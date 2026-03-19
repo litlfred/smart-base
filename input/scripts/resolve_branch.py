@@ -76,11 +76,17 @@ def _branch_dir(branch: str) -> str:
 # ---------------------------------------------------------------------------
 
 def _set_env(name: str, value: str) -> None:
-    """Append ``name=value`` to ``$GITHUB_ENV``."""
+    """Append ``name=value`` to ``$GITHUB_ENV`` using heredoc delimiter syntax.
+
+    The heredoc format (KEY<<DELIMITER / value / DELIMITER) is immune to
+    newline-injection attacks that can occur with the simpler KEY=VALUE
+    format when the value contains embedded newlines.
+    """
     env_file = os.environ.get("GITHUB_ENV", "")
     if env_file:
+        delimiter = "ghadelimiter_resolve_branch"
         with open(env_file, "a") as fh:
-            fh.write(f"{name}={value}\n")
+            fh.write(f"{name}<<{delimiter}\n{value}\n{delimiter}\n")
     print(f"{name}={value}")
 
 

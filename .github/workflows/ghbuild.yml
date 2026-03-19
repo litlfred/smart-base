@@ -17,9 +17,19 @@
 # script code — which requires environment approval in the caller workflow.
 #
 # For downstream WHO SMART Guidelines IGs that call this workflow via
-# workflow_call, scripts are downloaded on demand via curl when they are not
-# already present locally.  The `scripts_ref` input controls which smart-base
-# branch those downloads target.
+# workflow_call, scripts are bulk-downloaded from smart-base via a tarball so
+# that all scripts and their shared dependencies are available together.
+# The `scripts_ref` input controls which smart-base branch those downloads
+# target.
+#
+# Unified environment
+# ───────────────────
+# Python pre/post-processing and the FHIR IG Publisher all run on the same
+# GitHub Actions host runner.  Java, Node/SUSHI, and Python are set up via
+# standard actions (setup-java, setup-node, setup-python) so that every
+# stage shares the same filesystem, environment variables, and user context.
+# This eliminates Docker ownership issues and ensures scripts can interact
+# with IG Publisher input/output without permission mismatches.
 #
 # Make sure your repo has a branch called gh-pages.
 #
@@ -30,6 +40,7 @@
 # 2023-01-22: (JCT): use checkout action v3, and JamesIves/github-pages-deploy-action@v4
 # 2026-03-xx: Remove direct push/PR triggers; add git safe.directory fix for Docker step.
 # 2026-03-xx: Add split-checkout model with scripts_ref input.
+# 2026-03-19: Unified host-based build; bulk script download; injection hardening.
 
 name: FHIR IG Build and GitHub Pages Deployment
 
@@ -111,11 +122,10 @@ jobs:
           ref: ${{ inputs.ref || github.ref }}
 
       - name: Record checkout timestamp
-        run: echo "TS_CHECKOUT=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_ENV
+        run: echo "TS_CHECKOUT=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
 
       # ── Resolve the smart-base scripts source ──────────────────────────
-      # Sets SCRIPTS_BASE_URL for curl-based downloads (downstream repos)
-      # and SCRIPTS_REF for the git-based overlay (smart-base itself).
+      # Sets SCRIPTS_REF (sanitized) for later steps.
       - name: Resolve scripts source
         env:
           SCRIPTS_REF_INPUT: ${{ inputs.scripts_ref || 'main' }}
@@ -125,11 +135,8 @@ jobs:
           if [ -z "$SCRIPTS_REF" ]; then
             SCRIPTS_REF="main"
           fi
-          SCRIPTS_BASE_URL="https://raw.githubusercontent.com/WorldHealthOrganization/smart-base/${SCRIPTS_REF}"
           printf 'SCRIPTS_REF=%s\n' "$SCRIPTS_REF"
           printf 'SCRIPTS_REF=%s\n' "$SCRIPTS_REF" >> "$GITHUB_ENV"
-          printf 'SCRIPTS_BASE_URL=%s\n' "$SCRIPTS_BASE_URL"
-          printf 'SCRIPTS_BASE_URL=%s\n' "$SCRIPTS_BASE_URL" >> "$GITHUB_ENV"
 
       # ── Overlay smart-base scripts onto content checkout ───────────────
       # When running inside the smart-base repository, the content checkout
@@ -137,9 +144,8 @@ jobs:
       # them with the canonical versions from SCRIPTS_REF so that PR
       # branches only need to carry content, not build tooling.
       #
-      # For downstream repos this step is a no-op — those repos don't have
-      # input/scripts/ in their own tree and rely on the curl-based
-      # fallback downloads in subsequent steps.
+      # For downstream repos this step is a no-op — scripts are fetched in
+      # bulk in the next step.
       - name: Overlay smart-base scripts
         env:
           GH_REPOSITORY: ${{ github.repository }}
@@ -147,7 +153,7 @@ jobs:
           # Only overlay when running inside the smart-base repository.
           SMART_BASE_REPO="WorldHealthOrganization/smart-base"
           if [[ "$GH_REPOSITORY" != "$SMART_BASE_REPO" ]]; then
-            echo "Downstream repository — scripts will be fetched on demand"
+            echo "Downstream repository — scripts will be fetched in bulk"
             exit 0
           fi
 
@@ -157,7 +163,59 @@ jobs:
           # This overwrites any locally-modified copies with the canonical versions.
           git checkout FETCH_HEAD -- input/scripts/
           git checkout FETCH_HEAD -- input/includes/dmn2html.xslt input/includes/dmn.css 2>/dev/null || true
-          echo "✅ Scripts overlaid from ${SCRIPTS_REF}"
+          echo "Scripts overlaid from ${SCRIPTS_REF}"
+
+      # ── Bulk-download scripts for downstream repos ─────────────────────
+      # Instead of downloading scripts one-by-one via curl (which misses
+      # shared dependencies like dak_url_utils.py, translation_config.py),
+      # download the entire input/scripts/ and input/includes/ directories
+      # from smart-base as a tarball.  This ensures all scripts and their
+      # shared modules are available together.
+      - name: Download smart-base scripts (downstream repos)
+        env:
+          GH_REPOSITORY: ${{ github.repository }}
+        run: |
+          SMART_BASE_REPO="WorldHealthOrganization/smart-base"
+          if [[ "$GH_REPOSITORY" == "$SMART_BASE_REPO" ]]; then
+            echo "Smart-base repo — scripts already overlaid, skipping download"
+            exit 0
+          fi
+
+          echo "Downloading scripts from smart-base@${SCRIPTS_REF}..."
+          TARBALL_URL="https://github.com/WorldHealthOrganization/smart-base/archive/${SCRIPTS_REF}.tar.gz"
+
+          # Download and extract only input/scripts/ and input/includes/
+          # into a temporary directory, then overlay onto the workspace.
+          TMPDIR="$(mktemp -d)"
+          if ! curl -L -f -o "${TMPDIR}/smart-base.tar.gz" "$TARBALL_URL" 2>/dev/null; then
+            echo "::error::Failed to download smart-base tarball from ${TARBALL_URL}"
+            exit 1
+          fi
+
+          # Extract input/scripts/ and input/includes/ from the tarball.
+          # The tarball root is smart-base-<ref>/, so we strip the first
+          # path component and filter to just the directories we need.
+          mkdir -p input/scripts input/includes
+          tar -xzf "${TMPDIR}/smart-base.tar.gz" -C "$TMPDIR" --strip-components=1 \
+            --wildcards '*/input/scripts/*' '*/input/includes/*' 2>/dev/null || true
+
+          # Copy extracted files into the workspace (don't overwrite local files)
+          if [ -d "${TMPDIR}/input/scripts" ]; then
+            cp -rn "${TMPDIR}/input/scripts/"* input/scripts/ 2>/dev/null || true
+            echo "Scripts downloaded: $(ls input/scripts/*.py 2>/dev/null | wc -l) Python files"
+          fi
+          if [ -d "${TMPDIR}/input/includes" ]; then
+            cp -rn "${TMPDIR}/input/includes/"* input/includes/ 2>/dev/null || true
+            echo "Includes downloaded: $(ls input/includes/ 2>/dev/null | wc -l) files"
+          fi
+
+          rm -rf "$TMPDIR"
+          echo "Smart-base scripts downloaded from ${SCRIPTS_REF}"
+
+      # ── Environment setup ──────────────────────────────────────────────
+      # All tools (Python, Java, Node/SUSHI) are installed on the host so
+      # that pre-processing, the IG Publisher, and post-processing share
+      # the same unified environment.
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -168,6 +226,24 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install "GitPython>=3.1.40" "PyYAML>=6.0" "requests>=2.28.0" lxml
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install SUSHI
+        run: |
+          npm install -g fsh-sushi
+          sushi --version
+
+      # ── Branch resolution and PR detection ─────────────────────────────
 
       - name: Find PR number
         id: find_pr
@@ -188,14 +264,6 @@ jobs:
           GH_BRANCH: ${{ github.head_ref || github.ref_name }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Check if PR comment script exists locally, download if needed
-          if [ ! -f "input/scripts/pr_comment_start.py" ]; then
-            echo "PR comment script not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/pr_comment_start.py" "${SCRIPTS_BASE_URL}/input/scripts/pr_comment_start.py" 2>/dev/null || echo "Failed to download pr_comment_start.py"
-          fi
-
-          # Run PR comment script if available
           if [ -f "input/scripts/pr_comment_start.py" ]; then
             python3 input/scripts/pr_comment_start.py \
               "$PR_NUMBER" \
@@ -205,7 +273,7 @@ jobs:
               "$GH_BRANCH" \
               "$GH_TOKEN"
           else
-            echo "⚠️ PR comment script not available, skipping build start comment"
+            echo "PR comment script not available, skipping build start comment"
           fi
 
       - name: Get branch name
@@ -214,95 +282,58 @@ jobs:
           GH_REF_NAME: ${{ github.ref_name }}
         run: python3 input/scripts/resolve_branch.py
 
-      - name: Echo branch name and check if it's the default branch
+      - name: Check if default branch
         run: |
           echo "Current Branch: $BRANCH_NAME"
           DEFAULT_BRANCH=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p')
           echo "Default Branch: $DEFAULT_BRANCH"
-          if [ "$BRANCH_NAME" == "$DEFAULT_BRANCH" ]; then
+          if [ "$BRANCH_NAME" = "$DEFAULT_BRANCH" ]; then
             echo "This is the default branch."
-            echo "IS_DEFAULT_BRANCH=true" >> $GITHUB_ENV
+            echo "IS_DEFAULT_BRANCH=true" >> "$GITHUB_ENV"
           else
             echo "This is NOT the default branch."
-            echo "IS_DEFAULT_BRANCH=false" >> $GITHUB_ENV
+            echo "IS_DEFAULT_BRANCH=false" >> "$GITHUB_ENV"
           fi
 
-
-      # - name: Create gh-pages branch if it doesn't exist
-      #   run: |
-      #     git fetch origin
-      #     exists=`git show-ref refs/heads/gh-pages`
-      #     if [ -n "$exists" ]; then
-      #       echo 'gh-pages branch exists';
-      #     else
-      #       echo 'gh-pages branch does not exist, creating it';
-      #       git checkout --orphan gh-pages
-      #       git reset --hard
-      #       git commit --allow-empty -m "Initializing gh-pages branch"
-      #       git push origin gh-pages
-      #       git checkout ${GITHUB_REF##*/}
-      #     fi
-
-
+      # ── DAK Preprocessing ─────────────────────────────────────────────
 
       - name: Prepare DAK environment
         if: inputs.do_dak != 'false'
         run: |
           echo "Preparing DAK environment with configuration scripts..."
 
-          # Check if DAK preparation scripts exist locally, download if needed
-          if [ ! -f "input/scripts/generate_dak_from_sushi.py" ]; then
-            echo "DAK generation script not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/generate_dak_from_sushi.py" "${SCRIPTS_BASE_URL}/input/scripts/generate_dak_from_sushi.py" 2>/dev/null || echo "Failed to download generate_dak_from_sushi.py"
-          fi
-
-          if [ ! -f "input/scripts/update_sushi_config.py" ]; then
-            echo "Sushi config update script not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/update_sushi_config.py" "${SCRIPTS_BASE_URL}/input/scripts/update_sushi_config.py" 2>/dev/null || echo "Failed to download update_sushi_config.py"
-          fi
-
-          # First, generate DAK configuration from sushi config (only if smart.who.int.base is a dependency and dak.json doesn't exist)
+          # Generate DAK configuration from sushi config
           if [ -f "input/scripts/generate_dak_from_sushi.py" ]; then
             echo "Running generate_dak_from_sushi.py..."
             python3 input/scripts/generate_dak_from_sushi.py
-            echo "✅ DAK configuration processing completed"
+            echo "DAK configuration processing completed"
           else
-            echo "⚠️ generate_dak_from_sushi.py not available, skipping DAK generation"
+            echo "generate_dak_from_sushi.py not available, skipping DAK generation"
           fi
 
-          # Then, update sushi config with DAK API settings (checks if dak.json is present)
+          # Update sushi config with DAK API settings
           if [ -f "input/scripts/update_sushi_config.py" ]; then
             echo "Running update_sushi_config.py..."
             python3 input/scripts/update_sushi_config.py
-            echo "✅ Sushi configuration updated for DAK API"
+            echo "Sushi configuration updated for DAK API"
           else
-            echo "⚠️ update_sushi_config.py not available, skipping sushi config update"
+            echo "update_sushi_config.py not available, skipping sushi config update"
           fi
 
       - name: Check for DAK configuration
         env:
           DO_DAK: ${{ inputs.do_dak }}
-          GH_REPOSITORY: ${{ github.repository }}
-          GH_REF_NAME: ${{ github.head_ref || github.ref_name }}
         run: |
-          if [ "$DO_DAK" == "false" ]; then
+          if [ "$DO_DAK" = "false" ]; then
             echo "Not generating DAK"
             exit 0
           fi
           echo "DAK processing enabled, checking for dak.json..."
           if [ -f "dak.json" ]; then
-            echo "✅ Found dak.json - DAK processing will be enabled"
+            echo "Found dak.json - DAK processing will be enabled"
             echo "DAK_ENABLED=true" >> "$GITHUB_ENV"
-
-            # Set repository context for DAK URL generation
-            echo "GITHUB_REPOSITORY=${GH_REPOSITORY}" >> "$GITHUB_ENV"
-            echo "GITHUB_REF_NAME=${GH_REF_NAME}" >> "$GITHUB_ENV"
-            echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> "$GITHUB_ENV"
-
           else
-            echo "⚠️ do_dak=true but no dak.json found in repository root"
+            echo "do_dak=true but no dak.json found in repository root"
             echo "DAK processing will be skipped"
             echo "DAK_ENABLED=false" >> "$GITHUB_ENV"
           fi
@@ -311,169 +342,92 @@ jobs:
         if: (inputs.do_dak != 'false') && (env.DAK_ENABLED == 'true')
         run: |
           echo "Regenerating DAK configuration with current branch context..."
-
-          # Check if DAK generation script exists locally, download if needed
-          if [ ! -f "input/scripts/generate_dak_from_sushi.py" ]; then
-            echo "DAK generation script not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/generate_dak_from_sushi.py" "${SCRIPTS_BASE_URL}/input/scripts/generate_dak_from_sushi.py" 2>/dev/null || echo "Failed to download generate_dak_from_sushi.py"
-            curl -L -f -o "input/scripts/dak_url_utils.py" "${SCRIPTS_BASE_URL}/input/scripts/dak_url_utils.py" 2>/dev/null || echo "Failed to download dak_url_utils.py"
-          fi
-
-          # Regenerate DAK configuration with current environment context
           if [ -f "input/scripts/generate_dak_from_sushi.py" ]; then
             python3 input/scripts/generate_dak_from_sushi.py
-            echo "✅ DAK configuration regenerated with current context"
+            echo "DAK configuration regenerated with current context"
           else
-            echo "⚠️ DAK generation script not available, using existing dak.json"
+            echo "DAK generation script not available, using existing dak.json"
           fi
 
       - name: DAK Preprocessing - Generate DMN Questionnaires
         if: (inputs.do_dak != 'false') && (env.DAK_ENABLED == 'true')
         run: |
           echo "Generating FHIR Questionnaires from DMN files before IG publisher runs..."
-
-          # Check if questionnaire generation files exist locally
-          if [ ! -f "input/scripts/dmn_questionnaire_generator.py" ]; then
-            echo "DMN questionnaire generator not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-
-            # Download questionnaire generator from smart-base repository
-            if curl -L -f -o "input/scripts/dmn_questionnaire_generator.py" "${SCRIPTS_BASE_URL}/input/scripts/dmn_questionnaire_generator.py" 2>/dev/null; then
-              echo "Downloaded questionnaire generator from main branch"
-            else
-              echo "Failed to download questionnaire generator, skipping questionnaire generation"
-            fi
-          else
-            echo "Using local DMN questionnaire generator"
-          fi
-
-          # Run questionnaire generation if script is available
           if [ -f "input/scripts/dmn_questionnaire_generator.py" ]; then
             python3 input/scripts/dmn_questionnaire_generator.py
-            echo "✅ Questionnaires generated successfully"
+            echo "Questionnaires generated successfully"
           else
-            echo "⚠️ DMN questionnaire generator not available, skipping questionnaire generation"
+            echo "DMN questionnaire generator not available, skipping"
           fi
 
       - name: DAK Preprocessing - Transform DMN files to HTML
         if: inputs.do_dak != 'false' && env.DAK_ENABLED == 'true'
         run: |
           echo "Transforming DMN files to HTML before IG publisher runs..."
-
-          # Check if DMN transformation files exist locally
-          if [ ! -f "input/scripts/transform_dmn.py" ]; then
-            echo "DMN transformation files not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts input/includes
-
-            # Download transformation files from smart-base repository
-            curl -L -f -o "input/scripts/transform_dmn.py" "${SCRIPTS_BASE_URL}/input/scripts/transform_dmn.py" 2>/dev/null || echo "Failed to download transform_dmn.py"
-            curl -L -f -o "input/includes/dmn2html.xslt" "${SCRIPTS_BASE_URL}/input/includes/dmn2html.xslt" 2>/dev/null || echo "Failed to download dmn2html.xslt"
-            curl -L -f -o "input/includes/dmn.css" "${SCRIPTS_BASE_URL}/input/includes/dmn.css" 2>/dev/null || echo "Failed to download dmn.css"
-          else
-            echo "Using local DMN transformation files"
-          fi
-
-          # Run DMN transformation if script is available
           if [ -f "input/scripts/transform_dmn.py" ]; then
             python3 input/scripts/transform_dmn.py
-            echo "✅ DMN files transformed successfully"
+            echo "DMN files transformed successfully"
           else
-            echo "⚠️ DMN transformation script not available, skipping DMN transformation"
+            echo "DMN transformation script not available, skipping"
           fi
 
       - name: DAK Preprocessing - Inject diagram translations
         if: inputs.do_dak != 'false' && env.DAK_ENABLED == 'true'
         run: |
           echo "Injecting translations into diagram sources before IG publisher runs..."
-
-          # Check if injection script exists locally, download if needed
-          if [ ! -f "input/scripts/inject_translations.py" ]; then
-            echo "Translation injection script not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/inject_translations.py" \
-              "${SCRIPTS_BASE_URL}/input/scripts/inject_translations.py" \
-              2>/dev/null || echo "Failed to download inject_translations.py"
-          else
-            echo "Using local inject_translations.py"
-          fi
-
-          # Run injection if script is available
           if [ -f "input/scripts/inject_translations.py" ]; then
             python3 input/scripts/inject_translations.py
-            echo "✅ Diagram translations injected successfully"
+            echo "Diagram translations injected successfully"
           else
-            echo "⚠️ Translation injection script not available, skipping"
+            echo "Translation injection script not available, skipping"
           fi
 
-      - name: Update the image to the latest publisher
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          # Get the latest publisher - don't run the batch script but run the line directly
-          args: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
+      # ── FHIR IG Publisher ──────────────────────────────────────────────
+      # The publisher runs directly on the host alongside Python and SUSHI.
+      # No Docker container is used, so all stages share the same
+      # filesystem and user context.
 
+      - name: Download latest IG Publisher
+        run: |
+          mkdir -p ./input-cache
+          curl -L -f https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
+            -o ./input-cache/publisher.jar
 
       - name: Create package cache folder
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          entrypoint: /bin/sh
-          args: -c "mkdir -p ./fhir-package-cache && chown 1001:127 ./fhir-package-cache"
+        run: mkdir -p ./fhir-package-cache
 
-
-      - name: Run the IG publisher
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          entrypoint: /bin/sh
-          args: -c "mkdir -p /var/lib/.fhir && chown $(id -u):$(id -g) /var/lib/.fhir"
-
-      - name: Run the IG publisher with optional tx
+      - name: Run the IG Publisher
         env:
           INPUT_TX: ${{ inputs.tx }}
-          GH_WORKSPACE: ${{ github.workspace }}
+          JAVA_TOOL_OPTIONS: '-Dfile.encoding=UTF-8'
         run: |
           echo "TX input: $INPUT_TX"
 
-          CMD="java -Xmx6g -jar ./input-cache/publisher.jar publisher \
-            -ig . \
-            -auto-ig-build \
-            -repo https://github.com/${GITHUB_REPOSITORY}/tree/${GITHUB_REF_NAME} \
-            -package-cache-folder ./fhir-package-cache"
+          # Build the -repo URL using the sanitized BRANCH_NAME from
+          # resolve_branch.py (never from raw github.head_ref).
+          # GITHUB_REPOSITORY is a trusted GitHub-set variable.
+          REPO_URL="https://github.com/${GITHUB_REPOSITORY}/tree/${BRANCH_NAME}"
+
+          # Construct command arguments as an array to prevent word-splitting
+          # and injection issues.
+          ARGS=(
+            -Xmx6g
+            -jar ./input-cache/publisher.jar
+            publisher
+            -ig .
+            -auto-ig-build
+            -repo "$REPO_URL"
+            -package-cache-folder ./fhir-package-cache
+          )
 
           if [ -n "$INPUT_TX" ]; then
-            CMD="$CMD -tx $INPUT_TX"
+            ARGS+=(-tx "$INPUT_TX")
           fi
 
-          echo "Running command: $CMD"
+          echo "Running: java ${ARGS[*]}"
+          java "${ARGS[@]}"
 
-          # Start container with entrypoint (sets up sushi, jekyll, etc.) and keep it running
-          docker run -d --name ig-run \
-            -v "${GH_WORKSPACE}":/work \
-            -w /work \
-            hl7fhir/ig-publisher-base:latest \
-            sleep infinity
-
-          # Wait for entrypoint to finish setup
-          sleep 5
-
-          # Mark /work as a safe directory to suppress git dubious ownership warnings
-          docker exec ig-run git config --global --add safe.directory /work
-
-          # Install Python and SUSHI as root
-          docker exec --user root ig-run sh -c '\
-            apt-get update && \
-            apt-get install -y --no-install-recommends python3 python3-pip python3-venv && \
-            ln -sf /usr/bin/python3 /usr/bin/python && \
-            pip3 install --break-system-packages "GitPython>=3.1.40" "PyYAML>=6.0" "requests>=2.28.0" lxml && \
-            npm install -g fsh-sushi && \
-            sushi --version'
-
-          # Run publisher as the default user
-          docker exec -w /work ig-run sh -c "$CMD"
-
-          # Cleanup
-          docker rm -f ig-run
-
-          echo "TS_IG_BUILD=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_ENV
+          echo "TS_IG_BUILD=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
 
       # Additional step to upload qa.json as an artifact
       - name: Upload qa.json artifact
@@ -481,7 +435,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: qa-json-artifact
-          path: ./output/qa.json  # Adjust the path based on where qa.json is located
+          path: ./output/qa.json
 
       # The IG Publisher writes translation files to two locations:
       #   1. output/*.pot  — translation templates (gitignored)
@@ -539,150 +493,76 @@ jobs:
           if-no-files-found: ignore
           retention-days: 1
 
-      - name: Fix output directory ownership for DAK post-processing
-        if: inputs.do_dak != 'false' && env.DAK_ENABLED == 'true'
-        run: |
-          # The IG publisher runs in Docker as root, so output/ files are root-owned.
-          # Python post-processing scripts run as the GitHub Actions runner (non-root)
-          # and must be able to write schema files and modify HTML pages.
-          sudo chown -R "$USER:$USER" ./output || true
+      # ── DAK Postprocessing ─────────────────────────────────────────────
+      # No ownership fix needed — the IG Publisher ran on the host as the
+      # same user, so output/ files are already writable.
 
       - name: DAK Postprocessing - Generate JSON Schemas
         if: inputs.do_dak != 'false' && env.DAK_ENABLED == 'true'
         run: |
           echo "Generating JSON schemas from FHIR resources..."
-
-          # Check if schema generation files exist locally, download if needed
-          if [ ! -f "input/scripts/generate_logical_model_schemas.py" ]; then
-            echo "Schema generation files not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/generate_logical_model_schemas.py" "${SCRIPTS_BASE_URL}/input/scripts/generate_logical_model_schemas.py" 2>/dev/null || echo "Failed to download logical model schema generator"
-            curl -L -f -o "input/scripts/generate_valueset_schemas.py" "${SCRIPTS_BASE_URL}/input/scripts/generate_valueset_schemas.py" 2>/dev/null || echo "Failed to download valueset schema generator"
-          fi
-
-          # Generate logical model schemas
           if [ -f "input/scripts/generate_logical_model_schemas.py" ]; then
             python3 input/scripts/generate_logical_model_schemas.py
-            echo "✅ Logical model schemas generated"
+            echo "Logical model schemas generated"
           fi
-
-          # Generate valueset schemas
           if [ -f "input/scripts/generate_valueset_schemas.py" ]; then
             python3 input/scripts/generate_valueset_schemas.py
-            echo "✅ ValueSet schemas generated"
+            echo "ValueSet schemas generated"
           fi
 
       - name: DAK Postprocessing - Generate JSON-LD Vocabularies
         if: inputs.do_dak != 'false' && env.DAK_ENABLED == 'true'
         run: |
           echo "Generating JSON-LD vocabularies from ValueSet expansions..."
-
-          # Check if JSON-LD generation files exist locally, download if needed
-          if [ ! -f "input/scripts/generate_jsonld_vocabularies.py" ]; then
-            echo "JSON-LD vocabulary generator not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/generate_jsonld_vocabularies.py" "${SCRIPTS_BASE_URL}/input/scripts/generate_jsonld_vocabularies.py" 2>/dev/null || echo "Failed to download JSON-LD vocabulary generator"
-          fi
-
-          # Generate JSON-LD vocabularies
           if [ -f "input/scripts/generate_jsonld_vocabularies.py" ]; then
             python3 input/scripts/generate_jsonld_vocabularies.py
-            echo "✅ JSON-LD vocabularies generated"
+            echo "JSON-LD vocabularies generated"
           else
-            echo "⚠️ JSON-LD vocabulary generator not available, skipping vocabulary generation"
+            echo "JSON-LD vocabulary generator not available, skipping"
           fi
 
       - name: DAK Postprocessing - Generate DAK API Hub
         if: inputs.do_dak != 'false' && env.DAK_ENABLED == 'true'
         run: |
           echo "Generating DAK API documentation hub..."
-
-          # Check if API hub generation files exist locally, download if needed
-          if [ ! -f "input/scripts/generate_dak_api_hub.py" ]; then
-            echo "DAK API hub generator not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/generate_dak_api_hub.py" "${SCRIPTS_BASE_URL}/input/scripts/generate_dak_api_hub.py" 2>/dev/null || echo "Failed to download DAK API hub generator"
-          fi
-
-          # Generate DAK API hub
           if [ -f "input/scripts/generate_dak_api_hub.py" ]; then
             python3 input/scripts/generate_dak_api_hub.py
-            echo "✅ DAK API hub generated"
+            echo "DAK API hub generated"
           else
-            echo "⚠️ DAK API hub generator not available, skipping API hub generation"
+            echo "DAK API hub generator not available, skipping"
           fi
 
       - name: DAK Postprocessing - Update translated image references
         if: inputs.do_dak != 'false' && env.DAK_ENABLED == 'true'
         run: |
           echo "Updating image references in translated HTML pages..."
-
-          # Check if the script exists locally, download if needed
-          if [ ! -f "input/scripts/update_translated_image_refs.py" ]; then
-            echo "update_translated_image_refs.py not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/update_translated_image_refs.py" \
-              "${SCRIPTS_BASE_URL}/input/scripts/update_translated_image_refs.py" \
-              2>/dev/null || echo "Failed to download update_translated_image_refs.py"
-          else
-            echo "Using local update_translated_image_refs.py"
-          fi
-
-          # Run the reference updater if available
           if [ -f "input/scripts/update_translated_image_refs.py" ]; then
             python3 input/scripts/update_translated_image_refs.py
-            echo "✅ Translated image references updated"
+            echo "Translated image references updated"
           else
-            echo "⚠️ update_translated_image_refs.py not available, skipping"
+            echo "update_translated_image_refs.py not available, skipping"
           fi
-
 
       - name: DAK Postprocessing - Generate smart.liquid variables
         if: inputs.do_dak != 'false' && env.DAK_ENABLED == 'true'
         run: |
           echo "Generating smart.liquid Liquid variable include from IG Publisher output..."
-
-          # Check if the script exists locally, download if needed
-          if [ ! -f "input/scripts/generate_smart_liquid.py" ]; then
-            echo "generate_smart_liquid.py not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/generate_smart_liquid.py" \
-              "${SCRIPTS_BASE_URL}/input/scripts/generate_smart_liquid.py" \
-              2>/dev/null || echo "Failed to download generate_smart_liquid.py"
-          else
-            echo "Using local generate_smart_liquid.py"
-          fi
-
-          # Run the generator if available
           if [ -f "input/scripts/generate_smart_liquid.py" ]; then
             python3 input/scripts/generate_smart_liquid.py
-            echo "✅ smart.liquid variables generated"
+            echo "smart.liquid variables generated"
           else
-            echo "⚠️ generate_smart_liquid.py not available, skipping"
+            echo "generate_smart_liquid.py not available, skipping"
           fi
 
       - name: DAK Postprocessing - Inject smart.liquid include into markdown pages
         if: inputs.do_dak != 'false' && env.DAK_ENABLED == 'true'
         run: |
-          echo "Injecting {% include smart.liquid %} into DAK IG markdown pages..."
-
-          # Check if the script exists locally, download if needed
-          if [ ! -f "input/scripts/inject_smart_liquid.py" ]; then
-            echo "inject_smart_liquid.py not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/inject_smart_liquid.py" \
-              "${SCRIPTS_BASE_URL}/input/scripts/inject_smart_liquid.py" \
-              2>/dev/null || echo "Failed to download inject_smart_liquid.py"
-          else
-            echo "Using local inject_smart_liquid.py"
-          fi
-
-          # Run the injector if available
+          echo "Injecting smart.liquid include into DAK IG markdown pages..."
           if [ -f "input/scripts/inject_smart_liquid.py" ]; then
             python3 input/scripts/inject_smart_liquid.py
-            echo "✅ smart.liquid include injected into markdown pages"
+            echo "smart.liquid include injected into markdown pages"
           else
-            echo "⚠️ inject_smart_liquid.py not available, skipping"
+            echo "inject_smart_liquid.py not available, skipping"
           fi
 
       - name: Stamp deploy metadata
@@ -731,14 +611,6 @@ jobs:
           JOB_STATUS: ${{ job.status }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Check if PR comment script exists locally, download if needed
-          if [ ! -f "input/scripts/pr_comment_finish.py" ]; then
-            echo "PR comment script not found locally, downloading from smart-base repository..."
-            mkdir -p input/scripts
-            curl -L -f -o "input/scripts/pr_comment_finish.py" "${SCRIPTS_BASE_URL}/input/scripts/pr_comment_finish.py" 2>/dev/null || echo "Failed to download pr_comment_finish.py"
-          fi
-
-          # Run PR comment script if available
           if [ -f "input/scripts/pr_comment_finish.py" ]; then
             python3 input/scripts/pr_comment_finish.py \
               "$PR_NUMBER" \
@@ -749,5 +621,5 @@ jobs:
               "$JOB_STATUS" \
               "$GH_TOKEN"
           else
-            echo "⚠️ PR comment script not available, skipping deployment complete comment"
+            echo "PR comment script not available, skipping deployment complete comment"
           fi

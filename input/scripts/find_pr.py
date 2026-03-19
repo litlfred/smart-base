@@ -81,11 +81,16 @@ def _validate_ref_name(value: str) -> str:
 # ---------------------------------------------------------------------------
 
 def _set_output(name: str, value: str) -> None:
-    """Append ``name=value`` to ``$GITHUB_OUTPUT``."""
+    """Append ``name=value`` to ``$GITHUB_OUTPUT`` using heredoc delimiter syntax.
+
+    The heredoc format is immune to newline-injection attacks that can
+    occur with the simpler ``KEY=VALUE`` format.
+    """
     output_file = os.environ.get("GITHUB_OUTPUT", "")
     if output_file:
+        delimiter = "ghadelimiter_find_pr"
         with open(output_file, "a") as fh:
-            fh.write(f"{name}={value}\n")
+            fh.write(f"{name}<<{delimiter}\n{value}\n{delimiter}\n")
     # Also print for local debugging
     print(f"{name}={value}")
 
