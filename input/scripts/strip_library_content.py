@@ -20,8 +20,8 @@ to the corresponding file that already exists in the output directory:
 If the referenced file does not exist in the output directory the content
 entry is left unchanged (data is preserved).
 
-Both the XML (``.xml``) and JSON (``.json``) representations of each Library
-are processed.
+The XML (``.xml``), JSON (``.json``), and TTL (``.ttl``) representations of
+each Library are processed.
 
 Usage:
     python strip_library_content.py [output_dir]
@@ -34,6 +34,7 @@ Author: SMART Guidelines Team
 import json
 import logging
 import os
+import re
 import sys
 import xml.etree.ElementTree as ET
 from typing import Optional
@@ -182,6 +183,90 @@ def _process_library_json(json_path: str, output_dir: str) -> bool:
 
 
 # ------------------------------------------------------------------
+# TTL (Turtle/RDF) processing
+# ------------------------------------------------------------------
+
+# In FHIR TTL, Library content blocks look like:
+#
+#   fhir:content ( [
+#       fhir:contentType [ fhir:v "text/cql" ] ;
+#       fhir:data [ fhir:v "BASE64..."^^xsd:base64Binary ]
+#   ] [
+#       fhir:contentType [ fhir:v "application/elm+xml" ] ;
+#       fhir:data [ fhir:v "BASE64..."^^xsd:base64Binary ]
+#   ] ) ;
+#
+# We replace the fhir:data line with fhir:url for matching content types.
+
+# Regex that matches a single content block: [ fhir:contentType ... ; fhir:data ... ]
+# We capture the contentType value and the full block so we can selectively replace.
+_TTL_CONTENT_BLOCK_RE = re.compile(
+    r'(\[\s*'
+    r'fhir:contentType\s+\[\s*fhir:v\s+"([^"]+)"\s*\]\s*;'  # group 2 = contentType
+    r'\s*)'
+    r'fhir:data\s+\[\s*fhir:v\s+"[^"]*"(?:\^\^xsd:base64Binary)?\s*\]'  # the data line
+    r'(\s*\])',  # closing bracket
+    re.DOTALL,
+)
+
+
+def _process_library_ttl(ttl_path: str, output_dir: str) -> bool:
+    """Replace inline data with url references in a Library TTL file.
+
+    Returns True if the file was modified.
+    """
+    try:
+        with open(ttl_path, "r", encoding="utf-8") as fh:
+            ttl = fh.read()
+    except OSError as exc:
+        logger.warning("Could not read %s: %s", ttl_path, exc)
+        return False
+
+    # Quick check: is this a Library resource?
+    if "fhir:Library" not in ttl:
+        return False
+
+    basename = os.path.splitext(os.path.basename(ttl_path))[0]  # e.g. Library-Foo
+
+    modified = False
+
+    def _replace_block(m: re.Match) -> str:
+        nonlocal modified
+        ct_value = m.group(2)
+        ext = _CONTENT_TYPE_EXT.get(ct_value)
+        if ext is None:
+            return m.group(0)  # not a content type we handle
+
+        target_filename = basename + ext
+        target_path = os.path.join(output_dir, target_filename)
+        if not os.path.exists(target_path):
+            logger.debug(
+                "%s: keeping inline %s — %s not found",
+                os.path.basename(ttl_path), ct_value, target_filename,
+            )
+            return m.group(0)
+
+        modified = True
+        logger.info(
+            "%s: %s → url %s",
+            os.path.basename(ttl_path), ct_value, target_filename,
+        )
+        return (
+            m.group(1)
+            + f'fhir:url [ fhir:v "{target_filename}" ]'
+            + m.group(3)
+        )
+
+    new_ttl = _TTL_CONTENT_BLOCK_RE.sub(_replace_block, ttl)
+
+    if modified:
+        with open(ttl_path, "w", encoding="utf-8") as fh:
+            fh.write(new_ttl)
+
+    return modified
+
+
+# ------------------------------------------------------------------
 # Entry point
 # ------------------------------------------------------------------
 
@@ -205,6 +290,9 @@ def strip_library_content(output_dir: str) -> int:
                 modified += 1
         elif filename.endswith(".json") and not filename.endswith(".elm.json"):
             if _process_library_json(filepath, output_dir):
+                modified += 1
+        elif filename.endswith(".ttl"):
+            if _process_library_ttl(filepath, output_dir):
                 modified += 1
 
     logger.info(
