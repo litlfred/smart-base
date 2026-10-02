@@ -1,0 +1,1554 @@
+{
+  "$schema" : "ig-ast-dependencies/v1",
+  "authority" : "cache",
+  "edges" : 172,
+  "resolvedInIg" : 113,
+  "dependencies" : [{
+    "source" : "Requirements/SGAuthoring.Skills.AuthorActorDefinitions",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorBusinessProcesses",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorCQL",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorCodeSystems",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorConceptMaps",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorDataDictionary",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorDecisionLogic",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorExampleScenarios",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorFHIRProfiles",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorFHIRRequirements",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorFunctionalRequirements",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorIndicators",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorLogicalModels",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorMeasures",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorPersonas",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorPlanDefinitions",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorQuestionnaires",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorSchedulingLogic",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorStructureMaps",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorTestCases",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorUserScenarios",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.AuthorValueSets",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.BuildIG",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ConfigureIG",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.InterpretClinicalRecommendations",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ManageGovernance",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ManageReleases",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ManageStakeholders",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.MapConcepts",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.PlanIterations",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ReviewAndApproveContent",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ReviewChecklist",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ReviewL1Guidelines",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ReviewTerminology",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ReviewTranslations",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.RunQAChecks",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ScopeDAK",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.TranslateContent",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ValidateArtifactConformance",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ValidateDAKContent",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "Requirements/SGAuthoring.Skills.ValidateL3Functionality",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : "Requirements.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "http://smart.who.int/base/ActivityDefinition/SGDecisionTableGuidance|0.3.0",
+    "kind" : "meta.profile",
+    "target" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-communicationactivity",
+    "targetVersion" : null,
+    "resolved" : null,
+    "path" : "ActivityDefinition.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv1Hierarchy|0.3.0",
+    "kind" : "has scope",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv1Hierarchy|0.3.0",
+    "kind" : "has scope",
+    "target" : "http://smart.who.int/base/ValueSet/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv1Hierarchy|0.3.0",
+    "kind" : "has target",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv1Hierarchy|0.3.0",
+    "kind" : "has target",
+    "target" : "http://smart.who.int/base/ValueSet/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv1toCDHIv2|0.3.0",
+    "kind" : "has scope",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv1toCDHIv2|0.3.0",
+    "kind" : "has scope",
+    "target" : "http://smart.who.int/base/ValueSet/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv1toCDHIv2|0.3.0",
+    "kind" : "has target",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv1toCDHIv2|0.3.0",
+    "kind" : "has target",
+    "target" : "http://smart.who.int/base/ValueSet/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv2Hierarchy|0.3.0",
+    "kind" : "has scope",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv2Hierarchy|0.3.0",
+    "kind" : "has scope",
+    "target" : "http://smart.who.int/base/ValueSet/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv2Hierarchy|0.3.0",
+    "kind" : "has target",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDHIv2Hierarchy|0.3.0",
+    "kind" : "has target",
+    "target" : "http://smart.who.int/base/ValueSet/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDSCv1toCDSCv2|0.3.0",
+    "kind" : "has scope",
+    "target" : "http://smart.who.int/base/CodeSystem/CDSCv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDSCv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDSCv1toCDSCv2|0.3.0",
+    "kind" : "has scope",
+    "target" : "http://smart.who.int/base/ValueSet/CDSCv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/CDSCv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDSCv1toCDSCv2|0.3.0",
+    "kind" : "has target",
+    "target" : "http://smart.who.int/base/CodeSystem/CDSCv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDSCv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ConceptMap/CDSCv1toCDSCv2|0.3.0",
+    "kind" : "has target",
+    "target" : "http://smart.who.int/base/ValueSet/CDSCv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/CDSCv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ImplementationGuide/smart.who.int.base|0.3.0",
+    "kind" : "meta.profile",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGImplementationGuide",
+    "targetVersion" : null,
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGImplementationGuide|0.3.0",
+    "path" : "ImplementationGuide.meta.profile",
+    "origin" : "ast-export"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/BusinessProcessWorkflowSource|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/BusinessProcessWorkflowSource|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/BusinessProcessWorkflow",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/BusinessProcessWorkflow|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/BusinessProcessWorkflow|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/CoreDataElementSource|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/CoreDataElementSource|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/CoreDataElement",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/CoreDataElement|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/CoreDataElement|0.3.0",
+    "kind" : "binds to",
+    "target" : "http://smart.who.int/base/ValueSet/CoreDataElementTypeVS",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/CoreDataElementTypeVS|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/CoreDataElement|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/DAK|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/DecisionSupportLogicSource|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/DecisionSupportLogicSource|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/DecisionSupportLogic",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/DecisionSupportLogic|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/DecisionSupportLogic|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/DublinCore|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/FHIRSchemaBase|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/FunctionalRequirement|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/FunctionalRequirement|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGActor",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGActor|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/GenericPersonaSource|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/GenericPersonaSource|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/GenericPersona",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/GenericPersona|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/GenericPersona|0.3.0",
+    "kind" : "binds to",
+    "target" : "http://smart.who.int/base/ValueSet/ISCO08ValueSet",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/ISCO08ValueSet|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/GenericPersona|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/HealthInterventionsSource|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/HealthInterventionsSource|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/HealthInterventions",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/HealthInterventions|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/HealthInterventions|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/LinkIdExt|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/Markdown|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/NonFunctionalRequirement|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/Persona|0.3.0",
+    "kind" : "binds to",
+    "target" : "http://smart.who.int/base/ValueSet/SGPersonaTypesVS",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/ValueSet/SGPersonaTypesVS|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/Persona|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/ProgramIndicatorSource|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/ProgramIndicatorSource|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/ProgramIndicator",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/ProgramIndicator|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/ProgramIndicator|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/RequirementsSource|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/RequirementsSource|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/Requirements",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/Requirements|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/Requirements|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/Requirements|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/FunctionalRequirement",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/FunctionalRequirement|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/Requirements|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/NonFunctionalRequirement",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/NonFunctionalRequirement|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGActivityDefinition|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableactivitydefinition",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGActorExt|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGActorExt|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGActor",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGActor|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGActor|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/ActorDefinition",
+    "targetVersion" : "5.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGBusinessProcess|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/PlanDefinition",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGCodeSystem|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGCommunicationRequest|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-communicationrequest",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGConceptMap|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGDecisionTable|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGPlanDefinition",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGPlanDefinition|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGDocumentation|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGDocumentation|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGMarkdown",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGMarkdown|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGDocumentation|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirementExt",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirementExt|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGDocumentation|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGcode",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGcode|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGGraphDefinition|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/GraphDefinition",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGGraphDefinition|0.3.0",
+    "kind" : "uses",
+    "target" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-GraphDefinition.node",
+    "targetVersion" : "0.1.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGGraphDefinition|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/LinkIdExt",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/LinkIdExt|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGGroupDefinition|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-groupdefinition",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGImplementationGuide|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGLibrary|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablelibrary",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGLogicalModel|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/StructureDefinition",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGMarkdown|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGMeasure|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablemeasure",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGPlanDefinition|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableplandefinition",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGQuestionnaire|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablequestionnaire",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGQuestionnaire|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGActorExt",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGActorExt|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGQuestionnaire|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGcode",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGcode|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGRequirementExt|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGRequirementExt|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Requirements",
+    "targetVersion" : "5.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGTask",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGTask|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGUserStory",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGUserStory|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/Satisfies",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/Satisfies|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGString|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGStructureDefinition|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGStructureMap|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/StructureMap",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGTask|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGTransaction|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGGraphDefinition",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGGraphDefinition|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGTransaction|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGActorExt",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGActorExt|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGTransaction|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGDocumentation",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGDocumentation|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGUserStory|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGUserStory|0.3.0",
+    "kind" : "uses",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGString",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGString|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGValueSet|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+    "targetVersion" : "2.0.0",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SGcode|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/Satisfies|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/Satisfies|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/SGRequirements",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/SGRequirements|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SushiConfigLogicalModel|0.3.0",
+    "kind" : "binds to",
+    "target" : "http://hl7.org/fhir/ValueSet/FHIR-version",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SushiConfigLogicalModel|0.3.0",
+    "kind" : "binds to",
+    "target" : "http://hl7.org/fhir/ValueSet/publication-status",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SushiConfigLogicalModel|0.3.0",
+    "kind" : "binds to",
+    "target" : "http://hl7.org/fhir/ValueSet/spdx-license",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/SushiConfigLogicalModel|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/TestScenarioSource|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/TestScenarioSource|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/TestScenario",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/TestScenario|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/TestScenario|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/UserScenarioSource|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/UserScenarioSource|0.3.0",
+    "kind" : "refers to",
+    "target" : "http://smart.who.int/base/StructureDefinition/UserScenario",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/StructureDefinition/UserScenario|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/StructureDefinition/UserScenario|0.3.0",
+    "kind" : "derives from",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Base",
+    "targetVersion" : "4.0.1",
+    "resolved" : null,
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDHIv1.1|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDHIv1.2|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDHIv1.3|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDHIv1.4|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDHIv1|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDHIv2.1|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDHIv2.2|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDHIv2.3|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDHIv2.4|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDHIv2|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDHIv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDHIv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDSCv1|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDSCv1",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDSCv1|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDSCv2.A|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDSCv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDSCv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDSCv2.B|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDSCv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDSCv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDSCv2.C|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDSCv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDSCv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDSCv2.D|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDSCv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDSCv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDSCv2.E|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDSCv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDSCv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CDSCv2|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CDSCv2",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CDSCv2|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/CoreDataElementTypeVS|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/CoreDataElementType",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/CoreDataElementType|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/DecisionTableActions|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/DecisionTableActions",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/DecisionTableActions|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/ISCO08ValueSet|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://www.ilo.org/public/english/bureau/stat/isco/isco08/",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://www.ilo.org/public/english/bureau/stat/isco/isco08/|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/SGAuthoringPersonaTypesVS|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/SGAuthoringPersonaTypes",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/SGAuthoringPersonaTypes|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/SGAuthoringSkillsVS|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/SGAuthoringSkills",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/SGAuthoringSkills|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  },
+  {
+    "source" : "http://smart.who.int/base/ValueSet/SGPersonaTypesVS|0.3.0",
+    "kind" : "includes from",
+    "target" : "http://smart.who.int/base/CodeSystem/SGPersonaTypes",
+    "targetVersion" : "0.3.0",
+    "resolved" : "http://smart.who.int/base/CodeSystem/SGPersonaTypes|0.3.0",
+    "path" : null,
+    "origin" : "publisher"
+  }]
+}

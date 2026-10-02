@@ -1,0 +1,1242 @@
+[
+  {
+    "outputFile": "ActivityDefinition-SGDecisionTableGuidance.json",
+    "fshName": "SGDecisionTableGuidance",
+    "fshType": "Instance",
+    "fshFile": "activitydefinitions/SGDecisionTableGuidance.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.CommunityHealthWorker.json",
+    "fshName": "DAK.Persona.CommunityHealthWorker",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.CommunityHealthWorker.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.DataManager.json",
+    "fshName": "DAK.Persona.DataManager",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.DataManager.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.HealthSystemManager.json",
+    "fshName": "DAK.Persona.HealthSystemManager",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.HealthSystemManager.fsh",
+    "startLine": 1,
+    "endLine": 30
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.HealthcareProvider.json",
+    "fshName": "DAK.Persona.HealthcareProvider",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.HealthcareProvider.fsh",
+    "startLine": 1,
+    "endLine": 36
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.Person.json",
+    "fshName": "DAK.Persona.Person",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.Person.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.ClientRegistry.json",
+    "fshName": "DAK.Persona.System.ClientRegistry",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.ClientRegistry.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.EMR.json",
+    "fshName": "DAK.Persona.System.EMR",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.EMR.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.HMIS.json",
+    "fshName": "DAK.Persona.System.HMIS",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.HMIS.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.InteropPlatform.json",
+    "fshName": "DAK.Persona.System.InteropPlatform",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.InteropPlatform.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.LIS.json",
+    "fshName": "DAK.Persona.System.LIS",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.LIS.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.LMIS.json",
+    "fshName": "DAK.Persona.System.LMIS",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.LMIS.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.SurveillanceSystem.json",
+    "fshName": "DAK.Persona.System.SurveillanceSystem",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.SurveillanceSystem.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.BusinessAnalyst.json",
+    "fshName": "SGAuthoring.Persona.BusinessAnalyst",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.BusinessAnalyst.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.ClinicalSME.json",
+    "fshName": "SGAuthoring.Persona.ClinicalSME",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.ClinicalSME.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.ContentReviewer.json",
+    "fshName": "SGAuthoring.Persona.ContentReviewer",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.ContentReviewer.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.FHIRModeller.json",
+    "fshName": "SGAuthoring.Persona.FHIRModeller",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.FHIRModeller.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.ProgrammeManager.json",
+    "fshName": "SGAuthoring.Persona.ProgrammeManager",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.ProgrammeManager.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.PublicationManager.json",
+    "fshName": "SGAuthoring.Persona.PublicationManager",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.PublicationManager.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.QCReviewer.json",
+    "fshName": "SGAuthoring.Persona.QCReviewer",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.QCReviewer.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.TechnicalOfficer.json",
+    "fshName": "SGAuthoring.Persona.TechnicalOfficer",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.TechnicalOfficer.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.Terminologist.json",
+    "fshName": "SGAuthoring.Persona.Terminologist",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.Terminologist.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.Translator.json",
+    "fshName": "SGAuthoring.Persona.Translator",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.Translator.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "CodeSystem-CDHIv1.json",
+    "fshName": "CDHIv1",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CDHIv1.fsh",
+    "startLine": 1,
+    "endLine": 125
+  },
+  {
+    "outputFile": "CodeSystem-CDHIv2.json",
+    "fshName": "CDHIv2",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CDHIv2.fsh",
+    "startLine": 1,
+    "endLine": 168
+  },
+  {
+    "outputFile": "CodeSystem-CDSCv1.json",
+    "fshName": "CDSCv1",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CDSCv1.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
+    "outputFile": "CodeSystem-CDSCv2.json",
+    "fshName": "CDSCv2",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CDSCv2.fsh",
+    "startLine": 1,
+    "endLine": 121
+  },
+  {
+    "outputFile": "CodeSystem-CoreDataElementType.json",
+    "fshName": "CoreDataElementType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CoreDataElementType.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-DecisionTableActions.json",
+    "fshName": "DecisionTableActions",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/DecisionTableActions.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-DocumentationSections.json",
+    "fshName": "DocumentationSections",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/DocumentationSections.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "CodeSystem-ISCO08.json",
+    "fshName": "ISCO08",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/ISCO08.fsh",
+    "startLine": 1,
+    "endLine": 561
+  },
+  {
+    "outputFile": "CodeSystem-SGAuthoringPersonaTypes.json",
+    "fshName": "SGAuthoringPersonaTypes",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/SGAuthoringPersonaTypes.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "CodeSystem-SGAuthoringSkills.json",
+    "fshName": "SGAuthoringSkills",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/SGAuthoringSkills.fsh",
+    "startLine": 1,
+    "endLine": 71
+  },
+  {
+    "outputFile": "CodeSystem-SGPersonaTypes.json",
+    "fshName": "SGPersonaTypes",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/SGPersonaTypes.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-SGTasks.json",
+    "fshName": "SGTasks",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/SGTasks.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "ConceptMap-CDHIv1Hierarchy.json",
+    "fshName": "CDHIv1Hierarchy",
+    "fshType": "Instance",
+    "fshFile": "conceptmaps/CDHIv1Hierarchy.fsh",
+    "startLine": 1,
+    "endLine": 132
+  },
+  {
+    "outputFile": "ConceptMap-CDHIv1toCDHIv2.json",
+    "fshName": "CDHIv1toCDHIv2",
+    "fshType": "Instance",
+    "fshFile": "conceptmaps/CDHIv1toCDHIv2.fsh",
+    "startLine": 1,
+    "endLine": 164
+  },
+  {
+    "outputFile": "ConceptMap-CDHIv2Hierarchy.json",
+    "fshName": "CDHIv2Hierarchy",
+    "fshType": "Instance",
+    "fshFile": "conceptmaps/CDHIv2Hierarchy.fsh",
+    "startLine": 1,
+    "endLine": 151
+  },
+  {
+    "outputFile": "ConceptMap-CDSCv1toCDSCv2.json",
+    "fshName": "CDSCv1toCDSCv2",
+    "fshType": "Instance",
+    "fshFile": "conceptmaps/CDSCv1toCDSCv2.fsh",
+    "startLine": 1,
+    "endLine": 51
+  },
+  {
+    "outputFile": "Questionnaire-DAK.DT.IMMZ.D2.DT.BCGQuestionnaire.json",
+    "fshName": "DAK.DT.IMMZ.D2.DT.BCGQuestionnaire",
+    "fshType": "Instance",
+    "fshFile": "questionnaires/DAK.DT.IMMZ.D2.DT.BCGQuestionnaire.fsh",
+    "startLine": 1,
+    "endLine": 80
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorActorDefinitions.json",
+    "fshName": "SGAuthoring.Skills.AuthorActorDefinitions",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 229,
+    "endLine": 265
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorBusinessProcesses.json",
+    "fshName": "SGAuthoring.Skills.AuthorBusinessProcesses",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 85,
+    "endLine": 133
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorCQL.json",
+    "fshName": "SGAuthoring.Skills.AuthorCQL",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 112,
+    "endLine": 154
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorCodeSystems.json",
+    "fshName": "SGAuthoring.Skills.AuthorCodeSystems",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Terminology.fsh",
+    "startLine": 85,
+    "endLine": 115
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorConceptMaps.json",
+    "fshName": "SGAuthoring.Skills.AuthorConceptMaps",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Terminology.fsh",
+    "startLine": 151,
+    "endLine": 181
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorDataDictionary.json",
+    "fshName": "SGAuthoring.Skills.AuthorDataDictionary",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 136,
+    "endLine": 178
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorDecisionLogic.json",
+    "fshName": "SGAuthoring.Skills.AuthorDecisionLogic",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 181,
+    "endLine": 217
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorExampleScenarios.json",
+    "fshName": "SGAuthoring.Skills.AuthorExampleScenarios",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 268,
+    "endLine": 292
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorFHIRProfiles.json",
+    "fshName": "SGAuthoring.Skills.AuthorFHIRProfiles",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 40,
+    "endLine": 76
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorFHIRRequirements.json",
+    "fshName": "SGAuthoring.Skills.AuthorFHIRRequirements",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 328,
+    "endLine": 358
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorFunctionalRequirements.json",
+    "fshName": "SGAuthoring.Skills.AuthorFunctionalRequirements",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 292,
+    "endLine": 328
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorIndicators.json",
+    "fshName": "SGAuthoring.Skills.AuthorIndicators",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 253,
+    "endLine": 289
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorLogicalModels.json",
+    "fshName": "SGAuthoring.Skills.AuthorLogicalModels",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorMeasures.json",
+    "fshName": "SGAuthoring.Skills.AuthorMeasures",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 295,
+    "endLine": 325
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorPersonas.json",
+    "fshName": "SGAuthoring.Skills.AuthorPersonas",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorPlanDefinitions.json",
+    "fshName": "SGAuthoring.Skills.AuthorPlanDefinitions",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 190,
+    "endLine": 226
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorQuestionnaires.json",
+    "fshName": "SGAuthoring.Skills.AuthorQuestionnaires",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 79,
+    "endLine": 109
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorSchedulingLogic.json",
+    "fshName": "SGAuthoring.Skills.AuthorSchedulingLogic",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 220,
+    "endLine": 250
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorStructureMaps.json",
+    "fshName": "SGAuthoring.Skills.AuthorStructureMaps",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 157,
+    "endLine": 187
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorTestCases.json",
+    "fshName": "SGAuthoring.Skills.AuthorTestCases",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 361,
+    "endLine": 397
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorUserScenarios.json",
+    "fshName": "SGAuthoring.Skills.AuthorUserScenarios",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 46,
+    "endLine": 82
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorValueSets.json",
+    "fshName": "SGAuthoring.Skills.AuthorValueSets",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Terminology.fsh",
+    "startLine": 118,
+    "endLine": 148
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.BuildIG.json",
+    "fshName": "SGAuthoring.Skills.BuildIG",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Publication.fsh",
+    "startLine": 40,
+    "endLine": 77
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ConfigureIG.json",
+    "fshName": "SGAuthoring.Skills.ConfigureIG",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Publication.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.InterpretClinicalRecommendations.json",
+    "fshName": "SGAuthoring.Skills.InterpretClinicalRecommendations",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L1Review.fsh",
+    "startLine": 48,
+    "endLine": 84
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ManageGovernance.json",
+    "fshName": "SGAuthoring.Skills.ManageGovernance",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Publication.fsh",
+    "startLine": 137,
+    "endLine": 173
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ManageReleases.json",
+    "fshName": "SGAuthoring.Skills.ManageReleases",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Publication.fsh",
+    "startLine": 80,
+    "endLine": 134
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ManageStakeholders.json",
+    "fshName": "SGAuthoring.Skills.ManageStakeholders",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.StakeholderMgmt.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.MapConcepts.json",
+    "fshName": "SGAuthoring.Skills.MapConcepts",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Terminology.fsh",
+    "startLine": 40,
+    "endLine": 82
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.PlanIterations.json",
+    "fshName": "SGAuthoring.Skills.PlanIterations",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.StakeholderMgmt.fsh",
+    "startLine": 46,
+    "endLine": 88
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ReviewAndApproveContent.json",
+    "fshName": "SGAuthoring.Skills.ReviewAndApproveContent",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.ContentReview.fsh",
+    "startLine": 1,
+    "endLine": 49
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ReviewChecklist.json",
+    "fshName": "SGAuthoring.Skills.ReviewChecklist",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.QualityControl.fsh",
+    "startLine": 40,
+    "endLine": 82
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ReviewL1Guidelines.json",
+    "fshName": "SGAuthoring.Skills.ReviewL1Guidelines",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L1Review.fsh",
+    "startLine": 1,
+    "endLine": 45
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ReviewTerminology.json",
+    "fshName": "SGAuthoring.Skills.ReviewTerminology",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Terminology.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ReviewTranslations.json",
+    "fshName": "SGAuthoring.Skills.ReviewTranslations",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Translation.fsh",
+    "startLine": 40,
+    "endLine": 70
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.RunQAChecks.json",
+    "fshName": "SGAuthoring.Skills.RunQAChecks",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.QualityControl.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ScopeDAK.json",
+    "fshName": "SGAuthoring.Skills.ScopeDAK",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.ProjectManagement.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.TranslateContent.json",
+    "fshName": "SGAuthoring.Skills.TranslateContent",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Translation.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ValidateArtifactConformance.json",
+    "fshName": "SGAuthoring.Skills.ValidateArtifactConformance",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.QualityControl.fsh",
+    "startLine": 85,
+    "endLine": 121
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ValidateDAKContent.json",
+    "fshName": "SGAuthoring.Skills.ValidateDAKContent",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 331,
+    "endLine": 374
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ValidateL3Functionality.json",
+    "fshName": "SGAuthoring.Skills.ValidateL3Functionality",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.QualityControl.fsh",
+    "startLine": 124,
+    "endLine": 161
+  },
+  {
+    "outputFile": "StructureDefinition-BusinessProcessWorkflow.json",
+    "fshName": "BusinessProcessWorkflow",
+    "fshType": "Logical",
+    "fshFile": "models/BusinessProcessWorkflow.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-BusinessProcessWorkflowSource.json",
+    "fshName": "BusinessProcessWorkflowSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 49,
+    "endLine": 62
+  },
+  {
+    "outputFile": "StructureDefinition-CoreDataElement.json",
+    "fshName": "CoreDataElement",
+    "fshType": "Logical",
+    "fshFile": "models/CoreDataElement.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-CoreDataElementSource.json",
+    "fshName": "CoreDataElementSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 64,
+    "endLine": 77
+  },
+  {
+    "outputFile": "StructureDefinition-DAK.json",
+    "fshName": "DAK",
+    "fshType": "Logical",
+    "fshFile": "models/DAK.fsh",
+    "startLine": 1,
+    "endLine": 36
+  },
+  {
+    "outputFile": "StructureDefinition-DecisionSupportLogic.json",
+    "fshName": "DecisionSupportLogic",
+    "fshType": "Logical",
+    "fshFile": "models/DecisionSupportLogic.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-DecisionSupportLogicSource.json",
+    "fshName": "DecisionSupportLogicSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 79,
+    "endLine": 92
+  },
+  {
+    "outputFile": "StructureDefinition-DublinCore.json",
+    "fshName": "DublinCore",
+    "fshType": "Logical",
+    "fshFile": "models/DublinCore.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-FHIRSchemaBase.json",
+    "fshName": "FHIRSchemaBase",
+    "fshType": "Logical",
+    "fshFile": "models/FHIRSchemaBase.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "StructureDefinition-FunctionalRequirement.json",
+    "fshName": "FunctionalRequirement",
+    "fshType": "Logical",
+    "fshFile": "models/FunctionalRequirement.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-GenericPersona.json",
+    "fshName": "GenericPersona",
+    "fshType": "Logical",
+    "fshFile": "models/GenericPersona.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-GenericPersonaSource.json",
+    "fshName": "GenericPersonaSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 19,
+    "endLine": 32
+  },
+  {
+    "outputFile": "StructureDefinition-HealthInterventions.json",
+    "fshName": "HealthInterventions",
+    "fshType": "Logical",
+    "fshFile": "models/HealthInterventions.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-HealthInterventionsSource.json",
+    "fshName": "HealthInterventionsSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 4,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-LinkIdExt.json",
+    "fshName": "LinkIdExt",
+    "fshType": "Extension",
+    "fshFile": "extensions/LinkIdExt.fsh",
+    "startLine": 2,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-Markdown.json",
+    "fshName": "Markdown",
+    "fshType": "Extension",
+    "fshFile": "extensions/Markdown.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-NonFunctionalRequirement.json",
+    "fshName": "NonFunctionalRequirement",
+    "fshType": "Logical",
+    "fshFile": "models/NonFunctionalRequirement.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-Persona.json",
+    "fshName": "Persona",
+    "fshType": "Logical",
+    "fshFile": "models/Persona.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "StructureDefinition-ProgramIndicator.json",
+    "fshName": "ProgramIndicator",
+    "fshType": "Logical",
+    "fshFile": "models/ProgramIndicator.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-ProgramIndicatorSource.json",
+    "fshName": "ProgramIndicatorSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 94,
+    "endLine": 107
+  },
+  {
+    "outputFile": "StructureDefinition-Requirements.json",
+    "fshName": "Requirements",
+    "fshType": "Logical",
+    "fshFile": "models/Requirements.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-RequirementsSource.json",
+    "fshName": "RequirementsSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 109,
+    "endLine": 122
+  },
+  {
+    "outputFile": "StructureDefinition-SGActivityDefinition.json",
+    "fshName": "SGActivityDefinition",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGActivityDefinition.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGActorExt.json",
+    "fshName": "SGActorExt",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGActor.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-SGBusinessProcess.json",
+    "fshName": "SGBusinessProcess",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGBusinessProcess.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-SGCodeSystem.json",
+    "fshName": "SGCodeSystem",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGCodeSystem.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGCommunicationRequest.json",
+    "fshName": "SGCommunicationRequest",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGCommunicationRequest.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-SGConceptMap.json",
+    "fshName": "SGConceptMap",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGConceptMap.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGDecisionTable.json",
+    "fshName": "SGDecisionTable",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGDecisionTable.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "StructureDefinition-SGDocumentation.json",
+    "fshName": "SGDocumentation",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGDocumentation.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "StructureDefinition-SGImplementationGuide.json",
+    "fshName": "SGImplementationGuide",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGImplementationGuide.fsh",
+    "startLine": 1,
+    "endLine": 47
+  },
+  {
+    "outputFile": "StructureDefinition-SGLibrary.json",
+    "fshName": "SGLibrary",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGLibrary.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGLogicalModel.json",
+    "fshName": "SGLogicalModel",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGLogicalModel.fsh",
+    "startLine": 1,
+    "endLine": 40
+  },
+  {
+    "outputFile": "StructureDefinition-SGMarkdown.json",
+    "fshName": "SGMarkdown",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGDocumentation.fsh",
+    "startLine": 8,
+    "endLine": 11
+  },
+  {
+    "outputFile": "StructureDefinition-SGMeasure.json",
+    "fshName": "SGMeasure",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGMeasure.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGPlanDefinition.json",
+    "fshName": "SGPlanDefinition",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGPlanDefinition.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGQuestionnaire.json",
+    "fshName": "SGQuestionnaire",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGQuestionnaire.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-SGRequirementExt.json",
+    "fshName": "SGRequirementExt",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGDocumentation.fsh",
+    "startLine": 14,
+    "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-SGString.json",
+    "fshName": "SGString",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGUserStory.fsh",
+    "startLine": 7,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-SGStructureDefinition.json",
+    "fshName": "SGStructureDefinition",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGStructureDefinition.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGStructureMap.json",
+    "fshName": "SGStructureMap",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGStructureMap.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-SGTask.json",
+    "fshName": "SGTask",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGTask.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-SGUserStory.json",
+    "fshName": "SGUserStory",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGUserStory.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-SGValueSet.json",
+    "fshName": "SGValueSet",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGValueSet.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-Satisfies.json",
+    "fshName": "Satisfies",
+    "fshType": "Extension",
+    "fshFile": "extensions/Satisfies.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-SushiConfigLogicalModel.json",
+    "fshName": "SushiConfigLogicalModel",
+    "fshType": "Logical",
+    "fshFile": "models/SushiConfigLogicalModel.fsh",
+    "startLine": 1,
+    "endLine": 95
+  },
+  {
+    "outputFile": "StructureDefinition-TestScenario.json",
+    "fshName": "TestScenario",
+    "fshType": "Logical",
+    "fshFile": "models/TestScenario.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-TestScenarioSource.json",
+    "fshName": "TestScenarioSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 124,
+    "endLine": 137
+  },
+  {
+    "outputFile": "StructureDefinition-UserScenario.json",
+    "fshName": "UserScenario",
+    "fshType": "Logical",
+    "fshFile": "models/UserScenario.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-UserScenarioSource.json",
+    "fshName": "UserScenarioSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 34,
+    "endLine": 47
+  },
+  {
+    "outputFile": "ValueSet-CDHIv1.1.json",
+    "fshName": "CDHIv1.1",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv1.1.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "ValueSet-CDHIv1.2.json",
+    "fshName": "CDHIv1.2",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv1.2.fsh",
+    "startLine": 1,
+    "endLine": 48
+  },
+  {
+    "outputFile": "ValueSet-CDHIv1.3.json",
+    "fshName": "CDHIv1.3",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv1.3.fsh",
+    "startLine": 1,
+    "endLine": 40
+  },
+  {
+    "outputFile": "ValueSet-CDHIv1.4.json",
+    "fshName": "CDHIv1.4",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv1.4.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "ValueSet-CDHIv1.json",
+    "fshName": "CDHIv1",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv1.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-CDHIv2.1.json",
+    "fshName": "CDHIv2.1",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv2.1.fsh",
+    "startLine": 1,
+    "endLine": 33
+  },
+  {
+    "outputFile": "ValueSet-CDHIv2.2.json",
+    "fshName": "CDHIv2.2",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv2.2.fsh",
+    "startLine": 1,
+    "endLine": 52
+  },
+  {
+    "outputFile": "ValueSet-CDHIv2.3.json",
+    "fshName": "CDHIv2.3",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv2.3.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "ValueSet-CDHIv2.4.json",
+    "fshName": "CDHIv2.4",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv2.4.fsh",
+    "startLine": 1,
+    "endLine": 30
+  },
+  {
+    "outputFile": "ValueSet-CDHIv2.json",
+    "fshName": "CDHIv2",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv2.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-CDSCv1.json",
+    "fshName": "CDSCv1",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv1.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.A.json",
+    "fshName": "CDSCv2.A",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.A.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.B.json",
+    "fshName": "CDSCv2.B",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.B.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.C.json",
+    "fshName": "CDSCv2.C",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.C.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.D.json",
+    "fshName": "CDSCv2.D",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.D.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.E.json",
+    "fshName": "CDSCv2.E",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.E.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.json",
+    "fshName": "CDSCv2",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-CoreDataElementTypeVS.json",
+    "fshName": "CoreDataElementTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CoreDataElementTypeVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-DecisionTableActions.json",
+    "fshName": "DecisionTableActions",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/DecisionTableActions.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-DocumentationSection.json",
+    "fshName": "DocumentationSection",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/DocumentationSections.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-ISCO08ValueSet.json",
+    "fshName": "ISCO08ValueSet",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/ISCO08ValueSet.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-SGAuthoringPersonaTypesVS.json",
+    "fshName": "SGAuthoringPersonaTypesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/SGAuthoringSkillsVS.fsh",
+    "startLine": 10,
+    "endLine": 16
+  },
+  {
+    "outputFile": "ValueSet-SGAuthoringSkillsVS.json",
+    "fshName": "SGAuthoringSkillsVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/SGAuthoringSkillsVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-SGPersonaTypesVS.json",
+    "fshName": "SGPersonaTypesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/SGPersonaTypes.fsh",
+    "startLine": 1,
+    "endLine": 8
+  }
+]
