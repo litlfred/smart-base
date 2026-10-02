@@ -83,8 +83,26 @@ IG's id.
 3. **Dotted IG ids are not instance names.** A harness instantiated per IG
    needs a fixed id-to-name mapping. Here that is dots to hyphens.
 
+## Round 3 (2026-10-02): the chrome ships with the harness (plan Q4)
+
+Owner: *"go"*, which picks option 1, give the chrome a home with the harness.
+
+- **The fix.** `chromeFileFor` now looks in an instance's `themes`
+  directories before its `fhir-artifact-index`. This takes 8 files and
+  +14/−7 lines on top of stage D. It is offered to stage D's owner on
+  litlfred/folio-assistant#1795.
+- **On this branch,** `chrome.json` moves from `smart-base/fhir-artifact-index/`
+  (the IG data) to `themes/` at the root (the harness, beside the
+  template's WHO theme).
+- **Result.** `gen-ig-pages --instance smart-base --chrome-owner smart-base`
+  applies the chrome from the harness: 35 tokens, 2 template layers. The
+  pages match round 2.
+- **In folio-assistant,** the same move keeps smart-base's 226 pages and
+  smart-trust's 681 pages byte-identical. Kind validators and the theme
+  check pass.
+
 ## Still not done
 
-- Q4: give the chrome its own graph kind, so it can ship with the harness.
+- Q4 lands in folio-assistant: see round 3; it waits on stage D's owner.
 - Re-run on stage D's final head once #1795 merges.
 - No workflow added, and no WHO repository touched.
