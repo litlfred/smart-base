@@ -36,16 +36,55 @@ is litlfred/smart-trust#3.
 | `gen-ig-pages --instance smart-base --label "WHO SMART Base" --chrome-owner smart-base --summary --check`, with the 23 platform files of litlfred/smart-trust#3 and the templates | **pass**: 299 pages byte-identical |
 | `ingest-ig-menu --source . --out smart-base/fhir-artifact-index` | written: 4 groups (Home, Authoring, Downloads, Indices) |
 
-## Not done yet: round 2
+## Round 2 (2026-10-02): the harness at the root, the IG data under `smart-base/`
 
-- **Plan Q1(a): move the harness definition out of `smart-base/` to the
-  repository root.** That covers `skills/`, `tools/`, `methodologies/`,
-  `scenarios/`, `processes/` and `schemas/`. The IG's own data stays under
-  `smart-base/`, like every other IG.
-  - It waits on stage D (litlfred/folio-assistant#1795), which is still
-    consolidating these same files in folio-assistant.
-  - It also needs `smart-base.json`'s directory paths re-pointed. Doing it
-    first would race that work.
-- **Plan Q4: ship `chrome.json` with the harness.** Then smart-trust's
-  pages stop reading smart-base's data, and its fork stops carrying a copy.
-- No workflow is added and no WHO repository is touched.
+Owner: *"start smart-base round 2 after stage D"*, then **"1"**. Under that
+choice the harness keeps the name `smart-base`, and the IG's data takes the
+IG's id.
+
+- **Built from stage D.** The base is litlfred/folio-assistant#1795 at
+  `09fa3058`: the theme has moved from smart-trust, the chrome is re-keyed to
+  its template, and smart-l1 and smart-dak are retired. #1766's
+  instance-identity fix (`853f9532`) is applied on top.
+- **Harness, `smart-base`, at the repository root (plan Q1(a)).**
+  - Declared in `smart-base.json`, with `livesAt` set to litlfred/smart-base.
+  - Holds `skills/`, `tools/`, `methodologies/`, `processes/`, `schemas/`,
+    `scenarios/`, `themes/` and `AGENTS.md`.
+  - None of these names existed in this repository before, so nothing was
+    overwritten.
+- **IG data, `smart-who-int-base`, under `smart-base/`.**
+  - Declared in `smart-base/smart-who-int-base.json`, with
+    `needs: [smart-base]`.
+  - Holds `docs/`, `library/` (plan Q2(a)), `fhir-artifact-index/` and
+    `test/results/`.
+  - The id is the IG's, `smart.who.int.base`, with dots as hyphens. Instance
+    names allow only `[a-z0-9-]`.
+- **Both declarations validate** under `readDeclaration`, and
+  `instanceRootsIn` finds both.
+
+| check, with stage D's platform code | result |
+|---|---|
+| `gen-ig-pages --instance smart-base --chrome-owner smart-who-int-base --summary` | 225 of 226 pages byte-identical. `index.md` differs in one line: it names the data instance `smart-who-int-base`, as the rename intends. |
+| the same run, plus round 1's `menu.json` | adds the 4 menu section pages |
+
+### Findings
+
+1. **Plan Q4 is not met by the lookup as written.**
+   - `chromeFileFor` finds the chrome only in an instance's
+     `fhir-artifact-index` directories.
+   - A harness that holds no artefact index therefore cannot carry the
+     chrome, so here it stays with the IG data (`--chrome-owner
+     smart-who-int-base`).
+   - To ship the chrome with the harness, the lookup needs a graph kind of
+     its own for the chrome.
+2. **Stage D's pages no longer embed the instance in asset URLs.** The only
+   identity left in the pages is the `harness_details` include, so the rename
+   is close to free.
+3. **Dotted IG ids are not instance names.** A harness instantiated per IG
+   needs a fixed id-to-name mapping. Here that is dots to hyphens.
+
+## Still not done
+
+- Q4: give the chrome its own graph kind, so it can ship with the harness.
+- Re-run on stage D's final head once #1795 merges.
+- No workflow added, and no WHO repository touched.
