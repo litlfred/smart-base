@@ -2,10 +2,10 @@
   "$schema": "kg-qa/v1",
   "subject": {
     "kind": "skill",
-    "id": "ig-artifact-ingestion",
-    "path": "skills/content/authoring-who-smart-guidelines/ig-artifact-ingestion.md"
+    "id": "SKILL",
+    "path": "skills/voices/who-digital-transformation-handbook/SKILL.md"
   },
-  "source_hash": "b286b02129b0",
+  "source_hash": "224e461d5b88",
   "criteria": {
     "skill-is-a-stub": {
       "result": "pass",
