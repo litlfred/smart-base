@@ -5,7 +5,7 @@
       "@base": "https://litlfred.github.io/folio/"
     }
   ],
-  "@id": "library/9789240101197-eng/manifest",
+  "@id": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789240101197-eng/manifest.jsonld",
   "@type": [
     "folio-assistant-core:SourceDocument"
   ],
@@ -93,6 +93,7 @@
   "provenance": "ingested",
   "meta": {
     "doc_id": "9789240101197-eng",
+    "title_source": "slug",
     "source_file": "9789240101197-eng.pdf",
     "source_sha256": "cd157b40eef513c13129ea10b286db75a7fbcda405716a44cc06775f75aa9ad2",
     "arxiv": null,
