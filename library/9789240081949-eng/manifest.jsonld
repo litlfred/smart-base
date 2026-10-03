@@ -5,7 +5,7 @@
       "@base": "https://litlfred.github.io/folio/"
     }
   ],
-  "@id": "library/9789240081949-eng/manifest",
+  "@id": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789240081949-eng/manifest.jsonld",
   "@type": [
     "folio-assistant-core:SourceDocument"
   ],
@@ -82,6 +82,7 @@
   "meta": {
     "doc_id": "9789240081949-eng",
     "title_source": "editorial",
+    "title_from": "structure.json metadata.title_correction.title",
     "title_verified": true,
     "title_correction": {
       "title": "Classification of digital interventions, services and applications in health: a shared language to describe the uses of digital technology for health",
