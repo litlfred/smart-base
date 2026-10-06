@@ -45,11 +45,11 @@
 
 name: PR Preview Deploy (approval required)
 
+# Disabled in this fork (owner decision, 2026-10-06): no automatic PR preview.
+# Its jobs need a pull_request event, so a manual run does nothing; a preview
+# can still be requested with the /deploy slash comment (pr-deploy-slash.yml).
 on:
-  pull_request_target:
-    branches-ignore:
-      - 'gh-pages'
-    types: [opened, synchronize, reopened]
+  workflow_dispatch:
 
 # One active preview deployment per PR branch at a time.
 # A new push cancels any pending approval for the previous commit so that
