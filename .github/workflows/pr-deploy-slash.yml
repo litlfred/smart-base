@@ -5,9 +5,11 @@ name: PR Slash-Command Deploy
 # The /deploy command is recognized when it appears at the start of the comment
 # or at the start of any line within the comment (e.g. after "@copilot ...").
 
+# Manual trigger only (owner decision, 2026-10-06): GitHub workflows here are
+# defined, not run automatically. Start it from the Actions tab.
+# (workflow_call, if present, is kept so other repositories can call it.)
 on:
-  issue_comment:
-    types: [created]
+  workflow_dispatch:
 
 jobs:
   dispatch:

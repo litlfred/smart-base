@@ -7,11 +7,10 @@
 
 name: Knowledge graph schema
 
+# Manual trigger only (owner decision, 2026-10-06): GitHub workflows here are
+# defined, not run automatically. Start it from the Actions tab.
+# (workflow_call, if present, is kept so other repositories can call it.)
 on:
-  push:
-    paths: ['kg/**', 'input/fsh/models/KG*.fsh', 'input/fsh/codesystems/KG*.fsh', 'input/fsh/valuesets/KG*.fsh', '.github/workflows/kg.yml']
-  pull_request:
-    paths: ['kg/**', 'input/fsh/models/KG*.fsh', 'input/fsh/codesystems/KG*.fsh', 'input/fsh/valuesets/KG*.fsh', '.github/workflows/kg.yml']
   workflow_dispatch:
 
 permissions:
