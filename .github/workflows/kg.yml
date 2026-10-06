@@ -1,0 +1,56 @@
+# The knowledge-graph schema (kg/): Zod source, generated FSH and JSON, and parity with smart-kg.
+#
+# kg/src/*.ts is the source. The ontology JSON, the graph JSON Schema and the FSH logical models,
+# code systems and value sets under input/fsh/ are generated from it and committed, so a consumer
+# reads them without this toolchain -- and committed generated files go stale silently, which is
+# what `npm run check` catches. The IG build (ghbuild.yml) compiles the generated FSH like any other.
+
+name: Knowledge graph schema
+
+on:
+  push:
+    paths: ['kg/**', 'input/fsh/models/KG*.fsh', 'input/fsh/codesystems/KG*.fsh', 'input/fsh/valuesets/KG*.fsh', '.github/workflows/kg.yml']
+  pull_request:
+    paths: ['kg/**', 'input/fsh/models/KG*.fsh', 'input/fsh/codesystems/KG*.fsh', 'input/fsh/valuesets/KG*.fsh', '.github/workflows/kg.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: kg
+    steps:
+      - uses: actions/checkout@v4
+
+      # The commit kg/src/l1.ts records as MIGRATED_FROM. Parity is asserted against that, not against
+      # whatever smart-kg's main is today: a later upstream change is a migration to make, not a red build.
+      - name: Check out smart-kg at the migrated commit
+        uses: actions/checkout@v4
+        with:
+          repository: WorldHealthOrganization/smart-kg
+          ref: 66a9b1393fd7f315eb4eb0dab001db5e3eb0c5ef
+          path: _smart-kg
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: kg/package-lock.json
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npx tsc -p .
+
+      - name: Generated files are current
+        run: npm run check
+
+      # Parity with smart-kg's l1.json, the negative cases, and agreement with smart-kg's validate.mjs.
+      - name: Tests
+        run: npm test
+        env:
+          SMART_KG_HOME: ${{ github.workspace }}/_smart-kg
