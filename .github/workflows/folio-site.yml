@@ -17,9 +17,9 @@
 
 name: folio site
 
+# Manual trigger only (owner decision, 2026-10-06): no build runs on push.
+# Run it from the Actions tab, on `claude/seed-smart-base`, to publish.
 on:
-  push:
-    branches: [claude/seed-smart-base]
   workflow_dispatch:
 
 permissions:
