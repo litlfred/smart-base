@@ -1,0 +1,72 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Knowledge graph L1: Intervention API",
+    "description": "PICO I. The clinical or public-health action, distinct from health-intervention, which is the DAK-facing component. Class IRI: http://smart.who.int/kg/intervention.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/StructureDefinition-KGIntervention.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model StructureDefinition-KGIntervention",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-KGIntervention.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for StructureDefinition-KGIntervention",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./StructureDefinition-KGIntervention.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StructureDefinition-KGIntervention": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/base/StructureDefinition-KGIntervention.schema.json",
+        "title": "Knowledge graph L1: Intervention",
+        "description": "PICO I. The clinical or public-health action, distinct from health-intervention, which is the DAK-facing component. Class IRI: http://smart.who.int/kg/intervention.",
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "const": "KGIntervention",
+            "description": "Resource type identifier for KGIntervention logical model"
+          },
+          "description": {
+            "type": "string",
+            "description": "PICO intervention, as described in the source."
+          }
+        },
+        "required": [
+          "resourceType"
+        ],
+        "allOf": [
+          {
+            "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "resourceDefinition": {
+                "type": "string",
+                "format": "uri",
+                "const": "http://smart.who.int/base/StructureDefinition/KGIntervention"
+              },
+              "fhir:parent": {
+                "type": "string",
+                "const": "http://hl7.org/fhir/StructureDefinition/Base"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

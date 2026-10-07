@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "eb6be59e-974a-4da2-baa7-aed609c14d43-174",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/eb6be59e-974a-4da2-baa7-aed609c14d43-174",
+  "name" : "IntersectionCDSCv2.CAndCDSCv2.C",
+  "title" : "Intersection of Services and Application Types: Registries and Directories And Services and Application Types: Registries and Directories",
+  "status" : "active",
+  "date" : "2026-10-06T16:11:20+00:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "C"
+      },
+      {
+        "code" : "C1"
+      },
+      {
+        "code" : "C2"
+      },
+      {
+        "code" : "C3"
+      },
+      {
+        "code" : "C4"
+      },
+      {
+        "code" : "C5"
+      },
+      {
+        "code" : "C6"
+      },
+      {
+        "code" : "C7"
+      },
+      {
+        "code" : "C8"
+      },
+      {
+        "code" : "C9"
+      },
+      {
+        "code" : "C10"
+      },
+      {
+        "code" : "C11"
+      }]
+    }]
+  }
+}

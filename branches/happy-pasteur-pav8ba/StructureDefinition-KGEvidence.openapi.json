@@ -1,0 +1,152 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Knowledge graph L1: Evidence API",
+    "description": "The body of evidence behind a recommendation, with its GRADE certainty rating. Class IRI: http://smart.who.int/kg/evidence.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/StructureDefinition-KGEvidence.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model StructureDefinition-KGEvidence",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-KGEvidence.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for StructureDefinition-KGEvidence",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./StructureDefinition-KGEvidence.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StructureDefinition-KGEvidence": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/base/StructureDefinition-KGEvidence.schema.json",
+        "title": "Knowledge graph L1: Evidence",
+        "description": "The body of evidence behind a recommendation, with its GRADE certainty rating. Class IRI: http://smart.who.int/kg/evidence.",
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "const": "KGEvidence",
+            "description": "Resource type identifier for KGEvidence logical model"
+          },
+          "@context": {
+            "description": "JSON-LD context for this logical model with ValueSet vocabularies",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "URI reference to external JSON-LD context"
+              },
+              {
+                "type": "object",
+                "description": "Inline JSON-LD context",
+                "properties": {
+                  "@version": {
+                    "type": "number",
+                    "const": 1.1
+                  },
+                  "fhir": {
+                    "type": "string",
+                    "const": "http://hl7.org/fhir/"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              {
+                "type": "array",
+                "description": "Array of JSON-LD context objects/URIs",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    {
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "@type": {
+            "type": "string",
+            "description": "JSON-LD type identifier for KGEvidence logical model",
+            "examples": [
+              "LogicalModel-KGEvidence"
+            ]
+          },
+          "summary": {
+            "type": "string",
+            "description": "Summary of the body of evidence."
+          },
+          "certainty": {
+            "$ref": "./ValueSet-KGGradeCertaintyVS.schema.json",
+            "description": "GRADE certainty of the body of evidence."
+          },
+          "studyCount": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Number of studies in the body of evidence."
+          },
+          "citation": {
+            "type": "string",
+            "description": "Bibliographic citation of the evidence review."
+          }
+        },
+        "required": [
+          "resourceType"
+        ],
+        "allOf": [
+          {
+            "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "resourceDefinition": {
+                "type": "string",
+                "format": "uri",
+                "const": "http://smart.who.int/base/StructureDefinition/KGEvidence"
+              },
+              "fhir:parent": {
+                "type": "string",
+                "const": "http://hl7.org/fhir/StructureDefinition/Base"
+              },
+              "jsonld:valuesets": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "const": [
+                  "KGGradeCertaintyVS"
+                ]
+              },
+              "jsonld:contextTemplate": {
+                "type": "object",
+                "const": {
+                  "@version": 1.1,
+                  "fhir": "http://hl7.org/fhir/",
+                  "KGGradeCertaintyVS": "http://smart.who.int/base/ValueSet-KGGradeCertaintyVS.jsonld"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

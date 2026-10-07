@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-KGPopulation.schema.json",
+  "title": "Knowledge graph L1: Population",
+  "description": "PICO P. Class IRI: http://smart.who.int/kg/population.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "KGPopulation",
+      "description": "Resource type identifier for KGPopulation logical model"
+    },
+    "description": {
+      "type": "string",
+      "description": "PICO population, as described in the source."
+    },
+    "ageRange": {
+      "type": "string",
+      "description": "Age range of the population, as stated."
+    },
+    "qualifier": {
+      "type": "string",
+      "description": "Further qualification of the population, as stated."
+    }
+  },
+  "required": [
+    "resourceType"
+  ],
+  "resourceDefinition": "http://smart.who.int/base/StructureDefinition/KGPopulation",
+  "fhir:parent": "http://hl7.org/fhir/StructureDefinition/Base"
+}

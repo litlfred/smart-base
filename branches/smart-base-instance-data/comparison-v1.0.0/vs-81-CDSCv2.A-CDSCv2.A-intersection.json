@@ -1,0 +1,43 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "4a057eea-fbb1-4e14-985f-ad74b219b091-168",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/4a057eea-fbb1-4e14-985f-ad74b219b091-168",
+  "name" : "IntersectionCDSCv2.AAndCDSCv2.A",
+  "title" : "Intersection of Services and Application Types: Point of Service And Services and Application Types: Point of Service",
+  "status" : "active",
+  "date" : "2026-10-06T12:17:43+00:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "A"
+      },
+      {
+        "code" : "A1"
+      },
+      {
+        "code" : "A2"
+      },
+      {
+        "code" : "A3"
+      },
+      {
+        "code" : "A4"
+      },
+      {
+        "code" : "A5"
+      },
+      {
+        "code" : "A6"
+      },
+      {
+        "code" : "A7"
+      },
+      {
+        "code" : "A8"
+      },
+      {
+        "code" : "A9"
+      }]
+    }]
+  }
+}

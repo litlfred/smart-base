@@ -1,0 +1,231 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Knowledge graph L1: Publication API",
+    "description": "A WHO normative publication: a guideline, guidance, recommendation summary, or classification. Metadata follows Dublin Core, which HealthInterventions already uses. publicationType distinguishes normative guideline from guidance from summary table — a summary table restates recommendations made elsewhere, and conflating the two makes provenance wrong. identifier holds ISBN/ISSN/DOI, as CDHIv2 already does. sha256 pins the PDF. Derives from DublinCore (smart-base input/fsh/models/DublinCore.fsh); title, creator, publisher, date, identifier, language, rights are its elements. Class IRI: http://smart.who.int/kg/publication.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/StructureDefinition-KGPublication.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model StructureDefinition-KGPublication",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-KGPublication.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for StructureDefinition-KGPublication",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./StructureDefinition-KGPublication.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StructureDefinition-KGPublication": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/base/StructureDefinition-KGPublication.schema.json",
+        "title": "Knowledge graph L1: Publication",
+        "description": "A WHO normative publication: a guideline, guidance, recommendation summary, or classification. Metadata follows Dublin Core, which HealthInterventions already uses. publicationType distinguishes normative guideline from guidance from summary table — a summary table restates recommendations made elsewhere, and conflating the two makes provenance wrong. identifier holds ISBN/ISSN/DOI, as CDHIv2 already does. sha256 pins the PDF. Derives from DublinCore (smart-base input/fsh/models/DublinCore.fsh); title, creator, publisher, date, identifier, language, rights are its elements. Class IRI: http://smart.who.int/kg/publication.",
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "const": "KGPublication",
+            "description": "Resource type identifier for KGPublication logical model"
+          },
+          "@context": {
+            "description": "JSON-LD context for this logical model with ValueSet vocabularies",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "URI reference to external JSON-LD context"
+              },
+              {
+                "type": "object",
+                "description": "Inline JSON-LD context",
+                "properties": {
+                  "@version": {
+                    "type": "number",
+                    "const": 1.1
+                  },
+                  "fhir": {
+                    "type": "string",
+                    "const": "http://hl7.org/fhir/"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              {
+                "type": "array",
+                "description": "Array of JSON-LD context objects/URIs",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    {
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "@type": {
+            "type": "string",
+            "description": "JSON-LD type identifier for KGPublication logical model",
+            "examples": [
+              "LogicalModel-KGPublication"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "description": "A name given to the resource"
+          },
+          "creator": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "An entity responsible for making the resource"
+          },
+          "subject": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The topic of the resource"
+          },
+          "description": {
+            "type": "string",
+            "description": "An account of the resource"
+          },
+          "publisher": {
+            "type": "string",
+            "description": "An entity responsible for making the resource available"
+          },
+          "contributor": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "An entity responsible for making contributions to the resource"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "A point or period of time associated with an event in the lifecycle of the resource"
+          },
+          "type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The nature or genre of the resource"
+          },
+          "format": {
+            "type": "string",
+            "description": "The file format, physical medium, or dimensions of the resource"
+          },
+          "identifier": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "An unambiguous reference to the resource within a given context"
+          },
+          "source": {
+            "type": "string",
+            "description": "A related resource from which the described resource is derived"
+          },
+          "language": {
+            "type": "string",
+            "description": "A language of the resource"
+          },
+          "relation": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A related resource"
+          },
+          "coverage": {
+            "type": "string",
+            "description": "The spatial or temporal topic of the resource"
+          },
+          "rights": {
+            "type": "string",
+            "description": "Information about rights held in and over the resource"
+          },
+          "version": {
+            "type": "string",
+            "description": "Edition or version, as printed."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Where the publication is published."
+          },
+          "sha256": {
+            "type": "string",
+            "description": "Hash of the PDF the extraction read; pins the source."
+          },
+          "publicationType": {
+            "$ref": "./ValueSet-KGPublicationTypeVS.schema.json",
+            "description": "Normative guideline, guidance, summary table or classification. Unset when the publication is none of these."
+          }
+        },
+        "required": [
+          "resourceType"
+        ],
+        "allOf": [
+          {
+            "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "resourceDefinition": {
+                "type": "string",
+                "format": "uri",
+                "const": "http://smart.who.int/base/StructureDefinition/KGPublication"
+              },
+              "fhir:parent": {
+                "type": "string",
+                "const": "http://smart.who.int/base/StructureDefinition/DublinCore"
+              },
+              "jsonld:valuesets": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "const": [
+                  "KGPublicationTypeVS"
+                ]
+              },
+              "jsonld:contextTemplate": {
+                "type": "object",
+                "const": {
+                  "@version": 1.1,
+                  "fhir": "http://hl7.org/fhir/",
+                  "KGPublicationTypeVS": "http://smart.who.int/base/ValueSet-KGPublicationTypeVS.jsonld"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

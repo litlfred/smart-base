@@ -1,0 +1,64 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Knowledge graph: GRADE certainty of evidence Schema API",
+    "description": "JSON Schema for Knowledge graph: GRADE certainty of evidence ValueSet codes. Values are represented as Coding objects with 'system' and 'code' properties.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/ValueSet-KGGradeCertaintyVS.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the enumeration ValueSet-KGGradeCertaintyVS",
+        "description": "This endpoint serves the JSON Schema definition for the enumeration ValueSet-KGGradeCertaintyVS.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for ValueSet-KGGradeCertaintyVS",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./ValueSet-KGGradeCertaintyVS.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ValueSet-KGGradeCertaintyVS": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/base/ValueSet-KGGradeCertaintyVS.schema.json",
+        "title": "Knowledge graph: GRADE certainty of evidence Schema",
+        "description": "JSON Schema for Knowledge graph: GRADE certainty of evidence ValueSet codes. Values are represented as Coding objects with 'system' and 'code' properties.",
+        "type": "object",
+        "required": [
+          "system",
+          "code"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "system": {
+            "type": "string",
+            "const": "http://smart.who.int/base/CodeSystem/KGGradeCertainty"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "high",
+              "moderate",
+              "low",
+              "very-low"
+            ]
+          }
+        },
+        "narrative": "This schema validates Coding-shaped objects for the Knowledge graph: GRADE certainty of evidence ValueSet. Each value must be an object with 'system' (CodeSystem URI) and 'code' (fragment after '#') properties. Display values are available at http://smart.who.int/base/ValueSet-KGGradeCertaintyVS.displays.json. The canonical IRI for a code can be reconstructed as system + '#' + code. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+        "fhir:displays": "http://smart.who.int/base/ValueSet-KGGradeCertaintyVS.displays.json",
+        "fhir:valueSet": "http://smart.who.int/base/ValueSet/KGGradeCertaintyVS",
+        "fhir:version": "0.3.0",
+        "fhir:expansionTimestamp": "2026-10-06T11:01:35+00:00"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "4a057eea-fbb1-4e14-985f-ad74b219b091-177",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/4a057eea-fbb1-4e14-985f-ad74b219b091-177",
+  "name" : "IntersectionCDSCv2.DAndCDSCv2.D",
+  "title" : "Intersection of Services and Application Types: Data Management Services And Services and Application Types: Data Management Services",
+  "status" : "active",
+  "date" : "2026-10-06T12:17:43+00:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "D"
+      },
+      {
+        "code" : "D1"
+      },
+      {
+        "code" : "D2"
+      },
+      {
+        "code" : "D3"
+      },
+      {
+        "code" : "D4"
+      },
+      {
+        "code" : "D5"
+      },
+      {
+        "code" : "D6"
+      },
+      {
+        "code" : "D7"
+      },
+      {
+        "code" : "D8"
+      }]
+    }]
+  }
+}

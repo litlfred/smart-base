@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Knowledge graph L1: Comparator API",
+    "description": "PICO C. Frequently absent in WHO recommendations; absence is recorded rather than invented. Class IRI: http://smart.who.int/kg/comparator.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/StructureDefinition-KGComparator.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model StructureDefinition-KGComparator",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-KGComparator.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for StructureDefinition-KGComparator",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./StructureDefinition-KGComparator.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StructureDefinition-KGComparator": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/base/StructureDefinition-KGComparator.schema.json",
+        "title": "Knowledge graph L1: Comparator",
+        "description": "PICO C. Frequently absent in WHO recommendations; absence is recorded rather than invented. Class IRI: http://smart.who.int/kg/comparator.",
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "const": "KGComparator",
+            "description": "Resource type identifier for KGComparator logical model"
+          },
+          "description": {
+            "type": "string",
+            "description": "PICO comparator, as described in the source."
+          }
+        },
+        "required": [
+          "resourceType"
+        ],
+        "resourceDefinition": "http://smart.who.int/base/StructureDefinition/KGComparator",
+        "fhir:parent": "http://hl7.org/fhir/StructureDefinition/Base"
+      }
+    }
+  }
+}

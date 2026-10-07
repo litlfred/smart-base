@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-KGSchedule.schema.json",
+  "title": "Knowledge graph L1: Schedule",
+  "description": "A normative delivery schedule. Grounded: the BCG table cites \"WHO recommendations for routine immunization – summary tables\", which IS a schedule publication — the single most-cited L1 source in the immunization DAK. Class IRI: http://smart.who.int/kg/schedule.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "KGSchedule",
+      "description": "Resource type identifier for KGSchedule logical model"
+    },
+    "identifier": {
+      "type": "string",
+      "description": "Identifier of the schedule, where the source gives one."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the schedule (a summary table's title)."
+    },
+    "scope": {
+      "type": "string",
+      "description": "Who or what the schedule covers, as stated."
+    }
+  },
+  "required": [
+    "resourceType"
+  ],
+  "allOf": [
+    {
+      "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "resourceDefinition": {
+          "type": "string",
+          "format": "uri",
+          "const": "http://smart.who.int/base/StructureDefinition/KGSchedule"
+        },
+        "fhir:parent": {
+          "type": "string",
+          "const": "http://hl7.org/fhir/StructureDefinition/Base"
+        }
+      }
+    }
+  ]
+}

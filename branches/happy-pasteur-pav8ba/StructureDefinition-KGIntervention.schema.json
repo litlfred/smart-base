@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-KGIntervention.schema.json",
+  "title": "Knowledge graph L1: Intervention",
+  "description": "PICO I. The clinical or public-health action, distinct from health-intervention, which is the DAK-facing component. Class IRI: http://smart.who.int/kg/intervention.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "KGIntervention",
+      "description": "Resource type identifier for KGIntervention logical model"
+    },
+    "description": {
+      "type": "string",
+      "description": "PICO intervention, as described in the source."
+    }
+  },
+  "required": [
+    "resourceType"
+  ],
+  "allOf": [
+    {
+      "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "resourceDefinition": {
+          "type": "string",
+          "format": "uri",
+          "const": "http://smart.who.int/base/StructureDefinition/KGIntervention"
+        },
+        "fhir:parent": {
+          "type": "string",
+          "const": "http://hl7.org/fhir/StructureDefinition/Base"
+        }
+      }
+    }
+  ]
+}

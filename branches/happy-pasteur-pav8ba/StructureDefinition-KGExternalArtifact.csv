@@ -1,0 +1,9 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"KGExternalArtifact","KGExternalArtifact","","","",0,*,"","","","null {[]} {[]}
+","Knowledge graph L1: External artefact","An L2 or L3 artefact addressed by canonical URL — a BPMN process, a DMN decision table, a FHIR PlanDefinition. Deliberately opaque: it carries an IRI and a free-text kind, and this graph asserts nothing about its internal structure. That opacity is the boundary. The L2 and L3 subgraphs model those artefacts properly; L1 only needs to point. Class IRI: http://smart.who.int/kg/external-artifact.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"KGExternalArtifact.iri","KGExternalArtifact.iri","","","",0,1,"","","","uri {[]} {[]}
+","IRI","Canonical URL or IRI of the L2 or L3 artefact.","","","","","","","","","",,,,,"",,,,"KGExternalArtifact.iri",0,1,"",""
+"KGExternalArtifact.targetKind","KGExternalArtifact.targetKind","","","",0,1,"","","","string {[]} {[]}
+","Target kind","What kind of artefact it is, free text (""DMN decision table"", ""DAK component"").","","","","","","","","","",,,,,"",,,,"KGExternalArtifact.targetKind",0,1,"",""
+"KGExternalArtifact.version","KGExternalArtifact.version","","","",0,1,"","","","string {[]} {[]}
+","Version","Version of the artefact, where known.","","","","","","","","","",,,,,"",,,,"KGExternalArtifact.version",0,1,"",""

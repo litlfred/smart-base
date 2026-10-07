@@ -1,0 +1,15 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"KGScheduleEntry","KGScheduleEntry","","","",0,*,"","","","null {[]} {[]}
+","Knowledge graph L1: Schedule entry","One row of a schedule: which intervention, for whom, when, how many doses. This is the granularity a decision table actually consumes — the BCG rules turn on dose count, age and interval since a live vaccine. Class IRI: http://smart.who.int/kg/schedule-entry.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"KGScheduleEntry.antigen","KGScheduleEntry.antigen","","","",0,1,"","","","string {[]} {[]}
+","Antigen","The antigen or vaccine the row is about.","","","","","","","","","",,,,,"",,,,"KGScheduleEntry.antigen",0,1,"",""
+"KGScheduleEntry.doseNumber","KGScheduleEntry.doseNumber","","","",0,1,"","","","string {[]} {[]}
+","Dose number","Dose in the series as printed (""1"", ""Booster 1""). Text, because schedules label boosters rather than count them.","","","","","","","","","",,,,,"",,,,"KGScheduleEntry.doseNumber",0,1,"",""
+"KGScheduleEntry.series","KGScheduleEntry.series","","","",0,1,"","","","string {[]} {[]}
+","Series","Primary series or booster series, as stated.","","","","","","","","","",,,,,"",,,,"KGScheduleEntry.series",0,1,"",""
+"KGScheduleEntry.targetAge","KGScheduleEntry.targetAge","","","",0,1,"","","","string {[]} {[]}
+","Target age","Age at which the dose is due, as stated.","","","","","","","","","",,,,,"",,,,"KGScheduleEntry.targetAge",0,1,"",""
+"KGScheduleEntry.minimumInterval","KGScheduleEntry.minimumInterval","","","",0,1,"","","","string {[]} {[]}
+","Minimum interval","Minimum interval since the previous dose, as stated.","","","","","","","","","",,,,,"",,,,"KGScheduleEntry.minimumInterval",0,1,"",""
+"KGScheduleEntry.note","KGScheduleEntry.note","","","",0,1,"","","","string {[]} {[]}
+","Note","The row's footnote or remark, verbatim.","","","","","","","","","",,,,,"",,,,"KGScheduleEntry.note",0,1,"",""

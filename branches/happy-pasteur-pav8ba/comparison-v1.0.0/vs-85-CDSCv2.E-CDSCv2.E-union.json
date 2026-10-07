@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "8ec4a331-8b9d-469b-ac13-8e8f74936424-179",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/8ec4a331-8b9d-469b-ac13-8e8f74936424-179",
+  "name" : "UnionCDSCv2.EAndCDSCv2.E",
+  "title" : "Union of Services and Application Types: Surveillance and Response And Services and Application Types: Surveillance and Response",
+  "status" : "active",
+  "date" : "2026-10-07T12:51:41+00:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "E"
+      },
+      {
+        "code" : "E1"
+      },
+      {
+        "code" : "E2"
+      }]
+    }]
+  }
+}

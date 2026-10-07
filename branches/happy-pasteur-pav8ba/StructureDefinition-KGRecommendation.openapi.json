@@ -1,0 +1,161 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Knowledge graph L1: Recommendation API",
+    "description": "The atomic normative statement. This is the node nothing in the WHO estate currently makes addressable. statement is a VERBATIM quote, never a paraphrase — a paraphrased recommendation is a new recommendation. strength is GRADE (strong | conditional); certainty is GRADE (high | moderate | low | very-low); conditionality records the 'in settings where…' qualifier that decides whether a DAK can adopt it unchanged. Class IRI: http://smart.who.int/kg/recommendation.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/StructureDefinition-KGRecommendation.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model StructureDefinition-KGRecommendation",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-KGRecommendation.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for StructureDefinition-KGRecommendation",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./StructureDefinition-KGRecommendation.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StructureDefinition-KGRecommendation": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/base/StructureDefinition-KGRecommendation.schema.json",
+        "title": "Knowledge graph L1: Recommendation",
+        "description": "The atomic normative statement. This is the node nothing in the WHO estate currently makes addressable. statement is a VERBATIM quote, never a paraphrase — a paraphrased recommendation is a new recommendation. strength is GRADE (strong | conditional); certainty is GRADE (high | moderate | low | very-low); conditionality records the 'in settings where…' qualifier that decides whether a DAK can adopt it unchanged. Class IRI: http://smart.who.int/kg/recommendation.",
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "const": "KGRecommendation",
+            "description": "Resource type identifier for KGRecommendation logical model"
+          },
+          "@context": {
+            "description": "JSON-LD context for this logical model with ValueSet vocabularies",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "URI reference to external JSON-LD context"
+              },
+              {
+                "type": "object",
+                "description": "Inline JSON-LD context",
+                "properties": {
+                  "@version": {
+                    "type": "number",
+                    "const": 1.1
+                  },
+                  "fhir": {
+                    "type": "string",
+                    "const": "http://hl7.org/fhir/"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              {
+                "type": "array",
+                "description": "Array of JSON-LD context objects/URIs",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    {
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "@type": {
+            "type": "string",
+            "description": "JSON-LD type identifier for KGRecommendation logical model",
+            "examples": [
+              "LogicalModel-KGRecommendation"
+            ]
+          },
+          "identifier": {
+            "type": "string",
+            "description": "The recommendation's label or number as printed."
+          },
+          "statement": {
+            "type": "string",
+            "description": "The recommendation text, VERBATIM. A paraphrased recommendation is a new recommendation."
+          },
+          "strength": {
+            "$ref": "./ValueSet-KGGradeStrengthVS.schema.json",
+            "description": "GRADE strength, as stated in the source."
+          },
+          "certainty": {
+            "$ref": "./ValueSet-KGGradeCertaintyVS.schema.json",
+            "description": "GRADE certainty of evidence, as stated in the source."
+          },
+          "conditionality": {
+            "type": "string",
+            "description": "The 'in settings where…' qualifier, verbatim, that decides whether a DAK can adopt the recommendation unchanged."
+          },
+          "status": {
+            "type": "string",
+            "description": "The recommendation's standing in its publication (for example current or superseded), as stated."
+          }
+        },
+        "required": [
+          "resourceType"
+        ],
+        "allOf": [
+          {
+            "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "resourceDefinition": {
+                "type": "string",
+                "format": "uri",
+                "const": "http://smart.who.int/base/StructureDefinition/KGRecommendation"
+              },
+              "fhir:parent": {
+                "type": "string",
+                "const": "http://hl7.org/fhir/StructureDefinition/Base"
+              },
+              "jsonld:valuesets": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "const": [
+                  "KGGradeCertaintyVS",
+                  "KGGradeStrengthVS"
+                ]
+              },
+              "jsonld:contextTemplate": {
+                "type": "object",
+                "const": {
+                  "@version": 1.1,
+                  "fhir": "http://hl7.org/fhir/",
+                  "KGGradeCertaintyVS": "http://smart.who.int/base/ValueSet-KGGradeCertaintyVS.jsonld",
+                  "KGGradeStrengthVS": "http://smart.who.int/base/ValueSet-KGGradeStrengthVS.jsonld"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
