@@ -28,14 +28,14 @@ import {
   WORKBOOK_BACKED_KINDS,
   isGeneratedArtefact,
 } from "./qa-checkers-dak";
-import { QA_CRITERIA_REGISTRY } from "../../platform.js";
+import { QA_CRITERIA_REGISTRY } from "../../platform/index.js";
 import {
   criterionAdapters,
   incompatibleCompanions,
   COMPANION_ROLES,
-} from "../../platform.js";
-import { ContributionRegistry } from "../../platform.js";
-import { loadContributionsSync } from "../../platform.js";
+} from "../../platform/index.js";
+import { ContributionRegistry } from "../../platform/index.js";
+import { loadContributionsSync } from "../../platform/index.js";
 
 /** smart-base's contribution, registered as `loadContributions` would. */
 // The registry a folio depending on smart-base gets (smart-ig's): since bean

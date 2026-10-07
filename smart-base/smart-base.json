@@ -172,9 +172,57 @@
       "graphTypologies": [
         "external-schema"
       ]
+    },
+    {
+      "id": "smart-base-platform",
+      "path": "platform/",
+      "graphTypologies": [
+        "code"
+      ],
+      "description": "The import seam: `platform/index.ts` re-exports every platform symbol this instance uses, so re-pointing the platform is a one-file edit. It sat at `platform.ts` beside the declaration until the cutover (folio-assistant#2320, bean hupw, owner 2026-10-07: 'Forks declare it'): a remote mount brings declared directories only, so a root file the mounted code imports never arrived. Declared, it travels with the code that needs it."
+    },
+    {
+      "id": "smart-base-schemas",
+      "path": "schemas/",
+      "graphTypologies": [
+        "code"
+      ],
+      "description": "The dak vocabulary in code: `dak-blocks.ts` (the block builders `content-adapters/dak.json` names), `dak-kinds.ts` and `dak-jsonld.ts` (read off `block-kinds/`), `dak-content-type.ts`, `dak.ts`, and the l2-dak-authoring skill's input/output JSON Schemas. Declared at the cutover (bean hupw) so a remote mount brings it: the mounted adapter and QA checkers name these modules."
+    },
+    {
+      "id": "smart-base-content",
+      "path": "content/",
+      "graphTypologies": [
+        "code"
+      ],
+      "description": "`content/pipeline/qa-checkers-dak.ts`, the automated DAK checkers `qa-checkers/` names (`DAK_AUTOMATED_CHECKERS`). Declared at the cutover (bean hupw) so a remote mount brings it."
+    },
+    {
+      "id": "smart-base-scripts",
+      "path": "scripts/",
+      "graphTypologies": [
+        "code"
+      ],
+      "description": "This layer's own scripts and their tests: document-kinds, the DAK components figure, the DTH term findings, the smart-kg L1 extraction and pin, and the fhir-harness exclusions check. Declared at the cutover (bean hupw) so a remote mount brings them."
+    },
+    {
+      "id": "smart-base-skills",
+      "path": "skills/",
+      "graphTypologies": [
+        "skills"
+      ],
+      "description": "The authoring-who-smart-guidelines skill package, its skill definitions and the two WHO voices; `skills/skills.json` declares the subgroups. Declared at the cutover (bean hupw), under the id the skill docs already used for it, so a remote mount brings it."
+    },
+    {
+      "id": "smart-base-scenarios",
+      "path": "scenarios/",
+      "graphTypologies": [
+        "scenarios"
+      ],
+      "description": "`scenarios/roles.json`: the roles this layer's processes bind. Declared at the cutover (bean hupw) so a remote mount brings it."
     }
   ],
-  "_directories_comment": "The list above is the count; this comment said FIVE entries while there were six, and gives none now. `scenarios/` remains undeclared until it holds content -- a declared-but-absent directory is the `dh4f` defect, where every consumer scans nothing and reports a clean run over it.",
+  "_directories_comment": "The list above is the count; this comment said FIVE entries while there were six, and gives none now. `scenarios/` is declared now that it holds `roles.json` (bean hupw); a declared-but-absent directory would be the `dh4f` defect, where every consumer scans nothing and reports a clean run over it.",
   "assets": [
     {
       "id": "agent-instructions",

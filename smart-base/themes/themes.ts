@@ -161,7 +161,7 @@ import {
   resolveTheme,
   type ResolvedTheme,
   type Theme,
-} from "../platform.js";
+} from "../platform/index.js";
 
 /** The instance these themes belong to. `themeKey` keys on it; ids are not unique across instances. */
 export const THEME_INSTANCE = "smart-base";

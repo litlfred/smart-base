@@ -9,7 +9,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { DAK_COMPONENTS } from "../schemas/dak-kinds.ts";
-import { DocumentKindSchema } from "../platform.js";
+import { DocumentKindSchema } from "../platform/index.js";
 import { dakCoverage, dakKind, kindSetProblems } from "./gen-document-kinds.ts";
 import { pinnedTerms } from "./pin-smart-kg.ts";
 

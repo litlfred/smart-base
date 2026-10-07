@@ -30,8 +30,8 @@ import {
   DocumentKindSchema,
   type DocumentKind,
   type DocumentKindCoverage,
-} from "../platform.js";
-import { directoriesForGraph, instanceRootsIn, readDeclaration, repoRootFor } from "../platform.js";
+} from "../platform/index.js";
+import { directoriesForGraph, instanceRootsIn, readDeclaration, repoRootFor } from "../platform/index.js";
 import { DAK_CARDS } from "./gen-dak-components-figure.ts";
 import { pinnedTerms, snapshotProblem } from "./pin-smart-kg.ts";
 
