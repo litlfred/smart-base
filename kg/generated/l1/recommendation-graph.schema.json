@@ -132,6 +132,16 @@
               "artifact": {
                 "type": "string",
                 "description": "The generated artifact affected, where one exists."
+              },
+              "by": {
+                "type": "string",
+                "description": "Who made the judgement. Required by tier 2 when derivation is decided: a person's choice between candidates is only reviewable if it says whose it was."
+              },
+              "at": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+                "description": "When the judgement was made. Required by tier 2 when derivation is decided."
               }
             },
             "required": [
@@ -210,6 +220,16 @@
               "artifact": {
                 "type": "string",
                 "description": "The generated artifact affected, where one exists."
+              },
+              "by": {
+                "type": "string",
+                "description": "Who made the judgement. Required by tier 2 when derivation is decided: a person's choice between candidates is only reviewable if it says whose it was."
+              },
+              "at": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+                "description": "When the judgement was made. Required by tier 2 when derivation is decided."
               }
             },
             "required": [
@@ -265,5 +285,5 @@
     "edges"
   ],
   "additionalProperties": false,
-  "description": "One L1 graph: publications, recommendations and the citations that point at them, as typed nodes and reified edges. This schema checks form only -- tier 1. It cannot check that a node's type is a class the ontology declares, nor that an edge is a triple the ontology licenses, because both live in ontology/l1.json rather than in this file; that is tier 2, and tools/validate.mjs is the reference implementation. A document passing this schema and failing that check is a well-formed graph of things the model does not say."
+  "description": "One L1 graph: publications, recommendations and the citations that point at them, as typed nodes and reified edges. This schema checks form only -- tier 1. It cannot check that a node's type is a class the ontology declares, nor that an edge is a triple the ontology licenses, because both live in ontology/l1/l1.json rather than in this file; that is tier 2, and tools/validate.mjs is the reference implementation. A document passing this schema and failing that check is a well-formed graph of things the model does not say."
 }

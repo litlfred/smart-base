@@ -1,19 +1,16 @@
 /**
  * Check a knowledge-graph document: tier 1 (form, `graph.ts`) then tier 2
- * (against the ontology, `l1.ts`).
+ * (against the ontology: L1 3.0, and the `l1-library` extension when the
+ * document names it).
  *
- * Tier 2 is a port of smart-kg `tools/validate.mjs` `validateGraph`, rule for
- * rule and message for message, so a document's verdict does not depend on
- * which of the two checked it; `test/validate.test.ts` holds the two to the
- * same answers. It adds ONE rule smart-kg could not have, because l1.json did
- * not type properties: a property's VALUE must satisfy its declared type
- * (`publication.sha256` is 64 hex digits, `recommendation.strength` is a GRADE
- * code). That rule reports under its own prefix, `property value`, so a
- * reader can tell the new findings from the ported ones.
- *
- * Scope: the L1 layer. smart-kg's L2 layers import L1 and are not migrated
- * yet; a document naming another layer's context is refused with that reason
- * rather than checked against the wrong ontology.
+ * Tier 2 is a port of WHO smart-kg `tools/validate.mjs` `validateGraph` (main
+ * 3f5e477), rule for rule and message for message, so a document's verdict
+ * does not depend on which of the two checked it; `test/validate.test.ts` holds
+ * them to the same answers. It adds ONE rule smart-kg cannot have, because
+ * smart-kg types only bound properties: every property VALUE must satisfy its
+ * declared type (`issued` is a date, `cells` an array, `ordinal` an integer).
+ * Those findings carry the prefix `property value`, so a reader can tell the
+ * new ones from the ported ones.
  *
  *   npx tsx src/validate.ts path/to/graph.json [more.json ...]
  */
@@ -21,8 +18,10 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 import { GraphDocumentSchema, type GraphDocument } from "./graph.ts";
+import { contentHash, contentText, norm } from "./kgid.ts";
 import { L1 } from "./l1.ts";
-import { propertiesSchemaFor, type LayerSpec } from "./ontology.ts";
+import { L1_LIBRARY } from "./l1-library.ts";
+import { bindingOf, propertiesSchemaFor, type ClassSpec, type EdgeRule, type LayerSpec, type Predicate, type ValueSet } from "./ontology.ts";
 
 export interface Verdict {
   errors: string[];
@@ -30,7 +29,8 @@ export interface Verdict {
   metrics: Record<string, unknown>;
 }
 
-const RESOLVABLE = new Set(["unresolved", "resolved", "ambiguous"]);
+/** The layers this package holds, by name. */
+export const LAYERS: Readonly<Record<string, LayerSpec>> = { l1: L1, "l1-library": L1_LIBRARY };
 
 /** Which layer a document names through its @context — smart-kg's rule. */
 export function layerOf(doc: { "@context"?: unknown }): string {
@@ -39,17 +39,50 @@ export function layerOf(doc: { "@context"?: unknown }): string {
   return m ? m[1]! : "l1";
 }
 
+export interface Scope {
+  own: LayerSpec;
+  classes: Map<string, ClassSpec>;
+  predicates: Map<string, Predicate>;
+  edges: EdgeRule[];
+  valueSets: Map<string, ValueSet>;
+}
+
+/** A layer with its imports resolved — smart-kg's `loadLayer` + `scopeOf`. */
+export function scopeOf(name: string, seen = new Set<string>()): Scope {
+  const own = LAYERS[name];
+  if (!own) throw new Error(`layer "${name}" is not held by this package (it holds ${Object.keys(LAYERS).join(", ")})`);
+  if (seen.has(name)) throw new Error(`circular ontology import at "${name}"`);
+  seen.add(name);
+  const scope: Scope = { own, classes: new Map(), predicates: new Map(), edges: [], valueSets: new Map() };
+  for (const dep of own.imports ?? []) {
+    const sub = scopeOf(dep, seen);
+    if (sub.own.schemaVersion !== own.schemaVersion) {
+      throw new Error(`${name} is schemaVersion ${own.schemaVersion} but imports ${dep} at ${sub.own.schemaVersion}`);
+    }
+    for (const [k, v] of sub.classes) scope.classes.set(k, v);
+    for (const [k, v] of sub.predicates) scope.predicates.set(k, v);
+    for (const [k, v] of sub.valueSets) scope.valueSets.set(k, v);
+    scope.edges.push(...sub.edges);
+  }
+  for (const c of own.classes) scope.classes.set(c.id, c);
+  for (const p of own.predicates) scope.predicates.set(p.predicate, p);
+  for (const v of own.valueSets) scope.valueSets.set(v.id, v);
+  scope.edges.push(...own.edges);
+  return scope;
+}
+
 type AnyNode = { id: string; type: string; properties?: Record<string, unknown> };
+const RANK: Record<string, number> = { derived: 0, inferred: 1, decided: 2 };
 
 /** Tier 2. `external`: nodes defined in sibling documents of the same graph. */
-export function validateGraph(doc: GraphDocument, layer: LayerSpec = L1, external = new Map<string, AnyNode>()): Verdict {
+export function validateGraph(doc: GraphDocument, scope: Scope = scopeOf("l1"), external = new Map<string, AnyNode>()): Verdict {
   const errors: string[] = [];
   const warnings: string[] = [];
-  const classes = new Map(layer.classes.map((c) => [c.id, c]));
-  const openQualifier = new Set(layer.predicates.filter((p) => p.openQualifier).map((p) => p.predicate));
-  const licensed = new Map<string, typeof layer.edges>();
+  const { classes, valueSets } = scope;
+  const openQualifier = new Set([...scope.predicates.values()].filter((p) => p.openQualifier).map((p) => p.predicate));
+  const licensed = new Map<string, EdgeRule[]>();
   const between = new Map<string, Set<string>>();
-  for (const e of layer.edges) {
+  for (const e of scope.edges) {
     const key = `${e.predicate}|${e.source}|${e.target}`;
     if (!licensed.has(key)) licensed.set(key, []);
     licensed.get(key)!.push(e);
@@ -58,10 +91,10 @@ export function validateGraph(doc: GraphDocument, layer: LayerSpec = L1, externa
     between.get(pair)!.add(e.qualifier ? `${e.predicate} («${e.qualifier}»)` : e.predicate);
   }
 
-  if (doc.ontologyVersion !== layer.schemaVersion) {
+  if (doc.ontologyVersion !== scope.own.schemaVersion) {
     errors.push(
       `ontologyVersion "${doc.ontologyVersion}" does not match the ontology's schemaVersion ` +
-        `"${layer.schemaVersion}". Nothing below was checked.`,
+        `"${scope.own.schemaVersion}". Nothing below was checked.`,
     );
     return { errors, warnings, metrics: {} };
   }
@@ -78,9 +111,9 @@ export function validateGraph(doc: GraphDocument, layer: LayerSpec = L1, externa
       );
     }
   }
-
   const byClass: Record<string, number> = {};
   for (const n of nodes.values()) byClass[n.type] = (byClass[n.type] ?? 0) + 1;
+
   const byPredicate: Record<string, number> = {};
   let crossDocument = 0;
   for (const e of doc.edges) {
@@ -119,12 +152,20 @@ export function validateGraph(doc: GraphDocument, layer: LayerSpec = L1, externa
           `the model has: ${known}. More often a model that has moved on than a defect in the graph.`,
       );
     }
+    const minEdge = candidates.map((c) => c.minDerivation).find(Boolean);
+    if (minEdge && RANK[e.derivation]! < RANK[minEdge]!) {
+      errors.push(`edge "${s.type} ${e.predicate} ${t.type}" is "${e.derivation}", but the model requires at least "${minEdge}" for it`);
+    }
+    if (e.derivation === "decided" && !(e.evidence?.by && e.evidence?.at)) {
+      errors.push(`edge "${s.type} ${e.predicate} ${t.type}" is "decided" and its evidence does not say who decided and when (evidence.by, evidence.at)`);
+    }
     if ((e.derivation === "inferred" || e.derivation === "decided") && !(e.note && e.evidence)) {
       errors.push(`edge "${s.type} ${e.predicate} ${t.type}" is ${e.derivation} and carries no ${e.note ? "evidence" : "note"}.`);
     }
   }
 
-  // Property conformance: declared names (ported), then typed values (new).
+  // Property names (ported), then values against bindings (ported), then types (new).
+  const codesOf = (id: string) => (valueSets.get(id)?.codes ?? []).map((c) => c.code);
   for (const n of nodes.values()) {
     const c = classes.get(n.type);
     if (!c) continue;
@@ -132,26 +173,173 @@ export function validateGraph(doc: GraphDocument, layer: LayerSpec = L1, externa
     for (const key of Object.keys(n.properties ?? {})) {
       if (!allowed.has(key)) errors.push(`node "${n.id}" (${n.type}) has property "${key}", which the class does not declare`);
     }
-    const typed = propertiesSchemaFor(c).safeParse(
-      Object.fromEntries(Object.entries(n.properties ?? {}).filter(([k]) => allowed.has(k))),
-    );
+    for (const [prop, binding] of Object.entries(c.valueSets ?? {})) {
+      const { set, severity } = bindingOf(binding);
+      const value = n.properties?.[prop];
+      if (value === undefined || value === null) continue;
+      const codes = codesOf(set);
+      if (!codes.includes(value as string)) {
+        (severity === "warning" ? warnings : errors).push(
+          `node "${n.id}" (${n.type}) has ${prop} "${String(value)}", which is not a code in value set "${set}". Permitted: ${codes.join(", ")}`,
+        );
+      }
+    }
+    if (Array.isArray(n.properties?.identifiers) && valueSets.has("identifier-type")) {
+      for (const idf of n.properties.identifiers as { type?: string }[]) {
+        if (!codesOf("identifier-type").includes(idf?.type as string)) {
+          errors.push(`node "${n.id}" has an identifier of type "${String(idf?.type)}", which is not a code in value set "identifier-type"`);
+        }
+      }
+    }
+    // New: typed values. Bound codes are already reported above, so only other issues are added.
+    const bound = new Set(Object.keys(c.valueSets ?? {}));
+    const typed = propertiesSchemaFor(c).safeParse(Object.fromEntries(Object.entries(n.properties ?? {}).filter(([k]) => allowed.has(k))));
     if (!typed.success) {
       for (const issue of typed.error.issues) {
+        const prop = String(issue.path[0]);
+        if (bound.has(prop) && issue.path.length === 1) continue;
+        if (prop === "identifiers" && issue.path[2] === "type") continue;
         errors.push(`property value: node "${n.id}" (${n.type}) ${issue.path.join(".")}: ${issue.message}`);
       }
     }
   }
 
   for (const n of nodes.values()) {
-    if (n.type !== "citation") continue;
-    const status = n.properties?.resolutionStatus;
-    const resolves = doc.edges.some((e) => e.predicate === "resolvesTo" && e.source === n.id);
-    if (status === "resolved" && !resolves) errors.push(`citation "${n.id}" claims resolutionStatus "resolved" but has no resolvesTo edge`);
-    if (resolves && status !== "resolved") warnings.push(`citation "${n.id}" has a resolvesTo edge but resolutionStatus is "${String(status)}"`);
-    if (!n.properties?.text) errors.push(`citation "${n.id}" carries no verbatim text, so nothing can be checked against the source`);
+    const pattern = classes.get(n.type)?.iriPattern;
+    if (pattern && !new RegExp(pattern).test(n.id)) {
+      errors.push(`node "${n.id}" (${n.type}) does not have the IRI shape its class requires (${pattern}). Mint it with tools/kgid.mjs so re-extraction yields the same node.`);
+    }
   }
 
-  const joins = { resolved: 0, unresolved: 0, ambiguous: 0 };
+  for (const n of nodes.values()) {
+    const fields = classes.get(n.type)?.contentFields;
+    if (!fields) continue;
+    const text = contentText(n, fields);
+    if (text === null) continue;
+    const have = n.properties?.contentHash;
+    if (have === undefined) {
+      warnings.push(`node "${n.id}" (${n.type}) has no contentHash; a corrected PDF cannot be checked against it node by node`);
+    } else if (have !== contentHash(text)) {
+      errors.push(`node "${n.id}" (${n.type}) has a contentHash that does not match its ${fields.join(" + ")}. Recompute it with tools/kgid.mjs contentHash().`);
+    }
+  }
+
+  for (const n of nodes.values()) {
+    const min = classes.get(n.type)?.minDerivation;
+    const what = `node "${n.id}"`;
+    if (min && RANK[n.derivation] !== undefined && RANK[n.derivation]! < RANK[min]!) {
+      errors.push(`${what} is "${n.derivation}", but the model requires at least "${min}" for it`);
+    }
+    if (n.derivation === "decided" && !(n.evidence?.by && n.evidence?.at)) {
+      errors.push(`${what} is "decided" and its evidence does not say who decided and when (evidence.by, evidence.at)`);
+    }
+  }
+
+  const edgesFrom = (id: string, predicate: string) => doc.edges.filter((e) => e.source === id && e.predicate === predicate);
+  const nodeAt = (id: string): AnyNode | undefined => nodes.get(id) ?? external.get(id);
+  const prop = (n: AnyNode | undefined, k: string) => n?.properties?.[k] as string | undefined;
+
+  for (const n of nodes.values()) {
+    if (n.type !== "recommendation") continue;
+    const p = n.properties ?? {};
+    const kind = p.kind;
+    const has = (k: string) => p[k] !== undefined && p[k] !== null;
+    if (has("strength") && !has("direction")) {
+      errors.push(`recommendation "${n.id}" carries a strength without a direction. A strength says how firmly WHO recommends for or against something; record which.`);
+    }
+    if (kind === "good-practice-statement" || kind === "no-recommendation") {
+      const graded = ["strength", "overallCertainty", ...(kind === "no-recommendation" ? ["direction"] : [])].filter(has);
+      if (graded.length) {
+        errors.push(
+          `recommendation "${n.id}" is kind "${kind}" and carries ${graded.join(", ")}. ` +
+            `${kind === "no-recommendation" ? "No recommendation was made" : "A good practice statement is ungraded"}, so there is nothing to grade.`,
+        );
+      }
+    }
+    for (const e of edgesFrom(n.id, "definedIn")) {
+      const pub = nodeAt(e.target);
+      const grc = prop(pub, "grcStatus");
+      if (grc === "not-reviewed") {
+        errors.push(`recommendation "${n.id}" is defined in "${e.target}", which is recorded as not reviewed by the GRC. Recommendations come from GRC-approved guidelines.`);
+      } else if (pub && grc === undefined) {
+        warnings.push(`recommendation "${n.id}" is defined in "${e.target}", which records no GRC status`);
+      }
+    }
+    const sources = [String(p.statement ?? "")];
+    for (const e of edgesFrom(n.id, "hasRemark")) sources.push(prop(nodeAt(e.target), "text") ?? "");
+    for (const e of edgesFrom(n.id, "presentedIn")) {
+      const where = nodeAt(e.target);
+      sources.push(prop(where, "caption") ?? "", prop(where, "heading") ?? "");
+      for (const up of doc.edges.filter((x) => x.predicate === "contains" && x.target === e.target)) {
+        const parent = nodeAt(up.source);
+        sources.push(prop(parent, "caption") ?? "", prop(parent, "heading") ?? "");
+      }
+    }
+    const haystack = norm(sources.join(" \n "));
+    for (const slot of ["intervention", "population", "setting", "provider", "timing"]) {
+      if (has(slot) && !haystack.includes(norm(p[slot]))) {
+        warnings.push(`recommendation "${n.id}" has ${slot} "${String(p[slot])}", which is not quoted from its statement, remarks, or the caption or heading it is printed under`);
+      }
+    }
+    if (has("overallCertainty")) {
+      const ORDER = ["very-low", "low", "moderate", "high"];
+      const critical: string[] = [];
+      for (const s of edgesFrom(n.id, "supportedBy")) {
+        const ev = nodeAt(s.target);
+        const cert = prop(ev, "certainty");
+        if (!cert) continue;
+        for (const f of edgesFrom(s.target, "forOutcome")) if (prop(nodeAt(f.target), "importance") === "critical") critical.push(cert);
+      }
+      if (critical.length) {
+        const lowest = critical.reduce((a, b) => (ORDER.indexOf(a) <= ORDER.indexOf(b) ? a : b));
+        if (ORDER.indexOf(String(p.overallCertainty)) > ORDER.indexOf(lowest)) {
+          warnings.push(`recommendation "${n.id}" states overallCertainty "${String(p.overallCertainty)}", higher than the lowest certainty on its critical outcomes ("${lowest}"; handbook §9.6)`);
+        }
+      }
+    }
+  }
+
+  for (const n of nodes.values()) {
+    if (n.type !== "publication-element" || n.properties?.elementType !== "table") continue;
+    const { columns, columnMap } = n.properties as { columns?: string[]; columnMap?: Record<string, string> };
+    if (!Array.isArray(columns) || !columnMap) continue;
+    const mapped = columns.map((c, i) => (columnMap[c] ? i : -1)).filter((i) => i >= 0);
+    for (const e of edgesFrom(n.id, "contains")) {
+      const row = nodeAt(e.target);
+      const cells = row?.properties?.cells as (string | null)[] | undefined;
+      if (row?.properties?.rowType !== "data" || !Array.isArray(cells)) continue;
+      const presented = doc.edges.some((x) => x.predicate === "presentedIn" && x.target === row.id);
+      for (const i of mapped) {
+        if (presented && cells[i] !== null && cells[i] !== undefined) {
+          errors.push(`row "${row.id}" stores column "${columns[i]}", which the table fills from ${columnMap[columns[i]!]} of the content presented there. Store it once: set the cell to null.`);
+        }
+      }
+    }
+  }
+
+  const resolved = (id: string, seen = new Set<string>()): boolean => {
+    if (seen.has(id)) return false;
+    seen.add(id);
+    if (edgesFrom(id, "resolvesTo").length) return true;
+    return edgesFrom(id, "numberedAs").some((e) => prop(nodeAt(e.target), "resolutionStatus") === "resolved" && resolved(e.target, seen));
+  };
+  for (const n of nodes.values()) {
+    if (n.type !== "citation" && n.type !== "reference-entry") continue;
+    const status = n.properties?.resolutionStatus;
+    const direct = edgesFrom(n.id, "resolvesTo").length > 0;
+    if (n.type === "citation" && n.properties?.citationKind === "placeholder") {
+      if (direct || status === "resolved") {
+        errors.push(`citation "${n.id}" is a placeholder and claims a resolution. A placeholder marks a missing source; it never resolves.`);
+      }
+    } else if (status === "resolved" && !resolved(n.id)) {
+      errors.push(`${n.type} "${n.id}" claims resolutionStatus "resolved" but has no resolvesTo edge`);
+    }
+    if (direct && status !== "resolved") warnings.push(`${n.type} "${n.id}" has a resolvesTo edge but resolutionStatus is "${String(status)}"`);
+    if (!n.properties?.text) errors.push(`${n.type} "${n.id}" carries no verbatim text, so nothing can be checked against the source`);
+  }
+
+  const RESOLVABLE = new Set(valueSets.has("resolution-status") ? codesOf("resolution-status") : ["unresolved", "resolved", "ambiguous"]);
+  const joins: Record<string, number> = { resolved: 0, unresolved: 0, ambiguous: 0 };
   for (const e of doc.edges) {
     const status = e.properties?.resolutionStatus;
     if (status === undefined) continue;
@@ -159,21 +347,15 @@ export function validateGraph(doc: GraphDocument, layer: LayerSpec = L1, externa
       errors.push(`edge "${e.predicate}" carries resolutionStatus "${String(status)}"; permitted values are ${[...RESOLVABLE].join(", ")}`);
       continue;
     }
-    joins[status as keyof typeof joins]++;
+    joins[status] = (joins[status] ?? 0) + 1;
     if (status !== "resolved") continue;
     const t = nodes.get(e.target) ?? external.get(e.target);
     const ts = t?.properties?.resolutionStatus;
     if (ts && ts !== "resolved") {
-      errors.push(
-        `edge "${e.predicate}" claims resolutionStatus "resolved" but its target "${e.target}" is itself "${String(ts)}". ` +
-          `A join cannot be resolved against a placeholder.`,
-      );
+      errors.push(`edge "${e.predicate}" claims resolutionStatus "resolved" but its target "${e.target}" is itself "${String(ts)}". A join cannot be resolved against a placeholder.`);
     }
     if ((e.derivation === "inferred" || e.derivation === "decided") && !e.evidence?.location) {
-      errors.push(
-        `edge "${e.predicate}" claims a resolved match but points at no evidence. A match made by string equality ` +
-          `must say which file and which line it was made against.`,
-      );
+      errors.push(`edge "${e.predicate}" claims a resolved match but points at no evidence. A match made by string equality must say which file and which line it was made against.`);
     }
   }
 
@@ -185,7 +367,7 @@ export function validateGraph(doc: GraphDocument, layer: LayerSpec = L1, externa
       edges: doc.edges.length,
       byClass,
       byPredicate,
-      ...(joins.resolved + joins.unresolved + joins.ambiguous ? { joins } : {}),
+      ...(joins.resolved! + joins.unresolved! + joins.ambiguous! ? { joins } : {}),
       ...(crossDocument ? { crossDocumentEdges: crossDocument } : {}),
     },
   };
@@ -194,22 +376,17 @@ export function validateGraph(doc: GraphDocument, layer: LayerSpec = L1, externa
 /** Tier 1 then tier 2, for one parsed JSON value. */
 export function check(raw: unknown, external = new Map<string, AnyNode>()): Verdict {
   const layer = layerOf((raw ?? {}) as { "@context"?: unknown });
-  if (layer !== "l1") {
-    return {
-      errors: [`layer "${layer}" is not migrated to this package yet (L1 only); check it with smart-kg tools/validate.mjs`],
-      warnings: [],
-      metrics: {},
-    };
+  let scope: Scope;
+  try {
+    scope = scopeOf(layer);
+  } catch (err) {
+    return { errors: [(err as Error).message], warnings: [], metrics: {} };
   }
   const parsed = GraphDocumentSchema.safeParse(raw);
   if (!parsed.success) {
-    return {
-      errors: parsed.error.issues.map((i) => `tier 1: ${i.path.join(".") || "(document)"}: ${i.message}`),
-      warnings: [],
-      metrics: {},
-    };
+    return { errors: parsed.error.issues.map((i) => `tier 1: ${i.path.join(".") || "(document)"}: ${i.message}`), warnings: [], metrics: {} };
   }
-  return validateGraph(parsed.data, L1, external);
+  return validateGraph(parsed.data, scope, external);
 }
 
 function main(argv: string[]): number {
@@ -224,9 +401,9 @@ function main(argv: string[]): number {
   let failed = false;
   for (const { f, raw } of docs) {
     const v = check(raw, every);
-    const m = v.metrics as { nodes?: number; edges?: number; byClass?: Record<string, number>; joins?: Record<string, number> };
+    const m = v.metrics as { nodes?: number; edges?: number; byClass?: Record<string, number> };
     console.log(
-      `${f} [l1]: ${m.nodes ?? "?"} nodes, ${m.edges ?? "?"} edges` +
+      `${f} [${layerOf(raw as { "@context"?: unknown })}]: ${m.nodes ?? "?"} nodes, ${m.edges ?? "?"} edges` +
         (m.byClass ? ` [${Object.entries(m.byClass).map(([k, n]) => `${k}:${n}`).join(" ")}]` : ""),
     );
     for (const w of v.warnings) console.warn(`  warning: ${w}`);

@@ -1,95 +1,117 @@
 /**
  * The validator FAILS on what it claims to catch, and agrees with smart-kg.
  *
- * The L1 cases are smart-kg `tools/negative-test.mjs`'s, rebuilt here (that
- * file builds its documents rather than committing them, for the reason it
- * gives: a fixture big enough to be interesting is a dataset wearing a
- * fixture's name). Two more cover what only this package checks: an
- * unlicensed edge, and a property value of the wrong type.
+ * The fixture is smart-kg's own: `tools/negative-test.mjs --emit` writes the
+ * valid L1 3.0 document its tests mutate, so nothing is committed here (smart-kg
+ * holds no DAK data, and a fixture big enough to be interesting is a dataset).
+ * Each case mutates it and runs BOTH validators: this package's `check` and
+ * smart-kg's `validateGraph`. They must agree on pass or fail — except the
+ * typed-value cases, which only this package can see, and which are asserted
+ * to be invisible to smart-kg so the difference is stated rather than hidden.
  *
- * With SMART_KG_HOME pointing at a smart-kg checkout, every case also runs
- * through smart-kg's own `validateGraph`, and the two must agree on pass or
- * fail — except the typed-value case, which smart-kg cannot see and which is
- * asserted to be invisible to it, so the difference is stated rather than
- * hidden.
+ * Needs SMART_KG_HOME at a smart-kg checkout; without it every case reports
+ * n/a (skipped), never a pass.
  */
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { existsSync, mkdtempSync, readFileSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { test } from "node:test";
 
 import { check } from "../src/validate.ts";
 
-const NS = "https://example.org/dak";
-const doc = (nodes: unknown[], edges: unknown[]) => ({
-  "@context": "http://smart.who.int/kg/l1.context.jsonld",
-  id: `${NS}/kg/l1`,
-  type: "Entity",
-  ontologyVersion: "1.0",
-  generatedAt: "2026-01-01T00:00:00Z",
-  wasDerivedFrom: [{ path: "fixture", sha256: "0".repeat(64) }],
-  nodes,
-  edges,
-});
-const n = (id: string, type: string, label: string, properties = {}, extra = {}) => ({ id, type, label, properties, derivation: "derived", ...extra });
-const e = (predicate: string, source: string, target: string, extra = {}) => ({ type: "Statement", predicate, source, target, derivation: "derived", ...extra });
+const HOME = process.env.SMART_KG_HOME;
+const ready = !!HOME && existsSync(join(HOME, "tools", "negative-test.mjs"));
+const NA = "SMART_KG_HOME unset: NOT checked (n/a, not a pass)";
 
-const DMN_FILE = `${NS}/artifact/DT.EXAMPLE`;
-const CITATION = `${NS}/citation/abc123abc123`;
-const PUB = "urn:isbn:9789240000000";
-const base = () =>
-  doc(
-    [
-      n(DMN_FILE, "external-artifact", "Example decision table", { iri: DMN_FILE, targetKind: "dmn:DecisionTable" }),
-      n(CITATION, "citation", "Example guideline (1)", { text: "Example guideline (1)", location: "fixture#rule1", numbering: "1", resolutionStatus: "unresolved" }),
-      n(PUB, "publication", "Example guideline", { title: "Example guideline", identifier: "ISBN 978-92-4-000000-0", date: "2024" }),
-    ],
-    [e("appearsIn", CITATION, DMN_FILE)],
-  );
+type Doc = { "@context": string; ontologyVersion: string; nodes: any[]; edges: any[] };
+let base: Doc | undefined;
+let theirs: ((d: Doc) => { errors: string[] }) | undefined;
+if (ready) {
+  const dir = mkdtempSync(join(tmpdir(), "kg-fixture-"));
+  execFileSync("node", [join(HOME!, "tools", "negative-test.mjs"), "--emit", dir], { stdio: "ignore" });
+  base = JSON.parse(readFileSync(join(dir, "l1.json"), "utf8"));
+  const v = await import(pathToFileURL(join(HOME!, "tools", "validate.mjs")).href);
+  const o = await import(pathToFileURL(join(HOME!, "tools", "ontology.mjs")).href);
+  const layer = o.loadLayer("l1");
+  theirs = (d) => v.validateGraph(d, layer);
+}
 
-type Doc = ReturnType<typeof base> & { nodes: any[]; edges: any[]; ontologyVersion: string };
-const CASES: [string, ((d: Doc) => void) | null, RegExp | null, "both" | "zod-only"][] = [
-  ["L1 conforms", null, null, "both"],
-  ["unknown class is rejected", (d) => { d.nodes[0].type = "wormhole"; }, /does not declare/, "both"],
-  ["dangling edge target is rejected", (d) => { d.edges[0].target = "urn:nope"; }, /defined in no document/, "both"],
-  ["undeclared property is rejected", (d) => { d.nodes[0].properties.colour = "blue"; }, /does not declare/, "both"],
-  ["inferred node without evidence is rejected", (d) => { d.nodes[0].derivation = "inferred"; d.nodes[0].note = "why"; }, /evidence/, "both"],
-  ["citation claiming resolution without a resolvesTo edge is rejected", (d) => { d.nodes[1].properties.resolutionStatus = "resolved"; }, /no resolvesTo edge/, "both"],
-  ["a citation with no verbatim text is rejected", (d) => { delete d.nodes[1].properties.text; }, /no verbatim text/, "both"],
+const byType = (d: Doc, t: string) => d.nodes.find((n) => n.type === t);
+const edge = (d: Doc, p: string) => d.edges.find((e) => e.predicate === p);
+const rec = (d: Doc) => d.nodes.find((n) => n.type === "recommendation" && n.properties?.statement);
+
+// [name, mutation, expected message (null = conforms), who sees it]
+const CASES: [string, ((d: Doc) => void) | null, RegExp | null, "both" | "ours-only"][] = [
+  ["smart-kg's L1 fixture conforms", null, null, "both"],
+  ["unknown class is rejected", (d) => { byType(d, "remark").type = "wormhole"; }, /does not declare/, "both"],
+  ["dangling edge target is rejected", (d) => { edge(d, "answers").target = "urn:nope"; }, /defined in no document/, "both"],
+  ["undeclared property is rejected", (d) => { byType(d, "publication").properties.colour = "blue"; }, /does not declare/, "both"],
+  ["inferred node without evidence is rejected", (d) => { delete rec(d).evidence; }, /carries no evidence/, "both"],
   ["version mismatch stops the run", (d) => { d.ontologyVersion = "0.9"; }, /Nothing below was checked/, "both"],
-  ["an unlicensed edge is rejected", (d) => { d.edges.push(e("supersedes", CITATION, DMN_FILE)); }, /not licensed/, "both"],
-  ["a resolved citation with its resolvesTo edge conforms", (d) => {
-    d.nodes[1].properties.resolutionStatus = "resolved";
-    d.edges.push(e("resolvesTo", CITATION, PUB, { derivation: "inferred", note: "title match", evidence: { location: "fixture#ref1" } }));
-  }, null, "both"],
-  ["a typed value of the wrong type is rejected (new: smart-kg types no values)", (d) => { d.nodes[2].properties.date = "last spring"; }, /property value/, "zod-only"],
-  ["a GRADE strength outside the code list is rejected (new)", (d) => {
-    d.nodes.push(n(`${NS}/rec/1`, "recommendation", "Rec 1", { statement: "WHO recommends X.", strength: "weak" }));
-  }, /property value/, "zod-only"],
+  ["a strength outside the value set is rejected", (d) => { rec(d).properties.strength = "weak"; }, /not a code in value set "recommendation-strength"/, "both"],
+  ["an invented identifier type is rejected", (d) => { byType(d, "publication").properties.identifiers[0].type = "isbn13"; }, /identifier-type/, "both"],
+  ["a strength without a direction is rejected", (d) => { const r = rec(d); r.properties.strength = "strong"; delete r.properties.direction; }, /without a direction/, "both"],
+  ["schedule is no longer a class", (d) => { byType(d, "remark").type = "schedule"; }, /does not declare/, "both"],
+  ["appearsIn is not licensed in L1 any more", (d) => { d.edges.push({ type: "Statement", predicate: "appearsIn", source: byType(d, "citation").id, target: byType(d, "publication").id, derivation: "derived" }); }, /not licensed/, "both"],
+  ["an IRI minted outside the scheme is rejected", (d) => { const r = byType(d, "key-question"); const old = r.id; r.id = "https://example.org/kq/1"; for (const e of d.edges) { if (e.source === old) e.source = r.id; if (e.target === old) e.target = r.id; } }, /IRI shape/, "both"],
+  ["a contentHash that does not match the stored text is rejected", (d) => { rec(d).properties.contentHash = "0".repeat(64); }, /contentHash that does not match/, "both"],
+  ["content read from a PDF may not claim to be derived", (d) => { const r = rec(d); r.derivation = "derived"; }, /requires at least "inferred"/, "both"],
+  ["a decided judgement must say who and when", (d) => { const r = rec(d); r.derivation = "decided"; delete r.evidence.by; delete r.evidence.at; }, /who decided and when/, "both"],
+  ["a placeholder never resolves", (d) => { const c = d.nodes.find((n) => n.properties?.citationKind === "placeholder"); c.properties.resolutionStatus = "resolved"; }, /placeholder/, "both"],
+  ["a good practice statement carrying a strength is rejected", (d) => { const r = rec(d); r.properties.kind = "good-practice-statement"; r.properties.strength = "strong"; r.properties.direction = "for"; }, /nothing to grade/, "both"],
+  // Only this package types values smart-kg leaves untyped:
+  ["an issued date that is not a date is rejected (new)", (d) => { byType(d, "publication").properties.issued = "last spring"; }, /property value: .* issued/, "ours-only"],
+  ["an ordinal that is not a number is rejected (new)", (d) => { byType(d, "remark").properties.ordinal = "first"; }, /property value: .* ordinal/, "ours-only"],
+  ["cells that are not a list are rejected (new)", (d) => { const row = d.nodes.find((n) => n.properties?.elementType === "table-row"); row.properties.cells = "Dietary interventions"; }, /property value: .* cells/, "ours-only"],
 ];
 
-const SMART_KG = process.env.SMART_KG_HOME;
-const smartKg = SMART_KG && existsSync(join(SMART_KG, "tools", "validate.mjs"))
-  ? {
-      validate: (await import(pathToFileURL(join(SMART_KG, "tools", "validate.mjs")).href)).validateGraph,
-      layer: (await import(pathToFileURL(join(SMART_KG, "tools", "ontology.mjs")).href)).loadLayer("l1"),
-    }
-  : undefined;
-
-for (const [name, mutate, expected, scope] of CASES) {
-  test(name, () => {
-    const d = structuredClone(base()) as Doc;
+for (const [name, mutate, expected, who] of CASES) {
+  test(name, { skip: ready ? false : NA }, () => {
+    const d = structuredClone(base!) as Doc;
     mutate?.(d);
     const v = check(d);
     if (expected) assert.ok(v.errors.some((m) => expected.test(m)), `expected ${expected}, got: ${v.errors.join(" | ") || "(no errors)"}`);
     else assert.deepEqual(v.errors, []);
-
-    if (!smartKg) return; // n/a without a checkout — never reported as agreement
-    const theirs = smartKg.validate(d, smartKg.layer);
-    if (scope === "both") assert.equal(theirs.errors.length > 0, v.errors.length > 0, `smart-kg disagrees: ${theirs.errors.join(" | ")}`);
-    else assert.deepEqual(theirs.errors, [], "smart-kg was expected NOT to see this (it types no values)");
+    const t = theirs!(d);
+    if (who === "both") assert.equal(t.errors.length > 0, v.errors.length > 0, `smart-kg disagrees: ${t.errors.join(" | ")}`);
+    else assert.deepEqual(t.errors, [], "smart-kg was expected NOT to see this: it types only bound properties");
   });
 }
 
-test("smart-kg agreement was checked", { skip: smartKg ? false : "SMART_KG_HOME unset: agreement with smart-kg NOT checked (n/a, not a pass)" }, () => {});
+// ── the l1-library extension (owner rulings 2026-10-07) ─────────────────────
+
+const LIB = "https://example.org/library/entry-1/manifest.jsonld";
+const withLibrary = (d: Doc) => {
+  d["@context"] = "http://smart.who.int/kg/l1-library.context.jsonld";
+  d.nodes.push({ id: LIB, type: "library-node", label: "entry-1", properties: { iri: LIB, libraryClass: "https://litlfred.github.io/cat-harness/0.1.0/ns#SourceDocument", entry: "entry-1" }, derivation: "derived" });
+  return d;
+};
+
+test("a publication may specialise its library source document (upstream)", { skip: ready ? false : NA }, () => {
+  const d = withLibrary(structuredClone(base!));
+  d.edges.push({ type: "Statement", predicate: "specializationOf", source: byType(d, "publication").id, target: LIB, derivation: "derived" });
+  assert.deepEqual(check(d).errors, []);
+});
+
+test("a reference entry may resolve upstream to a library source that is not L1", { skip: ready ? false : NA }, () => {
+  const d = withLibrary(structuredClone(base!));
+  const r = byType(d, "reference-entry");
+  r.properties.resolutionStatus = "resolved";
+  d.edges.push({ type: "Statement", predicate: "resolvesTo", source: r.id, target: LIB, derivation: "inferred", note: "held by the library", evidence: { location: "fixture" } });
+  assert.deepEqual(check(d).errors, []);
+});
+
+test("the layering rule holds: a library node may not point down into L1", { skip: ready ? false : NA }, () => {
+  const d = withLibrary(structuredClone(base!));
+  d.edges.push({ type: "Statement", predicate: "specializationOf", source: LIB, target: byType(d, "publication").id, derivation: "derived" });
+  assert.ok(check(d).errors.some((m) => /not licensed/.test(m)));
+});
+
+test("plain L1 does not know the extension", { skip: ready ? false : NA }, () => {
+  const d = structuredClone(base!);
+  d.nodes.push({ id: LIB, type: "library-node", label: "x", properties: {}, derivation: "derived" });
+  assert.ok(check(d).errors.some((m) => /does not declare/.test(m)));
+});
