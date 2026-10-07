@@ -26,7 +26,7 @@ import { describe, expect, it } from "bun:test";
 import { existsSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 
-import { IgIdentitySchema, igSiteData, readIgIdentity } from "../platform";
+import { IgIdentitySchema, igSiteData, readIgIdentity } from "../platform/index.js";
 
 const ROOT = resolve(import.meta.dir, "..", "..");
 

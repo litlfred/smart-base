@@ -39,7 +39,7 @@ import {
   kindForBuilder,
   adapterForKind,
   profileAcceptsKind,
-} from "../platform.js";
+} from "../platform/index.js";
 import {
   decisionTable,
   valueSet,
@@ -51,12 +51,12 @@ import {
   testScenario,
   type DakBlock,
 } from "./dak-blocks";
-import { KNOWN_LABEL_PREFIXES } from "../platform.js";
+import { KNOWN_LABEL_PREFIXES } from "../platform/index.js";
 import { DAK_KIND_TO_WHO_MODEL, DAK_KIND_TO_FOLIO_TYPE } from "./dak-jsonld";
-import { assertPrefixesInSync, typesForKind } from "../platform.js";
-import { readBlockManifest } from "../platform.js";
-import { ContributionRegistry, composedKindOwner } from "../platform.js";
-import { loadContributionsSync } from "../platform.js";
+import { assertPrefixesInSync, typesForKind } from "../platform/index.js";
+import { readBlockManifest } from "../platform/index.js";
+import { ContributionRegistry, composedKindOwner } from "../platform/index.js";
+import { loadContributionsSync } from "../platform/index.js";
 
 /**
  * The registry a folio depending on smart-base gets: `smart-ig`'s, loaded as
@@ -198,17 +198,17 @@ describe("JSON-LD typing", () => {
     // The block is the authored manifest; the FHIR ValueSet is what its .fsh
     // compiles to. Typing the manifest as a FHIR resource would invite a
     // consumer to read FHIR fields off it.
-    expect(typesForKind("value-set", registry)).toEqual(["folio-assistant-core:ValueSet"]);
+    expect(typesForKind("value-set", registry)).toEqual(["smart-base:ValueSet"]);
   });
 
   test("DoCO co-typing stays sparing", () => {
-    expect(typesForKind("decision-table", registry)).toEqual(["folio-assistant-core:DecisionTable", "doco:Table"]);
-    expect(typesForKind("persona", registry)).toEqual(["folio-assistant-core:Persona"]);
+    expect(typesForKind("decision-table", registry)).toEqual(["smart-base:DecisionTable", "doco:Table"]);
+    expect(typesForKind("persona", registry)).toEqual(["smart-base:Persona"]);
   });
 
   test("paper typing is unchanged, with or without the registry", () => {
-    expect(typesForKind("theorem")).toEqual(["folio-assistant-core:Theorem", "doco:Section"]);
-    expect(typesForKind("theorem", registry)).toEqual(["folio-assistant-core:Theorem", "doco:Section"]);
+    expect(typesForKind("theorem")).toEqual(["folio-assistant-sci:Theorem", "doco:Section"]);
+    expect(typesForKind("theorem", registry)).toEqual(["folio-assistant-sci:Theorem", "doco:Section"]);
   });
 });
 

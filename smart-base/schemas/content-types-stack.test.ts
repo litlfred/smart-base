@@ -26,12 +26,12 @@ import {
   ContentTypeConflictError,
   ContentTypeRegistry,
   describeRepository,
-} from "../platform.js";
-import { registerBaseContentTypes } from "../platform.js";
+} from "../platform/index.js";
+import { registerBaseContentTypes } from "../platform/index.js";
 import { registerDakContentTypes } from "./dak-content-type";
-import { describeRepositoryClosure } from "../platform.js";
-import { writeInstanceConfig } from "../platform.js";
-import {  } from "../platform.js";
+import { describeRepositoryClosure } from "../platform/index.js";
+import { writeInstanceConfig } from "../platform/index.js";
+import {  } from "../platform/index.js";
 
 const roots: string[] = [];
 afterEach(() => {
