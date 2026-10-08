@@ -24,6 +24,9 @@ its properties and binds some to value sets, but doesn't type the rest.
 | `generated/l1/l1.json` | L1 3.0 in smart-kg's format, JSON-equal to WHO's | generated |
 | `generated/l1/l1-library.json`, `l1-library.jsonld` | the extension layer, and its `rdfs:subClassOf` statements | generated |
 | `generated/l1/recommendation-graph.schema.json` | the document JSON Schema | generated |
+| `generated/l1/l1.context.jsonld` | smart-kg's L1 JSON-LD context, equal to WHO's | generated |
+| `generated/l1/l1-library.context.jsonld` | the context an `l1-library` graph names (`src/context.ts`) | generated |
+| `src/loader.ts` | a jsonld.js document loader serving both contexts offline | source |
 | `../input/fsh/models/KGL1.fsh`, `KGL1Library.fsh` | logical models | generated |
 | `../input/fsh/codesystems/KG*.fsh`, `../input/fsh/valuesets/KG*VS.fsh` | one CodeSystem + ValueSet per value set | generated |
 
@@ -50,6 +53,37 @@ every other logical model here.
 It is kept as its own layer (`l1-library`, which imports `l1`), so
 `generated/l1/l1.json` stays equal to WHO's and the extension can be proposed
 upstream unchanged. A document using it names `l1-library.context.jsonld`.
+
+## JSON-LD: graphs that survive as RDF
+
+A graph names its context by URL (`http://smart.who.int/kg/<layer>.context.jsonld`).
+That URL is the layer's identity, and it is never fetched at run time:
+`src/loader.ts` maps each URL to the context generated here.
+
+```ts
+import jsonld from "jsonld";
+import { documentLoader } from "./src/loader.ts";
+const nquads = await jsonld.toRDF(graph, { format: "application/n-quads", documentLoader });
+```
+
+**`l1.context.jsonld` is smart-kg's and stays equal to it.** Under it, an L1
+graph loses most of its meaning as RDF. Measured on the Leave-no-one-behind
+graph with jsonld.js (1,400 triples):
+- **No node keeps its class.** Types are class ids (`publication-section`),
+  the context maps class names, and it sets no `@vocab`.
+- **Every property collapses into `sgkg:properties`.** It is an `@index`
+  container, so `pageRange: "11-12"` becomes `sgkg:properties "11-12"`.
+- **An unknown predicate disappears.** That includes `specializationOf`.
+
+**`l1-library.context.jsonld` adds three fixes:**
+- `@vocab` is the smart-kg namespace;
+- `properties` is `@nest`, with Dublin-Core-inherited properties as
+  `dcterms:` terms and `uri` properties as IRIs;
+- predicates map to their declared IRIs.
+
+The same graph then gives 1,508 triples with every class, every named
+property and 37 `prov:specializationOf` edges (`test/context.test.ts`). The
+three are proposed upstream; they are not patched into smart-kg's file.
 
 ## Reuse before invention
 

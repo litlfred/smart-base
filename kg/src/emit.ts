@@ -6,6 +6,8 @@
  *   kg/generated/l1/l1-library.json                  the extension layer (imports l1), smart-kg format
  *   kg/generated/l1/l1-library.jsonld                the specialisation: rdfs:subClassOf from L1 layout classes to the library's
  *   kg/generated/l1/recommendation-graph.schema.json the document JSON Schema
+ *   kg/generated/l1/l1.context.jsonld                smart-kg's L1 context, JSON-equal to WHO's
+ *   kg/generated/l1/l1-library.context.jsonld        the context an l1-library document names (src/context.ts)
  *   input/fsh/models/KGL1.fsh, KGL1Library.fsh       logical models
  *   input/fsh/codesystems/KG*.fsh, valuesets/KG*VS.fsh
  *
@@ -21,6 +23,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { z } from "zod";
 
+import { baseContext, extensionContext } from "./context.ts";
 import { fshFiles, GENERATED_BANNER } from "./fsh.ts";
 import { GraphDocumentSchema } from "./graph.ts";
 import { L1 } from "./l1.ts";
@@ -61,6 +64,8 @@ export function artefacts(): { path: string; text: string }[] {
     { path: "kg/generated/l1/l1-library.json", text: json(toOntologyJson(L1_LIBRARY)) },
     { path: "kg/generated/l1/l1-library.jsonld", text: json(specialisationJsonLd()) },
     { path: "kg/generated/l1/recommendation-graph.schema.json", text: json(graphJsonSchema()) },
+    { path: "kg/generated/l1/l1.context.jsonld", text: json(baseContext([L1])) },
+    { path: "kg/generated/l1/l1-library.context.jsonld", text: json(extensionContext([L1_LIBRARY, L1])) },
     ...fshFiles(L1, "kg/src/l1.ts (L1 3.0)"),
     ...fshFiles(L1_LIBRARY, "kg/src/l1-library.ts (the library extension)"),
   ];
