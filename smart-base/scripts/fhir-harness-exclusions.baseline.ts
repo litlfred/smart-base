@@ -19,12 +19,4 @@ export interface BaselineEntry {
   bean: string;
 }
 
-export const BASELINE: readonly BaselineEntry[] = [
-  {
-    "file": "fhir-harness/processes/content/l3-fhir-pipeline.bpmn",
-    "rule": "who-layer-path",
-    "count": 1,
-    "reason": "Documentary bpmn:import of smart-base's l2-dak-authoring.bpmn — the upward residual fhir-harness.json already records (proposal §5). Changing it needs the owner's OK.",
-    "bean": "folio-assistant-veiu"
-  }
-];
+export const BASELINE: readonly BaselineEntry[] = [];
