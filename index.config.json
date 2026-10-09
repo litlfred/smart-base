@@ -1,0 +1,13 @@
+{
+  "$schema": "folio-index-config/v1",
+  "instances": [
+    {
+      "name": "smart-base",
+      "source": {
+        "local": {
+          "at": "smart-base"
+        }
+      }
+    }
+  ]
+}

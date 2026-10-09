@@ -88,3 +88,6 @@ package.json
 # kg/ is a package: its manifest and lockfile are what `npm ci` in kg.yml installs from
 !kg/package.json
 !kg/package-lock.json
+
+# BEGIN index mounts (generated from index.config.json — do not edit)
+# END index mounts
