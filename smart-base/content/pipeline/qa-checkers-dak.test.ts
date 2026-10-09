@@ -15,7 +15,7 @@
  */
 import { describe, test, expect, beforeAll, afterAll } from "bun:test";
 import { mkdtempSync, writeFileSync, rmSync } from "fs";
-import { join, resolve } from "path";
+import { join } from "path";
 import { tmpdir } from "os";
 import {
   checkDakCompanionPresent,
@@ -34,14 +34,15 @@ import {
   incompatibleCompanions,
   COMPANION_ROLES,
 } from "../../platform/index.js";
-import { ContributionRegistry } from "../../platform/index.js";
-import { loadContributionsSync } from "../../platform/index.js";
+import { smartBaseRegistrySync } from "../../scripts/tests/smart-base-consumer";
 
 /** smart-base's contribution, registered as `loadContributions` would. */
-// The registry a folio depending on smart-base gets (smart-ig's): since bean
-// riit, step 3b, the checkers reach it as `smart-base/qa-checkers/` nodes
-// through the dependency walk, not from an array contributions.ts returns.
-const registry = loadContributionsSync(resolve(import.meta.dir, "../../../smart-ig"), new ContributionRegistry());
+// The registry a folio depending on smart-base gets: since bean riit, step
+// 3b, the checkers reach it as `smart-base/qa-checkers/` nodes through the
+// dependency walk, not from an array contributions.ts returns. The folio is a
+// fixture naming smart-base by path — `smart-ig`, which used to be that folio,
+// is a separate repository the composition does not mount.
+const registry = smartBaseRegistrySync();
 
 const DIR = mkdtempSync(join(tmpdir(), "dak-checkers-"));
 const p = (n: string) => join(DIR, n);

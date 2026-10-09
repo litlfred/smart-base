@@ -57,14 +57,17 @@ import { assertPrefixesInSync, typesForKind } from "../platform/index.js";
 import { readBlockManifest } from "../platform/index.js";
 import { ContributionRegistry, composedKindOwner } from "../platform/index.js";
 import { loadContributionsSync } from "../platform/index.js";
+import { smartBaseRegistrySync } from "../scripts/tests/smart-base-consumer";
 
 /**
- * The registry a folio depending on smart-base gets: `smart-ig`'s, loaded as
+ * The registry a folio depending on smart-base gets, loaded as
  * `loadContributions` does. Since bean riit, step 3, the DAK kinds reach it as
  * smart-base's declared `block-kinds/` nodes through the dependency walk, not
- * from an array `contributions.ts` returns.
+ * from an array `contributions.ts` returns. The folio is a fixture naming
+ * smart-base by path (`smart-base-consumer.ts`): `smart-ig`, which used to be
+ * that folio, is a separate repository the composition does not mount.
  */
-const registry = loadContributionsSync(resolve(import.meta.dir, "..", "..", "smart-ig"), new ContributionRegistry());
+const registry = smartBaseRegistrySync();
 const builders = registry.contributedBuilders();
 
 const DIR = mkdtempSync(join(tmpdir(), "dak-blocks-"));
