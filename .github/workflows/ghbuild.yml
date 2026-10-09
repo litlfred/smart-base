@@ -909,6 +909,31 @@ jobs:
             echo "No files over 100 MB found."
           fi
 
+      # A branch preview carries no Publisher binaries: releases are the only
+      # place they are published, and the IG's KG points at them there (owner
+      # ruling 2026-10-02, bean b8ip: "previews dont get binary, only
+      # releaes"). Measured before this step: 907 MB of these copies across
+      # gh-pages' branch previews. The names are the ones fhir-harness's
+      # `ig-binary-audit.ts` counts (PUBLISHER_BINARIES, validator-*.pack);
+      # keep the two lists together. The default branch's deploy is untouched.
+      - name: Drop Publisher binaries from a branch preview
+        if: env.IS_DEFAULT_BRANCH == 'false' && inputs.deploy != false
+        run: |
+          dropped=$(find ./output -maxdepth 1 -type f \( \
+            -name full-ig.zip -o -name package.tgz -o -name package.r4.tgz -o -name package.r4b.tgz \
+            -o -name package-combined.tgz -o -name package.db -o -name ai.zip -o -name validator.pack \
+            -o -name 'validator-*.pack' \
+            -o -name definitions.json.zip -o -name definitions.xml.zip -o -name definitions.ttl.zip \
+            -o -name examples.json.zip -o -name examples.xml.zip -o -name examples.ttl.zip \
+            -o -name expansions.json.zip -o -name expansions.xml.zip \
+            -o -name csvs.zip -o -name excels.zip -o -name schematrons.zip -o -name spreadsheets.zip \) -print)
+          if [ -z "$dropped" ]; then
+            echo "No Publisher binaries in ./output."
+          else
+            echo "$dropped" | while read -r f; do echo "  dropped from the preview: $f ($(du -h "$f" | cut -f1))"; rm -f "$f"; done
+            echo "$(echo "$dropped" | wc -l) Publisher binary file(s) left out of branches/${BRANCH_DIR} — they belong to a release."
+          fi
+
       - name: Deploy candidate
         id: deploy_candidate_1
         uses: JamesIves/github-pages-deploy-action@v4.4.2
