@@ -61,11 +61,13 @@ describe("the committed pages: the banner's identity is the index's", () => {
 describe("the committed pages: the landing page", () => {
   // Since bean `mftp` smart-base commits no landing page either: its IG
   // site's own home page is the root, and the harness is reached through the
-  // navbar. What it commits for the artefact index is the viewer declaration.
+  // navbar. What it commits for the artefact index is its front matter — title and
+  // `rendered-by`; the visualiser itself is declared in smart-base.json
+  // (`visualisers`, owner 2026-10-09).
   it("smart-base commits no landing page, only the artefact index's viewer declaration", () => {
     expect(existsSync(join(ROOT, "smart-base", "docs", "index.md"))).toBe(false);
     const src = readFileSync(join(ROOT, "smart-base", "docs", "artifacts.md"), "utf8");
-    expect(src).toMatch(/^---\ntitle: "WHO SMART Base — artefact index"\nrenders:\n {2}- smart-base\/fhir-artifact-index\nrendered-by: ig-pages\n---\n$/);
+    expect(src).toMatch(/^---\ntitle: "WHO SMART Base — artefact index"\nrendered-by: ig-pages\n---\n$/);
   });
 
   // Since bean `mftp` smart-trust commits no landing page: its IG site's own
@@ -75,7 +77,7 @@ describe("the committed pages: the landing page", () => {
     expect(existsSync(join(ROOT, "smart-trust", "docs", "index.md"))).toBe(false);
     const src = readFileSync(join(ROOT, "smart-trust", "docs", "artifacts.md"), "utf8");
     expect(src).not.toContain("harness_details.html");
-    expect(src).toMatch(/^---\ntitle: "WHO SMART Trust — artefact index"\nrenders:\n {2}- smart-trust\/fhir-artifact-index\nrendered-by: ig-pages\n---\n$/);
+    expect(src).toMatch(/^---\ntitle: "WHO SMART Trust — artefact index"\nrendered-by: ig-pages\n---\n$/);
   });
 });
 
