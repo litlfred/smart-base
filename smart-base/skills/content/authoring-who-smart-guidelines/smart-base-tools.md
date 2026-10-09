@@ -87,3 +87,22 @@ and CI scripts want no skill: GitHub Actions is their caller.
 
 **There is no PDF renderer in smart-base.** Its only PDF dependency is
 `pdfplumber`, used to *read* PDFs when extracting personas.
+
+## What the generic authoring skills need to know here
+
+The platform's `bpmn-authoring`, `dmn-authoring` and `translation-manager`
+are generic and name no DAK (bean `lthi`, 2026-10-09: the references used to
+point up from them to this skill). What a DAK adds to each is said here:
+
+- **BPMN is a source artefact.** `bpmn2fsh` turns an authored business
+  process into FHIR Shorthand, so names and ids chosen in the diagram appear
+  in the generated FSH. Author it knowing it will be transformed.
+- **DMN is a source artefact.** `dmn2html` renders decision tables for human
+  review, and `dmn_questionnaire_generator` derives questionnaires from them;
+  the caveats are §"Two things to expect" above.
+- **Translation.** smart-base defines the formal actor
+  `SGAuthoring.Persona.Translator`, with the skill requirements
+  `SGAuthoring.Skills.TranslateContent` and
+  `SGAuthoring.Skills.ReviewTranslations`. The translation subsystem is
+  invoked from a smart-base checkout, never copied — the same
+  *load it; never vendor it* rule as every tool here.
