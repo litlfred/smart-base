@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: WorldHealthOrganization/smart-kg
-          ref: 66a9b1393fd7f315eb4eb0dab001db5e3eb0c5ef
+          ref: 3f5e477b9628fa818e71a2b2298371196c5af97c
           path: _smart-kg
 
       - uses: actions/setup-node@v4

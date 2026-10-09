@@ -29,6 +29,8 @@ export const EvidenceSchema = z
     location: z.string().describe(T["/$defs/evidence/properties/location"]),
     quote: z.string().describe(T["/$defs/evidence/properties/quote"]).optional(),
     artifact: z.string().describe(T["/$defs/evidence/properties/artifact"]).optional(),
+    by: z.string().describe(T["/$defs/evidence/properties/by"]).optional(),
+    at: z.iso.date().describe(T["/$defs/evidence/properties/at"]).optional(),
   })
   .strict()
   .describe(T["/$defs/evidence"]);
