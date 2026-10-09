@@ -8,7 +8,9 @@ output: schemas/skills/l2-dak-authoring/output.schema.json
 > Skill id: `l2-dak-authoring` · Package: `authoring-who-smart-guidelines` ·
 > Named by `l2-dak-authoring.bpmn` steps **Personas and scenarios**,
 > **Data dictionary and core data elements**, **Indicators and requirements**,
-> all in the `Business analyst` lane.
+> all in the `Business analyst` lane, and by `dak-l3-ig.bpmn` step
+> **Map L2 → L3**, beside `l3-fhir-authoring`, before that diagram calls
+> fhir-harness's generic `l3-fhir-pipeline.bpmn`.
 
 Author the **L2** layer of a WHO SMART Guideline: the human-readable,
 machine-*processable* Digital Adaptation Kit that sits between a narrative
