@@ -34,6 +34,15 @@
  * Every recommendation is `inferred` — SCOPE: *"extraction from prose is
  * inferred at minimum, never derived"* — so each carries a note and evidence.
  *
+ * ## T3 fidelity is a person's, and this tool never passes it
+ *
+ * T2 (`--validate`, smart-kg's `tools/validate.mjs`) checks the graph's shape.
+ * T3 — does each node say what its source says — is left to a person (bean
+ * `8pzh`). The coverage record therefore carries `fidelity.t3: "pending-person"`
+ * and the number of inferred nodes awaiting that review, printed with every
+ * run. The type admits no other value, so no code path here can report T3 as
+ * passed; a person's verdict is recorded elsewhere, never by this extractor.
+ *
  * ## Where the document goes
  *
  * BESIDE the entry, as `smart-kg-l1.json` (owner default, bean `8pzh`, after
@@ -362,6 +371,8 @@ export interface Coverage {
   refused: Array<Refused & { section: string }>;
   /** `WHO recommends` in prose outside any labelled block: paraphrase, so not emitted. */
   unlabelledMentions: number;
+  /** T3 fidelity: always pending a person, for every inferred node (see the module doc). */
+  fidelity: { t3: "pending-person"; inferredNodes: number };
 }
 
 const pageRangeOf = (s: BaseSection): string | undefined => {
@@ -406,6 +417,7 @@ export function l1Document(entry: LibraryEntry, generatedAt: string): { doc: L1D
     withCertainty: 0,
     refused: [],
     unlabelledMentions: 0,
+    fidelity: { t3: "pending-person", inferredNodes: 0 },
   };
   const seen = new Set<string>();
 
@@ -493,6 +505,7 @@ export function l1Document(entry: LibraryEntry, generatedAt: string): { doc: L1D
     nodes,
     edges,
   };
+  coverage.fidelity.inferredNodes = nodes.filter((n) => n.derivation === "inferred").length;
   return { doc, coverage };
 }
 
@@ -529,6 +542,7 @@ function report(path: string, c: Coverage): void {
       `; GRADE strength stated for ${c.withStrength}, certainty for ${c.withCertainty}`,
   );
   for (const r of c.refused) console.log(`    refused: Recommendation ${r.identifier} at ${r.section}:${r.line} — ${r.reason}`);
+  console.log(`    T3 fidelity: PENDING a person for ${c.fidelity.inferredNodes} inferred node(s) — never passed by this tool`);
   if (c.unlabelledMentions) console.log(`    not extracted: ${c.unlabelledMentions} "WHO recommends" mention(s) in prose outside a labelled block — paraphrase, not a statement`);
 }
 

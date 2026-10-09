@@ -180,3 +180,19 @@ describe("staleness", () => {
     expect(stale.stdout).toContain("stale");
   });
 });
+
+describe("T3 fidelity is left to a person (bean 8pzh)", () => {
+  it("every run reports T3 pending a person, counting the inferred nodes awaiting review", () => {
+    const { doc, coverage } = l1Document(entryOf({ "page-001": GRADED }), AT);
+    expect(coverage.fidelity.t3).toBe("pending-person");
+    expect(coverage.fidelity.inferredNodes).toBe(doc.nodes.filter((n) => n.derivation === "inferred").length);
+    expect(coverage.fidelity.inferredNodes).toBeGreaterThan(0);
+  });
+
+  it("the extractor never sets T3 to anything but pending", () => {
+    const src = readFileSync(join(import.meta.dir, "extract-smart-kg-l1.ts"), "utf-8");
+    const assigned = [...src.matchAll(/t3:\s*"([^"]+)"/g)].map((m) => m[1]);
+    expect(assigned.length).toBeGreaterThan(0);
+    expect(new Set(assigned)).toEqual(new Set(["pending-person"]));
+  });
+});
