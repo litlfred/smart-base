@@ -239,9 +239,9 @@
       "description": "What this layer holds, where each document came from, and how to re-derive an entry."
     }
   ],
-  "_visualisers_comment": "THE VISUALISERS THIS HARNESS DECLARES, at its own level (owner, 2026-10-09: \"I still want the harness to be where specific visualizers/pages are declared for the harness at the level … Need harness to declare visualizer is renderedBy\"). `artifact-index` is the artefact index of this IG, drawn by fhir-harness's `ig-pages` Tool; its route <base>/smart-base/artifact-index/ is computed by visualiserRoute and opens the IG site's own artifacts page. Not `artifacts`: the IG already publishes artifacts.html beside it, and check:visualiser-routes refuses a route a harness's own served directory also answers. Until then the IG's front-matter page said `renders: [smart-base/fhir-artifact-index]`, which is the page claiming the directory.",
+  "_visualisers_comment": "THE VISUALISERS THIS HARNESS DECLARES, at its own level (owner, 2026-10-09: \"I still want the harness to be where specific visualizers/pages are declared for the harness at the level … Need harness to declare visualizer is renderedBy\"). `artifact-index` is the artefact index of the SMART IGs, drawn by fhir-harness's `ig-pages` Tool, by KIND and per instance: <base>/smart-base/artifact-index/ opens this IG's own artifacts page, and <base>/smart-base/artifact-index/<instance>/ each covered IG's (smart-trust, smart-immunizations), whose own repositories declare no visualiser yet. Routes computed by visualiserRoute. Not `artifacts`: the IG already publishes artifacts.html beside it, and check:visualiser-routes refuses a route a harness's own served directory also answers. Until then the IG's front-matter page said `renders: [smart-base/fhir-artifact-index]`, which is the page claiming the directory.",
   "visualisers": [
-    {"id": "artifact-index", "renderedBy": "ig-pages", "covers": ["smart-base-artifact-index"], "title": "Artefact index"}
+    {"id": "artifact-index", "renderedBy": "ig-pages", "coversKinds": ["fhir-artifact-index"], "subgraphs": "instance", "title": "Artefact index"}
   ],
   "needs": [
     "fhir-harness"
