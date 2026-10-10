@@ -14,7 +14,19 @@
 #
 # Not run on `main`: ghbuild publishes the default branch to the root, and two
 # workflows writing the root would overwrite each other.
-
+#
+# Built by hand, the IG sites drift apart: each wears the harness chrome of the
+# platform it was last built with (bean 48a6). So the site says what built it
+# (`folio-build.json` at its root) and the run REPORTS any sibling built with
+# a different platform — a message, never a failure. Two repository VARIABLES
+# configure it, so a copy needs no edit:
+#   FOLIO_SITE_SIBLINGS      site URLs to compare with, space-separated
+#   FOLIO_SITE_DEPENDENCIES  owner/repo@ref of the IGs this one depends on,
+#                            whose folio-site is re-run after a publish
+# The rebuild needs the FOLIO_SITE_DISPATCH_TOKEN secret, a token that may run
+# workflows in those repositories; without it the summary says what was NOT
+# rebuilt. Owner, 2026-10-09: "1, but rebuild dependency for now". Keep the
+# dependency list acyclic, or two sites will rebuild each other for ever.
 name: folio site
 
 # Manual trigger only (owner decision, 2026-10-06): no build runs on push.
@@ -44,6 +56,14 @@ jobs:
 
       - uses: oven-sh/setup-bun@v2
 
+      - name: Mount the platform's instances from its lock
+        working-directory: folio-assistant
+        # Since the separation (folio-assistant #2518) the platform's instances
+        # (cat-harness, fhir-harness, folio-assistant-core, ...) are not in the
+        # submodule: they are remote mounts pinned by its index.lock.json, laid
+        # down by this script. Idempotent; it verifies each tree digest.
+        run: bash .github/mount-from-lock.sh --root .
+
       - name: Install folio-assistant
         working-directory: folio-assistant
         run: bun install --frozen-lockfile
@@ -58,10 +78,23 @@ jobs:
       - name: The main site's chrome, with this instance's navbar
         working-directory: folio-assistant
         run: |
-          bun run cat-harness/scripts/compose-docs.ts --out "$RUNNER_TEMP/docs" --shell
-          bun run cat-harness/scripts/gen-navbar-include.ts --instance "$INSTANCE" \
+          # --instance/--title/--link-root scope the shell's harness data to THIS
+          # IG (#2263): its tiles, icon row, rail scope and title, with the
+          # main site's graphs linked there and none of its counts shown here.
+          bun run cat-harness-tools/scripts/compose-docs.ts --out "$RUNNER_TEMP/docs" --shell \
+            --instance "$INSTANCE" --title "$LABEL" --link-root "$MAIN_SITE"
+          bun run cat-harness-tools/scripts/gen-navbar-include.ts --instance "$INSTANCE" \
             --link-root "$MAIN_SITE" --title "$LABEL" \
             --out "$RUNNER_TEMP/docs/_includes/generated/navbar-footer.html"
+
+      - name: Restore the IG's FHIR AST, the source of site.data.fhir
+        run: |
+          # `ig-cache.sh restore` puts the AST at ./output-ast, where
+          # ig-site-data reads the ImplementationGuide resource first (bean
+          # jut3). Exit 1 is a cache MISS, not a failure: site.data.fhir then
+          # comes from sushi-config.yaml, and the stage log says which.
+          bash folio-assistant/fhir-harness/scripts/ig-cache.sh restore --ig-root . \
+            || echo "no FHIR AST restored (exit $?): site.data.fhir from sushi-config.yaml"
 
       - name: Compose this IG at the site root
         working-directory: folio-assistant
@@ -79,15 +112,31 @@ jobs:
           BUNDLE_GEMFILE="$PWD/folio-assistant/cat-harness/docs/Gemfile" bundle exec jekyll build \
             --source "$RUNNER_TEMP/docs" --destination ./_site --baseurl "$BASE"
           bun run folio-assistant/fhir-harness/scripts/build-ig-site.ts --dedupe-ids ./_site
-          # The served data the JSON and DAK views fetch (`../fhir-artifact-index/`).
-          cp -a "folio-assistant/${INSTANCE}/fhir-artifact-index" ./_site/fhir-artifact-index
           touch ./_site/.nojekyll
+
+      - name: Publish this IG's served directories
+        working-directory: folio-assistant
+        run: |
+          # Every `served: true` directory of THIS instance, read from its
+          # declaration: the artefact index the JSON and IG API views fetch, and
+          # the `openapi` graph that `openapi/index.html` links land on. The
+          # graph's pages are generated here: only the ingested document is
+          # committed, and its index is what the IG's Swagger links forward to.
+          if [ -n "$(find "$INSTANCE" -maxdepth 3 -name cat-openapi.config.json -print -quit)" ]; then
+            bun run cat-harness-tools/openapi/scripts/gen-openapi-pages.ts --instance "$INSTANCE"
+          fi
+          bun run fhir-harness/scripts/publish-served.ts --instance "$INSTANCE" --site ../_site
 
       - name: Give any page Jekyll did not lay out the same navbar
         working-directory: folio-assistant
         run: |
-          bun run cat-harness/scripts/rail-standalone-pages.ts --site ../_site --built cat-harness \
+          bun run cat-harness-tools/scripts/rail-standalone-pages.ts --site ../_site --built cat-harness \
             --foreign-site --home-label "$LABEL" --instance "$INSTANCE"
+
+      - name: Say which platform built this site
+        working-directory: folio-assistant
+        run: |
+          bun run fhir-harness/scripts/site-build-stamp.ts stamp --site ../_site --instance "$INSTANCE" --platform .
 
       - name: Publish to gh-pages
         if: github.ref == 'refs/heads/claude/seed-smart-base'
@@ -98,3 +147,17 @@ jobs:
           clean: true
           clean-exclude: |
             branches/**
+
+      - name: Report platform drift against the sibling sites
+        working-directory: folio-assistant
+        run: |
+          bun run fhir-harness/scripts/site-build-stamp.ts drift --self ../_site/folio-build.json \
+            --sites "${{ vars.FOLIO_SITE_SIBLINGS }}"
+
+      - name: Rebuild the IGs this one depends on
+        if: github.ref == 'refs/heads/claude/seed-smart-base'
+        working-directory: folio-assistant
+        env:
+          FOLIO_SITE_DISPATCH_TOKEN: ${{ secrets.FOLIO_SITE_DISPATCH_TOKEN }}
+        run: |
+          bun run fhir-harness/scripts/site-build-stamp.ts dispatch --repos "${{ vars.FOLIO_SITE_DEPENDENCIES }}"
