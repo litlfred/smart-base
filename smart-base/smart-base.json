@@ -237,6 +237,13 @@
       "role": "instance-readme",
       "title": "smart-base",
       "description": "What this layer holds, where each document came from, and how to re-derive an entry."
+    },
+    {
+      "id": "checkout-scripts",
+      "src": "package.json",
+      "role": "checkout-scripts",
+      "title": "package.json — smart-base",
+      "description": "The checkout scripts this instance's code runs, under `checkoutScripts`. Each command is relative to the downstream checkout root. A downstream that mounts this instance reads them with `bun run cat` and `check:script-placement` only while this file's sha256 matches the mount lock (owner, 2026-10-07: Option A, by reference). folio-assistant#2448 moved them here from its root manifest."
     }
   ],
   "_visualisers_comment": "THE VISUALISERS THIS HARNESS DECLARES, at its own level (owner, 2026-10-09: \"I still want the harness to be where specific visualizers/pages are declared for the harness at the level … Need harness to declare visualizer is renderedBy\"). `artifact-index` is the artefact index of the SMART IGs, drawn by fhir-harness's `ig-pages` Tool, by KIND and per instance: <base>/smart-base/artifact-index/ opens this IG's own artifacts page, and <base>/smart-base/artifact-index/<instance>/ each covered IG's (smart-trust, smart-immunizations), whose own repositories declare no visualiser yet. Routes computed by visualiserRoute. Not `artifacts`: the IG already publishes artifacts.html beside it, and check:visualiser-routes refuses a route a harness's own served directory also answers. Until then the IG's front-matter page said `renders: [smart-base/fhir-artifact-index]`, which is the page claiming the directory.",
@@ -337,7 +344,7 @@
           ],
           "extractModule": "content/pipeline/bpmn-translate.ts",
           "injectModule": "content/pipeline/bpmn-translate.ts",
-          "notes": "Element names and <documentation>. Ids, sourceRef/targetRef, calledElement and the folio: extensions are NEVER offered for translation — a translated id disconnects the graph and a translated skill ref is exactly the dangling reference check:workflow-refs exists to catch. Re-render with `bun run render:bpmn` after injection. On overflow: measured 2026-09-18, a French set ~18% longer with every authored &#10; break dropped re-wrapped to the same 3 lines, 42px of an 80px task box, because bpmn-js re-wraps regardless. The authored breaks are not load-bearing; if a diagram does overflow, the fix is its shape bounds, not the string."
+          "notes": "Element names and <documentation>. Ids, sourceRef/targetRef, calledElement and the folio: extensions are NEVER offered for translation — a translated id disconnects the graph and a translated skill ref is exactly the dangling reference check:workflow-refs exists to catch. Re-render with `bun run cat render:bpmn` after injection. On overflow: measured 2026-09-18, a French set ~18% longer with every authored &#10; break dropped re-wrapped to the same 3 lines, 42px of an 80px task box, because bpmn-js re-wraps regardless. The authored breaks are not load-bearing; if a diagram does overflow, the fix is its shape bounds, not the string."
         }
       ],
       "rtlSupported": true,
