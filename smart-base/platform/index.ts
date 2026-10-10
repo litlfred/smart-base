@@ -76,13 +76,13 @@ export { defineTool, type ToolDefinition } from "../../cat-harness/schemas/tool.
 export { toolTypeIri } from "../../cat-harness/schemas/tool-types.js";
 export {
   writeInstanceConfig,
-} from "../../cat-harness/test/support/instance-fixture.js";
+} from "../../cat-harness-tools/test/support/instance-fixture.js";
 export {
   QA_CRITERIA_REGISTRY,
-} from "../../cat-harness/content/pipeline/qa-criteria-registry.js";
+} from "../../cat-harness-tools/content/pipeline/qa-criteria-registry.js";
 export {
   readBlockManifest,
-} from "../../cat-harness/content/pipeline/qa-utils.js";
+} from "../../cat-harness-tools/content/pipeline/qa-utils.js";
 export {
   BLOCK_KINDS,
   CONTENT_PROFILES,
@@ -143,7 +143,7 @@ export {
 } from "../../cat-harness/schemas/declared-nodes.js";
 export {
   siteFilter,
-} from "../../cat-harness/scripts/staging-cone.ts";
+} from "../../cat-harness-tools/scripts/staging-cone.ts";
 export {
   AST_SITE_WRITERS,
 } from "../../fhir-harness/scripts/stage-ast-sites.ts";
