@@ -33,7 +33,7 @@ A language specialist responsible for translating SMART Guidelines Implementatio
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActorDefinition/SGAuthoring.Persona.Translator` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.Translator.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.Translator.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.Translator.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

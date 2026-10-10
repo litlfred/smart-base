@@ -33,7 +33,7 @@ Logical Model for representing User Scenarios from a DAK. Narratives that descri
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/UserScenario` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-UserScenario.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-UserScenario.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-UserScenario.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-UserScenario.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

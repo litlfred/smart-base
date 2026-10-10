@@ -33,7 +33,7 @@ Source reference for Generic Persona - exactly one of the following must be prov
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/GenericPersonaSource` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-GenericPersonaSource.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-GenericPersonaSource.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-GenericPersonaSource.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-GenericPersonaSource.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

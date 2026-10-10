@@ -33,7 +33,7 @@ An L3 author who creates machine-readable FHIR artifacts from L2 DAK specificati
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActorDefinition/SGAuthoring.Persona.FHIRModeller` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.FHIRModeller.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.FHIRModeller.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.FHIRModeller.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

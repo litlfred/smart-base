@@ -33,7 +33,7 @@ Source reference for Core Data Element - exactly one of the following must be pr
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/CoreDataElementSource` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-CoreDataElementSource.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-CoreDataElementSource.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-CoreDataElementSource.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-CoreDataElementSource.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

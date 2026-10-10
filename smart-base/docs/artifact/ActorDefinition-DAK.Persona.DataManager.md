@@ -33,7 +33,7 @@ A professional who manages, analyses, and disseminates health data to support ev
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActorDefinition/DAK.Persona.DataManager` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.DataManager.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.DataManager.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.DataManager.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

@@ -34,7 +34,7 @@ Systems that support the detection, monitoring, and response to disease outbreak
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/CDSCv2.E` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.E.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.E.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.E.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDSCv2.E.schema.json">JSON Schema</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDSCv2.E.jsonld">JSON-LD</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

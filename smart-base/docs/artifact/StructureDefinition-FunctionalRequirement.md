@@ -33,7 +33,7 @@ Logical Model for representing functional requirement from a DAK
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/FunctionalRequirement` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-FunctionalRequirement.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-FunctionalRequirement.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-FunctionalRequirement.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-FunctionalRequirement.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

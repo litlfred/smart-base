@@ -33,7 +33,7 @@ Smart Guidelines (required) string extension for use in a complex extension
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGString` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGString.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGString.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGString.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

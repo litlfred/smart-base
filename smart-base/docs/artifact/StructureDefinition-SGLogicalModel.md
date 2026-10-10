@@ -33,7 +33,7 @@ Defines the minimum expectations for Logical Models used in SMART Guidelines
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGLogicalModel` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGLogicalModel.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGLogicalModel.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGLogicalModel.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

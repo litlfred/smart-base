@@ -33,7 +33,7 @@ Source reference for Requirements - exactly one of the following must be provide
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/RequirementsSource` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-RequirementsSource.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-RequirementsSource.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-RequirementsSource.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-RequirementsSource.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

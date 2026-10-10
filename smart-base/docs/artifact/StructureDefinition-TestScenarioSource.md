@@ -33,7 +33,7 @@ Source reference for Test Scenario - exactly one of the following must be provid
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/TestScenarioSource` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-TestScenarioSource.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-TestScenarioSource.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-TestScenarioSource.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-TestScenarioSource.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

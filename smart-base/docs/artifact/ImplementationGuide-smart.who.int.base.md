@@ -30,7 +30,7 @@ ig_prev: "Basic-SGAuthoring.Skills.ValidateL3Functionality.html"
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ImplementationGuide/smart.who.int.base` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ImplementationGuide-smart.who.int.base.json">json</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ImplementationGuide-smart.who.int.base.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

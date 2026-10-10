@@ -33,7 +33,7 @@ Defines the minimum expectations for Questionnaire resources used in SMART Guide
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGQuestionnaire` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGQuestionnaire.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGQuestionnaire.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGQuestionnaire.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

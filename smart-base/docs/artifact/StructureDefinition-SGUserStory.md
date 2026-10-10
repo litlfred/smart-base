@@ -33,7 +33,7 @@ Smart Guidelines extension to support structured User Stories (As a Actor I want
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGUserStory` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGUserStory.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGUserStory.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGUserStory.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

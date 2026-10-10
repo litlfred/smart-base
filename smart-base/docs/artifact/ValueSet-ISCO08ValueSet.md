@@ -33,7 +33,7 @@ Extensible value set of ISCO-08 codes for persona classification
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/ISCO08ValueSet` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-ISCO08ValueSet.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-ISCO08ValueSet.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-ISCO08ValueSet.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

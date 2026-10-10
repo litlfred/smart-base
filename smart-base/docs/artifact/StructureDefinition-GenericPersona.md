@@ -33,7 +33,7 @@ Logical Model for representing Generic Personas from a DAK. Depiction of the hum
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/GenericPersona` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-GenericPersona.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-GenericPersona.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-GenericPersona.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-GenericPersona.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

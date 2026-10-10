@@ -33,7 +33,7 @@ Defines the minimum expectations for PlanDefinition resources used in SMART Guid
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGPlanDefinition` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGPlanDefinition.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGPlanDefinition.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGPlanDefinition.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

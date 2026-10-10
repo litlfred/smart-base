@@ -33,7 +33,7 @@ Mapping from the Classification of Digital Health Interventions v1 (CDHI v1, 201
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ConceptMap/CDHIv1toCDHIv2` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ConceptMap-CDHIv1toCDHIv2.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ConceptMap-CDHIv1toCDHIv2.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ConceptMap-CDHIv1toCDHIv2.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

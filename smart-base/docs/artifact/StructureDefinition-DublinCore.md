@@ -33,7 +33,7 @@ Logical Model representing Dublin Core metadata elements as defined at https://w
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/DublinCore` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DublinCore.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DublinCore.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DublinCore.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-DublinCore.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API
