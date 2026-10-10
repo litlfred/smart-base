@@ -1,8 +1,6 @@
 ---
 graph-typologies:
   - fhir-artifact-index
-governs:
-  - smart-trust/smart-trust-docs
 ---
 
 # ig-artifact-ingestion
