@@ -192,7 +192,7 @@ describe("the measles run", () => {
     const res = spawnSync("bun", ["run", join(import.meta.dir, "l1-recommendation-scenarios.ts"),
       "--l1", join(F, "measles-position-paper-2017.l1.yaml"), "--vocabulary", join(F, "immz-vocabulary.json"),
       "--generic", join(F, "smart-base-generic-personas.json"), "--mapping", join(F, "measles-immz-mapping.yaml"),
-      "--out", join(F, "output"), "--check"], { encoding: "utf8" });
+      "--out", join(F, "candidates"), "--check"], { encoding: "utf8" });
     expect(res.stdout + res.stderr).toContain("75 scenario candidates");
     expect(res.status).toBe(0);
   });
