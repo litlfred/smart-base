@@ -220,6 +220,14 @@
         "scenarios"
       ],
       "description": "`scenarios/roles.json`: the roles this layer's processes bind. Declared at the cutover (bean hupw) so a remote mount brings it."
+    },
+    {
+      "id": "smart-base-code-lists",
+      "path": "code-lists/",
+      "description": "The GRADE code lists — certainty of evidence, reasons to rate certainty down and up, the Evidence-to-Decision criteria, and recommendation direction and strength — one `\"$schema\": \"folio-code-list/v1\"` file per list, read with the `grade` skill. Moved down from cat-harness/code-lists/ on 2026-10-10 (placement audit, bean lthi; owner: 'merge and go'): GRADE is the WHO guideline method this layer authors with, not a harness concept. The harness's generic lists stay there and reach this instance through the dependency overlay; this directory holds only lists of its own, as the harness entry says a dependent should.",
+      "graphTypologies": [
+        "code-list"
+      ]
     }
   ],
   "_directories_comment": "The list above is the count; this comment said FIVE entries while there were six, and gives none now. `scenarios/` is declared now that it holds `roles.json` (bean hupw); a declared-but-absent directory would be the `dh4f` defect, where every consumer scans nothing and reports a clean run over it.",
