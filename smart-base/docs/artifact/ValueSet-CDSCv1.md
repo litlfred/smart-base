@@ -34,7 +34,7 @@ Value set for Health System Challenges (Classification of Digital Health System 
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/CDSCv1` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv1.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv1.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv1.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDSCv1.schema.json">JSON Schema</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDSCv1.jsonld">JSON-LD</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

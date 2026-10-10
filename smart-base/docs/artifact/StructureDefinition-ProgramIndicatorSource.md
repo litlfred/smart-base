@@ -33,7 +33,7 @@ Source reference for Program Indicator - exactly one of the following must be pr
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/ProgramIndicatorSource` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-ProgramIndicatorSource.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-ProgramIndicatorSource.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-ProgramIndicatorSource.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-ProgramIndicatorSource.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

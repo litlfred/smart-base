@@ -33,7 +33,7 @@ Auto-generated questionnaire for decision table DAK.DT.IMMZ.D2.DT.BCG
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/Questionnaire/DAK.DT.IMMZ.D2.DT.BCGQuestionnaire` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/Questionnaire-DAK.DT.IMMZ.D2.DT.BCGQuestionnaire.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/Questionnaire-DAK.DT.IMMZ.D2.DT.BCGQuestionnaire.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/Questionnaire-DAK.DT.IMMZ.D2.DT.BCGQuestionnaire.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

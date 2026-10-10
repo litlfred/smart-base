@@ -33,7 +33,7 @@ Indicates that if the conditions for this requirement are satisified, then that 
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/Satisfies` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-Satisfies.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-Satisfies.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-Satisfies.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

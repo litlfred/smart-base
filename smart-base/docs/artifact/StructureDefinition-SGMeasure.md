@@ -33,7 +33,7 @@ Defines the minimum expectations for Measure resources used in SMART Guidelines
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGMeasure` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGMeasure.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGMeasure.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGMeasure.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

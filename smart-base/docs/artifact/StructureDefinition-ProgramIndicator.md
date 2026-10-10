@@ -33,7 +33,7 @@ Logical Model for representing Program Indicators from a DAK. Core set of indica
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/ProgramIndicator` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-ProgramIndicator.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-ProgramIndicator.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-ProgramIndicator.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-ProgramIndicator.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

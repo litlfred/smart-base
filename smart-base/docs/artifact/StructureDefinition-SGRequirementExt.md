@@ -33,7 +33,7 @@ Smart Guidelines Requirements extension
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGRequirementExt` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGRequirementExt.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGRequirementExt.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGRequirementExt.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

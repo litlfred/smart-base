@@ -33,7 +33,7 @@ ISCO-08 codes from the International Labour Organization official classification
 | | |
 |---|---|
 | Canonical URL | `http://www.ilo.org/public/english/bureau/stat/isco/isco08/` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-ISCO08.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-ISCO08.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-ISCO08.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

@@ -34,7 +34,7 @@ Digital Health Interventions whose primary user group is Clients (persons using 
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/CDHIv1.1` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDHIv1.1.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDHIv1.1.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDHIv1.1.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDHIv1.1.schema.json">JSON Schema</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDHIv1.1.jsonld">JSON-LD</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

@@ -33,7 +33,7 @@ CodeSystem for SMART Guidelines Persona Types
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/CodeSystem/SGPersonaTypes` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-SGPersonaTypes.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-SGPersonaTypes.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-SGPersonaTypes.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

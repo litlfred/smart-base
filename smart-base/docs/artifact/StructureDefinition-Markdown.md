@@ -33,7 +33,7 @@ Markdown extension
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/Markdown` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-Markdown.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-Markdown.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-Markdown.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

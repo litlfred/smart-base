@@ -33,7 +33,7 @@ Logical Model for representing Generic Business Processes and Workflows from a D
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/BusinessProcessWorkflow` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-BusinessProcessWorkflow.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-BusinessProcessWorkflow.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-BusinessProcessWorkflow.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-BusinessProcessWorkflow.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

@@ -33,7 +33,7 @@ Defines the minimum expectations for StructureMap resources used in SMART Guidel
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGStructureMap` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGStructureMap.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGStructureMap.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGStructureMap.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

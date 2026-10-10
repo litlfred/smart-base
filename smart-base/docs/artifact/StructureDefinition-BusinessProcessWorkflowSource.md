@@ -33,7 +33,7 @@ Source reference for Business Process Workflow - exactly one of the following mu
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/BusinessProcessWorkflowSource` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-BusinessProcessWorkflowSource.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-BusinessProcessWorkflowSource.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-BusinessProcessWorkflowSource.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-BusinessProcessWorkflowSource.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

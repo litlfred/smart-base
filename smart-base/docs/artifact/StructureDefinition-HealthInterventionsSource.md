@@ -33,7 +33,7 @@ Source reference for Health Interventions - exactly one of the following must be
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/HealthInterventionsSource` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-HealthInterventionsSource.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-HealthInterventionsSource.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-HealthInterventionsSource.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-HealthInterventionsSource.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

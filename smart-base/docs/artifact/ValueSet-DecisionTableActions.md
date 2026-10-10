@@ -34,7 +34,7 @@ Value Set for Smart Guidelines Documentation Decision Table Actions
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/DecisionTableActions` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-DecisionTableActions.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-DecisionTableActions.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-DecisionTableActions.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/ValueSet-DecisionTableActions.schema.json">JSON Schema</a> · <a href="../fhir-artifact-index/dak/ValueSet-DecisionTableActions.jsonld">JSON-LD</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

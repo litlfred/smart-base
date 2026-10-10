@@ -33,7 +33,7 @@ Smart Guidelines markdown extension
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGMarkdown` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGMarkdown.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGMarkdown.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGMarkdown.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API
