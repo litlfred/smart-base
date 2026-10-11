@@ -10,7 +10,7 @@
  *
  * ## Declared, never string-matched
  *
- * Measured on smart-immunizations (bean `cydz`): the lanes say `CHW` where the
+ * Measured on an immunization DAK (bean `cydz`): the lanes say `CHW` where the
  * personas page says `Community health worker`, a pool and its lane share one
  * label (`Vaccination location / Health worker`), a header lane `Function`
  * sits in every figure, and `PCPOSS` names nothing on the personas page. A
