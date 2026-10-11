@@ -13,7 +13,7 @@
  *
  * A data sheet is one whose header row has both a `Data element ID` and a
  * `Data element label` column. Measured
- * on smart-immunizations' `IMMZ DAK_core data dictionary.xlsx` against WHO's
+ * on an immunization DAK's `IMMZ DAK_core data dictionary.xlsx` against WHO's
  * v2.1 template (bean `sopq`): the column ORDER differs from the template, the
  * header sits on row 1 rather than row 2, `*` required-markers are absent, and
  * even sibling sheets disagree (`Input option` / `Input options`). Names
