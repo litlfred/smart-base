@@ -41,13 +41,9 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 
-export interface SwimlaneMap {
-  $schema: "dak-swimlanes/v1";
-  /** Persona as named on the personas page -> the words a lane uses for it. */
-  personas: Record<string, string[]>;
-  /** Lane words that are deliberately not personas -> why. */
-  notPersonas: Record<string, string>;
-}
+import { DakSwimlaneMapSchema, type DakSwimlaneMap } from "../schemas/dak-annexes.ts";
+
+export type SwimlaneMap = DakSwimlaneMap;
 
 export interface Process {
   letter: string;
@@ -192,7 +188,8 @@ if (import.meta.main) {
     process.exit(2);
   }
   const pc = join(ig, "input", "pagecontent");
-  const map = JSON.parse(readFileSync(mapPath, "utf-8")) as SwimlaneMap;
+  // Parsed, not cast: a declaration this cannot read is refused before it is used.
+  const map = DakSwimlaneMapSchema.parse(JSON.parse(readFileSync(mapPath, "utf-8")));
   const personas = personasFrom(readFileSync(join(pc, "personas.md"), "utf-8"));
   const processes = processesFrom(readFileSync(join(pc, "business-processes.md"), "utf-8"));
   const cw = crosswalk(personas, processes, (f) => {
