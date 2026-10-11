@@ -37,7 +37,14 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 import { inflateRawSync } from "node:zlib";
 
-export const ANNEX_SCHEMA = "dak-data-dictionary/v1";
+import {
+  DAK_DATA_DICTIONARY_SCHEMA,
+  DakDataDictionaryAnnexSchema,
+  type DakAnnexSheet,
+  type DakDataDictionaryAnnex,
+} from "../schemas/dak-annexes.ts";
+
+export const ANNEX_SCHEMA = DAK_DATA_DICTIONARY_SCHEMA;
 
 /** Every entry of a zip, by name, inflated. */
 export function unzip(buf: Uint8Array): Map<string, Uint8Array> {
@@ -121,19 +128,8 @@ export function headerKey(h: string): string {
   return h.replace(/\*/g, "").replace(/\([^)]*\)\s*$/, "").replace(/\s+/g, " ").trim().toLowerCase().replace(/s$/, "");
 }
 
-export interface AnnexSheet {
-  name: string;
-  columns: { key: string; label: string }[];
-  rows: string[][];
-}
-
-export interface DataDictionaryAnnex {
-  $schema: typeof ANNEX_SCHEMA;
-  title: string;
-  source: { label: string; sha256: string };
-  idColumn: string;
-  sheets: AnnexSheet[];
-}
+export type AnnexSheet = DakAnnexSheet;
+export type DataDictionaryAnnex = DakDataDictionaryAnnex;
 
 /** The data sheets of a data-dictionary workbook, as an annex. */
 export function dataDictionaryAnnex(buf: Uint8Array, sourceLabel: string): DataDictionaryAnnex {
@@ -154,13 +150,14 @@ export function dataDictionaryAnnex(buf: Uint8Array, sourceLabel: string): DataD
       .map((r) => keep.map((c) => (r[c.i] ?? "").trim()));
     sheets.push({ name: s.name, columns: keep.map(({ key, label }) => ({ key, label })), rows });
   }
-  return {
+  // Parsed on the way out, so a file this writes is one its validator accepts.
+  return DakDataDictionaryAnnexSchema.parse({
     $schema: ANNEX_SCHEMA,
     title: "Core data dictionary",
     source: { label: sourceLabel, sha256: createHash("sha256").update(buf).digest("hex") },
     idColumn: ID,
     sheets,
-  };
+  });
 }
 
 if (import.meta.main) {
