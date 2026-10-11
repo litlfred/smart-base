@@ -33,7 +33,7 @@ Source reference for Decision Support Logic - exactly one of the following must 
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/DecisionSupportLogicSource` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DecisionSupportLogicSource.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DecisionSupportLogicSource.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DecisionSupportLogicSource.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-DecisionSupportLogicSource.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

@@ -33,7 +33,7 @@ A secure, digital system that holds information about people's health and clinic
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActorDefinition/DAK.Persona.System.EMR` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.System.EMR.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.System.EMR.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.System.EMR.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

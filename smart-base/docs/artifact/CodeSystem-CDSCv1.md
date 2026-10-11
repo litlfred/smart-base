@@ -33,7 +33,7 @@ CodeSystem for Classification of Digital Health System Categories v1. Autogenera
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/CodeSystem/CDSCv1` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-CDSCv1.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-CDSCv1.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-CDSCv1.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

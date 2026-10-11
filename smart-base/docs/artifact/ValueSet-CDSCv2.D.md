@@ -34,7 +34,7 @@ Services and systems that support the collection, aggregation, storage, analysis
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/CDSCv2.D` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.D.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.D.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.D.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDSCv2.D.schema.json">JSON Schema</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDSCv2.D.jsonld">JSON-LD</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

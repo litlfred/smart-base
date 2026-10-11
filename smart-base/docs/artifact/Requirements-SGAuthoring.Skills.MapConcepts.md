@@ -33,7 +33,7 @@ Capability to map data elements to WHO Commons dictionary, ICD-11, SNOMED CT, LO
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/Requirements/SGAuthoring.Skills.MapConcepts` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.MapConcepts.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.MapConcepts.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.MapConcepts.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

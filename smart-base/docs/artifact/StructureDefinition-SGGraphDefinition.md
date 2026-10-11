@@ -33,7 +33,7 @@ The minimum expectations for GraphDefinition resources used in SMART Guidelines
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGGraphDefinition` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGGraphDefinition.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGGraphDefinition.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGGraphDefinition.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

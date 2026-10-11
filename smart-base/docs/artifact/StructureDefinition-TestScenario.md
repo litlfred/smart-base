@@ -33,7 +33,7 @@ Logical Model for representing Test Scenarios from a DAK. A set of test scenario
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/TestScenario` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-TestScenario.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-TestScenario.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-TestScenario.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-TestScenario.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

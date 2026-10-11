@@ -33,7 +33,7 @@ Structure and constraints for Group Definitions represented in SMART Guidelines
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGGroupDefinition` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGGroupDefinition.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGGroupDefinition.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGGroupDefinition.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

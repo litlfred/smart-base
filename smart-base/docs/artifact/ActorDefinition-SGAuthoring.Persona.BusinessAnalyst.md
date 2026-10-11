@@ -33,7 +33,7 @@ A digital health informatician specializing in business analysis who authors L2 
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActorDefinition/SGAuthoring.Persona.BusinessAnalyst` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.BusinessAnalyst.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.BusinessAnalyst.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.BusinessAnalyst.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

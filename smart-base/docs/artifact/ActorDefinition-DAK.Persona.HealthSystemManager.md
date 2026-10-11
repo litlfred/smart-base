@@ -33,7 +33,7 @@ A professional involved in the administration and oversight of health systems. H
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActorDefinition/DAK.Persona.HealthSystemManager` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.HealthSystemManager.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.HealthSystemManager.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.HealthSystemManager.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

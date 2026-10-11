@@ -33,7 +33,7 @@ A member of the health workforce who delivers health interventions. This group h
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActorDefinition/DAK.Persona.HealthcareProvider` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.HealthcareProvider.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.HealthcareProvider.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.HealthcareProvider.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

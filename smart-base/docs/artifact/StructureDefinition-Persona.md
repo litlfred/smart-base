@@ -33,7 +33,7 @@ Logical Model for representing Personas from a DAK
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/Persona` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-Persona.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-Persona.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-Persona.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-Persona.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

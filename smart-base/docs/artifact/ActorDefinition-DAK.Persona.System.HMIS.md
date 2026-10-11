@@ -33,7 +33,7 @@ A digital system used to collect, process, report, and use aggregate health data
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActorDefinition/DAK.Persona.System.HMIS` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.System.HMIS.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.System.HMIS.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-DAK.Persona.System.HMIS.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

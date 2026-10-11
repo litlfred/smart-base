@@ -33,7 +33,7 @@ Smart Guidelines code extension
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGcode` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGcode.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGcode.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGcode.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

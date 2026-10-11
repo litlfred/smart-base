@@ -33,7 +33,7 @@ The minimum expectations for ActivityDefinition resources used in SMART Guidelin
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGActivityDefinition` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGActivityDefinition.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGActivityDefinition.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGActivityDefinition.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

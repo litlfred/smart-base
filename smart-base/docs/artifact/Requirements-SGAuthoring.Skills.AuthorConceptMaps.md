@@ -33,7 +33,7 @@ Capability to create FHIR ConceptMap resources for cross-terminology mappings.
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/Requirements/SGAuthoring.Skills.AuthorConceptMaps` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.AuthorConceptMaps.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.AuthorConceptMaps.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.AuthorConceptMaps.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

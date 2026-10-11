@@ -31,7 +31,7 @@ ig_next: "Basic-DAK.Persona.CommunityHealthWorker.html"
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActivityDefinition/SGDecisionTableGuidance` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActivityDefinition-SGDecisionTableGuidance.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActivityDefinition-SGDecisionTableGuidance.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActivityDefinition-SGDecisionTableGuidance.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

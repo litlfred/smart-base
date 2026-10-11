@@ -33,7 +33,7 @@ Logical Model for representing Health Interventions and Recommendations from a D
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/HealthInterventions` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-HealthInterventions.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-HealthInterventions.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-HealthInterventions.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-HealthInterventions.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

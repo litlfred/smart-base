@@ -33,7 +33,7 @@ Mapping from the Classification of Digital Health System Categories v1 (CDSCv1, 
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ConceptMap/CDSCv1toCDSCv2` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ConceptMap-CDSCv1toCDSCv2.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ConceptMap-CDSCv1toCDSCv2.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ConceptMap-CDSCv1toCDSCv2.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

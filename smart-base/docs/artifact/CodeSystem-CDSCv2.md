@@ -33,7 +33,7 @@ CodeSystem for the Classification of Digital Health Services and Application Typ
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/CodeSystem/CDSCv2` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-CDSCv2.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-CDSCv2.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-CDSCv2.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

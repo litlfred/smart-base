@@ -34,7 +34,7 @@ Crosscutting Data Services DHIs. Group 4 of the Classification of Digital Interv
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/CDHIv2.4` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDHIv2.4.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDHIv2.4.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDHIv2.4.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDHIv2.4.schema.json">JSON Schema</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDHIv2.4.jsonld">JSON-LD</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

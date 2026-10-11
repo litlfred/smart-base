@@ -33,7 +33,7 @@ Capability to review the SMART Guidelines publication checklist across L1-L4 lay
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/Requirements/SGAuthoring.Skills.ReviewChecklist` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.ReviewChecklist.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.ReviewChecklist.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.ReviewChecklist.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

@@ -33,7 +33,7 @@ Capability to run and interpret IG Publisher QA validation reports.
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/Requirements/SGAuthoring.Skills.RunQAChecks` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.RunQAChecks.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.RunQAChecks.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.RunQAChecks.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

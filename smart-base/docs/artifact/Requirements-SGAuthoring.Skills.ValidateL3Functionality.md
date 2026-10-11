@@ -33,7 +33,7 @@ Capability to test StructureMap extraction, CQL execution, and measure calculati
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/Requirements/SGAuthoring.Skills.ValidateL3Functionality` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.ValidateL3Functionality.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.ValidateL3Functionality.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/Requirements-SGAuthoring.Skills.ValidateL3Functionality.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

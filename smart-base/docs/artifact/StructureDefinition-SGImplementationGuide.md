@@ -33,7 +33,7 @@ Defines the minimum expectations for ImplementationGuide resources used in SMART
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGImplementationGuide` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGImplementationGuide.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGImplementationGuide.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGImplementationGuide.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

@@ -34,7 +34,7 @@ Systems that create, maintain, and provide authoritative master records for pers
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/CDSCv2.C` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.C.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.C.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.C.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDSCv2.C.schema.json">JSON Schema</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDSCv2.C.jsonld">JSON-LD</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

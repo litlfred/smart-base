@@ -33,7 +33,7 @@ Structure and constraints for ActorDefinition resources used in SMART Guidelines
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGActor` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGActor.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGActor.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGActor.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

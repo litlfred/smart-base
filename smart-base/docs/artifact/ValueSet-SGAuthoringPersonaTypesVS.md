@@ -34,7 +34,7 @@ ValueSet for SMART Guidelines authoring persona types
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/SGAuthoringPersonaTypesVS` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-SGAuthoringPersonaTypesVS.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-SGAuthoringPersonaTypesVS.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-SGAuthoringPersonaTypesVS.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/ValueSet-SGAuthoringPersonaTypesVS.schema.json">JSON Schema</a> · <a href="../fhir-artifact-index/dak/ValueSet-SGAuthoringPersonaTypesVS.jsonld">JSON-LD</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

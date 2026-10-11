@@ -33,7 +33,7 @@ A programme manager responsible for the overall coordination and management of t
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActorDefinition/SGAuthoring.Persona.ProgrammeManager` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.ProgrammeManager.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.ProgrammeManager.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.ProgrammeManager.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

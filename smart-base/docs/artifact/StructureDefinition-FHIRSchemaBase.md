@@ -33,7 +33,7 @@ Base logical model providing the common schema metadata interface inherited by a
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/FHIRSchemaBase` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-FHIRSchemaBase.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-FHIRSchemaBase.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-FHIRSchemaBase.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-FHIRSchemaBase.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

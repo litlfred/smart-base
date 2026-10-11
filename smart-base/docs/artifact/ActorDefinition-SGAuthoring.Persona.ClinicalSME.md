@@ -33,7 +33,7 @@ A clinician or subject matter expert (SME) of a specific health area who validat
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ActorDefinition/SGAuthoring.Persona.ClinicalSME` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.ClinicalSME.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.ClinicalSME.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ActorDefinition-SGAuthoring.Persona.ClinicalSME.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

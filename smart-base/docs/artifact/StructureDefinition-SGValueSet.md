@@ -33,7 +33,7 @@ Defines the minimum expectations for ValueSet resources used in SMART Guidelines
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/SGValueSet` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGValueSet.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGValueSet.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-SGValueSet.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

@@ -33,7 +33,7 @@ Logical Model for representing a complete Digital Adaptation Kit (DAK) with meta
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/DAK` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DAK.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DAK.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DAK.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-DAK.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

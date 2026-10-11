@@ -34,7 +34,7 @@ Systems that support the administrative and managerial functions of health syste
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/CDSCv2.B` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.B.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.B.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CDSCv2.B.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDSCv2.B.schema.json">JSON Schema</a> · <a href="../fhir-artifact-index/dak/ValueSet-CDSCv2.B.jsonld">JSON-LD</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

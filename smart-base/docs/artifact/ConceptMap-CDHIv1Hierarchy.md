@@ -33,7 +33,7 @@ Mapping to represent hierarchy within the Classification of Digital Health Inter
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ConceptMap/CDHIv1Hierarchy` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ConceptMap-CDHIv1Hierarchy.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ConceptMap-CDHIv1Hierarchy.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ConceptMap-CDHIv1Hierarchy.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API

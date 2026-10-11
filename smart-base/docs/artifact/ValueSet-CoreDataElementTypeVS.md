@@ -34,7 +34,7 @@ Value set of core data element types
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/ValueSet/CoreDataElementTypeVS` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CoreDataElementTypeVS.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CoreDataElementTypeVS.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/ValueSet-CoreDataElementTypeVS.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/ValueSet-CoreDataElementTypeVS.schema.json">JSON Schema</a> · <a href="../fhir-artifact-index/dak/ValueSet-CoreDataElementTypeVS.jsonld">JSON-LD</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

@@ -33,7 +33,7 @@ Logical Model for representing Decision-Support Logic from a DAK. Decision-suppo
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/StructureDefinition/DecisionSupportLogic` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DecisionSupportLogic.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DecisionSupportLogic.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/StructureDefinition-DecisionSupportLogic.json" rel="external">json (upstream)</a> · <a href="../fhir-artifact-index/dak/StructureDefinition-DecisionSupportLogic.schema.json">JSON Schema</a> |
 | Materialization | <span class="st-tag st-held">materialized</span> — working copy, regenerable by re-running the ingest |
 
 ## DAK API

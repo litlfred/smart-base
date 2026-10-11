@@ -33,7 +33,7 @@ CodeSystem for Core Data Element types - defines the type of FHIR resource that 
 | | |
 |---|---|
 | Canonical URL | `http://smart.who.int/base/CodeSystem/CoreDataElementType` |
-| Published | <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-CoreDataElementType.json">json</a> · <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-CoreDataElementType.html">html</a> |
+| Published | <a href="https://worldhealthorganization.github.io/smart-base/CodeSystem-CoreDataElementType.json" rel="external">json (upstream)</a> |
 | Materialization | <span class="st-tag st-ref">referenced</span> — upstream, not held here |
 
 ## DAK API
