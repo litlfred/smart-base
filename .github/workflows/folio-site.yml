@@ -68,6 +68,14 @@ jobs:
         working-directory: folio-assistant
         run: bun install --frozen-lockfile
 
+      - name: Generate this IG's pages
+        working-directory: folio-assistant
+        # The instance's `docs/` (its `igSite` graph) is GENERATED, never
+        # committed: the platform's own CI writes it with `smart:pages`, and
+        # stage-ig-sites copies it into the IG site. Without this step the
+        # directory does not exist and staging stops on ENOENT.
+        run: bun run cat "$INSTANCE:pages"
+
       - name: Set up Ruby for the site
         uses: ruby/setup-ruby@v1
         with:
