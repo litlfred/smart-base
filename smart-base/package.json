@@ -17,6 +17,7 @@
     "smart-base:dth-terms": "bun run smart-base/scripts/gen-dth-term-findings.ts",
     "smart-base:dth-terms:check": "bun run smart-base/scripts/gen-dth-term-findings.ts --check",
     "smart-base:dak-data-dictionary": "bun run smart-base/scripts/dak-data-dictionary.ts",
-    "smart-base:dak-swimlanes": "bun run smart-base/scripts/dak-swimlanes.ts"
+    "smart-base:dak-swimlanes": "bun run smart-base/scripts/dak-swimlanes.ts",
+    "smart-base:dak-ast-sidecars": "bun run smart-base/scripts/dak-ast-sidecars.ts"
   }
 }
