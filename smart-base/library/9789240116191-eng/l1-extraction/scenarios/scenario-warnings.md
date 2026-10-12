@@ -22,9 +22,10 @@ Every scenario is a **candidate** until a person reviews its entry (0 of 22 revi
 | smart-base generic DAK.Persona.* | 1 |
 | glossary candidate | 3 |
 
-## Warnings (25)
+## Warnings (26)
 
 ```
+WARNING practice-implementedBy-unlicensed x22: the L1 source holds implementation-practice nodes (the l1-library extension; owner ruling 1b, 2026-10-12). smart-kg's L2 licenses implementedBy from a recommendation only, so these edges are a proposal for L2 until the class is upstream
 WARNING process-not-determined NPC-R01: dth-health-product-catalogue prints no process; domain process catalogue absent. This handbook prints no business process with an id, and no health-system process catalogue exists yet (bean 2ipj).
 WARNING persona-glossary-candidate NPC-R02: persona "National regulatory authority" is a glossary candidate — not among the personas of dth-health-product-catalogue or smart-base's generic DAK.Persona.*. The step table names policies 'led by the NRA'; no role in this handbook's role lists, and no smart-base generic persona, is a regulator.
 WARNING process-not-determined NPC-R02: dth-health-product-catalogue prints no process; domain process catalogue absent. This handbook prints no business process with an id, and no health-system process catalogue exists yet (bean 2ipj).

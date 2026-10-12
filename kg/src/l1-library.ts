@@ -28,6 +28,16 @@
  *    specification) is still a resolution target: a DAK's reference entry
  *    resolves upstream to its library node rather than staying unresolved.
  *
+ * 4. **Implementation guidance is not a guideline** (owner ruling 1b,
+ *    2026-10-12). A publication whose publicationType is
+ *    `implementation-guidance` "makes no recommendations of its own" (handbook
+ *    §1.9), so what it prints as practice is an `implementation-practice` node,
+ *    not a `recommendation` of some new kind. It lives HERE rather than in
+ *    `l1.ts` for the same reason as the rest of this file: `generated/l1/l1.json`
+ *    must stay equal to WHO's (`test/parity.test.ts`). L1 3.0's `remark` cannot
+ *    attach to it — its IRI is minted under a recommendation — so that waits
+ *    on an upstream change.
+ *
  * The extension lives here, beside the migrated 3.0 layer and not inside it, so
  * `generated/l1/l1.json` stays equal to WHO's and this can be proposed to
  * smart-kg as its own layer. A document that uses it names
@@ -71,7 +81,7 @@ export const L1_LIBRARY: LayerSpec = {
   layer: "l1-library",
   namespace: "http://smart.who.int/kg/",
   source: "authored",
-  note: `${LAYERING_RULE} This layer adds what L1 needs to point at the library above it: one opaque upstream class and PROV's specializationOf. It imports L1 3.0 unchanged.`,
+  note: `${LAYERING_RULE} This layer adds what L1 needs to point at the library above it: one opaque upstream class and PROV's specializationOf. It also carries implementation-practice, the content class for implementation guidance, which L1 3.0 lacks (owner ruling 1b, 2026-10-12). It imports L1 3.0 unchanged.`,
   imports: ["l1"],
   groundedIn: [
     {
@@ -95,6 +105,25 @@ export const L1_LIBRARY: LayerSpec = {
   ],
   classes: [
     {
+      id: "implementation-practice",
+      name: "Implementation practice",
+      kind: "Concept",
+      iri: "http://smart.who.int/kg/implementation-practice",
+      note:
+        "A statement of how to put guidance into practice, printed in a publication whose publicationType is implementation-guidance or methodology: the handbook's \"products that are not guidelines\" (§1.9), a \"how to\" document that makes no recommendations of its own. " +
+        "Not a recommendation, and not a good practice statement — both are made by a guideline and approved by the GRC; this is neither. It carries no kind, direction, strength or certainty, because nothing graded it. " +
+        "A handbook's own \"Best practices\" lists are the typical source. Owner ruling 1b, 2026-10-12: model these as their own class, not as recommendation nodes of a new kind.",
+      properties: {
+        identifier: p.string("Identifier", "The key the extraction gives it (e.g. NPC-R06), or the printed number where the publication numbers its practices; used in the IRI."),
+        statement: p.markdown("Statement", "The practice, VERBATIM; the only stored copy."),
+        contentHash: p.sha256("Content hash", "sha256 of the normalised statement; unchanged on re-extraction means current."),
+      },
+      iriPattern: "^https://smart\\.who\\.int/kg/l1/publication/(isbn|iris-handle|doi|issn|url)-[^/]+/implementation-practice/[^/]+(/[^/]+)*$",
+      minDerivation: "inferred",
+      propertyNote: "statement is verbatim and is the only stored copy, as recommendation's is. identifier is used in the IRI. There is no remark: L1 3.0's remark is minted under a recommendation (its iriPattern) and hasRemark starts at one, so a remark of a practice needs L1 itself to change — proposed upstream, not patched here.",
+      contentFields: ["statement"],
+    },
+    {
       id: "library-node",
       name: "Library node",
       kind: "Reference",
@@ -110,6 +139,10 @@ export const L1_LIBRARY: LayerSpec = {
     },
   ],
   edges: [
+    { predicate: "definedIn", source: "implementation-practice", target: "publication", minDerivation: "inferred", note: "Printed in this publication, whose publicationType is implementation-guidance or methodology." },
+    { predicate: "presentedIn", source: "implementation-practice", target: "publication-section", minDerivation: "inferred" },
+    { predicate: "presentedIn", source: "implementation-practice", target: "publication-element", minDerivation: "inferred" },
+    { predicate: "partOf", source: "implementation-practice", target: "implementation-practice", minDerivation: "inferred", note: "One item of a printed list of practices, to the practice that heads it." },
     { predicate: "specializationOf", source: "publication", target: "library-node", minDerivation: "derived" },
     { predicate: "specializationOf", source: "publication-section", target: "library-node", minDerivation: "derived" },
     { predicate: "specializationOf", source: "publication-element", target: "library-node", minDerivation: "inferred", note: "An element is cut from a library block by reading its layout; one element may span several blocks (a table over two pages), so this edge may repeat." },

@@ -1,7 +1,23 @@
 {
-  "_comment": "Role EXTENSIONS by id (placement PR0b; PR1, bean ybwt). Each entry adds this instance's skills to a role the harness declares, so the edge points DOWN: the harness's scenarios/roles.json names no skill that lives above it. An extension adds skills and nothing else; a role this instance owns outright would go in `roles` (placement PR4 moves whole roles). Schema: cat-harness/schemas/role-graph.ts (RoleExtensionSchema); overlay: cat-harness/schemas/scenario-overlay.ts.",
+  "_comment": "Role EXTENSIONS by id (placement PR0b; PR1, bean ybwt). Each entry adds this instance's skills to a role the harness declares, so the edge points DOWN: the harness's scenarios/roles.json names no skill that lives above it. An extension adds skills and nothing else; a role this instance owns outright would go in `roles` (placement PR4 moves whole roles). Schema: cat-harness/schemas/role-graph.ts (RoleExtensionSchema); overlay: cat-harness/schemas/scenario-overlay.ts. `roles` holds the roles this instance owns outright: `l1-extraction-reviewer` (owner ruling 3b, 2026-10-12), which signs L1 extraction exclusions.",
   "name": "smart-base",
-  "roles": [],
+  "roles": [
+    {
+      "id": "l1-extraction-reviewer",
+      "title": "L1 extraction reviewer",
+      "description": "Signs, or rejects, the exclusions an L1 extraction proposes: each normative-looking sentence of a WHO publication that the curation says is not a recommendation, an implementation practice or a remark. Until a person acting in this role signs an exclusion, its sentence stays unaccounted and coverage stays below 100 %. Owner ruling 3b, 2026-10-12: exclusions are signed by this named role, never by the agent that proposed them. Inherits the harness's generic reviewer; the ontologist/terminologist skills, methodologies and processes that will equip it are bean 4nfs.",
+      "actorKinds": [
+        "person"
+      ],
+      "inherits": [
+        "reviewer"
+      ],
+      "skills": [
+        "recommendation-extraction"
+      ],
+      "persona": "Has the publication open beside the work list and reads each proposed exclusion against the printed page. A wrong exclusion silently drops guidance from every DAK built on the extraction, so they sign one only having read the sentence in place, and reject it with a reason otherwise."
+    }
+  ],
   "extensions": [
     {
       "role": "business-analyst",

@@ -8,7 +8,8 @@ publication:
   - type: isbn
     value: 978-92-4-011619-1
   title: Digital transformation handbook for health product catalogue
-  basis: Title and electronic ISBN as printed on page 3.
+  publicationType: implementation-guidance
+  basis: Title and electronic ISBN as printed on page 3. publicationType implementation-guidance — a "how to" handbook that makes no recommendations of its own (handbook for guideline development §1.9), so every statement decided below is an implementation-practice node, not a recommendation (owner ruling 1b, 2026-10-12).
 decisions:
   p3:s4:
     as: exclude
@@ -131,10 +132,9 @@ decisions:
     statement: 'Master data management procedures should include the following key elements to continuously and securely maintain master data: • Data governance framework: Establish clear policies, roles,
       responsibilities, and processes to ensure data quality and consistency for use across the health supply chain.'
   p26:s3:
-    as: remark
-    of: NPC-R06
-    remarkType: definition
-    basis: Defines the data owner role the governance framework in NPC-R06 assigns.
+    as: exclude
+    reason: editorial
+    basis: Defines the data owner role the governance framework in NPC-R06 assigns. Was a `remark` (definition) of NPC-R06; L1 3.0's remark attaches only to a recommendation, and NPC-R06 is an implementation-practice (owner ruling 1b, 2026-10-12), so it is proposed for exclusion until remark is licensed on a practice upstream.
   p27:s1:
   - as: recommendation
     key: NPC-R07

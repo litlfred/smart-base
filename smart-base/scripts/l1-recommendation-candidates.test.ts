@@ -55,7 +55,7 @@ describe("the mechanical half", () => {
     expect(hintsFor("You must license your work under the same licence.", "")).toContain("licence-or-imprint");
     expect(hintsFor("• Codes should be numeric", "")).toContain("layout-fragment");
     const r = run(readEntry(entry()), undefined, "lib/test-entry", "2026-10-12T00:00:00Z");
-    expect(r.exclusions).toEqual([{ location: "p1:s2", reason: "editorial" }]);
+    expect(r.exclusions).toEqual([{ location: "p1:s2", reason: "editorial", signerRole: { role: "l1-extraction-reviewer" } }]);
     expect(r.coverage.excluded).toBe(0);
   });
 });
@@ -73,13 +73,34 @@ describe("the curation gates", () => {
 
   it("writes a valid L1 3.0 graph, narrowing a joined list to its bullets", () => {
     const r = run(readEntry(entry()), good, "lib/test-entry", "2026-10-12T00:00:00Z");
-    expect(r.counts).toEqual({ recommendations: 3, remarks: 1, partOf: 0, excluded: 1, undecided: 0 });
+    expect(r.counts).toEqual({ statementClass: "recommendation", recommendations: 3, remarks: 1, partOf: 0, excluded: 1, undecided: 0 });
     const v = check(r.graph);
     expect(v.errors).toEqual([]);
     const types = (r.graph!.nodes as { type: string }[]).map((n) => n.type);
     expect(types.filter((t) => t === "recommendation")).toHaveLength(3);
     expect(types).toContain("remark");
     expect((r.graph!.nodes as { derivation: string }[]).every((n) => n.derivation === "inferred")).toBe(true);
+  });
+
+  it("implementation guidance emits implementation-practice nodes, not recommendations (ruling 1b)", () => {
+    const { "p2:s3": _remark, ...rest } = good.decisions;
+    const c: Curation = { ...curation(rest), publication: { identifiers: [{ type: "isbn", value: "978-92-4-011619-1" }], publicationType: "implementation-guidance", basis: "x" } };
+    const r = run(readEntry(entry()), c, "lib/test-entry", "2026-10-12T00:00:00Z");
+    expect(r.counts.statementClass).toBe("implementation-practice");
+    const types = (r.graph!.nodes as { type: string }[]).map((n) => n.type);
+    expect(types.filter((t) => t === "implementation-practice")).toHaveLength(3);
+    expect(types).not.toContain("recommendation");
+    expect(r.graph!["@context"]).toBe("http://smart.who.int/kg/l1-library.context.jsonld");
+    expect(check(r.graph).errors).toEqual([]);
+    expect(refused({ ...c, decisions: { ...c.decisions, "p2:s3": { as: "remark", of: "R1", basis: "x" } } }).join()).toMatch(/remark attaches only to a recommendation/);
+    expect(refused({ ...c, decisions: { ...c.decisions, "p2:s1": { as: "recommendation", key: "R1", kind: "good-practice-statement", basis: "x" } } }).join()).toMatch(/makes no recommendations of its own/);
+  });
+
+  it("the validator refuses a recommendation defined in implementation guidance", () => {
+    const r = run(readEntry(entry()), good, "lib/test-entry", "2026-10-12T00:00:00Z");
+    const g = structuredClone(r.graph!) as { nodes: { type: string; properties: Record<string, unknown> }[] };
+    g.nodes.find((n) => n.type === "publication")!.properties.publicationType = "implementation-guidance";
+    expect(check(g).errors.join()).toMatch(/makes no recommendations of its own/);
   });
 
   it("an unsigned exclusion is not accounted for; a signed one is", () => {
@@ -122,7 +143,7 @@ describe("the worked example", () => {
       cwd: join(import.meta.dir, "..", ".."),
       encoding: "utf8",
     });
-    expect(r.stderr + r.stdout).toMatch(/current — 48 candidates: 22 recommendations/);
+    expect(r.stderr + r.stdout).toMatch(/current — 48 candidates: 22 implementation practices/);
     expect(r.status).toBe(0);
   });
 
@@ -134,7 +155,7 @@ describe("the worked example", () => {
         "--generic", "smart-base/scripts/fixtures/l1-recommendation-scenarios/measles/smart-base-generic-personas.json", "--mapping", `${X}/scenario-mapping.yaml`, "--out", `${X}/scenarios`, "--check"],
       { cwd: join(import.meta.dir, "..", ".."), encoding: "utf8" },
     );
-    expect(r.stderr + r.stdout).toMatch(/current — 22 scenario candidates, 25 warning/);
+    expect(r.stderr + r.stdout).toMatch(/current — 22 scenario candidates, 26 warning/);
     expect(r.status).toBe(0);
   });
 });

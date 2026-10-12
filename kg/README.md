@@ -17,7 +17,7 @@ its properties and binds some to value sets, but doesn't type the rest.
 | file | what | generated? |
 |---|---|---|
 | `src/l1.ts` | L1 3.0: 13 classes with typed properties, 18 value sets, 21 predicates, 68 licensed edges | source (migrated) |
-| `src/l1-library.ts` | the **library extension**: the layering rule, the specialisation of L1's layout classes, and the upstream `library-node` class | source |
+| `src/l1-library.ts` | the **library extension**: the layering rule, the specialisation of L1's layout classes, the upstream `library-node` class, and `implementation-practice` (owner ruling 1b, 2026-10-12) | source |
 | `src/graph.ts` | a graph document's form (tier 1) | source |
 | `src/validate.ts` | tier 1 + tier 2: a port of smart-kg `validate.mjs` 3.0, plus a check on typed values | source |
 | `src/kgid.ts` | L1 IRIs and content hashes: a port of `tools/kgid.mjs` | source |
@@ -49,6 +49,15 @@ every other logical model here.
    produces.
 3. A source the library holds that **isn't L1** is still a resolution target:
    `reference-entry resolvesTo library-node`.
+
+**Implementation guidance (owner ruling 1b, 2026-10-12).** A publication whose
+`publicationType` is `implementation-guidance` (or `methodology`) makes no
+recommendations of its own (handbook §1.9). What it prints is an
+`implementation-practice` node — a class of its own, declared here rather than
+in `l1.ts` so `l1.json` stays equal to WHO's. It carries `identifier`,
+`statement` and `contentHash` and no grading; L1 3.0's `remark` cannot attach to
+it (its IRI is minted under a recommendation). `validate.ts` refuses a
+`recommendation` defined in such a publication.
 
 It is kept as its own layer (`l1-library`, which imports `l1`), so
 `generated/l1/l1.json` stays equal to WHO's and the extension can be proposed
