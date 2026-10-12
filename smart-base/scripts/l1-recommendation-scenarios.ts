@@ -71,6 +71,7 @@ import { z } from "zod";
 
 import { L1_NAMESPACE, slug } from "./l1-kgid.ts";
 import { VocabularySchema, type Vocabulary, type VocabPersona, type VocabProcess } from "./l1-scenario-vocabulary.ts";
+import { buildRunContext, writeRunContext } from "./l1-run-context.ts";
 
 export const MAPPING_SCHEMA_TAG = "l1-scenario-mapping/v1" as const;
 export const L2_CONTEXT = "http://smart.who.int/kg/l2.context.jsonld";
@@ -400,7 +401,7 @@ export function buildScenarios(inp: Inputs, generatedAt: string): Result {
     if (!proc) {
       warnings.push({
         code: "process-not-determined", key: rec.key,
-        message: `no ${guide.guide} process (${idRange([...processes.keys()])}) realises this; domain process catalogue absent. ${e.process.basis}`,
+        message: `${processes.size ? `no ${guide.guide} process (${idRange([...processes.keys()])}) realises this` : `${guide.guide} prints no process`}; domain process catalogue absent. ${e.process.basis}`,
       });
     }
 
@@ -600,6 +601,11 @@ if (import.meta.main) {
     process.exit(0);
   }
   mkdirSync(out, { recursive: true });
+  // The run's provenance, as cat-harness's folio-run-context/v1, beside the output. Not part of `--check`:
+  // its platform commit moves with every commit, as generatedAt moves with every run.
+  const ctx = buildRunContext(process.argv[1]!, [l1, vocabulary, mappingPath, ...(opt("--generic") ? [opt("--generic")!] : [])], out);
+  if (ctx) writeRunContext(ctx, out);
+  else console.error("WARNING run-context: no git checkout to name as the platform; run-context.json not written");
   for (const w of result.warnings) console.error(warningLine(w));
   if (!existsSync(graphPath) || !isCurrent(readFileSync(graphPath, "utf8"), result.document)) writeFileSync(graphPath, serialise(result.document));
   writeFileSync(reportPath, report);

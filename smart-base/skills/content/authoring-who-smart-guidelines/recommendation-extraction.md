@@ -92,6 +92,49 @@ mechanical again.**
    `npx tsx src/validate.ts <graph.json>` from `kg/` in a smart-base checkout
    (what `--validate-zod` runs in the sibling scripts).
 
+### Part 1 as a tool: `l1-recommendation-candidates`
+
+Steps 3–6 are one Tool node (`smart-base/tools/index.ts`), run twice around
+the agent's judgement:
+
+```sh
+# 1. mechanical: the work list — every normative sentence, with hints; nothing decided
+bun run smart-base/scripts/l1-recommendation-candidates.ts --entry smart-base/library/<id> --out <dir>
+# 2. agent: write <dir>/curation.yaml (l1-recommendation-curation/v1), one decision per location
+# 3. mechanical: the gates, and the L1 3.0 graph
+bun run smart-base/scripts/l1-recommendation-candidates.ts --entry smart-base/library/<id> \
+  --curation <dir>/curation.yaml --out <dir> [--check]
+```
+
+**The curation is the agent's step, and only the agent's.** The script hints
+(`licence-or-imprint`, `glossary-page`, `layout-fragment`) and proposes the
+publication's identity from the printed ISBN; it never decides. Per candidate
+location (`p<page>:s<n>`, `l1-coverage`'s own), the agent records one of:
+
+| `as` | means | fields |
+|---|---|---|
+| `recommendation` | an L1 `recommendation` node | `key`; `statement` only to narrow a joined list to one bullet, or to join a split sentence; `kind` only where printed |
+| `remark` | a `remark` of a recommendation, by `hasRemark` | `of`, `remarkType` |
+| `part-of` | inside another recommendation's statement | `of` |
+| `exclude` | a PROPOSED exclusion, one of the fixed reasons | `reason`; `signedOffBy` is a person's, never an agent's |
+
+Every decision carries a `basis`. A location may carry a list of
+`recommendation` decisions: the splitter reads a bulleted list as one sentence.
+
+It **refuses** a statement not printed in the entry (normalised), an override
+that neither contains nor is contained in its candidate, a location the entry
+does not hold, a reused key, and a remark of an undeclared key — then checks
+the graph with `kg/src/validate.ts`. It writes `recommendation-candidates.json`
+(the work list), `recommendations.l1.json`, `exclusions.proposed.json`,
+`extraction-warnings.md` and `run-context.json`.
+
+**Provenance.** Each run of either tool writes a cat-harness
+`folio-run-context/v1` (`schemas/run-context.ts`) as `run-context.json`
+beside its output — the platform commit, the mounts, the script and its hash,
+the inputs' hash basis — the same record `pdf-ocr.py` writes at ingest. The
+work list cites it by reference. `--check` ignores the context, as it ignores
+`generatedAt`: a context moves with every commit.
+
 ## Part 2 — the scenario
 
 ### The shape (D3: L2 nodes, reused unchanged)
@@ -221,7 +264,25 @@ becomes a functional **requirement** (`functional-requirement fulfilledBy
 persona`). None of that is drawn here. `could-not-determine` scenarios are the
 ones with no process to draw into yet.
 
-## The worked example
+## The worked examples
+
+**An ingested handbook, end to end.**
+`smart-base/library/9789240116191-eng/l1-extraction/` is the *Digital
+transformation handbook for health product catalogue* (WHO, 2025) run through
+both tools: 48 normative sentences; the agent's curation took 22
+recommendations and 1 remark and proposed 29 exclusions (licence text,
+glossary definitions, background on SMART Guidelines, chapter checkpoints) —
+none signed, so coverage reads 19/48 captured until a person signs them. The
+scenarios reuse the handbook's own roles (data owner, custodian, steward,
+project manager, solution architect: 18 links), one generic
+`DAK.Persona.DataManager`, and 3 glossary candidates (the national regulatory
+authority, twice, and the master data governance group). The handbook prints no
+business process with an id and no health-system catalogue exists (bean
+`2ipj`), so all 22 are `could-not-determine`: 25 warnings. That is the result,
+not a defect: it is the work list for the catalogue. The test
+`l1-recommendation-candidates.test.ts` keeps it current.
+
+**An authored L1, scenario half only.**
 
 `smart-base/scripts/fixtures/l1-recommendation-scenarios/measles/`: the 75
 recommendations of the WHO measles position paper (WER 92(17), 2017) against
