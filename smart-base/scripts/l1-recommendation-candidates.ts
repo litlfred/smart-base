@@ -196,7 +196,7 @@ export interface Candidate {
   keys?: string[];
 }
 
-export interface Warning { code: "undecided" | "fragment-decided" | "exclusion-unsigned" | "publication-proposed" | "no-publication-identity" | "hint"; key: string; message: string }
+export interface Warning { code: "l1-validator" | "undecided" | "fragment-decided" | "exclusion-unsigned" | "publication-proposed" | "no-publication-identity" | "hint"; key: string; message: string }
 
 export interface Result {
   candidates: Candidate[];
@@ -345,6 +345,13 @@ export function run(entry: Entry, curation: Curation | undefined, entryPath: str
   if (graph) {
     const v = checkGraph(graph);
     if (v.errors.length) throw new RefusalError(v.errors.map((e) => `L1 3.0 validation: ${e}`));
+    // The validator's warnings, grouped: the same finding on 22 nodes is one line with a count.
+    const groups = new Map<string, number>();
+    for (const w of v.warnings) {
+      const k = w.replace(/"[^"]*"/g, "…");
+      groups.set(k, (groups.get(k) ?? 0) + 1);
+    }
+    for (const [k, n] of groups) warnings.push({ code: "l1-validator", key: `x${n}`, message: k });
   }
 
   // coverage over the curated graph
@@ -451,6 +458,8 @@ if (import.meta.main) {
   if (ctx) ref = writeRunContext(ctx, out);
   else console.error("WARNING run-context: no git checkout to name as the platform; run-context.json not written");
   for (const [p, kind, v] of files) {
+    // An unchanged graph keeps its bytes: downstream (the scenario candidates) pins it by sha256.
+    if (p.endsWith(GRAPH_FILENAME) && existsSync(p) && sameIgnoring(readFileSync(p, "utf8"), v, ["generatedAt"])) continue;
     const body = kind === "text" ? (v as string) : serialise(p.endsWith(CANDIDATES_FILENAME) && ref ? { ...(v as object), runContext: ref } : v);
     writeFileSync(p, body);
   }
