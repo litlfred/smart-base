@@ -1,7 +1,7 @@
 {
   "$schema": "folio-run-context/v1",
   "platform": {
-    "commit": "615a9366e2d9257668db7f54f24611fd436762e5"
+    "commit": "4391a9704fdd2079a8749ffaed80f3d6c030f1ec"
   },
   "mounts": {
     "state": "could-not-determine",
@@ -11,7 +11,7 @@
   "invoker": {
     "kind": "system",
     "id": "smart-base/scripts/l1-recommendation-candidates.ts",
-    "script_hash": "8a7ebebf3f65a9d3012b2a7a78f58d187f6326d8d233587417af4d56572921d6"
+    "script_hash": "4da83547e3ad70225f9b8694556c9ca255615b3672bf1c246404f602e742fe36"
   },
   "inputs": [
     {
