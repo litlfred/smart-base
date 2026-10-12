@@ -3,11 +3,11 @@
   "id": "https://smart.who.int/dth-health-product-catalogue/graph/l1-scenarios/dth-npc-9789240116191",
   "type": "Entity",
   "ontologyVersion": "1.0",
-  "generatedAt": "2026-10-12T16:57:06Z",
+  "generatedAt": "2026-10-12T18:25:35Z",
   "wasDerivedFrom": [
     {
       "path": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json",
-      "sha256": "6d4d7ca01fc79268eae6acb47976dd1535825916fba591b6b8a339d921ef8fc4",
+      "sha256": "b582ea1f3c44c86688d3e50c8abe19ac4ed195f3f8561038ac91bfa77054d71e",
       "note": "The L1 recommendations, each the source of one implementedBy edge."
     },
     {
@@ -33,7 +33,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R01: identify every health product by its standardized product information in every transaction",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R01, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R01, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R01 (smart-base/library/9789240116191-eng/sections/page-010.md)",
         "quote": "For transactions to be seamless, all stakeholders must consistently identify health products using standardized information."
@@ -51,7 +51,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R02: set policies and guidelines that give manufacturers, distributors and suppliers efficient ways to share the required product data",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R02, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R02, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R02 (smart-base/library/9789240116191-eng/sections/page-022.md)",
         "quote": "Regulatory policies and guidelines must promote efficient mechanisms for stakeholders such as manufacturers, distributors and other suppliers to share the required data."
@@ -69,7 +69,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R03: outline phased timelines for rolling out the master data policies",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R03, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R03, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R03 (smart-base/library/9789240116191-eng/sections/page-022.md)",
         "quote": "Timelines with phased roll-out of policies should be outlined to ensure effective compliance by manufacturers."
@@ -87,7 +87,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R04: keep the integrity and quality of product master data maintained continuously",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R04, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R04, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R04 (smart-base/library/9789240116191-eng/sections/page-025.md)",
         "quote": "For effective use of data in operations, analysis, and decision-making, the integrity and quality of data must be consistently and continuously maintained."
@@ -105,7 +105,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R05: make the data management policies require privacy, security and ethical data use",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R05, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R05, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R05 (smart-base/library/9789240116191-eng/sections/page-025.md)",
         "quote": "Data management policies should ensure adherence to principles of privacy, security, and ethical data usage."
@@ -123,7 +123,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R06: include a data governance framework in the master data management procedures",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R06, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R06, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R06 (smart-base/library/9789240116191-eng/sections/page-026.md)",
         "quote": "Master data management procedures should include the following key elements to continuously and securely maintain master data: • Data governance framework: Establish clear policies, roles, responsibilities, and processes to ensure data quality and consistency for use across the health supply chain."
@@ -141,7 +141,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R07: take every source, system, process and stakeholder of product data into account when harmonizing it",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R07, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R07, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R07 (smart-base/library/9789240116191-eng/sections/page-027.md)",
         "quote": "Data harmonization activities must consider all sources of product data, as well as the systems, processes, and organizations or stakeholders that will utilize this data."
@@ -159,7 +159,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R08: make the master data definitions and structures cover product classifications, generic product information and trade item details",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R08, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R08, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R08 (smart-base/library/9789240116191-eng/sections/page-028.md)",
         "quote": "Master data definitions and structures should include provisions for maintaining product classifications, generic product information, and trade item details."
@@ -177,7 +177,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R09: keep product classification and characteristics out of the generic national product code",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R09, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R09, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R09 (smart-base/library/9789240116191-eng/sections/page-029.md)",
         "quote": "It is generally recommended to avoid including product classification or product characteristics such as dosage and strength in the generic national product code."
@@ -195,7 +195,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R10: have the system generate sequential numeric or alphanumeric product codes",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R10, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R10, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R10 (smart-base/library/9789240116191-eng/sections/page-029.md)",
         "quote": "Instead, a system-generated sequential numeric or alphanumeric code should be used."
@@ -213,7 +213,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R11: record dosage, strength, pack size and route of administration as attributes linked to the product code",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R11, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R11, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R11 (smart-base/library/9789240116191-eng/sections/page-029.md)",
         "quote": "Product characteristics such as dosage, strength, pack size, and route of administration should be defined as attributes and linked to the product codes."
@@ -231,7 +231,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R12: map each generic national product code to its trade items' GTINs or other unique identifiers",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R12, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R12, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R12 (smart-base/library/9789240116191-eng/sections/page-029.md)",
         "quote": "Generic national product codes, including drug codes and medicinal product identifiers (when using the WHO Drug Dictionary), should be mapped to trade item-specific identifiers, such as GTINs, or similar unique identifiers where GTINs are not available."
@@ -249,7 +249,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R13: keep product codes a uniform length and the coding system able to grow",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R13, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R13, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R13 (smart-base/library/9789240116191-eng/sections/page-029.md)",
         "quote": "The product coding system should maintain uniform code lengths and ensure scalability to accommodate an increasing number of unique products."
@@ -267,7 +267,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R14: let one generic national product code map to many trade items",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R14, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R14, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R14 (smart-base/library/9789240116191-eng/sections/page-029.md)",
         "quote": "Product master data structures should support the mapping of one generic national product code to multiple corresponding trade items."
@@ -285,7 +285,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R15: model packaging levels and the quantity relationships between them",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R15, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R15, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R15 (smart-base/library/9789240116191-eng/sections/page-029.md)",
         "quote": "In addition, the data structure should organize multiple packaging levels and quantity relationships across those."
@@ -303,7 +303,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R16: categorize data attributes by their sensitivity",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R16, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R16, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R16 (smart-base/library/9789240116191-eng/sections/page-032.md)",
         "quote": "To address these concerns, procedures and systems should be developed to categorize data attributes based on their level of sensitivity."
@@ -321,7 +321,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R17: control access to data according to its sensitivity category",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R17, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R17, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R17 (smart-base/library/9789240116191-eng/sections/page-032.md)",
         "quote": "Access should then be controlled according to these sensitivity categories, ensuring appropriate data protection while enabling secure data sharing."
@@ -339,7 +339,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R18: lead the governance, planning and oversight of product master data standardization, capture and dissemination",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R18, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R18, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R18 (smart-base/library/9789240116191-eng/sections/page-032.md)",
         "quote": "The governance group should support the overall governance and planning of product master data standardization, capture, and dissemination activities, and provide leadership and oversight for all data management efforts."
@@ -357,7 +357,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R19: give a trade item a local identifier when it has no GTIN",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R19, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R19, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R19 (smart-base/library/9789240116191-eng/sections/page-039.md)",
         "quote": "When global identifiers such as GTINs are not available—e.g., if a manufacturer has not yet subscribed for a GTIN—it is recommended to use a local identifier for trade items."
@@ -375,7 +375,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R20: put user training, standards participation and advocacy sessions into the change management plan",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R20, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R20, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R20 (smart-base/library/9789240116191-eng/sections/page-040.md)",
         "quote": "The plan should include: • Training of new users and newly hired staff involved in master data management • Encouraging participation in global and open standards conferences • Conducting advocacy sessions for operational users, emphasizing the benefits of standardized product master data."
@@ -393,7 +393,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R21: make sure staff understand the purpose and benefits of the new systems and processes",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R21, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R21, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R21 (smart-base/library/9789240116191-eng/sections/page-043.md)",
         "quote": "In addition to technical skills, the workforce must also understand the purpose of improved systems and processes, along with the benefits they bring to their daily work."
@@ -411,7 +411,7 @@
       "label": "DTH.NPC.9789240116191.NPC-R22: consider the typical technical roles when staffing the NPC implementation",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "User-scenario CANDIDATE for recommendation NPC-R22, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
+      "note": "User-scenario CANDIDATE for implementation practice NPC-R22, authored from its statement against the dth-health-product-catalogue vocabulary. Domain health-system-strengthening (inferred).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json#NPC-R22 (smart-base/library/9789240116191-eng/sections/page-057.md)",
         "quote": "The following table illustrates the typical technical roles that should be considered for NPC implementation."
@@ -553,11 +553,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R01",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R01",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r01",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R01 is implemented by scenario DTH.NPC.9789240116191.NPC-R01 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R01 is implemented by scenario DTH.NPC.9789240116191.NPC-R01 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R01"
       },
@@ -589,11 +589,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R02",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R02",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r02",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R02 is implemented by scenario DTH.NPC.9789240116191.NPC-R02 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R02 is implemented by scenario DTH.NPC.9789240116191.NPC-R02 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R02"
       },
@@ -625,11 +625,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R03",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R03",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r03",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R03 is implemented by scenario DTH.NPC.9789240116191.NPC-R03 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R03 is implemented by scenario DTH.NPC.9789240116191.NPC-R03 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R03"
       },
@@ -661,11 +661,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R04",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R04",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r04",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R04 is implemented by scenario DTH.NPC.9789240116191.NPC-R04 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R04 is implemented by scenario DTH.NPC.9789240116191.NPC-R04 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R04"
       },
@@ -697,11 +697,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R05",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R05",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r05",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R05 is implemented by scenario DTH.NPC.9789240116191.NPC-R05 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R05 is implemented by scenario DTH.NPC.9789240116191.NPC-R05 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R05"
       },
@@ -733,11 +733,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R06",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R06",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r06",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R06 is implemented by scenario DTH.NPC.9789240116191.NPC-R06 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R06 is implemented by scenario DTH.NPC.9789240116191.NPC-R06 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R06"
       },
@@ -769,11 +769,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R07",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R07",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r07",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R07 is implemented by scenario DTH.NPC.9789240116191.NPC-R07 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R07 is implemented by scenario DTH.NPC.9789240116191.NPC-R07 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R07"
       },
@@ -805,11 +805,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R08",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R08",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r08",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R08 is implemented by scenario DTH.NPC.9789240116191.NPC-R08 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R08 is implemented by scenario DTH.NPC.9789240116191.NPC-R08 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R08"
       },
@@ -841,11 +841,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R09",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R09",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r09",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R09 is implemented by scenario DTH.NPC.9789240116191.NPC-R09 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R09 is implemented by scenario DTH.NPC.9789240116191.NPC-R09 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R09"
       },
@@ -877,11 +877,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R10",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R10",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r10",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R10 is implemented by scenario DTH.NPC.9789240116191.NPC-R10 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R10 is implemented by scenario DTH.NPC.9789240116191.NPC-R10 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R10"
       },
@@ -913,11 +913,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R11",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R11",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r11",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R11 is implemented by scenario DTH.NPC.9789240116191.NPC-R11 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R11 is implemented by scenario DTH.NPC.9789240116191.NPC-R11 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R11"
       },
@@ -949,11 +949,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R12",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R12",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r12",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R12 is implemented by scenario DTH.NPC.9789240116191.NPC-R12 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R12 is implemented by scenario DTH.NPC.9789240116191.NPC-R12 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R12"
       },
@@ -985,11 +985,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R13",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R13",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r13",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R13 is implemented by scenario DTH.NPC.9789240116191.NPC-R13 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R13 is implemented by scenario DTH.NPC.9789240116191.NPC-R13 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R13"
       },
@@ -1021,11 +1021,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R14",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R14",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r14",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R14 is implemented by scenario DTH.NPC.9789240116191.NPC-R14 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R14 is implemented by scenario DTH.NPC.9789240116191.NPC-R14 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R14"
       },
@@ -1057,11 +1057,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R15",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R15",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r15",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R15 is implemented by scenario DTH.NPC.9789240116191.NPC-R15 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R15 is implemented by scenario DTH.NPC.9789240116191.NPC-R15 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R15"
       },
@@ -1093,11 +1093,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R16",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R16",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r16",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R16 is implemented by scenario DTH.NPC.9789240116191.NPC-R16 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R16 is implemented by scenario DTH.NPC.9789240116191.NPC-R16 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R16"
       },
@@ -1129,11 +1129,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R17",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R17",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r17",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R17 is implemented by scenario DTH.NPC.9789240116191.NPC-R17 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R17 is implemented by scenario DTH.NPC.9789240116191.NPC-R17 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R17"
       },
@@ -1165,11 +1165,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R18",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R18",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r18",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R18 is implemented by scenario DTH.NPC.9789240116191.NPC-R18 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R18 is implemented by scenario DTH.NPC.9789240116191.NPC-R18 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R18"
       },
@@ -1201,11 +1201,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R19",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R19",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r19",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R19 is implemented by scenario DTH.NPC.9789240116191.NPC-R19 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R19 is implemented by scenario DTH.NPC.9789240116191.NPC-R19 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R19"
       },
@@ -1237,11 +1237,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R20",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R20",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r20",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R20 is implemented by scenario DTH.NPC.9789240116191.NPC-R20 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R20 is implemented by scenario DTH.NPC.9789240116191.NPC-R20 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R20"
       },
@@ -1273,11 +1273,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R21",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R21",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r21",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R21 is implemented by scenario DTH.NPC.9789240116191.NPC-R21 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R21 is implemented by scenario DTH.NPC.9789240116191.NPC-R21 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R21"
       },
@@ -1309,11 +1309,11 @@
     {
       "type": "Statement",
       "predicate": "implementedBy",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R22",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R22",
       "target": "https://smart.who.int/dth-health-product-catalogue/user-scenario/dth-npc-9789240116191-npc-r22",
       "derivation": "inferred",
       "skill": "smart-base/recommendation-extraction",
-      "note": "Recommendation NPC-R22 is implemented by scenario DTH.NPC.9789240116191.NPC-R22 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
+      "note": "Implementation practice NPC-R22 is implemented by scenario DTH.NPC.9789240116191.NPC-R22 — a candidate, never derived: deciding that a scenario realises a recommendation is adaptation.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml#entries.NPC-R22"
       },

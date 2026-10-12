@@ -3,7 +3,7 @@
   "entry": "smart-base/library/9789240116191-eng",
   "curation": {
     "path": "smart-base/library/9789240116191-eng/l1-extraction/curation.yaml",
-    "sha256": "9ee275b20bae6b09130957212e929ecb61cbd49ff2f9609c6915deaf9411f2ff"
+    "sha256": "1e8cc3091676d70a50ed1eb8a0243eb9331e760bf4c0b17b6b65d4c60b6cd824"
   },
   "publication": {
     "iri": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
@@ -14,22 +14,24 @@
       }
     ],
     "title": "Digital transformation handbook for health product catalogue",
+    "publicationType": "implementation-guidance",
     "proposedBy": "curation"
   },
   "counts": {
+    "statementClass": "implementation-practice",
     "recommendations": 22,
-    "remarks": 1,
+    "remarks": 0,
     "partOf": 0,
-    "excluded": 29,
+    "excluded": 30,
     "undecided": 0
   },
   "coverage": {
     "normative": 48,
-    "captured": 19,
+    "captured": 18,
     "excluded": 0,
-    "unaccounted": 29,
-    "capturedPct": 39.58,
-    "accountedForPct": 39.58
+    "unaccounted": 30,
+    "capturedPct": 37.5,
+    "accountedForPct": 37.5
   },
   "hints": {
     "licence-or-imprint": "licence, rights or imprint text — normally excluded as `editorial`",
@@ -401,10 +403,7 @@
         "obligation"
       ],
       "hints": [],
-      "decision": "remark",
-      "keys": [
-        "NPC-R06"
-      ]
+      "decision": "exclude"
     },
     {
       "location": "p27:s1",
@@ -667,6 +666,6 @@
     }
   ],
   "runContext": {
-    "sha256": "6d31dfd6b860443f65c2f76bdeb6672bff59d6d5cca8025d10c991a869878e8f"
+    "sha256": "3e08ce3ecee25956b71c19cd86287b2a009cbcd59d8d35196a1f28e51d6b94db"
   }
 }

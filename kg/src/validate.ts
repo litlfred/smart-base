@@ -259,6 +259,10 @@ export function validateGraph(doc: GraphDocument, scope: Scope = scopeOf("l1"), 
     for (const e of edgesFrom(n.id, "definedIn")) {
       const pub = nodeAt(e.target);
       const grc = prop(pub, "grcStatus");
+      const ptype = prop(pub, "publicationType");
+      if (ptype === "implementation-guidance" || ptype === "methodology") {
+        errors.push(`recommendation "${n.id}" is defined in "${e.target}", a ${ptype} publication, which makes no recommendations of its own (handbook §1.9). What it prints is an implementation-practice (the l1-library extension; owner ruling 1b, 2026-10-12).`);
+      }
       if (grc === "not-reviewed") {
         errors.push(`recommendation "${n.id}" is defined in "${e.target}", which is recorded as not reviewed by the GRC. Recommendations come from GRC-approved guidelines.`);
       } else if (pub && grc === undefined) {

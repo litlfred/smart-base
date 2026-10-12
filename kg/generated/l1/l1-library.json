@@ -3,7 +3,7 @@
   "layer": "l1-library",
   "namespace": "http://smart.who.int/kg/",
   "source": "authored",
-  "note": "Every layer points only upstream: L3 → L2 → L1 → library (the ingested source document, its sections and blocks). A layer may point at any layer above it and never at one below it. This layer adds what L1 needs to point at the library above it: one opaque upstream class and PROV's specializationOf. It imports L1 3.0 unchanged.",
+  "note": "Every layer points only upstream: L3 → L2 → L1 → library (the ingested source document, its sections and blocks). A layer may point at any layer above it and never at one below it. This layer adds what L1 needs to point at the library above it: one opaque upstream class and PROV's specializationOf. It also carries implementation-practice, the content class for implementation guidance, which L1 3.0 lacks (owner ruling 1b, 2026-10-12). It imports L1 3.0 unchanged.",
   "imports": [
     "l1"
   ],
@@ -29,6 +29,24 @@
   ],
   "classes": [
     {
+      "id": "implementation-practice",
+      "name": "Implementation practice",
+      "kind": "Concept",
+      "iri": "http://smart.who.int/kg/implementation-practice",
+      "note": "A statement of how to put guidance into practice, printed in a publication whose publicationType is implementation-guidance or methodology: the handbook's \"products that are not guidelines\" (§1.9), a \"how to\" document that makes no recommendations of its own. Not a recommendation, and not a good practice statement — both are made by a guideline and approved by the GRC; this is neither. It carries no kind, direction, strength or certainty, because nothing graded it. A handbook's own \"Best practices\" lists are the typical source. Owner ruling 1b, 2026-10-12: model these as their own class, not as recommendation nodes of a new kind.",
+      "properties": [
+        "identifier",
+        "statement",
+        "contentHash"
+      ],
+      "iriPattern": "^https://smart\\.who\\.int/kg/l1/publication/(isbn|iris-handle|doi|issn|url)-[^/]+/implementation-practice/[^/]+(/[^/]+)*$",
+      "minDerivation": "inferred",
+      "propertyNote": "statement is verbatim and is the only stored copy, as recommendation's is. identifier is used in the IRI. There is no remark: L1 3.0's remark is minted under a recommendation (its iriPattern) and hasRemark starts at one, so a remark of a practice needs L1 itself to change — proposed upstream, not patched here.",
+      "contentFields": [
+        "statement"
+      ]
+    },
+    {
       "id": "library-node",
       "name": "Library node",
       "kind": "Reference",
@@ -44,6 +62,32 @@
     }
   ],
   "edges": [
+    {
+      "predicate": "definedIn",
+      "source": "implementation-practice",
+      "target": "publication",
+      "minDerivation": "inferred",
+      "note": "Printed in this publication, whose publicationType is implementation-guidance or methodology."
+    },
+    {
+      "predicate": "presentedIn",
+      "source": "implementation-practice",
+      "target": "publication-section",
+      "minDerivation": "inferred"
+    },
+    {
+      "predicate": "presentedIn",
+      "source": "implementation-practice",
+      "target": "publication-element",
+      "minDerivation": "inferred"
+    },
+    {
+      "predicate": "partOf",
+      "source": "implementation-practice",
+      "target": "implementation-practice",
+      "minDerivation": "inferred",
+      "note": "One item of a printed list of practices, to the practice that heads it."
+    },
     {
       "predicate": "specializationOf",
       "source": "publication",

@@ -22,6 +22,15 @@
  *   user-scenario  involves      persona
  *   business-process realises    user-scenario
  *
+ * **An implementation-practice is accepted as input too** (owner ruling 1b,
+ * 2026-10-12): implementation guidance prints practices, not recommendations,
+ * and `l1-recommendation-candidates.ts` emits them as the `l1-library`
+ * extension's `implementation-practice` class. It is mapped exactly as a
+ * recommendation is, keyed by its `identifier`. smart-kg's L2 licenses
+ * `implementedBy` from a recommendation only, so a run over practices warns
+ * once (`practice-implementedBy-unlicensed`): that edge is a proposal for L2
+ * until the class is upstream.
+ *
  * The description is a user story — "As a <persona>, during <process>, I
  * <act> so that <outcome>". Every link records where it came from, as an
  * intake `classifications` entry does (`cat-harness/schemas/intake.ts`):
@@ -149,7 +158,12 @@ export interface L1Rec {
   statement: string;
   /** Where in the source it is printed (`p220`, or the node's own evidence location). */
   location: string;
+  /** Set only when the source node is not a recommendation (an `implementation-practice`). */
+  nodeClass?: "implementation-practice";
 }
+
+/** The L1 node classes a mapping entry may be keyed on. */
+export const L1_INPUT_CLASSES = ["recommendation", "implementation-practice"] as const;
 
 const MeaslesYamlSchema = z.object({
   publication: z.object({ url: z.string().url() }).passthrough(),
@@ -187,15 +201,17 @@ export function readL1(path: string): L1Rec[] {
     }));
   }
   const g = L1GraphSchema.parse(JSON.parse(text));
-  const recs = g.nodes.filter((n) => n.type === "recommendation").map((n) => {
+  const recs = g.nodes.filter((n) => (L1_INPUT_CLASSES as readonly string[]).includes(n.type)).map((n) => {
     const identifier = n.properties?.identifier;
     const statement = n.properties?.statement;
     if (typeof identifier !== "string" || typeof statement !== "string") {
-      throw new Error(`${n.id}: an L1 recommendation needs properties.identifier and properties.statement`);
+      throw new Error(`${n.id}: an L1 ${n.type} needs properties.identifier and properties.statement`);
     }
-    return { key: identifier, iri: n.id, statement, location: n.evidence?.location ?? identifier };
+    const rec: L1Rec = { key: identifier, iri: n.id, statement, location: n.evidence?.location ?? identifier };
+    if (n.type === "implementation-practice") rec.nodeClass = "implementation-practice";
+    return rec;
   });
-  if (!recs.length) throw new Error(`${path}: no recommendation nodes`);
+  if (!recs.length) throw new Error(`${path}: no recommendation or implementation-practice nodes`);
   return recs;
 }
 
@@ -204,7 +220,7 @@ export function readL1(path: string): L1Rec[] {
 export type Tier = "guide" | "generic" | "glossary-candidate";
 
 export interface Warning {
-  code: "process-not-determined" | "persona-glossary-candidate";
+  code: "process-not-determined" | "persona-glossary-candidate" | "practice-implementedBy-unlicensed";
   key: string;
   message: string;
 }
@@ -362,6 +378,13 @@ export function buildScenarios(inp: Inputs, generatedAt: string): Result {
     return iri;
   };
 
+  const practices = recs.filter((r) => r.nodeClass === "implementation-practice").length;
+  if (practices) {
+    warnings.push({
+      code: "practice-implementedBy-unlicensed", key: `x${practices}`,
+      message: "the L1 source holds implementation-practice nodes (the l1-library extension; owner ruling 1b, 2026-10-12). smart-kg's L2 licenses implementedBy from a recommendation only, so these edges are a proposal for L2 until the class is upstream",
+    });
+  }
   for (const rec of recs) {
     const e = mapping.entries[rec.key];
     const status = e.review ? "reviewed" : "candidate";
@@ -411,7 +434,7 @@ export function buildScenarios(inp: Inputs, generatedAt: string): Result {
     const description = userStory(personaTitles, proc ? `${proc.id} ${proc.title}` : undefined, e.act, e.outcome);
     nodes.set(scenarioIri, {
       id: scenarioIri, type: "user-scenario", label: `${scenarioId}: ${e.act}`, derivation: "inferred", skill: SKILL,
-      note: `User-scenario ${status.toUpperCase()} for recommendation ${rec.key}, authored from its statement against the ${guide.guide} vocabulary. Domain ${e.domain.code} (${e.domain.source}).`,
+      note: `User-scenario ${status.toUpperCase()} for ${rec.nodeClass === "implementation-practice" ? "implementation practice" : "recommendation"} ${rec.key}, authored from its statement against the ${guide.guide} vocabulary. Domain ${e.domain.code} (${e.domain.source}).`,
       evidence: { location: `${sources.l1.path}#${rec.key} (${rec.location})`, quote: rec.statement },
       properties: { id: scenarioId, title: `${scenarioId}: ${e.act}`, description, source: `${sources.mapping.path}#entries.${rec.key}` },
     });
@@ -419,7 +442,7 @@ export function buildScenarios(inp: Inputs, generatedAt: string): Result {
     edges.push({
       type: "Statement", predicate: "implementedBy", source: rec.iri, target: scenarioIri,
       derivation: "inferred", skill: SKILL,
-      note: `Recommendation ${rec.key} is implemented by scenario ${scenarioId} — a ${status}, never derived: deciding that a scenario realises a recommendation is adaptation.`,
+      note: `${rec.nodeClass === "implementation-practice" ? "Implementation practice" : "Recommendation"} ${rec.key} is implemented by scenario ${scenarioId} — a ${status}, never derived: deciding that a scenario realises a recommendation is adaptation.`,
       evidence: at(""),
       properties: { reviewStatus: status, domain: e.domain.code, domainSource: e.domain.source, domainBasis: e.domain.basis, ...(e.review ? { reviewedBy: e.review.by, reviewedAt: e.review.at } : {}) },
     });

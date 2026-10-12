@@ -1,9 +1,9 @@
 {
-  "@context": "http://smart.who.int/kg/l1.context.jsonld",
+  "@context": "http://smart.who.int/kg/l1-library.context.jsonld",
   "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191#recommendation-candidates",
   "type": "Entity",
   "ontologyVersion": "3.0",
-  "generatedAt": "2026-10-12T16:57:06Z",
+  "generatedAt": "2026-10-12T18:25:04Z",
   "wasDerivedFrom": [
     {
       "path": "smart-base/library/9789240116191-eng/structure.json",
@@ -29,10 +29,11 @@
             "value": "978-92-4-011619-1"
           }
         ],
+        "publicationType": "implementation-guidance",
         "sha256": "9cc9ca42d30db9ebef25509f05cfbd69fcb51bc86f9add653aa54f2a94a1a021"
       },
       "derivation": "inferred",
-      "note": "Title and electronic ISBN as printed on page 3.",
+      "note": "Title and electronic ISBN as printed on page 3. publicationType implementation-guidance — a \"how to\" handbook that makes no recommendations of its own (handbook for guideline development §1.9), so every statement decided below is an implementation-practice node, not a recommendation (owner ruling 1b, 2026-10-12).",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/sections/page-003.md",
         "quote": "ISBN 978-92-4-011619-1 (electronic"
@@ -40,8 +41,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R01",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R01",
+      "type": "implementation-practice",
       "label": "NPC-R01",
       "properties": {
         "identifier": "NPC-R01",
@@ -57,8 +58,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R02",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R02",
+      "type": "implementation-practice",
       "label": "NPC-R02",
       "properties": {
         "identifier": "NPC-R02",
@@ -74,8 +75,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R03",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R03",
+      "type": "implementation-practice",
       "label": "NPC-R03",
       "properties": {
         "identifier": "NPC-R03",
@@ -91,8 +92,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R04",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R04",
+      "type": "implementation-practice",
       "label": "NPC-R04",
       "properties": {
         "identifier": "NPC-R04",
@@ -108,8 +109,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R05",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R05",
+      "type": "implementation-practice",
       "label": "NPC-R05",
       "properties": {
         "identifier": "NPC-R05",
@@ -125,8 +126,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R06",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R06",
+      "type": "implementation-practice",
       "label": "NPC-R06",
       "properties": {
         "identifier": "NPC-R06",
@@ -142,8 +143,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R07",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R07",
+      "type": "implementation-practice",
       "label": "NPC-R07",
       "properties": {
         "identifier": "NPC-R07",
@@ -159,8 +160,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R08",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R08",
+      "type": "implementation-practice",
       "label": "NPC-R08",
       "properties": {
         "identifier": "NPC-R08",
@@ -176,8 +177,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R09",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R09",
+      "type": "implementation-practice",
       "label": "NPC-R09",
       "properties": {
         "identifier": "NPC-R09",
@@ -193,8 +194,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R10",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R10",
+      "type": "implementation-practice",
       "label": "NPC-R10",
       "properties": {
         "identifier": "NPC-R10",
@@ -210,8 +211,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R11",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R11",
+      "type": "implementation-practice",
       "label": "NPC-R11",
       "properties": {
         "identifier": "NPC-R11",
@@ -227,8 +228,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R12",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R12",
+      "type": "implementation-practice",
       "label": "NPC-R12",
       "properties": {
         "identifier": "NPC-R12",
@@ -244,8 +245,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R13",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R13",
+      "type": "implementation-practice",
       "label": "NPC-R13",
       "properties": {
         "identifier": "NPC-R13",
@@ -261,8 +262,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R14",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R14",
+      "type": "implementation-practice",
       "label": "NPC-R14",
       "properties": {
         "identifier": "NPC-R14",
@@ -278,8 +279,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R15",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R15",
+      "type": "implementation-practice",
       "label": "NPC-R15",
       "properties": {
         "identifier": "NPC-R15",
@@ -295,8 +296,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R16",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R16",
+      "type": "implementation-practice",
       "label": "NPC-R16",
       "properties": {
         "identifier": "NPC-R16",
@@ -312,8 +313,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R17",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R17",
+      "type": "implementation-practice",
       "label": "NPC-R17",
       "properties": {
         "identifier": "NPC-R17",
@@ -329,8 +330,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R18",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R18",
+      "type": "implementation-practice",
       "label": "NPC-R18",
       "properties": {
         "identifier": "NPC-R18",
@@ -346,8 +347,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R19",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R19",
+      "type": "implementation-practice",
       "label": "NPC-R19",
       "properties": {
         "identifier": "NPC-R19",
@@ -363,8 +364,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R20",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R20",
+      "type": "implementation-practice",
       "label": "NPC-R20",
       "properties": {
         "identifier": "NPC-R20",
@@ -380,8 +381,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R21",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R21",
+      "type": "implementation-practice",
       "label": "NPC-R21",
       "properties": {
         "identifier": "NPC-R21",
@@ -397,8 +398,8 @@
       "skill": "smart-base/recommendation-extraction"
     },
     {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R22",
-      "type": "recommendation",
+      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R22",
+      "type": "implementation-practice",
       "label": "NPC-R22",
       "properties": {
         "identifier": "NPC-R22",
@@ -412,31 +413,13 @@
         "quote": "Additional roles for NPC implementation The following table illustrates the typical technical roles that should be considered for NPC implementation."
       },
       "skill": "smart-base/recommendation-extraction"
-    },
-    {
-      "id": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R06/remark/1",
-      "type": "remark",
-      "label": "NPC-R06 remark 1",
-      "properties": {
-        "text": "The data owner: - Defines the rules, policies, and standards for data quality, structure, and governance. - Makes decisions on how the data should be managed and ensures alignment with business objectives. - Approves changes to the product master data and ensures compliance with regulatory and business requirements. - Is accountable for the accuracy, completeness, and relevance of the product data in the organization. - Data custodian: responsible for the technical management and security of product master data.",
-        "remarkType": "definition",
-        "ordinal": 1,
-        "contentHash": "94779f1733367a02782d44ffe68b7970007ba7881d4ad574861be01a804e93bd"
-      },
-      "derivation": "inferred",
-      "note": "Defines the data owner role the governance framework in NPC-R06 assigns.",
-      "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-026.md",
-        "quote": "The data owner: - Defines the rules, policies, and standards for data quality, structure, and governance. - Makes decisions on how the data should be managed and ensures alignment with business objectives. - Approves changes to the product master data and ensures compliance with regulatory and business requirements. - Is accountable for the accuracy, completeness, and relevance of the product data in the organization. - Data custodian: responsible for the technical management and security of product master data."
-      },
-      "skill": "smart-base/recommendation-extraction"
     }
   ],
   "edges": [
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R01",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R01",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -448,7 +431,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R02",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R02",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -460,7 +443,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R03",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R03",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -472,7 +455,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R04",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R04",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -484,7 +467,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R05",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R05",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -496,7 +479,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R06",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R06",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -508,7 +491,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R07",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R07",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -520,7 +503,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R08",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R08",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -532,7 +515,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R09",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R09",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -544,7 +527,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R10",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R10",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -556,7 +539,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R11",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R11",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -568,7 +551,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R12",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R12",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -580,7 +563,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R13",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R13",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -592,7 +575,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R14",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R14",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -604,7 +587,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R15",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R15",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -616,7 +599,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R16",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R16",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -628,7 +611,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R17",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R17",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -640,7 +623,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R18",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R18",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -652,7 +635,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R19",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R19",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -664,7 +647,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R20",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R20",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -676,7 +659,7 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R21",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R21",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
@@ -688,24 +671,12 @@
     {
       "type": "Statement",
       "predicate": "definedIn",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R22",
+      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/implementation-practice/NPC-R22",
       "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
         "location": "smart-base/library/9789240116191-eng/sections/page-057.md"
-      },
-      "skill": "smart-base/recommendation-extraction"
-    },
-    {
-      "type": "Statement",
-      "predicate": "hasRemark",
-      "source": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R06",
-      "target": "https://smart.who.int/kg/l1/publication/isbn-9789240116191/recommendation/NPC-R06/remark/1",
-      "derivation": "inferred",
-      "note": "Defines the data owner role the governance framework in NPC-R06 assigns.",
-      "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-026.md"
       },
       "skill": "smart-base/recommendation-extraction"
     }

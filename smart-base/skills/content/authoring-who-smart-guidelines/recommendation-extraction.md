@@ -35,8 +35,38 @@ before any L2 asset is drawn.
 
 | half | produces | layer | schema |
 |---|---|---|---|
-| extraction | `recommendation` and `remark` nodes, verbatim | L1 | L1 **3.0**, `kg/src/l1.ts` in litlfred/smart-base (`KGRecommendation`); not smart-kg 1.0 |
+| extraction | `recommendation` and `remark` nodes, verbatim — or, for implementation guidance, `implementation-practice` nodes | L1 | L1 **3.0**, `kg/src/l1.ts` in litlfred/smart-base (`KGRecommendation`); `implementation-practice` is the `l1-library` extension, `kg/src/l1-library.ts` (`KGImplementationPractice`); not smart-kg 1.0 |
 | scenario | one `user-scenario` candidate per recommendation, joined to `persona` and `business-process` | L2 | smart-kg `ontology/l2/l2.json`, unchanged; smart-base `UserScenario.fsh` |
+
+### Implementation guidance prints practices, not recommendations (owner ruling 1b, 2026-10-12)
+
+A guideline's recommendation is a GRC-approved normative statement. A
+publication whose `publicationType` is **`implementation-guidance`** (or
+**`methodology`**) "makes no recommendations of its own" (handbook for
+guideline development §1.9) — a "how to" document, such as a digital
+transformation handbook with its own "Best practices" lists. What it prints as
+normative is an **`implementation-practice`** node, a class of its own, never a
+`recommendation` with a new kind code: every `recommendation-kind` (including
+`good-practice-statement`) is a guideline's.
+
+- Record the type in the curation: `publication.publicationType`. With
+  `implementation-guidance` or `methodology`, every `as: recommendation`
+  decision emits an `implementation-practice` node at
+  `<publication>/implementation-practice/<key>`, and the graph names
+  `l1-library.context.jsonld` so the validator scopes L1 + the extension.
+- The class lives in `kg/src/l1-library.ts`, **not** `kg/src/l1.ts`:
+  `generated/l1/l1.json` must stay equal to WHO smart-kg's (`kg/test/parity.test.ts`).
+- It carries `identifier`, `statement` (verbatim) and `contentHash`; no `kind`,
+  `direction`, `strength` or certainty — nothing graded it. A `kind` on such a
+  decision is refused.
+- **No remark.** L1 3.0's `remark` is minted under a recommendation, so a
+  `remark` decision in such a publication is refused: exclude the sentence,
+  make it its own practice, or wait until remark is licensed on a practice
+  upstream.
+- `kg/src/validate.ts` refuses a `recommendation` defined in an
+  implementation-guidance or methodology publication.
+- The output file keeps its name, `recommendations.l1.json`: the scenario half
+  and the run context pin it by path.
 
 No new L1 field carries the scenario. L1 holds what WHO says; who does it, and
 during which process, is adaptation, and adaptation is L2's.
@@ -116,7 +146,7 @@ location (`p<page>:s<n>`, `l1-coverage`'s own), the agent records one of:
 | `recommendation` | an L1 `recommendation` node | `key`; `statement` only to narrow a joined list to one bullet, or to join a split sentence; `kind` only where printed |
 | `remark` | a `remark` of a recommendation, by `hasRemark` | `of`, `remarkType` |
 | `part-of` | inside another recommendation's statement | `of` |
-| `exclude` | a PROPOSED exclusion, one of the fixed reasons | `reason`; `signedOffBy` is a person's, never an agent's |
+| `exclude` | a PROPOSED exclusion, one of the fixed reasons | `reason`; `signedOffBy` is a person's acting as `l1-extraction-reviewer`, never an agent's |
 
 Every decision carries a `basis`. A location may carry a list of
 `recommendation` decisions: the splitter reads a bulleted list as one sentence.
@@ -127,6 +157,15 @@ does not hold, a reused key, and a remark of an undeclared key — then checks
 the graph with `kg/src/validate.ts`. It writes `recommendation-candidates.json`
 (the work list), `recommendations.l1.json`, `exclusions.proposed.json`,
 `extraction-warnings.md` and `run-context.json`.
+
+**Who signs an exclusion (owner ruling 3b, 2026-10-12).** Each record in
+`exclusions.proposed.json` names the role that must sign it, as a role-graph
+`RoleRef` (`cat-harness/schemas/role-graph.ts`): `"signerRole": {"role":
+"l1-extraction-reviewer"}`. The role is declared in
+`smart-base/scenarios/roles.json` (title *L1 extraction reviewer*, a person,
+inheriting the harness's `reviewer`). The record stays unsigned — no
+`signedOffBy` — until a person acting in that role signs it; the skills and
+processes that equip the role are bean `4nfs`.
 
 **Provenance.** Each run of either tool writes a cat-harness
 `folio-run-context/v1` (`schemas/run-context.ts`) as `run-context.json`
@@ -242,8 +281,8 @@ list for whoever owns the guide's processes or the glossary.
 Everything this skill writes is a **candidate**. A person reviews an entry and
 records it in the mapping (`review: {by, at}`); the run then marks that entry's
 links `reviewed`. A person may also turn a link `declared` (with `by`). An
-agent never writes either. The coverage exclusions of Part 1 are signed the
-same way.
+agent never writes either. The coverage exclusions of Part 1 are signed by a
+person acting as `l1-extraction-reviewer`, and by no one else.
 
 ## What smart-kg L2 could not hold
 
@@ -269,16 +308,22 @@ ones with no process to draw into yet.
 **An ingested handbook, end to end.**
 `smart-base/library/9789240116191-eng/l1-extraction/` is the *Digital
 transformation handbook for health product catalogue* (WHO, 2025) run through
-both tools: 48 normative sentences; the agent's curation took 22
-recommendations and 1 remark and proposed 29 exclusions (licence text,
-glossary definitions, background on SMART Guidelines, chapter checkpoints) —
-none signed, so coverage reads 19/48 captured until a person signs them. The
+both tools: 48 normative sentences. The handbook is implementation guidance,
+so the agent's curation took **22 implementation practices** (not
+recommendations; ruling 1b) and proposed 30 exclusions (licence text, glossary
+definitions, background on SMART Guidelines, chapter checkpoints, and the
+definition of the data owner on page 26, which was a remark of NPC-R06 until
+ruling 1b made NPC-R06 a practice) — each naming `l1-extraction-reviewer` as
+its signer and none signed, so coverage reads 18/48 captured until a person
+signs them. The
 scenarios reuse the handbook's own roles (data owner, custodian, steward,
 project manager, solution architect: 18 links), one generic
 `DAK.Persona.DataManager`, and 3 glossary candidates (the national regulatory
 authority, twice, and the master data governance group). The handbook prints no
 business process with an id and no health-system catalogue exists (bean
-`2ipj`), so all 22 are `could-not-determine`: 25 warnings. That is the result,
+`2ipj`), so all 22 are `could-not-determine`: 26 warnings, one of them
+`practice-implementedBy-unlicensed` — smart-kg's L2 licenses `implementedBy`
+from a recommendation only, so from a practice it is a proposal for L2. That is the result,
 not a defect: it is the work list for the catalogue. The test
 `l1-recommendation-candidates.test.ts` keeps it current.
 

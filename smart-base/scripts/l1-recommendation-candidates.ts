@@ -27,6 +27,12 @@
  *    and the coverage totals. Every node is `inferred` and a candidate; a
  *    person signs exclusions and reviews scenarios, an agent never does.
  *
+ * A publication the curation types `implementation-guidance` or `methodology`
+ * makes no recommendations of its own (handbook §1.9): its decisions emit the
+ * `l1-library` extension's `implementation-practice` nodes instead (owner
+ * ruling 1b, 2026-10-12). Every proposed exclusion names the role that must
+ * sign it, `l1-extraction-reviewer` (ruling 3b).
+ *
  * The graph then feeds `l1-recommendation-scenarios.ts`, which proposes the
  * L2 user-scenario candidates (persona, process, domain).
  *
@@ -49,6 +55,7 @@ import { z } from "zod";
 
 import { coverage, normalise, type Exclusion, type Page, type Sentence } from "../../folio-assistant-core/scripts/l1-coverage.ts";
 import { contentHash, normText } from "../../kg/src/kgid.ts";
+import { L1_VALUE_SETS } from "../../kg/src/l1.ts";
 import { check as checkGraph } from "../../kg/src/validate.ts";
 import { L1_V3_CONTEXT, L1_V3_ONTOLOGY_VERSION, publicationId, type Identifier } from "./l1-kgid.ts";
 import { buildRunContext, writeRunContext, type RunContextRef } from "./l1-run-context.ts";
@@ -56,6 +63,34 @@ import { buildRunContext, writeRunContext, type RunContextRef } from "./l1-run-c
 export const CANDIDATES_SCHEMA_TAG = "l1-recommendation-candidates/v1" as const;
 export const CURATION_SCHEMA_TAG = "l1-recommendation-curation/v1" as const;
 export const SKILL = "smart-base/recommendation-extraction";
+
+/** The context a graph names when it holds a class from the `l1-library` extension (`kg/src/l1-library.ts`). */
+export const L1_LIBRARY_CONTEXT = "http://smart.who.int/kg/l1-library.context.jsonld";
+
+/** L1's publication-type codes, read from the ontology rather than restated. */
+export const PUBLICATION_TYPES = L1_VALUE_SETS.find((v) => v.id === "publication-type")!.codes.map((c) => c.code) as [string, ...string[]];
+
+/**
+ * Publication types that make no recommendations of their own (handbook §1.9).
+ * What they print as normative is an `implementation-practice`, not a
+ * `recommendation` (owner ruling 1b, 2026-10-12).
+ */
+export const NON_RECOMMENDING_TYPES: readonly string[] = ["implementation-guidance", "methodology"];
+
+/** The class a `recommendation` decision emits, by the publication's type. */
+export const statementClass = (publicationType: string | undefined): "recommendation" | "implementation-practice" =>
+  publicationType !== undefined && NON_RECOMMENDING_TYPES.includes(publicationType) ? "implementation-practice" : "recommendation";
+
+/**
+ * The role that must sign an L1 extraction's exclusions (owner ruling 3b,
+ * 2026-10-12), as a role-graph `RoleRef` (`cat-harness/schemas/role-graph.ts`):
+ * declared in `smart-base/scenarios/roles.json`. An exclusion names it and
+ * stays unsigned until a person acting in that role signs it.
+ */
+export const EXCLUSION_SIGNER_ROLE = { role: "l1-extraction-reviewer" } as const;
+
+/** An exclusion as written: l1-coverage's shape, plus the role that must sign it. */
+export type ProposedExclusion = Exclusion & { signerRole: { role: string } };
 export const CANDIDATES_FILENAME = "recommendation-candidates.json";
 export const GRAPH_FILENAME = "recommendations.l1.json";
 export const EXCLUSIONS_FILENAME = "exclusions.proposed.json";
@@ -169,6 +204,8 @@ export const CurationSchema = z.object({
   publication: z.object({
     identifiers: z.array(z.object({ type: z.string().min(1), value: z.string().min(1) }).strict()).min(1).optional(),
     title: z.string().min(1).optional(),
+    /** L1's publication-type. implementation-guidance or methodology turns every `recommendation` decision into an implementation-practice node. */
+    publicationType: z.enum(PUBLICATION_TYPES).optional(),
     ...Basis,
   }).strict().optional(),
   /** Keyed by the candidate's location, `p<page>:s<n>` — l1-coverage's own. */
@@ -201,11 +238,12 @@ export interface Warning { code: "l1-validator" | "undecided" | "fragment-decide
 export interface Result {
   candidates: Candidate[];
   graph?: Record<string, unknown>;
-  exclusions: Exclusion[];
+  exclusions: ProposedExclusion[];
   coverage: { normative: number; captured: number; excluded: number; unaccounted: number; capturedPct: number | null; accountedForPct: number | null };
   warnings: Warning[];
-  publication: { iri?: string; identifiers: Identifier[]; title?: string; proposedBy: "mechanical" | "curation" | "none" };
-  counts: { recommendations: number; remarks: number; partOf: number; excluded: number; undecided: number };
+  publication: { iri?: string; identifiers: Identifier[]; title?: string; publicationType?: string; proposedBy: "mechanical" | "curation" | "none" };
+  /** `statementClass` is what every `recommendation` decision emitted; `recommendations` counts those decisions whichever class they became. */
+  counts: { statementClass: "recommendation" | "implementation-practice"; recommendations: number; remarks: number; partOf: number; excluded: number; undecided: number };
 }
 
 const sha256 = (s: string | Buffer): string => createHash("sha256").update(s).digest("hex");
@@ -262,23 +300,31 @@ export function run(entry: Entry, curation: Curation | undefined, entryPath: str
       if (r && c && !normalise(r.statement).includes(normalise(c.text))) problems.push(`${loc}: part-of "${d.of}", but that statement does not contain this sentence`);
     }
   }
+  const pubType = curation?.publication?.publicationType;
+  const cls = statementClass(pubType);
+  if (cls === "implementation-practice") {
+    for (const [loc, d] of decided) {
+      if (d.as === "recommendation" && d.kind !== undefined) problems.push(`${loc}: kind "${d.kind}" is a recommendation kind, and a ${pubType} publication makes no recommendations of its own (handbook §1.9) — its statements are implementation-practice nodes, which carry no kind`);
+      if (d.as === "remark") problems.push(`${loc}: remark of "${d.of}", but in a ${pubType} publication "${d.of}" is an implementation-practice, and L1 3.0's remark attaches only to a recommendation (its IRI is minted under one) — exclude the sentence, make it its own practice, or wait for remark to be licensed upstream`);
+    }
+  }
   if (problems.length) throw new RefusalError(problems);
 
   // apply
-  const exclusions: Exclusion[] = [];
+  const exclusions: ProposedExclusion[] = [];
   for (const c of candidates) {
     const ds = decisionsAt(c.location);
     const d = ds[0];
     if (!d) {
       c.decision = "undecided";
       // An undecided licence sentence still gets an exclusion PROPOSAL — unsigned, so it stays unaccounted.
-      if (c.hints.includes("licence-or-imprint")) exclusions.push({ location: c.location, reason: "editorial" });
+      if (c.hints.includes("licence-or-imprint")) exclusions.push({ location: c.location, reason: "editorial", signerRole: EXCLUSION_SIGNER_ROLE });
       continue;
     }
     c.decision = d.as;
     const keys = ds.flatMap((x) => (x.as === "recommendation" ? [x.key] : x.as === "remark" || x.as === "part-of" ? [x.of] : []));
     if (keys.length) c.keys = keys;
-    if (d.as === "exclude") exclusions.push({ location: c.location, reason: d.reason, ...(d.signedOffBy ? { signedOffBy: d.signedOffBy } : {}), ...(d.signedOffAt ? { signedOffAt: d.signedOffAt } : {}) });
+    if (d.as === "exclude") exclusions.push({ location: c.location, reason: d.reason, signerRole: EXCLUSION_SIGNER_ROLE, ...(d.signedOffBy ? { signedOffBy: d.signedOffBy } : {}), ...(d.signedOffAt ? { signedOffAt: d.signedOffAt } : {}) });
   }
 
   // the L1 3.0 graph
@@ -289,7 +335,7 @@ export function run(entry: Entry, curation: Curation | undefined, entryPath: str
   if (pubIri && recs.size) {
     nodes.push({
       id: pubIri, type: "publication", label: curation?.publication?.title ?? entry.docId,
-      properties: { ...(curation?.publication?.title ? { title: curation.publication.title } : {}), identifiers, ...(entry.sourceSha256 ? { sha256: entry.sourceSha256 } : {}) },
+      properties: { ...(curation?.publication?.title ? { title: curation.publication.title } : {}), identifiers, ...(pubType ? { publicationType: pubType } : {}), ...(entry.sourceSha256 ? { sha256: entry.sourceSha256 } : {}) },
       derivation: "inferred",
       note: curation?.publication?.basis ?? `Identity proposed from the printed ISBN.`,
       evidence: { location: `${entryRel}/sections/${prop.location ?? entry.pages[0]!.file}`, ...(prop.quote ? { quote: prop.quote } : {}) },
@@ -298,10 +344,10 @@ export function run(entry: Entry, curation: Curation | undefined, entryPath: str
     const remarkOrdinal = new Map<string, number>();
     for (const [key, { loc, d, statement }] of recs) {
       const c = byLoc.get(loc)!;
-      const id = `${pubIri}/recommendation/${key}`;
+      const id = `${pubIri}/${cls}/${key}`;
       captured.push({ id: key, text: statement });
       nodes.push({
-        id, type: "recommendation", label: d.title ?? key,
+        id, type: cls, label: d.title ?? key,
         properties: { identifier: key, statement, ...(d.kind ? { kind: d.kind } : {}), contentHash: contentHash(normText(statement)) },
         derivation: "inferred", note: d.basis,
         evidence: { location: `${entryRel}/sections/${c.file}`, quote: c.text },
@@ -329,7 +375,8 @@ export function run(entry: Entry, curation: Curation | undefined, entryPath: str
   }
   const graph = nodes.length
     ? {
-        "@context": L1_V3_CONTEXT,
+        // A graph holding an extension class names the extension's context, so the validator scopes L1 + l1-library.
+        "@context": cls === "recommendation" ? L1_V3_CONTEXT : L1_LIBRARY_CONTEXT,
         id: `${pubIri}#recommendation-candidates`,
         type: "Entity",
         ontologyVersion: L1_V3_ONTOLOGY_VERSION,
@@ -360,13 +407,13 @@ export function run(entry: Entry, curation: Curation | undefined, entryPath: str
   // warnings: the work list
   const undecided = candidates.filter((c) => c.decision === "undecided");
   for (const c of undecided) warnings.push({ code: "undecided", key: c.location, message: `${c.text.slice(0, 100)}${c.text.length > 100 ? "…" : ""}${c.hints.length ? ` [${c.hints.join(", ")}]` : ""}` });
-  for (const e of exclusions) if (!e.signedOffBy) warnings.push({ code: "exclusion-unsigned", key: e.location!, message: `proposed \`${e.reason}\`; counts only once a person signs it` });
+  for (const e of exclusions) if (!e.signedOffBy) warnings.push({ code: "exclusion-unsigned", key: e.location!, message: `proposed \`${e.reason}\`; counts only once a person acting as \`${e.signerRole.role}\` signs it` });
 
   const count = (as: string) => decided.filter(([, d]) => d.as === as).length;
   return {
     candidates, graph, exclusions, coverage: cov, warnings,
-    publication: { iri: pubIri, identifiers, title: curation?.publication?.title, proposedBy },
-    counts: { recommendations: recs.size, remarks: count("remark"), partOf: count("part-of"), excluded: count("exclude"), undecided: undecided.length },
+    publication: { iri: pubIri, identifiers, title: curation?.publication?.title, ...(pubType ? { publicationType: pubType } : {}), proposedBy },
+    counts: { statementClass: cls, recommendations: recs.size, remarks: count("remark"), partOf: count("part-of"), excluded: count("exclude"), undecided: undecided.length },
   };
 }
 
@@ -381,8 +428,8 @@ export function warningsReport(r: Result, entryPath: string): string {
     `Generated by \`smart-base/scripts/l1-recommendation-candidates.ts\` (skill \`recommendation-extraction\`). Everything here is a **candidate**: an agent decides, a person signs exclusions and reviews.`,
     "",
     `- normative sentences (l1-coverage markers): **${r.candidates.length}**; hints: ${byHint}`,
-    `- decided: ${c.recommendations} recommendation(s), ${c.remarks} remark(s), ${c.partOf} part-of, ${c.excluded} proposed exclusion(s); **undecided ${c.undecided}**`,
-    `- coverage: captured ${r.coverage.captured}/${r.coverage.normative} (${r.coverage.capturedPct ?? "n/a"} %), accounted-for ${r.coverage.accountedForPct ?? "n/a"} % — 100 % needs every exclusion signed by a person`,
+    `- decided: ${c.recommendations} ${c.statementClass === "recommendation" ? "recommendation(s)" : "implementation practice(s) (the publication makes no recommendations of its own)"}, ${c.remarks} remark(s), ${c.partOf} part-of, ${c.excluded} proposed exclusion(s); **undecided ${c.undecided}**`,
+    `- coverage: captured ${r.coverage.captured}/${r.coverage.normative} (${r.coverage.capturedPct ?? "n/a"} %), accounted-for ${r.coverage.accountedForPct ?? "n/a"} % — 100 % needs every exclusion signed by a person acting as \`${EXCLUSION_SIGNER_ROLE.role}\``,
     `- publication: ${r.publication.iri ?? "none"} (${r.publication.proposedBy})`,
     "",
     `## Warnings (${r.warnings.length})`,
@@ -445,7 +492,7 @@ if (import.meta.main) {
     [join(out, WARNINGS_FILENAME), "text", report],
     ...(result.graph ? ([[join(out, GRAPH_FILENAME), "json", result.graph]] as [string, string, unknown][]) : []),
   ];
-  const summary = `${result.candidates.length} candidates: ${result.counts.recommendations} recommendations, ${result.counts.remarks} remarks, ${result.counts.excluded} proposed exclusions, ${result.counts.undecided} undecided; ${result.warnings.length} warning(s)`;
+  const summary = `${result.candidates.length} candidates: ${result.counts.recommendations} ${result.counts.statementClass === "recommendation" ? "recommendations" : "implementation practices"}, ${result.counts.remarks} remarks, ${result.counts.excluded} proposed exclusions, ${result.counts.undecided} undecided; ${result.warnings.length} warning(s)`;
   if (args.includes("--check")) {
     const stale = files.filter(([p, kind, v]) => !existsSync(p) || (kind === "text" ? readFileSync(p, "utf8") !== v : !sameIgnoring(readFileSync(p, "utf8"), v, ["runContext", "generatedAt"])));
     if (stale.length) { console.error(`✗ stale — re-run without --check: ${stale.map(([p]) => p).join(", ")}`); process.exit(1); }
