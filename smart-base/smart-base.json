@@ -59,6 +59,14 @@
       ]
     },
     {
+      "id": "library-9789240116191-eng-l1-extraction",
+      "path": "library/9789240116191-eng/l1-extraction/",
+      "description": "What the recommendation-extraction skill read out of `9789240116191-eng` (Digital transformation handbook for health product catalogue): the L1 A-Box graph `recommendations.l1.json`, the L2 scenario candidates `scenarios/scenario-candidates.l2.json`, and the curation, vocabulary and run context behind them. Declared so it is part of the knowledge graph rather than files beside it, and therefore PUBLISHED with its source (owner, 2026-10-12, bean 8pzh item 1: \"a and b\"). A SEPARATE declaration from `library/` though it nests inside it, as `methodologies/processes/` is beside `methodologies/`: a directory entry names one graph, and `l1-extraction` is a different typology. One entry per extracted library entry, never a wildcard: `scripts/l1-extraction-declared.test.ts` fails when an `l1-extraction/` directory on disk is undeclared, or a declaration names one that is not there.",
+      "graphTypologies": [
+        "l1-extraction"
+      ]
+    },
+    {
       "id": "methodologies",
       "path": "methodologies/",
       "description": "Methodologies adopted from the WHO digital-health corpus in `library/` -- somebody else's work, adopted whole, never a house process with a citation bolted on. `diig.md` is the first. Declared in the commit that created its content rather than ahead of it: a declared-but-absent directory is the `dh4f` defect, where every consumer scans nothing and reports a clean run over it. `skip` rather than `reproduce` because a downstream instance inherits the METHOD by depending on this layer, not by copying the directory.",
