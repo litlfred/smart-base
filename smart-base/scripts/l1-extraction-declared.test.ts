@@ -66,7 +66,7 @@ describe("l1-extraction is declared KG content", () => {
 
   it("the declared L1 graph document is there to publish", () => {
     for (const d of declared) {
-      const graph = JSON.parse(readFileSync(join(ROOT, d.path, "recommendations.l1.json"), "utf-8"));
+      const graph = JSON.parse(readFileSync(join(ROOT, d.path, "l1.json"), "utf-8"));
       expect(typeof graph["@context"]).toBe("string");
     }
   });

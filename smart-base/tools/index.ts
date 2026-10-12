@@ -328,7 +328,7 @@ export function tools(baseUrl?: string): ToolDefinition[] {
         ],
         outputs: [
           { name: "candidates", schema: t("RepoPath"), description: "`recommendation-candidates.json` — every normative sentence, its hints and its decision; cites the run context." },
-          { name: "graph", schema: t("RepoPath"), description: "`recommendations.l1.json` — L1 3.0 publication, recommendation and remark nodes, every one `inferred`." },
+          { name: "graph", schema: t("RepoPath"), description: "`l1.json` — L1 3.0 publication, recommendation and remark nodes, every one `inferred`." },
           { name: "exclusions", schema: t("RepoPath"), description: "`exclusions.proposed.json`, in `l1-coverage`'s shape; none counts until a person signs it." },
           { name: "warnings", schema: t("RepoPath"), description: "`extraction-warnings.md` — undecided candidates, unsigned exclusions, statements taken from a layout fragment." },
           { name: "runContext", schema: t("RepoPath"), description: "`run-context.json`, cat-harness `folio-run-context/v1`." },
@@ -350,7 +350,7 @@ export function tools(baseUrl?: string): ToolDefinition[] {
       description:
         "One smart-kg L2 `user-scenario` candidate per L1 recommendation, joined to a `persona` and a `business-process` by the edges smart-kg L2 already licenses, from an agent's `l1-scenario-mapping/v1`. Reuses the guide's own personas and processes, then smart-base's generic `DAK.Persona.*`; otherwise a glossary candidate or `could-not-determine`, each with a WARNING. Never invents a process.",
       install: { none: true },
-      invoke: { shell: "bun run smart-base/scripts/l1-recommendation-scenarios.ts --l1 <recommendations.l1.json|yaml> --vocabulary <guide.json> [--generic <generic.json>] --mapping <mapping.yaml> --out <dir> [--check]" },
+      invoke: { shell: "bun run smart-base/scripts/l1-recommendation-scenarios.ts --l1 <l1.json|yaml> --vocabulary <guide.json> [--generic <generic.json>] --mapping <mapping.yaml> --out <dir> [--check]" },
       io: {
         inputs: [
           { name: "l1", schema: t("RepoPath"), required: true, description: "The recommendations: the first tool's L1 3.0 graph, or an authored L1 YAML." },
