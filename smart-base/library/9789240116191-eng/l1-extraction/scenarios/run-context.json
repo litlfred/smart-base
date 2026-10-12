@@ -1,11 +1,11 @@
 {
   "$schema": "folio-run-context/v1",
   "platform": {
-    "commit": "7b50d99d586eb53bca4ffcba671c5d0fdc1fa88a"
+    "commit": "a034a2430d5bfc390955ca7f781b2933b1c162c8"
   },
   "mounts": {
     "state": "could-not-determine",
-    "reason": "no index.lock.json at /tmp/claude-0/wt-l1-sb"
+    "reason": "no index.lock.json at /tmp/claude-0/l1rename"
   },
   "releases": [],
   "invoker": {
@@ -15,10 +15,10 @@
   },
   "inputs": [
     {
-      "hash": "1107ca42fd46",
+      "hash": "138b80c99722",
       "inputs": [
         "smart-base/library/9789240116191-eng/l1-extraction/dth-npc-vocabulary.json",
-        "smart-base/library/9789240116191-eng/l1-extraction/recommendations.l1.json",
+        "smart-base/library/9789240116191-eng/l1-extraction/l1.json",
         "smart-base/library/9789240116191-eng/l1-extraction/scenario-mapping.yaml",
         "smart-base/scripts/fixtures/l1-recommendation-scenarios/measles/smart-base-generic-personas.json"
       ]

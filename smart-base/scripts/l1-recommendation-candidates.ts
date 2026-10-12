@@ -22,7 +22,7 @@
  * 3. **Mechanical again (this script, with `--curation`):** the curation is
  *    REFUSED when a statement is not verbatim, a decision names a location
  *    the entry does not hold, or a remark names no recommendation. Otherwise
- *    it writes `recommendations.l1.json` (L1 3.0, `kg/src/l1.ts`, checked with
+ *    it writes `l1.json` (L1 3.0, `kg/src/l1.ts`, checked with
  *    `kg/src/validate.ts`), `exclusions.proposed.json` (l1-coverage's shape),
  *    and the coverage totals. Every node is `inferred` and a candidate; a
  *    person signs exclusions and reviews scenarios, an agent never does.
@@ -92,7 +92,7 @@ export const EXCLUSION_SIGNER_ROLE = { role: "l1-extraction-reviewer" } as const
 /** An exclusion as written: l1-coverage's shape, plus the role that must sign it. */
 export type ProposedExclusion = Exclusion & { signerRole: { role: string } };
 export const CANDIDATES_FILENAME = "recommendation-candidates.json";
-export const GRAPH_FILENAME = "recommendations.l1.json";
+export const GRAPH_FILENAME = "l1.json";
 export const EXCLUSIONS_FILENAME = "exclusions.proposed.json";
 export const WARNINGS_FILENAME = "extraction-warnings.md";
 

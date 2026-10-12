@@ -151,7 +151,7 @@ describe("the worked example", () => {
     const X = "smart-base/library/9789240116191-eng/l1-extraction";
     const r = spawnSync(
       "bun",
-      ["run", "smart-base/scripts/l1-recommendation-scenarios.ts", "--l1", `${X}/recommendations.l1.json`, "--vocabulary", `${X}/dth-npc-vocabulary.json`,
+      ["run", "smart-base/scripts/l1-recommendation-scenarios.ts", "--l1", `${X}/l1.json`, "--vocabulary", `${X}/dth-npc-vocabulary.json`,
         "--generic", "smart-base/scripts/fixtures/l1-recommendation-scenarios/measles/smart-base-generic-personas.json", "--mapping", `${X}/scenario-mapping.yaml`, "--out", `${X}/scenarios`, "--check"],
       { cwd: join(import.meta.dir, "..", ".."), encoding: "utf8" },
     );

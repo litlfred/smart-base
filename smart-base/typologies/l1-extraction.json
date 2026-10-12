@@ -5,7 +5,7 @@
   "within": "library",
   "renderable": false,
   "holds": "derived",
-  "summary": "What the recommendation-extraction skill read out of ONE library entry, held beside it at `library/<entry>/l1-extraction/`: the L1 A-Box graph (`recommendations.l1.json`, JSON-LD against the WHO SMART L1 ontology), the L2 scenario candidates derived from it (`scenarios/scenario-candidates.l2.json`), and the curation, vocabulary and run context that produced them. A sub-graph of `library`, published with its entry beside the entry's manifest.",
+  "summary": "What the recommendation-extraction skill read out of ONE library entry, held beside it at `library/<entry>/l1-extraction/`: the L1 A-Box graph (`l1.json`, JSON-LD against the WHO SMART L1 ontology), the L2 scenario candidates derived from it (`scenarios/scenario-candidates.l2.json`), and the curation, vocabulary and run context that produced them. A sub-graph of `library`, published with its entry beside the entry's manifest.",
   "validatorNotApplicable": "Its two graph documents are JSON-LD that carry an `@context` and no `$schema`, so a per-family validator cannot select them; they are validated against the L1 ontology (and the `l1-library` extension) by `kg/src/validate.ts`, which `scripts/l1-recommendation-candidates.ts` runs on every write. Its other files are inputs and provenance of that run (`l1-recommendation-candidates/v1`, `l1-scenario-vocabulary/v1`, `folio-run-context/v1`, a curation YAML), each read and checked by the script that consumes it. One runnable validator here would grade all of them against whichever single shape it named.",
   "avatar": {
     "glyph": "M5 4h9l4 4v12H5zM8 11h3M8 15h3M14 13a2 2 0 1 0 0.01 0M11 11l3 2M11 15l3-2",

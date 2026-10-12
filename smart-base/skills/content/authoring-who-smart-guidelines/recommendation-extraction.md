@@ -65,8 +65,11 @@ normative is an **`implementation-practice`** node, a class of its own, never a
   upstream.
 - `kg/src/validate.ts` refuses a `recommendation` defined in an
   implementation-guidance or methodology publication.
-- The output file keeps its name, `recommendations.l1.json`: the scenario half
-  and the run context pin it by path.
+- The output file is `l1.json`. It was `recommendations.l1.json` until the
+  owner ruled, 2026-10-12, *"Rename to l1.json"*: the graph holds
+  implementation-practice nodes as well as recommendations, so the old name
+  was inaccurate. No alias is kept; the scenario half and its run context pin
+  the graph by path and were regenerated against the new one.
 
 No new L1 field carries the scenario. L1 holds what WHO says; who does it, and
 during which process, is adaptation, and adaptation is L2's.
@@ -155,7 +158,7 @@ It **refuses** a statement not printed in the entry (normalised), an override
 that neither contains nor is contained in its candidate, a location the entry
 does not hold, a reused key, and a remark of an undeclared key — then checks
 the graph with `kg/src/validate.ts`. It writes `recommendation-candidates.json`
-(the work list), `recommendations.l1.json`, `exclusions.proposed.json`,
+(the work list), `l1.json`, `exclusions.proposed.json`,
 `extraction-warnings.md` and `run-context.json`.
 
 **Who signs an exclusion (owner ruling 3b, 2026-10-12).** Each record in
