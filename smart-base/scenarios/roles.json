@@ -22,7 +22,10 @@
     {
       "role": "business-analyst",
       "skills": [
-        "l2-dak-authoring"
+        "l2-dak-authoring",
+        "dak-l1-library",
+        "recommendation-extraction",
+        "wireframe-design-review"
       ]
     },
     {
@@ -57,6 +60,30 @@
         "recommendation-extraction",
         "ig-ast-delta",
         "wireframe-design-review"
+      ]
+    },
+    {
+      "role": "programme-manager",
+      "skills": [
+        "dak-l1-library",
+        "raci",
+        "todo-manager"
+      ]
+    },
+    {
+      "role": "fhir-modeller",
+      "skills": [
+        "l2-dak-authoring",
+        "smart-guideline-create",
+        "ig-build-pipeline"
+      ]
+    },
+    {
+      "role": "qc-reviewer",
+      "skills": [
+        "qa-reports",
+        "fhir-validation",
+        "content-test"
       ]
     }
   ]

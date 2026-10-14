@@ -3,6 +3,7 @@
                   xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
                   xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
                   xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  xmlns:bootstrap.processes="https://litlfred.github.io/bootstrap/0.1.0/processes/ns#"
                   id="Definitions_DAKLifecycle"
                   targetNamespace="http://smart.who.int/base/bpmn"
                   exporter="SMART Guidelines Authoring"
@@ -39,41 +40,77 @@
   <!-- PHASE 1: PLANNING (Programme Manager)                                -->
   <!-- =================================================================== -->
   <bpmn:process id="Process_Planning" name="Phase 1: Planning" isExecutable="false">
+    <bpmn:documentation>Plans a DAK: scope, team, method, sources, roadmap and consultations, then starts the sprint cycle.</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_Planning">
+      <bpmn:lane id="Lane_Planning" name="Programme Manager">
+        <bpmn:extensionElements><bootstrap.processes:role ref="programme-manager"/></bpmn:extensionElements>
+        <bpmn:flowNodeRef>Start_Planning</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Scoping</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_FormTeam</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_EstablishProcess</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_GatherDocs</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_PlanTimeline</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_PlanConsultations</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AssignWork</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Planning</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
     <bpmn:startEvent id="Start_Planning" name="DAK Development Initiated">
       <bpmn:outgoing>Flow_P1</bpmn:outgoing>
     </bpmn:startEvent>
 
     <bpmn:task id="Task_Scoping" name="Define DAK scope, purpose, and target audience">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-plan" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_P1</bpmn:incoming>
       <bpmn:outgoing>Flow_P2</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_FormTeam" name="Form DAK development team and define RASCI matrix">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="raci" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_P2</bpmn:incoming>
       <bpmn:outgoing>Flow_P3</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_EstablishProcess" name="Establish development process (Agile/Scrum) and tooling">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="methodology-adoption" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_P3</bpmn:incoming>
       <bpmn:outgoing>Flow_P4</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_GatherDocs" name="Gather source documents (guidelines, registers, policies)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="dak-l1-library" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_P4</bpmn:incoming>
       <bpmn:outgoing>Flow_P5</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_PlanTimeline" name="Draft project roadmap, backlog, and sprint cadence">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="release-epic-planning" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_P5</bpmn:incoming>
       <bpmn:outgoing>Flow_P6</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_PlanConsultations" name="Plan SME consultation schedule and format">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-plan" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_P6</bpmn:incoming>
       <bpmn:outgoing>Flow_P7</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AssignWork" name="Assign work and begin sprint cycle">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="todo-manager" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_P7</bpmn:incoming>
       <bpmn:outgoing>Flow_P8</bpmn:outgoing>
     </bpmn:task>
@@ -97,54 +134,121 @@
   <!-- Iterative sprint cycle: Fill → Validate → Incorporate               -->
   <!-- =================================================================== -->
   <bpmn:process id="Process_L2Authoring" name="Phase 2a: L2 DAK Authoring" isExecutable="false">
+    <bpmn:documentation>Authors the L2 DAK components sprint by sprint, from the L1 sources to a DAK ready for L3.</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_L2Authoring">
+      <bpmn:lane id="Lane_L2Authoring" name="Business Analyst">
+        <bpmn:extensionElements><bootstrap.processes:role ref="business-analyst"/></bpmn:extensionElements>
+        <bpmn:flowNodeRef>Start_L2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ReviewL1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_IdentifyInterventions</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorPersonas</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorScenarios</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorBPMN</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>SubProcess_PerBP</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_DraftDAKComponents</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_IncorporateFeedback</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GW_MoreSprints</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_FinalizeL2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_L2</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
     <bpmn:startEvent id="Start_L2" name="Sprint Begins">
       <bpmn:outgoing>Flow_L2_1</bpmn:outgoing>
     </bpmn:startEvent>
 
     <bpmn:task id="Task_ReviewL1" name="Review L1 source documents for current sprint scope">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="dak-l1-library" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L2_1</bpmn:incoming>
       <bpmn:outgoing>Flow_L2_2</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_IdentifyInterventions" name="Identify health interventions and recommendations (Component 1)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="recommendation-extraction" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L2_2</bpmn:incoming>
       <bpmn:outgoing>Flow_L2_3</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorPersonas" name="Author generic personas (Component 2)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l2-dak-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L2_3</bpmn:incoming>
       <bpmn:outgoing>Flow_L2_4</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorScenarios" name="Author user scenarios (Component 3)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l2-dak-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L2_4</bpmn:incoming>
       <bpmn:outgoing>Flow_L2_5</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorBPMN" name="Author BPMN business processes (Component 4)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="bpmn-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L2_5</bpmn:incoming>
       <bpmn:outgoing>Flow_L2_6</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:subProcess id="SubProcess_PerBP" name="For each business process">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l2-dak-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L2_6</bpmn:incoming>
       <bpmn:outgoing>Flow_L2_7</bpmn:outgoing>
 
-      <bpmn:task id="Task_DetailWorkflow" name="Draft detailed workflow annotations"/>
-      <bpmn:task id="Task_DefineDataElements" name="Define core data elements (Component 5)"/>
-      <bpmn:task id="Task_DevelopDecisionLogic" name="Develop decision-support logic (Component 6)"/>
-      <bpmn:task id="Task_DevelopSchedulingLogic" name="Develop scheduling logic (Component 7)"/>
-      <bpmn:task id="Task_ListIndicators" name="List indicators and metrics (Component 8)"/>
-      <bpmn:task id="Task_DefineRequirements" name="Define functional/non-functional requirements (Component 9)"/>
+      <bpmn:task id="Task_DetailWorkflow" name="Draft detailed workflow annotations">
+        <bpmn:extensionElements>
+          <bootstrap.processes:skill ref="bpmn-authoring" />
+        </bpmn:extensionElements>
+      </bpmn:task>
+      <bpmn:task id="Task_DefineDataElements" name="Define core data elements (Component 5)">
+        <bpmn:extensionElements>
+          <bootstrap.processes:skill ref="l2-dak-authoring" />
+          <bootstrap.processes:skill ref="wireframe-design-review" />
+        </bpmn:extensionElements>
+      </bpmn:task>
+      <bpmn:task id="Task_DevelopDecisionLogic" name="Develop decision-support logic (Component 6)">
+        <bpmn:extensionElements>
+          <bootstrap.processes:skill ref="dmn-authoring" />
+        </bpmn:extensionElements>
+      </bpmn:task>
+      <bpmn:task id="Task_DevelopSchedulingLogic" name="Develop scheduling logic (Component 7)">
+        <bpmn:extensionElements>
+          <bootstrap.processes:skill ref="dmn-authoring" />
+        </bpmn:extensionElements>
+      </bpmn:task>
+      <bpmn:task id="Task_ListIndicators" name="List indicators and metrics (Component 8)">
+        <bpmn:extensionElements>
+          <bootstrap.processes:skill ref="l2-dak-authoring" />
+        </bpmn:extensionElements>
+      </bpmn:task>
+      <bpmn:task id="Task_DefineRequirements" name="Define functional/non-functional requirements (Component 9)">
+        <bpmn:extensionElements>
+          <bootstrap.processes:skill ref="l2-dak-authoring" />
+        </bpmn:extensionElements>
+      </bpmn:task>
     </bpmn:subProcess>
 
     <bpmn:task id="Task_DraftDAKComponents" name="Streamline and cross-check all DAK components">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-validate" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L2_7</bpmn:incoming>
       <bpmn:outgoing>Flow_L2_8</bpmn:outgoing>
     </bpmn:task>
 
     <!-- Feedback loop -->
     <bpmn:task id="Task_IncorporateFeedback" name="Incorporate SME feedback into DAK components">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l2-dak-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L2_8</bpmn:incoming>
       <bpmn:incoming>Flow_L2_Loop</bpmn:incoming>
       <bpmn:outgoing>Flow_L2_9</bpmn:outgoing>
@@ -157,6 +261,9 @@
     </bpmn:exclusiveGateway>
 
     <bpmn:task id="Task_FinalizeL2" name="Finalize L2 DAK for L3 authoring">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-validate" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L2_10</bpmn:incoming>
       <bpmn:outgoing>Flow_L2_End</bpmn:outgoing>
     </bpmn:task>
@@ -183,21 +290,41 @@
   <!-- CLINICAL REVIEW (Clinical SME)                                       -->
   <!-- =================================================================== -->
   <bpmn:process id="Process_ClinicalReview" name="Clinical Review" isExecutable="false">
+    <bpmn:documentation>Validates the DAK components against the L1 recommendations and field practice, and returns clinical feedback.</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_ClinicalReview">
+      <bpmn:lane id="Lane_ClinicalReview" name="Clinical SME">
+        <bpmn:extensionElements><bootstrap.processes:role ref="clinical-sme"/></bpmn:extensionElements>
+        <bpmn:flowNodeRef>Start_ClinReview</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ValidateClinical</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_GroundTruth</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ProvideFeedback</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_ClinReview</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
     <bpmn:startEvent id="Start_ClinReview" name="DAK Components Ready for Review">
       <bpmn:outgoing>Flow_CR1</bpmn:outgoing>
     </bpmn:startEvent>
 
     <bpmn:task id="Task_ValidateClinical" name="Validate DAK components against L1 recommendations">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-review" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_CR1</bpmn:incoming>
       <bpmn:outgoing>Flow_CR2</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_GroundTruth" name="Ground-truth with field practice (country visits/interviews)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-feedback" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_CR2</bpmn:incoming>
       <bpmn:outgoing>Flow_CR3</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_ProvideFeedback" name="Provide clinical feedback and identify gaps">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-feedback" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_CR3</bpmn:incoming>
       <bpmn:outgoing>Flow_CR4</bpmn:outgoing>
     </bpmn:task>
@@ -216,66 +343,124 @@
   <!-- PHASE 2b: L3 FHIR AUTHORING (FHIR Modeller)                         -->
   <!-- =================================================================== -->
   <bpmn:process id="Process_L3Authoring" name="Phase 2b: L3 FHIR Authoring" isExecutable="false">
+    <bpmn:documentation>Turns the L2 DAK into L3 FHIR artefacts and builds the IG until its QA issues are resolved.</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_L3Authoring">
+      <bpmn:lane id="Lane_L3Authoring" name="FHIR Modeller">
+        <bpmn:extensionElements><bootstrap.processes:role ref="fhir-modeller"/></bpmn:extensionElements>
+        <bpmn:flowNodeRef>Start_L3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_VerifyL2Input</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_SetupIG</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorLogicalModels</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorProfiles</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorQuestionnaires</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorTerminology</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorCQL</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorPlanDefs</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorActors</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AuthorRemainingL3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_RunBuild</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_FixIssues</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GW_L3Done</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_CompleteL3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_L3</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
     <bpmn:startEvent id="Start_L3" name="L2 DAK Available">
       <bpmn:outgoing>Flow_L3_1</bpmn:outgoing>
     </bpmn:startEvent>
 
     <bpmn:task id="Task_VerifyL2Input" name="Verify L2 input availability and consistency">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_1</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_2</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_SetupIG" name="Set up IG repository from template">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="smart-guideline-create" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_2</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_3</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorLogicalModels" name="Author logical models from L2 data dictionary">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_3</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_4</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorProfiles" name="Author FHIR profiles">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_4</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_5</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorQuestionnaires" name="Author questionnaires and structure maps">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_5</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_6</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorTerminology" name="Author CodeSystems, ValueSets, ConceptMaps">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_6</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_7</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorCQL" name="Author CQL (decision logic, scheduling, indicators)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_7</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_8</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorPlanDefs" name="Author PlanDefinitions (processes, decision tables)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_8</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_9</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorActors" name="Author ActorDefinitions (reuse Commons)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_9</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_10</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_AuthorRemainingL3" name="Author Measures, Requirements, Scenarios, Tests">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_10</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_11</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_RunBuild" name="Run IG Publisher build">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="ig-build-pipeline" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_11</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_12</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_FixIssues" name="Fix QA issues from review">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_12</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_13</bpmn:outgoing>
     </bpmn:task>
@@ -287,6 +472,9 @@
     </bpmn:exclusiveGateway>
 
     <bpmn:task id="Task_CompleteL3" name="L3 authoring complete - ready for review">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-fhir-authoring" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_L3_14</bpmn:incoming>
       <bpmn:outgoing>Flow_L3_End</bpmn:outgoing>
     </bpmn:task>
@@ -317,26 +505,50 @@
   <!-- TERMINOLOGY (Terminologist)                                          -->
   <!-- =================================================================== -->
   <bpmn:process id="Process_Terminology" name="Terminology Management" isExecutable="false">
+    <bpmn:documentation>Reviews terminology bindings and maps concepts to WHO Commons and to ICD-11, SNOMED CT and LOINC.</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_Terminology">
+      <bpmn:lane id="Lane_Terminology" name="Terminologist">
+        <bpmn:extensionElements><bootstrap.processes:role ref="terminologist"/></bpmn:extensionElements>
+        <bpmn:flowNodeRef>Start_Term</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ReviewTermBindings</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_MapToCommons</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_MapToStandards</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_OnboardConcepts</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Term</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
     <bpmn:startEvent id="Start_Term" name="Terminology Review Requested">
       <bpmn:outgoing>Flow_T1</bpmn:outgoing>
     </bpmn:startEvent>
 
     <bpmn:task id="Task_ReviewTermBindings" name="Review terminology bindings and code systems">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="terminology-management" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_T1</bpmn:incoming>
       <bpmn:outgoing>Flow_T2</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_MapToCommons" name="Map concepts to WHO Commons dictionary">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="terminology-management" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_T2</bpmn:incoming>
       <bpmn:outgoing>Flow_T3</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_MapToStandards" name="Map to ICD-11, SNOMED CT, LOINC">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="terminology-management" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_T3</bpmn:incoming>
       <bpmn:outgoing>Flow_T4</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_OnboardConcepts" name="Onboard new concepts to Commons (governance)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="vocabulary-authority" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_T4</bpmn:incoming>
       <bpmn:outgoing>Flow_T5</bpmn:outgoing>
     </bpmn:task>
@@ -356,31 +568,63 @@
   <!-- QUALITY CONTROL (QC Reviewer)                                        -->
   <!-- =================================================================== -->
   <bpmn:process id="Process_QualityControl" name="Phase 3: Quality Control" isExecutable="false">
+    <bpmn:documentation>Reviews the built IG against the QA report and the L1-L4 checklist, and approves it for publication or returns issues.</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_QualityControl">
+      <bpmn:lane id="Lane_QualityControl" name="QC Reviewer">
+        <bpmn:extensionElements><bootstrap.processes:role ref="qc-reviewer"/></bpmn:extensionElements>
+        <bpmn:flowNodeRef>Start_QC</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ReviewQA</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ReviewChecklistL1L2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ReviewChecklistL3L4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ValidateConformance</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_TestFunctionality</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GW_QCPass</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ReportIssues</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ApprovePublication</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ReviewTranslatedContent</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_QC</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
     <bpmn:startEvent id="Start_QC" name="IG Build Available">
       <bpmn:outgoing>Flow_QC1</bpmn:outgoing>
     </bpmn:startEvent>
 
     <bpmn:task id="Task_ReviewQA" name="Review IG Publisher QA report (qa.html)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="qa-reports" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_QC1</bpmn:incoming>
       <bpmn:outgoing>Flow_QC2</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_ReviewChecklistL1L2" name="Review L1 and L2 checklist items">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-review" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_QC2</bpmn:incoming>
       <bpmn:outgoing>Flow_QC3</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_ReviewChecklistL3L4" name="Review L3 and L4 checklist items">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-review" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_QC3</bpmn:incoming>
       <bpmn:outgoing>Flow_QC4</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_ValidateConformance" name="Validate artifact conformance (CRMI profiles)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="fhir-validation" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_QC4</bpmn:incoming>
       <bpmn:outgoing>Flow_QC5</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_TestFunctionality" name="Test L3 functionality (StructureMaps, CQL, Measures)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-test" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_QC5</bpmn:incoming>
       <bpmn:outgoing>Flow_QC6</bpmn:outgoing>
     </bpmn:task>
@@ -392,16 +636,25 @@
     </bpmn:exclusiveGateway>
 
     <bpmn:task id="Task_ReportIssues" name="Report issues to author for resolution">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-feedback" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_QC_Fail</bpmn:incoming>
       <bpmn:outgoing>Flow_QC7</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_ApprovePublication" name="Approve IG for publication">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="content-publish" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_QC_Pass</bpmn:incoming>
       <bpmn:outgoing>Flow_QC8</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_ReviewTranslatedContent" name="Review translated content for completeness">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="translation-manager" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_QC8</bpmn:incoming>
       <bpmn:outgoing>Flow_QC9</bpmn:outgoing>
     </bpmn:task>
@@ -428,51 +681,95 @@
   <!-- PHASE 4: PUBLICATION (Publication Manager)                           -->
   <!-- =================================================================== -->
   <bpmn:process id="Process_Publication" name="Phase 4: Publication" isExecutable="false">
+    <bpmn:documentation>Releases an approved IG: version, publication request, final build, tag, and the hand-over to smart.who.int.</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_Publication">
+      <bpmn:lane id="Lane_Publication" name="Publication Manager">
+        <bpmn:extensionElements><bootstrap.processes:role ref="publication-manager"/></bpmn:extensionElements>
+        <bpmn:flowNodeRef>Start_Pub</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_PrepareRelease</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_CreateReleaseBranch</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_UpdateIGStatus</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_CreatePubRequest</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_FinalBuild</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_CreateReleaseTag</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_VerifyAutomation</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_RequestWHOUpdate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ResetToDraft</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Pub</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
     <bpmn:startEvent id="Start_Pub" name="QC Approval Received">
       <bpmn:outgoing>Flow_Pub1</bpmn:outgoing>
     </bpmn:startEvent>
 
     <bpmn:task id="Task_PrepareRelease" name="Review changes and determine version number">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="package-release" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Pub1</bpmn:incoming>
       <bpmn:outgoing>Flow_Pub2</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_CreateReleaseBranch" name="Optionally create release-candidate branch">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="package-release" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Pub2</bpmn:incoming>
       <bpmn:outgoing>Flow_Pub3</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_UpdateIGStatus" name="Update IG status to active, set version, date">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="ig-publication" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Pub3</bpmn:incoming>
       <bpmn:outgoing>Flow_Pub4</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_CreatePubRequest" name="Create publication-request.json">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="ig-publication" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Pub4</bpmn:incoming>
       <bpmn:outgoing>Flow_Pub5</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_FinalBuild" name="Run final IG Publisher build and verify">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="ig-publication" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Pub5</bpmn:incoming>
       <bpmn:outgoing>Flow_Pub6</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_CreateReleaseTag" name="Create GitHub release and tag (vX.Y.Z)">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="package-release" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Pub6</bpmn:incoming>
       <bpmn:outgoing>Flow_Pub7</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_VerifyAutomation" name="Verify automated publication workflow succeeded">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="publish-verification" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Pub7</bpmn:incoming>
       <bpmn:outgoing>Flow_Pub8</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_RequestWHOUpdate" name="Request WHO team to update smart.who.int">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="instance-publication" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Pub8</bpmn:incoming>
       <bpmn:outgoing>Flow_Pub9</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_ResetToDraft" name="Reset main branch to draft, update version">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="package-release" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Pub9</bpmn:incoming>
       <bpmn:outgoing>Flow_Pub10</bpmn:outgoing>
     </bpmn:task>
@@ -497,21 +794,41 @@
   <!-- TRANSLATION (Translator)                                             -->
   <!-- =================================================================== -->
   <bpmn:process id="Process_Translation" name="Translation" isExecutable="false">
+    <bpmn:documentation>Translates the IG narrative, resource metadata and examples into the UN languages and submits them for review.</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_Translation">
+      <bpmn:lane id="Lane_Translation" name="Translator">
+        <bpmn:extensionElements><bootstrap.processes:role ref="translator"/></bpmn:extensionElements>
+        <bpmn:flowNodeRef>Start_Trans</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_TranslateContent</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_TranslateExamples</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_CompleteTranslation</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Trans</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
     <bpmn:startEvent id="Start_Trans" name="L3 Content Ready">
       <bpmn:outgoing>Flow_Tr1</bpmn:outgoing>
     </bpmn:startEvent>
 
     <bpmn:task id="Task_TranslateContent" name="Translate narrative and resource metadata">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="translation-manager" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Tr1</bpmn:incoming>
       <bpmn:outgoing>Flow_Tr2</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_TranslateExamples" name="Create example resources per UN language">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="translation-manager" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Tr2</bpmn:incoming>
       <bpmn:outgoing>Flow_Tr3</bpmn:outgoing>
     </bpmn:task>
 
     <bpmn:task id="Task_CompleteTranslation" name="Submit translations for review">
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="translation-manager" />
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_Tr3</bpmn:incoming>
       <bpmn:outgoing>Flow_Tr4</bpmn:outgoing>
     </bpmn:task>
@@ -531,26 +848,50 @@
   <bpmndi:BPMNShape id="Shape_Participant_ProgrammeManager" bpmnElement="Participant_ProgrammeManager" isHorizontal="true">
   <dc:Bounds x="39" y="-2184" width="2360" height="193" />
   </bpmndi:BPMNShape>
+  <bpmndi:BPMNShape id="Shape_Lane_Planning" bpmnElement="Lane_Planning" isHorizontal="true">
+  <dc:Bounds x="69" y="-2184" width="2330" height="193" />
+  </bpmndi:BPMNShape>
   <bpmndi:BPMNShape id="Shape_Participant_BusinessAnalyst" bpmnElement="Participant_BusinessAnalyst" isHorizontal="true">
   <dc:Bounds x="8" y="-1678" width="1752" height="631" />
+  </bpmndi:BPMNShape>
+  <bpmndi:BPMNShape id="Shape_Lane_L2Authoring" bpmnElement="Lane_L2Authoring" isHorizontal="true">
+  <dc:Bounds x="38" y="-1678" width="1722" height="631" />
   </bpmndi:BPMNShape>
   <bpmndi:BPMNShape id="Shape_Participant_ClinicalSME" bpmnElement="Participant_ClinicalSME" isHorizontal="true">
   <dc:Bounds x="18" y="-1039" width="1255" height="235" />
   </bpmndi:BPMNShape>
+  <bpmndi:BPMNShape id="Shape_Lane_ClinicalReview" bpmnElement="Lane_ClinicalReview" isHorizontal="true">
+  <dc:Bounds x="48" y="-1039" width="1225" height="235" />
+  </bpmndi:BPMNShape>
   <bpmndi:BPMNShape id="Shape_Participant_FHIRModeller" bpmnElement="Participant_FHIRModeller" isHorizontal="true">
   <dc:Bounds x="64" y="-1830" width="3726" height="141" />
+  </bpmndi:BPMNShape>
+  <bpmndi:BPMNShape id="Shape_Lane_L3Authoring" bpmnElement="Lane_L3Authoring" isHorizontal="true">
+  <dc:Bounds x="94" y="-1830" width="3696" height="141" />
   </bpmndi:BPMNShape>
   <bpmndi:BPMNShape id="Shape_Participant_Terminologist" bpmnElement="Participant_Terminologist" isHorizontal="true">
   <dc:Bounds x="28" y="-338" width="1469" height="215" />
   </bpmndi:BPMNShape>
+  <bpmndi:BPMNShape id="Shape_Lane_Terminology" bpmnElement="Lane_Terminology" isHorizontal="true">
+  <dc:Bounds x="58" y="-338" width="1439" height="215" />
+  </bpmndi:BPMNShape>
   <bpmndi:BPMNShape id="Shape_Participant_QCReviewer" bpmnElement="Participant_QCReviewer" isHorizontal="true">
   <dc:Bounds x="63" y="-1983" width="2543" height="145" />
+  </bpmndi:BPMNShape>
+  <bpmndi:BPMNShape id="Shape_Lane_QualityControl" bpmnElement="Lane_QualityControl" isHorizontal="true">
+  <dc:Bounds x="93" y="-1983" width="2513" height="145" />
   </bpmndi:BPMNShape>
   <bpmndi:BPMNShape id="Shape_Participant_PublicationManager" bpmnElement="Participant_PublicationManager" isHorizontal="true">
   <dc:Bounds x="51" y="-768" width="2794" height="173" />
   </bpmndi:BPMNShape>
+  <bpmndi:BPMNShape id="Shape_Lane_Publication" bpmnElement="Lane_Publication" isHorizontal="true">
+  <dc:Bounds x="81" y="-768" width="2764" height="173" />
+  </bpmndi:BPMNShape>
   <bpmndi:BPMNShape id="Shape_Participant_Translator" bpmnElement="Participant_Translator" isHorizontal="true">
   <dc:Bounds x="62" y="-587" width="1201" height="173" />
+  </bpmndi:BPMNShape>
+  <bpmndi:BPMNShape id="Shape_Lane_Translation" bpmnElement="Lane_Translation" isHorizontal="true">
+  <dc:Bounds x="92" y="-587" width="1171" height="173" />
   </bpmndi:BPMNShape>
   <bpmndi:BPMNShape id="Shape_Start_Planning" bpmnElement="Start_Planning">
   <dc:Bounds x="106" y="-2096" width="36" height="36" />
