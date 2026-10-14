@@ -199,8 +199,17 @@ picture for review.
 3. **Stage 6 review: fidelity.** A check pairs the wireframe's
    `data-element` attributes with the Questionnaire items' `definition`s. A
    field with no item, an item with no field, or a different order is a
-   finding. This check is the one new piece this process needs; it compares
-   two lists and renders nothing.
+   finding. The check compares two lists and renders nothing:
+
+   ```sh
+   bun run smart-base/scripts/check-wireframe-questionnaire.ts <wireframe.html> <Questionnaire.json>
+   ```
+
+   A wireframe that draws web and mobile as separate subtrees marks each
+   with `data-layout`, and each layout is checked on its own. A
+   Questionnaire item names its data element by `definition` (the URL, or
+   the element path after `#`) or by `code[].code`. Exit 0 faithful, 1 a
+   finding, 2 unreadable input.
 
 If the chosen wireframe changes later (a review asks for it), the
 Questionnaire derived from it is flagged `rejected-upstream` like any other
@@ -247,7 +256,7 @@ nothing. Do not maintain two copies of the stages.
 | who adjudicates | role ids: `clinical-sme`, `programme-manager`, `business-analyst`, `fhir-modeller`, `terminologist`, `reviewer`, and smart-base's `l1-extraction-reviewer` | no |
 | staged preview, before/after links | `feature-staging`, `staging-review` | no |
 | diffs | `ig-ast-delta` (L3), `before-after-preview` with `DiffRenderer` (L2, rendered pages) | no |
-| form and app design | `wireframe-design-review`, design use: L2 forms (stage 4) and the application (stage 8a) | no; the field ↔ item correspondence check is new |
+| form and app design | `wireframe-design-review`, design use: L2 forms (stage 4) and the application (stage 8a) | no; the field ↔ item check `check-wireframe-questionnaire.ts` is new |
 | dependency row | `DependsOnRecord`, `DependsOnGap`, KG `evidence` | adds `decision` and `reason` |
 | asking for a dependency choice | `decision-comparison`, `DecisionRequest` | no |
 | provenance flag | KG `wasDerivedFrom` and edge `properties` | adds the values `pending` and `rejected-upstream` |
