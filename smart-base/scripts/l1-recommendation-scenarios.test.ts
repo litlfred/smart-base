@@ -28,7 +28,7 @@ import {
   type L1Rec,
   type Mapping,
 } from "./l1-recommendation-scenarios.ts";
-import { htmlRows, markdownTable, readFshActors, VocabularySchema, type Vocabulary } from "./l1-scenario-vocabulary.ts";
+import { guideIdentity, htmlRows, markdownTable, readFshActors, sushiCanonical, VocabularySchema, type Vocabulary } from "./l1-scenario-vocabulary.ts";
 
 const AT = "2026-10-10T00:00:00Z";
 const SHA = "a".repeat(40);
@@ -179,6 +179,18 @@ describe("inputs", () => {
     mkdirSync(actors);
     writeFileSync(join(actors, "DAK.Persona.X.fsh"), 'Instance: DAK.Persona.X\n* title = "X Person"\n* type = #person\n* description = """\nDoes x.\n\n**ISCO-08**: 1342 (Managers).\n"""\n');
     expect(readFshActors(actors, (p) => p)[0]).toMatchObject({ id: "DAK.Persona.X", title: "X Person", description: "Does x.", iscoCode: ["1342"], personaType: "person" });
+  });
+
+  it("takes a guide's identity from the checkout's own declarations, naming no guide", () => {
+    expect(sushiCanonical("id: x\ncanonical: http://smart.who.int/x # c\nname: X\n")).toBe("http://smart.who.int/x");
+    const bare = mkdtempSync(join(tmpdir(), "guide-"));
+    writeFileSync(join(bare, "sushi-config.yaml"), "id: smart.who.int.x\ncanonical: http://smart.who.int/x\n");
+    expect(guideIdentity(bare, () => "owner/smart-x")).toEqual({ guide: "smart-x", namespace: "https://smart.who.int/x", repository: "owner/smart-x" });
+    mkdirSync(join(bare, "inst"));
+    writeFileSync(join(bare, "inst", "smart-y.json"), JSON.stringify({ $schema: "cat-harness-declaration/1.0.0", name: "smart-y", repository: "owner/smart-y" }));
+    expect(guideIdentity(bare, () => "owner/smart-x")).toEqual({ guide: "smart-y", namespace: "https://smart.who.int/x", repository: "owner/smart-y" });
+    const none = mkdtempSync(join(tmpdir(), "guide-"));
+    expect(() => guideIdentity(none, () => "o/r")).toThrow(/guide checkout/);
   });
 
   it("emits only classes the pinned smart-kg terms hold", () => {
