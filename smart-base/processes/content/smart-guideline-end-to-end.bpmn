@@ -234,12 +234,13 @@
       <bpmn:outgoing>E23</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:callActivity id="Task_AdjL3" name="Review each L3 asset&#10;(before / after if adapted)" calledElement="Process_Review">
-      <bpmn:documentation>One review item per created or changed resource: differential, each Questionnaire against the L2 wireframe it was derived from (field to item), CQL beside its DMN rule with test results, terminology expansions.</bpmn:documentation>
+      <bpmn:documentation>One review item per created or changed resource: differential, each Questionnaire against the L2 wireframe it was derived from (field to item: fhir-harness fhir-questionnaire-wireframe, whose check is check-wireframe-questionnaire), CQL beside its DMN rule with test results, terminology expansions.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-review" />
         <bootstrap.processes:skill ref="staging-review" />
         <bootstrap.processes:skill ref="ig-ast-delta" />
         <bootstrap.processes:skill ref="wireframe-design-review" />
+        <bootstrap.processes:skill ref="fhir-questionnaire-wireframe" />
       </bpmn:extensionElements>
       <bpmn:incoming>E22</bpmn:incoming>
       <bpmn:outgoing>E34</bpmn:outgoing>
