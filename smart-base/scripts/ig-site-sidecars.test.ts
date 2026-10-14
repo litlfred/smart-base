@@ -1,0 +1,33 @@
+import { describe, expect, test } from "bun:test";
+import { existsSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+
+import { DAK_API_LABEL, descriptorFor, IG_API_DESCRIPTOR, IG_API_WORK, igSiteSidecars } from "./ig-site-sidecars";
+
+describe("ig-site:sidecars, smart-base's step in an IG repository's site", () => {
+  test("a DAK (dak.json at the IG root) labels its sidecars DAK API", () => {
+    const ig = mkdtempSync(join(tmpdir(), "ig-dak-"));
+    writeFileSync(join(ig, "dak.json"), "{}");
+    expect(descriptorFor(ig)).toEqual({ label: DAK_API_LABEL });
+  });
+
+  test("an IG that declares no DAK gets no label, so fhir-harness's IG API default stands", () => {
+    expect(descriptorFor(mkdtempSync(join(tmpdir(), "ig-plain-")))).toEqual({});
+  });
+
+  test("no AST: refused, naming the step that restores it", () => {
+    const ig = mkdtempSync(join(tmpdir(), "ig-noast-"));
+    expect(() => igSiteSidecars({ ig, work: mkdtempSync(join(tmpdir(), "work-")), log: () => {} })).toThrow(/no AST[\s\S]*ig-site:ast/);
+  });
+
+  // fhir-harness beside this layer, as a checkout mounts them; skipped (and said) where it is not mounted.
+  const fhirHarness = join(import.meta.dir, "..", "..", "fhir-harness", "scripts", "ig-repo-site.ts");
+  test.skipIf(!existsSync(fhirHarness))("the handshake names are fhir-harness's (ig-repo-site.ts)", () => {
+    // Read, not imported: the test pins the two copies of the handshake's names
+    // together without running fhir-harness's code.
+    const src = readFileSync(fhirHarness, "utf-8");
+    expect(src).toContain(`IG_API_WORK = "${IG_API_WORK}"`);
+    expect(src).toContain(`IG_API_DESCRIPTOR = "${IG_API_DESCRIPTOR}"`);
+  });
+});

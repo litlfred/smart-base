@@ -116,6 +116,22 @@ Two things already measured about that surface, which constrain any redesign:
 
 Re-derive those numbers rather than quoting them.
 
+### On an IG repository's own site: `ig-site:sidecars`
+
+Owner, 2026-10-14, on smart-trust losing its DAK API sidecars when it dropped
+its own `site.build`: *"that should already be there in smart-base (dak
+api)"*. An IG repository whose `index.config.json` names smart-base as its
+site's landing declares no steps of its own. The site route (cat-harness-tools
+`stage-local.ts`) runs the landing layer's `ig-site:sidecars`, which is
+[`ig-site-sidecars.ts`](../../../scripts/ig-site-sidecars.ts): steps 4 to 6's
+generators run over the cached AST by `dak-ast-sidecars.ts`, written to
+`$SITE_WORK/ig-api/sidecars/`, with `$SITE_WORK/ig-api/ig-api.json` saying
+`{"label": "DAK API"}` when the IG has a `dak.json`. fhir-harness binds and
+serves them (`ig-repo-site.ts`, fhir-harness `ig-build-pipeline`
+§"The IG repository's site route") and never learns the DAK name. Step 6, the
+hub page, is not produced on this route: the AST stops before the Publisher
+writes `dak-api.html`.
+
 ## Step 5 depends on expansion, which depends on a terminology server
 
 `generate_jsonld_vocabularies.py` reads ValueSet **expansions**, which exist only
