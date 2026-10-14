@@ -133,9 +133,19 @@ too, over the AST and the sidecars with a stand-in hub page: its OpenAPI
 documents (`<stem>.openapi.json`), enumeration schemas and Swagger UI page
 `openapi/index.html` land in `$SITE_WORK/ig-api/site/`, which fhir-harness
 serves at the site root without replacing a path the site already holds
-(smart-hiv's live root served that `openapi/`, measured 2026-10-14). The hub
-page itself, `dak-api.html`, is not produced: the AST stops before the
-Publisher writes it.
+(smart-hiv's live root served that `openapi/`, measured 2026-10-14).
+
+The hub page itself is a THIN page (owner, 2026-10-14: *"Yes, thin page"*):
+[`dak-api-hub-page.ts`](../../../scripts/dak-api-hub-page.ts) writes
+`dak-api.html`, a shell made with cat-harness-tools' `thinPageHtml`, over a
+node `dak-api.jsonld` that its loader (`assets/dak-api-hub.js`) draws. The
+node links `openapi/`, every sidecar with its artefact page and (for a JSON
+Schema or JSON-LD sidecar) its view page `artifact/<file>.html`, bound by the
+rule fhir-harness binds sidecars by, and the enumeration schemas. It goes
+into the same `$SITE_WORK/ig-api/site/`. An IG whose own `dak-api.md` holds
+only the hub's marker (`<!-- DAK_API_CONTENT -->`, smart-trust's) gets the
+thin hub in that page's place: `ig-api.json` names the marker as
+`placeholder`, and fhir-harness replaces a page holding it, and no other.
 
 ## Step 5 depends on expansion, which depends on a terminology server
 
