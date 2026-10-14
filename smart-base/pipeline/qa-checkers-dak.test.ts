@@ -28,13 +28,13 @@ import {
   WORKBOOK_BACKED_KINDS,
   isGeneratedArtefact,
 } from "./qa-checkers-dak";
-import { QA_CRITERIA_REGISTRY } from "../../platform/index.js";
+import { QA_CRITERIA_REGISTRY } from "../platform/index.js";
 import {
   criterionAdapters,
   incompatibleCompanions,
   COMPANION_ROLES,
-} from "../../platform/index.js";
-import { smartBaseRegistrySync } from "../../scripts/tests/smart-base-consumer";
+} from "../platform/index.js";
+import { smartBaseRegistrySync } from "../scripts/tests/smart-base-consumer";
 
 /** smart-base's contribution, registered as `loadContributions` would. */
 // The registry a folio depending on smart-base gets: since bean riit, step
@@ -229,7 +229,7 @@ describe("registration", () => {
       // The rule is core's; the checker is this instance's (bean 1335).
       expect(def.checker_contributed).toBe(true);
       const entry = registry.qaCheckerEntry(def.id);
-      expect(entry?.label).toBe("smart-base/content/pipeline/qa-checkers-dak.ts");
+      expect(entry?.label).toBe("smart-base/pipeline/qa-checkers-dak.ts");
       expect(entry?.check).toBe(DAK_AUTOMATED_CHECKERS[def.id]);
     }
   });

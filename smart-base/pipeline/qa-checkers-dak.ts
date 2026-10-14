@@ -42,13 +42,13 @@
  * with this file as the checker's `sourceFile`, which is what keeps their
  * verdicts freshness-hashed (bean riit, step 3b).
  *
- * @module smart-base/content/pipeline/qa-checkers-dak
+ * @module smart-base/pipeline/qa-checkers-dak
  */
 
 import { existsSync, readFileSync } from "fs";
-import type { CheckerPaths, CheckerResult } from "../../platform/index.js";
+import type { CheckerPaths, CheckerResult } from "../platform/index.js";
 
-import { DAK_LABEL_PREFIXES, type DakBlockKind } from "../../schemas/dak-kinds";
+import { DAK_LABEL_PREFIXES, type DakBlockKind } from "../schemas/dak-kinds";
 
 /**
  * The companion each DAK kind must carry to be more than a stub.
