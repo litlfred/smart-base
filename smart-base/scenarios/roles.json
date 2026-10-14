@@ -30,6 +30,34 @@
       "skills": [
         "smart-base-tools"
       ]
+    },
+    {
+      "role": "user",
+      "skills": [
+        "smart-guideline-end-to-end"
+      ]
+    },
+    {
+      "role": "authoring-agent",
+      "skills": [
+        "smart-guideline-end-to-end",
+        "dak-l1-library",
+        "recommendation-extraction",
+        "l2-dak-authoring",
+        "dak-preprocessing",
+        "dak-postprocessing",
+        "ig-artifact-ingestion",
+        "l3-fhir-authoring",
+        "decision-comparison"
+      ]
+    },
+    {
+      "role": "reviewer",
+      "skills": [
+        "recommendation-extraction",
+        "ig-ast-delta",
+        "wireframe-design-review"
+      ]
     }
   ]
 }

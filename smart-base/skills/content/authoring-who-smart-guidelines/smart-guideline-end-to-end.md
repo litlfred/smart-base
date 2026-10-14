@@ -17,10 +17,12 @@ description: >
 > Skill id: `smart-guideline-end-to-end` · Package: `authoring-who-smart-guidelines` ·
 > Process: [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn)
 
-**This skill adds an order, a dependency choice at each level, and an
-adjudication record. It adds no authoring of its own.** Each stage runs a skill
-or process that already exists, named in the table below. If a stage needs
-something that skill does not say, fix that skill. Do not add it here.
+**This skill adds an order and a dependency choice at each level. It adds no
+authoring, no review record and no status vocabulary of its own.** Each stage
+runs a skill or process that already exists, named in the table below, and
+every record it leaves uses a schema that already exists, named in
+[What it reuses](#what-it-reuses). If a stage needs something those do not
+say, fix them. Do not add it here.
 
 ## The rule that shapes everything: adjudication is QA, not a gate
 
@@ -39,16 +41,20 @@ What follows from that:
 1. **Every stage needs adjudication, and the guideline is not done until every
    adjudication is recorded.** Not waiting is not the same as skipping. The
    process ends only when the last stage and all its adjudications are in.
-2. **An asset built on unadjudicated input says so.** Every asset produced
-   downstream of an adjudication that is still open carries
-   `adjudication: pending` on the input it used (provenance, not a warning
-   banner). When that adjudication closes, the flag updates.
+2. **An asset built on unadjudicated input says so.** Each derived KG node
+   already names its inputs in `wasDerivedFrom` (hash-pinned, so a changed
+   input makes it stale; smart-base `kg/src/graph.ts`). The adjudication state
+   of an input goes on that edge's open `properties`, beside the
+   `resolutionStatus` and `reviewStatus` that `recommendation-extraction`
+   already puts there: `adjudication: pending` while the input's review is
+   open. This is provenance, not a warning banner. When the review closes,
+   the property updates.
 3. **A rejection reopens the stage, and the flag spreads downstream.** A
-   rejected or amended adjudication files a bean against the stage. Every
-   downstream asset derived from the rejected item turns
-   `adjudication: rejected-upstream` and is re-derived when the stage is
-   redone. It is not deleted ahead of time: the re-derivation may come out
-   the same.
+   `request-changes` or `reject` decision files a bean against the stage.
+   Every downstream asset derived from the rejected item gets
+   `adjudication: rejected-upstream` on that edge, and is re-derived when
+   the stage is redone. It is not deleted ahead of time: the re-derivation
+   may come out the same.
 4. **The agent never adjudicates.** The person who signs is named by role
    (table below). An agent may prepare the review material, never record the
    verdict. This is `recommendation-extraction`'s sign-off rule applied to
@@ -64,19 +70,36 @@ re-assembles the DAK. `validated` ends in its own event.
 
 | # | stage | runs | produces | adjudicated by | what the adjudicator sees |
 |---|---|---|---|---|---|
-| 0 | **Describe the use case** | user | the use case: population, setting, jurisdiction, interventions in scope | (the user *is* the source) | — |
+| 0 | **Describe the use case** | `user` | the use case: population, setting, jurisdiction, interventions in scope | (the user *is* the source) | — |
 | 1 | **Identify L1 guidelines and recommendations** that bear on the use case | [`dak-l1-library`](dak-l1-library.md) (Component 1 sources first, then WHO IRIS and the jurisdiction's own guidelines) | a list of candidate L1 sources, each marked *in the library* / *ingested to KG* / *not yet* | Clinical SME | the list, each with why it was included or left out |
 | 2 | **Ingest into an L1 KG** the sources not yet in one | `bun run cat ingest` → [`dak-l1-library`](dak-l1-library.md) (generic-document layer, `l1-library`) → [`recommendation-extraction`](recommendation-extraction.md) (L1 layer: recommendations, remarks, practices, scenario candidates) | `library/<bib>/` and `library/<bib>/l1-extraction/` | `l1-extraction-reviewer` (exclusions and coverage), Clinical SME (recommendations) | the extraction beside the printed page; coverage score; every `WARNING` |
-| 3 | **Choose L2 dependencies**: which existing DAKs (WHO, or the jurisdiction's adaptation) to build on | agent, reading the L1 KG's `implementedBy` / `realises` edges against each candidate DAK's Component 1 | a dependency list: DAK, version, which components are reused, extended or not used, and why | Programme manager + Business analyst | one row per candidate DAK, including the ones rejected |
+| 3 | **Choose L2 dependencies**: which existing DAKs (WHO, or the jurisdiction's adaptation) to build on | agent, reading the L1 KG's `implementedBy` / `realises` edges against each candidate DAK's Component 1; [`decision-comparison`](#stages-3-and-5-dependency-choice) for the table | a dependency list: DAK, version, which components are reused, extended or not used, and why | Programme manager + Business analyst | one row per candidate DAK, including the ones rejected |
 | 4 | **Create or adapt the L2 DAK assets** | the steps of [`l2-dak-authoring.bpmn`](../../../processes/content/l2-dak-authoring.bpmn): [`l2-dak-authoring`](l2-dak-authoring.md), `bpmn-authoring`, `dmn-authoring`, `terminology-management`; pre/post-processing by [`dak-preprocessing`](dak-preprocessing.md) / [`dak-postprocessing`](dak-postprocessing.md) | the DAK components | per asset, see [Per-asset review](#per-asset-review) | per asset; **before and after** for an adaptation |
-| 5 | **Choose L3 dependencies**: which existing FHIR IGs (WHO, or the jurisdiction's) to build on | [`ig-artifact-ingestion`](ig-artifact-ingestion.md) to index each candidate IG; agent matches the L1 KG and the stage-4 L2 assets against the index | a dependency list: IG package, version, which profiles / value sets / libraries are reused, derived from or not used | FHIR modeller + Terminologist | one row per candidate IG, including the ones rejected |
+| 5 | **Choose L3 dependencies**: which existing FHIR IGs (WHO, or the jurisdiction's) to build on | [`ig-artifact-ingestion`](ig-artifact-ingestion.md) to index each candidate IG; agent matches the L1 KG and the stage-4 L2 assets against the index; `decision-comparison` for the table | a dependency list: IG package, version, which profiles / value sets / libraries are reused, derived from or not used | FHIR modeller + Terminologist | one row per candidate IG, including the ones rejected |
 | 6 | **Produce the L3 assets** from the L2 assets | [`dak-l3-ig.bpmn`](../../../processes/content/dak-l3-ig.bpmn): `l3-fhir-authoring` with `l2-dak-authoring`, then fhir-harness's L3 pipeline up to a clean IG build | the FHIR IG (FSH, CQL, profiles, terminology, examples, tests) | per asset, see [Per-asset review](#per-asset-review) | per asset; **before and after** for an adaptation |
-| 7 | **Describe the consuming application** | user, prompted by the agent | the application brief: who uses it, on what device, which L2 processes it covers, which L3 resources and operations it calls, connectivity, the systems it talks to | (the user *is* the source) | — |
-| 8 | **Build the consuming application** | agent, against the stage-6 IG (it needs a clean build, not a publication) | the application and its conformance tests against the IG's examples and test cases | Business analyst + Clinical SME (does it do what the L2 says?), FHIR modeller (does it conform to L3?) | the running app, walked through each L2 user scenario |
+| 7 | **Describe the consuming application** | `user`, prompted by the agent | the application brief: who uses it, on what device, which L2 processes it covers, which L3 resources and operations it calls, connectivity, the systems it talks to. This is the written intent `wireframe-design-review` starts from | (the user *is* the source) | — |
+| 8 | **Wireframe, then build the consuming application** | `wireframe-design-review` (to-be mode, from the stage-7 intent), then the agent builds against the stage-6 IG (a clean build, not a publication) | wireframe candidates under `docs/wireframes/<topic>/`; the application and its conformance tests against the IG's examples and test cases | Business analyst + Clinical SME (does it do what the L2 says?), FHIR modeller (does it conform to L3?) | the running app, walked through each L2 user scenario |
 
 Publication of the IG (the end of `dak-l3-ig.bpmn`) runs as normal and is not
 on the path to stage 8: an application can be built against an IG that has
 not been published yet.
+
+Every adjudication in the process is a call to cat-harness's generic review,
+`Process_Review` (`processes/content/review-task.bpmn`): it works out what
+kind of change it has, runs the review that fits, and accepts or sends back.
+When reviewers disagree, that process hands over to `Process_Adjudication`.
+Neither is copied here.
+
+### Staging: every review looks at a staged preview
+
+Each stage commits to the guideline's feature branch, and
+[`feature-staging`](https://github.com/litlfred/cat-harness/blob/main/skills/sdlc/sdlc-core/feature-staging.md)
+deploys that branch as a preview (`Process_FeatureStaging`). A review item
+never links to source alone. It links to the staged page, through
+`staging-review`, which returns **before** (main) and **after** (staging)
+URL pairs. A new guideline that has no repository yet is staged inside the
+current one first, as [`smart-guideline-create`](smart-guideline-create.md)
+already defaults to (`in-repo`, a staged sub-KG).
 
 ### Stages 0 and 7 belong to the user
 
@@ -103,15 +126,25 @@ the L1 half. Skipping is per source, not for the whole stage.
 ### Stages 3 and 5: dependency choice
 
 A dependency decides what the guideline inherits, so the choice is an asset in
-its own right and is adjudicated like one. For each candidate, record:
+its own right and is adjudicated like one. Each candidate is one row:
 
-| field | meaning |
-|---|---|
-| `candidate` | DAK id or IG package id, and version |
-| `publisher` | WHO, or the adapting jurisdiction |
-| `evidence` | the L1 KG nodes (and, at L3, the L2 assets) that point at it |
-| `decision` | `reuse` (unchanged) · `adapt` (fork and change) · `extend` (depend and add) · `reject` |
-| `reason` | one sentence; required for `reject` |
+| field | from | meaning |
+|---|---|---|
+| `packageId`, `version`, `uri` | cat-harness `DependsOnRecord` (`schemas/depends-on.ts`), the same three fields as FHIR `ImplementationGuide.dependsOn` | the candidate DAK or IG. A candidate missing one of the three is a `DependsOnGap`, not a row |
+| `publisher` | — | WHO, or the adapting jurisdiction |
+| `evidence` | smart-base KG `evidence` (`kg/src/graph.ts`) | the L1 KG nodes (and, at L3, the L2 assets) that point at it |
+| `decision` | this skill | `reuse` (unchanged) · `adapt` (fork and change) · `extend` (depend and add) · `reject` |
+| `reason` | this skill | one sentence; required for `reject` |
+
+The agent lays the candidates out as a `decision-comparison` table and asks
+through a `DecisionRequest` (`schemas/decision-request.ts`: two to four
+options, a recommendation, and what happens if nobody answers). Under the
+QA rule it goes ahead with its recommendation. The adjudicator's answer is
+the stage's review decision.
+
+Only `decision` and `reason` are new. Once adjudicated, a `reuse`, `adapt` or
+`extend` row becomes an ordinary dependency: a `dependencies:` entry in
+`sushi-config.yaml` at L3, and the DAK's own reference at L2.
 
 **Reuse first.** This is the precedence `recommendation-extraction` already
 uses for personas and processes: reuse an existing asset, then adapt one, and
@@ -124,7 +157,8 @@ too, as the upstream of that adaptation.
 
 Every asset a stage **creates or changes** gets its own review item. An asset
 that was reused unchanged gets none: its upstream's adjudication covers it.
-The review item shows the asset the way its reviewer reads it, not as source:
+The review item shows the asset the way its reviewer reads it, not as source,
+on the staged preview:
 
 | level | asset | review shows |
 |---|---|---|
@@ -132,25 +166,38 @@ The review item shows the asset the way its reviewer reads it, not as source:
 | L2 | persona, user scenario | the card: role, goal, setting |
 | L2 | business process (BPMN) | the rendered diagram (`render:bpmn` / `dak-swimlanes`) |
 | L2 | decision table (DMN) | the table, with the L1 recommendation each rule cites |
-| L2 | core data elements | data-dictionary rows (`dak-data-dictionary`), and a **wireframe** of the form that captures them |
+| L2 | core data elements | data-dictionary rows (`dak-data-dictionary`), and a **wireframe** of the form that captures them (`wireframe-design-review`, as-is mode) |
 | L2 | indicators, requirements | the indicator definition / requirement list, each with the persona and process it serves |
-| L3 | Questionnaire, profile with UI | a **wireframe** rendered from the resource |
+| L3 | Questionnaire, profile with UI | a **wireframe** of the rendered form (`wireframe-design-review`, as-is mode). Nothing renders a Questionnaire into a wireframe yet: that renderer is the one new piece this process needs |
 | L3 | profile, logical model | the IG Publisher's differential view |
 | L3 | CQL / PlanDefinition | the logic beside the DMN rule it implements, and its test cases passing or failing |
 | L3 | terminology | the expansion, and the mapping to ICD-11 / SNOMED CT / LOINC |
-| app | screen / flow | the running screen, walked through the L2 scenario it serves |
+| app | screen / flow | the chosen wireframe beside the running screen, walked through the L2 scenario it serves |
 
 **An adaptation is reviewed as a diff.** When the asset came from a stage-3 or
 stage-5 dependency with `decision: adapt`, the review item shows **before**
 (the upstream asset at its pinned version) and **after** side by side, with the
-change highlighted, and the L1 node that justifies the change. A changed asset
+change highlighted, and the L1 node that justifies the change. At L3 the diff
+is fhir-harness's `ig-ast-delta` (element-level, per resource). At L2, and
+for anything rendered, it is `before-after-preview`, drawn with one of the
+`DiffRenderer`s in `schemas/diff-renderers.ts`. A changed asset
 with no L1 justification is a finding in its own right: an adaptation is local
 evidence or local policy, and the KG has to say which.
 
-The verdict on a review item is `accepted`, `amended` (the reviewer's change
-replaces the agent's, recorded with `by` and `at`), or `rejected` with a reason.
-That is the shape `recommendation-extraction` already records
-(`review: {by, at}`). Use the same field at every level.
+The record of a review item is a cat-harness `QaReview` (`qa-review/v1`,
+`schemas/qa-review.ts`): `subject` is the asset, and each verdict is a
+`Decision` whose `role` is the adjudicator's role id. Its outcomes are the
+ones to use:
+
+| outcome | meaning here |
+|---|---|
+| `approve` | the asset stands |
+| `request-changes` | reopen the stage for this asset. If the reviewer wrote the fix themselves, it goes in an `AuditNote` and the agent applies it as given |
+| `reject` | the asset is wrong at the root (wrong source, wrong dependency). Reopen the stage that chose it |
+
+At L1, `recommendation-extraction` keeps its existing `review: {by, at}`
+fields on the mapping. The `QaReview` is the record of the stage's review,
+not a replacement for those fields.
 
 ## New guideline or adaptation: one process
 
@@ -158,6 +205,20 @@ An adaptation is not a separate process. It is this process with stages 3 and
 5 returning `adapt` decisions, which makes stages 4 and 6 show diffs. A new
 guideline is the case where those stages return only `reuse`, `extend` or
 nothing. Do not maintain two copies of the stages.
+
+## What it reuses
+
+| need | reused from | new? |
+|---|---|---|
+| each adjudication | cat-harness `Process_Review`, then `Process_Adjudication` on disagreement | no |
+| review record and verdict | cat-harness `qa-review/v1`: `QaReview`, `Decision` (`approve` · `request-changes` · `reject`), `AuditNote` | no |
+| who adjudicates | role ids: `clinical-sme`, `programme-manager`, `business-analyst`, `fhir-modeller`, `terminologist`, `reviewer`, and smart-base's `l1-extraction-reviewer` | no |
+| staged preview, before/after links | `feature-staging`, `staging-review` | no |
+| diffs | `ig-ast-delta` (L3), `before-after-preview` with `DiffRenderer` (L2, rendered pages) | no |
+| wireframes | `wireframe-design-review` (as-is for forms, to-be for the application) | no; a Questionnaire-to-wireframe renderer is new |
+| dependency row | `DependsOnRecord`, `DependsOnGap`, KG `evidence` | adds `decision` and `reason` |
+| asking for a dependency choice | `decision-comparison`, `DecisionRequest` | no |
+| provenance flag | KG `wasDerivedFrom` and edge `properties` | adds the values `pending` and `rejected-upstream` |
 
 ## What this does not change
 

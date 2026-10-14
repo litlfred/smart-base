@@ -20,7 +20,7 @@ for a new guideline and for a jurisdiction's adaptation of an existing one.
 | 5 | Choose the existing L3 FHIR IGs to build on | the L1 KG, the L2 assets; WHO IGs and the jurisdiction's IGs | dependency list: reuse / adapt / extend / reject, with reasons | FHIR Modeller, Terminologist |
 | 6 | Produce the L3 assets from the L2 assets ([Phase 2b](#phase-2b-l3-fhir-authoring-fhir-modeller)) | the L2 assets; the chosen IGs | FHIR IG | per asset (see below) |
 | 7 | Describe the consuming application | the L2 personas and processes | application brief | (requester) |
-| 8 | Build the consuming application | the L3 IG (a clean build, not a publication) | the application, with conformance tests | Business Analyst, Clinical SME, FHIR Modeller |
+| 8 | Wireframe, then build the consuming application | the application brief; the L3 IG (a clean build, not a publication) | wireframes (web and mobile); the application, with conformance tests | Requester, Business Analyst, Clinical SME, FHIR Modeller |
 
 **Adjudication is quality assurance, not a gate.** Every stage is adjudicated
 by a person, but the next stage does not wait for it: once the L2 assets
@@ -32,6 +32,11 @@ review. In practice:
 - a rejection reopens the stage, and the assets derived from the rejected item
   are re-derived;
 - the guideline is complete only when every adjudication is recorded.
+
+Each stage's work is staged as a preview before it is reviewed, so every
+review item links to the **current** (main) and the **staged** version of the
+page it changes. A reviewer approves an item, requests changes (optionally
+writing the change themselves), or rejects it.
 
 **Each created or changed asset gets its own review**, shown the way its
 reviewer reads it: a rendered BPMN diagram, a decision table beside the
