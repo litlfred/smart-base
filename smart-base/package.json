@@ -21,6 +21,8 @@
     "smart-base:dak-data-dictionary": "bun run smart-base/scripts/dak-data-dictionary.ts",
     "smart-base:dak-swimlanes": "bun run smart-base/scripts/dak-swimlanes.ts",
     "smart-base:dak-ast-sidecars": "bun run smart-base/scripts/dak-ast-sidecars.ts",
-    "check:dak-annexes": "bun run smart-base/scripts/check-dak-annexes.ts"
+    "check:dak-annexes": "bun run smart-base/scripts/check-dak-annexes.ts",
+    "smart-base:processes:render": "bun run smart-base/scripts/render-processes.ts",
+    "smart-base:processes:render:check": "bun run smart-base/scripts/render-processes.ts --check"
   }
 }
