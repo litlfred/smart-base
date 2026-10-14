@@ -71,3 +71,9 @@ happens when `SMART_BASE_HOME` is unset (the skill degrades to `skip`, it does
 a per-content-type process, and this package owns what "adequate" means in its
 domain. That is licence to adapt the sequence, not to skip the gate — the base
 processes it feeds (`editing-hci-validation`, `content-lifecycle`) stay strict.
+
+When this skill runs as stage 4 of
+[`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), clinical
+validation is that stage's adjudication. It runs beside the next stage and
+does not hold it up: the agent goes on to choose L3 dependencies while the L2
+assets are reviewed one by one.

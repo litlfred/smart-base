@@ -4,6 +4,50 @@ The SMART Guidelines authoring lifecycle encompasses DAK development, L3 FHIR au
 
 The process is based on the [WHO SMART IG Starter Kit](https://smart.who.int/ig-starter-kit/) guidance.
 
+#### End to End: From Use Case to Application
+
+The phases below describe *who* does the work. This section describes the
+order of the work, from a use case to a running application. It is the same
+for a new guideline and for a jurisdiction's adaptation of an existing one.
+
+| # | Stage | Builds on | Produces | Adjudicated by |
+|---|---|---|---|---|
+| 0 | Describe the use case | — | population, setting, jurisdiction, interventions in scope | (requester) |
+| 1 | Identify existing L1 guidelines and recommendations relevant to the use case | WHO guidelines, the jurisdiction's own guidelines | candidate L1 sources | Clinical SME |
+| 2 | Ingest any source not yet in a knowledge graph (KG) | the L1 sources | structured KG assets at the generic-document level and the L1 level (recommendations, remarks, practices) | L1 extraction reviewer, Clinical SME |
+| 3 | Choose the existing L2 DAKs to build on | the L1 KG; WHO DAKs and the jurisdiction's adapted DAKs | dependency list: reuse / adapt / extend / reject, with reasons | Programme Manager, Business Analyst |
+| 4 | Create or adapt the L2 DAK assets ([Phase 2a](#phase-2a-l2-dak-authoring-business-analyst-iterative)) | the L1 KG; the chosen DAKs | DAK components | per asset (see below) |
+| 5 | Choose the existing L3 FHIR IGs to build on | the L1 KG, the L2 assets; WHO IGs and the jurisdiction's IGs | dependency list: reuse / adapt / extend / reject, with reasons | FHIR Modeller, Terminologist |
+| 6 | Produce the L3 assets from the L2 assets ([Phase 2b](#phase-2b-l3-fhir-authoring-fhir-modeller)) | the L2 assets; the chosen IGs | FHIR IG | per asset (see below) |
+| 7 | Describe the consuming application | the L2 personas and processes | application brief | (requester) |
+| 8 | Build the consuming application | the L3 IG (a clean build, not a publication) | the application, with conformance tests | Business Analyst, Clinical SME, FHIR Modeller |
+
+**Adjudication is quality assurance, not a gate.** Every stage is adjudicated
+by a person, but the next stage does not wait for it: once the L2 assets
+exist, the L3 assets can be produced while the L2 assets are still under
+review. In practice:
+
+- an asset built on input that is still being adjudicated records that in
+  its provenance;
+- a rejection reopens the stage, and the assets derived from the rejected item
+  are re-derived;
+- the guideline is complete only when every adjudication is recorded.
+
+**Each created or changed asset gets its own review**, shown the way its
+reviewer reads it: a rendered BPMN diagram, a decision table beside the
+recommendation it cites, data-dictionary rows with a **wireframe** of the
+form that captures them, a Questionnaire rendered as a wireframe, a profile's
+differential. An **adapted** asset is reviewed as **before and after**: the
+upstream asset beside the adapted one, with the change and the
+recommendation or local policy behind it. A reused asset that was not changed
+needs no new review.
+
+**Dependency choices are adjudicated too.** Stages 3 and 5 decide what the
+guideline inherits. Each candidate DAK or IG is recorded with its evidence in
+the L1 KG and a decision: reuse, adapt, extend or reject. Where a
+jurisdiction's adaptation covers the same scope, it is preferred over the WHO
+original, and the WHO original is recorded as its upstream.
+
 #### Lifecycle Overview
 
 ```
@@ -106,3 +150,8 @@ The L2 authoring follows an iterative sprint cycle of **Fill → Validate → In
 The formal BPMN 2.0 process diagram is available at: [SGAuthoring.DAKLifecycle.bpmn](bpmn/SGAuthoring.DAKLifecycle.bpmn)
 
 This diagram models the full lifecycle as a collaboration with swimlanes for each authoring persona, including message flows between participants for handoffs (e.g. Business Analyst → Clinical SME for validation, QC Reviewer → Publication Manager for approval).
+
+The end-to-end stages above are modelled separately for authoring agents, with
+each stage forking into the next stage and its adjudication:
+`smart-base/processes/content/smart-guideline-end-to-end.bpmn` in the source
+repository, described by the `smart-guideline-end-to-end` skill.
