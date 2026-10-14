@@ -54,11 +54,11 @@ What follows from that:
    verdict. This is `recommendation-extraction`'s sign-off rule applied to
    every level.
 
-> **Open conflict.** `l2-dak-authoring.bpmn` still has its
-> **Clinically accurate?** gateway, which holds the DAK back until clinical
-> validation passes. In this process the L2 stage does not wait on it: clinical
-> validation is the L2 adjudication. Whether that gateway also becomes
-> non-blocking is for the owner to decide.
+`l2-dak-authoring.bpmn` follows the same rule (owner, 2026-10-14). Its
+**Clinically accurate?** decision now runs beside assembly, not before it: a
+parallel fork after the authoring join starts clinical validation and
+assembly together. `changes needed` still sends the work round again, which
+re-assembles the DAK. `validated` ends in its own event.
 
 ## The stages
 
