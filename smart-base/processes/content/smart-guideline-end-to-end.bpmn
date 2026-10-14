@@ -185,7 +185,7 @@
       <bpmn:outgoing>E17</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:callActivity id="Task_AdjL2" name="Review each L2 asset&#10;(before / after if adapted)" calledElement="Process_Review">
-      <bpmn:documentation>One review item per created or changed asset, shown as its reviewer reads it (diagram, table, data-dictionary rows); each form's wireframe candidates are reviewed blind and one is chosen (Process_Adjudication, Process_OptionsAnalysis); an adapted asset as a diff against its pinned upstream.</bpmn:documentation>
+      <bpmn:documentation>One review item per created or changed asset, shown as its reviewer reads it (diagram, table, data-dictionary rows); each form's wireframe candidates are reviewed blind and one is chosen (Process_Adjudication, Process_OptionsAnalysis); an adapted asset as a diff against its pinned upstream. For each L2 component this is the review that forks inside its own edit-and-review subprocess (l2-component-edit-review.bpmn, called by every l2-dak-authoring.bpmn track), with the renderer, checker and reviewing role that skill tables.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-review" />
         <bootstrap.processes:skill ref="staging-review" />

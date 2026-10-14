@@ -32,6 +32,10 @@
       The &lt;bootstrap.processes:skill&gt; extension on an activity names the folio-assistant skill
       that implements it; &lt;cat-harness.processes:bean&gt; marks a step that reads or writes the shared
       work plan in beans/.
+      Each of the six authoring tracks is a call into l2-component-edit-review.bpmn
+      (Process_L2ComponentEditReview): the agent edits the component, checks, renders and stages it, and hands it on, while a
+      person in the component's reviewing role reviews it alongside, never as a gate. The track's renderer, checker and reviewer
+      are tabled in the skill l2-component-edit-review.
     </bpmn:documentation>
     <bpmn:extensionElements>
       <cat-harness.processes:policy enforcement="advisory" />
@@ -65,7 +69,7 @@
         <bpmn:flowNodeRef>EndEvent_L2Ready</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_Terminologist" name="Terminologist">
-        <bpmn:documentation>One parallel branch of the fork, producing bindings the other five tracks cite rather than author themselves. Kept a separate lane rather than folded into the analyst's because governance of a code binding is deliberately independent of the artefact that cites it.</bpmn:documentation>
+        <bpmn:documentation>One parallel branch of the fork, producing bindings the other five tracks cite rather than author themselves, and calling the same edit-and-review subprocess as they do, with a different terminologist as its reviewer. Kept a separate lane rather than folded into the analyst's because governance of a code binding is deliberately independent of the artefact that cites it.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="terminologist"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Task_Terminology</bpmn:flowNodeRef>
       </bpmn:lane>
@@ -119,54 +123,60 @@
       <bpmn:outgoing>B10</bpmn:outgoing>
       <bpmn:outgoing>B07</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:userTask id="Task_Personas" name="Personas and scenarios&#10;[l2-dak-authoring]">
-      <bpmn:documentation>Author the DAK's personas and the user journeys (scenarios) they appear in. These are the DAK's own actors, not this harness's scenarios/roles.json — the two vocabularies must not be conflated.</bpmn:documentation>
+    <bpmn:callActivity id="Task_Personas" name="Personas and scenarios&#10;[l2-dak-authoring]" calledElement="Process_L2ComponentEditReview">
+      <bpmn:documentation>Author the DAK's personas and the user journeys (scenarios) they appear in, then have them reviewed: calls Process_L2ComponentEditReview with the personas-and-scenarios inputs of the skill l2-component-edit-review (checker: dak-swimlanes.ts and traceability to L1 recommendations; renderer: the persona card and a prose diff; reviewer: clinical SME). These are the DAK's own actors, not this harness's scenarios/roles.json — the two vocabularies must not be conflated.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
+        <bootstrap.processes:skill ref="l2-component-edit-review" />
       </bpmn:extensionElements>
       <bpmn:incoming>B05</bpmn:incoming>
       <bpmn:outgoing>B11</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="Task_Bpmn" name="Business processes · BPMN 2.0&#10;[bpmn-authoring]">
-      <bpmn:documentation>Author the DAK's L2 business processes as BPMN 2.0, with Diagram Interchange: a .bpmn with no x/y on its shapes parses and renders blank. Stay at L2 — reviewable by a clinician, not FHIR.</bpmn:documentation>
+    </bpmn:callActivity>
+    <bpmn:callActivity id="Task_Bpmn" name="Business processes · BPMN 2.0&#10;[bpmn-authoring]" calledElement="Process_L2ComponentEditReview">
+      <bpmn:documentation>Author the DAK's L2 business processes as BPMN 2.0, with Diagram Interchange: a .bpmn with no x/y on its shapes parses and renders blank. Stay at L2 — reviewable by a clinician, not FHIR. Calls Process_L2ComponentEditReview with the BPMN inputs of the skill l2-component-edit-review (checker: bpmn-js import with no warnings, dak-swimlanes.ts, artefact-reachability; renderer: render:bpmn with a visual-diff before/after; reviewer: clinical SME).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="bpmn-authoring" />
+        <bootstrap.processes:skill ref="l2-component-edit-review" />
       </bpmn:extensionElements>
       <bpmn:incoming>B06</bpmn:incoming>
       <bpmn:outgoing>B12</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="Task_Dmn" name="Decision logic · DMN tables&#10;[dmn-authoring]">
-      <bpmn:documentation>Author the decision logic as DMN tables, within the FEEL subset the interpreter implements (any, literals, comparisons, one-of). Ranges, not() and function calls are refused at load, so write inside the subset.</bpmn:documentation>
+    </bpmn:callActivity>
+    <bpmn:callActivity id="Task_Dmn" name="Decision logic · DMN tables&#10;[dmn-authoring]" calledElement="Process_L2ComponentEditReview">
+      <bpmn:documentation>Author the decision and scheduling logic as DMN tables, within the FEEL subset the interpreter implements (any, literals, comparisons, one-of). Ranges, not() and function calls are refused at load, so write inside the subset. Calls Process_L2ComponentEditReview with the DMN inputs of the skill l2-component-edit-review (checker: load, reachability, test cases; renderer: dmn2html table before/after, each rule beside its L1 citation; reviewer: clinical SME).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="dmn-authoring" />
+        <bootstrap.processes:skill ref="l2-component-edit-review" />
       </bpmn:extensionElements>
       <bpmn:incoming>B07</bpmn:incoming>
       <bpmn:outgoing>B13</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="Task_DataDict" name="Data dictionary and core data elements&#10;[l2-dak-authoring]">
-      <bpmn:documentation>Author the data dictionary and core data elements for this component. Stay structured but not FHIR: a data element a clinician can review, from which L3 can later be derived rather than written twice.</bpmn:documentation>
+    </bpmn:callActivity>
+    <bpmn:callActivity id="Task_DataDict" name="Data dictionary and core data elements&#10;[l2-dak-authoring]" calledElement="Process_L2ComponentEditReview">
+      <bpmn:documentation>Author the data dictionary and core data elements for this component. Stay structured but not FHIR: a data element a clinician can review, from which L3 can later be derived rather than written twice. Calls Process_L2ComponentEditReview with the glossary inputs of the skill l2-component-edit-review (checker: check-dak-annexes.ts; renderer: the term diff from dak-data-dictionary-diff.ts and each form's chosen wireframe; reviewer: clinical SME, terminologist for codes).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
+        <bootstrap.processes:skill ref="l2-component-edit-review" />
       </bpmn:extensionElements>
       <bpmn:incoming>B08</bpmn:incoming>
       <bpmn:outgoing>B14</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="Task_Indicators" name="Indicators and requirements&#10;[l2-dak-authoring]">
-      <bpmn:documentation>Author the component's indicators and its functional and non-functional requirements. These are the DAK's requirements, distinct from skills/requirements/*.json, which are this harness's own conformance obligations.</bpmn:documentation>
+    </bpmn:callActivity>
+    <bpmn:callActivity id="Task_Indicators" name="Indicators and requirements&#10;[l2-dak-authoring]" calledElement="Process_L2ComponentEditReview">
+      <bpmn:documentation>Author the component's indicators and its functional and non-functional requirements. These are the DAK's requirements, distinct from skills/requirements/*.json, which are this harness's own conformance obligations. Calls Process_L2ComponentEditReview with the indicators-and-requirements inputs of the skill l2-component-edit-review (checker: each names the persona and process it serves and traces to L1; renderer: prose diff; reviewer: business analyst with the programme manager).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
+        <bootstrap.processes:skill ref="l2-component-edit-review" />
       </bpmn:extensionElements>
       <bpmn:incoming>B09</bpmn:incoming>
       <bpmn:outgoing>B15</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="Task_Terminology" name="Terminology bindings&#10;[terminology-management]">
-      <bpmn:documentation>ICD-11, SNOMED CT, LOINC bindings — governed separately from the artifacts that cite them.</bpmn:documentation>
+    </bpmn:callActivity>
+    <bpmn:callActivity id="Task_Terminology" name="Terminology bindings&#10;[terminology-management]" calledElement="Process_L2ComponentEditReview">
+      <bpmn:documentation>ICD-11, SNOMED CT, LOINC bindings — governed separately from the artifacts that cite them. Calls Process_L2ComponentEditReview with the terminology inputs of the skill l2-component-edit-review (checker: bindings resolve and unmappedConcepts is reported; renderer: the term diff on the code columns; reviewer: a terminologist other than the one who bound it).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="terminology-management" />
+        <bootstrap.processes:skill ref="l2-component-edit-review" />
       </bpmn:extensionElements>
       <bpmn:incoming>B10</bpmn:incoming>
       <bpmn:outgoing>B16</bpmn:outgoing>
-    </bpmn:userTask>
+    </bpmn:callActivity>
     <bpmn:parallelGateway id="Gateway_AuthorJoin" name="">
       <bpmn:incoming>B11</bpmn:incoming>
       <bpmn:incoming>B12</bpmn:incoming>
@@ -183,7 +193,7 @@
       <bpmn:outgoing>B24</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:userTask id="Task_SmeValidate" name="Clinical validation&#10;[content-review]">
-      <bpmn:documentation>Ground truth: does the DAK say what the guideline says?</bpmn:documentation>
+      <bpmn:documentation>Ground truth: does the DAK say what the guideline says? This is the whole-DAK reading, across components: whether the personas, processes, decisions, data elements and indicators tell one consistent story. Each component has already had its own review, forking off inside its track (Process_L2ComponentEditReview, skill l2-component-edit-review), so this step does not repeat those per-component reviews.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-review" />
       </bpmn:extensionElements>
