@@ -16,4 +16,5 @@ Held in the library [`smart-base/library/`](../README.md) as `who-rhr-1806-eng`.
 | [sections](sections/) | 40 |
 | [blocks](blocks/) | 20 |
 | images | 0 |
+
 <!-- kg:subgraph:end -->

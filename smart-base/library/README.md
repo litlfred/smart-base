@@ -23,4 +23,5 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `library`, holding `librar
 | [`smart-trust/`](smart-trust/README.md) | described in its own README | |
 | [`who-dpi-h-reference-architecture-draft-v1/`](who-dpi-h-reference-architecture-draft-v1/README.md) | described in its own README | |
 | [`who-rhr-1806-eng/`](who-rhr-1806-eng/README.md) | described in its own README | |
+
 <!-- kg:subgraph:end -->

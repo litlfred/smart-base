@@ -16,4 +16,5 @@ Held in the library [`smart-base/library/`](../README.md) as `9789240116191-eng`
 | [sections](sections/) | 124 |
 | [blocks](blocks/) | 63 |
 | images | 1 |
+
 <!-- kg:subgraph:end -->

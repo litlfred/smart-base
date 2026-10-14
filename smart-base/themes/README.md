@@ -14,4 +14,5 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-themes`, holdi
 | [`themes.test.ts`](themes.test.ts) | a file |  |
 | [`themes.ts`](themes.ts) | a file |  |
 | [`upstream/`](upstream/) | _nothing declares what this holds_ | |
+
 <!-- kg:subgraph:end -->

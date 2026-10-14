@@ -12,4 +12,5 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `voices`, holding `voic
 |---|---|---|
 | [`who-digital-health/`](who-digital-health/) | _nothing declares what this holds_ | |
 | [`who-digital-transformation-handbook/`](who-digital-transformation-handbook/) | _nothing declares what this holds_ | |
+
 <!-- kg:subgraph:end -->

@@ -17,4 +17,5 @@ Held in the library [`smart-base/library/`](../README.md) as `who-dpi-h-referenc
 | [sections](sections/) | 258 |
 | [blocks](blocks/) | 158 |
 | images | 31 |
+
 <!-- kg:subgraph:end -->

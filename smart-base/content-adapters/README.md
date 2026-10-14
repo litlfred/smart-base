@@ -11,4 +11,5 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-content-adapte
 | file | what it is | used by |
 |---|---|---|
 | [`dak.json`](dak.json) | data |  |
+
 <!-- kg:subgraph:end -->

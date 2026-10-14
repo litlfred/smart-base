@@ -15,4 +15,5 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-qa-checkers`, 
 | [`dak-dmn-has-decision-table.json`](dak-dmn-has-decision-table.json) | data |  |
 | [`dak-fsh-declares-kind.json`](dak-fsh-declares-kind.json) | data |  |
 | [`dak-label-prefix-matches-kind.json`](dak-label-prefix-matches-kind.json) | data |  |
+
 <!-- kg:subgraph:end -->

@@ -11,4 +11,5 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-house-processe
 | file | what it is | used by |
 |---|---|---|
 | [`content/`](content/) | _nothing declares what this holds_ | |
+
 <!-- kg:subgraph:end -->

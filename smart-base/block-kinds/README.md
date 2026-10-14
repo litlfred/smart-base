@@ -31,4 +31,5 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-block-kinds`, 
 | [`test-scenario.json`](test-scenario.json) | data |  |
 | [`user-scenario.json`](user-scenario.json) | data |  |
 | [`value-set.json`](value-set.json) | data |  |
+
 <!-- kg:subgraph:end -->
