@@ -79,10 +79,10 @@ export {
 } from "../../cat-harness-tools/test/support/instance-fixture.js";
 export {
   QA_CRITERIA_REGISTRY,
-} from "../../cat-harness-tools/content/pipeline/qa-criteria-registry.js";
+} from "../../cat-harness-tools/pipeline/qa-criteria-registry.js";
 export {
   readBlockManifest,
-} from "../../cat-harness-tools/content/pipeline/qa-utils.js";
+} from "../../cat-harness-tools/pipeline/qa-utils.js";
 export {
   BLOCK_KINDS,
   CONTENT_PROFILES,
