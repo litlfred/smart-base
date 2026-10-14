@@ -7,7 +7,9 @@
  * (`check:fhir-harness-exclusions`).
  */
 import { describe, expect, it } from "bun:test";
-import { resolve } from "node:path";
+import { join, resolve } from "node:path";
+
+import { siteFileFor } from "../../../cat-harness/schemas/cat-harness.js";
 
 import { siteFilter } from "../../platform/index.js";
 import { AST_SITE_WRITERS } from "../../platform/index.js";
@@ -19,5 +21,7 @@ describe("the AST sites, on this checkout", () => {
   it("a skill-only change stages no AST site", () => expect(ast(["cat-harness/skills/kg/kg-core/directory-conventions.md"])).toBe(false));
   it("a gen-ig-pages.ts change stages it", () => expect(ast(["fhir-harness/scripts/gen-ig-pages.ts"])).toBe(true));
   it("a chrome change stages it, through derivedFrom", () => expect(ast(["smart-base/themes/chrome.json"])).toBe(true));
-  it("the build environment stages it", () => expect(ast(["cat-harness/docs/Gemfile.lock"])).toBe(true));
+  // Asked, never spelled: the Jekyll build environment is the site CHROME's
+  // since cat-harness slice 1 (`site-chrome/Gemfile.lock`), not `docs/`'s.
+  it("the build environment stages it", () => expect(ast([join("cat-harness", siteFileFor(join(REPO, "cat-harness"), "Gemfile.lock"))])).toBe(true));
 });
