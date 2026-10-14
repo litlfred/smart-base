@@ -90,4 +90,10 @@ package.json
 !kg/package-lock.json
 
 # BEGIN index mounts (generated from index.config.json — do not edit)
+/fhir-harness/
+/folio-assistant-core/
+/cat-harness/
+/cat-harness-tools/
+/bootstrap/
+/bootstrap-tools/
 # END index mounts
