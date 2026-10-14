@@ -25,7 +25,14 @@
         "l2-dak-authoring",
         "dak-l1-library",
         "recommendation-extraction",
-        "wireframe-design-review"
+        "wireframe-design-review",
+        "l2-component-edit-review"
+      ]
+    },
+    {
+      "role": "terminologist",
+      "skills": [
+        "l2-component-edit-review"
       ]
     },
     {
@@ -51,7 +58,13 @@
         "dak-postprocessing",
         "ig-artifact-ingestion",
         "l3-fhir-authoring",
-        "decision-comparison"
+        "decision-comparison",
+        "l2-component-edit-review",
+        "content-validate",
+        "content-test",
+        "artefact-reachability",
+        "staging-review",
+        "interaction-modality"
       ]
     },
     {
@@ -59,7 +72,8 @@
       "skills": [
         "recommendation-extraction",
         "ig-ast-delta",
-        "wireframe-design-review"
+        "wireframe-design-review",
+        "l2-component-edit-review"
       ]
     },
     {
