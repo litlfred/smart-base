@@ -22,6 +22,13 @@ for a new guideline and for a jurisdiction's adaptation of an existing one.
 | 7 | Describe the consuming application | the L2 personas and processes | application brief | (requester) |
 | 8 | Wireframe, then build the consuming application | the application brief; the L3 IG (a clean build, not a publication) | wireframes (web and mobile); the application, with conformance tests | Requester, Business Analyst, Clinical SME, FHIR Modeller |
 
+<figure>
+  <img src="smart-guideline-end-to-end.svg"
+       alt="SMART Guideline end to end – BPMN 2.0 process diagram: each stage forks into the next stage and its adjudication"
+       style="width:100%; max-width:80em; height:auto;" />
+  <figcaption>End to end, from use case to application (BPMN 2.0). Source: <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/processes/content/smart-guideline-end-to-end.bpmn">smart-guideline-end-to-end.bpmn</a>.</figcaption>
+</figure>
+
 **Adjudication is quality assurance, not a gate.** Every stage is adjudicated
 by a person, but the next stage does not wait for it: once the L2 assets
 exist, the L3 assets can be produced while the L2 assets are still under
@@ -157,13 +164,30 @@ The L2 authoring follows an iterative sprint cycle of **Fill → Validate → In
 8. **Request WHO team** to update smart.who.int
 9. **Reset main** to draft, update version for next cycle
 
-#### BPMN Process Diagram
+#### BPMN Process Diagrams
 
-The formal BPMN 2.0 process diagram is available at: [SGAuthoring.DAKLifecycle.bpmn](bpmn/SGAuthoring.DAKLifecycle.bpmn)
+All of these diagrams are BPMN 2.0, and they all live in one place,
+`smart-base/processes/content/` in the source repository. The pictures are
+generated from them by `bun run smart-base/scripts/render-processes.ts`;
+`--check` fails when one is stale.
 
-This diagram models the full lifecycle as a collaboration with swimlanes for each authoring persona, including message flows between participants for handoffs (e.g. Business Analyst → Clinical SME for validation, QC Reviewer → Publication Manager for approval).
+<figure>
+  <img src="SGAuthoring.DAKLifecycle.svg"
+       alt="SMART Guidelines DAK Authoring Lifecycle – BPMN 2.0 collaboration diagram with a swimlane per authoring persona"
+       style="width:100%; max-width:80em; height:auto;" />
+  <figcaption>The authoring lifecycle: a collaboration with a swimlane for each authoring persona, and message flows for the handoffs between them (e.g. Business Analyst → Clinical SME for validation, QC Reviewer → Publication Manager for approval). Source: <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn">SGAuthoring.DAKLifecycle.bpmn</a>.</figcaption>
+</figure>
 
-The end-to-end stages above are modelled separately for authoring agents, with
-each stage forking into the next stage and its adjudication:
-`smart-base/processes/content/smart-guideline-end-to-end.bpmn` in the source
-repository, described by the `smart-guideline-end-to-end` skill.
+<figure>
+  <img src="l2-dak-authoring.svg"
+       alt="L2 DAK authoring – BPMN 2.0 process diagram"
+       style="width:100%; max-width:80em; height:auto;" />
+  <figcaption>Phase 2a, authoring the L2 DAK. Clinical validation runs beside assembly, not before it. Source: <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/processes/content/l2-dak-authoring.bpmn">l2-dak-authoring.bpmn</a>.</figcaption>
+</figure>
+
+<figure>
+  <img src="dak-l3-ig.svg"
+       alt="L2 DAK to L3 FHIR IG – BPMN 2.0 process diagram"
+       style="width:100%; max-width:80em; height:auto;" />
+  <figcaption>Phase 2b, from the L2 DAK to the L3 FHIR IG. Source: <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/processes/content/dak-l3-ig.bpmn">dak-l3-ig.bpmn</a>.</figcaption>
+</figure>
