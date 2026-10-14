@@ -41,11 +41,18 @@ writing the change themselves), or rejects it.
 **Each created or changed asset gets its own review**, shown the way its
 reviewer reads it: a rendered BPMN diagram, a decision table beside the
 recommendation it cites, data-dictionary rows with a **wireframe** of the
-form that captures them, a Questionnaire rendered as a wireframe, a profile's
+form that captures them, a Questionnaire beside the wireframe it was built
+from, a profile's
 differential. An **adapted** asset is reviewed as **before and after**: the
 upstream asset beside the adapted one, with the change and the
 recommendation or local policy behind it. A reused asset that was not changed
 needs no new review.
+
+**Forms are designed at L2, as wireframes.** For each step where a persona
+records data, two or more wireframe designs (web and mobile, filled with the
+real data elements) are drawn from the persona, the user scenario and the
+core data elements, and one is chosen in review. The L3 Questionnaire is then
+built from the chosen wireframe, field by field, and checked against it.
 
 **Dependency choices are adjudicated too.** Stages 3 and 5 decide what the
 guideline inherits. Each candidate DAK or IG is recorded with its evidence in

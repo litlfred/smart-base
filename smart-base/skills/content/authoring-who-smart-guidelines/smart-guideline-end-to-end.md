@@ -78,7 +78,7 @@ re-assembles the DAK. `validated` ends in its own event.
 | 5 | **Choose L3 dependencies**: which existing FHIR IGs (WHO, or the jurisdiction's) to build on | [`ig-artifact-ingestion`](ig-artifact-ingestion.md) to index each candidate IG; agent matches the L1 KG and the stage-4 L2 assets against the index; `decision-comparison` for the table | a dependency list: IG package, version, which profiles / value sets / libraries are reused, derived from or not used | FHIR modeller + Terminologist | one row per candidate IG, including the ones rejected |
 | 6 | **Produce the L3 assets** from the L2 assets | [`dak-l3-ig.bpmn`](../../../processes/content/dak-l3-ig.bpmn): `l3-fhir-authoring` with `l2-dak-authoring`, then fhir-harness's L3 pipeline up to a clean IG build | the FHIR IG (FSH, CQL, profiles, terminology, examples, tests) | per asset, see [Per-asset review](#per-asset-review) | per asset; **before and after** for an adaptation |
 | 7 | **Describe the consuming application** | `user`, prompted by the agent | the application brief: who uses it, on what device, which L2 processes it covers, which L3 resources and operations it calls, connectivity, the systems it talks to. This is the written intent `wireframe-design-review` starts from | (the user *is* the source) | — |
-| 8 | **Wireframe, then build the consuming application** | `wireframe-design-review` (to-be mode, from the stage-7 intent), then the agent builds against the stage-6 IG (a clean build, not a publication) | wireframe candidates under `docs/wireframes/<topic>/`; the application and its conformance tests against the IG's examples and test cases | Business analyst + Clinical SME (does it do what the L2 says?), FHIR modeller (does it conform to L3?) | the running app, walked through each L2 user scenario |
+| 8 | **Wireframe, then build the consuming application** | `wireframe-design-review` (design use, from the stage-7 intent), then the agent builds against the stage-6 IG (a clean build, not a publication) | wireframe candidates under `docs/wireframes/<topic>/`; the application and its conformance tests against the IG's examples and test cases | Business analyst + Clinical SME (does it do what the L2 says?), FHIR modeller (does it conform to L3?) | the running app, walked through each L2 user scenario |
 
 Publication of the IG (the end of `dak-l3-ig.bpmn`) runs as normal and is not
 on the path to stage 8: an application can be built against an IG that has
@@ -166,13 +166,45 @@ on the staged preview:
 | L2 | persona, user scenario | the card: role, goal, setting |
 | L2 | business process (BPMN) | the rendered diagram (`render:bpmn` / `dak-swimlanes`) |
 | L2 | decision table (DMN) | the table, with the L1 recommendation each rule cites |
-| L2 | core data elements | data-dictionary rows (`dak-data-dictionary`), and a **wireframe** of the form that captures them (`wireframe-design-review`, as-is mode) |
+| L2 | core data elements | data-dictionary rows (`dak-data-dictionary`), and the **chosen wireframe** of each form that captures them (see [Forms are designed as wireframes](#forms-are-designed-as-wireframes-at-l2)) |
 | L2 | indicators, requirements | the indicator definition / requirement list, each with the persona and process it serves |
-| L3 | Questionnaire, profile with UI | a **wireframe** of the rendered form (`wireframe-design-review`, as-is mode). Nothing renders a Questionnaire into a wireframe yet: that renderer is the one new piece this process needs |
+| L3 | Questionnaire | the L2 wireframe it was derived from, beside the Questionnaire's field ↔ item correspondence (see below). The design was already reviewed at L2, so this review checks fidelity to it, not the design again |
 | L3 | profile, logical model | the IG Publisher's differential view |
 | L3 | CQL / PlanDefinition | the logic beside the DMN rule it implements, and its test cases passing or failing |
 | L3 | terminology | the expansion, and the mapping to ICD-11 / SNOMED CT / LOINC |
 | app | screen / flow | the chosen wireframe beside the running screen, walked through the L2 scenario it serves |
+
+### Forms are designed as wireframes at L2
+
+A data-entry form is designed once, at L2, and the L3 Questionnaire is
+derived from that design. It is not designed at L3 and then drawn back as a
+picture for review.
+
+1. **Stage 4: design.** For each business-process activity where a persona
+   records data, the agent runs `wireframe-design-review` in its **design
+   use**. The intent comes from the L2 assets: the persona (who), the
+   activity and its user scenario (what they do), and the core data elements
+   the activity captures (what it shows). That produces two or more
+   candidates, each with a web and a mobile layout, using real content: the
+   data elements' labels, value sets and the DMN rules that show or hide a
+   field. Each field carries the id of the core data element it captures (a
+   `data-element` attribute). Under the QA rule the agent goes on with its
+   recommended candidate. The review and the choice between candidates
+   (`Process_Adjudication`, `Process_OptionsAnalysis`) are that form's
+   stage-4 adjudication.
+2. **Stage 6: derive.** The Questionnaire follows the chosen wireframe:
+   one item per field, in its order and grouping, each item's `definition`
+   pointing at the logical-model element of the same core data element, and
+   `enableWhen` taken from the same DMN rules.
+3. **Stage 6 review: fidelity.** A check pairs the wireframe's
+   `data-element` attributes with the Questionnaire items' `definition`s. A
+   field with no item, an item with no field, or a different order is a
+   finding. This check is the one new piece this process needs; it compares
+   two lists and renders nothing.
+
+If the chosen wireframe changes later (a review asks for it), the
+Questionnaire derived from it is flagged `rejected-upstream` like any other
+derived asset.
 
 **An adaptation is reviewed as a diff.** When the asset came from a stage-3 or
 stage-5 dependency with `decision: adapt`, the review item shows **before**
@@ -215,7 +247,7 @@ nothing. Do not maintain two copies of the stages.
 | who adjudicates | role ids: `clinical-sme`, `programme-manager`, `business-analyst`, `fhir-modeller`, `terminologist`, `reviewer`, and smart-base's `l1-extraction-reviewer` | no |
 | staged preview, before/after links | `feature-staging`, `staging-review` | no |
 | diffs | `ig-ast-delta` (L3), `before-after-preview` with `DiffRenderer` (L2, rendered pages) | no |
-| wireframes | `wireframe-design-review` (as-is for forms, to-be for the application) | no; a Questionnaire-to-wireframe renderer is new |
+| form and app design | `wireframe-design-review`, design use: L2 forms (stage 4) and the application (stage 8a) | no; the field ↔ item correspondence check is new |
 | dependency row | `DependsOnRecord`, `DependsOnGap`, KG `evidence` | adds `decision` and `reason` |
 | asking for a dependency choice | `decision-comparison`, `DecisionRequest` | no |
 | provenance flag | KG `wasDerivedFrom` and edge `properties` | adds the values `pending` and `rejected-upstream` |

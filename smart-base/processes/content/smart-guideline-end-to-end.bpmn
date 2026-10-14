@@ -168,11 +168,12 @@
       <bpmn:outgoing>E31</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:task id="Task_L2" name="4 · Create / adapt L2 DAK assets&#10;[l2-dak-authoring]">
-      <bpmn:documentation>The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology). Its clinical validation is this stage's adjudication and does not hold up stage 5.</bpmn:documentation>
+      <bpmn:documentation>The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data elements. Its clinical validation is this stage's adjudication and does not hold up stage 5.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
         <bootstrap.processes:skill ref="dak-preprocessing" />
         <bootstrap.processes:skill ref="dak-postprocessing" />
+        <bootstrap.processes:skill ref="wireframe-design-review" />
         <bootstrap.processes:skill ref="feature-staging" />
       </bpmn:extensionElements>
       <bpmn:incoming>E14</bpmn:incoming>
@@ -184,7 +185,7 @@
       <bpmn:outgoing>E17</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:callActivity id="Task_AdjL2" name="Review each L2 asset&#10;(before / after if adapted)" calledElement="Process_Review">
-      <bpmn:documentation>One review item per created or changed asset, shown as its reviewer reads it (diagram, table, data-dictionary rows, wireframe); an adapted asset as a diff against its pinned upstream.</bpmn:documentation>
+      <bpmn:documentation>One review item per created or changed asset, shown as its reviewer reads it (diagram, table, data-dictionary rows); each form's wireframe candidates are reviewed blind and one is chosen (Process_Adjudication, Process_OptionsAnalysis); an adapted asset as a diff against its pinned upstream.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-review" />
         <bootstrap.processes:skill ref="staging-review" />
@@ -218,7 +219,7 @@
       <bpmn:outgoing>E33</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:task id="Task_L3" name="6 · Produce L3 assets&#10;[l3-fhir-authoring]">
-      <bpmn:documentation>The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build. Publication continues in that process and is not on the path to stage 8.</bpmn:documentation>
+      <bpmn:documentation>The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build. Each Questionnaire is derived from the chosen L2 wireframe of its form. Publication continues in that process and is not on the path to stage 8.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l3-fhir-authoring" />
         <bootstrap.processes:skill ref="l2-dak-authoring" />
@@ -233,7 +234,7 @@
       <bpmn:outgoing>E23</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:callActivity id="Task_AdjL3" name="Review each L3 asset&#10;(before / after if adapted)" calledElement="Process_Review">
-      <bpmn:documentation>One review item per created or changed resource: differential, wireframe for Questionnaires, CQL beside its DMN rule with test results, terminology expansions.</bpmn:documentation>
+      <bpmn:documentation>One review item per created or changed resource: differential, each Questionnaire against the L2 wireframe it was derived from (field to item), CQL beside its DMN rule with test results, terminology expansions.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-review" />
         <bootstrap.processes:skill ref="staging-review" />
