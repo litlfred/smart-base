@@ -11,4 +11,5 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `tools`, holding `tools`.
 | file | what it is | used by |
 |---|---|---|
 | [`index.ts`](index.ts) | a file |  |
+
 <!-- kg:subgraph:end -->

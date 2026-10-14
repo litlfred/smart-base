@@ -12,4 +12,5 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-external-schem
 |---|---|---|
 | [`who-smart-kg.json`](who-smart-kg.json) | WHO SMART Guidelines knowledge graph (ontology) |  |
 | [`who-smart-kg.terms.json`](who-smart-kg.terms.json) | data |  |
+
 <!-- kg:subgraph:end -->

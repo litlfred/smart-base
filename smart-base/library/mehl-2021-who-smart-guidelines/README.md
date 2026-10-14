@@ -17,4 +17,5 @@ Held in the library [`smart-base/library/`](../README.md) as `mehl-2021-who-smar
 | [sections](sections/) | 4 |
 | [blocks](blocks/) | 2 |
 | images | 0 |
+
 <!-- kg:subgraph:end -->

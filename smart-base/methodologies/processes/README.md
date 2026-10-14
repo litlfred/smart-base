@@ -11,4 +11,5 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `processes`, holding `p
 | file | what it is | used by |
 |---|---|---|
 | [`diig-investment-path.bpmn`](diig-investment-path.bpmn) | a [Process](https://litlfred.github.io/bootstrap/schemas/#process): DIIG — from a health system bottleneck to a costed implementation plan |  |
+
 <!-- kg:subgraph:end -->
