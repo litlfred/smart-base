@@ -27,7 +27,22 @@
  * smart-base the platform's `index.lock.json` pins, so the generators that run
  * are the ones this build is pinned to, never "whatever is on main today".
  *
- *   bun run smart-base/scripts/dak-ast-sidecars.ts --ast <output-ast> --out <dir> [--scripts <input/scripts dir>]
+ *   bun run smart-base/scripts/dak-ast-sidecars.ts --ast <output-ast> --out <dir> [--scripts <input/scripts dir>] [--hub <dir>]
+ *
+ * ## `--hub <dir>`: the DAK API hub's OpenAPI page, for a site with no Publisher run
+ *
+ * `generate_dak_api_hub.py` (post-processing step 6) wraps each schema in an
+ * OpenAPI document (`<stem>.openapi.json`), writes the enumeration schemas
+ * (`ValueSets.schema.json`, `LogicalModels.schema.json`) and a Swagger UI page
+ * over them at `openapi/index.html`, which links each document as
+ * `../<stem>.openapi.json`. It is run unchanged over the AST laid out as
+ * Publisher output plus the sidecars, with a stand-in `dak-api.html` holding
+ * only its marker, since the AST stops before the Publisher writes the hub
+ * page. What it ADDS is copied: into `<dir>` at the paths it wrote (a site
+ * root's layout), and the `.openapi.json` documents into `--out` as well, so
+ * they bind to their artefacts. The stand-in and its QA file are not kept.
+ * Measured 2026-10-14: smart-hiv's live root served this `openapi/` from a
+ * Publisher-run build; without it the AST-built root lacked the directory.
  *
  * @module smart-base/scripts/dak-ast-sidecars
  */
@@ -37,6 +52,32 @@ import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 
 export const GENERATORS = ["generate_valueset_schemas.py", "generate_jsonld_vocabularies.py", "generate_logical_model_schemas.py"] as const;
+/** Post-processing step 6, run only for `--hub`. */
+export const HUB_GENERATOR = "generate_dak_api_hub.py";
+/** The hub page's marker the generator injects at (`DAK_API_CONTENT`). */
+export const HUB_STAND_IN = "<!DOCTYPE html>\n<html><body><!-- DAK_API_CONTENT --></body></html>\n";
+/** What the hub run leaves that is not the hub's product: the stand-in page and the generator's QA file. */
+export const HUB_NOT_KEPT = new Set(["dak-api.html", "qa.json"]);
+
+/** Every file under `dir`, relative and `/`-separated. */
+export function filesIn(dir: string): string[] {
+  const out: string[] = [];
+  const walk = (d: string, rel: string): void => {
+    for (const e of readdirSync(d, { withFileTypes: true })) {
+      const r = rel ? `${rel}/${e.name}` : e.name;
+      if (e.isDirectory()) walk(join(d, e.name), r);
+      else if (e.isFile()) out.push(r);
+    }
+  };
+  if (existsSync(dir)) walk(dir, "");
+  return out.sort();
+}
+
+/** The files a hub run added, keeping only the hub's own products. Pure over the two listings. */
+export function hubProducts(before: readonly string[], after: readonly string[]): string[] {
+  const had = new Set(before);
+  return after.filter((f) => !had.has(f) && !HUB_NOT_KEPT.has(f));
+}
 
 interface ManifestResource {
   resourceType: string;
@@ -90,7 +131,7 @@ function fetchGenerators(repository: string, sha: string, dir: string): string {
   git(["init", "-q"], dir);
   git(["remote", "add", "origin", `https://github.com/${repository}`], dir);
   git(["fetch", "-q", "--depth", "1", "--filter=blob:none", "origin", sha], dir);
-  git(["checkout", "-q", "FETCH_HEAD", "--", ...GENERATORS.map((g) => `input/scripts/${g}`)], dir);
+  git(["checkout", "-q", "FETCH_HEAD", "--", ...[...GENERATORS, HUB_GENERATOR].map((g) => `input/scripts/${g}`)], dir);
   return join(dir, "input", "scripts");
 }
 
@@ -100,7 +141,7 @@ if (import.meta.main) {
   const ast = opt("--ast");
   const out = opt("--out");
   if (!ast || !out) {
-    console.error("usage: dak-ast-sidecars.ts --ast <output-ast> --out <dir> [--scripts <input/scripts dir>]");
+    console.error("usage: dak-ast-sidecars.ts --ast <output-ast> --out <dir> [--scripts <input/scripts dir>] [--hub <dir>]");
     process.exit(2);
   }
   const work = mkdtempSync(join(tmpdir(), "dak-ast-sidecars-"));
@@ -134,6 +175,22 @@ if (import.meta.main) {
       console.error("! no expansions.json beside the AST: ValueSet schemas and JSON-LD vocabularies NOT generated (re-seed the AST cache to keep the build's expansions)");
     }
     run("generate_logical_model_schemas.py", [flat, dest]);
+    const hub = opt("--hub");
+    if (hub) {
+      if (!existsSync(join(scripts, HUB_GENERATOR))) throw new Error(`${HUB_GENERATOR} is not in ${scripts}`);
+      // The AST as Publisher output, the sidecars beside it, and the stand-in hub page.
+      for (const f of readdirSync(dest)) copyFileSync(join(dest, f), join(flat, f));
+      writeFileSync(join(flat, "dak-api.html"), HUB_STAND_IN);
+      const before = filesIn(flat);
+      run(HUB_GENERATOR, [flat, join(work, "no-openapi-dir")]);
+      const made = hubProducts(before, filesIn(flat));
+      for (const f of made) {
+        mkdirSync(dirname(join(resolve(hub), f)), { recursive: true });
+        copyFileSync(join(flat, f), join(resolve(hub), f));
+        if (f.endsWith(".openapi.json") && !f.includes("/")) copyFileSync(join(flat, f), join(dest, f));
+      }
+      console.error(`${resolve(hub)}: the hub wrote ${made.length} file(s) (${made.filter((f) => f.endsWith(".openapi.json")).length} OpenAPI document(s)${made.includes("openapi/index.html") ? ", openapi/index.html" : ""})`);
+    }
     const files = readdirSync(dest);
     const count = (suf: string) => files.filter((x) => x.endsWith(suf)).length;
     const summary = { schema: count(".schema.json"), jsonld: count(".jsonld"), displays: count(".displays.json"), expansions: f.expansions };
