@@ -22,13 +22,68 @@
     {
       "role": "business-analyst",
       "skills": [
-        "l2-dak-authoring"
+        "l2-dak-authoring",
+        "dak-l1-library",
+        "recommendation-extraction",
+        "wireframe-design-review"
       ]
     },
     {
       "role": "build-pipeline",
       "skills": [
         "smart-base-tools"
+      ]
+    },
+    {
+      "role": "user",
+      "skills": [
+        "smart-guideline-end-to-end"
+      ]
+    },
+    {
+      "role": "authoring-agent",
+      "skills": [
+        "smart-guideline-end-to-end",
+        "dak-l1-library",
+        "recommendation-extraction",
+        "l2-dak-authoring",
+        "dak-preprocessing",
+        "dak-postprocessing",
+        "ig-artifact-ingestion",
+        "l3-fhir-authoring",
+        "decision-comparison"
+      ]
+    },
+    {
+      "role": "reviewer",
+      "skills": [
+        "recommendation-extraction",
+        "ig-ast-delta",
+        "wireframe-design-review"
+      ]
+    },
+    {
+      "role": "programme-manager",
+      "skills": [
+        "dak-l1-library",
+        "raci",
+        "todo-manager"
+      ]
+    },
+    {
+      "role": "fhir-modeller",
+      "skills": [
+        "l2-dak-authoring",
+        "smart-guideline-create",
+        "ig-build-pipeline"
+      ]
+    },
+    {
+      "role": "qc-reviewer",
+      "skills": [
+        "qa-reports",
+        "fhir-validation",
+        "content-test"
       ]
     }
   ]
