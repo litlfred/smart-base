@@ -14,7 +14,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "346ecd0bc7eb69e608bd0185a58ecb25acf2642e",
+          "ref": "a3933a7c325f90282ec32bfe3aff379388915a43",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -23,9 +23,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-10",
-              "ref": "346ecd0bc7eb69e608bd0185a58ecb25acf2642e",
-              "evidence": "owner, session_017fFnGmbJcfqqrHXz9oqxdG 2026-10-10: 'you can work on the litlfred/smart-* go ahead and harness them with index.config.json' and 'keep going. keep migrating environment'; 2026-10-12: 'repin+merge when green for next 3 hours. contineu' \u2014 smart-base mounts its own closure as smart-trust does, every layer at its current main ; 2026-10-14 bean folio-assistant-48a6, owner: 'Yes, both'"
+              "on": "2026-10-14",
+              "ref": "a3933a7c325f90282ec32bfe3aff379388915a43",
+              "evidence": "owner, session_017fFnGmbJcfqqrHXz9oqxdG 2026-10-10: 'you can work on the litlfred/smart-* go ahead and harness them with index.config.json' and 'keep going. keep migrating environment'; 2026-10-12: 'repin+merge when green for next 3 hours. contineu' \u2014 smart-base mounts its own closure as smart-trust does, every layer at its current main ; 2026-10-14 bean folio-assistant-48a6, owner: 'Yes, both' ; 2026-10-14 owner on the AST cache lifecycle: 'that should be in fhir-harness then smart-* all use that', 'Merge when green. Repin as needed.' \u2014 fhir-harness repinned to main after #55/#56 (the pre-export hook)"
             }
           }
         }

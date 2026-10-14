@@ -168,7 +168,7 @@
       <bpmn:outgoing>E31</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:task id="Task_L2" name="4 · Create / adapt L2 DAK assets&#10;[l2-dak-authoring]">
-      <bpmn:documentation>The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data elements. Its clinical validation is this stage's adjudication and does not hold up stage 5.</bpmn:documentation>
+      <bpmn:documentation>The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data elements. Its clinical validation is this stage's adjudication and does not hold up stage 5. The IG is built through fhir-harness's AST cache lifecycle (ig-ast-refresh.yml), with the DAK pre-processing as smart-base's pre-export overlay (dak-preprocessing, dak-pre-export.sh) and the DAK sidecars made from the AST (dak-postprocessing).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
         <bootstrap.processes:skill ref="dak-preprocessing" />
