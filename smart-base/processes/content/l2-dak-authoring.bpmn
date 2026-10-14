@@ -49,7 +49,7 @@
         <bpmn:flowNodeRef>Task_SeedBeans</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_Analyst" name="Business analyst">
-        <bpmn:documentation>Opens the parallel fork into six authoring tracks — five landing here, the sixth (terminology) crossing into a separate lane — and re-enters that same fork whenever clinical validation sends work back, so a fix after Gateway_Accurate revisits every track it is entangled with rather than patching only the one SME flagged. Performs the final assemble-and-validate once accuracy holds. Before any of that, and before the work plan is seeded, builds the DAK's L1 library from what its Component 1 cites, so every track starts with the guidance it operationalises already in the library and in the L1 graph.</bpmn:documentation>
+        <bpmn:documentation>Opens the parallel fork into six authoring tracks — five landing here, the sixth (terminology) crossing into a separate lane — and re-enters that same fork whenever clinical validation sends work back, so a fix after Gateway_Accurate revisits every track it is entangled with rather than patching only the one SME flagged. Performs the assemble-and-validate in parallel with clinical validation, not after it (owner, 2026-10-14: adjudication is QA, not a gate), and again after any rework. Before any of that, and before the work plan is seeded, builds the DAK's L1 library from what its Component 1 cites, so every track starts with the guidance it operationalises already in the library and in the L1 graph.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="business-analyst"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Task_L1Library</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_AuthorMerge</bpmn:flowNodeRef>
@@ -60,6 +60,7 @@
         <bpmn:flowNodeRef>Task_DataDict</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Indicators</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_AuthorJoin</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_ReviewFork</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_AssembleDak</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>EndEvent_L2Ready</bpmn:flowNodeRef>
       </bpmn:lane>
@@ -69,10 +70,11 @@
         <bpmn:flowNodeRef>Task_Terminology</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_Sme" name="Clinical SME">
-        <bpmn:documentation>The one gate every authored track must clear before assembly: a "no" here does not return to the specific task that erred but loops back through Gateway_AuthorMerge into the fork itself, so this lane's judgement — not the analyst's — decides whether personas, BPMN, DMN, data dictionary and indicators all get revisited together.</bpmn:documentation>
+        <bpmn:documentation>Clinical validation runs beside assembly, not before it: it is QA, not a gate (owner, 2026-10-14). A "no" here does not return to the specific task that erred but loops back through Gateway_AuthorMerge into the fork itself, so this lane's judgement — not the analyst's — decides whether personas, BPMN, DMN, data dictionary and indicators all get revisited together.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="clinical-sme"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Task_SmeValidate</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_Accurate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_Validated</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:startEvent id="StartEvent_Guideline" name="WHO guideline / recommendations">
@@ -174,16 +176,22 @@
       <bpmn:incoming>B13</bpmn:incoming>
       <bpmn:outgoing>B17</bpmn:outgoing>
     </bpmn:parallelGateway>
+    <bpmn:parallelGateway id="Gateway_ReviewFork" name="">
+      <bpmn:documentation>Clinical validation and assembly start together. Adjudication is QA, not a gate (owner, 2026-10-14: "once agent produces L2 it can produce L3"): the DAK is assembled and handed to L3 while the SME reviews it, and a "changes needed" sends the work round again, which re-assembles it.</bpmn:documentation>
+      <bpmn:incoming>B17</bpmn:incoming>
+      <bpmn:outgoing>B23</bpmn:outgoing>
+      <bpmn:outgoing>B24</bpmn:outgoing>
+    </bpmn:parallelGateway>
     <bpmn:userTask id="Task_SmeValidate" name="Clinical validation&#10;[content-review]">
       <bpmn:documentation>Ground truth: does the DAK say what the guideline says?</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-review" />
       </bpmn:extensionElements>
-      <bpmn:incoming>B17</bpmn:incoming>
+      <bpmn:incoming>B23</bpmn:incoming>
       <bpmn:outgoing>B18</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:exclusiveGateway id="Gateway_Accurate" name="Clinically accurate?">
-      <bpmn:documentation>The clinical validator's result. `changes needed` goes back to the author; `validated` goes on to assemble and validate the DAK.</bpmn:documentation>
+      <bpmn:documentation>The clinical validator's result. `changes needed` goes back to the author, and the reworked DAK is assembled again; `validated` records the adjudication. Assembly does not wait for this decision.</bpmn:documentation>
       <bpmn:incoming>B18</bpmn:incoming>
       <bpmn:outgoing>B19</bpmn:outgoing>
       <bpmn:outgoing>B20</bpmn:outgoing>
@@ -193,9 +201,13 @@
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-validate" />
       </bpmn:extensionElements>
-      <bpmn:incoming>B20</bpmn:incoming>
+      <bpmn:incoming>B24</bpmn:incoming>
       <bpmn:outgoing>B21</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_Validated" name="Clinically validated">
+      <bpmn:documentation>The SME's adjudication is recorded. The process instance completes only when this and EndEvent_L2Ready have both been reached.</bpmn:documentation>
+      <bpmn:incoming>B20</bpmn:incoming>
+    </bpmn:endEvent>
     <bpmn:endEvent id="EndEvent_L2Ready" name="L2 DAK ready for L3">
       <bpmn:incoming>B21</bpmn:incoming>
     </bpmn:endEvent>
@@ -216,10 +228,12 @@
     <bpmn:sequenceFlow id="B15" sourceRef="Task_Indicators" targetRef="Gateway_AuthorJoin" />
     <bpmn:sequenceFlow id="B16" sourceRef="Task_Terminology" targetRef="Gateway_AuthorJoin" />
     <bpmn:sequenceFlow id="B13" sourceRef="Task_Dmn" targetRef="Gateway_AuthorJoin" />
-    <bpmn:sequenceFlow id="B17" sourceRef="Gateway_AuthorJoin" targetRef="Task_SmeValidate" />
+    <bpmn:sequenceFlow id="B17" sourceRef="Gateway_AuthorJoin" targetRef="Gateway_ReviewFork" />
+    <bpmn:sequenceFlow id="B23" sourceRef="Gateway_ReviewFork" targetRef="Task_SmeValidate" />
+    <bpmn:sequenceFlow id="B24" sourceRef="Gateway_ReviewFork" targetRef="Task_AssembleDak" />
     <bpmn:sequenceFlow id="B18" sourceRef="Task_SmeValidate" targetRef="Gateway_Accurate" />
     <bpmn:sequenceFlow id="B19" name="changes needed" sourceRef="Gateway_Accurate" targetRef="Gateway_AuthorMerge" />
-    <bpmn:sequenceFlow id="B20" name="validated" sourceRef="Gateway_Accurate" targetRef="Task_AssembleDak" />
+    <bpmn:sequenceFlow id="B20" name="validated" sourceRef="Gateway_Accurate" targetRef="EndEvent_Validated" />
     <bpmn:sequenceFlow id="B21" sourceRef="Task_AssembleDak" targetRef="EndEvent_L2Ready" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
@@ -283,6 +297,15 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_AuthorJoin_di" bpmnElement="Gateway_AuthorJoin">
         <dc:Bounds x="1215" y="630" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_ReviewFork_di" bpmnElement="Gateway_ReviewFork">
+        <dc:Bounds x="1375" y="630" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_Validated_di" bpmnElement="EndEvent_Validated">
+        <dc:Bounds x="1702" y="1137" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1665" y="1177" width="110" height="30" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_SmeValidate_di" bpmnElement="Task_SmeValidate">
         <dc:Bounds x="1335" y="1110" width="130" height="90" />
@@ -384,8 +407,15 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B17_di" bpmnElement="B17">
         <di:waypoint x="1265" y="655" />
-        <di:waypoint x="1400" y="655" />
+        <di:waypoint x="1375" y="655" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="B23_di" bpmnElement="B23">
+        <di:waypoint x="1400" y="680" />
         <di:waypoint x="1400" y="1110" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="B24_di" bpmnElement="B24">
+        <di:waypoint x="1425" y="655" />
+        <di:waypoint x="1655" y="655" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B18_di" bpmnElement="B18">
         <di:waypoint x="1465" y="1155" />
@@ -402,8 +432,7 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B20_di" bpmnElement="B20">
         <di:waypoint x="1585" y="1155" />
-        <di:waypoint x="1720" y="1155" />
-        <di:waypoint x="1720" y="700" />
+        <di:waypoint x="1702" y="1155" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1600" y="1122" width="70" height="27" />
         </bpmndi:BPMNLabel>

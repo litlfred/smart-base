@@ -40,17 +40,22 @@ function banner(src: string): string {
 
 describe("the committed pages: the banner's identity is the index's", () => {
   // smart-trust's docs build into its IG site (`igSite`, bean `mftp`), whose
-  // index the IG writes; the banner is on every artefact page it commits.
+  // index the IG writes. Since thin became the default (fhir-harness
+  // `gen-ig-pages`, owner 2026-10-12: "make thin default") an ARTEFACT page is
+  // a thin `.html` shell that draws itself from its JSON-LD node and carries no
+  // banner; the banner is on the full pages that remain — the JSON view and
+  // tab pages, and the IG API view pages — so it is read there.
   it("smart-trust, whose chrome IS its own, keeps its draft watermark", () => {
-    const b = banner(readFileSync(join(ROOT, "smart-trust", "docs", "artifact", "ActorDefinition-Holder.md"), "utf8"));
+    const b = banner(readFileSync(join(ROOT, "smart-trust", "docs", "artifact", "ActorDefinition-Holder.json.md"), "utf8"));
     expect(b).toContain(">smart.who.int.trust</a>");
     expect(b).toContain('class="ig-status-draft"');
   });
 
-  // smart-base's docs build into its IG site too (bean `mftp`, "no drift"):
-  // the banner is on every artefact page it commits.
+  // smart-base's docs build into its IG site too (bean `mftp`, "no drift").
+  // Its index holds no package, so it has no JSON view pages; its full pages
+  // are the IG API views, and the DAK schema's carries the banner.
   it("smart-base names itself and asserts no status borrowed from smart-trust", () => {
-    const b = banner(readFileSync(join(ROOT, "smart-base", "docs", "artifact", "StructureDefinition-DAK.md"), "utf8"));
+    const b = banner(readFileSync(join(ROOT, "smart-base", "docs", "artifact", "StructureDefinition-DAK.schema.json.md"), "utf8"));
     expect(b).toContain(">smart.who.int.base</a>");
     expect(b).toContain("http://smart.who.int/base");
     expect(b).not.toContain("smart.who.int.trust");
@@ -59,25 +64,33 @@ describe("the committed pages: the banner's identity is the index's", () => {
 });
 
 describe("the committed pages: the landing page", () => {
-  // Since bean `mftp` smart-base commits no landing page either: its IG
-  // site's own home page is the root, and the harness is reached through the
-  // navbar. What it commits for the artefact index is its front matter — title and
-  // `rendered-by`; the visualiser itself is declared in smart-base.json
-  // (`visualisers`, owner 2026-10-09).
-  it("smart-base commits no landing page, only the artefact index's viewer declaration", () => {
+  // Since bean `mftp` neither IG commits a landing page: its IG site's own
+  // home page is the root, and the harness is reached through the navbar.
+  // Thin (the default since 2026-10-12), neither commits the artefact index's
+  // front matter either: `artifacts.html` is a finished thin page that
+  // `build-ig-site` draws from the index NODE and that carries `rendered-by`
+  // itself, so what each commits for the index is that node, naming its own
+  // IG; the visualiser is declared in the instance's `visualisers` (owner
+  // 2026-10-09).
+  const indexNode = (instance: string) =>
+    JSON.parse(readFileSync(join(ROOT, instance, "docs", "artifact", "index.jsonld"), "utf8")) as Record<string, unknown>;
+
+  it("smart-base commits no landing page, and its artefact index is the thin page's node", () => {
     expect(existsSync(join(ROOT, "smart-base", "docs", "index.md"))).toBe(false);
-    const src = readFileSync(join(ROOT, "smart-base", "docs", "artifacts.md"), "utf8");
-    expect(src).toMatch(/^---\ntitle: "WHO SMART Base — artefact index"\nrendered-by: ig-pages\n---\n$/);
+    expect(existsSync(join(ROOT, "smart-base", "docs", "artifacts.md"))).toBe(false);
+    const n = indexNode("smart-base");
+    expect(n["$schema"]).toBe("folio-ig-artifact-index-jsonld/v1");
+    expect(n["dcterms:identifier"]).toBe("smart.who.int.base");
+    expect(n["dcterms:title"]).toBe("WHO SMART Base");
   });
 
-  // Since bean `mftp` smart-trust commits no landing page: its IG site's own
-  // index is the root, and what it commits for the artefact index is the
-  // viewer declaration alone, laid onto the IG site's `artifacts` page.
-  it("smart-trust commits no landing page, only the artefact index's viewer declaration", () => {
+  it("smart-trust commits no landing page, and its artefact index is the thin page's node", () => {
     expect(existsSync(join(ROOT, "smart-trust", "docs", "index.md"))).toBe(false);
-    const src = readFileSync(join(ROOT, "smart-trust", "docs", "artifacts.md"), "utf8");
-    expect(src).not.toContain("harness_details.html");
-    expect(src).toMatch(/^---\ntitle: "WHO SMART Trust — artefact index"\nrendered-by: ig-pages\n---\n$/);
+    expect(existsSync(join(ROOT, "smart-trust", "docs", "artifacts.md"))).toBe(false);
+    const n = indexNode("smart-trust");
+    expect(n["$schema"]).toBe("folio-ig-artifact-index-jsonld/v1");
+    expect(n["dcterms:identifier"]).toBe("smart.who.int.trust");
+    expect(n["dcterms:title"]).toBe("WHO SMART Trust");
   });
 });
 
