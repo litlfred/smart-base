@@ -43,6 +43,7 @@
     <bpmn:documentation>Plans a DAK: scope, team, method, sources, roadmap and consultations, then starts the sprint cycle.</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_Planning">
       <bpmn:lane id="Lane_Planning" name="Programme Manager">
+        <bpmn:documentation>The programme manager owns this pool end to end: it fixes the DAK's scope, team (RACI) and source documents once, and its last task starts the sprint cycle that the Business Analyst pool picks up. Nothing here is revisited per sprint.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="programme-manager"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Start_Planning</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Scoping</bpmn:flowNodeRef>
@@ -137,6 +138,7 @@
     <bpmn:documentation>Authors the L2 DAK components sprint by sprint, from the L1 sources to a DAK ready for L3.</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_L2Authoring">
       <bpmn:lane id="Lane_L2Authoring" name="Business Analyst">
+        <bpmn:documentation>The business analyst authors every L2 component, sprint by sprint, and is the one who incorporates clinical feedback. Data-entry forms are drawn here as wireframes (wireframe-design-review) so the L3 Questionnaire is derived from a reviewed design, not invented at L3.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="business-analyst"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Start_L2</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_ReviewL1</bpmn:flowNodeRef>
@@ -145,6 +147,12 @@
         <bpmn:flowNodeRef>Task_AuthorScenarios</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_AuthorBPMN</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>SubProcess_PerBP</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_DetailWorkflow</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_DefineDataElements</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_DevelopDecisionLogic</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_DevelopSchedulingLogic</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ListIndicators</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_DefineRequirements</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_DraftDAKComponents</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_IncorporateFeedback</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>GW_MoreSprints</bpmn:flowNodeRef>
@@ -293,6 +301,7 @@
     <bpmn:documentation>Validates the DAK components against the L1 recommendations and field practice, and returns clinical feedback.</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_ClinicalReview">
       <bpmn:lane id="Lane_ClinicalReview" name="Clinical SME">
+        <bpmn:documentation>The clinical SME checks the business analyst's components against the L1 recommendations and field practice. Its feedback is QA on the sprint's output, not a gate: authoring continues while it is reviewed.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="clinical-sme"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Start_ClinReview</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_ValidateClinical</bpmn:flowNodeRef>
@@ -346,6 +355,7 @@
     <bpmn:documentation>Turns the L2 DAK into L3 FHIR artefacts and builds the IG until its QA issues are resolved.</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_L3Authoring">
       <bpmn:lane id="Lane_L3Authoring" name="FHIR Modeller">
+        <bpmn:documentation>The FHIR modeller turns the L2 DAK into L3 FHIR resources in the recommended order and rebuilds the IG until the publisher's QA issues are resolved, including those the QC reviewer sends back.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="fhir-modeller"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Start_L3</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_VerifyL2Input</bpmn:flowNodeRef>
@@ -508,6 +518,7 @@
     <bpmn:documentation>Reviews terminology bindings and maps concepts to WHO Commons and to ICD-11, SNOMED CT and LOINC.</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_Terminology">
       <bpmn:lane id="Lane_Terminology" name="Terminologist">
+        <bpmn:documentation>The terminologist works alongside L3 authoring: it reviews bindings and maps concepts to WHO Commons, ICD-11, SNOMED CT and LOINC, and returns its mappings to the FHIR modeller's pool.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="terminologist"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Start_Term</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_ReviewTermBindings</bpmn:flowNodeRef>
@@ -571,6 +582,7 @@
     <bpmn:documentation>Reviews the built IG against the QA report and the L1-L4 checklist, and approves it for publication or returns issues.</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_QualityControl">
       <bpmn:lane id="Lane_QualityControl" name="QC Reviewer">
+        <bpmn:documentation>The QC reviewer judges the built IG against the QA report and the L1-L4 checklist. It either returns issues to the FHIR modeller or approves the IG for the publication manager, and it also reviews the translations.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="qc-reviewer"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Start_QC</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_ReviewQA</bpmn:flowNodeRef>
@@ -684,6 +696,7 @@
     <bpmn:documentation>Releases an approved IG: version, publication request, final build, tag, and the hand-over to smart.who.int.</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_Publication">
       <bpmn:lane id="Lane_Publication" name="Publication Manager">
+        <bpmn:documentation>The publication manager releases an IG the QC reviewer approved: version number, publication request, final build, tag, verification, and the hand-over to smart.who.int, then resets main to draft.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="publication-manager"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Start_Pub</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_PrepareRelease</bpmn:flowNodeRef>
@@ -797,6 +810,7 @@
     <bpmn:documentation>Translates the IG narrative, resource metadata and examples into the UN languages and submits them for review.</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_Translation">
       <bpmn:lane id="Lane_Translation" name="Translator">
+        <bpmn:documentation>The translator works alongside quality control: it translates narrative, resource metadata and examples into the UN languages and submits them to the QC reviewer.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="translator"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Start_Trans</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_TranslateContent</bpmn:flowNodeRef>
