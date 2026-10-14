@@ -1,0 +1,29 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "00eec360-f3f8-4ab9-86f5-97fa236bf6d7-14",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/00eec360-f3f8-4ab9-86f5-97fa236bf6d7-14",
+  "name" : "UnionCoreDataElementTypeAndCoreDataElementType",
+  "title" : "Union of Core Data Element Type And Core Data Element Type",
+  "status" : "active",
+  "date" : "2026-10-14T13:33:03+00:00",
+  "concept" : [{
+    "code" : "valueset",
+    "display" : "ValueSet",
+    "definition" : "Reference to a FHIR ValueSet resource"
+  },
+  {
+    "code" : "codesystem",
+    "display" : "CodeSystem",
+    "definition" : "Reference to a FHIR CodeSystem resource"
+  },
+  {
+    "code" : "conceptmap",
+    "display" : "ConceptMap",
+    "definition" : "Reference to a FHIR ConceptMap resource"
+  },
+  {
+    "code" : "logicalmodel",
+    "display" : "Logical Model",
+    "definition" : "Reference to a Logical Model adherent to SGLogicalModel"
+  }]
+}

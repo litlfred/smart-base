@@ -1,0 +1,64 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Knowledge graph L1: External artefact API",
+    "description": "An L2 or L3 artefact addressed by canonical URL — a BPMN process, a DMN decision table, a FHIR PlanDefinition. Deliberately opaque: it carries an IRI and a free-text kind, and this graph asserts nothing about its internal structure. That opacity is the boundary. The L2 and L3 subgraphs model those artefacts properly; L1 only needs to point. Class IRI: http://smart.who.int/kg/external-artifact.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/StructureDefinition-KGExternalArtifact.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model StructureDefinition-KGExternalArtifact",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-KGExternalArtifact.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for StructureDefinition-KGExternalArtifact",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./StructureDefinition-KGExternalArtifact.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StructureDefinition-KGExternalArtifact": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/base/StructureDefinition-KGExternalArtifact.schema.json",
+        "title": "Knowledge graph L1: External artefact",
+        "description": "An L2 or L3 artefact addressed by canonical URL — a BPMN process, a DMN decision table, a FHIR PlanDefinition. Deliberately opaque: it carries an IRI and a free-text kind, and this graph asserts nothing about its internal structure. That opacity is the boundary. The L2 and L3 subgraphs model those artefacts properly; L1 only needs to point. Class IRI: http://smart.who.int/kg/external-artifact.",
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "const": "KGExternalArtifact",
+            "description": "Resource type identifier for KGExternalArtifact logical model"
+          },
+          "iri": {
+            "type": "string",
+            "format": "uri",
+            "description": "Canonical URL or IRI of the L2 or L3 artefact."
+          },
+          "targetKind": {
+            "type": "string",
+            "description": "What kind of artefact it is, free text (\"DMN decision table\", \"DAK component\")."
+          },
+          "version": {
+            "type": "string",
+            "description": "Version of the artefact, where known."
+          }
+        },
+        "required": [
+          "resourceType"
+        ],
+        "resourceDefinition": "http://smart.who.int/base/StructureDefinition/KGExternalArtifact",
+        "fhir:parent": "http://hl7.org/fhir/StructureDefinition/Base"
+      }
+    }
+  }
+}

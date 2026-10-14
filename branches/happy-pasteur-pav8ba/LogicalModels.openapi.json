@@ -1,0 +1,461 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Logical Model Enumeration Schema API",
+    "description": "JSON Schema defining the structure of the Logical Model enumeration endpoint response",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/LogicalModels.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model LogicalModels",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model LogicalModels.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for LogicalModels",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./LogicalModels.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LogicalModels": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "#/LogicalModels.schema.json",
+        "title": "Logical Model Enumeration Schema",
+        "description": "JSON Schema defining the structure of the Logical Model enumeration endpoint response",
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "logical_model"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "schemas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "filename": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "logicalModelUrl": {
+                  "type": "string"
+                },
+                "propertyCount": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "filename",
+                "title",
+                "url"
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "count",
+          "schemas"
+        ],
+        "example": {
+          "type": "logical_model",
+          "count": 46,
+          "schemas": [
+            {
+              "filename": "StructureDefinition-KGIntervention.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGIntervention.schema.json",
+              "title": "Knowledge graph L1: Intervention",
+              "description": "PICO I. The clinical or public-health action, distinct from health-intervention, which is the DAK-facing component. Class IRI: http://smart.who.int/kg/intervention.",
+              "url": "./StructureDefinition-KGIntervention.schema.json",
+              "propertyCount": 2
+            },
+            {
+              "filename": "StructureDefinition-KGComparator.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGComparator.schema.json",
+              "title": "Knowledge graph L1: Comparator",
+              "description": "PICO C. Frequently absent in WHO recommendations; absence is recorded rather than invented. Class IRI: http://smart.who.int/kg/comparator.",
+              "url": "./StructureDefinition-KGComparator.schema.json",
+              "propertyCount": 2
+            },
+            {
+              "filename": "StructureDefinition-SushiConfigLogicalModel.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-SushiConfigLogicalModel.schema.json",
+              "title": "SUSHI Configuration Logical Model",
+              "description": "Logical model defining the structure of sushi-config.yaml files used for FHIR Implementation Guide configuration. This model captures the essential metadata and configuration parameters needed for IG publishing.",
+              "url": "./StructureDefinition-SushiConfigLogicalModel.schema.json",
+              "propertyCount": 43
+            },
+            {
+              "filename": "StructureDefinition-GenericPersona.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-GenericPersona.schema.json",
+              "title": "Generic Persona (DAK)",
+              "description": "Logical Model for representing Generic Personas from a DAK. Depiction of the human and system actors. Human actors are end users, supervisors and related stakeholders who would be interacting with the digital system or involved in the clinical care, public health or health system pathway.",
+              "url": "./StructureDefinition-GenericPersona.schema.json",
+              "propertyCount": 8
+            },
+            {
+              "filename": "StructureDefinition-BusinessProcessWorkflow.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-BusinessProcessWorkflow.schema.json",
+              "title": "Business Process Workflow (DAK)",
+              "description": "Logical Model for representing Generic Business Processes and Workflows from a DAK. A business process is a set of related activities or tasks performed together to achieve the objectives of the health programme area.",
+              "url": "./StructureDefinition-BusinessProcessWorkflow.schema.json",
+              "propertyCount": 11
+            },
+            {
+              "filename": "StructureDefinition-KGHealthIntervention.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGHealthIntervention.schema.json",
+              "title": "Knowledge graph L1: Health intervention",
+              "description": "What a recommendation is about, and the hinge to L2. Corresponds to the DAK component smart-base defines as HealthInterventions — today `id`, `description[x]` and `reference 1..* DublinCore`, i.e. a bibliographic citation with no recommendation behind it. This class is what that citation should resolve to. Corresponds to HealthInterventions: identifier = HealthInterventions.id and description = HealthInterventions.description[x]; not a Parent because HealthInterventions requires reference 1..* DublinCore, which in the graph is an edge to a publication rather than a field. Class IRI: http://smart.who.int/kg/health-intervention.",
+              "url": "./StructureDefinition-KGHealthIntervention.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-ProgramIndicator.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-ProgramIndicator.schema.json",
+              "title": "Program Indicator (DAK)",
+              "description": "Logical Model for representing Program Indicators from a DAK. Core set of indicators that need to be aggregated for decision-making, performance metrics and subnational and national reporting.",
+              "url": "./StructureDefinition-ProgramIndicator.schema.json",
+              "propertyCount": 9
+            },
+            {
+              "filename": "StructureDefinition-KGNode.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGNode.schema.json",
+              "title": "Knowledge graph: node",
+              "description": "One typed node of a knowledge-graph document. Its instance fields are an instance of the logical model of its class (see definedBy), e.g. KGPublication for a publication.",
+              "url": "./StructureDefinition-KGNode.schema.json",
+              "propertyCount": 13
+            },
+            {
+              "filename": "StructureDefinition-UserScenario.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-UserScenario.schema.json",
+              "title": "User Scenario (DAK)",
+              "description": "Logical Model for representing User Scenarios from a DAK. Narratives that describe how the different personas may interact with each other.",
+              "url": "./StructureDefinition-UserScenario.schema.json",
+              "propertyCount": 5
+            },
+            {
+              "filename": "StructureDefinition-KGRemark.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGRemark.schema.json",
+              "title": "Knowledge graph L1: Remark",
+              "description": "An implementation consideration attached to a recommendation. Grounded: the BCG table's first annotationEntry carries exactly this — \"Neonates born to women of unknown HIV status should be vaccinated as the benefits…\" — clinical nuance that shapes the decision logic but is not the recommendation itself. Class IRI: http://smart.who.int/kg/remark.",
+              "url": "./StructureDefinition-KGRemark.schema.json",
+              "propertyCount": 2
+            },
+            {
+              "filename": "StructureDefinition-TestScenarioSource.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-TestScenarioSource.schema.json",
+              "title": "Test Scenario Source",
+              "description": "Source reference for Test Scenario - exactly one of the following must be provided:\n- url (url data type): URL to retrieve TestScenario definition from input/ or external source\n- canonical (canonical data type): Canonical URI pointing to the TestScenario definition\n- instance: Inline TestScenario instance data",
+              "url": "./StructureDefinition-TestScenarioSource.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-HealthInterventions.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-HealthInterventions.schema.json",
+              "title": "Health Interventions and Recommendations (DAK)",
+              "description": "Logical Model for representing Health Interventions and Recommendations from a DAK. Overview of the health interventions and WHO, regional or national recommendations included within the DAK.",
+              "url": "./StructureDefinition-HealthInterventions.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-Requirements.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-Requirements.schema.json",
+              "title": "Functional and Non-Functional Requirements (DAK)",
+              "description": "Logical Model for representing Functional and Non-Functional Requirements from a DAK. A high-level list of core functions and capabilities that the system must have to meet the end users' needs.",
+              "url": "./StructureDefinition-Requirements.schema.json",
+              "propertyCount": 8
+            },
+            {
+              "filename": "StructureDefinition-DecisionSupportLogic.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-DecisionSupportLogic.schema.json",
+              "title": "Decision-Support Logic (DAK)",
+              "description": "Logical Model for representing Decision-Support Logic from a DAK. Decision-support logic and algorithms to support appropriate service delivery in accordance with WHO clinical, public health and data use guidelines.",
+              "url": "./StructureDefinition-DecisionSupportLogic.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-KGProvenanceSource.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGProvenanceSource.schema.json",
+              "title": "Knowledge graph: provenance source",
+              "description": "A source a graph document was extracted from, pinned by hash.",
+              "url": "./StructureDefinition-KGProvenanceSource.schema.json",
+              "propertyCount": 6
+            },
+            {
+              "filename": "StructureDefinition-DublinCore.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-DublinCore.schema.json",
+              "title": "Dublin Core Metadata Element Set",
+              "description": "Logical Model representing Dublin Core metadata elements as defined at https://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
+              "url": "./StructureDefinition-DublinCore.schema.json",
+              "propertyCount": 16
+            },
+            {
+              "filename": "StructureDefinition-RequirementsSource.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-RequirementsSource.schema.json",
+              "title": "Requirements Source",
+              "description": "Source reference for Requirements - exactly one of the following must be provided:\n- url (url data type): URL to retrieve Requirements definition from input/ or external source\n- canonical (canonical data type): Canonical URI pointing to the Requirements definition\n- instance: Inline Requirements instance data",
+              "url": "./StructureDefinition-RequirementsSource.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-UserScenarioSource.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-UserScenarioSource.schema.json",
+              "title": "User Scenario Source",
+              "description": "Source reference for User Scenario - exactly one of the following must be provided:\n- url (url data type): URL to retrieve UserScenario definition from input/ or external source\n- canonical (canonical data type): Canonical URI pointing to the UserScenario definition\n- instance: Inline UserScenario instance data",
+              "url": "./StructureDefinition-UserScenarioSource.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-CoreDataElement.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-CoreDataElement.schema.json",
+              "title": "Core Data Element (DAK)",
+              "description": "Logical Model for representing Core Data Elements from a DAK. A core data element can be one of: a ValueSet, a CodeSystem, a ConceptMap, or a Logical Model adherent to SGLogicalModel. This is the ONE EXCEPTION to allowing FHIR R4 models into the DAK LMs.",
+              "url": "./StructureDefinition-CoreDataElement.schema.json",
+              "propertyCount": 7
+            },
+            {
+              "filename": "StructureDefinition-KGRecommendation.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGRecommendation.schema.json",
+              "title": "Knowledge graph L1: Recommendation",
+              "description": "The atomic normative statement. This is the node nothing in the WHO estate currently makes addressable. statement is a VERBATIM quote, never a paraphrase — a paraphrased recommendation is a new recommendation. strength is GRADE (strong | conditional); certainty is GRADE (high | moderate | low | very-low); conditionality records the 'in settings where…' qualifier that decides whether a DAK can adopt it unchanged. Class IRI: http://smart.who.int/kg/recommendation.",
+              "url": "./StructureDefinition-KGRecommendation.schema.json",
+              "propertyCount": 9
+            },
+            {
+              "filename": "StructureDefinition-KGExternalArtifact.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGExternalArtifact.schema.json",
+              "title": "Knowledge graph L1: External artefact",
+              "description": "An L2 or L3 artefact addressed by canonical URL — a BPMN process, a DMN decision table, a FHIR PlanDefinition. Deliberately opaque: it carries an IRI and a free-text kind, and this graph asserts nothing about its internal structure. That opacity is the boundary. The L2 and L3 subgraphs model those artefacts properly; L1 only needs to point. Class IRI: http://smart.who.int/kg/external-artifact.",
+              "url": "./StructureDefinition-KGExternalArtifact.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-HealthInterventionsSource.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-HealthInterventionsSource.schema.json",
+              "title": "Health Interventions Source",
+              "description": "Source reference for Health Interventions - exactly one of the following must be provided:\n- url (url data type): URL to retrieve HealthInterventions definition from input/ or external source\n- canonical (canonical data type): Canonical URI pointing to the HealthInterventions definition\n- instance: Inline HealthInterventions instance data",
+              "url": "./StructureDefinition-HealthInterventionsSource.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-KGCitation.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGCitation.schema.json",
+              "title": "Knowledge graph L1: Citation",
+              "description": "A citation string exactly as it appears in an L2 or L3 artefact, together with what it was resolved to. Grounded directly in the BCG table, where every rule's annotationEntry[1] reads \"WHO recommendations for routine immunization – summary tables (March 2023) (1)\" — a citation that no tool can currently follow. This class is where that string becomes a link, and where the fact that resolving it was a judgement gets recorded. text is verbatim. location is the artefact path plus the element id — e.g. the DMN rule id. numbering preserves the \"(1)\" back-reference into the source document's own bibliography. resolutionStatus is unresolved | resolved | ambiguous; ambiguous is a legitimate terminal state and must not be collapsed to resolved. Class IRI: http://smart.who.int/kg/citation.",
+              "url": "./StructureDefinition-KGCitation.schema.json",
+              "propertyCount": 7
+            },
+            {
+              "filename": "StructureDefinition-ProgramIndicatorSource.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-ProgramIndicatorSource.schema.json",
+              "title": "Program Indicator Source",
+              "description": "Source reference for Program Indicator - exactly one of the following must be provided:\n- url (url data type): URL to retrieve ProgramIndicator definition from input/ or external source\n- canonical (canonical data type): Canonical URI pointing to the ProgramIndicator definition\n- instance: Inline ProgramIndicator instance data",
+              "url": "./StructureDefinition-ProgramIndicatorSource.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-KGGraphDocument.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGGraphDocument.schema.json",
+              "title": "Knowledge graph L1: graph document",
+              "description": "One L1 knowledge-graph document: typed nodes and reified edges, provenance-pinned to the sources it was extracted from. In JSON the context element is written @context.",
+              "url": "./StructureDefinition-KGGraphDocument.schema.json",
+              "propertyCount": 10
+            },
+            {
+              "filename": "StructureDefinition-KGPublicationSection.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGPublicationSection.schema.json",
+              "title": "Knowledge graph L1: Publication section",
+              "description": "A chapter, annex or numbered section. Recommendations are located by section and page, which is what makes an extraction checkable. Class IRI: http://smart.who.int/kg/publication-section.",
+              "url": "./StructureDefinition-KGPublicationSection.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-FHIRSchemaBase.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-FHIRSchemaBase.schema.json",
+              "title": "FHIR Schema Base (SMART Guidelines)",
+              "description": "Base logical model providing the common schema metadata interface inherited by all SMART Guidelines logical models. Every SMART Guidelines logical model schema derives from this base, which documents the shared FHIR and JSON-LD metadata properties used by the JSON Schema generation pipeline.",
+              "url": "./StructureDefinition-FHIRSchemaBase.schema.json",
+              "propertyCount": 5
+            },
+            {
+              "filename": "StructureDefinition-KGPublication.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGPublication.schema.json",
+              "title": "Knowledge graph L1: Publication",
+              "description": "A WHO normative publication: a guideline, guidance, recommendation summary, or classification. Metadata follows Dublin Core, which HealthInterventions already uses. publicationType distinguishes normative guideline from guidance from summary table — a summary table restates recommendations made elsewhere, and conflating the two makes provenance wrong. identifier holds ISBN/ISSN/DOI, as CDHIv2 already does. sha256 pins the PDF. Derives from DublinCore (smart-base input/fsh/models/DublinCore.fsh); title, creator, publisher, date, identifier, language, rights are its elements. Class IRI: http://smart.who.int/kg/publication.",
+              "url": "./StructureDefinition-KGPublication.schema.json",
+              "propertyCount": 22
+            },
+            {
+              "filename": "StructureDefinition-KGIndicator.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGIndicator.schema.json",
+              "title": "Knowledge graph L1: Indicator",
+              "description": "A programme indicator defined normatively at L1. Distinct from the DAK's ProgramIndicator component, which is its L2 expression; that model already carries `references 0..* id` pointing at health intervention ids. Corresponds to ProgramIndicator: same element names and types (markdown), identifier = ProgramIndicator.id; not a Parent because ProgramIndicator makes name, definition, numerator, denominator and disaggregation 1..1 and an L1 indicator is recorded with what its source states. Class IRI: http://smart.who.int/kg/indicator.",
+              "url": "./StructureDefinition-KGIndicator.schema.json",
+              "propertyCount": 7
+            },
+            {
+              "filename": "StructureDefinition-KGPopulation.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGPopulation.schema.json",
+              "title": "Knowledge graph L1: Population",
+              "description": "PICO P. Class IRI: http://smart.who.int/kg/population.",
+              "url": "./StructureDefinition-KGPopulation.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-KGTerminologyCode.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGTerminologyCode.schema.json",
+              "title": "Knowledge graph L1: Terminology code",
+              "description": "A code in an external terminology — ICD-10, ICD-11, SNOMED CT, ATC, or a WHO classification such as CDHI. CROSS-REFERENCE ONLY. It records system, code and display, and asserts NOTHING about the terminology: no hierarchy, no subsumption, no synonyms, no post-coordination. The terminology has its own authority, its own release cycle and its own tooling, and a partial copy here would be wrong within one release. Resolve meaning against the terminology server, not against this graph. Derives from Coding (FHIR R4 core datatype); system, code, display, version are its elements. Class IRI: http://smart.who.int/kg/terminology-code.",
+              "url": "./StructureDefinition-KGTerminologyCode.schema.json",
+              "propertyCount": 7
+            },
+            {
+              "filename": "StructureDefinition-Persona.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-Persona.schema.json",
+              "title": "Persona (DAK)",
+              "description": "Logical Model for representing Personas from a DAK",
+              "url": "./StructureDefinition-Persona.schema.json",
+              "propertyCount": 8
+            },
+            {
+              "filename": "StructureDefinition-KGEvidenceLocation.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGEvidenceLocation.schema.json",
+              "title": "Knowledge graph: evidence location",
+              "description": "Where a node or edge came from in its source. Required on anything not mechanically derived.",
+              "url": "./StructureDefinition-KGEvidenceLocation.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-KGEvidence.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGEvidence.schema.json",
+              "title": "Knowledge graph L1: Evidence",
+              "description": "The body of evidence behind a recommendation, with its GRADE certainty rating. Class IRI: http://smart.who.int/kg/evidence.",
+              "url": "./StructureDefinition-KGEvidence.schema.json",
+              "propertyCount": 7
+            },
+            {
+              "filename": "StructureDefinition-KGSchedule.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGSchedule.schema.json",
+              "title": "Knowledge graph L1: Schedule",
+              "description": "A normative delivery schedule. Grounded: the BCG table cites \"WHO recommendations for routine immunization – summary tables\", which IS a schedule publication — the single most-cited L1 source in the immunization DAK. Class IRI: http://smart.who.int/kg/schedule.",
+              "url": "./StructureDefinition-KGSchedule.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-DAK.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-DAK.schema.json",
+              "title": "Digital Adaptation Kit (DAK)",
+              "description": "Logical Model for representing a complete Digital Adaptation Kit (DAK) with metadata and all 9 DAK components",
+              "url": "./StructureDefinition-DAK.schema.json",
+              "propertyCount": 24
+            },
+            {
+              "filename": "StructureDefinition-KGScheduleEntry.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGScheduleEntry.schema.json",
+              "title": "Knowledge graph L1: Schedule entry",
+              "description": "One row of a schedule: which intervention, for whom, when, how many doses. This is the granularity a decision table actually consumes — the BCG rules turn on dose count, age and interval since a live vaccine. Class IRI: http://smart.who.int/kg/schedule-entry.",
+              "url": "./StructureDefinition-KGScheduleEntry.schema.json",
+              "propertyCount": 7
+            },
+            {
+              "filename": "StructureDefinition-KGEdge.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGEdge.schema.json",
+              "title": "Knowledge graph: edge",
+              "description": "One reified statement: a predicate from a source node to a target node, with its derivation and evidence.",
+              "url": "./StructureDefinition-KGEdge.schema.json",
+              "propertyCount": 18
+            },
+            {
+              "filename": "StructureDefinition-NonFunctionalRequirement.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-NonFunctionalRequirement.schema.json",
+              "title": "Non-Functional Requirement (DAK)",
+              "description": "Logical Model for representing non-functional requirement from a DAK",
+              "url": "./StructureDefinition-NonFunctionalRequirement.schema.json",
+              "propertyCount": 5
+            },
+            {
+              "filename": "StructureDefinition-TestScenario.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-TestScenario.schema.json",
+              "title": "Test Scenario (DAK)",
+              "description": "Logical Model for representing Test Scenarios from a DAK. A set of test scenarios to validate an implementation of the DAK.",
+              "url": "./StructureDefinition-TestScenario.schema.json",
+              "propertyCount": 3
+            },
+            {
+              "filename": "StructureDefinition-DecisionSupportLogicSource.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-DecisionSupportLogicSource.schema.json",
+              "title": "Decision Support Logic Source",
+              "description": "Source reference for Decision Support Logic - exactly one of the following must be provided:\n- url (url data type): URL to retrieve DecisionSupportLogic definition from input/ or external source\n- canonical (canonical data type): Canonical URI pointing to the DecisionSupportLogic definition\n- instance: Inline DecisionSupportLogic instance data",
+              "url": "./StructureDefinition-DecisionSupportLogicSource.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-FunctionalRequirement.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-FunctionalRequirement.schema.json",
+              "title": "Functional Requirement (DAK)",
+              "description": "Logical Model for representing functional requirement from a DAK",
+              "url": "./StructureDefinition-FunctionalRequirement.schema.json",
+              "propertyCount": 7
+            },
+            {
+              "filename": "StructureDefinition-GenericPersonaSource.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-GenericPersonaSource.schema.json",
+              "title": "Generic Persona Source",
+              "description": "Source reference for Generic Persona - exactly one of the following must be provided:\n- url (url data type): URL to retrieve GenericPersona definition from input/ or external source\n- canonical (canonical data type): Canonical URI pointing to the GenericPersona definition\n- instance: Inline GenericPersona instance data",
+              "url": "./StructureDefinition-GenericPersonaSource.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-KGOutcome.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-KGOutcome.schema.json",
+              "title": "Knowledge graph L1: Outcome",
+              "description": "PICO O. Class IRI: http://smart.who.int/kg/outcome.",
+              "url": "./StructureDefinition-KGOutcome.schema.json",
+              "propertyCount": 2
+            },
+            {
+              "filename": "StructureDefinition-CoreDataElementSource.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-CoreDataElementSource.schema.json",
+              "title": "Core Data Element Source",
+              "description": "Source reference for Core Data Element - exactly one of the following must be provided:\n- url (url data type): URL to retrieve CoreDataElement definition from input/ or external source\n- canonical (canonical data type): Canonical URI pointing to the CoreDataElement definition\n- instance: Inline CoreDataElement instance data",
+              "url": "./StructureDefinition-CoreDataElementSource.schema.json",
+              "propertyCount": 4
+            },
+            {
+              "filename": "StructureDefinition-BusinessProcessWorkflowSource.schema.json",
+              "id": "http://smart.who.int/base/StructureDefinition-BusinessProcessWorkflowSource.schema.json",
+              "title": "Business Process Workflow Source",
+              "description": "Source reference for Business Process Workflow - exactly one of the following must be provided:\n- url (url data type): URL to retrieve BusinessProcessWorkflow definition from input/ or external source\n- canonical (canonical data type): Canonical URI pointing to the BusinessProcessWorkflow definition\n- instance: Inline BusinessProcessWorkflow instance data",
+              "url": "./StructureDefinition-BusinessProcessWorkflowSource.schema.json",
+              "propertyCount": 4
+            }
+          ]
+        }
+      }
+    }
+  }
+}

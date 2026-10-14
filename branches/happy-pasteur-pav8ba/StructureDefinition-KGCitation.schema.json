@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-KGCitation.schema.json",
+  "title": "Knowledge graph L1: Citation",
+  "description": "A citation string exactly as it appears in an L2 or L3 artefact, together with what it was resolved to. Grounded directly in the BCG table, where every rule's annotationEntry[1] reads \"WHO recommendations for routine immunization – summary tables (March 2023) (1)\" — a citation that no tool can currently follow. This class is where that string becomes a link, and where the fact that resolving it was a judgement gets recorded. text is verbatim. location is the artefact path plus the element id — e.g. the DMN rule id. numbering preserves the \"(1)\" back-reference into the source document's own bibliography. resolutionStatus is unresolved | resolved | ambiguous; ambiguous is a legitimate terminal state and must not be collapsed to resolved. Class IRI: http://smart.who.int/kg/citation.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "KGCitation",
+      "description": "Resource type identifier for KGCitation logical model"
+    },
+    "@context": {
+      "description": "JSON-LD context for this logical model with ValueSet vocabularies",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "URI reference to external JSON-LD context"
+        },
+        {
+          "type": "object",
+          "description": "Inline JSON-LD context",
+          "properties": {
+            "@version": {
+              "type": "number",
+              "const": 1.1
+            },
+            "fhir": {
+              "type": "string",
+              "const": "http://hl7.org/fhir/"
+            }
+          },
+          "additionalProperties": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        {
+          "type": "array",
+          "description": "Array of JSON-LD context objects/URIs",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "@type": {
+      "type": "string",
+      "description": "JSON-LD type identifier for KGCitation logical model",
+      "examples": [
+        "LogicalModel-KGCitation"
+      ]
+    },
+    "text": {
+      "type": "string",
+      "description": "The citation string, VERBATIM as it appears in the citing artefact."
+    },
+    "location": {
+      "type": "string",
+      "description": "The citing artefact's path plus the element id (a DMN rule id, a page)."
+    },
+    "numbering": {
+      "type": "string",
+      "description": "The '(1)' back-reference into the citing document's own bibliography."
+    },
+    "resolutionStatus": {
+      "$ref": "./ValueSet-KGResolutionStatusVS.schema.json",
+      "description": "unresolved | resolved | ambiguous. Ambiguous is a legitimate terminal state."
+    }
+  },
+  "required": [
+    "resourceType"
+  ],
+  "allOf": [
+    {
+      "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "resourceDefinition": {
+          "type": "string",
+          "format": "uri",
+          "const": "http://smart.who.int/base/StructureDefinition/KGCitation"
+        },
+        "fhir:parent": {
+          "type": "string",
+          "const": "http://hl7.org/fhir/StructureDefinition/Base"
+        },
+        "jsonld:valuesets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "const": [
+            "KGResolutionStatusVS"
+          ]
+        },
+        "jsonld:contextTemplate": {
+          "type": "object",
+          "const": {
+            "@version": 1.1,
+            "fhir": "http://hl7.org/fhir/",
+            "KGResolutionStatusVS": "http://smart.who.int/base/ValueSet-KGResolutionStatusVS.jsonld"
+          }
+        }
+      }
+    }
+  ]
+}
