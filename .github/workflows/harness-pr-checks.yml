@@ -30,3 +30,5 @@ jobs:
       instance: smart-base
       path-in-repo: smart-base
       tools-ref: claude/layer-pr-checks
+      # folio-assistant main pins pre-70lx layers until folio-assistant#2529 merges.
+      index-ref: claude/nifty-johnson-w3mspn
