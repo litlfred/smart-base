@@ -1,21 +1,20 @@
 #!/usr/bin/env bun
 /**
  * render-processes.ts — draw every BPMN process smart-base declares, beside
- * its source and into the IG's images.
+ * its source.
  *
  * The `.bpmn` is the source of truth, and it lives in a directory the
  * declaration (`smart-base.json`) gives the `processes` typology:
  * `processes/` (the house processes, among them the authoring lifecycle the
- * IG's Authoring Process page shows) and `methodologies/processes/`. Two
- * copies of each picture are written from one drawing:
+ * IG's Authoring Process page shows) and `methodologies/processes/`. The picture
+ * is written as `<name>.svg` next to `<name>.bpmn`, as bootstrap-tools draws
+ * one for every content graph, because a README on GitHub cannot draw BPMN.
  *
- * - **beside the source**, `<name>.svg` next to `<name>.bpmn`, as
- *   bootstrap-tools draws one for every content graph (a README on GitHub
- *   cannot draw BPMN);
- * - **into the IG**, `input/images/<name>.svg`, which the IG Publisher serves
- *   at the site root, so a page embeds `<img src="<name>.svg">`. Skipped when
- *   the checkout has no `input/images/` (a monorepo mount of smart-base, which
- *   carries no IG).
+ * It is NOT how the processes reach a site. smart-base is mounted into
+ * folio-assistant, whose just-the-docs site draws every mounted instance's
+ * processes (`cat-harness-tools` `render:bpmn`), and a branch is previewed
+ * there under `STAGING/<slug>/` (`feature-staging`). Nothing here writes into
+ * the IG's `input/`.
  *
  * The drawing is bootstrap-tools' (`scripts/render-bpmn.ts`: bpmn-js in
  * headless Chromium, byte-stable, call activities linked to sibling
@@ -39,7 +38,6 @@ import { besideSource, openRenderer, processIds } from "@litlfred/bootstrap-tool
 
 const INSTANCE = resolve(import.meta.dir, "..");
 const REPO = resolve(INSTANCE, "..");
-const IG_IMAGES = join(REPO, "input", "images");
 
 /** Every `.bpmn` under a directory, at any depth. */
 function bpmnUnder(dir: string): string[] {
@@ -67,8 +65,8 @@ if (import.meta.main) {
     console.error("✗ no .bpmn in a processes directory of smart-base.json — nothing was drawn or checked.");
     process.exit(2);
   }
-  // The IG serves every image at one root, so two diagrams of one name would
-  // overwrite each other there. Refused rather than trusted.
+  // Call activities link to sibling diagrams by basename, so two diagrams of
+  // one name would be ambiguous. Refused rather than trusted.
   const byName = new Map<string, string[]>();
   for (const f of sources) byName.set(basename(f), [...(byName.get(basename(f)) ?? []), f]);
   const clash = [...byName.values()].filter((fs) => fs.length > 1);
@@ -80,8 +78,6 @@ if (import.meta.main) {
   const viewer = Bun.resolveSync("bpmn-js/dist/bpmn-viewer.production.min.js", Bun.resolveSync("@litlfred/bootstrap-tools/package.json", import.meta.dir));
   const processFile = new Map<string, string>();
   for (const f of sources) for (const id of processIds(readFileSync(f, "utf8"))) processFile.set(id, f);
-  const ig = existsSync(IG_IMAGES);
-  if (!ig) console.log(`(no ${relative(REPO, IG_IMAGES)}/ in this checkout: drawing beside the sources only)`);
 
   const r = await openRenderer(viewer);
   let bad = 0;
@@ -92,8 +88,7 @@ if (import.meta.main) {
       bad++;
       continue;
     }
-    const outs = [file.replace(/\.bpmn$/, ".svg"), ...(ig ? [join(IG_IMAGES, basename(file).replace(/\.bpmn$/, ".svg"))] : [])];
-    for (const out of outs) {
+    for (const out of [file.replace(/\.bpmn$/, ".svg")]) {
       const prev = existsSync(out) ? readFileSync(out, "utf8") : undefined;
       if (check) {
         if (prev !== got.svg) {

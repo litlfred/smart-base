@@ -92,9 +92,16 @@ Neither is copied here.
 
 ### Staging: every review looks at a staged preview
 
-Each stage commits to the guideline's feature branch, and
+Each stage commits to the guideline's feature branch, and that branch is
+staged as a just-the-docs preview by
 [`feature-staging`](https://github.com/litlfred/cat-harness/blob/main/skills/sdlc/sdlc-core/feature-staging.md)
-deploys that branch as a preview (`Process_FeatureStaging`). A review item
+(`Process_FeatureStaging`), at `STAGING/<slug>/` on the platform's site.
+For smart-base, which folio-assistant mounts, the branch reaches that build
+by a **staging re-pin**: a folio-assistant pull request that points the
+`smart-base` mount at the branch's commit, recorded with
+`bun run cat mount:remote --staging` (basis `staging`, so it needs no
+consent). The IG Publisher's `branches/` preview (`ghbuild.yml`, `/deploy`)
+is the IG's, not this content's, and is never the preview for it. A review item
 never links to source alone. It links to the staged page, through
 `staging-review`, which returns **before** (main) and **after** (staging)
 URL pairs. A new guideline that has no repository yet is staged inside the
