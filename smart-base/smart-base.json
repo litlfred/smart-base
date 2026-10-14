@@ -309,11 +309,6 @@
       "outputs": [],
       "because": "measured 2026-10-01 (bean xpcu); moved from cat-harness/scripts/task-io.ts to its owning instance 2026-10-06 (bean 0r7u)"
     },
-    "smart-base:l1-scenarios:measles:check": {
-      "inputs": ["{tracked}"],
-      "outputs": [],
-      "because": "exits before either writeFileSync under `--check` -- measured 2026-10-10 (bean kvd2): a --check run leaves `git status` clean"
-    },
     "smart-base:smart-kg-l1:check": {
       "outputs": [],
       "writer": "smart-base:smart-kg-l1:all",

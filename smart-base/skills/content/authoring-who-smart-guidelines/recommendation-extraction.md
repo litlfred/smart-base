@@ -332,8 +332,12 @@ not a defect: it is the work list for the catalogue. The test
 
 **An authored L1, scenario half only.**
 
-`smart-base/scripts/fixtures/l1-recommendation-scenarios/measles/`: the 75
-recommendations of the WHO measles position paper (WER 92(17), 2017) against
-smart-immunizations at `86898e6`, with the vocabulary, the mapping, the output
-and the warnings. `smart-base:l1-scenarios:measles:check` keeps it current. Its
-real home is smart-immunizations' library.
+The 75 recommendations of the WHO measles position paper (WER 92(17), 2017),
+mapped against the immunization guide's own personas and processes, with the
+vocabulary, the mapping, the output and the warnings. It lives in that guide's
+library, which is its home, with the check that keeps it current (owner,
+2026-10-14). smart-base, which every guide builds on, holds no guide's example:
+<https://github.com/litlfred/smart-immunizations/tree/main/library/l1-recommendation-scenarios/measles>.
+The generic rung it was run with stays here, as
+`smart-base/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json`,
+because the handbook example above uses it too.
