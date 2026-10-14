@@ -22,6 +22,10 @@
  * 1. Runs `dak-ast-sidecars.ts` over the AST `ig-site:ast` restored
  *    (`<ig>/output-ast`). That script runs WHO's DAK post-processing
  *    generators at the smart-base commit the checkout pins.
+ *    With `--hub`, it also runs the DAK API hub generator (step 6), whose
+ *    OpenAPI page `openapi/index.html` and its `<stem>.openapi.json`
+ *    documents and enumeration schemas land in `<work>/ig-api/site/`, at the
+ *    paths a site root serves them.
  * 2. Leaves the files in `<work>/ig-api/sidecars/` and writes
  *    `<work>/ig-api/ig-api.json`, saying what the IG calls them: `DAK API`
  *    when the IG declares a DAK (`dak.json` at its root), and no label
@@ -44,6 +48,8 @@ import { join, resolve } from "node:path";
 /** fhir-harness's names for the handshake (`ig-repo-site.ts` `IG_API_WORK`, `IG_API_DESCRIPTOR`). */
 export const IG_API_WORK = "ig-api";
 export const IG_API_DESCRIPTOR = "ig-api.json";
+/** Under `ig-api/`: files served verbatim at the site root (`ig-repo-site.ts` `IG_API_SITE`). */
+export const IG_API_SITE = "site";
 /** What a DAK calls its sidecars. */
 export const DAK_API_LABEL = "DAK API";
 /** The file whose presence says the IG is a DAK. */
@@ -63,12 +69,13 @@ export function igSiteSidecars(o: { ig: string; work: string; log?: (s: string) 
   const sidecars = join(dir, "sidecars");
   rmSync(dir, { recursive: true, force: true });
   mkdirSync(sidecars, { recursive: true });
-  const r = spawnSync("bun", ["run", join(import.meta.dir, "dak-ast-sidecars.ts"), "--ast", ast, "--out", sidecars], { cwd: ig, stdio: ["ignore", "inherit", "inherit"] });
+  const site = join(dir, IG_API_SITE);
+  const r = spawnSync("bun", ["run", join(import.meta.dir, "dak-ast-sidecars.ts"), "--ast", ast, "--out", sidecars, "--hub", site], { cwd: ig, stdio: ["ignore", "inherit", "inherit"] });
   if (r.status !== 0) throw new Error(`dak-ast-sidecars.ts exited ${r.status}: the IG's sidecars were not written`);
   const d = descriptorFor(ig);
   writeFileSync(join(dir, IG_API_DESCRIPTOR), `${JSON.stringify(d, null, 2)}\n`);
   const files = readdirSync(sidecars).length;
-  log(`ig-site:sidecars: ${files} sidecar file(s) in ${sidecars}${d.label ? `, called "${d.label}"` : " (no dak.json: no label, the IG API default stands)"}`);
+  log(`ig-site:sidecars: ${files} sidecar file(s) in ${sidecars}${d.label ? `, called "${d.label}"` : " (no dak.json: no label, the IG API default stands)"}; ${existsSync(join(site, "openapi", "index.html")) ? "the hub's openapi/index.html" : "no hub OpenAPI page"} in ${site}`);
   return { files, ...d };
 }
 

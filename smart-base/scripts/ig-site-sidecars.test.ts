@@ -3,7 +3,8 @@ import { existsSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
-import { DAK_API_LABEL, descriptorFor, IG_API_DESCRIPTOR, IG_API_WORK, igSiteSidecars } from "./ig-site-sidecars";
+import { hubProducts } from "./dak-ast-sidecars";
+import { DAK_API_LABEL, descriptorFor, IG_API_DESCRIPTOR, IG_API_SITE, IG_API_WORK, igSiteSidecars } from "./ig-site-sidecars";
 
 describe("ig-site:sidecars, smart-base's step in an IG repository's site", () => {
   test("a DAK (dak.json at the IG root) labels its sidecars DAK API", () => {
@@ -29,5 +30,12 @@ describe("ig-site:sidecars, smart-base's step in an IG repository's site", () =>
     const src = readFileSync(fhirHarness, "utf-8");
     expect(src).toContain(`IG_API_WORK = "${IG_API_WORK}"`);
     expect(src).toContain(`IG_API_DESCRIPTOR = "${IG_API_DESCRIPTOR}"`);
+    expect(src).toContain(`IG_API_SITE = "${IG_API_SITE}"`);
+  });
+
+  test("the hub's products are what it added, without the stand-in page or its QA file", () => {
+    const before = ["ValueSet-x.json", "ValueSet-x.schema.json", "dak-api.html"];
+    const after = [...before, "ValueSet-x.openapi.json", "ValueSets.schema.json", "openapi/index.html", "qa.json"].sort();
+    expect(hubProducts(before, after)).toEqual(["ValueSet-x.openapi.json", "ValueSets.schema.json", "openapi/index.html"]);
   });
 });

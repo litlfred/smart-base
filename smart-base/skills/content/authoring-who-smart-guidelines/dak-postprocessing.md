@@ -128,9 +128,14 @@ generators run over the cached AST by `dak-ast-sidecars.ts`, written to
 `$SITE_WORK/ig-api/sidecars/`, with `$SITE_WORK/ig-api/ig-api.json` saying
 `{"label": "DAK API"}` when the IG has a `dak.json`. fhir-harness binds and
 serves them (`ig-repo-site.ts`, fhir-harness `ig-build-pipeline`
-§"The IG repository's site route") and never learns the DAK name. Step 6, the
-hub page, is not produced on this route: the AST stops before the Publisher
-writes `dak-api.html`.
+§"The IG repository's site route") and never learns the DAK name. Step 6 runs
+too, over the AST and the sidecars with a stand-in hub page: its OpenAPI
+documents (`<stem>.openapi.json`), enumeration schemas and Swagger UI page
+`openapi/index.html` land in `$SITE_WORK/ig-api/site/`, which fhir-harness
+serves at the site root without replacing a path the site already holds
+(smart-hiv's live root served that `openapi/`, measured 2026-10-14). The hub
+page itself, `dak-api.html`, is not produced: the AST stops before the
+Publisher writes it.
 
 ## Step 5 depends on expansion, which depends on a terminology server
 
