@@ -96,5 +96,7 @@ jobs:
           branch: gh-pages
           folder: _site
           clean: true
+          # `ns`: the JSON-LD context publish-context.yml writes (bean folio-assistant-63q4).
           clean-exclude: |
             branches/**
+            ns/**
