@@ -334,7 +334,7 @@ export function tools(baseUrl?: string): ToolDefinition[] {
           { name: "runContext", schema: t("RepoPath"), description: "`run-context.json`, cat-harness `folio-run-context/v1`." },
         ],
       },
-      satisfies: ["recommendation-extraction"],
+      satisfies: ["recommendation-candidates"],
       selection: {
         when: "A WHO guideline, position paper or handbook has been ingested and its recommendations are to become L1 3.0 nodes — in particular one that prints no `Recommendation N:` labels, where `extract-smart-kg-l1` finds none.",
         limits:
@@ -364,7 +364,7 @@ export function tools(baseUrl?: string): ToolDefinition[] {
           { name: "runContext", schema: t("RepoPath"), description: "`run-context.json`, cat-harness `folio-run-context/v1`." },
         ],
       },
-      satisfies: ["recommendation-extraction"],
+      satisfies: ["recommendation-scenarios"],
       selection: {
         when: "Each extracted recommendation is to say who acts on it and during which business process, before any L2 asset is drawn.",
         limits:

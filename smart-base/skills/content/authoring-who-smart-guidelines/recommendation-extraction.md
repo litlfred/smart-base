@@ -144,6 +144,8 @@ mechanical again.**
 
 ### Part 1 as a tool: `l1-recommendation-candidates`
 
+This mechanical step is its own named skill, [`recommendation-candidates`](recommendation-candidates.md), with its own contract; the Tool satisfies that skill, not this one.
+
 Steps 3–6 are one Tool node (`smart-base/tools/index.ts`), run twice around
 the agent's judgement:
 
@@ -195,6 +197,8 @@ work list cites it by reference. `--check` ignores the context, as it ignores
 `generatedAt`: a context moves with every commit.
 
 ## Part 2 — the scenario
+
+Its mechanical step is the named skill [`recommendation-scenarios`](recommendation-scenarios.md) (Tool `l1-recommendation-scenarios`).
 
 ### The shape (D3: L2 nodes, reused unchanged)
 
