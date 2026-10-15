@@ -16,6 +16,7 @@
  * @module smart-base/schemas/dak-annexes
  */
 import { z } from "zod";
+import { nodeKind } from "../../cat-harness/schemas/node-kind.ts";
 
 export const DAK_DATA_DICTIONARY_SCHEMA = "dak-data-dictionary/v1";
 export const DAK_SWIMLANES_SCHEMA = "dak-swimlanes/v1";
@@ -56,3 +57,13 @@ export const DakSwimlaneMapSchema = z
   })
   .strict();
 export type DakSwimlaneMap = z.infer<typeof DakSwimlaneMapSchema>;
+
+/**
+ * The two annex formats as node kinds (issue #2195), so `validators/dak-data-dictionary.json`
+ * and `validators/dak-swimlanes.json` name kinds and `node-kinds:check` files each
+ * family under one. Unversioned: the family's tag is not SemVer, so the `$schema` literal stays a
+ * field of the shape rather than one `nodeKind()` generates.
+ * Strict, as the schemas are.
+ */
+export const DakDataDictionaryAnnexKind = nodeKind("dak-data-dictionary", [], DakDataDictionaryAnnexSchema.shape, { strict: true });
+export const DakSwimlaneMapKind = nodeKind("dak-swimlanes", [], DakSwimlaneMapSchema.shape, { strict: true });

@@ -5,5 +5,5 @@
     "kind": "dak-annex",
     "family": "dak-swimlanes/v1"
   },
-  "schema": "smart-base:schemas/dak-annexes.ts#DakSwimlaneMapSchema"
+  "schema": "smart-base:schemas/dak-annexes.ts#DakSwimlaneMapKind"
 }
