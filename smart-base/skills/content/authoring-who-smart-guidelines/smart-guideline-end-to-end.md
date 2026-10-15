@@ -112,9 +112,9 @@ re-assembles the DAK. `validated` ends in its own event.
 | 0 | **Describe the use case** | `user` | the use case: population, setting, jurisdiction, interventions in scope | (the user *is* the source) | — |
 | 1 | **Identify L1 guidelines and recommendations** that bear on the use case | [`dak-l1-library`](dak-l1-library.md) (Component 1 sources first, then WHO IRIS and the jurisdiction's own guidelines) | a list of candidate L1 sources, each marked *in the library* / *ingested to KG* / *not yet* | Clinical SME | the list, each with why it was included or left out |
 | 2 | **Ingest into an L1 KG** the sources not yet in one | `bun run cat ingest` → [`dak-l1-library`](dak-l1-library.md) (generic-document layer, `l1-library`) → [`recommendation-extraction`](recommendation-extraction.md) (L1 layer: recommendations, remarks, practices, scenario candidates) | `library/<bib>/` and `library/<bib>/l1-extraction/` | `l1-extraction-reviewer` (exclusions and coverage), Clinical SME (recommendations) | the extraction beside the printed page; coverage score; every `WARNING` |
-| 3 | **Choose L2 dependencies**: which existing DAKs (WHO, or the jurisdiction's adaptation) to build on | agent, reading the L1 KG's `implementedBy` / `realises` edges against each candidate DAK's Component 1; [`decision-comparison`](#stages-3-and-5-dependency-choice) for the table | a dependency list: DAK, version, which components are reused, extended or not used, and why | Programme manager + Business analyst | one row per candidate DAK, including the ones rejected |
+| 3 | **Choose L2 dependencies**: which existing DAKs (WHO, or the jurisdiction's adaptation) to build on | agent, reading the L1 KG's `implementedBy` / `realises` edges against each candidate DAK's Component 1; [`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK* for how the candidate produces each component; [`decision-comparison`](#stages-3-and-5-dependency-choice) for the table | a dependency list: DAK, version, which components are reused, extended or not used, and why, and per component the `toolchain` stage 4 will use | Programme manager + Business analyst | one row per candidate DAK, including the ones rejected |
 | 4 | **Create or adapt the L2 DAK assets** | the steps of [`l2-dak-authoring.bpmn`](../../../processes/content/l2-dak-authoring.bpmn), each an edit-then-review call into [`l2-component-edit-review.bpmn`](../../../processes/content/l2-component-edit-review.bpmn): [`l2-dak-authoring`](l2-dak-authoring.md), `bpmn-authoring`, `dmn-authoring`, `terminology-management`; pre/post-processing by [`dak-preprocessing`](dak-preprocessing.md) / [`dak-postprocessing`](dak-postprocessing.md), run around fhir-harness's AST cache refresh as smart-base's overlay | the DAK components | per asset, see [Per-asset review](#per-asset-review) | per asset; **before and after** for an adaptation |
-| 5 | **Choose L3 dependencies**: which existing FHIR IGs (WHO, or the jurisdiction's) to build on | [`ig-artifact-ingestion`](ig-artifact-ingestion.md) to index each candidate IG; agent matches the L1 KG and the stage-4 L2 assets against the index; `decision-comparison` for the table | a dependency list: IG package, version, which profiles / value sets / libraries are reused, derived from or not used | FHIR modeller + Terminologist | one row per candidate IG, including the ones rejected |
+| 5 | **Choose L3 dependencies**: which existing FHIR IGs (WHO, or the jurisdiction's) to build on | [`ig-artifact-ingestion`](ig-artifact-ingestion.md) to index each candidate IG; agent matches the L1 KG and the stage-4 L2 assets against the index; [`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK* for how the candidate builds and tests its CQL and examples; `decision-comparison` for the table | a dependency list: IG package, version, which profiles / value sets / libraries are reused, derived from or not used, and per artefact type the `toolchain` stage 6 will use | FHIR modeller + Terminologist | one row per candidate IG, including the ones rejected |
 | 6 | **Produce the L3 assets** from the L2 assets | [`dak-l3-ig.bpmn`](../../../processes/content/dak-l3-ig.bpmn): `l3-fhir-authoring` with `l2-dak-authoring`, then fhir-harness's L3 pipeline up to a clean IG build | the FHIR IG (FSH, CQL, profiles, terminology, examples, tests) | per asset, see [Per-asset review](#per-asset-review) | per asset; **before and after** for an adaptation |
 | 7 | **L4: describe the consuming application** | `user`, prompted by the agent | the application brief: who uses it, on what device, which L2 processes it covers, which L3 resources and operations it calls, connectivity, the systems it talks to. This is the written intent `wireframe-design-review` starts from | (the user *is* the source) | — |
 | 8 | **L4: wireframe, then build the consuming application** | `wireframe-design-review` (design use, from the stage-7 intent), then the agent builds against the stage-6 IG (a clean build, not a publication) | wireframe candidates under `docs/wireframes/<topic>/`; the application and its conformance tests against the IG's examples and test cases | Business analyst + Clinical SME (does it do what the L2 says?), FHIR modeller (does it conform to L3?) | the running app, walked through each L2 user scenario |
@@ -181,6 +181,7 @@ its own right and is adjudicated like one. Each candidate is one row:
 | `evidence` | smart-base KG `evidence` (`kg/src/graph.ts`) | the L1 KG nodes (and, at L3, the L2 assets) that point at it |
 | `decision` | this skill | `reuse` (unchanged) · `adapt` (fork and change) · `extend` (depend and add) · `reject` |
 | `reason` | this skill | one sentence; required for `reject` |
+| `toolchain` | this skill | for each component reused, adapted or extended: how the candidate produces it — a Tool id from `bun run cat check:tools`, or a script in the candidate's own repository (its source spreadsheet, converter, CQL refresh, test format), found by the search in [`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK*. Stages 4 and 6 produce the component with that toolchain. `none` only after that search came back empty, naming where it looked; the new tool is then a Tool node, never a script in the adaptation repository |
 
 The agent lays the candidates out as a `decision-comparison` table and asks
 through a `DecisionRequest` (`schemas/decision-request.ts`: two to four
@@ -188,13 +189,17 @@ options, a recommendation, and what happens if nobody answers). Under the
 QA rule it goes ahead with its recommendation. The adjudicator's answer is
 the stage's review decision.
 
-Only `decision` and `reason` are new. Once adjudicated, a `reuse`, `adapt` or
+Only `decision`, `reason` and `toolchain` are new. Once adjudicated, a `reuse`, `adapt` or
 `extend` row becomes an ordinary dependency: a `dependencies:` entry in
 `sushi-config.yaml` at L3, and the DAK's own reference at L2.
 
 **Reuse first.** This is the precedence `recommendation-extraction` already
 uses for personas and processes: reuse an existing asset, then adapt one, and
-create only when neither fits, with a `WARNING` saying none fitted. Prefer the
+create only when neither fits, with a `WARNING` saying none fitted. The same
+precedence holds for the **tooling** that makes an asset: an adapted decision
+table is an edited copy of the upstream's source spreadsheet run through the
+upstream's converter, not a table re-typed in a new format with a new
+converter (2026-10-15, Uganda). Prefer the
 jurisdiction's adaptation over the WHO original when one exists for the same
 scope, because it already holds the local decisions. Record the WHO original
 too, as the upstream of that adaptation.
@@ -309,7 +314,8 @@ nothing. Do not maintain two copies of the stages.
 | staged preview, before/after links | `feature-staging`, `staging-review` | no |
 | diffs | `ig-ast-delta` (L3), `before-after-preview` with `DiffRenderer` (L2, rendered pages) | the data-dictionary term diff `dak-data-dictionary-diff.ts` is new |
 | form and app design | `wireframe-design-review`, design use: L2 forms (stage 4) and the application (stage 8a) | no; the stage-6 fidelity review is fhir-harness `fhir-questionnaire-wireframe`, whose field ↔ item check is fhir-harness `check-wireframe-questionnaire` |
-| dependency row | `DependsOnRecord`, `DependsOnGap`, KG `evidence` | adds `decision` and `reason` |
+| dependency row | `DependsOnRecord`, `DependsOnGap`, KG `evidence` | adds `decision`, `reason` and `toolchain` |
+| the tooling that produces each component | the tools graph (`bun run cat check:tools`), the upstream repository's own scripts, WHO's DAK toolchain: [`smart-base-tools`](smart-base-tools.md) | no |
 | asking for a dependency choice | `decision-comparison`, `DecisionRequest` | no |
 | provenance flag | KG `wasDerivedFrom` and edge `properties` | adds the values `pending` and `rejected-upstream` |
 

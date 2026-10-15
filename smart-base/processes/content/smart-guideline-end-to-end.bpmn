@@ -146,9 +146,10 @@
       <bpmn:outgoing>E11</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:task id="Task_DepsL2" name="3 · Choose L2 dependencies&#10;(WHO / jurisdiction DAKs)">
-      <bpmn:documentation>From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason. Reuse first; prefer the jurisdiction's adaptation, recording the WHO original as its upstream.</bpmn:documentation>
+      <bpmn:documentation>From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason. Reuse first; prefer the jurisdiction's adaptation, recording the WHO original as its upstream. For each component kept, record its toolchain: how the candidate produces it (the tools graph, the candidate repository's own source spreadsheets and converters, WHO's DAK toolchain), which stage 4 then uses.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="smart-guideline-end-to-end" />
+        <bootstrap.processes:skill ref="smart-base-tools" />
         <bootstrap.processes:skill ref="decision-comparison" />
       </bpmn:extensionElements>
       <bpmn:incoming>E11</bpmn:incoming>
@@ -172,6 +173,7 @@
       <bpmn:documentation>The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data elements. Its clinical validation is this stage's adjudication and does not hold up stage 5. The IG is built through fhir-harness's AST cache lifecycle (ig-ast-refresh.yml), with the DAK pre-processing as smart-base's pre-export overlay (dak-preprocessing, dak-pre-export.sh) and the DAK sidecars made from the AST (dak-postprocessing).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
+        <bootstrap.processes:skill ref="smart-base-tools" />
         <bootstrap.processes:skill ref="dak-preprocessing" />
         <bootstrap.processes:skill ref="dak-postprocessing" />
         <bootstrap.processes:skill ref="wireframe-design-review" />
@@ -198,9 +200,10 @@
       <bpmn:outgoing>E32</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:task id="Task_DepsL3" name="5 · Choose L3 dependencies&#10;(WHO / jurisdiction IGs)&#10;[ig-artifact-ingestion]">
-      <bpmn:documentation>Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG.</bpmn:documentation>
+      <bpmn:documentation>Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG, and record per artefact type the candidate's toolchain (CQL refresh, test-case format, example generator), which stage 6 then uses.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="ig-artifact-ingestion" />
+        <bootstrap.processes:skill ref="smart-base-tools" />
         <bootstrap.processes:skill ref="decision-comparison" />
       </bpmn:extensionElements>
       <bpmn:incoming>E17</bpmn:incoming>
@@ -231,6 +234,7 @@
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l3-fhir-authoring" />
         <bootstrap.processes:skill ref="l2-dak-authoring" />
+        <bootstrap.processes:skill ref="smart-base-tools" />
         <bootstrap.processes:skill ref="feature-staging" />
       </bpmn:extensionElements>
       <bpmn:incoming>E36</bpmn:incoming>
