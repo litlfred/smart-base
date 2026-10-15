@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   folio-assistant — a WHO SMART Guidelines use case, end to end: L1 knowledge
-  graph, L2 DAK, L3 FHIR IG, consuming application, new or adapted.
+  graph, L2 DAK, L3 FHIR IG, L4 consuming application, new or adapted.
 
   Source of truth: this file. Open it in bpmn.io, Camunda Modeler, or any other
   BPMN 2.0 tool. The SVG under docs/assets/img/workflows/ is generated from it
@@ -24,7 +24,7 @@
     <bpmn:participant id="Participant_SgEndToEnd" name="WHO SMART Guidelines — end to end, authoring or adaptation" processRef="Process_SgEndToEnd" />
   </bpmn:collaboration>
   <bpmn:process id="Process_SgEndToEnd" name="SMART Guideline end to end" isExecutable="false">
-    <bpmn:documentation>From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the application the requester describes. Adjudication follows every stage as QA, not as a gate (owner, 2026-10-14: "once agent produces L2 it can produce L3"): each stage forks into the next stage and its adjudication, and each adjudication has its own end event, so the instance completes only when all are recorded. The stages run the existing skills and processes (l2-dak-authoring.bpmn for stage 4, dak-l3-ig.bpmn for stage 6); the smart-guideline-end-to-end skill says which, and who adjudicates each.</bpmn:documentation>
+    <bpmn:documentation>From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the L4 consuming application the requester describes. Adjudication follows every stage as QA, not as a gate (owner, 2026-10-14: "once agent produces L2 it can produce L3"): each stage forks into the next stage and its adjudication, and each adjudication has its own end event, so the instance completes only when all are recorded. The stages run the existing skills and processes (l2-dak-authoring.bpmn for stage 4, dak-l3-ig.bpmn for stage 6); the smart-guideline-end-to-end skill says which, and who adjudicates each.</bpmn:documentation>
     <bpmn:extensionElements>
       <cat-harness.processes:policy enforcement="advisory" />
     </bpmn:extensionElements>
@@ -245,7 +245,7 @@
       <bpmn:incoming>E22</bpmn:incoming>
       <bpmn:outgoing>E34</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:userTask id="Task_DescribeApp" name="7 · Describe the consuming application">
+    <bpmn:userTask id="Task_DescribeApp" name="7 · L4: describe the consuming application">
       <bpmn:documentation>Who uses it, on what device, which L2 processes and L3 resources it covers, connectivity, the systems it talks to. The agent offers options drawn from the L2 personas and processes. This is the written intent wireframe-design-review starts from.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="smart-guideline-end-to-end" />
@@ -253,7 +253,7 @@
       <bpmn:incoming>E23</bpmn:incoming>
       <bpmn:outgoing>E24</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:task id="Task_WireframeApp" name="8a · Wireframe the application&#10;[wireframe-design-review]">
+    <bpmn:task id="Task_WireframeApp" name="8a · L4: wireframe the application&#10;[wireframe-design-review]">
       <bpmn:documentation>To-be mode, from the stage-7 intent: two or more candidates, web and mobile, with real content from the L2 personas and scenarios. The agent goes on with its recommended candidate; the requester may choose another during adjudication.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="wireframe-design-review" />
@@ -261,7 +261,7 @@
       <bpmn:incoming>E24</bpmn:incoming>
       <bpmn:outgoing>E25</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="Task_BuildApp" name="8b · Build the consuming application">
+    <bpmn:task id="Task_BuildApp" name="8b · L4: build the consuming application">
       <bpmn:documentation>Against the stage-6 IG build, with conformance tests from the IG's examples and test cases.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="smart-guideline-end-to-end" />
@@ -274,7 +274,7 @@
       <bpmn:outgoing>E27</bpmn:outgoing>
       <bpmn:outgoing>E28</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:callActivity id="Task_AdjApp" name="Adjudicate the wireframes and the application" calledElement="Process_Review">
+    <bpmn:callActivity id="Task_AdjApp" name="Adjudicate the L4 wireframes and application" calledElement="Process_Review">
       <bpmn:documentation>Business analyst and clinical SME walk it through each L2 user scenario; FHIR modeller checks L3 conformance.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-review" />
@@ -284,7 +284,7 @@
       <bpmn:incoming>E27</bpmn:incoming>
       <bpmn:outgoing>E35</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:endEvent id="EndEvent_AppBuilt" name="Application built">
+    <bpmn:endEvent id="EndEvent_AppBuilt" name="L4 application built">
       <bpmn:incoming>E28</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:endEvent id="End_AdjL1" name="Adjudicated">
