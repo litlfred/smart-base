@@ -108,6 +108,7 @@ before any guideline content, by copying an existing guideline repository
 | `CLAUDE.md` | names [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md) as the entry point for any authoring or adaptation work in the repository, and states its order rule in one line |
 | `.claude/settings.json` + `.claude/mount-platform.sh` | the SessionStart hook that mounts the platform, so the skills and processes are on disk in every session |
 | `index.config.json` | the mount of smart-base (and through it the platform), as in every guideline repository (§3) |
+| `<name>.json` | the instance declaration: `library/` as `library`, and one `l1-extraction` entry per extraction directory as each is created ([`recommendation-extraction`](recommendation-extraction.md), *Declare every output directory*) — an undeclared one fails folio-assistant's `check:l1-complete` and with it the staging build |
 
 The same applies when an agent is handed an existing repository that has
 none of the three: write them first, in their own commit.
@@ -131,3 +132,8 @@ bean `n3ni`, stages A to F.
 4. **Writing L3 into a bare repository.** FSH or CQL in a repository with no
    `CLAUDE.md` entry point, no mount and no `library/` is the 2026-10-15
    failure (§6).
+5. **Extraction output the declaration does not name.** An `l1-extraction/`
+   directory, or a scenario directory beside the library entries, missing
+   from `<name>.json` passes every check in the guideline repository and
+   fails folio-assistant's QA working copy once the index mounts it — the
+   second 2026-10-15 failure (§6).
