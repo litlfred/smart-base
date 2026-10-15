@@ -5,7 +5,7 @@
                   xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
                   xmlns:bootstrap.processes="https://litlfred.github.io/bootstrap/0.1.0/processes/ns#"
                   id="Definitions_DAKLifecycle"
-                  targetNamespace="http://smart.who.int/base/bpmn"
+                  targetNamespace="https://litlfred.github.io/folio-assistant/workflows"
                   exporter="SMART Guidelines Authoring"
                   exporterVersion="0.1.0">
 
