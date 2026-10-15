@@ -26,7 +26,27 @@ const HOME = process.env.SMART_KG_HOME;
 const ready = !!HOME && existsSync(join(HOME, "tools", "negative-test.mjs"));
 const NA = "SMART_KG_HOME unset: NOT checked (n/a, not a pass)";
 
-type Doc = { "@context": string; ontologyVersion: string; nodes: any[]; edges: any[] };
+type DocNode = {
+  id: string;
+  type: string;
+  label?: string;
+  derivation?: string;
+  evidence?: { by?: string; at?: string; location?: string };
+  properties: Record<string, unknown> & {
+    statement?: string;
+    identifiers?: { type: string }[];
+  };
+};
+type DocEdge = {
+  type: string;
+  predicate: string;
+  source: string;
+  target: string;
+  derivation: string;
+  note?: string;
+  evidence?: { location?: string };
+};
+type Doc = { "@context": string; ontologyVersion: string; nodes: DocNode[]; edges: DocEdge[] };
 let base: Doc | undefined;
 let theirs: ((d: Doc) => { errors: string[] }) | undefined;
 if (ready) {
@@ -39,9 +59,9 @@ if (ready) {
   theirs = (d) => v.validateGraph(d, layer);
 }
 
-const byType = (d: Doc, t: string) => d.nodes.find((n) => n.type === t);
-const edge = (d: Doc, p: string) => d.edges.find((e) => e.predicate === p);
-const rec = (d: Doc) => d.nodes.find((n) => n.type === "recommendation" && n.properties?.statement);
+const byType = (d: Doc, t: string) => d.nodes.find((n) => n.type === t)!;
+const edge = (d: Doc, p: string) => d.edges.find((e) => e.predicate === p)!;
+const rec = (d: Doc) => d.nodes.find((n) => n.type === "recommendation" && n.properties?.statement)!;
 
 // [name, mutation, expected message (null = conforms), who sees it]
 const CASES: [string, ((d: Doc) => void) | null, RegExp | null, "both" | "ours-only"][] = [
@@ -60,12 +80,12 @@ const CASES: [string, ((d: Doc) => void) | null, RegExp | null, "both" | "ours-o
   ["a contentHash that does not match the stored text is rejected", (d) => { rec(d).properties.contentHash = "0".repeat(64); }, /contentHash that does not match/, "both"],
   ["content read from a PDF may not claim to be derived", (d) => { const r = rec(d); r.derivation = "derived"; }, /requires at least "inferred"/, "both"],
   ["a decided judgement must say who and when", (d) => { const r = rec(d); r.derivation = "decided"; delete r.evidence.by; delete r.evidence.at; }, /who decided and when/, "both"],
-  ["a placeholder never resolves", (d) => { const c = d.nodes.find((n) => n.properties?.citationKind === "placeholder"); c.properties.resolutionStatus = "resolved"; }, /placeholder/, "both"],
+  ["a placeholder never resolves", (d) => { const c = d.nodes.find((n) => n.properties?.citationKind === "placeholder")!; c.properties.resolutionStatus = "resolved"; }, /placeholder/, "both"],
   ["a good practice statement carrying a strength is rejected", (d) => { const r = rec(d); r.properties.kind = "good-practice-statement"; r.properties.strength = "strong"; r.properties.direction = "for"; }, /nothing to grade/, "both"],
   // Only this package types values smart-kg leaves untyped:
   ["an issued date that is not a date is rejected (new)", (d) => { byType(d, "publication").properties.issued = "last spring"; }, /property value: .* issued/, "ours-only"],
   ["an ordinal that is not a number is rejected (new)", (d) => { byType(d, "remark").properties.ordinal = "first"; }, /property value: .* ordinal/, "ours-only"],
-  ["cells that are not a list are rejected (new)", (d) => { const row = d.nodes.find((n) => n.properties?.elementType === "table-row"); row.properties.cells = "Dietary interventions"; }, /property value: .* cells/, "ours-only"],
+  ["cells that are not a list are rejected (new)", (d) => { const row = d.nodes.find((n) => n.properties?.elementType === "table-row")!; row.properties.cells = "Dietary interventions"; }, /property value: .* cells/, "ours-only"],
 ];
 
 for (const [name, mutate, expected, who] of CASES) {
