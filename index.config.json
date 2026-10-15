@@ -10,7 +10,17 @@
         }
       },
       "contentType": "document",
-      "_contentType_comment": "`document`. The IG's pages and artefact index are structured prose and data; there is no Lean and no TeX."
+      "_contentType_comment": "`document`. The IG's pages and artefact index are structured prose and data; there is no Lean and no TeX.",
+      "site": {
+        "build": {
+          "keep": [
+            "ns",
+            "0.1.0",
+            "sitepreview"
+          ]
+        }
+      },
+      "_site_comment": "`site.build.keep`: root entries of gh-pages that the harness site's root publish (stage-local.ts, the IG folio route) keeps besides STAGING/, _render-log/ and the IG's branches/: `ns` and `0.1.0`, the JSON-LD context and vocabulary layer-publish-context.yml writes, and `sitepreview`. No steps are declared: the IG route supplies them."
     },
     {
       "name": "fhir-harness",
