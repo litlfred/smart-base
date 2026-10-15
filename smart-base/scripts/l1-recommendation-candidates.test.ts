@@ -14,7 +14,7 @@ import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
-import { check } from "../../kg/src/validate.ts";
+import { check } from "../kg/src/validate.ts";
 import { CurationSchema, hintsFor, proposedIdentifiers, readEntry, RefusalError, run, type Curation } from "./l1-recommendation-candidates.ts";
 
 const page = (n: number, text: string) =>

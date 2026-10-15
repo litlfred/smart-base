@@ -55,7 +55,7 @@ test("every committed generated file is current, and none is orphaned", () => {
     const abs = join(REPO, a.path);
     return !existsSync(abs) || readFileSync(abs, "utf8") !== a.text;
   });
-  assert.deepEqual(stale.map((s) => s.path), [], "run `npm run build` in kg/");
+  assert.deepEqual(stale.map((s) => s.path), [], "run `npm run build` in smart-base/kg/");
   assert.deepEqual(orphans(new Set(all.map((a) => a.path))), []);
 });
 
@@ -69,7 +69,7 @@ test("reuse is real: publication derives from DublinCore, terminology-code from 
 });
 
 test("the specialisation ruling is emitted as linked data", () => {
-  const ld = JSON.parse(readFileSync(join(REPO, "kg/generated/l1/l1-library.jsonld"), "utf8"));
+  const ld = JSON.parse(readFileSync(join(REPO, "smart-base/kg/generated/l1/l1-library.jsonld"), "utf8"));
   const sub = Object.fromEntries(ld["@graph"].map((n: { "@id": string; subClassOf: unknown }) => [n["@id"], n.subClassOf]));
   assert.equal(sub["http://smart.who.int/kg/publication"], "https://litlfred.github.io/cat-harness/0.1.0/ns#SourceDocument");
   assert.equal(sub["http://smart.who.int/kg/publication-section"], "http://purl.org/spar/doco/Section");
