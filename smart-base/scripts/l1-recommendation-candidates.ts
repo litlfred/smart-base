@@ -59,6 +59,7 @@ import { L1_VALUE_SETS } from "../../kg/src/l1.ts";
 import { check as checkGraph } from "../../kg/src/validate.ts";
 import { L1_V3_CONTEXT, L1_V3_ONTOLOGY_VERSION, publicationId, type Identifier } from "./l1-kgid.ts";
 import { buildRunContext, writeRunContext, type RunContextRef } from "./l1-run-context.ts";
+import { readStructure, STRUCTURE_FILENAME } from "../platform/index.js";
 
 export const CANDIDATES_SCHEMA_TAG = "l1-recommendation-candidates/v1" as const;
 export const CURATION_SCHEMA_TAG = "l1-recommendation-curation/v1" as const;
@@ -132,11 +133,14 @@ export function readEntry(dir: string): Entry {
   if (!existsSync(sec)) throw new Error(`${dir}: no sections/ — ingest the entry first`);
   let sourceSha256: string | undefined;
   let docId = basename(resolve(dir));
-  const sj = join(dir, "structure.json");
-  if (existsSync(sj)) {
-    const s = JSON.parse(readFileSync(sj, "utf8")) as { doc_id?: string; source?: { sha256?: string } };
-    sourceSha256 = s.source?.sha256;
-    docId = s.doc_id ?? docId;
+  // Through the platform's accessor (bean rkqp), so every structure variant is
+  // read one way. An entry with no structure keeps its directory name; one whose
+  // structure will not read is an error, never a silent fallback.
+  if (existsSync(join(dir, STRUCTURE_FILENAME))) {
+    const s = readStructure(dir);
+    if ("reason" in s) throw new Error(`${dir}: ${s.reason}`);
+    sourceSha256 = (s.raw as { source?: { sha256?: string } }).source?.sha256;
+    docId = s.doc_id;
   }
   const pages = readdirSync(sec)
     .filter((f) => f.endsWith(".md"))
@@ -382,7 +386,7 @@ export function run(entry: Entry, curation: Curation | undefined, entryPath: str
         ontologyVersion: L1_V3_ONTOLOGY_VERSION,
         generatedAt,
         wasDerivedFrom: [
-          ...(entry.sourceSha256 ? [{ path: `${entryRel}/structure.json`, sha256: sha256(readFileSync(join(entry.dir, "structure.json"))), note: `The entry's structure; the source PDF's sha256 is ${entry.sourceSha256}.` }] : []),
+          ...(entry.sourceSha256 ? [{ path: `${entryRel}/${STRUCTURE_FILENAME}`, sha256: sha256(readFileSync(join(entry.dir, STRUCTURE_FILENAME))), note: `The entry's structure; the source PDF's sha256 is ${entry.sourceSha256}.` }] : []),
           { path: `${entryRel}/sections/`, sha256: sha256(entry.pages.map((p) => `${sha256(readFileSync(join(entry.dir, "sections", p.file)))}  ${p.file}`).join("\n") + "\n"), note: "The page texts read, hashed as a sha256sum listing in file order." },
         ],
         nodes,
@@ -500,7 +504,7 @@ if (import.meta.main) {
     process.exit(0);
   }
   mkdirSync(out, { recursive: true });
-  const ctx = buildRunContext(process.argv[1]!, [join(entryPath, "structure.json"), ...(curationPath ? [curationPath] : [])].filter(existsSync), out);
+  const ctx = buildRunContext(process.argv[1]!, [join(entryPath, STRUCTURE_FILENAME), ...(curationPath ? [curationPath] : [])].filter(existsSync), out);
   let ref: RunContextRef | undefined;
   if (ctx) ref = writeRunContext(ctx, out);
   else console.error("WARNING run-context: no git checkout to name as the platform; run-context.json not written");

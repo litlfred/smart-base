@@ -305,6 +305,12 @@
       "outputs": [],
       "because": "measured 2026-10-01 (bean xpcu); moved from cat-harness/scripts/task-io.ts to its owning instance 2026-10-06 (bean 0r7u)"
     },
+    "smart-base:l1-scenarios:check": {
+      "inputs": ["{tracked}"],
+      "outputs": [],
+      "writer": "smart-base:l1-scenarios",
+      "because": "exits before either writeFileSync under `--check` -- measured 2026-10-10 for the measles run of the same script (bean kvd2), which moved to smart-immunizations with its data; this is the handbook example's run (9789240116191-eng), the one smart-base keeps"
+    },
     "smart-base:dth-terms:check": {
       "inputs": ["{tracked}"],
       "outputs": [],
