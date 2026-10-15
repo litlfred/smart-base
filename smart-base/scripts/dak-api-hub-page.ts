@@ -17,6 +17,17 @@
  * `dak-api.jsonld`, that the page's one loader (`assets/dak-api-hub.js`)
  * draws from (`visualizer-loading`).
  *
+ * ## One layout with the IG's other pages
+ *
+ * Owner, 2026-10-15: *"can we be more consistent with the DAK API stlying -
+ * full width. keep it on the other pages as well... please consolidate
+ * behaviours/appearance"*. The page links the shared page layout
+ * (cat-harness-tools `page-layout.ts`) and its column is that layout's
+ * full-width one, so it reads like every other page of the IG's site; its
+ * lists are tables that fill the column. Its top bar is the IG's, which
+ * fhir-harness's `publisher-pages` gives every page of the site
+ * (`ig-search.ts` `withIgBar`); the layout's files are the site's.
+ *
  * It belongs here, not in fhir-harness: the hub and its name are WHO's
  * (`check:fhir-harness-exclusions`). `ig-site:sidecars` writes it into
  * `$SITE_WORK/ig-api/site/`, which fhir-harness's `ig-site:publisher-pages`
@@ -44,6 +55,7 @@ import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFi
 import { join, resolve } from "node:path";
 
 import { escHtml, thinPageHtml } from "../../cat-harness-tools/scripts/thin-page.ts";
+import { PAGE_MAIN_CLASS } from "../../cat-harness-tools/scripts/page-layout.ts";
 
 /** The page, its node and its loader, at the site root. */
 export const HUB_PAGE = "dak-api.html";
@@ -168,9 +180,11 @@ export function hubPage(o: { label: string; openapi: boolean }): string {
     configId: HUB_CONFIG_ID,
     config: { node: HUB_NODE },
     canonical: HUB_PAGE,
+    // At the site root, which serves the layout's files.
+    layout: "",
     noscriptLead: `The ${label} hub`,
     body:
-      `<main class="dak-api-hub"><h1>${label}</h1>` +
+      `<main class="dak-api-hub ${PAGE_MAIN_CLASS}"><h1>${label}</h1>` +
       `<p>The ${label}: a JSON Schema, JSON-LD, display and OpenAPI file for the artefacts of this guide, each with its artefact and its view.</p>` +
       (o.openapi ? `<p><a href="openapi/">The OpenAPI documentation</a></p>` : "") +
       `<div class="dak-api-hub-body" aria-live="polite"><p>Loading the ${label}…</p></div></main>`,
