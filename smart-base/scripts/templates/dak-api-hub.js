@@ -52,7 +52,8 @@
           ]);
         });
         host.appendChild(el("h2", {}, [k + " (" + rows.length + ")"]));
-        host.appendChild(el("table", {}, [el("thead", {}, [el("tr", {}, [el("th", {}, ["File"]), el("th", {}, ["Artefact"]), el("th", {}, ["View"])])]), el("tbody", {}, rows)]));
+        // `fa-page-wide`: the list fills the page layout's column (cat-harness-tools `page-layout.ts`).
+        host.appendChild(el("table", { class: "fa-page-wide" }, [el("thead", {}, [el("tr", {}, [el("th", {}, ["File"]), el("th", {}, ["Artefact"]), el("th", {}, ["View"])])]), el("tbody", {}, rows)]));
       });
       var docs = node["schema:workExample"] || [];
       if (docs.length) {

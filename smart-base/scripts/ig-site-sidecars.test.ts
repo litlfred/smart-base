@@ -81,6 +81,14 @@ describe("the thin DAK API hub page (owner, 2026-10-14: \"Yes, thin page\")", ()
     expect(hubPage({ label: "DAK API", openapi: false })).not.toContain('href="openapi/"');
   });
 
+  test("the page wears the shared page layout, as every other page of the IG's site does (owner, 2026-10-15: \"full width. keep it on the other pages as well\")", () => {
+    const html = hubPage({ label: "DAK API", openapi: true });
+    expect(html).toContain('<link rel="stylesheet" href="assets/page-layout.css" data-fa-page-layout>');
+    expect(html).toContain('<script src="assets/page-layout.js" defer data-fa-page-layout></script>');
+    expect(html).toContain('<main class="dak-api-hub fa-page-main">');
+    expect(readFileSync(join(import.meta.dir, "templates", "dak-api-hub.js"), "utf-8")).toContain('el("table", { class: "fa-page-wide" }');
+  });
+
   test("writeHub lays the page, its node (.jsonld and .json) and its loader into the site", () => {
     const ast = mkdtempSync(join(tmpdir(), "ast-"));
     mkdirSync(join(ast, "resources", "ValueSet"), { recursive: true });
