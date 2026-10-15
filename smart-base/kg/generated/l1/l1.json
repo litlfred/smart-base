@@ -43,7 +43,7 @@
     },
     {
       "what": "Where DAK citations actually occur, and how they fail",
-      "where": "IMMZ DAK input/decision-logic/IMMZ DAK_decision-support logic.xlsx and input/L2/IMMZ DAK_indicators.xlsx",
+      "where": "smart-immunizations input/decision-logic/IMMZ DAK_decision-support logic.xlsx and input/L2/IMMZ DAK_indicators.xlsx",
       "detail": "Reference cells cite '… (n)', where (n) is a row of the workbook's own References sheet holding the full bibliographic entry and URL; each workbook numbers its own list. Some cells hold two citations on separate lines. Of 50 indicators, 44 cite a reference, 4 carry the placeholder '[Add appropriate reference]', 2 are blank."
     }
   ],
