@@ -26,7 +26,11 @@ const HOME = process.env.SMART_KG_HOME;
 const ready = !!HOME && existsSync(join(HOME, "tools", "negative-test.mjs"));
 const NA = "SMART_KG_HOME unset: NOT checked (n/a, not a pass)";
 
-type Doc = { "@context": string; ontologyVersion: string; nodes: any[]; edges: any[] };
+// The fixtures below mutate arbitrary node and edge fields to build negative
+// cases, so the rows are deliberately untyped here.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Row = any;
+type Doc = { "@context": string; ontologyVersion: string; nodes: Row[]; edges: Row[] };
 let base: Doc | undefined;
 let theirs: ((d: Doc) => { errors: string[] }) | undefined;
 if (ready) {
