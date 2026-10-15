@@ -49,18 +49,37 @@ test("both layers are internally consistent", () => {
   assert.equal(toOntologyJson(L1_LIBRARY).imports?.[0], "l1");
 });
 
-test("every committed generated file is current, and none is orphaned", () => {
-  const all = artefacts();
-  const stale = all.filter((a) => {
-    const abs = join(REPO, a.path);
-    return !existsSync(abs) || readFileSync(abs, "utf8") !== a.text;
-  });
-  assert.deepEqual(stale.map((s) => s.path), [], "run `npm run build` in smart-base/kg/");
-  assert.deepEqual(orphans(new Set(all.map((a) => a.path))), []);
+/**
+ * The generated FSH is the IG's, at the repository root (`input/fsh/`). An
+ * index mounts this package (declared `smart-base-kg`) but not the IG, so there
+ * the FSH half is n/a; the package's own `generated/` is checked everywhere.
+ */
+const IG_FSH = existsSync(join(REPO, "input", "fsh"));
+const stale = (paths: (p: string) => boolean) =>
+  artefacts()
+    .filter((a) => paths(a.path))
+    .filter((a) => {
+      const abs = join(REPO, a.path);
+      return !existsSync(abs) || readFileSync(abs, "utf8") !== a.text;
+    })
+    .map((a) => a.path);
+
+test("every committed generated file of the package is current", () => {
+  assert.deepEqual(stale((p) => !p.startsWith("input/")), [], "run `npm run build` in smart-base/kg/");
 });
 
+test(
+  "every committed generated FSH file is current, and none is orphaned",
+  { skip: IG_FSH ? false : "no input/fsh/ here (an index mounts the package, not the IG): NOT checked (n/a, not a pass)" },
+  () => {
+    assert.deepEqual(stale((p) => p.startsWith("input/")), [], "run `npm run build` in smart-base/kg/");
+    assert.deepEqual(orphans(new Set(artefacts().map((a) => a.path))), []);
+  },
+);
+
 test("reuse is real: publication derives from DublinCore, terminology-code from Coding", () => {
-  const fsh = readFileSync(join(REPO, "input/fsh/models/KGL1.fsh"), "utf8");
+  // The emitted text, not the committed copy: the test above holds the two equal.
+  const fsh = artefacts().find((a) => a.path === "input/fsh/models/KGL1.fsh")!.text;
   assert.match(fsh, /Logical: KGPublication\nParent: DublinCore\n/);
   assert.match(fsh, /Logical: KGTerminologyCode\nParent: Coding\n/);
   const pub = fsh.split(/\n(?=Logical: )/).find((b) => b.startsWith("Logical: KGPublication\n"))!;
