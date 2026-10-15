@@ -108,10 +108,17 @@ before any guideline content, by copying an existing guideline repository
 | `AGENTS.md`, declared in `<name>.json` as the asset `agent-instructions` (role `agent-instructions`), with `README.md` as `instance-readme` | names [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md) as the entry point for any authoring or adaptation work, and nothing else: the order rule and every other discipline live in that skill and its process. `CLAUDE.md` is the pointer stub `init-folio` writes (`@AGENTS.md`; in an index checkout whose root declares no instance, `bun run cat index:render` writes it); never put guidance in it ([`placement`](../../../../cat-harness/skills/kg/kg-core/placement.md), *The agent-file stub*) |
 | `.claude/settings.json` + `.claude/mount-platform.sh` | the SessionStart hook that mounts the platform, so the skills and processes are on disk in every session |
 | `index.config.json` | the mount of smart-base (and through it the platform), as in every guideline repository (§3) |
+| `index.config.json` `site` | `"agentRun": true` (and `landing`), so the agent publishes the repository's own site with `stage-local.ts`: the root from `main`, `STAGING/<slug>/` from a branch ([`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), *Staging*) |
+| `.github/workflows/ig-ast-refresh.yml` | fhir-harness's template, copied unchanged: it seeds the AST cache the site is built from. Without it `stage-local.ts` refuses ("no cache branch for this IG") and the guideline has no site |
+| `.github/workflows/site-publish.yml`, `harness-pr-checks.yml` | the documented GitHub path of the same publish (dispatch only, never run for an agent-run repository), and the harness gates on every pull request through cat-harness-tools' `layer-pr-checks.yml` |
+| `.gitignore` | the mount block between `# BEGIN index mounts (generated from index.config.json — do not edit)` and `# END index mounts`, written by the mount tool, never typed: a hand-written marker makes `remote-mount.ts` refuse ("markers unpaired") |
 | `<name>.json` | the instance declaration: its `assets` (above), `library/` as `library`, and one `l1-extraction` entry per extraction directory as each is created ([`recommendation-extraction`](recommendation-extraction.md), *Declare every output directory*) — an undeclared one fails folio-assistant's `check:l1-complete` and with it the staging build |
 
-The same applies when an agent is handed an existing repository that has
-none of the three: write them first, in their own commit.
+The same applies when an agent is handed an existing repository that lacks
+any of these: write them first, in their own commit. Copy each one; a file
+typed from memory is the 2026-10-15 failure twice over (the Uganda adaptation
+had no `ig-ast-refresh.yml`, so no site, and a hand-written `.gitignore`
+marker, so the mount refused).
 
 ## What does not change
 
