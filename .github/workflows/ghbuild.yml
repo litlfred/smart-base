@@ -909,6 +909,30 @@ jobs:
             echo "No files over 100 MB found."
           fi
 
+      # ── Is the gh-pages root a folio site? ─────────────────────────────
+      # A repository whose site is agent-run (`index.config.json` `site`) has
+      # its gh-pages ROOT published by the platform's `stage-local.ts`, the
+      # folio site built from the IG's cached AST, stamped with
+      # `folio-build.json` (or a folio's `_main-site.json`). The IG Publisher's
+      # output must not replace that root, nor squash its history with a
+      # single-commit force-push (owner, 2026-10-15: smart-base republishes
+      # "via the same IG route as smart-hiv", "Yes + retire old workflow").
+      # Then the default branch's Publisher build goes to branches/<branch>/
+      # like any preview, and no deploy here is single-commit. A gh-pages
+      # without either stamp is deployed exactly as before.
+      - name: Is the gh-pages root a folio site?
+        if: inputs.deploy != false
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          if git fetch -q --depth=1 --filter=blob:none origin gh-pages 2>/dev/null \
+             && { git cat-file -e FETCH_HEAD:folio-build.json 2>/dev/null || git cat-file -e FETCH_HEAD:_main-site.json 2>/dev/null; }; then
+            echo "FOLIO_ROOT=true" >> "$GITHUB_ENV"
+            echo "::notice::The gh-pages root is a folio site (folio-build.json / _main-site.json): this build deploys to branches/${BRANCH_DIR}/ only, without single-commit; the root is published by stage-local.ts."
+          else
+            echo "FOLIO_ROOT=false" >> "$GITHUB_ENV"
+            echo "The gh-pages root is not a folio site: deploying as before."
+          fi
+
       # A branch preview carries no Publisher binaries: releases are the only
       # place they are published, and the IG's KG points at them there (owner
       # ruling 2026-10-02, bean b8ip: "previews dont get binary, only
@@ -917,7 +941,7 @@ jobs:
       # `ig-binary-audit.ts` counts (PUBLISHER_BINARIES, validator-*.pack);
       # keep the two lists together. The default branch's deploy is untouched.
       - name: Drop Publisher binaries from a branch preview
-        if: env.IS_DEFAULT_BRANCH == 'false' && inputs.deploy != false
+        if: (env.IS_DEFAULT_BRANCH == 'false' || env.FOLIO_ROOT == 'true') && inputs.deploy != false
         run: |
           dropped=$(find ./output -maxdepth 1 -type f \( \
             -name full-ig.zip -o -name package.tgz -o -name package.r4.tgz -o -name package.r4b.tgz \
@@ -944,7 +968,7 @@ jobs:
           folder: ./output # The folder the action should deploy.
           commit-message: Deploy candidate branch
           target-folder: branches/${{ env.BRANCH_DIR }}
-          single-commit: true
+          single-commit: ${{ env.FOLIO_ROOT != 'true' }}
           clean: false
 
       - name: Deploy candidate (retry after gh-pages ref conflict)
@@ -955,13 +979,13 @@ jobs:
           folder: ./output
           commit-message: Deploy candidate branch (retry)
           target-folder: branches/${{ env.BRANCH_DIR }}
-          single-commit: true
+          single-commit: ${{ env.FOLIO_ROOT != 'true' }}
           clean: false
 
       - name: Deploy main
         id: deploy_main_1
         uses: JamesIves/github-pages-deploy-action@v4.4.2
-        if: env.IS_DEFAULT_BRANCH == 'true' && inputs.deploy != false
+        if: env.IS_DEFAULT_BRANCH == 'true' && env.FOLIO_ROOT != 'true' && inputs.deploy != false
         continue-on-error: true
         with:
           branch: gh-pages # The branch the action should deploy to.
@@ -984,7 +1008,7 @@ jobs:
 
       - name: Deploy main (retry after gh-pages ref conflict)
         uses: JamesIves/github-pages-deploy-action@v4.4.2
-        if: env.IS_DEFAULT_BRANCH == 'true' && inputs.deploy != false && steps.deploy_main_1.outcome == 'failure'
+        if: env.IS_DEFAULT_BRANCH == 'true' && env.FOLIO_ROOT != 'true' && inputs.deploy != false && steps.deploy_main_1.outcome == 'failure'
         with:
           branch: gh-pages
           folder: ./output
@@ -1003,6 +1027,18 @@ jobs:
             STAGING
             _render-log
             folio-build.json
+
+      # The default branch over a folio root: a preview like any branch's,
+      # never the root (see "Is the gh-pages root a folio site?").
+      - name: Deploy main beside the folio root
+        uses: JamesIves/github-pages-deploy-action@v4.4.2
+        if: env.IS_DEFAULT_BRANCH == 'true' && env.FOLIO_ROOT == 'true' && inputs.deploy != false
+        with:
+          branch: gh-pages
+          folder: ./output
+          commit-message: Deploy main branch (preview beside the folio root)
+          target-folder: branches/${{ env.BRANCH_DIR }}
+          clean: false
 
       # ── Commit updated README.md back to the source branch ──────────────
       # Runs only when deploying from the default branch (not on PRs or

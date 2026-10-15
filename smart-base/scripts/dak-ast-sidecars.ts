@@ -120,6 +120,25 @@ export function lockedSmartBase(from: string): { repository: string; sha: string
   }
 }
 
+/**
+ * The checkout's own `input/scripts/`, when the nearest `index.config.json`
+ * above `from` declares smart-base as a LOCAL instance: litlfred/smart-base's
+ * own repository, which mounts no smart-base because it is one. Its
+ * generators at this very commit are the ones the build is pinned to.
+ */
+export function localSmartBaseScripts(from: string): string | undefined {
+  for (let d = resolve(from); ; d = dirname(d)) {
+    const p = join(d, "index.config.json");
+    if (existsSync(p)) {
+      const idx = JSON.parse(readFileSync(p, "utf-8")) as { instances?: { name?: string; source?: { local?: unknown } }[] };
+      const local = (idx.instances ?? []).some((i) => i.name === "smart-base" && i.source?.local !== undefined);
+      const scripts = join(d, "input", "scripts");
+      return local && GENERATORS.every((g) => existsSync(join(scripts, g))) ? scripts : undefined;
+    }
+    if (dirname(d) === d) return undefined;
+  }
+}
+
 function git(args: string[], cwd: string): void {
   const r = spawnSync("git", args, { cwd, stdio: ["ignore", "ignore", "pipe"] });
   if (r.status !== 0) throw new Error(`git ${args.join(" ")}: ${r.stderr?.toString().trim()}`);
@@ -149,12 +168,17 @@ if (import.meta.main) {
     let scripts = opt("--scripts");
     if (!scripts) {
       const pin = lockedSmartBase(process.cwd());
-      if (!pin) {
-        console.error("no --scripts given and no index.lock.json pins smart-base: cannot tell which generators to run");
+      const local = pin ? undefined : localSmartBaseScripts(process.cwd());
+      if (pin) {
+        scripts = fetchGenerators(pin.repository, pin.sha, join(work, "smart-base"));
+        console.error(`generators: ${pin.repository}@${pin.sha.slice(0, 12)} input/scripts/`);
+      } else if (local) {
+        scripts = local;
+        console.error(`generators: this checkout's own ${local} (smart-base is a local instance here)`);
+      } else {
+        console.error("no --scripts given, no index.lock.json pins smart-base, and smart-base is not a local instance here: cannot tell which generators to run");
         process.exit(2);
       }
-      scripts = fetchGenerators(pin.repository, pin.sha, join(work, "smart-base"));
-      console.error(`generators: ${pin.repository}@${pin.sha.slice(0, 12)} input/scripts/`);
     }
     for (const g of GENERATORS) if (!existsSync(join(scripts, g))) throw new Error(`${g} is not in ${scripts}`);
     const flat = join(work, "output");
