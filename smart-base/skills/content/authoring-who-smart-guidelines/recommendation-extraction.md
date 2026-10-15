@@ -359,3 +359,13 @@ library, which is its home, with the check that keeps it current (owner,
 The generic rung it was run with stays here, as
 `smart-base/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json`,
 because the handbook example above uses it too.
+
+**An authored L1 from pictures.** When the source prints its recommendations
+only as images (a schedule poster, a slide deck), Part 1 finds nothing and the
+L1 is authored from the inspected image narratives and from transcriptions of
+the rendered page. The Tool `l1-transcription-verbatim` is its check: every
+statement verbatim in the narrative or transcription it names, every
+transcription word corroborated by the text layer unless listed under
+`inspectionOnly` with its basis. The Uganda schedule poster and UNEPI deck
+(litlfred/smart-immunizations-uganda, `library/l1-recommendation-scenarios/uganda/`)
+are the worked example.

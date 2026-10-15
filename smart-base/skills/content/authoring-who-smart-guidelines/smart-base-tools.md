@@ -25,7 +25,7 @@ it.**
 > quietly becomes a fork — which is the failure this rule was written against
 > and is still the failure to avoid.
 >
-> Ten tools are declared. Two upstream scripts deliberately are **not**:
+> Eleven tools are declared. Two upstream scripts deliberately are **not**:
 > `strip_library_binaries.py` and `strip_library_content.py` are not DAK-shaped
 > and belong to `fhir-harness` — see
 > [`smart-stack-layering`](smart-stack-layering.md). The DAK repositories' own GitHub Actions invoke those scripts in place,
@@ -111,6 +111,7 @@ stage-5 dependency row of
    | CQL libraries (compile and refresh) | `input/cql/*.cql` | cqf tooling-cli `-RefreshIG` (`_refresh.sh`); the IG Publisher compiles CQL in the build |
    | test cases | `input/tests/plandefinition/<Library>/*.yaml` | `tools/node/makeExample.js` into FHIR test bundles |
    | L1 recommendations transcribed verbatim | `*.l1.yaml` (measles) | litlfred/test `tools/build_l1.py` |
+   | L1 authored from pictures (posters, slides) | `*.l1.yaml` with `image:` / `from:` | the smart-base Tool `l1-transcription-verbatim` |
 
 3. **WHO's method.** The WHO IG Starter Kit (`smart.who.int/ig-starter-kit`:
    `l2_dak_authoring`, `l3_decisiontables`, `l3_cql`, `l3_testing`) and its
