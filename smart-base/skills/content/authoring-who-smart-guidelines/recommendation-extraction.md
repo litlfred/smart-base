@@ -231,16 +231,19 @@ schedule-design or programme decision is not a per-client process.
 
 ### Run it
 
-1. **The vocabulary.** For smart-immunizations, read its two pages into the
+1. **The vocabulary.** For the target guide, read its two pages
+   (`business-processes.md`, `personas.md`) from a guide checkout into the
    vocabulary JSON; for the generic rung, read smart-base's ActorDefinitions:
 
    ```sh
-   bun run smart-base/scripts/l1-scenario-vocabulary.ts --immz <smart-immunizations checkout> --out immz-vocabulary.json
+   bun run smart-base/scripts/l1-scenario-vocabulary.ts --guide <guide checkout> --out guide-vocabulary.json
    bun run smart-base/scripts/l1-scenario-vocabulary.ts --fsh-actors <smart-base checkout>/input/fsh/actors --out smart-base-generic-personas.json
    ```
 
    Each file records the repository, the commit, and the file and line every
-   entry came from. Persona ids are `slug(title)` where the guide prints none
+   entry came from. The guide's name, namespace and repository are read from
+   the checkout itself — its `<name>.json` declaration and its
+   `sushi-config.yaml` `canonical` — so the script names no guide. Persona ids are `slug(title)` where the guide prints none
    (what smart-kg `kgid.mjs` mints a persona IRI from); process ids are the
    printed Process IDs.
 2. **The mapping** (`l1-scenario-mapping/v1`, YAML), authored: per
@@ -253,7 +256,7 @@ schedule-design or programme decision is not a per-client process.
 
    ```sh
    bun run smart-base/scripts/l1-recommendation-scenarios.ts \
-     --l1 <recommendations.yaml | l1-graph.json> --vocabulary immz-vocabulary.json \
+     --l1 <recommendations.yaml | l1-graph.json> --vocabulary guide-vocabulary.json \
      --generic smart-base-generic-personas.json --mapping mapping.yaml --out <dir> [--check]
    ```
 

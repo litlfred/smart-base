@@ -10,14 +10,23 @@
  *
  * ## Two readers, one shape
  *
- * - `--immz <checkout>`: a smart-immunizations checkout. Its processes are the
- *   markdown table in `input/pagecontent/business-processes.md` (IMMZ.A–I),
- *   and its personas the two HTML tables in `input/pagecontent/personas.md`.
- *   The guide holds no ActorDefinition and no BPMN (bean `96y4`), so these
- *   pages ARE its persona and process vocabulary. tier `guide`.
+ * - `--guide <checkout>`: a SMART guideline's IG checkout. Its processes are
+ *   the markdown table in `input/pagecontent/business-processes.md`, and its
+ *   personas the HTML tables in `input/pagecontent/personas.md` — the DAK page
+ *   conventions every SMART guideline shares. A guide that holds no
+ *   ActorDefinition and no BPMN (bean `96y4`) has these pages as its persona
+ *   and process vocabulary. tier `guide`.
  * - `--fsh-actors <dir>`: smart-base's own generic personas,
  *   `input/fsh/actors/DAK.Persona.*.fsh` (ISCO / CDHI). tier `generic`, the
  *   second rung of the precedence; it holds no processes.
+ *
+ * ## The guide's own identity — read from the checkout, never named here
+ *
+ * `guide`, `namespace` and `source.repository` come from the checkout's own
+ * declarations (`guideIdentity`): the harness declaration `<name>.json` at its
+ * root or one directory down (`name`, `repository`), and `sushi-config.yaml`
+ * `canonical` (or `dak.json` `canonicalUrl`) for the namespace, in the
+ * `dakNamespace` form. Without a declaration the name is the repository's.
  *
  * ## Identity — read, never improved
  *
@@ -25,10 +34,10 @@
  * is what smart-kg `kgid.mjs` `personaId` mints a persona IRI from. A generic
  * persona's id is its FSH instance id (`DAK.Persona.HealthcareProvider`),
  * because that is what a `Canonical()` reference resolves against. A
- * process's id is the printed Process ID (`IMMZ.D`). Every entry keeps the
+ * process's id is the printed Process ID (e.g. `IMMZ.D`). Every entry keeps the
  * file and the row it was read from, and the file records the commit.
  *
- *   bun run smart-base/scripts/l1-scenario-vocabulary.ts --immz <smart-immunizations> --out <file> [--check]
+ *   bun run smart-base/scripts/l1-scenario-vocabulary.ts --guide <guide checkout> --out <file> [--check]
  *   bun run smart-base/scripts/l1-scenario-vocabulary.ts --fsh-actors <dir> --out <file> [--check]
  *
  * @module smart-base/scripts/l1-scenario-vocabulary
@@ -39,7 +48,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, join, relative, resolve } from "node:path";
 import { z } from "zod";
 
-import { slug } from "./l1-kgid.ts";
+import { dakNamespace, slug } from "./l1-kgid.ts";
 
 export const VOCABULARY_SCHEMA_TAG = "l1-scenario-vocabulary/v1" as const;
 
@@ -133,7 +142,7 @@ const isco = (s: string): string[] | undefined => {
   return codes.length ? codes : undefined;
 };
 
-export function readImmz(root: string, rel: (p: string) => string): Pick<Vocabulary, "personas" | "processes"> {
+export function readGuidePages(root: string, rel: (p: string) => string): Pick<Vocabulary, "personas" | "processes"> {
   const bpPath = join(root, "input/pagecontent/business-processes.md");
   const peoplePath = join(root, "input/pagecontent/personas.md");
   const processes: VocabProcess[] = markdownTable(readFileSync(bpPath, "utf8"), ["Process Name", "Process ID", "Personas", "Objectives"])
@@ -193,6 +202,43 @@ const repoName = (cwd: string): string => {
   }
 };
 
+/** The `canonical:` of a `sushi-config.yaml` — a top-level scalar, so no YAML parser is needed. */
+export const sushiCanonical = (text: string): string | undefined =>
+  /^canonical:\s*["']?([^\s"'#]+)["']?\s*(#.*)?$/m.exec(text)?.[1];
+
+/**
+ * A guide checkout's name, namespace and repository, from its own declarations.
+ * The harness declaration is the `<name>.json` whose `$schema` is a
+ * `cat-harness-declaration`, at the root or one directory down; the namespace
+ * is the IG's canonical (`sushi-config.yaml`, else `dak.json` `canonicalUrl`).
+ */
+export function guideIdentity(root: string, fallbackRepository: () => string): { guide: string; namespace: string; repository: string } {
+  const candidates = [
+    ...readdirSync(root).filter((f) => f.endsWith(".json")).map((f) => join(root, f)),
+    ...readdirSync(root, { withFileTypes: true })
+      .filter((d) => d.isDirectory() && !d.name.startsWith(".") && d.name !== "node_modules")
+      .flatMap((d) => readdirSync(join(root, d.name)).filter((f) => f.endsWith(".json")).map((f) => join(root, d.name, f))),
+  ];
+  const declarations = new Map<string, { name: string; repository?: string }>();
+  for (const f of candidates) {
+    try {
+      const j = JSON.parse(readFileSync(f, "utf8"));
+      if (typeof j?.$schema === "string" && j.$schema.startsWith("cat-harness-declaration") && typeof j.name === "string")
+        declarations.set(j.name, { name: j.name, ...(typeof j.repository === "string" ? { repository: j.repository } : {}) });
+    } catch { /* not JSON we read */ }
+  }
+  if (declarations.size > 1)
+    throw new Error(`${root}: ${declarations.size} harness declarations (${[...declarations.keys()].join(", ")}); cannot tell which is the guide`);
+  const declared = [...declarations.values()][0];
+  const sushi = join(root, "sushi-config.yaml");
+  const dak = join(root, "dak.json");
+  const canonical = (existsSync(sushi) ? sushiCanonical(readFileSync(sushi, "utf8")) : undefined)
+    ?? (existsSync(dak) ? JSON.parse(readFileSync(dak, "utf8"))?.canonicalUrl : undefined);
+  if (!canonical) throw new Error(`${root}: neither sushi-config.yaml \`canonical\` nor dak.json \`canonicalUrl\` — is this a guide checkout?`);
+  const repository = declared?.repository ?? fallbackRepository();
+  return { guide: declared?.name ?? basename(repository), namespace: dakNamespace(canonical), repository };
+}
+
 export const serialise = (v: Vocabulary): string => JSON.stringify(v, null, 2) + "\n";
 
 if (import.meta.main) {
@@ -202,24 +248,25 @@ if (import.meta.main) {
     return i >= 0 ? args[i + 1] : undefined;
   };
   const out = opt("--out");
-  const immz = opt("--immz");
+  const guideRoot = opt("--guide");
   const actors = opt("--fsh-actors");
-  if (!out || (!immz === !actors)) {
-    console.error("usage: l1-scenario-vocabulary.ts (--immz <smart-immunizations> | --fsh-actors <dir>) --out <file> [--check]");
+  if (!out || (!guideRoot === !actors)) {
+    console.error("usage: l1-scenario-vocabulary.ts (--guide <guide checkout> | --fsh-actors <dir>) --out <file> [--check]");
     process.exit(2);
   }
   let vocab: Vocabulary;
-  if (immz) {
-    const root = resolve(immz);
+  if (guideRoot) {
+    const root = resolve(guideRoot);
     const rel = (p: string) => relative(root, p);
+    const { guide, namespace, repository } = guideIdentity(root, () => repoName(root));
     vocab = {
       $schema: VOCABULARY_SCHEMA_TAG,
-      _comment: "GENERATED by smart-base/scripts/l1-scenario-vocabulary.ts --immz from the two pages named in source.paths at source.commit. Never hand-edit: re-run it. Persona ids are slug(title) because personas.md prints none; process ids are the printed Process ID.",
+      _comment: "GENERATED by smart-base/scripts/l1-scenario-vocabulary.ts --guide from the two pages named in source.paths at source.commit. Never hand-edit: re-run it. Persona ids are slug(title) because personas.md prints none; process ids are the printed Process ID.",
       tier: "guide",
-      guide: "smart-immunizations",
-      namespace: "https://smart.who.int/immunizations",
-      source: { repository: repoName(root), commit: git(root, "rev-parse", "HEAD"), paths: ["input/pagecontent/business-processes.md", "input/pagecontent/personas.md"] },
-      ...readImmz(root, rel),
+      guide,
+      namespace,
+      source: { repository, commit: git(root, "rev-parse", "HEAD"), paths: ["input/pagecontent/business-processes.md", "input/pagecontent/personas.md"] },
+      ...readGuidePages(root, rel),
     };
   } else {
     const dir = resolve(actors!);
