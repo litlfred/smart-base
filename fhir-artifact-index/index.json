@@ -13146,12 +13146,12 @@
   "sidecarsUnbound": [
     {
       "filename": "LogicalModels-enumeration.openapi.json",
-      "enumeration": "/tmp/claude-0/-home-user/f4829056-f65c-544d-8544-f8cb39133cec/scratchpad/smart-base-site/ig-api/sidecars",
+      "enumeration": "/home/user/smart-base-site/ig-api/sidecars",
       "reason": "no artefact has the stem LogicalModels-enumeration as <Type>-<id>, <Type>-<name> or <Type>-<title>"
     },
     {
       "filename": "ValueSets-enumeration.openapi.json",
-      "enumeration": "/tmp/claude-0/-home-user/f4829056-f65c-544d-8544-f8cb39133cec/scratchpad/smart-base-site/ig-api/sidecars",
+      "enumeration": "/home/user/smart-base-site/ig-api/sidecars",
       "reason": "no artefact has the stem ValueSets-enumeration as <Type>-<id>, <Type>-<name> or <Type>-<title>"
     }
   ]

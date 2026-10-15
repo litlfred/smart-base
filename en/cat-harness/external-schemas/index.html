@@ -578,33 +578,33 @@
   them: those are versioned in their own URLs already.
 -->
 <!-- The harness icon row's own style, which railed pages load without docs-ui.css (beans `lhvt`, `9rq1`). -->
-<link rel="stylesheet" href="/smart-base/assets/css/navbar-row.css?v=1792090009">
-<link rel="stylesheet" href="/smart-base/assets/css/docs-ui.css?v=1792090009">
+<link rel="stylesheet" href="/smart-base/assets/css/navbar-row.css?v=1792091500">
+<link rel="stylesheet" href="/smart-base/assets/css/docs-ui.css?v=1792091500">
 <!-- Narrow viewports: wide content scrolls in its own box, never the page
      (bean `2r2n`). The standalone viewers inline the same file through
      `withViewerNav`, so both kinds of page read one set of rules. -->
-<link rel="stylesheet" href="/smart-base/assets/css/narrow-viewport.css?v=1792090009">
+<link rel="stylesheet" href="/smart-base/assets/css/narrow-viewport.css?v=1792091500">
 
 <!--
   The work-plan dashboard's styles, split from docs-ui.css so that
   `state-visualizer.ts` can inline exactly these bytes into the generated
   `<base>/<stub>/state-visualizer/` pages. One rule, two surfaces.
 -->
-<link rel="stylesheet" href="/smart-base/assets/css/work-plan.css?v=1792090009">
+<link rel="stylesheet" href="/smart-base/assets/css/work-plan.css?v=1792091500">
 <!-- Sticky themes. GENERATED from the theme nodes in `schemas/themes.ts` by
      `bun run cat themes:css`; `themes:css:check` fails the build when it is stale.
      Loaded AFTER docs-ui.css deliberately: it supplies the `--fa-sticky-*`
      roles that docs-ui.css consumes, and a custom property has to be set on a
      matching element before the rule reading it takes effect. -->
-<link rel="stylesheet" href="/smart-base/assets/css/themes.css?v=1792090009">
+<link rel="stylesheet" href="/smart-base/assets/css/themes.css?v=1792091500">
 <!-- UML overview colours: one class per graph typology, set on the Mermaid nodes
      that `scripts/gen-uml-overview.ts` writes into docs/uml/overview/. -->
-<link rel="stylesheet" href="/smart-base/assets/css/uml.css?v=1792090009">
+<link rel="stylesheet" href="/smart-base/assets/css/uml.css?v=1792091500">
 <!-- Kind avatars. GENERATED from `schemas/avatars.ts` by `bun run cat avatars:css`;
      `avatars:css:check` fails the build when it is stale. One stylesheet
      rather than 68 assets: the glyph is a mask and the colour is a property,
      so a scheme swap is a custom property and the trash state is a selector. -->
-<link rel="stylesheet" href="/smart-base/assets/css/avatars.css?v=1792090009">
+<link rel="stylesheet" href="/smart-base/assets/css/avatars.css?v=1792091500">
 
 <!--
   The kinds THIS INSTANCE DECLARES, for the avatar fan.
@@ -625,12 +625,12 @@
 <!-- BEFORE docs-ui.js and work-plan.js: both read window.faRender. -->
 <script src="/smart-base/assets/js/kg-render.js" defer></script>
 <!-- BEFORE docs-ui.js, which calls it: the one drawing of the harness icon row (beans `lhvt`, `9rq1`). -->
-<script src="/smart-base/assets/js/navbar-row.js?v=1792090009" defer></script>
-<script src="/smart-base/assets/js/docs-ui.js?v=1792090009" defer></script>
+<script src="/smart-base/assets/js/navbar-row.js?v=1792091500" defer></script>
+<script src="/smart-base/assets/js/docs-ui.js?v=1792091500" defer></script>
 <!-- The edit, source and feedback links of every page, from the platform's one
   recipe (cat-harness-tools/src/core/edit-links.ts, bean v433): links carry their
   facts and this builds the hrefs. -->
-<script src="/smart-base/assets/js/edit-links.js?v=1792090009" defer></script>
+<script src="/smart-base/assets/js/edit-links.js?v=1792091500" defer></script>
 
 <!--
   The work-plan dashboard. SELF-MOUNTING on any page carrying
@@ -846,7 +846,7 @@ depends on it</strong>, and <strong>which of its terms this repository branches 
 <div class="xs-grid">
 <div class="xs-stat"><b>28</b><span>specifications</span></div>
 <div class="xs-stat"><b>107</b><span>operative terms in graph (65 described, 42 pending)</span></div>
-<div class="xs-stat"><b>274</b><span>declared uses</span></div>
+<div class="xs-stat"><b>532</b><span>declared uses</span></div>
 <div class="xs-stat"><b>0</b><span>declarations naming no record</span></div>
 </div>
 
@@ -1058,12 +1058,6 @@ front-matter list, an <code class="language-plaintext highlighter-rouge">xmlns</
 declares the spec (bean <code class="language-plaintext highlighter-rouge">u63y</code>).</p>
 
 <p>Every declaration names a record on this page.</p>
-
-<p><strong>1 record(s) nothing declares.</strong> A version bump would move nothing that says so:</p>
-
-<ul>
-  <li><a href="#w3c-sparql-1.1-query"><code class="language-plaintext highlighter-rouge">w3c-sparql-1.1-query</code></a></li>
-</ul>
 <h2 id="namespaces-the-corpus-uses-against-the-ones-it-declares">
   
   
@@ -1073,20 +1067,11 @@ declares the spec (bean <code class="language-plaintext highlighter-rouge">u63y<
 </h2>
     
 
-<p>Read from diagram files (BPMN and DMN), metadata records, and JSON-LD contexts — <strong>33</strong> namespace IRI(s)
+<p>Read from diagram files (BPMN and DMN), metadata records, and JSON-LD contexts — <strong>35</strong> namespace IRI(s)
 are in use across the corpus. Derived rather than listed, so an artefact that adopts a new
 vocabulary shows up here instead of going unnoticed.</p>
 
 <p>Every namespace the corpus declares is covered by a record above.</p>
-
-<p><strong>2 declared and not in use.</strong> Not a defect on its own: a
-record may cover a namespace only some artefacts carry. It is here because
-a registry nobody prunes is one that stops describing the repository.</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">http://www.w3.org/ns/formats/N-Quads</code></li>
-  <li><code class="language-plaintext highlighter-rouge">https://www.omg.org/spec/DMN/20191111/DMNDI/</code></li>
-</ul>
 <h2 id="each-specification">
   
   
@@ -1154,6 +1139,34 @@ a registry nobody prunes is one that stops describing the repository.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/skills/library/catalogue/oxigraph-catalogue-search.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/kg-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/ns-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/todo-graph.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/schemas/dublin-core-render.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/schemas/dublin-core.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/skills/library/catalogue/oxigraph-catalogue-search.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/who-iris/skills/iris-dspace.md</code></td>
       <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
     </tr>
     <tr>
@@ -1307,6 +1320,18 @@ a subset of the edition rather than a transcription of it.</p>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/vocab-mapping-fhir.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/vocab-mapping.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">vocab-mapping graph</code></td>
       <td>through the module that types it (<code class="language-plaintext highlighter-rouge">cat-harness/schemas/vocab-mapping.ts</code>)</td>
     </tr>
@@ -1364,6 +1389,10 @@ a subset of the edition rather than a transcription of it.</p>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/prov-jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/prov-jsonld.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
   </tbody>
@@ -1469,6 +1498,82 @@ graph. That is a determined zero, not an unfilled field.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/ui/*.bpmn (3)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/bootstrap-tools/processes/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/bootstrap/processes/*.bpmn (5)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/content/*.bpmn (3)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/kg/*.bpmn (10)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/library/*.bpmn (10)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/process/*.bpmn (12)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/sdlc/*.bpmn (26)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/ui/*.bpmn (4)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/kg-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/render-bpmn.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/src/workflow/process-model.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/fhir-harness/processes/content/*.bpmn (3)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/processes/conduct/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/processes/content/*.bpmn (7)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/processes/library/*.bpmn (6)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/processes/ui/*.bpmn (3)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-sci/processes/content/*.bpmn (2)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/smart-base/methodologies/processes/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/smart-base/processes/content/*.bpmn (2)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
@@ -1667,6 +1772,74 @@ a subset of the edition rather than a transcription of it.</p>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/bootstrap-tools/processes/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/bootstrap/processes/*.bpmn (5)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/content/*.bpmn (3)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/kg/*.bpmn (10)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/library/*.bpmn (10)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/process/*.bpmn (12)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/sdlc/*.bpmn (26)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/ui/*.bpmn (4)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/render-bpmn.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/fhir-harness/processes/content/*.bpmn (3)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/processes/conduct/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/processes/content/*.bpmn (7)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/processes/library/*.bpmn (6)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/processes/ui/*.bpmn (3)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-sci/processes/content/*.bpmn (2)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/smart-base/methodologies/processes/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/smart-base/processes/content/*.bpmn (2)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">smart-base/methodologies/processes/*.bpmn (1)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
@@ -1730,6 +1903,30 @@ graph. That is a determined zero, not an unfilled field.</p>
       <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/content/decisions/*.dmn (2)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/kg/decisions/*.dmn (4)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/process/decisions/*.dmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/processes/sdlc/decisions/*.dmn (3)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/processes/conduct/decisions/*.dmn (2)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/processes/content/decisions/*.dmn (2)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-sci/processes/content/decisions/*.dmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
   </tbody>
 </table></div>
 
@@ -1771,6 +1968,10 @@ graph. That is a determined zero, not an unfilled field.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/archimate/schemas/archimate.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/archimate/scripts/gen-archimate-pages.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
   </tbody>
@@ -1853,6 +2054,14 @@ graph. That is a determined zero, not an unfilled field.</p>
       <td><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/todo-graph.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/kg-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/todo-graph.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
   </tbody>
 </table></div>
 
@@ -1921,6 +2130,10 @@ a subset of the edition rather than a transcription of it.</p>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/jsonld.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
   </tbody>
@@ -2040,6 +2253,10 @@ graph. That is a determined zero, not an unfilled field.</p>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/spdx-license-expression.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/spdx-license-expression.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
   </tbody>
 </table></div>
 
@@ -2075,6 +2292,10 @@ graph. That is a determined zero, not an unfilled field.</p>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/jsonld.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
   </tbody>
@@ -2131,6 +2352,10 @@ a subset of the edition rather than a transcription of it.</p>
       <td><code class="language-plaintext highlighter-rouge">cat-harness-tools/openapi/scripts/gen-openapi-pages.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/openapi/scripts/gen-openapi-pages.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
   </tbody>
 </table></div>
 
@@ -2174,6 +2399,22 @@ graph. That is a determined zero, not an unfilled field.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/skills/kg/graph-management/nquads-distribution.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/nquads-distribution.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/skills/kg/graph-management/named-query-execution.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/skills/kg/graph-management/nquads-distribution.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/who-iris/skills/iris-oxigraph.md</code></td>
       <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
     </tr>
   </tbody>
@@ -2232,6 +2473,10 @@ a subset of the edition rather than a transcription of it.</p>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/odrl.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/odrl.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
     <tr>
@@ -2352,6 +2597,18 @@ a subset of the edition rather than a transcription of it.</p>
       <td><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/ns-export.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/code-lists.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/glossary-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/ns-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
   </tbody>
 </table></div>
 
@@ -2416,6 +2673,10 @@ a subset of the edition rather than a transcription of it.</p>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/prov-jsonld.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/prov-jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
   </tbody>
 </table></div>
 
@@ -2459,6 +2720,18 @@ graph. That is a determined zero, not an unfilled field.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/bootstrap-tools/scripts/export-graph.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/kg-export.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
   </tbody>
@@ -2523,6 +2796,10 @@ a subset of the edition rather than a transcription of it.</p>
       <td><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/todo-graph.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/todo-graph.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
   </tbody>
 </table></div>
 
@@ -2570,6 +2847,22 @@ graph. That is a determined zero, not an unfilled field.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/skills/library/catalogue/oxigraph-catalogue-search.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/code-lists.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/ns-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/schemas/dublin-core-render.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/skills/library/catalogue/oxigraph-catalogue-search.md</code></td>
       <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
     </tr>
   </tbody>
@@ -2636,6 +2929,18 @@ a subset of the edition rather than a transcription of it.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/ns-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/glossary-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/kg-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/ns-export.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
   </tbody>
@@ -2722,6 +3027,26 @@ a subset of the edition rather than a transcription of it.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/vocabulary.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/vocab-mapping.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/vocabulary.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/glossary-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/ns-export.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
     <tr>
@@ -2850,7 +3175,22 @@ a subset of the edition rather than a transcription of it.</p>
 
 <p><strong>Note.</strong> The query language who-iris’s Oxigraph pipeline (skill iris-oxigraph) runs over the catalogue’s N-Quads: faceted rollups and combined queries, in the browser (WebAssembly) and on the CLI. A language, not an RDF vocabulary, so it claims no namespace; the IRIs its queries match are the vocabularies’ own (dcterms, skos, …), recorded under those.</p>
 
-<p><strong>What depends on it.</strong> Nothing here declares it.</p>
+<p><strong>What depends on it.</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>user</th>
+      <th>declared by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/who-iris/skills/iris-oxigraph.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+  </tbody>
+</table></div>
 
 <p><strong>No operative terms.</strong> This repository conforms to the specification
 without branching on any of its terms, so none is materialised into the
@@ -2884,6 +3224,10 @@ graph. That is a determined zero, not an unfilled field.</p>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/jsonld.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
   </tbody>
@@ -2927,6 +3271,14 @@ graph. That is a determined zero, not an unfilled field.</p>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/jsonld.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/scripts/kg-export.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
   </tbody>
 </table></div>
 
@@ -2966,6 +3318,10 @@ graph. That is a determined zero, not an unfilled field.</p>
       <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/schemas/dublin-core-render.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/folio-assistant-core/schemas/dublin-core-render.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
   </tbody>
 </table></div>
 
@@ -3003,6 +3359,10 @@ graph. That is a determined zero, not an unfilled field.</p>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/schemas/jsonld.ts</code></td>
+      <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant/cat-harness/schemas/jsonld.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
     </tr>
   </tbody>
