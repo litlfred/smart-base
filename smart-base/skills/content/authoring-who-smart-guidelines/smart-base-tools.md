@@ -100,7 +100,7 @@ stage-5 dependency row of
    folio-assistant-core, cat-harness), with the skills each satisfies.
 2. **The upstream repository's own toolchain.** Read the dependency's
    repository, not only its published IG. For the WHO immunizations DAK
-   (litlfred/smart-immunizations), what it uses:
+   (<https://github.com/litlfred/smart-immunizations>), what it uses:
 
    | component | upstream source | how it is produced |
    |---|---|---|

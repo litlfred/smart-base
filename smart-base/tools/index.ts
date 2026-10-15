@@ -204,7 +204,7 @@ export function tools(baseUrl?: string): ToolDefinition[] {
       selection: {
         when: "An L2 decision-support, scheduling, requirements or data-dictionary component is created or adapted, and the upstream DAK keeps it in the WHO DAK spreadsheet template. Look for that spreadsheet in the upstream repository before writing any decision table by hand.",
         limits:
-          "It reads only the DAK template layout (COVER sheet, per-tab inputs and outputs); a table in any other shape is invisible to it. It requires a `smart-base` checkout at `SMART_BASE_HOME`; without one the capability is ABSENT, not a clean run. Some DAK repositories (litlfred/smart-immunizations) also carry their own converters (`tools/node/processDT*.js`); use the upstream's own where it has one.",
+          "It reads only the DAK template layout (COVER sheet, per-tab inputs and outputs); a table in any other shape is invisible to it. It requires a `smart-base` checkout at `SMART_BASE_HOME`; without one the capability is ABSENT, not a clean run. Some DAK repositories (https://github.com/litlfred/smart-immunizations) also carry their own converters (`tools/node/processDT*.js`); use the upstream's own where it has one.",
         cost: "Seconds to minutes, no network unless `--run-publisher` is passed.",
       },
       requires: { runtime: ["python3"], network: false },

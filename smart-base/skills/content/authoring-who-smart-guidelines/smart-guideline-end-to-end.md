@@ -91,7 +91,7 @@ first and have sign off"*, ruled as *order strict, sign-off QA*:
    absence as permission to go straight to L3.
 
 **Why the rule is written down.** On 2026-10-15 an agent asked to adapt
-the WHO immunization guidelines to Uganda (litlfred/smart-immunizations-uganda#1)
+the WHO immunization guidelines to Uganda (<https://github.com/litlfred/smart-immunizations-uganda/issues/1>)
 read the poster and the UNEPI deck by eye and wrote CQL, a PlanDefinition and
 prose pages directly (#3): no library entry, no L1 extraction, no L2 decision
 table, no review requested. CI was green throughout. The causes were that the

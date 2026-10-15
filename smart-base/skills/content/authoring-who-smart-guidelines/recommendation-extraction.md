@@ -188,7 +188,7 @@ entry as a stray child and a sibling directory as an entry with no
 `structure.json`; it fails the QA working copy, and with it every test
 shard, gate and the staging build that read the copy. That is what happened
 to the Uganda adaptation on 2026-10-15 (folio-assistant#2559, fixed by
-smart-immunizations-uganda `6baddb4`). Before staging, run
+<https://github.com/litlfred/smart-immunizations-uganda/commit/6baddb4>). Before staging, run
 `bun run cat check:l1-complete` in a folio-assistant checkout that mounts the
 instance at the commit being staged; it must exit 0.
 
@@ -367,5 +367,5 @@ the rendered page. The Tool `l1-transcription-verbatim` is its check: every
 statement verbatim in the narrative or transcription it names, every
 transcription word corroborated by the text layer unless listed under
 `inspectionOnly` with its basis. The Uganda schedule poster and UNEPI deck
-(litlfred/smart-immunizations-uganda, `library/l1-recommendation-scenarios/uganda/`)
+(<https://github.com/litlfred/smart-immunizations-uganda/tree/main/library/l1-recommendation-scenarios/uganda>)
 are the worked example.

@@ -101,7 +101,7 @@ by: no skills on disk, no process, nothing saying the work is staged L1 → L2
 [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), *The order is
 a rule*) went straight to L3 for that reason. So route `new-repo` writes,
 before any guideline content, by copying an existing guideline repository
-(litlfred/smart-immunizations) rather than typing them:
+(<https://github.com/litlfred/smart-immunizations>) rather than typing them:
 
 | file | what it does |
 |---|---|
