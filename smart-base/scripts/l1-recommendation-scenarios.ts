@@ -69,7 +69,8 @@
  *     [--generic <generic-personas.json>] --mapping <mapping.yaml> --out <dir> [--check]
  *
  * @module smart-base/scripts/l1-recommendation-scenarios
- * @covers scenarios
+ * @covers scenarios, l1-extraction — `smart-base:l1-scenarios:check` judges the handbook example's
+ *   `l1-extraction/scenarios/` against the L1 graph, vocabulary and mapping beside it
  */
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
