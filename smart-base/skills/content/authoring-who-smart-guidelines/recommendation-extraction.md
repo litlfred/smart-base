@@ -11,6 +11,8 @@ description: >
   does it and where. Covers the hybrid extraction (mechanical candidates, agent
   structuring, verbatim and 100 % coverage gates), the reuse-first precedence
   for personas and processes, the WARNING format, and sign-off.
+input: schemas/skills/recommendation-extraction/input.schema.json
+output: schemas/skills/recommendation-extraction/output.schema.json
 ---
 
 # recommendation-extraction
@@ -30,6 +32,21 @@ Every recommendation will end up in a SMART Guideline that is a **clinical**,
 **public-health** or **health-system-strengthening** guideline, and will feed
 the L2 assets derived from it. This skill records that, per recommendation,
 before any L2 asset is drawn.
+
+## Input and output
+
+The contract is [`input.schema.json`](../../../schemas/skills/recommendation-extraction/input.schema.json) and [`output.schema.json`](../../../schemas/skills/recommendation-extraction/output.schema.json).
+
+- **In:** `l1Sources`, [`dak-l1-library`](dak-l1-library.md)'s output, and the `targetGuide` whose personas and processes the scenarios reuse first.
+- **Out:** `l1Kg`: per included source, its `extractionPath` (`library/<bib>/l1-extraction/`), `sourceVersion`, the recommendation, remark, practice and scenario-candidate counts, the `coverage` and every `WARNING`. Stages 3 ([`l2-dependency-choice`](l2-dependency-choice.md)), 4 and 5 take it as their `l1Kg`.
+
+As stage 2 of [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), a
+source is **skipped only when it is already in a KG**: `library/<bib>/l1-extraction/`
+is there, declared, and at the same source version (`skipped: true` in the
+output). A library entry with no extraction still needs this half, after
+`bun run cat ingest` and [`dak-l1-library`](dak-l1-library.md)'s generic-document
+layer have put it in `library/`. Skipping is per source, not for the whole
+stage.
 
 ## The two halves
 

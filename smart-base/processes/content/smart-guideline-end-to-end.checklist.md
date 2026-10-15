@@ -4,7 +4,7 @@
 
 > **Generated, and not the authority.** This is `smart-base/processes/content/smart-guideline-end-to-end.bpmn` (process `Process_SgEndToEnd`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
 
-From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the application the requester describes.
+From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the L4 consuming application the requester describes.
 
 ## Begin — Use case to support (`StartEvent_Need`)
 
@@ -15,7 +15,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 1. 0 · Describe the use case (`Task_DescribeUseCase`)
 
 - Who: the `Requester (country team / implementer)` lane (role `user`).
-- Skill: `smart-guideline-end-to-end`.
+- Skill: `guideline-use-case`.
 - What: Population, setting, jurisdiction, interventions in scope.
 - Record it: `workflow_complete` with `node: "Task_DescribeUseCase"`.
 - next: → `Task_IdentifyL1` (1 · Identify L1 guidelines and recommendations)
@@ -23,7 +23,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 2. 1 · Identify L1 guidelines and recommendations (`Task_IdentifyL1`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `dak-l1-library`, `smart-guideline-end-to-end`.
+- Skill: `dak-l1-library`.
 - What: Component 1 sources of any DAK already in scope first, then WHO IRIS and the jurisdiction's own guidelines.
 - Record it: `workflow_complete` with `node: "Task_IdentifyL1"`.
 - next: → `Fork_L1`
@@ -44,17 +44,17 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### Decide — All sources in an L1 KG? (`Gateway_InKg`)
 
 - Call `workflow_complete` with `node: "Gateway_InKg"` and `outcome` set to the label that holds:
-  - «no» → `Task_IngestKg` (2 · Ingest into the L1 KG [dak-l1-library · recommendation-extraction])
+  - «no» → `Task_IngestKg` (2 · Ingest into the L1 KG)
   - «yes» → `Gateway_KgMerge`
 
 ## Done — Adjudicated (`End_AdjL1`)
 
 - The instance completes here. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
 
-### 4. 2 · Ingest into the L1 KG [dak-l1-library · recommendation-extraction] (`Task_IngestKg`)
+### 4. 2 · Ingest into the L1 KG (`Task_IngestKg`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `dak-l1-library`, `recommendation-extraction`.
+- Skill: `recommendation-extraction`, `dak-l1-library`.
 - What: Per source not yet extracted: cat ingest into library/, the generic-document layer (l1-library), then the L1 layer (recommendations, remarks, practices, scenario candidates) into library/<bib>/l1-extraction/.
 - Record it: `workflow_complete` with `node: "Task_IngestKg"`.
 - next: → `Fork_Kg`
@@ -72,7 +72,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 5. 3 · Choose L2 dependencies (WHO / jurisdiction DAKs) (`Task_DepsL2`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `smart-guideline-end-to-end`, `decision-comparison`.
+- Skill: `l2-dependency-choice`, `decision-comparison`.
 - What: From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason.
 - Record it: `workflow_complete` with `node: "Task_DepsL2"`.
 - next: → `Fork_DepsL2`
@@ -130,7 +130,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 10. 5 · Choose L3 dependencies (WHO / jurisdiction IGs) (`Task_DepsL3`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `ig-artifact-ingestion`, `decision-comparison`.
+- Skill: `l3-dependency-choice`, `ig-artifact-ingestion`, `decision-comparison`.
 - What: Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG.
 - Record it: `workflow_complete` with `node: "Task_DepsL3"`.
 - next: → `Fork_DepsL3`
@@ -166,7 +166,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### Do all of — `Fork_L3`
 
-- Work every branch; none is optional. Branches: → `Task_AdjL3` (Review each L3 asset (before / after if adapted)), → `Task_DescribeApp` (7 · Describe the consuming application)
+- Work every branch; none is optional. Branches: → `Task_AdjL3` (Review each L3 asset (before / after if adapted)), → `Task_DescribeApp` (7 · L4: describe the consuming application)
 - The engine passes through this gateway itself; there is nothing to record here.
 
 ### 13. Review each L3 asset (before / after if adapted) (`Task_AdjL3`)
@@ -177,40 +177,40 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `End_AdjL3` (Adjudicated)
 
-### 14. 7 · Describe the consuming application (`Task_DescribeApp`)
+### 14. 7 · L4: describe the consuming application (`Task_DescribeApp`)
 
 - Who: the `Requester (country team / implementer)` lane (role `user`).
-- Skill: `smart-guideline-end-to-end`.
+- Skill: `l4-application-brief`.
 - What: Who uses it, on what device, which L2 processes and L3 resources it covers, connectivity, the systems it talks to.
 - Record it: `workflow_complete` with `node: "Task_DescribeApp"`.
-- next: → `Task_WireframeApp` (8a · Wireframe the application)
+- next: → `Task_WireframeApp` (8a · L4: wireframe the application)
 
 ## Done — Adjudicated (`End_AdjL3`)
 
 - The instance completes here. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
 
-### 15. 8a · Wireframe the application (`Task_WireframeApp`)
+### 15. 8a · L4: wireframe the application (`Task_WireframeApp`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `wireframe-design-review`.
 - What: To-be mode, from the stage-7 intent: two or more candidates, web and mobile, with real content from the L2 personas and scenarios.
 - Record it: `workflow_complete` with `node: "Task_WireframeApp"`.
-- next: → `Task_BuildApp` (8b · Build the consuming application)
+- next: → `Task_BuildApp` (8b · L4: build the consuming application)
 
-### 16. 8b · Build the consuming application (`Task_BuildApp`)
+### 16. 8b · L4: build the consuming application (`Task_BuildApp`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `smart-guideline-end-to-end`.
+- Skill: `l4-application-build`.
 - What: Against the stage-6 IG build, with conformance tests from the IG's examples and test cases.
 - Record it: `workflow_complete` with `node: "Task_BuildApp"`.
 - next: → `Fork_App`
 
 ### Do all of — `Fork_App`
 
-- Work every branch; none is optional. Branches: → `Task_AdjApp` (Adjudicate the wireframes and the application), → `EndEvent_AppBuilt` (Application built)
+- Work every branch; none is optional. Branches: → `Task_AdjApp` (Adjudicate the L4 wireframes and application), → `EndEvent_AppBuilt` (L4 application built)
 - The engine passes through this gateway itself; there is nothing to record here.
 
-### 17. Adjudicate the wireframes and the application (`Task_AdjApp`)
+### 17. Adjudicate the L4 wireframes and application (`Task_AdjApp`)
 
 - Who: the `Human adjudicators` lane (role `reviewer`).
 - Skill: `content-review`, `staging-review`, `wireframe-design-review`.
@@ -218,7 +218,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `End_AdjApp` (Adjudicated)
 
-## Done — Application built (`EndEvent_AppBuilt`)
+## Done — L4 application built (`EndEvent_AppBuilt`)
 
 - The instance completes here. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
 

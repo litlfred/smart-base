@@ -44,7 +44,9 @@
     {
       "role": "user",
       "skills": [
-        "smart-guideline-end-to-end"
+        "smart-guideline-end-to-end",
+        "guideline-use-case",
+        "l4-application-brief"
       ]
     },
     {
@@ -64,7 +66,12 @@
         "content-test",
         "artefact-reachability",
         "staging-review",
-        "interaction-modality"
+        "interaction-modality",
+        "guideline-use-case",
+        "l2-dependency-choice",
+        "l3-dependency-choice",
+        "l4-application-brief",
+        "l4-application-build"
       ]
     },
     {

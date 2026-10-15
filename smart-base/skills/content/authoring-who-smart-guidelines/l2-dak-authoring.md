@@ -1,4 +1,13 @@
 ---
+name: l2-dak-authoring
+description: >
+  Author the L2 layer of a WHO SMART Guideline — the Digital Adaptation Kit
+  between the narrative L1 guideline and the L3 FHIR artefacts — one DAK
+  component per pass (personas, user scenarios, business processes, data
+  dictionary, decision and scheduling logic, indicators, requirements), each
+  edited and then reviewed alongside through l2-component-edit-review. Stage 4
+  of smart-guideline-end-to-end and the authoring steps of
+  l2-dak-authoring.bpmn. Read before authoring or adapting any DAK component.
 input: schemas/skills/l2-dak-authoring/input.schema.json
 output: schemas/skills/l2-dak-authoring/output.schema.json
 ---
@@ -25,13 +34,12 @@ guideline (L1) and FHIR artefacts (L3).
 > WHO for what a DAK component must contain. Where the two disagree, WHO is
 > right and this file is stale.
 
-## Inputs and outputs
+## Input and output
 
-`smart-base/schemas/skills/l2-dak-authoring/` is the contract:
+The contract is [`input.schema.json`](../../../schemas/skills/l2-dak-authoring/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l2-dak-authoring/output.schema.json).
 
-- **in** — `dakComponent` (required), `sourceGuideline` (required),
-  `existingContent`, `sprintNumber`
-- **out** — `artifacts`, `status`, `validationIssues`
+- **In:** `dakComponent` (required), `sourceGuideline` (required), `existingContent`, `sprintNumber`; as stage 4 of [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), also stage 2's `l1Kg` and stage 3's `l2Dependencies` ([`l2-dependency-choice`](l2-dependency-choice.md)'s output).
+- **Out:** `artifacts` (each an `l2Artifact`: `path`, `type`, `description`), `status`, `validationIssues`, `stagingLinks`. Stage 5 ([`l3-dependency-choice`](l3-dependency-choice.md)) takes the artifacts of every pass as its `l2Assets`.
 
 `dakComponent` is the unit of work. Author one component per pass; a DAK is
 completed component by component, and a sprint that touches five half-way is
