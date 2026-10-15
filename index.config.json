@@ -17,7 +17,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "40e08dbf3bc6e236ba3ab1933cef25307bd1653b",
+          "ref": "0cff13f6530dcf4aae32905e729d413c92691c36",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -27,8 +27,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-15",
-              "ref": "40e08dbf3bc6e236ba3ab1933cef25307bd1653b",
-              "evidence": "Owner litlfred, 2026-10-15 session chat: smart-base 'Yes + retire old workflow' (republish via the IG route)"
+              "ref": "0cff13f6530dcf4aae32905e729d413c92691c36",
+              "evidence": "Owner litlfred, 2026-10-15 session chat: smart-base 'Merge + publish' and 'Keep both' (ns/, 0.1.0/), fhir-harness#97"
             }
           }
         }
