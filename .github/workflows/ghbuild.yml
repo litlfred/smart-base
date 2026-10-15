@@ -968,9 +968,11 @@ jobs:
           folder: ./output # The folder the action should deploy.
           commit-message: Deploy main branch
           single-commit: true
+          # `ns`: the JSON-LD context publish-context.yml writes (bean folio-assistant-63q4).
           clean-exclude: |
             branches
             sitepreview
+            ns
 
       - name: Deploy main (retry after gh-pages ref conflict)
         uses: JamesIves/github-pages-deploy-action@v4.4.2
@@ -980,9 +982,11 @@ jobs:
           folder: ./output
           commit-message: Deploy main branch (retry)
           single-commit: true
+          # `ns`: the JSON-LD context publish-context.yml writes (bean folio-assistant-63q4).
           clean-exclude: |
             branches
             sitepreview
+            ns
 
       # ── Commit updated README.md back to the source branch ──────────────
       # Runs only when deploying from the default branch (not on PRs or
