@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: smart-guideline-end-to-end\n"
-"POT-Creation-Date: 2026-10-15T13:35:10.814Z\n"
+"POT-Creation-Date: 2026-10-15T16:16:53.395Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -14,92 +14,92 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:84
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:85
 #. Diagram label
 msgid "0 · Describe the use case"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:92
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:93
 #. Diagram label
 msgid "1 · Identify L1 guidelines and recommendations [dak-l1-library]"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:119
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:120
 #. Diagram label
 msgid "2 · Ingest into the L1 KG [dak-l1-library · recommendation-extraction]"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:147
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:148
 #. Diagram label
 msgid "3 · Choose L2 dependencies (WHO / jurisdiction DAKs)"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:170
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:172
 #. Diagram label
 msgid "4 · Create / adapt L2 DAK assets [l2-dak-authoring]"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:198
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:202
 #. Diagram label
 msgid "5 · Choose L3 dependencies (WHO / jurisdiction IGs) [ig-artifact-ingestion]"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:221
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:232
 #. Diagram label
 msgid "6 · Produce L3 assets [l3-fhir-authoring]"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:248
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:260
 #. Diagram label
 msgid "7 · L4: describe the consuming application"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:256
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:268
 #. Diagram label
 msgid "8a · L4: wireframe the application [wireframe-design-review]"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:264
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:276
 #. Diagram label
 msgid "8b · L4: build the consuming application"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:161
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:163
 #. Diagram label
 msgid "Adjudicate L2 dependencies"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:212
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:217
 #. Diagram label
 msgid "Adjudicate L3 dependencies"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:133
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:134
 #. Diagram label
 msgid "Adjudicate the L1 KG"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:106
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:107
 #. Diagram label
 msgid "Adjudicate the L1 source list"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:277
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:289
 #. Diagram label
 msgid "Adjudicate the L4 wireframes and application"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:290
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:302
 #. Diagram label
 msgid "Adjudicated"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:265
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:277
 #. Diagram element documentation
 msgid "Against the stage-6 IG build, with conformance tests from the IG's examples and test cases."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:114
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:115
 #. Diagram label
 msgid "All sources in an L1 KG?"
 msgstr ""
@@ -109,87 +109,92 @@ msgstr ""
 msgid "Authoring agent"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:278
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:290
 #. Diagram element documentation
 msgid "Business analyst and clinical SME walk it through each L2 user scenario; FHIR modeller checks L3 conformance."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:62
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:63
 #. Diagram element documentation
 msgid "Clinical SME, l1-extraction-reviewer, programme manager, business analyst, FHIR modeller, terminologist: which one signs each stage is in the smart-guideline-end-to-end skill. Each adjudication calls cat-harness's generic review, Process_Review, on the staged preview (feature-staging, staging-review) and records a qa-review/v1 Decision (approve, request-changes, reject) with the adjudicator's role id. Each adjudication ends in its own end event, so the instance is complete only when every adjudication is recorded. A rejection files a bean against the stage and marks every downstream asset derived from the rejected item rejected-upstream; it does not stop the agent."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:107
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:108
 #. Diagram element documentation
 msgid "Clinical SME: each source with why it was included or left out."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:93
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:94
 #. Diagram element documentation
 msgid "Component 1 sources of any DAK already in scope first, then WHO IRIS and the jurisdiction's own guidelines. Each candidate marked in-library / in-KG / not yet."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:213
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:218
 #. Diagram element documentation
 msgid "FHIR modeller and terminologist: one row per candidate IG, rejected ones included."
 msgstr ""
 
 #: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:27
 #. Diagram element documentation
-msgid "From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the L4 consuming application the requester describes. Adjudication follows every stage as QA, not as a gate (owner, 2026-10-14: \"once agent produces L2 it can produce L3\"): each stage forks into the next stage and its adjudication, and each adjudication has its own end event, so the instance completes only when all are recorded. The stages run the existing skills and processes (l2-dak-authoring.bpmn for stage 4, dak-l3-ig.bpmn for stage 6); the smart-guideline-end-to-end skill says which, and who adjudicates each."
+msgid "From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the L4 consuming application the requester describes. Adjudication follows every stage as QA, not as a gate (owner, 2026-10-14: \"once agent produces L2 it can produce L3\"), but the order is a rule (owner, 2026-10-15: \"order strict, sign-off QA\"): no L3 asset before the L1 extraction and L2 assets it derives from exist with their review requested (Gateway_L3Ready). each stage forks into the next stage and its adjudication, and each adjudication has its own end event, so the instance completes only when all are recorded. The stages run the existing skills and processes (l2-dak-authoring.bpmn for stage 4, dak-l3-ig.bpmn for stage 6); the smart-guideline-end-to-end skill says which, and who adjudicates each."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:148
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:149
 #. Diagram element documentation
-msgid "From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason. Reuse first; prefer the jurisdiction's adaptation, recording the WHO original as its upstream."
+msgid "From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason. Reuse first; prefer the jurisdiction's adaptation, recording the WHO original as its upstream. For each component kept, record its toolchain: how the candidate produces it (the tools graph, the candidate repository's own source spreadsheets and converters, WHO's DAK toolchain), which stage 4 then uses."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:61
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:62
 #. Diagram label
 msgid "Human adjudicators"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:199
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:203
 #. Diagram element documentation
-msgid "Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG."
+msgid "Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG, and record per artefact type the candidate's toolchain (CQL refresh, test-case format, example generator), which stage 6 then uses."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:134
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:226
+#. Diagram label
+msgid "L1 extraction and L2 assets exist, review requested?"
+msgstr ""
+
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:135
 #. Diagram element documentation
 msgid "l1-extraction-reviewer signs exclusions and coverage; Clinical SME reviews recommendations beside the printed page."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:287
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:299
 #. Diagram label
 msgid "L4 application built"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:316
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:328
 #. Diagram label
 msgid "no"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:188
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:192
 #. Diagram element documentation
 msgid "One review item per created or changed asset, shown as its reviewer reads it (diagram, table, data-dictionary rows); each form's wireframe candidates are reviewed blind and one is chosen (Process_Adjudication, Process_OptionsAnalysis); an adapted asset as a diff against its pinned upstream. For each L2 component this is the review that forks inside its own edit-and-review subprocess (l2-component-edit-review.bpmn, called by every l2-dak-authoring.bpmn track), with the renderer, checker and reviewing role that skill tables."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:237
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:249
 #. Diagram element documentation
 msgid "One review item per created or changed resource: differential, each Questionnaire against the L2 wireframe it was derived from (field to item: fhir-harness fhir-questionnaire-wireframe, whose check is check-wireframe-questionnaire), CQL beside its DMN rule with test results, terminology expansions."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:120
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:121
 #. Diagram element documentation
 msgid "Per source not yet extracted: cat ingest into library/, the generic-document layer (l1-library), then the L1 layer (recommendations, remarks, practices, scenario candidates) into library/<bib>/l1-extraction/."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:85
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:86
 #. Diagram element documentation
 msgid "Population, setting, jurisdiction, interventions in scope. The user's own words; the agent asks a numbered question if the request did not say."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:162
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:164
 #. Diagram element documentation
 msgid "Programme manager and business analyst: one row per candidate DAK, rejected ones included."
 msgstr ""
@@ -199,19 +204,19 @@ msgstr ""
 msgid "Requester (country team / implementer)"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:187
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:191
 #. Diagram label
 msgid "Review each L2 asset (before / after if adapted)"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:236
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:248
 #. Diagram label
 msgid "Review each L3 asset (before / after if adapted)"
 msgstr ""
 
 #: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:40
 #. Diagram element documentation
-msgid "Runs every authoring stage with the skill named on each activity. Goes straight on to the next stage after each one: adjudication runs beside it, as QA, not as a gate (owner, 2026-10-14)."
+msgid "Runs every authoring stage with the skill named on each activity. Goes straight on to the next stage after each one, once that stage's output exists and its review is requested: adjudication runs beside it, as QA, not as a gate (owner, 2026-10-14); the order is not optional (owner, 2026-10-15)."
 msgstr ""
 
 #: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:26
@@ -219,19 +224,24 @@ msgstr ""
 msgid "SMART Guideline end to end"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:81
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:82
 #. Diagram element documentation
 msgid "Someone needs a SMART Guideline, new or adapted, for a use case."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:171
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:173
 #. Diagram element documentation
 msgid "The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data elements. Its clinical validation is this stage's adjudication and does not hold up stage 5. The IG is built through fhir-harness's AST cache lifecycle (ig-ast-refresh.yml), with the DAK pre-processing as smart-base's pre-export overlay (dak-preprocessing, dak-pre-export.sh) and the DAK sidecars made from the AST (dak-postprocessing)."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:222
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:233
 #. Diagram element documentation
-msgid "The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build. Each Questionnaire is derived from the chosen L2 wireframe of its form. Publication continues in that process and is not on the path to stage 8."
+msgid "The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build. Every L3 asset names the L2 asset it implements in wasDerivedFrom, with that edge's adjudication state. Each Questionnaire is derived from the chosen L2 wireframe of its form. Publication continues in that process and is not on the path to stage 8."
+msgstr ""
+
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:227
+#. Diagram element documentation
+msgid "The order rule (owner, 2026-10-15: \"order strict, sign-off QA\"). Yes only when every L3 asset about to be written has an L2 asset upstream, every L2 asset an L1 node, and the review of each has been requested (opened and staged, verdict not awaited). No goes back to stage 4; a missing L1 extraction is stage 4's input gap, filled from stage 2."
 msgstr ""
 
 #: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:33
@@ -239,12 +249,12 @@ msgstr ""
 msgid "The person who wants the guideline and the application. Describes the use case (stage 0) and the consuming application (stage 7). The agent asks; it never invents either."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:257
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:269
 #. Diagram element documentation
 msgid "To-be mode, from the stage-7 intent: two or more candidates, web and mobile, with real content from the L2 personas and scenarios. The agent goes on with its recommended candidate; the requester may choose another during adjudication."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:80
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:81
 #. Diagram label
 msgid "Use case to support"
 msgstr ""
@@ -254,12 +264,12 @@ msgstr ""
 msgid "WHO SMART Guidelines — end to end, authoring or adaptation"
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:249
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:261
 #. Diagram element documentation
 msgid "Who uses it, on what device, which L2 processes and L3 resources it covers, connectivity, the systems it talks to. The agent offers options drawn from the L2 personas and processes. This is the written intent wireframe-design-review starts from."
 msgstr ""
 
-#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:317
+#: ../smart-base/processes/content/smart-guideline-end-to-end.bpmn:329
 #. Diagram label
 msgid "yes"
 msgstr ""

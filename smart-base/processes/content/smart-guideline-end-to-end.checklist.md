@@ -141,8 +141,14 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### Do all of — `Fork_DepsL3`
 
-- Work every branch; none is optional. Branches: → `Task_AdjDepsL3` (Adjudicate L3 dependencies), → `Task_L3` (6 · Produce L3 assets)
+- Work every branch; none is optional. Branches: → `Task_AdjDepsL3` (Adjudicate L3 dependencies), → `Gateway_L3Ready` (L1 extraction and L2 assets exist, review requested?)
 - The engine passes through this gateway itself; there is nothing to record here.
+
+### Decide — L1 extraction and L2 assets exist, review requested? (`Gateway_L3Ready`)
+
+- Call `workflow_complete` with `node: "Gateway_L3Ready"` and `outcome` set to the label that holds:
+  - «yes» → `Task_L3` (6 · Produce L3 assets)
+  - «no» → `Task_L2` (4 · Create / adapt L2 DAK assets)
 
 ### 11. Adjudicate L3 dependencies (`Task_AdjDepsL3`)
 
@@ -156,7 +162,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `l3-fhir-authoring`, `l2-dak-authoring`, `feature-staging`.
-- What: The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build.
+- What: The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build. Every L3 asset names the L2 asset it implements in wasDerivedFrom, with that edge's adjudication state.
 - Record it: `workflow_complete` with `node: "Task_L3"`.
 - next: → `Fork_L3`
 
