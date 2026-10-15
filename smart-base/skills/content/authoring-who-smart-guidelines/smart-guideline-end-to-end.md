@@ -134,28 +134,12 @@ Neither is copied here.
 Each stage commits to the guideline's feature branch, and that branch is
 staged by
 [`feature-staging`](https://github.com/litlfred/cat-harness/blob/main/skills/sdlc/sdlc-core/feature-staging.md)
-(`Process_FeatureStaging`) **on the repository that holds the guideline**:
-
-| the guideline lives in | its preview is | published by |
-|---|---|---|
-| its own repository (`litlfred/<guideline>`) | `https://<owner>.github.io/<guideline>/STAGING/<slug>/`, and the root from `main` | `stage-local.ts --repo .` from that checkout, when its `index.config.json` declares `site.agentRun` (feature-staging, *Agent-run repositories*); never by dispatching its `site-publish.yml` |
-| a platform layer folio-assistant mounts (smart-base itself) | `STAGING/<slug>/` on the platform's site | a **staging re-pin**: a folio-assistant pull request that points the mount at the branch's commit, recorded with `bun run cat mount:remote --staging` (basis `staging`, so it needs no consent) |
-
-So read the guideline repository's `index.config.json` first, and use its
-own site when it has one. The platform's site shows a mounted guideline only
-as one instance among the layers, and is the wrong preview for a guideline's
-reviewers. On 2026-10-15 the Uganda adaptation, a repository of its own that
-declared `site.agentRun`, was previewed only on the platform's site because
-this section used to name that route alone; its own site was never built.
-
-An agent-run IG repository's site is built from the IG's cached AST, never
-from a Publisher run. The cache (`cat/fhir-harness/fhir-ast/<package id>`)
-is seeded by the repository's `ig-ast-refresh.yml` (fhir-harness's template,
-copied unchanged; [`smart-guideline-create`](smart-guideline-create.md) §6),
-the one workflow such a repository dispatches, and only the owner, or an
-agent the owner names for that run, dispatches it. Until it has run once,
-`stage-local.ts` refuses with "no cache branch for this IG": say so and ask,
-rather than falling back to the platform's site.
+(`Process_FeatureStaging`) on the site its section *Which site* names: a
+guideline in a repository of its own is previewed on that repository's own
+Pages, and smart-base itself, which folio-assistant mounts, by a staging
+re-pin on the platform's site. An IG repository's site needs its AST cache
+seeded first ([`fhir-ig-create`](https://github.com/litlfred/fhir-harness/blob/main/skills/fhir-ig-base/fhir-ig-create.md),
+`new-repo` step 5). Neither rule is WHO's, so neither is restated here.
 
 The IG Publisher's `branches/` preview (`ghbuild.yml`, `/deploy`)
 is the IG's, not this content's, and is never the preview for it. A review item
