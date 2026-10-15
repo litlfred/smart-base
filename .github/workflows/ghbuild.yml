@@ -969,10 +969,18 @@ jobs:
           commit-message: Deploy main branch
           single-commit: true
           # `ns`: the JSON-LD context publish-context.yml writes (bean folio-assistant-63q4).
+          # `0.1.0`: the versioned vocabulary the same workflow writes. `en`, `STAGING`, `_render-log`
+          # and `folio-build.json`: the harness site the agent publishes beside the IG
+          # (stage-local.ts), its previews, its render log and its root stamp.
           clean-exclude: |
             branches
             sitepreview
             ns
+            0.1.0
+            en
+            STAGING
+            _render-log
+            folio-build.json
 
       - name: Deploy main (retry after gh-pages ref conflict)
         uses: JamesIves/github-pages-deploy-action@v4.4.2
@@ -983,10 +991,18 @@ jobs:
           commit-message: Deploy main branch (retry)
           single-commit: true
           # `ns`: the JSON-LD context publish-context.yml writes (bean folio-assistant-63q4).
+          # `0.1.0`: the versioned vocabulary the same workflow writes. `en`, `STAGING`, `_render-log`
+          # and `folio-build.json`: the harness site the agent publishes beside the IG
+          # (stage-local.ts), its previews, its render log and its root stamp.
           clean-exclude: |
             branches
             sitepreview
             ns
+            0.1.0
+            en
+            STAGING
+            _render-log
+            folio-build.json
 
       # ── Commit updated README.md back to the source branch ──────────────
       # Runs only when deploying from the default branch (not on PRs or
