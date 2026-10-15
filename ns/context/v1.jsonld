@@ -7,6 +7,7 @@
     "doco": "http://purl.org/spar/doco/",
     "folio-assistant-core": "https://litlfred.github.io/folio-assistant-core/0.1.0/ns#",
     "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "contains": {
       "@id": "dcterms:hasPart",
       "@type": "@id",
