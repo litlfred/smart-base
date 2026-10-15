@@ -93,6 +93,25 @@ are configuration. Model the new instance's `<name>:pages` script on an
 existing guideline's in the root `package.json`: `--publish-note`,
 `--sidecar-label "DAK API"`, `--label` and `--chrome-owner smart-base`.
 
+### 6. A new repository carries its entry point and its platform mount
+
+A repository that starts empty gives an agent nothing to find this package
+by: no skills on disk, no process, nothing saying the work is staged L1 → L2
+→ L3. The Uganda adaptation of 2026-10-15 (see
+[`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), *The order is
+a rule*) went straight to L3 for that reason. So route `new-repo` writes,
+before any guideline content, by copying an existing guideline repository
+(litlfred/smart-immunizations) rather than typing them:
+
+| file | what it does |
+|---|---|
+| `CLAUDE.md` | names [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md) as the entry point for any authoring or adaptation work in the repository, and states its order rule in one line |
+| `.claude/settings.json` + `.claude/mount-platform.sh` | the SessionStart hook that mounts the platform, so the skills and processes are on disk in every session |
+| `index.config.json` | the mount of smart-base (and through it the platform), as in every guideline repository (§3) |
+
+The same applies when an agent is handed an existing repository that has
+none of the three: write them first, in their own commit.
+
 ## What does not change
 
 The import seam (`<name>/platform.ts`), the separation guard, `seed:ready`,
@@ -109,3 +128,6 @@ bean `n3ni`, stages A to F.
    staging ground, by the owner's ruling.
 3. **Copying the WHO theme into the guideline** to make a page look right.
    It arrives by `needs`.
+4. **Writing L3 into a bare repository.** FSH or CQL in a repository with no
+   `CLAUDE.md` entry point, no mount and no `library/` is the 2026-10-15
+   failure (§6).

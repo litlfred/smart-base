@@ -7,9 +7,14 @@ description: >
   choose the existing L2 DAKs and L3 IGs to build on, create or adapt the L2
   and L3 assets, then build the consuming application the user describes.
   Human adjudication follows every stage, as QA and never as a gate: the agent
-  goes on to the next stage while the last one is reviewed. Read before
-  starting any end-to-end authoring or adaptation, and to find which existing
-  skill and process runs each stage.
+  goes on to the next stage while the last one is reviewed. The ORDER of the
+  stages is a rule, though: no L3 asset before the L1 extraction and the L2
+  assets it derives from exist and their review has been requested. Read
+  before starting any end-to-end authoring or adaptation, and to find which
+  existing skill and process runs each stage. A request to adapt a WHO
+  guideline, DAK or IG to a country or programme ("adapt the immunization
+  guidelines to Uganda using these schedules") is this process, even when it
+  reads like an IG or coding task.
 ---
 
 # smart-guideline-end-to-end
@@ -59,6 +64,40 @@ What follows from that:
    (table below). An agent may prepare the review material, never record the
    verdict. This is `recommendation-extraction`'s sign-off rule applied to
    every level.
+
+## The order is a rule: L1, then L2, then L3 (owner, 2026-10-15)
+
+QA-not-a-gate is about **verdicts**. It never licenses skipping a stage.
+Owner, 2026-10-15: *"this is a process failure to not make L1 and L2 assets
+first and have sign off"*, ruled as *order strict, sign-off QA*:
+
+1. **Each stage's output exists before the next stage starts.** Stage 2
+   writes `library/<bib>/l1-extraction/` for every source of the use case;
+   stage 4 writes the L2 assets; only then does stage 6 write FSH, CQL or
+   any other L3 file. Source documents (a schedule poster, a slide deck)
+   are stage-2 input, never direct input to L3.
+2. **Sign-off is requested before the next stage starts.** Each stage's
+   review items (`Process_Review`, one per asset) are opened, staged and
+   handed to their adjudicating role before the next stage begins. The
+   verdict is not waited for (QA, as above), but an asset whose review was
+   never requested has not finished its stage.
+3. **Every L3 asset names the L2 asset it implements**, and every L2 asset
+   the L1 node it rests on, in `wasDerivedFrom` with the edge's
+   `adjudication` state. An L3 asset with no L2 upstream is a finding, not a
+   shortcut: a green build and passing tests do not make up for it.
+4. **A request that skips stages is still this process.** "Adapt X to
+   <country> using these documents" is stages 0–6. If the request names no
+   L1/L2 work, the agent does it anyway and says so; it does not read the
+   absence as permission to go straight to L3.
+
+**Why the rule is written down.** On 2026-10-15 an agent asked to adapt
+the WHO immunization guidelines to Uganda (litlfred/smart-immunizations-uganda#1)
+read the poster and the UNEPI deck by eye and wrote CQL, a PlanDefinition and
+prose pages directly (#3): no library entry, no L1 extraction, no L2 decision
+table, no review requested. CI was green throughout. The causes were that the
+new repository had no pointer to this skill and no platform mount
+([`smart-guideline-create`](smart-guideline-create.md) §6 now requires
+both), and that nothing checked the order (rule 3 above).
 
 `l2-dak-authoring.bpmn` follows the same rule (owner, 2026-10-14). Its
 **Clinically accurate?** decision now runs beside assembly, not before it: a
