@@ -14,7 +14,7 @@ import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
-import { check } from "../../kg/src/validate.ts";
+import { check } from "../kg/src/validate.ts";
 import { CurationSchema, hintsFor, proposedIdentifiers, readEntry, RefusalError, run, type Curation } from "./l1-recommendation-candidates.ts";
 
 const page = (n: number, text: string) =>
@@ -23,7 +23,23 @@ const page = (n: number, text: string) =>
 function entry(): string {
   const dir = mkdtempSync(join(tmpdir(), "l1-cand-"));
   mkdirSync(join(dir, "sections"));
-  writeFileSync(join(dir, "structure.json"), JSON.stringify({ doc_id: "test-entry", source: { sha256: "a".repeat(64) } }));
+  // A real `pdf-structure/v1` (page granularity), because readEntry reads it
+  // through the platform's readStructure, which refuses an untagged structure.
+  const section = (n: number) => {
+    const id = `page-${String(n).padStart(3, "0")}`;
+    return { id, number: null, title: `Page ${n}`, level: 1, page_start: n, page_end: n, n_chars: 0, n_words: 0 };
+  };
+  writeFileSync(
+    join(dir, "structure.json"),
+    JSON.stringify({
+      _schema: "pdf-structure/v1",
+      doc_id: "test-entry",
+      source: { file: "test-entry.pdf", sha256: "a".repeat(64), bytes: 0, mtime: null, mimetype_sniffed: "application/pdf", mimetype_source: "magic-bytes" },
+      toc_source: "none",
+      granularity: "page",
+      sections: [section(1), section(2)],
+    }),
+  );
   writeFileSync(join(dir, "sections", "page-001.md"), page(1, "ISBN 978-92-4-011619-1 (electronic version)\nSome rights reserved. You must license your work under the same licence."));
   writeFileSync(
     join(dir, "sections", "page-002.md"),

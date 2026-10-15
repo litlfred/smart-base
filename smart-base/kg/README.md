@@ -1,4 +1,4 @@
-# kg — the SMART Guidelines knowledge-graph schema (L1 3.0)
+# smart-base/kg — the SMART Guidelines knowledge-graph schema (L1 3.0)
 
 The L1 layer of the SMART Guidelines knowledge graph as **Zod**, with the FHIR
 artefacts generated from it:
@@ -27,8 +27,8 @@ its properties and binds some to value sets, but doesn't type the rest.
 | `generated/l1/l1.context.jsonld` | smart-kg's L1 JSON-LD context, equal to WHO's | generated |
 | `generated/l1/l1-library.context.jsonld` | the context an `l1-library` graph names (`src/context.ts`) | generated |
 | `src/loader.ts` | a jsonld.js document loader serving both contexts offline | source |
-| `../input/fsh/models/KGL1.fsh`, `KGL1Library.fsh` | logical models | generated |
-| `../input/fsh/codesystems/KG*.fsh`, `../input/fsh/valuesets/KG*VS.fsh` | one CodeSystem + ValueSet per value set | generated |
+| `../../input/fsh/models/KGL1.fsh`, `KGL1Library.fsh` | logical models | generated |
+| `../../input/fsh/codesystems/KG*.fsh`, `../../input/fsh/valuesets/KG*VS.fsh` | one CodeSystem + ValueSet per value set | generated |
 
 SUSHI compiles the FSH. smart-base's own `generate_logical_model_schemas.py`
 and `generate_valueset_schemas.py` turn it into JSON Schema, as they do for
@@ -106,10 +106,10 @@ three are proposed upstream; they are not patched into smart-kg's file.
 ## Commands
 
 ```sh
-cd kg && npm ci
+cd smart-base/kg && npm ci
 npm run build                            # regenerate everything; removes orphaned generated FSH
 npm run check                            # fail if any generated file is stale or orphaned
-SMART_KG_HOME=../../smart-kg npm test    # parity, kgid agreement, smart-kg's L1 cases, the extension
+SMART_KG_HOME=../../../smart-kg npm test  # parity, kgid agreement, smart-kg's L1 cases, the extension
 npm run validate -- path/to/graph.json   # check a graph document
 ```
 

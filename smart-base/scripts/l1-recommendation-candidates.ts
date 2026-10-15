@@ -22,8 +22,8 @@
  * 3. **Mechanical again (this script, with `--curation`):** the curation is
  *    REFUSED when a statement is not verbatim, a decision names a location
  *    the entry does not hold, or a remark names no recommendation. Otherwise
- *    it writes `l1.json` (L1 3.0, `kg/src/l1.ts`, checked with
- *    `kg/src/validate.ts`), `exclusions.proposed.json` (l1-coverage's shape),
+ *    it writes `l1.json` (L1 3.0, `smart-base/kg/src/l1.ts`, checked with
+ *    `smart-base/kg/src/validate.ts`), `exclusions.proposed.json` (l1-coverage's shape),
  *    and the coverage totals. Every node is `inferred` and a candidate; a
  *    person signs exclusions and reviews scenarios, an agent never does.
  *
@@ -54,9 +54,9 @@ import { parse as parseYaml } from "yaml";
 import { z } from "zod";
 
 import { coverage, normalise, type Exclusion, type Page, type Sentence } from "../../folio-assistant-core/scripts/l1-coverage.ts";
-import { contentHash, normText } from "../../kg/src/kgid.ts";
-import { L1_VALUE_SETS } from "../../kg/src/l1.ts";
-import { check as checkGraph } from "../../kg/src/validate.ts";
+import { contentHash, normText } from "../kg/src/kgid.ts";
+import { L1_VALUE_SETS } from "../kg/src/l1.ts";
+import { check as checkGraph } from "../kg/src/validate.ts";
 import { L1_V3_CONTEXT, L1_V3_ONTOLOGY_VERSION, publicationId, type Identifier } from "./l1-kgid.ts";
 import { buildRunContext, writeRunContext, type RunContextRef } from "./l1-run-context.ts";
 import { readStructure, STRUCTURE_FILENAME } from "../platform/index.js";
@@ -65,7 +65,7 @@ export const CANDIDATES_SCHEMA_TAG = "l1-recommendation-candidates/v1" as const;
 export const CURATION_SCHEMA_TAG = "l1-recommendation-curation/v1" as const;
 export const SKILL = "smart-base/recommendation-extraction";
 
-/** The context a graph names when it holds a class from the `l1-library` extension (`kg/src/l1-library.ts`). */
+/** The context a graph names when it holds a class from the `l1-library` extension (`smart-base/kg/src/l1-library.ts`). */
 export const L1_LIBRARY_CONTEXT = "http://smart.who.int/kg/l1-library.context.jsonld";
 
 /** L1's publication-type codes, read from the ontology rather than restated. */
