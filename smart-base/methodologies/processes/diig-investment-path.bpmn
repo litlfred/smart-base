@@ -201,6 +201,7 @@ plan, and its case"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_GW_ProgressCheck4" bpmnElement="GW_ProgressCheck4" isMarkerVisible="true">
         <dc:Bounds x="1090" y="370" width="50" height="50" />
+        <bpmndi:BPMNLabel><dc:Bounds x="1140" y="404" width="84" height="54" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_A_PlanImplementation" bpmnElement="A_PlanImplementation">
         <dc:Bounds x="1190" y="145" width="140" height="80" />
