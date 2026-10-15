@@ -5,7 +5,7 @@ ways. Most mistakes here come from treating one as the other.
 
 | | what | published by | previewed at |
 |---|---|---|---|
-| `input/`, `sushi-config.yaml` | the WHO SMART Base **FHIR IG** | IG Publisher (`ghbuild.yml`) | `gh-pages/branches/<branch>/` (`/deploy`) |
+| `input/`, `sushi-config.yaml` | the WHO SMART Base **FHIR IG** | the gh-pages ROOT: an agent, by the IG route every smart-* IG uses (`bun run cat-harness-tools/scripts/stage-local.ts --repo .`, from the cached AST; `index.config.json` `site`). The IG Publisher (`ghbuild.yml`) only previews, and never deploys over a folio root | `STAGING/<branch>/` (stage-local); Publisher output at `gh-pages/branches/<branch>/` (`/deploy`) |
 | `smart-base/` | the smart-base **harness instance**: skills, processes (BPMN), library, KG | folio-assistant's just-the-docs site, which **mounts** this directory | folio-assistant `STAGING/<slug>/` (`feature-staging`) |
 
 ## The platform is mounted, not absent
