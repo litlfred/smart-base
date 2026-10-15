@@ -48,7 +48,7 @@ What follows from that:
    process ends only when the last stage and all its adjudications are in.
 2. **An asset built on unadjudicated input says so.** Each derived KG node
    already names its inputs in `wasDerivedFrom` (hash-pinned, so a changed
-   input makes it stale; smart-base `kg/src/graph.ts`). The adjudication state
+   input makes it stale; `smart-base/kg/src/graph.ts`). The adjudication state
    of an input goes on that edge's open `properties`, beside the
    `resolutionStatus` and `reviewStatus` that `recommendation-extraction`
    already puts there: `adjudication: pending` while the input's review is
@@ -178,7 +178,7 @@ its own right and is adjudicated like one. Each candidate is one row:
 |---|---|---|
 | `packageId`, `version`, `uri` | cat-harness `DependsOnRecord` (`schemas/depends-on.ts`), the same three fields as FHIR `ImplementationGuide.dependsOn` | the candidate DAK or IG. A candidate missing one of the three is a `DependsOnGap`, not a row |
 | `publisher` | — | WHO, or the adapting jurisdiction |
-| `evidence` | smart-base KG `evidence` (`kg/src/graph.ts`) | the L1 KG nodes (and, at L3, the L2 assets) that point at it |
+| `evidence` | smart-base KG `evidence` (`smart-base/kg/src/graph.ts`) | the L1 KG nodes (and, at L3, the L2 assets) that point at it |
 | `decision` | this skill | `reuse` (unchanged) · `adapt` (fork and change) · `extend` (depend and add) · `reject` |
 | `reason` | this skill | one sentence; required for `reject` |
 | `toolchain` | this skill | for each component reused, adapted or extended: how the candidate produces it — a Tool id from `bun run cat check:tools`, or a script in the candidate's own repository (its source spreadsheet, converter, CQL refresh, test format), found by the search in [`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK*. Stages 4 and 6 produce the component with that toolchain. `none` only after that search came back empty, naming where it looked; the new tool is then a Tool node, never a script in the adaptation repository |

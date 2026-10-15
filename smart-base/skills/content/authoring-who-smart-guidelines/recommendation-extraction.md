@@ -35,7 +35,7 @@ before any L2 asset is drawn.
 
 | half | produces | layer | schema |
 |---|---|---|---|
-| extraction | `recommendation` and `remark` nodes, verbatim — or, for implementation guidance, `implementation-practice` nodes | L1 | L1 **3.0**, `kg/src/l1.ts` in litlfred/smart-base (`KGRecommendation`); `implementation-practice` is the `l1-library` extension, `kg/src/l1-library.ts` (`KGImplementationPractice`); not smart-kg 1.0 |
+| extraction | `recommendation` and `remark` nodes, verbatim — or, for implementation guidance, `implementation-practice` nodes | L1 | L1 **3.0**, `smart-base/kg/src/l1.ts` in litlfred/smart-base (`KGRecommendation`); `implementation-practice` is the `l1-library` extension, `smart-base/kg/src/l1-library.ts` (`KGImplementationPractice`); not smart-kg 1.0 |
 | scenario | one `user-scenario` candidate per recommendation, joined to `persona` and `business-process` | L2 | smart-kg `ontology/l2/l2.json`, unchanged; smart-base `UserScenario.fsh` |
 
 ### Implementation guidance prints practices, not recommendations (owner ruling 1b, 2026-10-12)
@@ -54,8 +54,8 @@ normative is an **`implementation-practice`** node, a class of its own, never a
   decision emits an `implementation-practice` node at
   `<publication>/implementation-practice/<key>`, and the graph names
   `l1-library.context.jsonld` so the validator scopes L1 + the extension.
-- The class lives in `kg/src/l1-library.ts`, **not** `kg/src/l1.ts`:
-  `generated/l1/l1.json` must stay equal to WHO smart-kg's (`kg/test/parity.test.ts`).
+- The class lives in `smart-base/kg/src/l1-library.ts`, **not** `smart-base/kg/src/l1.ts`:
+  `generated/l1/l1.json` must stay equal to WHO smart-kg's (`smart-base/kg/test/parity.test.ts`).
 - It carries `identifier`, `statement` (verbatim) and `contentHash`; no `kind`,
   `direction`, `strength` or certainty — nothing graded it. A `kind` on such a
   decision is refused.
@@ -63,7 +63,7 @@ normative is an **`implementation-practice`** node, a class of its own, never a
   `remark` decision in such a publication is refused: exclude the sentence,
   make it its own practice, or wait until remark is licensed on a practice
   upstream.
-- `kg/src/validate.ts` refuses a `recommendation` defined in an
+- `smart-base/kg/src/validate.ts` refuses a `recommendation` defined in an
   implementation-guidance or methodology publication.
 - The output file is `l1.json`. It was `recommendations.l1.json` until the
   owner ruled, 2026-10-12, *"Rename to l1.json"*: the graph holds
@@ -157,7 +157,7 @@ Every decision carries a `basis`. A location may carry a list of
 It **refuses** a statement not printed in the entry (normalised), an override
 that neither contains nor is contained in its candidate, a location the entry
 does not hold, a reused key, and a remark of an undeclared key — then checks
-the graph with `kg/src/validate.ts`. It writes `recommendation-candidates.json`
+the graph with `smart-base/kg/src/validate.ts`. It writes `recommendation-candidates.json`
 (the work list), `l1.json`, `exclusions.proposed.json`,
 `extraction-warnings.md` and `run-context.json`.
 

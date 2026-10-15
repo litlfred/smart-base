@@ -85,9 +85,9 @@ tramp
 node_modules/
 package-lock.json
 package.json
-# kg/ is a package: its manifest and lockfile are what `npm ci` in kg.yml installs from
-!kg/package.json
-!kg/package-lock.json
+# smart-base/kg/ is a package: its manifest and lockfile are what `npm ci` in kg.yml installs from
+!smart-base/kg/package.json
+!smart-base/kg/package-lock.json
 
 # BEGIN index mounts (generated from index.config.json — do not edit)
 /fhir-harness/

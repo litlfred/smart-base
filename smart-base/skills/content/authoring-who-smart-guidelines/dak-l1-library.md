@@ -34,7 +34,7 @@ L1 document's publication, sections and elements are **specialisations** of
 its library entry, its sections and its blocks (`prov:specializationOf`), and
 L1 inherits whatever sectioning the ingest produced — an outline, the
 consensus contents of issue #2302, or pages. The schema is smart-base's
-`l1-library` layer (`kg/src/l1-library.ts` in litlfred/smart-base), which
+`l1-library` layer (`smart-base/kg/src/l1-library.ts` in litlfred/smart-base), which
 imports smart-kg L1 3.0 unchanged.
 
 ## L1 or not — three sources, one precedence
