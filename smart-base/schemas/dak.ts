@@ -108,7 +108,7 @@ export type DakComponentEntries = unknown[];
  * caller never hardcodes one.
  */
 export interface DakDeclaration extends KgNodeLabels {
-  /** The instance's name, e.g. `"smart-immunizations"`. */
+  /** The instance's name, e.g. the immunizations DAK's own instance name. */
   name: string;
   /** Where the published DAK lives — the base its `@id`s are minted against. */
   canonicalUrl?: string;

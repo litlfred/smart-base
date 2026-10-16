@@ -43,7 +43,7 @@ which is the half worth having — so a no-DAK IG is a thin index, not an error.
 ## The index is RECONSTRUCTED, never downloaded
 
 The finding that governs everything here, measured 2026-09-21 against
-smart-trust v1.8.0:
+the WHO SMART Trust IG v1.8.0:
 
 > **No IG publishes an artefact-index instance document.**
 
@@ -90,7 +90,7 @@ dropped both its navigation and the narrative pages it points at.
 ### The chrome comes from a CHAIN, and only part of it is the IG's own
 
 An IG declares its appearance in **no file it owns**. Measured 2026-09-23 for
-smart-trust:
+the WHO SMART Trust IG:
 
 ```
 local-template  →  who.template.root 0.5.0  →  fhir.base.template 1.0.0
@@ -145,7 +145,7 @@ pages from the committed data and compares byte for byte, and
 
 ## Four partial views, and none of them is sufficient
 
-Measured on smart-trust v1.8.0. The coverage gaps are the reason the pipeline
+Measured on the WHO SMART Trust IG v1.8.0. The coverage gaps are the reason the pipeline
 merges rather than picking a winner:
 
 | file | entries | holds | misses |
@@ -161,20 +161,20 @@ key format — so the category join is on an identifier the publisher wrote, not
 one the pipeline composed from a filename.
 
 **Read the source, not the page about the source.** `dak-api.html` is prose
-*about* what is published, and on smart-trust it links the enumeration schemas
+*about* what is published, and on the WHO SMART Trust IG it links the enumeration schemas
 to a `schemas/` directory they are not in. A pipeline written from the
 documentation would have found nothing at the paths it named.
 
 ## Two traps
 
-**`openapi/openapi.json` is not the DAK API.** On smart-trust that path holds
+**`openapi/openapi.json` is not the DAK API.** On the WHO SMART Trust IG that path holds
 the *DDCC Gateway* API — a domain API about certificate exchange that merely
 lives there. A pipeline that globs for `openapi` files a piece of subject
 matter as an artefact descriptor. The overlay is therefore keyed off **each
 artefact's own stem** (`schemas/<ResourceType>-<id>.openapi.json`), never off a
 directory scan.
 
-**`.index.json` is lossy.** Its Organization entries on smart-trust carry a
+**`.index.json` is lossy.** Its Organization entries on the WHO SMART Trust IG carry a
 truncated `"type": "["`. Do not repair such a value and do not propagate it:
 `canonicals.json` is the spine for anything canonical, and for a resource that
 appears only in `.index.json` the field is simply absent. An absent field is a
@@ -184,7 +184,7 @@ fact; a repaired one is a guess wearing a fact's clothes.
 
 `canonical` is **optional** on an artefact, and that is load-bearing. Examples
 and instance resources have no canonical URL and are the majority of a large IG
-— 604 of smart-trust's 674. Minting one to fill the slot produces an identifier
+— 604 of the WHO SMART Trust IG's 674. Minting one to fill the slot produces an identifier
 that resolves to nothing while looking authoritative, which is the failure the
 who-iris catalogue refused for `collection/hq-publications` and refuses here
 for the same reason.
@@ -198,7 +198,7 @@ make the word mean two things in one index.
 
 Default is **catalogue by reference**, following `who-iris`: the index records
 where each artefact is published and holds no bytes. `--materialize-dak` adds
-the DAK surface only — on smart-trust, 332K across 71 files, against 7.1M for
+the DAK surface only — on the WHO SMART Trust IG, 332K across 71 files, against 7.1M for
 the full resource corpus.
 
 Materialised nodes take `purpose: "working"`, never `archival`: they are
@@ -232,13 +232,13 @@ it is actually published.
 ```sh
 bun run cat ingest:ig -- \
   --source /path/to/gh-pages --kind gh-pages \
-  --id smart-trust \
-  --base https://worldhealthorganization.github.io/smart-trust \
-  --out smart-trust --materialize-dak
+  --id <ig> \
+  --base https://worldhealthorganization.github.io/<ig> \
+  --out <ig> --materialize-dak
 ```
 
 `--base` is the URL the artefacts are **published at**, and it is not the
-canonical base. smart-trust publishes at `worldhealthorganization.github.io`
+canonical base. The WHO SMART Trust IG publishes at `worldhealthorganization.github.io`
 and is canonical at `smart.who.int` — the index carries both, and composing
 either from the other is how a link that resolves for nobody gets written down.
 `canonicalBase` is read from the IG's own `ImplementationGuide` canonical, not
@@ -252,10 +252,10 @@ every run by design.
 ## Adding another IG
 
 1. Clone the IG's `gh-pages` (shallow, single branch — a published IG is large;
-   smart-trust's is 342,656 files).
+   the WHO SMART Trust IG's is 342,656 files).
 2. Run the ingest with a new `--id` and `--out`.
 3. Give the new directory a declaration declaring one directory of kind
-   `fhir-artifact-index`, as `smart-trust/smart-trust.config.json` does. The
+   `fhir-artifact-index`, as an ingested IG's own `<name>.config.json` does. The
    declaration is `<name>.config.json` since #695 — resolve it with
    `declarationPathIn`, never by joining a filename.
 4. Add its `ingest:ig:check` invocation to the gate set, so the index cannot go

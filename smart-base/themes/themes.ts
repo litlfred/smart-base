@@ -4,11 +4,11 @@
  * @module smart-base/themes/themes
  * @graphNode themes
  *
- * Owner, 2026-09-30: *"does not make css/branding/style of
- * worldhealthorganization.github.io/smart-trust"*, then *"theme it, keep the
- * justthedocs machinery"*, then *"reuse all existing justthedocs infra … but
- * keep styling of smart-trust (except navbar on LHS not top)"*. Bean `7h3u`,
- * issue #1682.
+ * Owner, 2026-09-30 (paraphrased): the site did not carry the CSS, branding
+ * and style of the published WHO SMART Trust IG; then *"theme it, keep the
+ * justthedocs machinery"*; then reuse all the existing just-the-docs
+ * infrastructure but keep the styling of that published IG (except the
+ * navbar, on the left rather than the top). Bean `7h3u`, issue #1682.
  *
  * ## Why this lives here and not in `cat-harness/schemas/themes.ts`
  *
@@ -18,11 +18,11 @@
  * `resolveTheme`. This file is that precedent applied a second time.
  *
  * **Which WHO instance:** smart-base, the harness every smart-* IG
- * instantiates. It was first written under `smart-trust/themes/`, the IG it was
+ * instantiates. It was first written under the WHO SMART Trust IG's `themes/`, the IG it was
  * measured beside; stage D of the smart-* separation (#1767, bean `kg83`) moved
  * it here because the theme is the TEMPLATE's, and every IG wears it.
  *
- * ## The styling is NOT in `WorldHealthOrganization/smart-trust`
+ * ## The styling is NOT in the WHO SMART Trust IG's repository
  *
  * Measured 2026-09-30, and it is the finding that shaped this file. That
  * repository (@ `26635f7b05b`) carries **no branding CSS** — its only `.css` is
@@ -200,7 +200,7 @@ export const UPSTREAM = {
 /**
  * `who-smart-ig` — the WHO SMART IG template's web theme.
  *
- * Named for the TEMPLATE rather than for `smart-trust`, because that is what it
+ * Named for the TEMPLATE rather than for the WHO SMART Trust IG, because that is what it
  * was measured from and every WHO SMART IG builds with the same one. A second
  * ingested IG gets this theme rather than a copy of it.
  */

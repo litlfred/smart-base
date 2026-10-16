@@ -5,7 +5,7 @@ corpus, the methodologies read out of it, and the editorial voices derived
 from it.
 
 Staged as a top-level directory ahead of becoming its own repository, the same
-path `who-iris`, `smart-trust` and `smart-immunizations` are on.
+path the IRIS catalogue and the WHO SMART Trust and Immunizations IGs are on.
 
 **Contents**
 
