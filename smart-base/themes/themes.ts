@@ -4,11 +4,11 @@
  * @module smart-base/themes/themes
  * @graphNode themes
  *
- * Owner, 2026-09-30: *"does not make css/branding/style of
- * worldhealthorganization.github.io/smart-trust"*, then *"theme it, keep the
- * justthedocs machinery"*, then *"reuse all existing justthedocs infra … but
- * keep styling of smart-trust (except navbar on LHS not top)"*. Bean `7h3u`,
- * issue #1682.
+ * Owner, 2026-09-30 (paraphrased): the site did not carry the CSS, branding
+ * and style of the published WHO SMART Trust IG; then *"theme it, keep the
+ * justthedocs machinery"*; then reuse all the existing just-the-docs
+ * infrastructure but keep the styling of that published IG (except the
+ * navbar, on the left rather than the top). Bean `7h3u`, issue #1682.
  *
  * ## Why this lives here and not in `cat-harness/schemas/themes.ts`
  *

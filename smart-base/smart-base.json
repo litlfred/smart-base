@@ -151,7 +151,7 @@
         "fhir-harness/scripts/templates/ig-pages/"
       ],
       "igSite": true,
-      "_comment_igSite": "Built INTO smart-base's own IG site at /smart-base/, as the WHO SMART Trust IG's are -- the same reasoning, recorded on that IG's docs directory (bean mftp). Owner, 2026-10-05: \"make sure changes you do for smart-trust are reflected in smart-base and so smart-*\", and \"make sure no drift issues\". The IG's own home page is the root; the harness is reached through the navbar.",
+      "_comment_igSite": "Built INTO smart-base's own IG site at /smart-base/, as the WHO SMART Trust IG's are -- the same reasoning, recorded on that IG's docs directory (bean mftp). Owner, 2026-10-05 (paraphrased): changes made for the WHO SMART Trust IG are to be reflected in smart-base and so in every IG built on it, with no drift. The IG's own home page is the root; the harness is reached through the navbar.",
       "tile": {
         "icon": "docs"
       }
