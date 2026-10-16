@@ -31,7 +31,7 @@ until a person reviews it.
 
 ## Tool
 
-`l1-recommendation-scenarios` (`smart-base/tools/index.ts`):
+`l1-recommendation-scenarios` (`smart-base/tools/l1-recommendation-scenarios/l1-recommendation-scenarios.ts`):
 
 ```sh
 bun run smart-base/scripts/l1-recommendation-scenarios.ts --l1 <l1.json|yaml> --vocabulary <guide.json> [--generic <generic.json>] --mapping <mapping.yaml> --out <dir> [--check]

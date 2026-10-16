@@ -41,8 +41,9 @@ The contract is [`input.schema.json`](../../../schemas/skills/l2-dependency-choi
 | `decision` | this skill | `reuse` (unchanged) · `adapt` (fork and change) · `extend` (depend and add) · `reject` |
 | `reason` | this skill | one sentence; required for `reject` |
 | `components` | — | what is taken, piece by piece: DAK components here, profiles, value sets and libraries at L3 |
+| `toolchain` | this skill | on each component reused, adapted or extended: how the candidate produces it — a Tool id from `bun run cat check:tools`, or a script in the candidate's own repository (its source spreadsheet, converter, CQL refresh, test format), found by the search in [`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK*. Stages 4 and 6 produce the component with that toolchain. `none` only after that search came back empty, naming where it looked; the new tool is then a Tool node, never a script in the adaptation repository |
 
-Only `decision` and `reason` are new. Once adjudicated, a `reuse`, `adapt`
+Only `decision`, `reason` and `toolchain` are new. Once adjudicated, a `reuse`, `adapt`
 or `extend` row becomes an ordinary dependency: the DAK's own reference at
 L2, a `dependencies:` entry in `sushi-config.yaml` at L3.
 
@@ -50,10 +51,17 @@ L2, a `dependencies:` entry in `sushi-config.yaml` at L3.
 
 1. **Find the candidates.** Start from `candidates`, and add each DAK whose
    Component 1 the L1 KG's `implementedBy` / `realises` edges reach.
+   For each, find how it produces each component it would give
+   ([`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK*): that is
+   the component's `toolchain`, which stage 4 uses.
 2. **Reuse first.** This is the precedence `recommendation-extraction`
    already uses for personas and processes: reuse an existing asset, then
    adapt one, and create only when neither fits, with a `WARNING` saying none
-   fitted. Prefer the jurisdiction's adaptation over the WHO original when
+   fitted. The same precedence holds for the **tooling** that makes an
+   asset: an adapted decision table is an edited copy of the upstream's
+   source spreadsheet run through the upstream's converter, not a table
+   re-typed in a new format with a new converter (2026-10-15, Uganda).
+   Prefer the jurisdiction's adaptation over the WHO original when
    one exists for the same scope, because it already holds the local
    decisions. Record the WHO original too, as that row's `upstream`.
 3. **Lay the rows out** as a `decision-comparison` table and ask through a

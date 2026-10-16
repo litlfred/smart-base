@@ -72,7 +72,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 5. 3 · Choose L2 dependencies (WHO / jurisdiction DAKs) (`Task_DepsL2`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `l2-dependency-choice`, `decision-comparison`.
+- Skill: `l2-dependency-choice`, `smart-base-tools`, `decision-comparison`.
 - What: From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason.
 - Record it: `workflow_complete` with `node: "Task_DepsL2"`.
 - next: → `Fork_DepsL2`
@@ -105,7 +105,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 8. 4 · Create / adapt L2 DAK assets (`Task_L2`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `l2-dak-authoring`, `dak-preprocessing`, `dak-postprocessing`, `wireframe-design-review`, `feature-staging`.
+- Skill: `l2-dak-authoring`, `smart-base-tools`, `dak-preprocessing`, `dak-postprocessing`, `wireframe-design-review`, `feature-staging`.
 - What: The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data ele
 - Record it: `workflow_complete` with `node: "Task_L2"`.
 - next: → `Fork_L2`
@@ -130,8 +130,8 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 10. 5 · Choose L3 dependencies (WHO / jurisdiction IGs) (`Task_DepsL3`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `l3-dependency-choice`, `ig-artifact-ingestion`, `decision-comparison`.
-- What: Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG.
+- Skill: `l3-dependency-choice`, `ig-artifact-ingestion`, `smart-base-tools`, `decision-comparison`.
+- What: Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG, and record per artefact type the candidate's toolchain (CQL refresh, test-case format, example generator), which stage 6 then uses.
 - Record it: `workflow_complete` with `node: "Task_DepsL3"`.
 - next: → `Fork_DepsL3`
 
@@ -141,7 +141,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### Do all of — `Fork_DepsL3`
 
-- Work every branch; none is optional. Branches: → `Task_AdjDepsL3` (Adjudicate L3 dependencies), → `Task_L3` (6 · Produce L3 assets)
+- Work every branch; none is optional. Branches: → `Task_AdjDepsL3` (Adjudicate L3 dependencies), → `Gateway_L3Ready` (L1 extraction and L2 assets exist, review requested?)
 - The engine passes through this gateway itself; there is nothing to record here.
 
 ### 11. Adjudicate L3 dependencies (`Task_AdjDepsL3`)
@@ -152,17 +152,24 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `End_AdjDepsL3` (Adjudicated)
 
-### 12. 6 · Produce L3 assets (`Task_L3`)
+### Decide — L1 extraction and L2 assets exist, review requested? (`Gateway_L3Ready`)
 
-- Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `l3-fhir-authoring`, `l2-dak-authoring`, `feature-staging`.
-- What: The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build.
-- Record it: `workflow_complete` with `node: "Task_L3"`.
-- next: → `Fork_L3`
+- The order rule (owner, 2026-10-15: "order strict, sign-off QA").
+- Call `workflow_complete` with `node: "Gateway_L3Ready"` and `outcome` set to the label that holds:
+  - «yes» → `Task_L3` (6 · Produce L3 assets)
+  - «no» → `Task_L2` (4 · Create / adapt L2 DAK assets)
 
 ## Done — Adjudicated (`End_AdjDepsL3`)
 
 - The instance completes here. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
+
+### 12. 6 · Produce L3 assets (`Task_L3`)
+
+- Who: the `Authoring agent` lane (role `authoring-agent`).
+- Skill: `l3-fhir-authoring`, `l2-dak-authoring`, `smart-base-tools`, `feature-staging`.
+- What: The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build.
+- Record it: `workflow_complete` with `node: "Task_L3"`.
+- next: → `Fork_L3`
 
 ### Do all of — `Fork_L3`
 

@@ -56,7 +56,7 @@
     },
     "dependencyRow": {
       "title": "Dependency decision row",
-      "description": "One candidate and the decision about it. Only decision and reason are new; the rest is cat-harness DependsOnRecord and smart-base KG evidence. Once adjudicated, a reuse, adapt or extend row becomes an ordinary dependency: the DAK's own reference at L2, a sushi-config.yaml dependencies entry at L3. Defined by the l2-dependency-choice output contract and copied inline wherever it is passed on; the stage chain check compares the copies.",
+      "description": "One candidate and the decision about it. Only decision, reason and toolchain are new; the rest is cat-harness DependsOnRecord and smart-base KG evidence. Once adjudicated, a reuse, adapt or extend row becomes an ordinary dependency: the DAK's own reference at L2, a sushi-config.yaml dependencies entry at L3. Defined by the l2-dependency-choice output contract and copied inline wherever it is passed on; the stage chain check compares the copies.",
       "type": "object",
       "required": [
         "packageId",
@@ -126,6 +126,10 @@
                   "extend",
                   "not-used"
                 ]
+              },
+              "toolchain": {
+                "type": "string",
+                "description": "For a component reused, adapted or extended: how the candidate produces it, so stages 4 and 6 produce it the same way. A Tool id from bun run cat check:tools, or a script in the candidate's own repository (its source spreadsheet, converter, CQL refresh, test format), found by the search in smart-base-tools section Adapting a DAK. none only after that search came back empty, naming where it looked; the new tool is then a Tool node, never a script in the adaptation repository."
               }
             }
           },

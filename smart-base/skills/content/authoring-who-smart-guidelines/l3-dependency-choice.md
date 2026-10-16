@@ -41,5 +41,8 @@ The contract is [`input.schema.json`](../../../schemas/skills/l3-dependency-choi
    CQL library or PlanDefinition in the index that already implements it.
    The matches are the row's `evidence`; what is taken is its `components`
    (`reuse`, `adapt`, `extend`, `not-used`).
+   For each artefact type taken, record the `toolchain` stage 6 will use:
+   how the candidate builds and tests its CQL and examples, found by the
+   search in [`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK*.
 4. **Decide, table, ask and go on**, exactly as
    [`l2-dependency-choice`](l2-dependency-choice.md) steps 2–4.

@@ -22,7 +22,8 @@
     "smart-guideline-create",
     "smart-guideline-end-to-end",
     "smart-stack-layering",
-    "toolchain-ownership"
+    "toolchain-ownership",
+    "transcription-verbatim"
   ],
   "docker": {
     "baseImage": "ubuntu:24.04",
