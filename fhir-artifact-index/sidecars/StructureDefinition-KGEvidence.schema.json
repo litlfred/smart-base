@@ -120,8 +120,8 @@
           "const": {
             "@version": 1.1,
             "fhir": "http://hl7.org/fhir/",
-            "KGCertaintyVS": "http://smart.who.int/base/ValueSet-KGCertaintyVS.jsonld",
-            "KGEvidenceTypeVS": "http://smart.who.int/base/ValueSet-KGEvidenceTypeVS.jsonld"
+            "KGEvidenceTypeVS": "http://smart.who.int/base/ValueSet-KGEvidenceTypeVS.jsonld",
+            "KGCertaintyVS": "http://smart.who.int/base/ValueSet-KGCertaintyVS.jsonld"
           }
         }
       }

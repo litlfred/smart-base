@@ -166,8 +166,8 @@
             "@version": 1.1,
             "fhir": "http://hl7.org/fhir/",
             "KGL1PredicatesVS": "http://smart.who.int/base/ValueSet-KGL1PredicatesVS.jsonld",
-            "KGDerivationVS": "http://smart.who.int/base/ValueSet-KGDerivationVS.jsonld",
-            "KGResolutionStatusVS": "http://smart.who.int/base/ValueSet-KGResolutionStatusVS.jsonld"
+            "KGResolutionStatusVS": "http://smart.who.int/base/ValueSet-KGResolutionStatusVS.jsonld",
+            "KGDerivationVS": "http://smart.who.int/base/ValueSet-KGDerivationVS.jsonld"
           }
         }
       }
