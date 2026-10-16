@@ -11,6 +11,8 @@ description: >
   does it and where. Covers the hybrid extraction (mechanical candidates, agent
   structuring, verbatim and 100 % coverage gates), the reuse-first precedence
   for personas and processes, the WARNING format, and sign-off.
+input: schemas/skills/recommendation-extraction/input.schema.json
+output: schemas/skills/recommendation-extraction/output.schema.json
 ---
 
 # recommendation-extraction
@@ -30,6 +32,21 @@ Every recommendation will end up in a SMART Guideline that is a **clinical**,
 **public-health** or **health-system-strengthening** guideline, and will feed
 the L2 assets derived from it. This skill records that, per recommendation,
 before any L2 asset is drawn.
+
+## Input and output
+
+The contract is [`input.schema.json`](../../../schemas/skills/recommendation-extraction/input.schema.json) and [`output.schema.json`](../../../schemas/skills/recommendation-extraction/output.schema.json).
+
+- **In:** `l1Sources`, [`dak-l1-library`](dak-l1-library.md)'s output, and the `targetGuide` whose personas and processes the scenarios reuse first.
+- **Out:** `l1Kg`: per included source, its `extractionPath` (`library/<bib>/l1-extraction/`), `sourceVersion`, the recommendation, remark, practice and scenario-candidate counts, the `coverage` and every `WARNING`. Stages 3 ([`l2-dependency-choice`](l2-dependency-choice.md)), 4 and 5 take it as their `l1Kg`.
+
+As stage 2 of [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), a
+source is **skipped only when it is already in a KG**: `library/<bib>/l1-extraction/`
+is there, declared, and at the same source version (`skipped: true` in the
+output). A library entry with no extraction still needs this half, after
+`bun run cat ingest` and [`dak-l1-library`](dak-l1-library.md)'s generic-document
+layer have put it in `library/`. Skipping is per source, not for the whole
+stage.
 
 ## The two halves
 
@@ -127,7 +144,9 @@ mechanical again.**
 
 ### Part 1 as a tool: `l1-recommendation-candidates`
 
-Steps 3–6 are one Tool node (`smart-base/tools/index.ts`), run twice around
+This mechanical step is its own named skill, [`recommendation-candidates`](recommendation-candidates.md), with its own contract; the Tool satisfies that skill, not this one.
+
+Steps 3–6 are one Tool node (`smart-base/tools/l1-recommendation-candidates/`), run twice around
 the agent's judgement:
 
 ```sh
@@ -193,6 +212,8 @@ to the Uganda adaptation on 2026-10-15 (folio-assistant#2559, fixed by
 instance at the commit being staged; it must exit 0.
 
 ## Part 2 — the scenario
+
+Its mechanical step is the named skill [`recommendation-scenarios`](recommendation-scenarios.md) (Tool `l1-recommendation-scenarios`).
 
 ### The shape (D3: L2 nodes, reused unchanged)
 
@@ -363,7 +384,9 @@ because the handbook example above uses it too.
 **An authored L1 from pictures.** When the source prints its recommendations
 only as images (a schedule poster, a slide deck), Part 1 finds nothing and the
 L1 is authored from the inspected image narratives and from transcriptions of
-the rendered page. The Tool `l1-transcription-verbatim` is its check: every
+the rendered page. Its check is the named step skill
+[`transcription-verbatim`](transcription-verbatim.md), which the Tool
+`l1-transcription-verbatim` satisfies: every
 statement verbatim in the narrative or transcription it names, every
 transcription word corroborated by the text layer unless listed under
 `inspectionOnly` with its basis. The Uganda schedule poster and UNEPI deck

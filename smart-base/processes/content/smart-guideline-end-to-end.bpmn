@@ -24,7 +24,7 @@
     <bpmn:participant id="Participant_SgEndToEnd" name="WHO SMART Guidelines — end to end, authoring or adaptation" processRef="Process_SgEndToEnd" />
   </bpmn:collaboration>
   <bpmn:process id="Process_SgEndToEnd" name="SMART Guideline end to end" isExecutable="false">
-    <bpmn:documentation>From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the L4 consuming application the requester describes. Adjudication follows every stage as QA, not as a gate (owner, 2026-10-14: "once agent produces L2 it can produce L3"), but the order is a rule (owner, 2026-10-15: "order strict, sign-off QA"): no L3 asset before the L1 extraction and L2 assets it derives from exist with their review requested (Gateway_L3Ready). each stage forks into the next stage and its adjudication, and each adjudication has its own end event, so the instance completes only when all are recorded. The stages run the existing skills and processes (l2-dak-authoring.bpmn for stage 4, dak-l3-ig.bpmn for stage 6); the smart-guideline-end-to-end skill says which, and who adjudicates each.</bpmn:documentation>
+    <bpmn:documentation>From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the L4 consuming application the requester describes. Adjudication follows every stage as QA, not as a gate (owner, 2026-10-14: "once agent produces L2 it can produce L3"), but the order is a rule (owner, 2026-10-15: "order strict, sign-off QA"): no L3 asset before the L1 extraction and L2 assets it derives from exist with their review requested (Gateway_L3Ready). Each stage forks into the next stage and its adjudication, and each adjudication has its own end event, so the instance completes only when all are recorded. Each stage runs one named skill with its own input and output contract, named in brackets on the task (l2-dak-authoring.bpmn for stage 4, dak-l3-ig.bpmn for stage 6), and each stage's output is the next stage's input; the smart-guideline-end-to-end skill is the orchestrator that says so, and who adjudicates each.</bpmn:documentation>
     <bpmn:extensionElements>
       <cat-harness.processes:policy enforcement="advisory" />
     </bpmn:extensionElements>
@@ -82,10 +82,10 @@
       <bpmn:documentation>Someone needs a SMART Guideline, new or adapted, for a use case.</bpmn:documentation>
       <bpmn:outgoing>E01</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:userTask id="Task_DescribeUseCase" name="0 · Describe the use case">
+    <bpmn:userTask id="Task_DescribeUseCase" name="0 · Describe the use case&#10;[guideline-use-case]">
       <bpmn:documentation>Population, setting, jurisdiction, interventions in scope. The user's own words; the agent asks a numbered question if the request did not say.</bpmn:documentation>
       <bpmn:extensionElements>
-        <bootstrap.processes:skill ref="smart-guideline-end-to-end" />
+        <bootstrap.processes:skill ref="guideline-use-case" />
       </bpmn:extensionElements>
       <bpmn:incoming>E01</bpmn:incoming>
       <bpmn:outgoing>E02</bpmn:outgoing>
@@ -94,7 +94,6 @@
       <bpmn:documentation>Component 1 sources of any DAK already in scope first, then WHO IRIS and the jurisdiction's own guidelines. Each candidate marked in-library / in-KG / not yet.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="dak-l1-library" />
-        <bootstrap.processes:skill ref="smart-guideline-end-to-end" />
       </bpmn:extensionElements>
       <bpmn:incoming>E02</bpmn:incoming>
       <bpmn:outgoing>E03</bpmn:outgoing>
@@ -117,11 +116,11 @@
       <bpmn:outgoing>E06</bpmn:outgoing>
       <bpmn:outgoing>E07</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_IngestKg" name="2 · Ingest into the L1 KG&#10;[dak-l1-library · recommendation-extraction]">
+    <bpmn:task id="Task_IngestKg" name="2 · Ingest into the L1 KG&#10;[recommendation-extraction]">
       <bpmn:documentation>Per source not yet extracted: cat ingest into library/, the generic-document layer (l1-library), then the L1 layer (recommendations, remarks, practices, scenario candidates) into library/&lt;bib&gt;/l1-extraction/.</bpmn:documentation>
       <bpmn:extensionElements>
-        <bootstrap.processes:skill ref="dak-l1-library" />
         <bootstrap.processes:skill ref="recommendation-extraction" />
+        <bootstrap.processes:skill ref="dak-l1-library" />
       </bpmn:extensionElements>
       <bpmn:incoming>E06</bpmn:incoming>
       <bpmn:outgoing>E08</bpmn:outgoing>
@@ -145,10 +144,10 @@
       <bpmn:incoming>E10</bpmn:incoming>
       <bpmn:outgoing>E11</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_DepsL2" name="3 · Choose L2 dependencies&#10;(WHO / jurisdiction DAKs)">
+    <bpmn:task id="Task_DepsL2" name="3 · Choose L2 dependencies&#10;(WHO / jurisdiction DAKs)&#10;[l2-dependency-choice]">
       <bpmn:documentation>From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason. Reuse first; prefer the jurisdiction's adaptation, recording the WHO original as its upstream. For each component kept, record its toolchain: how the candidate produces it (the tools graph, the candidate repository's own source spreadsheets and converters, WHO's DAK toolchain), which stage 4 then uses.</bpmn:documentation>
       <bpmn:extensionElements>
-        <bootstrap.processes:skill ref="smart-guideline-end-to-end" />
+        <bootstrap.processes:skill ref="l2-dependency-choice" />
         <bootstrap.processes:skill ref="smart-base-tools" />
         <bootstrap.processes:skill ref="decision-comparison" />
       </bpmn:extensionElements>
@@ -199,9 +198,10 @@
       <bpmn:incoming>E16</bpmn:incoming>
       <bpmn:outgoing>E32</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:task id="Task_DepsL3" name="5 · Choose L3 dependencies&#10;(WHO / jurisdiction IGs)&#10;[ig-artifact-ingestion]">
+    <bpmn:task id="Task_DepsL3" name="5 · Choose L3 dependencies&#10;(WHO / jurisdiction IGs)&#10;[l3-dependency-choice]">
       <bpmn:documentation>Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG, and record per artefact type the candidate's toolchain (CQL refresh, test-case format, example generator), which stage 6 then uses.</bpmn:documentation>
       <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="l3-dependency-choice" />
         <bootstrap.processes:skill ref="ig-artifact-ingestion" />
         <bootstrap.processes:skill ref="smart-base-tools" />
         <bootstrap.processes:skill ref="decision-comparison" />
@@ -257,10 +257,10 @@
       <bpmn:incoming>E22</bpmn:incoming>
       <bpmn:outgoing>E34</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:userTask id="Task_DescribeApp" name="7 · L4: describe the consuming application">
+    <bpmn:userTask id="Task_DescribeApp" name="7 · L4: describe the consuming application&#10;[l4-application-brief]">
       <bpmn:documentation>Who uses it, on what device, which L2 processes and L3 resources it covers, connectivity, the systems it talks to. The agent offers options drawn from the L2 personas and processes. This is the written intent wireframe-design-review starts from.</bpmn:documentation>
       <bpmn:extensionElements>
-        <bootstrap.processes:skill ref="smart-guideline-end-to-end" />
+        <bootstrap.processes:skill ref="l4-application-brief" />
       </bpmn:extensionElements>
       <bpmn:incoming>E23</bpmn:incoming>
       <bpmn:outgoing>E24</bpmn:outgoing>
@@ -273,10 +273,10 @@
       <bpmn:incoming>E24</bpmn:incoming>
       <bpmn:outgoing>E25</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="Task_BuildApp" name="8b · L4: build the consuming application">
+    <bpmn:task id="Task_BuildApp" name="8b · L4: build the consuming application&#10;[l4-application-build]">
       <bpmn:documentation>Against the stage-6 IG build, with conformance tests from the IG's examples and test cases.</bpmn:documentation>
       <bpmn:extensionElements>
-        <bootstrap.processes:skill ref="smart-guideline-end-to-end" />
+        <bootstrap.processes:skill ref="l4-application-build" />
       </bpmn:extensionElements>
       <bpmn:incoming>E25</bpmn:incoming>
       <bpmn:outgoing>E26</bpmn:outgoing>

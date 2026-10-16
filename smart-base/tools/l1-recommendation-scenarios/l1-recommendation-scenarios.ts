@@ -21,7 +21,7 @@ export default toolFactory((t) =>
         { name: "runContext", schema: t("RepoPath"), description: "`run-context.json`, cat-harness `folio-run-context/v1`." },
       ],
     },
-    satisfies: ["recommendation-extraction"],
+    satisfies: ["recommendation-scenarios"],
     selection: {
       when: "Each extracted recommendation is to say who acts on it and during which business process, before any L2 asset is drawn.",
       limits:
