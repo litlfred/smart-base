@@ -8,8 +8,9 @@
  * commit 3f5e477b9628fa818e71a2b2298371196c5af97c (main). Every note, value set, predicate, edge, grounding
  * and omission is carried verbatim; what is NEW is each property's type, Zod
  * schema and FHIR mapping. `npm run build` regenerates
- * `generated/l1/l1.json` (smart-kg's format) and the FSH under `input/fsh/`;
- * `test/parity.test.ts` holds the JSON equal to WHO's.
+ * `generated/l1/l1.json` (smart-kg's format) and the FSH under `input/fsh/`.
+ * This file is the source of truth: smart-kg is deprecated (owner,
+ * 2026-10-16) and the JSON is no longer held equal to its file.
  *
  * Typing decisions a reviewer should check, because l1.json names these
  * properties without typing them:
@@ -577,7 +578,7 @@ export const L1: LayerSpec = {
     },
     {
       "what": "Where DAK citations actually occur, and how they fail",
-      "where": "smart-immunizations input/decision-logic/IMMZ DAK_decision-support logic.xlsx and input/L2/IMMZ DAK_indicators.xlsx",
+      "where": "a WHO SMART immunizations IG's decision-logic workbook (input/decision-logic/IMMZ DAK_decision-support logic.xlsx) and its indicators workbook (input/L2/IMMZ DAK_indicators.xlsx)",
       "detail": "Reference cells cite '… (n)', where (n) is a row of the workbook's own References sheet holding the full bibliographic entry and URL; each workbook numbers its own list. Some cells hold two citations on separate lines. Of 50 indicators, 44 cite a reference, 4 carry the placeholder '[Add appropriate reference]', 2 are blank."
     }
   ],
