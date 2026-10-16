@@ -141,7 +141,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### Do all of — `Fork_DepsL3`
 
-- Work every branch; none is optional. Branches: → `Task_AdjDepsL3` (Adjudicate L3 dependencies), → `Gateway_L3Ready` (L1 extraction and L2 assets exist, review requested?)
+- Work every branch; none is optional. Branches: → `Task_AdjDepsL3` (Adjudicate L3 dependencies), → `Task_L3Ready` (Check L3 readiness)
 - The engine passes through this gateway itself; there is nothing to record here.
 
 ### 11. Adjudicate L3 dependencies (`Task_AdjDepsL3`)
@@ -152,18 +152,26 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `End_AdjDepsL3` (Adjudicated)
 
-### Decide — L1 extraction and L2 assets exist, review requested? (`Gateway_L3Ready`)
+### 12. Check L3 readiness (`Task_L3Ready`)
 
-- The order rule (owner, 2026-10-15: "order strict, sign-off QA").
-- Call `workflow_complete` with `node: "Gateway_L3Ready"` and `outcome` set to the label that holds:
-  - «yes» → `Task_L3` (6 · Produce L3 assets)
-  - «no» → `Task_L2` (4 · Create / adapt L2 DAK assets)
+- Who: the `Authoring agent` lane (role `authoring-agent`).
+- Skill: `l3-readiness`.
+- What: The order rule as a check with its own contract (owner, 2026-10-16: its own skill).
+- Record it: `workflow_complete` with `node: "Task_L3Ready"`.
+- next: → `Gateway_L3Ready` (L1 extraction and L2 assets exist, review requested?)
 
 ## Done — Adjudicated (`End_AdjDepsL3`)
 
 - The instance completes here. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
 
-### 12. 6 · Produce L3 assets (`Task_L3`)
+### Decide — L1 extraction and L2 assets exist, review requested? (`Gateway_L3Ready`)
+
+- The order rule (owner, 2026-10-15: "order strict, sign-off QA"), decided on Task_L3Ready's ready (skill l3-readiness).
+- Call `workflow_complete` with `node: "Gateway_L3Ready"` and `outcome` set to the label that holds:
+  - «yes» → `Task_L3` (6 · Produce L3 assets)
+  - «no» → `Task_L2` (4 · Create / adapt L2 DAK assets)
+
+### 13. 6 · Produce L3 assets (`Task_L3`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `l3-fhir-authoring`, `l2-dak-authoring`, `smart-base-tools`, `feature-staging`.
@@ -176,7 +184,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 - Work every branch; none is optional. Branches: → `Task_AdjL3` (Review each L3 asset (before / after if adapted)), → `Task_DescribeApp` (7 · L4: describe the consuming application)
 - The engine passes through this gateway itself; there is nothing to record here.
 
-### 13. Review each L3 asset (before / after if adapted) (`Task_AdjL3`)
+### 14. Review each L3 asset (before / after if adapted) (`Task_AdjL3`)
 
 - Who: the `Human adjudicators` lane (role `reviewer`).
 - Skill: `content-review`, `staging-review`, `ig-ast-delta`, `wireframe-design-review`, `fhir-questionnaire-wireframe`.
@@ -184,7 +192,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `End_AdjL3` (Adjudicated)
 
-### 14. 7 · L4: describe the consuming application (`Task_DescribeApp`)
+### 15. 7 · L4: describe the consuming application (`Task_DescribeApp`)
 
 - Who: the `Requester (country team / implementer)` lane (role `user`).
 - Skill: `l4-application-brief`.
@@ -196,7 +204,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 - The instance completes here. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
 
-### 15. 8a · L4: wireframe the application (`Task_WireframeApp`)
+### 16. 8a · L4: wireframe the application (`Task_WireframeApp`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `wireframe-design-review`.
@@ -204,7 +212,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 - Record it: `workflow_complete` with `node: "Task_WireframeApp"`.
 - next: → `Task_BuildApp` (8b · L4: build the consuming application)
 
-### 16. 8b · L4: build the consuming application (`Task_BuildApp`)
+### 17. 8b · L4: build the consuming application (`Task_BuildApp`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `l4-application-build`.
@@ -217,7 +225,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 - Work every branch; none is optional. Branches: → `Task_AdjApp` (Adjudicate the L4 wireframes and application), → `EndEvent_AppBuilt` (L4 application built)
 - The engine passes through this gateway itself; there is nothing to record here.
 
-### 17. Adjudicate the L4 wireframes and application (`Task_AdjApp`)
+### 18. Adjudicate the L4 wireframes and application (`Task_AdjApp`)
 
 - Who: the `Human adjudicators` lane (role `reviewer`).
 - Skill: `content-review`, `staging-review`, `wireframe-design-review`.
