@@ -1,4 +1,5 @@
 {
+  "_generated": "smart-base/scripts/gen-document-kinds.ts — do not hand-edit; rerun it",
   "id": "dak",
   "title": "Digital Adaptation Kit (DAK)",
   "description": "The L2 layer of a WHO SMART Guideline: the ten components that make a guideline's recommendations operational, ahead of the L3 FHIR IG that implements them. Fixed: a DAK has exactly these components, in this order.",

@@ -2,7 +2,7 @@
  * Write every artefact generated from the Zod source, or with `--check`, fail
  * when any committed copy differs from what would be written.
  *
- *   smart-base/kg/generated/l1/l1.json                          L1 3.0, smart-kg format, JSON-equal to WHO's
+ *   smart-base/kg/generated/l1/l1.json                          L1 3.0, smart-kg format, JSON-equal to WHO's but for `_generated`
  *   smart-base/kg/generated/l1/l1-library.json                  the extension layer (imports l1), smart-kg format
  *   smart-base/kg/generated/l1/l1-library.jsonld                the specialisation: rdfs:subClassOf from L1 layout classes to the library's
  *   smart-base/kg/generated/l1/recommendation-graph.schema.json the document JSON Schema
@@ -57,11 +57,27 @@ export function specialisationJsonLd(): Record<string, unknown> {
   };
 }
 
+/**
+ * The top-level `_generated` the two smart-kg-format files carry: each file's
+ * own declaration that this generator wrote it, the convention the harness's
+ * reference-direction check reads (`declaresGenerated`). `l1.json` quotes
+ * WHO's text byte for byte, including a `where` naming a DAK repository by its
+ * layer name; without the key that quote read as authored text in this layer.
+ *
+ * Added here, at serialisation, and not in `toOntologyJson`: the ontology
+ * schema is strict and the parity test compares that function's value with
+ * WHO's file, so both stay exactly as they were. `source: "authored"` in the
+ * file is about L1's CONTENT (authored, not extracted); this key is about the
+ * FILE (written from `l1.ts`, not edited by hand).
+ */
+export const GENERATED_NOTE = "smart-base/kg/src/emit.ts (npm run build in smart-base/kg/) — do not hand-edit; edit src/";
+
 export function artefacts(): { path: string; text: string }[] {
   const json = (v: unknown) => `${JSON.stringify(v, null, 2)}\n`;
+  const declared = (v: object) => json({ _generated: GENERATED_NOTE, ...v });
   return [
-    { path: "smart-base/kg/generated/l1/l1.json", text: json(toOntologyJson(L1)) },
-    { path: "smart-base/kg/generated/l1/l1-library.json", text: json(toOntologyJson(L1_LIBRARY)) },
+    { path: "smart-base/kg/generated/l1/l1.json", text: declared(toOntologyJson(L1)) },
+    { path: "smart-base/kg/generated/l1/l1-library.json", text: declared(toOntologyJson(L1_LIBRARY)) },
     { path: "smart-base/kg/generated/l1/l1-library.jsonld", text: json(specialisationJsonLd()) },
     { path: "smart-base/kg/generated/l1/recommendation-graph.schema.json", text: json(graphJsonSchema()) },
     { path: "smart-base/kg/generated/l1/l1.context.jsonld", text: json(baseContext([L1])) },
