@@ -9,7 +9,9 @@ permissions:
   contents: read
 jobs:
   checks:
-    uses: litlfred/cat-harness-tools/.github/workflows/layer-pr-checks.yml@main
+    uses: litlfred/cat-harness-tools/.github/workflows/layer-pr-checks.yml@claude/layer-pr-checks-speed-397
     with:
       # The instance is a sub-directory of this repository, not its root.
       path-in-repo: smart-base
+      # TRIAL ONLY (litlfred/cat-harness-tools#406): never merge this branch.
+      tools-ref: claude/layer-pr-checks-speed-397
