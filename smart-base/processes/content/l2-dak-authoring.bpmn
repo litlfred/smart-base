@@ -249,7 +249,7 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_L2Dak">
       <bpmndi:BPMNShape id="Participant_L2Dak_di" bpmnElement="Participant_L2Dak" isHorizontal="true">
-        <dc:Bounds x="160" y="80" width="1820" height="1150" />
+        <dc:Bounds x="160" y="80" width="1820" height="1210" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_Programme_di" bpmnElement="Lane_Programme" isHorizontal="true">
         <dc:Bounds x="190" y="80" width="1790" height="150" />
@@ -264,7 +264,7 @@
         <dc:Bounds x="190" y="930" width="1790" height="150" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_Sme_di" bpmnElement="Lane_Sme" isHorizontal="true">
-        <dc:Bounds x="190" y="1080" width="1790" height="150" />
+        <dc:Bounds x="190" y="1080" width="1790" height="210" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="StartEvent_Guideline_di" bpmnElement="StartEvent_Guideline">
         <dc:Bounds x="262" y="137" width="36" height="36" />
@@ -323,7 +323,7 @@
       <bpmndi:BPMNShape id="Gateway_Accurate_di" bpmnElement="Gateway_Accurate" isMarkerVisible="true">
         <dc:Bounds x="1535" y="1130" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1495" y="1184" width="130" height="28" />
+          <dc:Bounds x="1500" y="1100" width="120" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_AssembleDak_di" bpmnElement="Task_AssembleDak">
@@ -432,12 +432,12 @@
         <di:waypoint x="1535" y="1155" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B19_di" bpmnElement="B19">
-        <di:waypoint x="1560" y="1130" />
-        <di:waypoint x="1560" y="600" />
-        <di:waypoint x="745" y="600" />
-        <di:waypoint x="745" y="630" />
+        <di:waypoint x="1560" y="1180" />
+        <di:waypoint x="1560" y="1245" />
+        <di:waypoint x="760" y="1245" />
+        <di:waypoint x="760" y="680" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1300" y="568" width="110" height="27" />
+          <dc:Bounds x="1105" y="1252" width="110" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B20_di" bpmnElement="B20">

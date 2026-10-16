@@ -85,9 +85,9 @@ tramp
 node_modules/
 package-lock.json
 package.json
-# kg/ is a package: its manifest and lockfile are what `npm ci` in kg.yml installs from
-!kg/package.json
-!kg/package-lock.json
+# smart-base/kg/ is a package: its manifest and lockfile are what `npm ci` in kg.yml installs from
+!smart-base/kg/package.json
+!smart-base/kg/package-lock.json
 
 # BEGIN index mounts (generated from index.config.json — do not edit)
 /fhir-harness/
@@ -97,3 +97,9 @@ package.json
 /bootstrap/
 /bootstrap-tools/
 # END index mounts
+
+# Written by a local publish (stage-local.ts, IG route): the IG AST fetched from
+# its cache branch, and the landing data the site build writes into the local
+# instance. Never committed; the site is built from them.
+output-ast/
+smart-base/docs/_data/

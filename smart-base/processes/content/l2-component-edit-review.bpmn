@@ -25,7 +25,7 @@
     <bpmn:participant id="Participant_L2ComponentEditReview" name="One L2 DAK component — agent edits, a person reviews" processRef="Process_L2ComponentEditReview" />
   </bpmn:collaboration>
   <bpmn:process id="Process_L2ComponentEditReview" name="L2 component edit and review" isExecutable="false">
-    <bpmn:documentation>One pass over one L2 DAK component: the agent edits it, runs its checker, renders and stages it with a before/after, and hands it on; review forks off beside that hand-on and never holds it up (owner, 2026-10-14: adjudication is QA, not a gate). Called by each authoring track of l2-dak-authoring.bpmn (Process_L2Dak), one call per component pass.
+    <bpmn:documentation>One pass over one L2 DAK component: the agent edits it, runs its checker, renders and stages it with a before/after, and hands it on; review forks off beside that hand-on and never holds it up, because adjudication is QA, not a gate. That is the owner's ruling of 2026-10-14. Called by each authoring track of l2-dak-authoring.bpmn (Process_L2Dak), one call per component pass.
 
 The call's inputs, which are the only things that differ between components (skill l2-component-edit-review, "The inputs, per component"):
 - component: personas and user scenarios (C2, C3), business processes (C4), core data elements and glossary (C5) with their terminology bindings, decision-support and scheduling logic (C6, C7), indicators and requirements (C8, C9);

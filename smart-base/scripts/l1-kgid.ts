@@ -2,11 +2,12 @@
  * L1 identity — the functions of WHO smart-kg `tools/kgid.mjs` (main
  * `3f5e477`, L1 3.0) this instance's extractors mint IRIs with.
  *
- * A copy, and a deliberate one: smart-kg's module and litlfred/smart-base's
- * Zod port (`kg/src/kgid.ts`) both live in other repositories, and an L1 IRI
- * that differs from the one smart-kg mints for the same guideline makes two
- * nodes of one. So `l1-kgid.test.ts` pins outputs, and when `SMART_KG_HOME`
- * names a checkout it compares against `kgid.mjs` itself.
+ * A copy, and a deliberate one: smart-kg's module lives in another repository,
+ * and an L1 IRI that differs from the one smart-kg mints for the same guideline
+ * makes two nodes of one. (This layer's Zod package holds a second port of the
+ * same functions, `smart-base/kg/src/kgid.ts`.) So `l1-kgid.test.ts` pins
+ * outputs, and when `SMART_KG_HOME` names a checkout it compares against
+ * `kgid.mjs` itself.
  *
  * The rule, from smart-kg: L1 IRIs live under one WHO-wide namespace and are
  * built from what WHO prints (ISBN, printed number), so two extractions of one

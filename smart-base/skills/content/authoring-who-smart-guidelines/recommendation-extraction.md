@@ -35,7 +35,7 @@ before any L2 asset is drawn.
 
 | half | produces | layer | schema |
 |---|---|---|---|
-| extraction | `recommendation` and `remark` nodes, verbatim — or, for implementation guidance, `implementation-practice` nodes | L1 | L1 **3.0**, `kg/src/l1.ts` in litlfred/smart-base (`KGRecommendation`); `implementation-practice` is the `l1-library` extension, `kg/src/l1-library.ts` (`KGImplementationPractice`); not smart-kg 1.0 |
+| extraction | `recommendation` and `remark` nodes, verbatim — or, for implementation guidance, `implementation-practice` nodes | L1 | L1 **3.0**, `smart-base/kg/src/l1.ts` in litlfred/smart-base (`KGRecommendation`); `implementation-practice` is the `l1-library` extension, `smart-base/kg/src/l1-library.ts` (`KGImplementationPractice`); not smart-kg 1.0 |
 | scenario | one `user-scenario` candidate per recommendation, joined to `persona` and `business-process` | L2 | smart-kg `ontology/l2/l2.json`, unchanged; smart-base `UserScenario.fsh` |
 
 ### Implementation guidance prints practices, not recommendations (owner ruling 1b, 2026-10-12)
@@ -54,8 +54,8 @@ normative is an **`implementation-practice`** node, a class of its own, never a
   decision emits an `implementation-practice` node at
   `<publication>/implementation-practice/<key>`, and the graph names
   `l1-library.context.jsonld` so the validator scopes L1 + the extension.
-- The class lives in `kg/src/l1-library.ts`, **not** `kg/src/l1.ts`:
-  `generated/l1/l1.json` must stay equal to WHO smart-kg's (`kg/test/parity.test.ts`).
+- The class lives in `smart-base/kg/src/l1-library.ts`, **not** `smart-base/kg/src/l1.ts`:
+  `generated/l1/l1.json` must stay equal to WHO smart-kg's (`smart-base/kg/test/parity.test.ts`).
 - It carries `identifier`, `statement` (verbatim) and `contentHash`; no `kind`,
   `direction`, `strength` or certainty — nothing graded it. A `kind` on such a
   decision is refused.
@@ -63,7 +63,7 @@ normative is an **`implementation-practice`** node, a class of its own, never a
   `remark` decision in such a publication is refused: exclude the sentence,
   make it its own practice, or wait until remark is licensed on a practice
   upstream.
-- `kg/src/validate.ts` refuses a `recommendation` defined in an
+- `smart-base/kg/src/validate.ts` refuses a `recommendation` defined in an
   implementation-guidance or methodology publication.
 - The output file is `l1.json`. It was `recommendations.l1.json` until the
   owner ruled, 2026-10-12, *"Rename to l1.json"*: the graph holds
@@ -157,7 +157,7 @@ Every decision carries a `basis`. A location may carry a list of
 It **refuses** a statement not printed in the entry (normalised), an override
 that neither contains nor is contained in its candidate, a location the entry
 does not hold, a reused key, and a remark of an undeclared key — then checks
-the graph with `kg/src/validate.ts`. It writes `recommendation-candidates.json`
+the graph with `smart-base/kg/src/validate.ts`. It writes `recommendation-candidates.json`
 (the work list), `l1.json`, `exclusions.proposed.json`,
 `extraction-warnings.md` and `run-context.json`.
 
@@ -176,6 +176,21 @@ beside its output — the platform commit, the mounts, the script and its hash,
 the inputs' hash basis — the same record `pdf-ocr.py` writes at ingest. The
 work list cites it by reference. `--check` ignores the context, as it ignores
 `generatedAt`: a context moves with every commit.
+
+**Declare every output directory, in the same commit.** An `--out` directory
+in or beside a library — `library/<entry>/l1-extraction/`, or a sibling such
+as `library/l1-recommendation-scenarios/` that Part 2 writes — is a directory
+of the instance's `<name>.json` with `"graphTypologies": ["l1-extraction"]`,
+one entry per directory, never a wildcard (smart-base's own
+`library-9789240116191-eng-l1-extraction` is the pattern). Undeclared,
+folio-assistant's `check:l1-complete` reads an `l1-extraction/` inside an
+entry as a stray child and a sibling directory as an entry with no
+`structure.json`; it fails the QA working copy, and with it every test
+shard, gate and the staging build that read the copy. That is what happened
+to the Uganda adaptation on 2026-10-15 (folio-assistant#2559, fixed by
+<https://github.com/litlfred/smart-immunizations-uganda/commit/6baddb4>). Before staging, run
+`bun run cat check:l1-complete` in a folio-assistant checkout that mounts the
+instance at the commit being staged; it must exit 0.
 
 ## Part 2 — the scenario
 
@@ -344,3 +359,13 @@ library, which is its home, with the check that keeps it current (owner,
 The generic rung it was run with stays here, as
 `smart-base/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json`,
 because the handbook example above uses it too.
+
+**An authored L1 from pictures.** When the source prints its recommendations
+only as images (a schedule poster, a slide deck), Part 1 finds nothing and the
+L1 is authored from the inspected image narratives and from transcriptions of
+the rendered page. The Tool `l1-transcription-verbatim` is its check: every
+statement verbatim in the narrative or transcription it names, every
+transcription word corroborated by the text layer unless listed under
+`inspectionOnly` with its basis. The Uganda schedule poster and UNEPI deck
+(<https://github.com/litlfred/smart-immunizations-uganda/tree/main/library/l1-recommendation-scenarios/uganda>)
+are the worked example.

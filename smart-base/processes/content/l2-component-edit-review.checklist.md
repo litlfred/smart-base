@@ -4,7 +4,7 @@
 
 > **Generated, and not the authority.** This is `smart-base/processes/content/l2-component-edit-review.bpmn` (process `Process_L2ComponentEditReview`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
 
-One pass over one L2 DAK component: the agent edits it, runs its checker, renders and stages it with a before/after, and hands it on; review forks off beside that hand-on and never holds it up (owner, 2026-10-14: adjudication is QA, not a gate).
+One pass over one L2 DAK component: the agent edits it, runs its checker, renders and stages it with a before/after, and hands it on; review forks off beside that hand-on and never holds it up, because adjudication is QA, not a gate.
 
 ## Begin — Component pass called (`Start_ComponentPass`)
 

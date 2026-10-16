@@ -74,6 +74,7 @@ export {
 } from "../../cat-harness/schemas/theme-by-ref.js";
 export { defineTool, type ToolDefinition } from "../../cat-harness/schemas/tool.js";
 export { toolTypeIri } from "../../cat-harness/schemas/tool-types.js";
+export { toolFactory, toolsFromFolders } from "../../cat-harness/schemas/tool-folders.js";
 export {
   writeInstanceConfig,
 } from "../../cat-harness-tools/test/support/instance-fixture.js";
