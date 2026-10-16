@@ -12,8 +12,8 @@
  *
  * The emitted ontology JSON ({@link toOntologyJson}) is smart-kg's format,
  * field for field, so tools written against smart-kg — `validate.mjs`,
- * `build-exports.mjs` — read it unchanged. `test/parity.test.ts` holds it equal
- * to WHO's `ontology/l1/l1.json`.
+ * `build-exports.mjs` — read it unchanged. It is no longer held equal to WHO's
+ * `ontology/l1/l1.json`: smart-kg is deprecated (owner, 2026-10-16).
  */
 import { z } from "zod";
 

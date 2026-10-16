@@ -72,7 +72,8 @@ normative is an **`implementation-practice`** node, a class of its own, never a
   `<publication>/implementation-practice/<key>`, and the graph names
   `l1-library.context.jsonld` so the validator scopes L1 + the extension.
 - The class lives in `smart-base/kg/src/l1-library.ts`, **not** `smart-base/kg/src/l1.ts`:
-  `generated/l1/l1.json` must stay equal to WHO smart-kg's (`smart-base/kg/test/parity.test.ts`).
+  `l1.ts` stays the migrated L1 3.0 layer, unextended. (It is no longer held
+  equal to WHO smart-kg's `l1.json`: smart-kg is deprecated, owner 2026-10-16.)
 - It carries `identifier`, `statement` (verbatim) and `contentHash`; no `kind`,
   `direction`, `strength` or certainty — nothing graded it. A `kind` on such a
   decision is refused.

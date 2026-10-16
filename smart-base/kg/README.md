@@ -12,6 +12,10 @@ Migrated from [WorldHealthOrganization/smart-kg](https://github.com/WorldHealthO
 carried verbatim. What's new is a **type** for every property: smart-kg names
 its properties and binds some to value sets, but doesn't type the rest.
 
+**smart-kg is deprecated (owner, 2026-10-16).** `src/l1.ts` is the source of
+truth; nothing here is held equal to smart-kg's files any more, and no test or
+workflow needs a smart-kg checkout.
+
 ## One source, every format
 
 | file | what | generated? |
@@ -21,10 +25,10 @@ its properties and binds some to value sets, but doesn't type the rest.
 | `src/graph.ts` | a graph document's form (tier 1) | source |
 | `src/validate.ts` | tier 1 + tier 2: a port of smart-kg `validate.mjs` 3.0, plus a check on typed values | source |
 | `src/kgid.ts` | L1 IRIs and content hashes: a port of `tools/kgid.mjs` | source |
-| `generated/l1/l1.json` | L1 3.0 in smart-kg's format, JSON-equal to WHO's | generated |
+| `generated/l1/l1.json` | L1 3.0 in smart-kg's format | generated |
 | `generated/l1/l1-library.json`, `l1-library.jsonld` | the extension layer, and its `rdfs:subClassOf` statements | generated |
 | `generated/l1/recommendation-graph.schema.json` | the document JSON Schema | generated |
-| `generated/l1/l1.context.jsonld` | smart-kg's L1 JSON-LD context, equal to WHO's | generated |
+| `generated/l1/l1.context.jsonld` | the L1 JSON-LD context, built the way smart-kg built it | generated |
 | `generated/l1/l1-library.context.jsonld` | the context an `l1-library` graph names (`src/context.ts`) | generated |
 | `src/loader.ts` | a jsonld.js document loader serving both contexts offline | source |
 | `../../input/fsh/models/KGL1.fsh`, `KGL1Library.fsh` | logical models | generated |
@@ -54,14 +58,13 @@ every other logical model here.
 `publicationType` is `implementation-guidance` (or `methodology`) makes no
 recommendations of its own (handbook §1.9). What it prints is an
 `implementation-practice` node — a class of its own, declared here rather than
-in `l1.ts` so `l1.json` stays equal to WHO's. It carries `identifier`,
+in `l1.ts` so the migrated 3.0 layer stays unextended. It carries `identifier`,
 `statement` and `contentHash` and no grading; L1 3.0's `remark` cannot attach to
 it (its IRI is minted under a recommendation). `validate.ts` refuses a
 `recommendation` defined in such a publication.
 
-It is kept as its own layer (`l1-library`, which imports `l1`), so
-`generated/l1/l1.json` stays equal to WHO's and the extension can be proposed
-upstream unchanged. A document using it names `l1-library.context.jsonld`.
+It is kept as its own layer (`l1-library`, which imports `l1`), so the 3.0
+layer stays as migrated and the extension stays separable. A document using it names `l1-library.context.jsonld`.
 
 ## JSON-LD: graphs that survive as RDF
 
@@ -75,7 +78,7 @@ import { documentLoader } from "./src/loader.ts";
 const nquads = await jsonld.toRDF(graph, { format: "application/n-quads", documentLoader });
 ```
 
-**`l1.context.jsonld` is smart-kg's and stays equal to it.** Under it, an L1
+**`l1.context.jsonld` is smart-kg's L1 context as migrated.** Under it, an L1
 graph loses most of its meaning as RDF. Measured on the Leave-no-one-behind
 graph with jsonld.js (1,400 triples):
 - **No node keeps its class.** Types are class ids (`publication-section`),
@@ -92,7 +95,7 @@ graph with jsonld.js (1,400 triples):
 
 The same graph then gives 1,508 triples with every class, every named
 property and 37 `prov:specializationOf` edges (`test/context.test.ts`). The
-three are proposed upstream; they are not patched into smart-kg's file.
+three are kept in the extension's context, not in the L1 one.
 
 ## Reuse before invention
 
@@ -109,16 +112,13 @@ three are proposed upstream; they are not patched into smart-kg's file.
 cd smart-base/kg && npm ci
 npm run build                            # regenerate everything; removes orphaned generated FSH
 npm run check                            # fail if any generated file is stale or orphaned
-SMART_KG_HOME=../../../smart-kg npm test  # parity, kgid agreement, smart-kg's L1 cases, the extension
+npm test                                 # layers, generated files, contexts, RDF
 npm run validate -- path/to/graph.json   # check a graph document
 ```
 
-Without `SMART_KG_HOME`, the parity and agreement tests report **n/a**: they
-are skipped, never passed.
-
 ## Known limits
 
-- L1 only. smart-kg's L2, L2-BPMN, L2-DMN and L3 layers stay in smart-kg.
+- L1 only. smart-kg's L2, L2-BPMN, L2-DMN and L3 layers were not migrated.
 - smart-base's `generate_logical_model_schemas.py` flattens a BackboneElement's
   children into top-level properties (`identifiers.value` appears as `value`).
   That's an existing behaviour of the generator: `DAK.publisher` is nested the
