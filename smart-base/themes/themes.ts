@@ -178,8 +178,12 @@ export const THEME_REPOSITORY = "litlfred/smart-base";
  * rather than describing a site that no longer looks like this.
  */
 export const UPSTREAM = {
-  /** The IG whose look this reproduces. Carries no branding CSS of its own. */
-  ig: { repo: "WorldHealthOrganization/smart-trust", sha: "26635f7b05b647bb4f15a526bac79d23cff57056" },
+  /**
+   * The IG whose look this reproduces. Carries no branding CSS of its own.
+   * Recorded as the published repository's ADDRESS: it is where the look was
+   * observed, not a layer this one depends on.
+   */
+  ig: { url: "https://github.com/WorldHealthOrganization/smart-trust", sha: "26635f7b05b647bb4f15a526bac79d23cff57056" },
   /** `who.template.root` — where the branding actually lives. CC0-1.0. */
   template: {
     repo: "WorldHealthOrganization/smart-ig-template",
