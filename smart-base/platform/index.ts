@@ -155,3 +155,31 @@ export {
   DublinCoreRecordSchema,
   type DublinCoreRecord,
 } from "../../folio-assistant-core/schemas/dublin-core.ts";
+// The l1-extraction viewer (`scripts/gen-l1-extraction-pages.ts`): where a
+// declared visualiser's pages go, and where the library publisher puts an
+// entry's sub-graph files.
+export {
+  checkoutRootFor,
+} from "../../cat-harness/schemas/cat-harness.js";
+export {
+  checkoutDirectories,
+} from "../../cat-harness/schemas/harness-config.js";
+export {
+  siteRootFrom,
+  visualiserRoute,
+} from "../../cat-harness/schemas/visualiser-route.js";
+export {
+  declaredVisualisers,
+  pageParts,
+  siteOwnerDir,
+  visualiserPageDir,
+  withRenderedByFrontMatter,
+  type DeclaredVisualiser,
+} from "../../cat-harness-tools/scripts/viewer-declarations.js";
+export {
+  siteArg,
+  sitePageAt,
+} from "../../cat-harness-tools/scripts/lib/site-target.ts";
+export {
+  entryGraphSitePath,
+} from "../../cat-harness-tools/scripts/lib/library-entry-graphs.ts";
