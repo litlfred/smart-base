@@ -8,7 +8,7 @@
  *
  * ## Why it is here
  *
- * Owner, 2026-10-14, on an IG repository (smart-trust) that lost its DAK API
+ * Owner, 2026-10-14, on an IG repository (the WHO SMART Trust IG) that lost its DAK API
  * sidecars when it dropped its own `site.build`: *"that should already be
  * there in smart-base (dak api)"*. An IG repository declares no steps of its
  * own; it names this layer as its site's landing (`index.config.json`
