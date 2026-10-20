@@ -26,7 +26,10 @@ export default toolFactory((t) =>
       ],
       outputs: [{ name: "pages", schema: t("Count"), description: "Pages written: the hub and one per instance." }],
     },
-    satisfies: ["recommendation-extraction"],
+    // A page writer, as the other kind viewers are (`bibliography-page`,
+    // `glossary-page`, `iris-pages`): it draws what an extraction holds and
+    // takes none of `recommendation-extraction`'s inputs (`l1Sources`).
+    satisfies: ["graph-rendering"],
     selection: {
       when: "Publishing a site that should show what each L1 extraction holds.",
       limits: "Shows what the files hold; it validates nothing (`l1-recommendation-candidates` and `l1-recommendation-scenarios` do, on every write) and does not re-render the JSON-LD (the library viewer publishes it).",
