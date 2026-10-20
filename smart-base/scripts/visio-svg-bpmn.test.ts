@@ -2,12 +2,12 @@ import { describe, expect, test } from "bun:test";
 import { BpmnModdle } from "bpmn-moddle";
 
 import type { SwimlaneMap } from "./dak-swimlanes";
-import { parseTransform, pascal, pathPoints, readFigure, toBpmn } from "./visio-svg-bpmn";
+import { objectivesFrom, parseTransform, pascal, pathPoints, readFigure, toBpmn } from "./visio-svg-bpmn";
 
 const map: SwimlaneMap = {
   $schema: "dak-swimlanes/v1",
   personas: { "Health worker (HW)": ["Health worker", "HW"], Client: [] },
-  notPersonas: { "Vaccination location": "a pool" },
+  notPersonas: { "Vaccination location": "a pool", PCPOSS: "a system, not a persona" },
 };
 
 // A Visio export in miniature: the page group, a cross-functional container,
@@ -92,7 +92,19 @@ describe("visio-svg-bpmn reading a figure", () => {
 });
 
 describe("visio-svg-bpmn writing BPMN", () => {
-  const { xml, problems } = toBpmn(readFigure(figure), "IMMZ", "C", map);
+  const { xml, problems } = toBpmn(readFigure(figure), "IMMZ", "C", map, "Create and/or update the client's record");
+
+  test("each process carries the objective its page states", () => {
+    const page = ["####  B.  Plan  ", "Objective: Ensure supply", '<img src="b.svg" />', "####  C.  Register", '<img src="images/c.svg" />', "Objective: Create the record"].join("\n");
+    expect([...objectivesFrom(page)]).toEqual([["b.svg", "Ensure supply"], ["c.svg", "Create the record"]]);
+    expect(xml).toMatch(/<bpmn:process [^>]*>\s*<bpmn:documentation>Create and\/or update the client's record<\/bpmn:documentation>/);
+  });
+
+  test("an undocumented process or lane is reported", () => {
+    const bare = toBpmn(readFigure(figure), "IMMZ", "C").problems;
+    expect(bare).toContainEqual(expect.stringContaining("has no objective"));
+    expect(bare).toContainEqual(expect.stringContaining("IMMZ.Lane.Client (Client) has no documentation"));
+  });
 
   test("an end that touches nothing is reported, never guessed", () => {
     expect(problems).toEqual([expect.stringContaining("(No): its end touches no node")]);
@@ -117,6 +129,8 @@ describe("visio-svg-bpmn writing BPMN", () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect(proc.artifacts.map((a: any) => a.$type)).toEqual(["bpmn:Group"]);
     expect(xml).toContain(`<bpmn:linkEventDefinition id="IMMZ.C.Event_2.Link" name="D. Administer vaccine" />`);
+    // A sub-process's children answer to a lane too.
+    expect(xml).toContain("<bpmn:flowNodeRef>IMMZ.C.5.1</bpmn:flowNodeRef>");
     // Every flow joins two different nodes.
     expect([...xml.matchAll(/sourceRef="([^"]+)" targetRef="([^"]+)"/g)].filter((m) => m[1] === m[2])).toEqual([]);
   });

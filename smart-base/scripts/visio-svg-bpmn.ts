@@ -25,9 +25,13 @@
  * Lanes are named by their heading. With `--map <swimlanes.json>` (the
  * declaration `dak-swimlanes.ts` reads, bean `cydz`), a lane that resolves to
  * personas carries them in its documentation, so the BPMN and the personas
- * page agree on who a lane is.
+ * page agree on who a lane is; a system lane carries the declared reason it is
+ * not a persona. With `--page`, each process carries the objective the
+ * business-processes page states for it. A lane or process left without
+ * documentation is reported, as `check:lane-documentation` and
+ * `check:process-documentation` would.
  *
- *   bun run smart-base/scripts/visio-svg-bpmn.ts --prefix IMMZ --out <dir> [--map swimlanes.json] [--check] <figure.svg>...
+ *   bun run smart-base/scripts/visio-svg-bpmn.ts --prefix IMMZ --out <dir> [--map swimlanes.json] [--page business-processes.md] [--check] <figure.svg>...
  *
  * Writes `<dir>/<prefix>.<letter>.bpmn` per figure. `--check` exits 1 when a
  * file would change or a connector end is unmatched.
@@ -40,7 +44,7 @@ import { basename, join } from "node:path";
 
 import { DOMParser } from "@xmldom/xmldom";
 
-import { resolveLane, type SwimlaneMap } from "./dak-swimlanes.ts";
+import { kramdownId, processesFrom, resolveLane, type SwimlaneMap } from "./dak-swimlanes.ts";
 
 const SVG_NS = "http://www.w3.org/2000/svg";
 const V_NS = "http://schemas.microsoft.com/visio/2003/SVGExtensions/";
@@ -270,6 +274,25 @@ export function readFigure(svg: string): Figure {
   return fig;
 }
 
+/**
+ * Each process's objective, keyed by its figure's file name, from the IG's
+ * business-processes page: the `Objective:` line under an enumerated heading
+ * (`####  C.  Client registration`), whose figure `dak-swimlanes.ts` finds.
+ */
+export function objectivesFrom(md: string): Map<string, string> {
+  const out = new Map<string, string>();
+  const lines = md.split("\n");
+  for (const p of processesFrom(md)) {
+    if (!p.figure) continue;
+    const at = lines.findIndex((l) => /^#{2,6}\s/.test(l) && kramdownId(l.replace(/^#+/, "").trim()) === p.anchor);
+    for (let j = at + 1; at >= 0 && j < lines.length && !/^#{1,6}\s/.test(lines[j]!); j++) {
+      const o = /^\s*Objective:\s*(.+?)\s*$/i.exec(lines[j]!);
+      if (o) { out.set(basename(p.figure), o[1]!); break; }
+    }
+  }
+  return out;
+}
+
 // ── writing BPMN ──────────────────────────────────────────────────────────
 
 const xml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -282,7 +305,7 @@ export const pascal = (s: string) =>
 /** `2.3. Possible match found?` → `2.3`; nothing when the label is not numbered. */
 const stepNo = (label: string) => /^(\d+(?:\.\d+)*)\.?\s/.exec(label)?.[1];
 
-export function toBpmn(fig: Figure, prefix: string, letter: string, map?: SwimlaneMap): { xml: string; problems: string[] } {
+export function toBpmn(fig: Figure, prefix: string, letter: string, map?: SwimlaneMap, objective?: string): { xml: string; problems: string[] } {
   const pid = `${prefix}.${letter}`;
   const problems: string[] = [];
   const ids = new Map<string, string>();
@@ -305,8 +328,9 @@ export function toBpmn(fig: Figure, prefix: string, letter: string, map?: Swimla
     const cx = n.box.x + n.box.w / 2, cy = n.box.y + n.box.h / 2;
     return fig.lanes.findIndex((l) => cx >= l.box.x && cx <= l.box.x + l.box.w && cy >= l.box.y && cy <= l.box.y + l.box.h);
   };
-  // A lane holds the process's own nodes; a sub-process holds its children.
-  const top = fig.nodes.filter((n) => !n.parent);
+  // A lane holds every node drawn in it, a sub-process's children included:
+  // each activity answers to someone.
+  const top = fig.nodes;
   // A lane's id names who it is, the same in every process of the DAK, so the
   // health worker's lane is one actor across A–I (smart-base's
   // bpmn2fhirfsh.xsl makes one actor per distinct lane id).
@@ -328,13 +352,18 @@ export function toBpmn(fig: Figure, prefix: string, letter: string, map?: Swimla
   out.push(`    <bpmn:participant id="${pid}.Participant" name="${xml(fig.title)}" processRef="${pid}" />`);
   out.push(`  </bpmn:collaboration>`);
   out.push(`  <bpmn:process id="${pid}" name="${xml(fig.title)}" isExecutable="false">`);
+  if (objective) out.push(`    <bpmn:documentation>${xml(objective)}</bpmn:documentation>`);
+  else problems.push(`process ${pid} has no objective: pass the page that states it (--page)`);
   out.push(`    <bpmn:laneSet id="${pid}.LaneSet">`);
   for (const l of lanes) {
     out.push(`      <bpmn:lane id="${l.id}" name="${xml(l.label)}">`);
     if (map) {
       const who = l.personas.map((p) => `${p} (${prefix}.Persona.${pascal(p)})`);
+      const system = Object.entries(map.notPersonas).find(([w]) => w.toLowerCase() === l.label.toLowerCase());
       if (who.length) out.push(`        <bpmn:documentation>Personas: ${xml(who.join("; "))}</bpmn:documentation>`);
-    }
+      else if (system) out.push(`        <bpmn:documentation>${xml(`${system[0]}: ${system[1]}`)}</bpmn:documentation>`);
+      else problems.push(`lane ${l.id} (${l.label}) names no persona and no declared non-persona`);
+    } else problems.push(`lane ${l.id} (${l.label}) has no documentation: pass the persona declaration (--map)`);
     for (const n of l.members) out.push(`        <bpmn:flowNodeRef>${ids.get(n.vid)}</bpmn:flowNodeRef>`);
     out.push(`      </bpmn:lane>`);
   }
@@ -402,19 +431,20 @@ if (import.meta.main) {
   const opt = (k: string) => { const i = argv.indexOf(k); if (i < 0) return undefined; const v = argv[i + 1]; argv.splice(i, 2); return v; };
   const check = argv.includes("--check");
   if (check) argv.splice(argv.indexOf("--check"), 1);
-  const prefix = opt("--prefix"), outDir = opt("--out"), mapPath = opt("--map");
+  const prefix = opt("--prefix"), outDir = opt("--out"), mapPath = opt("--map"), pagePath = opt("--page");
   if (!prefix || !outDir || !argv.length) {
-    console.error("usage: visio-svg-bpmn.ts --prefix <DAK prefix> --out <dir> [--map swimlanes.json] [--check] <figure.svg>...");
+    console.error("usage: visio-svg-bpmn.ts --prefix <DAK prefix> --out <dir> [--map swimlanes.json] [--page business-processes.md] [--check] <figure.svg>...");
     process.exit(2);
   }
   const map = mapPath ? (JSON.parse(readFileSync(mapPath, "utf8")) as SwimlaneMap) : undefined;
+  const objectives = pagePath ? objectivesFrom(readFileSync(pagePath, "utf8")) : new Map<string, string>();
   let bad = 0;
   if (!check) mkdirSync(outDir, { recursive: true });
   for (const svgPath of argv) {
     const fig = readFigure(readFileSync(svgPath, "utf8"));
     const letter = /^([A-Z0-9]{1,3})\s*\./.exec(fig.title)?.[1] ?? /-([a-z0-9])-/i.exec(basename(svgPath))?.[1]?.toUpperCase();
     if (!letter) { console.error(`✗ ${svgPath}: cannot tell the process letter from "${fig.title}"`); bad++; continue; }
-    const { xml: text, problems } = toBpmn(fig, prefix, letter, map);
+    const { xml: text, problems } = toBpmn(fig, prefix, letter, map, objectives.get(basename(svgPath)));
     const target = join(outDir, `${prefix}.${letter}.bpmn`);
     for (const p of problems) console.error(`✗ ${basename(svgPath)}: ${p}`);
     bad += problems.length;
