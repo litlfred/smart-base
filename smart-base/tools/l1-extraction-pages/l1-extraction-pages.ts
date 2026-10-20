@@ -5,8 +5,8 @@ import { defineTool, toolFactory } from "../../platform/index.js";
 // smart-base owns the `l1-extraction` kind (owner, 2026-10-16:
 // "l1-extraction is part of smart-base"), so its viewer is drawn here: a hub
 // at the visualiser's route and one page per instance declaring a directory
-// of the kind (smart-base's handbook extraction, smart-immunizations' measles
-// example). Implemented in `smart-base/scripts/gen-l1-extraction-pages.ts`.
+// of the kind (smart-base's handbook extraction, and the measles example of
+// the immunizations guideline layer above it). Implemented in `smart-base/scripts/gen-l1-extraction-pages.ts`.
 export default toolFactory((t) =>
   defineTool({
     id: "l1-extraction-pages",
