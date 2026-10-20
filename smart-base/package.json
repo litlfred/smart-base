@@ -20,6 +20,7 @@
     "smart-base:dth-terms:check": "bun run smart-base/scripts/gen-dth-term-findings.ts --check",
     "smart-base:dak-data-dictionary": "bun run smart-base/scripts/dak-data-dictionary.ts",
     "smart-base:dak-swimlanes": "bun run smart-base/scripts/dak-swimlanes.ts",
+    "smart-base:visio-bpmn": "bun run smart-base/scripts/visio-svg-bpmn.ts",
     "smart-base:dak-data-dictionary-diff": "bun run smart-base/scripts/dak-data-dictionary-diff.ts",
     "smart-base:dak-ast-sidecars": "bun run smart-base/scripts/dak-ast-sidecars.ts",
     "ig-site:sidecars": "bun run smart-base/scripts/ig-site-sidecars.ts",
