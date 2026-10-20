@@ -1,0 +1,1770 @@
+[
+  {
+    "outputFile": "ActivityDefinition-SGDecisionTableGuidance.json",
+    "fshName": "SGDecisionTableGuidance",
+    "fshType": "Instance",
+    "fshFile": "activitydefinitions/SGDecisionTableGuidance.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.CommunityHealthWorker.json",
+    "fshName": "DAK.Persona.CommunityHealthWorker",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.CommunityHealthWorker.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.DataManager.json",
+    "fshName": "DAK.Persona.DataManager",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.DataManager.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.HealthSystemManager.json",
+    "fshName": "DAK.Persona.HealthSystemManager",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.HealthSystemManager.fsh",
+    "startLine": 1,
+    "endLine": 30
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.HealthcareProvider.json",
+    "fshName": "DAK.Persona.HealthcareProvider",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.HealthcareProvider.fsh",
+    "startLine": 1,
+    "endLine": 36
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.Person.json",
+    "fshName": "DAK.Persona.Person",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.Person.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.ClientRegistry.json",
+    "fshName": "DAK.Persona.System.ClientRegistry",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.ClientRegistry.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.EMR.json",
+    "fshName": "DAK.Persona.System.EMR",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.EMR.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.HMIS.json",
+    "fshName": "DAK.Persona.System.HMIS",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.HMIS.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.InteropPlatform.json",
+    "fshName": "DAK.Persona.System.InteropPlatform",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.InteropPlatform.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.LIS.json",
+    "fshName": "DAK.Persona.System.LIS",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.LIS.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.LMIS.json",
+    "fshName": "DAK.Persona.System.LMIS",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.LMIS.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "ActorDefinition-DAK.Persona.System.SurveillanceSystem.json",
+    "fshName": "DAK.Persona.System.SurveillanceSystem",
+    "fshType": "Instance",
+    "fshFile": "actors/DAK.Persona.System.SurveillanceSystem.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.BusinessAnalyst.json",
+    "fshName": "SGAuthoring.Persona.BusinessAnalyst",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.BusinessAnalyst.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.ClinicalSME.json",
+    "fshName": "SGAuthoring.Persona.ClinicalSME",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.ClinicalSME.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.ContentReviewer.json",
+    "fshName": "SGAuthoring.Persona.ContentReviewer",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.ContentReviewer.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.FHIRModeller.json",
+    "fshName": "SGAuthoring.Persona.FHIRModeller",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.FHIRModeller.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.ProgrammeManager.json",
+    "fshName": "SGAuthoring.Persona.ProgrammeManager",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.ProgrammeManager.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.PublicationManager.json",
+    "fshName": "SGAuthoring.Persona.PublicationManager",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.PublicationManager.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.QCReviewer.json",
+    "fshName": "SGAuthoring.Persona.QCReviewer",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.QCReviewer.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.TechnicalOfficer.json",
+    "fshName": "SGAuthoring.Persona.TechnicalOfficer",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.TechnicalOfficer.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.Terminologist.json",
+    "fshName": "SGAuthoring.Persona.Terminologist",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.Terminologist.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ActorDefinition-SGAuthoring.Persona.Translator.json",
+    "fshName": "SGAuthoring.Persona.Translator",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Persona.Translator.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "CodeSystem-CDHIv1.json",
+    "fshName": "CDHIv1",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CDHIv1.fsh",
+    "startLine": 1,
+    "endLine": 125
+  },
+  {
+    "outputFile": "CodeSystem-CDHIv2.json",
+    "fshName": "CDHIv2",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CDHIv2.fsh",
+    "startLine": 1,
+    "endLine": 168
+  },
+  {
+    "outputFile": "CodeSystem-CDSCv1.json",
+    "fshName": "CDSCv1",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CDSCv1.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
+    "outputFile": "CodeSystem-CDSCv2.json",
+    "fshName": "CDSCv2",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CDSCv2.fsh",
+    "startLine": 1,
+    "endLine": 121
+  },
+  {
+    "outputFile": "CodeSystem-CoreDataElementType.json",
+    "fshName": "CoreDataElementType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CoreDataElementType.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-DecisionTableActions.json",
+    "fshName": "DecisionTableActions",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/DecisionTableActions.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-DocumentationSections.json",
+    "fshName": "DocumentationSections",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/DocumentationSections.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "CodeSystem-ISCO08.json",
+    "fshName": "ISCO08",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/ISCO08.fsh",
+    "startLine": 1,
+    "endLine": 561
+  },
+  {
+    "outputFile": "CodeSystem-KGCertainty.json",
+    "fshName": "KGCertainty",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGCertainty.fsh",
+    "startLine": 2,
+    "endLine": 14
+  },
+  {
+    "outputFile": "CodeSystem-KGChangeStatus.json",
+    "fshName": "KGChangeStatus",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGChangeStatus.fsh",
+    "startLine": 2,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-KGCitationKind.json",
+    "fshName": "KGCitationKind",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGCitationKind.fsh",
+    "startLine": 2,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-KGDerivation.json",
+    "fshName": "KGDerivation",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGDerivation.fsh",
+    "startLine": 2,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-KGElementType.json",
+    "fshName": "KGElementType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGElementType.fsh",
+    "startLine": 2,
+    "endLine": 19
+  },
+  {
+    "outputFile": "CodeSystem-KGEvidenceType.json",
+    "fshName": "KGEvidenceType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGEvidenceType.fsh",
+    "startLine": 2,
+    "endLine": 14
+  },
+  {
+    "outputFile": "CodeSystem-KGGrcStatus.json",
+    "fshName": "KGGrcStatus",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGGrcStatus.fsh",
+    "startLine": 2,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-KGIdentifierType.json",
+    "fshName": "KGIdentifierType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGIdentifierType.fsh",
+    "startLine": 2,
+    "endLine": 16
+  },
+  {
+    "outputFile": "CodeSystem-KGInterventionType.json",
+    "fshName": "KGInterventionType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGInterventionType.fsh",
+    "startLine": 2,
+    "endLine": 20
+  },
+  {
+    "outputFile": "CodeSystem-KGL1Classes.json",
+    "fshName": "KGL1Classes",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL1Classes.fsh",
+    "startLine": 2,
+    "endLine": 23
+  },
+  {
+    "outputFile": "CodeSystem-KGL1LibraryClasses.json",
+    "fshName": "KGL1LibraryClasses",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL1LibraryClasses.fsh",
+    "startLine": 2,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-KGL1LibraryPredicates.json",
+    "fshName": "KGL1LibraryPredicates",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL1LibraryPredicates.fsh",
+    "startLine": 2,
+    "endLine": 11
+  },
+  {
+    "outputFile": "CodeSystem-KGL1Predicates.json",
+    "fshName": "KGL1Predicates",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL1Predicates.fsh",
+    "startLine": 2,
+    "endLine": 31
+  },
+  {
+    "outputFile": "CodeSystem-KGOutcomeImportance.json",
+    "fshName": "KGOutcomeImportance",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGOutcomeImportance.fsh",
+    "startLine": 2,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-KGPublicationType.json",
+    "fshName": "KGPublicationType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGPublicationType.fsh",
+    "startLine": 2,
+    "endLine": 24
+  },
+  {
+    "outputFile": "CodeSystem-KGRecommendationDirection.json",
+    "fshName": "KGRecommendationDirection",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGRecommendationDirection.fsh",
+    "startLine": 2,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-KGRecommendationKind.json",
+    "fshName": "KGRecommendationKind",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGRecommendationKind.fsh",
+    "startLine": 2,
+    "endLine": 15
+  },
+  {
+    "outputFile": "CodeSystem-KGRecommendationStatus.json",
+    "fshName": "KGRecommendationStatus",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGRecommendationStatus.fsh",
+    "startLine": 2,
+    "endLine": 14
+  },
+  {
+    "outputFile": "CodeSystem-KGRecommendationStrength.json",
+    "fshName": "KGRecommendationStrength",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGRecommendationStrength.fsh",
+    "startLine": 2,
+    "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-KGRemarkType.json",
+    "fshName": "KGRemarkType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGRemarkType.fsh",
+    "startLine": 2,
+    "endLine": 17
+  },
+  {
+    "outputFile": "CodeSystem-KGResolutionStatus.json",
+    "fshName": "KGResolutionStatus",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGResolutionStatus.fsh",
+    "startLine": 2,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-KGRowType.json",
+    "fshName": "KGRowType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGRowType.fsh",
+    "startLine": 2,
+    "endLine": 14
+  },
+  {
+    "outputFile": "CodeSystem-KGTerminologySystem.json",
+    "fshName": "KGTerminologySystem",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGTerminologySystem.fsh",
+    "startLine": 2,
+    "endLine": 18
+  },
+  {
+    "outputFile": "CodeSystem-SGAuthoringPersonaTypes.json",
+    "fshName": "SGAuthoringPersonaTypes",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/SGAuthoringPersonaTypes.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "CodeSystem-SGAuthoringSkills.json",
+    "fshName": "SGAuthoringSkills",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/SGAuthoringSkills.fsh",
+    "startLine": 1,
+    "endLine": 71
+  },
+  {
+    "outputFile": "CodeSystem-SGPersonaTypes.json",
+    "fshName": "SGPersonaTypes",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/SGPersonaTypes.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-SGTasks.json",
+    "fshName": "SGTasks",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/SGTasks.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "ConceptMap-CDHIv1Hierarchy.json",
+    "fshName": "CDHIv1Hierarchy",
+    "fshType": "Instance",
+    "fshFile": "conceptmaps/CDHIv1Hierarchy.fsh",
+    "startLine": 1,
+    "endLine": 132
+  },
+  {
+    "outputFile": "ConceptMap-CDHIv1toCDHIv2.json",
+    "fshName": "CDHIv1toCDHIv2",
+    "fshType": "Instance",
+    "fshFile": "conceptmaps/CDHIv1toCDHIv2.fsh",
+    "startLine": 1,
+    "endLine": 164
+  },
+  {
+    "outputFile": "ConceptMap-CDHIv2Hierarchy.json",
+    "fshName": "CDHIv2Hierarchy",
+    "fshType": "Instance",
+    "fshFile": "conceptmaps/CDHIv2Hierarchy.fsh",
+    "startLine": 1,
+    "endLine": 151
+  },
+  {
+    "outputFile": "ConceptMap-CDSCv1toCDSCv2.json",
+    "fshName": "CDSCv1toCDSCv2",
+    "fshType": "Instance",
+    "fshFile": "conceptmaps/CDSCv1toCDSCv2.fsh",
+    "startLine": 1,
+    "endLine": 51
+  },
+  {
+    "outputFile": "Questionnaire-DAK.DT.IMMZ.D2.DT.BCGQuestionnaire.json",
+    "fshName": "DAK.DT.IMMZ.D2.DT.BCGQuestionnaire",
+    "fshType": "Instance",
+    "fshFile": "questionnaires/DAK.DT.IMMZ.D2.DT.BCGQuestionnaire.fsh",
+    "startLine": 1,
+    "endLine": 80
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorActorDefinitions.json",
+    "fshName": "SGAuthoring.Skills.AuthorActorDefinitions",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 229,
+    "endLine": 265
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorBusinessProcesses.json",
+    "fshName": "SGAuthoring.Skills.AuthorBusinessProcesses",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 85,
+    "endLine": 133
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorCQL.json",
+    "fshName": "SGAuthoring.Skills.AuthorCQL",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 112,
+    "endLine": 154
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorCodeSystems.json",
+    "fshName": "SGAuthoring.Skills.AuthorCodeSystems",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Terminology.fsh",
+    "startLine": 85,
+    "endLine": 115
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorConceptMaps.json",
+    "fshName": "SGAuthoring.Skills.AuthorConceptMaps",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Terminology.fsh",
+    "startLine": 151,
+    "endLine": 181
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorDataDictionary.json",
+    "fshName": "SGAuthoring.Skills.AuthorDataDictionary",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 136,
+    "endLine": 178
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorDecisionLogic.json",
+    "fshName": "SGAuthoring.Skills.AuthorDecisionLogic",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 181,
+    "endLine": 217
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorExampleScenarios.json",
+    "fshName": "SGAuthoring.Skills.AuthorExampleScenarios",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 268,
+    "endLine": 292
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorFHIRProfiles.json",
+    "fshName": "SGAuthoring.Skills.AuthorFHIRProfiles",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 40,
+    "endLine": 76
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorFHIRRequirements.json",
+    "fshName": "SGAuthoring.Skills.AuthorFHIRRequirements",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 328,
+    "endLine": 358
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorFunctionalRequirements.json",
+    "fshName": "SGAuthoring.Skills.AuthorFunctionalRequirements",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 292,
+    "endLine": 328
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorIndicators.json",
+    "fshName": "SGAuthoring.Skills.AuthorIndicators",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 253,
+    "endLine": 289
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorLogicalModels.json",
+    "fshName": "SGAuthoring.Skills.AuthorLogicalModels",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorMeasures.json",
+    "fshName": "SGAuthoring.Skills.AuthorMeasures",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 295,
+    "endLine": 325
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorPersonas.json",
+    "fshName": "SGAuthoring.Skills.AuthorPersonas",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorPlanDefinitions.json",
+    "fshName": "SGAuthoring.Skills.AuthorPlanDefinitions",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 190,
+    "endLine": 226
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorQuestionnaires.json",
+    "fshName": "SGAuthoring.Skills.AuthorQuestionnaires",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 79,
+    "endLine": 109
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorSchedulingLogic.json",
+    "fshName": "SGAuthoring.Skills.AuthorSchedulingLogic",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 220,
+    "endLine": 250
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorStructureMaps.json",
+    "fshName": "SGAuthoring.Skills.AuthorStructureMaps",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 157,
+    "endLine": 187
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorTestCases.json",
+    "fshName": "SGAuthoring.Skills.AuthorTestCases",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L3Authoring.fsh",
+    "startLine": 361,
+    "endLine": 397
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorUserScenarios.json",
+    "fshName": "SGAuthoring.Skills.AuthorUserScenarios",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 46,
+    "endLine": 82
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.AuthorValueSets.json",
+    "fshName": "SGAuthoring.Skills.AuthorValueSets",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Terminology.fsh",
+    "startLine": 118,
+    "endLine": 148
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.BuildIG.json",
+    "fshName": "SGAuthoring.Skills.BuildIG",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Publication.fsh",
+    "startLine": 40,
+    "endLine": 77
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ConfigureIG.json",
+    "fshName": "SGAuthoring.Skills.ConfigureIG",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Publication.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.InterpretClinicalRecommendations.json",
+    "fshName": "SGAuthoring.Skills.InterpretClinicalRecommendations",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L1Review.fsh",
+    "startLine": 48,
+    "endLine": 84
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ManageGovernance.json",
+    "fshName": "SGAuthoring.Skills.ManageGovernance",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Publication.fsh",
+    "startLine": 137,
+    "endLine": 173
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ManageReleases.json",
+    "fshName": "SGAuthoring.Skills.ManageReleases",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Publication.fsh",
+    "startLine": 80,
+    "endLine": 134
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ManageStakeholders.json",
+    "fshName": "SGAuthoring.Skills.ManageStakeholders",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.StakeholderMgmt.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.MapConcepts.json",
+    "fshName": "SGAuthoring.Skills.MapConcepts",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Terminology.fsh",
+    "startLine": 40,
+    "endLine": 82
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.PlanIterations.json",
+    "fshName": "SGAuthoring.Skills.PlanIterations",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.StakeholderMgmt.fsh",
+    "startLine": 46,
+    "endLine": 88
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ReviewAndApproveContent.json",
+    "fshName": "SGAuthoring.Skills.ReviewAndApproveContent",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.ContentReview.fsh",
+    "startLine": 1,
+    "endLine": 49
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ReviewChecklist.json",
+    "fshName": "SGAuthoring.Skills.ReviewChecklist",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.QualityControl.fsh",
+    "startLine": 40,
+    "endLine": 82
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ReviewL1Guidelines.json",
+    "fshName": "SGAuthoring.Skills.ReviewL1Guidelines",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L1Review.fsh",
+    "startLine": 1,
+    "endLine": 45
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ReviewTerminology.json",
+    "fshName": "SGAuthoring.Skills.ReviewTerminology",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Terminology.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ReviewTranslations.json",
+    "fshName": "SGAuthoring.Skills.ReviewTranslations",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Translation.fsh",
+    "startLine": 40,
+    "endLine": 70
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.RunQAChecks.json",
+    "fshName": "SGAuthoring.Skills.RunQAChecks",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.QualityControl.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ScopeDAK.json",
+    "fshName": "SGAuthoring.Skills.ScopeDAK",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.ProjectManagement.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.TranslateContent.json",
+    "fshName": "SGAuthoring.Skills.TranslateContent",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.Translation.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ValidateArtifactConformance.json",
+    "fshName": "SGAuthoring.Skills.ValidateArtifactConformance",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.QualityControl.fsh",
+    "startLine": 85,
+    "endLine": 121
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ValidateDAKContent.json",
+    "fshName": "SGAuthoring.Skills.ValidateDAKContent",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.L2Authoring.fsh",
+    "startLine": 331,
+    "endLine": 374
+  },
+  {
+    "outputFile": "Requirements-SGAuthoring.Skills.ValidateL3Functionality.json",
+    "fshName": "SGAuthoring.Skills.ValidateL3Functionality",
+    "fshType": "Instance",
+    "fshFile": "actors/SGAuthoring.Skills.QualityControl.fsh",
+    "startLine": 124,
+    "endLine": 161
+  },
+  {
+    "outputFile": "StructureDefinition-BusinessProcessWorkflow.json",
+    "fshName": "BusinessProcessWorkflow",
+    "fshType": "Logical",
+    "fshFile": "models/BusinessProcessWorkflow.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-BusinessProcessWorkflowSource.json",
+    "fshName": "BusinessProcessWorkflowSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 49,
+    "endLine": 62
+  },
+  {
+    "outputFile": "StructureDefinition-CoreDataElement.json",
+    "fshName": "CoreDataElement",
+    "fshType": "Logical",
+    "fshFile": "models/CoreDataElement.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-CoreDataElementSource.json",
+    "fshName": "CoreDataElementSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 64,
+    "endLine": 77
+  },
+  {
+    "outputFile": "StructureDefinition-DAK.json",
+    "fshName": "DAK",
+    "fshType": "Logical",
+    "fshFile": "models/DAK.fsh",
+    "startLine": 1,
+    "endLine": 36
+  },
+  {
+    "outputFile": "StructureDefinition-DecisionSupportLogic.json",
+    "fshName": "DecisionSupportLogic",
+    "fshType": "Logical",
+    "fshFile": "models/DecisionSupportLogic.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-DecisionSupportLogicSource.json",
+    "fshName": "DecisionSupportLogicSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 79,
+    "endLine": 92
+  },
+  {
+    "outputFile": "StructureDefinition-DublinCore.json",
+    "fshName": "DublinCore",
+    "fshType": "Logical",
+    "fshFile": "models/DublinCore.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-FHIRSchemaBase.json",
+    "fshName": "FHIRSchemaBase",
+    "fshType": "Logical",
+    "fshFile": "models/FHIRSchemaBase.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "StructureDefinition-FunctionalRequirement.json",
+    "fshName": "FunctionalRequirement",
+    "fshType": "Logical",
+    "fshFile": "models/FunctionalRequirement.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-GenericPersona.json",
+    "fshName": "GenericPersona",
+    "fshType": "Logical",
+    "fshFile": "models/GenericPersona.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-GenericPersonaSource.json",
+    "fshName": "GenericPersonaSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 19,
+    "endLine": 32
+  },
+  {
+    "outputFile": "StructureDefinition-HealthInterventions.json",
+    "fshName": "HealthInterventions",
+    "fshType": "Logical",
+    "fshFile": "models/HealthInterventions.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-HealthInterventionsSource.json",
+    "fshName": "HealthInterventionsSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 4,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-KGCitation.json",
+    "fshName": "KGCitation",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 179,
+    "endLine": 190
+  },
+  {
+    "outputFile": "StructureDefinition-KGEdge.json",
+    "fshName": "KGEdge",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 255,
+    "endLine": 276
+  },
+  {
+    "outputFile": "StructureDefinition-KGEvidence.json",
+    "fshName": "KGEvidence",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 125,
+    "endLine": 138
+  },
+  {
+    "outputFile": "StructureDefinition-KGEvidenceLocation.json",
+    "fshName": "KGEvidenceLocation",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 212,
+    "endLine": 222
+  },
+  {
+    "outputFile": "StructureDefinition-KGGraphDocument.json",
+    "fshName": "KGGraphDocument",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 278,
+    "endLine": 292
+  },
+  {
+    "outputFile": "StructureDefinition-KGHealthIntervention.json",
+    "fshName": "KGHealthIntervention",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 140,
+    "endLine": 150
+  },
+  {
+    "outputFile": "StructureDefinition-KGImplementationPractice.json",
+    "fshName": "KGImplementationPractice",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1Library.fsh",
+    "startLine": 2,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-KGIndicator.json",
+    "fshName": "KGIndicator",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 152,
+    "endLine": 177
+  },
+  {
+    "outputFile": "StructureDefinition-KGKeyQuestion.json",
+    "fshName": "KGKeyQuestion",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 99,
+    "endLine": 111
+  },
+  {
+    "outputFile": "StructureDefinition-KGLibraryNode.json",
+    "fshName": "KGLibraryNode",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1Library.fsh",
+    "startLine": 12,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-KGNode.json",
+    "fshName": "KGNode",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 236,
+    "endLine": 253
+  },
+  {
+    "outputFile": "StructureDefinition-KGOutcome.json",
+    "fshName": "KGOutcome",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 113,
+    "endLine": 123
+  },
+  {
+    "outputFile": "StructureDefinition-KGProvenanceSource.json",
+    "fshName": "KGProvenanceSource",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 224,
+    "endLine": 234
+  },
+  {
+    "outputFile": "StructureDefinition-KGPublication.json",
+    "fshName": "KGPublication",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 2,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-KGPublicationElement.json",
+    "fshName": "KGPublicationElement",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 35,
+    "endLine": 55
+  },
+  {
+    "outputFile": "StructureDefinition-KGPublicationSection.json",
+    "fshName": "KGPublicationSection",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 24,
+    "endLine": 33
+  },
+  {
+    "outputFile": "StructureDefinition-KGRecommendation.json",
+    "fshName": "KGRecommendation",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 57,
+    "endLine": 85
+  },
+  {
+    "outputFile": "StructureDefinition-KGReferenceEntry.json",
+    "fshName": "KGReferenceEntry",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 192,
+    "endLine": 202
+  },
+  {
+    "outputFile": "StructureDefinition-KGRemark.json",
+    "fshName": "KGRemark",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 87,
+    "endLine": 97
+  },
+  {
+    "outputFile": "StructureDefinition-KGTerminologyCode.json",
+    "fshName": "KGTerminologyCode",
+    "fshType": "Logical",
+    "fshFile": "models/KGL1.fsh",
+    "startLine": 204,
+    "endLine": 210
+  },
+  {
+    "outputFile": "StructureDefinition-LinkIdExt.json",
+    "fshName": "LinkIdExt",
+    "fshType": "Extension",
+    "fshFile": "extensions/LinkIdExt.fsh",
+    "startLine": 2,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-Markdown.json",
+    "fshName": "Markdown",
+    "fshType": "Extension",
+    "fshFile": "extensions/Markdown.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-NonFunctionalRequirement.json",
+    "fshName": "NonFunctionalRequirement",
+    "fshType": "Logical",
+    "fshFile": "models/NonFunctionalRequirement.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-Persona.json",
+    "fshName": "Persona",
+    "fshType": "Logical",
+    "fshFile": "models/Persona.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "StructureDefinition-ProgramIndicator.json",
+    "fshName": "ProgramIndicator",
+    "fshType": "Logical",
+    "fshFile": "models/ProgramIndicator.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-ProgramIndicatorSource.json",
+    "fshName": "ProgramIndicatorSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 94,
+    "endLine": 107
+  },
+  {
+    "outputFile": "StructureDefinition-Requirements.json",
+    "fshName": "Requirements",
+    "fshType": "Logical",
+    "fshFile": "models/Requirements.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-RequirementsSource.json",
+    "fshName": "RequirementsSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 109,
+    "endLine": 122
+  },
+  {
+    "outputFile": "StructureDefinition-SGActivityDefinition.json",
+    "fshName": "SGActivityDefinition",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGActivityDefinition.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGActorExt.json",
+    "fshName": "SGActorExt",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGActor.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-SGBusinessProcess.json",
+    "fshName": "SGBusinessProcess",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGBusinessProcess.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-SGCodeSystem.json",
+    "fshName": "SGCodeSystem",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGCodeSystem.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGCommunicationRequest.json",
+    "fshName": "SGCommunicationRequest",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGCommunicationRequest.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-SGConceptMap.json",
+    "fshName": "SGConceptMap",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGConceptMap.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGDecisionTable.json",
+    "fshName": "SGDecisionTable",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGDecisionTable.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "StructureDefinition-SGDocumentation.json",
+    "fshName": "SGDocumentation",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGDocumentation.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "StructureDefinition-SGImplementationGuide.json",
+    "fshName": "SGImplementationGuide",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGImplementationGuide.fsh",
+    "startLine": 1,
+    "endLine": 47
+  },
+  {
+    "outputFile": "StructureDefinition-SGLibrary.json",
+    "fshName": "SGLibrary",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGLibrary.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGLogicalModel.json",
+    "fshName": "SGLogicalModel",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGLogicalModel.fsh",
+    "startLine": 1,
+    "endLine": 40
+  },
+  {
+    "outputFile": "StructureDefinition-SGMarkdown.json",
+    "fshName": "SGMarkdown",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGDocumentation.fsh",
+    "startLine": 8,
+    "endLine": 11
+  },
+  {
+    "outputFile": "StructureDefinition-SGMeasure.json",
+    "fshName": "SGMeasure",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGMeasure.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGPlanDefinition.json",
+    "fshName": "SGPlanDefinition",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGPlanDefinition.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGQuestionnaire.json",
+    "fshName": "SGQuestionnaire",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGQuestionnaire.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-SGRequirementExt.json",
+    "fshName": "SGRequirementExt",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGDocumentation.fsh",
+    "startLine": 14,
+    "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-SGString.json",
+    "fshName": "SGString",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGUserStory.fsh",
+    "startLine": 7,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-SGStructureDefinition.json",
+    "fshName": "SGStructureDefinition",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGStructureDefinition.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-SGStructureMap.json",
+    "fshName": "SGStructureMap",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGStructureMap.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-SGTask.json",
+    "fshName": "SGTask",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGTask.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-SGUserStory.json",
+    "fshName": "SGUserStory",
+    "fshType": "Extension",
+    "fshFile": "extensions/SGUserStory.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-SGValueSet.json",
+    "fshName": "SGValueSet",
+    "fshType": "Profile",
+    "fshFile": "profiles/SGValueSet.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-Satisfies.json",
+    "fshName": "Satisfies",
+    "fshType": "Extension",
+    "fshFile": "extensions/Satisfies.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "StructureDefinition-SushiConfigLogicalModel.json",
+    "fshName": "SushiConfigLogicalModel",
+    "fshType": "Logical",
+    "fshFile": "models/SushiConfigLogicalModel.fsh",
+    "startLine": 1,
+    "endLine": 95
+  },
+  {
+    "outputFile": "StructureDefinition-TestScenario.json",
+    "fshName": "TestScenario",
+    "fshType": "Logical",
+    "fshFile": "models/TestScenario.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-TestScenarioSource.json",
+    "fshName": "TestScenarioSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 124,
+    "endLine": 137
+  },
+  {
+    "outputFile": "StructureDefinition-UserScenario.json",
+    "fshName": "UserScenario",
+    "fshType": "Logical",
+    "fshFile": "models/UserScenario.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-UserScenarioSource.json",
+    "fshName": "UserScenarioSource",
+    "fshType": "Logical",
+    "fshFile": "models/DAKComponentSources.fsh",
+    "startLine": 34,
+    "endLine": 47
+  },
+  {
+    "outputFile": "ValueSet-CDHIv1.1.json",
+    "fshName": "CDHIv1.1",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv1.1.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "ValueSet-CDHIv1.2.json",
+    "fshName": "CDHIv1.2",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv1.2.fsh",
+    "startLine": 1,
+    "endLine": 48
+  },
+  {
+    "outputFile": "ValueSet-CDHIv1.3.json",
+    "fshName": "CDHIv1.3",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv1.3.fsh",
+    "startLine": 1,
+    "endLine": 40
+  },
+  {
+    "outputFile": "ValueSet-CDHIv1.4.json",
+    "fshName": "CDHIv1.4",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv1.4.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "ValueSet-CDHIv1.json",
+    "fshName": "CDHIv1",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv1.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-CDHIv2.1.json",
+    "fshName": "CDHIv2.1",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv2.1.fsh",
+    "startLine": 1,
+    "endLine": 33
+  },
+  {
+    "outputFile": "ValueSet-CDHIv2.2.json",
+    "fshName": "CDHIv2.2",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv2.2.fsh",
+    "startLine": 1,
+    "endLine": 52
+  },
+  {
+    "outputFile": "ValueSet-CDHIv2.3.json",
+    "fshName": "CDHIv2.3",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv2.3.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "ValueSet-CDHIv2.4.json",
+    "fshName": "CDHIv2.4",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv2.4.fsh",
+    "startLine": 1,
+    "endLine": 30
+  },
+  {
+    "outputFile": "ValueSet-CDHIv2.json",
+    "fshName": "CDHIv2",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDHIv2.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-CDSCv1.json",
+    "fshName": "CDSCv1",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv1.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.A.json",
+    "fshName": "CDSCv2.A",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.A.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.B.json",
+    "fshName": "CDSCv2.B",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.B.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.C.json",
+    "fshName": "CDSCv2.C",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.C.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.D.json",
+    "fshName": "CDSCv2.D",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.D.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.E.json",
+    "fshName": "CDSCv2.E",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.E.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-CDSCv2.json",
+    "fshName": "CDSCv2",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CDSCv2.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-CoreDataElementTypeVS.json",
+    "fshName": "CoreDataElementTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CoreDataElementTypeVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-DecisionTableActions.json",
+    "fshName": "DecisionTableActions",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/DecisionTableActions.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-DocumentationSection.json",
+    "fshName": "DocumentationSection",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/DocumentationSections.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-ISCO08ValueSet.json",
+    "fshName": "ISCO08ValueSet",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/ISCO08ValueSet.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-KGCertaintyVS.json",
+    "fshName": "KGCertaintyVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGCertaintyVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGChangeStatusVS.json",
+    "fshName": "KGChangeStatusVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGChangeStatusVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGCitationKindVS.json",
+    "fshName": "KGCitationKindVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGCitationKindVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGDerivationVS.json",
+    "fshName": "KGDerivationVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGDerivationVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGElementTypeVS.json",
+    "fshName": "KGElementTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGElementTypeVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGEvidenceTypeVS.json",
+    "fshName": "KGEvidenceTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGEvidenceTypeVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGGrcStatusVS.json",
+    "fshName": "KGGrcStatusVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGGrcStatusVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGIdentifierTypeVS.json",
+    "fshName": "KGIdentifierTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGIdentifierTypeVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGInterventionTypeVS.json",
+    "fshName": "KGInterventionTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGInterventionTypeVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL1ClassesVS.json",
+    "fshName": "KGL1ClassesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL1ClassesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL1LibraryClassesVS.json",
+    "fshName": "KGL1LibraryClassesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL1LibraryClassesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL1LibraryPredicatesVS.json",
+    "fshName": "KGL1LibraryPredicatesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL1LibraryPredicatesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL1PredicatesVS.json",
+    "fshName": "KGL1PredicatesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL1PredicatesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGOutcomeImportanceVS.json",
+    "fshName": "KGOutcomeImportanceVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGOutcomeImportanceVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGPublicationTypeVS.json",
+    "fshName": "KGPublicationTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGPublicationTypeVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGRecommendationDirectionVS.json",
+    "fshName": "KGRecommendationDirectionVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGRecommendationDirectionVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGRecommendationKindVS.json",
+    "fshName": "KGRecommendationKindVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGRecommendationKindVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGRecommendationStatusVS.json",
+    "fshName": "KGRecommendationStatusVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGRecommendationStatusVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGRecommendationStrengthVS.json",
+    "fshName": "KGRecommendationStrengthVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGRecommendationStrengthVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGRemarkTypeVS.json",
+    "fshName": "KGRemarkTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGRemarkTypeVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGResolutionStatusVS.json",
+    "fshName": "KGResolutionStatusVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGResolutionStatusVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGRowTypeVS.json",
+    "fshName": "KGRowTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGRowTypeVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGTerminologySystemVS.json",
+    "fshName": "KGTerminologySystemVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGTerminologySystemVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-SGAuthoringPersonaTypesVS.json",
+    "fshName": "SGAuthoringPersonaTypesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/SGAuthoringSkillsVS.fsh",
+    "startLine": 10,
+    "endLine": 16
+  },
+  {
+    "outputFile": "ValueSet-SGAuthoringSkillsVS.json",
+    "fshName": "SGAuthoringSkillsVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/SGAuthoringSkillsVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-SGPersonaTypesVS.json",
+    "fshName": "SGPersonaTypesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/SGPersonaTypes.fsh",
+    "startLine": 1,
+    "endLine": 8
+  }
+]
