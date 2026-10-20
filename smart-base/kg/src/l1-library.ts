@@ -33,14 +33,14 @@
  *    `implementation-guidance` "makes no recommendations of its own" (handbook
  *    §1.9), so what it prints as practice is an `implementation-practice` node,
  *    not a `recommendation` of some new kind. It lives HERE rather than in
- *    `l1.ts` for the same reason as the rest of this file: `generated/l1/l1.json`
- *    must stay equal to WHO's (`test/parity.test.ts`). L1 3.0's `remark` cannot
+ *    `l1.ts` for the same reason as the rest of this file: `l1.ts` stays the
+ *    migrated 3.0 layer, unextended. L1 3.0's `remark` cannot
  *    attach to it — its IRI is minted under a recommendation — so that waits
  *    on an upstream change.
  *
  * The extension lives here, beside the migrated 3.0 layer and not inside it, so
- * `generated/l1/l1.json` stays equal to WHO's and this can be proposed to
- * smart-kg as its own layer. A document that uses it names
+ * the 3.0 layer stays as migrated and this stays a layer of its own. (It was
+ * to be proposed to smart-kg; smart-kg is deprecated, owner 2026-10-16.) A document that uses it names
  * `l1-library.context.jsonld`; smart-kg's `validate.mjs` cannot check such a
  * document until the layer is upstream, and `validate.ts` here can.
  */

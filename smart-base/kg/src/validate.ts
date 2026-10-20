@@ -5,8 +5,9 @@
  *
  * Tier 2 is a port of WHO smart-kg `tools/validate.mjs` `validateGraph` (main
  * 3f5e477), rule for rule and message for message, so a document's verdict
- * does not depend on which of the two checked it; `test/validate.test.ts` holds
- * them to the same answers. It adds ONE rule smart-kg cannot have, because
+ * did not depend on which of the two checked it. (The test that held the two
+ * to the same answers ran against a smart-kg checkout and was removed when
+ * smart-kg was deprecated, owner 2026-10-16.) It adds ONE rule smart-kg cannot have, because
  * smart-kg types only bound properties: every property VALUE must satisfy its
  * declared type (`issued` is a date, `cells` an array, `ordinal` an integer).
  * Those findings carry the prefix `property value`, so a reader can tell the

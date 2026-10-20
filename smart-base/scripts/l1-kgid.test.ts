@@ -1,6 +1,4 @@
 import { describe, expect, test } from "bun:test";
-import { existsSync } from "node:fs";
-import { join } from "node:path";
 
 import * as k from "./l1-kgid.ts";
 
@@ -21,19 +19,5 @@ describe("l1-kgid mints smart-kg's IRIs", () => {
     expect(k.referenceEntryId("https://smart.who.int/immunizations/artifact/x", "26")).toBe("https://smart.who.int/immunizations/artifact/x/reference/26");
     expect(k.citationId("https://smart.who.int/immunizations", "abc")).toBe(`https://smart.who.int/immunizations/citation/${k.shortHash("abc")}`);
     expect(k.dakNamespace("http://smart.who.int/immunizations/bpmn/")).toBe("https://smart.who.int/immunizations");
-  });
-
-  // Against smart-kg itself, when a checkout is named; n/a otherwise, never passed.
-  const home = process.env.SMART_KG_HOME;
-  const kgid = home ? join(home, "tools", "kgid.mjs") : undefined;
-  test.skipIf(!kgid || !existsSync(kgid))("agrees with smart-kg kgid.mjs", async () => {
-    const w = await import(kgid!);
-    const ids = [{ type: "isbn", value: "9789240099456 (electronic version)" }];
-    const pub = w.publicationId(ids);
-    expect(k.publicationId(ids)).toBe(pub);
-    for (const n of ["1", "1.2", "Annex 3"]) expect(k.sectionId(pub, n)).toBe(w.sectionId(pub, n));
-    expect(k.publicationElementId(pub, "Box 2", "row 1")).toBe(w.publicationElementId(pub, "Box 2", "row 1"));
-    expect(k.citationId("https://x", "t (1)")).toBe(w.citationId("https://x", "t (1)"));
-    expect(k.dakNamespace("http://smart.who.int/base/bpmn")).toBe(w.dakNamespace("http://smart.who.int/base/bpmn"));
   });
 });

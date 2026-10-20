@@ -39,6 +39,21 @@ const OUT = resolve(import.meta.dir, "..", "document-kinds");
 const GENERATOR = "smart-base/scripts/gen-document-kinds.ts";
 
 /**
+ * Every file this writes says so itself, in a top-level `_generated` key — the
+ * self-declaration the harness's reference-direction check reads
+ * (`declaresGenerated`), in the form `sync-docs-harness.ts` writes it. The
+ * coverage reports name the instances they classify, and without it each of
+ * those names read as authored text in this layer naming a layer above it.
+ *
+ * Added at serialisation, after the schema parse: the node kinds strip a key
+ * they do not declare, so readers that parse these files are unaffected.
+ * `generatedBy` stays — it is a field of the kind; `_generated` is the file's.
+ */
+export function serialise(node: Record<string, unknown>): string {
+  return `${JSON.stringify({ _generated: `${GENERATOR} — do not hand-edit; rerun it`, ...node }, null, 2)}\n`;
+}
+
+/**
  * What is wrong with the kinds in this directory TAKEN TOGETHER — the joins a
  * per-file schema cannot see (bean `pebe`):
  *
@@ -188,9 +203,9 @@ function ingestedIgs(repoRoot: string): [string, string, IndexArtifact[]][] {
 if (import.meta.main) {
   const check = process.argv.includes("--check");
   const repoRoot = repoRootFor(resolve(import.meta.dir, ".."));
-  const files = new Map<string, string>([[join(OUT, "dak.json"), `${JSON.stringify(dakKind(), null, 2)}\n`]]);
+  const files = new Map<string, string>([[join(OUT, "dak.json"), serialise(dakKind())]]);
   for (const [subject, from, artifacts] of ingestedIgs(repoRoot)) {
-    files.set(join(OUT, `dak.coverage.${subject}.json`), `${JSON.stringify(dakCoverage(subject, from, artifacts), null, 2)}\n`);
+    files.set(join(OUT, `dak.coverage.${subject}.json`), serialise(dakCoverage(subject, from, artifacts)));
   }
   if (check) {
     let bad = 0;

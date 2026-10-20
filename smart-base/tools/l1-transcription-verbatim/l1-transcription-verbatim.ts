@@ -19,7 +19,7 @@ export default toolFactory((t) =>
         { name: "report", schema: t("Text"), description: "One summary line per file and one `FINDING` line per failure. Exit 0 clean, 1 findings, 2 nothing to check (not a pass)." },
       ],
     },
-    satisfies: ["recommendation-extraction"],
+    satisfies: ["transcription-verbatim"],
     selection: {
       when: "The L1 was authored from inspected images or transcriptions because `l1-recommendation-candidates` found no normative sentence in the entry's text layer (a poster, a slide deck).",
       limits:

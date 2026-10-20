@@ -3,8 +3,9 @@
  * specs as the ontology JSON and the FHIR artefacts, so the three cannot drift.
  *
  *   l1.context.jsonld          smart-kg's own, rebuilt the way smart-kg
- *                              `tools/build-exports.mjs` builds it (`buildContext`),
- *                              and held JSON-equal to WHO's file by test/parity.
+ *                              `tools/build-exports.mjs` builds it (`buildContext`).
+ *                              No longer compared with WHO's file: smart-kg is
+ *                              deprecated (owner, 2026-10-16).
  *   l1-library.context.jsonld  the context an `l1-library` document names. It is
  *                              the same base over L1 + l1-library, plus three
  *                              additions without which the document does not

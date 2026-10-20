@@ -111,14 +111,15 @@ Two things already measured about that surface, which constrain any redesign:
   `example` that happens to hold the list. The index is reconstructed from four
   partial views, none sufficient alone (bean `qsf5`).
 - **Coverage differs per IG, so no view is the winner.** `canonicals.json`
-  covers 10 % of smart-trust and 100 % of smart-immunizations (bean `qrnz`).
+  covers 10 % of the WHO SMART Trust IG and 100 % of the WHO SMART
+  Immunizations IG (bean `qrnz`).
   Provenance records all views rather than naming one.
 
 Re-derive those numbers rather than quoting them.
 
 ### On an IG repository's own site: `ig-site:sidecars`
 
-Owner, 2026-10-14, on smart-trust losing its DAK API sidecars when it dropped
+Owner, 2026-10-14, on the WHO SMART Trust IG losing its DAK API sidecars when it dropped
 its own `site.build`: *"that should already be there in smart-base (dak
 api)"*. An IG repository whose `index.config.json` names smart-base as its
 site's landing declares no steps of its own. The site route (cat-harness-tools
@@ -143,7 +144,7 @@ node links `openapi/`, every sidecar with its artefact page and (for a JSON
 Schema or JSON-LD sidecar) its view page `artifact/<file>.html`, bound by the
 rule fhir-harness binds sidecars by, and the enumeration schemas. It goes
 into the same `$SITE_WORK/ig-api/site/`. An IG whose own `dak-api.md` holds
-only the hub's marker (`<!-- DAK_API_CONTENT -->`, smart-trust's) gets the
+only the hub's marker (`<!-- DAK_API_CONTENT -->`, as the WHO SMART Trust IG's does) gets the
 thin hub in that page's place: `ig-api.json` names the marker as
 `placeholder`, and fhir-harness replaces a page holding it, and no other.
 

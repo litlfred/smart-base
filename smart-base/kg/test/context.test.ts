@@ -1,28 +1,18 @@
 /**
- * The JSON-LD contexts: the L1 one is smart-kg's, byte-for-byte in meaning,
- * and the l1-library one makes a graph survive as RDF — node classes,
+ * The JSON-LD contexts: the L1 one is generated from `src/l1.ts`, and the
+ * l1-library one makes a graph survive as RDF — node classes,
  * named properties, Dublin Core, and `prov:specializationOf` edges — with no
  * network, through `src/loader.ts`.
  */
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
 import { test } from "node:test";
 
 import jsonld from "jsonld";
 
-import { baseContext, contextUrl, extensionContext } from "../src/context.ts";
+import { contextUrl, extensionContext } from "../src/context.ts";
 import { L1 } from "../src/l1.ts";
 import { L1_LIBRARY } from "../src/l1-library.ts";
 import { CONTEXTS, documentLoader } from "../src/loader.ts";
-
-const HOME = process.env.SMART_KG_HOME;
-const WHO = HOME ? join(HOME, "ontology", "l1", "l1.context.jsonld") : "";
-const NA = { skip: WHO && existsSync(WHO) ? false : "SMART_KG_HOME unset: NOT checked (n/a, not a pass)" };
-
-test("the generated L1 context equals smart-kg's l1.context.jsonld", NA, () => {
-  assert.deepEqual(baseContext([L1]), JSON.parse(readFileSync(WHO, "utf8")));
-});
 
 test("the loader serves both contexts and refuses any other URL", async () => {
   assert.deepEqual(Object.keys(CONTEXTS).sort(), [contextUrl("l1"), contextUrl("l1-library")].sort());

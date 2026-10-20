@@ -1,4 +1,5 @@
 {
+  "_generated": "smart-base/kg/src/emit.ts (npm run build in smart-base/kg/) — do not hand-edit; edit src/",
   "schemaVersion": "3.0",
   "layer": "L1",
   "namespace": "http://smart.who.int/kg/",
@@ -43,7 +44,7 @@
     },
     {
       "what": "Where DAK citations actually occur, and how they fail",
-      "where": "smart-immunizations input/decision-logic/IMMZ DAK_decision-support logic.xlsx and input/L2/IMMZ DAK_indicators.xlsx",
+      "where": "a WHO SMART immunizations IG's decision-logic workbook (input/decision-logic/IMMZ DAK_decision-support logic.xlsx) and its indicators workbook (input/L2/IMMZ DAK_indicators.xlsx)",
       "detail": "Reference cells cite '… (n)', where (n) is a row of the workbook's own References sheet holding the full bibliographic entry and URL; each workbook numbers its own list. Some cells hold two citations on separate lines. Of 50 indicators, 44 cite a reference, 4 carry the placeholder '[Add appropriate reference]', 2 are blank."
     }
   ],

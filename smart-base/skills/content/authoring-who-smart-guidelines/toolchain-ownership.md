@@ -76,7 +76,7 @@ do, the move has not happened and a fork has.
 > re-derives the fork reading will recreate the error.
 
 That puts the toolchain on the same path as every other `smart-*` asset here —
-`who-iris`, `smart-trust`, `smart-immunizations`, `smart-base` — under the
+the IRIS catalogue, the WHO SMART Trust and Immunizations IGs, `smart-base` — under the
 owner's standing ruling: *"want KG assets here, can break apart later."*
 
 **What already exists there:** `smart-base/tools/`, holding the Tool nodes.

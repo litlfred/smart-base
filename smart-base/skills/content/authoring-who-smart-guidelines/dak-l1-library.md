@@ -8,6 +8,8 @@ description: >
   is L1 (declared > context > inferred), extracting the Component 1 graph, the
   L1 graph of each L1 source as a specialisation of its library entry, and the
   layering rule: the library is upstream of L1.
+input: schemas/skills/dak-l1-library/input.schema.json
+output: schemas/skills/dak-l1-library/output.schema.json
 ---
 
 # dak-l1-library
@@ -23,6 +25,13 @@ interventions, §1.2 names the sources, each with a printed `(n)` into the
 DAK's reference list. Those sources are the DAK's L1. A library that holds the
 DAK but not what Component 1 cites cannot answer the question an L1 graph
 exists for: *which recommendation does this decision rule implement?*
+
+## Input and output
+
+The contract is [`input.schema.json`](../../../schemas/skills/dak-l1-library/input.schema.json) and [`output.schema.json`](../../../schemas/skills/dak-l1-library/output.schema.json).
+
+- **In:** where to look: the `useCase` (stage 1 of [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), [`guideline-use-case`](guideline-use-case.md)'s output), a `dak` whose Component 1 cites the sources (`l2-dak-authoring.bpmn`), or both; and whether to `ingest` what is not in `library/` yet.
+- **Out:** `l1Sources`: the candidates, Component 1 sources first, then WHO IRIS and the jurisdiction's own, each `in-library`, `in-kg` or `not-yet`, `included` or not with a one-sentence `reason`. Stage 2 ([`recommendation-extraction`](recommendation-extraction.md)) takes it as its `l1Sources`.
 
 ## The layering rule (owner, 2026-10-07)
 
