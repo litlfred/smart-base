@@ -15,16 +15,19 @@
   "file": "../images/img-p088-1.png",
   "pageStart": 88,
   "pageEnd": 88,
-  "narrative": {
-    "text": "The cover of the \"WHO Evaluation Practice Handbook,\" published by the World Health Organization, showing the title in white text over a marbled blue-grey background with the WHO emblem.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:50:57Z"
-  },
+  "narrative": [
+    {
+      "text": "The cover of the \"WHO Evaluation Practice Handbook,\" published by the World Health Organization, showing the title in white text over a marbled blue-grey background with the WHO emblem.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:50:57Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789241511766-eng/sections/page-088",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789241511766-eng/manifest.jsonld",
   "provenance": "ingested"

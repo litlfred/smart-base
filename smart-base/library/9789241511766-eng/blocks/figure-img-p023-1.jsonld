@@ -15,16 +15,19 @@
   "file": "../images/img-p023-1.png",
   "pageStart": 23,
   "pageEnd": 23,
-  "narrative": {
-    "text": "A chapter-opening photograph, shown rotated 180 degrees, of two hands holding a smartphone displaying a Vietnamese-language mobile web page with a login field, held over an open paper ledger of handwritten patient records.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:50:57Z"
-  },
+  "narrative": [
+    {
+      "text": "A chapter-opening photograph, shown rotated 180 degrees, of two hands holding a smartphone displaying a Vietnamese-language mobile web page with a login field, held over an open paper ledger of handwritten patient records.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:50:57Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789241511766-eng/sections/page-023",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789241511766-eng/manifest.jsonld",
   "provenance": "ingested"

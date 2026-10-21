@@ -15,17 +15,20 @@
   "file": "../images/img-p054-8.png",
   "pageStart": 54,
   "pageEnd": 54,
-  "narrative": {
-    "text": "ArchiMate notation for the 'Application Service' element: a light-cyan rounded box with a rounded-rectangle service icon, labelled 'Application Service'. It is the symbol in the 'ArchiMate element' column of Table 3.1, 'The element types used in the DPI-H reference architecture and what they represent' (section 3.1).",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude",
-      "model": "not-disclosed",
-      "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
-    },
-    "drafted_at": "2026-10-01"
-  },
+  "narrative": [
+    {
+      "text": "ArchiMate notation for the 'Application Service' element: a light-cyan rounded box with a rounded-rectangle service icon, labelled 'Application Service'. It is the symbol in the 'ArchiMate element' column of Table 3.1, 'The element types used in the DPI-H reference architecture and what they represent' (section 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude",
+        "model": "not-disclosed",
+        "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
+      },
+      "drafted_at": "2026-10-01",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-025",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/who-dpi-h-reference-architecture-draft-v1/manifest.jsonld",
   "provenance": "ingested"
