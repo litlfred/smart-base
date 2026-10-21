@@ -27,6 +27,8 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { parse as parseYaml } from "yaml";
 
+import { narrativeFor } from "../../cat-harness/schemas/narrative.js";
+
 export function norm(s: string): string {
   let t = s.normalize("NFKC");
   t = [...t].filter((c) => {
@@ -58,7 +60,9 @@ export function checkFile(file: string, root: string): { findings: string[]; sum
   const imagesJson = join(entry, "images.json");
   if (existsSync(imagesJson)) {
     for (const img of JSON.parse(readFileSync(imagesJson, "utf-8")).images ?? []) {
-      narratives.set(img.id, norm(img.narrative?.text ?? ""));
+      // A narrative slot is one narrative or a list of them (cat-harness#396);
+      // `narrativeFor` reads either, and with no locale asked, the first.
+      narratives.set(img.id, norm(img.narrative ? narrativeFor(img.narrative).text : ""));
     }
   }
   const sectionsDir = join(entry, "sections");
