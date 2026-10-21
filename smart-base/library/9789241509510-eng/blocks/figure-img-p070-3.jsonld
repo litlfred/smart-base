@@ -15,16 +15,19 @@
   "file": "../images/img-p070-3.png",
   "pageStart": 70,
   "pageEnd": 70,
-  "narrative": {
-    "text": "The OpenHIE logo, showing a stylized circular icon made of overlapping teal, blue, orange and green dots beside the wordmark 'OpenHIE'.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:53:47Z"
-  },
+  "narrative": [
+    {
+      "text": "The OpenHIE logo, showing a stylized circular icon made of overlapping teal, blue, orange and green dots beside the wordmark 'OpenHIE'.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:53:47Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789241509510-eng/sections/page-070",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789241509510-eng/manifest.jsonld",
   "provenance": "ingested"

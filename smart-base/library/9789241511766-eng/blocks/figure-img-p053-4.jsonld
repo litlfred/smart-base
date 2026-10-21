@@ -15,16 +15,19 @@
   "file": "../images/img-p053-4.png",
   "pageStart": 53,
   "pageEnd": 53,
-  "narrative": {
-    "text": "A screenshot of a MEASURE Evaluation web page titled \"Summary List of Indicators,\" showing the site's blue header, a left-hand navigation menu, and a list of linked indicator categories.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:50:57Z"
-  },
+  "narrative": [
+    {
+      "text": "A screenshot of a MEASURE Evaluation web page titled \"Summary List of Indicators,\" showing the site's blue header, a left-hand navigation menu, and a list of linked indicator categories.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:50:57Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789241511766-eng/sections/page-053",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789241511766-eng/manifest.jsonld",
   "provenance": "ingested"

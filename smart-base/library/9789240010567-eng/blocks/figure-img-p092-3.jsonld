@@ -15,16 +15,19 @@
   "file": "../images/img-p092-3.png",
   "pageStart": 92,
   "pageEnd": 92,
-  "narrative": {
-    "text": "The OpenHIE logo: a teal and blue circular/plus-shaped icon beside the wordmark 'OpenHIE'. It represents the interoperability framework referenced in Fig. 5.6.2, which illustrates how mHero integrates digital health interventions using standards.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:48:14Z"
-  },
+  "narrative": [
+    {
+      "text": "The OpenHIE logo: a teal and blue circular/plus-shaped icon beside the wordmark 'OpenHIE'. It represents the interoperability framework referenced in Fig. 5.6.2, which illustrates how mHero integrates digital health interventions using standards.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:48:14Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789240010567-eng/sections/page-092",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789240010567-eng/manifest.jsonld",
   "provenance": "ingested"

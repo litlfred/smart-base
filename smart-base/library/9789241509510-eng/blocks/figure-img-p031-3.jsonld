@@ -15,16 +15,19 @@
   "file": "../images/img-p031-3.png",
   "pageStart": 31,
   "pageEnd": 31,
-  "narrative": {
-    "text": "The cover of 'Information and Communication Technologies for Women's and Children's Health: A Planning Workbook', showing three photographs of women and children in community/clinical settings above the title and a row of partner organization logos along the bottom.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:53:47Z"
-  },
+  "narrative": [
+    {
+      "text": "The cover of 'Information and Communication Technologies for Women's and Children's Health: A Planning Workbook', showing three photographs of women and children in community/clinical settings above the title and a row of partner organization logos along the bottom.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:53:47Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789241509510-eng/sections/page-031",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789241509510-eng/manifest.jsonld",
   "provenance": "ingested"

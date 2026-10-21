@@ -15,16 +15,19 @@
   "file": "../images/img-p075-1.png",
   "pageStart": 75,
   "pageEnd": 75,
-  "narrative": {
-    "text": "A chapter-opening photograph of a desktop computer monitor on an office desk, displaying a Vietnamese-language web application for immunization registration and reporting, with a child's record open showing personal details and a vaccination schedule table. Stacks of paper forms, a mouse and a telephone are visible on the desk around the monitor.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:50:57Z"
-  },
+  "narrative": [
+    {
+      "text": "A chapter-opening photograph of a desktop computer monitor on an office desk, displaying a Vietnamese-language web application for immunization registration and reporting, with a child's record open showing personal details and a vaccination schedule table. Stacks of paper forms, a mouse and a telephone are visible on the desk around the monitor.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:50:57Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789241511766-eng/sections/page-075",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789241511766-eng/manifest.jsonld",
   "provenance": "ingested"
