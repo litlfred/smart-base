@@ -510,7 +510,13 @@ jobs:
           # single quotes so the host shell does NOT expand any variables;
           # only the container's sh expands them, preventing injection
           # through branch names or tx values.
+          # WHO_IG_OWN_POST_CHECK: the template (who.template.root) skips its
+          # own post-check generators, since this workflow runs the current
+          # ones after the Publisher. Without it, every sidecar is also
+          # published under schemas/ in an older format with the same $id
+          # (litlfred/smart-base#99, WorldHealthOrganization/smart-ig-template#69).
           docker exec -w /work \
+            -e "WHO_IG_OWN_POST_CHECK=1" \
             -e "IG_REPO=${GITHUB_REPOSITORY}" \
             -e "IG_REF=${GITHUB_REF_NAME}" \
             -e "TX_URL=${INPUT_TX:-}" \
