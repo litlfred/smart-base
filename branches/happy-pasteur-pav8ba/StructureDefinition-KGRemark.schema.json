@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-KGRemark.schema.json",
+  "title": "Knowledge graph L1: Remark",
+  "description": "An implementation consideration attached to a recommendation. Grounded: the BCG table's first annotationEntry carries exactly this — \"Neonates born to women of unknown HIV status should be vaccinated as the benefits…\" — clinical nuance that shapes the decision logic but is not the recommendation itself. Class IRI: http://smart.who.int/kg/remark.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "KGRemark",
+      "description": "Resource type identifier for KGRemark logical model"
+    },
+    "text": {
+      "type": "string",
+      "description": "The implementation consideration, verbatim."
+    }
+  },
+  "required": [
+    "resourceType"
+  ],
+  "allOf": [
+    {
+      "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "resourceDefinition": {
+          "type": "string",
+          "format": "uri",
+          "const": "http://smart.who.int/base/StructureDefinition/KGRemark"
+        },
+        "fhir:parent": {
+          "type": "string",
+          "const": "http://hl7.org/fhir/StructureDefinition/Base"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-KGIndicator.schema.json",
+  "title": "Knowledge graph L1: Indicator",
+  "description": "A programme indicator defined normatively at L1. Distinct from the DAK's ProgramIndicator component, which is its L2 expression; that model already carries `references 0..* id` pointing at health intervention ids. Corresponds to ProgramIndicator: same element names and types (markdown), identifier = ProgramIndicator.id; not a Parent because ProgramIndicator makes name, definition, numerator, denominator and disaggregation 1..1 and an L1 indicator is recorded with what its source states. Class IRI: http://smart.who.int/kg/indicator.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "KGIndicator",
+      "description": "Resource type identifier for KGIndicator logical model"
+    },
+    "identifier": {
+      "type": "string",
+      "description": "Identifier for the program indicator"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the indicator"
+    },
+    "definition": {
+      "type": "string",
+      "description": "Definition of what the indicator measures"
+    },
+    "numerator": {
+      "type": "string",
+      "description": "Description of the numerator calculation"
+    },
+    "denominator": {
+      "type": "string",
+      "description": "Description of the denominator calculation"
+    },
+    "disaggregation": {
+      "type": "string",
+      "description": "Description of how the indicator should be disaggregated"
+    }
+  },
+  "required": [
+    "resourceType"
+  ],
+  "allOf": [
+    {
+      "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "resourceDefinition": {
+          "type": "string",
+          "format": "uri",
+          "const": "http://smart.who.int/base/StructureDefinition/KGIndicator"
+        },
+        "fhir:parent": {
+          "type": "string",
+          "const": "http://hl7.org/fhir/StructureDefinition/Base"
+        }
+      }
+    }
+  ]
+}

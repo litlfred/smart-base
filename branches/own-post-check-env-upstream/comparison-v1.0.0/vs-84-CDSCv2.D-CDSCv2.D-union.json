@@ -1,0 +1,40 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "09956e38-60bd-4c62-a329-20f9e75cfe24-176",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/09956e38-60bd-4c62-a329-20f9e75cfe24-176",
+  "name" : "UnionCDSCv2.DAndCDSCv2.D",
+  "title" : "Union of Services and Application Types: Data Management Services And Services and Application Types: Data Management Services",
+  "status" : "active",
+  "date" : "2026-10-22T16:38:06+00:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "D"
+      },
+      {
+        "code" : "D1"
+      },
+      {
+        "code" : "D2"
+      },
+      {
+        "code" : "D3"
+      },
+      {
+        "code" : "D4"
+      },
+      {
+        "code" : "D5"
+      },
+      {
+        "code" : "D6"
+      },
+      {
+        "code" : "D7"
+      },
+      {
+        "code" : "D8"
+      }]
+    }]
+  }
+}

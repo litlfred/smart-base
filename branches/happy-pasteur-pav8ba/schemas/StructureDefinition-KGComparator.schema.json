@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-KGComparator.schema.json",
+  "title": "Knowledge graph L1: Comparator",
+  "description": "PICO C. Frequently absent in WHO recommendations; absence is recorded rather than invented. Class IRI: http://smart.who.int/kg/comparator.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "KGComparator",
+      "description": "Resource type identifier for KGComparator logical model"
+    },
+    "description": {
+      "type": "string",
+      "description": "PICO comparator, as described in the source."
+    }
+  },
+  "required": [
+    "resourceType"
+  ],
+  "resourceDefinition": "http://smart.who.int/base/StructureDefinition/KGComparator",
+  "fhir:parent": "http://hl7.org/fhir/StructureDefinition/Base"
+}

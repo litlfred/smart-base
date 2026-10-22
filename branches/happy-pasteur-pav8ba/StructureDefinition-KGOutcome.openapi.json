@@ -1,0 +1,72 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Knowledge graph L1: Outcome API",
+    "description": "PICO O. Class IRI: http://smart.who.int/kg/outcome.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/StructureDefinition-KGOutcome.schema.json": {
+      "get": {
+        "summary": "JSON Schema definition for the Logical Model StructureDefinition-KGOutcome",
+        "description": "This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-KGOutcome.",
+        "responses": {
+          "200": {
+            "description": "The JSON Schema for StructureDefinition-KGOutcome",
+            "content": {
+              "application/schema+json": {
+                "schema": {
+                  "$ref": "./StructureDefinition-KGOutcome.schema.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StructureDefinition-KGOutcome": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "http://smart.who.int/base/StructureDefinition-KGOutcome.schema.json",
+        "title": "Knowledge graph L1: Outcome",
+        "description": "PICO O. Class IRI: http://smart.who.int/kg/outcome.",
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "const": "KGOutcome",
+            "description": "Resource type identifier for KGOutcome logical model"
+          },
+          "description": {
+            "type": "string",
+            "description": "PICO outcome, as described in the source."
+          }
+        },
+        "required": [
+          "resourceType"
+        ],
+        "allOf": [
+          {
+            "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "resourceDefinition": {
+                "type": "string",
+                "format": "uri",
+                "const": "http://smart.who.int/base/StructureDefinition/KGOutcome"
+              },
+              "fhir:parent": {
+                "type": "string",
+                "const": "http://hl7.org/fhir/StructureDefinition/Base"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

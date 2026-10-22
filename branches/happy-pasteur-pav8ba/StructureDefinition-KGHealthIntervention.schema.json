@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-KGHealthIntervention.schema.json",
+  "title": "Knowledge graph L1: Health intervention",
+  "description": "What a recommendation is about, and the hinge to L2. Corresponds to the DAK component smart-base defines as HealthInterventions — today `id`, `description[x]` and `reference 1..* DublinCore`, i.e. a bibliographic citation with no recommendation behind it. This class is what that citation should resolve to. Corresponds to HealthInterventions: identifier = HealthInterventions.id and description = HealthInterventions.description[x]; not a Parent because HealthInterventions requires reference 1..* DublinCore, which in the graph is an edge to a publication rather than a field. Class IRI: http://smart.who.int/kg/health-intervention.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "KGHealthIntervention",
+      "description": "Resource type identifier for KGHealthIntervention logical model"
+    },
+    "identifier": {
+      "type": "string",
+      "description": "An identifier for the health intervention"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the health intervention, as listed."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the health intervention"
+    }
+  },
+  "required": [
+    "resourceType"
+  ],
+  "allOf": [
+    {
+      "$ref": "./StructureDefinition-FHIRSchemaBase.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "resourceDefinition": {
+          "type": "string",
+          "format": "uri",
+          "const": "http://smart.who.int/base/StructureDefinition/KGHealthIntervention"
+        },
+        "fhir:parent": {
+          "type": "string",
+          "const": "http://hl7.org/fhir/StructureDefinition/Base"
+        }
+      }
+    }
+  ]
+}

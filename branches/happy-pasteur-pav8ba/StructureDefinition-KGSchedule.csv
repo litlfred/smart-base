@@ -1,0 +1,9 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"KGSchedule","KGSchedule","","","",0,*,"","","","null {[]} {[]}
+","Knowledge graph L1: Schedule","A normative delivery schedule. Grounded: the BCG table cites ""WHO recommendations for routine immunization – summary tables"", which IS a schedule publication — the single most-cited L1 source in the immunization DAK. Class IRI: http://smart.who.int/kg/schedule.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"KGSchedule.identifier","KGSchedule.identifier","","","",0,1,"","","","string {[]} {[]}
+","Identifier","Identifier of the schedule, where the source gives one.","","","","","","","","","",,,,,"",,,,"KGSchedule.identifier",0,1,"",""
+"KGSchedule.name","KGSchedule.name","","","",0,1,"","","","string {[]} {[]}
+","Name","Name of the schedule (a summary table's title).","","","","","","","","","",,,,,"",,,,"KGSchedule.name",0,1,"",""
+"KGSchedule.scope","KGSchedule.scope","","","",0,1,"","","","string {[]} {[]}
+","Scope","Who or what the schedule covers, as stated.","","","","","","","","","",,,,,"",,,,"KGSchedule.scope",0,1,"",""

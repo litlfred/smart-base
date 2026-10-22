@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-KGScheduleEntry.schema.json",
+  "title": "Knowledge graph L1: Schedule entry",
+  "description": "One row of a schedule: which intervention, for whom, when, how many doses. This is the granularity a decision table actually consumes — the BCG rules turn on dose count, age and interval since a live vaccine. Class IRI: http://smart.who.int/kg/schedule-entry.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "KGScheduleEntry",
+      "description": "Resource type identifier for KGScheduleEntry logical model"
+    },
+    "antigen": {
+      "type": "string",
+      "description": "The antigen or vaccine the row is about."
+    },
+    "doseNumber": {
+      "type": "string",
+      "description": "Dose in the series as printed (\"1\", \"Booster 1\"). Text, because schedules label boosters rather than count them."
+    },
+    "series": {
+      "type": "string",
+      "description": "Primary series or booster series, as stated."
+    },
+    "targetAge": {
+      "type": "string",
+      "description": "Age at which the dose is due, as stated."
+    },
+    "minimumInterval": {
+      "type": "string",
+      "description": "Minimum interval since the previous dose, as stated."
+    },
+    "note": {
+      "type": "string",
+      "description": "The row's footnote or remark, verbatim."
+    }
+  },
+  "required": [
+    "resourceType"
+  ],
+  "resourceDefinition": "http://smart.who.int/base/StructureDefinition/KGScheduleEntry",
+  "fhir:parent": "http://hl7.org/fhir/StructureDefinition/Base"
+}
