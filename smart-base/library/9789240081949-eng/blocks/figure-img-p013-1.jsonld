@@ -15,16 +15,19 @@
   "file": "../images/img-p013-1.png",
   "pageStart": 13,
   "pageEnd": 13,
-  "narrative": {
-    "text": "An extremely small extracted image (8 by 2 pixels); its content could not be determined from the extracted image. Given its position on the 'Related documents' page, it is likely a minor decorative rule or artifact rather than a substantive figure.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:48:06Z"
-  },
+  "narrative": [
+    {
+      "text": "An extremely small extracted image (8 by 2 pixels); its content could not be determined from the extracted image. Given its position on the 'Related documents' page, it is likely a minor decorative rule or artifact rather than a substantive figure.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:48:06Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789240081949-eng/sections/page-013",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789240081949-eng/manifest.jsonld",
   "provenance": "ingested"

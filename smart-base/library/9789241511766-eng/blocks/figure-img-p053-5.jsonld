@@ -15,16 +15,19 @@
   "file": "../images/img-p053-5.png",
   "pageStart": 53,
   "pageEnd": 53,
-  "narrative": {
-    "text": "The cover of a publication titled \"National AIDS Programmes: A guide to indicators for monitoring and evaluating national HIV/AIDS prevention programmes for young people,\" showing the title text on a red ribbon-patterned background with logos of UNAIDS, UNICEF, WHO and other partner organizations along the bottom.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:50:57Z"
-  },
+  "narrative": [
+    {
+      "text": "The cover of a publication titled \"National AIDS Programmes: A guide to indicators for monitoring and evaluating national HIV/AIDS prevention programmes for young people,\" showing the title text on a red ribbon-patterned background with logos of UNAIDS, UNICEF, WHO and other partner organizations along the bottom.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:50:57Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789241511766-eng/sections/page-053",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789241511766-eng/manifest.jsonld",
   "provenance": "ingested"

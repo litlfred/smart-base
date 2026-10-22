@@ -15,16 +15,19 @@
   "file": "../images/img-p081-1.png",
   "pageStart": 81,
   "pageEnd": 81,
-  "narrative": {
-    "text": "A photograph of two people seated on wooden chairs outdoors near a house with a banana tree in the background; one, wearing a cap, writes on papers held on their lap while the other, in a headscarf and patterned dress, looks on.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:53:47Z"
-  },
+  "narrative": [
+    {
+      "text": "A photograph of two people seated on wooden chairs outdoors near a house with a banana tree in the background; one, wearing a cap, writes on papers held on their lap while the other, in a headscarf and patterned dress, looks on.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:53:47Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789241509510-eng/sections/page-081",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789241509510-eng/manifest.jsonld",
   "provenance": "ingested"

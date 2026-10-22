@@ -49,7 +49,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "935a5bd81090e2e334cadb4979e80bf38026b7f8",
+          "ref": "f35c1daff72439fec61ef8f5c15d218dc9e16d09",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -64,9 +64,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-16",
-              "ref": "935a5bd81090e2e334cadb4979e80bf38026b7f8",
-              "evidence": "Owner litlfred, 2026-10-16 (06:52Z), on a decision card in project Folio Assistant: 'Yes, repin both' to 'Approve repinning smart-ra and smart-base to each layer's current main, recorded as your consent?'; then 'merge and repin window open 3 hrs'"
+              "on": "2026-10-21",
+              "ref": "f35c1daff72439fec61ef8f5c15d218dc9e16d09",
+              "evidence": "owner, 2026-10-21 12:49Z, session_016heucWhrncLm4uy52csBcz: \"Extend window +3hrs\" (re-pin and merge; the platform layers move together to their mains so cat-harness carries narrativeFor, cat-harness#396)"
             }
           }
         }
@@ -77,7 +77,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "49309d684151daab2e87610ab7f62722c0b2dd49",
+          "ref": "59ddb5c831405b740a8ad6d8f0ba86d1f580a025",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -92,9 +92,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-16",
-              "ref": "49309d684151daab2e87610ab7f62722c0b2dd49",
-              "evidence": "Owner litlfred, 2026-10-16 (06:52Z), on a decision card in project Folio Assistant: 'Yes, repin both' to 'Approve repinning smart-ra and smart-base to each layer's current main, recorded as your consent?'; then 'merge and repin window open 3 hrs'"
+              "on": "2026-10-21",
+              "ref": "59ddb5c831405b740a8ad6d8f0ba86d1f580a025",
+              "evidence": "owner, 2026-10-21 12:49Z, session_016heucWhrncLm4uy52csBcz: \"Extend window +3hrs\" (re-pin and merge; the platform layers move together to their mains so cat-harness carries narrativeFor, cat-harness#396)"
             }
           }
         }
@@ -105,7 +105,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "71b289f79238493762d7e70376c8f5f07a38043c",
+          "ref": "5d68cd2fedcc3abef76db28a365c21ac2a289c87",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -117,9 +117,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-16",
-              "ref": "71b289f79238493762d7e70376c8f5f07a38043c",
-              "evidence": "Owner litlfred, 2026-10-16 (06:52Z), on a decision card in project Folio Assistant: 'Yes, repin both' to 'Approve repinning smart-ra and smart-base to each layer's current main, recorded as your consent?'; then 'merge and repin window open 3 hrs'; 08:51Z 'Merge now' on cat-harness-tools#394; 09:40Z 'Extend 2 hrs'"
+              "on": "2026-10-21",
+              "ref": "5d68cd2fedcc3abef76db28a365c21ac2a289c87",
+              "evidence": "owner, 2026-10-21 12:49Z, session_016heucWhrncLm4uy52csBcz: \"Extend window +3hrs\" (re-pin and merge; the platform layers move together to their mains so cat-harness carries narrativeFor, cat-harness#396)"
             }
           }
         }
@@ -130,7 +130,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "9ecfb729b38b9196063fee76c6f7932f92502353",
+          "ref": "c71b96a3f2e8caf143b78bcf3ab6bb80060c82c2",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -139,9 +139,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-15",
-              "ref": "9ecfb729b38b9196063fee76c6f7932f92502353",
-              "evidence": "Owner litlfred, 2026-10-15 (17:30Z): 'merge and repin for next 3 hrs. keep draining'"
+              "on": "2026-10-21",
+              "ref": "c71b96a3f2e8caf143b78bcf3ab6bb80060c82c2",
+              "evidence": "owner, 2026-10-21 12:49Z, session_016heucWhrncLm4uy52csBcz: \"Extend window +3hrs\" (re-pin and merge; the platform layers move together to their mains so cat-harness carries narrativeFor, cat-harness#396)"
             }
           }
         }
@@ -152,7 +152,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "7dc55773590bbc3158c877a3d61222aa7864006c",
+          "ref": "3f5b43c8c9454da1272e5b08067535941b70178a",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -164,9 +164,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-15",
-              "ref": "7dc55773590bbc3158c877a3d61222aa7864006c",
-              "evidence": "Owner litlfred, 2026-10-15 (17:30Z): 'merge and repin for next 3 hrs. keep draining'"
+              "on": "2026-10-21",
+              "ref": "3f5b43c8c9454da1272e5b08067535941b70178a",
+              "evidence": "owner, 2026-10-21 12:49Z, session_016heucWhrncLm4uy52csBcz: \"Extend window +3hrs\" (re-pin and merge; the platform layers move together to their mains so cat-harness carries narrativeFor, cat-harness#396)"
             }
           }
         }

@@ -15,16 +15,19 @@
   "file": "../images/img-p001-1.png",
   "pageStart": 1,
   "pageEnd": 1,
-  "narrative": {
-    "text": "A blank, solid white rectangular image with no visible graphic content; the original artwork could not be determined from the extracted image.",
-    "state": "draft",
-    "drafted_by": {
-      "kind": "agent",
-      "id": "claude-code",
-      "model": "claude-sonnet-5"
-    },
-    "drafted_at": "2026-09-22T08:49:40Z"
-  },
+  "narrative": [
+    {
+      "text": "A blank, solid white rectangular image with no visible graphic content; the original artwork could not be determined from the extracted image.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "claude-sonnet-5"
+      },
+      "drafted_at": "2026-09-22T08:49:40Z",
+      "lang": "en"
+    }
+  ],
   "derivedFrom": "library/9789240093362-eng/sections/sec-front-matter",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/smart-base/9789240093362-eng/manifest.jsonld",
   "provenance": "ingested"
