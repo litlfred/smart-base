@@ -3,6 +3,9 @@
   "wireframes": {
     "fhir-artifact-index": {
       "covers": ["smart-base/artifact-index"]
+    },
+    "l1-extraction": {
+      "covers": ["smart-base/l1-extraction"]
     }
   }
 }
