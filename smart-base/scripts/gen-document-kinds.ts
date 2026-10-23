@@ -38,7 +38,7 @@ import {
 } from "../platform/index.js";
 import { directoriesForGraph, instanceDirectoryForGraph, instanceRootsIn, readDeclaration, repoRootFor } from "../platform/index.js";
 import { DAK_CARDS } from "./gen-dak-components-figure.ts";
-import { pinnedTerms, snapshotProblem } from "./pin-smart-kg.ts";
+import { kgClasses } from "./kg-classes.ts";
 
 const OUT = resolve(import.meta.dir, "..", "document-kinds");
 const GENERATOR = "smart-base/scripts/gen-document-kinds.ts";
@@ -65,8 +65,9 @@ export function serialise(node: Record<string, unknown>): string {
  * - `extends` names a kind that is here, and the chain does not loop;
  * - a child does not redeclare a section id its parent already has — "extends"
  *   would otherwise mean two sections answering to one id;
- * - every `modelledBy` term is in the pinned smart-kg snapshot, so a section
- *   cannot claim a class smart-kg does not declare at the commit we pinned.
+ * - every `modelledBy` term is in smart-base's KG class lists
+ *   (`code-lists/sgkg-l*-classes.json`), so a section cannot claim an
+ *   undeclared class.
  */
 export function kindSetProblems(kinds: readonly DocumentKind[], pinned: ReadonlySet<string>): string[] {
   const byId = new Map(kinds.map((k) => [k.id, k]));
@@ -86,7 +87,7 @@ export function kindSetProblems(kinds: readonly DocumentKind[], pinned: Readonly
     for (const s of k.sections) {
       if (inherited.has(s.id)) out.push(`${k.id}: section "${s.id}" is already its parent's — extend it, do not redeclare it`);
       for (const t of s.modelledBy ?? []) {
-        if (!pinned.has(t)) out.push(`${k.id}: section "${s.id}" is modelledBy "${t}", which the pinned smart-kg snapshot does not declare`);
+        if (!pinned.has(t)) out.push(`${k.id}: section "${s.id}" is modelledBy "${t}", which the KG class lists do not declare`);
       }
     }
   }
@@ -252,10 +253,9 @@ if (import.meta.main) {
       if (!ok) { console.log(`✗ ${relative(process.cwd(), target)} is stale — run without --check`); bad++; }
     }
     if (bad === 0) console.log(`✓ ${files.size} document-kind file(s) current`);
-    const snap = snapshotProblem();
-    const problems = [...(snap ? [snap] : []), ...kindSetProblems(kindsIn(OUT), pinnedTerms())];
+    const problems = kindSetProblems(kindsIn(OUT), kgClasses());
     for (const p of problems) console.log(`✗ ${p}`);
-    if (problems.length === 0) console.log(`✓ kinds resolve: every extends names a kind here, every modelledBy is in the pinned smart-kg snapshot`);
+    if (problems.length === 0) console.log(`✓ kinds resolve: every extends names a kind here, every modelledBy is in the KG class lists`);
     process.exit(bad === 0 && problems.length === 0 && homeless.length === 0 ? 0 : 1);
   }
   for (const [target, body] of files) {
@@ -263,7 +263,7 @@ if (import.meta.main) {
     writeFileSync(target, body);
     console.log(`${relative(process.cwd(), target)} written`);
   }
-  const problems = kindSetProblems(kindsIn(OUT), pinnedTerms());
+  const problems = kindSetProblems(kindsIn(OUT), kgClasses());
   for (const p of problems) console.log(`✗ ${p}`);
   if (problems.length > 0 || homeless.length > 0) process.exit(1);
 }

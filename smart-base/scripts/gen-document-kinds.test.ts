@@ -11,7 +11,7 @@ import { join } from "node:path";
 import { DAK_COMPONENTS } from "../schemas/dak-kinds.ts";
 import { DocumentKindSchema } from "../platform/index.js";
 import { dakCoverage, dakKind, kindSetProblems } from "./gen-document-kinds.ts";
-import { pinnedTerms } from "./pin-smart-kg.ts";
+import { kgClasses } from "./kg-classes.ts";
 
 const committed = DocumentKindSchema.parse(JSON.parse(readFileSync(join(import.meta.dir, "..", "document-kinds", "dak.json"), "utf-8")));
 
@@ -49,7 +49,7 @@ describe("the authored kinds resolve as a set (bean pebe)", () => {
   const read = (id: string) =>
     DocumentKindSchema.parse(JSON.parse(readFileSync(join(import.meta.dir, "..", "document-kinds", `${id}.json`), "utf-8")));
   const kinds = ["dak", "l1", "l1-guideline", "dth"].map(read);
-  const pinned = pinnedTerms();
+  const pinned = kgClasses();
   it("the committed kinds have no problem", () => {
     expect(kindSetProblems(kinds, pinned)).toEqual([]);
   });
@@ -74,7 +74,7 @@ describe("the authored kinds resolve as a set (bean pebe)", () => {
     const dup = { ...dth, sections: [...dth.sections, { ...dth.sections[0]!, id: "introduction" }] };
     expect(kindSetProblems([...others, dup], pinned).join()).toContain('"introduction" is already its parent');
   });
-  it("a modelledBy term the pinned smart-kg snapshot does not declare", () => {
+  it("a modelledBy term the KG class lists do not declare", () => {
     const bad = { ...dth, sections: dth.sections.map((s, i) => (i === 0 ? { ...s, modelledBy: ["sgkg-l2#not-a-class"] } : s)) };
     expect(kindSetProblems([...others, bad], pinned).join()).toContain("sgkg-l2#not-a-class");
   });
