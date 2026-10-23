@@ -262,6 +262,14 @@
       "graphTypologies": [
         "code-list"
       ]
+    },
+    {
+      "id": "glossary",
+      "path": "glossary/",
+      "description": "SMART Base's generated glossary (`glossary/generated/smart-base/`): candidate `folio-glossary/v1` schemes extracted from this layer's tools, skills, BPMN activities and schema fields by `glossary:page`. Moved here from `folio-assistant-core/glossary/generated/smart-base/` on the owner's 2026-10-20 ruling (bean rfev: \"Move to smart-base\") so core holds no base vocabulary.",
+      "graphTypologies": [
+        "glossary"
+      ]
     }
   ],
   "_directories_comment": "The list above is the count; this comment said FIVE entries while there were six, and gives none now. `scenarios/` is declared now that it holds `roles.json` (bean hupw); a declared-but-absent directory would be the `dh4f` defect, where every consumer scans nothing and reports a clean run over it.",
