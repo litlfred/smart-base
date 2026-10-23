@@ -1,0 +1,44 @@
+import { webpage } from "@litlfred/cat-harness/schemas/webpage.ts";
+
+export default webpage({
+  slug: "concepts/who-smart-content-types",
+  title: "WHO SMART Guidelines content types",
+  parent: "Content types",
+  navOrder: 3,
+  nodes: [
+    {
+      id: "who-smart-guidelines-daks-l2",
+      title: "WHO SMART Guidelines DAKs (L2)",
+      asset: {
+        kind: "bpmn",
+        source: "processes/content/l2-dak-authoring.bpmn",
+        rendered: "../assets/img/workflows/l2-dak-authoring.svg",
+        alt: "BPMN swimlane diagram of L2 DAK authoring: a parallel gateway fans out personas, BPMN processes, DMN decision logic, the data dictionary and indicators across the business-analyst lane alongside the terminologist's bindings, then clinical SME validation gates assembly of the DAK.",
+        sourceLinks: [
+          { text: "BPMN 2.0 source", href: "https://github.com/litlfred/folio-assistant/blob/main/smart-base/processes/content/l2-dak-authoring.bpmn" },
+          { text: "full-size SVG", href: "../assets/img/workflows/l2-dak-authoring.svg" },
+        ],
+        linkStyle: "caption",
+      },
+      lead: "who-smart-guidelines-daks-l2-lead",
+      block: "who-smart-guidelines-daks-l2",
+    },
+    {
+      id: "who-smart-implementation-guides-l3",
+      title: "WHO SMART Implementation Guides (L3)",
+      asset: {
+        kind: "bpmn",
+        source: "../fhir-harness/processes/content/l3-fhir-pipeline.bpmn",
+        rendered: "../assets/img/workflows/l3-fhir-pipeline.svg",
+        alt: "BPMN swimlane diagram of the L3 pipeline: map L2 to L3, author FSH, SUSHI compile, validate against profiles with a loop back to FSH on failure, QC gates that file findings as beans, IG Publisher build, and publication of the IG site.",
+        sourceLinks: [
+          { text: "BPMN 2.0 source", href: "https://github.com/litlfred/folio-assistant/blob/main/processes/l3-fhir-pipeline.bpmn" },
+          { text: "full-size SVG", href: "../assets/img/workflows/l3-fhir-pipeline.svg" },
+        ],
+        linkStyle: "caption",
+      },
+      lead: "who-smart-implementation-guides-l3-lead",
+      block: "who-smart-implementation-guides-l3",
+    },
+  ],
+});
