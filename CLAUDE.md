@@ -10,17 +10,19 @@ ways. Most mistakes here come from treating one as the other.
 
 ## The platform is mounted, not absent
 
-`folio-assistant/` is a submodule. The SessionStart hook
-(`.claude/mount-platform.sh`) initialises it and replays its lock, which puts
-folio-assistant-core, cat-harness, cat-harness-tools, fhir-harness,
-bootstrap-tools and smart-base on disk under `folio-assistant/`. **Read the
+The platform layers are remote mounts, not a submodule (bean
+folio-assistant-n3h9). The SessionStart hook (`.claude/mount-platform.sh`)
+replays `index.lock.json` with cat-harness-tools' `mount-from-lock.ts`, the
+same steps `site-publish.yml` runs, which puts fhir-harness,
+folio-assistant-core, cat-harness, cat-harness-tools, bootstrap and
+bootstrap-tools on disk at the repository root (gitignored). **Read the
 platform's skills there before choosing how to build, render, review or
-stage anything** (`folio-assistant/cat-harness/skills/`,
-`folio-assistant/fhir-harness/skills/`). If `folio-assistant/` is empty, run
-`bash .claude/mount-platform.sh`.
+stage anything** (`cat-harness/skills/`, `fhir-harness/skills/`). If they
+are missing, run `bash .claude/mount-platform.sh`.
 
-`folio-assistant/smart-base/` is the **pinned** copy the platform mounts.
-Edit `./smart-base/`, never the mounted copy.
+`./smart-base/` is this repository's own copy of the harness instance (its
+`index.config.json` entry is `source.local`). Edit it here; downstream IGs
+mount it at a pinned commit.
 
 ## Rules
 
@@ -33,7 +35,7 @@ Edit `./smart-base/`, never the mounted copy.
    does not contain this content.
 2. **Processes live under `smart-base/processes/`**: the `.bpmn`, its
    documentation, and its picture beside it
-   (`NODE_PATH=folio-assistant/node_modules bun run smart-base/scripts/render-processes.ts`,
+   (`NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`,
    which draws with the mounted bootstrap-tools). Do not copy a process
    or its picture into `input/`; the just-the-docs site draws every mounted
    process itself.
