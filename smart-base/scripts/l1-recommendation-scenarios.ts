@@ -98,8 +98,6 @@ export const DOMAINS = ["clinical", "public-health", "health-system-strengthenin
 /** The L2 classes this emits; each must be in `code-lists/sgkg-l2-classes.json`. */
 export const EMITTED_CLASSES = ["user-scenario", "persona", "business-process"] as const;
 
-const HERE = resolve(import.meta.dir, "..");
-
 const sha256 = (b: string | Buffer): string => createHash("sha256").update(b).digest("hex");
 
 // ── the mapping ────────────────────────────────────────────────────────────
