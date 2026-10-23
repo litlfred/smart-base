@@ -125,13 +125,15 @@ api)"*. An IG repository whose `index.config.json` names smart-base as its
 site's landing declares no steps of its own. The site route (cat-harness-tools
 `stage-local.ts`) runs the landing layer's `ig-site:sidecars`, which is
 [`ig-site-sidecars.ts`](../../../scripts/ig-site-sidecars.ts): steps 4 to 6's
-generators run over the cached AST by `dak-ast-sidecars.ts`, written to
+generators, as fhir-harness's generic port `ig-api-gen.ts` (owner,
+2026-10-23, bean `h7ap`; this layer passes the label and its data types'
+JSON-LD prefix), run over the cached AST, written to
 `$SITE_WORK/ig-api/sidecars/`, with `$SITE_WORK/ig-api/ig-api.json` saying
 `{"label": "DAK API"}` when the IG has a `dak.json`. fhir-harness binds and
 serves them (`ig-repo-site.ts`, fhir-harness `ig-build-pipeline`
-§"The IG repository's site route") and never learns the DAK name. Step 6 runs
-too, over the AST and the sidecars with a stand-in hub page: its OpenAPI
-documents (`<stem>.openapi.json`), enumeration schemas and Swagger UI page
+§"The IG repository's site route") and never learns the DAK name. Step 6's
+products come from the same port: the OpenAPI documents (`<stem>.openapi.json`)
+go with the sidecars, and the enumeration schemas and Swagger UI page
 `openapi/index.html` land in `$SITE_WORK/ig-api/site/`, which fhir-harness
 serves at the site root without replacing a path the site already holds
 (smart-hiv's live root served that `openapi/`, measured 2026-10-14).
