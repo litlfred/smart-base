@@ -36,7 +36,7 @@ import {
   type DocumentKind,
   type DocumentKindCoverage,
 } from "../platform/index.js";
-import { directoriesForGraph, instanceRootsIn, readDeclaration, repoRootFor } from "../platform/index.js";
+import { directoriesForGraph, instanceDirectoryForGraph, instanceRootsIn, readDeclaration, repoRootFor } from "../platform/index.js";
 import { DAK_CARDS } from "./gen-dak-components-figure.ts";
 import { pinnedTerms, snapshotProblem } from "./pin-smart-kg.ts";
 
@@ -227,7 +227,7 @@ function ingestedIgs(repoRoot: string): IngestedIg[] {
  */
 export function coverageDirFor(ig: { subject: string; root: string }, ownName: string): string | undefined {
   if (ig.subject === ownName) return OUT;
-  return directoriesForGraph(ig.root, "document-kinds")[0];
+  return instanceDirectoryForGraph(ig.root, "document-kinds");
 }
 
 if (import.meta.main) {
