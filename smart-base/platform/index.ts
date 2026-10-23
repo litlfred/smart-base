@@ -18,6 +18,7 @@
 export {
   declarationPathIn,
   directoriesForGraph,
+  instanceDirectoryForGraph,
   instanceRootsIn,
   readDeclaration,
   repoRootFor,
