@@ -136,17 +136,14 @@ documents (`<stem>.openapi.json`), enumeration schemas and Swagger UI page
 serves at the site root without replacing a path the site already holds
 (smart-hiv's live root served that `openapi/`, measured 2026-10-14).
 
-The hub page itself is a THIN page (owner, 2026-10-14: *"Yes, thin page"*):
-[`dak-api-hub-page.ts`](../../../scripts/dak-api-hub-page.ts) writes
-`dak-api.html`, a shell made with cat-harness-tools' `thinPageHtml`, over a
-node `dak-api.jsonld` that its loader (`assets/dak-api-hub.js`) draws. The
-node links `openapi/`, every sidecar with its artefact page and (for a JSON
-Schema or JSON-LD sidecar) its view page `artifact/<file>.html`, bound by the
-rule fhir-harness binds sidecars by, and the enumeration schemas. It goes
-into the same `$SITE_WORK/ig-api/site/`. An IG whose own `dak-api.md` holds
-only the hub's marker (`<!-- DAK_API_CONTENT -->`, as the WHO SMART Trust IG's does) gets the
-thin hub in that page's place: `ig-api.json` names the marker as
-`placeholder`, and fhir-harness replaces a page holding it, and no other.
+The hub page is fhir-harness's, not this layer's (owner, 2026-10-23: the DAK
+API should be generic, "something like fhir-api", in fhir-harness and its
+just-the-docs rendering pipeline; bean `h7ap`). fhir-harness's `ig-api-hub.ts`
+draws it from the artefact index's bound sidecars, with one loader, on the
+docs site, an IG site and an IG repository's own site. This layer names only
+what WHO calls it: `ig-api.json` gives the label ("DAK API") and the marker an
+IG's own `dak-api.md` holds (`<!-- DAK_API_CONTENT -->`, as the WHO SMART
+Trust IG's does), and fhir-harness puts the hub at that page.
 
 ## Step 5 depends on expansion, which depends on a terminology server
 
