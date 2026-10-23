@@ -36,8 +36,8 @@
  *
  * ## T3 fidelity is a person's, and this tool never passes it
  *
- * T2 (`--validate`, smart-kg's `tools/validate.mjs`) checks the graph's shape.
- * T3 — does each node say what its source says — is left to a person (bean
+ * T2, the graph's shape, was smart-kg's `tools/validate.mjs`; smart-kg is
+ * deprecated (owner, 2026-10-16) and nothing here runs it any more. T3 — does each node say what its source says — is left to a person (bean
  * `8pzh`). The coverage record therefore carries `fidelity.t3: "pending-person"`
  * and the number of inferred nodes awaiting that review, printed with every
  * run. The type admits no other value, so no code path here can report T3 as
@@ -58,29 +58,25 @@
  * to satisfy them would be the copy bean `wg7r` refuses. Measured: as
  * `.jsonld` the document failed that gate with one unresolved context.
  *
- * ## The vocabulary is the pinned one
+ * ## The vocabulary is smart-base's own
  *
- * Every class emitted must be in `who-smart-kg.terms.json` ({@link pinnedTerms});
- * the CLI refuses to write otherwise. The snapshot holds class ids only, so
- * predicates and per-class properties are checked by smart-kg's own
- * `tools/validate.mjs` — `--validate <checkout>` runs it, at the pinned commit.
+ * Every class emitted must be in smart-base's KG class lists ({@link kgClasses});
+ * the CLI refuses to write otherwise. The lists hold class ids only.
  *
- *   bun run smart-base/scripts/extract-smart-kg-l1.ts --entry smart-base/library/<id> [--validate <smart-kg>]
+ *   bun run smart-base/scripts/extract-smart-kg-l1.ts --entry smart-base/library/<id>
  *   bun run smart-base/scripts/extract-smart-kg-l1.ts --check [--entry <dir>]
  *   bun run smart-base/scripts/extract-smart-kg-l1.ts --all    # rewrite every entry --check examines
  *
  * @module smart-base/scripts/extract-smart-kg-l1
  * @covers library
  */
-import { spawnSync, execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join, relative, resolve } from "node:path";
 
 import { directoriesForGraph, repoRootFor } from "../platform/index.js";
 import { pagesOf, readStructure, STRUCTURE_FILENAME, type BaseSection, type BaseStructure } from "../platform/index.js";
-import { ExternalSchemaSchema } from "../platform/index.js";
-import { pinnedTerms, SMART_KG_PIN } from "./pin-smart-kg.ts";
+import { kgClasses } from "./kg-classes.ts";
 
 const HERE = resolve(import.meta.dir, "..");
 const REPO = repoRootFor(HERE);
@@ -92,13 +88,12 @@ export const L1_DOCUMENT_FILENAME = "smart-kg-l1.json";
 export const L1_CONTEXT = "http://smart.who.int/kg/l1.context.jsonld";
 
 /**
- * `schemaVersion` of `ontology/l1/l1.json` at the pinned commit. The terms
- * snapshot does not carry it, so it is stated here — and `validate.mjs`
- * refuses the whole document if it disagrees, so it cannot drift silently.
+ * `schemaVersion` of smart-kg's `ontology/l1/l1.json` when the class lists
+ * were taken. The code lists do not carry it, so it is stated here.
  */
 export const L1_ONTOLOGY_VERSION = "1.0";
 
-/** The pinned-terminology system L1 class ids are codes in (`SMART_KG_LAYERS`). */
+/** The class system L1 class ids are codes in (`code-lists/sgkg-l1-classes.json`). */
 const L1_SYSTEM = "sgkg-l1";
 
 const SKILL = "smart-base/extract-smart-kg-l1";
@@ -509,7 +504,7 @@ export function l1Document(entry: LibraryEntry, generatedAt: string): { doc: L1D
   return { doc, coverage };
 }
 
-/** Classes the document uses that the pinned smart-kg snapshot does not hold. */
+/** Classes the document uses that the KG class lists do not hold. */
 export function unpinnedClasses(doc: L1Document, pinned: Set<string>): string[] {
   return [...new Set(doc.nodes.map((n) => n.type))].filter((c) => !pinned.has(`${L1_SYSTEM}#${c}`));
 }
@@ -558,17 +553,6 @@ function entriesWithDocument(): string[] {
   return out.sort();
 }
 
-function validate(checkout: string, file: string): number {
-  const pin = ExternalSchemaSchema.parse(JSON.parse(readFileSync(SMART_KG_PIN, "utf-8")));
-  const head = execFileSync("git", ["-C", checkout, "rev-parse", "HEAD"], { encoding: "utf-8" }).trim();
-  if (head !== pin.version) {
-    console.error(`✗ ${checkout} is at ${head}, the pin names ${pin.version} — validating against another edition proves nothing about this one`);
-    return 1;
-  }
-  const r = spawnSync("node", [join(checkout, "tools", "validate.mjs"), file], { stdio: "inherit" });
-  return r.status ?? 1;
-}
-
 if (import.meta.main) {
   const args = process.argv.slice(2);
   const opt = (name: string): string | undefined => {
@@ -577,13 +561,12 @@ if (import.meta.main) {
   };
   const check = args.includes("--check");
   const entryArg = opt("--entry");
-  const checkout = opt("--validate");
   // `--all` is the writer `--check` pairs with (bean `wczm` item 1): the same
   // entries, rewritten. Without it the only writer took one `--entry` at a
   // time, so `regen` had no command that repairs what the gate reports, and a
   // merge train went red on it after `regen` called the tree current.
   if (!entryArg && !check && !args.includes("--all")) {
-    console.error("usage: extract-smart-kg-l1.ts --entry <library entry> [--validate <smart-kg checkout>] | --all | --check [--entry <library entry>]");
+    console.error("usage: extract-smart-kg-l1.ts --entry <library entry> | --all | --check [--entry <library entry>]");
     process.exit(2);
   }
   const dirs = entryArg ? [resolve(entryArg)] : entriesWithDocument();
@@ -591,7 +574,7 @@ if (import.meta.main) {
     console.log("✓ no library entry of this instance carries a smart-kg L1 document");
     process.exit(0);
   }
-  const pinned = pinnedTerms();
+  const pinned = kgClasses();
   let bad = 0;
   for (const dir of dirs) {
     const entry = readEntry(dir);
@@ -605,7 +588,7 @@ if (import.meta.main) {
     const { doc, coverage } = l1Document(entry, new Date().toISOString().replace(/\.\d+Z$/, "Z"));
     const unpinned = unpinnedClasses(doc, pinned);
     if (unpinned.length) {
-      console.error(`✗ ${shown}: class(es) ${unpinned.join(", ")} are not in the pinned smart-kg snapshot`);
+      console.error(`✗ ${shown}: class(es) ${unpinned.join(", ")} are not in the KG class lists`);
       bad++;
       continue;
     }
@@ -624,7 +607,6 @@ if (import.meta.main) {
       console.log(`${shown} written`);
     }
     report(entry.path, coverage);
-    if (checkout && validate(checkout, target) !== 0) bad++;
   }
   process.exit(bad === 0 ? 0 : 1);
 }

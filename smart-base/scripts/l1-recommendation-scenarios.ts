@@ -82,6 +82,7 @@ import { z } from "zod";
 import { L1_NAMESPACE, slug } from "./l1-kgid.ts";
 import { VocabularySchema, type Vocabulary, type VocabPersona, type VocabProcess } from "./l1-scenario-vocabulary.ts";
 import { buildRunContext, writeRunContext } from "./l1-run-context.ts";
+import { kgClasses } from "./kg-classes.ts";
 
 export const MAPPING_SCHEMA_TAG = "l1-scenario-mapping/v1" as const;
 export const L2_CONTEXT = "http://smart.who.int/kg/l2.context.jsonld";
@@ -94,11 +95,10 @@ export const WARNINGS_FILENAME = "scenario-warnings.md";
 export const COULD_NOT_DETERMINE = "could-not-determine";
 /** The three guideline domains (owner, 2026-10-10); the SKOS scheme is bean `398x`. */
 export const DOMAINS = ["clinical", "public-health", "health-system-strengthening"] as const;
-/** The L2 classes this emits; each must be in the pinned smart-kg terms. */
+/** The L2 classes this emits; each must be in `code-lists/sgkg-l2-classes.json`. */
 export const EMITTED_CLASSES = ["user-scenario", "persona", "business-process"] as const;
 
 const HERE = resolve(import.meta.dir, "..");
-const PINNED_TERMS = join(HERE, "external-schemas", "who-smart-kg.terms.json");
 
 const sha256 = (b: string | Buffer): string => createHash("sha256").update(b).digest("hex");
 
@@ -548,12 +548,9 @@ export function isCurrent(onDisk: string, fresh: ScenarioDocument): boolean {
   }
 }
 
-/** Every class this emits is in the pinned smart-kg terms, or nothing is written. */
-export function unpinnedClasses(termsPath = PINNED_TERMS): string[] {
-  if (!existsSync(termsPath)) return [...EMITTED_CLASSES];
-  const terms = JSON.parse(readFileSync(termsPath, "utf8")) as { concepts: { system: string; code: string }[] };
-  const l2 = new Set(terms.concepts.filter((c) => c.system === "sgkg-l2").map((c) => c.code));
-  return EMITTED_CLASSES.filter((c) => !l2.has(c));
+/** Every class this emits is in the KG class lists, or nothing is written. */
+export function unpinnedClasses(classes: ReadonlySet<string> = kgClasses()): string[] {
+  return EMITTED_CLASSES.filter((c) => !classes.has(`sgkg-l2#${c}`));
 }
 
 /** A path as a reader of the repository sees it: from the git top level when there is one. */
@@ -590,7 +587,7 @@ if (import.meta.main) {
   }
   const unpinned = unpinnedClasses();
   if (unpinned.length) {
-    console.error(`✗ not in the pinned smart-kg terms: ${unpinned.join(", ")}`);
+    console.error(`✗ not in the KG class lists: ${unpinned.join(", ")}`);
     process.exit(1);
   }
   let inp: Inputs, result: Result;
