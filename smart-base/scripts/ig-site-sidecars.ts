@@ -19,18 +19,19 @@
  *
  * ## What it does, and what it leaves to fhir-harness
  *
- * 1. Runs `dak-ast-sidecars.ts` over the AST `ig-site:ast` restored
- *    (`<ig>/output-ast`). That script runs WHO's DAK post-processing
- *    generators at the smart-base commit the checkout pins.
- *    With `--hub`, it also runs the DAK API hub generator (step 6), whose
- *    OpenAPI page `openapi/index.html` and its `<stem>.openapi.json`
- *    documents and enumeration schemas land in `<work>/ig-api/site/`, at the
- *    paths a site root serves them.
- *    Then the hub page itself, THIN (owner, 2026-10-14: *"Yes, thin page"*):
- *    `dak-api.html` over `dak-api.jsonld` (`dak-api-hub-page.ts`), into the
- *    same `<work>/ig-api/site/`. An IG whose own `dak-api.md` holds only the
- *    hub's marker gets it in place of that page: the descriptor names the
- *    marker (`placeholder`), and fhir-harness fills a page holding it.
+ * 1. Runs fhir-harness's `ig-api-gen.ts` over the AST `ig-site:ast`
+ *    restored (`<ig>/output-ast`): the ValueSet schemas, displays and
+ *    JSON-LD vocabularies, the logical-model schemas, their OpenAPI wrappers,
+ *    the enumeration schemas and the Swagger page `openapi/index.html`. It is
+ *    the generic port of WHO's post-processing generators (owner, 2026-10-23,
+ *    bean `h7ap`); this layer passes only what WHO calls things: the label and
+ *    the JSON-LD prefix of its data types ({@link DAK_VOCAB_BASE}). The
+ *    per-artefact files land in `<work>/ig-api/sidecars/`, the rest in
+ *    `<work>/ig-api/site/`, at the paths a site root serves them.
+ *    The hub page itself is fhir-harness's (`ig-api-hub.ts`, bean `h7ap`):
+ *    it draws the hub from the artefact index's bound sidecars, at the IG's
+ *    page holding the marker this step's descriptor names (`placeholder`),
+ *    under the label it names. Nothing here writes a hub page.
  * 2. Leaves the files in `<work>/ig-api/sidecars/` and writes
  *    `<work>/ig-api/ig-api.json`, saying what the IG calls them: `DAK API`
  *    when the IG declares a DAK (`dak.json` at its root), and no label
@@ -50,7 +51,6 @@ import { spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 
-import { HUB_PAGE, writeHub } from "./dak-api-hub-page.ts";
 
 /** fhir-harness's names for the handshake (`ig-repo-site.ts` `IG_API_WORK`, `IG_API_DESCRIPTOR`). */
 export const IG_API_WORK = "ig-api";
@@ -61,6 +61,9 @@ export const IG_API_SITE = "site";
 export const DAK_API_LABEL = "DAK API";
 /** The file whose presence says the IG is a DAK. */
 export const DAK_DECLARATION = "dak.json";
+
+/** The JSON-LD prefix a DAK's vocabularies give FHIR data types: smart-base's own `DataTypes.jsonld`. */
+export const DAK_VOCAB_BASE = "https://smart.who.int/base/DataTypes.jsonld#";
 
 /** The marker an IG's own hub page holds where the hub goes (`generate_dak_api_hub.py`'s). */
 export const HUB_MARKER = "<!-- DAK_API_CONTENT -->";
@@ -84,17 +87,14 @@ export function igSiteSidecars(o: { ig: string; work: string; log?: (s: string) 
   rmSync(dir, { recursive: true, force: true });
   mkdirSync(sidecars, { recursive: true });
   const site = join(dir, IG_API_SITE);
-  const r = spawnSync("bun", ["run", join(import.meta.dir, "dak-ast-sidecars.ts"), "--ast", ast, "--out", sidecars, "--hub", site], { cwd: ig, stdio: ["ignore", "inherit", "inherit"] });
-  if (r.status !== 0) throw new Error(`dak-ast-sidecars.ts exited ${r.status}: the IG's sidecars were not written`);
   const d = descriptorFor(ig);
+  const gen = join(import.meta.dir, "..", "..", "fhir-harness", "scripts", "ig-api-gen.ts");
+  if (!existsSync(gen)) throw new Error(`${gen}: fhir-harness is not mounted beside this layer, so the IG API cannot be generated`);
+  const r = spawnSync("bun", ["run", gen, "--ast", ast, "--out", sidecars, "--site", site, "--label", d.label ?? "IG API", "--vocab-base", DAK_VOCAB_BASE], { cwd: ig, stdio: ["ignore", "inherit", "inherit"] });
+  if (r.status !== 0) throw new Error(`ig-api-gen.ts exited ${r.status}: the IG's sidecars were not written`);
   writeFileSync(join(dir, IG_API_DESCRIPTOR), `${JSON.stringify(d, null, 2)}\n`);
-  // The hub page: thin, over the sidecars just written (dak-postprocessing §"On an IG repository's own site").
-  mkdirSync(site, { recursive: true });
-  const documents = readdirSync(site).filter((f) => f.endsWith(".schema.json"));
-  const hub = writeHub({ ast, sidecars, site, label: d.label ?? "IG API", openapi: existsSync(join(site, "openapi", "index.html")), documents });
-  log(`ig-site:sidecars: ${HUB_PAGE}, a thin hub over ${hub.entries} sidecar(s), ${hub.views} with a view page`);
   const files = readdirSync(sidecars).length;
-  log(`ig-site:sidecars: ${files} sidecar file(s) in ${sidecars}${d.label ? `, called "${d.label}"` : " (no dak.json: no label, the IG API default stands)"}; ${existsSync(join(site, "openapi", "index.html")) ? "the hub's openapi/index.html" : "no hub OpenAPI page"} in ${site}`);
+  log(`ig-site:sidecars: ${files} sidecar file(s) in ${sidecars}${d.label ? `, called "${d.label}"` : " (no dak.json: no label, the IG API default stands)"}; ${existsSync(join(site, "openapi", "index.html")) ? "openapi/index.html" : "no OpenAPI page"} in ${site}`);
   return { files, ...d };
 }
 
