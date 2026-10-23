@@ -8,6 +8,11 @@
  * third copy free to drift. `--check` regenerates in memory and fails on a
  * difference, which is what makes a hand edit visibly a defect.
  *
+ * `dak.coverage.<ig>.json` — the DAK view of each ingested IG's artefact
+ * index, written into the `document-kinds` directory that IG's OWN instance
+ * declares ({@link coverageDirFor}); only this layer's own coverage is
+ * written here.
+ *
  * `l1.json` and `dth.json` are authored, not generated: their sections are
  * read from publications (owner, 2026-10-01: the SMART Guidelines paper, the
  * WHO guideline-development handbook and the DTHs), not from code.
@@ -20,7 +25,7 @@
  * @covers document-kinds
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
-import { join, relative, resolve } from "node:path";
+import { dirname, join, relative, resolve } from "node:path";
 
 import { DAK_COMPONENTS, DAK_UNFORMALIZED_COMPONENTS } from "../schemas/dak-kinds.ts";
 import {
@@ -184,9 +189,19 @@ export function dakCoverage(subject: string, from: string, artifacts: readonly I
   });
 }
 
-/** Every instance holding a fhir-artifact-index, as [subject, repo-relative index path, artefacts]. */
-function ingestedIgs(repoRoot: string): [string, string, IndexArtifact[]][] {
-  const out: [string, string, IndexArtifact[]][] = [];
+/** One instance holding a fhir-artifact-index: whose it is, where its index is, and its artefacts. */
+interface IngestedIg {
+  subject: string;
+  /** The instance's root, where its own `document-kinds` directory is declared. */
+  root: string;
+  /** Repo-relative path of the index. */
+  from: string;
+  artifacts: IndexArtifact[];
+}
+
+/** Every instance holding a fhir-artifact-index. */
+function ingestedIgs(repoRoot: string): IngestedIg[] {
+  const out: IngestedIg[] = [];
   for (const root of instanceRootsIn(repoRoot)) {
     const subject = readDeclaration(root)?.name;
     if (!subject) continue;
@@ -194,19 +209,42 @@ function ingestedIgs(repoRoot: string): [string, string, IndexArtifact[]][] {
       const path = join(dir, "index.json");
       if (!existsSync(path)) continue;
       const ix = JSON.parse(readFileSync(path, "utf-8")) as { artifacts?: IndexArtifact[] };
-      out.push([subject, relative(repoRoot, path).split("\\").join("/"), ix.artifacts ?? []]);
+      out.push({ subject, root, from: relative(repoRoot, path).split("\\").join("/"), artifacts: ix.artifacts ?? [] });
     }
   }
-  return out.sort((a, b) => a[0].localeCompare(b[0]));
+  return out.sort((a, b) => a.subject.localeCompare(b.subject));
+}
+
+/**
+ * Where an IG's DAK coverage report is written: the `document-kinds` directory
+ * the IG's OWN instance declares — never this one (wrong-direction move M13).
+ * A coverage report is data about one IG, so it lives in that IG's layer, which
+ * depends on this one; written here, it was this layer holding a file about a
+ * layer above it. This layer's own coverage stays in {@link OUT}.
+ *
+ * `undefined` when the IG's instance declares no such directory: the caller
+ * reports it rather than falling back here, which is the move this undoes.
+ */
+export function coverageDirFor(ig: { subject: string; root: string }, ownName: string): string | undefined {
+  if (ig.subject === ownName) return OUT;
+  return directoriesForGraph(ig.root, "document-kinds")[0];
 }
 
 if (import.meta.main) {
   const check = process.argv.includes("--check");
   const repoRoot = repoRootFor(resolve(import.meta.dir, ".."));
   const files = new Map<string, string>([[join(OUT, "dak.json"), serialise(dakKind())]]);
-  for (const [subject, from, artifacts] of ingestedIgs(repoRoot)) {
-    files.set(join(OUT, `dak.coverage.${subject}.json`), serialise(dakCoverage(subject, from, artifacts)));
+  const ownName = readDeclaration(resolve(import.meta.dir, ".."))?.name ?? "smart-base";
+  const homeless: string[] = [];
+  for (const ig of ingestedIgs(repoRoot)) {
+    const dir = coverageDirFor(ig, ownName);
+    if (dir === undefined) {
+      homeless.push(`${ig.subject} holds an artefact index (${ig.from}) but declares no document-kinds directory for its DAK coverage`);
+      continue;
+    }
+    files.set(join(dir, `dak.coverage.${ig.subject}.json`), serialise(dakCoverage(ig.subject, ig.from, ig.artifacts)));
   }
+  for (const h of homeless) console.log(`✗ ${h}`);
   if (check) {
     let bad = 0;
     for (const [target, body] of files) {
@@ -218,14 +256,14 @@ if (import.meta.main) {
     const problems = [...(snap ? [snap] : []), ...kindSetProblems(kindsIn(OUT), pinnedTerms())];
     for (const p of problems) console.log(`✗ ${p}`);
     if (problems.length === 0) console.log(`✓ kinds resolve: every extends names a kind here, every modelledBy is in the pinned smart-kg snapshot`);
-    process.exit(bad === 0 && problems.length === 0 ? 0 : 1);
+    process.exit(bad === 0 && problems.length === 0 && homeless.length === 0 ? 0 : 1);
   }
-  mkdirSync(OUT, { recursive: true });
   for (const [target, body] of files) {
+    mkdirSync(dirname(target), { recursive: true });
     writeFileSync(target, body);
     console.log(`${relative(process.cwd(), target)} written`);
   }
   const problems = kindSetProblems(kindsIn(OUT), pinnedTerms());
   for (const p of problems) console.log(`✗ ${p}`);
-  if (problems.length > 0) process.exit(1);
+  if (problems.length > 0 || homeless.length > 0) process.exit(1);
 }
