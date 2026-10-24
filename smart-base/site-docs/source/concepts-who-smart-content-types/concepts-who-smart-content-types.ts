@@ -7,6 +7,11 @@ export default webpage({
   navOrder: 3,
   nodes: [
     {
+      id: "the-three-layers",
+      title: "L1–L5: five layers, not five stages; FHIR content is the first three",
+      block: "the-three-layers",
+    },
+    {
       id: "who-smart-guidelines-daks-l2",
       title: "WHO SMART Guidelines DAKs (L2)",
       asset: {
@@ -40,5 +45,7 @@ export default webpage({
       lead: "who-smart-implementation-guides-l3-lead",
       block: "who-smart-implementation-guides-l3",
     },
+    { id: "the-dak-surface", title: "The DAK API surface", block: "the-dak-surface" },
+    { id: "the-who-build", title: "The WHO build around the IG Publisher", block: "the-who-build" },
   ],
 });
