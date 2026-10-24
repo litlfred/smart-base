@@ -23,6 +23,7 @@ export {
   readDeclaration,
   repoRootFor,
 } from "../../cat-harness/schemas/cat-harness.js";
+export { isBuiltAtPublish } from "../../cat-harness/schemas/built-at-publish.js";
 export {
   ContentTypeConflictError,
   ContentTypeRegistry,
