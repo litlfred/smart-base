@@ -5,11 +5,11 @@
  * **This is a placeholder, and the placeholder is the point.** A repo declares
  * itself a DAK by carrying {@link DAK_MARKER_FILENAME} at its root, exactly as
  * it declares itself a harness instance by carrying `harness.json`. That
- * much is settled and is modelled here. What is *not* settled is the shape of
- * the ten components inside it (nine in WHO's model, plus scheduling logic —
- * see `DAK_UNFORMALIZED_COMPONENTS`): WHO's `DAK` Logical Model is still being
- * finalised in FHIR upstream, so this module **records the components without
- * inventing their contents**.
+ * much is settled and is modelled here, and so is the wrapper each of WHO's
+ * nine components uses (url, canonical or inline instance). What this module
+ * does *not* model is the inside of an inline instance, nor the tenth component,
+ * scheduling logic, which WHO's model lacks (`DAK_UNFORMALIZED_COMPONENTS`):
+ * it **records the components without restating their contents**.
  *
  * ## Why a placeholder rather than waiting
  *
@@ -21,13 +21,18 @@
  *
  * ## What this deliberately does NOT model
  *
- * **The element shape of a component.** Each of WHO's nine is declared
- * `0..* <Name>Source` in `smart-base`'s `input/fsh/models/DAK.fsh`. The
- * **cardinality is final** — an array, possibly empty — so that much is
- * enforced. The **element** is not, so it is `unknown` and is carried through
- * untouched. Guessing it would produce a second, weaker, drifting copy of a
- * specification that is about to exist, which is the argument
+ * **The inside of a component's inline instance.** Each of WHO's nine is
+ * declared `0..* <Name>Source` in `smart-base`'s `input/fsh/models/DAK.fsh`,
+ * and every `<Name>Source` in `DAKComponentSources.fsh` is the same wrapper:
+ * a `url`, a `canonical`, or an inline `instance`, exactly one. Both models are
+ * `#active` (bean `cz17`, 2026-10-24), so the cardinality and the wrapper
+ * are enforced ({@link DakComponentSourceSchema}). The `instance` itself is
+ * still `unknown` and is carried through untouched: typing nine instance
+ * models here would be a second copy of WHO's, which is the argument
  * `schemas/dak-blocks.ts` already makes about `ValueSet.compose.include`.
+ * Scheduling logic, which WHO's model does not have yet
+ * (`DAK_UNFORMALIZED_COMPONENTS`), has no wrapper to follow, so its elements
+ * stay `unknown`.
  *
  * **Anything else a real `dak.config.json` carries.** The schema is
  * {@link DakDeclarationSchema | passthrough}: unknown keys survive a
@@ -53,7 +58,12 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { z } from "zod";
 
-import { DAK_COMPONENTS, DAK_COMPONENT_FIELDS, type DakComponent } from "./dak-kinds";
+import {
+  DAK_COMPONENTS,
+  DAK_COMPONENT_FIELDS,
+  DAK_UNFORMALIZED_COMPONENTS,
+  type DakComponent,
+} from "./dak-kinds";
 import { kgNodeLabelShape, type KgNodeLabels } from "../platform/index.js";
 import { SMART_BASE_NS } from "../platform/index.js";
 
@@ -92,11 +102,35 @@ export const DAK_MARKER_FILENAME = "dak.config.json";
 /** The `@type` a DAK declaration projects to — WHO's own logical model. */
 export const DAK_TYPE = `${SMART_BASE_NS}DAK`;
 
+/** The three ways WHO's `<Name>Source` types point at a component's content. */
+export const DAK_COMPONENT_SOURCE_KEYS = ["url", "canonical", "instance"] as const;
+
+/**
+ * One entry of a formalized component: WHO's `<Name>Source` wrapper, from
+ * `smart-base` `input/fsh/models/DAKComponentSources.fsh`.
+ *
+ * Exactly one of `url`, `canonical` or `instance`, as the FSH description of
+ * every wrapper says. `instance` is `unknown` (see the module note). Other keys
+ * survive, for the same no-data-loss reason as the declaration itself.
+ */
+export const DakComponentSourceSchema = z
+  .object({
+    url: z.string().min(1).optional(),
+    canonical: z.string().min(1).optional(),
+    instance: z.unknown().optional(),
+  })
+  .passthrough()
+  .refine((s) => DAK_COMPONENT_SOURCE_KEYS.filter((k) => s[k] !== undefined).length === 1, {
+    message: "a DAK component source carries exactly one of url, canonical or instance",
+  });
+
+export type DakComponentSource = z.infer<typeof DakComponentSourceSchema>;
+
 /**
  * One component's contents, as read from a `dak.config.json`.
  *
- * `unknown` because the element shape is pending upstream — see the module
- * note. The array itself is not in doubt: every component is `0..*`.
+ * A formalized component's entries are {@link DakComponentSource}s; an
+ * unformalized one's are `unknown`. Every component is `0..*`.
  */
 export type DakComponentEntries = unknown[];
 
@@ -123,10 +157,16 @@ export interface DakDeclaration extends KgNodeLabels {
 /**
  * The component fields, built from {@link DAK_COMPONENT_FIELDS} rather
  * than written out, so a component added to the vocabulary appears here with
- * no edit.
+ * no edit. A formalized component takes WHO's source wrapper; an unformalized
+ * one takes anything.
  */
-const componentShape: Record<string, z.ZodOptional<z.ZodArray<z.ZodUnknown>>> = Object.fromEntries(
-  DAK_COMPONENTS.map((c) => [DAK_COMPONENT_FIELDS[c], z.array(z.unknown()).optional()]),
+const componentShape: Record<string, z.ZodTypeAny> = Object.fromEntries(
+  DAK_COMPONENTS.map((c) => [
+    DAK_COMPONENT_FIELDS[c],
+    DAK_UNFORMALIZED_COMPONENTS.includes(c)
+      ? z.array(z.unknown()).optional()
+      : z.array(DakComponentSourceSchema).optional(),
+  ]),
 );
 
 export const DakDeclarationSchema = z
