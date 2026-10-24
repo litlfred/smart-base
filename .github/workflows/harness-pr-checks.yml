@@ -26,5 +26,6 @@ jobs:
       # cat-harness-tools at main, not the index lock's pin: the lock's pin can lag
       # a QA_WRITERS change this instance needs (cat-harness-tools#701 claims every
       # instance's test/results/witnesses/**; the pin 5cc9b5e predates it). As
-      # fhir-harness does.
-      layers-at-main: cat-harness-tools
+      # fhir-harness does. cat-harness too: tools at main import its newer exports
+      # (publishedSubgraphDir), which the lock's cat-harness pin a196134 lacks.
+      layers-at-main: cat-harness cat-harness-tools
