@@ -28,7 +28,13 @@
  * repository, and adding one for read-only cell text is not worth it (the
  * same call `cat-harness-tools/scripts/tabular-records.py` made).
  *
- *   bun run smart-base/scripts/dak-data-dictionary.ts --xlsx <workbook> --out <annex.json> [--source <label>]
+ *   bun run smart-base/scripts/dak-data-dictionary.ts --xlsx <workbook> --out <annex.json> \
+ *     --annex-of <instance/library/slug | 10665/n> --label "Web Annex A" --section dak#core-data-elements \
+ *     [--iris 10665/n] [--source <label>]
+ *
+ * The three `web-annex` facts (`annexOf`, `label`, `section`; `iris` only when
+ * WHO gave the annex a record of its own) are said, never guessed: the
+ * workbook does not carry them.
  *
  * @module smart-base/scripts/dak-data-dictionary
  */
@@ -43,6 +49,14 @@ import {
   type DakAnnexSheet,
   type DakDataDictionaryAnnex,
 } from "../schemas/dak-annexes.ts";
+
+/** What the web annex says about itself (`WebAnnexOfShape`). */
+export interface WebAnnexOf {
+  annexOf: string;
+  label: string;
+  section: string;
+  iris?: string;
+}
 
 export const ANNEX_SCHEMA = DAK_DATA_DICTIONARY_SCHEMA;
 
@@ -132,7 +146,7 @@ export type AnnexSheet = DakAnnexSheet;
 export type DataDictionaryAnnex = DakDataDictionaryAnnex;
 
 /** The data sheets of a data-dictionary workbook, as an annex. */
-export function dataDictionaryAnnex(buf: Uint8Array, sourceLabel: string): DataDictionaryAnnex {
+export function dataDictionaryAnnex(buf: Uint8Array, sourceLabel: string, of: WebAnnexOf): DataDictionaryAnnex {
   const ID = headerKey("Data element ID");
   const LABEL = headerKey("Data element label");
   const sheets: AnnexSheet[] = [];
@@ -153,6 +167,10 @@ export function dataDictionaryAnnex(buf: Uint8Array, sourceLabel: string): DataD
   // Parsed on the way out, so a file this writes is one its validator accepts.
   return DakDataDictionaryAnnexSchema.parse({
     $schema: ANNEX_SCHEMA,
+    annexOf: of.annexOf,
+    label: of.label,
+    ...(of.iris ? { iris: of.iris } : {}),
+    section: of.section,
     title: "Core data dictionary",
     source: { label: sourceLabel, sha256: createHash("sha256").update(buf).digest("hex") },
     idColumn: ID,
@@ -165,11 +183,15 @@ if (import.meta.main) {
   const opt = (k: string) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : undefined; };
   const xlsx = opt("--xlsx");
   const out = opt("--out");
-  if (!xlsx || !out) {
-    console.error("usage: dak-data-dictionary.ts --xlsx <workbook> --out <annex.json> [--source <label>]");
+  const annexOf = opt("--annex-of");
+  const label = opt("--label");
+  const section = opt("--section");
+  if (!xlsx || !out || !annexOf || !label || !section) {
+    console.error("usage: dak-data-dictionary.ts --xlsx <workbook> --out <annex.json> --annex-of <ref> --label <label> --section <kind#section> [--iris <handle>] [--source <label>]");
     process.exit(2);
   }
-  const annex = dataDictionaryAnnex(readFileSync(xlsx), opt("--source") ?? xlsx);
+  const iris = opt("--iris");
+  const annex = dataDictionaryAnnex(readFileSync(xlsx), opt("--source") ?? xlsx, { annexOf, label, section, ...(iris ? { iris } : {}) });
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, `${JSON.stringify(annex, null, 1)}\n`);
   console.error(`${out}: ${annex.sheets.map((s) => `${s.name} (${s.rows.length})`).join(", ")}`);

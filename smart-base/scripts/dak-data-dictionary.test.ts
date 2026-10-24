@@ -56,7 +56,8 @@ describe("dak-data-dictionary", () => {
   });
 
   test("the annex holds the data sheets only, rows with an id only, entities decoded", () => {
-    const a = dataDictionaryAnnex(workbook, "fixture.xlsx");
+    const a = dataDictionaryAnnex(workbook, "fixture.xlsx", { annexOf: "10665/380303", label: "Web Annex A", section: "dak#core-data-elements" });
+    expect([a.annexOf, a.label, a.section, a.iris]).toEqual(["10665/380303", "Web Annex A", "dak#core-data-elements", undefined]);
     expect(a.$schema).toBe(ANNEX_SCHEMA);
     // READ ME names "Data element ID" as a value, not a header beside a label: not data.
     expect(a.sheets.map((s) => s.name)).toEqual(["IMMZ.C Client registration"]);

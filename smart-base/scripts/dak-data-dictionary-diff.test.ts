@@ -16,6 +16,9 @@ const COLS = [
 function annex(sheets: { name: string; columns?: typeof COLS; rows: string[][] }[]): DakDataDictionaryAnnex {
   return {
     $schema: DAK_DATA_DICTIONARY_SCHEMA,
+    annexOf: "10665/380303",
+    label: "Web Annex A",
+    section: "dak#core-data-elements",
     title: "Core data dictionary",
     source: { label: "fixture", sha256: "0".repeat(64) },
     idColumn: "data element id",
