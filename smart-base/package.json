@@ -28,6 +28,7 @@
     "smart-base:dak-pre-export": "bash smart-base/scripts/dak-pre-export.sh",
     "check:web-annexes": "bun run smart-base/scripts/check-web-annexes.ts",
     "check:dak-annexes": "bun run smart-base/scripts/check-web-annexes.ts",
+    "smart-base:terminology-lookup": "bun run smart-base/scripts/terminology-lookup.ts",
     "smart-base:processes:render": "bun run smart-base/scripts/render-processes.ts",
     "smart-base:processes:render:check": "bun run smart-base/scripts/render-processes.ts --check"
   }
