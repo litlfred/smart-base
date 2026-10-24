@@ -6,6 +6,9 @@ import { objectivesFrom, parseTransform, pascal, pathPoints, readFigure, toBpmn 
 
 const map: SwimlaneMap = {
   $schema: "dak-swimlanes/v1",
+  annexOf: "10665/380303",
+  label: "Web Annex B",
+  section: "dak#generic-business-processes-and-workflows",
   personas: { "Health worker (HW)": ["Health worker", "HW"], Client: [] },
   notPersonas: { "Vaccination location": "a pool", PCPOSS: "a system, not a persona" },
 };

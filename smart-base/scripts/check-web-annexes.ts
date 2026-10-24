@@ -1,15 +1,26 @@
 #!/usr/bin/env bun
 /**
- * check-dak-annexes.ts — what a DAK's annexes SAY is consistent, not only how
- * they are shaped.
+ * check-web-annexes.ts — what a WHO publication's web annexes SAY is
+ * consistent, not only how they are shaped. (`check-dak-annexes.ts` until
+ * 2026-10-24, when the `dak-annex` kind widened into `web-annex` for L1 and
+ * L2 annexes alike; `check:dak-annexes` is kept as an alias of
+ * `check:web-annexes`, because folio-assistant's gates call it.)
  *
- * The `dak-annex` kind (typologies/dak-annex.json) is TYPED by its validators:
+ * The `web-annex` kind (typologies/web-annex.json) is TYPED by its validators:
  * `check:kind-validators` parses every node against `dak-data-dictionary/v1`
  * or `dak-swimlanes/v1`. Typing is not judging (`audit-coverage`: a kind can
  * parse perfectly while nothing has an opinion about what it says), and the
  * kind read `typed-only` the day it arrived (folio-assistant#2529). This is
  * the opinion, kept to rules a schema cannot state:
  *
+ * - **which publication, which section** — every node's `section`
+ *   (`<kind>#<section>`) names a section of a document kind some instance
+ *   declares (`document-kind/1.0.0`, e.g. `smart-base/document-kinds/dak.json`),
+ *   counting the sections a kind `extends`; and its `annexOf`, when it is a
+ *   library entry (`<instance>/library/<slug>`), is an entry this checkout
+ *   holds. An IRIS handle (`annexOf`, or the optional `iris`) is a WHO record
+ *   this check cannot open, and the run says it is not verified rather than
+ *   counting it as resolved.
  * - **data dictionary** — every sheet that has rows declares the `idColumn`;
  *   every row has exactly one cell per column; every data element id is
  *   present, and no id is used twice across the workbook. A repeated or empty
@@ -26,23 +37,33 @@
  *   file that exists and, for a dictionary, columns every sheet with rows
  *   has. Persona aliases are NOT resolved: the index carries no persona
  *   artefact to resolve them against, and the run says so rather than
- *   counting them as resolved.
+ *   counting them as resolved. An instance that holds no `index.json` (an IG
+ *   repository commits none; fhir-harness builds it at publish, its #124)
+ *   has its ids reported UNRESOLVED, said and not counted, rather than
+ *   failed: there is nothing here to resolve them against, which is not
+ *   the same as an id that resolves to nothing.
+ * - **annex records** — the `annexes.json` of every `ig-annex` directory the
+ *   same instance declares (fhir-harness's contract, `ig-annexes/v1`,
+ *   `{ $schema, annexes: [...] }`; an IG repository's web-annex directory
+ *   nests inside one) is judged as an index's is.
  *
- * Every `dak-annex` directory any instance in the checkout declares is read,
+ * Every `web-annex` directory any instance in the checkout declares is read,
  * through the declarations — never a hard-coded path.
  *
- *   bun run smart-base/scripts/check-dak-annexes.ts
+ *   bun run smart-base/scripts/check-web-annexes.ts
  *
  * Exit: 0 consistent, 1 a finding, 2 nothing to judge could be read.
  *
- * @module smart-base/scripts/check-dak-annexes
- * @covers dak-annex
+ * @module smart-base/scripts/check-web-annexes
+ * @covers web-annex
  */
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 
-import { directoriesForGraph, instanceRootsIn, repoRootFor } from "../platform/index.js";
+import { DOCUMENT_KIND_SCHEMA_TAG, directoriesForGraph, instanceRootsIn, readDeclaration, repoRootFor } from "../platform/index.js";
 import {
+  IRIS_HANDLE,
+  LIBRARY_ENTRY_REF,
   DAK_DATA_DICTIONARY_SCHEMA,
   DAK_SWIMLANES_SCHEMA,
   DakDataDictionaryAnnexSchema,
@@ -172,6 +193,115 @@ export function judgeAnnexRecords(
   return out;
 }
 
+/**
+ * The data element ids of a dictionary, judged against the artefact indexes
+ * its instance holds. With none held, nothing is a finding: the ids are
+ * returned as `unresolved`, a count the run says instead of a pass.
+ */
+export function dictionaryReferences(
+  d: DakDataDictionaryAnnex,
+  indexesHeld: number,
+  codeSystems: ReadonlySet<string>,
+): { findings: string[]; unresolved?: number } {
+  if (indexesHeld > 0) return { findings: judgeDictionaryReferences(d, codeSystems) };
+  const ids = d.sheets.reduce((n, s) => n + s.rows.length, 0);
+  return { findings: [], unresolved: ids };
+}
+
+/**
+ * The records of an `annexes.json`: a bare array (an artefact index's,
+ * as fhir-harness#33 wrote it) or `{ annexes: [...] }` (fhir-harness's
+ * `ig-annexes/v1`). Anything else holds none.
+ */
+export function annexRecordsOf(json: unknown): AnnexRecord[] {
+  if (Array.isArray(json)) return json as AnnexRecord[];
+  const list = (json as { annexes?: unknown } | null)?.annexes;
+  return Array.isArray(list) ? (list as AnnexRecord[]) : [];
+}
+
+/** A document kind as this check reads it: its id, its sections' ids, and the kind it extends. */
+export interface KindSections {
+  id: string;
+  sections: string[];
+  extends?: string;
+}
+
+/** `<kind>#<section>` for every section of every kind, a kind's `extends` chain included. */
+export function sectionRefs(kinds: ReadonlyArray<KindSections>): Set<string> {
+  const byId = new Map(kinds.map((k) => [k.id, k]));
+  const out = new Set<string>();
+  for (const k of kinds) {
+    const seen = new Set<string>();
+    for (let at: KindSections | undefined = k; at && !seen.has(at.id); at = at.extends ? byId.get(at.extends) : undefined) {
+      seen.add(at.id);
+      for (const sec of at.sections) out.add(`${k.id}#${sec}`);
+    }
+  }
+  return out;
+}
+
+/** What a web annex says about itself: `annexOf`, `label`, `iris`, `section` (`WebAnnexOfShape`). */
+export interface WebAnnexOf {
+  annexOf: string;
+  label: string;
+  iris?: string;
+  section: string;
+}
+
+/**
+ * Findings, and what was not verified, about which publication and section
+ * an annex names. `libraryHeld` answers whether `<instance>/library/<slug>`
+ * is an entry this checkout holds.
+ */
+export function judgeWebAnnexOf(
+  a: WebAnnexOf,
+  sections: ReadonlySet<string>,
+  libraryHeld: (ref: string) => boolean,
+): { findings: string[]; unverified: string[] } {
+  const findings: string[] = [];
+  const unverified: string[] = [];
+  if (!sections.has(a.section)) findings.push(`section "${a.section}" is no section of a document kind this checkout declares`);
+  if (LIBRARY_ENTRY_REF.test(a.annexOf)) {
+    if (!libraryHeld(a.annexOf)) findings.push(`annexOf "${a.annexOf}" is no library entry this checkout holds`);
+  } else if (IRIS_HANDLE.test(a.annexOf)) unverified.push(`annexOf IRIS ${a.annexOf}`);
+  if (a.iris !== undefined) unverified.push(`own IRIS record ${a.iris}`);
+  return { findings, unverified };
+}
+
+/** The document kinds the checkout's instances declare, read from their `document-kinds` directories. */
+function documentKindsIn(roots: ReadonlyArray<string>): KindSections[] {
+  const out: KindSections[] = [];
+  for (const inst of roots) {
+    for (const d of directoriesForGraph(inst, "document-kinds")) {
+      if (!existsSync(d)) continue;
+      for (const f of readdirSync(d).filter((n) => n.endsWith(".json"))) {
+        let j: { $schema?: unknown; id?: unknown; extends?: unknown; sections?: { id?: unknown }[] };
+        try {
+          j = JSON.parse(readFileSync(join(d, f), "utf-8"));
+        } catch {
+          continue;
+        }
+        if (j.$schema !== DOCUMENT_KIND_SCHEMA_TAG || typeof j.id !== "string") continue;
+        out.push({
+          id: j.id,
+          sections: (j.sections ?? []).map((x) => x.id).filter((x): x is string => typeof x === "string"),
+          ...(typeof j.extends === "string" ? { extends: j.extends } : {}),
+        });
+      }
+    }
+  }
+  return out;
+}
+
+/** Whether `<instance>/library/<slug>` is an entry one of the named instance's library directories holds. */
+function libraryHeldIn(roots: ReadonlyArray<string>): (ref: string) => boolean {
+  return (ref) => {
+    const [name, , slug] = ref.split("/");
+    const root = roots.find((r) => (readDeclaration(r)?.name ?? "") === name);
+    return root !== undefined && directoriesForGraph(root, "library").some((d) => existsSync(join(d, slug!)));
+  };
+}
+
 /** Judge one file; `undefined` when it is not a node of this kind. */
 export function judgeFile(text: string): { schema: string; findings: string[] } | undefined {
   let json: unknown;
@@ -203,17 +333,24 @@ function readOrUndefined(abs: string): string | undefined {
 function main(): number {
   const repo = repoRootFor(resolve(import.meta.dir, ".."));
   const dirs = new Set<string>();
-  /** Each dak-annex directory's instance's artefact index directories. */
+  const roots = instanceRootsIn(repo);
+  const sections = sectionRefs(documentKindsIn(roots));
+  const libraryHeld = libraryHeldIn(roots);
+  /** Each web-annex directory's instance's artefact index directories. */
   const indexesOf = new Map<string, string[]>();
-  for (const inst of instanceRootsIn(repo)) {
+  /** Each web-annex directory's instance's `ig-annex` directories (fhir-harness), whose `annexes.json` names its files. */
+  const annexDirsOf = new Map<string, string[]>();
+  for (const inst of roots) {
     const indexes = directoriesForGraph(inst, "fhir-artifact-index");
-    for (const d of directoriesForGraph(inst, "dak-annex")) {
+    const annexDirs = directoriesForGraph(inst, "ig-annex");
+    for (const d of directoriesForGraph(inst, "web-annex")) {
       dirs.add(d);
       indexesOf.set(d, indexes);
+      annexDirsOf.set(d, annexDirs);
     }
   }
   if (dirs.size === 0) {
-    console.log("check:dak-annexes — no instance here declares a dak-annex directory; nothing to judge.");
+    console.log("check:web-annexes — no instance here declares a web-annex directory; nothing to judge.");
     return 0;
   }
   let judged = 0;
@@ -232,19 +369,25 @@ function main(): number {
       if (r === undefined) continue;
       judged++;
       const rel = relative(repo, join(dir, f));
+      if (r.findings.length === 0) {
+        const of = judgeWebAnnexOf(JSON.parse(text) as WebAnnexOf, sections, libraryHeld);
+        r.findings.push(...of.findings);
+        if (of.unverified.length) console.log(`  · ${rel}: not verified here — ${of.unverified.join("; ")} (a WHO record this check cannot open)`);
+      }
       if (r.schema === DAK_DATA_DICTIONARY_SCHEMA && r.findings.length === 0) {
-        if (indexes.length === 0) r.findings.push("its instance declares no artefact index with an index.json, so the data element ids it names resolve against nothing");
-        else r.findings.push(...judgeDictionaryReferences(DakDataDictionaryAnnexSchema.parse(JSON.parse(text)), codeSystems));
+        const refs = dictionaryReferences(DakDataDictionaryAnnexSchema.parse(JSON.parse(text)), indexes.length, codeSystems);
+        r.findings.push(...refs.findings);
+        if (refs.unresolved !== undefined) console.log(`  · ${rel}: ${refs.unresolved} data element id(s) UNRESOLVED — its instance holds no artefact index with an index.json to resolve them against`);
       }
       if (r.schema === DAK_SWIMLANES_SCHEMA) console.log(`  · ${rel}: persona aliases not resolved — the artefact index carries no persona artefact`);
       if (r.findings.length === 0) console.log(`✓ ${rel} (${r.schema})`);
       for (const x of r.findings) console.error(`✗ ${rel}: ${x}`);
       findings += r.findings.length;
     }
-    for (const d of indexes) {
+    for (const d of [...indexes, ...(annexDirsOf.get(dir) ?? []).filter((a) => existsSync(a))]) {
       const recordsAt = join(d, "annexes.json");
       if (!existsSync(recordsAt)) continue;
-      const records = JSON.parse(readFileSync(recordsAt, "utf-8")) as AnnexRecord[];
+      const records = annexRecordsOf(JSON.parse(readFileSync(recordsAt, "utf-8")));
       const found = judgeAnnexRecords(records, dirname(recordsAt), readOrUndefined);
       const rel = relative(repo, recordsAt);
       if (found.length === 0) console.log(`✓ ${rel} (${records.length} annex record(s) resolve)`);
@@ -253,10 +396,10 @@ function main(): number {
     }
   }
   if (judged === 0) {
-    console.error("check:dak-annexes — dak-annex directories are declared, and none holds a node to judge.");
+    console.error("check:web-annexes — web-annex directories are declared, and none holds a node to judge.");
     return 2;
   }
-  console.log(`check:dak-annexes — ${judged} annex(es) judged, ${findings} finding(s).`);
+  console.log(`check:web-annexes — ${judged} annex(es) judged, ${findings} finding(s).`);
   return findings > 0 ? 1 : 0;
 }
 
