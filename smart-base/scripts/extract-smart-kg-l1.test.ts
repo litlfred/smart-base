@@ -25,7 +25,7 @@ import {
   type L1Document,
   type LibraryEntry,
 } from "./extract-smart-kg-l1.ts";
-import { pinnedTerms } from "./pin-smart-kg.ts";
+import { kgClasses } from "./kg-classes.ts";
 
 const SCRIPT = join(import.meta.dir, "extract-smart-kg-l1.ts");
 const AT = "2026-10-02T00:00:00Z";
@@ -143,13 +143,13 @@ describe("the publication", () => {
   });
 });
 
-describe("the vocabulary is the pinned one", () => {
-  it("every class the document uses is in the pinned smart-kg snapshot", () => {
+describe("the vocabulary is smart-base's own", () => {
+  it("every class the document uses is in the KG class lists", () => {
     const { doc } = l1Document(entryOf({ "page-001": GRADED, "page-002": UNGRADED }), AT);
     expect(new Set(doc.nodes.map((n) => n.type))).toEqual(new Set(["publication", "publication-section", "recommendation"]));
-    expect(unpinnedClasses(doc, pinnedTerms())).toEqual([]);
+    expect(unpinnedClasses(doc, kgClasses())).toEqual([]);
   });
-  it("a class outside the snapshot is caught", () => {
+  it("a class outside the lists is caught", () => {
     const { doc } = l1Document(entryOf({ "page-001": GRADED }), AT);
     expect(unpinnedClasses(doc, new Set(["sgkg-l1#publication"]))).toEqual(["publication-section", "recommendation"]);
   });

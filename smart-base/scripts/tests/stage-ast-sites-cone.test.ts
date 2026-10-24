@@ -17,11 +17,15 @@ import { AST_SITE_WRITERS } from "../../platform/index.js";
 const REPO = resolve(import.meta.dir, "..", "..", "..");
 const ast = (changed: string[]) => siteFilter(REPO, changed, AST_SITE_WRITERS)("smart-trust").carry;
 
+// Each case walks the whole checkout's cone, about 4-5 s on a CI runner,
+// which is bun's 5 s default; one case timed out at 5.08 s on smart-base#132.
+const CONE_MS = 30_000;
+
 describe("the AST sites, on this checkout", () => {
-  it("a skill-only change stages no AST site", () => expect(ast(["cat-harness/skills/kg/kg-core/directory-conventions.md"])).toBe(false));
-  it("a gen-ig-pages.ts change stages it", () => expect(ast(["fhir-harness/scripts/gen-ig-pages.ts"])).toBe(true));
-  it("a chrome change stages it, through derivedFrom", () => expect(ast(["smart-base/themes/chrome.json"])).toBe(true));
+  it("a skill-only change stages no AST site", () => expect(ast(["cat-harness/skills/kg/kg-core/directory-conventions.md"])).toBe(false), CONE_MS);
+  it("a gen-ig-pages.ts change stages it", () => expect(ast(["fhir-harness/scripts/gen-ig-pages.ts"])).toBe(true), CONE_MS);
+  it("a chrome change stages it, through derivedFrom", () => expect(ast(["smart-base/themes/chrome.json"])).toBe(true), CONE_MS);
   // Asked, never spelled: the Jekyll build environment is the site CHROME's
   // since cat-harness slice 1 (`site-chrome/Gemfile.lock`), not `docs/`'s.
-  it("the build environment stages it", () => expect(ast([join("cat-harness", siteFileFor(join(REPO, "cat-harness"), "Gemfile.lock"))])).toBe(true));
+  it("the build environment stages it", () => expect(ast([join("cat-harness", siteFileFor(join(REPO, "cat-harness"), "Gemfile.lock"))])).toBe(true), CONE_MS);
 });

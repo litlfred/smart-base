@@ -192,7 +192,7 @@ describe("inputs", () => {
     expect(() => guideIdentity(none, () => "o/r")).toThrow(/guide checkout/);
   });
 
-  it("emits only classes the pinned smart-kg terms hold", () => {
+  it("emits only classes the KG class lists hold", () => {
     expect(unpinnedClasses()).toEqual([]);
   });
 });

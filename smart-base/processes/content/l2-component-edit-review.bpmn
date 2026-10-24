@@ -3,7 +3,7 @@
   smart-base — one L2 DAK component, edited by the agent and reviewed by a person.
 
   Source of truth: this file. The picture beside it (l2-component-edit-review.svg)
-  is drawn by `NODE_PATH=folio-assistant/node_modules bun run smart-base/scripts/render-processes.ts`;
+  is drawn by `NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`;
   never hand-edit it.
 
   Called once per component pass by every authoring track of l2-dak-authoring.bpmn.
