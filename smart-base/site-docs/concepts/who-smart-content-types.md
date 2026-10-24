@@ -24,6 +24,56 @@ available_locales: ["ar","zh","en","fr","ru","es"]
 
 _This page is generated from [`site-docs/source/concepts-who-smart-content-types/`](https://github.com/litlfred/smart-base/tree/main/site-docs/source/concepts-who-smart-content-types) — each section below links to its own source._
 
+## L1–L5: five layers, not five stages; FHIR content is the first three
+{: #the-three-layers data-fa-label="sec:fhir-content-the-three-layers" }
+
+[✎ Edit](https://github.com/litlfred/smart-base/edit/main/site-docs/source/concepts-who-smart-content-types/the-three-layers.md){: .fa-node-edit title="Edit site-docs/source/concepts-who-smart-content-types/the-three-layers.md" data-fa-link="edit" data-src="site-docs/source/concepts-who-smart-content-types/the-three-layers.md" data-repo="litlfred/smart-base" } <span class="fa-qa-badges"><button type="button" class="fa-qa-badge fa-qa-pending fa-qa-fam-block" lang="en" dir="ltr" data-qa-family="block" data-qa-key="the-three-layers.block" data-qa-label="Content QA" data-qa-noun="block" data-qa-src="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/the-three-layers.block.json' | relative_url }}" data-qa-index="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/qa-index.json' | relative_url }}" aria-expanded="false" aria-busy="true" title="Content QA: loading the verdict…" aria-label="Content QA: loading the verdict…"><span class="fa-qa-tag">QA</span><span class="fa-qa-glyph" aria-hidden="true">…</span></button> <button type="button" class="fa-qa-badge fa-qa-pending fa-qa-fam-translation" lang="en" dir="ltr" data-qa-family="translation" data-qa-key="the-three-layers.translation" data-qa-label="Translation QA" data-qa-noun="block" data-qa-src="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/the-three-layers.translation.json' | relative_url }}" data-qa-index="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/qa-index.json' | relative_url }}" aria-expanded="false" aria-busy="true" title="Translation QA: loading the verdict…" aria-label="Translation QA: loading the verdict…"><span class="fa-qa-tag">TR</span><span class="fa-qa-glyph" aria-hidden="true">…</span></button></span>
+
+WHO SMART Guidelines names **five** knowledge layers. FHIR content lives in
+the first three, and those three are the clearest available vocabulary for
+FHIR content generally:
+
+| layer | what it holds | form |
+|---|---|---|
+| **L1** Narrative | narrative guidance — the publication a recommendation comes from | prose, figures, tables |
+| **L2** Operational | the Digital Adaptation Kit — its ten components, from health interventions to test scenarios | BPMN, DMN, structured tables |
+| **L3** Machine readable | the FHIR Implementation Guide | FSH → FHIR resources |
+| L4 Executable | reference applications and services that execute the static algorithms | software |
+| L5 Dynamic | dynamic algorithms trained and optimised on data — the precision-health model | models, analytics |
+
+The five names and their one-line meanings are the WHO *Digital
+transformation handbook for primary health care* (2024), §1.2 pp. 20–21,
+ingested as the DAK layer's `library/9789240093362-eng`. It cites, as its ref. 18,
+the primary source: Mehl G. et al., *WHO SMART guidelines: optimising
+country-level use of guideline recommendations in the digital age*, Lancet
+Digital Health 2021;3(4):e213–e216, ingested as
+the DAK layer's `library/mehl-2021-who-smart-guidelines` (CC BY 3.0 IGO). It
+presents the same five as "knowledge layers (L1–L5)".
+
+**This page stops at L3 on purpose.** L4 and L5 are software and trained
+models. They consume what L1–L3 publish, but they are not authored as FHIR
+content, so nothing in this platform validates them as content. An earlier
+version of this page said SMART Guidelines "names three layers". That is the
+kind of rounding that tells a reader L4 and L5 do not exist.
+
+**They are layers, not stages, and the difference is load-bearing.** A stage
+model says each is produced from the one before and then left behind. In
+practice all three are live at once: an L2 decision table and the L3
+`PlanDefinition` derived from it both exist, both are published, and both can
+change. Treating L2 as scaffolding that L3 replaces is how a decision table
+and its FHIR representation drift apart with nothing to notice.
+
+It is also why an instance may hold any one of the three without the others.
+An L1 corpus with no DAK behind it is a real thing; so is an IG with no L1.
+
+**The SMART layers are not the platform's layers.** `cat-harness`,
+the content core and the science layer are layers of *this software*.
+Each depends on the one before and inherits its skills and directories. L1–L5
+are layers of *guideline knowledge*. A WHO folio holds L1–L3 *content*; the
+platform layers are the tools that author and check it, and none of them is
+"the L2 layer". The deck that set the two side by side is
+`cat-harness/library/kg-folio-asst-2026-09-30` (slide 1).
+
 ## WHO SMART Guidelines DAKs (L2)
 {: #who-smart-guidelines-daks-l2 data-fa-label="sec:content-types-who-smart-guidelines-daks-l2" }
 
@@ -89,3 +139,66 @@ Relevant skill schemas:
 {: .bpmn-source }
 
 ---
+
+## The DAK API surface
+{: #the-dak-surface data-fa-label="sec:fhir-content-the-dak-surface" }
+
+[✎ Edit](https://github.com/litlfred/smart-base/edit/main/site-docs/source/concepts-who-smart-content-types/the-dak-surface.md){: .fa-node-edit title="Edit site-docs/source/concepts-who-smart-content-types/the-dak-surface.md" data-fa-link="edit" data-src="site-docs/source/concepts-who-smart-content-types/the-dak-surface.md" data-repo="litlfred/smart-base" } <span class="fa-qa-badges"><button type="button" class="fa-qa-badge fa-qa-pending fa-qa-fam-block" lang="en" dir="ltr" data-qa-family="block" data-qa-key="the-dak-surface.block" data-qa-label="Content QA" data-qa-noun="block" data-qa-src="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/the-dak-surface.block.json' | relative_url }}" data-qa-index="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/qa-index.json' | relative_url }}" aria-expanded="false" aria-busy="true" title="Content QA: loading the verdict…" aria-label="Content QA: loading the verdict…"><span class="fa-qa-tag">QA</span><span class="fa-qa-glyph" aria-hidden="true">…</span></button> <button type="button" class="fa-qa-badge fa-qa-pending fa-qa-fam-translation" lang="en" dir="ltr" data-qa-family="translation" data-qa-key="the-dak-surface.translation" data-qa-label="Translation QA" data-qa-noun="block" data-qa-src="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/the-dak-surface.translation.json' | relative_url }}" data-qa-index="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/qa-index.json' | relative_url }}" aria-expanded="false" aria-busy="true" title="Translation QA: loading the verdict…" aria-label="Translation QA: loading the verdict…"><span class="fa-qa-tag">TR</span><span class="fa-qa-glyph" aria-hidden="true">…</span></button></span>
+
+A WHO SMART Guidelines IG publishes an extra layer on top of standard IG
+output — the **DAK API** — produced by scripts that run *after* the Publisher
+exits:
+
+- `<stem>.schema.json` — a JSON Schema per logical model and per ValueSet
+- `<stem>.displays.json` — display labels
+- `<stem>.openapi.json` — an OpenAPI description
+- `<stem>.jsonld` — a JSON-LD vocabulary, built from ValueSet **expansions**
+- `dak-api.html` — the hub a reader enters through
+
+Its size varies by two orders of magnitude between IGs, so treat any figure
+you have seen as a fact about one IG at one version rather than as a property
+of the surface.
+
+**None of this is the Publisher's work**, which is the practical reason to
+know the boundary: a question about why a schema is missing is a question
+about a post-processing script, not about the build. And because the JSON-LD
+vocabularies are built from expansions, they inherit the terminology server's
+availability — a thin vocabulary may mean a thin ValueSet or may mean nobody
+could expand it, and the artefact alone does not say which.
+
+## The WHO build around the IG Publisher
+{: #the-who-build data-fa-label="sec:who-smart-content-types-the-who-build" }
+
+[✎ Edit](https://github.com/litlfred/smart-base/edit/main/site-docs/source/concepts-who-smart-content-types/the-who-build.md){: .fa-node-edit title="Edit site-docs/source/concepts-who-smart-content-types/the-who-build.md" data-fa-link="edit" data-src="site-docs/source/concepts-who-smart-content-types/the-who-build.md" data-repo="litlfred/smart-base" } <span class="fa-qa-badges"><button type="button" class="fa-qa-badge fa-qa-pending fa-qa-fam-block" lang="en" dir="ltr" data-qa-family="block" data-qa-key="the-who-build.block" data-qa-label="Content QA" data-qa-noun="block" data-qa-src="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/the-who-build.block.json' | relative_url }}" data-qa-index="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/qa-index.json' | relative_url }}" aria-expanded="false" aria-busy="true" title="Content QA: loading the verdict…" aria-label="Content QA: loading the verdict…"><span class="fa-qa-tag">QA</span><span class="fa-qa-glyph" aria-hidden="true">…</span></button> <button type="button" class="fa-qa-badge fa-qa-pending fa-qa-fam-translation" lang="en" dir="ltr" data-qa-family="translation" data-qa-key="the-who-build.translation" data-qa-label="Translation QA" data-qa-noun="block" data-qa-src="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/the-who-build.translation.json' | relative_url }}" data-qa-index="{{ '/assets/qa/smart-base/concepts-who-smart-content-types/qa-index.json' | relative_url }}" aria-expanded="false" aria-busy="true" title="Translation QA: loading the verdict…" aria-label="Translation QA: loading the verdict…"><span class="fa-qa-tag">TR</span><span class="fa-qa-glyph" aria-hidden="true">…</span></button></span>
+
+The FHIR IG Publisher and FHIR content in general are described on the
+[FHIR IG Publisher](https://litlfred.github.io/folio-assistant/fhir-harness/fhir/ig-publisher.html)
+and [FHIR content](https://litlfred.github.io/folio-assistant/fhir-harness/fhir/fhir-content.html)
+pages of the FHIR IG layer. This section holds what is specific to the WHO
+SMART Guidelines build.
+
+**The Publisher is one step of many.** In the WHO SMART Guidelines build it
+runs between six pre-processing invocations and nine post-processing ones.
+Most of what a reader sees on a published SMART Guideline (the DAK API, the
+JSON Schemas, the JSON-LD vocabularies) is produced *after* the Publisher
+exits, by scripts, and is not the Publisher's work at all.
+
+**The version floats.** The WHO build downloads `publisher.jar` from the
+**latest** release on every run, so two builds of an unchanged commit can
+differ, and nothing in the output says which version produced them.
+
+**The dependency closure.** For the DAK layer, the Publisher resolves
+`hl7.terminology`, `hl7.fhir.uv.extensions.r4`, `hl7.fhir.uv.cql`,
+`hl7.fhir.uv.cpg`, `hl7.fhir.uv.crmi` and `hl7.fhir.uv.sdc`.
+
+The rules are skills, and where the two disagree the skill wins and this page
+is wrong:
+
+- **`l2-dak-authoring`**: authoring at L2, and deriving rather than retyping.
+- **`ig-artifact-ingestion`**: reading a *published* IG back as a knowledge
+  graph: which IGs qualify, what to read, what to refuse, the four partial
+  views and the two traps.
+- **`dak-preprocessing`** and **`dak-postprocessing`**: the WHO-specific
+  phases around the Publisher run, step by step.
+- **`smart-stack-layering`**: which harness layer a given asset belongs to,
+  and the question that settles it.
