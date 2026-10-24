@@ -7,8 +7,9 @@ import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
-import { DAK_COMPONENTS, DAK_COMPONENT_FIELDS } from "./dak-kinds";
+import { DAK_COMPONENTS, DAK_COMPONENT_FIELDS, DAK_UNFORMALIZED_COMPONENTS } from "./dak-kinds";
 import {
+  DAK_COMPONENT_SOURCE_KEYS,
   DAK_MARKER_FILENAME,
   DAK_TYPE,
   DakDeclarationSchema,
@@ -52,12 +53,35 @@ describe("the marker", () => {
 });
 
 describe("what it refuses to invent", () => {
-  test("a component's ELEMENTS are carried through untouched", () => {
-    // The LM is not final upstream. Anything is accepted inside a component and
-    // comes back byte-identical; the day the shape lands, this test changes.
-    const odd = { anything: [1, 2], nested: { at: "all" } };
+  test("an inline INSTANCE is carried through untouched", () => {
+    // WHO's wrapper is settled (#active); what an instance holds is WHO's model,
+    // not restated here. Anything inside comes back byte-identical.
+    const odd = { instance: { anything: [1, 2], nested: { at: "all" } } };
     const parsed = DakDeclarationSchema.parse({ ...minimal, healthInterventions: [odd] });
     expect((parsed as DakDeclaration).healthInterventions).toEqual([odd]);
+  });
+
+  test("a formalized component's entry is WHO's source wrapper: exactly one of three", () => {
+    const ok = (e: unknown) => DakDeclarationSchema.safeParse({ ...minimal, personas: [e] }).success;
+    expect(ok({ url: "input/personas.json" })).toBe(true);
+    expect(ok({ canonical: "http://smart.who.int/base/GenericPersona/x" })).toBe(true);
+    expect(ok({ instance: {} })).toBe(true);
+    expect(ok({})).toBe(false);
+    expect(ok({ url: "a", canonical: "b" })).toBe(false);
+    expect(ok({ anything: [1] })).toBe(false);
+  });
+
+  test("a wrapper keeps keys it does not know", () => {
+    const e = { url: "u", note: "kept" };
+    const parsed = DakDeclarationSchema.parse({ ...minimal, indicators: [e] }) as DakDeclaration;
+    expect(parsed.indicators).toEqual([e]);
+  });
+
+  test("the unformalized component takes anything, having no wrapper to follow", () => {
+    for (const c of DAK_UNFORMALIZED_COMPONENTS) {
+      const field = DAK_COMPONENT_FIELDS[c];
+      expect(DakDeclarationSchema.safeParse({ ...minimal, [field]: [{ anything: 1 }] }).success).toBe(true);
+    }
   });
 
   test("but the CARDINALITY is enforced, because 0..* is settled", () => {
@@ -80,8 +104,9 @@ describe("the component fields come from the vocabulary, not from this module", 
   });
 
   test("componentEntries never needs a caller to hardcode a field name", () => {
-    const d = DakDeclarationSchema.parse({ ...minimal, personas: ["a", "b"] }) as DakDeclaration;
-    expect(componentEntries(d, "generic-personas")).toEqual(["a", "b"]);
+    const ab = [{ url: "a" }, { url: "b" }];
+    const d = DakDeclarationSchema.parse({ ...minimal, personas: ab }) as DakDeclaration;
+    expect(componentEntries(d, "generic-personas")).toEqual(ab);
     expect(componentEntries(d, "test-scenarios")).toEqual([]);
   });
 });
@@ -90,7 +115,7 @@ describe("coverage distinguishes three states, not two", () => {
   test("absent, declared-and-empty, and populated are different facts", () => {
     const absent = DakDeclarationSchema.parse(minimal) as DakDeclaration;
     const empty = DakDeclarationSchema.parse({ ...minimal, personas: [] }) as DakDeclaration;
-    const full = DakDeclarationSchema.parse({ ...minimal, personas: ["a"] }) as DakDeclaration;
+    const full = DakDeclarationSchema.parse({ ...minimal, personas: [{ url: "a" }] }) as DakDeclaration;
 
     expect(populatedComponents(absent)).toEqual([]);
     expect(populatedComponents(empty)).toEqual([]);

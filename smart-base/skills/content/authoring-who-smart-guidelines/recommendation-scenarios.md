@@ -9,13 +9,18 @@ description: >
   it.
 input: schemas/skills/recommendation-scenarios/input.schema.json
 output: schemas/skills/recommendation-scenarios/output.schema.json
+uses-methodology:
+  - terminology-coding
 ---
 
 # recommendation-scenarios
 
 Step 2 of [`recommendation-extraction`](recommendation-extraction.md). That
 skill's Part 2 holds the judgement (the shape of a scenario and the
-reuse-first precedence); this one is the mechanical step that applies it.
+reuse-first precedence for persona, business-process, and domain coding defined
+in the [`terminology-coding`](../../../methodologies/terminology-coding.md)
+methodology and [`classify-and-code-content`](classify-and-code-content.md));
+this one is the mechanical step that applies it.
 
 ## Input and output
 
