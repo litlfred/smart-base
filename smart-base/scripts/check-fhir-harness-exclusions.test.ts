@@ -61,6 +61,12 @@ describe("planted dependencies are graded", () => {
   it("reading dak.config.json", () => {
     expect(one("fhir-harness/s.ts", 'readFileSync("dak.config.json")').graded[0]!.rule).toBe("dak-config");
   });
+  it("reading the DAK section of the index", () => {
+    expect(one("fhir-harness/s.ts", "const d = cfg.contentTypes.dak;").graded[0]!.rule).toBe("dak-config");
+    expect(one("fhir-harness/s.ts", 'const d = cfg.contentTypes["dak"];').graded[0]!.rule).toBe("dak-config");
+    expect(one("fhir-harness/s.sh", "python3 input/scripts/dak_index.py .").graded[0]!.rule).toBe("dak-config");
+    expect(one("fhir-harness/s.ts", "const t = cfg.contentTypes.paper;").graded).toEqual([]);
+  });
   it("a DAK step invoked from Python or shell; a # comment is not", () => {
     const step = dakStepNames(root)[0]!;
     expect(one("fhir-harness/s.sh", `python3 ${step}`).graded[0]!.rule).toBe("dak-step");

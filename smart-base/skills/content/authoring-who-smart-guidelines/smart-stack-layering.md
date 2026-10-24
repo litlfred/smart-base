@@ -82,8 +82,8 @@ own is a kind.
 
 | layer | holds | must NOT hold |
 |---|---|---|
-| `fhir-harness` | SUSHI, IG Publisher invocation, Jekyll assembly, publication to a pages branch, the artefact-index reconstruction | any WHO term, `dak.config.json`, any DAK pre/post step, any `smart.who.int` canonical |
-| `smart-base` | the SMART harness rules, the DAK logical model, `dak.config.json`'s schema, WHO voices and methodologies, the `smart.who.int.base` IG — **and the two document kinds:** L1 (narrative assets, figure narratives, the corpus a DTH is written from) and DAK (the ten components, DMN/BPMN authoring, the DAK-shaped pre-processing) | subject matter for any one guideline; FHIR resources in an L1 document; FHIR profiles or publication in a DAK |
+| `fhir-harness` | SUSHI, IG Publisher invocation, Jekyll assembly, publication to a pages branch, the artefact-index reconstruction | any WHO term, the DAK declaration (`index.config.json` `contentTypes.dak`, formerly `dak.json`), any DAK pre/post step, any `smart.who.int` canonical |
+| `smart-base` | the SMART harness rules, the DAK logical model, the schema of the `contentTypes.dak` index section, WHO voices and methodologies, the `smart.who.int.base` IG — **and the two document kinds:** L1 (narrative assets, figure narratives, the corpus a DTH is written from) and DAK (the ten components, DMN/BPMN authoring, the DAK-shaped pre-processing) | subject matter for any one guideline; FHIR resources in an L1 document; FHIR profiles or publication in a DAK |
 | `smart-ig` | L3 — FSH, profiles, terminology binding, the IG build for one guideline | L1 narrative; DAK authoring |
 
 ## Two consequences that overturn what is on `main`
@@ -130,7 +130,7 @@ about copies of the code and is unchanged.
 
 Scope, stated because it is easy to over-read: this is **pre-work in
 `litlfred/*`**. Nothing at `WorldHealthOrganization/*` is being changed, and
-the `dak.json` → `dak.config.json` rename is ours alone until upstream follows.
+moving the DAK declaration from `dak.json` into `index.config.json` is ours alone until upstream follows (the owner, who speaks for WHO here, chose it on 2026-10-24 so WHO can adopt the harness file).
 
 ## The falsification test
 

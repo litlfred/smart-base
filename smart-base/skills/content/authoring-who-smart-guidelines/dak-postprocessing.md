@@ -17,8 +17,9 @@ graph-typologies:
 > `fhir-harness` — see §"One step is not WHO's".
 
 Everything the WHO build runs between `publisher.jar` finishing and deployment,
-gated by `do_dak` and by `dak.json` (upstream's spelling; ours is
-`dak.config.json`). Each step runs **inside the publisher's
+gated by `do_dak` and by the `contentTypes.dak` section of the root
+`index.config.json` (`dak.json` until 2026-10-24; see
+[`dak-preprocessing`](dak-preprocessing.md)). Each step runs **inside the publisher's
 Docker container** (`docker exec -w /work ig-run python3 …`), against `output/`.
 
 > **Sourcing.** `WorldHealthOrganization/smart-base` —
@@ -129,7 +130,7 @@ generators, as fhir-harness's generic port `ig-api-gen.ts` (owner,
 2026-10-23, bean `h7ap`; this layer passes the label and its data types'
 JSON-LD prefix), run over the cached AST, written to
 `$SITE_WORK/ig-api/sidecars/`, with `$SITE_WORK/ig-api/ig-api.json` saying
-`{"label": "DAK API"}` when the IG has a `dak.json`. fhir-harness binds and
+`{"label": "DAK API"}` when the IG declares a DAK (`index.config.json` `contentTypes.dak`, or a legacy `dak.json`; `scripts/ig-dak-metadata.ts`). fhir-harness binds and
 serves them (`ig-repo-site.ts`, fhir-harness `ig-build-pipeline`
 §"The IG repository's site route") and never learns the DAK name. Step 6's
 products come from the same port: the OpenAPI documents (`<stem>.openapi.json`)

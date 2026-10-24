@@ -6,7 +6,13 @@ import { join } from "node:path";
 import { DAK_API_LABEL, descriptorFor, HUB_MARKER, IG_API_DESCRIPTOR, IG_API_SITE, IG_API_WORK, igSiteSidecars } from "./ig-site-sidecars";
 
 describe("ig-site:sidecars, smart-base's step in an IG repository's site", () => {
-  test("a DAK (dak.json at the IG root) labels its sidecars DAK API", () => {
+  test("a DAK (contentTypes.dak in its index.config.json) labels its sidecars DAK API", () => {
+    const ig = mkdtempSync(join(tmpdir(), "ig-dak-"));
+    writeFileSync(join(ig, "index.config.json"), JSON.stringify({ contentTypes: { dak: {} } }));
+    expect(descriptorFor(ig)).toEqual({ label: DAK_API_LABEL, placeholder: HUB_MARKER });
+  });
+
+  test("a DAK not yet migrated (a legacy dak.json at the IG root) is still labelled", () => {
     const ig = mkdtempSync(join(tmpdir(), "ig-dak-"));
     writeFileSync(join(ig, "dak.json"), "{}");
     expect(descriptorFor(ig)).toEqual({ label: DAK_API_LABEL, placeholder: HUB_MARKER });
