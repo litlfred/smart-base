@@ -80,12 +80,16 @@ jobs:
       - name: Check for DAK configuration
         id: dak_check
         run: |
-          if [ -f "dak.json" ]; then
+          # contentTypes.dak in index.config.json (dak.json until 2026-10-24).
+          if [ -f "input/scripts/dak_index.py" ]; then
+            python3 input/scripts/dak_index.py --adopt-legacy .
+          fi
+          if [ -f "input/scripts/dak_index.py" ] && python3 input/scripts/dak_index.py .; then
             echo "DAK_ENABLED=true" >> "$GITHUB_OUTPUT"
-            echo "✅ dak.json found — translation pull is enabled"
+            echo "✅ contentTypes.dak found — translation pull is enabled"
           else
             echo "DAK_ENABLED=false" >> "$GITHUB_OUTPUT"
-            echo "⚠️ dak.json not found — skipping translation pull (DAK not enabled)"
+            echo "⚠️ no contentTypes.dak in index.config.json — skipping translation pull (DAK not enabled)"
           fi
 
       - name: Set up Python

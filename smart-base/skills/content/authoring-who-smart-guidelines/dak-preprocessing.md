@@ -17,9 +17,13 @@ description: >
 > authoring, not pre-processing".
 
 The phase the WHO build calls *DAK Preprocessing*: everything that runs between
-checkout and `publisher.jar`, gated by the `do_dak` input and by the presence of
-`dak.json` at the repository root — **upstream's spelling**; ours is
-`dak.config.json` since 2026-09-22 and nothing at WHO has been renamed.
+checkout and `publisher.jar`, gated by the `do_dak` input and by a `dak`
+section under `contentTypes` in the root `index.config.json` (owner,
+2026-10-24, bean `cz17`: "WHO will adopt harness file"). Every script reads
+and writes it through `input/scripts/dak_index.py`. An IG that still carries
+the old `dak.json` keeps building: the workflow reads that file into the index
+for that build only, with a warning (`dak_index.py --adopt-legacy`), until the
+IG moves it. Nothing is committed back.
 
 > **Sourcing.** Read from `WorldHealthOrganization/smart-base` —
 > `.github/workflows/ghbuild.yml` and the scripts under `input/scripts/` — on
@@ -33,7 +37,7 @@ checkout and `publisher.jar`, gated by the `do_dak` input and by the presence of
 
 | # | script | what it actually does |
 |---|---|---|
-| 1 | `generate_dak_from_sushi.py` | writes `dak.json` from `sushi-config.yaml` plus branch/repo context — only when `smart.who.int.base` is a dependency and `dak.json` is absent |
+| 1 | `generate_dak_from_sushi.py` | writes `contentTypes.dak` into `index.config.json` from `sushi-config.yaml` plus branch/repo context — only when `smart.who.int.base` is a dependency and the section is absent |
 | 2 | `update_sushi_config.py` | **registers pages and menu entries in `sushi-config.yaml`, and writes placeholder markdown** — see below, this is the one that matters |
 | 3 | `generate_dak_from_sushi.py`, again | re-runs step 1 with the resolved branch context, after the branch name has been sanitised |
 | 4 | `dmn_questionnaire_generator.py` | emits FHIR `Questionnaire` resources from the DMN decision tables |
@@ -113,7 +117,7 @@ Do not remove it on the strength of the page argument alone.
 context"*. That is a workaround for ordering: the branch name is sanitised by a
 later step than the one that first needs it.
 
-`dak.config.json` is **ours** (bean `cz17`), not a file we merely read, so this is a
+The DAK section is **ours** (bean `cz17`), not a file we merely read, so this is a
 derivation we own and can compute once, in the right order. Do not reproduce the
 double run when lifting this step.
 
@@ -147,7 +151,7 @@ exporter does not run this phase, so smart-base supplies it as an
   of the table above, in that order. It uses this checkout's own
   `input/scripts/`, never a download from another repository's `main`. It
   does not repeat step 3, as §"Steps 1 and 3" says. Steps 4–6 run only when
-  `dak.json` is present, as in `ghbuild.yml`. Any failure fails the run.
+  the IG declares `contentTypes.dak`, as in `ghbuild.yml`. Any failure fails the run.
 - **The caller** is smart-base's `.github/workflows/ig-ast-refresh.yml`:
   fhir-harness's template plus `pre-export: bash smart-base/scripts/dak-pre-export.sh`.
   It runs by hand, and on every push to `main` that changes `sushi-config.yaml`,

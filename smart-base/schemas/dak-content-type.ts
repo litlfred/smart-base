@@ -18,7 +18,7 @@
  *
  * The comment was right about where they belong and wrong that it could wait.
  * `smart-base` depends on core; core recognising a DAK means core importing
- * downstream, and it is not avoidable by intent — recognising `dak.config.json`
+ * downstream, and it is not avoidable by intent — recognising a DAK
  * requires `DAK_TYPE`, and reaching for it *is* the edge. A boundary argued in
  * prose is a boundary that does not hold; this one is held by the import graph.
  *
@@ -33,7 +33,7 @@
  * for its config, so a WHO or HL7 IRI would imply an authority we do not have,
  * while our own is at least honest about who is speaking.
  */
-import { DAK_MARKER_FILENAME, DAK_TYPE } from "./dak";
+import { DAK_INDEX_SECTION, DAK_TYPE } from "./dak";
 import { defaultContentTypes, type ContentTypeRegistry } from "../platform/index.js";
 import { termIri } from "../platform/index.js";
 
@@ -49,7 +49,9 @@ export const SUSHI_TYPE = termIri("SushiProject");
 
 export function registerDakContentTypes(registry: ContentTypeRegistry = defaultContentTypes): void {
   registry.register("dak", {
-    filename: DAK_MARKER_FILENAME,
+    // A section of the root `index.config.json`, not a file of its own
+    // (owner, 2026-10-24, bean `cz17`).
+    filename: { indexSection: DAK_INDEX_SECTION },
     type: DAK_TYPE,
     summary: "A WHO SMART Guidelines Digital Adaptation Kit, per `smart-base`'s own model.",
     facts: (d) => {
