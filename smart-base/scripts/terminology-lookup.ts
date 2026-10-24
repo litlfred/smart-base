@@ -106,6 +106,9 @@ export interface LookupOptions {
 }
 
 const HERE = resolve(import.meta.dir, "..");
+// declared-path-literal: a provenance label shown beside each guideline-domain match, naming the scheme's home in folio-assistant-core; this script never reads it from disk
+const GUIDELINE_DOMAIN_SOURCE = "folio-assistant-core/glossary/guideline-domain.glossary.json";
+
 const DEFAULT_GENERIC_PERSONAS = join(
   HERE,
   "scripts",
@@ -151,7 +154,7 @@ export const AUTHORITY_SCHEMES: Record<TerminologySlot, AuthoritySchemeInfo> = {
     id: "guideline-domain",
     title: "WHO SMART Guideline Domain Scheme",
     uri: "https://litlfred.github.io/folio-assistant-core/glossary/guideline-domain",
-    localSources: ["folio-assistant-core/glossary/guideline-domain.glossary.json"],
+    localSources: [GUIDELINE_DOMAIN_SOURCE],
   },
   "business-process": {
     id: "dak-business-process",
@@ -200,7 +203,7 @@ const BUILTIN_DOMAIN_TERMS: RawEntry[] = [
     definition:
       "A guideline whose recommendations address the care of individual patients by health workers: assessment, diagnosis, treatment and management of a condition in a person.",
     uri: "https://litlfred.github.io/folio-assistant-core/glossary/guideline-domain#clinical",
-    sourcePath: "folio-assistant-core/glossary/guideline-domain.glossary.json",
+    sourcePath: GUIDELINE_DOMAIN_SOURCE,
   },
   {
     rung: "rung-2-smart-base",
@@ -211,7 +214,7 @@ const BUILTIN_DOMAIN_TERMS: RawEntry[] = [
     definition:
       "A guideline whose recommendations address the health of populations rather than of an individual patient: prevention, health promotion, immunization and screening programmes, surveillance, and policy or environmental measures.",
     uri: "https://litlfred.github.io/folio-assistant-core/glossary/guideline-domain#public-health",
-    sourcePath: "folio-assistant-core/glossary/guideline-domain.glossary.json",
+    sourcePath: GUIDELINE_DOMAIN_SOURCE,
   },
   {
     rung: "rung-2-smart-base",
@@ -222,7 +225,7 @@ const BUILTIN_DOMAIN_TERMS: RawEntry[] = [
     definition:
       "A guideline whose recommendations address how the health system itself is organised and resourced — service delivery, health workforce, health information systems, access to medical products, financing, and leadership and governance.",
     uri: "https://litlfred.github.io/folio-assistant-core/glossary/guideline-domain#health-system-strengthening",
-    sourcePath: "folio-assistant-core/glossary/guideline-domain.glossary.json",
+    sourcePath: GUIDELINE_DOMAIN_SOURCE,
   },
 ];
 
