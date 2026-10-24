@@ -53,6 +53,7 @@ import {
 } from "./dak-blocks";
 import { KNOWN_LABEL_PREFIXES } from "../platform/index.js";
 import { DAK_KIND_TO_WHO_MODEL, DAK_KIND_TO_FOLIO_TYPE } from "./dak-jsonld";
+import { DAK_COMPONENT_SOURCE_KEYS } from "./dak";
 import { assertPrefixesInSync, typesForKind } from "../platform/index.js";
 import { readBlockManifest } from "../platform/index.js";
 import { ContributionRegistry, composedKindOwner } from "../platform/index.js";
@@ -366,6 +367,21 @@ describe("the component list against WHO's own logical model", () => {
     const declared = [...fsh.matchAll(/^\* (\w+) 0\.\.\* \w+Source\b/gm)].map((m) => m[1]!);
     const known = new Set(Object.values(DAK_COMPONENT_FIELDS));
     expect(declared.filter((d) => !known.has(d))).toEqual([]);
+  });
+
+  test.skipIf(!available)("every component's Source is the url / canonical / instance wrapper", () => {
+    // DakComponentSourceSchema in ./dak claims this shape; checked here, not trusted.
+    const sources = join(DAK_FSH, "..", "DAKComponentSources.fsh");
+    expect(existsSync(sources)).toBe(true);
+    const fsh = readFileSync(sources, "utf-8");
+    const types = [...readFileSync(DAK_FSH, "utf-8").matchAll(/^\* \w+ 0\.\.\* (\w+Source)\b/gm)].map((m) => m[1]!);
+    for (const t of types) {
+      const body = fsh.split(/^Logical: /m).find((b) => b.startsWith(`${t}\n`));
+      expect(body, t).toBeDefined();
+      const fields = [...body!.matchAll(/^\* (\w+) 0\.\.1 /gm)].map((m) => m[1]!);
+      expect(fields, t).toEqual([...DAK_COMPONENT_SOURCE_KEYS]);
+      expect(body, t).toMatch(/exactly one of/);
+    }
   });
 
   test.skipIf(!available)("scheduling logic is not YET a field of WHO's model", () => {
