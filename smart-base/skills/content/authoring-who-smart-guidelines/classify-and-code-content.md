@@ -43,9 +43,9 @@ lanes of [`classify-and-code-content.bpmn`](../../../processes/content/classify-
 3. **`terminologist` (terminologist / ontologist reviewer) lane** — a person
    acting as `terminologist` reviews the candidate concept codings, SKOS
    mapping predicates (`exactMatch` vs `closeMatch` per
-   [`ontologist`](../../../../folio-assistant-core/skills/kg/kg-core/ontologist.md)),
+   [`ontologist`](../../../../folio-assistant-core/skills/library/cataloguing/ontologist.md)),
    and proposed local glossary terms (`status: "candidate"` per
-   [`glossary-terms`](../../../../folio-assistant-core/skills/library/library-core/glossary-terms.md)),
+   [`glossary-terms`](../../../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md)),
    and records the review verdict.
 
 ## Input and output
@@ -80,11 +80,11 @@ Follow the reuse-first precedence of
 3. **Rung 3 (`rung-3-external-standard`):** resolve against the slot's
    authoritative external standard (`ICD-11`, `ICHI` / `CDHIv2`, `ISCO-08`,
    `ATC`), distinguishing `skos:exactMatch` from `skos:closeMatch` per
-   [`ontologist`](../../../../folio-assistant-core/skills/kg/kg-core/ontologist.md).
+   [`ontologist`](../../../../folio-assistant-core/skills/library/cataloguing/ontologist.md).
 4. **Rung 4 (`rung-4-local-candidate`):**
    - For an unmatched persona or domain concept, record a local glossary
      candidate (`status: "candidate"`, `source: "extracted"`) per
-     [`glossary-terms`](../../../../folio-assistant-core/skills/library/library-core/glossary-terms.md)
+     [`glossary-terms`](../../../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md)
      and emit `WARNING <slot>-glossary-candidate`.
    - For an unmatched business process, **never invent a process**: record
      `could-not-determine` and emit `WARNING process-not-determined`.
@@ -139,8 +139,8 @@ To review a proposed exclusion in `Lane_ExtractionReviewer` of
 In `Lane_Terminologist` of
 [`classify-and-code-content.bpmn`](../../../processes/content/classify-and-code-content.bpmn),
 a person acting as `terminologist` (equipped with
-[`ontologist`](../../../../folio-assistant-core/skills/kg/kg-core/ontologist.md),
-[`glossary-terms`](../../../../folio-assistant-core/skills/library/library-core/glossary-terms.md),
+[`ontologist`](../../../../folio-assistant-core/skills/library/cataloguing/ontologist.md),
+[`glossary-terms`](../../../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md),
 and [`terminology-management`](../../../../fhir-harness/skills/content/fhir-ig-authoring/terminology-management.md))
 judges each staged coding:
 

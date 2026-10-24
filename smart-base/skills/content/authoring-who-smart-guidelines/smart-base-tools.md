@@ -120,7 +120,7 @@ stage-5 dependency row of
    litlfred/uganda-sg-training for Uganda.
 
 Only when all three come back empty is something new written, and then as a
-**Tool node** under [`tool-authoring`](../../../../cat-harness/skills/folio-core/tool-authoring.md),
+**Tool node** under [`tool-authoring`](../../../../cat-harness/skills/tools/folio-core/tool-authoring.md),
 with the search recorded in the dependency row (`toolchain: none`, and where
 it looked). A script written into the adaptation repository with no Tool node
 is the 2026-10-15 failure: the Uganda adaptation wrote its own YAML → DMN

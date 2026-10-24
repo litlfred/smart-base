@@ -41,10 +41,10 @@ foundation for [`classify-and-code-content`](../skills/content/authoring-who-sma
 [`recommendation-extraction`](../skills/content/authoring-who-smart-guidelines/recommendation-extraction.md),
 and [`recommendation-scenarios`](../skills/content/authoring-who-smart-guidelines/recommendation-scenarios.md).**
 It bridges the platform's generic ontology and glossary rules —
-[`ontologist`](../../folio-assistant-core/skills/kg/kg-core/ontologist.md),
-[`glossary-terms`](../../folio-assistant-core/skills/library/library-core/glossary-terms.md),
+[`ontologist`](../../folio-assistant-core/skills/library/cataloguing/ontologist.md),
+[`glossary-terms`](../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md),
 [`vocabulary-authority`](../../cat-harness/skills/kg/kg-core/vocabulary-authority.md),
-and [`code-lists`](../../cat-harness/skills/kg/kg-core/code-lists.md) — with the
+and [`code-lists`](../../cat-harness/skills/library/library-core/code-lists.md) — with the
 WHO Family of International Classifications (WHO-FIC) and SMART Guidelines DAK
 component conventions.
 
@@ -59,7 +59,7 @@ an arbitrary string or borrowing a code from an unrelated axis.
 |---|---|---|---|
 | **Condition / disease / health problem** | L1 `recommendation.population` / `condition`; L2 data dictionary (C5) & DMN inputs (C6) | **ICD-11** (WHO International Classification of Diseases, 11th Revision; MMS & foundation URI) | `KGTerminologySystem` (`#ICD11`, `http://id.who.int/icd/release/11/mms`); DAK C5 `ICD-11` binding column |
 | **Intervention (clinical, public-health or digital)** | L1 `recommendation.intervention`; L2 user scenarios (C3), business processes (C4), data dictionary (C5), indicators (C8) | **ICHI** (International Classification of Health Interventions) for clinical and public-health interventions; **CDISAH / CDHI v2.0** (`library/9789240081949-eng`, `input/fsh/codesystems/CDHIv2.fsh`, `CDSCv2.fsh`) and **CDHI v1.0** (`library/who-rhr-1806-eng`, `CDHIv1.fsh`) for digital health interventions and system categories; **WHO UHC Intervention Compendium** for service packages | `input/fsh/codesystems/CDHIv2.fsh`, `CDHIv1.fsh`, `CDSCv2.fsh`, `CDSCv1.fsh`; `KGTerminologySystem` (`#ICHI`, `#SNOMEDCT`, `#LOINC`) |
-| **Persona / actor / occupational role** | L2 generic personas (C2), user-scenario `involves` edges (C3), BPMN swimlanes (C4) | **ISCO-08** (ILO International Standard Classification of Occupations) and **CDISAH / CDHI health-workforce categories** | Target guide's `personas.md` (`l1-scenario-vocabulary/v1`), then `smart-base` generic personas (`input/fsh/actors/*.fsh`, `DAK.Persona.*`, `input/fsh/codesystems/ISCO08.fsh`), then local [`glossary-terms`](../../folio-assistant-core/skills/library/library-core/glossary-terms.md) candidate |
+| **Persona / actor / occupational role** | L2 generic personas (C2), user-scenario `involves` edges (C3), BPMN swimlanes (C4) | **ISCO-08** (ILO International Standard Classification of Occupations) and **CDISAH / CDHI health-workforce categories** | Target guide's `personas.md` (`l1-scenario-vocabulary/v1`), then `smart-base` generic personas (`input/fsh/actors/*.fsh`, `DAK.Persona.*`, `input/fsh/codesystems/ISCO08.fsh`), then local [`glossary-terms`](../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md) candidate |
 | **Medicine / vaccine / health product** | L1 `recommendation.intervention`; L2 data dictionary (C5), scheduling logic (C7), product catalogues (`library/9789240116191-eng`) | **WHO ATC** (Anatomical Therapeutic Chemical classification) and **ICD-11** medicaments/vaccines extension | `KGTerminologySystem` (`#ATC`, `http://www.whocc.no/atc`); product-catalogue attributes per `library/9789240116191-eng` |
 | **Guideline / scenario domain** | L1 intake classification; L2 user-scenario `domain` property | **SMART Guideline domain scheme** (`clinical` \| `public-health` \| `health-system-strengthening`) | `folio-assistant-core/glossary/guideline-domain.glossary.json` (`folio-glossary/v1`, SKOS `ConceptScheme` `guideline-domain`, bean `398x`) |
 | **Business process** | L2 business processes (C4); `business-process realises user-scenario` edge | Target SMART Guideline's **C4 business process catalogue** (`business-processes.md`); domain process catalogue where published (bean `2ipj`) | `l1-scenario-vocabulary/v1` `processes[]`; `could-not-determine` with a structured warning when absent |
@@ -94,12 +94,12 @@ exact or well-scoped match**:
    [`vocabulary-authority`](../../cat-harness/skills/kg/kg-core/vocabulary-authority.md)
    and §1 above (`ICD-11`, `ICHI`, `CDHI`, `ISCO-08`, `ATC`, `SNOMED CT`,
    `LOINC`), recording the mapping predicate (`skos:exactMatch` or
-   `skos:closeMatch`) per [`ontologist`](../../folio-assistant-core/skills/kg/kg-core/ontologist.md).
-4. **Rung 4 — Local candidate or explicit third state (citing [`glossary-terms`](../../folio-assistant-core/skills/library/library-core/glossary-terms.md)).**
+   `skos:closeMatch`) per [`ontologist`](../../folio-assistant-core/skills/library/cataloguing/ontologist.md).
+4. **Rung 4 — Local candidate or explicit third state (citing [`glossary-terms`](../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md)).**
    When Rungs 1–3 hold no match:
    - **For a persona or domain concept:** mint a local glossary entry in
      `<instance>/glossary/<scheme>.glossary.json` following
-     [`glossary-terms`](../../folio-assistant-core/skills/library/library-core/glossary-terms.md)
+     [`glossary-terms`](../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md)
      with `status: "candidate"`, `source: "extracted"` (citing the `doc_id` and
      `section` / quote), and emit a `WARNING persona-glossary-candidate` (or
      term candidate warning). An agent may only write `status: "candidate"`;
@@ -155,7 +155,7 @@ back to the extraction curation so no guidance is silently dropped.
   scenario, the only valid value is `could-not-determine` with a warning.
 - **Never stretch a narrower code as `exactMatch`.** If a guide's persona or a
   code list entry covers only part of the concept, use `skos:closeMatch` (or
-  `skos:broadMatch` / `skos:narrowMatch` per [`ontologist`](../../folio-assistant-core/skills/kg/kg-core/ontologist.md))
+  `skos:broadMatch` / `skos:narrowMatch` per [`ontologist`](../../folio-assistant-core/skills/library/cataloguing/ontologist.md))
   or fall through to the next rung.
 - **Never self-approve a candidate term or an L1 exclusion.** An agent writes
   `status: "candidate"` on glossary terms and leaves `signedOffBy` absent on
