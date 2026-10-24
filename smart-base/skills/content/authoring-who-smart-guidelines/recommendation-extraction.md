@@ -254,7 +254,7 @@ Persona, business-process, and guideline-domain coding apply the
 [`terminology-coding`](../../../methodologies/terminology-coding.md) methodology
 (backed by [`classify-and-code-content`](classify-and-code-content.md), the
 [`terminology-lookup`](../../../tools/terminology-lookup/terminology-lookup.ts)
-Tool, and [`glossary-terms`](../../../../folio-assistant-core/skills/library/library-core/glossary-terms.md)):
+Tool, and [`glossary-terms`](../../../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md)):
 
 | what | 1st | 2nd | otherwise |
 |---|---|---|---|
