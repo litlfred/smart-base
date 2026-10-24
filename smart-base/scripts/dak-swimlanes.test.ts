@@ -3,6 +3,9 @@ import { crosswalk, lanesFrom, personaAnchor, personasFrom, personasMarkdown, pr
 
 const map: SwimlaneMap = {
   $schema: "dak-swimlanes/v1",
+  annexOf: "10665/380303",
+  label: "Web Annex B",
+  section: "dak#generic-business-processes-and-workflows",
   personas: { "Health worker (HW)": ["Health worker", "HW"], "Community health worker": ["CHW"], Client: [], Caregiver: [] },
   notPersonas: { Function: "header lane", "Vaccination location": "a pool", Community: "a pool" },
 };

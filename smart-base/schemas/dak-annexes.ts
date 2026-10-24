@@ -1,6 +1,9 @@
 /**
- * The two DAK annex formats the litlfred/smart-* IG sites carry beside their
- * artefact index, as Zod schemas a `folio-validator/v1` node can name.
+ * The two formats of the `web-annex` kind (`typologies/web-annex.json`): a WHO
+ * publication's web annexes, L1 or L2, held as data in the knowledge graph, as
+ * Zod schemas a `folio-validator/v1` node can name. Each node says which
+ * publication it is an annex OF, what WHO calls it, and which section of a
+ * document kind it serves ({@link WebAnnexOfShape}).
  *
  * - `dak-data-dictionary/v1`: a DAK's core data dictionary workbook as JSON,
  *   loaded on demand by the IG site's annex view
@@ -19,6 +22,31 @@ import { z } from "zod";
 import { nodeKind } from "../../cat-harness/schemas/node-kind.ts";
 
 export const DAK_DATA_DICTIONARY_SCHEMA = "dak-data-dictionary/v1";
+
+/** A library entry this checkout holds (`<instance>/library/<slug>`). */
+export const LIBRARY_ENTRY_REF = /^[a-z0-9][a-z0-9-]*\/library\/[^/\s]+$/;
+/** An IRIS handle (`10665/<n>`), WHO's repository identifier for a publication's record. */
+export const IRIS_HANDLE = /^10665\/[0-9]+$/;
+/** A section of a document kind: `<kind id>#<section id>`, as `smart-base/document-kinds/*.json` declare them. */
+export const DOCUMENT_KIND_SECTION_REF = /^[a-z0-9][a-z0-9-]*#[a-z0-9][a-z0-9-]*$/;
+
+/**
+ * What every web annex says about itself (owner, 2026-10-24: "web annex is a
+ * special WHO thing. associated to publications. not sure if they get own full
+ * IRIS record or not").
+ */
+export const WebAnnexOfShape = {
+  /** The parent publication: a library entry id when one is held, else the parent's IRIS handle. */
+  annexOf: z.string().refine((v) => LIBRARY_ENTRY_REF.test(v) || IRIS_HANDLE.test(v), {
+    message: "annexOf is a library entry (<instance>/library/<slug>) or an IRIS handle (10665/<n>)",
+  }),
+  /** What the publication calls it, e.g. "Web Annex A". */
+  label: z.string().min(1),
+  /** The annex's OWN IRIS handle, only when WHO gave it a record of its own; many are files on the parent's record. */
+  iris: z.string().regex(IRIS_HANDLE).optional(),
+  /** The document-kind section it belongs to, e.g. `dak#core-data-elements` or `l1#annexes`. */
+  section: z.string().regex(DOCUMENT_KIND_SECTION_REF),
+};
 export const DAK_SWIMLANES_SCHEMA = "dak-swimlanes/v1";
 
 /** One sheet of the workbook: its columns (stable key, header as written) and the rows that carry an id. */
@@ -36,6 +64,7 @@ export const DakAnnexSheetSchema = z
 export const DakDataDictionaryAnnexSchema = z
   .object({
     $schema: z.literal(DAK_DATA_DICTIONARY_SCHEMA),
+    ...WebAnnexOfShape,
     title: z.string().min(1),
     /** The workbook it was read from, and the sha256 of its bytes. */
     source: z.object({ label: z.string().min(1), sha256: z.string().regex(/^[0-9a-f]{64}$/) }).strict(),
@@ -50,6 +79,7 @@ export type DakAnnexSheet = z.infer<typeof DakAnnexSheetSchema>;
 export const DakSwimlaneMapSchema = z
   .object({
     $schema: z.literal(DAK_SWIMLANES_SCHEMA),
+    ...WebAnnexOfShape,
     /** Persona as named on the personas page -> the words a lane uses for it. */
     personas: z.record(z.string().min(1), z.array(z.string().min(1))),
     /** Lane words that are deliberately not personas -> why. */

@@ -194,7 +194,7 @@
     {
       "id": "smart-base-typologies",
       "path": "typologies/",
-      "description": "The graph typologies smart-base owns, one folio-graph-typology/v1 node per file (bean dmx1), as fhir-harness's typologies/ are. Today `dak-annex`: a DAK's web annexes beside an IG's artefact index, a kind of smart-base's own so the DAK formats are not listed on fhir-harness's `fhir-artifact-index`.",
+      "description": "The graph typologies smart-base owns, one folio-graph-typology/v1 node per file (bean dmx1), as fhir-harness's typologies/ are. Among them `web-annex` (formerly `dak-annex`): a WHO publication's web annexes, L1 or L2, held as data, a kind of smart-base's own because a web annex is a WHO concept fhir-harness may not name.",
       "graphTypologies": [
         "typologies"
       ]
@@ -202,7 +202,7 @@
     {
       "id": "smart-base-validators",
       "path": "validators/",
-      "description": "The validators smart-base's code provides, one folio-validator/v1 node each naming the graph typology and $schema family it checks, as fhir-harness's validators/ do (bean riit). Today the two families of the `dak-annex` kind (typologies/dak-annex.json): dak-data-dictionary/v1 and dak-swimlanes/v1 (schemas/dak-annexes.ts), unmapped until 2026-10-11 (check:kind-validators:require-all).",
+      "description": "The validators smart-base's code provides, one folio-validator/v1 node each naming the graph typology and $schema family it checks, as fhir-harness's validators/ do (bean riit). Today the two families of the `web-annex` kind (typologies/web-annex.json; `dak-annex` until 2026-10-24): dak-data-dictionary/v1 and dak-swimlanes/v1 (schemas/dak-annexes.ts), unmapped until 2026-10-11 (check:kind-validators:require-all).",
       "graphTypologies": [
         "validators"
       ]
