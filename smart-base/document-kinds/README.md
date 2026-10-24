@@ -13,7 +13,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-document-kinds
 
 | file | what it is | used by |
 |---|---|---|
-| [`dak.coverage.smart-base.json`](dak.coverage.smart-base.json) | data |  |
 | [`dak.json`](dak.json) | Digital Adaptation Kit (DAK) |  |
 | [`dth.json`](dth.json) | Digital Transformation Handbook (DTH) |  |
 | [`l1-guideline.json`](l1-guideline.json) | WHO guideline (L1) |  |
