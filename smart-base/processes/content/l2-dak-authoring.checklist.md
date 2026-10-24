@@ -26,15 +26,34 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 - Skill: `dak-l1-library`.
 - What: Ingest the DAK into the library; it is L2, so it gets no L1 graph.
 - Record it: `workflow_complete` with `node: "Task_L1Library"`.
-- next: → `Task_SeedBeans` (Seed the work plan)
+- next: → `Call_BeanOpen` (Open the bean)
 
-### 3. Seed the work plan (`Task_SeedBeans`)
+### 3. Open the bean (`Call_BeanOpen`)
+
+- Who: the `Work plan — beans (shared by humans and agents)` lane (role `work-plan`).
+- Skill: `bean-coordination`.
+- What: Process_BeanOpen: check before you create, find out whose the bean is, and claim it — or leave it alone when it is someone else's.
+- A subprocess (`Process_BeanOpen`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
+- next: → `GW_BeanYours` (Bean claimed?)
+
+### Decide — Bean claimed? (`GW_BeanYours`)
+
+- Reads which end Process_BeanOpen reached.
+- Call `workflow_complete` with `node: "GW_BeanYours"` and `outcome` set to the label that holds:
+  - «claimed» → `Task_SeedBeans` (Seed the work plan)
+  - «not yours» → `End_BeanNotYours` (Not yours — left alone)
+
+### 4. Seed the work plan (`Task_SeedBeans`)
 
 - Who: the `Work plan — beans (shared by humans and agents)` lane (role `work-plan`).
 - Skill: `todo-manager`.
 - What: Turn the scope into beans on the shared work plan — one per DAK component, since a DAK is completed component by component.
 - Record it: `workflow_complete` with `node: "Task_SeedBeans"`.
 - next: → `Gateway_AuthorMerge`
+
+## Done — Not yours — left alone (`End_BeanNotYours`)
+
+- The instance completes here: Someone else holds the bean; this run stops without touching it. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
 
 ### Merge — `Gateway_AuthorMerge`
 
@@ -46,7 +65,7 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 - Work every branch; none is optional. Branches: → `Task_Personas` (Personas and scenarios), → `Task_Bpmn` (Business processes · BPMN 2.0), → `Task_DataDict` (Data dictionary and core data elements), → `Task_Indicators` (Indicators and requirements), → `Task_Terminology` (Terminology bindings), → `Task_Dmn` (Decision logic · DMN tables)
 - The engine passes through this gateway itself; there is nothing to record here.
 
-### 4. Personas and scenarios (`Task_Personas`)
+### 5. Personas and scenarios (`Task_Personas`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `l2-dak-authoring`, `l2-component-edit-review`.
@@ -54,7 +73,7 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `Gateway_AuthorJoin`
 
-### 5. Business processes · BPMN 2.0 (`Task_Bpmn`)
+### 6. Business processes · BPMN 2.0 (`Task_Bpmn`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `bpmn-authoring`, `l2-component-edit-review`.
@@ -62,7 +81,7 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `Gateway_AuthorJoin`
 
-### 6. Data dictionary and core data elements (`Task_DataDict`)
+### 7. Data dictionary and core data elements (`Task_DataDict`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `l2-dak-authoring`, `l2-component-edit-review`.
@@ -70,7 +89,7 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `Gateway_AuthorJoin`
 
-### 7. Indicators and requirements (`Task_Indicators`)
+### 8. Indicators and requirements (`Task_Indicators`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `l2-dak-authoring`, `l2-component-edit-review`.
@@ -78,7 +97,7 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `Gateway_AuthorJoin`
 
-### 8. Terminology bindings (`Task_Terminology`)
+### 9. Terminology bindings (`Task_Terminology`)
 
 - Who: the `Terminologist` lane (role `terminologist`).
 - Skill: `terminology-management`, `l2-component-edit-review`.
@@ -86,7 +105,7 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `Gateway_AuthorJoin`
 
-### 9. Decision logic · DMN tables (`Task_Dmn`)
+### 10. Decision logic · DMN tables (`Task_Dmn`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `dmn-authoring`, `l2-component-edit-review`.
@@ -104,7 +123,7 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 - Work every branch; none is optional. Branches: → `Task_SmeValidate` (Clinical validation), → `Task_AssembleDak` (Assemble and validate the DAK)
 - The engine passes through this gateway itself; there is nothing to record here.
 
-### 10. Clinical validation (`Task_SmeValidate`)
+### 11. Clinical validation (`Task_SmeValidate`)
 
 - Who: the `Clinical SME` lane (role `clinical-sme`).
 - Skill: `content-review`.
@@ -112,20 +131,36 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 - Record it: `workflow_complete` with `node: "Task_SmeValidate"`.
 - next: → `Gateway_Accurate` (Clinically accurate?)
 
-### 11. Assemble and validate the DAK (`Task_AssembleDak`)
+### 12. Assemble and validate the DAK (`Task_AssembleDak`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `content-validate`.
 - What: Assemble the validated components and run content validation: schemas, cross-component consistency and terminology bindings.
 - Record it: `workflow_complete` with `node: "Task_AssembleDak"`.
-- next: → `EndEvent_L2Ready` (L2 DAK ready for L3)
+- next: → `Call_BeanClose` (Close the bean)
 
 ### Decide — Clinically accurate? (`Gateway_Accurate`)
 
 - The clinical validator's result.
 - Call `workflow_complete` with `node: "Gateway_Accurate"` and `outcome` set to the label that holds:
   - «changes needed» → `Gateway_AuthorMerge`
-  - «validated» → `EndEvent_Validated` (Clinically validated)
+  - «validated» → `Call_BeanClose_2` (Close the bean)
+
+### 13. Close the bean (`Call_BeanClose`)
+
+- Who: the `Business analyst` lane (role `business-analyst`).
+- Skill: `todo-manager`.
+- What: Process_BeanClose: end the bean in a state that says why — complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back.
+- A subprocess (`Process_BeanClose`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
+- next: → `EndEvent_L2Ready` (L2 DAK ready for L3)
+
+### 14. Close the bean (`Call_BeanClose_2`)
+
+- Who: the `Clinical SME` lane (role `clinical-sme`).
+- Skill: `todo-manager`.
+- What: Process_BeanClose: end the bean in a state that says why — complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back.
+- A subprocess (`Process_BeanClose`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
+- next: → `EndEvent_Validated` (Clinically validated)
 
 ## Done — L2 DAK ready for L3 (`EndEvent_L2Ready`)
 
