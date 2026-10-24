@@ -9,7 +9,6 @@ import { join } from "node:path";
 
 import { DAK_COMPONENTS, DAK_COMPONENT_FIELDS, DAK_UNFORMALIZED_COMPONENTS } from "./dak-kinds";
 import {
-  DAK_COMPONENT_SOURCE_KEYS,
   DAK_MARKER_FILENAME,
   DAK_TYPE,
   DakDeclarationSchema,
