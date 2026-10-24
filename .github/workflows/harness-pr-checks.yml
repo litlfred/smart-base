@@ -23,3 +23,8 @@ jobs:
       draft-fast-tier: true
       # The instance is a sub-directory of this repository, not its root.
       path-in-repo: smart-base
+      # cat-harness-tools at main, not the index lock's pin: the lock's pin can lag
+      # a QA_WRITERS change this instance needs (cat-harness-tools#701 claims every
+      # instance's test/results/witnesses/**; the pin 5cc9b5e predates it). As
+      # fhir-harness does.
+      layers-at-main: cat-harness-tools
