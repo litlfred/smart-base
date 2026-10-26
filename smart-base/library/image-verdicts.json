@@ -1017,6 +1017,61 @@
         },
         "inspected_at": "2026-10-03"
       }
+    },
+    "9789241549912-eng": {
+      "img-p001-1": {
+        "role": "decorative",
+        "saw": "an ISBN barcode reading 9 789241 549912, judged from the embedded JPEG (the PNG was not written: pdf-images.py could not encode its Separation(DeviceCMYK,Black) colourspace). PDF page 1 is a cover spread whose crop box shows only the front cover; the barcode is placed at x = -188, outside that crop box, i.e. on the back-cover half",
+        "draft": "The back-cover ISBN barcode for 9789241549912."
+      },
+      "img-p172-1": {
+        "role": "decorative",
+        "saw": "an ISBN barcode reading 9 789241 549912 on the back cover, judged from the embedded JPEG (the PNG was not written: pdf-images.py could not encode its Separation(DeviceCMYK,Black) colourspace)",
+        "draft": "The back-cover ISBN barcode for 9789241549912."
+      }
+    },
+    "9789241549912-webannexes-eng": {
+      "img-p024-1": {
+        "role": "decorative",
+        "saw": "an ISBN barcode reading 9 789241 549912 on the last page",
+        "draft": "The back-cover ISBN barcode for 9789241549912."
+      }
+    },
+    "9789241549912-websupplement-eng": {
+      "img-p129-1": {
+        "role": "decorative",
+        "saw": "an ISBN barcode reading 9 789241 549912 on the last page",
+        "draft": "The back-cover ISBN barcode for 9789241549912."
+      }
+    }
+  },
+  "attribution": {
+    "9789241549912-eng": {
+      "inspected_by": {
+        "kind": "agent",
+        "id": "claude",
+        "model": "claude-opus-5-5",
+        "session": "https://claude.ai/code/session_013ZJ1uYnvBifNcPaVPVJbUS"
+      },
+      "inspected_at": "2026-10-26"
+    },
+    "9789241549912-webannexes-eng": {
+      "inspected_by": {
+        "kind": "agent",
+        "id": "claude",
+        "model": "claude-opus-5-5",
+        "session": "https://claude.ai/code/session_013ZJ1uYnvBifNcPaVPVJbUS"
+      },
+      "inspected_at": "2026-10-26"
+    },
+    "9789241549912-websupplement-eng": {
+      "inspected_by": {
+        "kind": "agent",
+        "id": "claude",
+        "model": "claude-opus-5-5",
+        "session": "https://claude.ai/code/session_013ZJ1uYnvBifNcPaVPVJbUS"
+      },
+      "inspected_at": "2026-10-26"
     }
   }
 }
