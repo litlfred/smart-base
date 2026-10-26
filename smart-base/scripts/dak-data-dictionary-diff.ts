@@ -24,7 +24,7 @@
  * ## What it does not judge
  *
  * Whether a change is right. That is the reviewer's call. Whether ids are
- * unique and references resolve is `check-dak-annexes.ts`, the glossary
+ * unique and references resolve is `check-web-annexes.ts`, the glossary
  * checker that runs beside this diff in the same subprocess. A duplicated id
  * in either input is refused here (exit 2), not diffed, because "which row
  * is IMMZ.C.DE.1" would have two answers.

@@ -13,6 +13,8 @@ description: >
   for personas and processes, the WARNING format, and sign-off.
 input: schemas/skills/recommendation-extraction/input.schema.json
 output: schemas/skills/recommendation-extraction/output.schema.json
+uses-methodology:
+  - terminology-coding
 ---
 
 # recommendation-extraction
@@ -187,8 +189,11 @@ the graph with `smart-base/kg/src/validate.ts`. It writes `recommendation-candid
 "l1-extraction-reviewer"}`. The role is declared in
 `smart-base/scenarios/roles.json` (title *L1 extraction reviewer*, a person,
 inheriting the harness's `reviewer`). The record stays unsigned — no
-`signedOffBy` — until a person acting in that role signs it; the skills and
-processes that equip the role are bean `4nfs`.
+`signedOffBy` — until a person acting in that role reads the sentence in place
+against the printed page and signs it in `Lane_ExtractionReviewer` of
+[`classify-and-code-content.bpmn`](../../../processes/content/classify-and-code-content.bpmn)
+following [`classify-and-code-content`](classify-and-code-content.md) and
+[`terminology-coding`](../../../methodologies/terminology-coding.md) (bean `4nfs`).
 
 **Provenance.** Each run of either tool writes a cat-harness
 `folio-run-context/v1` (`schemas/run-context.ts`) as `run-context.json`
@@ -244,6 +249,12 @@ Each link records its **source**, as an intake `classifications` entry does
 and a **status**: `candidate` until a person reviews the entry.
 
 ### Reuse first, stop at the first hit (D4)
+
+Persona, business-process, and guideline-domain coding apply the
+[`terminology-coding`](../../../methodologies/terminology-coding.md) methodology
+(backed by [`classify-and-code-content`](classify-and-code-content.md), the
+[`terminology-lookup`](../../../tools/terminology-lookup/terminology-lookup.ts)
+Tool, and [`glossary-terms`](../../../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md)):
 
 | what | 1st | 2nd | otherwise |
 |---|---|---|---|

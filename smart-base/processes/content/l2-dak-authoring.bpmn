@@ -51,6 +51,9 @@
         <bpmn:documentation>A single claim made once, right after scoping and before the parallel fork. Unlike the per-edit lifecycle in editing-hci-validation, this diagram seeds one bean for the whole DAK and never returns here to log or resolve it, so tracking any one track's own progress is not this lane's concern.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="work-plan"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Task_SeedBeans</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Call_BeanOpen</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GW_BeanYours</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_BeanNotYours</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_Analyst" name="Business analyst">
         <bpmn:documentation>Opens the parallel fork into six authoring tracks — five landing here, the sixth (terminology) crossing into a separate lane — and re-enters that same fork whenever clinical validation sends work back, so a fix after Gateway_Accurate revisits every track it is entangled with rather than patching only the one SME flagged. Performs the assemble-and-validate in parallel with clinical validation, not after it (owner, 2026-10-14: adjudication is QA, not a gate), and again after any rework. Before any of that, and before the work plan is seeded, builds the DAK's L1 library from what its Component 1 cites, so every track starts with the guidance it operationalises already in the library and in the L1 graph.</bpmn:documentation>
@@ -67,6 +70,7 @@
         <bpmn:flowNodeRef>Gateway_ReviewFork</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_AssembleDak</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>EndEvent_L2Ready</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Call_BeanClose</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_Terminologist" name="Terminologist">
         <bpmn:documentation>One parallel branch of the fork, producing bindings the other five tracks cite rather than author themselves, and calling the same edit-and-review subprocess as they do, with a different terminologist as its reviewer. Kept a separate lane rather than folded into the analyst's because governance of a code binding is deliberately independent of the artefact that cites it.</bpmn:documentation>
@@ -79,6 +83,7 @@
         <bpmn:flowNodeRef>Task_SmeValidate</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_Accurate</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>EndEvent_Validated</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Call_BeanClose_2</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:startEvent id="StartEvent_Guideline" name="WHO guideline / recommendations">
@@ -104,10 +109,10 @@
       <bpmn:documentation>Turn the scope into beans on the shared work plan — one per DAK component, since a DAK is completed component by component. beans create is not idempotent: check for an existing bean before every create, or a re-run duplicates the plan.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
-        <cat-harness.processes:bean op="claim" />
+        <cat-harness.processes:bean op="note"/>
       </bpmn:extensionElements>
-      <bpmn:incoming>B22</bpmn:incoming>
       <bpmn:outgoing>B03</bpmn:outgoing>
+      <bpmn:incoming>SF_Bean_1</bpmn:incoming>
     </bpmn:task>
     <bpmn:exclusiveGateway id="Gateway_AuthorMerge" name="">
       <bpmn:incoming>B03</bpmn:incoming>
@@ -216,14 +221,42 @@
     </bpmn:userTask>
     <bpmn:endEvent id="EndEvent_Validated" name="Clinically validated">
       <bpmn:documentation>The SME's adjudication is recorded. The process instance completes only when this and EndEvent_L2Ready have both been reached.</bpmn:documentation>
-      <bpmn:incoming>B20</bpmn:incoming>
+      <bpmn:incoming>SF_Bean_5</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:endEvent id="EndEvent_L2Ready" name="L2 DAK ready for L3">
-      <bpmn:incoming>B21</bpmn:incoming>
+      <bpmn:incoming>SF_Bean_4</bpmn:incoming>
     </bpmn:endEvent>
+    <bpmn:callActivity id="Call_BeanOpen" name="Open the bean&#10;[bean-open]" calledElement="Process_BeanOpen">
+      <bpmn:documentation>Process_BeanOpen: check before you create, find out whose the bean is, and claim it — or leave it alone when it is someone else's. The one place a claim is drawn (bean m8gz, owner 2026-10-24); the gateway after this reads which end it reached.</bpmn:documentation>
+      <bpmn:extensionElements><bootstrap.processes:skill ref="bean-coordination"/></bpmn:extensionElements>
+      <bpmn:incoming>B22</bpmn:incoming>
+      <bpmn:outgoing>SF_Bean_2</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:exclusiveGateway id="GW_BeanYours" name="Bean claimed?">
+      <bpmn:documentation>Reads which end Process_BeanOpen reached. `claimed`: the bean is in progress and this process works it. `not yours`: a sibling session or a human holds it, nothing was written to it, and this process stops here rather than work a bean it does not own (bean-coordination).</bpmn:documentation>
+      <bpmn:outgoing>SF_Bean_1</bpmn:outgoing>
+      <bpmn:incoming>SF_Bean_2</bpmn:incoming>
+      <bpmn:outgoing>SF_Bean_3</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="End_BeanNotYours" name="Not yours —&#10;left alone">
+      <bpmn:documentation>Someone else holds the bean; this run stops without touching it.</bpmn:documentation>
+      <bpmn:incoming>SF_Bean_3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:callActivity id="Call_BeanClose" name="Close the bean&#10;[bean-close]" calledElement="Process_BeanClose">
+      <bpmn:documentation>Process_BeanClose: end the bean in a state that says why — complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back. The one place resolve and archive are drawn (bean m8gz, owner 2026-10-24); placed straight before the end so the engine's resolve sees nothing left but the archive step.</bpmn:documentation>
+      <bpmn:extensionElements><bootstrap.processes:skill ref="todo-manager"/></bpmn:extensionElements>
+      <bpmn:incoming>B21</bpmn:incoming>
+      <bpmn:outgoing>SF_Bean_4</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:callActivity id="Call_BeanClose_2" name="Close the bean&#10;[bean-close]" calledElement="Process_BeanClose">
+      <bpmn:documentation>Process_BeanClose: end the bean in a state that says why — complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back. The one place resolve and archive are drawn (bean m8gz, owner 2026-10-24); placed straight before the end so the engine's resolve sees nothing left but the archive step.</bpmn:documentation>
+      <bpmn:extensionElements><bootstrap.processes:skill ref="todo-manager"/></bpmn:extensionElements>
+      <bpmn:incoming>B20</bpmn:incoming>
+      <bpmn:outgoing>SF_Bean_5</bpmn:outgoing>
+    </bpmn:callActivity>
     <bpmn:sequenceFlow id="B01" sourceRef="StartEvent_Guideline" targetRef="Task_ScopeDak" />
     <bpmn:sequenceFlow id="B02" sourceRef="Task_ScopeDak" targetRef="Task_L1Library" />
-    <bpmn:sequenceFlow id="B22" sourceRef="Task_L1Library" targetRef="Task_SeedBeans" />
+    <bpmn:sequenceFlow id="B22" sourceRef="Task_L1Library" targetRef="Call_BeanOpen" />
     <bpmn:sequenceFlow id="B03" sourceRef="Task_SeedBeans" targetRef="Gateway_AuthorMerge" />
     <bpmn:sequenceFlow id="B04" sourceRef="Gateway_AuthorMerge" targetRef="Gateway_AuthorFork" />
     <bpmn:sequenceFlow id="B05" sourceRef="Gateway_AuthorFork" targetRef="Task_Personas" />
@@ -243,28 +276,33 @@
     <bpmn:sequenceFlow id="B24" sourceRef="Gateway_ReviewFork" targetRef="Task_AssembleDak" />
     <bpmn:sequenceFlow id="B18" sourceRef="Task_SmeValidate" targetRef="Gateway_Accurate" />
     <bpmn:sequenceFlow id="B19" name="changes needed" sourceRef="Gateway_Accurate" targetRef="Gateway_AuthorMerge" />
-    <bpmn:sequenceFlow id="B20" name="validated" sourceRef="Gateway_Accurate" targetRef="EndEvent_Validated" />
-    <bpmn:sequenceFlow id="B21" sourceRef="Task_AssembleDak" targetRef="EndEvent_L2Ready" />
+    <bpmn:sequenceFlow id="B20" name="validated" sourceRef="Gateway_Accurate" targetRef="Call_BeanClose_2" />
+    <bpmn:sequenceFlow id="B21" sourceRef="Task_AssembleDak" targetRef="Call_BeanClose" />
+    <bpmn:sequenceFlow id="SF_Bean_1" name="claimed" sourceRef="GW_BeanYours" targetRef="Task_SeedBeans"/>
+    <bpmn:sequenceFlow id="SF_Bean_2" sourceRef="Call_BeanOpen" targetRef="GW_BeanYours"/>
+    <bpmn:sequenceFlow id="SF_Bean_3" name="not yours" sourceRef="GW_BeanYours" targetRef="End_BeanNotYours"/>
+    <bpmn:sequenceFlow id="SF_Bean_4" sourceRef="Call_BeanClose" targetRef="EndEvent_L2Ready"/>
+    <bpmn:sequenceFlow id="SF_Bean_5" sourceRef="Call_BeanClose_2" targetRef="EndEvent_Validated"/>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_L2Dak">
       <bpmndi:BPMNShape id="Participant_L2Dak_di" bpmnElement="Participant_L2Dak" isHorizontal="true">
-        <dc:Bounds x="160" y="80" width="1820" height="1210" />
+        <dc:Bounds x="160" y="80" width="2260" height="1210" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_Programme_di" bpmnElement="Lane_Programme" isHorizontal="true">
-        <dc:Bounds x="190" y="80" width="1790" height="150" />
+        <dc:Bounds x="190" y="80" width="2230" height="150" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_WorkPlan_di" bpmnElement="Lane_WorkPlan" isHorizontal="true">
-        <dc:Bounds x="190" y="230" width="1790" height="150" />
+        <dc:Bounds x="190" y="230" width="2230" height="150" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_Analyst_di" bpmnElement="Lane_Analyst" isHorizontal="true">
-        <dc:Bounds x="190" y="380" width="1790" height="550" />
+        <dc:Bounds x="190" y="380" width="2230" height="550" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_Terminologist_di" bpmnElement="Lane_Terminologist" isHorizontal="true">
-        <dc:Bounds x="190" y="930" width="1790" height="150" />
+        <dc:Bounds x="190" y="930" width="2230" height="150" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_Sme_di" bpmnElement="Lane_Sme" isHorizontal="true">
-        <dc:Bounds x="190" y="1080" width="1790" height="210" />
+        <dc:Bounds x="190" y="1080" width="2230" height="210" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="StartEvent_Guideline_di" bpmnElement="StartEvent_Guideline">
         <dc:Bounds x="262" y="137" width="36" height="36" />
@@ -279,60 +317,60 @@
         <dc:Bounds x="375" y="420" width="130" height="90" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_SeedBeans_di" bpmnElement="Task_SeedBeans">
-        <dc:Bounds x="535" y="260" width="130" height="90" />
+        <dc:Bounds x="815" y="260" width="130" height="90" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_AuthorMerge_di" bpmnElement="Gateway_AuthorMerge" isMarkerVisible="true">
-        <dc:Bounds x="735" y="630" width="50" height="50" />
+        <dc:Bounds x="1015" y="630" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_AuthorFork_di" bpmnElement="Gateway_AuthorFork">
-        <dc:Bounds x="895" y="630" width="50" height="50" />
+        <dc:Bounds x="1175" y="630" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_Personas_di" bpmnElement="Task_Personas">
-        <dc:Bounds x="1015" y="390" width="130" height="90" />
+        <dc:Bounds x="1295" y="390" width="130" height="90" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_Bpmn_di" bpmnElement="Task_Bpmn">
-        <dc:Bounds x="1015" y="500" width="130" height="90" />
+        <dc:Bounds x="1295" y="500" width="130" height="90" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_Dmn_di" bpmnElement="Task_Dmn">
-        <dc:Bounds x="1015" y="610" width="130" height="90" />
+        <dc:Bounds x="1295" y="610" width="130" height="90" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_DataDict_di" bpmnElement="Task_DataDict">
-        <dc:Bounds x="1015" y="720" width="130" height="90" />
+        <dc:Bounds x="1295" y="720" width="130" height="90" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_Indicators_di" bpmnElement="Task_Indicators">
-        <dc:Bounds x="1015" y="830" width="130" height="90" />
+        <dc:Bounds x="1295" y="830" width="130" height="90" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_Terminology_di" bpmnElement="Task_Terminology">
-        <dc:Bounds x="1015" y="960" width="130" height="90" />
+        <dc:Bounds x="1295" y="960" width="130" height="90" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_AuthorJoin_di" bpmnElement="Gateway_AuthorJoin">
-        <dc:Bounds x="1215" y="630" width="50" height="50" />
+        <dc:Bounds x="1495" y="630" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_ReviewFork_di" bpmnElement="Gateway_ReviewFork">
-        <dc:Bounds x="1375" y="630" width="50" height="50" />
+        <dc:Bounds x="1655" y="630" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="EndEvent_Validated_di" bpmnElement="EndEvent_Validated">
-        <dc:Bounds x="1702" y="1137" width="36" height="36" />
+        <dc:Bounds x="2142" y="1137" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1665" y="1177" width="110" height="30" />
+          <dc:Bounds x="2105" y="1177" width="110" height="30" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_SmeValidate_di" bpmnElement="Task_SmeValidate">
-        <dc:Bounds x="1335" y="1110" width="130" height="90" />
+        <dc:Bounds x="1615" y="1110" width="130" height="90" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_Accurate_di" bpmnElement="Gateway_Accurate" isMarkerVisible="true">
-        <dc:Bounds x="1535" y="1130" width="50" height="50" />
+        <dc:Bounds x="1815" y="1130" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1500" y="1100" width="120" height="20" />
+          <dc:Bounds x="1780" y="1100" width="120" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_AssembleDak_di" bpmnElement="Task_AssembleDak">
-        <dc:Bounds x="1655" y="610" width="130" height="90" />
+        <dc:Bounds x="1935" y="610" width="130" height="90" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="EndEvent_L2Ready_di" bpmnElement="EndEvent_L2Ready">
-        <dc:Bounds x="1862" y="637" width="36" height="36" />
+        <dc:Bounds x="2302" y="637" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1825" y="677" width="110" height="30" />
+          <dc:Bounds x="2265" y="677" width="110" height="30" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="B01_di" bpmnElement="B01">
@@ -343,114 +381,113 @@
         <di:waypoint x="440" y="200" />
         <di:waypoint x="440" y="420" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="B22_di" bpmnElement="B22">
-        <di:waypoint x="505" y="465" />
-        <di:waypoint x="600" y="465" />
-        <di:waypoint x="600" y="350" />
-      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="B22_di" bpmnElement="B22"><di:waypoint x="505" y="465"/><di:waypoint x="515" y="465"/><di:waypoint x="515" y="305"/><di:waypoint x="535" y="305"/></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B03_di" bpmnElement="B03">
-        <di:waypoint x="665" y="305" />
-        <di:waypoint x="775" y="305" />
-        <di:waypoint x="775" y="630" />
+        <di:waypoint x="945" y="305" />
+        <di:waypoint x="1055" y="305" />
+        <di:waypoint x="1055" y="630" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B04_di" bpmnElement="B04">
-        <di:waypoint x="785" y="655" />
-        <di:waypoint x="895" y="655" />
+        <di:waypoint x="1065" y="655" />
+        <di:waypoint x="1175" y="655" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B05_di" bpmnElement="B05">
-        <di:waypoint x="920" y="630" />
-        <di:waypoint x="920" y="435" />
-        <di:waypoint x="1015" y="435" />
+        <di:waypoint x="1200" y="630" />
+        <di:waypoint x="1200" y="435" />
+        <di:waypoint x="1295" y="435" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B06_di" bpmnElement="B06">
-        <di:waypoint x="920" y="630" />
-        <di:waypoint x="920" y="545" />
-        <di:waypoint x="1015" y="545" />
+        <di:waypoint x="1200" y="630" />
+        <di:waypoint x="1200" y="545" />
+        <di:waypoint x="1295" y="545" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B08_di" bpmnElement="B08">
-        <di:waypoint x="920" y="680" />
-        <di:waypoint x="920" y="765" />
-        <di:waypoint x="1015" y="765" />
+        <di:waypoint x="1200" y="680" />
+        <di:waypoint x="1200" y="765" />
+        <di:waypoint x="1295" y="765" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B09_di" bpmnElement="B09">
-        <di:waypoint x="920" y="680" />
-        <di:waypoint x="920" y="875" />
-        <di:waypoint x="1015" y="875" />
+        <di:waypoint x="1200" y="680" />
+        <di:waypoint x="1200" y="875" />
+        <di:waypoint x="1295" y="875" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B10_di" bpmnElement="B10">
-        <di:waypoint x="920" y="680" />
-        <di:waypoint x="920" y="1005" />
-        <di:waypoint x="1015" y="1005" />
+        <di:waypoint x="1200" y="680" />
+        <di:waypoint x="1200" y="1005" />
+        <di:waypoint x="1295" y="1005" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B07_di" bpmnElement="B07">
-        <di:waypoint x="945" y="655" />
-        <di:waypoint x="1015" y="655" />
+        <di:waypoint x="1225" y="655" />
+        <di:waypoint x="1295" y="655" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B11_di" bpmnElement="B11">
-        <di:waypoint x="1145" y="435" />
-        <di:waypoint x="1240" y="435" />
-        <di:waypoint x="1240" y="630" />
+        <di:waypoint x="1425" y="435" />
+        <di:waypoint x="1520" y="435" />
+        <di:waypoint x="1520" y="630" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B12_di" bpmnElement="B12">
-        <di:waypoint x="1145" y="545" />
-        <di:waypoint x="1240" y="545" />
-        <di:waypoint x="1240" y="630" />
+        <di:waypoint x="1425" y="545" />
+        <di:waypoint x="1520" y="545" />
+        <di:waypoint x="1520" y="630" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B14_di" bpmnElement="B14">
-        <di:waypoint x="1145" y="765" />
-        <di:waypoint x="1240" y="765" />
-        <di:waypoint x="1240" y="680" />
+        <di:waypoint x="1425" y="765" />
+        <di:waypoint x="1520" y="765" />
+        <di:waypoint x="1520" y="680" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B15_di" bpmnElement="B15">
-        <di:waypoint x="1145" y="875" />
-        <di:waypoint x="1240" y="875" />
-        <di:waypoint x="1240" y="680" />
+        <di:waypoint x="1425" y="875" />
+        <di:waypoint x="1520" y="875" />
+        <di:waypoint x="1520" y="680" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B16_di" bpmnElement="B16">
-        <di:waypoint x="1145" y="1005" />
-        <di:waypoint x="1240" y="1005" />
-        <di:waypoint x="1240" y="680" />
+        <di:waypoint x="1425" y="1005" />
+        <di:waypoint x="1520" y="1005" />
+        <di:waypoint x="1520" y="680" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B13_di" bpmnElement="B13">
-        <di:waypoint x="1145" y="655" />
-        <di:waypoint x="1215" y="655" />
+        <di:waypoint x="1425" y="655" />
+        <di:waypoint x="1495" y="655" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B17_di" bpmnElement="B17">
-        <di:waypoint x="1265" y="655" />
-        <di:waypoint x="1375" y="655" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="B23_di" bpmnElement="B23">
-        <di:waypoint x="1400" y="680" />
-        <di:waypoint x="1400" y="1110" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="B24_di" bpmnElement="B24">
-        <di:waypoint x="1425" y="655" />
+        <di:waypoint x="1545" y="655" />
         <di:waypoint x="1655" y="655" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="B23_di" bpmnElement="B23">
+        <di:waypoint x="1680" y="680" />
+        <di:waypoint x="1680" y="1110" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="B24_di" bpmnElement="B24">
+        <di:waypoint x="1705" y="655" />
+        <di:waypoint x="1935" y="655" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B18_di" bpmnElement="B18">
-        <di:waypoint x="1465" y="1155" />
-        <di:waypoint x="1535" y="1155" />
+        <di:waypoint x="1745" y="1155" />
+        <di:waypoint x="1815" y="1155" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B19_di" bpmnElement="B19">
-        <di:waypoint x="1560" y="1180" />
-        <di:waypoint x="1560" y="1245" />
-        <di:waypoint x="760" y="1245" />
-        <di:waypoint x="760" y="680" />
+        <di:waypoint x="1840" y="1180" />
+        <di:waypoint x="1840" y="1245" />
+        <di:waypoint x="1040" y="1245" />
+        <di:waypoint x="1040" y="680" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1105" y="1252" width="110" height="20" />
+          <dc:Bounds x="1385" y="1252" width="110" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="B20_di" bpmnElement="B20">
-        <di:waypoint x="1585" y="1155" />
-        <di:waypoint x="1702" y="1155" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1600" y="1122" width="70" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="B21_di" bpmnElement="B21">
-        <di:waypoint x="1785" y="655" />
-        <di:waypoint x="1862" y="655" />
-      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="B20_di" bpmnElement="B20"><di:waypoint x="1865" y="1155"/><di:waypoint x="1982" y="1155"/><bpmndi:BPMNLabel>
+          <dc:Bounds x="1880" y="1122" width="70" height="27" />
+        </bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="B21_di" bpmnElement="B21"><di:waypoint x="2065" y="655"/><di:waypoint x="2142" y="655"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Call_BeanOpen_di" bpmnElement="Call_BeanOpen"><dc:Bounds x="535" y="265" width="120" height="80"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SF_Bean_1_di" bpmnElement="SF_Bean_1"><di:waypoint x="735" y="305"/><di:waypoint x="815" y="305"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="GW_BeanYours_di" bpmnElement="GW_BeanYours" isMarkerVisible="true"><dc:Bounds x="685" y="280" width="50" height="50"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="End_BeanNotYours_di" bpmnElement="End_BeanNotYours"><dc:Bounds x="692" y="214" width="36" height="36"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SF_Bean_2_di" bpmnElement="SF_Bean_2"><di:waypoint x="655" y="305"/><di:waypoint x="685" y="305"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SF_Bean_3_di" bpmnElement="SF_Bean_3"><di:waypoint x="710" y="280"/><di:waypoint x="710" y="250"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Call_BeanClose_di" bpmnElement="Call_BeanClose"><dc:Bounds x="2142" y="615" width="120" height="80"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SF_Bean_4_di" bpmnElement="SF_Bean_4"><di:waypoint x="2262" y="655"/><di:waypoint x="2302" y="655"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Call_BeanClose_2_di" bpmnElement="Call_BeanClose_2"><dc:Bounds x="1982" y="1115" width="120" height="80"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SF_Bean_5_di" bpmnElement="SF_Bean_5"><di:waypoint x="2102" y="1155"/><di:waypoint x="2142" y="1155"/></bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
