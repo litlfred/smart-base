@@ -3,73 +3,73 @@
   "entry": "mehl-2021-who-smart-guidelines",
   "corpus": {
     "library": "smart-base/library",
-    "sections": 839,
-    "terms": 7506,
+    "sections": 973,
+    "terms": 8571,
     "weighting": "log-entropy"
   },
   "document": [
     {
       "term": "guideline recommendations",
-      "score": 2.8017,
+      "score": 2.4622,
       "evidence": [
         "heading"
       ]
     },
     {
       "term": "readable recommendations",
-      "score": 2.6261,
+      "score": 2.3673,
       "evidence": []
     },
     {
       "term": "smart guideline",
-      "score": 2.3871,
+      "score": 2.3491,
       "evidence": [
         "heading"
       ]
     },
     {
-      "term": "machine-readable recommendations",
-      "score": 2.3257,
-      "evidence": []
-    },
-    {
       "term": "adaptation kits",
-      "score": 2.1438,
-      "evidence": []
-    },
-    {
-      "term": "care recommendations",
-      "score": 2.1369,
-      "evidence": []
-    },
-    {
-      "term": "knowledge layers",
-      "score": 2.1027,
+      "score": 2.1689,
       "evidence": []
     },
     {
       "term": "anc fhir",
-      "score": 2.0974,
+      "score": 2.1244,
       "evidence": []
     },
     {
       "term": "machine readable",
-      "score": 2.0952,
+      "score": 2.1168,
       "evidence": []
     },
     {
-      "term": "enhanced guidelines",
-      "score": 2.0513,
+      "term": "knowledge layers",
+      "score": 2.1114,
+      "evidence": []
+    },
+    {
+      "term": "machine-readable recommendations",
+      "score": 2.0694,
       "evidence": []
     },
     {
       "term": "digit med",
-      "score": 1.9944,
+      "score": 2.0427,
+      "evidence": []
+    },
+    {
+      "term": "enhanced guidelines",
+      "score": 2.0392,
+      "evidence": []
+    },
+    {
+      "term": "comment www",
+      "score": 2.0187,
       "evidence": []
     },
     {
       "term": "npj digit",
-      "score": 1.9895,
+      "score": 1.994,
       "evidence": []
     }
   ],
@@ -77,46 +77,46 @@
     "sec-000-who-smart-guidelines-optimising-country-level-us": [
       {
         "term": "guideline recommendations",
-        "score": 5.6033,
+        "score": 4.9245,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "smart guideline",
-        "score": 4.7742,
+        "score": 4.6983,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "readable recommendations",
-        "score": 2.6261,
-        "evidence": []
-      },
-      {
-        "term": "machine-readable recommendations",
-        "score": 2.3257,
+        "score": 2.3673,
         "evidence": []
       },
       {
         "term": "adaptation kits",
-        "score": 2.1438,
-        "evidence": []
-      },
-      {
-        "term": "care recommendations",
-        "score": 2.1369,
-        "evidence": []
-      },
-      {
-        "term": "knowledge layers",
-        "score": 2.1027,
+        "score": 2.1689,
         "evidence": []
       },
       {
         "term": "anc fhir",
-        "score": 2.0974,
+        "score": 2.1244,
+        "evidence": []
+      },
+      {
+        "term": "machine readable",
+        "score": 2.1168,
+        "evidence": []
+      },
+      {
+        "term": "knowledge layers",
+        "score": 2.1114,
+        "evidence": []
+      },
+      {
+        "term": "machine-readable recommendations",
+        "score": 2.0694,
         "evidence": []
       }
     ]

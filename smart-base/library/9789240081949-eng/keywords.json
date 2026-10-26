@@ -3,69 +3,69 @@
   "entry": "9789240081949-eng",
   "corpus": {
     "library": "smart-base/library",
-    "sections": 839,
-    "terms": 7506,
+    "sections": 973,
+    "terms": 8571,
     "weighting": "log-entropy"
   },
   "document": [
     {
       "term": "healthcare providers",
-      "score": 43.8252,
+      "score": 47.772,
       "evidence": []
     },
     {
       "term": "persons page",
-      "score": 39.666,
+      "score": 40.7915,
       "evidence": []
     },
     {
       "term": "management services",
-      "score": 34.2695,
+      "score": 36.5063,
       "evidence": []
     },
     {
       "term": "services applications",
-      "score": 32.9788,
+      "score": 35.3046,
       "evidence": []
     },
     {
       "term": "healthcare worker",
-      "score": 31.6434,
+      "score": 32.5304,
       "evidence": []
     },
     {
       "term": "enable healthcare",
-      "score": 28.4431,
-      "evidence": []
-    },
-    {
-      "term": "schedule healthcare",
-      "score": 28.0335,
+      "score": 29.3159,
       "evidence": []
     },
     {
       "term": "support personnel",
-      "score": 27.5605,
+      "score": 28.9379,
+      "evidence": []
+    },
+    {
+      "term": "schedule healthcare",
+      "score": 28.8265,
+      "evidence": []
+    },
+    {
+      "term": "information management",
+      "score": 28.5654,
       "evidence": []
     },
     {
       "term": "screen persons",
-      "score": 27.4341,
-      "evidence": []
-    },
-    {
-      "term": "identify persons",
-      "score": 26.5695,
+      "score": 27.964,
       "evidence": []
     },
     {
       "term": "services clinical",
-      "score": 26.3643,
+      "score": 27.6114,
       "evidence": []
     },
     {
-      "term": "transmit person",
-      "score": 25.3261,
+      "term": "identify persons",
+      "score": 27.2038,
       "evidence": []
     }
   ],
@@ -73,492 +73,492 @@
     "page-001": [
       {
         "term": "page",
-        "score": 0.4534,
+        "score": 0.4714,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "classification",
-        "score": 0.3933,
+        "score": 0.4029,
         "evidence": []
       },
       {
         "term": "edition",
-        "score": 0.3513,
+        "score": 0.3514,
         "evidence": []
       }
     ],
     "page-002": [
       {
         "term": "insuffi cient",
-        "score": 3.6773,
+        "score": 3.6928,
         "evidence": []
       },
       {
         "term": "identifi cation",
-        "score": 3.0513,
+        "score": 3.0715,
         "evidence": []
       },
       {
         "term": "certifi cate",
-        "score": 2.8462,
+        "score": 2.8581,
         "evidence": []
       },
       {
         "term": "notifi cation",
-        "score": 2.8231,
+        "score": 2.8395,
         "evidence": []
       },
       {
         "term": "healthcare provider",
-        "score": 2.5918,
+        "score": 2.6205,
         "evidence": []
       },
       {
         "term": "transmit untargeted",
-        "score": 2.4979,
+        "score": 2.5362,
         "evidence": []
       },
       {
         "term": "transmit targeted",
-        "score": 2.059,
+        "score": 2.0949,
         "evidence": []
       },
       {
-        "term": "manage person-centred",
-        "score": 2.0235,
+        "term": "nancial transactions",
+        "score": 2.0406,
         "evidence": []
       }
     ],
     "page-004": [
       {
         "term": "suggested citation",
-        "score": 1.4108,
+        "score": 1.4155,
         "evidence": []
       },
       {
         "term": "shared language",
-        "score": 1.123,
+        "score": 1.1422,
         "evidence": []
       },
       {
         "term": "edition",
-        "score": 0.9863,
+        "score": 0.9864,
         "evidence": []
       },
       {
         "term": "licence",
-        "score": 0.9649,
+        "score": 0.9827,
         "evidence": []
       },
       {
         "term": "material",
-        "score": 0.8954,
+        "score": 0.8784,
         "evidence": []
       },
       {
         "term": "igo",
-        "score": 0.8154,
+        "score": 0.8277,
         "evidence": []
       },
       {
         "term": "cip",
-        "score": 0.7811,
+        "score": 0.7879,
         "evidence": []
       },
       {
         "term": "work",
-        "score": 0.7532,
+        "score": 0.7678,
         "evidence": []
       }
     ],
     "page-005": [
       {
         "term": "healthcare providers",
-        "score": 0.7746,
+        "score": 0.8503,
         "evidence": []
       },
       {
         "term": "support personnel",
-        "score": 0.6094,
+        "score": 0.6371,
         "evidence": []
       },
       {
         "term": "persons",
-        "score": 0.4879,
+        "score": 0.4987,
         "evidence": []
       }
     ],
     "page-006": [
       {
         "term": "alvin marcelo",
-        "score": 2.3134,
+        "score": 2.3233,
         "evidence": []
       },
       {
         "term": "matthew hulse",
-        "score": 2.2652,
+        "score": 2.27,
         "evidence": []
       },
       {
         "term": "merrick schaefer",
-        "score": 2.213,
+        "score": 2.225,
         "evidence": []
       },
       {
         "term": "caroline perrin",
-        "score": 1.9895,
+        "score": 1.994,
         "evidence": []
       },
       {
         "term": "jai ganesh",
-        "score": 1.9895,
+        "score": 1.994,
         "evidence": []
       },
       {
         "term": "steven wanyee",
-        "score": 1.9598,
-        "evidence": []
-      },
-      {
-        "term": "regional office",
-        "score": 1.9546,
+        "score": 1.9711,
         "evidence": []
       },
       {
         "term": "chaitali sinha",
-        "score": 1.9237,
+        "score": 1.9296,
+        "evidence": []
+      },
+      {
+        "term": "regional office",
+        "score": 1.8896,
         "evidence": []
       }
     ],
     "page-007": [
       {
         "term": "organized around",
-        "score": 1.4077,
+        "score": 1.4169,
         "evidence": []
       },
       {
         "term": "address gaps",
-        "score": 0.9709,
+        "score": 0.9916,
         "evidence": []
       },
       {
         "term": "application types",
-        "score": 0.9568,
+        "score": 0.983,
         "evidence": []
       },
       {
         "term": "cdhi",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "advances",
-        "score": 0.8439,
+        "score": 0.8195,
         "evidence": []
       },
       {
         "term": "edition",
-        "score": 0.8157,
+        "score": 0.8159,
         "evidence": []
       },
       {
         "term": "axes",
-        "score": 0.7462,
+        "score": 0.7538,
         "evidence": []
       },
       {
         "term": "classification",
-        "score": 0.6966,
+        "score": 0.7137,
         "evidence": []
       }
     ],
     "page-008": [
       {
         "term": "insuffi cient",
-        "score": 3.6773,
+        "score": 3.6928,
         "evidence": []
       },
       {
         "term": "identifi cation",
-        "score": 3.0513,
+        "score": 3.0715,
         "evidence": []
       },
       {
         "term": "certifi cate",
-        "score": 2.8462,
+        "score": 2.8581,
         "evidence": []
       },
       {
         "term": "notifi cation",
-        "score": 2.8231,
+        "score": 2.8395,
         "evidence": []
       },
       {
         "term": "healthcare provider",
-        "score": 2.6539,
+        "score": 2.6838,
         "evidence": []
       },
       {
         "term": "transmit untargeted",
-        "score": 2.4979,
+        "score": 2.5362,
         "evidence": []
       },
       {
         "term": "transmit targeted",
-        "score": 2.059,
+        "score": 2.0949,
         "evidence": []
       },
       {
-        "term": "manage person-centred",
-        "score": 2.0235,
+        "term": "nancial transactions",
+        "score": 2.0406,
         "evidence": []
       }
     ],
     "page-009": [
       {
         "term": "classification scheme",
-        "score": 1.3702,
+        "score": 1.3987,
         "evidence": []
       },
       {
         "term": "conducting research",
-        "score": 1.2168,
+        "score": 1.2402,
         "evidence": []
       },
       {
         "term": "inventories",
-        "score": 1.0825,
-        "evidence": []
-      },
-      {
-        "term": "four primary",
-        "score": 0.892,
+        "score": 1.0891,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 0.8858,
+        "score": 0.965,
+        "evidence": []
+      },
+      {
+        "term": "four primary",
+        "score": 0.951,
         "evidence": []
       },
       {
         "term": "prompted",
-        "score": 0.8812,
+        "score": 0.8859,
         "evidence": []
       },
       {
         "term": "developing guidance",
-        "score": 0.8477,
+        "score": 0.8466,
         "evidence": []
       },
       {
-        "term": "technologists",
-        "score": 0.7484,
+        "term": "inform planning",
+        "score": 0.7658,
         "evidence": []
       }
     ],
     "page-010": [
       {
         "term": "view",
-        "score": 1.1841,
-        "evidence": []
-      },
-      {
-        "term": "additional descriptors",
-        "score": 0.9901,
+        "score": 1.1437,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 0.9775,
+        "score": 1.073,
+        "evidence": []
+      },
+      {
+        "term": "additional descriptors",
+        "score": 1.0643,
         "evidence": []
       },
       {
         "term": "disah",
-        "score": 0.9289,
-        "evidence": []
-      },
-      {
-        "term": "organized",
-        "score": 0.8756,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "synonyms",
-        "score": 0.8739,
+        "score": 0.8692,
         "evidence": []
       },
       {
         "term": "support personnel",
-        "score": 0.8142,
+        "score": 0.8526,
+        "evidence": []
+      },
+      {
+        "term": "organized",
+        "score": 0.8522,
         "evidence": []
       },
       {
         "term": "application types",
-        "score": 0.7888,
+        "score": 0.811,
         "evidence": []
       }
     ],
     "page-011": [
       {
         "term": "application types",
-        "score": 1.2568,
+        "score": 1.2893,
         "evidence": []
       },
       {
         "term": "healthcare provider",
-        "score": 1.2179,
+        "score": 1.2329,
         "evidence": []
       },
       {
         "term": "notify stock",
-        "score": 1.1379,
+        "score": 1.1499,
         "evidence": []
       },
       {
         "term": "logistics management",
-        "score": 0.9025,
+        "score": 0.9356,
         "evidence": []
       },
       {
         "term": "electronic medical",
-        "score": 0.8977,
+        "score": 0.9195,
         "evidence": []
       },
       {
         "term": "stock levels",
-        "score": 0.8714,
+        "score": 0.888,
         "evidence": []
       },
       {
         "term": "commodities",
-        "score": 0.7731,
+        "score": 0.7842,
         "evidence": []
       },
       {
         "term": "person",
-        "score": 0.6829,
+        "score": 0.6954,
         "evidence": []
       }
     ],
     "page-012": [
       {
         "term": "dhi",
-        "score": 1.3164,
+        "score": 1.33,
         "evidence": []
       },
       {
         "term": "registered projects",
-        "score": 1.133,
+        "score": 1.1543,
         "evidence": []
       },
       {
         "term": "landscape analysis",
-        "score": 0.9259,
+        "score": 0.9437,
         "evidence": []
       },
       {
         "term": "dha",
-        "score": 0.8548,
-        "evidence": []
-      },
-      {
-        "term": "mother",
-        "score": 0.8498,
+        "score": 0.86,
         "evidence": []
       },
       {
         "term": "focus area",
-        "score": 0.8273,
+        "score": 0.8266,
         "evidence": []
       },
       {
         "term": "application type",
-        "score": 0.8129,
+        "score": 0.8231,
         "evidence": []
       },
       {
         "term": "therapeutic",
-        "score": 0.7744,
+        "score": 0.7814,
+        "evidence": []
+      },
+      {
+        "term": "challenge",
+        "score": 0.7804,
         "evidence": []
       }
     ],
     "page-013": [
       {
         "term": "accessed november",
-        "score": 2.0352,
+        "score": 2.0159,
         "evidence": []
       },
       {
         "term": "telecommunication union",
-        "score": 1.155,
+        "score": 1.1713,
         "evidence": []
       },
       {
         "term": "international telecommunication",
-        "score": 1.1107,
+        "score": 1.1099,
         "evidence": []
       },
       {
         "term": "quick deployment",
-        "score": 1.0838,
+        "score": 1.0919,
         "evidence": []
       },
       {
         "term": "investment guide",
-        "score": 0.9085,
+        "score": 0.9619,
         "evidence": []
       },
       {
         "term": "ehr",
-        "score": 0.8324,
+        "score": 0.8381,
         "evidence": []
       },
       {
         "term": "diig",
-        "score": 0.7904,
+        "score": 0.808,
         "evidence": []
       },
       {
         "term": "pdf",
-        "score": 0.7112,
+        "score": 0.7994,
         "evidence": []
       }
     ],
     "page-014": [
       {
         "term": "page",
-        "score": 0.4534,
+        "score": 0.4714,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "persons",
-        "score": 0.3079,
+        "score": 0.3147,
         "evidence": []
       },
       {
         "term": "applications",
-        "score": 0.2737,
+        "score": 0.2915,
         "evidence": []
       }
     ],
     "page-016": [
       {
         "term": "faced",
-        "score": 0.6419,
+        "score": 0.6518,
         "evidence": []
       },
       {
         "term": "drill",
-        "score": 0.58,
+        "score": 0.5825,
         "evidence": []
       },
       {
         "term": "page",
-        "score": 0.4534,
+        "score": 0.4714,
         "evidence": [
           "heading"
         ]
@@ -567,625 +567,627 @@
     "page-017": [
       {
         "term": "insuffi cient",
-        "score": 3.6773,
+        "score": 3.6928,
         "evidence": []
       },
       {
         "term": "inadequate",
-        "score": 1.3146,
+        "score": 1.3068,
         "evidence": []
       },
       {
         "term": "lack",
-        "score": 1.051,
+        "score": 1.071,
         "evidence": []
       },
       {
         "term": "identifi",
-        "score": 0.8244,
+        "score": 0.8304,
         "evidence": []
       },
       {
         "term": "poor",
-        "score": 0.7535,
+        "score": 0.7572,
         "evidence": []
       },
       {
         "term": "page",
-        "score": 0.7186,
+        "score": 0.7471,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "delayed",
-        "score": 0.7023,
+        "score": 0.7109,
         "evidence": []
       },
       {
         "term": "persons",
-        "score": 0.6157,
+        "score": 0.6293,
         "evidence": []
       }
     ],
     "page-018": [
       {
         "term": "persons",
-        "score": 0.6157,
+        "score": 0.6293,
         "evidence": []
+      },
+      {
+        "term": "page",
+        "score": 0.4714,
+        "evidence": [
+          "heading"
+        ]
       },
       {
         "term": "caregivers",
-        "score": 0.462,
-        "evidence": []
-      },
-      {
-        "term": "taxonomy",
-        "score": 0.4561,
+        "score": 0.467,
         "evidence": []
       }
     ],
     "page-019": [
       {
         "term": "transmit untargeted",
-        "score": 2.1801,
+        "score": 2.2126,
         "evidence": []
       },
       {
         "term": "undefi ned",
-        "score": 1.8387,
+        "score": 1.8464,
         "evidence": []
       },
       {
         "term": "transmit targeted",
-        "score": 1.7413,
+        "score": 1.7713,
         "evidence": []
       },
       {
         "term": "event alerts",
-        "score": 1.2388,
+        "score": 1.2384,
         "evidence": []
       },
       {
         "term": "persons",
-        "score": 0.9759,
+        "score": 0.9974,
         "evidence": []
       },
       {
         "term": "individual",
-        "score": 0.6475,
+        "score": 0.66,
         "evidence": []
       },
       {
         "term": "consent",
-        "score": 0.5993,
+        "score": 0.6061,
         "evidence": []
       },
       {
         "term": "manage",
-        "score": 0.5924,
+        "score": 0.598,
         "evidence": []
       }
     ],
     "page-020": [
       {
         "term": "targeted communication",
-        "score": 1.4748,
+        "score": 1.491,
         "evidence": []
       },
       {
         "term": "transmit targeted",
-        "score": 1.3912,
+        "score": 1.4143,
         "evidence": []
       },
       {
         "term": "kibaale",
-        "score": 0.9855,
+        "score": 0.9879,
         "evidence": []
       },
       {
         "term": "person",
-        "score": 0.9585,
+        "score": 0.9761,
         "evidence": []
       },
       {
         "term": "appointments",
-        "score": 0.9022,
+        "score": 0.8963,
         "evidence": []
       },
       {
         "term": "alerts",
-        "score": 0.7299,
+        "score": 0.7357,
         "evidence": []
       },
       {
         "term": "ebola",
-        "score": 0.7156,
+        "score": 0.7238,
         "evidence": []
       },
       {
         "term": "notification",
-        "score": 0.6676,
+        "score": 0.6831,
         "evidence": []
       }
     ],
     "page-021": [
       {
         "term": "mass communication",
-        "score": 2.0245,
+        "score": 2.0023,
         "evidence": []
       },
       {
         "term": "mass messaging",
-        "score": 1.8773,
+        "score": 1.8643,
         "evidence": []
       },
       {
         "term": "transmit untargeted",
-        "score": 1.8354,
+        "score": 1.8604,
         "evidence": []
       },
       {
         "term": "messaging campaign",
-        "score": 1.6613,
-        "evidence": []
-      },
-      {
-        "term": "undefined target",
-        "score": 1.5948,
+        "score": 1.6852,
         "evidence": []
       },
       {
         "term": "peer group",
-        "score": 1.5542,
+        "score": 1.6428,
+        "evidence": []
+      },
+      {
+        "term": "undefined target",
+        "score": 1.5727,
         "evidence": []
       },
       {
         "term": "media communication",
-        "score": 1.5277,
+        "score": 1.5021,
         "evidence": []
       },
       {
         "term": "social media",
-        "score": 1.226,
+        "score": 1.1763,
         "evidence": []
       }
     ],
     "page-022": [
       {
         "term": "individual personal",
-        "score": 1.5052,
+        "score": 1.5294,
         "evidence": []
       },
       {
         "term": "self tracking",
-        "score": 1.3635,
+        "score": 1.3791,
         "evidence": []
       },
       {
         "term": "tracking self-care",
-        "score": 1.3345,
+        "score": 1.33,
         "evidence": []
       },
       {
         "term": "wearables",
-        "score": 1.1795,
+        "score": 1.184,
         "evidence": []
       },
       {
         "term": "sensors",
-        "score": 0.9382,
+        "score": 0.9478,
         "evidence": []
       },
       {
         "term": "self-monitoring",
-        "score": 0.9265,
+        "score": 0.9302,
         "evidence": []
       },
       {
         "term": "verifiable",
-        "score": 0.8982,
+        "score": 0.9087,
         "evidence": []
       },
       {
         "term": "status",
-        "score": 0.8774,
+        "score": 0.8777,
         "evidence": []
       }
     ],
     "page-023": [
       {
         "term": "person searches",
-        "score": 1.4962,
+        "score": 1.4448,
         "evidence": []
       },
       {
         "term": "individuals person",
-        "score": 1.3288,
+        "score": 1.3617,
         "evidence": []
       },
       {
         "term": "chatbots",
-        "score": 0.9947,
+        "score": 0.997,
+        "evidence": []
+      },
+      {
+        "term": "information accessible",
+        "score": 0.8927,
         "evidence": []
       },
       {
         "term": "looks",
-        "score": 0.8812,
-        "evidence": []
-      },
-      {
-        "term": "youth",
-        "score": 0.8439,
-        "evidence": []
-      },
-      {
-        "term": "conversations",
-        "score": 0.8134,
-        "evidence": []
-      },
-      {
-        "term": "simulated",
-        "score": 0.8134,
+        "score": 0.8859,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 0.7746,
+        "score": 0.8503,
+        "evidence": []
+      },
+      {
+        "term": "youth",
+        "score": 0.8494,
+        "evidence": []
+      },
+      {
+        "term": "simulated",
+        "score": 0.8195,
         "evidence": []
       }
     ],
     "page-024": [
       {
         "term": "cash transfers",
-        "score": 2.319,
+        "score": 2.271,
         "evidence": []
       },
       {
         "term": "conditional cash",
-        "score": 2.3107,
-        "evidence": []
-      },
-      {
-        "term": "consent",
-        "score": 1.1344,
+        "score": 2.1906,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 1.0485,
+        "score": 1.1567,
+        "evidence": []
+      },
+      {
+        "term": "consent",
+        "score": 1.1472,
         "evidence": []
       },
       {
         "term": "financial transactions",
-        "score": 1.0457,
+        "score": 1.0742,
         "evidence": []
       },
       {
         "term": "medical records",
-        "score": 1.0322,
+        "score": 1.0641,
         "evidence": []
       },
       {
         "term": "smartcard",
-        "score": 0.9855,
+        "score": 0.9879,
         "evidence": []
       },
       {
         "term": "voucher",
-        "score": 0.9225,
+        "score": 0.9263,
         "evidence": []
       }
     ],
     "page-025": [
       {
         "term": "healthcare providers",
-        "score": 0.9775,
+        "score": 1.073,
         "evidence": []
       },
       {
         "term": "page",
-        "score": 0.7186,
+        "score": 0.7471,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "taxonomy",
-        "score": 0.4561,
+        "score": 0.4612,
         "evidence": []
       }
     ],
     "page-026": [
       {
         "term": "healthcare provider",
-        "score": 2.3496,
+        "score": 2.3768,
         "evidence": []
       },
       {
         "term": "manage person-centred",
-        "score": 1.276,
+        "score": 1.2813,
         "evidence": []
       },
       {
         "term": "manage referrals",
-        "score": 1.1944,
+        "score": 1.2107,
         "evidence": []
       },
       {
         "term": "clinical records",
-        "score": 1.0401,
+        "score": 1.0496,
         "evidence": []
       },
       {
         "term": "transmit",
-        "score": 0.9685,
+        "score": 0.9863,
         "evidence": []
       },
       {
         "term": "person",
-        "score": 0.9585,
+        "score": 0.9761,
         "evidence": []
       },
       {
         "term": "diagnostic",
-        "score": 0.8344,
+        "score": 0.8092,
         "evidence": []
       },
       {
         "term": "prescription",
-        "score": 0.6906,
+        "score": 0.6892,
         "evidence": []
       }
     ],
     "page-027": [
       {
         "term": "migrant populations",
-        "score": 1.4369,
+        "score": 1.4694,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 1.1348,
+        "score": 1.2457,
         "evidence": []
       },
       {
         "term": "person",
-        "score": 0.7928,
+        "score": 0.8073,
         "evidence": []
       },
       {
         "term": "register",
-        "score": 0.7367,
-        "evidence": []
-      },
-      {
-        "term": "digitized",
-        "score": 0.6746,
+        "score": 0.7315,
         "evidence": []
       },
       {
         "term": "registry",
-        "score": 0.6698,
+        "score": 0.6853,
+        "evidence": []
+      },
+      {
+        "term": "digitized",
+        "score": 0.6837,
         "evidence": []
       },
       {
         "term": "immunization",
-        "score": 0.5919,
+        "score": 0.6069,
         "evidence": []
       },
       {
         "term": "longitudinal",
-        "score": 0.5742,
+        "score": 0.5855,
         "evidence": []
       }
     ],
     "page-028": [
       {
         "term": "clinical records",
-        "score": 1.4568,
+        "score": 1.4675,
         "evidence": []
       },
       {
         "term": "medical record",
-        "score": 1.3637,
+        "score": 1.4018,
         "evidence": []
       },
       {
         "term": "job aid",
-        "score": 1.2788,
-        "evidence": []
-      },
-      {
-        "term": "manage person-centred",
-        "score": 1.088,
+        "score": 1.286,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 1.0485,
+        "score": 1.1567,
         "evidence": []
       },
       {
-        "term": "delivery according",
-        "score": 1.0274,
+        "term": "manage person-centred",
+        "score": 1.0915,
         "evidence": []
       },
       {
         "term": "decision support",
-        "score": 1.0181,
+        "score": 1.0407,
+        "evidence": []
+      },
+      {
+        "term": "delivery according",
+        "score": 1.0344,
         "evidence": []
       },
       {
         "term": "electronic medical",
-        "score": 0.9642,
+        "score": 0.9879,
         "evidence": []
       }
     ],
     "page-029": [
       {
         "term": "africa teledermatology",
-        "score": 1.4392,
+        "score": 1.429,
         "evidence": []
       },
       {
         "term": "healthcare provider",
-        "score": 1.3843,
+        "score": 1.4007,
         "evidence": []
       },
       {
         "term": "biosignals",
-        "score": 1.2436,
+        "score": 1.2466,
         "evidence": []
       },
       {
         "term": "teledermatology project",
-        "score": 1.1599,
+        "score": 1.1792,
         "evidence": []
       },
       {
         "term": "telemedicine",
-        "score": 1.1402,
-        "evidence": []
-      },
-      {
-        "term": "remote",
-        "score": 0.9578,
+        "score": 1.1605,
         "evidence": []
       },
       {
         "term": "african countries",
-        "score": 0.9414,
+        "score": 0.9445,
         "evidence": []
       },
       {
-        "term": "hotline",
-        "score": 0.8385,
+        "term": "remote",
+        "score": 0.9216,
+        "evidence": []
+      },
+      {
+        "term": "patient case",
+        "score": 0.8566,
         "evidence": []
       }
     ],
     "page-030": [
       {
         "term": "healthcare provider",
-        "score": 2.0848,
+        "score": 2.1116,
         "evidence": []
       },
       {
         "term": "phone-based communication",
-        "score": 1.9253,
+        "score": 1.9409,
         "evidence": []
       },
       {
         "term": "mobile phone-based",
-        "score": 1.5249,
+        "score": 1.5624,
         "evidence": []
       },
       {
         "term": "text messaging",
-        "score": 1.3637,
-        "evidence": []
-      },
-      {
-        "term": "nutrition experts",
-        "score": 1.2239,
-        "evidence": []
-      },
-      {
-        "term": "basic text",
-        "score": 1.2116,
+        "score": 1.3943,
         "evidence": []
       },
       {
         "term": "text message",
-        "score": 1.1964,
+        "score": 1.2243,
+        "evidence": []
+      },
+      {
+        "term": "basic text",
+        "score": 1.2209,
         "evidence": []
       },
       {
         "term": "performance feedback",
-        "score": 1.1122,
+        "score": 1.1585,
+        "evidence": []
+      },
+      {
+        "term": "nutrition experts",
+        "score": 1.1515,
         "evidence": []
       }
     ],
     "page-031": [
       {
         "term": "manage referrals",
-        "score": 1.666,
+        "score": 1.6923,
         "evidence": []
       },
       {
         "term": "automated scheduling",
-        "score": 1.4256,
-        "evidence": []
-      },
-      {
-        "term": "referral management",
-        "score": 1.2091,
-        "evidence": []
-      },
-      {
-        "term": "emergency response",
-        "score": 1.1805,
+        "score": 1.4572,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 1.1348,
+        "score": 1.2457,
+        "evidence": []
+      },
+      {
+        "term": "referral management",
+        "score": 1.198,
+        "evidence": []
+      },
+      {
+        "term": "emergency response",
+        "score": 1.1798,
         "evidence": []
       },
       {
         "term": "social services",
-        "score": 1.1342,
+        "score": 1.1501,
         "evidence": []
       },
       {
         "term": "police",
-        "score": 1.0479,
+        "score": 1.0552,
         "evidence": []
       },
       {
         "term": "justice",
-        "score": 0.8158,
+        "score": 0.8219,
         "evidence": []
       }
     ],
     "page-032": [
       {
         "term": "prescription orders",
-        "score": 2.0905,
+        "score": 2.1021,
         "evidence": []
       },
       {
         "term": "healthcare provider",
-        "score": 1.6401,
+        "score": 1.6589,
         "evidence": []
       },
       {
         "term": "provider training",
-        "score": 1.38,
+        "score": 1.4019,
         "evidence": []
       },
       {
         "term": "medication",
-        "score": 1.1303,
+        "score": 1.1326,
         "evidence": []
       },
       {
         "term": "training content",
-        "score": 0.965,
+        "score": 1.0048,
         "evidence": []
       },
       {
         "term": "bottle",
-        "score": 0.9193,
+        "score": 0.9232,
         "evidence": []
       },
       {
         "term": "educational",
-        "score": 0.731,
+        "score": 0.7131,
         "evidence": []
       },
       {
-        "term": "consumption",
+        "term": "drugs",
         "score": 0.5944,
         "evidence": []
       }
@@ -1193,603 +1195,603 @@
     "page-033": [
       {
         "term": "drug reactions",
-        "score": 1.8552,
+        "score": 1.8572,
         "evidence": []
       },
       {
         "term": "biological specimens",
-        "score": 1.8252,
+        "score": 1.8088,
         "evidence": []
       },
       {
         "term": "adverse drug",
-        "score": 1.7451,
+        "score": 1.7637,
         "evidence": []
       },
       {
         "term": "blood donations",
-        "score": 1.7278,
+        "score": 1.6358,
         "evidence": []
       },
       {
         "term": "diagnostic orders",
-        "score": 1.587,
+        "score": 1.5685,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 1.0637,
+        "score": 1.162,
         "evidence": []
       },
       {
         "term": "adrs",
-        "score": 0.9855,
+        "score": 0.9879,
         "evidence": []
       },
       {
         "term": "laboratory",
-        "score": 0.9796,
+        "score": 0.9775,
         "evidence": []
       }
     ],
     "page-034": [
       {
         "term": "verify eligibility",
-        "score": 1.5591,
+        "score": 1.573,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 1.2053,
+        "score": 1.3184,
         "evidence": []
       },
       {
         "term": "financial transactions",
-        "score": 0.9141,
+        "score": 0.9392,
         "evidence": []
       },
       {
         "term": "payments",
-        "score": 0.7358,
+        "score": 0.7498,
         "evidence": []
       },
       {
         "term": "persons",
-        "score": 0.6157,
+        "score": 0.6293,
         "evidence": []
       }
     ],
     "page-035": [
       {
         "term": "support personnel",
-        "score": 0.769,
+        "score": 0.8039,
         "evidence": []
       },
       {
         "term": "page",
-        "score": 0.7186,
+        "score": 0.7471,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "taxonomy",
-        "score": 0.4561,
+        "score": 0.4612,
         "evidence": []
       }
     ],
     "page-036": [
       {
         "term": "certifi cate",
-        "score": 2.8462,
+        "score": 2.8581,
         "evidence": []
       },
       {
         "term": "notifi cation",
-        "score": 2.1348,
+        "score": 2.1472,
+        "evidence": []
+      },
+      {
+        "term": "cate information",
+        "score": 1.6248,
         "evidence": []
       },
       {
         "term": "healthcare provider",
-        "score": 1.5223,
+        "score": 1.5399,
         "evidence": []
       },
       {
         "term": "commodities",
-        "score": 0.8607,
+        "score": 0.8731,
         "evidence": []
       },
       {
         "term": "manage",
-        "score": 0.8476,
+        "score": 0.8556,
         "evidence": []
       },
       {
         "term": "nancial",
-        "score": 0.8469,
+        "score": 0.8523,
         "evidence": []
       },
       {
         "term": "register",
-        "score": 0.8201,
-        "evidence": []
-      },
-      {
-        "term": "notify",
-        "score": 0.7678,
+        "score": 0.8143,
         "evidence": []
       }
     ],
     "page-037": [
       {
         "term": "prospective employee",
-        "score": 1.8764,
-        "evidence": []
-      },
-      {
-        "term": "employee training",
-        "score": 1.4632,
+        "score": 1.7545,
         "evidence": []
       },
       {
         "term": "healthcare provider",
-        "score": 1.4439,
+        "score": 1.4622,
+        "evidence": []
+      },
+      {
+        "term": "employee training",
+        "score": 1.4256,
         "evidence": []
       },
       {
         "term": "training qualifications",
-        "score": 1.3691,
-        "evidence": []
-      },
-      {
-        "term": "verify prospective",
-        "score": 1.3683,
+        "score": 1.398,
         "evidence": []
       },
       {
         "term": "council staff",
-        "score": 1.3467,
+        "score": 1.3335,
         "evidence": []
       },
       {
         "term": "enabling council",
-        "score": 1.3372,
+        "score": 1.3267,
+        "evidence": []
+      },
+      {
+        "term": "verify prospective",
+        "score": 1.312,
         "evidence": []
       },
       {
         "term": "registration certification",
-        "score": 1.1397,
+        "score": 1.1531,
         "evidence": []
       }
     ],
     "page-038": [
       {
         "term": "stock levels",
-        "score": 1.6167,
+        "score": 1.6465,
         "evidence": []
       },
       {
         "term": "medical commodities",
-        "score": 1.3829,
-        "evidence": []
-      },
-      {
-        "term": "temperature",
-        "score": 1.2315,
+        "score": 1.4072,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 1.2053,
+        "score": 1.3184,
+        "evidence": []
+      },
+      {
+        "term": "temperature",
+        "score": 1.2005,
         "evidence": []
       },
       {
         "term": "cold chain",
-        "score": 1.0983,
+        "score": 1.1169,
         "evidence": []
       },
       {
         "term": "logistics management",
-        "score": 1.0389,
+        "score": 1.0752,
         "evidence": []
       },
       {
         "term": "text message",
-        "score": 0.9213,
+        "score": 0.9435,
         "evidence": []
       },
       {
         "term": "assignment",
-        "score": 0.8168,
+        "score": 0.8291,
         "evidence": []
       }
     ],
     "page-039": [
       {
         "term": "death event",
-        "score": 2.1026,
+        "score": 1.9452,
         "evidence": []
       },
       {
         "term": "birth event",
-        "score": 1.8197,
-        "evidence": []
-      },
-      {
-        "term": "event alert",
-        "score": 1.5722,
+        "score": 1.6943,
         "evidence": []
       },
       {
         "term": "civil registration",
-        "score": 1.5478,
+        "score": 1.5891,
+        "evidence": []
+      },
+      {
+        "term": "event alert",
+        "score": 1.5735,
         "evidence": []
       },
       {
         "term": "vital statistics",
-        "score": 1.5183,
+        "score": 1.554,
         "evidence": []
       },
       {
         "term": "drug authenticity",
-        "score": 1.4419,
+        "score": 1.4432,
         "evidence": []
       },
       {
         "term": "surveillance",
-        "score": 1.1387,
+        "score": 1.1352,
         "evidence": []
       },
       {
         "term": "certificate",
-        "score": 0.795,
+        "score": 0.8015,
         "evidence": []
       }
     ],
     "page-040": [
       {
         "term": "healthcare provider",
-        "score": 1.3922,
+        "score": 1.4058,
         "evidence": []
       },
       {
         "term": "payments",
-        "score": 1.1663,
+        "score": 1.1885,
         "evidence": []
       },
       {
         "term": "social protection",
-        "score": 1.1537,
+        "score": 1.1319,
         "evidence": []
       },
       {
         "term": "financial incentives",
-        "score": 1.108,
+        "score": 1.129,
         "evidence": []
       },
       {
         "term": "financial transactions",
-        "score": 1.0343,
+        "score": 1.0631,
         "evidence": []
       },
       {
         "term": "claims",
-        "score": 0.9175,
+        "score": 0.9425,
         "evidence": []
       },
       {
         "term": "insurance",
-        "score": 0.8208,
+        "score": 0.8417,
         "evidence": []
       },
       {
-        "term": "reimbursement",
-        "score": 0.7497,
+        "term": "claim information",
+        "score": 0.8404,
         "evidence": []
       }
     ],
     "page-041": [
       {
         "term": "physical assets",
-        "score": 1.6076,
+        "score": 1.5717,
         "evidence": []
       },
       {
         "term": "insurance contributions",
-        "score": 1.466,
+        "score": 1.4844,
         "evidence": []
       },
       {
         "term": "contribution rate",
-        "score": 1.4015,
+        "score": 1.324,
         "evidence": []
       },
       {
         "term": "equipment",
-        "score": 1.1613,
+        "score": 1.2083,
+        "evidence": []
+      },
+      {
+        "term": "payment information",
+        "score": 1.1796,
         "evidence": []
       },
       {
         "term": "asset management",
-        "score": 1.0551,
+        "score": 1.0849,
         "evidence": []
       },
       {
         "term": "coverage schemes",
-        "score": 0.9688,
-        "evidence": []
-      },
-      {
-        "term": "payment",
-        "score": 0.8918,
+        "score": 0.9847,
         "evidence": []
       },
       {
         "term": "budgeting",
-        "score": 0.7768,
+        "score": 0.7641,
         "evidence": []
       }
     ],
     "page-042": [
       {
+        "term": "certificate information",
+        "score": 1.9323,
+        "evidence": []
+      },
+      {
         "term": "immunisation certificates",
-        "score": 1.6193,
+        "score": 1.6379,
         "evidence": []
       },
       {
         "term": "facilities",
-        "score": 0.8796,
+        "score": 0.8916,
         "evidence": []
       },
       {
         "term": "revoke",
-        "score": 0.8457,
+        "score": 0.8511,
         "evidence": []
       },
       {
         "term": "identification number",
-        "score": 0.7363,
+        "score": 0.7354,
         "evidence": []
       },
       {
         "term": "covering",
-        "score": 0.7227,
+        "score": 0.7162,
         "evidence": []
       },
       {
         "term": "facility",
-        "score": 0.7005,
+        "score": 0.704,
         "evidence": []
       },
       {
         "term": "portal",
-        "score": 0.6705,
-        "evidence": []
-      },
-      {
-        "term": "retrieve",
-        "score": 0.643,
+        "score": 0.6692,
         "evidence": []
       }
     ],
     "page-043": [
       {
         "term": "page",
-        "score": 0.7186,
+        "score": 0.7471,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "taxonomy",
-        "score": 0.4561,
+        "score": 0.4612,
         "evidence": []
       },
       {
         "term": "toward",
-        "score": 0.3827,
+        "score": 0.3894,
         "evidence": []
       }
     ],
     "page-044": [
       {
         "term": "map location",
-        "score": 1.5817,
+        "score": 1.605,
         "evidence": []
       },
       {
         "term": "persons",
-        "score": 0.4879,
+        "score": 0.4987,
         "evidence": []
       },
       {
         "term": "page",
-        "score": 0.4534,
+        "score": 0.4714,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "healthcare",
-        "score": 0.4247,
+        "score": 0.4381,
         "evidence": []
       },
       {
         "term": "services",
-        "score": 0.3005,
+        "score": 0.3231,
         "evidence": []
       },
       {
         "term": "applications",
-        "score": 0.2737,
+        "score": 0.2915,
         "evidence": []
       }
     ],
     "page-045": [
       {
-        "term": "labour",
-        "score": 0.8133,
-        "evidence": []
-      },
-      {
         "term": "aggregation",
-        "score": 0.7503,
+        "score": 0.764,
         "evidence": []
       },
       {
         "term": "intelligence",
-        "score": 0.6656,
+        "score": 0.675,
+        "evidence": []
+      },
+      {
+        "term": "labour",
+        "score": 0.6711,
         "evidence": []
       },
       {
         "term": "creation",
-        "score": 0.6254,
+        "score": 0.6356,
         "evidence": []
       },
       {
         "term": "statistics",
-        "score": 0.5631,
-        "evidence": []
-      },
-      {
-        "term": "repository",
-        "score": 0.5106,
+        "score": 0.5746,
         "evidence": []
       },
       {
         "term": "collection",
-        "score": 0.5008,
+        "score": 0.5196,
         "evidence": []
       },
       {
-        "term": "storage",
-        "score": 0.4627,
+        "term": "repository",
+        "score": 0.513,
+        "evidence": []
+      },
+      {
+        "term": "interventions",
+        "score": 0.4747,
         "evidence": []
       }
     ],
     "page-046": [
       {
-        "term": "web portal",
-        "score": 1.4424,
+        "term": "map location",
+        "score": 1.4313,
         "evidence": []
       },
       {
-        "term": "map location",
-        "score": 1.4122,
+        "term": "web portal",
+        "score": 1.217,
         "evidence": []
       },
       {
         "term": "facilities structures",
-        "score": 1.0718,
+        "score": 1.0947,
         "evidence": []
       },
       {
         "term": "cleaning",
-        "score": 0.8816,
+        "score": 0.8863,
         "evidence": []
       },
       {
         "term": "codes",
-        "score": 0.8128,
+        "score": 0.83,
         "evidence": []
       },
       {
         "term": "mapping",
-        "score": 0.7998,
+        "score": 0.8123,
         "evidence": []
       },
       {
         "term": "datasets",
-        "score": 0.7954,
+        "score": 0.7981,
         "evidence": []
       },
       {
         "term": "terminology",
-        "score": 0.7387,
+        "score": 0.7589,
         "evidence": []
       }
     ],
     "page-047": [
       {
         "term": "map location",
-        "score": 1.2968,
+        "score": 1.3152,
         "evidence": []
       },
       {
         "term": "spray",
-        "score": 0.9855,
+        "score": 0.9879,
+        "evidence": []
+      },
+      {
+        "term": "information exchange",
+        "score": 0.9619,
         "evidence": []
       },
       {
         "term": "team leaders",
-        "score": 0.9131,
+        "score": 0.9258,
         "evidence": []
       },
       {
         "term": "routing",
-        "score": 0.8062,
+        "score": 0.8125,
         "evidence": []
       },
       {
         "term": "mapping",
-        "score": 0.7365,
+        "score": 0.7479,
         "evidence": []
       },
       {
         "term": "geographic",
-        "score": 0.7074,
+        "score": 0.7129,
         "evidence": []
       },
       {
         "term": "visualization",
-        "score": 0.6479,
-        "evidence": []
-      },
-      {
-        "term": "exchange",
-        "score": 0.6056,
+        "score": 0.6577,
         "evidence": []
       }
     ],
     "page-048": [
       {
         "term": "consent management",
-        "score": 1.4857,
+        "score": 1.5176,
         "evidence": []
       },
       {
         "term": "unnamed",
-        "score": 0.9542,
-        "evidence": []
-      },
-      {
-        "term": "authentication",
-        "score": 0.7524,
+        "score": 0.9635,
         "evidence": []
       },
       {
         "term": "sensitive",
-        "score": 0.7363,
+        "score": 0.7696,
+        "evidence": []
+      },
+      {
+        "term": "authentication",
+        "score": 0.7661,
         "evidence": []
       },
       {
         "term": "trust",
-        "score": 0.6783,
+        "score": 0.688,
         "evidence": []
       },
       {
         "term": "identity",
-        "score": 0.5562,
+        "score": 0.5679,
         "evidence": []
       },
       {
         "term": "privacy",
-        "score": 0.4705,
+        "score": 0.4783,
         "evidence": []
       },
       {
         "term": "page",
-        "score": 0.4534,
+        "score": 0.4714,
         "evidence": [
           "heading"
         ]
@@ -1797,617 +1799,617 @@
     ],
     "page-049": [
       {
+        "term": "information systems",
+        "score": 1.1571,
+        "evidence": []
+      },
+      {
+        "term": "management systems",
+        "score": 1.0799,
+        "evidence": []
+      },
+      {
         "term": "directories",
-        "score": 0.9667,
+        "score": 0.9757,
+        "evidence": []
+      },
+      {
+        "term": "monitoring systems",
+        "score": 0.9317,
         "evidence": []
       },
       {
         "term": "cation",
-        "score": 0.8534,
+        "score": 0.8586,
         "evidence": []
       },
       {
         "term": "application types",
-        "score": 0.8161,
+        "score": 0.8354,
         "evidence": []
       },
       {
         "term": "page",
-        "score": 0.7186,
+        "score": 0.7471,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "surveillance",
-        "score": 0.6429,
-        "evidence": []
-      },
-      {
-        "term": "registries",
-        "score": 0.5651,
-        "evidence": []
-      },
-      {
-        "term": "administration",
-        "score": 0.505,
-        "evidence": []
-      },
-      {
-        "term": "facility",
-        "score": 0.4782,
+        "score": 0.6409,
         "evidence": []
       }
     ],
     "page-050": [
       {
         "term": "healthcare providers",
-        "score": 1.3165,
+        "score": 1.4331,
         "evidence": []
       },
       {
         "term": "clinical decision",
-        "score": 1.2074,
-        "evidence": []
-      },
-      {
-        "term": "decision support",
-        "score": 1.0283,
+        "score": 1.186,
         "evidence": []
       },
       {
         "term": "medical device",
-        "score": 1.0251,
+        "score": 1.0531,
+        "evidence": []
+      },
+      {
+        "term": "decision support",
+        "score": 1.0426,
         "evidence": []
       },
       {
         "term": "descriptors",
-        "score": 0.8314,
+        "score": 0.8434,
         "evidence": []
       },
       {
         "term": "communication",
-        "score": 0.7633,
+        "score": 0.7695,
+        "evidence": []
+      },
+      {
+        "term": "information systems",
+        "score": 0.767,
         "evidence": []
       },
       {
         "term": "functional areas",
-        "score": 0.703,
-        "evidence": []
-      },
-      {
-        "term": "persons",
-        "score": 0.6157,
+        "score": 0.755,
         "evidence": []
       }
     ],
     "page-051": [
       {
         "term": "functional areas",
-        "score": 1.1465,
-        "evidence": []
-      },
-      {
-        "term": "descriptors",
-        "score": 1.0746,
+        "score": 1.2314,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 1.0637,
+        "score": 1.162,
+        "evidence": []
+      },
+      {
+        "term": "descriptors",
+        "score": 1.0901,
+        "evidence": []
+      },
+      {
+        "term": "laboratory information",
+        "score": 0.9037,
         "evidence": []
       },
       {
         "term": "decision support",
-        "score": 0.8171,
+        "score": 0.8358,
         "evidence": []
       },
       {
         "term": "appointment",
-        "score": 0.7681,
+        "score": 0.7636,
         "evidence": []
       },
       {
         "term": "record",
-        "score": 0.7209,
+        "score": 0.7411,
         "evidence": []
       },
       {
-        "term": "sample",
-        "score": 0.7013,
-        "evidence": []
-      },
-      {
-        "term": "person",
-        "score": 0.6829,
+        "term": "information systems",
+        "score": 0.7396,
         "evidence": []
       }
     ],
     "page-052": [
       {
-        "term": "blood bank",
-        "score": 1.4327,
+        "term": "claims management",
+        "score": 1.3269,
         "evidence": []
       },
       {
-        "term": "claims management",
-        "score": 1.2769,
+        "term": "blood bank",
+        "score": 1.3122,
+        "evidence": []
+      },
+      {
+        "term": "management systems",
+        "score": 1.0926,
         "evidence": []
       },
       {
         "term": "financial management",
-        "score": 1.0442,
+        "score": 1.0892,
+        "evidence": []
+      },
+      {
+        "term": "information management",
+        "score": 0.987,
         "evidence": []
       },
       {
         "term": "descriptors",
-        "score": 0.8314,
+        "score": 0.8434,
         "evidence": []
       },
       {
         "term": "pos",
-        "score": 0.7646,
+        "score": 0.7718,
         "evidence": []
       },
       {
         "term": "functional areas",
-        "score": 0.703,
-        "evidence": []
-      },
-      {
-        "term": "test",
-        "score": 0.5113,
-        "evidence": []
-      },
-      {
-        "term": "administration",
-        "score": 0.505,
+        "score": 0.755,
         "evidence": []
       }
     ],
     "page-053": [
       {
         "term": "chain management",
-        "score": 1.0546,
+        "score": 1.1049,
         "evidence": []
       },
       {
         "term": "functional areas",
-        "score": 0.8871,
+        "score": 0.9528,
         "evidence": []
       },
       {
         "term": "descriptors",
-        "score": 0.8314,
+        "score": 0.8434,
         "evidence": []
       },
       {
         "term": "continuing",
-        "score": 0.7993,
+        "score": 0.7161,
+        "evidence": []
+      },
+      {
+        "term": "information systems",
+        "score": 0.5736,
         "evidence": []
       },
       {
         "term": "page",
-        "score": 0.4534,
+        "score": 0.4714,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "tracking",
-        "score": 0.3873,
-        "evidence": []
-      },
-      {
-        "term": "patient",
-        "score": 0.3837,
+        "score": 0.4027,
         "evidence": []
       }
     ],
     "page-054": [
       {
         "term": "central authority",
-        "score": 1.0727,
+        "score": 1.1022,
         "evidence": []
       },
       {
         "term": "vital statistics",
-        "score": 1.0583,
+        "score": 1.0829,
         "evidence": []
       },
       {
         "term": "certificates",
-        "score": 0.9359,
-        "evidence": []
-      },
-      {
-        "term": "death",
-        "score": 0.919,
-        "evidence": []
-      },
-      {
-        "term": "descriptors",
-        "score": 0.8314,
-        "evidence": []
-      },
-      {
-        "term": "facility",
-        "score": 0.7799,
+        "score": 0.9456,
         "evidence": []
       },
       {
         "term": "healthcare providers",
-        "score": 0.7746,
+        "score": 0.8503,
+        "evidence": []
+      },
+      {
+        "term": "descriptors",
+        "score": 0.8434,
+        "evidence": []
+      },
+      {
+        "term": "death",
+        "score": 0.8036,
+        "evidence": []
+      },
+      {
+        "term": "facility",
+        "score": 0.7838,
         "evidence": []
       },
       {
         "term": "functional areas",
-        "score": 0.703,
+        "score": 0.755,
         "evidence": []
       }
     ],
     "page-055": [
       {
         "term": "central authority",
-        "score": 1.1591,
+        "score": 1.1904,
         "evidence": []
       },
       {
         "term": "immunisation",
-        "score": 1.1145,
+        "score": 1.1291,
         "evidence": []
       },
       {
         "term": "service terminology",
-        "score": 1.0865,
+        "score": 1.1172,
         "evidence": []
       },
       {
         "term": "descriptors",
-        "score": 0.9653,
+        "score": 0.9792,
         "evidence": []
       },
       {
         "term": "registry",
-        "score": 0.7776,
+        "score": 0.7956,
         "evidence": []
       },
       {
         "term": "directories",
-        "score": 0.7661,
+        "score": 0.7732,
         "evidence": []
       },
       {
         "term": "identity",
-        "score": 0.5562,
+        "score": 0.5679,
         "evidence": []
       },
       {
         "term": "icd",
-        "score": 0.5413,
+        "score": 0.5533,
         "evidence": []
       }
     ],
     "page-056": [
       {
         "term": "environmental management",
-        "score": 1.3842,
+        "score": 1.3984,
         "evidence": []
       },
       {
         "term": "emis",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "descriptors",
-        "score": 0.9653,
+        "score": 0.9792,
         "evidence": []
       },
       {
         "term": "functional areas",
-        "score": 0.8871,
+        "score": 0.9528,
+        "evidence": []
+      },
+      {
+        "term": "information systems",
+        "score": 0.741,
         "evidence": []
       },
       {
         "term": "analytics",
-        "score": 0.7172,
+        "score": 0.7403,
         "evidence": []
       },
       {
         "term": "processing",
-        "score": 0.5702,
+        "score": 0.5816,
         "evidence": []
       },
       {
         "term": "dashboards",
-        "score": 0.5153,
-        "evidence": []
-      },
-      {
-        "term": "repository",
-        "score": 0.5106,
+        "score": 0.5279,
         "evidence": []
       }
     ],
     "page-057": [
       {
         "term": "descriptors",
-        "score": 0.8314,
+        "score": 0.8434,
         "evidence": []
       },
       {
-        "term": "containing",
-        "score": 0.7484,
-        "evidence": []
-      },
-      {
-        "term": "registries",
-        "score": 0.7304,
+        "term": "information systems",
+        "score": 0.7595,
         "evidence": []
       },
       {
         "term": "functional areas",
-        "score": 0.703,
+        "score": 0.755,
+        "evidence": []
+      },
+      {
+        "term": "registries",
+        "score": 0.7532,
+        "evidence": []
+      },
+      {
+        "term": "containing",
+        "score": 0.6984,
         "evidence": []
       },
       {
         "term": "knowledge",
-        "score": 0.6671,
+        "score": 0.6612,
         "evidence": []
       },
       {
         "term": "repository",
-        "score": 0.6443,
+        "score": 0.6473,
         "evidence": []
-      },
-      {
-        "term": "page",
-        "score": 0.4534,
-        "evidence": [
-          "heading"
-        ]
       }
     ],
     "page-058": [
       {
         "term": "surveillance",
-        "score": 1.0485,
+        "score": 1.0453,
         "evidence": []
       },
       {
         "term": "case reporting",
-        "score": 0.8322,
+        "score": 0.8586,
         "evidence": []
       },
       {
         "term": "functional areas",
-        "score": 0.703,
+        "score": 0.755,
         "evidence": []
       },
       {
         "term": "descriptors",
-        "score": 0.6589,
+        "score": 0.6684,
         "evidence": []
+      },
+      {
+        "term": "page",
+        "score": 0.4714,
+        "evidence": [
+          "heading"
+        ]
       },
       {
         "term": "disease",
-        "score": 0.4618,
-        "evidence": []
-      },
-      {
-        "term": "response",
-        "score": 0.4571,
+        "score": 0.4621,
         "evidence": []
       }
     ],
     "page-059": [
       {
         "term": "compendium database",
-        "score": 4.304,
+        "score": 4.0258,
         "evidence": []
       },
       {
         "term": "accessed december",
-        "score": 3.726,
+        "score": 3.7204,
         "evidence": []
       },
       {
         "term": "online database",
-        "score": 3.6021,
+        "score": 3.3399,
         "evidence": []
       },
       {
         "term": "mhealth compendium",
-        "score": 3.2298,
+        "score": 3.2098,
         "evidence": []
       },
       {
         "term": "accessed january",
-        "score": 2.8663,
+        "score": 2.8527,
         "evidence": []
       },
       {
         "term": "baltimore",
-        "score": 2.2645,
+        "score": 2.278,
         "evidence": []
       },
       {
         "term": "k4health",
-        "score": 2.0581,
+        "score": 2.076,
         "evidence": []
       },
       {
         "term": "handle",
-        "score": 1.895,
+        "score": 1.9164,
         "evidence": []
       }
     ],
     "page-060": [
       {
         "term": "compendium database",
-        "score": 4.142,
+        "score": 3.8738,
         "evidence": []
       },
       {
         "term": "accessed december",
-        "score": 3.515,
+        "score": 3.5098,
         "evidence": []
       },
       {
         "term": "online database",
-        "score": 3.4688,
+        "score": 3.2158,
         "evidence": []
       },
       {
         "term": "mhealth compendium",
-        "score": 3.101,
+        "score": 3.0819,
         "evidence": []
       },
       {
         "term": "accessed march",
-        "score": 2.3361,
+        "score": 2.3348,
         "evidence": []
       },
       {
         "term": "accessed november",
-        "score": 2.2599,
+        "score": 2.2642,
         "evidence": []
       },
       {
         "term": "baltimore",
-        "score": 2.1722,
+        "score": 2.1852,
         "evidence": []
       },
       {
         "term": "k4health",
-        "score": 1.9742,
+        "score": 1.9914,
         "evidence": []
       }
     ],
     "page-061": [
       {
         "term": "compendium database",
-        "score": 3.3577,
+        "score": 3.1437,
         "evidence": []
       },
       {
         "term": "accessed december",
-        "score": 2.9768,
+        "score": 2.9797,
         "evidence": []
       },
       {
         "term": "accessed march",
-        "score": 2.8949,
+        "score": 2.8731,
         "evidence": []
       },
       {
         "term": "online database",
-        "score": 2.6773,
+        "score": 2.4796,
         "evidence": []
       },
       {
         "term": "mhealth compendium",
-        "score": 2.4865,
+        "score": 2.4666,
         "evidence": []
       },
       {
         "term": "accessed january",
-        "score": 2.246,
+        "score": 2.2475,
         "evidence": []
       },
       {
         "term": "baltimore",
-        "score": 1.6292,
+        "score": 1.6389,
         "evidence": []
       },
       {
         "term": "k4health",
-        "score": 1.4807,
+        "score": 1.4936,
         "evidence": []
       }
     ],
     "page-062": [
       {
         "term": "accessed march",
-        "score": 2.5472,
+        "score": 2.5262,
         "evidence": []
       },
       {
         "term": "accessed january",
-        "score": 2.2532,
+        "score": 2.2435,
         "evidence": []
       },
       {
         "term": "accessed november",
-        "score": 2.0307,
+        "score": 2.0303,
         "evidence": []
       },
       {
         "term": "website",
-        "score": 1.1573,
+        "score": 1.1238,
         "evidence": []
       },
       {
         "term": "iso",
-        "score": 0.9276,
+        "score": 0.9422,
         "evidence": []
       },
       {
         "term": "qualification",
-        "score": 0.9209,
+        "score": 0.9247,
         "evidence": []
       },
       {
         "term": "google",
-        "score": 0.8439,
+        "score": 0.8494,
         "evidence": []
       },
       {
         "term": "telehealth",
-        "score": 0.8439,
+        "score": 0.8494,
         "evidence": []
       }
     ],
     "page-064": [
       {
         "term": "public feedback",
-        "score": 1.2835,
-        "evidence": []
-      },
-      {
-        "term": "cdisah",
-        "score": 1.1915,
+        "score": 1.3142,
         "evidence": []
       },
       {
         "term": "working group",
-        "score": 1.1055,
+        "score": 1.207,
+        "evidence": []
+      },
+      {
+        "term": "cdisah",
+        "score": 1.2005,
         "evidence": []
       },
       {
         "term": "technical consultations",
-        "score": 1.0066,
+        "score": 1.015,
         "evidence": []
       },
       {
         "term": "editions",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "dhi",
-        "score": 0.9378,
+        "score": 0.9475,
         "evidence": []
       },
       {
         "term": "public process",
-        "score": 0.8823,
+        "score": 0.9098,
         "evidence": []
       },
       {
         "term": "bit",
-        "score": 0.8134,
+        "score": 0.8195,
         "evidence": []
       }
     ]
