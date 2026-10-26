@@ -101,6 +101,14 @@
       "notation": "smart-liquid-variables",
       "source": "smart-base/tools/smart-liquid-variables/smart-liquid-variables.ts#smart-liquid-variables",
       "status": "candidate"
+    },
+    {
+      "id": "terminology-lookup",
+      "prefLabel": "Reuse-first terminology and code-list lookup",
+      "definition": "Look up a concept or code token for a semantic slot (`condition`, `intervention`, `persona`, `medicine`, `domain`, `business-process`, `recommendation-strength`, `recommendation-direction`, `evidence-certainty`) across the four reuse-first precedence rungs of the `terminology-coding` methodology: (1) target guide's `l1-scenario-vocabulary/v1`, (2) `smart-base` generic personas (`DAK.Persona.*`), GRADE `code-lists/*.json` and `guideline-domain` SKOS glossary, (3) local WHO/ILO FSH CodeSystems (`ISCO08`, `CDHIv2`, `CDHIv1`, `CDSCv2`, `KGTerminologySystem`), and (4) a proposed `glossary-terms` candidate (`status: \"candidate\"`) or `could-not-determine` for `business-process`.",
+      "notation": "terminology-lookup",
+      "source": "smart-base/tools/terminology-lookup/terminology-lookup.ts#terminology-lookup",
+      "status": "candidate"
     }
   ]
 }
