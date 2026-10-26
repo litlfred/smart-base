@@ -3,69 +3,69 @@
   "entry": "9789241511766-eng",
   "corpus": {
     "library": "smart-base/library",
-    "sections": 839,
-    "terms": 7506,
+    "sections": 973,
+    "terms": 8571,
     "weighting": "log-entropy"
   },
   "document": [
     {
       "term": "intervention project",
-      "score": 63.4065,
+      "score": 65.1334,
       "evidence": []
     },
     {
       "term": "intervention effectiveness",
-      "score": 62.2716,
+      "score": 63.2336,
       "evidence": []
     },
     {
       "term": "intervention stage",
-      "score": 61.8267,
+      "score": 62.7306,
       "evidence": []
     },
     {
       "term": "intervention claims",
-      "score": 60.2707,
+      "score": 61.4487,
       "evidence": []
     },
     {
       "term": "programme intervention",
-      "score": 59.9097,
+      "score": 61.2629,
       "evidence": []
     },
     {
       "term": "intervention impact",
-      "score": 58.9453,
+      "score": 60.3746,
       "evidence": []
     },
     {
       "term": "intervention activities",
-      "score": 58.0978,
-      "evidence": []
-    },
-    {
-      "term": "intervention delivery",
-      "score": 57.3076,
-      "evidence": []
-    },
-    {
-      "term": "intervention objectives",
-      "score": 56.7479,
-      "evidence": []
-    },
-    {
-      "term": "intervention maturity",
-      "score": 56.426,
+      "score": 59.4673,
       "evidence": []
     },
     {
       "term": "intervention during",
-      "score": 56.2933,
+      "score": 59.292,
       "evidence": []
     },
     {
-      "term": "intervention content",
-      "score": 54.941,
+      "term": "intervention delivery",
+      "score": 58.3995,
+      "evidence": []
+    },
+    {
+      "term": "intervention objectives",
+      "score": 57.9981,
+      "evidence": []
+    },
+    {
+      "term": "intervention implementation",
+      "score": 57.8517,
+      "evidence": []
+    },
+    {
+      "term": "intervention maturity",
+      "score": 57.5484,
       "evidence": []
     }
   ],
@@ -73,5567 +73,5567 @@
     "page-002": [
       {
         "term": "suggested citation",
-        "score": 1.4108,
+        "score": 1.4155,
         "evidence": []
       },
       {
         "term": "creative commons",
-        "score": 1.3906,
+        "score": 1.3972,
         "evidence": []
       },
       {
         "term": "licence",
-        "score": 0.9649,
+        "score": 0.9827,
         "evidence": []
       },
       {
         "term": "material",
-        "score": 0.8954,
+        "score": 0.8784,
         "evidence": []
       },
       {
         "term": "conducting research",
-        "score": 0.8233,
+        "score": 0.838,
         "evidence": []
       },
       {
         "term": "igo",
-        "score": 0.8154,
+        "score": 0.8277,
         "evidence": []
       },
       {
         "term": "cip",
-        "score": 0.7811,
+        "score": 0.7879,
         "evidence": []
       },
       {
         "term": "work",
-        "score": 0.7532,
+        "score": 0.7678,
         "evidence": []
       }
     ],
     "page-003": [
       {
-        "term": "quality assessment",
-        "score": 0.8398,
+        "term": "mera",
+        "score": 0.7819,
         "evidence": []
       },
       {
-        "term": "mera",
-        "score": 0.775,
+        "term": "quality assessment",
+        "score": 0.7597,
         "evidence": []
       },
       {
         "term": "chapter",
-        "score": 0.5966,
+        "score": 0.6321,
         "evidence": []
       },
       {
         "term": "stage",
-        "score": 0.4999,
+        "score": 0.5041,
         "evidence": []
       },
       {
         "term": "evaluation",
-        "score": 0.471,
+        "score": 0.4799,
         "evidence": []
       },
       {
         "term": "setting",
-        "score": 0.4689,
+        "score": 0.477,
         "evidence": []
       },
       {
         "term": "monitoring",
-        "score": 0.4294,
+        "score": 0.4499,
         "evidence": []
       }
     ],
     "page-004": [
       {
         "term": "rhr department",
-        "score": 2.1813,
+        "score": 1.9464,
         "evidence": []
       },
       {
         "term": "jhsph",
-        "score": 1.7006,
+        "score": 1.7059,
         "evidence": []
       },
       {
         "term": "grant mechanism",
-        "score": 1.5911,
+        "score": 1.6083,
         "evidence": []
       },
       {
         "term": "mhealth grant",
-        "score": 1.5125,
+        "score": 1.5445,
         "evidence": []
       },
       {
         "term": "catalytic mhealth",
-        "score": 1.341,
+        "score": 1.3704,
         "evidence": []
       },
       {
         "term": "unf",
-        "score": 1.3209,
+        "score": 1.3311,
         "evidence": []
       },
       {
         "term": "johns hopkins",
-        "score": 1.3029,
+        "score": 1.3221,
         "evidence": []
       },
       {
         "term": "jhu-gmi",
-        "score": 1.1915,
+        "score": 1.2005,
         "evidence": []
       }
     ],
     "page-005": [
       {
         "term": "johns hopkins",
-        "score": 1.3029,
+        "score": 1.3221,
         "evidence": []
       },
       {
         "term": "hopkins university",
-        "score": 1.2102,
-        "evidence": []
-      },
-      {
-        "term": "analysis",
-        "score": 0.5516,
+        "score": 1.2438,
         "evidence": []
       },
       {
         "term": "cost",
-        "score": 0.5257,
+        "score": 0.5581,
+        "evidence": []
+      },
+      {
+        "term": "analysis",
+        "score": 0.558,
         "evidence": []
       },
       {
         "term": "international",
-        "score": 0.5127,
+        "score": 0.5073,
         "evidence": []
       },
       {
         "term": "research",
-        "score": 0.4307,
+        "score": 0.4324,
         "evidence": []
       },
       {
         "term": "ehealth",
-        "score": 0.419,
+        "score": 0.4316,
         "evidence": []
       },
       {
-        "term": "human",
-        "score": 0.3327,
+        "term": "group",
+        "score": 0.3651,
         "evidence": []
       }
     ],
     "page-006": [
       {
         "term": "united nations",
-        "score": 1.533,
+        "score": 1.5551,
         "evidence": []
       },
       {
         "term": "fund",
-        "score": 0.699,
-        "evidence": []
-      },
-      {
-        "term": "newborn",
-        "score": 0.5906,
+        "score": 0.6479,
         "evidence": []
       },
       {
         "term": "maternal",
-        "score": 0.5839,
+        "score": 0.6254,
+        "evidence": []
+      },
+      {
+        "term": "newborn",
+        "score": 0.5795,
         "evidence": []
       },
       {
         "term": "reproductive",
-        "score": 0.5165,
+        "score": 0.5066,
         "evidence": []
       },
       {
         "term": "agency",
-        "score": 0.4821,
+        "score": 0.4819,
         "evidence": []
       },
       {
         "term": "mhealth",
-        "score": 0.4506,
+        "score": 0.4707,
         "evidence": []
       },
       {
-        "term": "child",
-        "score": 0.4469,
+        "term": "mobile",
+        "score": 0.4513,
         "evidence": []
       }
     ],
     "page-007": [
       {
         "term": "five years",
-        "score": 1.068,
+        "score": 1.037,
         "evidence": []
       },
       {
         "term": "united nations",
-        "score": 0.9961,
+        "score": 1.0101,
         "evidence": []
       },
       {
         "term": "deployments",
-        "score": 0.7134,
+        "score": 0.7279,
         "evidence": []
       },
       {
         "term": "learn",
-        "score": 0.6603,
+        "score": 0.6697,
         "evidence": []
       },
       {
         "term": "assistance",
-        "score": 0.6437,
-        "evidence": []
-      },
-      {
-        "term": "implementers",
-        "score": 0.4622,
+        "score": 0.6352,
         "evidence": []
       },
       {
         "term": "mhealth",
-        "score": 0.4506,
+        "score": 0.4707,
+        "evidence": []
+      },
+      {
+        "term": "implementers",
+        "score": 0.467,
         "evidence": []
       },
       {
         "term": "methods",
-        "score": 0.4355,
+        "score": 0.4367,
         "evidence": []
       }
     ],
     "page-008": [
       {
         "term": "reader",
-        "score": 0.6534,
+        "score": 0.6445,
         "evidence": []
       },
       {
         "term": "value",
-        "score": 0.5348,
+        "score": 0.5347,
+        "evidence": []
+      },
+      {
+        "term": "interventions",
+        "score": 0.5155,
         "evidence": []
       },
       {
         "term": "basic",
-        "score": 0.5005,
-        "evidence": []
-      },
-      {
-        "term": "intervention",
-        "score": 0.4435,
+        "score": 0.495,
         "evidence": []
       },
       {
         "term": "evaluation",
-        "score": 0.4231,
+        "score": 0.4311,
         "evidence": []
       },
       {
         "term": "impact",
-        "score": 0.4016,
+        "score": 0.4208,
         "evidence": []
       },
       {
         "term": "efforts",
-        "score": 0.3861,
+        "score": 0.3956,
         "evidence": []
       },
       {
         "term": "questions",
-        "score": 0.3777,
+        "score": 0.3748,
         "evidence": []
       }
     ],
     "page-009": [
       {
         "term": "readers",
-        "score": 1.1555,
+        "score": 1.1652,
         "evidence": []
       },
       {
         "term": "chapter",
-        "score": 0.8303,
+        "score": 0.8797,
         "evidence": []
       },
       {
         "term": "claims",
-        "score": 0.7906,
+        "score": 0.8121,
         "evidence": []
       },
       {
         "term": "mera",
-        "score": 0.775,
+        "score": 0.7819,
         "evidence": []
       },
       {
         "term": "findings",
-        "score": 0.6555,
+        "score": 0.6667,
         "evidence": []
       },
       {
         "term": "quantitative",
-        "score": 0.6288,
+        "score": 0.6266,
         "evidence": []
       },
       {
         "term": "indicators",
-        "score": 0.6074,
+        "score": 0.6174,
         "evidence": []
       },
       {
-        "term": "designs",
-        "score": 0.5975,
+        "term": "assessing",
+        "score": 0.5948,
         "evidence": []
       }
     ],
     "page-010": [
       {
         "term": "intended",
-        "score": 0.5584,
+        "score": 0.5667,
         "evidence": []
       },
       {
         "term": "fidelity",
-        "score": 0.4763,
+        "score": 0.4897,
         "evidence": []
       },
       {
         "term": "intervention",
-        "score": 0.4435,
+        "score": 0.451,
         "evidence": []
       },
       {
         "term": "activities",
-        "score": 0.4297,
+        "score": 0.4496,
         "evidence": []
       },
       {
         "term": "impact",
-        "score": 0.4016,
+        "score": 0.4208,
         "evidence": []
       },
       {
         "term": "technologies",
-        "score": 0.3892,
+        "score": 0.4009,
         "evidence": []
       },
       {
         "term": "objectives",
-        "score": 0.3751,
+        "score": 0.3907,
         "evidence": []
       },
       {
-        "term": "monitor",
-        "score": 0.3725,
+        "term": "programme",
+        "score": 0.3848,
         "evidence": []
       }
     ],
     "page-012": [
       {
         "term": "maturity life-cycle",
-        "score": 1.8576,
+        "score": 1.8552,
         "evidence": []
       },
       {
         "term": "intervention maturity",
-        "score": 1.3239,
+        "score": 1.3561,
         "evidence": []
       },
       {
         "term": "intervention matures",
-        "score": 1.2765,
+        "score": 1.2978,
         "evidence": []
       },
       {
         "term": "concurrent monitoring",
-        "score": 1.1553,
+        "score": 1.1694,
         "evidence": []
       },
       {
         "term": "financial evaluation",
-        "score": 0.9036,
+        "score": 0.9242,
         "evidence": []
       },
       {
         "term": "economic financial",
-        "score": 0.8315,
+        "score": 0.8403,
         "evidence": []
       },
       {
         "term": "prototype",
-        "score": 0.8281,
+        "score": 0.8401,
         "evidence": []
       },
       {
         "term": "attempt",
-        "score": 0.7652,
+        "score": 0.7724,
         "evidence": []
       }
     ],
     "page-013": [
       {
         "term": "monitoring activities",
-        "score": 0.978,
+        "score": 1.024,
         "evidence": []
       },
       {
         "term": "process monitoring",
-        "score": 0.8978,
+        "score": 0.9481,
         "evidence": []
       },
       {
         "term": "stage",
-        "score": 0.8153,
+        "score": 0.8222,
         "evidence": []
       },
       {
         "term": "life-cycle",
-        "score": 0.8101,
+        "score": 0.7941,
+        "evidence": []
+      },
+      {
+        "term": "implementation fidelity",
+        "score": 0.7422,
         "evidence": []
       },
       {
         "term": "questions",
-        "score": 0.6689,
+        "score": 0.6639,
         "evidence": []
       },
       {
         "term": "measure",
-        "score": 0.6232,
+        "score": 0.6407,
         "evidence": []
       },
       {
         "term": "deployments",
-        "score": 0.5653,
-        "evidence": []
-      },
-      {
-        "term": "intervention",
-        "score": 0.5438,
+        "score": 0.5768,
         "evidence": []
       }
     ],
     "page-014": [
       {
         "term": "learning curve",
-        "score": 1.3166,
+        "score": 1.3135,
         "evidence": []
       },
       {
         "term": "extrinsic",
-        "score": 0.9855,
+        "score": 0.9879,
         "evidence": []
       },
       {
         "term": "attributable",
-        "score": 0.7876,
+        "score": 0.7943,
         "evidence": []
       },
       {
         "term": "changes",
-        "score": 0.7098,
+        "score": 0.721,
         "evidence": []
       },
       {
         "term": "begins",
-        "score": 0.6762,
+        "score": 0.6853,
         "evidence": []
       },
       {
         "term": "stability",
-        "score": 0.6694,
+        "score": 0.6803,
         "evidence": []
       },
       {
         "term": "prototype",
-        "score": 0.6562,
+        "score": 0.6657,
         "evidence": []
       },
       {
-        "term": "interaction",
-        "score": 0.6534,
+        "term": "measurement",
+        "score": 0.6545,
         "evidence": []
       }
     ],
     "page-015": [
       {
         "term": "intervention changed",
-        "score": 1.7876,
+        "score": 1.8089,
         "evidence": []
       },
       {
         "term": "changed outcomes",
-        "score": 1.6003,
+        "score": 1.7469,
         "evidence": []
       },
       {
         "term": "changed processes",
-        "score": 1.474,
+        "score": 1.5023,
         "evidence": []
       },
       {
         "term": "non-research setting",
-        "score": 1.4366,
+        "score": 1.4559,
         "evidence": []
       },
       {
         "term": "research setting",
-        "score": 1.0282,
+        "score": 1.0414,
         "evidence": []
       },
       {
         "term": "guideline adherence",
-        "score": 1.0099,
+        "score": 0.9867,
         "evidence": []
       },
       {
         "term": "asks",
-        "score": 0.8155,
+        "score": 0.8216,
         "evidence": []
       },
       {
         "term": "worker performance",
-        "score": 0.7907,
+        "score": 0.8142,
         "evidence": []
       }
     ],
     "page-016": [
       {
         "term": "text messages",
-        "score": 0.9985,
+        "score": 1.024,
         "evidence": []
       },
       {
         "term": "improve uptake",
-        "score": 0.8923,
+        "score": 0.9083,
         "evidence": []
       },
       {
         "term": "conclusion",
-        "score": 0.6276,
+        "score": 0.629,
         "evidence": []
       },
       {
-        "term": "ineffectiveness",
-        "score": 0.6218,
+        "term": "reminders",
+        "score": 0.6265,
         "evidence": []
       }
     ],
     "page-017": [
       {
-        "term": "stage",
-        "score": 1.0911,
+        "term": "evaluation activities",
+        "score": 1.1152,
         "evidence": []
       },
       {
-        "term": "evaluation activities",
-        "score": 1.0829,
+        "term": "stage",
+        "score": 1.1004,
         "evidence": []
       },
       {
         "term": "appropriate claims",
-        "score": 1.0378,
+        "score": 1.0974,
         "evidence": []
       },
       {
         "term": "step",
-        "score": 0.9094,
+        "score": 0.9414,
         "evidence": []
       },
       {
         "term": "carry out",
-        "score": 0.9008,
+        "score": 0.9034,
         "evidence": []
       },
       {
         "term": "corresponds",
-        "score": 0.8812,
+        "score": 0.8859,
         "evidence": []
       },
       {
         "term": "maturity",
-        "score": 0.7285,
+        "score": 0.7515,
         "evidence": []
       },
       {
         "term": "continuum",
-        "score": 0.7003,
+        "score": 0.6441,
         "evidence": []
       }
     ],
     "page-018": [
       {
         "term": "appropriate claims",
-        "score": 1.1199,
-        "evidence": []
-      },
-      {
-        "term": "underlying framework",
-        "score": 1.0039,
+        "score": 1.1696,
         "evidence": []
       },
       {
         "term": "anticipated outcomes",
-        "score": 0.9836,
+        "score": 1.1024,
+        "evidence": []
+      },
+      {
+        "term": "underlying framework",
+        "score": 1.0264,
         "evidence": []
       },
       {
         "term": "evaluated",
-        "score": 0.8162,
+        "score": 0.8867,
         "evidence": []
       },
       {
         "term": "objectives",
-        "score": 0.7862,
+        "score": 0.8189,
         "evidence": []
       },
       {
         "term": "stage",
-        "score": 0.7323,
+        "score": 0.7386,
+        "evidence": []
+      },
+      {
+        "term": "systems improve",
+        "score": 0.6699,
         "evidence": []
       },
       {
         "term": "measurable",
-        "score": 0.6064,
-        "evidence": []
-      },
-      {
-        "term": "intervention",
-        "score": 0.5935,
+        "score": 0.617,
         "evidence": []
       }
     ],
     "page-019": [
       {
         "term": "cost-effective improving",
-        "score": 1.2455,
-        "evidence": []
-      },
-      {
-        "term": "quality cost-effective",
-        "score": 1.0628,
+        "score": 1.2115,
         "evidence": []
       },
       {
         "term": "stage",
-        "score": 1.0477,
+        "score": 1.0566,
         "evidence": []
       },
       {
-        "term": "bringing",
-        "score": 0.8439,
+        "term": "quality cost-effective",
+        "score": 0.9929,
         "evidence": []
       },
       {
         "term": "circumstances",
-        "score": 0.836,
+        "score": 0.8321,
+        "evidence": []
+      },
+      {
+        "term": "bringing",
+        "score": 0.8195,
         "evidence": []
       },
       {
         "term": "technical stability",
-        "score": 0.7983,
+        "score": 0.8162,
         "evidence": []
       },
       {
         "term": "non-research",
-        "score": 0.7497,
+        "score": 0.7572,
         "evidence": []
       },
       {
         "term": "feasibility",
-        "score": 0.6623,
+        "score": 0.6955,
         "evidence": []
       }
     ],
     "page-020": [
       {
         "term": "internal evaluations",
-        "score": 1.8023,
+        "score": 1.8381,
         "evidence": []
       },
       {
         "term": "evaluation activities",
-        "score": 1.2484,
+        "score": 1.2862,
         "evidence": []
       },
       {
         "term": "carried out",
-        "score": 1.1119,
+        "score": 1.0937,
         "evidence": []
       },
       {
         "term": "study design",
-        "score": 1.1092,
+        "score": 1.0778,
         "evidence": []
       },
       {
         "term": "carry out",
-        "score": 1.0491,
+        "score": 1.0562,
         "evidence": []
       },
       {
         "term": "implementing agency",
-        "score": 1.0353,
+        "score": 1.0488,
+        "evidence": []
+      },
+      {
+        "term": "inception",
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "prospective",
-        "score": 0.8816,
-        "evidence": []
-      },
-      {
-        "term": "timing",
-        "score": 0.8189,
+        "score": 0.8219,
         "evidence": []
       }
     ],
     "page-021": [
       {
         "term": "evaluation activities",
-        "score": 1.2345,
+        "score": 1.2777,
+        "evidence": []
+      },
+      {
+        "term": "implementation plan",
+        "score": 1.0983,
         "evidence": []
       },
       {
         "term": "carried out",
-        "score": 1.1119,
+        "score": 1.0937,
         "evidence": []
       },
       {
         "term": "sub-activities",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "activity",
-        "score": 0.9085,
-        "evidence": []
-      },
-      {
-        "term": "support evaluation",
-        "score": 0.8375,
+        "score": 0.8867,
         "evidence": []
       },
       {
         "term": "pregnancy outcomes",
-        "score": 0.8318,
+        "score": 0.882,
+        "evidence": []
+      },
+      {
+        "term": "support evaluation",
+        "score": 0.8724,
         "evidence": []
       },
       {
         "term": "timeline",
-        "score": 0.7635,
-        "evidence": []
-      },
-      {
-        "term": "dates",
-        "score": 0.7081,
+        "score": 0.7675,
         "evidence": []
       }
     ],
     "page-022": [
       {
         "term": "accessed march",
-        "score": 1.8748,
-        "evidence": []
-      },
-      {
-        "term": "project officer",
-        "score": 1.8692,
+        "score": 1.8643,
         "evidence": []
       },
       {
         "term": "accessed april",
-        "score": 1.8304,
+        "score": 1.8492,
+        "evidence": []
+      },
+      {
+        "term": "project officer",
+        "score": 1.8198,
         "evidence": []
       },
       {
         "term": "donor budget",
-        "score": 1.3327,
+        "score": 1.3596,
         "evidence": []
       },
       {
         "term": "sop",
-        "score": 1.0429,
+        "score": 1.0503,
         "evidence": []
       },
       {
         "term": "evaluation handbook",
-        "score": 1.0158,
+        "score": 1.0425,
         "evidence": []
       },
       {
         "term": "activity",
-        "score": 0.9866,
+        "score": 0.963,
         "evidence": []
       },
       {
-        "term": "red",
-        "score": 0.8439,
+        "term": "field guide",
+        "score": 0.8316,
         "evidence": []
       }
     ],
     "page-024": [
       {
         "term": "value propositions",
-        "score": 2.1666,
+        "score": 2.1727,
         "evidence": []
       },
       {
         "term": "implicit comparator",
-        "score": 1.6373,
+        "score": 1.5418,
         "evidence": []
       },
       {
         "term": "statement describing",
-        "score": 1.4196,
+        "score": 1.4426,
         "evidence": []
       },
       {
         "term": "non-digital intervention",
-        "score": 1.4156,
+        "score": 1.4307,
         "evidence": []
       },
       {
         "term": "anticipated benefits",
-        "score": 1.373,
+        "score": 1.3123,
         "evidence": []
       },
       {
         "term": "project goals",
-        "score": 0.9671,
+        "score": 1.0083,
         "evidence": []
       },
       {
         "term": "claims",
-        "score": 0.7906,
+        "score": 0.8121,
         "evidence": []
       },
       {
-        "term": "alternative",
-        "score": 0.6495,
+        "term": "drive",
+        "score": 0.6494,
         "evidence": []
       }
     ],
     "page-025": [
       {
         "term": "aged months",
-        "score": 2.0663,
+        "score": 2.0797,
         "evidence": []
       },
       {
         "term": "measles vaccine",
-        "score": 2.0304,
+        "score": 2.0115,
         "evidence": []
       },
       {
         "term": "children aged",
-        "score": 1.9887,
+        "score": 1.9813,
         "evidence": []
       },
       {
         "term": "articulating claims",
-        "score": 1.8494,
+        "score": 1.889,
         "evidence": []
       },
       {
         "term": "claim statements",
-        "score": 1.824,
-        "evidence": []
-      },
-      {
-        "term": "vaccine coverage",
-        "score": 1.5992,
+        "score": 1.8331,
         "evidence": []
       },
       {
         "term": "message reminders",
-        "score": 1.5851,
+        "score": 1.6227,
+        "evidence": []
+      },
+      {
+        "term": "vaccine coverage",
+        "score": 1.5796,
         "evidence": []
       },
       {
         "term": "whose mothers",
-        "score": 1.548,
+        "score": 1.5586,
         "evidence": []
       }
     ],
     "page-026": [
       {
         "term": "pathway question",
-        "score": 1.663,
-        "evidence": []
-      },
-      {
-        "term": "childhood vaccines",
-        "score": 1.4165,
+        "score": 1.6628,
         "evidence": []
       },
       {
         "term": "claim statement",
-        "score": 1.3817,
+        "score": 1.4006,
+        "evidence": []
+      },
+      {
+        "term": "childhood vaccines",
+        "score": 1.3884,
         "evidence": []
       },
       {
         "term": "following pathway",
-        "score": 1.3119,
+        "score": 1.3391,
         "evidence": []
       },
       {
         "term": "added benefit",
-        "score": 1.1471,
+        "score": 1.1539,
         "evidence": []
       },
       {
-        "term": "electronic decision",
-        "score": 0.9572,
-        "evidence": []
-      },
-      {
-        "term": "evidence base",
-        "score": 0.9196,
+        "term": "underlying evidence",
+        "score": 1.0537,
         "evidence": []
       },
       {
         "term": "health-care providers",
-        "score": 0.8855,
+        "score": 0.9888,
+        "evidence": []
+      },
+      {
+        "term": "electronic decision",
+        "score": 0.9535,
         "evidence": []
       }
     ],
     "page-027": [
       {
         "term": "determinant layers",
-        "score": 1.9485,
+        "score": 1.9194,
         "evidence": []
       },
       {
         "term": "claim statements",
-        "score": 1.3417,
+        "score": 1.3474,
         "evidence": []
       },
       {
         "term": "illustrative claim",
-        "score": 1.1214,
+        "score": 1.1485,
         "evidence": []
       },
       {
         "term": "uhc",
-        "score": 1.0842,
+        "score": 1.0955,
         "evidence": []
       },
       {
         "term": "sustainable development",
-        "score": 0.7983,
+        "score": 0.8158,
         "evidence": []
       },
       {
         "term": "coverage",
-        "score": 0.7222,
+        "score": 0.7314,
         "evidence": []
       },
       {
         "term": "development goals",
-        "score": 0.6275,
+        "score": 0.6499,
         "evidence": []
       },
       {
         "term": "telemedicine",
-        "score": 0.6024,
+        "score": 0.6131,
         "evidence": []
       }
     ],
     "page-028": [
       {
         "term": "claims-based approach",
-        "score": 1.7086,
+        "score": 1.732,
         "evidence": []
       },
       {
         "term": "key stakeholders",
-        "score": 1.0988,
+        "score": 1.1404,
         "evidence": []
       },
       {
         "term": "latter",
-        "score": 0.8134,
+        "score": 0.7641,
         "evidence": []
       },
       {
         "term": "claims",
-        "score": 0.7101,
+        "score": 0.7295,
         "evidence": []
       },
       {
         "term": "exercise",
-        "score": 0.6548,
+        "score": 0.6768,
         "evidence": []
       },
       {
         "term": "chapter",
-        "score": 0.6376,
+        "score": 0.6755,
         "evidence": []
       },
       {
         "term": "projects",
-        "score": 0.5171,
+        "score": 0.5335,
         "evidence": []
       },
       {
-        "term": "scale-up",
-        "score": 0.4579,
+        "term": "considered",
+        "score": 0.5136,
         "evidence": []
       }
     ],
     "page-029": [
       {
         "term": "claim statements",
-        "score": 2.5395,
+        "score": 2.5503,
         "evidence": []
       },
       {
         "term": "expectations",
-        "score": 1.0187,
+        "score": 1.0313,
         "evidence": []
       },
       {
         "term": "substantiated",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "assumption",
-        "score": 0.7681,
+        "score": 0.756,
         "evidence": []
       },
       {
         "term": "match",
-        "score": 0.717,
-        "evidence": []
-      },
-      {
-        "term": "expect",
-        "score": 0.7076,
+        "score": 0.7112,
         "evidence": []
       },
       {
         "term": "top",
-        "score": 0.7028,
+        "score": 0.6986,
         "evidence": []
       },
       {
         "term": "stakeholder",
-        "score": 0.668,
+        "score": 0.6889,
+        "evidence": []
+      },
+      {
+        "term": "expect",
+        "score": 0.6786,
         "evidence": []
       }
     ],
     "page-030": [
       {
         "term": "illustrative claim",
-        "score": 2.0659,
+        "score": 2.1074,
         "evidence": []
       },
       {
         "term": "improved rmncah",
-        "score": 1.6966,
-        "evidence": []
-      },
-      {
-        "term": "infant morbidity",
-        "score": 1.4261,
+        "score": 1.667,
         "evidence": []
       },
       {
         "term": "rmncah impact",
-        "score": 1.2564,
+        "score": 1.2809,
+        "evidence": []
+      },
+      {
+        "term": "infant morbidity",
+        "score": 1.2649,
         "evidence": []
       },
       {
         "term": "providing maternal",
-        "score": 1.0408,
+        "score": 1.1019,
         "evidence": []
       },
       {
         "term": "mobile network",
-        "score": 0.923,
+        "score": 0.9596,
         "evidence": []
       },
       {
         "term": "collection platform",
-        "score": 0.7194,
+        "score": 0.7444,
         "evidence": []
       },
       {
         "term": "operator",
-        "score": 0.6869,
+        "score": 0.6957,
         "evidence": []
       }
     ],
     "page-031": [
       {
         "term": "illustrative claim",
-        "score": 1.5197,
-        "evidence": []
-      },
-      {
-        "term": "infant morbidity",
-        "score": 1.4261,
+        "score": 1.5508,
         "evidence": []
       },
       {
         "term": "rmncah impact",
-        "score": 1.3969,
+        "score": 1.4187,
         "evidence": []
       },
       {
         "term": "future adopters",
-        "score": 1.3535,
+        "score": 1.3643,
         "evidence": []
       },
       {
-        "term": "diabetes",
-        "score": 0.9265,
+        "term": "infant morbidity",
+        "score": 1.2649,
         "evidence": []
       },
       {
         "term": "peers",
-        "score": 0.8158,
+        "score": 0.8219,
+        "evidence": []
+      },
+      {
+        "term": "diabetes",
+        "score": 0.7333,
         "evidence": []
       },
       {
         "term": "interventions technologies",
-        "score": 0.6122,
+        "score": 0.6919,
         "evidence": []
       },
       {
         "term": "maternal",
-        "score": 0.5839,
+        "score": 0.6254,
         "evidence": []
       }
     ],
     "page-032": [
       {
         "term": "conceptual frameworks",
-        "score": 1.9764,
-        "evidence": []
-      },
-      {
-        "term": "logical framework",
-        "score": 1.2496,
+        "score": 2.0007,
         "evidence": []
       },
       {
         "term": "logic model",
-        "score": 1.2453,
+        "score": 1.3034,
+        "evidence": []
+      },
+      {
+        "term": "logical framework",
+        "score": 1.2839,
         "evidence": []
       },
       {
         "term": "causal",
-        "score": 0.9688,
+        "score": 0.9826,
         "evidence": []
       },
       {
         "term": "theoretical",
-        "score": 0.8133,
+        "score": 0.8195,
         "evidence": []
       },
       {
         "term": "theory",
-        "score": 0.7652,
+        "score": 0.7377,
         "evidence": []
       },
       {
         "term": "clarify",
-        "score": 0.6603,
+        "score": 0.6592,
         "evidence": []
       },
       {
-        "term": "anticipated",
-        "score": 0.6533,
+        "term": "achievement",
+        "score": 0.6557,
         "evidence": []
       }
     ],
     "page-033": [
       {
         "term": "anticipated goal",
-        "score": 1.6872,
+        "score": 1.6723,
         "evidence": []
       },
       {
         "term": "desired goal",
-        "score": 1.5609,
+        "score": 1.5805,
         "evidence": []
       },
       {
         "term": "conceptual framework",
-        "score": 1.507,
+        "score": 1.5245,
         "evidence": []
       },
       {
         "term": "conceptual model",
-        "score": 1.4186,
+        "score": 1.4526,
         "evidence": []
       },
       {
         "term": "factor",
-        "score": 1.2301,
+        "score": 1.2042,
         "evidence": []
       },
       {
         "term": "k4health",
-        "score": 1.146,
+        "score": 1.156,
         "evidence": []
       },
       {
         "term": "successful achievement",
-        "score": 1.1215,
+        "score": 1.1412,
         "evidence": []
       },
       {
         "term": "arrows",
-        "score": 0.8425,
+        "score": 0.8481,
         "evidence": []
       }
     ],
     "page-034": [
       {
         "term": "causal relationships",
-        "score": 1.8763,
+        "score": 1.9041,
         "evidence": []
       },
       {
         "term": "incremental achievement",
-        "score": 1.8044,
+        "score": 1.8311,
         "evidence": []
       },
       {
         "term": "linear relationships",
-        "score": 1.695,
+        "score": 1.6746,
         "evidence": []
       },
       {
         "term": "clarifies project",
-        "score": 1.6445,
+        "score": 1.6725,
         "evidence": []
       },
       {
         "term": "higher-level objectives",
-        "score": 1.5912,
+        "score": 1.6254,
         "evidence": []
       },
       {
         "term": "desired change",
-        "score": 1.586,
+        "score": 1.6152,
         "evidence": []
       },
       {
         "term": "programme objectives",
-        "score": 1.3871,
+        "score": 1.4434,
         "evidence": []
       },
       {
         "term": "influence programme",
-        "score": 1.2488,
+        "score": 1.2571,
         "evidence": []
       }
     ],
     "page-035": [
       {
         "term": "motech server",
-        "score": 2.3271,
+        "score": 2.3523,
         "evidence": []
       },
       {
         "term": "mobile midwife",
-        "score": 2.0056,
+        "score": 1.9603,
         "evidence": []
       },
       {
         "term": "improved maternal",
-        "score": 1.4257,
+        "score": 1.4324,
         "evidence": []
       },
       {
         "term": "ghana",
-        "score": 1.252,
+        "score": 1.2119,
         "evidence": []
       },
       {
         "term": "grameen foundation",
-        "score": 1.1481,
+        "score": 1.161,
         "evidence": []
       },
       {
         "term": "lower-level",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "mobile technology",
-        "score": 0.8736,
+        "score": 0.9285,
         "evidence": []
       },
       {
-        "term": "client",
-        "score": 0.8471,
+        "term": "care during",
+        "score": 0.8966,
         "evidence": []
       }
     ],
     "page-036": [
       {
-        "term": "registered infants",
-        "score": 2.751,
-        "evidence": []
-      },
-      {
         "term": "registered pregnant",
-        "score": 2.6436,
+        "score": 2.7498,
         "evidence": []
       },
       {
-        "term": "night registered",
-        "score": 2.3669,
+        "term": "registered infants",
+        "score": 2.7147,
         "evidence": []
       },
       {
         "term": "pregnant women",
-        "score": 2.3079,
+        "score": 2.6481,
+        "evidence": []
+      },
+      {
+        "term": "night registered",
+        "score": 2.2067,
         "evidence": []
       },
       {
         "term": "motech training",
-        "score": 2.0132,
-        "evidence": []
-      },
-      {
-        "term": "previous night",
-        "score": 1.4445,
+        "score": 2.0407,
         "evidence": []
       },
       {
         "term": "least doses",
-        "score": 1.3392,
+        "score": 1.4328,
+        "evidence": []
+      },
+      {
+        "term": "previous night",
+        "score": 1.2944,
         "evidence": []
       },
       {
         "term": "improve maternal",
-        "score": 1.1404,
+        "score": 1.2585,
         "evidence": []
       }
     ],
     "page-037": [
       {
         "term": "logical framework",
-        "score": 1.5221,
+        "score": 1.5592,
         "evidence": []
       },
       {
         "term": "programmatic inputs",
-        "score": 1.4602,
+        "score": 1.4945,
         "evidence": []
       },
       {
         "term": "service responsiveness",
-        "score": 1.3452,
+        "score": 1.3642,
         "evidence": []
       },
       {
         "term": "intermediate changes",
-        "score": 1.3286,
+        "score": 1.3325,
         "evidence": []
       },
       {
         "term": "training courses",
-        "score": 1.2342,
+        "score": 1.2624,
         "evidence": []
       },
       {
         "term": "technology inputs",
-        "score": 1.1105,
+        "score": 1.1621,
         "evidence": []
       },
       {
         "term": "activities undertaken",
-        "score": 1.1059,
+        "score": 1.0937,
         "evidence": []
       },
       {
         "term": "productive",
-        "score": 1.0479,
+        "score": 1.0552,
         "evidence": []
       }
     ],
     "page-038": [
       {
         "term": "desk services",
-        "score": 1.3904,
+        "score": 1.4348,
         "evidence": []
       },
       {
         "term": "pregnant women",
-        "score": 1.1673,
+        "score": 1.3477,
         "evidence": []
       },
       {
         "term": "health-care facility",
-        "score": 1.1389,
+        "score": 1.183,
         "evidence": []
       },
       {
         "term": "improved",
-        "score": 1.0323,
+        "score": 0.9896,
         "evidence": []
       },
       {
         "term": "antenatal care",
-        "score": 0.9689,
-        "evidence": []
-      },
-      {
-        "term": "reduction",
-        "score": 0.9537,
+        "score": 0.9523,
         "evidence": []
       },
       {
         "term": "promotional",
-        "score": 0.8816,
+        "score": 0.8863,
         "evidence": []
       },
       {
         "term": "anc",
-        "score": 0.8462,
+        "score": 0.8531,
+        "evidence": []
+      },
+      {
+        "term": "reduction",
+        "score": 0.8507,
         "evidence": []
       }
     ],
     "page-039": [
       {
         "term": "south africa",
-        "score": 1.8955,
+        "score": 1.8317,
         "evidence": []
       },
       {
         "term": "momconnect",
-        "score": 1.0491,
+        "score": 1.0612,
         "evidence": []
       },
       {
         "term": "sms messages",
-        "score": 1.0072,
+        "score": 1.0391,
         "evidence": []
       },
       {
         "term": "registered",
-        "score": 1.0045,
+        "score": 1.0126,
         "evidence": []
       },
       {
         "term": "ndoh",
-        "score": 0.9855,
-        "evidence": []
-      },
-      {
-        "term": "baby",
-        "score": 0.9007,
-        "evidence": []
-      },
-      {
-        "term": "pregnancy",
-        "score": 0.8001,
+        "score": 0.9879,
         "evidence": []
       },
       {
         "term": "receives",
-        "score": 0.7672,
+        "score": 0.7526,
+        "evidence": []
+      },
+      {
+        "term": "pregnancy",
+        "score": 0.7511,
+        "evidence": []
+      },
+      {
+        "term": "baby",
+        "score": 0.7444,
         "evidence": []
       }
     ],
     "page-040": [
       {
         "term": "evaluation tips",
-        "score": 0.8382,
+        "score": 0.8555,
         "evidence": []
       },
       {
         "term": "international development",
-        "score": 0.7925,
+        "score": 0.7966,
         "evidence": []
       },
       {
         "term": "conceptual",
-        "score": 0.6462,
+        "score": 0.6475,
         "evidence": []
       },
       {
         "term": "educ",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
-        "term": "theory",
-        "score": 0.6064,
+        "term": "modelled",
+        "score": 0.5884,
         "evidence": []
       }
     ],
     "page-041": [
       {
         "term": "qualitative factor",
-        "score": 1.4095,
+        "score": 1.3608,
         "evidence": []
       },
       {
         "term": "measure achievement",
-        "score": 1.1827,
+        "score": 1.2075,
         "evidence": []
       },
       {
         "term": "development actor",
-        "score": 0.979,
+        "score": 0.9972,
         "evidence": []
       },
       {
         "term": "changes connected",
-        "score": 0.9487,
+        "score": 0.966,
         "evidence": []
       },
       {
         "term": "reliable means",
-        "score": 0.9416,
+        "score": 0.9569,
         "evidence": []
       },
       {
         "term": "indicators",
-        "score": 0.905,
+        "score": 0.9199,
         "evidence": []
       },
       {
         "term": "specified",
-        "score": 0.8287,
+        "score": 0.8376,
         "evidence": []
       },
       {
         "term": "quantitative",
-        "score": 0.7934,
+        "score": 0.7907,
         "evidence": []
       }
     ],
     "page-042": [
       {
         "term": "outcome indicators",
-        "score": 1.4787,
+        "score": 1.4812,
         "evidence": []
       },
       {
         "term": "process indicators",
-        "score": 1.4354,
+        "score": 1.4797,
         "evidence": []
       },
       {
         "term": "underlying intervention",
-        "score": 1.3457,
+        "score": 1.3644,
         "evidence": []
       },
       {
         "term": "evidence base",
-        "score": 1.2355,
+        "score": 1.2993,
         "evidence": []
       },
       {
         "term": "attainable",
-        "score": 0.8249,
+        "score": 0.8308,
         "evidence": []
       },
       {
         "term": "selection",
-        "score": 0.8179,
+        "score": 0.79,
         "evidence": []
       },
       {
         "term": "kinds",
-        "score": 0.7903,
+        "score": 0.7752,
         "evidence": []
       },
       {
         "term": "service delivery",
-        "score": 0.6929,
+        "score": 0.7126,
         "evidence": []
       }
     ],
     "page-043": [
       {
         "term": "organizational factors",
-        "score": 1.2951,
-        "evidence": []
-      },
-      {
-        "term": "prism",
-        "score": 1.0847,
+        "score": 1.3131,
         "evidence": []
       },
       {
         "term": "people interact",
-        "score": 1.0696,
+        "score": 1.1029,
+        "evidence": []
+      },
+      {
+        "term": "prism",
+        "score": 1.0912,
         "evidence": []
       },
       {
         "term": "technical factors",
-        "score": 1.0599,
+        "score": 1.0743,
         "evidence": []
       },
       {
         "term": "delivery affect",
-        "score": 1.0345,
+        "score": 1.042,
         "evidence": []
       },
       {
         "term": "captures",
-        "score": 1.0289,
+        "score": 1.0414,
         "evidence": []
       },
       {
         "term": "technology work",
-        "score": 0.9682,
+        "score": 1.0187,
         "evidence": []
       },
       {
         "term": "technology improve",
-        "score": 0.8289,
+        "score": 0.9139,
         "evidence": []
       }
     ],
     "page-044": [
       {
         "term": "technical factors",
-        "score": 1.4617,
+        "score": 1.4876,
         "evidence": []
       },
       {
         "term": "skilled local",
-        "score": 1.2865,
+        "score": 1.3177,
         "evidence": []
       },
       {
         "term": "local staff",
-        "score": 1.2477,
+        "score": 1.2888,
         "evidence": []
       },
       {
         "term": "technology attended",
-        "score": 1.2381,
+        "score": 1.2015,
         "evidence": []
       },
       {
         "term": "target population",
-        "score": 1.0901,
-        "evidence": []
-      },
-      {
-        "term": "sample domains",
-        "score": 1.0738,
+        "score": 1.0931,
         "evidence": []
       },
       {
         "term": "software quality",
-        "score": 1.0699,
+        "score": 1.0642,
         "evidence": []
       },
       {
         "term": "industry standards",
-        "score": 1.0402,
+        "score": 1.0607,
+        "evidence": []
+      },
+      {
+        "term": "sample domains",
+        "score": 0.9541,
         "evidence": []
       }
     ],
     "page-045": [
       {
         "term": "organizational factors",
-        "score": 1.4781,
+        "score": 1.5018,
         "evidence": []
       },
       {
         "term": "users find",
-        "score": 1.1779,
+        "score": 1.1948,
         "evidence": []
       },
       {
         "term": "target population",
-        "score": 0.9389,
+        "score": 0.9415,
         "evidence": []
       },
       {
         "term": "behaviour change",
-        "score": 0.9,
+        "score": 0.9027,
         "evidence": []
       },
       {
         "term": "indicators",
-        "score": 0.869,
+        "score": 0.8834,
         "evidence": []
       },
       {
         "term": "received through",
-        "score": 0.7969,
+        "score": 0.8044,
         "evidence": []
       },
       {
         "term": "change communication",
-        "score": 0.7264,
+        "score": 0.7334,
         "evidence": []
       },
       {
         "term": "quantity",
-        "score": 0.7242,
+        "score": 0.7322,
         "evidence": []
       }
     ],
     "page-046": [
       {
         "term": "feedback loop",
-        "score": 1.6875,
+        "score": 1.7179,
         "evidence": []
       },
       {
         "term": "reference period",
-        "score": 1.5862,
+        "score": 1.5586,
         "evidence": []
       },
       {
         "term": "output indicators",
-        "score": 1.2641,
+        "score": 1.2863,
         "evidence": []
       },
       {
         "term": "iterative process",
-        "score": 1.1604,
+        "score": 1.1954,
         "evidence": []
       },
       {
         "term": "intended users",
-        "score": 1.1316,
+        "score": 1.161,
         "evidence": []
       },
       {
         "term": "people interact",
-        "score": 0.9257,
+        "score": 0.9559,
         "evidence": []
       },
       {
         "term": "development process",
-        "score": 0.784,
+        "score": 0.8257,
         "evidence": []
       },
       {
-        "term": "satisfaction",
-        "score": 0.7545,
+        "term": "technology development",
+        "score": 0.7842,
         "evidence": []
       }
     ],
     "page-047": [
       {
         "term": "service delivery",
-        "score": 1.0321,
+        "score": 1.062,
         "evidence": []
       },
       {
         "term": "client-level",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "behaviour change",
-        "score": 0.9,
+        "score": 0.9027,
         "evidence": []
       },
       {
         "term": "change communication",
-        "score": 0.8263,
+        "score": 0.8341,
         "evidence": []
       },
       {
         "term": "indicators",
-        "score": 0.7848,
-        "evidence": []
-      },
-      {
-        "term": "utilization",
-        "score": 0.7554,
+        "score": 0.7978,
         "evidence": []
       },
       {
         "term": "client",
-        "score": 0.7299,
+        "score": 0.745,
+        "evidence": []
+      },
+      {
+        "term": "utilization",
+        "score": 0.689,
         "evidence": []
       },
       {
         "term": "provider",
-        "score": 0.6917,
+        "score": 0.6863,
         "evidence": []
       }
     ],
     "page-048": [
       {
         "term": "provider-level indicators",
-        "score": 1.7796,
+        "score": 1.7947,
         "evidence": []
       },
       {
         "term": "m4rh",
-        "score": 1.5696,
+        "score": 1.5831,
         "evidence": []
       },
       {
         "term": "unique clients",
-        "score": 0.9711,
-        "evidence": []
-      },
-      {
-        "term": "back-end",
-        "score": 0.9602,
+        "score": 1.0037,
         "evidence": []
       },
       {
         "term": "building blocks",
-        "score": 0.9447,
+        "score": 0.9701,
+        "evidence": []
+      },
+      {
+        "term": "back-end",
+        "score": 0.9694,
+        "evidence": []
+      },
+      {
+        "term": "costs",
+        "score": 0.9336,
         "evidence": []
       },
       {
         "term": "oct",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "contacted",
-        "score": 0.9265,
-        "evidence": []
-      },
-      {
-        "term": "feb",
-        "score": 0.9265,
+        "score": 0.9302,
         "evidence": []
       }
     ],
     "page-049": [
       {
-        "term": "reference period",
-        "score": 1.8151,
+        "term": "health-care provider",
+        "score": 1.7853,
         "evidence": []
       },
       {
-        "term": "health-care provider",
-        "score": 1.7186,
+        "term": "reference period",
+        "score": 1.7851,
         "evidence": []
       },
       {
         "term": "qualified health-care",
-        "score": 1.6179,
+        "score": 1.6713,
         "evidence": []
       },
       {
         "term": "target clients",
-        "score": 1.6007,
+        "score": 1.6403,
         "evidence": []
       },
       {
         "term": "minutes",
-        "score": 1.477,
-        "evidence": []
-      },
-      {
-        "term": "observed",
-        "score": 1.2206,
+        "score": 1.3908,
         "evidence": []
       },
       {
         "term": "intervention during",
-        "score": 1.1554,
+        "score": 1.2415,
         "evidence": []
       },
       {
-        "term": "relation",
-        "score": 1.0491,
+        "term": "observed",
+        "score": 1.218,
+        "evidence": []
+      },
+      {
+        "term": "reported",
+        "score": 1.1243,
         "evidence": []
       }
     ],
     "page-050": [
       {
         "term": "reference period",
-        "score": 2.0804,
+        "score": 2.0466,
         "evidence": []
       },
       {
         "term": "health-care facility",
-        "score": 1.5739,
+        "score": 1.6444,
         "evidence": []
       },
       {
         "term": "insert name",
-        "score": 1.5227,
+        "score": 1.5301,
         "evidence": []
       },
       {
         "term": "out-of-pocket payments",
-        "score": 1.4271,
+        "score": 1.4436,
         "evidence": []
       },
       {
         "term": "phone call",
-        "score": 1.3984,
+        "score": 1.43,
         "evidence": []
       },
       {
         "term": "workers observed",
-        "score": 1.2743,
+        "score": 1.2931,
         "evidence": []
       },
       {
         "term": "seeking intervention",
-        "score": 1.2719,
+        "score": 1.2874,
         "evidence": []
       },
       {
         "term": "intervention targeted",
-        "score": 1.2381,
+        "score": 1.2579,
         "evidence": []
       }
     ],
     "page-051": [
       {
         "term": "efficiency indicators",
-        "score": 1.8801,
+        "score": 1.9156,
         "evidence": []
       },
       {
         "term": "provider level",
-        "score": 1.5974,
+        "score": 1.6157,
         "evidence": []
       },
       {
         "term": "technical efficiency",
-        "score": 1.5697,
-        "evidence": []
-      },
-      {
-        "term": "operational efficiency",
-        "score": 1.4961,
-        "evidence": []
-      },
-      {
-        "term": "costs averted",
-        "score": 1.4778,
+        "score": 1.6086,
         "evidence": []
       },
       {
         "term": "additional surveys",
-        "score": 1.4731,
+        "score": 1.5932,
+        "evidence": []
+      },
+      {
+        "term": "operational efficiency",
+        "score": 1.5337,
+        "evidence": []
+      },
+      {
+        "term": "costs averted",
+        "score": 1.476,
         "evidence": []
       },
       {
         "term": "client level",
-        "score": 1.4336,
+        "score": 1.474,
         "evidence": []
       },
       {
         "term": "health-care facility",
-        "score": 1.2627,
+        "score": 1.3253,
         "evidence": []
       }
     ],
     "page-052": [
       {
         "term": "indicators compendium",
-        "score": 1.7689,
+        "score": 1.7599,
         "evidence": []
       },
       {
         "term": "outcome indicators",
-        "score": 1.5383,
+        "score": 1.5317,
         "evidence": []
       },
       {
         "term": "indicator databases",
-        "score": 1.2124,
+        "score": 1.2063,
         "evidence": []
       },
       {
         "term": "prior research",
-        "score": 1.136,
+        "score": 1.1318,
         "evidence": []
       },
       {
         "term": "newborn standards",
-        "score": 1.0529,
+        "score": 1.0515,
         "evidence": []
       },
       {
         "term": "vaccination",
-        "score": 0.7931,
+        "score": 0.8268,
         "evidence": []
       },
       {
         "term": "maternal",
-        "score": 0.6779,
+        "score": 0.7261,
         "evidence": []
       },
       {
-        "term": "child",
-        "score": 0.6547,
+        "term": "monitoring framework",
+        "score": 0.6575,
         "evidence": []
       }
     ],
     "page-053": [
       {
         "term": "hiv aids",
-        "score": 1.8568,
+        "score": 1.7585,
         "evidence": []
       },
       {
         "term": "aids programmes",
-        "score": 1.4353,
+        "score": 1.4423,
         "evidence": []
       },
       {
         "term": "delivery indicators",
-        "score": 1.1813,
+        "score": 1.2044,
         "evidence": []
       },
       {
         "term": "national aids",
-        "score": 1.1666,
+        "score": 1.1719,
         "evidence": []
       },
       {
         "term": "service provision",
-        "score": 0.9307,
+        "score": 0.9439,
         "evidence": []
       },
       {
         "term": "involvement",
-        "score": 0.8457,
+        "score": 0.8365,
         "evidence": []
       },
       {
         "term": "programmes guide",
-        "score": 0.7965,
+        "score": 0.8303,
         "evidence": []
       }
     ],
     "page-054": [
       {
         "term": "mars discovery",
-        "score": 2.2124,
+        "score": 2.2231,
         "evidence": []
       },
       {
         "term": "accessed march",
-        "score": 2.027,
+        "score": 2.0195,
         "evidence": []
       },
       {
         "term": "discovery district",
-        "score": 1.2033,
+        "score": 1.2226,
         "evidence": []
       },
       {
         "term": "evaluation tips",
-        "score": 1.1547,
-        "evidence": []
-      },
-      {
-        "term": "bryson",
-        "score": 0.9947,
+        "score": 1.1779,
         "evidence": []
       },
       {
         "term": "doi",
-        "score": 0.9839,
+        "score": 1.0949,
         "evidence": []
       },
       {
-        "term": "website",
-        "score": 0.9437,
+        "term": "bryson",
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "toronto",
-        "score": 0.9289,
+        "score": 0.9326,
+        "evidence": []
+      },
+      {
+        "term": "international development",
+        "score": 0.9248,
         "evidence": []
       }
     ],
     "page-055": [
       {
         "term": "accessed april",
-        "score": 2.4424,
+        "score": 2.4645,
         "evidence": []
       },
       {
         "term": "iso software",
-        "score": 1.9245,
+        "score": 1.9786,
         "evidence": []
       },
       {
         "term": "chapel hill",
-        "score": 1.5985,
+        "score": 1.6114,
         "evidence": []
       },
       {
         "term": "software engineering",
-        "score": 1.4282,
+        "score": 1.467,
         "evidence": []
       },
       {
         "term": "prism framework",
-        "score": 1.394,
+        "score": 1.411,
         "evidence": []
       },
       {
         "term": "m4rh kenya",
-        "score": 1.3427,
+        "score": 1.3416,
         "evidence": []
       },
       {
         "term": "measure evaluation",
-        "score": 1.0942,
+        "score": 1.1206,
         "evidence": []
       },
       {
         "term": "software product",
-        "score": 1.0299,
+        "score": 1.0821,
         "evidence": []
       }
     ],
     "page-057": [
       {
         "term": "process monitoring",
-        "score": 1.1046,
-        "evidence": []
-      },
-      {
-        "term": "half",
-        "score": 0.9289,
+        "score": 1.1664,
         "evidence": []
       },
       {
         "term": "failure",
-        "score": 0.9222,
+        "score": 0.937,
+        "evidence": []
+      },
+      {
+        "term": "half",
+        "score": 0.8947,
         "evidence": []
       },
       {
         "term": "threaten",
-        "score": 0.8812,
+        "score": 0.8859,
         "evidence": []
       },
       {
         "term": "shifts",
-        "score": 0.7652,
-        "evidence": []
-      },
-      {
-        "term": "major",
-        "score": 0.7117,
+        "score": 0.7724,
         "evidence": []
       },
       {
         "term": "fidelity",
-        "score": 0.6977,
+        "score": 0.7174,
         "evidence": []
       },
       {
-        "term": "literature",
-        "score": 0.6895,
+        "term": "major",
+        "score": 0.7008,
+        "evidence": []
+      },
+      {
+        "term": "chapter",
+        "score": 0.6755,
         "evidence": []
       }
     ],
     "page-058": [
       {
         "term": "answers",
-        "score": 1.0911,
+        "score": 1.1023,
         "evidence": []
       },
       {
         "term": "intervention maturity",
-        "score": 0.9812,
+        "score": 1.0038,
         "evidence": []
       },
       {
         "term": "stability",
-        "score": 0.7772,
+        "score": 0.7898,
         "evidence": []
       },
       {
         "term": "viewed",
-        "score": 0.7455,
+        "score": 0.7531,
         "evidence": []
       },
       {
         "term": "question",
-        "score": 0.696,
+        "score": 0.6979,
         "evidence": []
       },
       {
         "term": "prototype",
-        "score": 0.6562,
+        "score": 0.6657,
         "evidence": []
       },
       {
         "term": "functionality",
-        "score": 0.6302,
+        "score": 0.6552,
         "evidence": []
       },
       {
         "term": "intended",
-        "score": 0.6216,
+        "score": 0.6309,
         "evidence": []
       }
     ],
     "page-059": [
       {
         "term": "sms messages",
-        "score": 1.2901,
+        "score": 1.3308,
         "evidence": []
       },
       {
         "term": "users interacting",
-        "score": 1.1813,
-        "evidence": []
-      },
-      {
-        "term": "primary users",
-        "score": 1.076,
+        "score": 1.2108,
         "evidence": []
       },
       {
         "term": "receive sms",
-        "score": 1.0685,
+        "score": 1.1111,
+        "evidence": []
+      },
+      {
+        "term": "primary users",
+        "score": 1.1064,
         "evidence": []
       },
       {
         "term": "user-linked",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "high-quality",
-        "score": 0.9463,
+        "score": 0.9285,
         "evidence": []
       },
       {
         "term": "non-digital",
-        "score": 0.8457,
+        "score": 0.8511,
         "evidence": []
       },
       {
         "term": "remind",
-        "score": 0.8457,
+        "score": 0.8511,
         "evidence": []
       }
     ],
     "page-060": [
       {
         "term": "middle stage",
-        "score": 1.7596,
-        "evidence": []
-      },
-      {
-        "term": "higher burden",
-        "score": 1.3536,
+        "score": 1.7266,
         "evidence": []
       },
       {
         "term": "intervention maturity",
-        "score": 1.2603,
+        "score": 1.2943,
+        "evidence": []
+      },
+      {
+        "term": "higher burden",
+        "score": 1.2845,
         "evidence": []
       },
       {
         "term": "monitoring burden",
-        "score": 1.2469,
+        "score": 1.247,
         "evidence": []
       },
       {
         "term": "relative monitoring",
-        "score": 1.2464,
+        "score": 0.8775,
         "evidence": []
       },
       {
         "term": "figure",
-        "score": 0.6533,
+        "score": 0.666,
         "evidence": []
       },
       {
         "term": "stability",
-        "score": 0.5305,
+        "score": 0.5391,
         "evidence": []
       },
       {
-        "term": "significant",
-        "score": 0.5198,
+        "term": "projects",
+        "score": 0.5335,
         "evidence": []
       }
     ],
     "page-061": [
       {
         "term": "srs",
-        "score": 2.0442,
+        "score": 2.0537,
         "evidence": []
       },
       {
         "term": "raw materials",
-        "score": 1.4974,
+        "score": 1.5089,
         "evidence": []
       },
       {
         "term": "wireframes",
-        "score": 1.34,
+        "score": 1.3458,
         "evidence": []
       },
       {
         "term": "human-centered design",
-        "score": 1.2753,
+        "score": 1.2281,
         "evidence": []
       },
       {
         "term": "user-centred design",
-        "score": 1.23,
+        "score": 1.1838,
         "evidence": []
       },
       {
         "term": "requirements specification",
-        "score": 1.0893,
-        "evidence": []
-      },
-      {
-        "term": "quality assurance",
-        "score": 1.0071,
+        "score": 1.1277,
         "evidence": []
       },
       {
         "term": "expected functionality",
-        "score": 0.9858,
+        "score": 1.0143,
+        "evidence": []
+      },
+      {
+        "term": "quality assurance",
+        "score": 0.9617,
         "evidence": []
       }
     ],
     "page-062": [
       {
         "term": "duplicate events",
-        "score": 2.5052,
+        "score": 2.4055,
         "evidence": []
       },
       {
         "term": "vaccine event",
-        "score": 2.3892,
+        "score": 2.3392,
         "evidence": []
       },
       {
         "term": "event record",
-        "score": 2.0759,
+        "score": 2.09,
         "evidence": []
       },
       {
         "term": "update vaccine",
-        "score": 2.0468,
+        "score": 2.0155,
         "evidence": []
       },
       {
         "term": "test cases",
-        "score": 1.6457,
+        "score": 1.6405,
         "evidence": []
       },
       {
         "term": "patient record",
-        "score": 1.5636,
+        "score": 1.6061,
         "evidence": []
       },
       {
         "term": "allow user",
-        "score": 1.3449,
+        "score": 1.3734,
         "evidence": []
       },
       {
-        "term": "identify groups",
-        "score": 1.0607,
+        "term": "manual review",
+        "score": 1.1392,
         "evidence": []
       }
     ],
     "page-063": [
       {
         "term": "indicators list",
-        "score": 1.1756,
+        "score": 1.1918,
         "evidence": []
       },
       {
         "term": "programme team",
-        "score": 1.0118,
+        "score": 1.041,
         "evidence": []
       },
       {
         "term": "codebooks",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "pieces",
-        "score": 0.8134,
+        "score": 0.8195,
         "evidence": []
       },
       {
         "term": "dashboard",
-        "score": 0.7894,
+        "score": 0.8022,
         "evidence": []
       },
       {
         "term": "back-end",
-        "score": 0.7609,
+        "score": 0.7682,
         "evidence": []
       },
       {
         "term": "technologists",
-        "score": 0.7484,
+        "score": 0.756,
         "evidence": []
       },
       {
         "term": "cstock",
-        "score": 0.7045,
+        "score": 0.713,
         "evidence": []
       }
     ],
     "page-064": [
       {
         "term": "mid",
-        "score": 1.7333,
-        "evidence": []
-      },
-      {
-        "term": "late",
-        "score": 1.6561,
+        "score": 1.6623,
         "evidence": []
       },
       {
         "term": "user interaction",
-        "score": 1.4723,
+        "score": 1.4982,
+        "evidence": []
+      },
+      {
+        "term": "late",
+        "score": 1.4556,
         "evidence": []
       },
       {
         "term": "form submissions",
-        "score": 1.3545,
+        "score": 1.3733,
         "evidence": []
       },
       {
         "term": "maturity stage",
-        "score": 1.1497,
+        "score": 1.1715,
         "evidence": []
       },
       {
         "term": "pre-launch",
-        "score": 1.0287,
-        "evidence": []
-      },
-      {
-        "term": "schedules",
-        "score": 0.9179,
+        "score": 1.0364,
         "evidence": []
       },
       {
         "term": "monitoring components",
-        "score": 0.8915,
+        "score": 0.9322,
+        "evidence": []
+      },
+      {
+        "term": "network connectivity",
+        "score": 0.8877,
         "evidence": []
       }
     ],
     "page-065": [
       {
         "term": "polio vaccine",
-        "score": 2.899,
+        "score": 2.8719,
         "evidence": []
       },
       {
         "term": "polio date",
-        "score": 2.7007,
+        "score": 2.6814,
         "evidence": []
       },
       {
         "term": "user clicks",
-        "score": 1.987,
+        "score": 2.0174,
         "evidence": []
       },
       {
         "term": "vaccine displays",
-        "score": 1.9042,
-        "evidence": []
-      },
-      {
-        "term": "date weeks",
-        "score": 1.8467,
+        "score": 1.8749,
         "evidence": []
       },
       {
         "term": "test cases",
-        "score": 1.8117,
+        "score": 1.8041,
+        "evidence": []
+      },
+      {
+        "term": "date weeks",
+        "score": 1.7844,
         "evidence": []
       },
       {
         "term": "skip patterns",
-        "score": 1.7409,
+        "score": 1.7631,
         "evidence": []
       },
       {
         "term": "form schedules",
-        "score": 1.7349,
+        "score": 1.684,
         "evidence": []
       }
     ],
     "page-066": [
       {
         "term": "continued functionality",
-        "score": 1.6102,
+        "score": 1.4898,
         "evidence": []
       },
       {
         "term": "functionality monitoring",
-        "score": 1.2947,
+        "score": 1.35,
         "evidence": []
       },
       {
         "term": "pre-launch",
-        "score": 1.0287,
+        "score": 1.0364,
         "evidence": []
       },
       {
         "term": "demonstration",
-        "score": 0.7681,
-        "evidence": []
-      },
-      {
-        "term": "families",
-        "score": 0.7528,
+        "score": 0.756,
         "evidence": []
       },
       {
         "term": "stages",
-        "score": 0.7161,
+        "score": 0.7353,
+        "evidence": []
+      },
+      {
+        "term": "families",
+        "score": 0.7031,
         "evidence": []
       },
       {
         "term": "reminder",
-        "score": 0.6886,
+        "score": 0.6974,
         "evidence": []
       },
       {
         "term": "maturity",
-        "score": 0.6707,
+        "score": 0.6919,
         "evidence": []
       }
     ],
     "page-067": [
       {
         "term": "stability monitoring",
-        "score": 1.8567,
+        "score": 1.9052,
         "evidence": []
       },
       {
         "term": "server logs",
-        "score": 1.851,
+        "score": 1.8865,
         "evidence": []
       },
       {
         "term": "failure rate",
-        "score": 1.8248,
+        "score": 1.77,
         "evidence": []
       },
       {
         "term": "later stages",
-        "score": 1.5591,
+        "score": 1.577,
         "evidence": []
       },
       {
         "term": "instability",
-        "score": 1.4898,
+        "score": 1.4924,
         "evidence": []
       },
       {
         "term": "outages",
-        "score": 1.2424,
+        "score": 1.2542,
         "evidence": []
       },
       {
         "term": "sms messages",
-        "score": 1.2157,
+        "score": 1.254,
         "evidence": []
       },
       {
-        "term": "functionality monitoring",
-        "score": 1.07,
+        "term": "automated systems",
+        "score": 1.2417,
         "evidence": []
       }
     ],
     "page-068": [
       {
         "term": "intervention delivery",
-        "score": 0.9785,
+        "score": 0.9991,
         "evidence": []
       },
       {
         "term": "charged",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "stability",
-        "score": 0.8652,
+        "score": 0.8793,
         "evidence": []
       },
       {
         "term": "project managers",
-        "score": 0.8022,
-        "evidence": []
-      },
-      {
-        "term": "continued",
-        "score": 0.8003,
-        "evidence": []
-      },
-      {
-        "term": "duration",
-        "score": 0.7164,
+        "score": 0.8291,
         "evidence": []
       },
       {
         "term": "fidelity",
-        "score": 0.6977,
+        "score": 0.7174,
         "evidence": []
       },
       {
-        "term": "average",
-        "score": 0.6746,
+        "term": "server",
+        "score": 0.6839,
+        "evidence": []
+      },
+      {
+        "term": "duration",
+        "score": 0.6652,
+        "evidence": []
+      },
+      {
+        "term": "launch",
+        "score": 0.6588,
         "evidence": []
       }
     ],
     "page-069": [
       {
         "term": "user fidelity",
-        "score": 1.4617,
+        "score": 1.5129,
         "evidence": []
       },
       {
         "term": "fidelity monitoring",
-        "score": 1.426,
+        "score": 1.4774,
         "evidence": []
       },
       {
         "term": "project manager",
-        "score": 1.2349,
+        "score": 1.2645,
         "evidence": []
       },
       {
         "term": "trigger notifications",
-        "score": 1.1468,
+        "score": 1.1694,
         "evidence": []
       },
       {
         "term": "monitoring findings",
-        "score": 1.1018,
+        "score": 1.1384,
+        "evidence": []
+      },
+      {
+        "term": "visits",
+        "score": 1.0103,
         "evidence": []
       },
       {
         "term": "retraining",
-        "score": 0.9947,
-        "evidence": []
-      },
-      {
-        "term": "weaknesses",
-        "score": 0.8158,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "intervention content",
-        "score": 0.8155,
+        "score": 0.8326,
         "evidence": []
       }
     ],
     "page-070": [
       {
         "term": "intervention content",
-        "score": 1.1353,
+        "score": 1.1602,
         "evidence": []
       },
       {
         "term": "user capabilities",
-        "score": 0.9148,
+        "score": 0.9548,
         "evidence": []
       },
       {
         "term": "quality monitoring",
-        "score": 0.9104,
+        "score": 0.8824,
         "evidence": []
       },
       {
         "term": "accuracy",
-        "score": 0.8346,
+        "score": 0.8422,
         "evidence": []
       },
       {
         "term": "launch",
-        "score": 0.8191,
+        "score": 0.8313,
         "evidence": []
       },
       {
         "term": "functionalities",
-        "score": 0.7117,
+        "score": 0.7262,
         "evidence": []
       },
       {
         "term": "workers",
-        "score": 0.664,
+        "score": 0.6841,
         "evidence": []
       },
       {
         "term": "indicators",
-        "score": 0.6074,
+        "score": 0.6174,
         "evidence": []
       }
     ],
     "page-071": [
       {
         "term": "content quality",
-        "score": 1.4503,
+        "score": 1.4101,
         "evidence": []
       },
       {
         "term": "user quality",
-        "score": 1.3184,
-        "evidence": []
-      },
-      {
-        "term": "trainers",
-        "score": 1.1532,
+        "score": 1.2862,
         "evidence": []
       },
       {
         "term": "monitoring user",
-        "score": 1.1326,
+        "score": 1.1844,
+        "evidence": []
+      },
+      {
+        "term": "trainers",
+        "score": 1.1355,
         "evidence": []
       },
       {
         "term": "launch",
-        "score": 0.951,
-        "evidence": []
-      },
-      {
-        "term": "kemri",
-        "score": 0.862,
+        "score": 0.9652,
         "evidence": []
       },
       {
         "term": "project managers",
-        "score": 0.8484,
+        "score": 0.8777,
+        "evidence": []
+      },
+      {
+        "term": "kemri",
+        "score": 0.8733,
         "evidence": []
       },
       {
         "term": "adjustments",
-        "score": 0.7681,
+        "score": 0.7752,
         "evidence": []
       }
     ],
     "page-072": [
       {
         "term": "sms messages",
-        "score": 1.8504,
+        "score": 1.9089,
         "evidence": []
       },
       {
         "term": "worker interface",
-        "score": 1.4687,
-        "evidence": []
-      },
-      {
-        "term": "families",
-        "score": 1.3333,
+        "score": 1.495,
         "evidence": []
       },
       {
         "term": "user interactions",
-        "score": 1.2908,
+        "score": 1.3275,
         "evidence": []
       },
       {
-        "term": "project manager",
-        "score": 1.1322,
+        "term": "families",
+        "score": 1.2453,
         "evidence": []
       },
       {
         "term": "versus secondary",
-        "score": 1.1313,
+        "score": 1.1658,
+        "evidence": []
+      },
+      {
+        "term": "project manager",
+        "score": 1.1564,
         "evidence": []
       },
       {
         "term": "phone numbers",
-        "score": 1.0898,
+        "score": 1.094,
         "evidence": []
       },
       {
         "term": "intervention content",
-        "score": 1.0591,
+        "score": 1.0817,
         "evidence": []
       }
     ],
     "page-073": [
       {
         "term": "accessed april",
-        "score": 2.1314,
+        "score": 2.1509,
         "evidence": []
       },
       {
         "term": "stability issues",
-        "score": 1.1585,
+        "score": 1.1732,
         "evidence": []
       },
       {
         "term": "stability monitoring",
-        "score": 1.0831,
+        "score": 1.1103,
         "evidence": []
       },
       {
         "term": "doi",
-        "score": 0.8838,
-        "evidence": []
-      },
-      {
-        "term": "jama",
-        "score": 0.8457,
+        "score": 0.9835,
         "evidence": []
       },
       {
         "term": "project manager",
-        "score": 0.8115,
+        "score": 0.83,
+        "evidence": []
+      },
+      {
+        "term": "jama",
+        "score": 0.8216,
         "evidence": []
       },
       {
         "term": "iso",
-        "score": 0.799,
+        "score": 0.8116,
         "evidence": []
       },
       {
         "term": "downtime",
-        "score": 0.7907,
+        "score": 0.7974,
         "evidence": []
       }
     ],
     "page-074": [
       {
         "term": "mhealth uhealth",
-        "score": 1.5771,
+        "score": 1.6054,
         "evidence": []
       },
       {
         "term": "accessed april",
-        "score": 1.4322,
+        "score": 1.4467,
         "evidence": []
       },
       {
         "term": "jmir mhealth",
-        "score": 1.3978,
+        "score": 1.43,
         "evidence": []
       },
       {
         "term": "product vision",
-        "score": 0.8274,
+        "score": 0.8465,
         "evidence": []
       },
       {
         "term": "cstock",
-        "score": 0.7045,
+        "score": 0.713,
         "evidence": []
       },
       {
         "term": "bid",
-        "score": 0.6342,
+        "score": 0.6442,
         "evidence": []
       }
     ],
     "page-076": [
       {
         "term": "intervention achieves",
-        "score": 1.4962,
+        "score": 1.5113,
         "evidence": []
       },
       {
         "term": "intervention doing",
-        "score": 1.2645,
+        "score": 1.2846,
         "evidence": []
       },
       {
         "term": "evaluation activities",
-        "score": 0.9237,
+        "score": 0.9492,
         "evidence": []
       },
       {
         "term": "right",
-        "score": 0.6338,
+        "score": 0.6412,
         "evidence": []
       },
       {
         "term": "assess",
-        "score": 0.5818,
-        "evidence": []
-      },
-      {
-        "term": "intended",
-        "score": 0.5584,
-        "evidence": []
-      },
-      {
-        "term": "stages",
-        "score": 0.5541,
+        "score": 0.5988,
         "evidence": []
       },
       {
         "term": "chapter",
-        "score": 0.5494,
+        "score": 0.582,
+        "evidence": []
+      },
+      {
+        "term": "stages",
+        "score": 0.5689,
+        "evidence": []
+      },
+      {
+        "term": "intended",
+        "score": 0.5667,
         "evidence": []
       }
     ],
     "page-077": [
       {
         "term": "versus effectiveness",
-        "score": 1.5101,
+        "score": 1.5608,
         "evidence": []
       },
       {
         "term": "efficacy versus",
-        "score": 1.4703,
+        "score": 1.5241,
         "evidence": []
       },
       {
         "term": "real-world setting",
-        "score": 1.4491,
+        "score": 1.4659,
+        "evidence": []
+      },
+      {
+        "term": "implementation research",
+        "score": 0.9833,
         "evidence": []
       },
       {
         "term": "asks",
-        "score": 0.8155,
+        "score": 0.8216,
         "evidence": []
       },
       {
         "term": "ideal",
-        "score": 0.7876,
+        "score": 0.7943,
         "evidence": []
       },
       {
         "term": "occurs",
-        "score": 0.7308,
+        "score": 0.7165,
         "evidence": []
       },
       {
         "term": "ask",
-        "score": 0.7033,
-        "evidence": []
-      },
-      {
-        "term": "conditions",
-        "score": 0.636,
+        "score": 0.693,
         "evidence": []
       }
     ],
     "page-078": [
       {
         "term": "summative evaluations",
-        "score": 2.3359,
+        "score": 2.3628,
         "evidence": []
       },
       {
         "term": "type tests",
-        "score": 1.5519,
+        "score": 1.5772,
         "evidence": []
       },
       {
         "term": "study designs",
-        "score": 1.4746,
+        "score": 1.493,
         "evidence": []
       },
       {
         "term": "observing gathering",
-        "score": 1.4193,
-        "evidence": []
-      },
-      {
-        "term": "randomized controlled",
-        "score": 1.151,
-        "evidence": []
-      },
-      {
-        "term": "studies",
-        "score": 1.0869,
+        "score": 1.4267,
         "evidence": []
       },
       {
         "term": "formative",
-        "score": 0.9793,
+        "score": 0.9928,
+        "evidence": []
+      },
+      {
+        "term": "randomized controlled",
+        "score": 0.9826,
+        "evidence": []
+      },
+      {
+        "term": "key outcomes",
+        "score": 0.9751,
         "evidence": []
       },
       {
         "term": "hybrid",
-        "score": 0.8683,
+        "score": 0.8794,
         "evidence": []
       }
     ],
     "page-079": [
       {
         "term": "summative evaluations",
-        "score": 2.5214,
+        "score": 2.5534,
         "evidence": []
       },
       {
         "term": "formative evaluations",
-        "score": 2.3773,
+        "score": 2.4163,
         "evidence": []
       },
       {
         "term": "impact evaluations",
-        "score": 1.8509,
+        "score": 1.9018,
         "evidence": []
       },
       {
         "term": "process evaluations",
-        "score": 1.6761,
+        "score": 1.727,
         "evidence": []
       },
       {
         "term": "intermediate changes",
-        "score": 1.1902,
+        "score": 1.1919,
         "evidence": []
       },
       {
         "term": "intervention activities",
-        "score": 1.1486,
+        "score": 1.1821,
+        "evidence": []
+      },
+      {
+        "term": "key outcomes",
+        "score": 1.1049,
         "evidence": []
       },
       {
         "term": "fidelity monitoring",
-        "score": 1.0304,
-        "evidence": []
-      },
-      {
-        "term": "disease risk",
-        "score": 0.9829,
+        "score": 1.0678,
         "evidence": []
       }
     ],
     "page-080": [
       {
         "term": "less expensive",
-        "score": 1.6267,
+        "score": 1.7267,
         "evidence": []
       },
       {
         "term": "spur subsequent",
-        "score": 1.5264,
+        "score": 1.5295,
         "evidence": []
       },
       {
         "term": "study designs",
-        "score": 1.4746,
+        "score": 1.493,
         "evidence": []
       },
       {
         "term": "control groups",
-        "score": 1.4542,
+        "score": 1.4244,
         "evidence": []
       },
       {
         "term": "random assignment",
-        "score": 1.4502,
-        "evidence": []
-      },
-      {
-        "term": "sample size",
-        "score": 1.1733,
+        "score": 1.3865,
         "evidence": []
       },
       {
         "term": "subsequent research",
-        "score": 1.0281,
+        "score": 1.0293,
         "evidence": []
       },
       {
         "term": "medical literature",
-        "score": 1.0169,
+        "score": 1.003,
+        "evidence": []
+      },
+      {
+        "term": "alternatives",
+        "score": 0.9386,
         "evidence": []
       }
     ],
     "page-081": [
       {
         "term": "descriptive studies",
-        "score": 2.7488,
+        "score": 2.2887,
         "evidence": []
       },
       {
         "term": "experimental studies",
-        "score": 2.6839,
+        "score": 2.2224,
         "evidence": []
       },
       {
         "term": "analytic studies",
-        "score": 2.6351,
+        "score": 2.1674,
         "evidence": []
       },
       {
         "term": "study designs",
-        "score": 1.939,
+        "score": 1.9638,
         "evidence": []
       },
       {
         "term": "qualitative research",
-        "score": 1.1457,
+        "score": 1.1134,
         "evidence": []
       },
       {
         "term": "control group",
-        "score": 0.9788,
+        "score": 1.0123,
         "evidence": []
       },
       {
         "term": "rct",
-        "score": 0.9644,
+        "score": 0.854,
         "evidence": []
       },
       {
         "term": "concerned",
-        "score": 0.8249,
+        "score": 0.8057,
         "evidence": []
       }
     ],
     "page-082": [
       {
         "term": "regression",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "pretest",
-        "score": 0.9289,
-        "evidence": []
-      },
-      {
-        "term": "randomized",
-        "score": 0.8042,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "analytic",
-        "score": 0.7879,
+        "score": 0.7946,
+        "evidence": []
+      },
+      {
+        "term": "experimental",
+        "score": 0.6882,
         "evidence": []
       }
     ],
     "page-083": [
       {
         "term": "studies interrupted",
-        "score": 3.1051,
+        "score": 2.4934,
         "evidence": []
       },
       {
         "term": "studies case-series",
-        "score": 2.9713,
+        "score": 2.4294,
         "evidence": []
       },
       {
         "term": "quasi-experimental studies",
-        "score": 2.8619,
+        "score": 2.3224,
         "evidence": []
       },
       {
         "term": "cross-sectional studies",
-        "score": 2.8338,
+        "score": 2.2949,
         "evidence": []
       },
       {
         "term": "ecological studies",
-        "score": 2.8024,
+        "score": 2.2642,
         "evidence": []
       },
       {
         "term": "studies cohort",
-        "score": 2.7205,
+        "score": 2.1498,
         "evidence": []
       },
       {
         "term": "descriptive studies",
-        "score": 2.6843,
+        "score": 2.1486,
         "evidence": []
       },
       {
-        "term": "studies surveillance",
-        "score": 2.6449,
+        "term": "multicentre rcts",
+        "score": 2.148,
         "evidence": []
       }
     ],
     "page-084": [
       {
+        "term": "study designs",
+        "score": 2.3603,
+        "evidence": []
+      },
+      {
         "term": "cross-sectional studies",
-        "score": 2.7222,
+        "score": 2.2193,
         "evidence": []
       },
       {
         "term": "observational studies",
-        "score": 2.5215,
+        "score": 2.0159,
         "evidence": []
       },
       {
         "term": "cohort studies",
-        "score": 2.4678,
-        "evidence": []
-      },
-      {
-        "term": "study designs",
-        "score": 2.3358,
+        "score": 1.9361,
         "evidence": []
       },
       {
         "term": "stepped wedge",
-        "score": 1.8579,
+        "score": 1.8185,
         "evidence": []
       },
       {
         "term": "traditional parallel",
-        "score": 1.7039,
+        "score": 1.7109,
         "evidence": []
       },
       {
         "term": "study period",
-        "score": 1.6004,
+        "score": 1.6181,
         "evidence": []
       },
       {
         "term": "quasi experimental",
-        "score": 1.4695,
+        "score": 1.4852,
         "evidence": []
       }
     ],
     "page-085": [
       {
         "term": "analytic studies",
-        "score": 2.2215,
+        "score": 1.9304,
         "evidence": []
       },
       {
         "term": "study designs",
-        "score": 1.4746,
+        "score": 1.493,
         "evidence": []
       },
       {
         "term": "research methods",
-        "score": 1.1062,
+        "score": 1.11,
         "evidence": []
       },
       {
         "term": "inference",
-        "score": 1.0727,
-        "evidence": []
-      },
-      {
-        "term": "exploratory",
-        "score": 1.0086,
-        "evidence": []
-      },
-      {
-        "term": "predictive",
-        "score": 0.9845,
+        "score": 1.0794,
         "evidence": []
       },
       {
         "term": "descriptive",
-        "score": 0.9813,
+        "score": 0.9948,
+        "evidence": []
+      },
+      {
+        "term": "predictive",
+        "score": 0.9931,
+        "evidence": []
+      },
+      {
+        "term": "exploratory",
+        "score": 0.9419,
         "evidence": []
       },
       {
         "term": "research questions",
-        "score": 0.9343,
+        "score": 0.9337,
         "evidence": []
       }
     ],
     "page-086": [
       {
         "term": "cross-sectional surveys",
-        "score": 2.6488,
+        "score": 2.682,
         "evidence": []
       },
       {
         "term": "surveys ecological",
-        "score": 2.3369,
+        "score": 2.3681,
         "evidence": []
       },
       {
         "term": "sectional surveys",
-        "score": 2.2057,
-        "evidence": []
-      },
-      {
-        "term": "ecological studies",
-        "score": 2.1506,
+        "score": 2.2086,
         "evidence": []
       },
       {
         "term": "longitudinal surveys",
-        "score": 2.1144,
+        "score": 2.1504,
         "evidence": []
       },
       {
         "term": "surveillance cross-sectional",
-        "score": 2.0702,
+        "score": 2.0791,
         "evidence": []
       },
       {
-        "term": "experimental studies",
-        "score": 1.8828,
+        "term": "ecological studies",
+        "score": 1.7719,
         "evidence": []
       },
       {
-        "term": "observational studies",
-        "score": 1.8385,
+        "term": "qualitative methods",
+        "score": 1.5641,
+        "evidence": []
+      },
+      {
+        "term": "combining qualitative",
+        "score": 1.5264,
         "evidence": []
       }
     ],
     "page-087": [
       {
         "term": "qualitative methods",
-        "score": 1.4682,
+        "score": 1.4303,
         "evidence": []
       },
       {
         "term": "explanatory",
-        "score": 1.1634,
+        "score": 1.1682,
         "evidence": []
       },
       {
         "term": "intervention led",
-        "score": 1.0479,
-        "evidence": []
-      },
-      {
-        "term": "future events",
-        "score": 1.0041,
+        "score": 1.0581,
         "evidence": []
       },
       {
         "term": "inferences",
-        "score": 0.9903,
+        "score": 0.9988,
         "evidence": []
       },
       {
         "term": "predictive",
-        "score": 0.9845,
+        "score": 0.9931,
         "evidence": []
       },
       {
         "term": "modelling",
-        "score": 0.957,
+        "score": 0.971,
+        "evidence": []
+      },
+      {
+        "term": "future events",
+        "score": 0.9565,
         "evidence": []
       },
       {
         "term": "quantitative",
-        "score": 0.9211,
+        "score": 0.9179,
         "evidence": []
       }
     ],
     "page-088": [
       {
         "term": "qualitative methods",
-        "score": 2.2358,
+        "score": 2.1752,
         "evidence": []
       },
       {
         "term": "qualitative research",
-        "score": 2.0055,
+        "score": 1.9453,
         "evidence": []
       },
       {
         "term": "qualitative approaches",
-        "score": 1.9726,
+        "score": 1.9289,
         "evidence": []
       },
       {
         "term": "quantitative approaches",
-        "score": 1.5708,
+        "score": 1.5869,
         "evidence": []
       },
       {
         "term": "evaluation methods",
-        "score": 1.4595,
+        "score": 1.4723,
         "evidence": []
       },
       {
         "term": "economic evaluations",
-        "score": 1.3694,
+        "score": 1.3846,
         "evidence": []
       },
       {
         "term": "opinions",
-        "score": 0.9542,
+        "score": 0.9419,
         "evidence": []
       },
       {
         "term": "mixed-methods",
-        "score": 0.9525,
+        "score": 0.8995,
         "evidence": []
       }
     ],
     "page-089": [
       {
         "term": "conducting observation",
-        "score": 2.0095,
+        "score": 2.0257,
         "evidence": []
       },
       {
         "term": "video recordings",
-        "score": 1.7137,
+        "score": 1.7303,
         "evidence": []
       },
       {
         "term": "clarifying questions",
-        "score": 1.5449,
-        "evidence": []
-      },
-      {
-        "term": "qualitative methods",
-        "score": 1.3797,
+        "score": 1.5439,
         "evidence": []
       },
       {
         "term": "objective notes",
-        "score": 1.3631,
+        "score": 1.3906,
+        "evidence": []
+      },
+      {
+        "term": "qualitative methods",
+        "score": 1.3416,
         "evidence": []
       },
       {
         "term": "research question",
-        "score": 1.204,
+        "score": 1.2081,
         "evidence": []
       },
       {
         "term": "interactions",
-        "score": 1.0132,
+        "score": 1.0333,
         "evidence": []
       },
       {
         "term": "audio",
-        "score": 0.9192,
+        "score": 0.9127,
         "evidence": []
       }
     ],
     "page-090": [
       {
         "term": "shorthand notes",
-        "score": 1.8767,
+        "score": 1.9184,
         "evidence": []
       },
       {
         "term": "during observation",
-        "score": 1.6729,
+        "score": 1.7693,
         "evidence": []
       },
       {
         "term": "idis",
-        "score": 1.5189,
+        "score": 1.5336,
         "evidence": []
       },
       {
         "term": "in-depth interviews",
-        "score": 1.5051,
+        "score": 1.493,
         "evidence": []
       },
       {
         "term": "allows researchers",
-        "score": 1.4597,
+        "score": 1.448,
         "evidence": []
       },
       {
         "term": "subjective",
-        "score": 1.3336,
+        "score": 1.3396,
         "evidence": []
       },
       {
         "term": "vaccination clinic",
-        "score": 1.235,
+        "score": 1.2608,
         "evidence": []
       },
       {
-        "term": "fgds",
-        "score": 1.1033,
+        "term": "pregnant women",
+        "score": 1.1916,
         "evidence": []
       }
     ],
     "page-091": [
       {
-        "term": "adolescent girls",
-        "score": 1.6946,
-        "evidence": []
-      },
-      {
         "term": "fgds",
-        "score": 1.5785,
+        "score": 1.5941,
         "evidence": []
       },
       {
-        "term": "qualitative research",
-        "score": 1.215,
-        "evidence": []
-      },
-      {
-        "term": "research question",
-        "score": 1.0995,
-        "evidence": []
-      },
-      {
-        "term": "participants",
-        "score": 1.0913,
-        "evidence": []
-      },
-      {
-        "term": "group discussions",
-        "score": 1.0834,
-        "evidence": []
-      },
-      {
-        "term": "fgd",
-        "score": 1.0825,
+        "term": "adolescent girls",
+        "score": 1.4506,
         "evidence": []
       },
       {
         "term": "pregnant women",
-        "score": 1.0397,
+        "score": 1.1916,
+        "evidence": []
+      },
+      {
+        "term": "qualitative research",
+        "score": 1.183,
+        "evidence": []
+      },
+      {
+        "term": "group discussions",
+        "score": 1.1583,
+        "evidence": []
+      },
+      {
+        "term": "research question",
+        "score": 1.1032,
+        "evidence": []
+      },
+      {
+        "term": "fgd",
+        "score": 1.0891,
+        "evidence": []
+      },
+      {
+        "term": "participants",
+        "score": 1.0529,
         "evidence": []
       }
     ],
     "page-092": [
       {
         "term": "purposive sampling",
-        "score": 2.6227,
+        "score": 2.5606,
         "evidence": []
       },
       {
         "term": "snowball sampling",
-        "score": 2.3736,
+        "score": 2.3642,
         "evidence": []
       },
       {
         "term": "shorthand notes",
-        "score": 2.1775,
+        "score": 2.2229,
         "evidence": []
       },
       {
         "term": "quantitative methods",
-        "score": 2.029,
+        "score": 2.0267,
         "evidence": []
       },
       {
         "term": "quantitative research",
-        "score": 1.8621,
+        "score": 1.8601,
         "evidence": []
       },
       {
         "term": "polls",
-        "score": 1.783,
+        "score": 1.7894,
         "evidence": []
       },
       {
         "term": "field notes",
-        "score": 1.5052,
+        "score": 1.5514,
         "evidence": []
       },
       {
         "term": "research question",
-        "score": 1.204,
+        "score": 1.2081,
         "evidence": []
       }
     ],
     "page-093": [
       {
         "term": "conducting surveys",
-        "score": 1.9981,
-        "evidence": []
-      },
-      {
-        "term": "own smartphone",
-        "score": 1.2946,
-        "evidence": []
-      },
-      {
-        "term": "community-based clients",
-        "score": 1.2864,
+        "score": 2.0366,
         "evidence": []
       },
       {
         "term": "health-care providers",
-        "score": 1.2261,
+        "score": 1.3649,
+        "evidence": []
+      },
+      {
+        "term": "own smartphone",
+        "score": 1.3092,
+        "evidence": []
+      },
+      {
+        "term": "community-based clients",
+        "score": 1.261,
         "evidence": []
       },
       {
         "term": "polls",
-        "score": 1.1887,
+        "score": 1.1929,
         "evidence": []
       },
       {
         "term": "assess satisfaction",
-        "score": 1.1797,
+        "score": 1.1501,
         "evidence": []
       },
       {
         "term": "text message",
-        "score": 1.0354,
+        "score": 1.0601,
         "evidence": []
       },
       {
         "term": "bednet",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       }
     ],
     "page-094": [
       {
         "term": "probability sampling",
-        "score": 2.7336,
-        "evidence": []
-      },
-      {
-        "term": "sample size",
-        "score": 2.0591,
+        "score": 2.7323,
         "evidence": []
       },
       {
         "term": "influencing sample",
-        "score": 2.0467,
+        "score": 1.7963,
+        "evidence": []
+      },
+      {
+        "term": "sample size",
+        "score": 1.5068,
         "evidence": []
       },
       {
         "term": "size calculations",
-        "score": 1.7293,
+        "score": 1.4378,
         "evidence": []
       },
       {
         "term": "factors influencing",
-        "score": 1.4132,
+        "score": 1.4182,
         "evidence": []
       },
       {
         "term": "collection platforms",
-        "score": 1.3049,
+        "score": 1.3425,
         "evidence": []
       },
       {
         "term": "surveys",
-        "score": 1.2736,
+        "score": 1.2935,
         "evidence": []
       },
       {
         "term": "primary outcome",
-        "score": 1.0851,
+        "score": 1.0772,
         "evidence": []
       }
     ],
     "page-095": [
       {
         "term": "random sampling",
-        "score": 3.4871,
+        "score": 3.3233,
         "evidence": []
       },
       {
         "term": "non-probability sampling",
-        "score": 3.072,
+        "score": 3.0591,
         "evidence": []
       },
       {
         "term": "purposive sampling",
-        "score": 2.8149,
+        "score": 2.759,
         "evidence": []
       },
       {
         "term": "random sample",
-        "score": 2.5902,
+        "score": 2.207,
         "evidence": []
       },
       {
         "term": "cluster random",
-        "score": 2.3061,
+        "score": 2.1297,
         "evidence": []
       },
       {
         "term": "systematic random",
-        "score": 2.0872,
+        "score": 1.9616,
         "evidence": []
       },
       {
         "term": "selected clusters",
-        "score": 1.9206,
+        "score": 1.8591,
         "evidence": []
       },
       {
         "term": "quantitative",
-        "score": 1.1137,
+        "score": 1.1098,
         "evidence": []
       }
     ],
     "page-096": [
       {
         "term": "mixed-methods approaches",
-        "score": 2.8796,
-        "evidence": []
-      },
-      {
-        "term": "mixed-methods studies",
-        "score": 2.6532,
+        "score": 2.7877,
         "evidence": []
       },
       {
         "term": "mixed-methods approach",
-        "score": 2.476,
+        "score": 2.3779,
+        "evidence": []
+      },
+      {
+        "term": "mixed-methods studies",
+        "score": 2.3524,
         "evidence": []
       },
       {
         "term": "sampling approaches",
-        "score": 1.9187,
+        "score": 1.9324,
         "evidence": []
       },
       {
         "term": "mixed methods",
-        "score": 1.6529,
-        "evidence": []
-      },
-      {
-        "term": "sample size",
-        "score": 1.4806,
+        "score": 1.5946,
         "evidence": []
       },
       {
         "term": "quantitative",
-        "score": 1.1137,
+        "score": 1.1098,
+        "evidence": []
+      },
+      {
+        "term": "sample size",
+        "score": 1.0802,
         "evidence": []
       },
       {
         "term": "qualitative",
-        "score": 1.0036,
+        "score": 0.9558,
         "evidence": []
       }
     ],
     "page-097": [
       {
         "term": "economic evaluations",
-        "score": 2.4305,
+        "score": 2.4524,
         "evidence": []
       },
       {
         "term": "monetary values",
-        "score": 2.3497,
+        "score": 2.1493,
         "evidence": []
       },
       {
         "term": "financial evaluations",
-        "score": 1.904,
+        "score": 1.9464,
         "evidence": []
       },
       {
         "term": "market values",
-        "score": 1.8691,
-        "evidence": []
-      },
-      {
-        "term": "utility analysis",
-        "score": 1.5747,
+        "score": 1.6512,
         "evidence": []
       },
       {
         "term": "cost utility",
-        "score": 1.545,
+        "score": 1.5981,
+        "evidence": []
+      },
+      {
+        "term": "utility analysis",
+        "score": 1.5941,
         "evidence": []
       },
       {
         "term": "dalys",
-        "score": 1.4898,
+        "score": 1.4924,
         "evidence": []
       },
       {
         "term": "qalys",
-        "score": 1.4898,
+        "score": 1.4924,
         "evidence": []
       }
     ],
     "page-098": [
       {
         "term": "monetary units",
-        "score": 3.3554,
+        "score": 3.3305,
         "evidence": []
       },
       {
         "term": "natural units",
-        "score": 2.5735,
-        "evidence": []
-      },
-      {
-        "term": "lives saved",
-        "score": 1.891,
-        "evidence": []
-      },
-      {
-        "term": "sending sms",
-        "score": 1.8482,
-        "evidence": []
-      },
-      {
-        "term": "healthy years",
-        "score": 1.744,
+        "score": 2.548,
         "evidence": []
       },
       {
         "term": "pregnant women",
-        "score": 1.6956,
+        "score": 1.9435,
+        "evidence": []
+      },
+      {
+        "term": "sending sms",
+        "score": 1.8817,
+        "evidence": []
+      },
+      {
+        "term": "lives saved",
+        "score": 1.826,
         "evidence": []
       },
       {
         "term": "life years",
-        "score": 1.6898,
+        "score": 1.6465,
         "evidence": []
       },
       {
         "term": "sending messages",
-        "score": 1.5742,
+        "score": 1.5986,
+        "evidence": []
+      },
+      {
+        "term": "healthy years",
+        "score": 1.5548,
         "evidence": []
       }
     ],
     "page-099": [
       {
         "term": "evaluation activities",
-        "score": 1.1087,
+        "score": 1.1428,
         "evidence": []
       },
       {
         "term": "external entity",
-        "score": 1.0722,
+        "score": 1.0874,
         "evidence": []
       },
       {
         "term": "pre-prototype",
-        "score": 1.0429,
+        "score": 1.0503,
         "evidence": []
       },
       {
         "term": "inferences",
-        "score": 0.9903,
+        "score": 0.9988,
         "evidence": []
       },
       {
         "term": "stage",
-        "score": 0.9462,
+        "score": 0.9542,
         "evidence": []
       },
       {
         "term": "sustained programme",
-        "score": 0.87,
+        "score": 0.8936,
         "evidence": []
       },
       {
         "term": "formative",
-        "score": 0.8435,
+        "score": 0.8552,
         "evidence": []
       },
       {
         "term": "summative",
-        "score": 0.8425,
+        "score": 0.8481,
         "evidence": []
       }
     ],
     "page-100": [
       {
         "term": "mixed methods",
-        "score": 2.3926,
+        "score": 2.2804,
         "evidence": []
       },
       {
         "term": "participant observation",
-        "score": 1.982,
+        "score": 1.9661,
         "evidence": []
       },
       {
         "term": "system-generated monitoring",
-        "score": 1.7305,
+        "score": 1.7668,
         "evidence": []
       },
       {
         "term": "quantitative",
-        "score": 1.6215,
+        "score": 1.6159,
         "evidence": []
       },
       {
         "term": "evaluation methods",
-        "score": 1.5433,
+        "score": 1.5576,
         "evidence": []
       },
       {
         "term": "idis",
-        "score": 1.4375,
-        "evidence": []
-      },
-      {
-        "term": "qualitative",
-        "score": 1.43,
+        "score": 1.4513,
         "evidence": []
       },
       {
         "term": "fgds",
-        "score": 1.4255,
+        "score": 1.4396,
+        "evidence": []
+      },
+      {
+        "term": "qualitative",
+        "score": 1.3619,
         "evidence": []
       }
     ],
     "page-101": [
       {
         "term": "mixed methods",
-        "score": 2.5514,
+        "score": 2.4269,
         "evidence": []
       },
       {
         "term": "longitudinal surveys",
-        "score": 1.8525,
+        "score": 1.8843,
         "evidence": []
       },
       {
-        "term": "death audits",
-        "score": 1.8325,
+        "term": "coverage surveys",
+        "score": 1.83,
         "evidence": []
       },
       {
         "term": "cross-sectional coverage",
-        "score": 1.8067,
+        "score": 1.8255,
+        "evidence": []
+      },
+      {
+        "term": "death audits",
+        "score": 1.7064,
         "evidence": []
       },
       {
         "term": "quantitative",
-        "score": 1.6852,
+        "score": 1.6793,
         "evidence": []
       },
       {
         "term": "idis",
-        "score": 1.5918,
+        "score": 1.6071,
         "evidence": []
       },
       {
         "term": "fgds",
-        "score": 1.5785,
-        "evidence": []
-      },
-      {
-        "term": "qualitative",
-        "score": 1.5186,
+        "score": 1.5941,
         "evidence": []
       }
     ],
     "page-102": [
       {
         "term": "qualitative methods",
-        "score": 1.837,
+        "score": 1.7954,
         "evidence": []
       },
       {
         "term": "accessed april",
-        "score": 1.7404,
+        "score": 1.7545,
         "evidence": []
       },
       {
         "term": "mixed methods",
-        "score": 1.6947,
-        "evidence": []
-      },
-      {
-        "term": "qualitative research",
-        "score": 1.5701,
+        "score": 1.6365,
         "evidence": []
       },
       {
         "term": "quantitative methods",
-        "score": 1.5416,
+        "score": 1.5419,
+        "evidence": []
+      },
+      {
+        "term": "qualitative research",
+        "score": 1.5288,
         "evidence": []
       },
       {
         "term": "study designs",
-        "score": 1.1958,
-        "evidence": []
-      },
-      {
-        "term": "meadows",
-        "score": 1.1164,
+        "score": 1.2048,
         "evidence": []
       },
       {
         "term": "doi",
-        "score": 1.0686,
+        "score": 1.1891,
+        "evidence": []
+      },
+      {
+        "term": "meadows",
+        "score": 1.1222,
         "evidence": []
       }
     ],
     "page-103": [
       {
         "term": "participatory research",
-        "score": 1.7795,
+        "score": 1.6956,
         "evidence": []
       },
       {
         "term": "community-based participatory",
-        "score": 1.6942,
-        "evidence": []
-      },
-      {
-        "term": "participatory action",
-        "score": 1.518,
+        "score": 1.5729,
         "evidence": []
       },
       {
         "term": "oxford university",
-        "score": 1.4806,
+        "score": 1.4735,
         "evidence": []
       },
       {
         "term": "accessed april",
-        "score": 1.4322,
+        "score": 1.4467,
+        "evidence": []
+      },
+      {
+        "term": "participatory action",
+        "score": 1.4273,
         "evidence": []
       },
       {
         "term": "university press",
-        "score": 1.2431,
+        "score": 1.2133,
         "evidence": []
       },
       {
         "term": "agyepong",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "med",
-        "score": 0.861,
+        "score": 0.9008,
         "evidence": []
       }
     ],
     "page-104": [
       {
         "term": "qualitative research",
-        "score": 2.2123,
+        "score": 2.1551,
         "evidence": []
       },
       {
         "term": "quantitative research",
-        "score": 1.9561,
+        "score": 1.9564,
         "evidence": []
       },
       {
         "term": "qualitative versus",
-        "score": 1.8331,
+        "score": 1.8116,
         "evidence": []
       },
       {
         "term": "research methods",
-        "score": 1.7551,
+        "score": 1.761,
         "evidence": []
       },
       {
         "term": "mixed methods",
-        "score": 1.6062,
+        "score": 1.5478,
         "evidence": []
       },
       {
         "term": "johns hopkins",
-        "score": 1.3029,
+        "score": 1.3221,
         "evidence": []
       },
       {
         "term": "research design",
-        "score": 1.2881,
+        "score": 1.2506,
         "evidence": []
       },
       {
         "term": "community nurs",
-        "score": 1.1194,
+        "score": 1.1226,
         "evidence": []
       }
     ],
     "page-105": [
       {
-        "term": "green book",
-        "score": 1.5815,
+        "term": "community nurs",
+        "score": 1.4848,
         "evidence": []
       },
       {
-        "term": "community nurs",
-        "score": 1.4722,
+        "term": "green book",
+        "score": 1.4683,
         "evidence": []
       },
       {
         "term": "united kingdom",
-        "score": 1.1188,
+        "score": 1.123,
         "evidence": []
       },
       {
         "term": "meadows",
-        "score": 1.1164,
+        "score": 1.1222,
         "evidence": []
       },
       {
         "term": "impact analysis",
-        "score": 0.9459,
+        "score": 0.9756,
         "evidence": []
       },
       {
         "term": "budget impact",
-        "score": 0.942,
+        "score": 0.9752,
         "evidence": []
       },
       {
         "term": "treasury",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "dent",
-        "score": 0.8724,
+        "score": 0.8773,
         "evidence": []
       }
     ],
     "page-107": [
       {
         "term": "claims",
-        "score": 0.6117,
+        "score": 0.6283,
         "evidence": []
       },
       {
         "term": "right",
-        "score": 0.5023,
+        "score": 0.5081,
         "evidence": []
       },
       {
         "term": "intervention",
-        "score": 0.4816,
+        "score": 0.4898,
         "evidence": []
       },
       {
         "term": "assessing",
-        "score": 0.4704,
+        "score": 0.4713,
         "evidence": []
       },
       {
         "term": "collection",
-        "score": 0.4314,
-        "evidence": []
-      },
-      {
-        "term": "quality",
-        "score": 0.3986,
+        "score": 0.4475,
         "evidence": []
       },
       {
         "term": "intended",
-        "score": 0.3811,
+        "score": 0.3869,
         "evidence": []
       },
       {
         "term": "ability",
-        "score": 0.3725,
+        "score": 0.3827,
+        "evidence": []
+      },
+      {
+        "term": "quality",
+        "score": 0.3624,
         "evidence": []
       }
     ],
     "page-108": [
       {
         "term": "intervention claims",
-        "score": 1.4129,
+        "score": 1.4469,
         "evidence": []
       },
       {
         "term": "programme claims",
-        "score": 1.3395,
+        "score": 1.3806,
         "evidence": []
       },
       {
         "term": "quality assessment",
-        "score": 0.895,
-        "evidence": []
-      },
-      {
-        "term": "illustration",
-        "score": 0.7681,
+        "score": 0.8105,
         "evidence": []
       },
       {
         "term": "step",
-        "score": 0.738,
+        "score": 0.764,
+        "evidence": []
+      },
+      {
+        "term": "illustration",
+        "score": 0.756,
         "evidence": []
       },
       {
         "term": "key components",
-        "score": 0.7149,
+        "score": 0.7383,
         "evidence": []
       },
       {
         "term": "sources",
-        "score": 0.6721,
+        "score": 0.6767,
         "evidence": []
       },
       {
         "term": "summary",
-        "score": 0.618,
+        "score": 0.6707,
         "evidence": []
       }
     ],
     "page-109": [
       {
         "term": "quality assessment",
-        "score": 0.8345,
+        "score": 0.7545,
         "evidence": []
       },
       {
         "term": "team",
-        "score": 0.6125,
+        "score": 0.6236,
         "evidence": []
       },
       {
         "term": "expertise",
-        "score": 0.5888,
+        "score": 0.5779,
         "evidence": []
       },
       {
         "term": "discuss",
-        "score": 0.5728,
+        "score": 0.5612,
         "evidence": []
       },
       {
         "term": "step",
-        "score": 0.5257,
+        "score": 0.5443,
         "evidence": []
       },
       {
         "term": "benefit",
-        "score": 0.5231,
+        "score": 0.5196,
         "evidence": []
       },
       {
         "term": "leadership",
-        "score": 0.4909,
+        "score": 0.5008,
         "evidence": []
       },
       {
         "term": "intervention",
-        "score": 0.4435,
+        "score": 0.451,
         "evidence": []
       }
     ],
     "page-110": [
       {
         "term": "intervention claims",
-        "score": 1.5393,
+        "score": 1.5754,
         "evidence": []
       },
       {
         "term": "assessment worksheet",
-        "score": 1.193,
+        "score": 1.1628,
         "evidence": []
       },
       {
         "term": "please refer",
-        "score": 1.1108,
+        "score": 1.1184,
         "evidence": []
       },
       {
         "term": "instructions",
-        "score": 0.8605,
+        "score": 0.8444,
         "evidence": []
       },
       {
         "term": "numerator",
-        "score": 0.8062,
+        "score": 0.8125,
         "evidence": []
       },
       {
         "term": "step",
-        "score": 0.738,
+        "score": 0.764,
         "evidence": []
       },
       {
         "term": "indicators",
-        "score": 0.7344,
+        "score": 0.7465,
         "evidence": []
       },
       {
         "term": "anc",
-        "score": 0.7289,
+        "score": 0.7349,
         "evidence": []
       }
     ],
     "page-111": [
       {
         "term": "time frame",
-        "score": 1.2468,
+        "score": 1.2945,
         "evidence": []
       },
       {
         "term": "comparison group",
-        "score": 1.1634,
+        "score": 1.2167,
         "evidence": []
       },
       {
         "term": "system-generated",
-        "score": 1.0517,
-        "evidence": []
-      },
-      {
-        "term": "magnitude",
-        "score": 0.9947,
+        "score": 1.0637,
         "evidence": []
       },
       {
         "term": "indicate",
-        "score": 0.9644,
+        "score": 0.9631,
+        "evidence": []
+      },
+      {
+        "term": "magnitude",
+        "score": 0.9302,
         "evidence": []
       },
       {
         "term": "collected",
-        "score": 0.9069,
+        "score": 0.9275,
         "evidence": []
       },
       {
         "term": "routine operations",
-        "score": 0.8268,
+        "score": 0.8429,
         "evidence": []
       },
       {
         "term": "denominator",
-        "score": 0.8147,
+        "score": 0.827,
         "evidence": []
       }
     ],
     "page-112": [
       {
         "term": "claims",
-        "score": 0.8586,
+        "score": 0.882,
         "evidence": []
       },
       {
         "term": "step",
-        "score": 0.8333,
+        "score": 0.8626,
         "evidence": []
       },
       {
         "term": "numerator",
-        "score": 0.8062,
+        "score": 0.8125,
         "evidence": []
       },
       {
         "term": "survey",
-        "score": 0.7431,
+        "score": 0.7114,
         "evidence": []
       },
       {
         "term": "denominator",
-        "score": 0.6457,
+        "score": 0.6554,
         "evidence": []
       },
       {
         "term": "indicators",
-        "score": 0.6074,
+        "score": 0.6174,
         "evidence": []
       },
       {
         "term": "iii",
-        "score": 0.5831,
+        "score": 0.5793,
         "evidence": []
       }
     ],
     "page-113": [
       {
         "term": "chart relevant",
-        "score": 2.0419,
-        "evidence": []
-      },
-      {
-        "term": "generate recommendations",
-        "score": 1.2019,
+        "score": 1.9676,
         "evidence": []
       },
       {
         "term": "additional claims",
-        "score": 1.1898,
+        "score": 1.2779,
+        "evidence": []
+      },
+      {
+        "term": "generate recommendations",
+        "score": 1.084,
         "evidence": []
       },
       {
         "term": "health-care facilities",
-        "score": 0.9244,
-        "evidence": []
-      },
-      {
-        "term": "deficiencies",
-        "score": 0.8812,
+        "score": 0.9708,
         "evidence": []
       },
       {
         "term": "illustrate",
-        "score": 0.8319,
+        "score": 0.8438,
         "evidence": []
       },
       {
-        "term": "column",
-        "score": 0.8202,
+        "term": "deficiencies",
+        "score": 0.8219,
+        "evidence": []
+      },
+      {
+        "term": "step",
+        "score": 0.8164,
         "evidence": []
       },
       {
         "term": "row",
-        "score": 0.8019,
+        "score": 0.8082,
         "evidence": []
       }
     ],
     "page-114": [
       {
         "term": "disaggregation",
-        "score": 0.8155,
+        "score": 0.8216,
         "evidence": []
       },
       {
         "term": "opportunities",
-        "score": 0.6264,
+        "score": 0.6355,
         "evidence": []
       },
       {
         "term": "level",
-        "score": 0.6028,
+        "score": 0.6245,
         "evidence": []
       },
       {
         "term": "frequency",
-        "score": 0.5515,
+        "score": 0.5368,
         "evidence": []
       },
       {
         "term": "recommended",
-        "score": 0.5288,
-        "evidence": []
-      },
-      {
-        "term": "recommendations",
-        "score": 0.4854,
+        "score": 0.5233,
         "evidence": []
       },
       {
         "term": "changes",
-        "score": 0.4732,
+        "score": 0.4807,
+        "evidence": []
+      },
+      {
+        "term": "map",
+        "score": 0.4706,
         "evidence": []
       }
     ],
     "page-115": [
       {
         "term": "paper forms",
-        "score": 1.6185,
+        "score": 1.6281,
         "evidence": []
       },
       {
         "term": "dashboard exist",
-        "score": 1.2419,
+        "score": 1.2603,
         "evidence": []
       },
       {
         "term": "identifier",
-        "score": 1.026,
+        "score": 1.0424,
         "evidence": []
       },
       {
         "term": "indicators identified",
-        "score": 0.9198,
+        "score": 0.9323,
         "evidence": []
       },
       {
         "term": "item",
-        "score": 0.8729,
+        "score": 0.8872,
         "evidence": []
       },
       {
         "term": "elements",
-        "score": 0.753,
+        "score": 0.7666,
         "evidence": []
       },
       {
         "term": "step",
-        "score": 0.738,
+        "score": 0.764,
         "evidence": []
       },
       {
         "term": "missing",
-        "score": 0.7149,
+        "score": 0.7088,
         "evidence": []
       }
     ],
     "page-116": [
       {
         "term": "staff members",
-        "score": 1.0145,
+        "score": 1.0754,
         "evidence": []
       },
       {
         "term": "uncertain",
-        "score": 0.8812,
+        "score": 0.8978,
         "evidence": []
       },
       {
         "term": "item",
-        "score": 0.784,
+        "score": 0.7969,
         "evidence": []
       },
       {
         "term": "supervision",
-        "score": 0.7413,
+        "score": 0.7533,
         "evidence": []
       },
       {
         "term": "meetings",
-        "score": 0.7024,
+        "score": 0.742,
         "evidence": []
       },
       {
         "term": "assigned",
-        "score": 0.6644,
+        "score": 0.6633,
         "evidence": []
       },
       {
         "term": "months",
-        "score": 0.6307,
+        "score": 0.6393,
         "evidence": []
       },
       {
         "term": "collection",
-        "score": 0.6055,
+        "score": 0.6282,
         "evidence": []
       }
     ],
     "page-117": [
       {
-        "term": "paper forms",
-        "score": 1.1305,
+        "term": "item",
+        "score": 1.1402,
         "evidence": []
       },
       {
-        "term": "item",
-        "score": 1.1217,
+        "term": "paper forms",
+        "score": 1.1372,
         "evidence": []
       },
       {
         "term": "step",
-        "score": 0.738,
+        "score": 0.764,
         "evidence": []
       },
       {
         "term": "checks",
-        "score": 0.6797,
+        "score": 0.6887,
         "evidence": []
       },
       {
         "term": "adequate",
-        "score": 0.673,
+        "score": 0.669,
         "evidence": []
       },
       {
         "term": "elements",
-        "score": 0.6486,
+        "score": 0.6603,
+        "evidence": []
+      },
+      {
+        "term": "identify areas",
+        "score": 0.6361,
         "evidence": []
       },
       {
         "term": "dashboard",
-        "score": 0.6256,
-        "evidence": []
-      },
-      {
-        "term": "recommendations",
-        "score": 0.6125,
+        "score": 0.6358,
         "evidence": []
       }
     ],
     "page-118": [
       {
-        "term": "control arm",
-        "score": 3.1104,
+        "term": "weeks postnatal",
+        "score": 2.789,
         "evidence": []
       },
       {
-        "term": "weeks postnatal",
-        "score": 2.9268,
+        "term": "control arm",
+        "score": 2.7001,
         "evidence": []
       },
       {
         "term": "intervention arm",
-        "score": 2.8856,
+        "score": 2.5532,
         "evidence": []
       },
       {
         "term": "weeks postpartum",
-        "score": 2.6624,
+        "score": 2.5519,
         "evidence": []
       },
       {
         "term": "attend postnatal",
-        "score": 2.4928,
+        "score": 2.3142,
         "evidence": []
       },
       {
         "term": "postnatal clinic",
-        "score": 2.3499,
+        "score": 2.2596,
         "evidence": []
       },
       {
         "term": "live infants",
-        "score": 2.3222,
+        "score": 2.2325,
         "evidence": []
       },
       {
-        "term": "viral testing",
-        "score": 2.1978,
+        "term": "pregnant women",
+        "score": 2.1733,
         "evidence": []
       }
     ],
     "page-119": [
       {
         "term": "mother baby",
-        "score": 2.4178,
+        "score": 2.0885,
         "evidence": []
       },
       {
         "term": "postpartum survey",
-        "score": 1.5896,
+        "score": 1.5174,
         "evidence": []
       },
       {
         "term": "patient charts",
-        "score": 1.4391,
+        "score": 1.3841,
         "evidence": []
       },
       {
         "term": "abstracted",
-        "score": 1.3336,
+        "score": 1.3396,
         "evidence": []
       },
       {
         "term": "once woman",
-        "score": 1.3058,
+        "score": 1.3324,
         "evidence": []
       },
       {
         "term": "system-generated",
-        "score": 1.0517,
+        "score": 1.0637,
         "evidence": []
       },
       {
         "term": "odk",
-        "score": 1.0443,
+        "score": 1.0516,
         "evidence": []
       },
       {
         "term": "hei",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       }
     ],
     "page-120": [
       {
         "term": "accessed march",
-        "score": 1.3607,
+        "score": 1.3498,
         "evidence": []
       },
       {
         "term": "odk",
-        "score": 1.0443,
+        "score": 1.0516,
         "evidence": []
       },
       {
         "term": "mentor",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "united states",
-        "score": 0.9357,
+        "score": 0.9265,
         "evidence": []
       },
       {
         "term": "sti",
-        "score": 0.878,
+        "score": 0.8828,
         "evidence": []
       },
       {
         "term": "measure evaluation",
-        "score": 0.7898,
+        "score": 0.8087,
+        "evidence": []
+      },
+      {
+        "term": "reported",
+        "score": 0.7495,
         "evidence": []
       },
       {
         "term": "international development",
-        "score": 0.7344,
-        "evidence": []
-      },
-      {
-        "term": "usaid",
-        "score": 0.6822,
+        "score": 0.7365,
         "evidence": []
       }
     ],
     "page-121": [
       {
         "term": "mera",
-        "score": 0.9779,
+        "score": 0.9867,
         "evidence": []
       },
       {
         "term": "mterg",
-        "score": 0.8812,
+        "score": 0.8859,
         "evidence": []
       },
       {
-        "term": "recruited",
-        "score": 0.556,
+        "term": "evidence",
+        "score": 0.5489,
         "evidence": []
       }
     ],
     "page-122": [
       {
         "term": "research findings",
-        "score": 1.4517,
+        "score": 1.4687,
         "evidence": []
       },
       {
         "term": "mera",
-        "score": 0.9779,
+        "score": 0.9867,
         "evidence": []
       },
       {
-        "term": "encourage",
-        "score": 0.7279,
-        "evidence": []
-      },
-      {
-        "term": "studies",
-        "score": 0.7246,
+        "term": "evidence",
+        "score": 0.8952,
         "evidence": []
       },
       {
         "term": "checklist",
-        "score": 0.7185,
+        "score": 0.7323,
         "evidence": []
       },
       {
         "term": "reporting",
-        "score": 0.701,
+        "score": 0.7092,
+        "evidence": []
+      },
+      {
+        "term": "encourage",
+        "score": 0.693,
         "evidence": []
       },
       {
         "term": "journal",
-        "score": 0.6886,
+        "score": 0.6827,
         "evidence": []
       },
       {
         "term": "transparent",
-        "score": 0.6583,
+        "score": 0.6577,
         "evidence": []
       }
     ],
     "page-123": [
       {
         "term": "mera criteria",
-        "score": 2.2924,
+        "score": 2.2456,
         "evidence": []
       },
       {
         "term": "core mera",
-        "score": 2.0762,
-        "evidence": []
-      },
-      {
-        "term": "observational studies",
-        "score": 1.3595,
+        "score": 2.1018,
         "evidence": []
       },
       {
         "term": "intervention content",
-        "score": 1.2446,
+        "score": 1.2714,
         "evidence": []
       },
       {
         "term": "study design",
-        "score": 1.1938,
+        "score": 1.1808,
         "evidence": []
       },
       {
         "term": "checklists",
-        "score": 1.1567,
+        "score": 1.1664,
         "evidence": []
       },
       {
-        "term": "criterion",
-        "score": 1.1361,
+        "term": "observational studies",
+        "score": 1.131,
+        "evidence": []
+      },
+      {
+        "term": "intervention among",
+        "score": 1.1111,
         "evidence": []
       },
       {
         "term": "user feedback",
-        "score": 1.0611,
+        "score": 1.1038,
         "evidence": []
       }
     ],
     "page-124": [
       {
         "term": "support replicability",
-        "score": 1.7832,
+        "score": 1.8117,
         "evidence": []
       },
       {
         "term": "authors work",
-        "score": 1.5094,
+        "score": 1.4198,
         "evidence": []
       },
       {
         "term": "infrastructure required",
-        "score": 1.2259,
+        "score": 1.2603,
         "evidence": []
       },
       {
         "term": "coverage rate",
-        "score": 1.1797,
+        "score": 1.1133,
         "evidence": []
       },
       {
         "term": "code",
-        "score": 0.7492,
+        "score": 0.7629,
+        "evidence": []
+      },
+      {
+        "term": "reported",
+        "score": 0.7495,
         "evidence": []
       },
       {
         "term": "replicate",
-        "score": 0.7308,
+        "score": 0.7387,
         "evidence": []
       },
       {
         "term": "explanation",
-        "score": 0.7132,
-        "evidence": []
-      },
-      {
-        "term": "modifications",
-        "score": 0.7019,
+        "score": 0.6987,
         "evidence": []
       }
     ],
     "page-125": [
       {
         "term": "text message",
-        "score": 1.4302,
+        "score": 1.465,
         "evidence": []
       },
       {
         "term": "explanation",
-        "score": 0.9,
+        "score": 0.8817,
         "evidence": []
       },
       {
-        "term": "duration",
-        "score": 0.7164,
+        "term": "intensity",
+        "score": 0.7826,
         "evidence": []
       },
       {
         "term": "customized",
-        "score": 0.7148,
+        "score": 0.7088,
         "evidence": []
       },
       {
         "term": "item",
-        "score": 0.6753,
+        "score": 0.6865,
         "evidence": []
       },
       {
         "term": "content",
-        "score": 0.6678,
+        "score": 0.6856,
+        "evidence": []
+      },
+      {
+        "term": "duration",
+        "score": 0.6652,
         "evidence": []
       },
       {
         "term": "intervention",
-        "score": 0.615,
-        "evidence": []
-      },
-      {
-        "term": "day",
-        "score": 0.5788,
+        "score": 0.6254,
         "evidence": []
       }
     ],
     "page-126": [
       {
         "term": "user feedback",
-        "score": 1.3209,
-        "evidence": []
-      },
-      {
-        "term": "weight loss",
-        "score": 1.2038,
-        "evidence": []
-      },
-      {
-        "term": "formative research",
-        "score": 1.1848,
+        "score": 1.3733,
         "evidence": []
       },
       {
         "term": "intervention among",
-        "score": 1.1644,
+        "score": 1.2802,
+        "evidence": []
+      },
+      {
+        "term": "formative research",
+        "score": 1.1979,
         "evidence": []
       },
       {
         "term": "among certain",
-        "score": 1.0861,
+        "score": 1.1971,
+        "evidence": []
+      },
+      {
+        "term": "weight loss",
+        "score": 1.1172,
         "evidence": []
       },
       {
         "term": "subgroups",
-        "score": 0.9947,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "likelihood",
-        "score": 0.9117,
+        "score": 0.8932,
         "evidence": []
       },
       {
         "term": "explanation",
-        "score": 0.9,
+        "score": 0.8817,
         "evidence": []
       }
     ],
     "page-127": [
       {
         "term": "competency assessment",
-        "score": 1.8432,
+        "score": 1.7369,
         "evidence": []
       },
       {
         "term": "economic evaluations",
-        "score": 1.3303,
+        "score": 1.3399,
         "evidence": []
       },
       {
         "term": "full economic",
-        "score": 1.3052,
+        "score": 1.2817,
         "evidence": []
       },
       {
         "term": "pilot studies",
-        "score": 1.0704,
-        "evidence": []
-      },
-      {
-        "term": "authors",
-        "score": 0.9485,
+        "score": 0.8908,
         "evidence": []
       },
       {
         "term": "explanation",
-        "score": 0.9,
+        "score": 0.8817,
+        "evidence": []
+      },
+      {
+        "term": "authors",
+        "score": 0.8601,
         "evidence": []
       },
       {
         "term": "length",
-        "score": 0.8816,
+        "score": 0.8219,
         "evidence": []
       },
       {
         "term": "average",
-        "score": 0.8512,
+        "score": 0.8151,
         "evidence": []
       }
     ],
     "page-128": [
       {
         "term": "contextual adaptability",
-        "score": 1.6262,
-        "evidence": []
-      },
-      {
-        "term": "replicability",
-        "score": 0.9947,
+        "score": 1.6391,
         "evidence": []
       },
       {
         "term": "mobile phone",
-        "score": 0.9617,
+        "score": 1.0016,
         "evidence": []
       },
       {
-        "term": "mobilize",
-        "score": 0.8812,
+        "term": "replicability",
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "phone based",
-        "score": 0.8364,
+        "score": 0.889,
         "evidence": []
       },
       {
-        "term": "authors",
-        "score": 0.817,
+        "term": "mobilize",
+        "score": 0.8859,
         "evidence": []
       },
       {
         "term": "suited",
-        "score": 0.7681,
+        "score": 0.7752,
+        "evidence": []
+      },
+      {
+        "term": "authors",
+        "score": 0.7408,
         "evidence": []
       },
       {
         "term": "explanation",
-        "score": 0.7132,
+        "score": 0.6987,
         "evidence": []
       }
     ],
     "page-129": [
       {
         "term": "times day",
-        "score": 1.1513,
+        "score": 1.0781,
         "evidence": []
       },
       {
         "term": "explanation",
-        "score": 1.0448,
-        "evidence": []
-      },
-      {
-        "term": "confidentiality",
-        "score": 0.9328,
+        "score": 1.0236,
         "evidence": []
       },
       {
         "term": "transferred",
-        "score": 0.9289,
+        "score": 0.9326,
+        "evidence": []
+      },
+      {
+        "term": "confidentiality",
+        "score": 0.9153,
         "evidence": []
       },
       {
         "term": "encrypted",
-        "score": 0.8548,
+        "score": 0.86,
         "evidence": []
       },
       {
         "term": "hipaa",
-        "score": 0.8439,
+        "score": 0.8494,
         "evidence": []
       },
       {
         "term": "national guidelines",
-        "score": 0.825,
+        "score": 0.832,
         "evidence": []
       },
       {
         "term": "security",
-        "score": 0.7994,
+        "score": 0.8068,
         "evidence": []
       }
     ],
     "page-130": [
       {
-        "term": "methodological criteria",
-        "score": 2.1612,
+        "term": "undergone circumcision",
+        "score": 2.0807,
         "evidence": []
       },
       {
-        "term": "undergone circumcision",
-        "score": 2.0718,
+        "term": "methodological criteria",
+        "score": 2.0588,
         "evidence": []
       },
       {
         "term": "essential criteria",
-        "score": 1.6736,
+        "score": 1.5968,
         "evidence": []
       },
       {
         "term": "study design",
-        "score": 1.4726,
+        "score": 1.469,
         "evidence": []
       },
       {
         "term": "quantitative research",
-        "score": 1.2241,
+        "score": 1.2231,
         "evidence": []
       },
       {
         "term": "secondary outcome",
-        "score": 1.2131,
+        "score": 1.1866,
         "evidence": []
       },
       {
         "term": "theoretical framework",
-        "score": 1.1226,
+        "score": 1.1393,
         "evidence": []
       },
       {
         "term": "outcome measures",
-        "score": 1.0933,
+        "score": 1.0576,
         "evidence": []
       }
     ],
     "page-131": [
       {
         "term": "ocp continuation",
-        "score": 2.1728,
+        "score": 2.1795,
         "evidence": []
       },
       {
         "term": "study population",
-        "score": 1.504,
+        "score": 1.5328,
         "evidence": []
       },
       {
         "term": "six districts",
-        "score": 1.2509,
-        "evidence": []
-      },
-      {
-        "term": "bias",
-        "score": 1.2424,
+        "score": 1.2764,
         "evidence": []
       },
       {
         "term": "please note",
-        "score": 1.1065,
-        "evidence": []
-      },
-      {
-        "term": "north",
-        "score": 0.9947,
+        "score": 1.1267,
         "evidence": []
       },
       {
         "term": "evaluate feasibility",
-        "score": 0.993,
+        "score": 1.0207,
+        "evidence": []
+      },
+      {
+        "term": "north",
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "geographic area",
-        "score": 0.9766,
+        "score": 0.9772,
+        "evidence": []
+      },
+      {
+        "term": "enrolled",
+        "score": 0.9429,
         "evidence": []
       }
     ],
     "page-132": [
       {
         "term": "analytical methods",
-        "score": 1.4476,
+        "score": 1.46,
         "evidence": []
       },
       {
         "term": "confounding",
-        "score": 1.0825,
+        "score": 1.0891,
         "evidence": []
       },
       {
         "term": "missing",
-        "score": 1.0473,
+        "score": 1.0384,
         "evidence": []
       },
       {
         "term": "themes",
-        "score": 0.9802,
+        "score": 0.9889,
         "evidence": []
       },
       {
         "term": "continuation",
-        "score": 0.9336,
+        "score": 0.9371,
         "evidence": []
       },
       {
         "term": "contraceptive",
-        "score": 0.8812,
+        "score": 0.8859,
         "evidence": []
       },
       {
         "term": "generalizability",
-        "score": 0.8812,
+        "score": 0.8859,
         "evidence": []
       },
       {
         "term": "ethical",
-        "score": 0.8732,
+        "score": 0.8843,
         "evidence": []
       }
     ],
     "page-133": [
       {
         "term": "accessed april",
-        "score": 1.3255,
-        "evidence": []
-      },
-      {
-        "term": "young people",
-        "score": 1.1918,
+        "score": 1.3379,
         "evidence": []
       },
       {
         "term": "controlled trial",
-        "score": 1.1732,
+        "score": 1.2651,
         "evidence": []
       },
       {
-        "term": "randomized controlled",
-        "score": 1.151,
+        "term": "young people",
+        "score": 1.1696,
         "evidence": []
       },
       {
         "term": "consort",
-        "score": 1.1304,
+        "score": 1.136,
         "evidence": []
       },
       {
         "term": "strobe",
-        "score": 1.1304,
+        "score": 1.136,
         "evidence": []
       },
       {
         "term": "text messaging",
-        "score": 1.0673,
+        "score": 1.0913,
         "evidence": []
       },
       {
         "term": "respondent",
-        "score": 0.9947,
+        "score": 0.997,
+        "evidence": []
+      },
+      {
+        "term": "doi",
+        "score": 0.9835,
         "evidence": []
       }
     ],
     "page-134": [
       {
-        "term": "antiretroviral therapy",
-        "score": 1.9212,
-        "evidence": []
-      },
-      {
         "term": "bmc med",
-        "score": 1.7992,
+        "score": 1.8794,
         "evidence": []
       },
       {
         "term": "controlled trial",
-        "score": 1.5847,
-        "evidence": []
-      },
-      {
-        "term": "randomized controlled",
-        "score": 1.5567,
+        "score": 1.7038,
         "evidence": []
       },
       {
         "term": "phone text-message",
-        "score": 1.5294,
+        "score": 1.5472,
+        "evidence": []
+      },
+      {
+        "term": "antiretroviral therapy",
+        "score": 1.5044,
         "evidence": []
       },
       {
         "term": "text message",
-        "score": 1.3846,
+        "score": 1.4173,
+        "evidence": []
+      },
+      {
+        "term": "randomized controlled",
+        "score": 1.3473,
         "evidence": []
       },
       {
         "term": "text messaging",
-        "score": 1.2894,
+        "score": 1.318,
         "evidence": []
       },
       {
-        "term": "obstet",
-        "score": 1.2705,
+        "term": "mobile phones",
+        "score": 1.315,
         "evidence": []
       }
     ],
     "page-135": [
       {
         "term": "bmc med",
-        "score": 1.6045,
-        "evidence": []
-      },
-      {
-        "term": "observational studies",
-        "score": 1.3595,
+        "score": 1.6763,
         "evidence": []
       },
       {
         "term": "doi",
-        "score": 1.0686,
+        "score": 1.1891,
+        "evidence": []
+      },
+      {
+        "term": "observational studies",
+        "score": 1.131,
         "evidence": []
       },
       {
         "term": "qual",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "randomised",
-        "score": 0.8812,
-        "evidence": []
-      },
-      {
-        "term": "statement",
-        "score": 0.7169,
+        "score": 0.8707,
         "evidence": []
       },
       {
         "term": "trial",
-        "score": 0.6595,
+        "score": 0.7363,
+        "evidence": []
+      },
+      {
+        "term": "statement",
+        "score": 0.7252,
         "evidence": []
       },
       {
         "term": "int",
-        "score": 0.5808,
+        "score": 0.5876,
         "evidence": []
       }
     ],
     "page-136": [
       {
         "term": "experimental studies",
-        "score": 1.944,
+        "score": 1.6048,
         "evidence": []
       },
       {
         "term": "wireless technologies",
-        "score": 1.1752,
+        "score": 1.1989,
         "evidence": []
       },
       {
         "term": "theoretical",
-        "score": 0.8133,
+        "score": 0.8195,
         "evidence": []
       },
       {
         "term": "analytic",
-        "score": 0.7879,
+        "score": 0.7946,
         "evidence": []
       },
       {
         "term": "fgds",
-        "score": 0.7531,
+        "score": 0.7606,
         "evidence": []
       },
       {
         "term": "hypotheses",
-        "score": 0.7169,
+        "score": 0.7251,
         "evidence": []
       },
       {
         "term": "intervention",
-        "score": 0.6702,
+        "score": 0.6816,
         "evidence": []
       },
       {
         "term": "descriptive",
-        "score": 0.6698,
+        "score": 0.6791,
         "evidence": []
       }
     ],
     "page-137": [
       {
         "term": "study designs",
-        "score": 1.0394,
+        "score": 1.0495,
         "evidence": []
       },
       {
         "term": "logic model",
-        "score": 0.9006,
+        "score": 0.9447,
         "evidence": []
       },
       {
-        "term": "sampling",
-        "score": 0.7632,
+        "term": "implementation research",
+        "score": 0.8074,
         "evidence": []
       },
       {
         "term": "idis",
-        "score": 0.7595,
+        "score": 0.7668,
+        "evidence": []
+      },
+      {
+        "term": "sampling",
+        "score": 0.7563,
         "evidence": []
       },
       {
         "term": "achievement",
-        "score": 0.6459,
+        "score": 0.6557,
         "evidence": []
       },
       {
         "term": "attention",
-        "score": 0.6129,
+        "score": 0.6091,
         "evidence": []
       },
       {
-        "term": "monitored",
-        "score": 0.6095,
-        "evidence": []
-      },
-      {
-        "term": "amount",
-        "score": 0.5941,
+        "term": "inputs",
+        "score": 0.6026,
         "evidence": []
       }
     ],
     "page-138": [
       {
         "term": "test cases",
-        "score": 1.1724,
+        "score": 1.1687,
         "evidence": []
       },
       {
         "term": "srs",
-        "score": 0.9038,
-        "evidence": []
-      },
-      {
-        "term": "sampling",
-        "score": 0.7632,
+        "score": 0.908,
         "evidence": []
       },
       {
         "term": "project managers",
-        "score": 0.7457,
+        "score": 0.7696,
+        "evidence": []
+      },
+      {
+        "term": "sampling",
+        "score": 0.7563,
         "evidence": []
       },
       {
         "term": "probability",
-        "score": 0.7401,
+        "score": 0.7478,
         "evidence": []
       },
       {
         "term": "process monitoring",
-        "score": 0.6553,
+        "score": 0.6941,
         "evidence": []
       },
       {
         "term": "intervention",
-        "score": 0.6532,
+        "score": 0.6642,
         "evidence": []
       },
       {
-        "term": "studies",
-        "score": 0.5743,
+        "term": "conformance",
+        "score": 0.5815,
         "evidence": []
       }
     ],
     "page-139": [
       {
-        "term": "qualitative versus",
-        "score": 1.4757,
+        "term": "versus quantitative",
+        "score": 1.5089,
         "evidence": []
       },
       {
-        "term": "versus quantitative",
-        "score": 1.4727,
+        "term": "qualitative versus",
+        "score": 1.4711,
         "evidence": []
       },
       {
         "term": "quantitative research",
-        "score": 1.4211,
+        "score": 1.42,
         "evidence": []
       },
       {
         "term": "accessed",
-        "score": 0.8565,
-        "evidence": []
-      },
-      {
-        "term": "specified",
-        "score": 0.7138,
-        "evidence": []
-      },
-      {
-        "term": "anticipated",
-        "score": 0.6533,
-        "evidence": []
-      },
-      {
-        "term": "conceptual",
-        "score": 0.6462,
+        "score": 0.8736,
         "evidence": []
       },
       {
         "term": "women",
-        "score": 0.6149,
+        "score": 0.7519,
+        "evidence": []
+      },
+      {
+        "term": "specified",
+        "score": 0.7215,
+        "evidence": []
+      },
+      {
+        "term": "conceptual",
+        "score": 0.6475,
+        "evidence": []
+      },
+      {
+        "term": "anticipated",
+        "score": 0.6311,
         "evidence": []
       }
     ],
     "page-140": [
       {
         "term": "qualitative research",
-        "score": 1.6021,
+        "score": 1.5657,
         "evidence": []
       },
       {
         "term": "research methods",
-        "score": 1.4823,
+        "score": 1.4873,
         "evidence": []
       },
       {
         "term": "accessed",
-        "score": 1.0503,
+        "score": 1.0713,
+        "evidence": []
+      },
+      {
+        "term": "implementation research",
+        "score": 0.9475,
         "evidence": []
       },
       {
         "term": "adam",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "duke",
-        "score": 0.8816,
+        "score": 0.8863,
         "evidence": []
       },
       {
         "term": "treasure",
-        "score": 0.8816,
+        "score": 0.8863,
         "evidence": []
       },
       {
         "term": "chadwick",
-        "score": 0.878,
-        "evidence": []
-      },
-      {
-        "term": "dent",
-        "score": 0.8724,
+        "score": 0.8828,
         "evidence": []
       }
     ],
     "page-141": [
       {
         "term": "accessed april",
-        "score": 1.593,
+        "score": 1.6107,
         "evidence": []
       },
       {
         "term": "states department",
-        "score": 1.2868,
+        "score": 1.2683,
         "evidence": []
       },
       {
         "term": "united states",
-        "score": 1.271,
+        "score": 1.2614,
         "evidence": []
       },
       {
         "term": "mars",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "evaluation tips",
-        "score": 0.9138,
+        "score": 0.9325,
         "evidence": []
       },
       {
-        "term": "website",
-        "score": 0.8477,
+        "term": "gov",
+        "score": 0.8315,
         "evidence": []
       }
     ],
     "page-144": [
       {
         "term": "reproductivehealth",
-        "score": 0.8831,
+        "score": 0.7075,
         "evidence": []
       },
       {
         "term": "int",
-        "score": 0.5808,
+        "score": 0.5876,
         "evidence": []
       },
       {
         "term": "fax",
-        "score": 0.58,
+        "score": 0.5119,
         "evidence": []
       }
     ]

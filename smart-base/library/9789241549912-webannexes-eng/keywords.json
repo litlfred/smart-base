@@ -1,0 +1,985 @@
+{
+  "$schema": "folio-keywords/v1",
+  "entry": "9789241549912-webannexes-eng",
+  "corpus": {
+    "library": "smart-base/library",
+    "sections": 973,
+    "terms": 8571,
+    "weighting": "log-entropy"
+  },
+  "document": [
+    {
+      "term": "neither favours",
+      "score": 49.0504,
+      "evidence": []
+    },
+    {
+      "term": "option nor",
+      "score": 45.1253,
+      "evidence": []
+    },
+    {
+      "term": "disadvantages outweigh",
+      "score": 30.1968,
+      "evidence": []
+    },
+    {
+      "term": "benefits outweigh",
+      "score": 24.7509,
+      "evidence": []
+    },
+    {
+      "term": "pregnant women",
+      "score": 24.0576,
+      "evidence": []
+    },
+    {
+      "term": "context-specific recommendation",
+      "score": 23.3985,
+      "evidence": []
+    },
+    {
+      "term": "versus disadvantages",
+      "score": 20.8895,
+      "evidence": []
+    },
+    {
+      "term": "anc guideline",
+      "score": 20.3682,
+      "evidence": []
+    },
+    {
+      "term": "maternal morbidity",
+      "score": 19.6053,
+      "evidence": []
+    },
+    {
+      "term": "women values",
+      "score": 18.5519,
+      "evidence": []
+    },
+    {
+      "term": "screening women",
+      "score": 18.44,
+      "evidence": []
+    },
+    {
+      "term": "maternal mortality",
+      "score": 17.7525,
+      "evidence": []
+    }
+  ],
+  "sections": {
+    "page-002": [
+      {
+        "term": "world",
+        "score": 0.8776,
+        "evidence": []
+      },
+      {
+        "term": "organization",
+        "score": 0.8175,
+        "evidence": []
+      },
+      {
+        "term": "material",
+        "score": 0.7566,
+        "evidence": []
+      },
+      {
+        "term": "concerning",
+        "score": 0.6942,
+        "evidence": []
+      },
+      {
+        "term": "lines",
+        "score": 0.6473,
+        "evidence": []
+      },
+      {
+        "term": "press",
+        "score": 0.6351,
+        "evidence": []
+      },
+      {
+        "term": "publications",
+        "score": 0.6079,
+        "evidence": []
+      },
+      {
+        "term": "website",
+        "score": 0.5619,
+        "evidence": []
+      }
+    ],
+    "page-003": [
+      {
+        "term": "web annex",
+        "score": 1.0018,
+        "evidence": []
+      },
+      {
+        "term": "antenatal care",
+        "score": 0.7295,
+        "evidence": []
+      },
+      {
+        "term": "guideline",
+        "score": 0.6721,
+        "evidence": []
+      }
+    ],
+    "page-004": [
+      {
+        "term": "fetal newborn",
+        "score": 2.5833,
+        "evidence": []
+      },
+      {
+        "term": "maternal morbidity",
+        "score": 2.5678,
+        "evidence": []
+      },
+      {
+        "term": "mortality fetal",
+        "score": 2.4339,
+        "evidence": []
+      },
+      {
+        "term": "iron supplementation",
+        "score": 2.4105,
+        "evidence": []
+      },
+      {
+        "term": "pregnant women",
+        "score": 2.3832,
+        "evidence": []
+      },
+      {
+        "term": "side-effects fetal",
+        "score": 2.2992,
+        "evidence": []
+      },
+      {
+        "term": "maternal satisfaction",
+        "score": 2.136,
+        "evidence": []
+      },
+      {
+        "term": "perinatal outcomes",
+        "score": 2.0799,
+        "evidence": []
+      }
+    ],
+    "page-005": [
+      {
+        "term": "fetal newborn",
+        "score": 2.9215,
+        "evidence": []
+      },
+      {
+        "term": "maternal morbidity",
+        "score": 2.7532,
+        "evidence": []
+      },
+      {
+        "term": "side-effects fetal",
+        "score": 2.7416,
+        "evidence": []
+      },
+      {
+        "term": "mortality fetal",
+        "score": 2.6897,
+        "evidence": []
+      },
+      {
+        "term": "vitamin supplements",
+        "score": 2.5153,
+        "evidence": []
+      },
+      {
+        "term": "maternal satisfaction",
+        "score": 2.328,
+        "evidence": []
+      },
+      {
+        "term": "preterm birth",
+        "score": 2.1919,
+        "evidence": []
+      },
+      {
+        "term": "birth weight",
+        "score": 2.1155,
+        "evidence": []
+      }
+    ],
+    "page-006": [
+      {
+        "term": "screening women",
+        "score": 2.6066,
+        "evidence": []
+      },
+      {
+        "term": "pregnant women",
+        "score": 2.4282,
+        "evidence": []
+      },
+      {
+        "term": "substance abuse",
+        "score": 2.0269,
+        "evidence": []
+      },
+      {
+        "term": "accessed september",
+        "score": 1.9635,
+        "evidence": []
+      },
+      {
+        "term": "anc visits",
+        "score": 1.7211,
+        "evidence": []
+      },
+      {
+        "term": "priority outcomes",
+        "score": 1.6598,
+        "evidence": []
+      },
+      {
+        "term": "anc settings",
+        "score": 1.6335,
+        "evidence": []
+      },
+      {
+        "term": "improve maternal",
+        "score": 1.5211,
+        "evidence": []
+      }
+    ],
+    "page-007": [
+      {
+        "term": "fetal newborn",
+        "score": 3.3656,
+        "evidence": []
+      },
+      {
+        "term": "satisfaction fetal",
+        "score": 3.017,
+        "evidence": []
+      },
+      {
+        "term": "fetal movement",
+        "score": 2.7445,
+        "evidence": []
+      },
+      {
+        "term": "newborn morbidity",
+        "score": 2.6315,
+        "evidence": []
+      },
+      {
+        "term": "fetal blood",
+        "score": 2.6214,
+        "evidence": []
+      },
+      {
+        "term": "maternal morbidity",
+        "score": 2.5176,
+        "evidence": []
+      },
+      {
+        "term": "newborn mortality",
+        "score": 2.4711,
+        "evidence": []
+      },
+      {
+        "term": "pregnant women",
+        "score": 2.4404,
+        "evidence": []
+      }
+    ],
+    "page-008": [
+      {
+        "term": "pregnant women",
+        "score": 2.5393,
+        "evidence": []
+      },
+      {
+        "term": "women rating",
+        "score": 2.3705,
+        "evidence": []
+      },
+      {
+        "term": "fetal newborn",
+        "score": 2.3583,
+        "evidence": []
+      },
+      {
+        "term": "newborn morbidity",
+        "score": 2.3363,
+        "evidence": []
+      },
+      {
+        "term": "symptomatic relief",
+        "score": 2.1205,
+        "evidence": []
+      },
+      {
+        "term": "reduce morbidity",
+        "score": 2.1201,
+        "evidence": []
+      },
+      {
+        "term": "side-effects maternal",
+        "score": 2.0071,
+        "evidence": []
+      },
+      {
+        "term": "leg cramps",
+        "score": 1.9942,
+        "evidence": []
+      }
+    ],
+    "page-009": [
+      {
+        "term": "fetal newborn",
+        "score": 2.3583,
+        "evidence": []
+      },
+      {
+        "term": "pregnant women",
+        "score": 2.3041,
+        "evidence": []
+      },
+      {
+        "term": "women rating",
+        "score": 2.2716,
+        "evidence": []
+      },
+      {
+        "term": "mortality fetal",
+        "score": 2.271,
+        "evidence": []
+      },
+      {
+        "term": "newborn morbidity",
+        "score": 2.1945,
+        "evidence": []
+      },
+      {
+        "term": "varicose veins",
+        "score": 2.1693,
+        "evidence": []
+      },
+      {
+        "term": "maternal satisfaction",
+        "score": 2.1646,
+        "evidence": []
+      },
+      {
+        "term": "symptomatic relief",
+        "score": 2.1205,
+        "evidence": []
+      }
+    ],
+    "page-010": [
+      {
+        "term": "fetal newborn",
+        "score": 1.2917,
+        "evidence": []
+      },
+      {
+        "term": "rural areas",
+        "score": 1.2617,
+        "evidence": []
+      },
+      {
+        "term": "priority outcomes",
+        "score": 1.0534,
+        "evidence": []
+      },
+      {
+        "term": "anc",
+        "score": 0.9498,
+        "evidence": []
+      },
+      {
+        "term": "antenatal care",
+        "score": 0.8052,
+        "evidence": []
+      },
+      {
+        "term": "retention",
+        "score": 0.7776,
+        "evidence": []
+      }
+    ],
+    "page-011": [
+      {
+        "term": "pregnant women",
+        "score": 2.5964,
+        "evidence": []
+      },
+      {
+        "term": "anc guideline",
+        "score": 2.2293,
+        "evidence": []
+      },
+      {
+        "term": "reduce morbidity",
+        "score": 2.0541,
+        "evidence": []
+      },
+      {
+        "term": "pico questions",
+        "score": 1.7788,
+        "evidence": []
+      },
+      {
+        "term": "steering group",
+        "score": 1.7488,
+        "evidence": []
+      },
+      {
+        "term": "group decided",
+        "score": 1.6341,
+        "evidence": []
+      },
+      {
+        "term": "detecting risk",
+        "score": 1.5636,
+        "evidence": []
+      },
+      {
+        "term": "tract infection",
+        "score": 1.5603,
+        "evidence": []
+      }
+    ],
+    "page-012": [
+      {
+        "term": "anc guideline",
+        "score": 2.0968,
+        "evidence": []
+      },
+      {
+        "term": "pregnant women",
+        "score": 1.9282,
+        "evidence": []
+      },
+      {
+        "term": "reduce morbidity",
+        "score": 1.6989,
+        "evidence": []
+      },
+      {
+        "term": "domestic violence",
+        "score": 1.6921,
+        "evidence": []
+      },
+      {
+        "term": "pico questions",
+        "score": 1.4528,
+        "evidence": []
+      },
+      {
+        "term": "vaccination against",
+        "score": 1.3876,
+        "evidence": []
+      },
+      {
+        "term": "group decided",
+        "score": 1.3174,
+        "evidence": []
+      },
+      {
+        "term": "steering group",
+        "score": 1.2872,
+        "evidence": []
+      }
+    ],
+    "page-013": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2537,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "balanced",
+        "score": 1.0039,
+        "evidence": []
+      },
+      {
+        "term": "recommended",
+        "score": 0.9269,
+        "evidence": []
+      },
+      {
+        "term": "energy",
+        "score": 0.818,
+        "evidence": []
+      }
+    ],
+    "page-014": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2537,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "acid supplements",
+        "score": 1.5211,
+        "evidence": []
+      },
+      {
+        "term": "folic acid",
+        "score": 1.3504,
+        "evidence": []
+      },
+      {
+        "term": "oral iron",
+        "score": 1.3407,
+        "evidence": []
+      }
+    ],
+    "page-015": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2537,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "recommended",
+        "score": 0.9269,
+        "evidence": []
+      },
+      {
+        "term": "balanced",
+        "score": 0.8647,
+        "evidence": []
+      },
+      {
+        "term": "ptb",
+        "score": 0.8511,
+        "evidence": []
+      }
+    ],
+    "page-016": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2537,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "recommended",
+        "score": 0.9269,
+        "evidence": []
+      },
+      {
+        "term": "balanced",
+        "score": 0.8647,
+        "evidence": []
+      },
+      {
+        "term": "supplements",
+        "score": 0.851,
+        "evidence": []
+      }
+    ],
+    "page-017": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2537,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "haemoglobinometer",
+        "score": 0.9771,
+        "evidence": []
+      },
+      {
+        "term": "recommended",
+        "score": 0.9269,
+        "evidence": []
+      },
+      {
+        "term": "balanced",
+        "score": 0.8647,
+        "evidence": []
+      }
+    ],
+    "page-018": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2537,
+        "evidence": []
+      },
+      {
+        "term": "gram stain",
+        "score": 1.895,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "recommended",
+        "score": 0.9269,
+        "evidence": []
+      },
+      {
+        "term": "ipv",
+        "score": 0.8942,
+        "evidence": []
+      }
+    ],
+    "page-019": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2537,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "recommended",
+        "score": 0.9269,
+        "evidence": []
+      },
+      {
+        "term": "balanced",
+        "score": 0.8647,
+        "evidence": []
+      },
+      {
+        "term": "gdg",
+        "score": 0.7091,
+        "evidence": []
+      }
+    ],
+    "page-020": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2537,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "recommended",
+        "score": 0.9269,
+        "evidence": []
+      },
+      {
+        "term": "balanced",
+        "score": 0.8647,
+        "evidence": []
+      },
+      {
+        "term": "asb",
+        "score": 0.7335,
+        "evidence": []
+      }
+    ],
+    "page-021": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2537,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "recommended",
+        "score": 0.9269,
+        "evidence": []
+      },
+      {
+        "term": "balanced",
+        "score": 0.8647,
+        "evidence": []
+      },
+      {
+        "term": "tetanus",
+        "score": 0.831,
+        "evidence": []
+      }
+    ],
+    "page-022": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2537,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "maternal satisfaction",
+        "score": 1.3211,
+        "evidence": []
+      },
+      {
+        "term": "recommended",
+        "score": 0.9269,
+        "evidence": []
+      },
+      {
+        "term": "balanced",
+        "score": 0.8647,
+        "evidence": []
+      }
+    ],
+    "page-023": [
+      {
+        "term": "neither favours",
+        "score": 4.4591,
+        "evidence": []
+      },
+      {
+        "term": "option nor",
+        "score": 4.1023,
+        "evidence": []
+      },
+      {
+        "term": "disadvantages outweigh",
+        "score": 2.7452,
+        "evidence": []
+      },
+      {
+        "term": "benefits outweigh",
+        "score": 2.2134,
+        "evidence": []
+      },
+      {
+        "term": "context-specific recommendation",
+        "score": 1.7827,
+        "evidence": []
+      },
+      {
+        "term": "perinatal mortality",
+        "score": 1.6204,
+        "evidence": []
+      },
+      {
+        "term": "visits",
+        "score": 1.0103,
+        "evidence": []
+      },
+      {
+        "term": "anc",
+        "score": 0.9498,
+        "evidence": []
+      }
+    ],
+    "page-024": [
+      {
+        "term": "avenue appia",
+        "score": 1.9926,
+        "evidence": []
+      },
+      {
+        "term": "organization avenue",
+        "score": 1.5121,
+        "evidence": []
+      },
+      {
+        "term": "fax",
+        "score": 1.0239,
+        "evidence": []
+      },
+      {
+        "term": "int",
+        "score": 0.9583,
+        "evidence": []
+      }
+    ]
+  }
+}

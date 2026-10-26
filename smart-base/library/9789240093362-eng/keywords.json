@@ -3,71 +3,71 @@
   "entry": "9789240093362-eng",
   "corpus": {
     "library": "smart-base/library",
-    "sections": 839,
-    "terms": 7506,
+    "sections": 973,
+    "terms": 8571,
     "weighting": "log-entropy"
   },
   "document": [
     {
       "term": "user requirements",
-      "score": 38.2085,
+      "score": 39.9625,
       "evidence": [
         "heading"
       ]
     },
     {
-      "term": "design testing",
-      "score": 36.2143,
+      "term": "service user",
+      "score": 36.2696,
       "evidence": []
     },
     {
       "term": "implementing pcposs",
-      "score": 35.3045,
-      "evidence": []
-    },
-    {
-      "term": "service user",
-      "score": 34.9293,
+      "score": 36.0839,
       "evidence": []
     },
     {
       "term": "pcposs improve",
-      "score": 34.3203,
+      "score": 35.5165,
+      "evidence": []
+    },
+    {
+      "term": "design testing",
+      "score": 35.053,
       "evidence": []
     },
     {
       "term": "interoperable pcposs",
-      "score": 32.238,
+      "score": 32.9078,
       "evidence": []
     },
     {
       "term": "pcposs meet",
-      "score": 32.2088,
+      "score": 32.8794,
       "evidence": []
     },
     {
       "term": "pcposs encompasses",
-      "score": 31.6921,
-      "evidence": []
-    },
-    {
-      "term": "adaptation kits",
-      "score": 28.2797,
+      "score": 32.3139,
       "evidence": []
     },
     {
       "term": "transformation handbook",
-      "score": 27.9642,
+      "score": 29.0726,
       "evidence": []
     },
     {
-      "term": "hiv testing",
-      "score": 27.8749,
+      "term": "software requirements",
+      "score": 28.9828,
       "evidence": []
     },
     {
-      "term": "adaptation kit",
-      "score": 27.7836,
+      "term": "business requirements",
+      "score": 28.9289,
+      "evidence": []
+    },
+    {
+      "term": "adaptation kits",
+      "score": 28.7977,
       "evidence": []
     }
   ],
@@ -75,214 +75,214 @@
     "sec-000-acknowledgements": [
       {
         "term": "western pacific",
-        "score": 3.0248,
+        "score": 2.8102,
         "evidence": []
       },
       {
         "term": "regional office",
-        "score": 2.6211,
+        "score": 2.5332,
         "evidence": []
       },
       {
         "term": "cape town",
-        "score": 2.541,
+        "score": 2.3897,
         "evidence": []
       },
       {
         "term": "headquarters",
-        "score": 2.3736,
+        "score": 2.2759,
         "evidence": []
       },
       {
         "term": "united states",
-        "score": 2.2328,
+        "score": 2.2146,
         "evidence": []
       },
       {
         "term": "hopkins school",
-        "score": 2.0103,
-        "evidence": []
-      },
-      {
-        "term": "america",
-        "score": 1.9874,
+        "score": 1.9493,
         "evidence": []
       },
       {
         "term": "johns hopkins",
-        "score": 1.9087,
+        "score": 1.9369,
+        "evidence": []
+      },
+      {
+        "term": "hopkins bloomberg",
+        "score": 1.9077,
         "evidence": []
       }
     ],
     "sec-001-abbreviations": [
       {
         "term": "blood pressure",
-        "score": 1.5344,
+        "score": 1.4023,
         "evidence": []
       },
       {
         "term": "international classification",
-        "score": 1.159,
+        "score": 1.1641,
         "evidence": []
       },
       {
         "term": "notation",
-        "score": 0.6646,
+        "score": 0.674,
         "evidence": []
       },
       {
         "term": "interface",
-        "score": 0.5053,
+        "score": 0.518,
         "evidence": []
       },
       {
         "term": "healthcare",
-        "score": 0.4247,
+        "score": 0.4381,
         "evidence": []
       },
       {
         "term": "adaptation",
-        "score": 0.4173,
+        "score": 0.4272,
         "evidence": []
       },
       {
         "term": "testing",
-        "score": 0.3997,
+        "score": 0.4126,
         "evidence": []
       },
       {
         "term": "user",
-        "score": 0.39,
+        "score": 0.4073,
         "evidence": []
       }
     ],
     "sec-002-glossary": [
       {
         "term": "output entries",
-        "score": 2.5154,
+        "score": 2.5471,
         "evidence": []
       },
       {
         "term": "input entries",
-        "score": 2.4892,
+        "score": 2.5148,
         "evidence": []
       },
       {
         "term": "input entry",
-        "score": 1.7714,
-        "evidence": []
-      },
-      {
-        "term": "person-centred point",
-        "score": 1.7523,
+        "score": 1.7999,
         "evidence": []
       },
       {
         "term": "service user",
-        "score": 1.7186,
+        "score": 1.7832,
+        "evidence": []
+      },
+      {
+        "term": "person-centred point",
+        "score": 1.7748,
         "evidence": []
       },
       {
         "term": "decision table",
-        "score": 1.6886,
-        "evidence": []
-      },
-      {
-        "term": "source code",
-        "score": 1.6358,
+        "score": 1.7399,
         "evidence": []
       },
       {
         "term": "decision-support table",
-        "score": 1.6142,
+        "score": 1.7008,
+        "evidence": []
+      },
+      {
+        "term": "source code",
+        "score": 1.6162,
         "evidence": []
       }
     ],
     "sec-003-introduction": [
       {
         "term": "accessed october",
-        "score": 3.0586,
+        "score": 2.9758,
         "evidence": []
       },
       {
         "term": "accessed january",
-        "score": 2.3217,
+        "score": 2.3133,
         "evidence": []
       },
       {
         "term": "gartner glossary",
-        "score": 2.2555,
+        "score": 2.2802,
         "evidence": []
       },
       {
         "term": "home-based records",
-        "score": 1.9679,
-        "evidence": []
-      },
-      {
-        "term": "transformational journey",
-        "score": 1.8486,
+        "score": 1.8929,
         "evidence": []
       },
       {
         "term": "paper-based records",
-        "score": 1.8447,
+        "score": 1.8884,
         "evidence": []
       },
       {
         "term": "self care",
-        "score": 1.8276,
+        "score": 1.8872,
         "evidence": []
       },
       {
-        "term": "phc",
-        "score": 1.7006,
+        "term": "transformational journey",
+        "score": 1.8671,
+        "evidence": []
+      },
+      {
+        "term": "decision support",
+        "score": 1.711,
         "evidence": []
       }
     ],
     "sec-004-11-person-centred-point-of-service-systems": [
       {
         "term": "pcposs encompasses",
-        "score": 2.0017,
+        "score": 2.0318,
         "evidence": []
       },
       {
         "term": "person-centred",
-        "score": 1.9191,
+        "score": 1.9181,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "clerical burden",
-        "score": 1.8694,
-        "evidence": []
-      },
-      {
-        "term": "clinical decision",
-        "score": 1.5998,
+        "score": 1.8549,
         "evidence": []
       },
       {
         "term": "clinical care",
-        "score": 1.5891,
+        "score": 1.6344,
         "evidence": []
       },
       {
-        "term": "clinical records",
-        "score": 1.4374,
+        "term": "clinical decision",
+        "score": 1.5724,
+        "evidence": []
+      },
+      {
+        "term": "paper-based systems",
+        "score": 1.4977,
         "evidence": []
       },
       {
         "term": "service",
-        "score": 1.4347,
+        "score": 1.4791,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "point",
-        "score": 1.4018,
+        "score": 1.45,
         "evidence": [
           "heading"
         ]
@@ -291,598 +291,598 @@
     "sec-005-12-smart-guidelines": [
       {
         "term": "smart guidelines",
-        "score": 3.6936,
+        "score": 3.6994,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "knowledge layers",
-        "score": 1.7245,
+        "score": 1.7343,
         "evidence": []
       },
       {
         "term": "machine readable",
-        "score": 1.6211,
+        "score": 1.6378,
         "evidence": []
       },
       {
         "term": "adaptation kits",
-        "score": 1.4135,
+        "score": 1.4325,
         "evidence": []
       },
       {
         "term": "localised",
-        "score": 1.112,
+        "score": 1.1179,
         "evidence": []
       },
       {
         "term": "executable",
-        "score": 0.9753,
+        "score": 0.9842,
         "evidence": []
       },
       {
         "term": "dynamic",
-        "score": 0.9476,
+        "score": 0.9619,
         "evidence": []
       },
       {
-        "term": "recommendations",
-        "score": 0.9188,
+        "term": "optimised",
+        "score": 0.9037,
         "evidence": []
       }
     ],
     "sec-006-13-how-this-handbook-was-developed": [
       {
         "term": "handbook",
-        "score": 1.281,
+        "score": 1.3257,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "establish people-first",
-        "score": 1.2158,
+        "score": 1.2337,
         "evidence": []
       },
       {
         "term": "pcposs",
-        "score": 0.8289,
+        "score": 0.8457,
         "evidence": []
       },
       {
         "term": "contributors",
-        "score": 0.7876,
+        "score": 0.7724,
         "evidence": []
       },
       {
         "term": "user requirements",
-        "score": 0.7377,
+        "score": 0.7717,
+        "evidence": []
+      },
+      {
+        "term": "information systems",
+        "score": 0.7311,
         "evidence": []
       },
       {
         "term": "templates",
-        "score": 0.6772,
-        "evidence": []
-      },
-      {
-        "term": "updating",
-        "score": 0.6348,
+        "score": 0.6863,
         "evidence": []
       },
       {
         "term": "principle",
-        "score": 0.6308,
+        "score": 0.6279,
         "evidence": []
       }
     ],
     "sec-007-21-targeted-scenarios-of-digital-readiness": [
       {
         "term": "pcposss",
-        "score": 1.1271,
+        "score": 1.1375,
         "evidence": []
       },
       {
         "term": "scenarios",
-        "score": 0.7633,
+        "score": 0.7767,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "paper-based",
-        "score": 0.7507,
+        "score": 0.7595,
         "evidence": []
       },
       {
         "term": "readiness",
-        "score": 0.6361,
+        "score": 0.6379,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "paper",
-        "score": 0.6136,
+        "score": 0.6194,
         "evidence": []
       },
       {
         "term": "pcposs",
-        "score": 0.5658,
+        "score": 0.5773,
         "evidence": []
       },
       {
         "term": "starting",
-        "score": 0.5151,
+        "score": 0.5198,
         "evidence": []
       }
     ],
     "sec-008-22-targeted-users": [
       {
         "term": "written",
-        "score": 0.6449,
+        "score": 0.6453,
         "evidence": []
       },
       {
         "term": "pcposs",
-        "score": 0.5658,
+        "score": 0.5773,
         "evidence": []
       },
       {
         "term": "involved",
-        "score": 0.5603,
+        "score": 0.5613,
         "evidence": []
       },
       {
         "term": "targeted",
-        "score": 0.4966,
+        "score": 0.5039,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "handbook",
-        "score": 0.4691,
+        "score": 0.4855,
         "evidence": []
       },
       {
         "term": "role",
-        "score": 0.4215,
+        "score": 0.4295,
         "evidence": []
       },
       {
         "term": "adaptation",
-        "score": 0.4173,
+        "score": 0.4272,
         "evidence": []
       }
     ],
     "sec-009-23-before-using-this-resource": [
       {
         "term": "unique ids",
-        "score": 2.24,
+        "score": 2.2872,
         "evidence": []
       },
       {
         "term": "implementing pcposs",
-        "score": 1.944,
+        "score": 1.992,
         "evidence": []
       },
       {
         "term": "telecommunications union",
-        "score": 1.9167,
+        "score": 1.9183,
         "evidence": []
       },
       {
         "term": "unique identifiers",
-        "score": 1.8102,
+        "score": 1.8594,
         "evidence": []
       },
       {
         "term": "international telecommunications",
-        "score": 1.7265,
+        "score": 1.708,
         "evidence": []
       },
       {
         "term": "unique identification",
-        "score": 1.5574,
+        "score": 1.588,
         "evidence": []
       },
       {
         "term": "scope creep",
-        "score": 1.5365,
+        "score": 1.5385,
         "evidence": []
       },
       {
         "term": "strategy toolkit",
-        "score": 1.3161,
+        "score": 1.3546,
         "evidence": []
       }
     ],
     "sec-010-24-the-stepwise-approaches-to-digitizing": [
       {
         "term": "handbook recognizing",
-        "score": 1.679,
+        "score": 1.6644,
         "evidence": []
       },
       {
         "term": "roll out",
-        "score": 1.4809,
+        "score": 1.4629,
         "evidence": []
       },
       {
         "term": "train users",
-        "score": 1.3993,
+        "score": 1.43,
         "evidence": []
       },
       {
         "term": "prioritize user",
-        "score": 1.3389,
-        "evidence": []
-      },
-      {
-        "term": "leading practices",
-        "score": 1.1427,
+        "score": 1.3527,
         "evidence": []
       },
       {
         "term": "user requirements",
-        "score": 1.1388,
+        "score": 1.191,
         "evidence": []
       },
       {
-        "term": "adapt design",
-        "score": 1.115,
+        "term": "leading practices",
+        "score": 1.1792,
         "evidence": []
       },
       {
         "term": "user feedback",
-        "score": 1.0993,
+        "score": 1.1429,
+        "evidence": []
+      },
+      {
+        "term": "adapt design",
+        "score": 1.0525,
         "evidence": []
       }
     ],
     "sec-011-25-choices-for-software-and-digital-applications": [
       {
         "term": "matrix template",
-        "score": 1.6076,
+        "score": 1.6443,
         "evidence": []
       },
       {
         "term": "mapping template",
-        "score": 1.5329,
+        "score": 1.5683,
         "evidence": []
       },
       {
         "term": "user stories",
-        "score": 1.4669,
+        "score": 1.5065,
         "evidence": []
       },
       {
         "term": "user requirements",
-        "score": 1.4244,
+        "score": 1.4898,
         "evidence": []
       },
       {
         "term": "understand user",
-        "score": 1.1456,
+        "score": 1.1869,
         "evidence": []
       },
       {
         "term": "worker occupational",
-        "score": 1.0592,
+        "score": 1.0731,
         "evidence": []
       },
       {
         "term": "service schedule",
-        "score": 1.0051,
+        "score": 1.007,
         "evidence": []
       },
       {
         "term": "decision table",
-        "score": 0.905,
+        "score": 0.9318,
         "evidence": []
       }
     ],
     "sec-012-31-follow-key-requirement-gathering-methods": [
       {
         "term": "semi-structured interviews",
-        "score": 2.7896,
+        "score": 2.7529,
         "evidence": []
       },
       {
         "term": "requirements-gathering workshops",
-        "score": 2.4797,
+        "score": 2.4956,
         "evidence": []
       },
       {
         "term": "follow-up interviews",
-        "score": 2.3685,
+        "score": 2.3523,
         "evidence": []
       },
       {
         "term": "observing end-users",
-        "score": 2.1795,
+        "score": 2.221,
         "evidence": []
       },
       {
         "term": "desk review",
-        "score": 1.5384,
-        "evidence": []
-      },
-      {
-        "term": "hawthorne effect",
-        "score": 1.4682,
-        "evidence": []
-      },
-      {
-        "term": "try",
-        "score": 1.402,
+        "score": 1.6899,
         "evidence": []
       },
       {
         "term": "fill out",
-        "score": 1.3752,
+        "score": 1.3963,
+        "evidence": []
+      },
+      {
+        "term": "hawthorne effect",
+        "score": 1.3778,
+        "evidence": []
+      },
+      {
+        "term": "try",
+        "score": 1.3396,
         "evidence": []
       }
     ],
     "sec-013-32-get-to-know-the-users": [
       {
-        "term": "user stories",
-        "score": 2.7504,
-        "evidence": []
-      },
-      {
         "term": "user personas",
-        "score": 2.7444,
+        "score": 2.82,
         "evidence": []
       },
       {
-        "term": "nurse midwife",
-        "score": 2.2023,
+        "term": "user stories",
+        "score": 2.8148,
         "evidence": []
       },
       {
         "term": "personas along",
-        "score": 2.1468,
+        "score": 2.1799,
+        "evidence": []
+      },
+      {
+        "term": "nurse midwife",
+        "score": 2.1253,
         "evidence": []
       },
       {
         "term": "user story",
-        "score": 1.88,
+        "score": 1.9333,
         "evidence": []
       },
       {
         "term": "know",
-        "score": 1.8624,
+        "score": 1.866,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "user requirements",
-        "score": 1.7031,
+        "score": 1.7807,
         "evidence": []
       },
       {
         "term": "end user",
-        "score": 1.6509,
+        "score": 1.7094,
         "evidence": []
       }
     ],
     "sec-014-33-map-business-processes-and-workflows": [
       {
         "term": "swim lane",
-        "score": 4.4984,
+        "score": 4.5119,
         "evidence": []
       },
       {
         "term": "business processes",
-        "score": 3.9063,
+        "score": 4.0793,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "gateway symbol",
-        "score": 3.4776,
+        "score": 3.493,
         "evidence": []
       },
       {
         "term": "as-is workflows",
-        "score": 3.3195,
+        "score": 3.3678,
         "evidence": []
       },
       {
         "term": "to-be workflows",
-        "score": 3.3195,
+        "score": 3.3678,
         "evidence": []
       },
       {
         "term": "symbol name",
-        "score": 3.0478,
+        "score": 3.0651,
         "evidence": []
       },
       {
         "term": "another swim",
-        "score": 2.9799,
+        "score": 3.0302,
         "evidence": []
       },
       {
         "term": "depict split",
-        "score": 2.8194,
+        "score": 2.832,
         "evidence": []
       }
     ],
     "sec-015-34-streamline-data-collection-and-indicator-repo": [
       {
         "term": "paper forms",
-        "score": 2.3578,
+        "score": 2.3696,
         "evidence": []
       },
       {
         "term": "collection forms",
-        "score": 2.069,
+        "score": 2.0972,
         "evidence": []
       },
       {
         "term": "remove duplicated",
-        "score": 2.0264,
+        "score": 2.0472,
         "evidence": []
       },
       {
         "term": "mapping exercise",
-        "score": 1.8625,
+        "score": 1.9087,
         "evidence": []
       },
       {
         "term": "aggregate indicators",
-        "score": 1.8344,
+        "score": 1.8703,
+        "evidence": []
+      },
+      {
+        "term": "elements across",
+        "score": 1.8555,
         "evidence": []
       },
       {
         "term": "compile aggregate",
-        "score": 1.8213,
-        "evidence": []
-      },
-      {
-        "term": "collection instruments",
-        "score": 1.8142,
+        "score": 1.8505,
         "evidence": []
       },
       {
         "term": "immunization card",
-        "score": 1.8059,
+        "score": 1.8204,
         "evidence": []
       }
     ],
     "sec-016-35-create-a-data-dictionary": [
       {
         "term": "dictionary",
-        "score": 4.0918,
+        "score": 4.1456,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "standardized classifications",
-        "score": 1.8624,
+        "score": 1.8736,
         "evidence": []
       },
       {
         "term": "standardized concepts",
-        "score": 1.6512,
+        "score": 1.6598,
         "evidence": []
       },
       {
         "term": "elements",
-        "score": 1.5755,
+        "score": 1.604,
         "evidence": []
       },
       {
         "term": "database design",
-        "score": 1.5376,
+        "score": 1.3688,
         "evidence": []
       },
       {
         "term": "orphaned",
-        "score": 1.3518,
+        "score": 1.3574,
         "evidence": []
       },
       {
         "term": "adaptation kits",
-        "score": 1.2595,
+        "score": 1.2748,
         "evidence": []
       },
       {
         "term": "indicator reporting",
-        "score": 1.1298,
+        "score": 1.1489,
         "evidence": []
       }
     ],
     "sec-017-36-determine-decision-support-logic": [
       {
         "term": "decision-support logic",
-        "score": 7.4535,
+        "score": 7.5845,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "hiv testing",
-        "score": 3.5738,
-        "evidence": []
-      },
-      {
-        "term": "hiv prevention",
-        "score": 3.4381,
-        "evidence": []
-      },
-      {
-        "term": "hiv infection",
-        "score": 3.3827,
+        "score": 3.3967,
         "evidence": []
       },
       {
         "term": "decision-support tables",
-        "score": 3.348,
+        "score": 3.338,
         "evidence": []
       },
       {
-        "term": "hiv acquisition",
-        "score": 3.2466,
+        "term": "hiv prevention",
+        "score": 3.2323,
         "evidence": []
       },
       {
         "term": "decision trees",
-        "score": 3.1454,
+        "score": 3.1263,
+        "evidence": []
+      },
+      {
+        "term": "hiv acquisition",
+        "score": 3.0373,
+        "evidence": []
+      },
+      {
+        "term": "hiv infection",
+        "score": 3.0148,
         "evidence": []
       },
       {
         "term": "pathway decision-support",
-        "score": 2.9636,
+        "score": 2.9905,
         "evidence": []
       }
     ],
     "sec-018-37-map-health-service-schedules": [
       {
         "term": "service schedules",
-        "score": 3.8176,
+        "score": 3.6746,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "worker occupational",
-        "score": 1.0592,
+        "score": 1.0731,
         "evidence": []
       },
       {
         "term": "spreadsheet",
-        "score": 1.0193,
+        "score": 1.0272,
         "evidence": []
       },
       {
         "term": "occupational group",
-        "score": 0.9564,
+        "score": 1.0226,
         "evidence": []
       },
       {
         "term": "upcoming",
-        "score": 0.9323,
+        "score": 0.9219,
         "evidence": []
       },
       {
         "term": "anc",
-        "score": 0.7289,
+        "score": 0.7349,
         "evidence": []
       },
       {
         "term": "pcposs",
-        "score": 0.7139,
+        "score": 0.7284,
         "evidence": []
       },
       {
         "term": "map",
-        "score": 0.5795,
+        "score": 0.5938,
         "evidence": [
           "heading"
         ]
@@ -891,269 +891,265 @@
     "sec-019-38-gather-and-prioritize-requirements": [
       {
         "term": "non-functional requirements",
-        "score": 2.4549,
+        "score": 2.522,
         "evidence": []
       },
       {
         "term": "functional requirements",
-        "score": 1.8981,
+        "score": 1.9682,
         "evidence": []
       },
       {
         "term": "user requirements",
-        "score": 1.8454,
+        "score": 1.9304,
         "evidence": []
       },
       {
         "term": "concept dictionary",
-        "score": 1.8398,
+        "score": 1.8445,
         "evidence": []
       },
       {
         "term": "nurse midwife",
-        "score": 1.8016,
+        "score": 1.7359,
         "evidence": []
       },
       {
         "term": "user story",
-        "score": 1.6719,
-        "evidence": []
-      },
-      {
-        "term": "water bottle",
-        "score": 1.6313,
+        "score": 1.716,
         "evidence": []
       },
       {
         "term": "user stories",
-        "score": 1.6018,
+        "score": 1.6474,
+        "evidence": []
+      },
+      {
+        "term": "water bottle",
+        "score": 1.6234,
         "evidence": []
       }
     ],
     "sec-020-41-finalize-software-and-vendor-selection": [
       {
         "term": "vendor",
-        "score": 1.7756,
+        "score": 1.8145,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "software",
-        "score": 1.6557,
+        "score": 1.7473,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "reference software",
-        "score": 1.5432,
+        "score": 1.5894,
         "evidence": []
       },
       {
         "term": "software features",
-        "score": 1.2257,
+        "score": 1.2867,
+        "evidence": []
+      },
+      {
+        "term": "obtain evidence",
+        "score": 1.1293,
         "evidence": []
       },
       {
         "term": "undertake design",
-        "score": 1.1264,
+        "score": 1.0922,
         "evidence": []
       },
       {
         "term": "source code",
-        "score": 1.0099,
+        "score": 0.9931,
         "evidence": []
       },
       {
         "term": "executable",
-        "score": 0.9753,
+        "score": 0.9842,
         "evidence": []
-      },
-      {
-        "term": "finalize",
-        "score": 0.9581,
-        "evidence": [
-          "heading"
-        ]
       }
     ],
     "sec-021-42-validate-functional-requirements": [
       {
         "term": "validate",
-        "score": 1.0668,
+        "score": 1.0911,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "requirements",
-        "score": 0.8572,
+        "score": 0.898,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "breaks",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "digitize",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "rework",
-        "score": 0.58,
+        "score": 0.5825,
         "evidence": []
       }
     ],
     "sec-022-43-develop-and-test-prototype-design": [
       {
         "term": "fidelity prototypes",
-        "score": 3.5749,
+        "score": 3.6085,
         "evidence": []
       },
       {
         "term": "mock-ups",
-        "score": 2.5382,
+        "score": 2.5404,
         "evidence": []
       },
       {
         "term": "higher fidelity",
-        "score": 1.7119,
+        "score": 1.6802,
         "evidence": []
       },
       {
         "term": "test",
-        "score": 1.6678,
+        "score": 1.6432,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "wireframes",
-        "score": 1.6202,
-        "evidence": []
-      },
-      {
-        "term": "design",
-        "score": 1.5937,
-        "evidence": [
-          "heading"
-        ]
-      },
-      {
-        "term": "user-centred design",
-        "score": 1.5649,
+        "score": 1.6272,
         "evidence": []
       },
       {
         "term": "final product",
-        "score": 1.482,
+        "score": 1.5008,
+        "evidence": []
+      },
+      {
+        "term": "allow testing",
+        "score": 1.4977,
+        "evidence": []
+      },
+      {
+        "term": "incorporate feedback",
+        "score": 1.497,
         "evidence": []
       }
     ],
     "sec-023-44-design-system-architecture": [
       {
         "term": "syntactic interoperability",
-        "score": 2.25,
+        "score": 2.3206,
         "evidence": []
       },
       {
         "term": "fhir standard",
-        "score": 2.1607,
+        "score": 2.3085,
         "evidence": []
       },
       {
         "term": "classification standards",
-        "score": 2.0022,
+        "score": 2.069,
         "evidence": []
       },
       {
         "term": "terminology standards",
-        "score": 1.9899,
+        "score": 2.0589,
         "evidence": []
       },
       {
         "term": "semantic interoperability",
-        "score": 1.9256,
-        "evidence": []
-      },
-      {
-        "term": "common standards",
-        "score": 1.8569,
-        "evidence": []
-      },
-      {
-        "term": "communication standards",
-        "score": 1.8473,
+        "score": 2.006,
         "evidence": []
       },
       {
         "term": "organizational interoperability",
-        "score": 1.8383,
+        "score": 1.9207,
+        "evidence": []
+      },
+      {
+        "term": "common standards",
+        "score": 1.9116,
+        "evidence": []
+      },
+      {
+        "term": "communication standards",
+        "score": 1.8977,
         "evidence": []
       }
     ],
     "sec-024-45-build-and-quality-assurance": [
       {
         "term": "quality assurance",
-        "score": 3.244,
+        "score": 3.1124,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "beta version",
-        "score": 2.0234,
+        "score": 2.0237,
         "evidence": []
       },
       {
         "term": "release version",
-        "score": 1.8197,
+        "score": 1.8244,
         "evidence": []
       },
       {
         "term": "testing approach",
-        "score": 1.5216,
+        "score": 1.5754,
         "evidence": []
       },
       {
         "term": "build",
-        "score": 1.3003,
+        "score": 1.3466,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "pcposs",
-        "score": 1.2797,
+        "score": 1.3057,
         "evidence": []
       },
       {
         "term": "providing feedback",
-        "score": 1.1224,
+        "score": 1.1616,
         "evidence": []
       },
       {
         "term": "targeted end-users",
-        "score": 1.1112,
+        "score": 1.1406,
         "evidence": []
       }
     ],
     "sec-025-51-develop-and-conduct-training": [
       {
         "term": "training",
-        "score": 1.149,
+        "score": 1.2092,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "pcposs",
-        "score": 0.5658,
+        "score": 0.5773,
         "evidence": []
       },
       {
@@ -1165,616 +1161,614 @@
     "sec-026-52-test-user-acceptance-and-deployment-readiness": [
       {
         "term": "uat testers",
-        "score": 2.2475,
+        "score": 2.2647,
         "evidence": []
       },
       {
         "term": "user acceptance",
-        "score": 2.0356,
+        "score": 2.0741,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "beta version",
-        "score": 1.3984,
+        "score": 1.3998,
+        "evidence": []
+      },
+      {
+        "term": "design flaws",
+        "score": 1.3131,
         "evidence": []
       },
       {
         "term": "conduct training",
-        "score": 1.1872,
+        "score": 1.2358,
         "evidence": []
       },
       {
         "term": "pcposs",
-        "score": 1.1316,
+        "score": 1.1545,
         "evidence": []
       },
       {
         "term": "technology partner",
-        "score": 1.0523,
+        "score": 1.0474,
         "evidence": []
       },
       {
         "term": "trainers",
-        "score": 0.9933,
-        "evidence": []
-      },
-      {
-        "term": "bugs",
-        "score": 0.9323,
+        "score": 0.978,
         "evidence": []
       }
     ],
     "sec-027-53-deploy-the-system": [
       {
         "term": "test cases",
-        "score": 2.104,
+        "score": 2.0955,
         "evidence": []
       },
       {
         "term": "poor deployment",
-        "score": 1.2127,
+        "score": 1.2419,
         "evidence": []
       },
       {
         "term": "production environment",
-        "score": 1.1871,
+        "score": 1.1624,
         "evidence": []
       },
       {
         "term": "expected diagnosis",
-        "score": 1.1413,
+        "score": 1.1611,
         "evidence": []
       },
       {
         "term": "uat",
-        "score": 0.8925,
+        "score": 0.9031,
         "evidence": []
       },
       {
         "term": "technology partner",
-        "score": 0.8041,
+        "score": 0.8078,
         "evidence": []
       },
       {
         "term": "onto",
-        "score": 0.7455,
+        "score": 0.7531,
         "evidence": []
       },
       {
         "term": "testing",
-        "score": 0.6519,
+        "score": 0.6729,
         "evidence": []
       }
     ],
     "sec-028-54-manage-feedback-and-system-maintenance": [
       {
+        "term": "legacy systems",
+        "score": 1.7111,
+        "evidence": []
+      },
+      {
         "term": "phasing out",
-        "score": 1.5041,
+        "score": 1.5259,
         "evidence": []
       },
       {
         "term": "out paper",
-        "score": 1.3874,
+        "score": 1.4104,
         "evidence": []
       },
       {
         "term": "feedback",
-        "score": 1.3291,
+        "score": 1.3748,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "legacy",
-        "score": 1.2796,
-        "evidence": []
-      },
-      {
         "term": "evaluation specialists",
-        "score": 1.13,
+        "score": 1.1388,
         "evidence": []
       },
       {
         "term": "pcposs",
-        "score": 0.9228,
+        "score": 0.9415,
         "evidence": []
       },
       {
         "term": "scale-up",
-        "score": 0.9158,
+        "score": 0.9372,
         "evidence": []
       },
       {
         "term": "phase-out",
-        "score": 0.878,
+        "score": 0.8828,
         "evidence": []
       }
     ],
     "sec-029-61-determine-readiness-for-scaling-up": [
       {
-        "term": "out paper",
-        "score": 0.8051,
+        "term": "legacy systems",
+        "score": 0.904,
         "evidence": []
       },
       {
-        "term": "legacy",
-        "score": 0.676,
+        "term": "out paper",
+        "score": 0.8194,
         "evidence": []
       },
       {
         "term": "ready",
-        "score": 0.6479,
+        "score": 0.6577,
         "evidence": []
       }
     ],
     "sec-030-62-plan-for-phase-out-of-legacy-systems": [
       {
         "term": "legacy",
-        "score": 2.5591,
+        "score": 2.5936,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "pcposs improve",
-        "score": 2.0743,
+        "score": 2.163,
         "evidence": []
       },
       {
         "term": "phase-out",
-        "score": 1.756,
+        "score": 1.7655,
         "evidence": [
           "heading"
         ]
       },
       {
+        "term": "legacy systems",
+        "score": 1.7111,
+        "evidence": []
+      },
+      {
         "term": "countrywide coverage",
-        "score": 1.6171,
+        "score": 1.6272,
         "evidence": []
       },
       {
         "term": "service user",
-        "score": 1.4608,
-        "evidence": []
-      },
-      {
-        "term": "reference period",
-        "score": 1.4248,
+        "score": 1.5154,
         "evidence": []
       },
       {
         "term": "out paper",
-        "score": 1.4214,
+        "score": 1.4434,
         "evidence": []
       },
       {
-        "term": "metric area",
-        "score": 1.2935,
+        "term": "reference period",
+        "score": 1.4,
         "evidence": []
       }
     ],
     "sec-031-63-monitor-and-evaluate-progress-on-objectives": [
       {
-        "term": "policy-makers",
-        "score": 0.5325,
-        "evidence": []
-      },
-      {
         "term": "progress",
-        "score": 0.5064,
+        "score": 0.5204,
         "evidence": [
           "heading"
         ]
-      },
-      {
-        "term": "stepwise",
-        "score": 0.4828,
-        "evidence": []
       },
       {
         "term": "objectives",
-        "score": 0.4733,
+        "score": 0.493,
         "evidence": [
           "heading"
         ]
+      },
+      {
+        "term": "policy-makers",
+        "score": 0.4882,
+        "evidence": []
+      },
+      {
+        "term": "stepwise",
+        "score": 0.4873,
+        "evidence": []
       }
     ],
     "sec-032-64-phase-out-of-legacy-systems": [
       {
         "term": "legacy",
-        "score": 1.3521,
+        "score": 1.3703,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "out paper",
-        "score": 1.313,
+        "score": 1.3364,
         "evidence": []
       },
       {
         "term": "phase out",
-        "score": 1.2761,
+        "score": 1.3046,
         "evidence": []
       },
       {
-        "term": "phase-out",
-        "score": 1.1079,
-        "evidence": [
-          "heading"
-        ]
+        "term": "paper systems",
+        "score": 1.1883,
+        "evidence": []
       }
     ],
     "sec-033-65-adopt-change-management-practices": [
       {
         "term": "change management",
-        "score": 2.0681,
+        "score": 2.1244,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "phasing out",
-        "score": 1.1407,
+        "score": 1.1563,
         "evidence": []
       },
       {
         "term": "advanced analytics",
-        "score": 1.0621,
+        "score": 1.0786,
         "evidence": []
       },
       {
         "term": "back-up",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "paper",
-        "score": 0.8613,
+        "score": 0.8695,
         "evidence": []
       },
       {
         "term": "big",
-        "score": 0.8439,
+        "score": 0.8494,
         "evidence": []
       },
       {
         "term": "behaviour",
-        "score": 0.5552,
+        "score": 0.5541,
         "evidence": []
       },
       {
         "term": "smart",
-        "score": 0.5116,
+        "score": 0.5243,
         "evidence": []
       }
     ],
     "sec-034-references": [
       {
         "term": "accessed january",
-        "score": 4.8018,
+        "score": 4.7465,
         "evidence": []
       },
       {
         "term": "accessed october",
-        "score": 3.9301,
+        "score": 3.8484,
         "evidence": []
       },
       {
         "term": "accessed september",
-        "score": 2.9279,
+        "score": 3.0197,
         "evidence": []
       },
       {
         "term": "fhir release",
-        "score": 2.3856,
+        "score": 2.4224,
         "evidence": []
       },
       {
         "term": "telecommunication union",
-        "score": 2.2267,
+        "score": 2.2593,
         "evidence": []
       },
       {
         "term": "international telecommunication",
-        "score": 2.1282,
+        "score": 2.125,
         "evidence": []
       },
       {
         "term": "press release",
-        "score": 2.0581,
+        "score": 2.003,
         "evidence": []
       },
       {
-        "term": "website",
-        "score": 1.9932,
+        "term": "stanford university",
+        "score": 1.9847,
         "evidence": []
       }
     ],
     "sec-035-principles-for-digital-development": [
       {
         "term": "outreach session",
-        "score": 2.0772,
+        "score": 1.9966,
         "evidence": []
       },
       {
         "term": "typical day",
-        "score": 2.024,
+        "score": 1.927,
         "evidence": []
       },
       {
         "term": "busy day",
-        "score": 2.0015,
-        "evidence": []
-      },
-      {
-        "term": "nurse midwife",
-        "score": 1.4277,
+        "score": 1.8987,
         "evidence": []
       },
       {
         "term": "service users",
-        "score": 1.4077,
+        "score": 1.4553,
+        "evidence": []
+      },
+      {
+        "term": "nurse midwife",
+        "score": 1.3757,
         "evidence": []
       },
       {
         "term": "user requirements",
-        "score": 0.8814,
-        "evidence": []
-      },
-      {
-        "term": "duties",
-        "score": 0.8812,
+        "score": 0.9218,
         "evidence": []
       },
       {
         "term": "transformation handbook",
-        "score": 0.8551,
+        "score": 0.8899,
+        "evidence": []
+      },
+      {
+        "term": "duties",
+        "score": 0.8859,
         "evidence": []
       }
     ],
     "sec-036-observations-worksheet": [
       {
         "term": "worksheet",
-        "score": 1.1916,
+        "score": 1.2132,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "facility",
-        "score": 1.0437,
+        "score": 1.0489,
         "evidence": []
       },
       {
         "term": "service user",
-        "score": 0.8627,
+        "score": 0.8962,
         "evidence": []
       },
       {
         "term": "user requirements",
-        "score": 0.7966,
+        "score": 0.8329,
         "evidence": []
       },
       {
         "term": "observed",
-        "score": 0.6103,
+        "score": 0.609,
         "evidence": []
       },
       {
         "term": "electricity",
-        "score": 0.5802,
+        "score": 0.5856,
         "evidence": []
       },
       {
-        "term": "completed",
-        "score": 0.5079,
+        "term": "roll-out",
+        "score": 0.5179,
         "evidence": []
       }
     ],
     "sec-037-user-persona-worksheet": [
       {
         "term": "persona",
-        "score": 2.3311,
+        "score": 2.3647,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "worksheet",
-        "score": 1.1916,
+        "score": 1.2132,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "worker occupational",
-        "score": 1.1669,
+        "score": 1.1819,
         "evidence": []
       },
       {
         "term": "occupational group",
-        "score": 1.0372,
+        "score": 1.1182,
         "evidence": []
       },
       {
         "term": "user",
-        "score": 0.9055,
+        "score": 0.9457,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "photo",
-        "score": 0.7681,
+        "score": 0.7752,
         "evidence": []
       },
       {
         "term": "success",
-        "score": 0.6176,
+        "score": 0.6251,
         "evidence": []
       },
       {
         "term": "professional",
-        "score": 0.6025,
+        "score": 0.5722,
         "evidence": []
       }
     ],
     "sec-038-user-stories-worksheet": [
       {
+        "term": "gynaecology department",
+        "score": 1.4652,
+        "evidence": []
+      },
+      {
         "term": "non-functional requirements",
-        "score": 1.0408,
+        "score": 1.0675,
         "evidence": []
       },
       {
         "term": "user",
-        "score": 1.0081,
+        "score": 1.0528,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "obstetrics",
-        "score": 0.9947,
-        "evidence": []
-      },
-      {
         "term": "wanting",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       }
     ],
     "sec-039-business-process-matrix-guide": [
       {
         "term": "business process",
-        "score": 2.6713,
+        "score": 2.8127,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "letter",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "row",
-        "score": 0.8019,
+        "score": 0.8082,
         "evidence": []
       },
       {
         "term": "service user",
-        "score": 0.7486,
+        "score": 0.777,
         "evidence": []
       },
       {
         "term": "counselling",
-        "score": 0.7298,
-        "evidence": []
-      },
-      {
-        "term": "nurse",
-        "score": 0.6676,
+        "score": 0.7123,
         "evidence": []
       },
       {
         "term": "matrix",
-        "score": 0.664,
+        "score": 0.6745,
         "evidence": [
           "heading"
         ]
       },
       {
+        "term": "nurse",
+        "score": 0.6624,
+        "evidence": []
+      },
+      {
         "term": "involved",
-        "score": 0.5603,
+        "score": 0.5613,
         "evidence": []
       }
     ],
     "sec-040-form-inventory-guide": [
       {
         "term": "form",
-        "score": 2.4289,
+        "score": 2.4698,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "form title",
-        "score": 2.4184,
+        "score": 2.4009,
         "evidence": []
       },
       {
         "term": "form version",
-        "score": 1.9589,
+        "score": 1.9749,
         "evidence": []
       },
       {
         "term": "worker occupational",
-        "score": 1.4883,
+        "score": 1.5075,
         "evidence": []
       },
       {
         "term": "occupational group",
-        "score": 1.2068,
+        "score": 1.2904,
         "evidence": []
       },
       {
         "term": "reporting purposes",
-        "score": 1.0641,
+        "score": 1.0722,
         "evidence": []
       },
       {
         "term": "working language",
-        "score": 1.0466,
+        "score": 1.0505,
         "evidence": []
       },
       {
         "term": "column",
-        "score": 1.035,
+        "score": 1.0191,
         "evidence": []
       }
     ],
     "sec-041-form-data-mapping-guide": [
       {
         "term": "element label",
-        "score": 4.179,
+        "score": 4.1417,
         "evidence": []
       },
       {
         "term": "element contributes",
-        "score": 3.3049,
+        "score": 3.2621,
         "evidence": []
       },
       {
         "term": "element appears",
-        "score": 3.0523,
+        "score": 3.0703,
         "evidence": []
       },
       {
         "term": "column blank",
-        "score": 2.4538,
+        "score": 2.4348,
         "evidence": []
       },
       {
         "term": "list select",
-        "score": 2.3724,
-        "evidence": []
-      },
-      {
-        "term": "corresponding list",
-        "score": 2.321,
+        "score": 2.4045,
         "evidence": []
       },
       {
         "term": "tables here",
-        "score": 2.3001,
+        "score": 2.2967,
+        "evidence": []
+      },
+      {
+        "term": "corresponding list",
+        "score": 2.2933,
         "evidence": []
       },
       {
         "term": "form",
-        "score": 2.1279,
+        "score": 2.1638,
         "evidence": [
           "heading"
         ]
@@ -1783,258 +1777,258 @@
     "sec-042-aggregate-indicator-mapping-guide": [
       {
         "term": "decision-support logic",
-        "score": 2.8229,
+        "score": 2.8726,
         "evidence": []
       },
       {
         "term": "indicator",
-        "score": 2.4974,
+        "score": 2.55,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "decision-support table",
-        "score": 2.3896,
-        "evidence": []
-      },
-      {
-        "term": "decision name",
-        "score": 2.1457,
+        "score": 2.5062,
         "evidence": []
       },
       {
         "term": "indicator here",
-        "score": 2.1354,
+        "score": 2.1812,
         "evidence": []
       },
       {
         "term": "scheduling logic",
-        "score": 2.1012,
+        "score": 2.1458,
+        "evidence": []
+      },
+      {
+        "term": "decision name",
+        "score": 2.1318,
         "evidence": []
       },
       {
         "term": "rule order",
-        "score": 2.0818,
+        "score": 2.1039,
         "evidence": []
       },
       {
         "term": "indicator applies",
-        "score": 2.0553,
+        "score": 2.0827,
         "evidence": []
       }
     ],
     "sec-043-template-for-a-decision-support-table": [
       {
         "term": "output entry",
-        "score": 2.2085,
+        "score": 2.2516,
         "evidence": []
       },
       {
         "term": "input entry",
-        "score": 2.1823,
+        "score": 2.2192,
         "evidence": []
       },
       {
         "term": "input expression",
-        "score": 2.1791,
+        "score": 2.1714,
         "evidence": []
       },
       {
         "term": "adaptation kit",
-        "score": 1.8761,
+        "score": 1.8922,
         "evidence": []
       },
       {
         "term": "rule number",
-        "score": 1.5691,
+        "score": 1.5812,
         "evidence": []
       },
       {
         "term": "blood pressure",
-        "score": 1.5344,
+        "score": 1.4023,
         "evidence": []
       },
       {
         "term": "operational requirements",
-        "score": 1.2075,
+        "score": 1.2583,
         "evidence": []
       },
       {
         "term": "activity number",
-        "score": 1.07,
+        "score": 1.0569,
         "evidence": []
       }
     ],
     "sec-044-scheduling-logic-table-guide": [
       {
         "term": "hepatitis vaccine",
-        "score": 3.0597,
-        "evidence": []
-      },
-      {
-        "term": "hepatitis birth",
-        "score": 2.9879,
+        "score": 3.0301,
         "evidence": []
       },
       {
         "term": "hepatitis vaccination",
-        "score": 2.8765,
+        "score": 2.9126,
+        "evidence": []
+      },
+      {
+        "term": "hepatitis birth",
+        "score": 2.8731,
         "evidence": []
       },
       {
         "term": "expiration date",
-        "score": 2.8208,
+        "score": 2.7816,
         "evidence": []
       },
       {
         "term": "overdue date",
-        "score": 2.311,
+        "score": 2.2779,
         "evidence": []
       },
       {
         "term": "trigger date",
-        "score": 2.0781,
+        "score": 2.05,
+        "evidence": []
+      },
+      {
+        "term": "birth dose",
+        "score": 1.942,
         "evidence": []
       },
       {
         "term": "due date",
-        "score": 1.9106,
-        "evidence": []
-      },
-      {
-        "term": "service schedule",
-        "score": 1.8706,
+        "score": 1.9042,
         "evidence": []
       }
     ],
     "sec-045-prioritization-of-requirements-guide": [
       {
         "term": "requirement here",
-        "score": 2.5139,
+        "score": 2.559,
         "evidence": []
       },
       {
         "term": "functional requirement",
-        "score": 2.2933,
+        "score": 2.3351,
         "evidence": []
       },
       {
         "term": "requirement required",
-        "score": 2.2176,
+        "score": 2.2574,
         "evidence": []
       },
       {
         "term": "prioritization",
-        "score": 1.3624,
+        "score": 1.3573,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "priority",
-        "score": 0.9513,
+        "score": 0.8812,
         "evidence": []
       },
       {
         "term": "pcposs",
-        "score": 0.8289,
+        "score": 0.8457,
         "evidence": []
       },
       {
         "term": "non-functional",
-        "score": 0.6716,
+        "score": 0.6808,
         "evidence": []
       },
       {
         "term": "medium",
-        "score": 0.6485,
+        "score": 0.6237,
         "evidence": []
       }
     ],
     "sec-046-hl7-fhir-standard-components": [
       {
         "term": "fhir standard",
-        "score": 4.389,
+        "score": 4.5724,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "fhir release",
-        "score": 2.9008,
+        "score": 2.9489,
         "evidence": []
       },
       {
         "term": "fhir api",
-        "score": 2.6656,
+        "score": 2.714,
         "evidence": []
       },
       {
         "term": "fhir resource",
-        "score": 2.6134,
+        "score": 2.6452,
         "evidence": []
       },
       {
         "term": "fhir profiles",
-        "score": 2.5516,
+        "score": 2.5894,
+        "evidence": []
+      },
+      {
+        "term": "fhir implementation",
+        "score": 2.1958,
         "evidence": []
       },
       {
         "term": "accessed october",
-        "score": 2.2292,
+        "score": 2.1618,
         "evidence": []
       },
       {
         "term": "healthit",
-        "score": 1.2705,
-        "evidence": []
-      },
-      {
-        "term": "national coordinator",
-        "score": 1.0726,
+        "score": 1.273,
         "evidence": []
       }
     ],
     "sec-front-matter": [
       {
         "term": "optimizing person-centred",
-        "score": 1.8023,
+        "score": 1.7416,
         "evidence": []
       },
       {
         "term": "decision-support logic",
-        "score": 1.5257,
+        "score": 1.5526,
         "evidence": []
       },
       {
         "term": "person-centred point",
-        "score": 1.429,
+        "score": 1.4473,
         "evidence": []
       },
       {
         "term": "suggested citation",
-        "score": 1.4108,
+        "score": 1.4155,
         "evidence": []
       },
       {
         "term": "creative commons",
-        "score": 1.3906,
+        "score": 1.3972,
         "evidence": []
       },
       {
         "term": "transformation handbook",
-        "score": 1.1833,
+        "score": 1.2326,
         "evidence": []
       },
       {
         "term": "user requirements",
-        "score": 1.0246,
+        "score": 1.0715,
         "evidence": []
       },
       {
         "term": "matrix guide",
-        "score": 0.9792,
+        "score": 1.0179,
         "evidence": []
       }
     ]

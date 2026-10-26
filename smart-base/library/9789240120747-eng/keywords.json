@@ -3,69 +3,69 @@
   "entry": "9789240120747-eng",
   "corpus": {
     "library": "smart-base/library",
-    "sections": 839,
-    "terms": 7506,
+    "sections": 973,
+    "terms": 8571,
     "weighting": "log-entropy"
   },
   "document": [
     {
       "term": "falsified reporting",
-      "score": 53.1355,
+      "score": 54.1703,
       "evidence": []
     },
     {
       "term": "reporting substandard",
-      "score": 52.3171,
+      "score": 53.367,
       "evidence": []
     },
     {
       "term": "falsified medical",
-      "score": 49.8872,
+      "score": 51.1839,
       "evidence": []
     },
     {
       "term": "falsified products",
-      "score": 47.7531,
+      "score": 48.9712,
       "evidence": []
     },
     {
       "term": "falsified report",
-      "score": 40.3286,
+      "score": 41.3308,
       "evidence": []
     },
     {
       "term": "falsified medicines",
-      "score": 36.7506,
-      "evidence": []
-    },
-    {
-      "term": "suspected substandard",
-      "score": 35.9208,
+      "score": 37.4721,
       "evidence": []
     },
     {
       "term": "current substandard",
-      "score": 35.7463,
+      "score": 36.7432,
+      "evidence": []
+    },
+    {
+      "term": "suspected substandard",
+      "score": 36.7077,
       "evidence": []
     },
     {
       "term": "identify substandard",
-      "score": 34.8775,
+      "score": 35.9588,
       "evidence": []
     },
     {
       "term": "tackling substandard",
-      "score": 31.7199,
+      "score": 32.5215,
       "evidence": []
     },
     {
       "term": "surrounding substandard",
-      "score": 31.3698,
+      "score": 32.1672,
       "evidence": []
     },
     {
       "term": "pharmacovigilance reporting",
-      "score": 29.9594,
+      "score": 30.3257,
       "evidence": []
     }
   ],
@@ -73,1022 +73,1022 @@
     "page-004": [
       {
         "term": "suggested citation",
-        "score": 1.4108,
+        "score": 1.4155,
         "evidence": []
       },
       {
         "term": "creative commons",
-        "score": 1.3906,
+        "score": 1.3972,
         "evidence": []
       },
       {
         "term": "licence",
-        "score": 0.9649,
-        "evidence": []
-      },
-      {
-        "term": "material",
-        "score": 0.8954,
+        "score": 0.9827,
         "evidence": []
       },
       {
         "term": "medical products",
-        "score": 0.8623,
+        "score": 0.8857,
+        "evidence": []
+      },
+      {
+        "term": "material",
+        "score": 0.8784,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 0.8368,
+        "score": 0.8586,
         "evidence": []
       },
       {
         "term": "igo",
-        "score": 0.8154,
+        "score": 0.8277,
         "evidence": []
       },
       {
         "term": "reporting substandard",
-        "score": 0.8069,
+        "score": 0.8235,
         "evidence": []
       }
     ],
     "page-005": [
       {
         "term": "falsified medical",
-        "score": 0.9702,
+        "score": 0.9953,
         "evidence": []
       },
       {
         "term": "medical products",
-        "score": 0.6554,
+        "score": 0.6733,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.6271,
+        "score": 0.6434,
         "evidence": []
       },
       {
         "term": "analyse",
-        "score": 0.5602,
+        "score": 0.5718,
         "evidence": []
       },
       {
         "term": "acronyms",
-        "score": 0.4561,
+        "score": 0.4373,
         "evidence": []
       }
     ],
     "page-006": [
       {
         "term": "annex",
-        "score": 0.7277,
+        "score": 0.684,
         "evidence": []
       },
       {
         "term": "template",
-        "score": 0.6252,
+        "score": 0.6416,
         "evidence": []
       },
       {
         "term": "raci",
-        "score": 0.5132,
+        "score": 0.5171,
         "evidence": []
       }
     ],
     "page-007": [
       {
         "term": "independent expert",
-        "score": 2.0862,
+        "score": 2.0762,
         "evidence": []
       },
       {
         "term": "uhf",
-        "score": 1.9631,
+        "score": 1.9656,
         "evidence": []
       },
       {
         "term": "headquarters",
-        "score": 1.1868,
+        "score": 1.1379,
         "evidence": []
       },
       {
         "term": "department",
-        "score": 0.7741,
+        "score": 0.7802,
         "evidence": []
       },
       {
         "term": "acknowledges",
-        "score": 0.7652,
+        "score": 0.7531,
         "evidence": []
       },
       {
         "term": "contributions",
-        "score": 0.7158,
-        "evidence": []
-      },
-      {
-        "term": "south",
-        "score": 0.6613,
+        "score": 0.7176,
         "evidence": []
       },
       {
         "term": "doi",
-        "score": 0.6033,
+        "score": 0.6713,
+        "evidence": []
+      },
+      {
+        "term": "south",
+        "score": 0.6356,
         "evidence": []
       }
     ],
     "page-008": [
       {
         "term": "post-market surveillance",
-        "score": 1.6925,
+        "score": 1.6946,
         "evidence": []
       },
       {
         "term": "uhf",
-        "score": 0.6544,
+        "score": 0.6552,
         "evidence": []
       },
       {
         "term": "rb-pms",
-        "score": 0.6276,
-        "evidence": []
-      },
-      {
-        "term": "futures",
-        "score": 0.6218,
+        "score": 0.629,
         "evidence": []
       },
       {
         "term": "risk-based",
-        "score": 0.6218,
+        "score": 0.6233,
+        "evidence": []
+      },
+      {
+        "term": "futures",
+        "score": 0.5825,
         "evidence": []
       }
     ],
     "page-009": [
       {
         "term": "medical product",
-        "score": 0.9817,
+        "score": 1.0173,
         "evidence": []
       },
       {
         "term": "business process",
-        "score": 0.8781,
+        "score": 0.9244,
         "evidence": []
       },
       {
         "term": "step towards",
-        "score": 0.8669,
+        "score": 0.8873,
         "evidence": []
       },
       {
         "term": "authorized",
-        "score": 0.8134,
+        "score": 0.8195,
         "evidence": []
       },
       {
         "term": "enabling environment",
-        "score": 0.7675,
+        "score": 0.7904,
         "evidence": []
       },
       {
         "term": "digitization",
-        "score": 0.7377,
+        "score": 0.7455,
         "evidence": []
       },
       {
         "term": "reactions",
-        "score": 0.7081,
+        "score": 0.7165,
         "evidence": []
       },
       {
         "term": "digitalization",
-        "score": 0.6196,
+        "score": 0.6299,
         "evidence": []
       }
     ],
     "page-010": [
       {
         "term": "generic product",
-        "score": 1.3981,
+        "score": 1.4321,
         "evidence": []
       },
       {
         "term": "source code",
-        "score": 1.2323,
-        "evidence": []
-      },
-      {
-        "term": "open source",
-        "score": 1.1356,
+        "score": 1.2139,
         "evidence": []
       },
       {
         "term": "open standards",
-        "score": 1.1031,
+        "score": 1.1414,
         "evidence": []
       },
       {
         "term": "adverse effects",
-        "score": 1.0329,
+        "score": 1.137,
         "evidence": []
       },
       {
         "term": "excluding",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "non-functional requirements",
-        "score": 0.9642,
+        "score": 0.9873,
         "evidence": []
       },
       {
-        "term": "passive",
-        "score": 0.9289,
+        "term": "product information",
+        "score": 0.9806,
+        "evidence": []
+      },
+      {
+        "term": "falsified medical",
+        "score": 0.9467,
         "evidence": []
       }
     ],
     "page-011": [
       {
         "term": "acceptance testing",
-        "score": 1.0275,
+        "score": 1.0424,
         "evidence": []
       },
       {
         "term": "smart guidelines",
-        "score": 1.0017,
+        "score": 1.0026,
         "evidence": []
       },
       {
         "term": "regulatory authority",
-        "score": 0.9496,
+        "score": 0.9739,
         "evidence": []
       },
       {
         "term": "user acceptance",
-        "score": 0.9369,
+        "score": 0.9525,
         "evidence": []
       },
       {
         "term": "national regulatory",
-        "score": 0.8973,
+        "score": 0.928,
         "evidence": []
       },
       {
         "term": "medical product",
-        "score": 0.8456,
+        "score": 0.8763,
         "evidence": []
       },
       {
         "term": "specifications",
-        "score": 0.6906,
+        "score": 0.7063,
         "evidence": []
       },
       {
         "term": "interoperability standards",
-        "score": 0.6599,
+        "score": 0.6935,
         "evidence": []
       }
     ],
     "page-013": [
       {
         "term": "falsified products",
-        "score": 2.2582,
+        "score": 2.3161,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 2.1299,
+        "score": 2.1854,
         "evidence": []
       },
       {
         "term": "therapeutic failure",
-        "score": 1.4039,
+        "score": 1.421,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 1.2542,
+        "score": 1.2869,
         "evidence": []
       },
       {
         "term": "nmras",
-        "score": 1.1843,
+        "score": 1.1935,
         "evidence": []
       },
       {
         "term": "care professionals",
-        "score": 1.1379,
+        "score": 1.1428,
         "evidence": []
       },
       {
         "term": "market",
-        "score": 1.1306,
+        "score": 1.1095,
         "evidence": []
       },
       {
         "term": "rb-pms",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       }
     ],
     "page-014": [
       {
-        "term": "industry representatives",
-        "score": 1.6918,
+        "term": "pharmacovigilance teams",
+        "score": 1.7115,
         "evidence": []
       },
       {
-        "term": "pharmacovigilance teams",
-        "score": 1.6804,
+        "term": "industry representatives",
+        "score": 1.6747,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.6169,
+        "score": 1.6593,
         "evidence": []
       },
       {
         "term": "reporting substandard",
-        "score": 1.6038,
+        "score": 1.6352,
+        "evidence": []
+      },
+      {
+        "term": "association representatives",
+        "score": 1.5401,
         "evidence": []
       },
       {
         "term": "professional associations",
-        "score": 1.5766,
+        "score": 1.518,
         "evidence": []
       },
       {
         "term": "care professional",
-        "score": 1.4181,
+        "score": 1.4159,
         "evidence": []
       },
       {
         "term": "medical products",
-        "score": 1.3706,
-        "evidence": []
-      },
-      {
-        "term": "monitoring pharmacovigilance",
-        "score": 1.336,
+        "score": 1.408,
         "evidence": []
       }
     ],
     "page-015": [
       {
         "term": "falsified reporting",
-        "score": 1.3661,
+        "score": 1.3919,
         "evidence": []
       },
       {
         "term": "pharmacovigilance teams",
-        "score": 1.1679,
+        "score": 1.1897,
         "evidence": []
       },
       {
         "term": "regulatory authority",
-        "score": 1.103,
+        "score": 1.1302,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.0736,
-        "evidence": []
-      },
-      {
-        "term": "enterprise architects",
-        "score": 1.013,
+        "score": 1.1013,
         "evidence": []
       },
       {
         "term": "national regulatory",
-        "score": 1.0127,
+        "score": 1.0442,
+        "evidence": []
+      },
+      {
+        "term": "enterprise architects",
+        "score": 1.0374,
         "evidence": []
       },
       {
         "term": "regulatory monitoring",
-        "score": 0.9837,
+        "score": 1.011,
         "evidence": []
       },
       {
         "term": "reporting application",
-        "score": 0.9224,
+        "score": 0.9445,
         "evidence": []
       }
     ],
     "page-016": [
       {
         "term": "implementations identify",
-        "score": 0.983,
+        "score": 1.0316,
         "evidence": []
       },
       {
         "term": "phase",
-        "score": 0.977,
+        "score": 0.9934,
         "evidence": []
       },
       {
         "term": "future state",
-        "score": 0.9277,
+        "score": 0.9538,
         "evidence": []
       },
       {
         "term": "transformation handbook",
-        "score": 0.9001,
+        "score": 0.9364,
         "evidence": []
       },
       {
         "term": "current state",
-        "score": 0.8872,
+        "score": 0.917,
         "evidence": []
       },
       {
         "term": "identify validated",
-        "score": 0.8715,
+        "score": 0.8995,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 0.8368,
+        "score": 0.8586,
         "evidence": []
       },
       {
         "term": "reporting substandard",
-        "score": 0.8069,
+        "score": 0.8235,
         "evidence": []
       }
     ],
     "page-017": [
       {
         "term": "smart guidelines",
-        "score": 1.8468,
+        "score": 1.8497,
         "evidence": []
       },
       {
         "term": "machine-readable recommendations",
-        "score": 1.8118,
+        "score": 1.6474,
         "evidence": []
       },
       {
         "term": "localized",
-        "score": 1.402,
+        "score": 1.4065,
         "evidence": []
       },
       {
         "term": "adaptation kits",
-        "score": 1.3688,
+        "score": 1.3867,
         "evidence": []
       },
       {
         "term": "machine readable",
-        "score": 1.2847,
+        "score": 1.2979,
         "evidence": []
       },
       {
         "term": "knowledge layers",
-        "score": 1.2734,
+        "score": 1.2816,
         "evidence": []
       },
       {
         "term": "executable",
-        "score": 0.9753,
+        "score": 0.9842,
         "evidence": []
       },
       {
         "term": "dynamic",
-        "score": 0.9476,
+        "score": 0.9619,
         "evidence": []
       }
     ],
     "page-018": [
       {
         "term": "falsified medical",
-        "score": 1.0559,
+        "score": 1.0834,
         "evidence": []
       },
       {
         "term": "medical product",
-        "score": 0.8456,
+        "score": 0.8763,
         "evidence": []
       },
       {
         "term": "product reporting",
-        "score": 0.8235,
+        "score": 0.8473,
         "evidence": []
       },
       {
         "term": "templates",
-        "score": 0.6772,
+        "score": 0.6863,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.6271,
+        "score": 0.6434,
         "evidence": []
       }
     ],
     "page-020": [
       {
         "term": "falsified reporting",
-        "score": 1.6684,
-        "evidence": []
-      },
-      {
-        "term": "reporting substandard",
-        "score": 1.6435,
+        "score": 1.7013,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.6385,
+        "score": 1.6811,
+        "evidence": []
+      },
+      {
+        "term": "reporting substandard",
+        "score": 1.677,
         "evidence": []
       },
       {
         "term": "medical products",
-        "score": 1.2007,
+        "score": 1.2334,
         "evidence": []
       },
       {
         "term": "stakeholder matrix",
-        "score": 1.1808,
+        "score": 1.2075,
         "evidence": []
       },
       {
         "term": "civil society",
-        "score": 1.1427,
+        "score": 1.1797,
         "evidence": []
       },
       {
         "term": "enabling environment",
-        "score": 0.7675,
+        "score": 0.7904,
         "evidence": []
       },
       {
         "term": "industry",
-        "score": 0.7326,
+        "score": 0.7405,
         "evidence": []
       }
     ],
     "page-021": [
       {
         "term": "falsified reporting",
-        "score": 1.3362,
+        "score": 1.3628,
         "evidence": []
       },
       {
         "term": "stakeholder",
-        "score": 0.8584,
+        "score": 0.8852,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.8105,
+        "score": 0.8316,
         "evidence": []
       },
       {
         "term": "influence",
-        "score": 0.7215,
+        "score": 0.6981,
         "evidence": []
       },
       {
         "term": "interests",
-        "score": 0.6148,
+        "score": 0.6215,
         "evidence": []
       },
       {
         "term": "contribute",
-        "score": 0.5233,
+        "score": 0.5148,
         "evidence": []
       },
       {
         "term": "responsibilities",
-        "score": 0.4242,
+        "score": 0.4365,
         "evidence": []
       },
       {
         "term": "decisions",
-        "score": 0.4194,
+        "score": 0.4217,
         "evidence": []
       }
     ],
     "page-022": [
       {
         "term": "pharmacovigilance reporting",
-        "score": 2.103,
+        "score": 2.1304,
         "evidence": []
       },
       {
         "term": "falsified reporting",
-        "score": 1.7281,
+        "score": 1.761,
         "evidence": []
       },
       {
         "term": "reporting substandard",
-        "score": 1.7046,
+        "score": 1.738,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.5441,
-        "evidence": []
-      },
-      {
-        "term": "adverse drug",
-        "score": 1.0777,
+        "score": 1.5843,
         "evidence": []
       },
       {
         "term": "collection tools",
-        "score": 1.0723,
+        "score": 1.1192,
         "evidence": []
       },
       {
         "term": "regulatory frameworks",
-        "score": 1.07,
+        "score": 1.0926,
+        "evidence": []
+      },
+      {
+        "term": "adverse drug",
+        "score": 1.0914,
         "evidence": []
       },
       {
         "term": "medical products",
-        "score": 1.0604,
+        "score": 1.0894,
         "evidence": []
       }
     ],
     "page-023": [
       {
         "term": "privacy rights",
-        "score": 1.3149,
+        "score": 1.2954,
         "evidence": []
       },
       {
         "term": "obtain",
-        "score": 1.0299,
+        "score": 1.028,
         "evidence": []
       },
       {
         "term": "internet",
-        "score": 0.9285,
+        "score": 0.9286,
         "evidence": []
       },
       {
         "term": "care facilities",
-        "score": 0.883,
+        "score": 0.9205,
         "evidence": []
       },
       {
         "term": "laws",
-        "score": 0.7903,
+        "score": 0.7752,
         "evidence": []
       },
       {
         "term": "explore",
-        "score": 0.7635,
+        "score": 0.7511,
         "evidence": []
       },
       {
         "term": "regulations",
-        "score": 0.7199,
+        "score": 0.7276,
         "evidence": []
       },
       {
-        "term": "protect",
-        "score": 0.7003,
+        "term": "computers",
+        "score": 0.6853,
         "evidence": []
       }
     ],
     "page-024": [
       {
         "term": "adverse reaction",
-        "score": 2.5009,
+        "score": 2.5184,
         "evidence": []
       },
       {
         "term": "drug reaction",
-        "score": 2.3743,
+        "score": 2.3488,
         "evidence": []
       },
       {
         "term": "reaction reporting",
-        "score": 2.2333,
+        "score": 2.2243,
         "evidence": []
       },
       {
         "term": "reaction reports",
-        "score": 2.1831,
+        "score": 2.1673,
         "evidence": []
       },
       {
         "term": "reporting substandard",
-        "score": 1.7384,
-        "evidence": []
-      },
-      {
-        "term": "falsified medical",
-        "score": 1.5987,
-        "evidence": []
-      },
-      {
-        "term": "reporting form",
-        "score": 1.5615,
+        "score": 1.773,
         "evidence": []
       },
       {
         "term": "standard adverse",
-        "score": 1.5417,
+        "score": 1.6576,
+        "evidence": []
+      },
+      {
+        "term": "falsified medical",
+        "score": 1.6402,
+        "evidence": []
+      },
+      {
+        "term": "reporting form",
+        "score": 1.5839,
         "evidence": []
       }
     ],
     "page-025": [
       {
+        "term": "reporting options",
+        "score": 1.5881,
+        "evidence": []
+      },
+      {
         "term": "care professionals",
-        "score": 1.5482,
+        "score": 1.5606,
         "evidence": []
       },
       {
         "term": "sync online",
-        "score": 1.526,
-        "evidence": []
-      },
-      {
-        "term": "reporting options",
-        "score": 1.5161,
+        "score": 1.5119,
         "evidence": []
       },
       {
         "term": "offline reporting",
-        "score": 1.3981,
+        "score": 1.4182,
         "evidence": []
       },
       {
         "term": "wi-fi network",
-        "score": 1.271,
+        "score": 1.2856,
         "evidence": []
       },
       {
         "term": "providing offline",
-        "score": 1.2415,
+        "score": 1.2752,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.2259,
+        "score": 1.2578,
         "evidence": []
       },
       {
         "term": "polypharmacy",
-        "score": 1.1304,
+        "score": 1.136,
         "evidence": []
       }
     ],
     "page-027": [
       {
         "term": "falsified medical",
-        "score": 1.5441,
+        "score": 1.5843,
         "evidence": []
       },
       {
         "term": "enforcement mechanisms",
-        "score": 1.3038,
+        "score": 1.3327,
         "evidence": []
       },
       {
         "term": "regulatory policies",
-        "score": 1.3036,
+        "score": 1.3288,
+        "evidence": []
+      },
+      {
+        "term": "medical products",
+        "score": 1.1925,
         "evidence": []
       },
       {
         "term": "products reporting",
-        "score": 1.1676,
+        "score": 1.1899,
         "evidence": []
       },
       {
         "term": "existing regulatory",
-        "score": 1.0658,
+        "score": 1.0879,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.9406,
+        "score": 0.9652,
         "evidence": []
       },
       {
         "term": "establish shared",
-        "score": 0.7835,
-        "evidence": []
-      },
-      {
-        "term": "pharmacovigilance",
-        "score": 0.6695,
+        "score": 0.8134,
         "evidence": []
       }
     ],
     "page-028": [
       {
         "term": "steering committee",
-        "score": 2.1167,
-        "evidence": []
-      },
-      {
-        "term": "months post-launch",
-        "score": 1.6254,
+        "score": 2.1414,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.5987,
+        "score": 1.6402,
+        "evidence": []
+      },
+      {
+        "term": "months post-launch",
+        "score": 1.6362,
         "evidence": []
       },
       {
         "term": "national steering",
-        "score": 1.4957,
+        "score": 1.5591,
         "evidence": []
       },
       {
         "term": "law enforcement",
-        "score": 1.4523,
+        "score": 1.4356,
         "evidence": []
       },
       {
         "term": "professional associations",
-        "score": 1.2965,
+        "score": 1.2519,
         "evidence": []
       },
       {
         "term": "strategic goals",
-        "score": 1.1692,
+        "score": 1.2094,
         "evidence": []
       },
       {
         "term": "governance structure",
-        "score": 1.1227,
+        "score": 1.1669,
         "evidence": []
       }
     ],
     "page-029": [
       {
         "term": "falsified medical",
-        "score": 1.0559,
+        "score": 1.0834,
         "evidence": []
       },
       {
         "term": "medical products",
-        "score": 0.7411,
+        "score": 0.7614,
         "evidence": []
       },
       {
         "term": "risks",
-        "score": 0.6649,
+        "score": 0.6679,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.6271,
+        "score": 0.6434,
         "evidence": []
       },
       {
         "term": "political",
-        "score": 0.5741,
+        "score": 0.5799,
         "evidence": []
       },
       {
         "term": "strategic",
-        "score": 0.5186,
+        "score": 0.5351,
         "evidence": []
       },
       {
         "term": "mitigation",
-        "score": 0.5147,
+        "score": 0.5273,
         "evidence": []
       },
       {
         "term": "governance",
-        "score": 0.4643,
+        "score": 0.4842,
         "evidence": []
       }
     ],
     "page-031": [
       {
         "term": "falsified reporting",
-        "score": 1.5221,
+        "score": 1.5518,
         "evidence": []
       },
       {
         "term": "reporting solution",
-        "score": 1.4867,
+        "score": 1.5118,
         "evidence": []
       },
       {
         "term": "investment roadmap",
-        "score": 1.4346,
+        "score": 1.4837,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.3154,
+        "score": 1.3494,
         "evidence": []
       },
       {
         "term": "future state",
-        "score": 1.1589,
+        "score": 1.191,
         "evidence": []
       },
       {
         "term": "priorities across",
-        "score": 1.0035,
+        "score": 1.0225,
         "evidence": []
       },
       {
         "term": "medium-term",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.8802,
+        "score": 0.9032,
         "evidence": []
       }
     ],
     "page-032": [
       {
         "term": "scalability",
-        "score": 0.7487,
+        "score": 0.7563,
         "evidence": []
       },
       {
         "term": "compliance",
-        "score": 0.6632,
+        "score": 0.6636,
         "evidence": []
       },
       {
         "term": "medium",
-        "score": 0.6485,
-        "evidence": []
-      },
-      {
-        "term": "continued",
-        "score": 0.6342,
-        "evidence": []
-      },
-      {
-        "term": "priority",
-        "score": 0.6342,
+        "score": 0.6237,
         "evidence": []
       },
       {
         "term": "channels",
-        "score": 0.611,
+        "score": 0.6144,
+        "evidence": []
+      },
+      {
+        "term": "priority",
+        "score": 0.5875,
         "evidence": []
       },
       {
         "term": "long-term",
-        "score": 0.5794,
+        "score": 0.5855,
         "evidence": []
       },
       {
         "term": "verification",
-        "score": 0.5697,
+        "score": 0.5811,
+        "evidence": []
+      },
+      {
+        "term": "ensuring",
+        "score": 0.5481,
         "evidence": []
       }
     ],
     "page-033": [
       {
         "term": "falsified reporting",
-        "score": 1.5221,
+        "score": 1.5518,
         "evidence": []
       },
       {
         "term": "enterprise architecture",
-        "score": 1.4299,
+        "score": 1.5053,
         "evidence": []
       },
       {
         "term": "cybersecurity",
-        "score": 1.2886,
+        "score": 1.2994,
         "evidence": []
       },
       {
         "term": "diig framework",
-        "score": 1.1339,
+        "score": 1.1645,
         "evidence": []
       },
       {
         "term": "reporting application",
-        "score": 1.1133,
+        "score": 1.1448,
         "evidence": []
       },
       {
         "term": "open standards",
-        "score": 1.0065,
+        "score": 1.0424,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.8802,
+        "score": 0.9032,
         "evidence": []
       },
       {
         "term": "page",
-        "score": 0.7186,
+        "score": 0.7471,
         "evidence": [
           "heading"
         ]
@@ -1097,84 +1097,84 @@
     "page-034": [
       {
         "term": "datasets sourced",
-        "score": 1.3852,
+        "score": 1.3947,
         "evidence": []
       },
       {
         "term": "mgmt info",
-        "score": 1.303,
+        "score": 1.3222,
         "evidence": []
       },
       {
         "term": "pos application",
-        "score": 1.2674,
+        "score": 1.2914,
         "evidence": []
       },
       {
         "term": "software capabilities",
-        "score": 1.1643,
+        "score": 1.222,
         "evidence": []
       },
       {
         "term": "functional software",
-        "score": 0.9949,
+        "score": 1.0389,
         "evidence": []
       },
       {
         "term": "registry",
-        "score": 0.8657,
+        "score": 0.8857,
         "evidence": []
       },
       {
         "term": "shared services",
-        "score": 0.8316,
+        "score": 0.8834,
         "evidence": []
       },
       {
         "term": "programme area",
-        "score": 0.7861,
+        "score": 0.797,
         "evidence": []
       }
     ],
     "page-036": [
       {
         "term": "reporting substandard",
-        "score": 1.3595,
+        "score": 1.387,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.3104,
+        "score": 1.3445,
         "evidence": []
       },
       {
         "term": "user personas",
-        "score": 1.1635,
+        "score": 1.1981,
         "evidence": []
       },
       {
         "term": "medical products",
-        "score": 0.9602,
+        "score": 0.9863,
         "evidence": []
       },
       {
         "term": "analysis report",
-        "score": 0.8179,
+        "score": 0.8325,
         "evidence": []
       },
       {
         "term": "section",
-        "score": 0.4982,
+        "score": 0.5188,
         "evidence": []
       },
       {
         "term": "requirements",
-        "score": 0.4772,
+        "score": 0.4998,
         "evidence": []
       },
       {
         "term": "page",
-        "score": 0.4534,
+        "score": 0.4714,
         "evidence": [
           "heading"
         ]
@@ -1183,1237 +1183,1237 @@
     "page-037": [
       {
         "term": "specialist doctor",
-        "score": 2.8257,
-        "evidence": []
-      },
-      {
-        "term": "medical doctor",
-        "score": 2.3953,
+        "score": 2.6008,
         "evidence": []
       },
       {
         "term": "registered nurse",
-        "score": 2.3809,
+        "score": 2.3745,
+        "evidence": []
+      },
+      {
+        "term": "medical doctor",
+        "score": 2.2502,
         "evidence": []
       },
       {
         "term": "medical practitioner",
-        "score": 2.1551,
+        "score": 2.1811,
         "evidence": []
       },
       {
         "term": "practice nurse",
-        "score": 2.0976,
+        "score": 2.0954,
         "evidence": []
       },
       {
         "term": "user personas",
-        "score": 1.9939,
+        "score": 2.0485,
         "evidence": []
       },
       {
         "term": "user scenarios",
-        "score": 1.5251,
+        "score": 1.5723,
         "evidence": []
       },
       {
-        "term": "nursing",
-        "score": 1.2705,
+        "term": "university providing",
+        "score": 1.2229,
         "evidence": []
       }
     ],
     "page-038": [
       {
         "term": "laboratory technician",
-        "score": 2.5327,
+        "score": 2.5371,
         "evidence": []
       },
       {
         "term": "pathology laboratory",
-        "score": 2.3173,
+        "score": 2.3175,
         "evidence": []
       },
       {
         "term": "isco code",
-        "score": 1.9725,
+        "score": 1.9883,
         "evidence": []
       },
       {
         "term": "isco international",
-        "score": 1.7851,
+        "score": 1.7857,
         "evidence": []
       },
       {
         "term": "medical laboratory",
-        "score": 1.6665,
+        "score": 1.6815,
         "evidence": []
       },
       {
         "term": "pharmacist",
-        "score": 1.3446,
+        "score": 1.3542,
         "evidence": []
       },
       {
         "term": "occupational title",
-        "score": 1.3275,
+        "score": 1.3158,
         "evidence": []
       },
       {
         "term": "occupations",
-        "score": 1.2705,
+        "score": 1.273,
         "evidence": []
       }
     ],
     "page-039": [
       {
         "term": "receives confirmation",
-        "score": 2.7866,
+        "score": 2.7112,
         "evidence": []
       },
       {
         "term": "patient reaction",
-        "score": 2.2722,
+        "score": 2.2829,
         "evidence": []
       },
       {
         "term": "receives tracking",
-        "score": 2.1754,
+        "score": 2.1674,
         "evidence": []
       },
       {
         "term": "submits report",
-        "score": 2.072,
-        "evidence": []
-      },
-      {
-        "term": "confirmation message",
-        "score": 1.8896,
+        "score": 2.0962,
         "evidence": []
       },
       {
         "term": "patient details",
-        "score": 1.8832,
+        "score": 1.9246,
         "evidence": []
       },
       {
         "term": "uploads photos",
-        "score": 1.8662,
+        "score": 1.8795,
         "evidence": []
       },
       {
-        "term": "reporting app",
-        "score": 1.7949,
+        "term": "confirmation message",
+        "score": 1.864,
+        "evidence": []
+      },
+      {
+        "term": "suspect product",
+        "score": 1.8242,
         "evidence": []
       }
     ],
     "page-040": [
       {
         "term": "receives confirmation",
-        "score": 3.1551,
+        "score": 3.0701,
         "evidence": []
       },
       {
         "term": "receives updates",
-        "score": 2.6295,
+        "score": 2.6054,
         "evidence": []
       },
       {
         "term": "receives tracking",
-        "score": 2.4104,
+        "score": 2.3979,
         "evidence": []
       },
       {
         "term": "submits report",
-        "score": 2.2229,
+        "score": 2.2478,
         "evidence": []
       },
       {
         "term": "medication packaging",
-        "score": 2.1855,
+        "score": 2.199,
         "evidence": []
       },
       {
         "term": "administers medication",
-        "score": 2.1846,
-        "evidence": []
-      },
-      {
-        "term": "isolates suspicious",
-        "score": 2.1761,
+        "score": 2.192,
         "evidence": []
       },
       {
         "term": "uploads photos",
-        "score": 2.0708,
+        "score": 2.0859,
+        "evidence": []
+      },
+      {
+        "term": "isolates suspicious",
+        "score": 2.0811,
         "evidence": []
       }
     ],
     "page-041": [
       {
         "term": "supplier manufacturer",
-        "score": 1.5102,
+        "score": 1.525,
         "evidence": []
       },
       {
         "term": "gaining clarity",
-        "score": 1.4936,
+        "score": 1.5002,
         "evidence": []
       },
       {
         "term": "business process",
-        "score": 1.3854,
+        "score": 1.4572,
         "evidence": []
       },
       {
         "term": "process matrix",
-        "score": 1.0992,
+        "score": 1.1472,
         "evidence": []
       },
       {
         "term": "business processes",
-        "score": 1.0815,
-        "evidence": []
-      },
-      {
-        "term": "diagramming",
-        "score": 0.9855,
+        "score": 1.1279,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 0.9702,
+        "score": 0.9953,
+        "evidence": []
+      },
+      {
+        "term": "diagramming",
+        "score": 0.9879,
         "evidence": []
       },
       {
         "term": "reporting tool",
-        "score": 0.8447,
+        "score": 0.8589,
         "evidence": []
       }
     ],
     "page-042": [
       {
         "term": "select type",
-        "score": 1.492,
+        "score": 1.4955,
         "evidence": []
       },
       {
         "term": "submit report",
-        "score": 1.2651,
+        "score": 1.2832,
         "evidence": []
       },
       {
         "term": "reporting substandard",
-        "score": 1.1821,
+        "score": 1.2063,
         "evidence": []
       },
       {
         "term": "non-functional requirements",
-        "score": 1.1488,
-        "evidence": []
-      },
-      {
-        "term": "falsified medical",
-        "score": 1.0736,
+        "score": 1.1807,
         "evidence": []
       },
       {
         "term": "adverse effects",
-        "score": 1.0329,
+        "score": 1.137,
+        "evidence": []
+      },
+      {
+        "term": "falsified medical",
+        "score": 1.1013,
         "evidence": []
       },
       {
         "term": "capture details",
-        "score": 0.9227,
+        "score": 0.9407,
         "evidence": []
       },
       {
         "term": "reporting application",
-        "score": 0.8972,
+        "score": 0.9244,
         "evidence": []
       }
     ],
     "page-043": [
       {
         "term": "sfr",
-        "score": 2.4851,
+        "score": 2.4884,
         "evidence": []
       },
       {
         "term": "product caused",
-        "score": 2.1121,
+        "score": 2.1038,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 2.0002,
-        "evidence": []
-      },
-      {
-        "term": "product package",
-        "score": 1.9077,
+        "score": 2.0521,
         "evidence": []
       },
       {
         "term": "reporting substandard",
-        "score": 1.9038,
+        "score": 1.944,
+        "evidence": []
+      },
+      {
+        "term": "product package",
+        "score": 1.8993,
         "evidence": []
       },
       {
         "term": "caused adverse",
-        "score": 1.7157,
+        "score": 1.6832,
         "evidence": []
       },
       {
         "term": "care professional",
-        "score": 1.6471,
+        "score": 1.6298,
         "evidence": []
       },
       {
         "term": "expiry date",
-        "score": 1.5469,
+        "score": 1.5299,
         "evidence": []
       }
     ],
     "page-044": [
       {
         "term": "security confidentiality",
-        "score": 3.2319,
+        "score": 3.2151,
         "evidence": []
       },
       {
         "term": "security authentication",
-        "score": 2.9087,
+        "score": 2.9476,
         "evidence": []
       },
       {
         "term": "audit trail",
-        "score": 2.7906,
+        "score": 2.8033,
         "evidence": []
       },
       {
         "term": "wrong password",
-        "score": 2.445,
+        "score": 2.4634,
         "evidence": []
       },
       {
         "term": "security user",
-        "score": 2.4027,
+        "score": 2.4545,
         "evidence": []
       },
       {
         "term": "allow user",
-        "score": 1.5299,
+        "score": 1.5709,
         "evidence": []
       },
       {
         "term": "user credentials",
-        "score": 1.4165,
+        "score": 1.4651,
         "evidence": []
       },
       {
         "term": "logs",
-        "score": 1.3897,
+        "score": 1.4071,
         "evidence": []
       }
     ],
     "page-045": [
       {
         "term": "security general",
-        "score": 2.3932,
+        "score": 2.4108,
         "evidence": []
       },
       {
         "term": "requirements general",
-        "score": 2.0954,
+        "score": 2.1412,
         "evidence": []
       },
       {
         "term": "security user",
-        "score": 1.5614,
+        "score": 1.5917,
         "evidence": []
       },
       {
         "term": "version number",
-        "score": 1.0211,
+        "score": 1.0183,
         "evidence": []
       },
       {
         "term": "penetration",
-        "score": 0.7876,
+        "score": 0.7943,
         "evidence": []
       },
       {
         "term": "nmra",
-        "score": 0.7346,
-        "evidence": []
-      },
-      {
-        "term": "subject",
-        "score": 0.6772,
+        "score": 0.7425,
         "evidence": []
       },
       {
         "term": "user management",
-        "score": 0.6682,
+        "score": 0.6999,
+        "evidence": []
+      },
+      {
+        "term": "assigned",
+        "score": 0.6633,
         "evidence": []
       }
     ],
     "page-046": [
       {
         "term": "requirements usability",
-        "score": 2.2288,
+        "score": 2.3037,
         "evidence": []
       },
       {
         "term": "requirements scalability",
-        "score": 1.9746,
+        "score": 2.0274,
         "evidence": []
       },
       {
         "term": "requirements general",
-        "score": 1.52,
+        "score": 1.5654,
         "evidence": []
       },
       {
         "term": "concurrent users",
-        "score": 1.2069,
+        "score": 1.2175,
+        "evidence": []
+      },
+      {
+        "term": "seconds",
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "accommodate",
-        "score": 0.9187,
+        "score": 0.9213,
         "evidence": []
       },
       {
         "term": "price",
-        "score": 0.8812,
+        "score": 0.8494,
         "evidence": []
       },
       {
         "term": "administrators",
-        "score": 0.8158,
-        "evidence": []
-      },
-      {
-        "term": "computers",
-        "score": 0.6762,
+        "score": 0.8219,
         "evidence": []
       }
     ],
     "page-047": [
       {
         "term": "requirements configuration",
-        "score": 1.8348,
+        "score": 1.887,
         "evidence": []
       },
       {
         "term": "disaster recovery",
-        "score": 1.4874,
+        "score": 1.4773,
         "evidence": []
       },
       {
         "term": "requirements interoperability",
-        "score": 1.284,
+        "score": 1.3543,
         "evidence": []
       },
       {
         "term": "business rules",
-        "score": 1.0918,
+        "score": 1.1266,
         "evidence": []
       },
       {
         "term": "configure",
-        "score": 0.98,
+        "score": 0.9888,
         "evidence": []
       },
       {
         "term": "fhir",
-        "score": 0.8366,
+        "score": 0.8533,
+        "evidence": []
+      },
+      {
+        "term": "external systems",
+        "score": 0.7294,
         "evidence": []
       },
       {
         "term": "uat",
-        "score": 0.7073,
-        "evidence": []
-      },
-      {
-        "term": "non-functional",
-        "score": 0.6716,
+        "score": 0.7157,
         "evidence": []
       }
     ],
     "page-049": [
       {
         "term": "falsified reporting",
-        "score": 1.3362,
+        "score": 1.3628,
         "evidence": []
       },
       {
         "term": "reporting application",
-        "score": 0.9487,
+        "score": 0.9764,
         "evidence": []
       },
       {
         "term": "total cost",
-        "score": 0.8902,
+        "score": 0.903,
+        "evidence": []
+      },
+      {
+        "term": "implementation plan",
+        "score": 0.8404,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.8105,
+        "score": 0.8316,
         "evidence": []
       },
       {
         "term": "management plan",
-        "score": 0.6857,
+        "score": 0.7227,
         "evidence": []
       },
       {
         "term": "transformation handbook",
-        "score": 0.6531,
+        "score": 0.6808,
         "evidence": []
       },
       {
         "term": "project management",
-        "score": 0.6231,
-        "evidence": []
-      },
-      {
-        "term": "budget",
-        "score": 0.6195,
+        "score": 0.6561,
         "evidence": []
       }
     ],
     "page-050": [
       {
         "term": "sovereignty",
-        "score": 0.8812,
-        "evidence": []
-      },
-      {
-        "term": "cost-effective",
-        "score": 0.7907,
-        "evidence": []
-      },
-      {
-        "term": "enhancing",
-        "score": 0.7455,
+        "score": 0.8859,
         "evidence": []
       },
       {
         "term": "options",
-        "score": 0.7168,
+        "score": 0.7795,
+        "evidence": []
+      },
+      {
+        "term": "cost-effective",
+        "score": 0.7456,
+        "evidence": []
+      },
+      {
+        "term": "enhancing",
+        "score": 0.7359,
         "evidence": []
       },
       {
         "term": "meets",
-        "score": 0.6762,
+        "score": 0.6853,
         "evidence": []
       },
       {
         "term": "advantages",
-        "score": 0.6718,
+        "score": 0.681,
         "evidence": []
       },
       {
         "term": "customization",
-        "score": 0.655,
+        "score": 0.6645,
         "evidence": []
       },
       {
         "term": "enterprise architecture",
-        "score": 0.6237,
+        "score": 0.6565,
         "evidence": []
       }
     ],
     "page-052": [
       {
         "term": "conducting research",
-        "score": 1.0389,
+        "score": 1.0574,
         "evidence": []
       },
       {
         "term": "falsified reporting",
-        "score": 1.0339,
+        "score": 1.0544,
         "evidence": []
       },
       {
         "term": "extrinsic",
-        "score": 0.9855,
+        "score": 0.9879,
         "evidence": []
       },
       {
         "term": "practical guide",
-        "score": 0.9141,
+        "score": 0.9352,
         "evidence": []
       },
       {
         "term": "asks",
-        "score": 0.8155,
+        "score": 0.8216,
         "evidence": []
       },
       {
         "term": "transformation handbook",
-        "score": 0.6531,
+        "score": 0.6808,
         "evidence": []
       },
       {
         "term": "doing",
-        "score": 0.6495,
+        "score": 0.6592,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.6271,
+        "score": 0.6434,
         "evidence": []
       }
     ],
     "page-053": [
       {
         "term": "learning curve",
-        "score": 1.3166,
+        "score": 1.3135,
         "evidence": []
       },
       {
         "term": "conducting research",
-        "score": 0.9127,
+        "score": 0.9277,
         "evidence": []
       },
       {
         "term": "prototype",
-        "score": 0.8281,
+        "score": 0.8401,
         "evidence": []
       },
       {
         "term": "practical guide",
-        "score": 0.6859,
+        "score": 0.7001,
         "evidence": []
       },
       {
         "term": "stability",
-        "score": 0.6694,
+        "score": 0.6803,
         "evidence": []
       },
       {
         "term": "rates",
-        "score": 0.579,
+        "score": 0.6015,
         "evidence": []
       },
       {
         "term": "changes",
-        "score": 0.5494,
+        "score": 0.558,
         "evidence": []
       },
       {
         "term": "feasibility",
-        "score": 0.5249,
+        "score": 0.5512,
         "evidence": []
       }
     ],
     "page-054": [
       {
         "term": "falsified reporting",
-        "score": 1.9532,
+        "score": 1.9918,
         "evidence": []
       },
       {
         "term": "application changed",
-        "score": 1.7947,
+        "score": 1.8375,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.5167,
-        "evidence": []
-      },
-      {
-        "term": "non-research setting",
-        "score": 1.4366,
+        "score": 1.5554,
         "evidence": []
       },
       {
         "term": "changed outcomes",
-        "score": 1.42,
+        "score": 1.5139,
+        "evidence": []
+      },
+      {
+        "term": "non-research setting",
+        "score": 1.4559,
         "evidence": []
       },
       {
         "term": "changed processes",
-        "score": 1.4035,
+        "score": 1.4281,
         "evidence": []
       },
       {
         "term": "increased reporting",
-        "score": 1.3199,
+        "score": 1.3255,
         "evidence": []
       },
       {
         "term": "controlled setting",
-        "score": 1.2006,
+        "score": 1.2276,
         "evidence": []
       }
     ],
     "page-055": [
       {
-        "term": "carrying out",
-        "score": 1.2546,
+        "term": "falsified reporting",
+        "score": 1.2762,
         "evidence": []
       },
       {
-        "term": "falsified reporting",
-        "score": 1.2517,
+        "term": "carrying out",
+        "score": 1.2343,
         "evidence": []
       },
       {
         "term": "carried out",
-        "score": 1.1119,
+        "score": 1.0937,
         "evidence": []
       },
       {
         "term": "reporting application",
-        "score": 0.9487,
+        "score": 0.9764,
         "evidence": []
       },
       {
         "term": "comprehensive plan",
-        "score": 0.9039,
+        "score": 0.9369,
         "evidence": []
       },
       {
         "term": "step",
-        "score": 0.7886,
+        "score": 0.8164,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.728,
+        "score": 0.747,
         "evidence": []
       },
       {
         "term": "involves",
-        "score": 0.666,
+        "score": 0.6741,
         "evidence": []
       }
     ],
     "page-056": [
       {
         "term": "falsified report",
-        "score": 1.5286,
+        "score": 1.5665,
         "evidence": []
       },
       {
         "term": "report submissions",
-        "score": 1.5046,
+        "score": 1.5319,
         "evidence": []
       },
       {
         "term": "pre-launch",
-        "score": 1.0287,
+        "score": 1.0364,
         "evidence": []
       },
       {
         "term": "response time",
-        "score": 0.9506,
-        "evidence": []
-      },
-      {
-        "term": "rate",
-        "score": 0.7981,
+        "score": 0.9809,
         "evidence": []
       },
       {
         "term": "reporting application",
-        "score": 0.7728,
+        "score": 0.7962,
         "evidence": []
       },
       {
         "term": "substandard",
-        "score": 0.728,
+        "score": 0.747,
+        "evidence": []
+      },
+      {
+        "term": "rate",
+        "score": 0.7269,
         "evidence": []
       }
     ],
     "page-057": [
       {
         "term": "job rotations",
-        "score": 1.7612,
-        "evidence": []
-      },
-      {
-        "term": "updating job",
-        "score": 1.4013,
+        "score": 1.7047,
         "evidence": []
       },
       {
         "term": "operations plan",
-        "score": 1.3238,
+        "score": 1.3892,
+        "evidence": []
+      },
+      {
+        "term": "updating job",
+        "score": 1.367,
         "evidence": []
       },
       {
         "term": "job aids",
-        "score": 1.3049,
+        "score": 1.3039,
         "evidence": []
       },
       {
         "term": "sustainability plan",
-        "score": 1.2381,
+        "score": 1.2924,
         "evidence": []
       },
       {
         "term": "reporting application",
-        "score": 1.0514,
-        "evidence": []
-      },
-      {
-        "term": "continuous improvement",
-        "score": 1.0451,
+        "score": 1.0885,
         "evidence": []
       },
       {
         "term": "maintenance personnel",
-        "score": 1.0046,
+        "score": 1.0326,
+        "evidence": []
+      },
+      {
+        "term": "continuous improvement",
+        "score": 1.0156,
         "evidence": []
       }
     ],
     "page-059": [
       {
         "term": "smartphone app",
-        "score": 2.5386,
+        "score": 2.5706,
         "evidence": []
       },
       {
         "term": "professionals appreciated",
-        "score": 2.2333,
+        "score": 2.128,
         "evidence": []
       },
       {
         "term": "care professionals",
-        "score": 1.823,
+        "score": 1.8258,
         "evidence": []
       },
       {
         "term": "nmra staff",
-        "score": 1.7829,
+        "score": 1.8079,
         "evidence": []
       },
       {
         "term": "pilot study",
-        "score": 1.5995,
+        "score": 1.6338,
         "evidence": []
       },
       {
         "term": "united republic",
-        "score": 1.5433,
+        "score": 1.5664,
         "evidence": []
       },
       {
         "term": "suspected substandard",
-        "score": 1.4767,
+        "score": 1.4966,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.4107,
+        "score": 1.4475,
         "evidence": []
       }
     ],
     "page-060": [
       {
-        "term": "int teams",
-        "score": 1.2312,
+        "term": "geneva",
+        "score": 1.2672,
         "evidence": []
       },
       {
-        "term": "geneva",
-        "score": 1.2115,
+        "term": "int teams",
+        "score": 1.2523,
         "evidence": []
       },
       {
         "term": "website",
-        "score": 1.0953,
+        "score": 1.0636,
         "evidence": []
       },
       {
         "term": "transformation handbook",
-        "score": 0.9936,
+        "score": 1.037,
         "evidence": []
       },
       {
         "term": "world",
-        "score": 0.9862,
+        "score": 1.0245,
         "evidence": []
       },
       {
         "term": "open standards",
-        "score": 0.9742,
+        "score": 1.0079,
+        "evidence": []
+      },
+      {
+        "term": "organization",
+        "score": 0.9819,
         "evidence": []
       },
       {
         "term": "by-nc-sa",
-        "score": 0.9612,
-        "evidence": []
-      },
-      {
-        "term": "igo",
-        "score": 0.9467,
+        "score": 0.9752,
         "evidence": []
       }
     ],
     "page-061": [
       {
         "term": "bmj glob",
-        "score": 1.8131,
+        "score": 1.8288,
         "evidence": []
       },
       {
         "term": "falsified medical",
-        "score": 1.2259,
+        "score": 1.2578,
         "evidence": []
       },
       {
         "term": "telecommunication union",
-        "score": 1.155,
+        "score": 1.1713,
         "evidence": []
       },
       {
         "term": "geneva",
-        "score": 1.0876,
+        "score": 1.1376,
         "evidence": []
       },
       {
         "term": "website",
-        "score": 1.0249,
+        "score": 0.9953,
         "evidence": []
       },
       {
         "term": "medical products",
-        "score": 0.9602,
+        "score": 0.9863,
         "evidence": []
       },
       {
         "term": "pract",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
-        "term": "medicine quality",
-        "score": 0.8576,
+        "term": "world",
+        "score": 0.8776,
         "evidence": []
       }
     ],
     "page-062": [
       {
         "term": "by-nc-sa",
-        "score": 1.2419,
+        "score": 1.26,
         "evidence": []
       },
       {
         "term": "igo",
-        "score": 1.2231,
-        "evidence": []
-      },
-      {
-        "term": "website",
-        "score": 1.2128,
+        "score": 1.2416,
         "evidence": []
       },
       {
         "term": "geneva",
-        "score": 1.1737,
+        "score": 1.2277,
+        "evidence": []
+      },
+      {
+        "term": "website",
+        "score": 1.1777,
         "evidence": []
       },
       {
         "term": "licence",
-        "score": 1.1198,
+        "score": 1.1404,
         "evidence": []
       },
       {
         "term": "handle",
-        "score": 1.0552,
+        "score": 1.0671,
         "evidence": []
       },
       {
         "term": "transformation handbook",
-        "score": 0.9567,
+        "score": 0.9973,
         "evidence": []
       },
       {
         "term": "world",
-        "score": 0.9555,
+        "score": 0.9925,
         "evidence": []
       }
     ],
     "page-064": [
       {
         "term": "people-first",
-        "score": 0.836,
+        "score": 0.8416,
         "evidence": []
       },
       {
         "term": "starts",
-        "score": 0.7685,
+        "score": 0.7572,
         "evidence": []
       },
       {
         "term": "harm",
-        "score": 0.7028,
+        "score": 0.6738,
         "evidence": []
       },
       {
         "term": "mitigate",
-        "score": 0.5747,
+        "score": 0.5798,
         "evidence": []
       },
       {
         "term": "works",
-        "score": 0.5637,
+        "score": 0.5695,
+        "evidence": []
+      },
+      {
+        "term": "evidence",
+        "score": 0.5489,
         "evidence": []
       },
       {
         "term": "build",
-        "score": 0.503,
-        "evidence": []
-      },
-      {
-        "term": "practices",
-        "score": 0.4749,
+        "score": 0.5209,
         "evidence": []
       },
       {
         "term": "people",
-        "score": 0.4745,
+        "score": 0.4977,
         "evidence": []
       }
     ],
     "page-065": [
       {
         "term": "persona template",
-        "score": 1.5687,
+        "score": 1.5971,
         "evidence": []
       },
       {
         "term": "user persona",
-        "score": 1.526,
+        "score": 1.5615,
         "evidence": []
       },
       {
         "term": "technicians",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "professional",
-        "score": 0.7602,
+        "score": 0.7221,
         "evidence": []
       },
       {
         "term": "medications",
-        "score": 0.7222,
+        "score": 0.7162,
         "evidence": []
       },
       {
         "term": "success",
-        "score": 0.6176,
+        "score": 0.6251,
         "evidence": []
       },
       {
         "term": "pharmacy",
-        "score": 0.5989,
+        "score": 0.6096,
         "evidence": []
       },
       {
         "term": "kind",
-        "score": 0.5647,
+        "score": 0.5486,
         "evidence": []
       }
     ],
     "page-066": [
       {
         "term": "swim lane",
-        "score": 4.0761,
+        "score": 4.0883,
         "evidence": []
       },
       {
         "term": "another swim",
-        "score": 2.9388,
+        "score": 2.9833,
         "evidence": []
       },
       {
         "term": "different swim",
-        "score": 2.6855,
+        "score": 2.7153,
         "evidence": []
       },
       {
         "term": "start event",
-        "score": 1.9577,
+        "score": 1.9183,
         "evidence": []
       },
       {
         "term": "end event",
-        "score": 1.6199,
-        "evidence": []
-      },
-      {
-        "term": "pool",
-        "score": 1.6042,
+        "score": 1.6238,
         "evidence": []
       },
       {
         "term": "process diagram",
-        "score": 1.5536,
+        "score": 1.6093,
+        "evidence": []
+      },
+      {
+        "term": "pool",
+        "score": 1.5663,
         "evidence": []
       },
       {
         "term": "message flows",
-        "score": 1.4525,
+        "score": 1.4868,
         "evidence": []
       }
     ],
     "page-067": [
       {
         "term": "throw link",
-        "score": 2.3641,
-        "evidence": []
-      },
-      {
-        "term": "hoc subprocess",
-        "score": 2.2401,
+        "score": 2.3926,
         "evidence": []
       },
       {
         "term": "output arrows",
-        "score": 2.2353,
+        "score": 2.2605,
+        "evidence": []
+      },
+      {
+        "term": "hoc subprocess",
+        "score": 2.2502,
         "evidence": []
       },
       {
         "term": "catch link",
-        "score": 2.1646,
+        "score": 2.1926,
         "evidence": []
       },
       {
         "term": "parallel gateway",
-        "score": 2.1608,
+        "score": 2.1798,
         "evidence": []
       },
       {
         "term": "link event",
-        "score": 2.0126,
+        "score": 2.0278,
         "evidence": []
       },
       {
         "term": "off-page connector",
-        "score": 1.971,
+        "score": 1.9759,
         "evidence": []
       },
       {
         "term": "end event",
-        "score": 1.8513,
+        "score": 1.8561,
         "evidence": []
       }
     ],
     "page-068": [
       {
         "term": "raci matrix",
-        "score": 1.3396,
+        "score": 1.3541,
         "evidence": []
       },
       {
         "term": "stakeholder raci",
-        "score": 1.2229,
+        "score": 1.2419,
         "evidence": []
       },
       {
         "term": "consulted",
-        "score": 0.6694,
+        "score": 0.663,
         "evidence": []
       },
       {
         "term": "approves",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       }
     ],
     "page-069": [
       {
         "term": "openlmis",
-        "score": 1.0681,
+        "score": 1.0749,
         "evidence": []
       },
       {
         "term": "mobile app",
-        "score": 0.9727,
+        "score": 0.9983,
         "evidence": []
       },
       {
         "term": "npc",
-        "score": 0.8165,
+        "score": 0.8288,
         "evidence": []
       },
       {
         "term": "erp",
-        "score": 0.8099,
+        "score": 0.8161,
         "evidence": []
       },
       {
         "term": "pharmacovigilance",
-        "score": 0.6695,
+        "score": 0.6788,
         "evidence": []
       }
     ],
     "page-070": [
       {
-        "term": "barrier",
-        "score": 1.5648,
+        "term": "falsified medical",
+        "score": 1.5617,
         "evidence": []
       },
       {
-        "term": "falsified medical",
-        "score": 1.522,
+        "term": "barrier",
+        "score": 1.4346,
         "evidence": []
       },
       {
         "term": "reporting substandard",
-        "score": 1.3343,
+        "score": 1.3625,
         "evidence": []
       },
       {
         "term": "medical products",
-        "score": 1.2405,
+        "score": 1.2743,
         "evidence": []
       },
       {
         "term": "lack",
-        "score": 1.0093,
+        "score": 1.0285,
         "evidence": []
       },
       {
         "term": "pinpoint",
-        "score": 0.8439,
+        "score": 0.8494,
         "evidence": []
       },
       {
         "term": "nmras",
-        "score": 0.8084,
+        "score": 0.8147,
         "evidence": []
       }
     ],
     "page-071": [
       {
         "term": "mitigation steps",
-        "score": 0.8449,
+        "score": 0.8727,
         "evidence": []
       },
       {
         "term": "audience",
-        "score": 0.6252,
+        "score": 0.6271,
         "evidence": []
       },
       {
         "term": "training",
-        "score": 0.5437,
+        "score": 0.5722,
         "evidence": []
       },
       {
         "term": "raised",
-        "score": 0.5325,
+        "score": 0.5186,
         "evidence": []
       }
     ]

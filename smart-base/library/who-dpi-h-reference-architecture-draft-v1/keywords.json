@@ -3,81 +3,81 @@
   "entry": "who-dpi-h-reference-architecture-draft-v1",
   "corpus": {
     "library": "smart-base/library",
-    "sections": 839,
-    "terms": 7506,
+    "sections": 973,
+    "terms": 8571,
     "weighting": "log-entropy"
   },
   "document": [
     {
       "term": "dpi-h governance",
-      "score": 73.3139,
+      "score": 75.6888,
       "evidence": [
         "heading"
       ]
     },
     {
       "term": "dpi-h foundational",
-      "score": 71.0827,
+      "score": 72.9999,
       "evidence": [
         "heading"
       ]
     },
     {
       "term": "dpi-h component",
-      "score": 69.9077,
+      "score": 71.3345,
       "evidence": [
         "heading"
       ]
     },
     {
       "term": "dpi-h reference",
-      "score": 69.8072,
+      "score": 70.7553,
       "evidence": [
         "heading"
       ]
     },
     {
-      "term": "foundational registry",
-      "score": 68.3834,
-      "evidence": []
-    },
-    {
       "term": "governance infrastructure",
-      "score": 68.0515,
+      "score": 70.5386,
       "evidence": [
         "heading"
       ]
     },
     {
       "term": "dpi-h architecture",
-      "score": 67.5663,
+      "score": 70.4194,
       "evidence": [
         "heading"
       ]
     },
     {
+      "term": "foundational registry",
+      "score": 70.2195,
+      "evidence": []
+    },
+    {
       "term": "shared infrastructure",
-      "score": 66.1446,
+      "score": 68.6984,
       "evidence": []
     },
     {
       "term": "clinical governance",
-      "score": 62.7525,
+      "score": 63.7912,
       "evidence": []
     },
     {
       "term": "registry record",
-      "score": 60.9859,
+      "score": 62.5125,
       "evidence": []
     },
     {
       "term": "national registry",
-      "score": 59.7446,
+      "score": 61.8733,
       "evidence": []
     },
     {
       "term": "governance capability",
-      "score": 59.6053,
+      "score": 61.7142,
       "evidence": [
         "heading"
       ]
@@ -87,641 +87,643 @@
     "sec-000-111-what-is-a-reference-architecture-and-why-doe": [
       {
         "term": "reference architecture",
-        "score": 1.8461,
+        "score": 1.8923,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "building blocks",
-        "score": 0.9447,
+        "score": 0.9701,
         "evidence": []
       },
       {
         "term": "governable",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "technology-neutral",
-        "score": 0.5861,
+        "score": 0.5884,
         "evidence": []
       },
       {
         "term": "blank",
-        "score": 0.5132,
+        "score": 0.5171,
         "evidence": []
       }
     ],
     "sec-001-112-understanding-digital-public-infrastructure": [
       {
         "term": "public infrastructure",
-        "score": 2.9412,
+        "score": 3.0044,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "dpi",
-        "score": 2.9125,
+        "score": 2.9602,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "foundational dpi",
-        "score": 2.352,
+        "score": 2.4039,
         "evidence": []
       },
       {
         "term": "dpi-h",
-        "score": 2.2015,
+        "score": 2.2532,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "societal scale",
-        "score": 1.3981,
+        "score": 1.4099,
         "evidence": []
       },
       {
         "term": "shared infrastructure",
-        "score": 1.3585,
+        "score": 1.4096,
         "evidence": []
       },
       {
         "term": "nist",
-        "score": 1.2705,
+        "score": 1.273,
         "evidence": []
       },
       {
-        "term": "world bank",
-        "score": 1.1148,
+        "term": "open standards",
+        "score": 1.1414,
         "evidence": []
       }
     ],
     "sec-002-113-building-on-existing-foundations": [
       {
         "term": "foundational dpi",
-        "score": 2.0407,
+        "score": 2.086,
         "evidence": []
       },
       {
         "term": "sector goals",
-        "score": 1.4082,
+        "score": 1.4558,
         "evidence": []
       },
       {
         "term": "possesses some",
-        "score": 1.3225,
+        "score": 1.418,
         "evidence": []
       },
       {
         "term": "reference architecture",
-        "score": 1.1839,
+        "score": 1.2204,
         "evidence": []
       },
       {
         "term": "architecture guidance",
-        "score": 1.1678,
+        "score": 1.2021,
         "evidence": []
       },
       {
         "term": "estonia",
-        "score": 1.1304,
-        "evidence": []
-      },
-      {
-        "term": "seven priority",
-        "score": 1.0681,
+        "score": 1.136,
         "evidence": []
       },
       {
         "term": "openhie architecture",
-        "score": 1.068,
+        "score": 1.116,
+        "evidence": []
+      },
+      {
+        "term": "dpis",
+        "score": 1.0567,
         "evidence": []
       }
     ],
     "sec-003-114-who-can-benefit-from-this-guidance": [
       {
         "term": "broader dpi",
-        "score": 1.4616,
+        "score": 1.487,
         "evidence": []
       },
       {
         "term": "reference architecture",
-        "score": 1.2125,
+        "score": 1.247,
         "evidence": []
       },
       {
         "term": "support multiple",
-        "score": 0.7226,
+        "score": 0.7544,
         "evidence": []
       },
       {
         "term": "highlights",
-        "score": 0.6744,
+        "score": 0.674,
         "evidence": []
       },
       {
         "term": "health-specific",
-        "score": 0.6537,
+        "score": 0.6632,
         "evidence": []
       },
       {
         "term": "coherent",
-        "score": 0.6457,
+        "score": 0.6555,
         "evidence": []
       },
       {
         "term": "scalable",
-        "score": 0.5872,
+        "score": 0.5982,
         "evidence": []
       },
       {
         "term": "investments",
-        "score": 0.573,
+        "score": 0.5905,
         "evidence": []
       }
     ],
     "sec-004-12-why-health-needs-more-than-foundational-dpi": [
       {
         "term": "foundational dpi",
-        "score": 3.9896,
+        "score": 4.0841,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "foundational dpis",
-        "score": 2.4506,
+        "score": 2.4914,
         "evidence": []
       },
       {
         "term": "leverage foundational",
-        "score": 1.5734,
-        "evidence": []
-      },
-      {
-        "term": "middle-income countries",
-        "score": 0.9987,
+        "score": 1.6149,
         "evidence": []
       },
       {
         "term": "sector-specific",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "health-specific components",
-        "score": 0.9312,
+        "score": 0.9528,
+        "evidence": []
+      },
+      {
+        "term": "middle-income countries",
+        "score": 0.9479,
         "evidence": []
       },
       {
         "term": "some cases",
-        "score": 0.7298,
+        "score": 0.8071,
         "evidence": []
       },
       {
         "term": "absent",
-        "score": 0.7275,
+        "score": 0.7355,
         "evidence": []
       }
     ],
     "sec-005-121-identity-dpi-and-identification-in-healthcar": [
       {
         "term": "identity dpi",
-        "score": 5.5281,
+        "score": 5.6327,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "foundational identity",
-        "score": 2.5622,
-        "evidence": []
-      },
-      {
-        "term": "undocumented migrants",
-        "score": 2.165,
+        "score": 2.6268,
         "evidence": []
       },
       {
         "term": "probabilistic matching",
-        "score": 2.1385,
+        "score": 2.1249,
+        "evidence": []
+      },
+      {
+        "term": "undocumented migrants",
+        "score": 2.1213,
+        "evidence": []
+      },
+      {
+        "term": "identity systems",
+        "score": 1.9628,
         "evidence": []
       },
       {
         "term": "national identity",
-        "score": 1.8895,
+        "score": 1.9421,
         "evidence": []
       },
       {
         "term": "clinical matching",
-        "score": 1.7789,
+        "score": 1.7541,
         "evidence": []
       },
       {
         "term": "matching algorithms",
-        "score": 1.6972,
-        "evidence": []
-      },
-      {
-        "term": "duplicate detection",
-        "score": 1.3646,
+        "score": 1.6931,
         "evidence": []
       }
     ],
     "sec-006-122-data-exchange-dpi-and-interoperability-in-th": [
       {
         "term": "exchange dpi",
-        "score": 4.3404,
+        "score": 4.4603,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "sector",
-        "score": 1.1289,
+        "score": 1.1647,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "business logic",
-        "score": 0.9236,
+        "score": 0.951,
         "evidence": []
       },
       {
         "term": "agnostic",
-        "score": 0.8816,
+        "score": 0.8863,
         "evidence": []
       },
       {
         "term": "cross-border",
-        "score": 0.859,
+        "score": 0.8642,
         "evidence": []
       },
       {
         "term": "foundational",
-        "score": 0.7933,
-        "evidence": []
-      },
-      {
-        "term": "reading",
-        "score": 0.6725,
+        "score": 0.8181,
         "evidence": []
       },
       {
         "term": "contents",
-        "score": 0.6718,
+        "score": 0.6719,
+        "evidence": []
+      },
+      {
+        "term": "reading",
+        "score": 0.6625,
         "evidence": []
       }
     ],
     "sec-007-123-payments-dpi-and-financial-transactions-in-t": [
       {
         "term": "payments dpi",
-        "score": 5.3607,
+        "score": 5.4556,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "foundational payments",
-        "score": 2.2577,
+        "score": 2.3121,
         "evidence": []
       },
       {
         "term": "health-specific financing",
-        "score": 1.9319,
+        "score": 1.9737,
         "evidence": []
       },
       {
         "term": "funds once",
-        "score": 1.6571,
+        "score": 1.6791,
         "evidence": []
       },
       {
         "term": "benefit entitlement",
-        "score": 1.6151,
+        "score": 1.6199,
         "evidence": []
       },
       {
         "term": "insurance contributions",
-        "score": 1.5683,
+        "score": 1.5892,
         "evidence": []
       },
       {
         "term": "moving money",
-        "score": 1.3911,
+        "score": 1.4074,
         "evidence": []
       },
       {
         "term": "private insurance",
-        "score": 1.2052,
+        "score": 1.2278,
         "evidence": []
       }
     ],
     "sec-008-13-value-of-dpi-h": [
       {
         "term": "dpi-h",
-        "score": 0.6627,
+        "score": 0.6783,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "dpi",
-        "score": 0.6237,
+        "score": 0.634,
         "evidence": []
       },
       {
-        "term": "nationwide",
-        "score": 0.5325,
+        "term": "philosophy",
+        "score": 0.5974,
         "evidence": []
       }
     ],
     "sec-009-131-the-cost-of-fragmentation": [
       {
         "term": "dominant pattern",
-        "score": 1.6258,
+        "score": 1.6381,
         "evidence": []
       },
       {
         "term": "own patient",
-        "score": 1.1686,
+        "score": 1.1868,
         "evidence": []
       },
       {
         "term": "fragmentation",
-        "score": 1.1582,
+        "score": 1.1677,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "programme-driven",
-        "score": 0.9947,
-        "evidence": []
-      },
-      {
-        "term": "vertical",
-        "score": 0.9542,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "shared infrastructure",
-        "score": 0.9526,
+        "score": 0.9891,
+        "evidence": []
+      },
+      {
+        "term": "vertical",
+        "score": 0.9635,
         "evidence": []
       },
       {
         "term": "work against",
-        "score": 0.9239,
+        "score": 0.9271,
         "evidence": []
       },
       {
         "term": "compounding",
-        "score": 0.8812,
+        "score": 0.8859,
         "evidence": []
       }
     ],
     "sec-010-132-what-dpi-h-makes-possible": [
       {
         "term": "dpi-h",
-        "score": 1.0504,
+        "score": 1.0751,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "innovators",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "lock",
-        "score": 0.58,
+        "score": 0.5825,
         "evidence": []
       },
       {
         "term": "recreating",
-        "score": 0.58,
+        "score": 0.5825,
         "evidence": []
       },
       {
         "term": "switching",
-        "score": 0.58,
+        "score": 0.5589,
         "evidence": []
       }
     ],
     "sec-011-133-value-across-stakeholders": [
       {
         "term": "shared infrastructure",
-        "score": 0.9328,
+        "score": 0.9696,
         "evidence": []
       },
       {
         "term": "benefit",
-        "score": 0.8532,
+        "score": 0.8475,
         "evidence": []
       },
       {
         "term": "across programmes",
-        "score": 0.8007,
+        "score": 0.8366,
         "evidence": []
       },
       {
         "term": "dpi",
-        "score": 0.7871,
+        "score": 0.8,
         "evidence": []
       },
       {
         "term": "dpi-h",
-        "score": 0.7694,
-        "evidence": []
-      },
-      {
-        "term": "gain",
-        "score": 0.6382,
+        "score": 0.7875,
         "evidence": []
       },
       {
         "term": "visibility",
-        "score": 0.5758,
+        "score": 0.5871,
+        "evidence": []
+      },
+      {
+        "term": "gain",
+        "score": 0.5864,
         "evidence": []
       },
       {
         "term": "ministries",
-        "score": 0.5563,
+        "score": 0.5631,
         "evidence": []
       }
     ],
     "sec-012-14-dpi-h-principles": [
       {
         "term": "dpi-h",
-        "score": 2.4523,
+        "score": 2.51,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "principles",
-        "score": 1.563,
+        "score": 1.5741,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "public governance",
-        "score": 1.3082,
+        "score": 1.3435,
         "evidence": []
       },
       {
         "term": "governance structures",
-        "score": 1.2039,
+        "score": 1.2497,
         "evidence": []
       },
       {
         "term": "open standards",
-        "score": 1.1973,
+        "score": 1.2395,
         "evidence": []
       },
       {
         "term": "operated",
-        "score": 0.7993,
+        "score": 0.8057,
         "evidence": []
       },
       {
         "term": "built",
-        "score": 0.7692,
+        "score": 0.7873,
         "evidence": []
       },
       {
         "term": "reference architecture",
-        "score": 0.7353,
+        "score": 0.7583,
         "evidence": []
       }
     ],
     "sec-013-15-the-seven-priority-health-sector-goals": [
       {
         "term": "seven",
-        "score": 1.1311,
+        "score": 1.1615,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "captured once",
-        "score": 1.108,
+        "score": 1.1291,
         "evidence": []
       },
       {
         "term": "goals",
-        "score": 1.0189,
+        "score": 1.0567,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "building blocks",
-        "score": 0.9447,
-        "evidence": []
-      },
-      {
-        "term": "principle",
-        "score": 0.796,
+        "score": 0.9701,
         "evidence": []
       },
       {
         "term": "directed",
-        "score": 0.7876,
+        "score": 0.7943,
+        "evidence": []
+      },
+      {
+        "term": "principle",
+        "score": 0.7924,
         "evidence": []
       },
       {
         "term": "same",
-        "score": 0.6672,
+        "score": 0.6571,
         "evidence": []
       },
       {
         "term": "verified",
-        "score": 0.6342,
+        "score": 0.6442,
         "evidence": []
       }
     ],
     "sec-014-151-the-health-sector-goals": [
       {
-        "term": "goal",
-        "score": 1.1674,
-        "evidence": []
+        "term": "goals",
+        "score": 1.1764,
+        "evidence": [
+          "heading"
+        ]
       },
       {
         "term": "reference architecture",
-        "score": 1.0067,
+        "score": 1.0411,
         "evidence": []
       },
       {
         "term": "climate",
-        "score": 0.835,
+        "score": 0.8406,
         "evidence": []
       },
       {
         "term": "across programmes",
-        "score": 0.7531,
+        "score": 0.7886,
         "evidence": []
       },
       {
         "term": "computable",
-        "score": 0.7238,
+        "score": 0.7318,
         "evidence": []
       },
       {
         "term": "verifiable",
-        "score": 0.7118,
+        "score": 0.7202,
         "evidence": []
       },
       {
         "term": "countries",
-        "score": 0.6983,
+        "score": 0.7088,
         "evidence": []
       },
       {
         "term": "workforce",
-        "score": 0.6696,
+        "score": 0.6825,
         "evidence": []
       }
     ],
     "sec-015-21-the-reference-architecture-scope": [
       {
         "term": "point-of-service applications",
-        "score": 1.1331,
+        "score": 1.167,
         "evidence": []
       },
       {
         "term": "architecture",
-        "score": 0.7695,
+        "score": 0.8223,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "shared infrastructure",
-        "score": 0.7299,
+        "term": "open group",
+        "score": 0.7773,
         "evidence": []
       },
       {
-        "term": "open group",
-        "score": 0.7086,
+        "term": "shared infrastructure",
+        "score": 0.7586,
         "evidence": []
       },
       {
         "term": "dpi-h",
-        "score": 0.6627,
+        "score": 0.6783,
         "evidence": []
       },
       {
         "term": "scope",
-        "score": 0.5418,
+        "score": 0.5416,
         "evidence": [
           "heading"
         ]
@@ -730,254 +732,254 @@
     "sec-017-212-business-services-layer": [
       {
         "term": "layer",
-        "score": 1.6428,
+        "score": 1.697,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "metadata registries",
-        "score": 1.1852,
+        "score": 1.2132,
         "evidence": []
       },
       {
         "term": "shared components",
-        "score": 1.1011,
+        "score": 1.1512,
         "evidence": []
       },
       {
         "term": "foundational components",
-        "score": 1.0905,
+        "score": 1.131,
         "evidence": []
       },
       {
         "term": "clinical care",
-        "score": 1.0214,
+        "score": 1.0434,
         "evidence": []
       },
       {
         "term": "business",
-        "score": 0.9783,
+        "score": 1.0169,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "supplier",
-        "score": 0.8855,
+        "score": 0.8901,
         "evidence": []
       },
       {
         "term": "business service",
-        "score": 0.8478,
+        "score": 0.8782,
         "evidence": []
       }
     ],
     "sec-018-213-relationship-to-foundational-dpi": [
       {
         "term": "foundational dpi",
-        "score": 2.7044,
+        "score": 2.7656,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "dpi-h",
-        "score": 0.6627,
+        "score": 0.6783,
         "evidence": []
       },
       {
         "term": "relationship",
-        "score": 0.6518,
+        "score": 0.6467,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "redefine",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
-        "term": "nor",
-        "score": 0.5504,
+        "term": "resilient",
+        "score": 0.5079,
         "evidence": []
       }
     ],
     "sec-019-221-what-reddhi-is-and-its-foundational-core": [
       {
         "term": "slate",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "weakens",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "donor-funded",
-        "score": 0.5504,
+        "score": 0.5535,
         "evidence": []
       }
     ],
     "sec-020-22-resilient-essential-data-and-digital-health-i": [
       {
         "term": "reddhi",
-        "score": 2.2362,
+        "score": 2.2574,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "client registry",
-        "score": 1.6604,
+        "score": 1.6971,
         "evidence": []
       },
       {
         "term": "workforce registries",
-        "score": 1.625,
+        "score": 1.6665,
         "evidence": []
       },
       {
         "term": "foundational capabilities",
-        "score": 1.4886,
+        "score": 1.5433,
         "evidence": []
       },
       {
         "term": "maturity grows",
-        "score": 1.3439,
+        "score": 1.3662,
         "evidence": []
       },
       {
         "term": "terminology service",
-        "score": 1.0799,
+        "score": 1.1109,
         "evidence": []
       },
       {
         "term": "infrastructure",
-        "score": 1.0139,
+        "score": 1.0447,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "starting point",
-        "score": 1.0051,
+        "score": 1.0266,
         "evidence": []
       }
     ],
     "sec-021-222-the-enabling-conditions-for-reddhi": [
       {
         "term": "reddhi",
-        "score": 2.4895,
+        "score": 2.5131,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "consent infrastructure",
-        "score": 2.451,
+        "score": 2.4972,
         "evidence": []
       },
       {
         "term": "means designing",
-        "score": 2.3018,
+        "score": 2.347,
         "evidence": []
       },
       {
         "term": "architectural choices",
-        "score": 2.2714,
-        "evidence": []
-      },
-      {
-        "term": "design principle",
-        "score": 2.2566,
+        "score": 2.2922,
         "evidence": []
       },
       {
         "term": "open architectures",
-        "score": 2.1907,
-        "evidence": []
-      },
-      {
-        "term": "individual consent",
-        "score": 2.1805,
+        "score": 2.2449,
         "evidence": []
       },
       {
         "term": "governance arrangements",
-        "score": 2.1577,
+        "score": 2.2157,
+        "evidence": []
+      },
+      {
+        "term": "individual consent",
+        "score": 2.2108,
+        "evidence": []
+      },
+      {
+        "term": "architectural decisions",
+        "score": 2.1786,
         "evidence": []
       }
     ],
     "sec-022-24-methodology-mapping-health-goals-to-dpi-h": [
       {
+        "term": "shared infrastructure",
+        "score": 1.278,
+        "evidence": []
+      },
+      {
         "term": "goals",
-        "score": 1.2319,
+        "score": 1.2776,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "shared infrastructure",
-        "score": 1.2308,
-        "evidence": []
-      },
-      {
         "term": "shared components",
-        "score": 1.1816,
+        "score": 1.2352,
         "evidence": []
       },
       {
         "term": "dpi-h components",
-        "score": 1.131,
+        "score": 1.1696,
         "evidence": []
       },
       {
         "term": "foundational components",
-        "score": 1.0537,
+        "score": 1.094,
         "evidence": []
       },
       {
         "term": "mapping",
-        "score": 0.9031,
+        "score": 0.9172,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "convergence",
-        "score": 0.8902,
+        "score": 0.8947,
         "evidence": []
       },
       {
         "term": "begins",
-        "score": 0.6762,
+        "score": 0.6853,
         "evidence": []
       }
     ],
     "sec-023-241-how-each-health-goal-is-articulated": [
       {
         "term": "goal",
-        "score": 1.1674,
+        "score": 1.1756,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "seven priority",
-        "score": 1.0681,
+        "score": 1.0463,
         "evidence": []
       },
       {
         "term": "same structure",
-        "score": 0.9316,
+        "score": 0.944,
         "evidence": []
       },
       {
         "term": "articulated",
-        "score": 0.8108,
+        "score": 0.8231,
         "evidence": [
           "heading"
         ]
@@ -986,1596 +988,1598 @@
     "sec-024-242-worked-example-advance-efficient-and-equitab": [
       {
         "term": "financing",
-        "score": 1.8298,
+        "score": 1.885,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "benefits package",
-        "score": 1.5469,
-        "evidence": []
-      },
-      {
         "term": "client registry",
-        "score": 1.5092,
+        "score": 1.5429,
         "evidence": []
       },
       {
         "term": "covered services",
-        "score": 1.4894,
+        "score": 1.5243,
+        "evidence": []
+      },
+      {
+        "term": "benefits package",
+        "score": 1.45,
+        "evidence": []
+      },
+      {
+        "term": "product registry",
+        "score": 1.444,
         "evidence": []
       },
       {
         "term": "worked",
-        "score": 1.4329,
+        "score": 1.4325,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "product registry",
-        "score": 1.4043,
-        "evidence": []
-      },
-      {
         "term": "reference architecture",
-        "score": 1.3462,
+        "score": 1.39,
         "evidence": []
       },
       {
         "term": "shared infrastructure",
-        "score": 1.3189,
+        "score": 1.3703,
         "evidence": []
       }
     ],
     "sec-025-31-the-architecture-description-approach": [
       {
-        "term": "navigable views",
-        "score": 2.9969,
+        "term": "reads writes",
+        "score": 2.8989,
         "evidence": []
       },
       {
-        "term": "reads writes",
-        "score": 2.8918,
+        "term": "navigable views",
+        "score": 2.7074,
         "evidence": []
       },
       {
         "term": "element types",
-        "score": 2.4054,
+        "score": 2.4203,
         "evidence": []
       },
       {
         "term": "component accesses",
-        "score": 2.3738,
+        "score": 2.4047,
         "evidence": []
       },
       {
         "term": "application component",
-        "score": 2.146,
+        "score": 2.2107,
         "evidence": []
       },
       {
         "term": "typed relationships",
-        "score": 1.9338,
+        "score": 1.953,
         "evidence": []
       },
       {
         "term": "product bundles",
-        "score": 1.8775,
+        "score": 1.9069,
         "evidence": []
       },
       {
-        "term": "reader concerned",
-        "score": 1.8654,
+        "term": "archimate",
+        "score": 1.8513,
         "evidence": []
       }
     ],
     "sec-026-33-the-reference-architecture-in-practice": [
       {
         "term": "layered view",
-        "score": 2.8567,
+        "score": 2.8196,
         "evidence": []
       },
       {
         "term": "suits readers",
-        "score": 2.4851,
-        "evidence": []
-      },
-      {
-        "term": "simplified view",
-        "score": 2.3576,
-        "evidence": []
-      },
-      {
-        "term": "cross-cutting enablers",
-        "score": 2.2856,
+        "score": 2.4961,
         "evidence": []
       },
       {
         "term": "reference architecture",
-        "score": 2.2842,
+        "score": 2.3605,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "trusted personal",
-        "score": 1.489,
+        "term": "simplified view",
+        "score": 2.3086,
+        "evidence": []
+      },
+      {
+        "term": "cross-cutting enablers",
+        "score": 2.2589,
         "evidence": []
       },
       {
         "term": "foundational components",
-        "score": 1.4774,
+        "score": 1.532,
+        "evidence": []
+      },
+      {
+        "term": "trusted personal",
+        "score": 1.4966,
         "evidence": []
       },
       {
         "term": "point-of-care clinical",
-        "score": 1.4709,
+        "score": 1.4731,
         "evidence": []
       }
     ],
     "sec-028-341-purpose-and-framing": [
       {
         "term": "shared infrastructure",
-        "score": 0.9526,
+        "score": 0.9891,
         "evidence": []
       },
       {
         "term": "arrangements",
-        "score": 0.8193,
+        "score": 0.8315,
         "evidence": []
       },
       {
         "term": "tend",
-        "score": 0.7652,
+        "score": 0.7742,
         "evidence": []
       },
       {
         "term": "distinct",
-        "score": 0.5613,
+        "score": 0.5671,
         "evidence": []
       },
       {
         "term": "coordination",
-        "score": 0.4363,
+        "score": 0.4481,
         "evidence": []
       },
       {
         "term": "governance",
-        "score": 0.368,
+        "score": 0.3837,
         "evidence": []
       }
     ],
     "sec-029-342-governance-principles": [
       {
         "term": "governance",
-        "score": 0.9287,
+        "score": 0.9684,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "principles",
-        "score": 0.8258,
+        "score": 0.8316,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "bodies",
-        "score": 0.571,
-        "evidence": []
-      },
-      {
         "term": "separation",
-        "score": 0.5652,
+        "score": 0.568,
         "evidence": []
       },
       {
-        "term": "prescriptive",
-        "score": 0.5504,
+        "term": "bodies",
+        "score": 0.5606,
+        "evidence": []
+      },
+      {
+        "term": "dpi-h",
+        "score": 0.5375,
         "evidence": []
       }
     ],
     "sec-030-343-strategic-governance": [
       {
         "term": "strategic governance",
-        "score": 3.5282,
+        "score": 3.662,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "governance bodies",
-        "score": 1.8227,
+        "score": 1.8497,
         "evidence": []
       },
       {
         "term": "governance structures",
-        "score": 1.5383,
+        "score": 1.5985,
         "evidence": []
       },
       {
         "term": "shared infrastructure",
-        "score": 1.4396,
+        "score": 1.4938,
         "evidence": []
       },
       {
         "term": "contribution requirements",
-        "score": 1.4191,
-        "evidence": []
-      },
-      {
-        "term": "financial continuity",
-        "score": 1.1706,
+        "score": 1.4022,
         "evidence": []
       },
       {
         "term": "shared capacity",
-        "score": 1.17,
+        "score": 1.2249,
+        "evidence": []
+      },
+      {
+        "term": "financial continuity",
+        "score": 1.1921,
         "evidence": []
       },
       {
         "term": "establish usage",
-        "score": 1.1515,
+        "score": 1.1823,
         "evidence": []
       }
     ],
     "sec-031-344-operational-governance": [
       {
         "term": "operational governance",
-        "score": 3.0753,
+        "score": 3.1983,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "operational authority",
-        "score": 1.4245,
-        "evidence": []
-      },
-      {
-        "term": "escalation",
-        "score": 1.2772,
+        "score": 1.4758,
         "evidence": []
       },
       {
         "term": "strategic governance",
-        "score": 1.2545,
+        "score": 1.3025,
+        "evidence": []
+      },
+      {
+        "term": "escalation",
+        "score": 1.2844,
         "evidence": []
       },
       {
         "term": "incidents",
-        "score": 0.8812,
+        "score": 0.8859,
         "evidence": []
       },
       {
         "term": "resolved",
-        "score": 0.7497,
+        "score": 0.7572,
         "evidence": []
       },
       {
         "term": "semantic",
-        "score": 0.6929,
+        "score": 0.7078,
         "evidence": []
       },
       {
-        "term": "versions",
-        "score": 0.6639,
+        "term": "infrastructure",
+        "score": 0.6749,
         "evidence": []
       }
     ],
     "sec-032-345-semantic-governance-infrastructure": [
       {
         "term": "semantic governance",
-        "score": 3.999,
+        "score": 4.132,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "sgi capability",
-        "score": 3.6315,
+        "score": 3.6617,
         "evidence": []
       },
       {
         "term": "governance infrastructure",
-        "score": 3.2218,
+        "score": 3.347,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "runtime terminology",
-        "score": 2.9598,
-        "evidence": []
-      },
-      {
-        "term": "runtime services",
-        "score": 2.18,
+        "score": 3.0035,
         "evidence": []
       },
       {
         "term": "metadata registry",
-        "score": 2.1785,
+        "score": 2.2212,
+        "evidence": []
+      },
+      {
+        "term": "runtime services",
+        "score": 2.2199,
         "evidence": []
       },
       {
         "term": "openhie terminology",
-        "score": 2.0281,
+        "score": 2.0789,
         "evidence": []
       },
       {
         "term": "metadata registries",
-        "score": 1.967,
+        "score": 2.0113,
         "evidence": []
       }
     ],
     "sec-033-346-regional-governance-considerations": [
       {
         "term": "regional",
-        "score": 1.8524,
+        "score": 1.8335,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "governance body",
-        "score": 1.7706,
+        "score": 1.8123,
         "evidence": []
       },
       {
         "term": "regional deployments",
-        "score": 1.4915,
+        "score": 1.4936,
         "evidence": []
       },
       {
         "term": "regional strategic",
-        "score": 1.4448,
-        "evidence": []
-      },
-      {
-        "term": "country-specific components",
-        "score": 1.3389,
+        "score": 1.4518,
         "evidence": []
       },
       {
         "term": "governance addresses",
-        "score": 1.3381,
+        "score": 1.3748,
+        "evidence": []
+      },
+      {
+        "term": "country-specific components",
+        "score": 1.3663,
         "evidence": []
       },
       {
         "term": "layered",
-        "score": 0.8324,
+        "score": 0.8381,
         "evidence": []
       },
       {
         "term": "obligations",
-        "score": 0.7701,
+        "score": 0.7772,
         "evidence": []
       }
     ],
     "sec-034-347-governance-maturity-considerations": [
       {
         "term": "governance",
-        "score": 1.3036,
+        "score": 1.3593,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "maturity",
-        "score": 0.8225,
+        "score": 0.8485,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "institutional",
-        "score": 0.6869,
+        "score": 0.6903,
         "evidence": []
       },
       {
         "term": "bodies",
-        "score": 0.571,
+        "score": 0.5606,
         "evidence": []
       },
       {
         "term": "dpi-h",
-        "score": 0.5252,
+        "score": 0.5375,
         "evidence": []
       },
       {
         "term": "applicable",
-        "score": 0.5029,
+        "score": 0.531,
         "evidence": []
       }
     ],
     "sec-035-35-dpi-h-application-components": [
       {
         "term": "components",
-        "score": 0.5551,
+        "score": 0.5792,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "introduces",
-        "score": 0.4524,
+        "score": 0.4576,
         "evidence": []
       },
       {
         "term": "appendix",
-        "score": 0.4518,
+        "score": 0.457,
         "evidence": []
       }
     ],
     "sec-036-351-what-distinguishes-a-dpi-h-application-compo": [
       {
         "term": "dpi-h component",
-        "score": 3.9768,
+        "score": 4.0577,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "dpi-h application",
-        "score": 3.1883,
+        "score": 3.2887,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "orchestrates national-level",
-        "score": 1.5785,
-        "evidence": []
-      },
-      {
-        "term": "vendor controls",
-        "score": 1.5103,
+        "score": 1.5918,
         "evidence": []
       },
       {
         "term": "expose stable",
-        "score": 1.5015,
+        "score": 1.5275,
+        "evidence": []
+      },
+      {
+        "term": "vendor controls",
+        "score": 1.5113,
         "evidence": []
       },
       {
         "term": "core function",
-        "score": 1.4889,
+        "score": 1.4964,
         "evidence": []
       },
       {
         "term": "point-of-care workflow",
-        "score": 1.36,
+        "score": 1.3842,
         "evidence": []
       },
       {
         "term": "governed across",
-        "score": 1.2834,
+        "score": 1.3279,
         "evidence": []
       }
     ],
     "sec-037-352-how-each-component-is-described": [
       {
         "term": "component",
-        "score": 0.8877,
+        "score": 0.9022,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "appendix",
-        "score": 0.7161,
+        "score": 0.7243,
         "evidence": []
       },
       {
-        "term": "referencing",
-        "score": 0.5259,
+        "term": "dpis",
+        "score": 0.5284,
         "evidence": []
       }
     ],
     "sec-038-353-how-the-components-are-organised": [
       {
         "term": "organised",
-        "score": 0.851,
+        "score": 0.8626,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "public infrastructure",
-        "score": 0.6743,
+        "score": 0.6885,
         "evidence": []
       },
       {
         "term": "reference architecture",
-        "score": 0.6665,
+        "score": 0.6848,
         "evidence": []
       }
     ],
     "sec-039-3531-the-foundational-shared-data-layer": [
       {
         "term": "blood pressure",
-        "score": 4.2522,
+        "score": 3.8862,
         "evidence": []
       },
       {
         "term": "pressure method",
-        "score": 3.6914,
+        "score": 3.599,
         "evidence": []
       },
       {
         "term": "systolic blood",
-        "score": 3.5021,
+        "score": 3.2479,
         "evidence": []
       },
       {
         "term": "pressure observation",
-        "score": 3.1844,
+        "score": 3.082,
         "evidence": []
       },
       {
         "term": "pressure reading",
-        "score": 3.0436,
+        "score": 2.9266,
         "evidence": []
       },
       {
         "term": "pressure model",
-        "score": 2.9593,
+        "score": 2.9219,
         "evidence": []
       },
       {
         "term": "measurement method",
-        "score": 2.8336,
+        "score": 2.88,
         "evidence": []
       },
       {
         "term": "method value",
-        "score": 2.7381,
+        "score": 2.7498,
         "evidence": []
       }
     ],
     "sec-040-3532-the-business-services-layer": [
       {
         "term": "services layer",
-        "score": 1.9333,
+        "score": 2.0188,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "business services",
-        "score": 1.496,
+        "score": 1.5735,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "computable decision",
-        "score": 1.3675,
+        "score": 1.3684,
         "evidence": []
       },
       {
         "term": "reusable across",
-        "score": 1.033,
+        "score": 1.0707,
         "evidence": []
       },
       {
         "term": "support engine",
-        "score": 0.9146,
+        "score": 0.9406,
         "evidence": []
       },
       {
         "term": "dpi-h application",
-        "score": 0.8277,
+        "score": 0.855,
         "evidence": []
       },
       {
         "term": "application components",
-        "score": 0.7091,
+        "score": 0.7417,
         "evidence": []
       },
       {
         "term": "lifelong",
-        "score": 0.6717,
+        "score": 0.673,
         "evidence": []
       }
     ],
     "sec-041-36-interoperability-architecture-within-dpi-h": [
       {
         "term": "agreed exchange",
-        "score": 1.1594,
+        "score": 1.1741,
         "evidence": []
       },
       {
         "term": "interoperability",
-        "score": 0.796,
+        "score": 0.8482,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "organisational",
-        "score": 0.7562,
+        "score": 0.7636,
         "evidence": []
       },
       {
         "term": "dimensions",
-        "score": 0.6554,
+        "score": 0.6649,
         "evidence": []
       },
       {
         "term": "structural",
-        "score": 0.6482,
+        "score": 0.6579,
         "evidence": []
       },
       {
         "term": "transport",
-        "score": 0.5961,
+        "score": 0.5885,
         "evidence": []
       },
       {
         "term": "semantic",
-        "score": 0.5491,
+        "score": 0.5609,
         "evidence": []
       },
       {
         "term": "receiving",
-        "score": 0.4537,
+        "score": 0.4592,
         "evidence": []
       }
     ],
     "sec-042-361-interoperability-as-a-capability-not-just-a": [
       {
         "term": "central bus",
-        "score": 2.1034,
+        "score": 2.1231,
         "evidence": []
       },
       {
         "term": "capability",
-        "score": 1.4676,
+        "score": 1.5053,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "single point",
-        "score": 1.2913,
+        "score": 1.3288,
         "evidence": []
       },
       {
         "term": "interoperability",
-        "score": 1.229,
+        "score": 1.3096,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "mediation",
-        "score": 1.2064,
+        "score": 1.219,
         "evidence": []
       },
       {
         "term": "interoperability layer",
-        "score": 1.0485,
+        "score": 1.1031,
         "evidence": []
       },
       {
         "term": "orchestrating",
-        "score": 0.9289,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "endpoints",
-        "score": 0.8994,
+        "score": 0.9037,
         "evidence": []
       }
     ],
     "sec-043-362-data-and-health-content-standards": [
       {
         "term": "meaning",
-        "score": 1.2392,
+        "score": 1.2598,
         "evidence": []
       },
       {
         "term": "standards",
-        "score": 0.9014,
+        "score": 0.9382,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "governed",
-        "score": 0.872,
+        "score": 0.8918,
+        "evidence": []
+      },
+      {
+        "term": "information models",
+        "score": 0.8225,
         "evidence": []
       },
       {
         "term": "structure",
-        "score": 0.7838,
+        "score": 0.8117,
         "evidence": []
       },
       {
         "term": "representation",
-        "score": 0.7204,
-        "evidence": []
-      },
-      {
-        "term": "unable",
-        "score": 0.712,
+        "score": 0.728,
         "evidence": []
       },
       {
         "term": "governs",
-        "score": 0.7078,
+        "score": 0.7162,
         "evidence": []
       },
       {
-        "term": "snomed",
-        "score": 0.6829,
+        "term": "unable",
+        "score": 0.693,
         "evidence": []
       }
     ],
     "sec-044-363-interoperability-between-dpi-h-and-foundatio": [
       {
         "term": "dpi",
-        "score": 2.2096,
+        "score": 2.2458,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "exchange dpi",
-        "score": 2.0371,
+        "score": 2.0969,
         "evidence": []
       },
       {
         "term": "publish subscribe",
-        "score": 2.0363,
-        "evidence": []
-      },
-      {
-        "term": "participating organisation",
-        "score": 1.9488,
+        "score": 2.0608,
         "evidence": []
       },
       {
         "term": "distributed exchange",
-        "score": 1.9059,
+        "score": 1.9429,
+        "evidence": []
+      },
+      {
+        "term": "participating organisation",
+        "score": 1.9174,
         "evidence": []
       },
       {
         "term": "allows endpoints",
-        "score": 1.8911,
+        "score": 1.9054,
         "evidence": []
       },
       {
         "term": "bilateral connections",
-        "score": 1.8544,
+        "score": 1.8728,
         "evidence": []
       },
       {
         "term": "exchange patterns",
-        "score": 1.7427,
+        "score": 1.8015,
         "evidence": []
       }
     ],
     "sec-045-364-cross-border-health-data-flows": [
       {
         "term": "cross-border",
-        "score": 3.252,
+        "score": 3.2715,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "cross-border exchange",
-        "score": 2.3098,
+        "score": 2.3501,
         "evidence": []
       },
       {
         "term": "federated exchange",
-        "score": 1.4474,
+        "score": 1.4852,
         "evidence": []
       },
       {
         "term": "certification network",
-        "score": 1.2478,
+        "score": 1.2619,
         "evidence": []
       },
       {
         "term": "patient summary",
-        "score": 1.1022,
+        "score": 1.1675,
         "evidence": []
       },
       {
         "term": "trust",
-        "score": 1.075,
+        "score": 1.0904,
         "evidence": []
       },
       {
         "term": "european",
-        "score": 1.0569,
+        "score": 1.0688,
         "evidence": []
       },
       {
         "term": "clinical content",
-        "score": 1.0209,
+        "score": 1.0306,
         "evidence": []
       }
     ],
     "sec-046-365-conformance": [
       {
         "term": "conformance",
-        "score": 1.6704,
+        "score": 1.7037,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "information-model",
-        "score": 0.5504,
+        "score": 0.5535,
         "evidence": []
       },
       {
-        "term": "behaviours",
-        "score": 0.4182,
+        "term": "testing",
+        "score": 0.4126,
         "evidence": []
       }
     ],
     "sec-047-371-purpose": [
       {
         "term": "reference architecture",
-        "score": 1.2527,
+        "score": 1.2939,
         "evidence": []
       },
       {
         "term": "realise",
-        "score": 0.769,
+        "score": 0.7761,
         "evidence": []
       },
       {
         "term": "conformance",
-        "score": 0.7194,
+        "score": 0.7337,
         "evidence": []
       },
       {
         "term": "assessed",
-        "score": 0.5532,
+        "score": 0.5543,
         "evidence": []
       },
       {
         "term": "elements",
-        "score": 0.514,
+        "score": 0.5233,
         "evidence": []
       },
       {
         "term": "tested",
-        "score": 0.4929,
+        "score": 0.5108,
         "evidence": []
       },
       {
         "term": "relationships",
-        "score": 0.4794,
+        "score": 0.4869,
         "evidence": []
       }
     ],
     "sec-048-372-the-model": [
       {
         "term": "opposite actor",
-        "score": 3.1066,
+        "score": 3.1351,
         "evidence": []
       },
       {
         "term": "actor role",
-        "score": 2.9641,
+        "score": 3.0062,
         "evidence": []
       },
       {
         "term": "application interaction",
-        "score": 2.7461,
+        "score": 2.7845,
         "evidence": []
       },
       {
         "term": "element types",
-        "score": 2.1145,
-        "evidence": []
-      },
-      {
-        "term": "offered required",
-        "score": 2.1016,
+        "score": 2.1275,
         "evidence": []
       },
       {
         "term": "optional service",
-        "score": 2.0375,
-        "evidence": []
-      },
-      {
-        "term": "mandatory service",
-        "score": 2.0201,
+        "score": 2.0769,
         "evidence": []
       },
       {
         "term": "application behaviour",
-        "score": 2.018,
+        "score": 2.0605,
+        "evidence": []
+      },
+      {
+        "term": "mandatory service",
+        "score": 2.0599,
+        "evidence": []
+      },
+      {
+        "term": "offered required",
+        "score": 2.0383,
         "evidence": []
       }
     ],
     "sec-049-373-alignment-with-ihe-profiles": [
       {
         "term": "ihe",
-        "score": 2.4984,
+        "score": 2.5342,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "correspondence",
-        "score": 0.9888,
+        "term": "transaction",
+        "score": 0.997,
         "evidence": []
       },
       {
-        "term": "transaction",
-        "score": 0.9835,
+        "term": "correspondence",
+        "score": 0.9912,
         "evidence": []
       },
       {
         "term": "interaction",
-        "score": 0.6534,
+        "score": 0.6512,
         "evidence": []
       },
       {
         "term": "accommodated",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       }
     ],
     "sec-050-374-planning-testing-from-the-architecture": [
       {
         "term": "testing",
-        "score": 1.4159,
+        "score": 1.4615,
+        "evidence": [
+          "heading"
+        ]
+      },
+      {
+        "term": "architecture",
+        "score": 1.0624,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "interaction",
-        "score": 1.0657,
+        "score": 1.062,
         "evidence": []
       },
       {
         "term": "simulators",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
-      },
-      {
-        "term": "architecture",
-        "score": 0.9943,
-        "evidence": [
-          "heading"
-        ]
       },
       {
         "term": "conformance",
-        "score": 0.9298,
-        "evidence": []
-      },
-      {
-        "term": "side",
-        "score": 0.8918,
+        "score": 0.9484,
         "evidence": []
       },
       {
         "term": "actor",
-        "score": 0.8824,
+        "score": 0.8933,
+        "evidence": []
+      },
+      {
+        "term": "side",
+        "score": 0.8729,
         "evidence": []
       },
       {
         "term": "component",
-        "score": 0.8401,
+        "score": 0.8539,
         "evidence": []
       }
     ],
     "sec-051-375-validating-goals-and-adoption": [
       {
         "term": "element realises",
-        "score": 2.8676,
+        "score": 2.883,
         "evidence": []
       },
       {
         "term": "reference element",
-        "score": 2.4467,
-        "evidence": []
-      },
-      {
-        "term": "realisation relationship",
-        "score": 2.0955,
+        "score": 2.4545,
         "evidence": []
       },
       {
         "term": "country element",
-        "score": 2.0885,
+        "score": 2.1211,
+        "evidence": []
+      },
+      {
+        "term": "realisation relationship",
+        "score": 2.0979,
         "evidence": []
       },
       {
         "term": "verdict",
-        "score": 1.4898,
-        "evidence": []
-      },
-      {
-        "term": "criterion",
-        "score": 1.319,
+        "score": 1.4924,
         "evidence": []
       },
       {
         "term": "adoption",
-        "score": 1.2622,
+        "score": 1.2783,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "correspondence",
-        "score": 1.2477,
+        "term": "criterion",
+        "score": 1.2776,
+        "evidence": []
+      },
+      {
+        "term": "country architecture",
+        "score": 1.2753,
         "evidence": []
       }
     ],
     "sec-052-376-constructs-and-their-counterparts": [
       {
         "term": "opposite actor",
-        "score": 2.7504,
+        "score": 2.7745,
         "evidence": []
       },
       {
         "term": "actor role",
-        "score": 2.2967,
+        "score": 2.3285,
         "evidence": []
       },
       {
         "term": "realisation",
-        "score": 1.4438,
+        "score": 1.4513,
         "evidence": []
       },
       {
         "term": "application service",
-        "score": 1.2288,
+        "score": 1.279,
         "evidence": []
       },
       {
         "term": "transaction",
-        "score": 1.1891,
+        "score": 1.2054,
         "evidence": []
       },
       {
         "term": "simulator",
-        "score": 1.178,
+        "score": 1.1825,
         "evidence": []
       },
       {
         "term": "constructs",
-        "score": 1.0549,
+        "score": 1.062,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "initiator",
-        "score": 1.001,
+        "score": 1.0031,
         "evidence": []
       }
     ],
     "sec-054-411-no-country-starts-from-zero": [
       {
         "term": "legacy",
-        "score": 0.676,
+        "score": 0.6851,
         "evidence": []
       },
       {
         "term": "maturing",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "slate",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "favour",
-        "score": 0.58,
+        "score": 0.5658,
         "evidence": []
       },
       {
-        "term": "upgraded",
-        "score": 0.58,
+        "term": "destination",
+        "score": 0.5535,
         "evidence": []
       }
     ],
     "sec-055-412-assessing-where-you-are": [
       {
         "term": "high-value",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "open standards",
-        "score": 0.7077,
+        "score": 0.7324,
         "evidence": []
       },
       {
         "term": "institutional",
-        "score": 0.5443,
+        "score": 0.547,
         "evidence": []
       },
       {
         "term": "cases",
-        "score": 0.5272,
-        "evidence": []
-      },
-      {
-        "term": "roadmap",
-        "score": 0.5114,
+        "score": 0.5331,
         "evidence": []
       },
       {
         "term": "goals",
-        "score": 0.5095,
+        "score": 0.5283,
+        "evidence": []
+      },
+      {
+        "term": "roadmap",
+        "score": 0.5241,
         "evidence": []
       },
       {
         "term": "exists",
-        "score": 0.5028,
+        "score": 0.5118,
         "evidence": []
       },
       {
         "term": "priority",
-        "score": 0.5026,
+        "score": 0.4656,
         "evidence": []
       }
     ],
     "sec-057-421-different-entry-points-toward-reddhi": [
       {
         "term": "entry",
-        "score": 1.971,
+        "score": 2.0112,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "entry point",
-        "score": 1.6544,
-        "evidence": []
-      },
-      {
-        "term": "priority here",
-        "score": 1.5328,
+        "score": 1.6974,
         "evidence": []
       },
       {
         "term": "reddhi",
-        "score": 1.5265,
+        "score": 1.5409,
         "evidence": [
           "heading"
         ]
       },
       {
+        "term": "priority here",
+        "score": 1.496,
+        "evidence": []
+      },
+      {
         "term": "shared infrastructure",
-        "score": 1.3929,
+        "score": 1.446,
         "evidence": []
       },
       {
         "term": "toward",
-        "score": 1.2132,
+        "score": 1.2344,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "foundational dpi",
-        "score": 1.1889,
+        "score": 1.2168,
         "evidence": []
       },
       {
-        "term": "deepening",
-        "score": 0.9947,
+        "term": "existing systems",
+        "score": 1.0319,
         "evidence": []
       }
     ],
     "sec-058-422-a-phased-implementation-approach": [
       {
-        "term": "phase",
-        "score": 1.2723,
+        "term": "shared infrastructure",
+        "score": 1.2993,
         "evidence": []
       },
       {
-        "term": "shared infrastructure",
-        "score": 1.2505,
+        "term": "phase",
+        "score": 1.2937,
         "evidence": []
       },
       {
         "term": "shared foundation",
-        "score": 1.2136,
+        "score": 1.252,
+        "evidence": []
+      },
+      {
+        "term": "foundational shared",
+        "score": 1.2506,
         "evidence": []
       },
       {
         "term": "phased",
-        "score": 1.2132,
+        "score": 1.2192,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "foundational shared",
-        "score": 1.2027,
-        "evidence": []
-      },
-      {
         "term": "entry point",
-        "score": 1.1117,
+        "score": 1.1412,
         "evidence": []
       },
       {
         "term": "business case",
-        "score": 1.009,
+        "score": 1.0533,
         "evidence": []
       },
       {
         "term": "cases selected",
-        "score": 0.9863,
+        "score": 0.9893,
         "evidence": []
       }
     ],
     "sec-059-423-navigating-legacy-systems": [
       {
-        "term": "legacy",
-        "score": 2.8338,
+        "term": "legacy systems",
+        "score": 3.6474,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "replacement",
-        "score": 0.9761,
+        "score": 0.9748,
         "evidence": []
       },
       {
         "term": "stop",
-        "score": 0.9289,
-        "evidence": []
-      },
-      {
-        "term": "moments",
-        "score": 0.8548,
+        "score": 0.9326,
         "evidence": []
       },
       {
         "term": "natural",
-        "score": 0.8548,
+        "score": 0.86,
+        "evidence": []
+      },
+      {
+        "term": "moments",
+        "score": 0.86,
         "evidence": []
       },
       {
         "term": "procured",
-        "score": 0.8439,
+        "score": 0.8494,
         "evidence": []
       },
       {
         "term": "reddhi",
-        "score": 0.7632,
+        "score": 0.7704,
         "evidence": []
       },
       {
         "term": "replace",
-        "score": 0.6702,
+        "score": 0.6687,
         "evidence": []
       }
     ],
     "sec-060-424-the-role-of-the-national-digital-architect": [
       {
         "term": "architect",
-        "score": 0.9581,
+        "score": 0.9673,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "role",
-        "score": 0.843,
+        "score": 0.859,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "dialogue",
-        "score": 0.7652,
+        "score": 0.7848,
         "evidence": []
       },
       {
         "term": "architectural",
-        "score": 0.6133,
+        "score": 0.6299,
         "evidence": []
       },
       {
         "term": "accountable",
-        "score": 0.5859,
+        "score": 0.597,
         "evidence": []
       },
       {
         "term": "conformance",
-        "score": 0.5701,
+        "score": 0.5815,
         "evidence": []
       },
       {
         "term": "authority",
-        "score": 0.5365,
+        "score": 0.5548,
         "evidence": []
       }
     ],
     "sec-061-43-profiles-and-specifications-for-implementatio": [
       {
         "term": "profiles",
-        "score": 0.7185,
+        "score": 0.7198,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "behave",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "specification",
-        "score": 0.5355,
+        "score": 0.5476,
         "evidence": []
       }
     ],
     "sec-062-431-design-data-structures-and-data-models-first": [
       {
         "term": "minimum attributes",
-        "score": 2.1263,
+        "score": 2.0739,
         "evidence": []
       },
       {
         "term": "models",
-        "score": 1.6312,
+        "score": 1.6939,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "attributes required",
-        "score": 1.592,
+        "score": 1.6264,
         "evidence": []
       },
       {
         "term": "semantic governance",
-        "score": 1.1572,
+        "score": 1.192,
         "evidence": []
       },
       {
         "term": "governance infrastructure",
-        "score": 0.9713,
+        "score": 1.0066,
         "evidence": []
       },
       {
         "term": "model repository",
-        "score": 0.8752,
+        "score": 0.9096,
         "evidence": []
       },
       {
         "term": "registry",
-        "score": 0.8657,
+        "score": 0.8857,
         "evidence": []
       },
       {
-        "term": "logical",
-        "score": 0.5746,
+        "term": "logical information",
+        "score": 0.8204,
         "evidence": []
       }
     ],
     "sec-063-432-actors-and-roles-defining-who-participates": [
       {
         "term": "computable actor",
-        "score": 1.8643,
+        "score": 1.8864,
         "evidence": []
       },
       {
         "term": "actor definitions",
-        "score": 1.7106,
+        "score": 1.7243,
         "evidence": []
       },
       {
         "term": "generic personas",
-        "score": 1.3713,
+        "score": 1.3886,
         "evidence": []
       },
       {
         "term": "capability statements",
-        "score": 1.1978,
+        "score": 1.2066,
         "evidence": []
       },
       {
         "term": "smart guidelines",
-        "score": 1.1357,
+        "score": 1.1399,
         "evidence": []
       },
       {
         "term": "adaptation kit",
-        "score": 1.0833,
+        "score": 1.0916,
         "evidence": []
       },
       {
         "term": "roles",
-        "score": 0.817,
+        "score": 0.8191,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "participate",
-        "score": 0.7279,
+        "score": 0.7026,
         "evidence": []
       }
     ],
     "sec-064-433-services-and-transactions-fhir-as-the-recomm": [
       {
         "term": "fhir",
-        "score": 2.493,
+        "score": 2.5426,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "fhir conformance",
-        "score": 1.8166,
+        "score": 1.8528,
         "evidence": []
       },
       {
         "term": "transaction patterns",
-        "score": 1.2245,
+        "score": 1.2454,
         "evidence": []
       },
       {
         "term": "semantic interoperability",
-        "score": 1.0357,
+        "score": 1.0731,
+        "evidence": []
+      },
+      {
+        "term": "logical information",
+        "score": 0.9738,
         "evidence": []
       },
       {
         "term": "profiles",
-        "score": 0.8342,
+        "score": 0.8357,
+        "evidence": []
+      },
+      {
+        "term": "information model",
+        "score": 0.8155,
         "evidence": []
       },
       {
         "term": "conformant",
-        "score": 0.7284,
-        "evidence": []
-      },
-      {
-        "term": "logical",
-        "score": 0.725,
-        "evidence": []
-      },
-      {
-        "term": "governed",
-        "score": 0.6747,
+        "score": 0.7364,
         "evidence": []
       }
     ],
     "sec-065-434-integration-interfaces-with-foundational-dpi": [
       {
         "term": "foundational dpi",
-        "score": 4.001,
+        "score": 4.0933,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "verification apis",
-        "score": 2.0043,
+        "score": 2.0383,
         "evidence": []
       },
       {
         "term": "dpi authorities",
-        "score": 1.7519,
+        "score": 1.7771,
         "evidence": []
       },
       {
         "term": "client registry",
-        "score": 1.505,
+        "score": 1.5383,
         "evidence": []
       },
       {
         "term": "workforce registry",
-        "score": 1.4709,
+        "score": 1.5027,
         "evidence": []
       },
       {
         "term": "national identity",
-        "score": 1.4577,
+        "score": 1.5024,
         "evidence": []
       },
       {
         "term": "civil registration",
-        "score": 0.9928,
+        "score": 1.0187,
         "evidence": []
       },
       {
-        "term": "payments",
-        "score": 0.7358,
-        "evidence": []
+        "term": "integration",
+        "score": 0.7568,
+        "evidence": [
+          "heading"
+        ]
       }
     ],
     "sec-066-434-interoperability-implementation-pathways": [
       {
-        "term": "centralised",
-        "score": 1.0549,
+        "term": "exchange component",
+        "score": 1.0838,
         "evidence": []
       },
       {
-        "term": "exchange component",
-        "score": 1.0494,
+        "term": "centralised",
+        "score": 1.0669,
         "evidence": []
       },
       {
         "term": "localised",
-        "score": 0.8812,
+        "score": 0.8859,
         "evidence": []
       },
       {
         "term": "hybrid",
-        "score": 0.8683,
+        "score": 0.8794,
         "evidence": []
       },
       {
         "term": "interoperability",
-        "score": 0.796,
+        "score": 0.8482,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "pathways",
-        "score": 0.7543,
+        "score": 0.7528,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "claims",
-        "score": 0.7101,
+        "score": 0.7295,
         "evidence": []
       },
       {
         "term": "enforcement",
-        "score": 0.6961,
+        "score": 0.7048,
         "evidence": []
       }
     ],
     "sec-067-435-minimum-conformance-and-testing": [
       {
         "term": "conformance",
-        "score": 1.6704,
+        "score": 1.7037,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "testing",
-        "score": 1.0087,
+        "score": 1.0412,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "profiles",
-        "score": 0.7185,
+        "score": 0.7198,
         "evidence": []
       },
       {
         "term": "minimum",
-        "score": 0.6973,
+        "score": 0.6517,
         "evidence": [
           "heading"
         ]
@@ -2584,118 +2588,118 @@
     "sec-068-44-measuring-progress-and-impact": [
       {
         "term": "national architecture",
-        "score": 0.657,
+        "score": 0.6991,
         "evidence": []
       },
       {
         "term": "section",
-        "score": 0.644,
+        "score": 0.6706,
         "evidence": []
       },
       {
         "term": "verified",
-        "score": 0.6342,
+        "score": 0.6442,
         "evidence": []
       },
       {
         "term": "conformance",
-        "score": 0.5701,
+        "score": 0.5815,
         "evidence": []
       },
       {
         "term": "mapping",
-        "score": 0.5698,
+        "score": 0.5787,
         "evidence": []
       },
       {
-        "term": "elements",
-        "score": 0.514,
+        "term": "roadmap",
+        "score": 0.5241,
         "evidence": []
       }
     ],
     "sec-069-441-assessing-impact-are-goals-being-achieved": [
       {
         "term": "goals",
-        "score": 0.8776,
+        "score": 0.9102,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "impact",
-        "score": 0.6366,
+        "score": 0.667,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "decomposition",
-        "score": 0.58,
+        "score": 0.5825,
         "evidence": []
       },
       {
         "term": "baselines",
-        "score": 0.5504,
+        "score": 0.5535,
         "evidence": []
       },
       {
         "term": "fuller",
-        "score": 0.5504,
+        "score": 0.5535,
         "evidence": []
       }
     ],
     "sec-070-442-tracking-progress-over-time": [
       {
         "term": "progress",
-        "score": 0.8026,
+        "score": 0.8248,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "dimensions",
-        "score": 0.6554,
-        "evidence": []
-      },
-      {
-        "term": "governed",
-        "score": 0.5347,
-        "evidence": []
-      },
-      {
-        "term": "coverage",
-        "score": 0.3816,
+        "score": 0.6649,
         "evidence": []
       },
       {
         "term": "evidence",
-        "score": 0.37,
+        "score": 0.5489,
+        "evidence": []
+      },
+      {
+        "term": "governed",
+        "score": 0.5468,
+        "evidence": []
+      },
+      {
+        "term": "coverage",
+        "score": 0.3864,
         "evidence": []
       },
       {
         "term": "infrastructure",
-        "score": 0.346,
+        "score": 0.3566,
         "evidence": []
       }
     ],
     "sec-071-45-roles-skills-and-capacity": [
       {
         "term": "skills",
-        "score": 0.6962,
+        "score": 0.7022,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "roles",
-        "score": 0.5154,
+        "score": 0.5168,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "capacity",
-        "score": 0.4345,
+        "score": 0.4547,
         "evidence": [
           "heading"
         ]
@@ -2704,125 +2708,125 @@
     "sec-072-451-how-to-use-this-architecture": [
       {
         "term": "reference model",
-        "score": 0.8743,
+        "score": 0.9065,
         "evidence": []
       },
       {
         "term": "architecture",
-        "score": 0.6629,
+        "score": 0.7083,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "adopting",
-        "score": 0.6164,
+        "score": 0.6268,
         "evidence": []
       },
       {
         "term": "conformance",
-        "score": 0.5701,
+        "score": 0.5815,
         "evidence": []
       },
       {
         "term": "definitions",
-        "score": 0.57,
+        "score": 0.5698,
         "evidence": []
       },
       {
         "term": "capabilities",
-        "score": 0.4636,
+        "score": 0.4835,
         "evidence": []
       },
       {
-        "term": "common",
-        "score": 0.3865,
+        "term": "shared",
+        "score": 0.402,
         "evidence": []
       }
     ],
     "sec-073-452-the-roles-and-skills-needed-to-build-and-gov": [
       {
         "term": "skills",
-        "score": 1.1035,
+        "score": 1.113,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "roles",
-        "score": 1.0309,
+        "score": 1.0336,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "architecture",
-        "score": 0.7695,
+        "score": 0.8223,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "stewardship",
-        "score": 0.6624,
-        "evidence": []
-      },
-      {
-        "term": "specialists",
-        "score": 0.659,
+        "score": 0.6625,
         "evidence": []
       },
       {
         "term": "architects",
-        "score": 0.6519,
+        "score": 0.6616,
+        "evidence": []
+      },
+      {
+        "term": "specialists",
+        "score": 0.6588,
         "evidence": []
       },
       {
         "term": "keep",
-        "score": 0.6437,
+        "score": 0.6352,
         "evidence": []
       },
       {
         "term": "fhir",
-        "score": 0.5711,
+        "score": 0.5824,
         "evidence": []
       }
     ],
     "sec-074-453-building-and-sustaining-national-capacity": [
       {
         "term": "sustaining",
-        "score": 0.7557,
+        "score": 0.7692,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "capacity",
-        "score": 0.6887,
+        "score": 0.7207,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "architects",
-        "score": 0.6519,
+        "score": 0.6616,
         "evidence": []
       },
       {
         "term": "national",
-        "score": 0.577,
+        "score": 0.6092,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "leadership",
-        "score": 0.4909,
+        "score": 0.5008,
         "evidence": []
       },
       {
         "term": "building",
-        "score": 0.4401,
+        "score": 0.4585,
         "evidence": [
           "heading"
         ]
@@ -2831,299 +2835,301 @@
     "sec-075-46-financing-and-partnerships": [
       {
         "term": "deserve",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "financing",
-        "score": 0.5772,
+        "score": 0.5947,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "financed",
-        "score": 0.479,
+        "score": 0.4837,
         "evidence": []
       }
     ],
     "sec-076-461-the-investment-case": [
       {
         "term": "ministries",
-        "score": 0.815,
+        "score": 0.8249,
         "evidence": []
       },
       {
         "term": "finance",
-        "score": 0.7315,
+        "score": 0.738,
         "evidence": []
       },
       {
         "term": "case",
-        "score": 0.6991,
+        "score": 0.7338,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "capital",
-        "score": 0.6869,
+        "score": 0.6617,
         "evidence": []
       },
       {
         "term": "dpi",
-        "score": 0.6237,
+        "score": 0.634,
         "evidence": []
       },
       {
         "term": "financing",
-        "score": 0.5772,
+        "score": 0.5947,
         "evidence": []
       },
       {
-        "term": "infrastructure",
-        "score": 0.5644,
-        "evidence": []
+        "term": "investment",
+        "score": 0.5869,
+        "evidence": [
+          "heading"
+        ]
       }
     ],
     "sec-077-462-sustainability-by-design": [
       {
         "term": "wilton park",
-        "score": 1.7423,
-        "evidence": []
-      },
-      {
-        "term": "dimension",
-        "score": 0.8158,
+        "score": 1.7521,
         "evidence": []
       },
       {
         "term": "shared infrastructure",
-        "score": 0.8111,
+        "score": 0.841,
+        "evidence": []
+      },
+      {
+        "term": "dimension",
+        "score": 0.8219,
         "evidence": []
       },
       {
         "term": "organisational",
-        "score": 0.7562,
+        "score": 0.7636,
         "evidence": []
       },
       {
         "term": "commonwealth",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       }
     ],
     "sec-078-463-approaches-to-financing": [
       {
         "term": "multi-modal models",
-        "score": 1.8112,
+        "score": 1.846,
         "evidence": []
       },
       {
         "term": "artificial intelligence",
-        "score": 1.7972,
+        "score": 1.8182,
         "evidence": []
       },
       {
         "term": "emerging technologies",
-        "score": 1.1975,
+        "score": 1.2137,
         "evidence": []
       },
       {
         "term": "financing",
-        "score": 1.1545,
+        "score": 1.1893,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "machine learning",
-        "score": 1.0842,
-        "evidence": []
-      },
-      {
-        "term": "recurrent",
-        "score": 0.9289,
+        "score": 1.0798,
         "evidence": []
       },
       {
         "term": "arrangements",
-        "score": 0.8193,
+        "score": 0.8315,
         "evidence": []
       },
       {
         "term": "orientation",
-        "score": 0.7681,
+        "score": 0.7752,
+        "evidence": []
+      },
+      {
+        "term": "national architecture",
+        "score": 0.7478,
         "evidence": []
       }
     ],
     "sec-079-51-emerging-technologies-and-the-foundations-the": [
       {
         "term": "emerging technologies",
-        "score": 2.5531,
+        "score": 2.5902,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "artificial intelligence",
-        "score": 2.3229,
+        "score": 2.35,
         "evidence": []
       },
       {
         "term": "multi-modal models",
-        "score": 1.9463,
+        "score": 1.9935,
         "evidence": []
       },
       {
         "term": "governed terminology",
-        "score": 1.8693,
+        "score": 1.9157,
         "evidence": []
       },
       {
         "term": "depend",
-        "score": 1.6491,
+        "score": 1.6658,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "model repository",
-        "score": 1.451,
+        "score": 1.5357,
+        "evidence": []
+      },
+      {
+        "term": "information models",
+        "score": 1.4853,
         "evidence": []
       },
       {
         "term": "terminology services",
-        "score": 1.1578,
-        "evidence": []
-      },
-      {
-        "term": "client registry",
-        "score": 1.1174,
+        "score": 1.2038,
         "evidence": []
       }
     ],
     "sec-080-53-where-artificial-intelligence-can-support-the": [
       {
+        "term": "assistive",
+        "score": 0.997,
+        "evidence": []
+      },
+      {
         "term": "scanned",
-        "score": 0.9947,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "detection",
-        "score": 0.8923,
+        "score": 0.8461,
         "evidence": []
       },
       {
         "term": "adjudication",
-        "score": 0.8249,
-        "evidence": []
-      },
-      {
-        "term": "kinds",
-        "score": 0.7903,
-        "evidence": []
-      },
-      {
-        "term": "fraud",
-        "score": 0.7681,
+        "score": 0.8308,
         "evidence": []
       },
       {
         "term": "support",
-        "score": 0.7257,
+        "score": 0.7818,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "claims",
-        "score": 0.7101,
+        "term": "kinds",
+        "score": 0.7752,
         "evidence": []
       },
       {
-        "term": "analytical",
-        "score": 0.6232,
+        "term": "fraud",
+        "score": 0.7752,
+        "evidence": []
+      },
+      {
+        "term": "claims",
+        "score": 0.7295,
         "evidence": []
       }
     ],
     "sec-082-541-what-ai-readiness-means": [
       {
+        "term": "governing",
+        "score": 0.6441,
+        "evidence": []
+      },
+      {
         "term": "readiness",
-        "score": 0.6361,
+        "score": 0.6379,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "governing",
-        "score": 0.6341,
-        "evidence": []
-      },
-      {
         "term": "representativeness",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "safeguards",
-        "score": 0.58,
+        "score": 0.5825,
         "evidence": []
       },
       {
-        "term": "drift",
-        "score": 0.5504,
+        "term": "model",
+        "score": 0.581,
         "evidence": []
       }
     ],
     "sec-083-542-trustworthy-ai-in-a-health-setting": [
       {
         "term": "artificial intelligence",
-        "score": 1.9513,
+        "score": 1.9738,
         "evidence": []
       },
       {
         "term": "trustworthy",
-        "score": 1.3206,
+        "score": 1.3395,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "del",
-        "score": 0.9947,
-        "evidence": []
-      },
-      {
-        "term": "europe",
-        "score": 0.8158,
+        "score": 0.997,
         "evidence": []
       },
       {
         "term": "january",
-        "score": 0.814,
+        "score": 0.7868,
+        "evidence": []
+      },
+      {
+        "term": "europe",
+        "score": 0.756,
         "evidence": []
       },
       {
         "term": "act",
-        "score": 0.7597,
+        "score": 0.7559,
         "evidence": []
       },
       {
         "term": "council",
-        "score": 0.7562,
+        "score": 0.7377,
         "evidence": []
       },
       {
         "term": "law",
-        "score": 0.7562,
+        "score": 0.7308,
         "evidence": []
       }
     ],
     "sec-084-543-equity-and-safety": [
       {
         "term": "equity",
-        "score": 0.8006,
+        "score": 0.7703,
         "evidence": [
           "heading"
         ]
@@ -3137,909 +3143,911 @@
       },
       {
         "term": "representativeness",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       }
     ],
     "sec-085-544-cost-sustainability-and-commercial-pressure": [
       {
         "term": "commercial",
-        "score": 1.235,
-        "evidence": [
-          "heading"
-        ]
-      },
-      {
-        "term": "pressure",
-        "score": 0.9995,
+        "score": 1.2557,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "cost",
-        "score": 0.9056,
+        "score": 0.9614,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "dependence",
-        "score": 0.8439,
-        "evidence": []
+        "term": "pressure",
+        "score": 0.952,
+        "evidence": [
+          "heading"
+        ]
       },
       {
         "term": "foundations",
-        "score": 0.8388,
+        "score": 0.8404,
+        "evidence": []
+      },
+      {
+        "term": "dependence",
+        "score": 0.8195,
         "evidence": []
       },
       {
         "term": "carries",
-        "score": 0.7027,
+        "score": 0.6751,
         "evidence": []
       },
       {
-        "term": "keep",
-        "score": 0.6437,
+        "term": "models",
+        "score": 0.6553,
         "evidence": []
       }
     ],
     "sec-086-55-keeping-the-architecture-open-and-adaptable": [
       {
         "term": "emerging technologies",
-        "score": 1.443,
+        "score": 1.4666,
         "evidence": []
       },
       {
         "term": "adaptable",
-        "score": 0.98,
+        "score": 0.9041,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "foundations",
-        "score": 0.8388,
+        "score": 0.8404,
         "evidence": []
       },
       {
         "term": "open",
-        "score": 0.8,
+        "score": 0.8245,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "architecture",
-        "score": 0.6629,
+        "score": 0.7083,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "now",
-        "score": 0.539,
+        "score": 0.542,
         "evidence": []
       },
       {
         "term": "sustain",
-        "score": 0.5327,
+        "score": 0.5353,
         "evidence": []
       },
       {
         "term": "infrastructure",
-        "score": 0.5069,
+        "score": 0.5224,
         "evidence": []
       }
     ],
     "sec-087-appendix-a": [
       {
-        "term": "academic",
-        "score": 0.8158,
+        "term": "institutions",
+        "score": 0.7477,
         "evidence": []
       },
       {
-        "term": "institutions",
-        "score": 0.7598,
+        "term": "academic",
+        "score": 0.7387,
         "evidence": []
       },
       {
         "term": "agencies",
-        "score": 0.7061,
+        "score": 0.7208,
         "evidence": []
       },
       {
         "term": "dpi-f",
-        "score": 0.6276,
+        "score": 0.629,
         "evidence": []
       },
       {
         "term": "coordinators",
-        "score": 0.5861,
+        "score": 0.5884,
         "evidence": []
       }
     ],
     "sec-088-appendix-b": [
       {
         "term": "appendix",
-        "score": 0.9036,
+        "score": 0.914,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "block",
-        "score": 0.8812,
+        "score": 0.8195,
         "evidence": []
       },
       {
         "term": "trusted",
-        "score": 0.6408,
+        "score": 0.6413,
         "evidence": []
       },
       {
         "term": "resilience",
-        "score": 0.6271,
+        "score": 0.6373,
         "evidence": []
       },
       {
         "term": "seventh",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       }
     ],
     "sec-090-client-registry": [
       {
         "term": "client registry",
-        "score": 7.3574,
+        "score": 7.519,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "person identity",
-        "score": 4.0894,
+        "score": 4.1701,
         "evidence": []
       },
       {
         "term": "identity resolution",
-        "score": 3.8484,
+        "score": 3.8861,
         "evidence": []
       },
       {
         "term": "person demographic",
-        "score": 3.6697,
+        "score": 3.7316,
         "evidence": []
       },
       {
         "term": "identity record",
-        "score": 3.5528,
+        "score": 3.6378,
         "evidence": []
       },
       {
         "term": "identity attributes",
-        "score": 3.4742,
+        "score": 3.5451,
         "evidence": []
       },
       {
         "term": "identity creation",
-        "score": 3.4544,
+        "score": 3.5206,
         "evidence": []
       },
       {
         "term": "person identifiers",
-        "score": 3.441,
+        "score": 3.5077,
         "evidence": []
       }
     ],
     "sec-091-health-facility-registry": [
       {
         "term": "facility registry",
-        "score": 8.6659,
+        "score": 8.7848,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "catchment hierarchy",
-        "score": 4.5185,
+        "score": 4.5486,
         "evidence": []
       },
       {
         "term": "administrative hierarchy",
-        "score": 4.4516,
+        "score": 4.4911,
         "evidence": []
       },
       {
         "term": "location hierarchy",
-        "score": 4.129,
+        "score": 4.1581,
         "evidence": []
       },
       {
         "term": "facility identifier",
-        "score": 3.828,
+        "score": 3.8648,
         "evidence": []
       },
       {
         "term": "hierarchy linkage",
-        "score": 3.7933,
-        "evidence": []
-      },
-      {
-        "term": "assigned facility",
-        "score": 3.6907,
+        "score": 3.8185,
         "evidence": []
       },
       {
         "term": "canonical facility",
-        "score": 3.6767,
+        "score": 3.7086,
+        "evidence": []
+      },
+      {
+        "term": "assigned facility",
+        "score": 3.6994,
         "evidence": []
       }
     ],
     "sec-092-health-workforce-registry": [
       {
         "term": "workforce registry",
-        "score": 8.0864,
+        "score": 8.2565,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "credential verification",
-        "score": 3.7012,
+        "score": 3.735,
         "evidence": []
       },
       {
         "term": "worker registry",
-        "score": 3.4385,
-        "evidence": []
-      },
-      {
-        "term": "professional licence",
-        "score": 3.4176,
-        "evidence": []
-      },
-      {
-        "term": "employment status",
-        "score": 3.3887,
-        "evidence": []
-      },
-      {
-        "term": "professional licensing",
-        "score": 3.3709,
+        "score": 3.4987,
         "evidence": []
       },
       {
         "term": "issuing licensing",
-        "score": 3.3673,
+        "score": 3.4051,
         "evidence": []
       },
       {
         "term": "facility registry",
-        "score": 3.346,
+        "score": 3.3978,
+        "evidence": []
+      },
+      {
+        "term": "employment status",
+        "score": 3.3926,
+        "evidence": []
+      },
+      {
+        "term": "professional licence",
+        "score": 3.3679,
+        "evidence": []
+      },
+      {
+        "term": "credential updates",
+        "score": 3.3562,
         "evidence": []
       }
     ],
     "sec-093-product-registry": [
       {
         "term": "product registry",
-        "score": 7.3574,
+        "score": 7.5955,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "product catalogue",
-        "score": 3.9798,
+        "score": 4.0772,
         "evidence": []
       },
       {
         "term": "enriched product",
-        "score": 3.689,
+        "score": 3.7628,
         "evidence": []
       },
       {
         "term": "enriched attributes",
-        "score": 3.6285,
-        "evidence": []
-      },
-      {
-        "term": "catalogue entries",
-        "score": 3.1956,
+        "score": 3.6611,
         "evidence": []
       },
       {
         "term": "product identifier",
-        "score": 3.1932,
+        "score": 3.29,
         "evidence": []
       },
       {
         "term": "foundational registry",
-        "score": 3.177,
+        "score": 3.2593,
         "evidence": []
       },
       {
         "term": "catalogue management",
-        "score": 3.1635,
+        "score": 3.2323,
+        "evidence": []
+      },
+      {
+        "term": "catalogue entries",
+        "score": 3.2276,
         "evidence": []
       }
     ],
     "sec-094-lifelong-health-record": [
       {
         "term": "lhr serves",
-        "score": 4.1687,
+        "score": 4.2024,
         "evidence": []
       },
       {
         "term": "authorised point-of-care",
-        "score": 3.2604,
+        "score": 3.2918,
         "evidence": []
       },
       {
         "term": "record",
-        "score": 3.0807,
+        "score": 3.1672,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "consent preferences",
-        "score": 3.0345,
+        "term": "longitudinal record",
+        "score": 3.0268,
         "evidence": []
       },
       {
         "term": "record assembled",
-        "score": 2.9704,
+        "score": 2.9742,
         "evidence": []
       },
       {
-        "term": "longitudinal record",
-        "score": 2.9557,
-        "evidence": []
-      },
-      {
-        "term": "person-level clinical",
-        "score": 2.8348,
+        "term": "consent preferences",
+        "score": 2.9236,
         "evidence": []
       },
       {
         "term": "individual consent",
-        "score": 2.8193,
+        "score": 2.8603,
+        "evidence": []
+      },
+      {
+        "term": "person-level clinical",
+        "score": 2.8229,
         "evidence": []
       }
     ],
     "sec-095-terminology-service": [
       {
         "term": "terminology service",
-        "score": 4.3177,
+        "score": 4.4408,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "lookup code",
-        "score": 3.9284,
+        "score": 3.9763,
         "evidence": []
       },
       {
         "term": "query code",
-        "score": 3.8403,
-        "evidence": []
-      },
-      {
-        "term": "concept lookup",
-        "score": 3.6549,
+        "score": 3.8977,
         "evidence": []
       },
       {
         "term": "code required",
-        "score": 3.6227,
+        "score": 3.6984,
+        "evidence": []
+      },
+      {
+        "term": "concept lookup",
+        "score": 3.641,
         "evidence": []
       },
       {
         "term": "local code",
-        "score": 3.325,
+        "score": 3.4077,
         "evidence": []
       },
       {
         "term": "code translation",
-        "score": 3.3092,
+        "score": 3.3704,
         "evidence": []
       },
       {
         "term": "code validation",
-        "score": 3.1867,
+        "score": 3.2534,
         "evidence": []
       }
     ],
     "sec-096-logical-information-model-repository": [
       {
         "term": "logical model",
-        "score": 5.6023,
+        "score": 5.8641,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "model repository",
-        "score": 4.2777,
+        "score": 4.483,
+        "evidence": [
+          "heading"
+        ]
+      },
+      {
+        "term": "logical information",
+        "score": 4.2121,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "computable clinical",
-        "score": 3.2823,
+        "score": 3.285,
         "evidence": []
       },
       {
         "term": "structural definitions",
-        "score": 3.2598,
+        "score": 3.2847,
         "evidence": []
       },
       {
         "term": "limr",
-        "score": 3.1893,
+        "score": 3.2109,
         "evidence": []
       },
       {
         "term": "element definitions",
-        "score": 3.0582,
+        "score": 3.065,
         "evidence": []
       },
       {
         "term": "openehr clinical",
-        "score": 3.0407,
-        "evidence": []
-      },
-      {
-        "term": "computable guidelines",
-        "score": 3.0325,
+        "score": 3.03,
         "evidence": []
       }
     ],
     "sec-098-computable-decision-support-engine": [
       {
         "term": "computable decision",
-        "score": 7.2977,
+        "score": 7.2681,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "decision support",
-        "score": 5.1799,
+        "score": 5.2387,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "cdse subscribes",
-        "score": 4.4876,
-        "evidence": []
-      },
-      {
-        "term": "cds hooks",
-        "score": 4.3828,
+        "score": 4.5048,
         "evidence": []
       },
       {
         "term": "support engine",
-        "score": 4.1426,
+        "score": 4.3045,
         "evidence": [
           "heading"
         ]
       },
       {
+        "term": "cds hooks",
+        "score": 4.2955,
+        "evidence": []
+      },
+      {
         "term": "cdse depends",
-        "score": 3.9755,
+        "score": 4.0008,
         "evidence": []
       },
       {
         "term": "computable clinical",
-        "score": 3.7592,
+        "score": 3.7543,
         "evidence": []
       },
       {
         "term": "override governance",
-        "score": 3.6378,
+        "score": 3.6895,
         "evidence": []
       }
     ],
     "sec-099-supplier-registry": [
       {
         "term": "supplier registry",
-        "score": 12.1699,
+        "score": 12.3042,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "supplier identity",
-        "score": 5.6557,
-        "evidence": []
-      },
-      {
-        "term": "cross-sectoral supplier",
-        "score": 5.6034,
+        "score": 5.7097,
         "evidence": []
       },
       {
         "term": "supplier identifier",
-        "score": 5.6019,
+        "score": 5.6474,
+        "evidence": []
+      },
+      {
+        "term": "cross-sectoral supplier",
+        "score": 5.6368,
         "evidence": []
       },
       {
         "term": "supplier location",
-        "score": 5.418,
+        "score": 5.4467,
         "evidence": []
       },
       {
         "term": "canonical supplier",
-        "score": 5.3363,
+        "score": 5.3755,
         "evidence": []
       },
       {
         "term": "supplier record",
-        "score": 5.2063,
+        "score": 5.2588,
         "evidence": []
       },
       {
-        "term": "authoritative supplier",
-        "score": 5.187,
+        "term": "supplier master",
+        "score": 5.2324,
         "evidence": []
       }
     ],
     "sec-100-benefits-package-registry": [
       {
         "term": "package registry",
-        "score": 10.5681,
+        "score": 10.2182,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "benefits package",
-        "score": 9.7492,
+        "score": 9.1393,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "package definitions",
-        "score": 5.0079,
+        "score": 4.7864,
         "evidence": []
       },
       {
         "term": "authoritative package",
-        "score": 4.3939,
-        "evidence": []
-      },
-      {
-        "term": "package versions",
-        "score": 4.2704,
-        "evidence": []
-      },
-      {
-        "term": "package covers",
-        "score": 4.1742,
+        "score": 4.1944,
         "evidence": []
       },
       {
         "term": "eligibility determination",
-        "score": 4.0718,
+        "score": 4.1097,
         "evidence": []
       },
       {
-        "term": "prior package",
-        "score": 3.8567,
+        "term": "package versions",
+        "score": 4.0497,
+        "evidence": []
+      },
+      {
+        "term": "package covers",
+        "score": 3.9644,
+        "evidence": []
+      },
+      {
+        "term": "eligibility inquiry",
+        "score": 3.7444,
         "evidence": []
       }
     ],
     "sec-101-distinguishing-the-benefits-package-registry-con": [
       {
-        "term": "package registry",
-        "score": 7.4427,
+        "term": "beneficiary registry",
+        "score": 7.3563,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "beneficiary registry",
-        "score": 7.2523,
+        "term": "package registry",
+        "score": 7.2342,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "benefits package",
-        "score": 6.5164,
+        "score": 6.1112,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "contract benefits",
-        "score": 4.6281,
+        "score": 4.5499,
         "evidence": [
           "heading"
         ]
       },
       {
+        "term": "individual enrolment",
+        "score": 2.9855,
+        "evidence": []
+      },
+      {
         "term": "benefits management",
-        "score": 3.0569,
+        "score": 2.9757,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "package definitions",
-        "score": 3.041,
-        "evidence": []
-      },
-      {
-        "term": "individual enrolment",
-        "score": 2.9541,
+        "score": 2.8992,
         "evidence": []
       },
       {
         "term": "client registry",
-        "score": 2.5052,
+        "score": 2.5607,
         "evidence": []
       }
     ],
     "sec-102-health-management-information-system": [
       {
         "term": "openhie hmis",
-        "score": 3.9224,
+        "score": 3.9748,
         "evidence": []
       },
       {
         "term": "hmis serves",
-        "score": 3.5895,
+        "score": 3.6364,
         "evidence": []
       },
       {
         "term": "hmis specification",
-        "score": 3.5128,
+        "score": 3.5566,
         "evidence": []
       },
       {
         "term": "aggregate indicators",
-        "score": 2.6534,
+        "score": 2.7064,
         "evidence": []
       },
       {
         "term": "required requirement",
-        "score": 2.3329,
+        "score": 2.3802,
         "evidence": []
       },
       {
         "term": "aggregation rules",
-        "score": 2.3203,
+        "score": 2.3672,
         "evidence": []
       },
       {
-        "term": "indicator definitions",
-        "score": 2.3114,
+        "term": "indicator governance",
+        "score": 2.3576,
         "evidence": []
       },
       {
         "term": "aggregate analysis",
-        "score": 2.2959,
+        "score": 2.3388,
         "evidence": []
       }
     ],
     "sec-103-public-health-surveillance-platform": [
       {
         "term": "surveillance platform",
-        "score": 7.3304,
+        "score": 7.3683,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "event-based surveillance",
-        "score": 4.9086,
+        "score": 4.9043,
         "evidence": []
       },
       {
         "term": "surveillance signals",
-        "score": 4.7029,
+        "score": 4.7103,
         "evidence": []
       },
       {
         "term": "phsp supports",
-        "score": 4.4886,
+        "score": 4.512,
         "evidence": []
       },
       {
         "term": "configurable surveillance",
-        "score": 4.3716,
-        "evidence": []
-      },
-      {
-        "term": "outbreak detection",
-        "score": 4.3042,
-        "evidence": []
-      },
-      {
-        "term": "outbreak investigation",
-        "score": 4.3007,
+        "score": 4.3789,
         "evidence": []
       },
       {
         "term": "picture surveillance",
-        "score": 4.2506,
+        "score": 4.2605,
+        "evidence": []
+      },
+      {
+        "term": "outbreak investigation",
+        "score": 4.2398,
+        "evidence": []
+      },
+      {
+        "term": "outbreak detection",
+        "score": 4.2198,
         "evidence": []
       }
     ],
     "sec-104-appendix-d-country-and-regional-implementation-e": [
       {
         "term": "appendix",
-        "score": 1.8071,
+        "score": 1.8279,
         "evidence": [
           "heading"
         ]
       },
       {
-        "term": "illustrate approaches",
-        "score": 1.0261,
+        "term": "shared infrastructure",
+        "score": 1.0483,
         "evidence": []
       },
       {
-        "term": "shared infrastructure",
-        "score": 1.01,
+        "term": "illustrate approaches",
+        "score": 1.0464,
         "evidence": []
       },
       {
         "term": "public infrastructure",
-        "score": 0.8926,
+        "score": 0.9135,
         "evidence": []
       },
       {
         "term": "named",
-        "score": 0.7903,
+        "score": 0.797,
         "evidence": []
       },
       {
         "term": "inclusion",
-        "score": 0.6521,
+        "score": 0.6057,
         "evidence": []
       },
       {
         "term": "technologies",
-        "score": 0.5701,
+        "score": 0.5872,
         "evidence": []
       },
       {
-        "term": "listed",
-        "score": 0.5608,
+        "term": "standards-based",
+        "score": 0.5628,
         "evidence": []
       }
     ],
     "sec-105-client-registry": [
       {
         "term": "client registry",
-        "score": 1.9568,
+        "score": 1.9997,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "matching",
-        "score": 0.4951,
+        "score": 0.4883,
         "evidence": []
       },
       {
         "term": "contributing",
-        "score": 0.477,
+        "score": 0.4655,
         "evidence": []
       }
     ],
     "sec-106-lifelong-health-record": [
       {
         "term": "record",
-        "score": 0.884,
+        "score": 0.9088,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "open-source",
-        "score": 0.588,
+        "score": 0.599,
         "evidence": []
       },
       {
         "term": "openehr",
-        "score": 0.5661,
+        "score": 0.5688,
         "evidence": []
       }
     ],
     "sec-107-computable-decision-support-engine": [
       {
         "term": "clinical reasoning",
-        "score": 1.6988,
+        "score": 1.6919,
         "evidence": []
       },
       {
         "term": "computable",
-        "score": 1.4476,
+        "score": 1.4637,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "engine",
-        "score": 1.3843,
+        "score": 1.4018,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "decision logic",
-        "score": 1.3584,
+        "score": 1.3643,
         "evidence": []
       },
       {
         "term": "expressing",
-        "score": 0.8439,
+        "score": 0.8494,
         "evidence": []
       },
       {
         "term": "open-source",
-        "score": 0.742,
+        "score": 0.7559,
         "evidence": []
       }
     ],
     "sec-108-health-management-information-service": [
       {
         "term": "data-quality",
-        "score": 0.58,
+        "score": 0.5825,
         "evidence": []
       },
       {
         "term": "low-connectivity",
-        "score": 0.4922,
+        "score": 0.4966,
         "evidence": []
       },
       {
         "term": "tooling",
-        "score": 0.4828,
+        "score": 0.4873,
         "evidence": []
       }
     ],
     "sec-109-public-health-surveillance-platform": [
       {
         "term": "surveillance",
-        "score": 2.2775,
+        "score": 2.2704,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "outbreak investigation",
-        "score": 1.6358,
+        "score": 1.6093,
         "evidence": []
       },
       {
         "term": "contact tracing",
-        "score": 1.308,
+        "score": 1.3292,
         "evidence": []
       },
       {
         "term": "module",
-        "score": 0.706,
+        "score": 0.7144,
         "evidence": []
       },
       {
         "term": "laboratory",
-        "score": 0.553,
+        "score": 0.5518,
         "evidence": []
       },
       {
         "term": "platform",
-        "score": 0.4764,
+        "score": 0.4918,
         "evidence": [
           "heading"
         ]
@@ -4048,320 +4056,318 @@
     "sec-110-terminology-service-and-logical-information-mode": [
       {
         "term": "fhir-conformant terminology",
-        "score": 1.5447,
+        "score": 1.5676,
         "evidence": []
       },
       {
         "term": "terminology server",
-        "score": 1.1932,
+        "score": 1.2236,
         "evidence": []
       },
       {
         "term": "national terminology",
-        "score": 0.952,
+        "score": 0.9863,
         "evidence": []
       }
     ],
     "sec-111-australia": [
       {
         "term": "australia",
-        "score": 1.6268,
+        "score": 1.5272,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "terminology service",
-        "score": 1.2186,
+        "score": 1.2534,
         "evidence": []
       },
       {
         "term": "fhir",
-        "score": 0.8366,
+        "score": 0.8533,
         "evidence": []
       },
       {
         "term": "record",
-        "score": 0.6475,
+        "score": 0.6657,
         "evidence": []
       },
       {
         "term": "profiles",
-        "score": 0.5694,
-        "evidence": []
-      },
-      {
-        "term": "reference",
-        "score": 0.5096,
+        "score": 0.5704,
         "evidence": []
       },
       {
         "term": "models",
-        "score": 0.5001,
+        "score": 0.5193,
+        "evidence": []
+      },
+      {
+        "term": "reference",
+        "score": 0.5099,
         "evidence": []
       }
     ],
     "sec-112-denmark": [
       {
         "term": "denmark",
-        "score": 1.0549,
+        "score": 0.9942,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "centralising",
-        "score": 0.5861,
+        "score": 0.5884,
         "evidence": []
       },
       {
         "term": "lhr",
-        "score": 0.5618,
+        "score": 0.5646,
         "evidence": []
       }
     ],
     "sec-113-estonia": [
       {
         "term": "estonia",
-        "score": 1.1304,
+        "score": 1.136,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "identity infrastructure",
-        "score": 0.9928,
+        "score": 1.0178,
         "evidence": []
       },
       {
-        "term": "tertiary",
-        "score": 0.5845,
+        "term": "lhr",
+        "score": 0.5646,
         "evidence": []
       }
     ],
     "sec-114-india": [
       {
         "term": "india",
-        "score": 0.8365,
+        "score": 0.7998,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "consent-governed",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "phsp",
-        "score": 0.599,
+        "score": 0.601,
         "evidence": []
       },
       {
         "term": "flowing",
-        "score": 0.5861,
+        "score": 0.5884,
         "evidence": []
       }
     ],
     "sec-115-kenya": [
       {
         "term": "kenya",
-        "score": 0.704,
+        "score": 0.694,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "assembling",
-        "score": 0.58,
+        "score": 0.5825,
         "evidence": []
       },
       {
         "term": "consolidation",
-        "score": 0.58,
+        "score": 0.5825,
         "evidence": []
       }
     ],
     "sec-116-nigeria": [
       {
         "term": "disease surveillance",
-        "score": 1.273,
+        "score": 1.2709,
         "evidence": []
       },
       {
         "term": "nigeria",
-        "score": 0.8438,
+        "score": 0.8555,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "contact-tracing",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       }
     ],
     "sec-117-rwanda": [
       {
         "term": "rwanda",
-        "score": 1.2501,
+        "score": 1.2705,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "shared foundations",
-        "score": 0.9689,
+        "score": 0.9846,
         "evidence": []
       },
       {
         "term": "surveillance",
-        "score": 0.6429,
+        "score": 0.6409,
         "evidence": []
       },
       {
-        "term": "phsp",
-        "score": 0.599,
+        "term": "resource-constrained",
+        "score": 0.6233,
         "evidence": []
       }
     ],
     "sec-118-spain": [
       {
         "term": "spain",
-        "score": 1.971,
+        "score": 1.7726,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "federated national",
-        "score": 1.1365,
+        "score": 1.1645,
         "evidence": []
       },
       {
         "term": "national interoperability",
-        "score": 0.6446,
+        "score": 0.6832,
         "evidence": []
       },
       {
         "term": "del",
-        "score": 0.6276,
+        "score": 0.629,
         "evidence": []
       }
     ],
     "sec-119-spain-catalonia-subnational": [
       {
         "term": "climate-related",
-        "score": 0.9865,
+        "score": 0.9889,
         "evidence": []
       },
       {
         "term": "subnational",
-        "score": 0.81,
+        "score": 0.8106,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "surveillance",
-        "score": 0.6429,
+        "score": 0.6409,
         "evidence": []
       }
     ],
     "sec-120-tanzania": [
       {
         "term": "facility reporting",
-        "score": 0.7881,
+        "score": 0.7941,
         "evidence": []
       },
       {
         "term": "tanzania",
-        "score": 0.6686,
+        "score": 0.6699,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "data-quality",
-        "score": 0.58,
+        "score": 0.5825,
         "evidence": []
       }
     ],
     "sec-121-uganda": [
       {
         "term": "uganda",
-        "score": 1.3194,
+        "score": 1.3149,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "computable",
-        "score": 0.7238,
+        "score": 0.7318,
         "evidence": []
       },
       {
-        "term": "piloting",
-        "score": 0.6218,
+        "term": "participated",
+        "score": 0.6233,
         "evidence": []
       }
     ],
     "sec-122-united-kingdom-england": [
       {
         "term": "england",
-        "score": 1.2436,
+        "score": 1.2466,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "terminology service",
-        "score": 0.8558,
+        "score": 0.8802,
         "evidence": []
       },
       {
-        "term": "allergy",
-        "score": 0.6352,
+        "term": "pharmaceutical",
+        "score": 0.6475,
         "evidence": []
       }
     ],
     "sec-123-united-states": [
       {
         "term": "immunisation",
-        "score": 0.6834,
+        "score": 0.6923,
         "evidence": []
       },
       {
         "term": "jurisdictional",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
-        "term": "states",
-        "score": 0.62,
-        "evidence": [
-          "heading"
-        ]
+        "term": "phsp",
+        "score": 0.601,
+        "evidence": []
       }
     ],
     "sec-124-european-union-and-european-economic-area-region": [
       {
         "term": "surveillance",
-        "score": 1.6225,
+        "score": 1.6175,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "european",
-        "score": 1.4429,
+        "score": 1.4592,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "regional",
-        "score": 0.8838,
+        "score": 0.8748,
         "evidence": [
           "heading"
         ]
@@ -4370,149 +4376,149 @@
     "sec-125-who-smart-guidelines-pilot-implementations": [
       {
         "term": "computable",
-        "score": 0.7238,
+        "score": 0.7318,
         "evidence": []
       },
       {
         "term": "operationalised",
-        "score": 0.6218,
+        "score": 0.6233,
         "evidence": []
       },
       {
         "term": "cdse",
-        "score": 0.5779,
+        "score": 0.5804,
         "evidence": []
       }
     ],
     "sec-126-appendix-e-health-goals-to-dpi-mapping": [
       {
         "term": "foundational-dpi dependencies",
-        "score": 3.2232,
+        "score": 3.2397,
         "evidence": []
       },
       {
         "term": "workforce registry",
-        "score": 2.4519,
+        "score": 2.5041,
         "evidence": []
       },
       {
         "term": "goal introduces",
-        "score": 2.4272,
+        "score": 2.4475,
         "evidence": []
       },
       {
         "term": "goal rests",
-        "score": 2.397,
-        "evidence": []
-      },
-      {
-        "term": "goal through",
-        "score": 2.2998,
+        "score": 2.418,
         "evidence": []
       },
       {
         "term": "dpi-h component",
-        "score": 2.2985,
+        "score": 2.3454,
+        "evidence": []
+      },
+      {
+        "term": "goal through",
+        "score": 2.3358,
         "evidence": []
       },
       {
         "term": "mapping",
-        "score": 2.2262,
+        "score": 2.2608,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "facility registry",
-        "score": 2.1866,
+        "score": 2.2217,
         "evidence": []
       }
     ],
     "sec-127-appendix-f-semantic-governance-infrastructure-ca": [
       {
         "term": "capability details",
-        "score": 2.5934,
+        "score": 2.6533,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "upstream content",
-        "score": 2.1427,
+        "score": 2.1715,
         "evidence": []
       },
       {
         "term": "upstream sources",
-        "score": 1.9074,
+        "score": 1.9196,
         "evidence": []
       },
       {
         "term": "published artefacts",
-        "score": 1.869,
+        "score": 1.8471,
         "evidence": []
       },
       {
         "term": "distribution endpoints",
-        "score": 1.5132,
+        "score": 1.506,
         "evidence": []
       },
       {
         "term": "governance",
-        "score": 1.393,
+        "score": 1.4526,
         "evidence": [
           "heading"
         ]
       },
       {
         "term": "capability category",
-        "score": 1.3104,
+        "score": 1.3453,
         "evidence": []
       },
       {
         "term": "owners",
-        "score": 1.1906,
+        "score": 1.1948,
         "evidence": []
       }
     ],
     "sec-front-matter": [
       {
         "term": "dpi-h reference",
-        "score": 3.0713,
+        "score": 3.1147,
         "evidence": []
       },
       {
         "term": "foundational dpi",
-        "score": 2.8589,
+        "score": 2.9222,
         "evidence": []
       },
       {
         "term": "dpi-h application",
-        "score": 2.6474,
+        "score": 2.7313,
         "evidence": []
       },
       {
         "term": "dpi authorities",
-        "score": 2.5913,
-        "evidence": []
-      },
-      {
-        "term": "systematized nomenclature",
-        "score": 2.5463,
+        "score": 2.6293,
         "evidence": []
       },
       {
         "term": "dpi-h principles",
-        "score": 2.5403,
+        "score": 2.5881,
         "evidence": []
       },
       {
-        "term": "package registry",
-        "score": 2.295,
+        "term": "systematized nomenclature",
+        "score": 2.5608,
         "evidence": []
       },
       {
         "term": "reference architecture",
-        "score": 2.264,
+        "score": 2.3334,
+        "evidence": []
+      },
+      {
+        "term": "package registry",
+        "score": 2.2529,
         "evidence": []
       }
     ]
