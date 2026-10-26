@@ -130,7 +130,10 @@
       "id": "key-questions",
       "title": "Key questions (PICO) and outcomes",
       "required": false,
-      "description": "The foreground questions in population-intervention-comparator-outcome form, the outcomes rated important or critical, and optionally an analytic framework. The PICO question sets themselves come from the guideline development group's scoping and the systematic reviews behind it, which smart-base has not ingested. So this section names no `computedFrom`: computing it needs an evidence graph that does not exist yet (owner, 2026-10-04, bean qvxh, option 1). Ingesting that evidence is bean folio-assistant-0lde.",
+      "description": "The foreground questions in population-intervention-comparator-outcome form, the outcomes rated important or critical, and optionally an analytic framework. The PICO question sets come from the guideline development group's scoping and the systematic reviews behind it, so this section is computed from `library` where that guideline's evidence base is ingested: for WHO's 2016 antenatal care guideline, Web annex 1 of `9789241549912-webannexes-eng` lists its priority questions in PICO form with their priority outcomes. A guideline whose evidence base is not in `library` cannot yet compute this section; WHO's 2016 antenatal care guideline (ISBN 9789241549912) is the first whose evidence base is held, as three entries ingested for bean folio-assistant-0lde.",
+      "computedFrom": [
+        "library"
+      ],
       "modelledBy": [
         "sgkg-l1#population",
         "sgkg-l1#intervention",
@@ -152,6 +155,21 @@
           "ref": "who-iris/library/9789241548960-eng",
           "locator": "§4.5 Table 4.1, PDF pp.53-55; sections/sec-075-44-when-should-the-planning-proposal-be-develope.md",
           "note": "10.2 Foreground (key/PICO) questions"
+        },
+        {
+          "ref": "smart-base/library/9789241549912-webannexes-eng",
+          "locator": "Web annex 1, PDF p.4; sections/page-004.md",
+          "note": "Web annex 1: Priority questions and outcomes for the antenatal care (ANC) interventions identified for this guideline"
+        },
+        {
+          "ref": "smart-base/library/9789241549912-webannexes-eng",
+          "locator": "Web annex 1, PDF p.4; sections/page-004.md",
+          "note": "P=Population; I=Intervention; C=Comparator; O=Outcomes"
+        },
+        {
+          "ref": "smart-base/library/9789241549912-eng",
+          "locator": "§2.1 WHO Steering Group, PDF p.22; sections/sec-004-2-methods.md",
+          "note": "The Steering Group drafted the initial scope of the guideline and drafted the key recommendation questions in PICO format (population, intervention, comparator, outcome)"
         }
       ]
     },
@@ -159,7 +177,10 @@
       "id": "evidence-retrieval-and-synthesis",
       "title": "Evidence retrieval and synthesis",
       "required": false,
-      "description": "Search strategy, study selection and synthesis of the systematic reviews informing each key question; full reviews may sit in annexes. The systematic reviews it summarises (for WHO guidelines, typically Cochrane or WHO-commissioned reviews) are external evidence that smart-base has not ingested. So this section names no `computedFrom`: computing it needs an evidence graph that does not exist yet (owner, 2026-10-04, bean qvxh, option 1). Ingesting that evidence is bean folio-assistant-0lde.",
+      "description": "Search strategy, study selection and synthesis of the systematic reviews informing each key question; full reviews may sit in annexes. The systematic reviews it summarises (for WHO guidelines, typically Cochrane or WHO-commissioned reviews) are external evidence, so this section is computed from `library` where that guideline's evidence base is ingested: for WHO's 2016 antenatal care guideline, §2.9 of `9789241549912-eng` describes how its evidence was identified and retrieved, and the web supplement `9789241549912-websupplement-eng` holds its search strategies and evidence tables, each naming the review it is drawn from. A guideline whose evidence base is not in `library` cannot yet compute this section; WHO's 2016 antenatal care guideline (ISBN 9789241549912) is the first whose evidence base is held, as three entries ingested for bean folio-assistant-0lde.",
+      "computedFrom": [
+        "library"
+      ],
       "modelledBy": [
         "sgkg-l1#evidence"
       ],
@@ -173,6 +194,21 @@
           "ref": "who-iris/library/9789241548960-eng",
           "locator": "§8.3 Step 2 Identify information sources, PDF pp.111-113; sections/sec-140-step-2-identify-information-sources-and-search-f.md",
           "note": "The development and finalization of the strategies for searching for evidence that meets the established inclusion criteria is a fundamental step"
+        },
+        {
+          "ref": "smart-base/library/9789241549912-eng",
+          "locator": "§2.9 Evidence identification and retrieval, PDF p.25; sections/sec-004-2-methods.md",
+          "note": "Evidence on effectiveness was mostly derived from Cochrane reviews of randomized controlled trials (RCTs)."
+        },
+        {
+          "ref": "smart-base/library/9789241549912-websupplement-eng",
+          "locator": "Search strategies for the evidence base, PDF pp.121-128; sections/sec-114-search-strategies-for-the-evidence-base.md",
+          "note": "Search strategies for the evidence base"
+        },
+        {
+          "ref": "smart-base/library/9789241549912-websupplement-eng",
+          "locator": "EB Table A.1.1, PDF p.9; sections/sec-002-eb-table-a11-all-diet-andor-physical-activityexe.md",
+          "note": "Source: Muktabhant B, Lawrie TA, Lumbiganon P, Laopaiboon M. Diet or exercise, or both, for preventing excessive weight gain in pregnancy. Cochrane Database Syst Rev. 2015;(6):CD007145."
         }
       ]
     },
@@ -180,7 +216,10 @@
       "id": "certainty-of-evidence",
       "title": "Certainty of the evidence (GRADE)",
       "required": false,
-      "description": "GRADE assessment of the body of evidence per outcome and key question, summarised in evidence profiles. The GRADE evidence profiles it summarises are built from external systematic reviews (typically Cochrane) that smart-base has not ingested. So this section names no `computedFrom`: computing it needs an evidence graph that does not exist yet (owner, 2026-10-04, bean qvxh, option 1). Ingesting that evidence is bean folio-assistant-0lde.",
+      "description": "GRADE assessment of the body of evidence per outcome and key question, summarised in evidence profiles. The GRADE evidence profiles it summarises are built from external systematic reviews (typically Cochrane), so this section is computed from `library` where that guideline's evidence base is ingested: for WHO's 2016 antenatal care guideline, §2.10 of `9789241549912-eng` describes its grading, and the web supplement `9789241549912-websupplement-eng` holds its evidence base (EB) tables, each with the GRADE quality-assessment columns and a certainty rating per outcome. A guideline whose evidence base is not in `library` cannot yet compute this section; WHO's 2016 antenatal care guideline (ISBN 9789241549912) is the first whose evidence base is held, as three entries ingested for bean folio-assistant-0lde.",
+      "computedFrom": [
+        "library"
+      ],
       "modelledBy": [
         "sgkg-l1#evidence"
       ],
@@ -194,6 +233,16 @@
           "ref": "who-iris/library/9789241548960-eng",
           "locator": "§12.1 Guideline format, PDF p.169; sections/sec-225-121-guideline-format.md",
           "note": "GRADE evidence profiles, evidence-to-decision frameworks and tables, and any other relevant documentation can be supplied in appendices"
+        },
+        {
+          "ref": "smart-base/library/9789241549912-eng",
+          "locator": "§2.10 Quality assessment and grading of the evidence, PDF p.26; sections/sec-004-2-methods.md",
+          "note": "The GRADE approach (15) to appraising the quality of quantitative evidence was used for all the critical outcomes identified in the PICOs, and a GRADE profile was prepared for each quantitative outcome within each PICO."
+        },
+        {
+          "ref": "smart-base/library/9789241549912-websupplement-eng",
+          "locator": "EB Table A.1.1, PDF p.9; sections/sec-002-eb-table-a11-all-diet-andor-physical-activityexe.md",
+          "note": "EB Table A.1.1: All diet and/or physical activity/exercise interventions versus control (standard or other care)"
         }
       ]
     },
@@ -201,7 +250,10 @@
       "id": "evidence-to-decision",
       "title": "Evidence to decision",
       "required": false,
-      "description": "Records the judgements on benefits and harms, values and preferences, resources, equity, acceptability and feasibility that shaped each recommendation's direction and strength. Its judgements rest on the GRADE evidence profiles and the systematic reviews behind them, which smart-base has not ingested. So this section names no `computedFrom`: computing it needs an evidence graph that does not exist yet (owner, 2026-10-04, bean qvxh, option 1). Ingesting that evidence is bean folio-assistant-0lde.",
+      "description": "Records the judgements on benefits and harms, values and preferences, resources, equity, acceptability and feasibility that shaped each recommendation's direction and strength. Its judgements rest on the GRADE evidence profiles and the systematic reviews behind them, so this section is computed from `library` where that guideline's evidence base is ingested: for WHO's 2016 antenatal care guideline, §2.11 of `9789241549912-eng` describes the DECIDE framework it used, and Web annex 3 of `9789241549912-webannexes-eng` tabulates the GDG's judgements for each recommendation. A guideline whose evidence base is not in `library` cannot yet compute this section; WHO's 2016 antenatal care guideline (ISBN 9789241549912) is the first whose evidence base is held, as three entries ingested for bean folio-assistant-0lde.",
+      "computedFrom": [
+        "library"
+      ],
       "sources": [
         {
           "ref": "who-iris/library/9789241548960-eng",
@@ -212,6 +264,16 @@
           "ref": "who-iris/library/9789241548960-eng",
           "locator": "§10.3, PDF p.140; sections/sec-174-103-evidence-to-recommendation-tables.md",
           "note": "the GDG should, at a minimum, document its judgements on the four main factors."
+        },
+        {
+          "ref": "smart-base/library/9789241549912-eng",
+          "locator": "§2.11 Formulation of the recommendations, PDF p.27; sections/sec-004-2-methods.md",
+          "note": "DECIDE is an evidence-to-decision (EtD) tool that includes explicit and systematic consideration of evidence on interventions in terms of six domains: effects, values, resources, equity, acceptability and feasibility."
+        },
+        {
+          "ref": "smart-base/library/9789241549912-webannexes-eng",
+          "locator": "Web annex 3, PDF pp.13-23; sections/page-013.md",
+          "note": "Web annex 3: Guideline Development Group (GDG) judgements related to the recommendations"
         }
       ]
     },
