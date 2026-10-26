@@ -59,6 +59,9 @@ describe("the authored kinds resolve as a set (bean pebe)", () => {
   it("every section and every kind names a source", () => {
     for (const k of kinds.filter((k) => k.id !== "dak")) for (const s of k.sections) expect(s.sources?.length ?? 0).toBeGreaterThan(0);
   });
+  it("every authored section names the declared graph it is computedFrom (bean 0lde)", () => {
+    for (const k of kinds.filter((k) => k.id !== "dak")) for (const s of k.sections) expect(s.computedFrom).toEqual(["library"]);
+  });
   // Calibration: each case is the committed set with ONE thing broken.
   const dth = kinds.find((k) => k.id === "dth")!;
   const others = kinds.filter((k) => k.id !== "dth");

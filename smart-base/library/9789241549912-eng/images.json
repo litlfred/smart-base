@@ -1,0 +1,68 @@
+{
+  "$schema": "folio-document-images/v1",
+  "doc_id": "9789241549912-eng",
+  "images": [
+    {
+      "id": "img-p001-1",
+      "file": "images/img-p001-1.png",
+      "role": "decorative",
+      "basis": {
+        "method": "inspection",
+        "by": {
+          "kind": "agent",
+          "id": "antigravity",
+          "model": "not-disclosed",
+          "session": "c2017c72-0637-45b3-aceb-1eb3a5840db8"
+        },
+        "at": "2026-10-26",
+        "saw": "an ISBN 978-92-4-154991-2 barcode placed off-crop on the cover spread (x = -188..-98)",
+        "page": 1
+      },
+      "narrative": [
+        {
+          "text": "The back-cover ISBN barcode for 978 92 4 154991 2, placed on the left half of the cover spread.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "antigravity",
+            "model": "not-disclosed",
+            "session": "c2017c72-0637-45b3-aceb-1eb3a5840db8"
+          },
+          "drafted_at": "2026-10-26"
+        }
+      ]
+    },
+    {
+      "id": "img-p172-1",
+      "file": "images/img-p172-1.png",
+      "role": "decorative",
+      "basis": {
+        "method": "inspection",
+        "by": {
+          "kind": "agent",
+          "id": "antigravity",
+          "model": "not-disclosed",
+          "session": "c2017c72-0637-45b3-aceb-1eb3a5840db8"
+        },
+        "at": "2026-10-26",
+        "saw": "an ISBN 978-92-4-154991-2 barcode on the back cover",
+        "page": 172
+      },
+      "narrative": [
+        {
+          "text": "The back-cover ISBN barcode for 978 92 4 154991 2.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "antigravity",
+            "model": "not-disclosed",
+            "session": "c2017c72-0637-45b3-aceb-1eb3a5840db8"
+          },
+          "drafted_at": "2026-10-26"
+        }
+      ]
+    }
+  ]
+}

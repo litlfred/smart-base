@@ -130,7 +130,10 @@
       "id": "key-questions",
       "title": "Key questions (PICO) and outcomes",
       "required": false,
-      "description": "The foreground questions in population-intervention-comparator-outcome form, the outcomes rated important or critical, and optionally an analytic framework. The PICO question sets themselves come from the guideline development group's scoping and the systematic reviews behind it, which smart-base has not ingested. So this section names no `computedFrom`: computing it needs an evidence graph that does not exist yet (owner, 2026-10-04, bean qvxh, option 1). Ingesting that evidence is bean folio-assistant-0lde.",
+      "description": "The foreground questions in population-intervention-comparator-outcome form, the outcomes rated important or critical, and optionally an analytic framework. Computed from the ingested WHO L1 guideline evidence in `smart-base/library/` (`9789241549912-eng` §2.6 and `9789241549912-webannexes-eng` Web annex 1, WHO IRIS handle 10665/250796, CC BY-NC-SA 3.0 IGO).",
+      "computedFrom": [
+        "library"
+      ],
       "modelledBy": [
         "sgkg-l1#population",
         "sgkg-l1#intervention",
@@ -152,6 +155,16 @@
           "ref": "who-iris/library/9789241548960-eng",
           "locator": "§4.5 Table 4.1, PDF pp.53-55; sections/sec-075-44-when-should-the-planning-proposal-be-develope.md",
           "note": "10.2 Foreground (key/PICO) questions"
+        },
+        {
+          "ref": "smart-base/library/9789241549912-eng",
+          "locator": "§2.6 Identifying priority questions and outcomes, PDF p.24; sections/sec-004-2-methods.md",
+          "note": "This scoping and consultation process led to the identification of priority questions and outcomes related to the effectiveness of clinical, test accuracy, and health systems interventions aimed at achieving a positive pregnancy experience that includes a healthy mother and a healthy baby. These questions and outcomes are listed in Web annex 1."
+        },
+        {
+          "ref": "smart-base/library/9789241549912-webannexes-eng",
+          "locator": "Web annex 1: Priority questions and outcomes for the antenatal care (ANC) interventions identified for this guideline, PDF pp.4-10; sections/page-004.md",
+          "note": "A.1.1: For pregnant women (P), do diet and/or exercise interventions (I) compared with standard ANC (C) improve maternal and perinatal outcomes (O)?"
         }
       ]
     },
@@ -159,7 +172,10 @@
       "id": "evidence-retrieval-and-synthesis",
       "title": "Evidence retrieval and synthesis",
       "required": false,
-      "description": "Search strategy, study selection and synthesis of the systematic reviews informing each key question; full reviews may sit in annexes. The systematic reviews it summarises (for WHO guidelines, typically Cochrane or WHO-commissioned reviews) are external evidence that smart-base has not ingested. So this section names no `computedFrom`: computing it needs an evidence graph that does not exist yet (owner, 2026-10-04, bean qvxh, option 1). Ingesting that evidence is bean folio-assistant-0lde.",
+      "description": "Search strategy, study selection and synthesis of the systematic reviews informing each key question; full reviews may sit in annexes. Computed from the ingested WHO L1 guideline evidence and search strategies in `smart-base/library/` (`9789241549912-eng` §2.9 and `9789241549912-websupplement-eng`, WHO IRIS handle 10665/250796, CC BY-NC-SA 3.0 IGO).",
+      "computedFrom": [
+        "library"
+      ],
       "modelledBy": [
         "sgkg-l1#evidence"
       ],
@@ -173,6 +189,16 @@
           "ref": "who-iris/library/9789241548960-eng",
           "locator": "§8.3 Step 2 Identify information sources, PDF pp.111-113; sections/sec-140-step-2-identify-information-sources-and-search-f.md",
           "note": "The development and finalization of the strategies for searching for evidence that meets the established inclusion criteria is a fundamental step"
+        },
+        {
+          "ref": "smart-base/library/9789241549912-eng",
+          "locator": "§2.9 Evidence identification and retrieval, PDF p.25; sections/sec-004-2-methods.md",
+          "note": "Evidence on effectiveness was mostly derived from Cochrane reviews of randomized controlled trials (RCTs). The Steering Group, in collaboration with the Cochrane PCG and methodologists from CREP, initially identified all Cochrane systematic reviews and protocols relevant to ANC."
+        },
+        {
+          "ref": "smart-base/library/9789241549912-websupplement-eng",
+          "locator": "Search strategies for the evidence base: 1. Search strategy to identify existing ANC guidelines, PDF p.121; sections/sec-115-1-search-strategy-to-identify-existing-anc-guide.md",
+          "note": "In December 2013, a systematic search was conducted for evidence-based guidelines in the following databases: PubMed,5 LILACS6 (an index of scientific and technical literature of Latin America and the Caribbean) and Trip7 (Turning Research into Practice), and in the guidelines repository maintained by the Geneva Foundation for Medical Education and Research (GFMER)."
         }
       ]
     },
@@ -180,7 +206,10 @@
       "id": "certainty-of-evidence",
       "title": "Certainty of the evidence (GRADE)",
       "required": false,
-      "description": "GRADE assessment of the body of evidence per outcome and key question, summarised in evidence profiles. The GRADE evidence profiles it summarises are built from external systematic reviews (typically Cochrane) that smart-base has not ingested. So this section names no `computedFrom`: computing it needs an evidence graph that does not exist yet (owner, 2026-10-04, bean qvxh, option 1). Ingesting that evidence is bean folio-assistant-0lde.",
+      "description": "GRADE assessment of the body of evidence per outcome and key question, summarised in evidence profiles. Computed from the ingested WHO L1 guideline GRADE and GRADE-CERQual evidence base tables in `smart-base/library/` (`9789241549912-eng` §2.10 and `9789241549912-websupplement-eng` EB Tables A.1.1-E.7, WHO IRIS handle 10665/250796, CC BY-NC-SA 3.0 IGO).",
+      "computedFrom": [
+        "library"
+      ],
       "modelledBy": [
         "sgkg-l1#evidence"
       ],
@@ -194,6 +223,16 @@
           "ref": "who-iris/library/9789241548960-eng",
           "locator": "§12.1 Guideline format, PDF p.169; sections/sec-225-121-guideline-format.md",
           "note": "GRADE evidence profiles, evidence-to-decision frameworks and tables, and any other relevant documentation can be supplied in appendices"
+        },
+        {
+          "ref": "smart-base/library/9789241549912-eng",
+          "locator": "§2.10 Quality assessment and grading of the evidence, PDF p.26; sections/sec-004-2-methods.md",
+          "note": "The GRADE approach (15) to appraising the quality of quantitative evidence was used for all the critical outcomes identified in the PICOs, and a GRADE profile was prepared for each quantitative outcome within each PICO."
+        },
+        {
+          "ref": "smart-base/library/9789241549912-websupplement-eng",
+          "locator": "EB Table A.1.1: All diet and/or physical activity/exercise interventions versus control (standard or other care), PDF pp.9-16; sections/sec-002-eb-table-a11-all-diet-andor-physical-activityexe.md",
+          "note": "Source: Muktabhant B, Lawrie TA, Lumbiganon P, Laopaiboon M. Diet or exercise, or both, for preventing excessive weight gain in pregnancy. Cochrane Database Syst Rev. 2015;(6):CD007145."
         }
       ]
     },
@@ -201,7 +240,10 @@
       "id": "evidence-to-decision",
       "title": "Evidence to decision",
       "required": false,
-      "description": "Records the judgements on benefits and harms, values and preferences, resources, equity, acceptability and feasibility that shaped each recommendation's direction and strength. Its judgements rest on the GRADE evidence profiles and the systematic reviews behind them, which smart-base has not ingested. So this section names no `computedFrom`: computing it needs an evidence graph that does not exist yet (owner, 2026-10-04, bean qvxh, option 1). Ingesting that evidence is bean folio-assistant-0lde.",
+      "description": "Records the judgements on benefits and harms, values and preferences, resources, equity, acceptability and feasibility that shaped each recommendation's direction and strength. Computed from the ingested WHO L1 guideline DECIDE evidence-to-decision judgements in `smart-base/library/` (`9789241549912-eng` §2.11 and `9789241549912-webannexes-eng` Web annex 3, WHO IRIS handle 10665/250796, CC BY-NC-SA 3.0 IGO).",
+      "computedFrom": [
+        "library"
+      ],
       "sources": [
         {
           "ref": "who-iris/library/9789241548960-eng",
@@ -212,6 +254,16 @@
           "ref": "who-iris/library/9789241548960-eng",
           "locator": "§10.3, PDF p.140; sections/sec-174-103-evidence-to-recommendation-tables.md",
           "note": "the GDG should, at a minimum, document its judgements on the four main factors."
+        },
+        {
+          "ref": "smart-base/library/9789241549912-eng",
+          "locator": "§2.11 Formulation of the recommendations, PDF p.27; sections/sec-004-2-methods.md",
+          "note": "DECIDE is an evidence-to-decision (EtD) tool that includes explicit and systematic consideration of evidence on interventions in terms of six domains: effects, values, resources, equity, acceptability and feasibility."
+        },
+        {
+          "ref": "smart-base/library/9789241549912-webannexes-eng",
+          "locator": "Web annex 3: Guideline Development Group (GDG) judgements related to the recommendations, PDF pp.13-23; sections/page-013.md",
+          "note": "Web annex 3: Guideline Development Group (GDG) judgements related to the recommendations"
         }
       ]
     },

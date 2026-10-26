@@ -1,0 +1,37 @@
+{
+  "$schema": "folio-document-images/v1",
+  "doc_id": "9789241549912-websupplement-eng",
+  "images": [
+    {
+      "id": "img-p129-1",
+      "file": "images/img-p129-1.png",
+      "role": "decorative",
+      "basis": {
+        "method": "inspection",
+        "by": {
+          "kind": "agent",
+          "id": "antigravity",
+          "model": "not-disclosed",
+          "session": "c2017c72-0637-45b3-aceb-1eb3a5840db8"
+        },
+        "at": "2026-10-26",
+        "saw": "an ISBN 978-92-4-154991-2 barcode on the back cover",
+        "page": 129
+      },
+      "narrative": [
+        {
+          "text": "The back-cover ISBN barcode for 978 92 4 154991 2.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "antigravity",
+            "model": "not-disclosed",
+            "session": "c2017c72-0637-45b3-aceb-1eb3a5840db8"
+          },
+          "drafted_at": "2026-10-26"
+        }
+      ]
+    }
+  ]
+}

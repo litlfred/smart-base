@@ -1017,6 +1017,60 @@
         },
         "inspected_at": "2026-10-03"
       }
+    },
+    "9789241549912-eng": {
+      "img-p001-1": {
+        "role": "decorative",
+        "saw": "an ISBN 978-92-4-154991-2 barcode placed off-crop on the cover spread (x = -188..-98)",
+        "draft": "The back-cover ISBN barcode for 978 92 4 154991 2, placed on the left half of the cover spread.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "antigravity",
+          "model": "not-disclosed",
+          "session": "c2017c72-0637-45b3-aceb-1eb3a5840db8"
+        },
+        "inspected_at": "2026-10-26"
+      },
+      "img-p172-1": {
+        "role": "decorative",
+        "saw": "an ISBN 978-92-4-154991-2 barcode on the back cover",
+        "draft": "The back-cover ISBN barcode for 978 92 4 154991 2.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "antigravity",
+          "model": "not-disclosed",
+          "session": "c2017c72-0637-45b3-aceb-1eb3a5840db8"
+        },
+        "inspected_at": "2026-10-26"
+      }
+    },
+    "9789241549912-webannexes-eng": {
+      "img-p024-1": {
+        "role": "decorative",
+        "saw": "an ISBN 978-92-4-154991-2 barcode on the back cover",
+        "draft": "The back-cover ISBN barcode for 978 92 4 154991 2.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "antigravity",
+          "model": "not-disclosed",
+          "session": "c2017c72-0637-45b3-aceb-1eb3a5840db8"
+        },
+        "inspected_at": "2026-10-26"
+      }
+    },
+    "9789241549912-websupplement-eng": {
+      "img-p129-1": {
+        "role": "decorative",
+        "saw": "an ISBN 978-92-4-154991-2 barcode on the back cover",
+        "draft": "The back-cover ISBN barcode for 978 92 4 154991 2.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "antigravity",
+          "model": "not-disclosed",
+          "session": "c2017c72-0637-45b3-aceb-1eb3a5840db8"
+        },
+        "inspected_at": "2026-10-26"
+      }
     }
   }
 }
