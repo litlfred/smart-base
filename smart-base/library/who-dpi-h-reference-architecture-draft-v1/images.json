@@ -30,6 +30,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Image de substitution invisible placée derrière le filigrane diagonal « DRAFT » (PROJET) qui apparaît sur la plupart des pages ; elle ne comporte aucun contenu.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Imagen marcadora de posición invisible situada detrás de la marca de agua diagonal «DRAFT» (BORRADOR) que aparece en la mayoría de las páginas; no contiene información.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة عنصر نائب غير مرئية خلف العلامة المائية القطرية «DRAFT» (مسودة) التي تظهر في معظم الصفحات؛ ولا تحمل أي محتوى.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Невидимое изображение-заполнитель позади диагонального водяного знака «DRAFT» (ПРОЕКТ), присутствующего на большинстве страниц; информационной нагрузки не несет.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "大多数页面对角线“DRAFT”（草案）水印背后的不可见占位图像；不含任何实际内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -1168,6 +1228,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 1, « L'architecture de référence dans la planification et la mise en œuvre d'une entreprise de santé numérique » (The Reference Architecture within planning and implementing a digital health enterprise, Résumé d'orientation). L'infographie énumère sept phases à gauche, chacune accompagnée de ses étapes : 01 Évaluer l'état actuel et l'environnement porteur ; 02 Établir une compréhension commune et une planification stratégique ; 03 Définir l'état futur ; 04 Planifier l'architecture d'entreprise ; 05 Déterminer les exigences de contenu sanitaire ; 06 Suivi et évaluation (S&E) des mises en œuvre de santé numérique et promotion de l'utilisation des données ; 07 Mettre en œuvre, maintenir et passer à l'échelle. À côté de chaque phase figurent des vignettes de ressources d'appui, signalées comme PDF ou en ligne, telles que la Boîte à outils OMS-UIT pour une stratégie nationale de cybersanté (WHO-ITU National eHealth Strategy Toolkit), le Guide d'investissement pour la mise en œuvre numérique (DIIG), la classification OMS des interventions de santé numérique, Open Health Information Exchange (OpenHIE), TOGAF, le Réseau mondial de certification de la santé numérique (GDHCN), les Lignes directrices SMART de l'OMS (kits d'adaptation numérique et recommandations lisibles par machine) ainsi que la FCI-OMS (WHO FIC), la CIM-11 (ICD-11), HL7 FHIR et LOINC. Un encadré en pointillés à l'extrême droite, intitulé « Architecture de référence OMS-UIT pour la DPI-H » (WHO-ITU Reference Architecture for DPI-H), s'aligne sur les phases 01 à 04. Un pied de page développe les sigles HIS, ICT, ITU, M&E et SDG.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 1, «La arquitectura de referencia en la planificación e implementación de una empresa de salud digital» (The Reference Architecture within planning and implementing a digital health enterprise, Resumen ejecutivo). La infografía enumera siete fases a la izquierda, cada una con sus pasos: 01 Evaluar el estado actual y el entorno propicio; 02 Establecer un entendimiento compartido y la planificación estratégica; 03 Definir el estado futuro; 04 Planificar la arquitectura empresarial; 05 Determinar los requisitos de contenido de salud; 06 Monitoreo y evaluación (M&E) de las implementaciones de salud digital y fomento del uso de datos; 07 Implementar, mantener y ampliar a escala. Junto a cada fase hay mosaicos de recursos de apoyo, marcados como PDF o en línea, como el Conjunto de herramientas OMS-UIT para una estrategia nacional de cibersalud (WHO-ITU National eHealth Strategy Toolkit), la Guía de inversión en implementación digital (DIIG), la clasificación de la OMS de intervenciones de salud digital, Open Health Information Exchange (OpenHIE), TOGAF, la Red Mundial de Certificación de Salud Digital, las Directrices SMART de la OMS (kits de adaptación digital y recomendaciones legibles por máquina) y la FCI-OMS (WHO FIC), CIE-11 (ICD-11), HL7 FHIR y LOINC. Un recuadro discontinuo en el extremo derecho, etiquetado «Arquitectura de referencia OMS-UIT para la DPI-H» (WHO-ITU Reference Architecture for DPI-H), se alinea con las fases 01 a 04. Un pie de página desarrolla las siglas HIS, ICT, ITU, M&E y SDG.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 1، «البنية المرجعية ضمن تخطيط وتنفيذ مؤسسة للصحة الرقمية» (The Reference Architecture within planning and implementing a digital health enterprise، الملخص التنفيذي). يسرد الرسم المعلوماتي سبع مراحل على الجانب الأيسر مع خطوات كل منها: 01 تقييم الوضع الراهن والبيئة التمكينية؛ 02 إرساء فهم مشترك والتخطيط الاستراتيجي؛ 03 تحديد الحالة المستقبلية؛ 04 تخطيط بنية المؤسسة؛ 05 تحديد متطلبات المحتوى الصحي؛ 06 الرصد والتقييم (M&E) لتطبيقات الصحة الرقمية وتعزيز استخدام البيانات؛ 07 التنفيذ والصيانة والتوسيع. وبجانب كل مرحلة توجد بطاقات للموارد الداعمة، محددة بصيغة PDF أو عبر الإنترنت، مثل مجموعة أدوات الاستراتيجية الوطنية للصحة الإلكترونية الصادرة عن منظمة الصحة العالمية والاتحاد الدولي للاتصالات (WHO-ITU National eHealth Strategy Toolkit)، ودليل الاستثمار في التنفيذ الرقمي (DIIG)، وتصنيف منظمة الصحة العالمية لتدخلات الصحة الرقمية، وتبادل المعلومات الصحية المفتوح (OpenHIE)، وإطار TOGAF، والشبكة العالمية لإصدار الشهادات في مجال الصحة الرقمية، والمبادئ التوجيهية الذكية لمنظمة الصحة العالمية (WHO SMART Guidelines: مجموعات التكييف الرقمي والتوصيات المقروءة آلياً)، وعائلة التصنيفات الدولية لمنظمة الصحة العالمية (WHO FIC)، والتصنيف الدولي للأمراض (ICD-11)، ومعيار HL7 FHIR، ومعيار LOINC. ويظهر مربع متقطع في أقصى اليمين بعنوان «البنية المرجعية لمنظمة الصحة العالمية والاتحاد الدولي للاتصالات للبنية التحتية العامة الرقمية للصحة (DPI-H)» بمحاذاة المراحل من 01 إلى 04. ويوضح تذييل الشكل المختصرات HIS وICT وITU وM&E وSDG.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 1, «Референтная архитектура в рамках планирования и внедрения цифровой экосистемы здравоохранения» (The Reference Architecture within planning and implementing a digital health enterprise, Резюме). На инфографике слева перечислены семь фаз и входящие в них шаги: 01 Оценка текущего состояния и благоприятной среды; 02 Формирование общего понимания и стратегическое планирование; 03 Определение целевого состояния; 04 Планирование архитектуры предприятия; 05 Определение требований к медицинскому контенту; 06 Мониторинг и оценка (M&E) внедрений цифрового здравоохранения и стимулирование использования данных; 07 Внедрение, сопровождение и масштабирование. Рядом с каждой фазой расположены карточки вспомогательных ресурсов (с пометками PDF или онлайн), таких как Инструментарий национальной стратегии электронного здравоохранения ВОЗ–МСЭ (WHO-ITU National eHealth Strategy Toolkit), Руководство по инвестициям в цифровое внедрение (DIIG), классификация цифровых вмешательств в здравоохранении ВОЗ, Open Health Information Exchange (OpenHIE), TOGAF, Глобальная сеть сертификации цифрового здравоохранения, руководство ВОЗ SMART Guidelines (комплекты цифровой адаптации и машиночитаемые рекомендации), а также семейство международных классификаций ВОЗ (WHO FIC), МКБ-11 (ICD-11), HL7 FHIR и LOINC. Пунктирный блок справа с подписью «Референтная архитектура ВОЗ–МСЭ для DPI-H» (WHO-ITU Reference Architecture for DPI-H) расположен на уровне фаз 01–04. В нижнем колонтитуле расшифрованы сокращения HIS, ICT, ITU, M&E и SDG.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 1，“规划与实施数字卫生企业架构中的参考架构”（The Reference Architecture within planning and implementing a digital health enterprise，执行摘要）。该信息图在左侧列出七个阶段及其各自步骤：01 评估现状与赋能环境；02 建立共识与战略规划；03 定义未来状态；04 规划企业架构；05 确定卫生内容需求；06 数字卫生实施的监测与评估（M&E）及促进数据利用；07 实施、维护与规模化扩展。每个阶段旁配有标注为 PDF 或在线支持资源的图块，例如世卫组织-国际电联国家电子卫生保健战略工具包（WHO-ITU National eHealth Strategy Toolkit）、数字实施投资指南（DIIG）、世卫组织数字卫生干预分类、开放卫生信息交换（OpenHIE）、TOGAF、全球数字卫生认证网络、世卫组织 SMART 指南（数字适配工具包与机器可读建议）以及世卫组织国际分类家族（WHO FIC）、ICD-11、HL7 FHIR 和 LOINC。最右侧标为“世卫组织-国际电联卫生数字公共基础设施（DPI-H）参考架构”（WHO-ITU Reference Architecture for DPI-H）的虚线框与阶段 01 至 04 对齐。页脚给出了缩略语 HIS、ICT、ITU、M&E 和 SDG 的全称。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1199,6 +1319,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Image de substitution invisible placée derrière le filigrane diagonal « DRAFT » (PROJET) sur ces pages ; elle ne comporte aucun contenu.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Imagen marcadora de posición invisible situada detrás de la marca de agua diagonal «DRAFT» (BORRADOR) en estas páginas; no contiene información.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة عنصر نائب غير مرئية خلف العلامة المائية القطرية «DRAFT» (مسودة) في هذه الصفحات؛ ولا تحمل أي محتوى.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Невидимое изображение-заполнитель позади диагонального водяного знака «DRAFT» (ПРОЕКТ) на этих страницах; информационной нагрузки не несет.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "这些页面对角线“DRAFT”（草案）水印背后的不可见占位图像；不含任何实际内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -1397,6 +1577,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 2.2, « REDDHI : dimensions résiliente et essentielle, fondations full-STAC et rôle de la REDDHI au sein de l'architecture numérique nationale » (REDDHI: resilient and essential dimensions, the full-STAC foundations, and REDDHI's role within national digital architecture, section 2.2, Infrastructure de données et de santé numérique essentielle et résiliente). Surmontée du titre « Resilient Essential Data & Digital Health Infrastructure », elle décrit la REDDHI comme une trajectoire plutôt qu'une destination figée. Elle explique « Pourquoi résiliente » (Why resilient : résiste à la volatilité des financements, réduit la dépendance aux fournisseurs externes, assure la viabilité technique à long terme, renforce les capacités locales) et « Pourquoi essentielle » (Why essential : capacités minimales, socle commun à de multiples cas d'usage, efficience des investissements, sous-ensemble de l'architecture nationale globale). Un bandeau « Fondée sur des bases full-STAC ouvertes » (Built on open full-STAC foundations) comprend quatre volets : Normes / Standards (HL7 FHIR, CIM/ICD, SNOMED CT, LOINC, CQL), Technologies (outillage open source et kits de développement SDK), Architectures (fondées sur la DPI, modulaires, prêtes à brancher / plug-and-play) et Contenu / Content (Lignes directrices SMART de l'OMS). D'autres bandeaux présentent le rôle de la REDDHI (un sous-ensemble du tout, connecté aux DPI fondamentales, gouverné pour l'interopérabilité), cinq objectifs (sortir de la fragmentation, bâtir des fondations gouvernées et interopérables, favoriser l'innovation locale et régionale, garantir la viabilité technique et financière, positionner les pays pour des investissements à grande échelle) et neuf principes directeurs.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 2.2, «REDDHI: dimensiones resiliente y esencial, los cimientos full-STAC y la función de la REDDHI dentro de la arquitectura digital nacional» (REDDHI: resilient and essential dimensions, the full-STAC foundations, and REDDHI's role within national digital architecture, sección 2.2, Infraestructura esencial y resiliente de datos y salud digital). Encabezada «Resilient Essential Data & Digital Health Infrastructure», describe la REDDHI como una dirección de avance más que como un destino fijo. Explica «Por qué resiliente» (Why resilient: resiste la volatilidad del financiamiento, reduce la dependencia de proveedores externos, sostenibilidad técnica a largo plazo, desarrolla capacidad local) y «Por qué esencial» (Why essential: capacidades mínimas, base para múltiples casos de uso, eficiencia de la inversión, subconjunto de la arquitectura nacional más amplia). Una franja titulada «Construida sobre cimientos abiertos full-STAC» (Built on open full-STAC foundations) consta de cuatro partes: Estándares / Standards (HL7 FHIR, CIE/ICD, SNOMED CT, LOINC, CQL), Tecnologías / Technologies (herramientas de código abierto y SDK), Arquitecturas / Architectures (basadas en DPI, modulares, conectar y usar / plug-and-play) y Contenido / Content (Directrices SMART de la OMS). Otras franjas exponen el papel de la REDDHI (un subconjunto del todo, conectado a la DPI fundacional, gobernado para la interoperabilidad), cinco objetivos (transitar desde la fragmentación, construir cimientos gobernados e interoperables, habilitar la innovación local y regional, asegurar la sostenibilidad técnica y financiera, posicionar a los países para inversiones a gran escala) y nueve principios rectores.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 2.2، «البنية التحتية المرنة والأساسية للبيانات والصحة الرقمية (REDDHI): البعدان المرن والأساسي، وأسس STAC الكاملة، ودور REDDHI ضمن البنية الرقمية الوطنية» (القسم 2.2، البنية التحتية المرنة والأساسية للبيانات والصحة الرقمية). يحمل الشكل العنوان الرئيسي «Resilient Essential Data & Digital Health Infrastructure»، ويصف REDDHI بوصفها مسار توجه لا محطة نهائية ثابتة. ويوضح «لماذا مرنة» (Why resilient: تصمد أمام تقلبات التمويل، وتحد من الاعتماد على الموردين الخارجيين، وتحقق الاستدامة التقنية طويلة الأجل، وتبني القدرات المحلية) و«لماذا أساسية» (Why essential: القدرات الدنيا اللازمة، وأساس لحالات استخدام متعددة، وكفاءة الاستثمار، ومجموعة فرعية من البنية الوطنية الأوسع). ويتألف شريط «مبنية على أسس STAC الكاملة المفتوحة» (Built on open full-STAC foundations) من أربعة أجزاء: المعايير Standards (HL7 FHIR، وICD، وSNOMED CT، وLOINC، وCQL)، والتقنيات Technologies (أدوات مفتوحة المصدر وحزم تطوير البرمجيات SDKs)، والبنى المعمارية Architectures (قائمة على البنية التحتية العامة الرقمية DPI، ومعيارية، وقابلة للتوصيل والتشغيل)، والمحتوى Content (المبادئ التوجيهية الذكية لمنظمة الصحة العالمية WHO SMART Guidelines). وتعرض أشرطة أخرى دور REDDHI (مجموعة فرعية من الكل، متصلة بالبنية التحتية العامة الرقمية التأسيسية، ومحكومة للتشغيل البيني)، وخمسة أهداف (الانتقال من التشتت، وبناء أسس محكومة وقابلة للتشغيل البيني، وتمكين الابتكار المحلي والإقليمي، وضمان الاستدامة التقنية والمالية، وتهيئة البلدان للاستثمار واسع النطاق)، وتسعة مبادئ توجيهية.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 2.2, «REDDHI: характеристики устойчивости и базовой необходимости, фундамент full-STAC и роль REDDHI в национальной цифровой архитектуре» (раздел 2.2 «Устойчивая базовая инфраструктура данных и цифрового здравоохранения»). Под заголовком «Resilient Essential Data & Digital Health Infrastructure» инфраструктура REDDHI описывается как вектор развития, а не фиксированная конечная точка. Разъясняется, «Почему устойчивая» (Why resilient: выдерживает нестабильность финансирования, снижает зависимость от внешних поставщиков, обеспечивает долгосрочную техническую устойчивость, развивает локальный потенциал) и «Почему базовая» (Why essential: минимально необходимые возможности, основа для множества сценариев использования, эффективность инвестиций, подмножество более широкой национальной архитектуры). Полоса «Построена на открытом фундаменте full-STAC» (Built on open full-STAC foundations) включает четыре составляющие: Стандарты / Standards (HL7 FHIR, МКБ/ICD, SNOMED CT, LOINC, CQL), Технологии / Technologies (инструменты с открытым исходным кодом и SDK), Архитектуры / Architectures (на базе DPI, модульные, по принципу plug-and-play) и Контент / Content (руководства ВОЗ SMART Guidelines). Следующие полосы раскрывают роль REDDHI (подмножество целого, связанное с базовой DPI и управляемое для обеспечения интероперабельности), пять целей (переход от фрагментации, создание управляемого и интероперабельного фундамента, поддержка локальных и региональных инноваций, обеспечение технической и финансовой устойчивости, подготовка стран к крупномасштабным инвестициям) и девять руководящих принципов.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 2.2，“REDDHI：韧性与基础性维度、全栈 STAC（full-STAC）基础以及 REDDHI 在国家数字架构中的角色”（第 2.2 节，韧性基础数据与数字卫生基础设施）。图题为“Resilient Essential Data & Digital Health Infrastructure”，将 REDDHI 描述为演进方向而非固定终点。图中阐明了“为何具韧性”（Why resilient：抵御资金波动、减少对外部供应商的依赖、长期技术可持续性、建设本地能力）和“为何具基础性”（Why essential：最低必需能力、支撑多种用例的基础、投资效益、更广泛国家架构的子集）。“构建于开放全栈 STAC 基础之上”（Built on open full-STAC foundations）横幅包含四个部分：标准 Standards（HL7 FHIR、ICD、SNOMED CT、LOINC、CQL）、技术 Technologies（开源工具与 SDK）、架构 Architectures（基于 DPI、模块化、即插即用）以及内容 Content（世卫组织 SMART 指南）。其余横幅给出了 REDDHI 的角色（整体的子集、连接基础性 DPI、为互操作性而治理）、五项目标（摆脱碎片化、构建受治理且可互操作的基础、赋能本地与区域创新、确保技术与财务可持续性、使国家具备吸引大规模投资的条件）和九项指导原则。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1428,6 +1668,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 2.3, « Principes de conception de l'architecture DPI-H » (DPI-H Architecture Design Principles, section 2.3). Un demi-cercle de dix segments bleus, dotés chacun d'une icône, entoure le titre central. Chaque principe est accompagné d'une définition en une ligne : Gouvernance (Governance), Normes ouvertes (Open Standards), Interopérabilité (Interoperability), Viabilité / Durabilité (Sustainability), Modularité (Modularity), Capacités locales (Local Capacity), Équité et inclusion (Equity and Inclusion), Propriété, accès et contrôle des données (Data Ownership, Access and Control), Confiance et sécurité (Trust and Security) et Éthique (Ethics). Par exemple, la Modularité consiste à « construire des composants faiblement couplés qui peuvent être introduits, remplacés et améliorés de manière incrémentale », et l'Interopérabilité consiste à « concevoir dès le départ pour un échange de données porteur de sens entre les systèmes et les DPI fondamentales ».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 2.3, «Principios de diseño de la arquitectura DPI-H» (DPI-H Architecture Design Principles, sección 2.3). Un semicírculo de diez segmentos azules, cada uno con un icono, rodea el título central. Cada principio tiene una definición de una línea: Gobernanza (Governance), Estándares abiertos (Open Standards), Interoperabilidad (Interoperability), Sostenibilidad (Sustainability), Modularidad (Modularity), Capacidad local (Local Capacity), Equidad e inclusión (Equity and Inclusion), Propiedad, acceso y control de los datos (Data Ownership, Access and Control), Confianza y seguridad (Trust and Security) y Ética (Ethics). Por ejemplo, la Modularidad es «construir componentes débilmente acoplados que puedan introducirse, sustituirse y mejorarse de forma incremental», y la Interoperabilidad es «diseñar desde el principio para un intercambio significativo de datos entre los sistemas y la DPI fundacional».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 2.3، «مبادئ تصميم بنية البنية التحتية العامة الرقمية للصحة (DPI-H)» (DPI-H Architecture Design Principles، القسم 2.3). يحيط بالعنوان المركزي نصف دائرة مكوّن من عشرة قطاعات زرقاء يحمل كل منها أيقونة. ولكل مبدأ تعريف من سطر واحد: الحوكمة (Governance)، والمعايير المفتوحة (Open Standards)، والتشغيل البيني (Interoperability)، والاستدامة (Sustainability)، والنمطية / المعيارية (Modularity)، والقدرات المحلية (Local Capacity)، والإنصاف والشمول (Equity and Inclusion)، وملكية البيانات والوصول إليها والتحكم فيها (Data Ownership, Access and Control)، والثقة والأمن (Trust and Security)، والأخلاقيات (Ethics). وعلى سبيل المثال، تُعرَّف النمطية بأنها «بناء مكونات مترابطة بمرونة يمكن إدخالها واستبدالها وتحسينها تدريجياً»، ويُعرَّف التشغيل البيني بأنه «التصميم منذ البداية لتبادل فعّال وذي معنى للبيانات عبر الأنظمة والبنية التحتية العامة الرقمية التأسيسية».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 2.3, «Принципы проектирования архитектуры DPI-H» (DPI-H Architecture Design Principles, раздел 2.3). Полукруг из десяти синих сегментов с пиктограммами окружает центральный заголовок. Каждому принципу дано краткое определение в одну строку: Руководство и управление (Governance), Открытые стандарты (Open Standards), Интероперабельность (Interoperability), Устойчивость (Sustainability), Модульность (Modularity), Локальный потенциал (Local Capacity), Справедливость и инклюзивность (Equity and Inclusion), Владение данными, доступ и контроль (Data Ownership, Access and Control), Доверие и безопасность (Trust and Security), а также Этика (Ethics). Например, модульность определяется как «создание слабосвязанных компонентов, которые можно внедрять, заменять и совершенствовать поэтапно», а интероперабельность — как «проектирование с самого начала с расчетом на осмысленный обмен данными между системами и базовой DPI».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 2.3，“DPI-H 架构设计原则”（DPI-H Architecture Design Principles，第 2.3 节）。十个各带图标的蓝色扇形段呈半圆形环绕中心标题。每项原则均配有一句话定义：治理（Governance）、开放标准（Open Standards）、互操作性（Interoperability）、可持续性（Sustainability）、模块化（Modularity）、本地能力（Local Capacity）、公平与包容（Equity and Inclusion）、数据所有权、访问与控制（Data Ownership, Access and Control）、信任与安全（Trust and Security）以及伦理（Ethics）。例如，模块化定义为“构建松散耦合的组件，使其能够渐进地引入、替换和改进”，互操作性定义为“从一开始就围绕跨系统及基础性 DPI 的有意义数据交换进行设计”。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1459,6 +1759,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour l'élément « Partie prenante » (Stakeholder) : un rectangle lavande aux coins biseautés avec une icône de partie prenante (cylindre couché), intitulé « Stakeholder ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para el elemento «Parte interesada» (Stakeholder): un recuadro color lavanda con esquinas biseladas y un icono de parte interesada (cilindro horizontal), etiquetado «Stakeholder». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعنصر «صاحب المصلحة» (Stakeholder): مربع بلون الخزامى (أرجواني فاتح) ذو زوايا مشطوفة وأيقونة صاحب مصلحة (أسطوانة أفقية)، يحمل التسمية «Stakeholder». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для элемента «Заинтересованная сторона» (Stakeholder): светло-сиреневый прямоугольник со скошенными углами и пиктограммой заинтересованной стороны (горизонтальный цилиндр) с подписью «Stakeholder». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“利益相关方”（Stakeholder）元素的 ArchiMate 表示法：切角淡紫色方框，带利益相关方（横向圆柱）图标，标有“Stakeholder”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1490,6 +1850,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour l'élément « But / Objectif » (Goal) : un rectangle lavande aux coins biseautés avec une icône de cible (cercles concentriques), intitulé « Goal ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para el elemento «Meta / Objetivo» (Goal): un recuadro color lavanda con esquinas biseladas y un icono de diana (círculos concéntricos), etiquetado «Goal». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعنصر «الغاية / الهدف» (Goal): مربع بلون الخزامى ذو زوايا مشطوفة وأيقونة هدف (دوائر متحدة المركز)، يحمل التسمية «Goal». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для элемента «Цель» (Goal): светло-сиреневый прямоугольник со скошенными углами и пиктограммой мишени (концентрические окружности) с подписью «Goal». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“目标”（Goal）元素的 ArchiMate 表示法：切角淡紫色方框，带靶心（同心圆）图标，标有“Goal”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1521,6 +1941,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour l'élément « Résultat » (Outcome) : un rectangle lavande aux coins biseautés avec une icône de cible atteinte par une flèche, intitulé « Outcome ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para el elemento «Resultado» (Outcome): un recuadro color lavanda con esquinas biseladas y un icono de diana con flecha, etiquetado «Outcome». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعنصر «النتيجة / المحصلة» (Outcome): مربع بلون الخزامى ذو زوايا مشطوفة وأيقونة هدف مع سهم، يحمل التسمية «Outcome». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для элемента «Результат» (Outcome): светло-сиреневый прямоугольник со скошенными углами и пиктограммой мишени со стрелой с подписью «Outcome». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“成果”（Outcome）元素的 ArchiMate 表示法：切角淡紫色方框，带中靶箭头图标，标有“Outcome”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1552,6 +2032,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour l'élément « Valeur » (Value) : un rectangle lavande aux coins biseautés avec une icône ovale, intitulé « Value ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para el elemento «Valor» (Value): un recuadro color lavanda con esquinas biseladas y un icono ovalado, etiquetado «Value». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعنصر «القيمة» (Value): مربع بلون الخزامى ذو زوايا مشطوفة وأيقونة بيضاوية، يحمل التسمية «Value». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для элемента «Ценность» (Value): светло-сиреневый прямоугольник со скошенными углами и овальной пиктограммой с подписью «Value». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“价值”（Value）元素的 ArchiMate 表示法：切角淡紫色方框，带椭圆图标，标有“Value”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1583,6 +2123,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour l'élément « Capacité » (Capability) : un rectangle beige aux coins arrondis avec une icône de barres en escalier, intitulé « Capability ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para el elemento «Capacidad» (Capability): un recuadro redondeado de color tostado con un icono de barras escalonadas, etiquetado «Capability». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعنصر «القدرة» (Capability): مربع ذو زوايا مستديرة بلون أسمر فاتح وأيقونة أشرطة متدرجة، يحمل التسمية «Capability». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для элемента «Способность / Возможность» (Capability): бежевый скругленный прямоугольник с пиктограммой ступенчатых блоков и подписью «Capability». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“能力”（Capability）元素的 ArchiMate 表示法：浅褐色圆角方框，带阶梯状方格图标，标有“Capability”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1614,6 +2214,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour l'élément « Composant applicatif » (Application Component) : un rectangle cyan clair avec une icône de composant, intitulé « Application Component ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para el elemento «Componente de aplicación» (Application Component): un rectángulo cian claro con un icono de componente, etiquetado «Application Component». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعنصر «مكوّن التطبيق» (Application Component): مستطيل بلون سماوي فاتح مع أيقونة مكوّن برمجي، يحمل التسمية «Application Component». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для элемента «Прикладной компонент» (Application Component): светло-голубой прямоугольник с пиктограммой компонента и подписью «Application Component». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“应用组件”（Application Component）元素的 ArchiMate 表示法：浅青色矩形，带组件图标，标有“Application Component”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1645,6 +2305,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour l'élément « Service applicatif » (Application Service) : un rectangle cyan clair aux coins arrondis avec une icône de service en rectangle arrondi, intitulé « Application Service ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para el elemento «Servicio de aplicación» (Application Service): un recuadro redondeado cian claro con un icono de servicio en rectángulo redondeado, etiquetado «Application Service». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعنصر «خدمة التطبيق» (Application Service): مربع ذو زوايا مستديرة بلون سماوي فاتح مع أيقونة خدمة على شكل مستطيل مستدير الزوايا، يحمل التسمية «Application Service». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для элемента «Прикладной сервис» (Application Service): светло-голубой скругленный прямоугольник с пиктограммой сервиса в виде скругленного прямоугольника и подписью «Application Service». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“应用服务”（Application Service）元素的 ArchiMate 表示法：浅青色圆角方框，带圆角矩形服务图标，标有“Application Service”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1676,6 +2396,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour l'élément « Objet de données » (Data Object) : un rectangle cyan clair avec une icône de données à barre d'en-tête, intitulé « Data Object ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para el elemento «Objeto de datos» (Data Object): un rectángulo cian claro con un icono de datos con barra de encabezado, etiquetado «Data Object». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعنصر «كائن البيانات» (Data Object): مستطيل بلون سماوي فاتح مع أيقونة بيانات ذات شريط علوي، يحمل التسمية «Data Object». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для элемента «Объект данных» (Data Object): светло-голубой прямоугольник с пиктограммой данных с верхней полосой заголовка и подписью «Data Object». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“数据对象”（Data Object）元素的 ArchiMate 表示法：浅青色矩形，带顶栏数据图标，标有“Data Object”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1707,6 +2487,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour l'élément « Produit » (Product) : un rectangle jaune pâle avec une icône de produit à onglet, intitulé « Product ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para el elemento «Producto» (Product): un rectángulo amarillo pálido con un icono de producto con pestaña superior, etiquetado «Product». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعنصر «المنتج» (Product): مستطيل أصفر باهت مع أيقونة منتج ذات لسان علوي، يحمل التسمية «Product». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для элемента «Продукт» (Product): бледно-желтый прямоугольник с пиктограммой продукта с вкладкой и подписью «Product». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“产品”（Product）元素的 ArchiMate 表示法：浅黄色矩形，带顶栏标签页的产品图标，标有“Product”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1738,6 +2578,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour la relation « Réalise » (Realises) : une ligne verticale en pointillés se terminant par une pointe de flèche triangulaire vide. C'est le symbole figurant dans la colonne « Relation ArchiMate » (ArchiMate relationship) du Tableau 3.2, « Les types de relations utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para la relación «Realiza» (Realises): una línea vertical punteada que termina en una punta de flecha triangular hueca. Es el símbolo de la columna «Relación ArchiMate» (ArchiMate relationship) de la Tabla 3.2, «Los tipos de relaciones utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعلاقة «يحقّق» (Realises): خط رأسي منقّط ينتهي برأس سهم مثلث مفرّغ. وهو الرمز الوارد في عمود «علاقة ArchiMate» (ArchiMate relationship) من الجدول 3.2، «أنواع العلاقات المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для отношения «Реализует» (Realises): пунктирная вертикальная линия, заканчивающаяся пустой треугольной стрелкой. Это символ в столбце «Отношение ArchiMate» (ArchiMate relationship) таблицы 3.2 «Типы отношений, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“实现”（Realises）关系的 ArchiMate 表示法：末端为空心三角形箭头的垂直虚线。该符号位于表 3.2“DPI-H 参考架构中使用的关系类型及其含义”（第 3.1 节）的“ArchiMate 关系”（ArchiMate relationship）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },

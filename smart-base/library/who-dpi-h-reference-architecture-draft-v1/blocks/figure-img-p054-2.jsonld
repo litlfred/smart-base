@@ -27,6 +27,66 @@
       },
       "drafted_at": "2026-10-01",
       "lang": "en"
+    },
+    {
+      "text": "Notation ArchiMate pour l'élément « Partie prenante » (Stakeholder) : un rectangle lavande aux coins biseautés avec une icône de partie prenante (cylindre couché), intitulé « Stakeholder ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "fr"
+    },
+    {
+      "text": "Notación ArchiMate para el elemento «Parte interesada» (Stakeholder): un recuadro color lavanda con esquinas biseladas y un icono de parte interesada (cilindro horizontal), etiquetado «Stakeholder». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "es"
+    },
+    {
+      "text": "ترميز ArchiMate لعنصر «صاحب المصلحة» (Stakeholder): مربع بلون الخزامى (أرجواني فاتح) ذو زوايا مشطوفة وأيقونة صاحب مصلحة (أسطوانة أفقية)، يحمل التسمية «Stakeholder». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ar"
+    },
+    {
+      "text": "Нотация ArchiMate для элемента «Заинтересованная сторона» (Stakeholder): светло-сиреневый прямоугольник со скошенными углами и пиктограммой заинтересованной стороны (горизонтальный цилиндр) с подписью «Stakeholder». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ru"
+    },
+    {
+      "text": "“利益相关方”（Stakeholder）元素的 ArchiMate 表示法：切角淡紫色方框，带利益相关方（横向圆柱）图标，标有“Stakeholder”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-025",

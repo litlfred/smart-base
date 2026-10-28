@@ -27,6 +27,66 @@
       },
       "drafted_at": "2026-10-01",
       "lang": "en"
+    },
+    {
+      "text": "Notation ArchiMate pour l'élément « Produit » (Product) : un rectangle jaune pâle avec une icône de produit à onglet, intitulé « Product ». C'est le symbole figurant dans la colonne « Élément ArchiMate » (ArchiMate element) du Tableau 3.1, « Les types d'éléments utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "fr"
+    },
+    {
+      "text": "Notación ArchiMate para el elemento «Producto» (Product): un rectángulo amarillo pálido con un icono de producto con pestaña superior, etiquetado «Product». Es el símbolo de la columna «Elemento ArchiMate» (ArchiMate element) de la Tabla 3.1, «Los tipos de elementos utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "es"
+    },
+    {
+      "text": "ترميز ArchiMate لعنصر «المنتج» (Product): مستطيل أصفر باهت مع أيقونة منتج ذات لسان علوي، يحمل التسمية «Product». وهو الرمز الوارد في عمود «عنصر ArchiMate» (ArchiMate element) من الجدول 3.1، «أنواع العناصر المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ar"
+    },
+    {
+      "text": "Нотация ArchiMate для элемента «Продукт» (Product): бледно-желтый прямоугольник с пиктограммой продукта с вкладкой и подписью «Product». Это символ в столбце «Элемент ArchiMate» (ArchiMate element) таблицы 3.1 «Типы элементов, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ru"
+    },
+    {
+      "text": "“产品”（Product）元素的 ArchiMate 表示法：浅黄色矩形，带顶栏标签页的产品图标，标有“Product”。该符号位于表 3.1“DPI-H 参考架构中使用的元素类型及其含义”（第 3.1 节）的“ArchiMate 元素”（ArchiMate element）列。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-025",

@@ -27,6 +27,66 @@
       },
       "drafted_at": "2026-10-01",
       "lang": "en"
+    },
+    {
+      "text": "Figure 2.3, « Principes de conception de l'architecture DPI-H » (DPI-H Architecture Design Principles, section 2.3). Un demi-cercle de dix segments bleus, dotés chacun d'une icône, entoure le titre central. Chaque principe est accompagné d'une définition en une ligne : Gouvernance (Governance), Normes ouvertes (Open Standards), Interopérabilité (Interoperability), Viabilité / Durabilité (Sustainability), Modularité (Modularity), Capacités locales (Local Capacity), Équité et inclusion (Equity and Inclusion), Propriété, accès et contrôle des données (Data Ownership, Access and Control), Confiance et sécurité (Trust and Security) et Éthique (Ethics). Par exemple, la Modularité consiste à « construire des composants faiblement couplés qui peuvent être introduits, remplacés et améliorés de manière incrémentale », et l'Interopérabilité consiste à « concevoir dès le départ pour un échange de données porteur de sens entre les systèmes et les DPI fondamentales ».",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "fr"
+    },
+    {
+      "text": "Figura 2.3, «Principios de diseño de la arquitectura DPI-H» (DPI-H Architecture Design Principles, sección 2.3). Un semicírculo de diez segmentos azules, cada uno con un icono, rodea el título central. Cada principio tiene una definición de una línea: Gobernanza (Governance), Estándares abiertos (Open Standards), Interoperabilidad (Interoperability), Sostenibilidad (Sustainability), Modularidad (Modularity), Capacidad local (Local Capacity), Equidad e inclusión (Equity and Inclusion), Propiedad, acceso y control de los datos (Data Ownership, Access and Control), Confianza y seguridad (Trust and Security) y Ética (Ethics). Por ejemplo, la Modularidad es «construir componentes débilmente acoplados que puedan introducirse, sustituirse y mejorarse de forma incremental», y la Interoperabilidad es «diseñar desde el principio para un intercambio significativo de datos entre los sistemas y la DPI fundacional».",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "es"
+    },
+    {
+      "text": "الشكل 2.3، «مبادئ تصميم بنية البنية التحتية العامة الرقمية للصحة (DPI-H)» (DPI-H Architecture Design Principles، القسم 2.3). يحيط بالعنوان المركزي نصف دائرة مكوّن من عشرة قطاعات زرقاء يحمل كل منها أيقونة. ولكل مبدأ تعريف من سطر واحد: الحوكمة (Governance)، والمعايير المفتوحة (Open Standards)، والتشغيل البيني (Interoperability)، والاستدامة (Sustainability)، والنمطية / المعيارية (Modularity)، والقدرات المحلية (Local Capacity)، والإنصاف والشمول (Equity and Inclusion)، وملكية البيانات والوصول إليها والتحكم فيها (Data Ownership, Access and Control)، والثقة والأمن (Trust and Security)، والأخلاقيات (Ethics). وعلى سبيل المثال، تُعرَّف النمطية بأنها «بناء مكونات مترابطة بمرونة يمكن إدخالها واستبدالها وتحسينها تدريجياً»، ويُعرَّف التشغيل البيني بأنه «التصميم منذ البداية لتبادل فعّال وذي معنى للبيانات عبر الأنظمة والبنية التحتية العامة الرقمية التأسيسية».",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ar"
+    },
+    {
+      "text": "Рисунок 2.3, «Принципы проектирования архитектуры DPI-H» (DPI-H Architecture Design Principles, раздел 2.3). Полукруг из десяти синих сегментов с пиктограммами окружает центральный заголовок. Каждому принципу дано краткое определение в одну строку: Руководство и управление (Governance), Открытые стандарты (Open Standards), Интероперабельность (Interoperability), Устойчивость (Sustainability), Модульность (Modularity), Локальный потенциал (Local Capacity), Справедливость и инклюзивность (Equity and Inclusion), Владение данными, доступ и контроль (Data Ownership, Access and Control), Доверие и безопасность (Trust and Security), а также Этика (Ethics). Например, модульность определяется как «создание слабосвязанных компонентов, которые можно внедрять, заменять и совершенствовать поэтапно», а интероперабельность — как «проектирование с самого начала с расчетом на осмысленный обмен данными между системами и базовой DPI».",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ru"
+    },
+    {
+      "text": "图 2.3，“DPI-H 架构设计原则”（DPI-H Architecture Design Principles，第 2.3 节）。十个各带图标的蓝色扇形段呈半圆形环绕中心标题。每项原则均配有一句话定义：治理（Governance）、开放标准（Open Standards）、互操作性（Interoperability）、可持续性（Sustainability）、模块化（Modularity）、本地能力（Local Capacity）、公平与包容（Equity and Inclusion）、数据所有权、访问与控制（Data Ownership, Access and Control）、信任与安全（Trust and Security）以及伦理（Ethics）。例如，模块化定义为“构建松散耦合的组件，使其能够渐进地引入、替换和改进”，互操作性定义为“从一开始就围绕跨系统及基础性 DPI 的有意义数据交换进行设计”。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-021",
