@@ -27,6 +27,66 @@
       },
       "drafted_at": "2026-10-01",
       "lang": "en"
+    },
+    {
+      "text": "Notation ArchiMate pour la relation « Accède » (Accesses) : une ligne verticale en pointillés terminée à son extrémité inférieure par une petite pointe de flèche ouverte. C'est le symbole figurant dans la colonne « Relation ArchiMate » (ArchiMate relationship) du Tableau 3.2, « Les types de relations utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "fr"
+    },
+    {
+      "text": "Notación ArchiMate para la relación «Accede» (Accesses): una línea vertical punteada con una pequeña punta de flecha abierta en su extremo inferior. Es el símbolo de la columna «Relación ArchiMate» (ArchiMate relationship) de la Tabla 3.2, «Los tipos de relaciones utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "es"
+    },
+    {
+      "text": "ترميز ArchiMate لعلاقة «يصل إلى» (Accesses): خط رأسي منقّط ينتهي في طرفه السفلي برأس سهم صغير مفتوح. وهو الرمز الوارد في عمود «علاقة ArchiMate» (ArchiMate relationship) من الجدول 3.2، «أنواع العلاقات المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ar"
+    },
+    {
+      "text": "Нотация ArchiMate для отношения «Обращается к» (Accesses): пунктирная вертикальная линия с небольшим открытым наконечником стрелки на нижнем конце. Это символ в столбце «Отношение ArchiMate» (ArchiMate relationship) таблицы 3.2 «Типы отношений, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ru"
+    },
+    {
+      "text": "“访问”（Accesses）关系的 ArchiMate 表示法：底端带有小型开放箭头的垂直虚线。该符号位于表 3.2“DPI-H 参考架构中使用的关系类型及其含义”（第 3.1 节）的“ArchiMate 关系”（ArchiMate relationship）列。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-025",

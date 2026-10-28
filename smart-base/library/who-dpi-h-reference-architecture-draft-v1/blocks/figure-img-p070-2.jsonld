@@ -27,6 +27,66 @@
       },
       "drafted_at": "2026-10-01",
       "lang": "en"
+    },
+    {
+      "text": "Figure 3.4.1, « Infrastructure de gouvernance sémantique : les couches de gouvernance, d'exécution et de contenu/applications, ainsi que le flux de contenu entre elles » (Semantic Governance Infrastructure: the governance, runtime, and content-and-application layers, and the flow of content between them, section 3.4.5). Trois couches horizontales sont séparées par des lignes en pointillés. La couche Services de gouvernance (Governance Services) contient le LIMR, la Rédaction de profils (Profile authoring), les Ressources de conformité (Conformance resources) et le SGT de gouvernance (Governance TMS). La couche Services d'exécution (Runtime Services) contient le ST d'exécution (Runtime TS) et une boîte de réserve (placeholder). La couche Contenu et applications (Content and Application Layers) comprend une rangée de guides d'implémentation (IG 1, IG 2, IG 3 et suivants) et une rangée d'Applications/Cas d'usage (App 1, App 2, App 3 et suivants). Une flèche intitulée « Syndication de contenu » (Content syndication) va des Sources mondiales de contenu (Global Content Sources), situées hors des couches, vers le SGT de gouvernance (Governance TMS), et une flèche bidirectionnelle relie Governance TMS à Runtime TS.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "fr"
+    },
+    {
+      "text": "Figura 3.4.1, «Infraestructura de gobernanza semántica: las capas de gobernanza, de tiempo de ejecución y de contenido y aplicaciones, y el flujo de contenido entre ellas» (Semantic Governance Infrastructure: the governance, runtime, and content-and-application layers, and the flow of content between them, sección 3.4.5). Tres capas horizontales están separadas por líneas discontinuas. Servicios de gobernanza (Governance Services) contiene LIMR, Autoría de perfiles (Profile authoring), Recursos de conformidad (Conformance resources) y el TMS de gobernanza (Governance TMS). Servicios en tiempo de ejecución (Runtime Services) contiene el TS en tiempo de ejecución (Runtime TS) y un recuadro marcador de posición. Capas de contenido y aplicaciones (Content and Application Layers) contiene una fila de guías de implementación (IG 1, IG 2, IG 3 y más) y una fila de Aplicaciones/Casos de uso (App 1, App 2, App 3 y más). Una flecha etiquetada «Sindicación de contenido» (Content syndication) va desde las Fuentes mundiales de contenido (Global Content Sources), fuera de las capas, hacia Governance TMS, y una flecha bidireccional enlaza Governance TMS con Runtime TS.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "es"
+    },
+    {
+      "text": "الشكل 3.4.1، «البنية التحتية للحوكمة الدلالية: طبقات الحوكمة والتشغيل والمحتوى والتطبيقات، وتدفّق المحتوى فيما بينها» (Semantic Governance Infrastructure: the governance, runtime, and content-and-application layers, and the flow of content between them، القسم 3.4.5). تفصل خطوط متقطعة بين ثلاث طبقات أفقية: تضم طبقة خدمات الحوكمة (Governance Services) مستودع نماذج المعلومات المنطقية (LIMR)، وتأليف ملفات التعريف (Profile authoring)، وموارد المطابقة (Conformance resources)، ونظام إدارة المصطلحات للحوكمة (Governance TMS). وتضم طبقة خدمات التشغيل (Runtime Services) خدمة المصطلحات وقت التشغيل (Runtime TS) ومربعاً نائباً. وتضم طبقة المحتوى والتطبيقات (Content and Application Layers) صفاً من أدلة التنفيذ (IG 1 وIG 2 وIG 3 وغيرها) وصفاً من التطبيقات/حالات الاستخدام (App 1 وApp 2 وApp 3 وغيرها). ويمتد سهم بعنوان «توزيع المحتوى» (Content syndication) من مصادر المحتوى العالمية (Global Content Sources) خارج الطبقات إلى Governance TMS، ويربط سهم ثنائي الاتجاه بين Governance TMS وRuntime TS.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ar"
+    },
+    {
+      "text": "Рисунок 3.4.1, «Инфраструктура семантического управления: уровни управления, среды выполнения, а также контента и приложений, и поток контента между ними» (Semantic Governance Infrastructure: the governance, runtime, and content-and-application layers, and the flow of content between them, раздел 3.4.5). Три горизонтальных уровня разделены пунктирными линиями. Сервисы управления (Governance Services) содержат LIMR, Разработку профилей (Profile authoring), Ресурсы соответствия (Conformance resources) и Систему управления терминологией уровня управления (Governance TMS). Сервисы среды выполнения (Runtime Services) содержат Терминологический сервис среды выполнения (Runtime TS) и резервный блок. Уровни контента и приложений (Content and Application Layers) содержат ряд руководств по реализации (IG 1, IG 2, IG 3 и далее) и ряд Приложений/Сценариев использования (App 1, App 2, App 3 и далее). Стрелка с подписью «Синдикация контента» (Content syndication) ведёт от Глобальных источников контента (Global Content Sources), расположенных вне уровней, к Governance TMS, а двунаправленная стрелка связывает Governance TMS и Runtime TS.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ru"
+    },
+    {
+      "text": "图 3.4.1，“语义治理基础设施：治理层、运行时层及内容与应用层，以及各层之间的内容流”（Semantic Governance Infrastructure: the governance, runtime, and content-and-application layers, and the flow of content between them，第 3.4.5 节）。三个水平层由虚线分隔。治理服务层（Governance Services）包含 LIMR、配置文件编写（Profile authoring）、一致性资源（Conformance resources）和治理术语管理系统（Governance TMS）。运行时服务层（Runtime Services）包含运行时术语服务（Runtime TS）和一个占位框。内容与应用层（Content and Application Layers）包含一行实施指南（IG 1、IG 2、IG 3 等）和一行应用/用例（App 1、App 2、App 3 等）。标有“内容聚合分发”（Content syndication）的箭头从各层之外的全球内容源（Global Content Sources）指向 Governance TMS，双向箭头连接 Governance TMS 与 Runtime TS。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-032",

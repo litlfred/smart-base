@@ -27,6 +27,66 @@
       },
       "drafted_at": "2026-10-01",
       "lang": "en"
+    },
+    {
+      "text": "Figure 3.5 à la page 52, « Vue en couches d'un sous-objectif relatif à la garantie de la qualité et de la continuité des soins » (Layered view for one sub-goal relating to ensuring Quality and Continuity of Care, section 3.3). Le sous-objectif « Évaluation globale des besoins » (Comprehensive Needs Assessment, évaluation systématique de l'état de santé complet, des risques et des besoins de soins d'un patient) est réalisé par le résultat « Soins intégrés et centrés sur la personne » (Integrated, Person-Centered Care). Dans la « Mise en œuvre du sous-objectif Q&CC n° 1 » (Q&CC Sub-goal #1 Implementation), cinq capacités réalisent ce résultat : Gestion des protocoles de soins (Care Protocol Management), Orchestration du partage des tâches (Task-Sharing Orchestration), Intégration de l'historique du patient (Patient History Integration), Suivi de la qualité et de la performance (Quality and Performance Monitoring) et Aide à la décision (Decision Support). Celles-ci sont réalisées par le produit « Plan de soins partagé intégré (SCP) » (Integrated Shared Care Plan (SCP)), que servent quatre services : Gestion des protocoles de soins, Aide à la décision clinique, Service d'agrégation de l'historique du patient et Coordination des soins et tâches. Ces services sont réalisés ou servis par les composants Moteur de base de connaissances (Knowledge Base Engine), Dossier médical électronique (Electronic Medical Record), Couche d'interopérabilité (Interoperability Layer), Contrôle d'accès et authentification (Access Control and Authentication), Dossier de santé tout au long de la vie (Lifelong Health Record) et Registre des clients (Client Registry). Un « Regroupement » (Grouping) en bas, auquel accèdent ces composants, réunit le Registre des clients, le Registre des agents de santé, le Registre des établissements, le Serveur de terminologie et le Registre des produits.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "fr"
+    },
+    {
+      "text": "Figura 3.5 en la página 52, «Vista en capas de un subobjetivo relacionado con garantizar la calidad y la continuidad de la atención» (Layered view for one sub-goal relating to ensuring Quality and Continuity of Care, sección 3.3). El subobjetivo «Evaluación integral de necesidades» (Comprehensive Needs Assessment, evaluación sistemática del estado de salud completo, los riesgos y los requisitos de atención de un paciente) es realizado por el resultado «Atención integrada y centrada en la persona» (Integrated, Person-Centered Care). En la «Implementación del subobjetivo n.º 1 de Q&CC» (Q&CC Sub-goal #1 Implementation), cinco capacidades realizan ese resultado: Gestión de protocolos de atención (Care Protocol Management), Orquestación de la distribución de tareas (Task-Sharing Orchestration), Integración del historial del paciente (Patient History Integration), Monitoreo de la calidad y el desempeño (Quality and Performance Monitoring) y Apoyo a las decisiones (Decision Support). Estas son realizadas por el producto «Plan de atención compartido integrado (SCP)» (Integrated Shared Care Plan (SCP)), al que sirven cuatro servicios: Gestión de protocolos de atención, Apoyo a las decisiones clínicas, Servicio de agregación del historial del paciente y Coordinación de la atención y tareas. Dichos servicios son realizados o servidos desde los componentes Motor de base de conocimientos (Knowledge Base Engine), Historia clínica electrónica (Electronic Medical Record), Capa de interoperabilidad (Interoperability Layer), Control de acceso y autenticación (Access Control and Authentication), Historia de salud a lo largo de la vida (Lifelong Health Record) y Registro de clientes (Client Registry). Una «Agrupación» (Grouping) en la parte inferior, a la que acceden estos componentes, contiene el Registro de clientes, el Registro de trabajadores de la salud, el Registro de establecimientos, el Servidor de terminología y el Registro de productos.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "es"
+    },
+    {
+      "text": "الشكل 3.5 في الصفحة 52، «عرض متعدد الطبقات لهدف فرعي واحد يتعلق بضمان جودة الرعاية واستمراريتها» (Layered view for one sub-goal relating to ensuring Quality and Continuity of Care، القسم 3.3). يتحقق الهدف الفرعي «التقييم الشامل للاحتياجات» (Comprehensive Needs Assessment، وهو التقييم المنهجي للحالة الصحية الكاملة للمريض ومخاطره ومتطلبات رعايته) من خلال النتيجة «رعاية متكاملة ومتمحورة حول الشخص» (Integrated, Person-Centered Care). وفي «تنفيذ الهدف الفرعي الأول للجودة واستمرارية الرعاية (Q&CC)» (Q&CC Sub-goal #1 Implementation)، تحقّق خمس قدرات تلك النتيجة: إدارة بروتوكولات الرعاية (Care Protocol Management)، وتنسيق تقاسم المهام (Task-Sharing Orchestration)، وتكامل التاريخ المرضي للمريض (Patient History Integration)، ورصد الجودة والأداء (Quality and Performance Monitoring)، ودعم القرار (Decision Support). وتتحقق هذه القدرات بواسطة المنتج «خطة الرعاية المشتركة المتكاملة (SCP)» (Integrated Shared Care Plan (SCP))، الذي تخدمه أربع خدمات: إدارة بروتوكولات الرعاية، ودعم القرار السريري، وخدمة تجميع التاريخ المرضي للمريض، وتنسيق الرعاية والمهام. وتُحقَّق هذه الخدمات أو تُقدَّم من خلال المكوّنات: محرك قاعدة المعرفة (Knowledge Base Engine)، والسجل الطبي الإلكتروني (Electronic Medical Record)، وطبقة التشغيل البيني (Interoperability Layer)، والتحكم في الوصول والمصادقة (Access Control and Authentication)، والسجل الصحي مدى الحياة (Lifelong Health Record)، وسجل المراجعين (Client Registry). ويضم «تجميع» (Grouping) في الأسفل، تصل إليه هذه المكوّنات، سجل المراجعين، وسجل العاملين الصحيين، وسجل المرافق، وخادم المصطلحات، وسجل المنتجات.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ar"
+    },
+    {
+      "text": "Рисунок 3.5 на странице 52, «Многоуровневое представление одной подцели, относящейся к обеспечению качества и преемственности медицинской помощи» (Layered view for one sub-goal relating to ensuring Quality and Continuity of Care, раздел 3.3). Подцель «Комплексная оценка потребностей» (Comprehensive Needs Assessment — систематическая оценка полного состояния здоровья пациента, рисков и потребностей в помощи) реализуется результатом «Интегрированная пациентоориентированная помощь» (Integrated, Person-Centered Care). В области «Реализация подцели № 1 Q&CC» (Q&CC Sub-goal #1 Implementation) этот результат реализуют пять способностей: Управление протоколами лечения (Care Protocol Management), Оркестрация распределения задач (Task-Sharing Orchestration), Интеграция анамнеза пациента (Patient History Integration), Мониторинг качества и эффективности (Quality and Performance Monitoring) и Поддержка принятия решений (Decision Support). Они реализуются продуктом «Интегрированный совместный план лечения (SCP)» (Integrated Shared Care Plan (SCP)), который обслуживают четыре сервиса: Управление протоколами лечения, Поддержка принятия клинических решений, Сервис агрегации истории пациента и Координация помощи и задач. Эти сервисы реализуются или обслуживаются компонентами Механизм базы знаний (Knowledge Base Engine), Электронная медицинская карта (Electronic Medical Record), Уровень интероперабельности (Interoperability Layer), Контроль доступа и аутентификация (Access Control and Authentication), Пожизненная медицинская карта (Lifelong Health Record) и Реестр пациентов (Client Registry). Группа «Grouping» в нижней части, к которой обращаются эти компоненты, включает Реестр пациентов, Реестр медицинских работников, Реестр медицинских организаций, Сервер терминологии и Реестр медицинской продукции.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ru"
+    },
+    {
+      "text": "第 52 页图 3.5，“与确保医疗质量和连续性相关的单一子目标分层视图”（Layered view for one sub-goal relating to ensuring Quality and Continuity of Care，第 3.3 节）。子目标“综合需求评估”（Comprehensive Needs Assessment，对患者完整健康状况、风险和照护需求的系统评估）由成果“整合式以人为本的照护”（Integrated, Person-Centered Care）实现。在“Q&CC 子目标 #1 实施”（Q&CC Sub-goal #1 Implementation）中，五项业务能力实现该成果：照护方案管理（Care Protocol Management）、任务分担编排（Task-Sharing Orchestration）、患者病史整合（Patient History Integration）、质量与绩效监测（Quality and Performance Monitoring）以及决策支持（Decision Support）。这些能力由产品“整合式共享照护计划（SCP）”（Integrated Shared Care Plan (SCP)）实现，并由四项服务提供支持：照护方案管理、临床决策支持、患者病史聚合服务以及照护协调与任务。这些服务由知识库引擎（Knowledge Base Engine）、电子病历（Electronic Medical Record）、互操作性层（Interoperability Layer）、访问控制与认证（Access Control and Authentication）、终身健康档案（Lifelong Health Record）和客户注册库（Client Registry）组件实现或提供服务。底部供这些组件访问的“分组”（Grouping）包含客户注册库、卫生工作者注册库、机构注册库、术语服务器和产品注册库。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-026",

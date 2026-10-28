@@ -27,6 +27,66 @@
       },
       "drafted_at": "2026-10-01",
       "lang": "en"
+    },
+    {
+      "text": "Figure 3.6, « Modèles d'échange pouvant coexister au sein d'un même pays » (Exchange patterns that can coexist within a single country, section 3.6.3). Cinq panneaux montrent le même type de systèmes reliés de différentes manières. Connexions directes (Direct connections) : systèmes A à D reliés point à point. Bus de services central (Central service bus) : cinq systèmes tous raccordés à un même bus de services orange. Passerelles (Gateways) : systèmes A, B et C, chacun derrière sa propre passerelle, les passerelles étant reliées entre elles. Points d'accès distribués (Distributed access points) : systèmes A, B et C, dotés chacun d'un point d'accès (AP) ; les AP sont reliés par des lignes de données pleines, tandis que des lignes en pointillés joignent chacun d'eux à une boîte centrale « Registre et supervision » (Registry & oversight) par laquelle ne transite aucune donnée. Publication-abonnement (Publish–subscribe (asynchronous)) : le système A publie vers un courtier d'événements (event broker), qui notifie les systèmes B, C et D. Le texte de la page précise que l'architecture ne prescrit pas un modèle unique.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "fr"
+    },
+    {
+      "text": "Figura 3.6, «Patrones de intercambio que pueden coexistir dentro de un mismo país» (Exchange patterns that can coexist within a single country, sección 3.6.3). Cinco paneles muestran el mismo tipo de sistemas conectados de distintas maneras. Conexiones directas (Direct connections): sistemas A a D vinculados punto a punto. Bus de servicios central (Central service bus): cinco sistemas conectados a un único bus de servicios naranja. Pasarelas (Gateways): sistemas A, B y C, cada uno detrás de su propia pasarela, con las pasarelas interconectadas. Puntos de acceso distribuidos (Distributed access points): sistemas A, B y C, cada uno con un punto de acceso (AP); los AP están unidos por líneas continuas de datos, mientras que líneas discontinuas unen cada uno a un recuadro central de «Registro y supervisión» (Registry & oversight) que no transporta datos. Publicación-suscripción (Publish–subscribe (asynchronous)): el sistema A publica en un intermediario de eventos (event broker), que notifica a los sistemas B, C y D. El texto de la página indica que la arquitectura no prescribe un único patrón.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "es"
+    },
+    {
+      "text": "الشكل 3.6، «أنماط التبادل التي يمكن أن تتعايش داخل بلد واحد» (Exchange patterns that can coexist within a single country، القسم 3.6.3). تعرض خمس لوحات النوع نفسه من الأنظمة متصلاً بطرق مختلفة: الاتصالات المباشرة (Direct connections): الأنظمة من A إلى D متصلة بنمط نقطة إلى نقطة؛ ناقل الخدمة المركزي (Central service bus): خمسة أنظمة متصلة جميعها بناقل خدمة برتقالي واحد؛ البوابات (Gateways): الأنظمة A وB وC يقع كل منها خلف بوابتها الخاصة مع ترابط البوابات فيما بينها؛ نقاط الوصول الموزعة (Distributed access points): الأنظمة A وB وC مع نقطة وصول (AP) لكل منها، وتربط خطوط بيانات متصلة بين نقاط الوصول بينما تصل خطوط متقطعة كلاً منها بمربع مركزي بعنوان «السجل والإشراف» (Registry & oversight) لا تمر عبره بيانات؛ النشر والاشتراك غير المتزامن (Publish–subscribe (asynchronous)): ينشر النظام A إلى وسيط أحداث (event broker) يتولى إشعار الأنظمة B وC وD. ويوضح نص الصفحة أن البنية المعمارية لا تفرض نمطاً واحداً.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ar"
+    },
+    {
+      "text": "Рисунок 3.6, «Шаблоны обмена данными, которые могут сосуществовать в пределах одной страны» (Exchange patterns that can coexist within a single country, раздел 3.6.3). Пять панелей показывают однотипные системы, соединённые различными способами. Прямые соединения (Direct connections): системы A–D связаны по принципу «точка–точка». Центральная сервисная шина (Central service bus): пять систем подключены к одной оранжевой сервисной шине. Шлюзы (Gateways): системы A, B и C находятся каждая за собственным шлюзом, а шлюзы связаны между собой. Распределённые точки доступа (Distributed access points): системы A, B и C имеют по точке доступа (AP); точки доступа соединены сплошными линиями передачи данных, а пунктирные линии связывают каждую из них с центральным блоком «Реестр и надзор» (Registry & oversight), через который данные не передаются. Публикация–подписка (асинхронный обмен, Publish–subscribe (asynchronous)): система A публикует события в брокер событий (event broker), который уведомляет системы B, C и D. В тексте страницы указано, что архитектура не предписывает какой-либо один шаблон.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ru"
+    },
+    {
+      "text": "图 3.6，“可在同一国家内并存的交换模式”（Exchange patterns that can coexist within a single country，第 3.6 节/3.6.3 节）。五个面板展示了以不同方式连接的同类系统。直接连接（Direct connections）：系统 A 至 D 点对点相连。中央服务总线（Central service bus）：五个系统全部连接到同一条橙色服务总线。网关（Gateways）：系统 A、B 和 C 各自位于其网关之后，各网关相互连接。分布式接入点（Distributed access points）：系统 A、B 和 C 各有一个接入点（AP）；各 AP 之间由实线数据线相连，而虚线将每个 AP 连接到不传输数据的中央“注册与监管”（Registry & oversight）框。发布-订阅（异步，Publish–subscribe (asynchronous)）：系统 A 向事件代理（event broker）发布消息，由其通知系统 B、C 和 D。页面正文指出该架构并不强制规定单一模式。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-044",

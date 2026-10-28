@@ -27,6 +27,66 @@
       },
       "drafted_at": "2026-10-01",
       "lang": "en"
+    },
+    {
+      "text": "Figure 3.4.3, « Contenu terminologique hiérarchique, des normes de référence mondiales aux dictionnaires au niveau des établissements, avec personnalisation descendante et rétroaction ascendante » (Hierarchical terminology content, from global reference standards to facility-level dictionaries, with top-down customisation and upward feedback), adapté du cadre du Dictionnaire national de données de santé (NHDD) d'OpenHIE (section 3.4.5). Intitulé « Cadre NHDD : structure du contenu » (NHDD Framework: Content Structure), le schéma empile cinq couches de haut en bas : Jeux de codes de référence/administratifs (Reference/Administrative Code Sets, par exemple SNOMED, ICD, HL7) ; Sources de concepts organisées/Terminologies d'interface (Curated Concept Sources/Interface Terminologies, par exemple CIEL, IMO) ; Sous-ensembles/Personnalisations au niveau national (Country-level Subsets/Customizations) ; Dictionnaires/Personnalisations au niveau des organisations (Organization-level Dictionaries/Customizations) ; et Dictionnaires au niveau des établissements (Facility-level Dictionaries, par exemple formulaires thérapeutiques). Une flèche descendante à gauche indique que les normes internationales sont sélectionnées et personnalisées pour un usage national, puis adaptées plus finement pour la mise en œuvre locale. Une flèche ascendante à droite porte les mentions « Soumissions / Rétroaction vers les normes » (Submissions / Feedback to Standards) et « Gouvernance locale et nationale réactive » (Responsive Local & National Governance).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "fr"
+    },
+    {
+      "text": "Figura 3.4.3, «Contenido terminológico jerárquico, desde los estándares de referencia mundiales hasta los diccionarios a nivel de establecimiento, con personalización descendente y retroalimentación ascendente» (Hierarchical terminology content, from global reference standards to facility-level dictionaries, with top-down customisation and upward feedback), adaptado del marco del Diccionario Nacional de Datos de Salud (NHDD) de OpenHIE (sección 3.4.5). Titulado «Marco NHDD: Estructura del contenido» (NHDD Framework: Content Structure), apila cinco capas de arriba abajo: Conjuntos de códigos de referencia/administrativos (Reference/Administrative Code Sets, por ejemplo SNOMED, ICD, HL7); Fuentes de conceptos curadas/Terminologías de interfaz (Curated Concept Sources/Interface Terminologies, por ejemplo CIEL, IMO); Subconjuntos/Personalizaciones a nivel de país (Country-level Subsets/Customizations); Diccionarios/Personalizaciones a nivel de organización (Organization-level Dictionaries/Customizations); y Diccionarios a nivel de establecimiento (Facility-level Dictionaries, por ejemplo formularios farmacoterapéuticos). Una flecha descendente a la izquierda indica que los estándares internacionales se seleccionan y personalizan para su uso nacional y luego se adaptan aún más para la implementación local. Una flecha ascendente a la derecha dice «Envíos / Retroalimentación a los estándares» (Submissions / Feedback to Standards) y «Gobernanza local y nacional receptiva» (Responsive Local & National Governance).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "es"
+    },
+    {
+      "text": "الشكل 3.4.3، «محتوى المصطلحات الهرمي، من المعايير المرجعية العالمية إلى القواميس على مستوى المرافق، مع التخصيص من أعلى إلى أسفل والتغذية الراجعة الصاعدة» (Hierarchical terminology content, from global reference standards to facility-level dictionaries, with top-down customisation and upward feedback)، مقتبس من إطار قاموس البيانات الصحية الوطني (NHDD) التابع لـ OpenHIE (القسم 3.4.5). يحمل الشكل عنوان «إطار NHDD: بنية المحتوى» (NHDD Framework: Content Structure)، ويرصّ خمس طبقات من الأعلى إلى الأسفل: مجموعات الرموز المرجعية/الإدارية (Reference/Administrative Code Sets، مثل SNOMED وICD وHL7)؛ ومصادر المفاهيم المنسّقة/مصطلحات الواجهة (Curated Concept Sources/Interface Terminologies، مثل CIEL وIMO)؛ والمجموعات الفرعية/التخصيصات على المستوى الوطني (Country-level Subsets/Customizations)؛ والقواميس/التخصيصات على مستوى المؤسسات (Organization-level Dictionaries/Customizations)؛ والقواميس على مستوى المرافق (Facility-level Dictionaries، مثل قوائم الأدوية المعتمدة). ويشير سهم متجه إلى الأسفل على اليسار إلى أنه يتم اختيار المعايير الدولية وتخصيصها للاستخدام القطري ثم تكييفها للتنفيذ المحلي، بينما يحمل سهم متجه إلى الأعلى على اليمين عبارتي «المقترحات / التغذية الراجعة إلى المعايير» (Submissions / Feedback to Standards) و«الحوكمة المحلية والوطنية المستجيبة» (Responsive Local & National Governance).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ar"
+    },
+    {
+      "text": "Рисунок 3.4.3, «Иерархическое терминологическое наполнение: от глобальных эталонных стандартов до словарей уровня медицинских организаций с кастомизацией сверху вниз и обратной связью снизу вверх» (Hierarchical terminology content, from global reference standards to facility-level dictionaries, with top-down customisation and upward feedback), адаптировано из концепции Национального словаря данных здравоохранения (NHDD) OpenHIE (раздел 3.4.5). Диаграмма под названием «Структура контента NHDD» (NHDD Framework: Content Structure) включает пять уровней сверху вниз: Эталонные/административные наборы кодов (Reference/Administrative Code Sets, например SNOMED, ICD, HL7); Курируемые источники концептов/интерфейсные терминологии (Curated Concept Sources/Interface Terminologies, например CIEL, IMO); Национальные подмножества/адаптации (Country-level Subsets/Customizations); Словари/адаптации уровня организаций (Organization-level Dictionaries/Customizations); и Словари уровня медицинских учреждений (Facility-level Dictionaries, например лекарственные формуляры). Направленная вниз стрелка слева указывает, что международные стандарты отбираются и адаптируются для национального использования, а затем дополнительно настраиваются для локального внедрения. Направленная вверх стрелка справа подписана «Предложения / обратная связь в стандарты» (Submissions / Feedback to Standards) и «Отзывчивое локальное и национальное управление» (Responsive Local & National Governance).",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ru"
+    },
+    {
+      "text": "图 3.4.3，“从全球参考标准到机构级字典的层级化术语内容，以及自上而下的定制与自下而上的反馈”（Hierarchical terminology content, from global reference standards to facility-level dictionaries, with top-down customisation and upward feedback），改编自 OpenHIE 国家卫生数据字典（NHDD）框架（第 3.4.5 节）。图题为“NHDD 框架：内容结构”（NHDD Framework: Content Structure），自上而下堆叠五层：参考/管理代码集（Reference/Administrative Code Sets，例如 SNOMED、ICD、HL7）；精选概念源/接口术语集（Curated Concept Sources/Interface Terminologies，例如 CIEL、IMO）；国家级子集/定制（Country-level Subsets/Customizations）；组织级字典/定制（Organization-level Dictionaries/Customizations）；以及机构级字典（Facility-level Dictionaries，例如处方集）。左侧向下的箭头表明国际标准经遴选和定制供国家层面使用，并进一步适配以用于本地实施；右侧向上的箭头标注“向标准提交/反馈”（Submissions / Feedback to Standards）和“响应迅速的地方与国家治理”（Responsive Local & National Governance）。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-032",
