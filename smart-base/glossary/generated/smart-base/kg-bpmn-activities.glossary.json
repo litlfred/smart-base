@@ -7,6 +7,46 @@
   "source": "BPMN activities of smart-base",
   "terms": [
     {
+      "id": "process_classifyandcodecontent.task_identifyslots",
+      "prefLabel": "Identify slots and proposed exclusions [classify-and-code-content · recommendation-extraction]",
+      "definition": "Enumerate the classifiable slots in the L1 statements or L2 component (condition, intervention, persona, medicine, domain, business-process, recommendation-strength, recommendation-direction, evidence-certainty) and any proposed L1 coverage exclusions in exclusions.proposed.json naming l1-extraction-reviewer as signerRole.",
+      "notation": "Task_IdentifySlots",
+      "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_IdentifySlots",
+      "status": "candidate"
+    },
+    {
+      "id": "process_classifyandcodecontent.task_lookupandcode",
+      "prefLabel": "Run reuse-first lookup and record candidates [classify-and-code-content · recommendation-scenarios · glossary-terms]",
+      "definition": "Run the terminology-lookup Tool across the four reuse-first rungs of the terminology-coding methodology: (1) target guide vocabulary, (2) smart-base generic personas, GRADE code lists and guideline-domain glossary, (3) external WHO-FIC/ILO standards (ICD-11, ICHI/CDHIv2, ISCO-08, ATC), and (4) local glossary candidate (status: candidate, source: extracted) or could-not-determine for business-process with its WARNING line.",
+      "notation": "Task_LookupAndCode",
+      "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_LookupAndCode",
+      "status": "candidate"
+    },
+    {
+      "id": "process_classifyandcodecontent.task_reviewcodings",
+      "prefLabel": "Adjudicate slot codings and glossary candidates [classify-and-code-content · ontologist · glossary-terms · terminology-management · content-review]",
+      "definition": "Review each slot's classification and code against the terminology-coding methodology: verify that the authoritative scheme for the slot was used, confirm reuse-first rung selection, check skos:exactMatch vs skos:closeMatch precision (ontologist), and adjudicate any Rung 4 glossary candidates (promoting valid entries from candidate to authored per glossary-terms, or replacing them with an existing code).",
+      "notation": "Task_ReviewCodings",
+      "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_ReviewCodings",
+      "status": "candidate"
+    },
+    {
+      "id": "process_classifyandcodecontent.task_reviewexclusions",
+      "prefLabel": "Read proposed exclusions against page and sign [classify-and-code-content · recommendation-extraction · content-review]",
+      "definition": "Open library/<doc_id>/sections/page-NNN.md beside exclusions.proposed.json. Read each candidate sentence in place on the printed page, check whether the proposed exclusion reason (background-fact, manufacturer-statement, editorial, research-question, duplicate-of) holds without dropping normative guidance, and either sign the exclusion (signedOffBy) or reject it with a reason.",
+      "notation": "Task_ReviewExclusions",
+      "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_ReviewExclusions",
+      "status": "candidate"
+    },
+    {
+      "id": "process_classifyandcodecontent.task_stageforreview",
+      "prefLabel": "Stage codings, warnings and exclusions for review [staging-review · interaction-modality]",
+      "definition": "Write the candidate codings, provenance bases, warnings report, and any unsigned exclusions.proposed.json entries, and request human review with deep links to the staged extraction or component pages and the printed page sections.",
+      "notation": "Task_StageForReview",
+      "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_StageForReview",
+      "status": "candidate"
+    },
+    {
       "id": "process_dakl3ig.callactivity_l3fhir",
       "prefLabel": "L3 FHIR IG pipeline (fhir-harness)",
       "definition": "fhir-harness's l3-fhir-pipeline.bpmn, from its StartEvent_ModelReady with the mapping above as the source model: author FSH, SUSHI, validate, QC, IG Publisher, publish. Called, not copied, so a change to the generic pipeline reaches every IG built on it.",
@@ -95,6 +135,22 @@
       "status": "candidate"
     },
     {
+      "id": "process_diig.call_beanclose",
+      "prefLabel": "Close the bean [bean-close]",
+      "definition": "Process_BeanClose: end the bean in a state that says why — complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back. The one place resolve and archive are drawn (bean m8gz, owner 2026-10-24); placed straight before the end so the engine's resolve sees nothing left but the archive step.",
+      "notation": "Call_BeanClose",
+      "source": "smart-base/methodologies/processes/diig-investment-path.bpmn#Call_BeanClose",
+      "status": "candidate"
+    },
+    {
+      "id": "process_diig.call_beanopen",
+      "prefLabel": "Open the bean [bean-open]",
+      "definition": "Process_BeanOpen: check before you create, find out whose the bean is, and claim it — or leave it alone when it is someone else's. The one place a claim is drawn (bean m8gz, owner 2026-10-24); the gateway after this reads which end it reached.",
+      "notation": "Call_BeanOpen",
+      "source": "smart-base/methodologies/processes/diig-investment-path.bpmn#Call_BeanOpen",
+      "status": "candidate"
+    },
+    {
       "id": "process_l2componenteditreview.call_review",
       "prefLabel": "Review the staged component [content-review]",
       "definition": "cat-harness's generic review, not a copy of it: classify what changed, review it, and record the decision as a qa-review/v1 QaReview whose subject is the component and whose Decision carries the reviewing role. The reviewer reads the staged page and the before/after; for a figure or table, the visual-diff picture and its changed-pixel count; for a form, the wireframe (wireframe-design-review; at L3 its Questionnaire follows fhir-questionnaire-wireframe). What to judge per component is the skill l2-component-edit-review's column \"the reviewer judges\".",
@@ -140,6 +196,30 @@
       "definition": "Ask the person in the reviewing role, following staging-review's deep-link rule: one deep link per changed page and anchor on STAGING/<slug>/, each beside the same page on main as before (or \"new page\"), the pages taken from the change (rendered-impact) rather than chosen; no preview yet is said, not hidden. The request leads with what changed in prose, then the links, the before/after and the checker's findings, and puts its question in interaction-modality's form. Where it goes is a judgement, and more than one place may be right: this conversation, the GitHub issue the work came from, the pull request; each place carries the same links. A comment tagged on the PR becomes a review-comment todo (review-comments).",
       "notation": "Task_RequestReview",
       "source": "smart-base/processes/content/l2-component-edit-review.bpmn#Task_RequestReview",
+      "status": "candidate"
+    },
+    {
+      "id": "process_l2dak.call_beanclose",
+      "prefLabel": "Close the bean [bean-close]",
+      "definition": "Process_BeanClose: end the bean in a state that says why — complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back. The one place resolve and archive are drawn (bean m8gz, owner 2026-10-24); placed straight before the end so the engine's resolve sees nothing left but the archive step.",
+      "notation": "Call_BeanClose",
+      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Call_BeanClose",
+      "status": "candidate"
+    },
+    {
+      "id": "process_l2dak.call_beanclose_2",
+      "prefLabel": "Close the bean [bean-close]",
+      "definition": "Process_BeanClose: end the bean in a state that says why — complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back. The one place resolve and archive are drawn (bean m8gz, owner 2026-10-24); placed straight before the end so the engine's resolve sees nothing left but the archive step.",
+      "notation": "Call_BeanClose_2",
+      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Call_BeanClose_2",
+      "status": "candidate"
+    },
+    {
+      "id": "process_l2dak.call_beanopen",
+      "prefLabel": "Open the bean [bean-open]",
+      "definition": "Process_BeanOpen: check before you create, find out whose the bean is, and claim it — or leave it alone when it is someone else's. The one place a claim is drawn (bean m8gz, owner 2026-10-24); the gateway after this reads which end it reached.",
+      "notation": "Call_BeanOpen",
+      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Call_BeanOpen",
       "status": "candidate"
     },
     {
