@@ -23,6 +23,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie de couverture montrant en gros plan la main d'une personne touchant l'écran d'une tablette numérique qui affiche un formulaire mobile de collecte de données intitulé « VISIT STATUS » (Statut de la visite) avec des options sélectionnables comprenant Treated (Traité), Referred (Orienté), Not Treated (Non traité) et Admitted (Hospitalisé) ; au premier plan, des registres papier de patients comportant des inscriptions manuscrites sont visibles sur le bureau.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía en la cubierta que muestra un primer plano de la mano de una persona tocando la pantalla de una tableta que presenta un formulario móvil de recopilación de datos encabezado «VISIT STATUS» (Estado de la visita) con opciones seleccionables que incluyen Treated (Tratado), Referred (Derivado), Not Treated (No tratado) y Admitted (Ingresado); en primer plano, sobre el escritorio, se ven libros de registro de pacientes en papel con anotaciones manuscritas.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية على الغلاف تُظهر لقطة مقرّبة ليد شخص تلمس شاشة حاسوب لوحي يعرض نموذجاً محمولاً لجمع البيانات بعنوان «VISIT STATUS» (حالة الزيارة) مع خيارات قابلة للتحديد تشمل Treated (عُولج) وReferred (أُحيل) وNot Treated (لم يُعالج) وAdmitted (أُدخل المستشفى)؛ وفي المقدمة تظهر على المكتب سجلات ورقية للمرضى مدوّنة بخط اليد.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография на обложке, крупным планом показывающая руку человека, касающуюся экрана планшетного компьютера, на котором отображается мобильная форма сбора данных с заголовком «VISIT STATUS» (Статус визита) и выбираемыми вариантами Treated (Пролечен), Referred (Направлен), Not Treated (Не пролечен) и Admitted (Госпитализирован); на переднем плане на столе видны бумажные журналы регистрации пациентов с рукописными записями.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "封面照片近景展示一只手正在触摸平板电脑屏幕，屏幕上显示题为“VISIT STATUS”（就诊状态）的移动数据采集表单，可选项包括 Treated（已治疗）、Referred（已转诊）、Not Treated（未治疗）和 Admitted（已收治入院）；前景桌面上可见带有手写记录的纸质患者登记簿。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -32,7 +92,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 2.7e-05,
+        "coverage": 0.000027,
         "imagesOnPage": 71,
         "page": 1
       },
@@ -47,6 +107,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (12 par 27 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (12 por 27 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (12 × 27 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (12 на 27 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（12 × 27 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -56,7 +176,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 5.1e-05,
+        "coverage": 0.000051,
         "imagesOnPage": 71,
         "page": 1
       },
@@ -71,17 +191,77 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (8 par 16 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (8 por 16 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (8 × 16 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (8 на 16 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（8 × 16 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
         {
           "page": 1,
-          "coverage": 5.1e-05,
+          "coverage": 0.000051,
           "imagesOnPage": 71
         },
         {
           "page": 1,
-          "coverage": 5.1e-05,
+          "coverage": 0.000051,
           "imagesOnPage": 71
         }
       ]
@@ -107,6 +287,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (15 par 16 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (15 por 16 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (15 × 16 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (15 на 16 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（15 × 16 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -178,7 +418,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 9.1e-05,
+        "coverage": 0.000091,
         "imagesOnPage": 71,
         "page": 1
       },
@@ -193,6 +433,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (13 par 16 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (13 por 16 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (13 × 16 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (13 на 16 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（13 × 16 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -217,6 +517,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (16 par 16 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (16 por 16 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (16 × 16 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (16 на 16 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（16 × 16 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -253,6 +613,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (17 par 16 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (17 por 16 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (17 × 16 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (17 на 16 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（17 × 16 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -464,7 +884,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 7.6e-05,
+        "coverage": 0.000076,
         "imagesOnPage": 71,
         "page": 1
       },
@@ -479,6 +899,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (11 par 16 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (11 por 16 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (11 × 16 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (11 на 16 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（11 × 16 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -503,6 +983,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (15 par 15 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (15 por 15 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (15 × 15 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (15 на 15 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（15 × 15 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -513,7 +1053,7 @@
         },
         {
           "page": 1,
-          "coverage": 9.7e-05,
+          "coverage": 0.000097,
           "imagesOnPage": 71
         },
         {
@@ -523,7 +1063,7 @@
         },
         {
           "page": 1,
-          "coverage": 9.7e-05,
+          "coverage": 0.000097,
           "imagesOnPage": 71
         }
       ]
@@ -534,7 +1074,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 6.8e-05,
+        "coverage": 0.000068,
         "imagesOnPage": 71,
         "page": 1
       },
@@ -549,6 +1089,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (12 par 14 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (12 por 14 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (12 × 14 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (12 на 14 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（12 × 14 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -558,7 +1158,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 5e-05,
+        "coverage": 0.00005,
         "imagesOnPage": 71,
         "page": 1
       },
@@ -573,6 +1173,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (8 par 15 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (8 por 15 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (8 × 15 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (8 на 15 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（8 × 15 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -582,7 +1242,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 7e-05,
+        "coverage": 0.00007,
         "imagesOnPage": 71,
         "page": 1
       },
@@ -597,6 +1257,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (11 par 15 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (11 por 15 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (11 × 15 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (11 на 15 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（11 × 15 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -621,6 +1341,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (35 par 22 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (35 por 22 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (35 × 22 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (35 на 22 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（35 × 22 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -645,6 +1425,66 @@
           },
           "drafted_at": "2026-09-22T08:50:57Z",
           "lang": "en"
+        },
+        {
+          "text": "Un très petit fragment d'image (18 par 13 pixels) extrait de la page de couverture. À cette taille, le fragment apparaît vierge ou de couleur quasi uniforme, et son contenu n'a pas pu être déterminé à partir de l'image extraite ; compte tenu de ses dimensions et de sa position parmi les 71 images extraites de la couverture, il représente très probablement un petit élément du texte de titre stylisé ou de la composition d'arrière-plan plutôt qu'une figure autonome.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Un fragmento de imagen muy pequeño (18 por 13 píxeles) de la página de cubierta. A este tamaño, el fragmento parece en blanco o de color casi uniforme, y no fue posible determinar su contenido a partir de la imagen extraída; dados su tamaño y su posición entre las 71 imágenes extraídas de la cubierta, lo más probable es que represente una pequeña pieza del texto estilizado del título o de la composición de fondo, y no una figura independiente.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صغير جداً من صورة (18 × 13 بكسل) مستخرج من صفحة الغلاف. بهذا الحجم يبدو الجزء فارغاً أو ذا لون شبه موحّد، وتعذّر تحديد محتواه من الصورة المستخرجة؛ وبالنظر إلى حجمه وموضعه ضمن 71 صورة مستخرجة من الغلاف، فإنه يمثّل على الأرجح جزءاً صغيراً من نص العنوان المزخرف أو تكوين الخلفية وليس شكلاً مستقلاً بذاته.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Очень небольшой фрагмент изображения (18 на 13 пикселей) со страницы обложки. При таком размере фрагмент выглядит пустым или почти однородным по цвету, и его содержимое невозможно определить по извлечённому изображению; с учётом его размера и положения среди 71 изображения, извлечённого с обложки, он, вероятнее всего, представляет собой мелкий элемент стилизованного текста заголовка или фоновой композиции, а не самостоятельный рисунок.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "来自封面页的极小图像碎片（18 × 13 像素）。在此尺寸下，该碎片呈空白或近似均匀的纯色，无法从提取的图像中确定其具体内容；鉴于其尺寸以及在从封面提取的 71 幅图像中的位置，它极可能只是艺术化标题文字或背景构图的一小部分，而非独立成图的插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -654,7 +1494,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 9.6e-05,
+        "coverage": 0.000096,
         "imagesOnPage": 71,
         "page": 1
       },
@@ -678,7 +1518,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 9e-05,
+        "coverage": 0.00009,
         "imagesOnPage": 71,
         "page": 1
       },

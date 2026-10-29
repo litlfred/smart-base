@@ -27,6 +27,66 @@
       },
       "drafted_at": "2026-10-01",
       "lang": "en"
+    },
+    {
+      "text": "Figure 3.3, « Vue simplifiée d'un objectif de santé unique (Établir des dossiers de santé personnels fiables) » (Simplified view of a single health goal (Establish Trusted Personal Health Records), section 3.3). En haut, un groupe « Objectifs DSPF » (TPHR Goals) contient l'objectif global d'un système sécurisé et universellement accessible permettant de délivrer des dossiers de santé numériques vérifiables. Il se compose de quatre sous-objectifs : un dossier de santé vérifiable pour chaque individu ; le contrôle par le patient et le partage fondé sur le consentement ; la confiance, la sécurité et la confidentialité dans toutes les transactions ; et l'interopérabilité entre prestataires, établissements et juridictions. Un groupe « Résultats DSPF » (TPHR Outcomes) énumère quatre résultats, tels que des citoyens habilités à détenir, consulter et partager leurs dossiers de santé, qui réalisent les objectifs. Une zone « Mise en œuvre DSPF » (TPHR Implementation) montre les capacités réalisant ces résultats, notamment Gestion des dossiers de santé, Identité et authentification, Activation de l'accès universel, Gestion dynamique du consentement, Gouvernance des données, Partage de données et autorisation, Surveillance de l'audit et de la conformité, Confiance et vérification, Confidentialité des données, Détection et réponse aux incidents, Interopérabilité et échange d'informations de santé, Gestion des terminologies et des données, et Vérification des prestataires et des établissements. Au-dessous, des services applicatifs tels que le Service d'identité client, le Service de gestion du consentement, le Service API FHIR et le Service de terminologie (SNOMED, ICD, LOINC) sont réalisés par des composants applicatifs tels que le Dossier de santé tout au long de la vie (Lifelong Health Record), le Registre des clients (Client Registry), le Portail/Application mobile DSP, l'Infrastructure PKI/de confiance, le Système IAM/de contrôle d'accès, le SIEM, l'Intergiciel d'interopérabilité, le Service de terminologie et le Registre des établissements.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "fr"
+    },
+    {
+      "text": "Figura 3.3, «Vista simplificada de un único objetivo de salud (Establecer historias de salud personales confiables)» (Simplified view of a single health goal (Establish Trusted Personal Health Records), sección 3.3). En la parte superior, un grupo «Objetivos de TPHR» (TPHR Goals) contiene el objetivo general de un sistema seguro y universalmente accesible para emitir historias de salud digitales verificables. Está compuesto por cuatro subobjetivos: una historia de salud verificable para cada persona; control por parte del paciente e intercambio basado en el consentimiento; confianza, seguridad y privacidad en todas las transacciones; e interoperabilidad entre prestadores, establecimientos y jurisdicciones. Un grupo «Resultados de TPHR» (TPHR Outcomes) enumera cuatro resultados, como ciudadanos empoderados para poseer, consultar y compartir sus historias de salud, que realizan los objetivos. Un área de «Implementación de TPHR» (TPHR Implementation) muestra las capacidades que realizan dichos resultados, entre ellas Gestión de historias de salud, Identidad y autenticación, Habilitación del acceso universal, Gestión dinámica del consentimiento, Gobernanza de datos, Intercambio de datos y autorización, Monitoreo de auditoría y cumplimiento, Confianza y verificación, Privacidad de datos, Detección y respuesta a incidentes, Interoperabilidad e intercambio de información de salud, Gestión de terminología y datos, y Verificación de prestadores y establecimientos. Debajo de ellas, servicios de aplicación como el Servicio de identidad del cliente, el Servicio de gestión del consentimiento, el Servicio de API FHIR y el Servicio de terminología (SNOMED, ICD, LOINC) son realizados por componentes de aplicación como la Historia de salud a lo largo de la vida (Lifelong Health Record), el Registro de clientes (Client Registry), el Portal/Aplicación móvil de PHR, la Infraestructura PKI/de confianza, el Sistema IAM/de control de acceso, el SIEM, el Middleware de interoperabilidad, el Servicio de terminología y el Registro de establecimientos.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "es"
+    },
+    {
+      "text": "الشكل 3.3، «عرض مبسّط لهدف صحي واحد (إنشاء سجلات صحية شخصية موثوقة)» (Simplified view of a single health goal (Establish Trusted Personal Health Records)، القسم 3.3). في الأعلى، تضم مجموعة «أهداف السجل الصحي الشخصي الموثوق» (TPHR Goals) الهدف العام المتمثل في نظام آمن ومتاح للجميع لإصدار سجلات صحية رقمية قابلة للتحقق، ويتكوّن من أربعة أهداف فرعية: سجل صحي قابل للتحقق لكل فرد؛ وتحكّم المريض والمشاركة القائمة على الموافقة؛ والثقة والأمن والخصوصية في جميع المعاملات؛ والتشغيل البيني عبر مقدمي الخدمات والمرافق والسلطات القضائية. وتسرد مجموعة «نتائج TPHR» (TPHR Outcomes) أربع نتائج، مثل تمكين المواطنين من امتلاك سجلاتهم الصحية والوصول إليها ومشاركتها، وهي تحقّق تلك الأهداف. وتُظهر منطقة «تنفيذ TPHR» (TPHR Implementation) القدرات التي تحقّق هذه النتائج، بما في ذلك إدارة السجلات الصحية، والهوية والمصادقة، وتمكين الوصول الشامل، وإدارة الموافقة الديناميكية، وحوكمة البيانات، ومشاركة البيانات والتفويض، ورصد التدقيق والامتثال، والثقة والتحقق، وخصوصية البيانات، واكتشاف الحوادث والاستجابة لها، والتشغيل البيني وتبادل المعلومات الصحية، وإدارة المصطلحات والبيانات، والتحقق من مقدمي الخدمات والمرافق. وأسفل ذلك، تُحقَّق خدمات التطبيقات مثل خدمة هوية المراجع، وخدمة إدارة الموافقة، وخدمة واجهة FHIR البرمجية، وخدمة المصطلحات (SNOMED وICD وLOINC) بواسطة مكوّنات تطبيقات مثل السجل الصحي مدى الحياة (Lifelong Health Record)، وسجل المراجعين (Client Registry)، وبوابة/تطبيق الهاتف المحمول للسجل الصحي الشخصي، والبنية التحتية للمفاتيح العامة/الثقة (PKI)، ونظام إدارة الهوية والتحكم في الوصول (IAM)، ونظام SIEM، والبرمجيات الوسيطة للتشغيل البيني، وخدمة المصطلحات، وسجل المرافق.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ar"
+    },
+    {
+      "text": "Рисунок 3.3, «Упрощённое представление одной цели здравоохранения (Создание доверенных персональных медицинских карт)» (Simplified view of a single health goal (Establish Trusted Personal Health Records), раздел 3.3). В верхней части группа «Цели TPHR» (TPHR Goals) содержит общую цель создания защищённой, общедоступной системы выдачи верифицируемых цифровых медицинских записей. Она состоит из четырёх подцелей: верифицируемая медицинская карта для каждого человека; контроль со стороны пациента и обмен на основе согласия; доверие, безопасность и конфиденциальность во всех транзакциях; интероперабельность между поставщиками медуслуг, медицинскими организациями и юрисдикциями. Группа «Результаты TPHR» (TPHR Outcomes) перечисляет четыре результата, таких как наделение граждан возможностями владеть своими медицинскими записями, получать к ним доступ и делиться ими; эти результаты реализуют указанные цели. Область «Реализация TPHR» (TPHR Implementation) показывает способности, реализующие эти результаты, включая Управление медицинскими записями, Идентификацию и аутентификацию, Обеспечение универсального доступа, Динамическое управление согласием, Управление данными, Обмен данными и авторизацию, Мониторинг аудита и соответствия, Доверие и верификацию, Конфиденциальность данных, Обнаружение инцидентов и реагирование, Интероперабельность и обмен медицинской информацией, Управление терминологией и данными, а также Верификацию поставщиков и медицинских организаций. Ниже прикладные сервисы, такие как Сервис идентификации пациента, Сервис управления согласием, Сервис FHIR API и Сервис терминологии (SNOMED, ICD, LOINC), реализуются прикладными компонентами, такими как Пожизненная медицинская карта (Lifelong Health Record), Реестр пациентов (Client Registry), Портал/мобильное приложение ПМК (PHR), Инфраструктура PKI/доверия, Система IAM/контроля доступа, SIEM, Промежуточное ПО интероперабельности, Сервис терминологии и Реестр медицинских организаций.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ru"
+    },
+    {
+      "text": "图 3.3，“单一卫生目标的简化视图（建立可信个人健康档案）”（Simplified view of a single health goal (Establish Trusted Personal Health Records)，第 3.3 节）。顶部的“TPHR 目标”（TPHR Goals）组包含建立安全、普遍可及的可验证数字健康档案签发系统这一总体目标，并由四个子目标组成：为每个人提供可验证的健康档案；患者自主控制与基于知情同意的共享；所有事务中的信任、安全与隐私；以及跨服务提供方、医疗机构和管辖区的互操作性。“TPHR 成果”（TPHR Outcomes）组列出四项实现上述目标的成果，例如赋能公民拥有、访问和共享其健康档案。“TPHR 实施”（TPHR Implementation）区域展示了实现这些成果的业务能力，包括健康档案管理、身份与认证、普遍访问赋能、动态同意管理、数据治理、数据共享与授权、审计与合规监测、信任与验证、数据隐私、事件检测与响应、互操作性与卫生信息交换、术语与数据管理以及服务提供方与机构验证。其下，客户身份服务、同意管理服务、FHIR API 服务和术语服务（SNOMED、ICD、LOINC）等应用服务由终身健康档案（Lifelong Health Record）、客户注册库（Client Registry）、PHR 门户/移动应用、PKI/信任基础设施、IAM/访问控制系统、SIEM、互操作性中间件、术语服务和机构注册库等应用组件实现。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-026",

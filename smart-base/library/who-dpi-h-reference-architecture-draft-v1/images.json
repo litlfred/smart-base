@@ -2669,6 +2669,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour la relation « Compose » (Composes) : une ligne verticale pleine terminée à son extrémité supérieure par un losange noir plein. C'est le symbole figurant dans la colonne « Relation ArchiMate » (ArchiMate relationship) du Tableau 3.2, « Les types de relations utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para la relación «Compone» (Composes): una línea vertical continua con un rombo negro relleno en su extremo superior. Es el símbolo de la columna «Relación ArchiMate» (ArchiMate relationship) de la Tabla 3.2, «Los tipos de relaciones utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعلاقة «يتكوّن من» (Composes): خط رأسي متصل ينتهي في طرفه العلوي بمعين أسود مصمت. وهو الرمز الوارد في عمود «علاقة ArchiMate» (ArchiMate relationship) من الجدول 3.2، «أنواع العلاقات المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для отношения «Включает в состав» (Composes): сплошная вертикальная линия с закрашенным чёрным ромбом на верхнем конце. Это символ в столбце «Отношение ArchiMate» (ArchiMate relationship) таблицы 3.2 «Типы отношений, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“组合”（Composes）关系的 ArchiMate 表示法：顶端带有实心黑色菱形的垂直实线。该符号位于表 3.2“DPI-H 参考架构中使用的关系类型及其含义”（第 3.1 节）的“ArchiMate 关系”（ArchiMate relationship）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2700,6 +2760,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour la relation « Sert » (Serves) : une ligne verticale pleine terminée à son extrémité supérieure par une pointe de flèche ouverte. C'est le symbole figurant dans la colonne « Relation ArchiMate » (ArchiMate relationship) du Tableau 3.2, « Les types de relations utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para la relación «Sirve» (Serves): una línea vertical continua con una punta de flecha abierta en su extremo superior. Es el símbolo de la columna «Relación ArchiMate» (ArchiMate relationship) de la Tabla 3.2, «Los tipos de relaciones utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعلاقة «يخدم» (Serves): خط رأسي متصل ينتهي في طرفه العلوي برأس سهم مفتوح. وهو الرمز الوارد في عمود «علاقة ArchiMate» (ArchiMate relationship) من الجدول 3.2، «أنواع العلاقات المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для отношения «Обслуживает» (Serves): сплошная вертикальная линия с открытым наконечником стрелки на верхнем конце. Это символ в столбце «Отношение ArchiMate» (ArchiMate relationship) таблицы 3.2 «Типы отношений, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“服务”（Serves）关系的 ArchiMate 表示法：顶端带有开放箭头的垂直实线。该符号位于表 3.2“DPI-H 参考架构中使用的关系类型及其含义”（第 3.1 节）的“ArchiMate 关系”（ArchiMate relationship）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2731,6 +2851,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Notation ArchiMate pour la relation « Accède » (Accesses) : une ligne verticale en pointillés terminée à son extrémité inférieure par une petite pointe de flèche ouverte. C'est le symbole figurant dans la colonne « Relation ArchiMate » (ArchiMate relationship) du Tableau 3.2, « Les types de relations utilisés dans l'architecture de référence DPI-H et ce qu'ils représentent » (section 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Notación ArchiMate para la relación «Accede» (Accesses): una línea vertical punteada con una pequeña punta de flecha abierta en su extremo inferior. Es el símbolo de la columna «Relación ArchiMate» (ArchiMate relationship) de la Tabla 3.2, «Los tipos de relaciones utilizados en la arquitectura de referencia DPI-H y lo que representan» (sección 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "ترميز ArchiMate لعلاقة «يصل إلى» (Accesses): خط رأسي منقّط ينتهي في طرفه السفلي برأس سهم صغير مفتوح. وهو الرمز الوارد في عمود «علاقة ArchiMate» (ArchiMate relationship) من الجدول 3.2، «أنواع العلاقات المستخدمة في البنية المرجعية لـ DPI-H وما تمثله» (القسم 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Нотация ArchiMate для отношения «Обращается к» (Accesses): пунктирная вертикальная линия с небольшим открытым наконечником стрелки на нижнем конце. Это символ в столбце «Отношение ArchiMate» (ArchiMate relationship) таблицы 3.2 «Типы отношений, используемые в референтной архитектуре DPI-H, и то, что они представляют» (раздел 3.1).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“访问”（Accesses）关系的 ArchiMate 表示法：底端带有小型开放箭头的垂直虚线。该符号位于表 3.2“DPI-H 参考架构中使用的关系类型及其含义”（第 3.1 节）的“ArchiMate 关系”（ArchiMate relationship）列。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2762,6 +2942,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.1, « Relations de réalisation entre éléments architecturaux » (Realisation relationships among architectural elements, section 3.1). Quatre éléments ArchiMate sont empilés verticalement et reliés par des flèches en pointillés « réalise » (realises) pointant vers le haut : le Composant applicatif (Application Component) réalise la Fonction applicative (Application Function), qui réalise le Service applicatif (Application Service), lequel réalise la Capacité métier (Business Capability). Une note en regard de chacun donne un exemple concret : Registre des clients (Client Registry, composant), Appariement d'identité (Identity matching, fonction), Résolution et appariement de l'identité (Resolving and matching identity, service) et Identité maintenue à travers les services (Identity maintained across services, capacité). Le texte de la page précise que chaque élément inférieur réalise celui situé au-dessus.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.1, «Relaciones de realización entre elementos arquitectónicos» (Realisation relationships among architectural elements, sección 3.1). Cuatro elementos ArchiMate están apilados verticalmente y unidos por flechas punteadas de «realiza» (realises) que apuntan hacia arriba: el Componente de aplicación (Application Component) realiza la Función de aplicación (Application Function), que realiza el Servicio de aplicación (Application Service), el cual realiza la Capacidad de negocio (Business Capability). Una nota junto a cada uno ofrece un ejemplo práctico: Registro de clientes (Client Registry, componente), Emparejamiento de identidad (Identity matching, función), Resolución y emparejamiento de identidad (Resolving and matching identity, servicio) e Identidad mantenida entre servicios (Identity maintained across services, capacidad). El texto de la página indica que cada elemento inferior realiza el situado encima.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.1، «علاقات التحقيق بين العناصر المعمارية» (Realisation relationships among architectural elements، القسم 3.1). تُرصّ أربعة عناصر من ArchiMate عمودياً وتربط بينها أسهم منقّطة تشير إلى الأعلى وتمثّل علاقة «يحقّق» (realises): مكوّن التطبيق (Application Component) يحقّق وظيفة التطبيق (Application Function)، التي تحقّق خدمة التطبيق (Application Service)، والتي بدورها تحقّق القدرة المؤسسية (Business Capability). وتقدّم ملاحظة بجانب كل عنصر مثالاً تطبيقياً: سجل المراجعين (Client Registry، مكوّن)، ومطابقة الهوية (Identity matching، وظيفة)، وحسم الهوية ومطابقتها (Resolving and matching identity، خدمة)، والحفاظ على الهوية عبر الخدمات (Identity maintained across services، قدرة). ويوضح نص الصفحة أن كل عنصر سفلي يحقّق العنصر الذي يعلوه.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.1, «Отношения реализации между архитектурными элементами» (Realisation relationships among architectural elements, раздел 3.1). Четыре элемента ArchiMate расположены вертикально друг над другом и соединены направленными вверх пунктирными стрелками «реализует» (realises): Прикладной компонент (Application Component) реализует Прикладную функцию (Application Function), которая реализует Прикладной сервис (Application Service), который реализует Бизнес-способность (Business Capability). Примечание рядом с каждым элементом приводит практический пример: Реестр пациентов (Client Registry, компонент), Сопоставление идентификационных данных (Identity matching, функция), Разрешение и сопоставление идентификационных данных (Resolving and matching identity, сервис) и Поддержание единой идентичности между сервисами (Identity maintained across services, способность). В тексте страницы указано, что каждый нижестоящий элемент реализует вышестоящий.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 3.1，“架构元素之间的实现关系”（Realisation relationships among architectural elements，第 3.1 节）。四个 ArchiMate 元素垂直堆叠，并由指向上方的“实现”（realises）虚线箭头相连：应用组件（Application Component）实现应用功能（Application Function），应用功能实现应用服务（Application Service），应用服务实现业务能力（Business Capability）。每个元素旁的注释给出了具体示例：客户注册库（Client Registry，组件）、身份匹配（Identity matching，功能）、解析与匹配身份（Resolving and matching identity，服务）以及跨服务维护身份（Identity maintained across services，能力）。页面正文说明下方每个元素均实现其上方的元素。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2793,6 +3033,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.2, l'architecture de référence DPI-H sous forme de vue intégrée en couches (section 3.3, The reference architecture in practice). De haut en bas : Objectifs stratégiques de santé G1 à G7 (Fondations de données fiables, Personnel de santé, Qualité et continuité des soins, Dossier de santé personnel, Chaîne d'approvisionnement, Financement de la santé, Résilience climatique et épidémique) ; un bandeau transversal de Gouvernance (Politiques, législation et réglementation ; Cybersécurité, confidentialité et consentement ; Normes, certification et conformité ; Gouvernance et intendance sémantiques ; Auditabilité, assurance et redevabilité) ; Parties prenantes, telles que citoyens, personnel de santé, gouvernement/ministère de la Santé, établissements, entités financières, fournisseurs, agences de développement et recherche ; et Capacités, telles que gestion des identités, accès/consentement/confiance, gestion des dossiers de santé, gestion des connaissances, services cliniques et coordination des soins, gestion du personnel de santé, financement de la santé, chaîne d'approvisionnement, analytique et informatique décisionnelle (BI), et surveillance climatique et de santé publique. Vient ensuite la couche des Applications fonctionnelles et du point de service (Point-of-Service and Functional Applications), construite par le secteur privé, les bailleurs, les ONG et les responsables de mise en œuvre : systèmes prestataires, gestion de cas, pharmacie, agents de santé communautaire (ASC) et communauté, applications citoyen/patient, chaîne d'approvisionnement, couverture sanitaire et demandes de remboursement, opérations de financement et de personnel, et applications de santé publique. Celles-ci consomment la couche DPI-H via des API fondées sur des normes. La couche DPI-H, infrastructure réutilisable placée sous l'intendance des pouvoirs publics, comprend des Composants réutilisables (Services cliniques avec moteur d'aide à la décision calculable, Chaîne d'approvisionnement avec registre des fournisseurs, Financement de la santé avec registre des paniers de prestations, Santé publique et analytique avec plateforme de surveillance de santé publique et SGIS/HMIS, Intelligence fondée sur l'IA et Utilisation secondaire). Elle comporte également une Couche de données partagées composée de registres socles, dont plusieurs sont marqués d'une étoile comme composants REDDHI : Registre des clients (Client Registry), Dossier de santé tout au long de la vie (Lifelong Health Record), Registre du personnel de santé (Health Workforce Registry), Registre des établissements (Facility Registry), Registre des produits (Product Registry), Service de terminologie (Terminology Service) et Référentiel de modèles logiques d'information (Logical Information Model Repository). Au-dessous figurent la Couche DPI fondatrice (DPI-F : identité fondatrice, services nationaux de confiance, rails de paiement, trame d'échange de données, état civil et statistiques vitales [CRVS] et autres secteurs, géolocalisation et notification) et la Couche technologique (cloud hybride/souverain, plateforme IA/ML, opérations de sécurité et de confiance, plateforme de données, observabilité/DevSecOps). Une colonne transversale d'Interopérabilité à droite regroupe un Médiateur d'information (passerelle API, HIE), des normes ouvertes (telles que HL7 FHIR, IHE, openEHR, IPS, SNOMED CT, CIM-11/ICD-11, LOINC, GS1, CDS Hooks, SMART on FHIR, OpenID/OAuth2, DICOM) et des modèles d'intégration (API REST, flux d'événements, documents IHE, requêtes fédérées, données de masse, RSI/IPS transfrontaliers). Elle se raccorde à chaque couche par des marqueurs d'interface.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.2, la arquitectura de referencia DPI-H como vista integrada en capas (sección 3.3, The reference architecture in practice). De arriba abajo: Objetivos estratégicos de salud G1 a G7 (Bases de datos confiables, Personal de salud, Calidad y continuidad de la atención, Historia de salud personal, Cadena de suministro, Financiamiento de la salud, Resiliencia climática y epidémica); una franja transversal de Gobernanza (Política, legislación y regulación; Ciberseguridad, privacidad y consentimiento; Normas, certificación y conformidad; Gobernanza y custodia semánticas; Auditabilidad, aseguramiento y rendición de cuentas); Partes interesadas, como ciudadanos, personal de salud, gobierno/Ministerio de Salud, establecimientos, entidades financieras, proveedores, agencias de desarrollo e investigación; y Capacidades, como gestión de identidades, acceso/consentimiento/confianza, gestión de historias de salud, gestión del conocimiento, servicios clínicos y coordinación de la atención, gestión del personal de salud, financiamiento de la salud, cadena de suministro, analítica e inteligencia de negocios (BI), y vigilancia climática y de salud pública. A continuación se encuentra la capa de Aplicaciones funcionales y en el punto de atención (Point-of-Service and Functional Applications), desarrollada por el sector privado, donantes, ONG e implementadores: sistemas de prestadores, gestión de casos, farmacia, agentes comunitarios de salud y comunidad, aplicaciones para ciudadanos/pacientes, cadena de suministro, cobertura de salud y reclamaciones, operaciones de financiamiento y personal, y aplicaciones de salud pública. Estas consumen la capa DPI-H mediante API basadas en estándares. La capa DPI-H, infraestructura reutilizable bajo custodia gubernamental, contiene Componentes reutilizables (Servicios clínicos con motor computable de apoyo a las decisiones, Cadena de suministro con registro de proveedores, Financiamiento de la salud con registro de paquetes de prestaciones, Salud pública y analítica con plataforma de vigilancia de salud pública y HMIS, Inteligencia habilitada por IA y Uso secundario). También incluye una Capa de datos compartidos de registros básicos, varios marcados con estrella como componentes REDDHI: Registro de clientes (Client Registry), Historia de salud a lo largo de la vida (Lifelong Health Record), Registro del personal de salud (Health Workforce Registry), Registro de establecimientos (Facility Registry), Registro de productos (Product Registry), Servicio de terminología (Terminology Service) y Repositorio de modelos lógicos de información (Logical Information Model Repository). Debajo se sitúan la Capa DPI fundacional (DPI-F: identidad fundacional, servicios nacionales de confianza, rieles de pago, tejido de intercambio de datos, CRVS y otros sectores, geolocalización y notificación) y la Capa tecnológica (nube híbrida/soberana, plataforma de IA/ML, operaciones de seguridad y confianza, plataforma de datos, observabilidad/DevSecOps). Una columna transversal de Interoperabilidad a la derecha alberga un Mediador de información (pasarela API, HIE), estándares abiertos (como HL7 FHIR, IHE, openEHR, IPS, SNOMED CT, CIE-11/ICD-11, LOINC, GS1, CDS Hooks, SMART on FHIR, OpenID/OAuth2, DICOM) y patrones de integración (API REST, flujos de eventos, documentos IHE, consultas federadas, datos masivos, RSI/IPS transfronterizos). Se conecta a cada capa mediante marcadores de interfaz.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.2، البنية المرجعية لـ DPI-H في عرض متكامل متعدد الطبقات (القسم 3.3، The reference architecture in practice). من الأعلى إلى الأسفل: الأهداف الصحية الاستراتيجية من G1 إلى G7 (أسس البيانات الموثوقة، القوى العاملة الصحية، جودة الرعاية واستمراريتها، السجل الصحي الشخصي، سلسلة الإمداد، التمويل الصحي، القدرة على الصمود أمام المناخ والأوبئة)؛ وشريط الحوكمة الشامل لعدة قطاعات (السياسات والتشريعات واللوائح؛ الأمن السيبراني والخصوصية والموافقة؛ المعايير والاعتماد والمطابقة؛ الحوكمة والإشراف الدلالي؛ قابلية التدقيق والضمان والمساءلة)؛ وأصحاب المصلحة مثل المواطنين والقوى العاملة الصحية والحكومة/وزارة الصحة والمرافق والجهات المالية والمورّدين ووكالات التنمية والبحث العلمي؛ والقدرات مثل إدارة الهوية، والوصول/الموافقة/الثقة، وإدارة السجلات الصحية، وإدارة المعرفة، والخدمات السريرية وتنسيق الرعاية، وإدارة القوى العاملة الصحية، والتمويل الصحي، وسلسلة الإمداد، والتحليلات وذكاء الأعمال (BI)، وترصّد المناخ والصحة العامة. تليها طبقة تطبيقات نقطة تقديم الخدمة والتطبيقات الوظيفية (Point-of-Service and Functional Applications) التي يبنيها القطاع الخاص والجهات المانحة والمنظمات غير الحكومية وجهات التنفيذ: أنظمة مقدمي الخدمات، وإدارة الحالات، والصيدلة، والعاملين الصحيين المجتمعيين والمجتمع، وتطبيقات المواطنين/المرضى، وسلسلة الإمداد، والتغطية الصحية والمطالبات، وعمليات التمويل والقوى العاملة، وتطبيقات الصحة العامة؛ وهي تستهلك طبقة DPI-H عبر واجهات برمجة تطبيقات (APIs) قائمة على المعايير. وتضم طبقة DPI-H، وهي بنية تحتية قابلة لإعادة الاستخدام ترعاها الحكومة، مكوّنات قابلة لإعادة الاستخدام (الخدمات السريرية مع محرك حوسبي لدعم القرار، وسلسلة الإمداد مع سجل المورّدين، والتمويل الصحي مع سجل حزم المنافع، والصحة العامة والتحليلات مع منصة ترصّد الصحة العامة ونظام معلومات إدارة الصحة HMIS، والذكاء المدعوم بالذكاء الاصطناعي، والاستخدام الثانوي). كما تضم طبقة بيانات مشتركة من السجلات الأساسية، أُشير إلى عدة منها بنجمة بوصفها مكوّنات REDDHI: سجل المراجعين (Client Registry)، والسجل الصحي مدى الحياة (Lifelong Health Record)، وسجل القوى العاملة الصحية (Health Workforce Registry)، وسجل المرافق (Facility Registry)، وسجل المنتجات (Product Registry)، وخدمة المصطلحات (Terminology Service)، ومستودع نماذج المعلومات المنطقية (Logical Information Model Repository). ويقع أسفلها كل من طبقة البنية التحتية العامة الرقمية التأسيسية (DPI-F: الهوية التأسيسية، وخدمات الثقة الوطنية، وقنوات الدفع، ونسيج تبادل البيانات، والسجل المدني والإحصاءات الحيوية CRVS والقطاعات الأخرى، وتحديد الموقع الجغرافي والإشعارات) وطبقة التكنولوجيا (السحابة الهجينة/السيادية، ومنصة الذكاء الاصطناعي/التعلم الآلي، وعمليات الأمن والثقة، ومنصة البيانات، وقابلية المراقبة/DevSecOps). ويضم عمود التشغيل البيني الشامل على اليمين وسيط المعلومات (بوابة API، وتبادل المعلومات الصحية HIE)، والمعايير المفتوحة (مثل HL7 FHIR وIHE وopenEHR وIPS وSNOMED CT وICD-11 وLOINC وGS1 وCDS Hooks وSMART on FHIR وOpenID/OAuth2 وDICOM) وأنماط التكامل (واجهات REST APIs، وتدفقات الأحداث، ووثائق IHE، والاستعلام الموحّد، والبيانات الضخمة، واللوائح الصحية الدولية/ملخص المريض الدولي العابر للحدود)، ويتصل بكل طبقة عبر علامات واجهة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.2, референтная архитектура DPI-H в виде многоуровневого интегрированного представления (раздел 3.3, The reference architecture in practice). Сверху вниз: Стратегические цели здравоохранения G1–G7 (Надёжные основы данных, Кадры здравоохранения, Качество и преемственность медицинской помощи, Персональная медицинская карта, Цепочка поставок, Финансирование здравоохранения, Устойчивость к климатическим изменениям и эпидемиям); сквозной уровень Управления (Политика, законодательство и регулирование; Кибербезопасность, конфиденциальность и согласие; Стандарты, сертификация и соответствие; Семантическое управление и кураторство; Аудируемость, обеспечение гарантий и подотчётность); Заинтересованные стороны, такие как граждане, медицинские работники, правительство/Минздрав, медицинские организации, финансовые структуры, поставщики, агентства развития и исследовательские организации; и Способности (Capabilities), такие как управление идентификацией, доступ/согласие/доверие, управление медицинскими записями, управление знаниями, клинические сервисы и координация помощи, управление кадрами здравоохранения, финансирование здравоохранения, цепочка поставок, аналитика и BI, а также мониторинг климата и эпиднадзор. Далее следует уровень Приложений в точках оказания помощи и функциональных приложений (Point-of-Service and Functional Applications), создаваемых частным сектором, донорами, НКО и внедряющими организациями: системы поставщиков медуслуг, ведение случаев, аптечные системы, системы общинных медработников (CHW), приложения для граждан/пациентов, цепочка поставок, страховое покрытие и заявки на возмещение, операции финансирования и управления кадрами, а также приложения общественного здравоохранения. Они обращаются к уровню DPI-H через основанные на стандартах API. Уровень DPI-H — курируемая государством переиспользуемая инфраструктура — содержит Переиспользуемые компоненты (Клинические сервисы с вычислимым механизмом поддержки принятия решений, Цепочка поставок с реестром поставщиков, Финансирование здравоохранения с реестром пакетов медицинских гарантий, Общественное здравоохранение и аналитика с платформой эпиднадзора и ИСЗ/HMIS, Интеллектуальные сервисы на базе ИИ и Вторичное использование данных), а также Общий уровень данных (Shared Data Layer) базовых реестров, несколько из которых отмечены звёздочкой как компоненты REDDHI: Реестр пациентов (Client Registry), Пожизненная медицинская карта (Lifelong Health Record), Реестр медицинских работников (Health Workforce Registry), Реестр медицинских организаций (Facility Registry), Реестр медицинской продукции (Product Registry), Сервис терминологии (Terminology Service) и Репозиторий логических информационных моделей (Logical Information Model Repository). Ниже расположены Базовый уровень DPI (DPI-F: базовая идентификация, национальные сервисы доверия, платёжные контуры, среда обмена данными, ЗАГС/CRVS и другие сектора, геолокация и уведомления) и Технологический уровень (гибридное/суверенное облако, платформа ИИ/МО, операции безопасности и доверия, платформа данных, наблюдаемость/DevSecOps). Сквозной столбец Интероперабельности справа включает Информационный посредник (API-шлюз, HIE), открытые стандарты (HL7 FHIR, IHE, openEHR, IPS, SNOMED CT, МКБ-11/ICD-11, LOINC, GS1, CDS Hooks, SMART on FHIR, OpenID/OAuth2, DICOM) и шаблоны интеграции (REST API, потоки событий, документы IHE, федеративные запросы, пакетная передача данных, трансграничный обмен ММСП/IPS), соединяясь с каждым уровнем через маркеры интерфейсов.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 3.2，DPI-H 参考架构的分层综合视图（第 3.3 节，The reference architecture in practice）。自上而下依次为：战略卫生目标 G1 至 G7（可信数据基础、卫生人力、医疗质量与连续性、个人健康档案、供应链、卫生筹资、气候与疫情韧性）；跨领域治理带（政策、立法与监管；网络安全、隐私与知情同意；标准、认证与一致性；语义治理与管理；可审计性、保障与问责）；利益相关方，如公民、卫生人力、政府/卫生部、医疗机构、金融机构、供应商、发展机构与科研机构；以及业务能力，如身份管理、访问/同意/信任、健康档案管理、知识管理、临床服务与照护协调、卫生人力管理、卫生筹资、供应链、分析与商业智能（BI）以及气候与公共卫生监测。接下来是由私营部门、捐助方、非政府组织和实施方构建的服务点与功能应用层（Point-of-Service and Functional Applications）：医疗服务提供方系统、个案管理、药房、社区卫生工作者（CHW）与社区系统、公民/患者应用、供应链、医疗保障与理赔、筹资与人力运营以及公共卫生应用；这些应用通过基于标准的 API 调用 DPI-H 层。由政府统筹管理的可复用基础设施 DPI-H 层包含可复用组件（含可计算决策支持引擎的临床服务、含供应商注册库的供应链、含福利包注册库的卫生筹资、含公共卫生监测平台和卫生管理信息系统 HMIS 的公共卫生与分析、人工智能赋能的智能服务以及二次利用），还包含核心注册库组成的共享数据层（Shared Data Layer），其中多项标星为 REDDHI 组件：客户注册库（Client Registry）、终身健康档案（Lifelong Health Record）、卫生人力注册库（Health Workforce Registry）、机构注册库（Facility Registry）、产品注册库（Product Registry）、术语服务（Terminology Service）和逻辑信息模型存储库（Logical Information Model Repository）。其下为基础数字公共基础设施层（DPI-F：基础身份、国家信任服务、支付通道、数据交换网络、民事登记和生命统计 CRVS 及其他部门、地理定位与通知）和技术层（混合/主权云、AI/ML 平台、安全与信任运营、数据平台、可观测性/DevSecOps）。右侧跨领域的互操作性列包含信息中介（API 网关、HIE）、开放标准（如 HL7 FHIR、IHE、openEHR、IPS、SNOMED CT、ICD-11、LOINC、GS1、CDS Hooks、SMART on FHIR、OpenID/OAuth2、DICOM）以及集成模式（REST API、事件流、IHE 文档、联邦查询、批量数据、跨境 IHR/IPS），并通过接口标记与各层相连。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2824,6 +3124,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.3, « Vue simplifiée d'un objectif de santé unique (Établir des dossiers de santé personnels fiables) » (Simplified view of a single health goal (Establish Trusted Personal Health Records), section 3.3). En haut, un groupe « Objectifs DSPF » (TPHR Goals) contient l'objectif global d'un système sécurisé et universellement accessible permettant de délivrer des dossiers de santé numériques vérifiables. Il se compose de quatre sous-objectifs : un dossier de santé vérifiable pour chaque individu ; le contrôle par le patient et le partage fondé sur le consentement ; la confiance, la sécurité et la confidentialité dans toutes les transactions ; et l'interopérabilité entre prestataires, établissements et juridictions. Un groupe « Résultats DSPF » (TPHR Outcomes) énumère quatre résultats, tels que des citoyens habilités à détenir, consulter et partager leurs dossiers de santé, qui réalisent les objectifs. Une zone « Mise en œuvre DSPF » (TPHR Implementation) montre les capacités réalisant ces résultats, notamment Gestion des dossiers de santé, Identité et authentification, Activation de l'accès universel, Gestion dynamique du consentement, Gouvernance des données, Partage de données et autorisation, Surveillance de l'audit et de la conformité, Confiance et vérification, Confidentialité des données, Détection et réponse aux incidents, Interopérabilité et échange d'informations de santé, Gestion des terminologies et des données, et Vérification des prestataires et des établissements. Au-dessous, des services applicatifs tels que le Service d'identité client, le Service de gestion du consentement, le Service API FHIR et le Service de terminologie (SNOMED, ICD, LOINC) sont réalisés par des composants applicatifs tels que le Dossier de santé tout au long de la vie (Lifelong Health Record), le Registre des clients (Client Registry), le Portail/Application mobile DSP, l'Infrastructure PKI/de confiance, le Système IAM/de contrôle d'accès, le SIEM, l'Intergiciel d'interopérabilité, le Service de terminologie et le Registre des établissements.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.3, «Vista simplificada de un único objetivo de salud (Establecer historias de salud personales confiables)» (Simplified view of a single health goal (Establish Trusted Personal Health Records), sección 3.3). En la parte superior, un grupo «Objetivos de TPHR» (TPHR Goals) contiene el objetivo general de un sistema seguro y universalmente accesible para emitir historias de salud digitales verificables. Está compuesto por cuatro subobjetivos: una historia de salud verificable para cada persona; control por parte del paciente e intercambio basado en el consentimiento; confianza, seguridad y privacidad en todas las transacciones; e interoperabilidad entre prestadores, establecimientos y jurisdicciones. Un grupo «Resultados de TPHR» (TPHR Outcomes) enumera cuatro resultados, como ciudadanos empoderados para poseer, consultar y compartir sus historias de salud, que realizan los objetivos. Un área de «Implementación de TPHR» (TPHR Implementation) muestra las capacidades que realizan dichos resultados, entre ellas Gestión de historias de salud, Identidad y autenticación, Habilitación del acceso universal, Gestión dinámica del consentimiento, Gobernanza de datos, Intercambio de datos y autorización, Monitoreo de auditoría y cumplimiento, Confianza y verificación, Privacidad de datos, Detección y respuesta a incidentes, Interoperabilidad e intercambio de información de salud, Gestión de terminología y datos, y Verificación de prestadores y establecimientos. Debajo de ellas, servicios de aplicación como el Servicio de identidad del cliente, el Servicio de gestión del consentimiento, el Servicio de API FHIR y el Servicio de terminología (SNOMED, ICD, LOINC) son realizados por componentes de aplicación como la Historia de salud a lo largo de la vida (Lifelong Health Record), el Registro de clientes (Client Registry), el Portal/Aplicación móvil de PHR, la Infraestructura PKI/de confianza, el Sistema IAM/de control de acceso, el SIEM, el Middleware de interoperabilidad, el Servicio de terminología y el Registro de establecimientos.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.3، «عرض مبسّط لهدف صحي واحد (إنشاء سجلات صحية شخصية موثوقة)» (Simplified view of a single health goal (Establish Trusted Personal Health Records)، القسم 3.3). في الأعلى، تضم مجموعة «أهداف السجل الصحي الشخصي الموثوق» (TPHR Goals) الهدف العام المتمثل في نظام آمن ومتاح للجميع لإصدار سجلات صحية رقمية قابلة للتحقق، ويتكوّن من أربعة أهداف فرعية: سجل صحي قابل للتحقق لكل فرد؛ وتحكّم المريض والمشاركة القائمة على الموافقة؛ والثقة والأمن والخصوصية في جميع المعاملات؛ والتشغيل البيني عبر مقدمي الخدمات والمرافق والسلطات القضائية. وتسرد مجموعة «نتائج TPHR» (TPHR Outcomes) أربع نتائج، مثل تمكين المواطنين من امتلاك سجلاتهم الصحية والوصول إليها ومشاركتها، وهي تحقّق تلك الأهداف. وتُظهر منطقة «تنفيذ TPHR» (TPHR Implementation) القدرات التي تحقّق هذه النتائج، بما في ذلك إدارة السجلات الصحية، والهوية والمصادقة، وتمكين الوصول الشامل، وإدارة الموافقة الديناميكية، وحوكمة البيانات، ومشاركة البيانات والتفويض، ورصد التدقيق والامتثال، والثقة والتحقق، وخصوصية البيانات، واكتشاف الحوادث والاستجابة لها، والتشغيل البيني وتبادل المعلومات الصحية، وإدارة المصطلحات والبيانات، والتحقق من مقدمي الخدمات والمرافق. وأسفل ذلك، تُحقَّق خدمات التطبيقات مثل خدمة هوية المراجع، وخدمة إدارة الموافقة، وخدمة واجهة FHIR البرمجية، وخدمة المصطلحات (SNOMED وICD وLOINC) بواسطة مكوّنات تطبيقات مثل السجل الصحي مدى الحياة (Lifelong Health Record)، وسجل المراجعين (Client Registry)، وبوابة/تطبيق الهاتف المحمول للسجل الصحي الشخصي، والبنية التحتية للمفاتيح العامة/الثقة (PKI)، ونظام إدارة الهوية والتحكم في الوصول (IAM)، ونظام SIEM، والبرمجيات الوسيطة للتشغيل البيني، وخدمة المصطلحات، وسجل المرافق.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.3, «Упрощённое представление одной цели здравоохранения (Создание доверенных персональных медицинских карт)» (Simplified view of a single health goal (Establish Trusted Personal Health Records), раздел 3.3). В верхней части группа «Цели TPHR» (TPHR Goals) содержит общую цель создания защищённой, общедоступной системы выдачи верифицируемых цифровых медицинских записей. Она состоит из четырёх подцелей: верифицируемая медицинская карта для каждого человека; контроль со стороны пациента и обмен на основе согласия; доверие, безопасность и конфиденциальность во всех транзакциях; интероперабельность между поставщиками медуслуг, медицинскими организациями и юрисдикциями. Группа «Результаты TPHR» (TPHR Outcomes) перечисляет четыре результата, таких как наделение граждан возможностями владеть своими медицинскими записями, получать к ним доступ и делиться ими; эти результаты реализуют указанные цели. Область «Реализация TPHR» (TPHR Implementation) показывает способности, реализующие эти результаты, включая Управление медицинскими записями, Идентификацию и аутентификацию, Обеспечение универсального доступа, Динамическое управление согласием, Управление данными, Обмен данными и авторизацию, Мониторинг аудита и соответствия, Доверие и верификацию, Конфиденциальность данных, Обнаружение инцидентов и реагирование, Интероперабельность и обмен медицинской информацией, Управление терминологией и данными, а также Верификацию поставщиков и медицинских организаций. Ниже прикладные сервисы, такие как Сервис идентификации пациента, Сервис управления согласием, Сервис FHIR API и Сервис терминологии (SNOMED, ICD, LOINC), реализуются прикладными компонентами, такими как Пожизненная медицинская карта (Lifelong Health Record), Реестр пациентов (Client Registry), Портал/мобильное приложение ПМК (PHR), Инфраструктура PKI/доверия, Система IAM/контроля доступа, SIEM, Промежуточное ПО интероперабельности, Сервис терминологии и Реестр медицинских организаций.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 3.3，“单一卫生目标的简化视图（建立可信个人健康档案）”（Simplified view of a single health goal (Establish Trusted Personal Health Records)，第 3.3 节）。顶部的“TPHR 目标”（TPHR Goals）组包含建立安全、普遍可及的可验证数字健康档案签发系统这一总体目标，并由四个子目标组成：为每个人提供可验证的健康档案；患者自主控制与基于知情同意的共享；所有事务中的信任、安全与隐私；以及跨服务提供方、医疗机构和管辖区的互操作性。“TPHR 成果”（TPHR Outcomes）组列出四项实现上述目标的成果，例如赋能公民拥有、访问和共享其健康档案。“TPHR 实施”（TPHR Implementation）区域展示了实现这些成果的业务能力，包括健康档案管理、身份与认证、普遍访问赋能、动态同意管理、数据治理、数据共享与授权、审计与合规监测、信任与验证、数据隐私、事件检测与响应、互操作性与卫生信息交换、术语与数据管理以及服务提供方与机构验证。其下，客户身份服务、同意管理服务、FHIR API 服务和术语服务（SNOMED、ICD、LOINC）等应用服务由终身健康档案（Lifelong Health Record）、客户注册库（Client Registry）、PHR 门户/移动应用、PKI/信任基础设施、IAM/访问控制系统、SIEM、互操作性中间件、术语服务和机构注册库等应用组件实现。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2855,6 +3215,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.4, « Vue en couches d'un sous-objectif relatif à l'établissement de dossiers de santé personnels fiables » (Layered view for one sub-goal relating to Establish Trusted Personal Health Records, section 3.3). Le sous-objectif « Établir un dossier de santé sécurisé, universellement accessible et vérifiable pour chaque individu » est réalisé par le résultat « La population dispose de dossiers de santé numériques vérifiables ». Au sein de la « Mise en œuvre du sous-objectif DSPF n° 1 » (TPHR Sub-goal #1 Implementation), trois capacités réalisent ce résultat : Gestion des dossiers de santé (Health Record Management), Identité et authentification (Identity and Authentication) et Activation de l'accès universel (Universal Access Enablement). Celles-ci sont réalisées par le produit « Dossier de santé personnel fiable (DSP) » (Trusted Personal Health Record (PHR)), que servent trois services : Service de gestion des dossiers de santé, Service d'identité client et Service de vérification des dossiers. À leur tour, ces services sont réalisés par les composants Dossier de santé tout au long de la vie (Lifelong Health Record), Registre des clients (Client Registry) et Infrastructure PKI/de confiance (PKI/Trust Infrastructure). Un groupe « Composants de métadonnées » (Metadata Components) en bas réunit le Registre des clients, le Registre des établissements, le Registre des agents de santé, le Registre des produits et le Service de terminologie.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.4, «Vista en capas de un subobjetivo relacionado con Establecer historias de salud personales confiables» (Layered view for one sub-goal relating to Establish Trusted Personal Health Records, sección 3.3). El subobjetivo «Establecer una historia de salud segura, universalmente accesible y verificable para cada persona» es realizado por el resultado «La población cuenta con historias de salud digitales verificables». Dentro de la «Implementación del subobjetivo n.º 1 de TPHR» (TPHR Sub-goal #1 Implementation), tres capacidades realizan ese resultado: Gestión de historias de salud (Health Record Management), Identidad y autenticación (Identity and Authentication) y Habilitación del acceso universal (Universal Access Enablement). Estas son realizadas por el producto «Historia de salud personal confiable (PHR)» (Trusted Personal Health Record (PHR)), al que sirven tres servicios: Servicio de gestión de historias de salud, Servicio de identidad del cliente y Servicio de verificación de registros. A su vez, estos son realizados por los componentes Historia de salud a lo largo de la vida (Lifelong Health Record), Registro de clientes (Client Registry) e Infraestructura PKI/de confianza (PKI/Trust Infrastructure). Un grupo de «Componentes de metadatos» (Metadata Components) en la parte inferior alberga el Registro de clientes, el Registro de establecimientos, el Registro de trabajadores de la salud, el Registro de productos y el Servicio de terminología.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.4، «عرض متعدد الطبقات لهدف فرعي واحد يتعلق بإنشاء سجلات صحية شخصية موثوقة» (Layered view for one sub-goal relating to Establish Trusted Personal Health Records، القسم 3.3). يتحقق الهدف الفرعي «إنشاء سجل صحي آمن ومتاح للجميع وقابل للتحقق لكل فرد» من خلال النتيجة «امتلاك السكان لسجلات صحية رقمية قابلة للتحقق». وضمن «تنفيذ الهدف الفرعي الأول لـ TPHR» (TPHR Sub-goal #1 Implementation)، تحقّق ثلاث قدرات تلك النتيجة: إدارة السجلات الصحية (Health Record Management)، والهوية والمصادقة (Identity and Authentication)، وتمكين الوصول الشامل (Universal Access Enablement). وتتحقق هذه القدرات بواسطة المنتج «السجل الصحي الشخصي الموثوق (PHR)» (Trusted Personal Health Record (PHR))، الذي تخدمه ثلاث خدمات: خدمة إدارة السجلات الصحية، وخدمة هوية المراجع، وخدمة التحقق من السجلات. وبدورها تُحقَّق هذه الخدمات بواسطة المكوّنات: السجل الصحي مدى الحياة (Lifelong Health Record)، وسجل المراجعين (Client Registry)، والبنية التحتية للمفاتيح العامة/الثقة (PKI/Trust Infrastructure). وتضم مجموعة «مكوّنات البيانات الوصفية» (Metadata Components) في الأسفل سجل المراجعين، وسجل المرافق، وسجل العاملين الصحيين، وسجل المنتجات، وخدمة المصطلحات.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.4, «Многоуровневое представление одной подцели, относящейся к созданию доверенных персональных медицинских карт» (Layered view for one sub-goal relating to Establish Trusted Personal Health Records, раздел 3.3). Подцель «Создать защищённую, общедоступную и верифицируемую медицинскую карту для каждого человека» реализуется результатом «Население имеет верифицируемые цифровые медицинские записи». В рамках «Реализации подцели № 1 TPHR» (TPHR Sub-goal #1 Implementation) этот результат реализуют три способности: Управление медицинскими записями (Health Record Management), Идентификация и аутентификация (Identity and Authentication) и Обеспечение универсального доступа (Universal Access Enablement). Они реализуются продуктом «Доверенная персональная медицинская карта (PHR)» (Trusted Personal Health Record (PHR)), который обслуживают три сервиса: Сервис управления медицинскими записями, Сервис идентификации пациента и Сервис верификации записей. В свою очередь, они реализуются компонентами Пожизненная медицинская карта (Lifelong Health Record), Реестр пациентов (Client Registry) и Инфраструктура PKI/доверия (PKI/Trust Infrastructure). Группа «Компоненты метаданных» (Metadata Components) в нижней части содержит Реестр пациентов, Реестр медицинских организаций, Реестр медицинских работников, Реестр медицинской продукции и Сервис терминологии.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 3.4，“与建立可信个人健康档案相关的单一子目标分层视图”（Layered view for one sub-goal relating to Establish Trusted Personal Health Records，第 3.3 节）。子目标“为每个人建立安全、普遍可及且可验证的健康档案”由成果“人群拥有可验证的数字健康档案”实现。在“TPHR 子目标 #1 实施”（TPHR Sub-goal #1 Implementation）中，三项业务能力实现该成果：健康档案管理（Health Record Management）、身份与认证（Identity and Authentication）以及普遍访问赋能（Universal Access Enablement）。这些能力由产品“可信个人健康档案（PHR）”（Trusted Personal Health Record (PHR)）实现，并由三项服务提供支持：健康档案管理服务、客户身份服务和档案验证服务。这些服务进而由终身健康档案（Lifelong Health Record）、客户注册库（Client Registry）和 PKI/信任基础设施（PKI/Trust Infrastructure）组件实现。底部的“元数据组件”（Metadata Components）组包含客户注册库、机构注册库、卫生工作者注册库、产品注册库和术语服务。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2886,6 +3306,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.5 à la page 52, « Vue en couches d'un sous-objectif relatif à la garantie de la qualité et de la continuité des soins » (Layered view for one sub-goal relating to ensuring Quality and Continuity of Care, section 3.3). Le sous-objectif « Évaluation globale des besoins » (Comprehensive Needs Assessment, évaluation systématique de l'état de santé complet, des risques et des besoins de soins d'un patient) est réalisé par le résultat « Soins intégrés et centrés sur la personne » (Integrated, Person-Centered Care). Dans la « Mise en œuvre du sous-objectif Q&CC n° 1 » (Q&CC Sub-goal #1 Implementation), cinq capacités réalisent ce résultat : Gestion des protocoles de soins (Care Protocol Management), Orchestration du partage des tâches (Task-Sharing Orchestration), Intégration de l'historique du patient (Patient History Integration), Suivi de la qualité et de la performance (Quality and Performance Monitoring) et Aide à la décision (Decision Support). Celles-ci sont réalisées par le produit « Plan de soins partagé intégré (SCP) » (Integrated Shared Care Plan (SCP)), que servent quatre services : Gestion des protocoles de soins, Aide à la décision clinique, Service d'agrégation de l'historique du patient et Coordination des soins et tâches. Ces services sont réalisés ou servis par les composants Moteur de base de connaissances (Knowledge Base Engine), Dossier médical électronique (Electronic Medical Record), Couche d'interopérabilité (Interoperability Layer), Contrôle d'accès et authentification (Access Control and Authentication), Dossier de santé tout au long de la vie (Lifelong Health Record) et Registre des clients (Client Registry). Un « Regroupement » (Grouping) en bas, auquel accèdent ces composants, réunit le Registre des clients, le Registre des agents de santé, le Registre des établissements, le Serveur de terminologie et le Registre des produits.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.5 en la página 52, «Vista en capas de un subobjetivo relacionado con garantizar la calidad y la continuidad de la atención» (Layered view for one sub-goal relating to ensuring Quality and Continuity of Care, sección 3.3). El subobjetivo «Evaluación integral de necesidades» (Comprehensive Needs Assessment, evaluación sistemática del estado de salud completo, los riesgos y los requisitos de atención de un paciente) es realizado por el resultado «Atención integrada y centrada en la persona» (Integrated, Person-Centered Care). En la «Implementación del subobjetivo n.º 1 de Q&CC» (Q&CC Sub-goal #1 Implementation), cinco capacidades realizan ese resultado: Gestión de protocolos de atención (Care Protocol Management), Orquestación de la distribución de tareas (Task-Sharing Orchestration), Integración del historial del paciente (Patient History Integration), Monitoreo de la calidad y el desempeño (Quality and Performance Monitoring) y Apoyo a las decisiones (Decision Support). Estas son realizadas por el producto «Plan de atención compartido integrado (SCP)» (Integrated Shared Care Plan (SCP)), al que sirven cuatro servicios: Gestión de protocolos de atención, Apoyo a las decisiones clínicas, Servicio de agregación del historial del paciente y Coordinación de la atención y tareas. Dichos servicios son realizados o servidos desde los componentes Motor de base de conocimientos (Knowledge Base Engine), Historia clínica electrónica (Electronic Medical Record), Capa de interoperabilidad (Interoperability Layer), Control de acceso y autenticación (Access Control and Authentication), Historia de salud a lo largo de la vida (Lifelong Health Record) y Registro de clientes (Client Registry). Una «Agrupación» (Grouping) en la parte inferior, a la que acceden estos componentes, contiene el Registro de clientes, el Registro de trabajadores de la salud, el Registro de establecimientos, el Servidor de terminología y el Registro de productos.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.5 في الصفحة 52، «عرض متعدد الطبقات لهدف فرعي واحد يتعلق بضمان جودة الرعاية واستمراريتها» (Layered view for one sub-goal relating to ensuring Quality and Continuity of Care، القسم 3.3). يتحقق الهدف الفرعي «التقييم الشامل للاحتياجات» (Comprehensive Needs Assessment، وهو التقييم المنهجي للحالة الصحية الكاملة للمريض ومخاطره ومتطلبات رعايته) من خلال النتيجة «رعاية متكاملة ومتمحورة حول الشخص» (Integrated, Person-Centered Care). وفي «تنفيذ الهدف الفرعي الأول للجودة واستمرارية الرعاية (Q&CC)» (Q&CC Sub-goal #1 Implementation)، تحقّق خمس قدرات تلك النتيجة: إدارة بروتوكولات الرعاية (Care Protocol Management)، وتنسيق تقاسم المهام (Task-Sharing Orchestration)، وتكامل التاريخ المرضي للمريض (Patient History Integration)، ورصد الجودة والأداء (Quality and Performance Monitoring)، ودعم القرار (Decision Support). وتتحقق هذه القدرات بواسطة المنتج «خطة الرعاية المشتركة المتكاملة (SCP)» (Integrated Shared Care Plan (SCP))، الذي تخدمه أربع خدمات: إدارة بروتوكولات الرعاية، ودعم القرار السريري، وخدمة تجميع التاريخ المرضي للمريض، وتنسيق الرعاية والمهام. وتُحقَّق هذه الخدمات أو تُقدَّم من خلال المكوّنات: محرك قاعدة المعرفة (Knowledge Base Engine)، والسجل الطبي الإلكتروني (Electronic Medical Record)، وطبقة التشغيل البيني (Interoperability Layer)، والتحكم في الوصول والمصادقة (Access Control and Authentication)، والسجل الصحي مدى الحياة (Lifelong Health Record)، وسجل المراجعين (Client Registry). ويضم «تجميع» (Grouping) في الأسفل، تصل إليه هذه المكوّنات، سجل المراجعين، وسجل العاملين الصحيين، وسجل المرافق، وخادم المصطلحات، وسجل المنتجات.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.5 на странице 52, «Многоуровневое представление одной подцели, относящейся к обеспечению качества и преемственности медицинской помощи» (Layered view for one sub-goal relating to ensuring Quality and Continuity of Care, раздел 3.3). Подцель «Комплексная оценка потребностей» (Comprehensive Needs Assessment — систематическая оценка полного состояния здоровья пациента, рисков и потребностей в помощи) реализуется результатом «Интегрированная пациентоориентированная помощь» (Integrated, Person-Centered Care). В области «Реализация подцели № 1 Q&CC» (Q&CC Sub-goal #1 Implementation) этот результат реализуют пять способностей: Управление протоколами лечения (Care Protocol Management), Оркестрация распределения задач (Task-Sharing Orchestration), Интеграция анамнеза пациента (Patient History Integration), Мониторинг качества и эффективности (Quality and Performance Monitoring) и Поддержка принятия решений (Decision Support). Они реализуются продуктом «Интегрированный совместный план лечения (SCP)» (Integrated Shared Care Plan (SCP)), который обслуживают четыре сервиса: Управление протоколами лечения, Поддержка принятия клинических решений, Сервис агрегации истории пациента и Координация помощи и задач. Эти сервисы реализуются или обслуживаются компонентами Механизм базы знаний (Knowledge Base Engine), Электронная медицинская карта (Electronic Medical Record), Уровень интероперабельности (Interoperability Layer), Контроль доступа и аутентификация (Access Control and Authentication), Пожизненная медицинская карта (Lifelong Health Record) и Реестр пациентов (Client Registry). Группа «Grouping» в нижней части, к которой обращаются эти компоненты, включает Реестр пациентов, Реестр медицинских работников, Реестр медицинских организаций, Сервер терминологии и Реестр медицинской продукции.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "第 52 页图 3.5，“与确保医疗质量和连续性相关的单一子目标分层视图”（Layered view for one sub-goal relating to ensuring Quality and Continuity of Care，第 3.3 节）。子目标“综合需求评估”（Comprehensive Needs Assessment，对患者完整健康状况、风险和照护需求的系统评估）由成果“整合式以人为本的照护”（Integrated, Person-Centered Care）实现。在“Q&CC 子目标 #1 实施”（Q&CC Sub-goal #1 Implementation）中，五项业务能力实现该成果：照护方案管理（Care Protocol Management）、任务分担编排（Task-Sharing Orchestration）、患者病史整合（Patient History Integration）、质量与绩效监测（Quality and Performance Monitoring）以及决策支持（Decision Support）。这些能力由产品“整合式共享照护计划（SCP）”（Integrated Shared Care Plan (SCP)）实现，并由四项服务提供支持：照护方案管理、临床决策支持、患者病史聚合服务以及照护协调与任务。这些服务由知识库引擎（Knowledge Base Engine）、电子病历（Electronic Medical Record）、互操作性层（Interoperability Layer）、访问控制与认证（Access Control and Authentication）、终身健康档案（Lifelong Health Record）和客户注册库（Client Registry）组件实现或提供服务。底部供这些组件访问的“分组”（Grouping）包含客户注册库、卫生工作者注册库、机构注册库、术语服务器和产品注册库。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2917,6 +3397,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.4.1, « Infrastructure de gouvernance sémantique : les couches de gouvernance, d'exécution et de contenu/applications, ainsi que le flux de contenu entre elles » (Semantic Governance Infrastructure: the governance, runtime, and content-and-application layers, and the flow of content between them, section 3.4.5). Trois couches horizontales sont séparées par des lignes en pointillés. La couche Services de gouvernance (Governance Services) contient le LIMR, la Rédaction de profils (Profile authoring), les Ressources de conformité (Conformance resources) et le SGT de gouvernance (Governance TMS). La couche Services d'exécution (Runtime Services) contient le ST d'exécution (Runtime TS) et une boîte de réserve (placeholder). La couche Contenu et applications (Content and Application Layers) comprend une rangée de guides d'implémentation (IG 1, IG 2, IG 3 et suivants) et une rangée d'Applications/Cas d'usage (App 1, App 2, App 3 et suivants). Une flèche intitulée « Syndication de contenu » (Content syndication) va des Sources mondiales de contenu (Global Content Sources), situées hors des couches, vers le SGT de gouvernance (Governance TMS), et une flèche bidirectionnelle relie Governance TMS à Runtime TS.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.4.1, «Infraestructura de gobernanza semántica: las capas de gobernanza, de tiempo de ejecución y de contenido y aplicaciones, y el flujo de contenido entre ellas» (Semantic Governance Infrastructure: the governance, runtime, and content-and-application layers, and the flow of content between them, sección 3.4.5). Tres capas horizontales están separadas por líneas discontinuas. Servicios de gobernanza (Governance Services) contiene LIMR, Autoría de perfiles (Profile authoring), Recursos de conformidad (Conformance resources) y el TMS de gobernanza (Governance TMS). Servicios en tiempo de ejecución (Runtime Services) contiene el TS en tiempo de ejecución (Runtime TS) y un recuadro marcador de posición. Capas de contenido y aplicaciones (Content and Application Layers) contiene una fila de guías de implementación (IG 1, IG 2, IG 3 y más) y una fila de Aplicaciones/Casos de uso (App 1, App 2, App 3 y más). Una flecha etiquetada «Sindicación de contenido» (Content syndication) va desde las Fuentes mundiales de contenido (Global Content Sources), fuera de las capas, hacia Governance TMS, y una flecha bidireccional enlaza Governance TMS con Runtime TS.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.4.1، «البنية التحتية للحوكمة الدلالية: طبقات الحوكمة والتشغيل والمحتوى والتطبيقات، وتدفّق المحتوى فيما بينها» (Semantic Governance Infrastructure: the governance, runtime, and content-and-application layers, and the flow of content between them، القسم 3.4.5). تفصل خطوط متقطعة بين ثلاث طبقات أفقية: تضم طبقة خدمات الحوكمة (Governance Services) مستودع نماذج المعلومات المنطقية (LIMR)، وتأليف ملفات التعريف (Profile authoring)، وموارد المطابقة (Conformance resources)، ونظام إدارة المصطلحات للحوكمة (Governance TMS). وتضم طبقة خدمات التشغيل (Runtime Services) خدمة المصطلحات وقت التشغيل (Runtime TS) ومربعاً نائباً. وتضم طبقة المحتوى والتطبيقات (Content and Application Layers) صفاً من أدلة التنفيذ (IG 1 وIG 2 وIG 3 وغيرها) وصفاً من التطبيقات/حالات الاستخدام (App 1 وApp 2 وApp 3 وغيرها). ويمتد سهم بعنوان «توزيع المحتوى» (Content syndication) من مصادر المحتوى العالمية (Global Content Sources) خارج الطبقات إلى Governance TMS، ويربط سهم ثنائي الاتجاه بين Governance TMS وRuntime TS.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.4.1, «Инфраструктура семантического управления: уровни управления, среды выполнения, а также контента и приложений, и поток контента между ними» (Semantic Governance Infrastructure: the governance, runtime, and content-and-application layers, and the flow of content between them, раздел 3.4.5). Три горизонтальных уровня разделены пунктирными линиями. Сервисы управления (Governance Services) содержат LIMR, Разработку профилей (Profile authoring), Ресурсы соответствия (Conformance resources) и Систему управления терминологией уровня управления (Governance TMS). Сервисы среды выполнения (Runtime Services) содержат Терминологический сервис среды выполнения (Runtime TS) и резервный блок. Уровни контента и приложений (Content and Application Layers) содержат ряд руководств по реализации (IG 1, IG 2, IG 3 и далее) и ряд Приложений/Сценариев использования (App 1, App 2, App 3 и далее). Стрелка с подписью «Синдикация контента» (Content syndication) ведёт от Глобальных источников контента (Global Content Sources), расположенных вне уровней, к Governance TMS, а двунаправленная стрелка связывает Governance TMS и Runtime TS.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 3.4.1，“语义治理基础设施：治理层、运行时层及内容与应用层，以及各层之间的内容流”（Semantic Governance Infrastructure: the governance, runtime, and content-and-application layers, and the flow of content between them，第 3.4.5 节）。三个水平层由虚线分隔。治理服务层（Governance Services）包含 LIMR、配置文件编写（Profile authoring）、一致性资源（Conformance resources）和治理术语管理系统（Governance TMS）。运行时服务层（Runtime Services）包含运行时术语服务（Runtime TS）和一个占位框。内容与应用层（Content and Application Layers）包含一行实施指南（IG 1、IG 2、IG 3 等）和一行应用/用例（App 1、App 2、App 3 等）。标有“内容聚合分发”（Content syndication）的箭头从各层之外的全球内容源（Global Content Sources）指向 Governance TMS，双向箭头连接 Governance TMS 与 Runtime TS。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2948,6 +3488,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.4.2, « Un spectre de maturité terminologique, de la gestion minimale de listes de référence à un écosystème multipartite pleinement gouverné » (A terminology maturity spectrum, from minimal reference-list management to a fully governed, multi-stakeholder ecosystem), adapté du modèle de maturité du Service de terminologie OpenHIE (section 3.4.5). Une courbe ascendante représente cinq niveaux de maturité : Naissant (Nascent : aucun contenu ni gouvernance définis de manière centralisée) ; Émergent (Emerging : certains contenus définis de manière centralisée dans des formats non standard, avec une adoption et une gouvernance limitées) ; Référence électronique partagée (Shared Electronic Reference : définitions à jour harmonisées entre les principaux programmes) ; Abonnement numérique (Digital Subscription : les systèmes clés s'abonnent électroniquement au service central pour rester à jour) ; et Échange de données (Data Exchange : le service de terminologie automatise l'échange d'informations, par exemple la validation de codes et l'expansion d'ensembles de valeurs). Des marques de rupture rouges entre Émergent et Référence électronique partagée indiquent une progression abrupte. Un encadré souligne que de nombreux PRFI (LMIC) se trouvent aux premiers stades et que ce franchissement exige une nouvelle façon de travailler. Des accolades en dessous regroupent les trois premiers niveaux comme mettant l'accent sur la sélection, la définition et la gouvernance des normes, et les deux derniers comme mettant l'accent sur l'utilisation des terminologies pour l'échange de données.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.4.2, «Un espectro de madurez terminológica, desde la gestión mínima de listas de referencia hasta un ecosistema de múltiples partes interesadas plenamente gobernado» (A terminology maturity spectrum, from minimal reference-list management to a fully governed, multi-stakeholder ecosystem), adaptado del modelo de madurez del Servicio de terminología de OpenHIE (sección 3.4.5). Una línea ascendente traza cinco niveles de madurez: Incipiente (Nascent: sin contenido ni gobernanza definidos centralmente); Emergente (Emerging: algún contenido definido centralmente en formatos no estándar, con adopción y gobernanza limitadas); Referencia electrónica compartida (Shared Electronic Reference: definiciones actualizadas y alineadas entre los programas clave); Suscripción digital (Digital Subscription: los sistemas clave se suscriben electrónicamente al servicio central para mantenerse actualizados); e Intercambio de datos (Data Exchange: el servicio de terminología automatiza el intercambio de información, por ejemplo la validación de códigos y la expansión de conjuntos de valores). Unas marcas rojas de interrupción entre Emergente y Referencia electrónica compartida muestran un salto pronunciado. Una nota destacada señala que muchos PIBM (LMIC) se encuentran en etapas tempranas y que este paso requiere una forma diferente de trabajar. Unas llaves debajo agrupan los tres primeros niveles como centrados en la selección, definición y gobernanza de estándares, y los dos últimos como centrados en el uso de terminologías para el intercambio de datos.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.4.2، «طيف نضج المصطلحات، من الإدارة الدنيا لقوائم المراجع إلى منظومة متعددة أصحاب المصلحة خاضعة لحوكمة كاملة» (A terminology maturity spectrum, from minimal reference-list management to a fully governed, multi-stakeholder ecosystem)، مقتبس من نموذج نضج خدمة المصطلحات في OpenHIE (القسم 3.4.5). يرسم خط صاعد خمسة مستويات للنضج: ناشئ (Nascent: لا يوجد محتوى أو حوكمة محددان مركزياً)؛ آخذ في الظهور (Emerging: بعض المحتوى المحدد مركزياً بصيغ غير قياسية، مع تبنٍّ وحوكمة محدودين)؛ مرجع إلكتروني مشترك (Shared Electronic Reference: تعريفات محدّثة ومتسقة عبر البرامج الرئيسية)؛ اشتراك رقمي (Digital Subscription: تشترك الأنظمة الرئيسية إلكترونياً في الخدمة المركزية للبقاء محدّثة)؛ وتبادل البيانات (Data Exchange: تؤتمت خدمة المصطلحات تبادل المعلومات، مثل التحقق من الرموز وتوسيع مجموعات القيم). وتُظهر علامات قطع حمراء بين «آخذ في الظهور» و«مرجع إلكتروني مشترك» صعوداً حاداً. وتشير ملاحظة توضيحية إلى أن العديد من البلدان المنخفضة والمتوسطة الدخل (LMICs) تمر بالمراحل الأولى وأن هذه الخطوة تتطلب أسلوب عمل مختلفاً. وتجمع أقواس سفلية المستويات الثلاثة الأولى باعتبارها تركز على اختيار المعايير وتعريفها وحوكمتها، والمستويين الأخيرين باعتبارهما يركزان على استخدام المصطلحات لتبادل البيانات.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.4.2, «Спектр зрелости терминологии: от минимального ведения справочных списков до полностью управляемой многосторонней экосистемы» (A terminology maturity spectrum, from minimal reference-list management to a fully governed, multi-stakeholder ecosystem), адаптировано из модели зрелости Сервиса терминологии OpenHIE (раздел 3.4.5). Восходящая линия отображает пять уровней зрелости: Зарождающийся (Nascent — нет централизованно определённого контента или управления); Формирующийся (Emerging — часть контента определена централизованно в нестандартных форматах при ограниченном внедрении и управлении); Общий электронный справочник (Shared Electronic Reference — актуальные определения согласованы между ключевыми программами); Цифровая подписка (Digital Subscription — ключевые системы подписываются в электронном виде на центральный сервис для поддержания актуальности); и Обмен данными (Data Exchange — сервис терминологии автоматизирует информационный обмен, например валидацию кодов и развёртывание наборов значений). Красные линии разрыва между уровнями «Формирующийся» и «Общий электронный справочник» показывают крутой подъём. Выноска отмечает, что многие страны с низким и средним уровнем дохода (LMIC) находятся на ранних этапах и что этот переход требует иного подхода к организации работы. Фигурные скобки внизу объединяют первые три уровня как ориентированные на выбор, определение и управление стандартами, а последние два — как ориентированные на использование терминологий для обмена данными.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 3.4.2，“术语成熟度谱系：从最低限度的参考列表管理到完全治理的多利益相关方生态系统”（A terminology maturity spectrum, from minimal reference-list management to a fully governed, multi-stakeholder ecosystem），改编自 OpenHIE 术语服务成熟度模型（第 3.4.5 节）。一条上升曲线描绘了五个成熟度级别：萌芽期（Nascent：无集中定义的内容或治理）；起步期（Emerging：以非标准格式集中定义部分内容，采用率与治理水平有限）；共享电子参考（Shared Electronic Reference：各重点项目的最新定义保持一致）；数字订阅（Digital Subscription：关键系统以电子方式订阅中央服务以保持同步更新）；以及数据交换（Data Exchange：术语服务实现信息交换自动化，例如代码验证和值集展开）。“起步期”与“共享电子参考”之间的红色折断标记表示跨越陡峭。标注框指出许多中低收入国家（LMIC）仍处于早期阶段，迈出这一步需要转变工作方式。下方的大括号将前三个级别归类为侧重标准的选择、定义与治理，将后两个级别归类为侧重使用术语进行数据交换。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2979,6 +3579,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.4.3, « Contenu terminologique hiérarchique, des normes de référence mondiales aux dictionnaires au niveau des établissements, avec personnalisation descendante et rétroaction ascendante » (Hierarchical terminology content, from global reference standards to facility-level dictionaries, with top-down customisation and upward feedback), adapté du cadre du Dictionnaire national de données de santé (NHDD) d'OpenHIE (section 3.4.5). Intitulé « Cadre NHDD : structure du contenu » (NHDD Framework: Content Structure), le schéma empile cinq couches de haut en bas : Jeux de codes de référence/administratifs (Reference/Administrative Code Sets, par exemple SNOMED, ICD, HL7) ; Sources de concepts organisées/Terminologies d'interface (Curated Concept Sources/Interface Terminologies, par exemple CIEL, IMO) ; Sous-ensembles/Personnalisations au niveau national (Country-level Subsets/Customizations) ; Dictionnaires/Personnalisations au niveau des organisations (Organization-level Dictionaries/Customizations) ; et Dictionnaires au niveau des établissements (Facility-level Dictionaries, par exemple formulaires thérapeutiques). Une flèche descendante à gauche indique que les normes internationales sont sélectionnées et personnalisées pour un usage national, puis adaptées plus finement pour la mise en œuvre locale. Une flèche ascendante à droite porte les mentions « Soumissions / Rétroaction vers les normes » (Submissions / Feedback to Standards) et « Gouvernance locale et nationale réactive » (Responsive Local & National Governance).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.4.3, «Contenido terminológico jerárquico, desde los estándares de referencia mundiales hasta los diccionarios a nivel de establecimiento, con personalización descendente y retroalimentación ascendente» (Hierarchical terminology content, from global reference standards to facility-level dictionaries, with top-down customisation and upward feedback), adaptado del marco del Diccionario Nacional de Datos de Salud (NHDD) de OpenHIE (sección 3.4.5). Titulado «Marco NHDD: Estructura del contenido» (NHDD Framework: Content Structure), apila cinco capas de arriba abajo: Conjuntos de códigos de referencia/administrativos (Reference/Administrative Code Sets, por ejemplo SNOMED, ICD, HL7); Fuentes de conceptos curadas/Terminologías de interfaz (Curated Concept Sources/Interface Terminologies, por ejemplo CIEL, IMO); Subconjuntos/Personalizaciones a nivel de país (Country-level Subsets/Customizations); Diccionarios/Personalizaciones a nivel de organización (Organization-level Dictionaries/Customizations); y Diccionarios a nivel de establecimiento (Facility-level Dictionaries, por ejemplo formularios farmacoterapéuticos). Una flecha descendente a la izquierda indica que los estándares internacionales se seleccionan y personalizan para su uso nacional y luego se adaptan aún más para la implementación local. Una flecha ascendente a la derecha dice «Envíos / Retroalimentación a los estándares» (Submissions / Feedback to Standards) y «Gobernanza local y nacional receptiva» (Responsive Local & National Governance).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.4.3، «محتوى المصطلحات الهرمي، من المعايير المرجعية العالمية إلى القواميس على مستوى المرافق، مع التخصيص من أعلى إلى أسفل والتغذية الراجعة الصاعدة» (Hierarchical terminology content, from global reference standards to facility-level dictionaries, with top-down customisation and upward feedback)، مقتبس من إطار قاموس البيانات الصحية الوطني (NHDD) التابع لـ OpenHIE (القسم 3.4.5). يحمل الشكل عنوان «إطار NHDD: بنية المحتوى» (NHDD Framework: Content Structure)، ويرصّ خمس طبقات من الأعلى إلى الأسفل: مجموعات الرموز المرجعية/الإدارية (Reference/Administrative Code Sets، مثل SNOMED وICD وHL7)؛ ومصادر المفاهيم المنسّقة/مصطلحات الواجهة (Curated Concept Sources/Interface Terminologies، مثل CIEL وIMO)؛ والمجموعات الفرعية/التخصيصات على المستوى الوطني (Country-level Subsets/Customizations)؛ والقواميس/التخصيصات على مستوى المؤسسات (Organization-level Dictionaries/Customizations)؛ والقواميس على مستوى المرافق (Facility-level Dictionaries، مثل قوائم الأدوية المعتمدة). ويشير سهم متجه إلى الأسفل على اليسار إلى أنه يتم اختيار المعايير الدولية وتخصيصها للاستخدام القطري ثم تكييفها للتنفيذ المحلي، بينما يحمل سهم متجه إلى الأعلى على اليمين عبارتي «المقترحات / التغذية الراجعة إلى المعايير» (Submissions / Feedback to Standards) و«الحوكمة المحلية والوطنية المستجيبة» (Responsive Local & National Governance).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.4.3, «Иерархическое терминологическое наполнение: от глобальных эталонных стандартов до словарей уровня медицинских организаций с кастомизацией сверху вниз и обратной связью снизу вверх» (Hierarchical terminology content, from global reference standards to facility-level dictionaries, with top-down customisation and upward feedback), адаптировано из концепции Национального словаря данных здравоохранения (NHDD) OpenHIE (раздел 3.4.5). Диаграмма под названием «Структура контента NHDD» (NHDD Framework: Content Structure) включает пять уровней сверху вниз: Эталонные/административные наборы кодов (Reference/Administrative Code Sets, например SNOMED, ICD, HL7); Курируемые источники концептов/интерфейсные терминологии (Curated Concept Sources/Interface Terminologies, например CIEL, IMO); Национальные подмножества/адаптации (Country-level Subsets/Customizations); Словари/адаптации уровня организаций (Organization-level Dictionaries/Customizations); и Словари уровня медицинских учреждений (Facility-level Dictionaries, например лекарственные формуляры). Направленная вниз стрелка слева указывает, что международные стандарты отбираются и адаптируются для национального использования, а затем дополнительно настраиваются для локального внедрения. Направленная вверх стрелка справа подписана «Предложения / обратная связь в стандарты» (Submissions / Feedback to Standards) и «Отзывчивое локальное и национальное управление» (Responsive Local & National Governance).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 3.4.3，“从全球参考标准到机构级字典的层级化术语内容，以及自上而下的定制与自下而上的反馈”（Hierarchical terminology content, from global reference standards to facility-level dictionaries, with top-down customisation and upward feedback），改编自 OpenHIE 国家卫生数据字典（NHDD）框架（第 3.4.5 节）。图题为“NHDD 框架：内容结构”（NHDD Framework: Content Structure），自上而下堆叠五层：参考/管理代码集（Reference/Administrative Code Sets，例如 SNOMED、ICD、HL7）；精选概念源/接口术语集（Curated Concept Sources/Interface Terminologies，例如 CIEL、IMO）；国家级子集/定制（Country-level Subsets/Customizations）；组织级字典/定制（Organization-level Dictionaries/Customizations）；以及机构级字典（Facility-level Dictionaries，例如处方集）。左侧向下的箭头表明国际标准经遴选和定制供国家层面使用，并进一步适配以用于本地实施；右侧向上的箭头标注“向标准提交/反馈”（Submissions / Feedback to Standards）和“响应迅速的地方与国家治理”（Responsive Local & National Governance）。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -3010,6 +3670,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.5 à la page 66, vue en couches de l'architecture de référence DPI-H (section 3.5.3, How the components are organised). Il s'agit d'une version réduite de la vue intégrée de la Figure 3.2, sans les bandeaux des objectifs, de la gouvernance, des parties prenantes, des capacités et de la technologie. Intitulée « Architecture de référence DPI-H : infrastructure publique numérique pour la santé réutilisable et placée sous l'intendance des pouvoirs publics » (DPI-H Reference Architecture: government-stewarded reusable Digital Public Infrastructure for Health), elle présente en haut la couche des Applications fonctionnelles et du point de service, qui consomme la couche DPI-H via des API fondées sur des normes. La couche DPI-H comporte des Composants réutilisables (Services cliniques avec moteur d'aide à la décision calculable, Chaîne d'approvisionnement avec registre des fournisseurs, Financement de la santé avec registre des paniers de prestations, Santé publique et analytique avec plateforme de surveillance de santé publique et SGIS/HMIS, Intelligence fondée sur l'IA et Utilisation secondaire) et une Couche de données partagées (Registre des clients, Dossier de santé tout au long de la vie, Registre du personnel de santé, Registre des établissements, Registre des produits, Service de terminologie, Référentiel de modèles logiques d'information ; les cinq premiers sont marqués d'une étoile comme composants REDDHI). Au-dessous figure la Couche DPI fondatrice (DPI-F) : identité fondatrice, services nationaux de confiance, rails de paiement, trame d'échange de données, CRVS et autres secteurs, et géolocalisation et notification. Une colonne transversale d'Interopérabilité à droite regroupe le Médiateur d'information (passerelle API, HIE), les normes ouvertes et les modèles d'intégration.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.5 en la página 66, vista en capas de la arquitectura de referencia DPI-H (sección 3.5.3, How the components are organised). Es una forma reducida de la vista integrada de la Figura 3.2 sin las franjas de objetivos, gobernanza, partes interesadas, capacidades y tecnología. Titulada «Arquitectura de referencia DPI-H: infraestructura pública digital para la salud reutilizable y bajo custodia gubernamental» (DPI-H Reference Architecture: government-stewarded reusable Digital Public Infrastructure for Health), muestra en la parte superior la capa de Aplicaciones funcionales y en el punto de atención, que consume la capa DPI-H mediante API basadas en estándares. La capa DPI-H cuenta con Componentes reutilizables (Servicios clínicos con motor computable de apoyo a las decisiones, Cadena de suministro con registro de proveedores, Financiamiento de la salud con registro de paquetes de prestaciones, Salud pública y analítica con plataforma de vigilancia de salud pública y HMIS, Inteligencia habilitada por IA y Uso secundario) y una Capa de datos compartidos (Registro de clientes, Historia de salud a lo largo de la vida, Registro del personal de salud, Registro de establecimientos, Registro de productos, Servicio de terminología, Repositorio de modelos lógicos de información; los cinco primeros están marcados con estrella como componentes REDDHI). Debajo se encuentra la Capa DPI fundacional (DPI-F): identidad fundacional, servicios nacionales de confianza, rieles de pago, tejido de intercambio de datos, CRVS y otros sectores, y geolocalización y notificación. Una columna transversal de Interoperabilidad a la derecha contiene el Mediador de información (pasarela API, HIE), estándares abiertos y patrones de integración.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.5 في الصفحة 66، العرض متعدد الطبقات للبنية المرجعية لـ DPI-H (القسم 3.5.3، How the components are organised). وهو صيغة مختصرة من العرض المتكامل في الشكل 3.2 من دون أشرطة الأهداف والحوكمة وأصحاب المصلحة والقدرات والتكنولوجيا. يحمل الشكل عنوان «البنية المرجعية لـ DPI-H: بنية تحتية عامة رقمية للصحة قابلة لإعادة الاستخدام وترعاها الحكومة» (DPI-H Reference Architecture: government-stewarded reusable Digital Public Infrastructure for Health)، ويُظهر في الأعلى طبقة تطبيقات نقطة تقديم الخدمة والتطبيقات الوظيفية التي تستهلك طبقة DPI-H عبر واجهات برمجة تطبيقات (APIs) قائمة على المعايير. وتضم طبقة DPI-H مكوّنات قابلة لإعادة الاستخدام (الخدمات السريرية مع محرك حوسبي لدعم القرار، وسلسلة الإمداد مع سجل المورّدين، والتمويل الصحي مع سجل حزم المنافع، والصحة العامة والتحليلات مع منصة ترصّد الصحة العامة ونظام HMIS، والذكاء المدعوم بالذكاء الاصطناعي، والاستخدام الثانوي) وطبقة بيانات مشتركة (سجل المراجعين، والسجل الصحي مدى الحياة، وسجل القوى العاملة الصحية، وسجل المرافق، وسجل المنتجات، وخدمة المصطلحات، ومستودع نماذج المعلومات المنطقية؛ وقد أُشير إلى الخمسة الأولى بنجمة بوصفها مكوّنات REDDHI). وتقع أسفلها طبقة البنية التحتية العامة الرقمية التأسيسية (DPI-F): الهوية التأسيسية، وخدمات الثقة الوطنية، وقنوات الدفع، ونسيج تبادل البيانات، والسجل المدني والإحصاءات الحيوية (CRVS) والقطاعات الأخرى، وتحديد الموقع الجغرافي والإشعارات. ويضم عمود التشغيل البيني الشامل على اليمين وسيط المعلومات (بوابة API، وتبادل المعلومات الصحية HIE) والمعايير المفتوحة وأنماط التكامل.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.5 на странице 66, многоуровневое представление референтной архитектуры DPI-H (раздел 3.5.3, How the components are organised). Это сокращённая форма интегрированного представления с рисунка 3.2 без полос целей, управления, заинтересованных сторон, способностей и технологий. Диаграмма озаглавлена «Референтная архитектура DPI-H: курируемая государством переиспользуемая цифровая общественная инфраструктура здравоохранения» (DPI-H Reference Architecture: government-stewarded reusable Digital Public Infrastructure for Health) и показывает сверху уровень Приложений в точках оказания помощи и функциональных приложений, обращающийся к уровню DPI-H через основанные на стандартах API. Уровень DPI-H включает Переиспользуемые компоненты (Клинические сервисы с вычислимым механизмом поддержки принятия решений, Цепочка поставок с реестром поставщиков, Финансирование здравоохранения с реестром пакетов медицинских гарантий, Общественное здравоохранение и аналитика с платформой эпиднадзора и ИСЗ/HMIS, Интеллектуальные сервисы на базе ИИ и Вторичное использование данных) и Общий уровень данных (Реестр пациентов, Пожизненная медицинская карта, Реестр медицинских работников, Реестр медицинских организаций, Реестр медицинской продукции, Сервис терминологии, Репозиторий логических информационных моделей; первые пять отмечены звёздочкой как компоненты REDDHI). Ниже расположен Базовый уровень DPI (DPI-F): базовая идентификация, национальные сервисы доверия, платёжные контуры, среда обмена данными, ЗАГС/CRVS и другие сектора, геолокация и уведомления. Сквозной столбец Интероперабельности справа содержит Информационный посредник (API-шлюз, HIE), открытые стандарты и шаблоны интеграции.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "第 66 页图 3.5，DPI-H 参考架构分层视图（第 3.5.3 节，How the components are organised）。它是图 3.2 综合视图的精简形式，省去了目标、治理、利益相关方、业务能力和技术带。图题为“DPI-H 参考架构：由政府统筹管理的可复用卫生数字公共基础设施”（DPI-H Reference Architecture: government-stewarded reusable Digital Public Infrastructure for Health），顶部为通过基于标准的 API 调用 DPI-H 层的服务点与功能应用层。DPI-H 层包含可复用组件（含可计算决策支持引擎的临床服务、含供应商注册库的供应链、含福利包注册库的卫生筹资、含公共卫生监测平台和 HMIS 的公共卫生与分析、人工智能赋能的智能服务以及二次利用）和共享数据层（客户注册库、终身健康档案、卫生人力注册库、机构注册库、产品注册库、术语服务、逻辑信息模型存储库；前五项标星为 REDDHI 组件）。其下为基础 DPI 层（DPI-F）：基础身份、国家信任服务、支付通道、数据交换网络、CRVS 及其他部门以及地理定位与通知。右侧跨领域的互操作性列包含信息中介（API 网关、HIE）、开放标准和集成模式。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -3041,6 +3761,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.6, « Modèles d'échange pouvant coexister au sein d'un même pays » (Exchange patterns that can coexist within a single country, section 3.6.3). Cinq panneaux montrent le même type de systèmes reliés de différentes manières. Connexions directes (Direct connections) : systèmes A à D reliés point à point. Bus de services central (Central service bus) : cinq systèmes tous raccordés à un même bus de services orange. Passerelles (Gateways) : systèmes A, B et C, chacun derrière sa propre passerelle, les passerelles étant reliées entre elles. Points d'accès distribués (Distributed access points) : systèmes A, B et C, dotés chacun d'un point d'accès (AP) ; les AP sont reliés par des lignes de données pleines, tandis que des lignes en pointillés joignent chacun d'eux à une boîte centrale « Registre et supervision » (Registry & oversight) par laquelle ne transite aucune donnée. Publication-abonnement (Publish–subscribe (asynchronous)) : le système A publie vers un courtier d'événements (event broker), qui notifie les systèmes B, C et D. Le texte de la page précise que l'architecture ne prescrit pas un modèle unique.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.6, «Patrones de intercambio que pueden coexistir dentro de un mismo país» (Exchange patterns that can coexist within a single country, sección 3.6.3). Cinco paneles muestran el mismo tipo de sistemas conectados de distintas maneras. Conexiones directas (Direct connections): sistemas A a D vinculados punto a punto. Bus de servicios central (Central service bus): cinco sistemas conectados a un único bus de servicios naranja. Pasarelas (Gateways): sistemas A, B y C, cada uno detrás de su propia pasarela, con las pasarelas interconectadas. Puntos de acceso distribuidos (Distributed access points): sistemas A, B y C, cada uno con un punto de acceso (AP); los AP están unidos por líneas continuas de datos, mientras que líneas discontinuas unen cada uno a un recuadro central de «Registro y supervisión» (Registry & oversight) que no transporta datos. Publicación-suscripción (Publish–subscribe (asynchronous)): el sistema A publica en un intermediario de eventos (event broker), que notifica a los sistemas B, C y D. El texto de la página indica que la arquitectura no prescribe un único patrón.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.6، «أنماط التبادل التي يمكن أن تتعايش داخل بلد واحد» (Exchange patterns that can coexist within a single country، القسم 3.6.3). تعرض خمس لوحات النوع نفسه من الأنظمة متصلاً بطرق مختلفة: الاتصالات المباشرة (Direct connections): الأنظمة من A إلى D متصلة بنمط نقطة إلى نقطة؛ ناقل الخدمة المركزي (Central service bus): خمسة أنظمة متصلة جميعها بناقل خدمة برتقالي واحد؛ البوابات (Gateways): الأنظمة A وB وC يقع كل منها خلف بوابتها الخاصة مع ترابط البوابات فيما بينها؛ نقاط الوصول الموزعة (Distributed access points): الأنظمة A وB وC مع نقطة وصول (AP) لكل منها، وتربط خطوط بيانات متصلة بين نقاط الوصول بينما تصل خطوط متقطعة كلاً منها بمربع مركزي بعنوان «السجل والإشراف» (Registry & oversight) لا تمر عبره بيانات؛ النشر والاشتراك غير المتزامن (Publish–subscribe (asynchronous)): ينشر النظام A إلى وسيط أحداث (event broker) يتولى إشعار الأنظمة B وC وD. ويوضح نص الصفحة أن البنية المعمارية لا تفرض نمطاً واحداً.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.6, «Шаблоны обмена данными, которые могут сосуществовать в пределах одной страны» (Exchange patterns that can coexist within a single country, раздел 3.6.3). Пять панелей показывают однотипные системы, соединённые различными способами. Прямые соединения (Direct connections): системы A–D связаны по принципу «точка–точка». Центральная сервисная шина (Central service bus): пять систем подключены к одной оранжевой сервисной шине. Шлюзы (Gateways): системы A, B и C находятся каждая за собственным шлюзом, а шлюзы связаны между собой. Распределённые точки доступа (Distributed access points): системы A, B и C имеют по точке доступа (AP); точки доступа соединены сплошными линиями передачи данных, а пунктирные линии связывают каждую из них с центральным блоком «Реестр и надзор» (Registry & oversight), через который данные не передаются. Публикация–подписка (асинхронный обмен, Publish–subscribe (asynchronous)): система A публикует события в брокер событий (event broker), который уведомляет системы B, C и D. В тексте страницы указано, что архитектура не предписывает какой-либо один шаблон.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 3.6，“可在同一国家内并存的交换模式”（Exchange patterns that can coexist within a single country，第 3.6 节/3.6.3 节）。五个面板展示了以不同方式连接的同类系统。直接连接（Direct connections）：系统 A 至 D 点对点相连。中央服务总线（Central service bus）：五个系统全部连接到同一条橙色服务总线。网关（Gateways）：系统 A、B 和 C 各自位于其网关之后，各网关相互连接。分布式接入点（Distributed access points）：系统 A、B 和 C 各有一个接入点（AP）；各 AP 之间由实线数据线相连，而虚线将每个 AP 连接到不传输数据的中央“注册与监管”（Registry & oversight）框。发布-订阅（异步，Publish–subscribe (asynchronous)）：系统 A 向事件代理（event broker）发布消息，由其通知系统 B、C 和 D。页面正文指出该架构并不强制规定单一模式。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -3072,6 +3852,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.7.1 (section 3.7.2, The model), montrant un système qui réalise un acteur avec ses services offerts et requis, ainsi que deux acteurs reliés par une transaction. Les composants Source de documents (Document Source) et Référentiel de documents (Document Repository) sont tous deux affectés à l'interaction « Fournir et enregistrer un ensemble de documents [ITI-41] » (Provide and Register Document Set [ITI-41]). « Produit DME du fournisseur » (Vendor EHR Product) réalise Document Source, et « Produit DME du fournisseur 2 » (Vendor 2 EHR product) réalise Document Repository ; ces deux liens sont tracés sous forme de lignes rouges en pointillés. Document Repository réalise le service « Enregistrer un ensemble de documents » (Register Document Set), qui sert Document Source.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.7.1 (sección 3.7.2, The model), que muestra un sistema que realiza un actor con sus servicios ofrecidos y requeridos, y dos actores conectados por una transacción. Los componentes Origen de documentos (Document Source) y Repositorio de documentos (Document Repository) están asignados a la interacción «Proporcionar y registrar conjunto de documentos [ITI-41]» (Provide and Register Document Set [ITI-41]). «Producto de HCE del proveedor» (Vendor EHR Product) realiza Document Source, y «Producto de HCE del proveedor 2» (Vendor 2 EHR product) realiza Document Repository; ambos enlaces se dibujan como líneas rojas punteadas. Document Repository realiza el servicio «Registrar conjunto de documentos» (Register Document Set), que sirve a Document Source.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.7.1 (القسم 3.7.2، The model)، ويوضح نظاماً يحقّق فاعلاً (actor) مع خدماته المقدَّمة والمطلوبة، وفاعلَين مرتبطَين بمعاملة. يُسنَد كل من مكوّن مصدر الوثائق (Document Source) ومستودع الوثائق (Document Repository) إلى التفاعل «تقديم وتسجيل مجموعة وثائق [ITI-41]» (Provide and Register Document Set [ITI-41]). ويحقّق «منتج السجل الصحي الإلكتروني للمورّد» (Vendor EHR Product) مكوّن Document Source، بينما يحقّق «منتج السجل الصحي الإلكتروني للمورّد 2» (Vendor 2 EHR product) مكوّن Document Repository؛ وتُرسم كلتا الرابطتين بخطين أحمرين منقّطين. كما يحقّق Document Repository خدمة «تسجيل مجموعة الوثائق» (Register Document Set) التي تخدم Document Source.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.7.1 (раздел 3.7.2, The model), демонстрирующий систему, реализующую актора с его предоставляемыми и требуемыми сервисами, и двух акторов, связанных транзакцией. Компоненты Источник документов (Document Source) и Репозиторий документов (Document Repository) назначены взаимодействию «Предоставление и регистрация набора документов [ITI-41]» (Provide and Register Document Set [ITI-41]). «Продукт ЭМК поставщика» (Vendor EHR Product) реализует Document Source, а «Продукт ЭМК поставщика 2» (Vendor 2 EHR product) реализует Document Repository; обе связи изображены красными пунктирными линиями. Document Repository реализует сервис «Регистрация набора документов» (Register Document Set), который обслуживает Document Source.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 3.7.1（第 3.7.2 节，The model），展示了一个实现角色（actor）及其提供与所需服务的系统，以及通过事务相连的两个角色。文档源（Document Source）和文档存储库（Document Repository）两个组件均被分配给交互“提供并注册文档集 [ITI-41]”（Provide and Register Document Set [ITI-41]）。“供应商 EHR 产品”（Vendor EHR Product）实现 Document Source，“供应商 2 EHR 产品”（Vendor 2 EHR product）实现 Document Repository；这两条连接均绘制为红色虚线。Document Repository 实现服务“注册文档集”（Register Document Set），该服务为 Document Source 提供支持。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -3103,6 +3943,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure 3.7.2, « Vue des tests de conformité » (Conformance testing view, section 3.7.2). Le Système sous test (System Under Test), qui contient une interface « Interface utilisateur de capture de documents » (Document Capture UI), réalise l'acteur Source de documents (Document Source). Un Simulateur (Simulator) réalise l'acteur opposé Référentiel de documents (Document Repository). Les deux acteurs sont affectés à l'interaction « Fournir et enregistrer un ensemble de documents [ITI-41] » (Provide and Register Document Set [ITI-41]). L'interface Document Capture UI sert un rôle d'Opérateur de test (Test Operator), qui est affecté au processus « Créer et soumettre un document » (Create and submit document) déclenchant cette même interaction ITI-41. Cela montre que le système peut également être testé de bout en bout via son interface utilisateur.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura 3.7.2, «Vista de pruebas de conformidad» (Conformance testing view, sección 3.7.2). El Sistema bajo prueba (System Under Test), que contiene una interfaz «Interfaz de usuario de captura de documentos» (Document Capture UI), realiza el actor Origen de documentos (Document Source). Un Simulador (Simulator) realiza el actor opuesto Repositorio de documentos (Document Repository). Ambos actores están asignados a la interacción «Proporcionar y registrar conjunto de documentos [ITI-41]» (Provide and Register Document Set [ITI-41]). La interfaz Document Capture UI sirve a un rol de Operador de pruebas (Test Operator), asignado al proceso «Crear y enviar documento» (Create and submit document) que desencadena la misma interacción ITI-41. Esto muestra que el sistema también puede probarse de extremo a extremo a través de su interfaz de usuario.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل 3.7.2، «عرض اختبار المطابقة» (Conformance testing view، القسم 3.7.2). يحقّق النظام قيد الاختبار (System Under Test)، الذي يتضمن واجهة «واجهة مستخدم لالتقاط الوثائق» (Document Capture UI)، الفاعلَ مصدر الوثائق (Document Source). ويحقّق المحاكي (Simulator) الفاعلَ المقابل مستودع الوثائق (Document Repository). ويُسنَد كلا الفاعلَين إلى التفاعل «تقديم وتسجيل مجموعة وثائق [ITI-41]» (Provide and Register Document Set [ITI-41]). وتخدم واجهة Document Capture UI دور مشغّل الاختبار (Test Operator) المسنَد إلى عملية «إنشاء الوثيقة وإرسالها» (Create and submit document) التي تطلق التفاعل ITI-41 نفسه، مما يوضح إمكانية اختبار النظام شاملاً من الطرف إلى الطرف عبر واجهة المستخدم الخاصة به.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок 3.7.2, «Представление тестирования на соответствие» (Conformance testing view, раздел 3.7.2). Тестируемая система (System Under Test), содержащая интерфейс «Пользовательский интерфейс захвата документов» (Document Capture UI), реализует актора Источник документов (Document Source). Симулятор (Simulator) реализует противоположного актора Репозиторий документов (Document Repository). Оба актора назначены взаимодействию «Предоставление и регистрация набора документов [ITI-41]» (Provide and Register Document Set [ITI-41]). Интерфейс Document Capture UI обслуживает роль Оператора тестирования (Test Operator), назначенную процессу «Создать и отправить документ» (Create and submit document), который инициирует то же взаимодействие ITI-41. Это показывает, что систему можно тестировать и по сквозному сценарию через её пользовательский интерфейс.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 3.7.2，“一致性测试视图”（Conformance testing view，第 3.7.2 节）。包含“文档采集用户界面”（Document Capture UI）接口的被测系统（System Under Test）实现文档源（Document Source）角色，模拟器（Simulator）实现相对的文档存储库（Document Repository）角色。两个角色均被分配给交互“提供并注册文档集 [ITI-41]”（Provide and Register Document Set [ITI-41]）。Document Capture UI 服务于测试操作员（Test Operator）角色，该角色被分配给触发同一 ITI-41 交互的“创建并提交文档”（Create and submit document）流程。这表明该系统也可以通过其用户界面进行端到端测试。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -3134,6 +4034,66 @@
           },
           "drafted_at": "2026-10-01",
           "lang": "en"
+        },
+        {
+          "text": "Figure A.1, « Capacités de gouvernance sémantique, rôles qui les exercent et composants applicatifs d'appui » (Semantic governance capabilities, the roles that carry them out, and the supporting application components, Annexe F, Infrastructure de gouvernance sémantique : détails des capacités). Cinq capacités s'enchaînent de gauche à droite sous forme de flux : Consommer (Consume), Demandes de changement (Change requests), Gestion des changements (Change management), Publication (Publication) et Surveillance (Monitoring). L'étape allant de Gestion des changements à Publication est tracée en pointillés. Les rôles et objets d'information sont rattachés au-dessus : Partie prenante (Stakeholder) à Consommer ; Auteur (Author) et Propriétaire (Owner) à Gestion des changements ; Contenu (Content) et Contenu en amont (Upstream content) à Publication ; et Règles de gestion (Management rules) à Surveillance. Les outils d'appui sont rattachés au-dessous : Outils de demande de changement (Change-request tooling) à Demandes de changement, Rédaction (Authoring) à Gestion des changements et Référentiel (Repository) à Publication. Une légende distingue les trois types : capacité, rôle ou objet d'information, et outil d'appui.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Figura A.1, «Capacidades de gobernanza semántica, los roles que las llevan a cabo y los componentes de aplicación de apoyo» (Semantic governance capabilities, the roles that carry them out, and the supporting application components, Apéndice F, Infraestructura de gobernanza semántica: detalles de las capacidades). Cinco capacidades discurren de izquierda a derecha como un flujo: Consumir (Consume), Solicitudes de cambio (Change requests), Gestión de cambios (Change management), Publicación (Publication) y Monitoreo (Monitoring). El paso de Gestión de cambios a Publicación está trazado con línea discontinua. Los roles y objetos de información se adjuntan arriba: Parte interesada (Stakeholder) a Consumir; Autor (Author) y Propietario (Owner) a Gestión de cambios; Contenido (Content) y Contenido ascendente (Upstream content) a Publicación; y Reglas de gestión (Management rules) a Monitoreo. Las herramientas de apoyo se adjuntan debajo: Herramientas de solicitudes de cambio (Change-request tooling) a Solicitudes de cambio, Autoría (Authoring) a Gestión de cambios y Repositorio (Repository) a Publicación. Una leyenda distingue los tres tipos: capacidad, rol u objeto de información, y herramienta de apoyo.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "الشكل A.1، «قدرات الحوكمة الدلالية والأدوار التي تنفذها ومكوّنات التطبيقات الداعمة» (Semantic governance capabilities, the roles that carry them out, and the supporting application components، الملحق F، البنية التحتية للحوكمة الدلالية: تفاصيل القدرات). تمتد خمس قدرات من اليسار إلى اليمين في مسار متسلسل: الاستهلاك (Consume)، وطلبات التغيير (Change requests)، وإدارة التغيير (Change management)، والنشر (Publication)، والرصد (Monitoring)، وتُرسم الخطوة الممتدة من إدارة التغيير إلى النشر بخط متقطع. وتُربط الأدوار وكائنات المعلومات في الأعلى: صاحب المصلحة (Stakeholder) بالاستهلاك؛ والمؤلف (Author) والمالك (Owner) بإدارة التغيير؛ والمحتوى (Content) والمحتوى المصدري (Upstream content) بالنشر؛ وقواعد الإدارة (Management rules) بالرصد. وتُربط الأدوات الداعمة في الأسفل: أدوات طلبات التغيير (Change-request tooling) بطلبات التغيير، والتأليف (Authoring) بإدارة التغيير، والمستودع (Repository) بالنشر. ويميز مفتاح الشكل بين الأنواع الثلاثة: القدرة، والدور أو كائن المعلومات، والأداة الداعمة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Рисунок A.1, «Способности семантического управления, выполняющие их роли и поддерживающие прикладные компоненты» (Semantic governance capabilities, the roles that carry them out, and the supporting application components, Приложение F, Инфраструктура семантического управления: детализация способностей). Пять способностей выстроены слева направо в виде потока: Потребление (Consume), Запросы на изменение (Change requests), Управление изменениями (Change management), Публикация (Publication) и Мониторинг (Monitoring). Переход от Управления изменениями к Публикации изображён пунктиром. Сверху присоединены роли и информационные объекты: Заинтересованная сторона (Stakeholder) — к Потреблению; Автор (Author) и Владелец (Owner) — к Управлению изменениями; Контент (Content) и Вышестоящий контент (Upstream content) — к Публикации; Правила управления (Management rules) — к Мониторингу. Снизу присоединены вспомогательные инструменты: Инструментарий запросов на изменение (Change-request tooling) — к Запросам на изменение, Средства разработки (Authoring) — к Управлению изменениями и Репозиторий (Repository) — к Публикации. Легенда различает три типа элементов: способность, роль или информационный объект, и вспомогательный инструмент.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "图 A.1，“语义治理能力、执行这些能力的角色以及支撑应用组件”（Semantic governance capabilities, the roles that carry them out, and the supporting application components，附录 F，语义治理基础设施：能力详情）。五项能力自左向右构成流程：消费（Consume）、变更请求（Change requests）、变更管理（Change management）、发布（Publication）和监测（Monitoring）。从变更管理到发布的步骤以虚线绘制。上方连接角色与信息对象：利益相关方（Stakeholder）连接消费；作者（Author）和所有者（Owner）连接变更管理；内容（Content）和上游内容（Upstream content）连接发布；管理规则（Management rules）连接监测。下方连接支撑工具：变更请求工具（Change-request tooling）连接变更请求，编写工具（Authoring）连接变更管理，存储库（Repository）连接发布。图例区分了三种类型：能力、角色或信息对象以及支撑工具。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://d5de99b8-67f9-4aa7-bb02-91bba1238789"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     }
