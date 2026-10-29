@@ -48,3 +48,8 @@ mount it at a pinned commit.
    "SUSHI cannot run here" before running the seeder, and never stand in
    another version for a pin; its `--missing-out` list is what the mirror
    still needs.
+5. **This IG does not commit its artefact index.** `smart-base/fhir-artifact-index/`
+   (`index.json`, `menu.json`, `releases.json`, `package.tgz`) is written at
+   publish by fhir-harness's `ig-index:build` from the IG's AST and its
+   `sushi-config.yaml` (fhir-harness#124), and is gitignored. Never commit it,
+   hand-edit it, or re-ingest it from the published site.

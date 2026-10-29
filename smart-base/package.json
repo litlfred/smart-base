@@ -5,7 +5,6 @@
   "checkoutScripts": {
     "check:fhir-harness-exclusions": "bun run smart-base/scripts/check-fhir-harness-exclusions.ts",
     "ingest:ig-chrome:check": "bun run fhir-harness/scripts/ingest-ig-chrome.ts --out smart-base/themes --check",
-    "ingest:ig:check:smart-base": "bun run fhir-harness/scripts/ingest-ig-artifacts.ts --out smart-base --materialize-sidecars --sidecar-dir dak --api-hub-page dak-api.html --api-hub-markers DAK_API_HUB_START,DAK_API_HUB_END --api-placeholder DAK_API_CONTENT --check",
     "smart-base:pages": "bun run fhir-harness/scripts/gen-ig-pages.ts --instance smart-base --publish-note \"This page mirrors a published WHO Implementation Guide.\" --sidecar-label \"DAK API\" --label \"WHO SMART Base\" --chrome-owner smart-base --summary",
     "smart-base:document-kinds": "bun run smart-base/scripts/gen-document-kinds.ts",
     "smart-base:document-kinds:check": "bun run smart-base/scripts/gen-document-kinds.ts --check",
