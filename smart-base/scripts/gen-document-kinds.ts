@@ -36,7 +36,7 @@ import {
   type DocumentKind,
   type DocumentKindCoverage,
 } from "../platform/index.js";
-import { directoriesForGraph, instanceDirectoryForGraph, instanceRootsIn, readDeclaration, repoRootFor } from "../platform/index.js";
+import { directoriesForGraph, instanceDirectoryForGraph, instanceRootsIn, isBuiltAtPublish, readDeclaration, repoRootFor } from "../platform/index.js";
 import { DAK_CARDS } from "./gen-dak-components-figure.ts";
 import { kgClasses } from "./kg-classes.ts";
 
@@ -237,18 +237,28 @@ if (import.meta.main) {
   const files = new Map<string, string>([[join(OUT, "dak.json"), serialise(dakKind())]]);
   const ownName = readDeclaration(resolve(import.meta.dir, ".."))?.name ?? "smart-base";
   const homeless: string[] = [];
+  // A coverage report is a view of its IG's artefact index. Where the IG's
+  // instance builds that index at publish, it builds the report at publish
+  // too (`builtAtPublish`, writer `smart-base:document-kinds`), so --check
+  // has no committed copy to compare (fhir-harness#124).
+  const builtAtPublish = new Set<string>();
   for (const ig of ingestedIgs(repoRoot)) {
     const dir = coverageDirFor(ig, ownName);
     if (dir === undefined) {
       homeless.push(`${ig.subject} holds an artefact index (${ig.from}) but declares no document-kinds directory for its DAK coverage`);
       continue;
     }
-    files.set(join(dir, `dak.coverage.${ig.subject}.json`), serialise(dakCoverage(ig.subject, ig.from, ig.artifacts)));
+    const target = join(dir, `dak.coverage.${ig.subject}.json`);
+    files.set(target, serialise(dakCoverage(ig.subject, ig.from, ig.artifacts)));
+    const rel = relative(ig.root, target).split("\\").join("/");
+    if (isBuiltAtPublish(readDeclaration(ig.root)?.builtAtPublish ?? [], rel)) builtAtPublish.add(target);
   }
   for (const h of homeless) console.log(`✗ ${h}`);
   if (check) {
     let bad = 0;
+    for (const target of builtAtPublish) console.log(`✓ ${relative(process.cwd(), target)} is built at publish (builtAtPublish), not committed — nothing to compare`);
     for (const [target, body] of files) {
+      if (builtAtPublish.has(target)) continue;
       const ok = existsSync(target) && readFileSync(target, "utf-8") === body;
       if (!ok) { console.log(`✗ ${relative(process.cwd(), target)} is stale — run without --check`); bad++; }
     }

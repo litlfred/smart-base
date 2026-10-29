@@ -94,7 +94,7 @@ A DAK's generic persona is a depersonalised, context-free description of a human
 
 > "Depiction of the human and system actors."<br>— `smart-base/fhir-artifact-index/index.json`, StructureDefinition/GenericPersona, description
 
-> "Structure and constraints for ActorDefinition resources used in SMART Guidelines"<br>— `smart-base/fhir-artifact-index/index.json`, StructureDefinition/SGActor, description
+> "Smart Guidelines Actor"<br>— `smart-base/fhir-artifact-index/index.json`, StructureDefinition/SGActor, description
 
 > "depersonalised, context-free descriptions of the human and system actors"<br>— RA §4.3.2, PDF pp.106-107, describing the DAK (`who-dpi-h-reference-architecture-draft-v1/sec-063-432-actors-and-roles-defining-who-participates`)
 
