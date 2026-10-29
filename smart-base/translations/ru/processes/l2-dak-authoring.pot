@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l2-dak-authoring\n"
-"POT-Creation-Date: 2026-10-24T08:43:21.900Z\n"
+"POT-Creation-Date: 2026-10-26T11:12:06.402Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:159
 #. Diagram element documentation
-msgid "Author the data dictionary and core data elements for this component. Stay structured but not FHIR: a data element a clinician can review, from which L3 can later be derived rather than written twice. Calls Process_L2ComponentEditReview with the glossary inputs of the skill l2-component-edit-review (checker: check-dak-annexes.ts; renderer: the term diff from dak-data-dictionary-diff.ts and each form's chosen wireframe; reviewer: clinical SME, terminologist for codes)."
+msgid "Author the data dictionary and core data elements for this component. Stay structured but not FHIR: a data element a clinician can review, from which L3 can later be derived rather than written twice. Calls Process_L2ComponentEditReview with the glossary inputs of the skill l2-component-edit-review (checker: check-web-annexes.ts, on the data dictionary web annex; renderer: the term diff from dak-data-dictionary-diff.ts and each form's chosen wireframe; reviewer: clinical SME, terminologist for codes)."
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:150

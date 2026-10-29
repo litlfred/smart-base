@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l2-component-edit-review\n"
-"POT-Creation-Date: 2026-10-15T08:34:42.443Z\n"
+"POT-Creation-Date: 2026-10-26T11:12:06.398Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -161,7 +161,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:82
 #. Diagram element documentation
-msgid "The mechanical checks for this component, before anyone is asked (skill l2-component-edit-review, column \"checker\"): BPMN imports in bpmn-js with no warnings and its lanes map to personas (dak-swimlanes.ts); DMN loads, its decisions are reachable (artefact-reachability, audit:reachability) and its test cases run (content-test); the data dictionary's ids are unique and its references and terminology bindings resolve (check-dak-annexes.ts); personas, scenarios and requirements each trace to an L1 recommendation (recommendation-extraction's implementedBy edges). Findings travel with the review request; a failing check does not stop the hand-on, it is a finding the reviewer sees."
+msgid "The mechanical checks for this component, before anyone is asked (skill l2-component-edit-review, column \"checker\"): BPMN imports in bpmn-js with no warnings and its lanes map to personas (dak-swimlanes.ts); DMN loads, its decisions are reachable (artefact-reachability, audit:reachability) and its test cases run (content-test); the data dictionary web annex's ids are unique and its references and terminology bindings resolve (check-web-annexes.ts); personas, scenarios and requirements each trace to an L1 recommendation (recommendation-extraction's implementedBy edges). Findings travel with the review request; a failing check does not stop the hand-on, it is a finding the reviewer sees."
 msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:130
