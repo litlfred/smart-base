@@ -114,7 +114,12 @@ export const DAK_NAMING = /\bdak-api(?:\.html)?\b|\bDAK[ -]API\b|\bdak[-_]?views
 
 export function rules(root: string): Rule[] {
   return [
-    { id: "dak-config", refuses: "dak.config.json / dak.json", pattern: /\bdak(?:\.config)?\.json\b/gi },
+    {
+      id: "dak-config",
+      refuses: "the DAK declaration: index.config.json contentTypes.dak, or the legacy dak.config.json / dak.json",
+      // contentTypes.dak, contentTypes["dak"], contentTypes?.dak and dak_index(.py), since 2026-10-24 (bean cz17).
+      pattern: /\bdak(?:\.config)?\.json\b|\bcontentTypes\??\.dak\b|\bcontentTypes\[\s*["']dak["']\s*\]|\bdak_index\b/gi,
+    },
     { id: "who-canonical", refuses: "smart.who.int canonicals", pattern: /\bsmart\.who\.int\b/gi },
     {
       id: "dak-naming",

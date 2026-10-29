@@ -59,7 +59,7 @@
  *
  * Section reading and serialisation are `extract-smart-kg-l1.ts`'s
  * ({@link readEntry}, {@link serialise}, {@link isCurrent}); IRIs are smart-kg's
- * (`l1-kgid.ts`), under the DAK's namespace from `dak.json` for what the DAK
+ * (`l1-kgid.ts`), under the DAK's namespace from its DAK declaration (`index.config.json#contentTypes.dak`, or `dak.json`) for what the DAK
  * prints (citations, reference entries) and under the WHO-wide L1 namespace for
  * publications. A publication the library HOLDS is described exactly as
  * `l1-specialise.ts` describes it ({@link publicationProperties}), so the two
@@ -78,6 +78,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 
 import { handleFromUrl, readStructure } from "../platform/index.js";
+import { readIgDakMetadata } from "./ig-dak-metadata.ts";
 import { isCurrent, readEntry, serialise, type LibraryEntry as BaseEntry } from "./extract-smart-kg-l1.ts";
 import { artifactId, citationId, dakNamespace, L1_LIBRARY_CONTEXT, L1_V3_ONTOLOGY_VERSION, publicationId, referenceEntryId, sha256 } from "./l1-kgid.ts";
 import { checkClassification, decideL1, LAYER_SCHEME, type IntakeClassification } from "./l1-membership.ts";
@@ -607,10 +608,10 @@ if (import.meta.main) {
     console.error(`✗ ${entryArg}: ${entry.reason}`);
     process.exit(2);
   }
-  const dakJsonPath = join(repo, "dak.json");
-  const dakJson = existsSync(dakJsonPath) ? JSON.parse(readFileSync(dakJsonPath, "utf-8")) : undefined;
-  if (!dakJson?.canonicalUrl) {
-    console.error(`✗ ${repo}: no dak.json with a canonicalUrl — the DAK namespace citation IRIs are minted under`);
+  const dakMeta = readIgDakMetadata(repo);
+  const dakJson = dakMeta?.data as { canonicalUrl?: string } | undefined;
+  if (typeof dakJson?.canonicalUrl !== "string") {
+    console.error(`✗ ${repo}: no DAK declaration (index.config.json contentTypes.dak, or dak.json) with a canonicalUrl — the DAK namespace citation IRIs are minted under`);
     process.exit(2);
   }
   const held = heldByHandle(repo, [dirname(dir)], opt("--uploads"));

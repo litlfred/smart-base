@@ -16,11 +16,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Check DAK enabled
-        # dak.json in the repo root signals that DAK skill features are active.
+        # A contentTypes.dak section in the root index.config.json signals that
+        # DAK skill features are active (it was dak.json until 2026-10-24).
         # See .github/skills/README.md for configuration details.
         id: dak
         run: |
-          [ -f dak.json ] \
+          { [ -f dak.json ] || jq -e '.contentTypes.dak | type == "object"' index.config.json >/dev/null 2>&1; } \
             && echo "enabled=true"  >> $GITHUB_OUTPUT \
             || echo "enabled=false" >> $GITHUB_OUTPUT
 

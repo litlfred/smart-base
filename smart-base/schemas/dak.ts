@@ -3,8 +3,9 @@
  * Digital Adaptation Kit.
  *
  * **This is a placeholder, and the placeholder is the point.** A repo declares
- * itself a DAK by carrying {@link DAK_MARKER_FILENAME} at its root, exactly as
- * it declares itself a harness instance by carrying `harness.json`. That
+ * itself a DAK by carrying a {@link DAK_INDEX_SECTION} section in its root
+ * `index.config.json`, as it declares itself a harness instance by carrying
+ * `harness.json`. That
  * much is settled and is modelled here, and so is the wrapper each of WHO's
  * nine components uses (url, canonical or inline instance). What this module
  * does *not* model is the inside of an inline instance, nor the tenth component,
@@ -34,7 +35,7 @@
  * (`DAK_UNFORMALIZED_COMPONENTS`), has no wrapper to follow, so its elements
  * stay `unknown`.
  *
- * **Anything else a real `dak.config.json` carries.** The schema is
+ * **Anything else a real DAK declaration carries.** The schema is
  * {@link DakDeclarationSchema | passthrough}: unknown keys survive a
  * parse-and-write round trip. A placeholder that silently dropped the fields it
  * had not learned about yet would be worse than no placeholder — it would
@@ -68,36 +69,30 @@ import { kgNodeLabelShape, type KgNodeLabels } from "../platform/index.js";
 import { SMART_BASE_NS } from "../platform/index.js";
 
 /**
- * The file whose presence at a repository root declares it a DAK.
+ * The `contentTypes` key of the root `index.config.json` whose presence
+ * declares a repository a DAK; its value is the DAK declaration.
  *
- * Fixed, not stub-named, for the same reason `harness.json` is: a consumer
- * bootstrapping into a repository it knows nothing about needs one filename to
- * open first. See `skills/kg/kg-core/directory-conventions.md` §Naming.
+ * ## `dak.json` → `dak.config.json` → a section of `index.config.json`
  *
- * ## `dak.config.json` → `dak.config.json`, 2026-09-22
+ * 2026-09-22, the owner: `dak.json` was renamed `dak.config.json`, for
+ * consistency with `<name>.config.json`. It was renameable because the type is
+ * OURS (bean `cz17`), unlike `sushi-config.yaml`, which is SUSHI's.
  *
- * The owner's ruling, for consistency with `<name>.config.json`: a DAK
- * repository carries configuration, and this is that file, so it is spelled
- * like every other config here rather than like a bare declaration.
+ * 2026-10-24, the owner: *"do B"*, the declaration moves into
+ * `index.config.json`, and WHO adopts that file. The platform carries the
+ * section without knowing what it holds (`contentTypes` in cat-harness's
+ * `index-config.ts`); this layer validates it ({@link DakDeclarationSchema}).
+ * Its presence is the marker (`IndexSectionMarker` in `content-type.ts`),
+ * the same assertion a marker file made.
  *
- * **It was renameable because the type is OURS** — bean `cz17` settled that,
- * against an earlier note in `79t3` that listed it beside `sushi-config.yaml`
- * as somebody else's file. `sushi-config.yaml` is still not ours; this is.
- *
- * ## The upstream gap, stated rather than discovered
- *
- * `WorldHealthOrganization/smart-base` writes and reads **`dak.config.json`**:
- * `generate_dak_from_sushi.py` writes it, and `ghbuild.yml` gates the whole
- * DAK phase on its presence. Nothing upstream has been renamed, deliberately —
- * this is pre-work in `litlfred/*` only.
- *
- * So until upstream follows, {@link readDak} pointed at a real WHO DAK finds
- * **nothing**. That is a known divergence, not a bug to work around by
- * accepting both spellings: accepting both would make "this repo has migrated"
- * and "this repo has not" indistinguishable, which is exactly the state the
- * rename exists to end.
+ * No second spelling is read. Accepting `dak.json` as well would make "this
+ * repository has migrated" and "it has not" indistinguishable, which is the
+ * state a rename exists to end.
  */
-export const DAK_MARKER_FILENAME = "dak.config.json";
+export const DAK_INDEX_SECTION = "dak";
+
+/** The root file the {@link DAK_INDEX_SECTION} section lives in. */
+export const DAK_INDEX_FILE = "index.config.json";
 
 /** The `@type` a DAK declaration projects to — WHO's own logical model. */
 export const DAK_TYPE = `${SMART_BASE_NS}DAK`;
@@ -127,7 +122,7 @@ export const DakComponentSourceSchema = z
 export type DakComponentSource = z.infer<typeof DakComponentSourceSchema>;
 
 /**
- * One component's contents, as read from a `dak.config.json`.
+ * One component's contents, as read from a DAK declaration.
  *
  * A formalized component's entries are {@link DakComponentSource}s; an
  * unformalized one's are `unknown`. Every component is `0..*`.
@@ -135,7 +130,7 @@ export type DakComponentSource = z.infer<typeof DakComponentSourceSchema>;
 export type DakComponentEntries = unknown[];
 
 /**
- * A `dak.config.json`, as much of it as is settled.
+ * A DAK declaration, as much of it as is settled.
  *
  * The component fields are reachable by their WHO names through
  * {@link DAK_COMPONENT_FIELDS}; {@link componentEntries} does that lookup so a
@@ -178,7 +173,7 @@ export const DakDeclarationSchema = z
     ...kgNodeLabelShape,
     ...componentShape,
   })
-  // Unknown keys survive. A real `dak.config.json` carries more than this module has
+  // Unknown keys survive. A real DAK declaration carries more than this module has
   // learned about, and a placeholder that dropped it would destroy data on the
   // first tool that read and rewrote one.
   .passthrough();
@@ -204,15 +199,17 @@ export function populatedComponents(declaration: DakDeclaration): DakComponent[]
 }
 
 /**
- * Read a repository's `dak.config.json`.
+ * Read a repository's DAK declaration: the {@link DAK_INDEX_SECTION} section
+ * of its root `index.config.json`.
  *
- * Absent → `undefined`: a repository that is not a DAK is not an error.
- * Present but malformed → **throws**: a marker nobody can read leaves every
+ * No index, or an index without the section → `undefined`: a repository that
+ * is not a DAK is not an error. An index that is not valid JSON, or a section
+ * that is malformed → **throws**: a marker nobody can read leaves every
  * consumer guessing at what the repository is, which is worse than not having
  * one. Same contract as `readDeclaration` in `schemas/cat-harness.ts`.
  */
 export function readDakDeclaration(repoRoot: string): DakDeclaration | undefined {
-  const p = join(repoRoot, DAK_MARKER_FILENAME);
+  const p = join(repoRoot, DAK_INDEX_FILE);
   if (!existsSync(p)) return undefined;
   let raw: unknown;
   try {
@@ -220,10 +217,13 @@ export function readDakDeclaration(repoRoot: string): DakDeclaration | undefined
   } catch (e) {
     throw new Error(`${p} is not valid JSON: ${e instanceof Error ? e.message : String(e)}`);
   }
-  if (typeof raw === "object" && raw !== null) delete (raw as Record<string, unknown>)._comment;
-  const parsed = DakDeclarationSchema.safeParse(raw);
+  const sections = (raw as { contentTypes?: unknown } | null)?.contentTypes;
+  const section =
+    sections !== null && typeof sections === "object" ? (sections as Record<string, unknown>)[DAK_INDEX_SECTION] : undefined;
+  if (section === undefined) return undefined;
+  const parsed = DakDeclarationSchema.safeParse(section);
   if (!parsed.success) {
-    throw new Error(`${p} is not a valid DAK declaration: ${parsed.error.message}`);
+    throw new Error(`${p} contentTypes.${DAK_INDEX_SECTION} is not a valid DAK declaration: ${parsed.error.message}`);
   }
   return parsed.data as DakDeclaration;
 }

@@ -9,7 +9,8 @@ import { join } from "node:path";
 
 import { DAK_COMPONENTS, DAK_COMPONENT_FIELDS, DAK_UNFORMALIZED_COMPONENTS } from "./dak-kinds";
 import {
-  DAK_MARKER_FILENAME,
+  DAK_INDEX_FILE,
+  DAK_INDEX_SECTION,
   DAK_TYPE,
   DakDeclarationSchema,
   componentEntries,
@@ -20,34 +21,56 @@ import {
 
 const minimal = { name: "smart-immunizations" };
 
-function inTempRepo(contents: string | undefined, run: (root: string) => void): void {
+/** A repo whose root `index.config.json` holds `index` verbatim (or no index at all). */
+function inTempRepo(index: string | undefined, run: (root: string) => void): void {
   const root = mkdtempSync(join(tmpdir(), "dak-"));
   try {
-    if (contents !== undefined) writeFileSync(join(root, DAK_MARKER_FILENAME), contents);
+    if (index !== undefined) writeFileSync(join(root, DAK_INDEX_FILE), index);
     run(root);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
 }
 
+/** An index whose `contentTypes.dak` section is `section`. */
+const withDak = (section: unknown) =>
+  JSON.stringify({ $schema: "folio-index-config/v1", instances: [], contentTypes: { [DAK_INDEX_SECTION]: section } });
+
 describe("the marker", () => {
-  test("is a fixed filename, so a consumer knows what to open first", () => {
-    expect(DAK_MARKER_FILENAME).toBe("dak.config.json");
+  test("is the `dak` section of the root index.config.json", () => {
+    expect(DAK_INDEX_FILE).toBe("index.config.json");
+    expect(DAK_INDEX_SECTION).toBe("dak");
   });
 
   test("projects to WHO's own logical model, not a folio-local type", () => {
     expect(DAK_TYPE).toBe("http://smart.who.int/base/StructureDefinition/DAK");
   });
 
-  test("absent is not an error — a repo that is not a DAK is ordinary", () => {
+  test("absent is not an error: no index, or an index without the section", () => {
     inTempRepo(undefined, (root) => expect(readDakDeclaration(root)).toBeUndefined());
+    inTempRepo(JSON.stringify({ $schema: "folio-index-config/v1", instances: [] }), (root) =>
+      expect(readDakDeclaration(root)).toBeUndefined(),
+    );
   });
 
-  test("present but malformed throws, rather than reading as absent", () => {
+  test("the section is read as the declaration", () => {
+    inTempRepo(withDak({ name: "smart-immunizations", canonicalUrl: "http://smart.who.int/immunizations" }), (root) =>
+      expect(readDakDeclaration(root)).toMatchObject({ name: "smart-immunizations" }),
+    );
+  });
+
+  test("an unreadable index or a malformed section throws, rather than reading as absent", () => {
     inTempRepo("{ not json", (root) => expect(() => readDakDeclaration(root)).toThrow(/not valid JSON/));
-    inTempRepo('{"canonicalUrl":"x"}', (root) =>
+    inTempRepo(withDak({ canonicalUrl: "x" }), (root) =>
       expect(() => readDakDeclaration(root)).toThrow(/not a valid DAK declaration/),
     );
+  });
+
+  test("a dak.json beside it is not read: one spelling, so 'migrated' stays visible", () => {
+    inTempRepo(undefined, (root) => {
+      writeFileSync(join(root, "dak.json"), JSON.stringify({ name: "old" }));
+      expect(readDakDeclaration(root)).toBeUndefined();
+    });
   });
 });
 

@@ -25,7 +25,7 @@
  * `guide`, `namespace` and `source.repository` come from the checkout's own
  * declarations (`guideIdentity`): the harness declaration `<name>.json` at its
  * root or one directory down (`name`, `repository`), and `sushi-config.yaml`
- * `canonical` (or `dak.json` `canonicalUrl`) for the namespace, in the
+ * `canonical` (or the DAK declaration's `canonicalUrl`) for the namespace, in the
  * `dakNamespace` form. Without a declaration the name is the repository's.
  *
  * ## Identity — read, never improved
@@ -48,6 +48,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, join, relative, resolve } from "node:path";
 import { z } from "zod";
 
+import { readIgDakMetadata } from "./ig-dak-metadata.ts";
 import { dakNamespace, slug } from "./l1-kgid.ts";
 
 export const VOCABULARY_SCHEMA_TAG = "l1-scenario-vocabulary/v1" as const;
@@ -210,7 +211,7 @@ export const sushiCanonical = (text: string): string | undefined =>
  * A guide checkout's name, namespace and repository, from its own declarations.
  * The harness declaration is the `<name>.json` whose `$schema` is a
  * `cat-harness-declaration`, at the root or one directory down; the namespace
- * is the IG's canonical (`sushi-config.yaml`, else `dak.json` `canonicalUrl`).
+ * is the IG's canonical (`sushi-config.yaml`, else the DAK declaration's `canonicalUrl`).
  */
 export function guideIdentity(root: string, fallbackRepository: () => string): { guide: string; namespace: string; repository: string } {
   const candidates = [
@@ -231,10 +232,10 @@ export function guideIdentity(root: string, fallbackRepository: () => string): {
     throw new Error(`${root}: ${declarations.size} harness declarations (${[...declarations.keys()].join(", ")}); cannot tell which is the guide`);
   const declared = [...declarations.values()][0];
   const sushi = join(root, "sushi-config.yaml");
-  const dak = join(root, "dak.json");
+  const dakUrl = readIgDakMetadata(root)?.data.canonicalUrl;
   const canonical = (existsSync(sushi) ? sushiCanonical(readFileSync(sushi, "utf8")) : undefined)
-    ?? (existsSync(dak) ? JSON.parse(readFileSync(dak, "utf8"))?.canonicalUrl : undefined);
-  if (!canonical) throw new Error(`${root}: neither sushi-config.yaml \`canonical\` nor dak.json \`canonicalUrl\` — is this a guide checkout?`);
+    ?? (typeof dakUrl === "string" ? dakUrl : undefined);
+  if (!canonical) throw new Error(`${root}: neither sushi-config.yaml \`canonical\` nor a DAK declaration \`canonicalUrl\` — is this a guide checkout?`);
   const repository = declared?.repository ?? fallbackRepository();
   return { guide: declared?.name ?? basename(repository), namespace: dakNamespace(canonical), repository };
 }

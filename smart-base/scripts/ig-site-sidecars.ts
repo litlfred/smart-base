@@ -34,7 +34,7 @@
  *    under the label it names. Nothing here writes a hub page.
  * 2. Leaves the files in `<work>/ig-api/sidecars/` and writes
  *    `<work>/ig-api/ig-api.json`, saying what the IG calls them: `DAK API`
- *    when the IG declares a DAK (`dak.json` at its root), and no label
+ *    when the IG declares a DAK (`index.config.json#contentTypes.dak`, or a legacy `dak.json`), and no label
  *    otherwise, so fhir-harness's own default, "IG API", stands.
  *
  * fhir-harness's `ig-site:compose` and `ig-site:publisher-pages` read that
@@ -50,6 +50,7 @@
 import { spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
+import { readIgDakMetadata } from "./ig-dak-metadata.ts";
 
 
 /** fhir-harness's names for the handshake (`ig-repo-site.ts` `IG_API_WORK`, `IG_API_DESCRIPTOR`). */
@@ -59,8 +60,6 @@ export const IG_API_DESCRIPTOR = "ig-api.json";
 export const IG_API_SITE = "site";
 /** What a DAK calls its sidecars. */
 export const DAK_API_LABEL = "DAK API";
-/** The file whose presence says the IG is a DAK. */
-export const DAK_DECLARATION = "dak.json";
 
 /** The JSON-LD prefix a DAK's vocabularies give FHIR data types: smart-base's own `DataTypes.jsonld`. */
 export const DAK_VOCAB_BASE = "https://smart.who.int/base/DataTypes.jsonld#";
@@ -74,7 +73,7 @@ export const HUB_MARKER = "<!-- DAK_API_CONTENT -->";
  * layer's hub page goes.
  */
 export function descriptorFor(ig: string): { label?: string; placeholder: string } {
-  return { ...(existsSync(join(ig, DAK_DECLARATION)) ? { label: DAK_API_LABEL } : {}), placeholder: HUB_MARKER };
+  return { ...(readIgDakMetadata(ig) !== undefined ? { label: DAK_API_LABEL } : {}), placeholder: HUB_MARKER };
 }
 
 export function igSiteSidecars(o: { ig: string; work: string; log?: (s: string) => void }): { files: number; label?: string; placeholder: string } {
@@ -94,7 +93,7 @@ export function igSiteSidecars(o: { ig: string; work: string; log?: (s: string) 
   if (r.status !== 0) throw new Error(`ig-api-gen.ts exited ${r.status}: the IG's sidecars were not written`);
   writeFileSync(join(dir, IG_API_DESCRIPTOR), `${JSON.stringify(d, null, 2)}\n`);
   const files = readdirSync(sidecars).length;
-  log(`ig-site:sidecars: ${files} sidecar file(s) in ${sidecars}${d.label ? `, called "${d.label}"` : " (no dak.json: no label, the IG API default stands)"}; ${existsSync(join(site, "openapi", "index.html")) ? "openapi/index.html" : "no OpenAPI page"} in ${site}`);
+  log(`ig-site:sidecars: ${files} sidecar file(s) in ${sidecars}${d.label ? `, called "${d.label}"` : " (not a DAK: no label, the IG API default stands)"}; ${existsSync(join(site, "openapi", "index.html")) ? "openapi/index.html" : "no OpenAPI page"} in ${site}`);
   return { files, ...d };
 }
 

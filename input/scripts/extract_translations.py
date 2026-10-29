@@ -21,7 +21,7 @@ Each .pot file records:
   - #. Source: <github-url>#L<line>   — clickable link to source file/line on GitHub
   - #. URL: <canonical-page-url>      — published page for Weblate context
 
-When GITHUB_REPOSITORY or dak.json previewUrl is available, Source comments
+When GITHUB_REPOSITORY or contentTypes.dak previewUrl is available, Source comments
 become full GitHub blob URLs.  Otherwise, repository-relative paths are used.
 
 Usage:
