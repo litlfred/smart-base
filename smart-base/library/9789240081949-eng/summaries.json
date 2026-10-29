@@ -1,0 +1,633 @@
+{
+  "$schema": "folio-block-summaries/v1",
+  "entry": "9789240081949-eng",
+  "summaries": [
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-001",
+      "source": "sections/page-001.md",
+      "source_hash": "94582ae0edd7bc5c2a1cb20734fbb066d92da049bb9d17fb7ae169bd147fc4f0",
+      "narrative": [
+        {
+          "text": "Front cover of the WHO publication Classification of digital interventions, services and applications in health: a shared language to describe the uses of digital technology for health, second edition (v2.0).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-002",
+      "source": "sections/page-002.md",
+      "source_hash": "848d93f5d3f95a6663c604c11ccad3382383d19b8f538de603f46a32882a8e7f",
+      "narrative": [
+        {
+          "text": "Presents a comprehensive visual reference chart of the entire second-edition classification across all three axes: Digital Health Interventions (1.0 Persons, 2.0 Healthcare Providers, 3.0 Health Management and Support Personnel, 4.0 Data Services), Health System Challenges (categories 1–9), and Services and Application Types (categories A–E).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-003",
+      "source": "sections/page-003.md",
+      "source_hash": "25980de30d7f0275cf48b0ebf4e4f0ab04c2c6fbc4b394e7a2dfb421b55f7b55",
+      "narrative": [
+        {
+          "text": "Inner title page for Classification of digital interventions, services and applications in health: a shared language to describe the uses of digital technology for health, second edition.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-004",
+      "source": "sections/page-004.md",
+      "source_hash": "74773a9decf22bfdf159bfeeedb6b5395110048260750e1e81117d8f77601c0c",
+      "narrative": [
+        {
+          "text": "Provides bibliographic metadata (ISBN 978-92-4-008194-9 electronic / 978-92-4-008195-6 print), a note on the retitling from the 2018 first edition (WHO/RHR/18.06), 2023 WHO copyright and CC BY-NC-SA 3.0 IGO licensing terms, suggested citation, third-party material terms, and general disclaimers.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-005",
+      "source": "sections/page-005.md",
+      "source_hash": "78a7180957dfc4c9c1e387c412f2aa420a20d85f702772fb382732989f6f9253",
+      "narrative": [
+        {
+          "text": "Table of contents listing the front matter, introductory overview, Health System Challenges, the four Digital Health Intervention groups, Digital Services and Application Types, References, and Annex.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-006",
+      "source": "sections/page-006.md",
+      "source_hash": "0623efd513473373ce8f87605215c7d656480bd05960a4fe891b5acf465b4d0d",
+      "narrative": [
+        {
+          "text": "Acknowledges the WHO Department of Digital Health and Innovation and Department of Reproductive Health and Research coordination team, the Classifications Advisory Committee, the Classifications Small Working Group, first-edition contributors, and funding partners (Fondation Botnar, Rockefeller Foundation, HRP, USAID, and CDC).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-007",
+      "source": "sections/page-007.md",
+      "source_hash": "3b777beb5b7a267929b5f9671345cee264a634a03e7d007b7a062e8dc6f910bf",
+      "narrative": [
+        {
+          "text": "Executive summary defining digital health, explaining the rationale for updating the 2018 classification into the three-axis Classification of Digital Interventions, Services and Applications in Health (CDISAH), and summarizing the structural updates—most notably replacing Systems Categories with restructured Services and Application Types.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-008",
+      "source": "sections/page-008.md",
+      "source_hash": "08183d81c3f51cc9a111d2202f285b4e6f01a69e0ef30763951374b4169b9ac4",
+      "narrative": [
+        {
+          "text": "Summarizes the major content changes in the second edition—shifting from 'Client(s)' to 'Person(s)' or 'Individual(s)', adding pandemic-era and emerging DHIs, expanding descriptors and synonyms, and organizing Services and Application Types into five architectural representations—accompanied by the complete classification overview chart.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-009",
+      "source": "sections/page-009.md",
+      "source_hash": "6c67e971d41dfb28e833cb0a0e5b0f04f57fbabc399c343e51a70b62118f5849",
+      "narrative": [
+        {
+          "text": "Introduces the purpose and audience of the Classification of Digital Interventions, Services and Applications in Health (CDISAH), reviews the four foundational use cases that motivated the first edition alongside technical standards (COBIT, HL7, ISO), and lists ten current global applications of the classification.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-010",
+      "source": "sections/page-010.md",
+      "source_hash": "7b76d64e1c9e3a650981c186029f9516647dad5ec30ea7b034396fb995809a36",
+      "narrative": [
+        {
+          "text": "Explains how the CDISAH is organized across its three axes—nine Health System Challenge categories, four primary-user DHI groupings (Persons, Healthcare Providers, Health Management and Support Personnel, and Data Services) with synonyms and examples, and five architectural representations of Services and Application Types—and introduces how to use them together.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-011",
+      "source": "sections/page-011.md",
+      "source_hash": "87b2683aa8f4980ddbf3b8e0dfad9290c77e8895e6cda8aa932c1fa2ac0ce3c6",
+      "narrative": [
+        {
+          "text": "Explains how to pair Digital Health Interventions with Health System Challenges and Services and Application Types to support planning and interoperability, illustrated by Figure 1 mapping specific challenges (such as commodity shortages or loss to follow-up) to DHIs and system types (such as LMIS, EMR, and HMIS).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-012",
+      "source": "sections/page-012.md",
+      "source_hash": "ba48ffc2b0cab07f3e2ee75d4f532ec98c4b7e170413909b7afc2baa3abefba2",
+      "narrative": [
+        {
+          "text": "Presents four practical use cases for the classification: (1) selecting DHIs to address a health system challenge such as missed newborn immunizations, (2) articulating the DHIs delivered by a digital therapeutic application, (3) conducting landscape analyses of digital health investments, and (4) searching registered projects in the WHO Digital Health Atlas.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-013",
+      "source": "sections/page-013.md",
+      "source_hash": "1949b528ec1ffccd56e504a99f141167e53a944881b494f82aba2a2022399ce3",
+      "narrative": [
+        {
+          "text": "Highlights three related WHO companion publications (the WHO digital health guideline, the Digital Implementation Investment Guide, and the DIIG quick deployment guide), defines three core terms (digital health intervention, digital health application, and health system challenge), and lists six introductory references.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-014",
+      "source": "sections/page-014.md",
+      "source_hash": "b871f408a074b9280d56bf00bfcd7d11156518aa90c7deeda8895d229e4538fe",
+      "narrative": [
+        {
+          "text": "Transition page displaying the running footer and navigation tabs for the six main sections of the WHO Classification v2.0.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-015",
+      "source": "sections/page-015.md",
+      "source_hash": "0c53d0c3d41a8563bcd00422ca7731f9aaded77a883daf5a1b0c9f7210e28ad6",
+      "narrative": [
+        {
+          "text": "Part divider page introducing the main body of Digital Interventions, Services and Applications in Health.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-016",
+      "source": "sections/page-016.md",
+      "source_hash": "3c0b6898e965b4499ff72062c880f2e82dd267084569458735d88c2dda8da80c",
+      "narrative": [
+        {
+          "text": "Section divider introducing the Health System Challenges framework as a standardized starting point for program planners to identify bottlenecks in health programme processes and select appropriate digital health interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-017",
+      "source": "sections/page-017.md",
+      "source_hash": "69c22a15e6c849d7c742e991e494fd228aac361c7b4a4b80b12b7049b3de355a",
+      "narrative": [
+        {
+          "text": "Presents the complete Health System Challenges taxonomy across nine categories: 1 Information (1.1–1.7), 2 Availability (2.1–2.4), 3 Quality (3.1–3.8), 4 Acceptability (4.1–4.2), 5 Utilization (5.1–5.4), 6 Efficiency (6.1–6.6), 7 Cost (7.1–7.4), 8 Accountability (8.1–8.6), and 9 Equity (9.1–9.2).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-018",
+      "source": "sections/page-018.md",
+      "source_hash": "3069a17daa3561935e4c979ce42c05259f921cb5ec27cdc0bc063c4176e11028",
+      "narrative": [
+        {
+          "text": "Section divider introducing Group 1.0 (Digital Health Interventions for Persons), covering members of the public who are potential or current users of health services as well as their caregivers.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-019",
+      "source": "sections/page-019.md",
+      "source_hash": "ff0fb2028c0a62cbb4fb5cc092eb5341e9bdf790a94afdadd5998deb4c9d6302",
+      "narrative": [
+        {
+          "text": "Presents the taxonomy tree for Group 1.0 (Digital Health Interventions for Persons) across eight categories: 1.1 Targeted communication to persons (1.1.1–1.1.4), 1.2 Untargeted communication to persons (1.2.1–1.2.2), 1.3 Person-to-person communication (1.3.1), 1.4 Personal health tracking (1.4.1–1.4.4), 1.5 Person-based reporting (1.5.1–1.5.2), 1.6 On-demand communication with persons (1.6.1–1.6.2), 1.7 Person-centred financial transactions (1.7.1–1.7.3), and 1.8 Person-centred consent management (1.8.1).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-020",
+      "source": "sections/page-020.md",
+      "source_hash": "e06b0611adc79270cc92c6a4cb0fb17e57d055550a63448491c72328f9e16bab",
+      "narrative": [
+        {
+          "text": "Details Category 1.1 (Targeted communication to Persons) with semantically related descriptors and representative examples for 1.1.1 Transmit health event alerts to specific population groups, 1.1.2 Transmit targeted health information based on health status or demographics, and 1.1.3 Transmit targeted alerts and reminders to persons.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-021",
+      "source": "sections/page-021.md",
+      "source_hash": "1a78d78cabc87a8b8075bd8258cab2b618c0b6a780040d17e0ea0310cd471bdb",
+      "narrative": [
+        {
+          "text": "Concludes Category 1.1 with 1.1.4 (Transmit diagnostics result, or availability of result, to persons) and details Category 1.2 (Untargeted communication to Persons: 1.2.1 untargeted health information and 1.2.2 untargeted health event alerts) and Category 1.3 (Person to Person communication: 1.3.1 Peer group for individuals).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-022",
+      "source": "sections/page-022.md",
+      "source_hash": "de383ef5f222d069951b422b4ba1bdb14ec146178fbda4caa608f79bc8efdf2b",
+      "narrative": [
+        {
+          "text": "Details Category 1.4 (Personal health tracking) with descriptors and representative examples for 1.4.1 Access by the individual to own medical or summary health records, 1.4.2 Self-monitoring of health or diagnostic data, 1.4.3 Active data capture/documentation by an individual, and 1.4.4 Access by the individual to verifiable documentation of a health event or health status.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-023",
+      "source": "sections/page-023.md",
+      "source_hash": "7a1a151a58480608c521fcb5064cd27acc0e34b3ca71ef1288a6fe701d98de7f",
+      "narrative": [
+        {
+          "text": "Details Category 1.5 (Person-based reporting: 1.5.1 Reporting of health system feedback by persons and 1.5.2 Reporting of public health events by persons) and Category 1.6 (On-demand communication with persons: 1.6.1 Look-up of information on health and health services and 1.6.2 Simulated human-like conversations with individuals, including chatbots).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-024",
+      "source": "sections/page-024.md",
+      "source_hash": "9b74b7577f391b130ab194502a52a55cb84132c56b982bc38020ce393801d397",
+      "narrative": [
+        {
+          "text": "Details Category 1.7 (Person-centred financial transactions: 1.7.1 out-of-pocket payments, 1.7.2 vouchers, and 1.7.3 incentives for health services) and Category 1.8 (Person-centred consent management: 1.8.1 Manage provision and withdrawal of consent by individuals).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-025",
+      "source": "sections/page-025.md",
+      "source_hash": "aa760e9d1ac7d02ba2a845d46aecf2136abe45e7d2ef47d2856cf3c1bf757674",
+      "narrative": [
+        {
+          "text": "Section divider introducing Group 2.0 (Digital Health Interventions for Healthcare Providers), covering members of the health workforce who deliver health interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-026",
+      "source": "sections/page-026.md",
+      "source_hash": "06365c0b556917a37e914da9cf73dcf2d68bfc19c900a6c00cfab1fe1954e940",
+      "narrative": [
+        {
+          "text": "Presents the taxonomy tree for Group 2.0 (Digital Health Interventions for Healthcare Providers) across eleven categories: 2.1 Identification and registration of persons, 2.2 Person-centred health records, 2.3 Healthcare provider decision support, 2.4 Telemedicine, 2.5 Healthcare provider communication (including 2.5.6 Generative AI for tailored content creation), 2.6 Referral coordination, 2.7 Scheduling and activity planning, 2.8 Healthcare provider training, 2.9 Prescription and medication management, 2.10 Laboratory and diagnostics imaging management, and 2.11 Healthcare provider financial transactions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-027",
+      "source": "sections/page-027.md",
+      "source_hash": "83b71f193076dda3f5ca6efd4c4747cf2eea79ee82efb08b415bc1d3b2f2ff98",
+      "narrative": [
+        {
+          "text": "Details Category 2.1 (Identification and registration of persons: 2.1.1 Verify a person's unique identity and 2.1.2 Enrol persons for health services/clinical care plan) and introduces Category 2.2 (Person-centred health records) with 2.2.1 Longitudinal tracking of a person's health status and services.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-028",
+      "source": "sections/page-028.md",
+      "source_hash": "31cbc47951878705e095ec087bc7c25b538596ec7ec806a09b9903c6182eeaf4",
+      "narrative": [
+        {
+          "text": "Continues Category 2.2 with 2.2.2 (Manage person-centred structured clinical records), 2.2.3 (Manage person-centred unstructured clinical records), and 2.2.4 (Routine health indicator data collection and management), and introduces Category 2.3 (Healthcare provider decision support) with 2.3.1 (Provide prompts and alerts based according to protocol) and 2.3.2 (Provide checklist according to protocol).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-029",
+      "source": "sections/page-029.md",
+      "source_hash": "269534f69088aa223ff0788747910bde1d27f433313164d445edbb11642f457b",
+      "narrative": [
+        {
+          "text": "Concludes Category 2.3 with 2.3.3 (Screen persons by risk or other health status) and details Category 2.4 (Telemedicine): 2.4.1 Consultations between remote person and healthcare provider, 2.4.2 Remote monitoring of person's health or diagnostic data by provider, 2.4.3 Transmission of medical data to healthcare provider, and 2.4.4 Consultations for case management between healthcare providers.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-030",
+      "source": "sections/page-030.md",
+      "source_hash": "da4c5f527ccd7be1c71cd221038164b7e90ff8a199436e441e9529f6b4f04ed4",
+      "narrative": [
+        {
+          "text": "Details Category 2.5 (Healthcare provider communication): 2.5.1 Communication from healthcare provider to supervisors, 2.5.2 Communication and performance feedback to healthcare providers, 2.5.3 Transmit routine news and workflow notifications, 2.5.4 Transmit non-routine health event alerts, 2.5.5 Peer group for healthcare providers, and 2.5.6 Generative AI for tailored content creation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-031",
+      "source": "sections/page-031.md",
+      "source_hash": "d8360aa3a235ef796a14420a5c2f743aa98fbe015dd5539e05b2a5f99e5064e3",
+      "narrative": [
+        {
+          "text": "Details Category 2.6 (Referral coordination: 2.6.1 Coordinate emergency response and transport, 2.6.2 Manage referrals within the health sector, and 2.6.3 Manage referrals between health and other sectors) and introduces Category 2.7 (Scheduling and activity planning for healthcare providers) with 2.7.1 Identify persons in need of services.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-032",
+      "source": "sections/page-032.md",
+      "source_hash": "e1c1664235cc41272d87d3da2217c2566d32b7b93dc74ad5c1a0fa9dc6c20384",
+      "narrative": [
+        {
+          "text": "Concludes Category 2.7 with 2.7.2 (Schedule healthcare provider's activities), details Category 2.8 (Healthcare provider training: 2.8.1 Provide training content and 2.8.2 Assess capacity of healthcare providers), and introduces Category 2.9 (Prescription and medication management) with 2.9.1 (Transmit or track prescription orders) and 2.9.2 (Track individual's medication consumption).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240081949-eng/blocks/prose-page-033",
+      "source": "sections/page-033.md",
+      "source_hash": "e28f429acdc1b8ed17d63bc31c6ea5a1893e8c436891900a98ae5cc6ce54b8ef",
+      "narrative": [
+        {
+          "text": "Concludes Category 2.9 with 2.9.3 (Report adverse drug effects) and details Category 2.10 (Laboratory and diagnostics imaging management): 2.10.1 Transmit person's diagnostic result to healthcare provider, 2.10.2 Transmit and track diagnostic orders, 2.10.3 Capture diagnostic results from digital devices, and 2.10.4 Track biological specimens.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fb781b89-ca00-425e-80b4-1517b3ca301d"
+          },
+          "drafted_at": "2026-10-28"
+        }
+      ]
+    }
+  ]
+}
