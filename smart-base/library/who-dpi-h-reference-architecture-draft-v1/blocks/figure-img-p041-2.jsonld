@@ -27,6 +27,66 @@
       },
       "drafted_at": "2026-10-01",
       "lang": "en"
+    },
+    {
+      "text": "Figure 2.2, « REDDHI : dimensions résiliente et essentielle, fondations full-STAC et rôle de la REDDHI au sein de l'architecture numérique nationale » (REDDHI: resilient and essential dimensions, the full-STAC foundations, and REDDHI's role within national digital architecture, section 2.2, Infrastructure de données et de santé numérique essentielle et résiliente). Surmontée du titre « Resilient Essential Data & Digital Health Infrastructure », elle décrit la REDDHI comme une trajectoire plutôt qu'une destination figée. Elle explique « Pourquoi résiliente » (Why resilient : résiste à la volatilité des financements, réduit la dépendance aux fournisseurs externes, assure la viabilité technique à long terme, renforce les capacités locales) et « Pourquoi essentielle » (Why essential : capacités minimales, socle commun à de multiples cas d'usage, efficience des investissements, sous-ensemble de l'architecture nationale globale). Un bandeau « Fondée sur des bases full-STAC ouvertes » (Built on open full-STAC foundations) comprend quatre volets : Normes / Standards (HL7 FHIR, CIM/ICD, SNOMED CT, LOINC, CQL), Technologies (outillage open source et kits de développement SDK), Architectures (fondées sur la DPI, modulaires, prêtes à brancher / plug-and-play) et Contenu / Content (Lignes directrices SMART de l'OMS). D'autres bandeaux présentent le rôle de la REDDHI (un sous-ensemble du tout, connecté aux DPI fondamentales, gouverné pour l'interopérabilité), cinq objectifs (sortir de la fragmentation, bâtir des fondations gouvernées et interopérables, favoriser l'innovation locale et régionale, garantir la viabilité technique et financière, positionner les pays pour des investissements à grande échelle) et neuf principes directeurs.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "fr"
+    },
+    {
+      "text": "Figura 2.2, «REDDHI: dimensiones resiliente y esencial, los cimientos full-STAC y la función de la REDDHI dentro de la arquitectura digital nacional» (REDDHI: resilient and essential dimensions, the full-STAC foundations, and REDDHI's role within national digital architecture, sección 2.2, Infraestructura esencial y resiliente de datos y salud digital). Encabezada «Resilient Essential Data & Digital Health Infrastructure», describe la REDDHI como una dirección de avance más que como un destino fijo. Explica «Por qué resiliente» (Why resilient: resiste la volatilidad del financiamiento, reduce la dependencia de proveedores externos, sostenibilidad técnica a largo plazo, desarrolla capacidad local) y «Por qué esencial» (Why essential: capacidades mínimas, base para múltiples casos de uso, eficiencia de la inversión, subconjunto de la arquitectura nacional más amplia). Una franja titulada «Construida sobre cimientos abiertos full-STAC» (Built on open full-STAC foundations) consta de cuatro partes: Estándares / Standards (HL7 FHIR, CIE/ICD, SNOMED CT, LOINC, CQL), Tecnologías / Technologies (herramientas de código abierto y SDK), Arquitecturas / Architectures (basadas en DPI, modulares, conectar y usar / plug-and-play) y Contenido / Content (Directrices SMART de la OMS). Otras franjas exponen el papel de la REDDHI (un subconjunto del todo, conectado a la DPI fundacional, gobernado para la interoperabilidad), cinco objetivos (transitar desde la fragmentación, construir cimientos gobernados e interoperables, habilitar la innovación local y regional, asegurar la sostenibilidad técnica y financiera, posicionar a los países para inversiones a gran escala) y nueve principios rectores.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "es"
+    },
+    {
+      "text": "الشكل 2.2، «البنية التحتية المرنة والأساسية للبيانات والصحة الرقمية (REDDHI): البعدان المرن والأساسي، وأسس STAC الكاملة، ودور REDDHI ضمن البنية الرقمية الوطنية» (القسم 2.2، البنية التحتية المرنة والأساسية للبيانات والصحة الرقمية). يحمل الشكل العنوان الرئيسي «Resilient Essential Data & Digital Health Infrastructure»، ويصف REDDHI بوصفها مسار توجه لا محطة نهائية ثابتة. ويوضح «لماذا مرنة» (Why resilient: تصمد أمام تقلبات التمويل، وتحد من الاعتماد على الموردين الخارجيين، وتحقق الاستدامة التقنية طويلة الأجل، وتبني القدرات المحلية) و«لماذا أساسية» (Why essential: القدرات الدنيا اللازمة، وأساس لحالات استخدام متعددة، وكفاءة الاستثمار، ومجموعة فرعية من البنية الوطنية الأوسع). ويتألف شريط «مبنية على أسس STAC الكاملة المفتوحة» (Built on open full-STAC foundations) من أربعة أجزاء: المعايير Standards (HL7 FHIR، وICD، وSNOMED CT، وLOINC، وCQL)، والتقنيات Technologies (أدوات مفتوحة المصدر وحزم تطوير البرمجيات SDKs)، والبنى المعمارية Architectures (قائمة على البنية التحتية العامة الرقمية DPI، ومعيارية، وقابلة للتوصيل والتشغيل)، والمحتوى Content (المبادئ التوجيهية الذكية لمنظمة الصحة العالمية WHO SMART Guidelines). وتعرض أشرطة أخرى دور REDDHI (مجموعة فرعية من الكل، متصلة بالبنية التحتية العامة الرقمية التأسيسية، ومحكومة للتشغيل البيني)، وخمسة أهداف (الانتقال من التشتت، وبناء أسس محكومة وقابلة للتشغيل البيني، وتمكين الابتكار المحلي والإقليمي، وضمان الاستدامة التقنية والمالية، وتهيئة البلدان للاستثمار واسع النطاق)، وتسعة مبادئ توجيهية.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ar"
+    },
+    {
+      "text": "Рисунок 2.2, «REDDHI: характеристики устойчивости и базовой необходимости, фундамент full-STAC и роль REDDHI в национальной цифровой архитектуре» (раздел 2.2 «Устойчивая базовая инфраструктура данных и цифрового здравоохранения»). Под заголовком «Resilient Essential Data & Digital Health Infrastructure» инфраструктура REDDHI описывается как вектор развития, а не фиксированная конечная точка. Разъясняется, «Почему устойчивая» (Why resilient: выдерживает нестабильность финансирования, снижает зависимость от внешних поставщиков, обеспечивает долгосрочную техническую устойчивость, развивает локальный потенциал) и «Почему базовая» (Why essential: минимально необходимые возможности, основа для множества сценариев использования, эффективность инвестиций, подмножество более широкой национальной архитектуры). Полоса «Построена на открытом фундаменте full-STAC» (Built on open full-STAC foundations) включает четыре составляющие: Стандарты / Standards (HL7 FHIR, МКБ/ICD, SNOMED CT, LOINC, CQL), Технологии / Technologies (инструменты с открытым исходным кодом и SDK), Архитектуры / Architectures (на базе DPI, модульные, по принципу plug-and-play) и Контент / Content (руководства ВОЗ SMART Guidelines). Следующие полосы раскрывают роль REDDHI (подмножество целого, связанное с базовой DPI и управляемое для обеспечения интероперабельности), пять целей (переход от фрагментации, создание управляемого и интероперабельного фундамента, поддержка локальных и региональных инноваций, обеспечение технической и финансовой устойчивости, подготовка стран к крупномасштабным инвестициям) и девять руководящих принципов.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "ru"
+    },
+    {
+      "text": "图 2.2，“REDDHI：韧性与基础性维度、全栈 STAC（full-STAC）基础以及 REDDHI 在国家数字架构中的角色”（第 2.2 节，韧性基础数据与数字卫生基础设施）。图题为“Resilient Essential Data & Digital Health Infrastructure”，将 REDDHI 描述为演进方向而非固定终点。图中阐明了“为何具韧性”（Why resilient：抵御资金波动、减少对外部供应商的依赖、长期技术可持续性、建设本地能力）和“为何具基础性”（Why essential：最低必需能力、支撑多种用例的基础、投资效益、更广泛国家架构的子集）。“构建于开放全栈 STAC 基础之上”（Built on open full-STAC foundations）横幅包含四个部分：标准 Standards（HL7 FHIR、ICD、SNOMED CT、LOINC、CQL）、技术 Technologies（开源工具与 SDK）、架构 Architectures（基于 DPI、模块化、即插即用）以及内容 Content（世卫组织 SMART 指南）。其余横幅给出了 REDDHI 的角色（整体的子集、连接基础性 DPI、为互操作性而治理）、五项目标（摆脱碎片化、构建受治理且可互操作的基础、赋能本地与区域创新、确保技术与财务可持续性、使国家具备吸引大规模投资的条件）和九项指导原则。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://4dcd261e-4e31-428c-85f0-3cb9bf5d352f"
+      },
+      "drafted_at": "2026-10-28",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/who-dpi-h-reference-architecture-draft-v1/sections/sec-021",
