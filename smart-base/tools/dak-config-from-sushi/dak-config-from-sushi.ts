@@ -4,7 +4,7 @@ import { defineTool, toolFactory } from "../../platform/index.js";
 export default toolFactory((t) =>
   defineTool({
     id: "dak-config-from-sushi",
-    title: "sushi-config.yaml → dak.config.json",
+    title: "sushi-config.yaml → index.config.json#contentTypes.dak",
     description:
       "Derive the DAK configuration from `sushi-config.yaml` plus repository and branch context.",
     install: { none: true },
@@ -14,7 +14,7 @@ export default toolFactory((t) =>
         { name: "sushiConfig", schema: t("RepoPath"), required: true, description: "`sushi-config.yaml` at the IG root." },
         { name: "branch", schema: t("Branch"), required: false, description: "Sanitised branch name, for the publication and preview URLs." },
       ],
-      outputs: [{ name: "dakConfig", schema: t("RepoPath"), description: "`dak.config.json` — ours, per bean `cz17`. Upstream still writes `dak.json`." }],
+      outputs: [{ name: "dakConfig", schema: t("RepoPath"), description: "`index.config.json` (`contentTypes.dak`) — ours, per bean `cz17`. Upstream still writes `dak.json`." }],
     },
     satisfies: ["dak-preprocessing"],
     selection: {
