@@ -761,6 +761,956 @@
           "drafted_at": "2026-10-28"
         }
       ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-041",
+      "source": "sections/page-041.md",
+      "source_hash": "6b3b2d432dbcf1b756eef49d9ba6ce85913fe9cc4bb817f5898384691d2f08f1",
+      "narrative": [
+        {
+          "text": "Opening of Chapter 3 ('Identify health system challenges and needs', page 29), outlining the chapter's purpose, tools (Annex 3.1 process matrix, Fig. 3.2.1 root causes of common bottlenecks, Annex 3.2 bottleneck-mapping worksheet), objectives, inputs (named team and stakeholders, shared programme vision, personas), and expected outputs (Output 3.4 current-state workflow diagrams, Output 3.2 prioritized bottlenecks, and Output 3.3 mapped health system challenges).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-042",
+      "source": "sections/page-042.md",
+      "source_hash": "4f1d86c61952806765d1069c7822bf0342a399a97d16d6edb8efd1864fa69f34",
+      "narrative": [
+        {
+          "text": "Highlights two Principles for Digital Development (page 30) for Chapter 3—'Understand the Existing Ecosystem' (engaging target end-users, consulting research on networks, cultures, politics, data needs, infrastructure, and markets, and coordinating across government and civil society) and 'Design with the User' (incorporating end-users and stakeholders across the project life cycle, improving current workflows incrementally, prioritizing underserved groups, and allowing opt-out).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-043",
+      "source": "sections/page-043.md",
+      "source_hash": "c969f2ec76214217eaafdb0a53098a0c51259995e75621e89ccc690c970ddbe3",
+      "narrative": [
+        {
+          "text": "Introduces Chapter 3's adaptation of the Public Health Informatics Institute's Collaborative Requirements Development Methodology (CRDM) in Figure 3.1 (page 31)—spanning Business Process Analysis ('Think: How do we do our work now?'), Business Process Redesign ('Rethink: How should we do our work now?'), and Requirements Definition ('Describe: How can an information system support our work?')—and opens Section 3.1 ('Map the current state of programme activities') with its three steps.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-044",
+      "source": "sections/page-044.md",
+      "source_hash": "bfae89f40b4a57bc69bb099f9f0953038c4972685046405147bde252756c6878",
+      "narrative": [
+        {
+          "text": "Section 3.1.1 ('Determine the health programme processes to target', page 32) explains how to identify priority business processes and document their objectives, inputs, outputs, task sets, and expected outcomes, illustrated by Figure 3.1.1.1 (a process matrix for an Expanded Programme on Immunization covering Patient management, Vaccination management, Stock management, and Service delivery, cross-referencing Annex 3.1).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-045",
+      "source": "sections/page-045.md",
+      "source_hash": "99510e2777b52ff1253dbe0cdff5a491e56910a64a7268f9ac82557b8de50bbf",
+      "narrative": [
+        {
+          "text": "Section 3.1.2 ('Map the workflows for targeted processes', page 33) guides developing current-state task flow diagrams with frontline service providers to capture how programme activities and patient interactions actually occur on the ground, trace information flows, expose bottlenecks, and cross-reference WHO Digital Accelerator Kits (DAKs).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-046",
+      "source": "sections/page-046.md",
+      "source_hash": "e8fb0bd6b7a51d611ae6ce4cc10934688afea8b5b33159017b6069deaf687ae4",
+      "narrative": [
+        {
+          "text": "Presents Figure 3.1.2.1 (page 34), an example clinical encounter workflow diagram between a patient and health worker at a service delivery point (from Encounter, Counselling, and Diagnose through a 'Treatment Available?' decision branch to Refer or Dispense, Update Record, and Inform Next Visit), alongside Box 3.1.2.2 explaining standard workflow notation conventions (boxes for tasks, diamonds for decisions, double-lined boxes for subtask bundles, and circles for start/end points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-047",
+      "source": "sections/page-047.md",
+      "source_hash": "4fa78aa877b5d474894dcbeaebd1f26e87764e4e366419d08c35bad5a7105938",
+      "narrative": [
+        {
+          "text": "BID Initiative case study ('BID Initiative: Business processes', page 35) describing immunization day workflows, stock-outs, and manual paper reporting challenges faced by Sister Oliver Mlemeta at Usa River Health Facility in Tanzania, and explaining how the BID Initiative worked with Tanzania and Zambia to define 16 national immunization business processes and link systems including VIMS, RITA Birth Registration, National ID, DHIS2, and the Health Facility Registry.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-048",
+      "source": "sections/page-048.md",
+      "source_hash": "5192435b904448a23368d1f72fdad52a88351ef1d57cfbe28f93639cbf4f2720",
+      "narrative": [
+        {
+          "text": "Section 3.1.3 ('Identify and confirm bottlenecks', page 36) explains how to validate workflow diagrams with frontline health workers and clients to uncover service delivery inefficiencies, redundancies, and blocks, followed by Section 3.2 ('Conduct a root cause analysis of bottlenecks'), which categorizes root causes into Physical, Human, and Organizational factors, notes when nondigital solutions are preferable, and introduces the 5 Whys method.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-049",
+      "source": "sections/page-049.md",
+      "source_hash": "f2f6c1b1658ef65cff284d7087abd02c628146d12319d2a9b02a6596ced0a124",
+      "narrative": [
+        {
+          "text": "Presents Figure 3.2.1 (page 37), illustrating the 5 Whys root cause analysis model for a facility medication stock-out (tracing clinic stock-out to under-ordering, unknown demand, lack of monthly historical data, and slow manual aggregation from paper forms), and opens Section 3.3 ('Prioritize bottlenecks') on ranking bottlenecks by resolvability, stakeholder capacity, persona perspectives, and impact.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-050",
+      "source": "sections/page-050.md",
+      "source_hash": "9b95449bd9f8548f687f5b6d04fb1cef86e5be92d10b88ad329ec3515a953297",
+      "narrative": [
+        {
+          "text": "Presents Table 3.3.1 (page 38), a 1–3 scoring formula and worked examples for ranking bottlenecks across process impact, likelihood of overcoming the bottleneck, and breadth of stakeholder importance, and introduces Section 3.4 ('Map programme-specific bottlenecks to generic health system challenges') using WHO's standardized Health System Challenges (HSC) taxonomy while noting when nondigital or combined approaches are warranted.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-051",
+      "source": "sections/page-051.md",
+      "source_hash": "662b45cba66bf057d122132eaeb21b542679a9aa8c03ad0cd85431677e1b76f9",
+      "narrative": [
+        {
+          "text": "Presents Figure 3.4.1 (page 39), the complete WHO Classification of Health System Challenges organized into eight top-level categories: 1 Information (1.1–1.7), 2 Availability (2.1–2.4), 3 Quality (3.1–3.7), 4 Acceptability (4.1–4.2), 5 Utilization (5.1–5.4), 6 Efficiency (6.1–6.5), 7 Cost (7.1–7.4), and 8 Accountability (8.1–8.6).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-052",
+      "source": "sections/page-052.md",
+      "source_hash": "59451d6855930b640c8b80a3830b68ae6de5392581e29b0c34b1db0bdf80bd74",
+      "narrative": [
+        {
+          "text": "Presents Box 3.4.2 ('Linking health system challenges to universal health coverage', page 40), explaining how to map bottlenecks across the six layers of the updated Tanahashi framework for Universal Health Coverage (UHC)—Accountability coverage, Accessibility and availability of services, Contact coverage, Continuous coverage, Effective coverage, and Financial coverage—with reference to the Annex 3.2 template.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-053",
+      "source": "sections/page-053.md",
+      "source_hash": "fc86754dd750f302ef70911aefe696ac2ae13ef9e9d501105121a78bbc22c270",
+      "narrative": [
+        {
+          "text": "Presents Figure 3.4.3 (page 41), adapted from Mehl & Labrique (2014), illustrating how health system challenges across Accountability, Supply, Demand, Quality, and Affordability layers limit UHC for a target population and create potential for digital health interventions, followed by a Chapter 3 completion checklist covering Annex 3.1, Output 3.4, Outputs 3.2–3.3, and Annex 3.2.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-054",
+      "source": "sections/page-054.md",
+      "source_hash": "e933197a8160f2bb73b5be0c0b9bae9aad999f61cd97a89425e032dc305e8ca5",
+      "narrative": [
+        {
+          "text": "Chapter-end spacer page (page 42) bearing the running header 'Digital implementation investment guide' before Chapter 4.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-055",
+      "source": "sections/page-055.md",
+      "source_hash": "6ce4fcae14ecd1f03ca9e6ab86d6a7290a4f51e2a37bb7a0f86fd4baaf917de8",
+      "narrative": [
+        {
+          "text": "Opening of Chapter 4 ('Determine appropriate digital health interventions', page 43), summarizing the chapter's purpose, tools (Annex 3.2 worksheet, WHO Classification of DHIs, Fig. 4.1.3 selection matrix, Digital Health Atlas, and Global Digital Health Index), objectives, inputs from Chapter 3, and expected outputs (Outputs 4.1 through 4.5 covering prioritized DHIs, enabling-environment assessment, functional/nonfunctional requirements, future-state workflows, and landscape analysis).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-056",
+      "source": "sections/page-056.md",
+      "source_hash": "9c209289e0367ed8d3a5439d783e0a42e311bcaa16938a31198e5270b1892be5",
+      "narrative": [
+        {
+          "text": "Highlights two Principles for Digital Development (page 44) for Chapter 4—'Use Open Standards, Open Data, Open Source, and Open Innovation' (adopting open standards such as HL7 FHIR, sharing nonsensitive data, using and publishing open-source code, and co-creating tools) and 'Reuse and Improve' (evaluating existing local and global tools, building modular interoperable components rather than monolithic systems, and engaging technical working groups).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-057",
+      "source": "sections/page-057.md",
+      "source_hash": "0272c919978f0ca41bf5254c7fc9a58ed5c5366155e8b486a5db97854b90297b",
+      "narrative": [
+        {
+          "text": "Introduces Chapter 4's focus on Business Process Redesign and Requirements Definition within the CRDM framework in Figure 4.1 (page 45), and distinguishes digital health interventions (discrete functionalities addressing bottlenecks), digital health applications (software and ICT systems executing interventions and health content), and digital health enterprises (applications plus hardware, standards, people, processes, policies, governance, and infrastructure).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-058",
+      "source": "sections/page-058.md",
+      "source_hash": "4b9e7b1cc07d1ea0fc2e9d5b1347d084a8253591ef0631b9fce6b9666ca6ca33",
+      "narrative": [
+        {
+          "text": "Outlines the four steps for identifying and selecting digital health interventions (page 46)—selecting evidence-based DHIs, assessing enabling-environment feasibility, defining requirements and future-state workflows, and leveraging existing enterprise applications—and opens Section 4.1 ('Determine and select digital health interventions for the prioritized health system challenges') introducing the WHO Classification of Digital Health Interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-059",
+      "source": "sections/page-059.md",
+      "source_hash": "8ad0641822a796009d10edd0da21aa43bb4da5b5fc09a4c3982ef096489d3a1a",
+      "narrative": [
+        {
+          "text": "Presents Figure 4.1.1 (page 47), the full WHO Classification of Digital Health Interventions (2018) taxonomy organized across four user groups: 1.0 Clients (1.1–1.7), 2.0 Healthcare Providers (2.1–2.10), 3.0 Health System Managers (3.1–3.7), and 4.0 Data Services (4.1–4.4).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-060",
+      "source": "sections/page-060.md",
+      "source_hash": "435225ca439a47ca08fa9a15ac248bd4c3b18160127311fc310aceccc23c39a2",
+      "narrative": [
+        {
+          "text": "Discusses aligning candidate interventions with the WHO Guideline: Recommendations on Digital Interventions for Health System Strengthening and Annex 5.3 (page 48), and presents Figure 4.1.2 illustrating how specific Health System Challenges (insufficient commodity supply, poor clinical guideline adherence, lack of access to data, and client loss to follow-up) map to concrete Digital Health Interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-061",
+      "source": "sections/page-061.md",
+      "source_hash": "e029cc04255e9f894b50a04e09b8a4eb50bef9f23f5ec646ca8053a608cacf57",
+      "narrative": [
+        {
+          "text": "Presents Figure 4.1.3 (page 49), the Digital Health Intervention selection matrix mapping UHC coverage layers (Effective, Continuous, and Contact coverage), illustrative programme bottlenecks, and standardized Health System Challenges (HSC 5.3, 5.1, 5.2, and 6.2) to relevant DHIs, distinguishing interventions with a WHO guideline evidence base from other functionally appropriate DHIs.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-062",
+      "source": "sections/page-062.md",
+      "source_hash": "75778dc4d5756be08f547e60effa7f3035635cd180ee8200ae5752e376631796",
+      "narrative": [
+        {
+          "text": "Case study and Table 4.1.4 (page 50) from a joint WHO and Sierra Leone Ministry of Health and Sanitation multistakeholder consultation, illustrating how three bottlenecks—inequitable midwife distribution (HSC 2.4), poor medical/power/water infrastructure (HSC 5.2), and frequent drug stockouts (HSC 2.1)—were analyzed by root cause to determine where DHIs (such as DHI 3.1.1, DHI 2.4.4, and DHI 3.2.2) are appropriate versus where nondigital solutions are required.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-063",
+      "source": "sections/page-063.md",
+      "source_hash": "a6fafbada54470b20d11dd0086dd038e22cd4fdc16d1d8118954f050eee4f18b",
+      "narrative": [
+        {
+          "text": "Section 4.2 ('Determine whether the enabling environment can support the identified digital health interventions', page 51) explains how to assess ecosystem readiness, avoid monolithic 'ball-of-mud' software and technical debt, and review national digital health strategies, investment roadmaps, digital maturity assessments, asset inventories (such as the Digital Health Atlas), and enterprise architecture documentation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-064",
+      "source": "sections/page-064.md",
+      "source_hash": "d7db2990d96382dbe314bed9d6924562bbd00e3c50ad9265c1cb814d65e4ed07",
+      "narrative": [
+        {
+          "text": "Presents Figure 4.2.1 (page 52), adapted from the 2012 WHO/ITU National eHealth Strategy Toolkit, detailing the roles and contributions of the seven component building blocks across the Enabling Environment (Leadership and Governance; Strategy and Investment; Legislation, Policy and Compliance; Workforce; Standards and Interoperability) and the ICT Environment (Infrastructure; Services and Applications).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-065",
+      "source": "sections/page-065.md",
+      "source_hash": "434e333b72fea41defd175ca9c1a3cf934251ffcd8a04ea6272a97aeff9fa687",
+      "narrative": [
+        {
+          "text": "Continues Section 4.2 (page 53) on aligning short-, medium-, and long-term plans with enabling-environment constraints and deriving nonfunctional requirements (such as offline operation, multilingual interfaces, and password protection), accompanied by Box 4.2.2 cataloging six assessment toolkits (National eHealth Strategy Toolkit, Global Digital Health Index, HIS Stages of Continuous Improvement, HIS Interoperability Maturity Toolkit, Nigeria's enabling-environment assessment, and the ICT for women's and children's health workbook).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-066",
+      "source": "sections/page-066.md",
+      "source_hash": "ac7bb84caf973c9df0b575497a41e6c45da72b538e5635e4f2ac8ae0051c1f9f",
+      "narrative": [
+        {
+          "text": "Section 4.3 ('Determine what the interventions will need to do', page 54) and Figure 4.3.1 define how the Planning Team, End-Users, and Beneficiaries relate to a digital health intervention, and Section 4.3.1 ('Identify functional requirements and user stories') explains how to brainstorm workflow-aligned functional requirements for software developers.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-067",
+      "source": "sections/page-067.md",
+      "source_hash": "dcbcd3194e16166b2dad236efb9ebf1e754de1603adf642fd7b2cad351e5a794",
+      "narrative": [
+        {
+          "text": "Presents Table 4.3.1.1 (page 55) with three example 'As a community nurse, I need ... so that ...' user stories for an antenatal care pregnancy-support intervention, discusses prioritizing 'must have' versus 'nice to have' functions, and opens Section 4.3.2 ('Understand and manage expectations from end-users and stakeholders') on analyzing needs across end-users, beneficiaries, and broader stakeholders.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-068",
+      "source": "sections/page-068.md",
+      "source_hash": "11fb55690ee157ec4d6236c41bb4cbeced74bb4366c5c58dcf15bf7be5741d05",
+      "narrative": [
+        {
+          "text": "Presents Figure 4.3.2.1 (page 56), contrasting positive and negative potential responses to digital health interventions across four personas (Community leader, District programme manager, Clinic nurse, and Pregnant woman), and introduces Section 4.3.3 ('Map future-state workflow') on redrawing Chapter 3 workflows to highlight 'digital health moments' where interventions resolve bottlenecks.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-069",
+      "source": "sections/page-069.md",
+      "source_hash": "ba2b2dfdceb9c04b15255faa02b4bf5e190fd225428da9e72c73bf17a6b7c666",
+      "narrative": [
+        {
+          "text": "Presents Figure 4.3.3.1 (page 57), comparing current-state and future-state patient management workflows at a health facility to show how DHI 1.1.3 (targeted SMS reminders) and DHI 2.1.1 (unique ID verification) overcome missed immunization visits and slow paper record searches, and opens Section 4.4 ('Determine if existing digital health applications, platforms and enterprises can achieve the requirements').",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-070",
+      "source": "sections/page-070.md",
+      "source_hash": "83d5efcb814a20fb062723be0321434da4b077a2e2af0d01b14e9718e7fc14e2",
+      "narrative": [
+        {
+          "text": "Presents a BID Initiative case study ('BID Initiative: Data quality and use interventions', page 58) detailing Tanzania and Zambia's package of electronic immunization registries, barcodes/QR codes, automated reporting, microtraining videos, peer networks, and dashboards, alongside Section 4.4's checklist of nine data points to collect when conducting a national digital health landscape analysis and inventory.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-071",
+      "source": "sections/page-071.md",
+      "source_hash": "3c334e1d7c5685fcf56421d9b80b7204f100d50f972bc628fbe2ad3a8c47ca74",
+      "narrative": [
+        {
+          "text": "Presents Box 4.4.1 (page 59) on using the WHO Digital Health Atlas (DHA), communities of practice (Global Digital Health Network, AeHIN), and country landscape reports (Nigeria, Bangladesh, Malawi) to inventory existing systems, and explains how to leverage mature Free and Open Source Software (FOSS) digital health global goods curated in Digital Square's Global Goods Guidebook.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-072",
+      "source": "sections/page-072.md",
+      "source_hash": "eadaec37725d57129ac0f285c8781b62f2e89bccdf58888e2b439ceec903591b",
+      "narrative": [
+        {
+          "text": "Concludes Section 4.4 (page 60) on contributing new functionality back to software global goods and matching hardware specifications to health workers' existing ICT familiarity, and presents the Section 4.5 Progress Check summarizing completed Chapter 4 deliverables (Outputs 4.1 through 4.5).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-073",
+      "source": "sections/page-073.md",
+      "source_hash": "e7a8f45a1453c664075967dcdf3bc6be04bd0d01b2a4c39dedd8ed308b3d646c",
+      "narrative": [
+        {
+          "text": "Concludes Chapter 4 (page 61) with Figure 4.5.1 ('Considerations for designing a digital health enterprise to deploy selected digital health interventions'), providing a five-part review checklist across identified pain points and HSCs, evidence base and scale experience, enabling environment, user/cultural requirements, and linkages to other ICT enterprises.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-074",
+      "source": "sections/page-074.md",
+      "source_hash": "523b18fab4cc213a86577007f29ab0c5d635078753f5805ccdcb4c0fd4ef739d",
+      "narrative": [
+        {
+          "text": "Chapter-end spacer page (page 62) bearing the running header 'Digital implementation investment guide' before Chapter 5.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-075",
+      "source": "sections/page-075.md",
+      "source_hash": "639761f416370527b4030279b139a6a2db43f3ee144ca82b801503ac1ea04a27",
+      "narrative": [
+        {
+          "text": "Opening of Chapter 5 ('Plan the implementation', page 63), summarizing the chapter's purpose, tools (Annex 5.1 vendor questions and Annex 5.3 implementation considerations), objectives, inputs from Chapters 2 and 4, and expected outputs (Output 5.1 detailed implementation plan and Annex 5.2 Implementation Summary Template).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-076",
+      "source": "sections/page-076.md",
+      "source_hash": "b0f870b84b67809c0dd910f38c0884a5ba63f0612896a87b5ac2e6367b4ee067",
+      "narrative": [
+        {
+          "text": "Highlights the 'Build for Sustainability' Principle for Digital Development (page 64) for Chapter 5, outlining core tenets including planning for sustainability from the outset, defining a sustainable business model, investing in local ICT service providers, integrating with local government and national strategies, collaborating across partners, and designing adaptable programmes.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-077",
+      "source": "sections/page-077.md",
+      "source_hash": "e321ff1d0830f0ab275d0cd83d14f660981bfc869e7843ded2263008392d1ff0",
+      "narrative": [
+        {
+          "text": "Introduces the four critical components of a digital health implementation (page 65)—(1) evidence-based health content, (2) discrete digital health interventions, (3) digital health applications and shared services, and (4) the foundational ICT and enabling environment—and explains how alignment with national strategy building blocks, workforce capacity, partnerships, and interoperability standards underpins scale and sustainability.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-078",
+      "source": "sections/page-078.md",
+      "source_hash": "a81d14f8a25c7027931aa8f5548163cb1243ff95d0b9c9bb0e6f64d5f1c1b69c",
+      "narrative": [
+        {
+          "text": "Presents Figure 5.1 ('Essential components of a digital health implementation', page 66)—illustrating how Health Content, Digital Health Interventions, and Digital Applications rest on the seven building blocks of the foundational ICT and Enabling Environment layer—and begins Table 5.2 ('Illustrative implementation considerations for digital health') covering Strategy and Investment, Infrastructure, and Legislation, Policy and Compliance.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-079",
+      "source": "sections/page-079.md",
+      "source_hash": "32dea0b02b4dcb0f61d11f58e9089f760777ede340e227bef40adc89fcd2355f",
+      "narrative": [
+        {
+          "text": "Concludes Table 5.2 (page 67), listing key implementation planning questions across Leadership and Governance, Workforce, Services and Applications, Standards and Interoperability, and Health Content, adapted from the WHO/ITU National eHealth Strategy Toolkit and the MAPS Toolkit.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-080",
+      "source": "sections/page-080.md",
+      "source_hash": "79eaf926ca56de74b4cff8c3061b0a748127c1fb9c01a9c40c2b1b840e912fbd",
+      "narrative": [
+        {
+          "text": "Presents Box 5.3 (page 68), defining and listing synonyms/descriptors for the nine digital health interventions evaluated in the 2019 WHO Guideline (and detailed in Annex 5.3): Birth notification, Death notification, Stock notification and commodity management, Client-to-provider telemedicine, Provider-to-provider telemedicine, Targeted client communication, Health worker decision support, Digital tracking of clients' health status and services, and Provision of educational and training content to health workers (mLearning).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-081",
+      "source": "sections/page-081.md",
+      "source_hash": "6b5175784b3eb1cc1ddfa720ade92b9fd9caae7d594d3c655255229066a1d849",
+      "narrative": [
+        {
+          "text": "Section 5.1 ('Infrastructure considerations', page 69) guides assessing site readiness and contingency planning across four operational dimensions—Electricity (grid stability, seasonal outages, solar/battery alternatives, power management), Connectivity (voice/SMS/data coverage verification beyond MNO maps, offline storage capacity), Devices (local sourcing, end-user phone capabilities), and Digital Literacy and Language—and cites the BID Initiative Equipment support strategy in Box 5.1.1.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-082",
+      "source": "sections/page-082.md",
+      "source_hash": "f5ec59d62953d10ee60b79e3331905579f896051191f8590eccf781d691cc5d3",
+      "narrative": [
+        {
+          "text": "Section 5.2 ('Legislation, policy and compliance considerations', page 70) and Section 5.2.1 ('Data management, privacy and security') outline policy and regulatory requirements for digital health implementations, providing a nine-point checklist covering patient/provider privacy, transmission security, server access controls, donor and research data use, data flows, cloud hosting, data ownership, redundant backups, and HIS policy adherence.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-083",
+      "source": "sections/page-083.md",
+      "source_hash": "a020192b6ee457dac588f101460043ed83ad54f9f602dc81943188fcbc09ebe4",
+      "narrative": [
+        {
+          "text": "Introduces Section 5.2.2 ('Regulation of new digital health technologies', page 71) on national, regional (East African Community, AU/NEPAD), and international 'software as a medical device' regulatory frameworks, and presents Box 5.2.1.1 summarizing data protection tools and principles from UN Global Pulse, the EU General Data Protection Regulation (GDPR), CDC, UNAIDS, ISO TC 215, and Articles 18 and 21 of the African Union Convention on Cyber Security and Personal Data Protection.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-084",
+      "source": "sections/page-084.md",
+      "source_hash": "92967d05ab0993d57d8a52a91cb476279c4d3c216d7482cca01ecef0c5455e5d",
+      "narrative": [
+        {
+          "text": "Concludes Section 5.2.2 (page 72) with key regulatory planning questions and Box 5.2.2.1 (citing the International Medical Device Regulators Forum and WHO medical device regulations), and opens Section 5.3 ('Leadership and governance considerations') and Section 5.3.1 ('Governance') with questions on steering committees, MOUs, cross-departmental coordination between ICT, M&E, and vertical health programmes, and inter-ministerial involvement.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-085",
+      "source": "sections/page-085.md",
+      "source_hash": "1dc91e78e1854e0d279dfa05999e227b88bf5a57b7e8c7dfd27deff8c4929695",
+      "narrative": [
+        {
+          "text": "Section 5.3.2 ('External partnerships', page 73) discusses engaging NGOs, academia, donors, MNOs, and private-sector partners, aligning with broader health initiatives, and managing technology vendors through requirements-driven Requests for Proposals (RFPs) and transparent bid evaluation criteria.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-086",
+      "source": "sections/page-086.md",
+      "source_hash": "8ce38e948d4582b85ffa59ef8ee8f70a19a8165a0778d47fdfa581b6dc1a2e3f",
+      "narrative": [
+        {
+          "text": "Section 5.4 ('Workforce and training considerations', page 74) details strategies for training and supporting health workers and managers—including introductory and refresher training, training-of-trainers models, usage metadata monitoring, champions, managing dual paper-and-digital data entry during phased transitions, culturally adaptable UI design, feeding data back to frontline workers to foster a data-use culture, and password/privacy hygiene.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-087",
+      "source": "sections/page-087.md",
+      "source_hash": "5896c1e2d480978e454c3518b203564075c06db23e1197ba7933fb4453410410",
+      "narrative": [
+        {
+          "text": "BID Initiative case study ('BID Initiative: Workforce implementation', page 75) explaining how BID used district immunization officers to lead facility-level training 'touches' and presenting Figure 5.4.1, which maps John Kotter's eight-step change management model across Creating the climate for change (Steps 1–3), Engaging and enabling the organization (Steps 4–6), and Implementing and sustaining for change (Steps 7–8).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-088",
+      "source": "sections/page-088.md",
+      "source_hash": "9201e3a29d0720b051e3daca8a9e7ebb0a29fc5977522e503e2020886f5dfdfe",
+      "narrative": [
+        {
+          "text": "Continues the BID Initiative workforce case study (page 76) with a list of five BID rollout and change-management resources and Figure 5.4.2, a table linking Routine BID Activities (Touches 1 through 4) to Kotter's eight steps, specific training objectives, and facility- and district-level change management activities.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-089",
+      "source": "sections/page-089.md",
+      "source_hash": "a0a6ca96daae262bf887611044b1090745df8f23cedba401a6b8c47800af65a5",
+      "narrative": [
+        {
+          "text": "Section 5.5 ('Services and applications', page 77) provides guidance on leveraging existing hardware and mobile-device management tools, evaluating software licensing and configuration models to avoid vendor lock-in, and conducting four staged testing phases with formal developer sign-offs: continual end-user experience (usability) testing, controlled end-user acceptance testing (UAT), real-life functionality testing, and multi-user load/stress testing.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789240010567-eng/blocks/prose-page-090",
+      "source": "sections/page-090.md",
+      "source_hash": "174b6af3fc485d5e16bb3e7b3209900d31866a9a6929d5c2c77a94cf0928c605",
+      "narrative": [
+        {
+          "text": "Concludes Section 5.5 (page 78) on establishing issue-reporting mechanisms and aligning embedded clinical algorithms and indicators with evidence-based guidelines (including WHO Digital Accelerator Kits and Computable Guidelines Standards), and presents Figure 5.5.1 comparing the benefits, risks, and real-world examples of five software models: Custom-Developed Software, Commercial Off-the-Shelf (COTS) Software, Free Packaged Software, Open Source Software, and Software as a Service (SaaS).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://33c96a57-815f-496e-b0e5-ff3ce253c5a0"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
     }
   ]
 }
