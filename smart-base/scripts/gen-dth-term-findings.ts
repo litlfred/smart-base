@@ -142,6 +142,32 @@ export function sectionText(raw: string): string {
   return norm(body.split("\n").filter((l) => !/^\s*\d+\s*$/.test(l)).join("\n"));
 }
 
+/**
+ * The files this instance declares `builtAtPublish` (`smart-base.json`), as
+ * checkout-relative paths: `smart-base/fhir-artifact-index/index.json` is
+ * written by `ig-index:build` at publish (fhir-harness#124), so a checkout
+ * that has not built it, a repository mounting this layer included, holds
+ * none.
+ */
+export function builtAtPublishPaths(root = ROOT): Set<string> {
+  try {
+    const decl = JSON.parse(readFileSync(join(root, "smart-base", "smart-base.json"), "utf8")) as { builtAtPublish?: { path?: string }[] };
+    return new Set((decl.builtAtPublish ?? []).flatMap((b) => (b.path ? [`smart-base/${b.path.replace(/^\.\//, "")}`] : [])));
+  } catch {
+    return new Set();
+  }
+}
+
+/**
+ * Why a quote cannot be checked HERE, or null when it can: it cites a file
+ * built at publish that this checkout has not built. Said, not counted as a
+ * match, and not a failure.
+ */
+export function quoteUnverifiable(q: Quote, root = ROOT, built = builtAtPublishPaths(root)): string | null {
+  if (!("path" in q) || existsSync(join(root, q.path)) || !built.has(q.path)) return null;
+  return `${q.path}: built at publish and not built in this checkout — "${q.quote}" not checked`;
+}
+
 /** Why a quote does not match what it cites, or null when it does. */
 export function quoteProblem(q: Quote, root = ROOT): string | null {
   const file = "path" in q ? join(root, q.path) : join(root, "smart-base", "library", q.libraryId, "sections", `${q.sectionId}.md`);
@@ -258,7 +284,10 @@ function load(): { f: TermFindings; terms: CandidateTerm[] } {
 if (import.meta.main) {
   const check = process.argv.includes("--check");
   const { f, terms } = load();
-  const problems = allQuotes(f).map((q) => quoteProblem(q)).filter((p): p is string => p !== null);
+  const built = builtAtPublishPaths();
+  const unverified = allQuotes(f).map((q) => quoteUnverifiable(q, ROOT, built)).filter((p): p is string => p !== null);
+  for (const u of unverified) console.log(`? ${u}`);
+  const problems = allQuotes(f).filter((q) => quoteUnverifiable(q, ROOT, built) === null).map((q) => quoteProblem(q)).filter((p): p is string => p !== null);
   if (problems.length > 0) {
     console.error(`✗ ${problems.length} quote(s) in ${DATA.slice(ROOT.length + 1)} do not match what they cite:`);
     for (const p of problems) console.error(`    ${p}`);
@@ -271,7 +300,7 @@ if (import.meta.main) {
       console.error(`✗ ${OUT.slice(ROOT.length + 1)} is stale — run: bun run cat smart-base:dth-terms`);
       process.exit(1);
     }
-    console.log(`✓ ${OUT.slice(ROOT.length + 1)} current; ${terms.length} conflicting terms, ${allQuotes(f).length} quotes match their sources`);
+    console.log(`✓ ${OUT.slice(ROOT.length + 1)} current; ${terms.length} conflicting terms, ${allQuotes(f).length - unverified.length} quotes match their sources${unverified.length ? `, ${unverified.length} not checked here (built at publish)` : ""}`);
   } else {
     writeFileSync(OUT, page);
     console.log(`wrote ${OUT.slice(ROOT.length + 1)} (${terms.length} conflicting terms)`);
