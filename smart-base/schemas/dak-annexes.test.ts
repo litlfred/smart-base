@@ -22,7 +22,7 @@ describe("dak-annexes", () => {
   });
 
   test("a swimlane map parses; a persona's aliases must be a list", () => {
-    const map = { $schema: "dak-swimlanes/v1", annexOf: "smart-immunizations/library/9789240099456-eng", label: "Web Annex B", section: "dak#generic-business-processes-and-workflows", personas: { "Health worker": ["HW"] }, notPersonas: { Function: "header lane" } };
+    const map = { $schema: "dak-swimlanes/v1", annexOf: "who-iris/library/9789240099456-eng", label: "Web Annex B", section: "dak#generic-business-processes-and-workflows", personas: { "Health worker": ["HW"] }, notPersonas: { Function: "header lane" } };
     expect(DakSwimlaneMapSchema.safeParse(map).success).toBe(true);
     expect(DakSwimlaneMapSchema.safeParse({ ...map, personas: { "Health worker": "HW" } }).success).toBe(false);
   });
