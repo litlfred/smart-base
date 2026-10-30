@@ -1008,6 +1008,1013 @@
           "drafted_at": "2026-10-30"
         }
       ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-054",
+      "source": "sections/page-054.md",
+      "source_hash": "bc3041475eb1827dc6bf92d03fee7b1e756e4df20194a38a2c64f04aec61b425",
+      "narrative": [
+        {
+          "text": "Outlines opportunities for minimizing mHealth programme expenditures in Axis 3 (Financial Health) across two major cost drivers—technology (conducting landscape analyses of existing platforms and weighing fixed versus variable costs of open-source versus proprietary software) and training programmes (exploring cost-effective delivery mechanisms such as blended mobile/electronic and face-to-face learning)—and illustrates a MOTECH Ghana costing exercise comparing voice versus SMS.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-055",
+      "source": "sections/page-055.md",
+      "source_hash": "1ba71840cc08cd4beca36387895ec275666754aca4c36d3d84028494f18f1517",
+      "narrative": [
+        {
+          "text": "Provides Domain 7 (Financial Model) planning guidance on exploring routes to financial sustainability, featuring field lessons from VillageReach's comparison of four financial models for scaling up the Chipatala cha pa Foni hotline in Malawi (selecting a partnership and Airtel zero-rating cost-sharing model with GSMA support) and FHI 360's willingness-to-pay and partner solicitation assessments for transitioning m4RH from grant financing in Kenya and the United Republic of Tanzania, plus an overview of the Vital Wave Consulting/mHealth Alliance resource Sustainable Financing for mHealth (2010).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-056",
+      "source": "sections/page-056.md",
+      "source_hash": "30e829f8818a7a840b0e039278f0a0a725f4aad2a823856d024016cc60182c82",
+      "narrative": [
+        {
+          "text": "Lists five financial management and business model resources for Axis 3: Dimagi CommCare's Total Cost of Ownership Model (2014), Dalberg's Preparing the Next Generation of Community Health Workers: The Power of Technology (2012), Strategyzer's Business Model Canvas (2008), Osterwalder & Pigneur's The Business Model Generation (2009), and Strategyzer's The Value Proposition Design (2014).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-057",
+      "source": "sections/page-057.md",
+      "source_hash": "34dcf0f7cf41136641de827c1fca327298ce4f8ee1295cc81d01ef6738aa89eb",
+      "narrative": [
+        {
+          "text": "Section divider page introducing Axis 4: Technology & Architecture within the six-axis MAPS Toolkit navigation framework.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-058",
+      "source": "sections/page-058.md",
+      "source_hash": "b13f409e42d5b18a1bae36e25a14b26bacc305086770aea8993278a17efa5f70",
+      "narrative": [
+        {
+          "text": "Presents Section A (Thematic overview) for Axis 4: Technology & Architecture, defining the axis across Domain 8 (Data: 8-1 data access and quality, 8-2 data transmission and storage, 8-3 data security), Domain 9 (Interoperability: 9-1 systems integration, 9-2 data standards), and Domain 10 (Adaptability: 10-1 adaptability of technology, 10-2 adaptability of content, 10-3 transferability), detailing Domain 8 requirements for dashboards, automated data quality assurance, server latency, bandwidth, storage capacity, and stress testing, and defining key terms.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-059",
+      "source": "sections/page-059.md",
+      "source_hash": "cbf1e47e195d4b9882e539bb076978e348f9ce6a88058bfb43f62d7fcc8635e2",
+      "narrative": [
+        {
+          "text": "Concludes the Domain 8 overview on hardware/software data security and national patient privacy policies, and introduces Domain 9 (Interoperability), explaining how semantic and technology standards enable integration with national health management information systems (HMIS), outlining the three stages of achieving interoperability, defining interoperability and data standards, and presenting Table 4 on common health data standards (HL7, ICD-10, SNOMED CT, INN, and ISO).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-060",
+      "source": "sections/page-060.md",
+      "source_hash": "40cb51ea7b6d451e077e88ae7c4f11c452e675c8590c9a22be30d7ccf7a4ec1d",
+      "narrative": [
+        {
+          "text": "Presents the thematic overview for Domain 10 (Adaptability) under Axis 4, covering adaptability of technology across user groups and health domains with documentation for local developers, adaptability of content for new sociocultural contexts, languages, and illiterate users (via multimedia or IVR), and transferability across diverse mobile devices and operating systems.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-061",
+      "source": "sections/page-061.md",
+      "source_hash": "4318191bbe156e38597f3641dd130fa86ab5eecec3451311e5fdbc9e01d5e163",
+      "narrative": [
+        {
+          "text": "Presents Section B (Self-assessment questions) for Axis 4, Domain 8: Data, covering SAQ 8-1 on application features for data accessibility and quality (validation rules, real-time dashboards, data extraction/export, 9 points), SAQ 8-2 on data centre capacity for processing, latency, bandwidth, storage configuration, government hosting compliance, and stress testing (18 points), and SAQ 8-3a on server, access, device security, and breach response protocols (12 points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-062",
+      "source": "sections/page-062.md",
+      "source_hash": "8e4f8495ffd8a83f7015a839f1d4af6ec9947109d0f722626e66b7045b19d199",
+      "narrative": [
+        {
+          "text": "Continues Axis 4 self-assessment questions with SAQ 8-3b on adherence to national eHealth security and data privacy standards (6 points) and Domain 9: Interoperability (18 points), comprising SAQ 9-1 on identifying target health information systems (e.g. DHIS2, eLMIS, HRIS), companion applications (e.g. mobile money), and data dictionaries (9 points), and SAQ 9-2 on demonstrated adherence to government HIS data standards (e.g. HL7), clinical terminology standards (ICD-10, SNOMED CT), and other standards such as INN (9 points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-063",
+      "source": "sections/page-063.md",
+      "source_hash": "3e5d0214fa6d2a4ad7ac6fb9641c9b137070feb1074899dd1f00b25665532dc4",
+      "narrative": [
+        {
+          "text": "Presents self-assessment questions for Axis 4, Domain 10: Adaptability, covering SAQ 10-1 on adapting technology for new user groups and health domains with documentation and local developer modifiability (12 points), SAQ 10-2 on adapting content for new languages, illiterate users, and cultural contexts (9 points), and SAQ 10-3 on hardware and operating system transferability across mobile device types and platforms (6 points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-064",
+      "source": "sections/page-064.md",
+      "source_hash": "7c290ccb6ed674929dda728b45bf41504a21e6f86ac833ed9bf49ba7bb104504",
+      "narrative": [
+        {
+          "text": "Provides the Axis 4: Technology & Architecture scorecard for tallying points and calculating domain percentages across Domain 8: Data (SAQs 8-1, 8-2, 8-3a, 8-3b; 45 points), Domain 9: Interoperability (SAQs 9-1, 9-2; 18 points), and Domain 10: Adaptability (SAQs 10-1, 10-2, 10-3; 27 points) to compute the overall Axis 4 percentage score.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-065",
+      "source": "sections/page-065.md",
+      "source_hash": "f7bf0556927cd41c1b82cc923d66efe794fc18df4a02096440a86fb26bb4fd3a",
+      "narrative": [
+        {
+          "text": "Introduces Section C (Planning and guidance) for Axis 4: Technology & Architecture, summarizing five focus areas and presenting Domain 8 (Data) guidance on integrating user feedback through user-centred design to enhance data accessibility—illustrated by JSI's iterative dashboard, resupply calculation, and alert design for the cStock supply chain system—alongside assessing development, maintenance, upgrade, and hosting costs of secondary features.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-066",
+      "source": "sections/page-066.md",
+      "source_hash": "2d9837ca1e0b0dc9601315e9a9a342b7686a38f25a703cd360dee26f13e50c06",
+      "narrative": [
+        {
+          "text": "Continues Axis 4, Domain 8 (Data) planning guidance with field lessons and tips on designing offline data collection and syncing systems for low-connectivity settings (illustrated by OpenSRP in the Dristhi project in India and Medic Mobile), weighing cloud versus in-country server data hosting approaches and building government hosting capacity in line with WHO–ITU guidelines, and developing realistic projections for data transmission, warehousing, and storage capacity (illustrated by JSI's cStock expansion).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-067",
+      "source": "sections/page-067.md",
+      "source_hash": "8bbb66ae729b28cfc9dddc43c3080f0b01ad6733d514b06ff303dd8a6c38e630",
+      "narrative": [
+        {
+          "text": "Provides Domain 8 guidance on establishing user-specific data access privileges, inactivity password prompts, staff confidentiality training, and national data protection compliance, followed by Domain 9 (Interoperability) guidance on planning for interoperability from the outset with national HIS, eLMIS, HRIS, and OpenHIE architectures and registries.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-068",
+      "source": "sections/page-068.md",
+      "source_hash": "439ac5faef4805f1ea86ed5e90beb992feae264250a1baa28d2248e7f4298d87",
+      "narrative": [
+        {
+          "text": "Describes using application programming interfaces (APIs) to facilitate systems interoperability—highlighted by Uganda's mTrac and DHIS2 integration using the OpenHIE Facility Registry Database API to resolve facility naming mismatches—and presents Domain 10 (Adaptability) guidance on fostering a culture of systematic documentation using wikis and code version control repositories such as GitHub.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-069",
+      "source": "sections/page-069.md",
+      "source_hash": "40b01748cff2cd888d99f246343328c803e59ffebc3090767aea200a493156d2",
+      "narrative": [
+        {
+          "text": "Lists four Axis 4 resources on digital development, device selection, privacy law, and interoperability training: Principles for Digital Development, CommCare Help's Choosing a Device Type (2015), TrustLaw and mHealth Alliance's Patient Privacy in a Mobile World (2013), and the DHIS2 Academy workshop series.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-070",
+      "source": "sections/page-070.md",
+      "source_hash": "9b4db1ba336bd26e24488ff916dc0b78fbfb963c20fa9241ea206db507523f00",
+      "narrative": [
+        {
+          "text": "Continues the Axis 4 resource directory with four standards, interoperability, and policy repositories: Open Concept Lab (OCL), mHealth Alliance's The State of Standards and Interoperability for mHealth among Low- and Middle-Income Countries (Payne, 2013), Open Health Information Exchange (OpenHIE), and WHO's Global Observatory for eHealth Directory of eHealth Policies (2015).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-071",
+      "source": "sections/page-071.md",
+      "source_hash": "ecbacf0b2501959e628c5c813f82e24ab0754f185fbe720c537f8383c16d3fd5",
+      "narrative": [
+        {
+          "text": "Section divider page introducing Axis 5: Operations within the six-axis MAPS Toolkit navigation framework.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-072",
+      "source": "sections/page-072.md",
+      "source_hash": "09fce45063663f4dc94d6e84b190fe5857238d380c2e91aab932ed4e957d6474",
+      "narrative": [
+        {
+          "text": "Presents Section A (Thematic overview) for Axis 5: Operations across Domain 11 (Personnel), Domain 12 (Training and support), Domain 13 (Outreach and sensitization), and Domain 14 (Contingency planning), detailing Domain 11 requirements for workforce projection, role redefinition, retention, knowledge management, and four core leadership roles (director/advisor, manager, systems administrator, financial manager), and defining end-users and secondary users.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-073",
+      "source": "sections/page-073.md",
+      "source_hash": "6aea1a94512a4a4981304aa45cb19f792667cb646379f496ebe5ffc056b76fd7",
+      "narrative": [
+        {
+          "text": "Continues the Axis 5 thematic overview across Domain 12 (Training and support: tailored user training, routine field supervision, and tiered local/expert technical support), Domain 13 (Outreach and sensitization: engaging implementing partner staff, government officials, and community leaders/members), and Domain 14 (Contingency planning: procedures for connectivity and power constraints and device retention against loss, theft, breakage, and misuse).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-074",
+      "source": "sections/page-074.md",
+      "source_hash": "e23362a6bb23a4612fa4a8b8550855c8fd59d7c9776cf43c9bf444c6c7f86acc",
+      "narrative": [
+        {
+          "text": "Presents Section B (Self-assessment questions) for Axis 5, Domain 11: Personnel (33 points), comprising SAQ 11-1 on projecting personnel needs, restructuring job descriptions, expanding capacity, defining roles, retaining staff, preserving institutional knowledge, and updating workload/salary policies (21 points), and SAQ 11-2 on appointing a strategic advisor/director, operational manager, systems administrator, and financial manager (12 points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-075",
+      "source": "sections/page-075.md",
+      "source_hash": "b23ddd22bbad5d53c3df3838cbc5afffde508c65ef25cc4e0e11d7a47ef8d16d",
+      "narrative": [
+        {
+          "text": "Presents self-assessment questions for Axis 5, Domain 12: Training and support (45 points), covering SAQ 12-1a on initial training, operational guides/SOPs, refresher training, secondary user training, and training resources for health-worker-focused or client-focused products (15 or 6 points), and SAQ 12-1b on user literacy alignment, training delivery mechanisms, curricula, and competency/certification quality assurance (12 points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-076",
+      "source": "sections/page-076.md",
+      "source_hash": "8ae7f400b30f203a3e8256af32c7c70aa80ce7af4dbd4932b5a7e552ee538d52",
+      "narrative": [
+        {
+          "text": "Continues Axis 5 self-assessment questions with SAQ 12-2 on organizational structures, resources, and problem-resolution training for ongoing end-user supervision (9 points), SAQ 12-3 on local first-line technical support teams, escalation procedures, and peer-champion user support (9 points), and Domain 13: Outreach and sensitization SAQ 13-1 on orienting implementing partners, government representatives, and community leaders (9 points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-077",
+      "source": "sections/page-077.md",
+      "source_hash": "0bcffbcb062c2c8abe6a704ec7e870313e8e742e88149440bb239f039d5c3ec5",
+      "narrative": [
+        {
+          "text": "Completes Axis 5 self-assessment questions with SAQ 13-2 on community mobilization and community feedback events (6 points) and Domain 14: Contingency planning (18 points), comprising SAQ 14-1 on procedures and SOPs for connectivity and electricity constraints such as multi-SIM use and solar chargers (9 points) and SAQ 14-2 on preventing device loss/theft, stakeholder-vetted replacement policies/contracts, and preventing device misuse (9 points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-078",
+      "source": "sections/page-078.md",
+      "source_hash": "0af05e7446b8e45ee659e62e95c73ca06d6e146afebbf75288662c1ce9d25d20",
+      "narrative": [
+        {
+          "text": "Provides the Axis 5: Operations scorecard for tallying points and computing domain percentages across Domain 11: Personnel (33 points), Domain 12: Training and support (45 or 36 points), Domain 13: Outreach and sensitization (15 points), and Domain 14: Contingency planning (18 points) to calculate the overall Axis 5 percentage score.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-079",
+      "source": "sections/page-079.md",
+      "source_hash": "267f2ca58e629a0420d1877b90f9b3bb4c5765f1a3beff72da2b42ab8b8506d5",
+      "narrative": [
+        {
+          "text": "Introduces Section C (Planning and guidance) for Axis 5: Operations, summarizing five operational planning priorities and providing Domain 11 (Personnel) guidance on maintaining programme documentation and abbreviated training packages to mitigate staff turnover, and empowering staff across administrative levels to reduce reliance on external technical support (illustrated by JSI's multi-level cStock training in Malawi).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-080",
+      "source": "sections/page-080.md",
+      "source_hash": "98da4f6dabdb729d5b794dccd118e7904a0fcd00eec7856f84ba8ddccf328ab2",
+      "narrative": [
+        {
+          "text": "Provides Axis 5, Domain 12 (Training and support) guidance on dedicating time to device familiarization, dummy-server demo modes, and technology-literacy grouping, reinforcing classroom instruction with at least four weeks of on-the-job follow-up training and supportive supervision, and Table 5 comparing peer champions (Pathfinder International and D-Tree in the United Republic of Tanzania) and integration with existing health content and certificates (IRD vaccinators in Pakistan).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-081",
+      "source": "sections/page-081.md",
+      "source_hash": "9810dec0d4d19c3bc216a34f08e4b68cf9c56f80d73896806fec57f9f139142b",
+      "narrative": [
+        {
+          "text": "Continues Axis 5 planning guidance with partnering with local university computer science and informatics programmes for first-line technical support (Domain 12), and Domain 13 (Outreach and sensitization) guidance on developing standard operating procedures (SOPs) and checklists to delineate stakeholder roles and allocating continuous resources and engagement strategies for community mobilization with local and religious leaders.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-082",
+      "source": "sections/page-082.md",
+      "source_hash": "bcc57e0794f8745297bb9929a78f47ed34ce709cf41fc2f7e32ee62e9ae64565",
+      "narrative": [
+        {
+          "text": "Provides guidance on limiting mobile device misuse through application blockers and remote device management/tracking software (such as Meraki System Manager), and introduces Domain 14 (Contingency planning) lessons on designing around low-resource technical environments, illustrated by Medic Mobile's field assessment of coverage and power in Katanga Province, Democratic Republic of the Congo, using basic handsets and solar chargers.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-083",
+      "source": "sections/page-083.md",
+      "source_hash": "278cfe4266bb12ef99cb1e4b922887c6071fdfdfa723d8fd461c4b00023d7dba",
+      "narrative": [
+        {
+          "text": "Details Domain 14 strategies for minimizing device loss and theft—highlighting D-Tree and Pathfinder International's group stipend pool accountability model and personal-use allowance among community health workers in Shinyanga, United Republic of Tanzania, and MOTECH Ghana's handset receipt agreement sharing replacement costs (75% negligent nurse, 25% facility staff)—and compares the pros and cons of project-sponsored device procurement versus using end-users' personal phones.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-084",
+      "source": "sections/page-084.md",
+      "source_hash": "5b883a7f6d03e13bf1305acd62a05ba2608a5bdac93cfcebf896fcd08a48ba63",
+      "narrative": [
+        {
+          "text": "Lists three Axis 5 operational and training resources: Grameen Foundation's Mobile Technology for Community Health in Ghana: What it Is and What Grameen Foundation has Learned So Far (2012), mPowering Frontline Health Workers' ORB open-licensed training library, and Dimagi's CommCare Help: Mobile User Survey Templates (2012).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-085",
+      "source": "sections/page-085.md",
+      "source_hash": "ff324d0bcabb5692fd20f24451b5fb46d51f1bed5a60063253fb77234a4b66b3",
+      "narrative": [
+        {
+          "text": "Section divider page introducing Axis 6: Monitoring & Evaluation within the six-axis MAPS Toolkit navigation framework.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-086",
+      "source": "sections/page-086.md",
+      "source_hash": "ab4eb1a55216dfa530e8cf659750228ee04f81447c43d3997c2f8f5b55a98d1c",
+      "narrative": [
+        {
+          "text": "Presents Section A (Thematic overview) for Axis 6: Monitoring & Evaluation across Domain 15 (Process monitoring: 15-1 programme fidelity, 15-2 optimization) and Domain 16 (Evaluation research: 16-1 evaluation systems, 16-2 evidence claims, 16-3 dissemination), detailing Domain 15 requirements for budgeting (e.g. DFID's recommended 10% M&E allocation), Performance Monitoring Plans (PMPs), dashboards/scorecards, user feedback, and course correction, and defining process monitoring, evaluation research, and programme fidelity.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-087",
+      "source": "sections/page-087.md",
+      "source_hash": "3e0a65a4575c24f71b69d9d53efac41291eafa24be270b0f1b61307cf5c101bd",
+      "narrative": [
+        {
+          "text": "Presents the thematic overview for Axis 6, Domain 16 (Evaluation research), covering funding and external evaluators, aligning with stakeholder evidence priorities, developing a theory of change or logical framework linking inputs to impacts, combining system-generated and human-collected data, securing ethical approval, articulating outcomes across three levels (health systems, provider/service delivery, and individual health status) plus cost-effectiveness, defining indicators and comparators, and disseminating findings locally and widely.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-088",
+      "source": "sections/page-088.md",
+      "source_hash": "367ab02a415991f9f5368a0c16cc458301c3af1df104028533913820394a4da5",
+      "narrative": [
+        {
+          "text": "Presents Section B (Self-assessment questions) for Axis 6, Domain 15: Process monitoring (25 points), comprising SAQ 15-1a on earmarking monitoring funds and internal staff (4 points), SAQ 15-1b on developing a Performance Monitoring Plan (PMP), indicators/sources, and measurement instruments (9 points), and SAQ 15-2 on regular data analysis processes, implementation dashboards/scorecards, user feedback mechanisms, and course-correction protocols (12 points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-089",
+      "source": "sections/page-089.md",
+      "source_hash": "564f98d8c2bed23934376d7977b28e4ee8cdc9cd617f6de3e84ea8b559368fdc",
+      "narrative": [
+        {
+          "text": "Presents self-assessment questions for Axis 6, Domain 16: Evaluation research (66 points), covering SAQ 16-1a on evaluation funding, internal staff, and external evaluators (6 points), SAQ 16-1b on articulating stakeholder evidence priorities, developing a theory of change/logical framework, and obtaining ethical approval (9 points), SAQ 16-1c on accessing system-generated and human-collected data streams (6 points), and SAQ 16-2a on articulating health systems, provider/service delivery, client, and population health outcomes (12 points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-090",
+      "source": "sections/page-090.md",
+      "source_hash": "4327f7ad1b1dc1a05d6306750260f76879a26595f1c3147df573cbf9420102f6",
+      "narrative": [
+        {
+          "text": "Completes Axis 6, Domain 16 self-assessment questions with SAQ 16-2b on defining outcome indicators, data sources, quantitative/qualitative methods, and collection frequency/comparators (12 points), SAQ 16-2c on carrying out data collection to support evidence claims across technology functionality, usability, efficacy, effectiveness, and cost-effectiveness/cost-utility (15 points), and SAQ 16-3 on identifying local and wider dissemination opportunities (6 points).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-091",
+      "source": "sections/page-091.md",
+      "source_hash": "bb6f1ff00ff4a680cc178ecd9d70039b606cc50fccb3ca440084812176cccfbf",
+      "narrative": [
+        {
+          "text": "Provides the Axis 6: Monitoring & Evaluation scorecard for tallying points and calculating domain percentages across Domain 15: Process monitoring (SAQs 15-1a, 15-1b, 15-2; 25 points) and Domain 16: Evaluation research (SAQs 16-1a through 16-3; 66 or 60 points) to compute the overall Axis 6 percentage score.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-092",
+      "source": "sections/page-092.md",
+      "source_hash": "fb02e1c1d61ceab9fb9d3376a9d6972a7745c993a31e60695a5dde5893d54102",
+      "narrative": [
+        {
+          "text": "Introduces Section C (Planning and guidance) for Axis 6: Monitoring & Evaluation, outlining five key planning functions and presenting Domain 15 (Process monitoring) guidance on planning early for capturing, formatting, documenting, and structuring system-generated operational data (such as timestamps, GPS coordinates, and worker IDs) across back-end servers and MNO partnerships.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-093",
+      "source": "sections/page-093.md",
+      "source_hash": "2d1d309051e6ff28a6c29ff4fa564930bd9c3860836b171ac108cb18cff7f663",
+      "narrative": [
+        {
+          "text": "Continues Axis 6, Domain 15 planning guidance with field lessons on using process monitoring data for continuous service delivery improvement (VillageReach's Chipatala cha pa Foni hotline in Malawi adjusting message timing and staff allocation), enforcing data quality and integrity against fabricated reporting in pay-for-performance schemes (D-Tree International's timestamp, GPS, and suspicious activity monitoring in the United Republic of Tanzania), and using CommCare Help's Worker Activity and Form Completion Time reports to inform a Performance Monitoring Plan (PMP).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-094",
+      "source": "sections/page-094.md",
+      "source_hash": "d65cabe75827f9e9e470a855c090ec790c73ddb002930684741db15bc9fe8789",
+      "narrative": [
+        {
+          "text": "Provides Axis 6, Domain 16 (Evaluation research) guidance on anticipating ethical review complexities for mHealth data security/privacy, multi-institutional approvals, and telephone informed consent scripts, and illustrates organizing comprehensive M&E systems using the Virginia Tech RE-AIM (Reach, Effectiveness, Adoption, Implementation, Maintenance) framework as applied by KEMRI's Texting to Improve Testing (TextIT) early infant HIV testing trial in Kenya.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-095",
+      "source": "sections/page-095.md",
+      "source_hash": "36e79d1f405f9bbb6de1fa254466dac4990a993f182b33aeaa427c17b677b673",
+      "narrative": [
+        {
+          "text": "Illustrates using logical frameworks to link mHealth inputs, outputs, outcomes, and impacts—featuring an adapted MNCH logical framework for South Africa's MomConnect programme aiming to reduce maternal, stillbirth, and neonatal mortality—and advises aligning evaluation indicators with national health strategies and stakeholder evidence priorities, as demonstrated by KEMRI's TextIT study.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-096",
+      "source": "sections/page-096.md",
+      "source_hash": "aa43ee10a9786bf7667be82a08b5d4a675c68aca6d7af5e5e7bdf302acee2f9a",
+      "narrative": [
+        {
+          "text": "Describes harnessing mobile phones for evaluation data collection alongside service delivery—illustrated by FHI 360's SMS user surveys for m4RH in the United Republic of Tanzania while accounting for selection bias and survey fatigue—and introduces two evaluation resources: Mobile Alliance for Maternal Action's MAMA's Research Agenda (2015) and the World Bank's Impact Evaluation in Practice (Gertler et al., 2011).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-097",
+      "source": "sections/page-097.md",
+      "source_hash": "6cff10e53d7a5712c00d0e9890723b062a84a6b76abf2f1bd129ea186c7089eb",
+      "narrative": [
+        {
+          "text": "Concludes the Axis 6 resource listing with Knowledge4Health's mHealthEvidence.org literature repository and the WHO mHealth Technical Evidence Review Group's Guidelines for Reporting mHealth Evidence: the mHealth Evidence Reporting and Assessment (mERA) checklist (Agarwal et al.).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-098",
+      "source": "sections/page-098.md",
+      "source_hash": "2f94f8ff1485b36d03dabffcdd725a64c7f372655a9af619528059c0d20c30e2",
+      "narrative": [
+        {
+          "text": "Provides the master Summary Scorecard for recording and comparing overall axis and domain percentage scores across all six MAPS Toolkit axes (Groundwork, Partnerships, Financial Health, Technology & Architecture, Operations, and Monitoring & Evaluation) and their 16 domains.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-099",
+      "source": "sections/page-099.md",
+      "source_hash": "aa4a06f68e765c3bbd7998a6f7983c7d7b44a85df327657dd46f60e682e8cc07",
+      "narrative": [
+        {
+          "text": "Lists bibliographic references 1 through 15 cited in The MAPS Toolkit, including K4Health, PMNCH, Institute of Medicine, World Health Assembly Resolution WHA58.28 on eHealth, ExpandNet/WHO scaling-up guides, Labrique et al. (2013), HIMSS interoperability definitions, USAID's Idea to Impact, LiST modelling studies, and the Columbia University mHealth barriers policy white paper.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-100",
+      "source": "sections/page-100.md",
+      "source_hash": "4ba0683c44aa518d5fb85ec175b3c89d446d8ecce08cbf98db2e91f35fb93dfc",
+      "narrative": [
+        {
+          "text": "Concludes the bibliography with references 16 through 27, covering the Bellagio eHealth Evaluation Call to Action, the WHO–ITU National eHealth Strategy Toolkit (2012), complex adaptive systems and African mHealth systematic reviews, WHO mTERG working papers, Mehl & Labrique (2014), Advanced Development for Africa partnership reports, Vital Wave Consulting sustainable financing reports, AIDSTAR-Two, and the World Bank Group M&E handbook.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-101",
+      "source": "sections/page-101.md",
+      "source_hash": "268be8c4bf52bcca4ce1af1de72dadd4c9162a31604b278b08dbca0b68f351b9",
+      "narrative": [
+        {
+          "text": "Presents Annex 1, detailing the multi-year methodology used to develop the MAPS Toolkit (2011–2015), including Innovation Working Group (IWG) grantee workshops, literature and project report reviews, qualitative site visits (May 2014), expert consultations (June–October 2014), self-assessment question (SAQ) review panels (January–March 2015), a multi-agency technical workshop (April 2015), pre-testing in Malawi (May 2015), and six global and in-country learning workshops.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-102",
+      "source": "sections/page-102.md",
+      "source_hash": "25db21873be507d947c699f26ca1b9f877b5dd75e0123fcb62b2aa7df89d6d86",
+      "narrative": [
+        {
+          "text": "Begins Annex 2 (Projects that informed 'Lessons from the field'), profiling five IWG grantee and affiliate mHealth deployments: Dimagi's CommCare for ASHAs in India, D-Tree International's eNUT child malnutrition guideline software in Zanzibar (United Republic of Tanzania), FHI 360's m4RH contraceptive SMS service in Kenya and the United Republic of Tanzania, Grameen Foundation's MOTECH (Mobile Midwife and Nurses Application) in Ghana and Nigeria, and Georgetown University IRH's CycleTel family planning SMS service in India.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-103",
+      "source": "sections/page-103.md",
+      "source_hash": "f48c0041e446c0ec3aa29705adff63d30a563271bcec05225e322b0f94312d41",
+      "narrative": [
+        {
+          "text": "Continues Annex 2 with profiles of seven mHealth projects: Interactive Research and Development's (IRD) Interactive Alerts immunization lottery and RFID tracker in Pakistan, IICD's MAMMA malaria surveillance application in Mali and Senegal, John Snow, Inc.'s (JSI) cStock community supply chain system in Malawi, KEMRI's TextIT PMTCT retention trial in Kenya, Medic Mobile's SafeSim maternal and neonatal platform in Nepal, Rwanda MOH and UNICEF's RapidSMS maternal and newborn tracking system, and Zanzibar MOH's Wired Mothers (mama mitandao) antenatal/postnatal SMS service.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-104",
+      "source": "sections/page-104.md",
+      "source_hash": "eb53102d9e74dd65e5ef8282f2faf5d02e1fbf226abd4400b43451527e437c41",
+      "narrative": [
+        {
+          "text": "Concludes Annex 2 with profiles of four mHealth initiatives: Pathfinder International's CommCare decision-support scale-up under Nigeria's Saving One Million Lives initiative, the Society for Elimination of Rural Poverty's (SERP) mNDCC nutrition monitoring application in Andhra Pradesh, India, UNICEF and the Ugandan MOH's mTrac HMIS reporting and U-Report citizen feedback system in Uganda, and VillageReach's Chipatala cha pa Foni maternal and child health hotline in Malawi.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-105",
+      "source": "sections/page-105.md",
+      "source_hash": "574e4cea207e353d453fcc9541aabc82ac2dda0e4bae5b60311a1f6830d380c9",
+      "narrative": [
+        {
+          "text": "Lists photo credits (Possible, Francis Gonzalez, Roger Wong, Carolyn Florey, and HRP/Mark Leong), Noun Project icon creators, and editing, design, and layout credits (Green Ink, United Kingdom).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241509510-eng/blocks/prose-page-106",
+      "source": "sections/page-106.md",
+      "source_hash": "aea855f3a7216c7a1760dfdbcad383c49e22071954c98039ddbfe4f71087e944",
+      "narrative": [
+        {
+          "text": "Back cover providing contact information for the WHO Department of Reproductive Health and Research in Geneva, Switzerland, and partner branding for the Global mHealth Initiative at Johns Hopkins University.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://96cbad66-f952-4770-a940-d06cbc5da809"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
     }
   ]
 }
