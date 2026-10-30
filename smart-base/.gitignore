@@ -9,3 +9,6 @@
 /document-kinds/dak.coverage.smart-base.json
 /docs/
 # END built at publish
+
+# Sidecars written at publish alongside index.json by ig-index:build (via ig-site:sidecars)
+/fhir-artifact-index/sidecars/
