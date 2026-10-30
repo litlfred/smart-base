@@ -118,6 +118,14 @@
       "status": "candidate"
     },
     {
+      "id": "l4-application-run-local",
+      "prefLabel": "l4-application-run-local",
+      "definition": "Run an L4 application that is already built, on the agent's own machine, against a clean IG build, so a person can try or demonstrate it before anything is hosted. Read before starting a local copy of an L4 app for a review, a demo or a country adaptation check.",
+      "notation": "l4-application-run-local",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/l4-application-run-local.md",
+      "status": "candidate"
+    },
+    {
       "id": "recommendation-candidates",
       "prefLabel": "recommendation-candidates",
       "definition": "Turn one ingested L1 source into L1 3.0 recommendation nodes: list every normative sentence as a candidate, let the agent decide each in a curation file, then refuse a non-verbatim statement or unknown location and write the graph, coverage and proposed exclusions. Step 1 of recommendation-extraction, run once per included source; the `l1-recommendation-candidates` Tool satisfies it.",
