@@ -17,9 +17,6 @@
       "@id": "prov:wasDerivedFrom",
       "@type": "@id"
     },
-    "file": {
-      "@id": "cat-harness:file"
-    },
     "inSubgraph": {
       "@id": "cat-harness:inSubgraph",
       "@type": "@id"
@@ -35,10 +32,6 @@
     },
     "meta": {
       "@id": "cat-harness:blockMeta",
-      "@type": "@json"
-    },
-    "narrative": {
-      "@id": "cat-harness:narrative",
       "@type": "@json"
     },
     "pageEnd": "cat-harness:pageEnd",
