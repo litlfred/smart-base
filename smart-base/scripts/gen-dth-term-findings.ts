@@ -164,9 +164,24 @@ export function builtAtPublishPaths(root = ROOT): Set<string> {
  * match, and not a failure.
  */
 export function quoteUnverifiable(q: Quote, root = ROOT, built = builtAtPublishPaths(root)): string | null {
-  if (!("path" in q) || existsSync(join(root, q.path)) || !built.has(q.path)) return null;
+  if (!("path" in q)) {
+    const home = EXAMPLE_POINTERS[q.libraryId];
+    if (home === undefined || LIBRARY_ROOTS.some((r) => existsSync(join(root, r, q.libraryId, "sections")))) return null;
+    return `${q.libraryId}/${q.sectionId}: an example held by ${home}, not in this checkout — "${q.quote}" not checked here`;
+  }
+  if (existsSync(join(root, q.path)) || !built.has(q.path)) return null;
   return `${q.path}: built at publish and not built in this checkout — "${q.quote}" not checked`;
 }
+
+/**
+ * Sources smart-base cites as EXAMPLES only, whose one copy lives in a folio
+ * that builds on smart-base (owner, 2026-10-30: "one copy in smart-ra", and
+ * "example is a mention"). The quote stays as a pointer; it is checked where
+ * the copy is held, not here, and naming it is a mention, not a dependency.
+ */
+const EXAMPLE_POINTERS: Record<string, string> = {
+  "who-dpi-h-reference-architecture-draft-v1": "litlfred/smart-ra (library/who-dpi-h-reference-architecture-draft-v1)",
+};
 
 /**
  * The library that holds a libraryId's sections. smart-base's own library comes first;
@@ -312,7 +327,7 @@ if (import.meta.main) {
       console.error(`✗ ${OUT.slice(ROOT.length + 1)} is stale — run: bun run cat smart-base:dth-terms`);
       process.exit(1);
     }
-    console.log(`✓ ${OUT.slice(ROOT.length + 1)} current; ${terms.length} conflicting terms, ${allQuotes(f).length - unverified.length} quotes match their sources${unverified.length ? `, ${unverified.length} not checked here (built at publish)` : ""}`);
+    console.log(`✓ ${OUT.slice(ROOT.length + 1)} current; ${terms.length} conflicting terms, ${allQuotes(f).length - unverified.length} quotes match their sources${unverified.length ? `, ${unverified.length} not checked here (built at publish, or an example held elsewhere)` : ""}`);
   } else {
     writeFileSync(OUT, page);
     console.log(`wrote ${OUT.slice(ROOT.length + 1)} (${terms.length} conflicting terms)`);
