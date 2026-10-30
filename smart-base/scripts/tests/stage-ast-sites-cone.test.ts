@@ -9,7 +9,7 @@
 import { describe, expect, it } from "bun:test";
 import { join, resolve } from "node:path";
 
-import { siteFileFor } from "../../../cat-harness/schemas/cat-harness.js";
+import { siteFileFor } from "../../../cat-harness/schemas/kg/cat-harness.js";
 
 import { siteFilter } from "../../platform/index.js";
 import { AST_SITE_WRITERS } from "../../platform/index.js";

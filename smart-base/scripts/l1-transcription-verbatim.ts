@@ -27,7 +27,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { parse as parseYaml } from "yaml";
 
-import { narrativeFor } from "../../cat-harness/schemas/narrative.js";
+import { narrativeFor } from "../../cat-harness/schemas/content/narrative.js";
 
 export function norm(s: string): string {
   let t = s.normalize("NFKC");
