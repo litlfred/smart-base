@@ -21,7 +21,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 
-import { RUN_CONTEXT_SCHEMA_TAG, RunContextSchema, runContextRef, type RunContext, type RunContextRef } from "../../cat-harness/schemas/run-context.ts";
+import { RUN_CONTEXT_SCHEMA_TAG, RunContextSchema, runContextRef, type RunContext, type RunContextRef } from "../../cat-harness/schemas/sdlc/run-context.ts";
 
 export const RUN_CONTEXT_FILENAME = "run-context.json";
 

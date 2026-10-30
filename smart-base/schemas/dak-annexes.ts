@@ -19,7 +19,7 @@
  * @module smart-base/schemas/dak-annexes
  */
 import { z } from "zod";
-import { nodeKind } from "../../cat-harness/schemas/node-kind.ts";
+import { nodeKind } from "../../cat-harness/schemas/kg/node-kind.ts";
 
 export const DAK_DATA_DICTIONARY_SCHEMA = "dak-data-dictionary/v1";
 
