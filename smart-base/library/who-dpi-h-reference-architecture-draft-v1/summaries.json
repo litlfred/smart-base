@@ -1,0 +1,823 @@
+{
+  "$schema": "folio-block-summaries/v1",
+  "entry": "who-dpi-h-reference-architecture-draft-v1",
+  "summaries": [
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-000",
+      "source": "sections/sec-000-111-what-is-a-reference-architecture-and-why-doe.md",
+      "source_hash": "29178300576aebe9964531702dabda0d154e94daf91fc1d696ef848f2afe52a8",
+      "narrative": [
+        {
+          "text": "Section 1.1.1 defines a reference architecture as a technology-neutral blueprint capturing the common building blocks, relationships, and design principles of a technical environment, drawing on NIST SP 500-292 and TOGAF 9.2. Explains how a shared vocabulary and reusable building blocks align decisions across programmes, institutions, and levels of care, enabling countries to translate health policy goals into interoperable, governable, and context-adaptable digital infrastructure.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-001",
+      "source": "sections/sec-001-112-understanding-digital-public-infrastructure.md",
+      "source_hash": "652d258b4718508048ecb4e02831fb818f94a1d8357b46e98011d4492ca75df1",
+      "narrative": [
+        {
+          "text": "Section 1.1.2 traces the evolution from the 2020 WHO–ITU Digital Health Platform ('infostructure') concept to cross-sectoral Digital Public Infrastructure (DPI) as defined by the World Bank and the 2023 G20 Digital Economy Ministers' consensus, and derives the formal definition of Health Digital Public Infrastructure (DPI-H) as publicly governed, open-standards-based digital resources (systems and specifications) built as a shared means for fulfilling multiple health agency functions. Highlights two defining dimensions: shared reusable infrastructure across health actors and purposeful domain-specific extension of foundational DPI rather than vertical, programme-siloed digitalisation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-002",
+      "source": "sections/sec-002-113-building-on-existing-foundations.md",
+      "source_hash": "172dea1ec60536d0a4873dc73e0a2d0a59f7e51f3bdd39551df959af5444b831",
+      "narrative": [
+        {
+          "text": "Section 1.1.3 situates the DPI-H reference architecture as an extension of the 2020 WHO–ITU Digital Health Platform Handbook, OpenHIE Architecture Specification, and TOGAF. Illustrates cross-sectoral foundational DPI reuse with India's CoWIN vaccination platform built on Aadhaar and Estonia's national electronic health record running on X-Road and national digital ID, notes that the guidance articulates explicit health-sector requirements for both foundational DPIs and shared health DPIs, and introduces Box 1.1 listing the seven priority health sector goals alongside their taglines.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-003",
+      "source": "sections/sec-003-114-who-can-benefit-from-this-guidance.md",
+      "source_hash": "c159b65886c2c6855edc8cc8ba5fb31b205baa31166e2380834c8b1666e3ee0a",
+      "narrative": [
+        {
+          "text": "Section 1.1.4 details how six primary stakeholder groups benefit from the DPI-H reference architecture: (1) Health Ministries and Programme Managers aligning health infrastructure with national DPI across disease areas and care levels; (2) DPI Authorities understanding health-sector demand and domain requirements; (3) Enterprise Architects and Technical Teams applying TOGAF methodology, formal patterns, and standards-based blueprints; (4) Development Partners and Donors coordinating investments and embedding DPI into health financing and public financial management; (5) Procurement Teams using common specifications and conformance requirements for vendor-neutral evaluation; and (6) Policy Makers translating policy intent on governance, data protection, consent, country ownership, and financing into coherent technical direction.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-004",
+      "source": "sections/sec-004-12-why-health-needs-more-than-foundational-dpi.md",
+      "source_hash": "7681f641c34669decb9a8988407483de924b10b06a788ff22e373ef5f3e6defc",
+      "narrative": [
+        {
+          "text": "Section 1.2 explains why the health sector requires capabilities beyond general-purpose foundational DPIs (identity, payments, and data exchange): foundational DPIs intentionally leave sector-specific logic to consuming sectors, and in many low- and middle-income countries foundational DPIs remain nascent or absent while care delivery, disease surveillance, health financing, and supply chain management must operate immediately without creating permanent parallel silos.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-005",
+      "source": "sections/sec-005-121-identity-dpi-and-identification-in-healthcar.md",
+      "source_hash": "7f1085fe0b2c1e7006b41dc09b4794e8800f962acef856a965647f3e3bafea55",
+      "narrative": [
+        {
+          "text": "Section 1.2.1 and Box 1.2 examine why foundational identity DPI is necessary but insufficient on its own for healthcare, identifying six health-specific requirements: (1) universal coverage across newborns prior to civil registration, refugees, undocumented migrants, and marginalised groups to preserve care continuity and surveillance denominators; (2) purpose context such as scheme enrolment and service entitlements; (3) granular health privacy and consent management; (4) probabilistic clinical matching, duplicate detection, and family linkage for undocumented patients; (5) coexistence of multiple context-specific health identifiers; and (6) cross-border recognition. Positions the Client Registry as the health sector's identity DPI bridging foundational identity with health-specific needs.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-006",
+      "source": "sections/sec-006-122-data-exchange-dpi-and-interoperability-in-th.md",
+      "source_hash": "39bcac699cbaae2d0d38e4c5479c51c3d6bcf693114de696e29bd1f1e8e2d196",
+      "narrative": [
+        {
+          "text": "Section 1.2.2 and Box 1.3 contrast content-neutral foundational data exchange DPI—which acts like a postal service transporting sealed envelopes securely between registered parties—with two additional health-sector interoperability requirements: (1) structural, semantic, and message-format interoperability using health standards such as HL7 FHIR so clinical meaning is preserved across heterogeneous systems, and (2) cross-border and multi-jurisdiction health data exchange for migrants, travellers, regional surveillance, and emergency response using standards such as the International Patient Summary (IPS).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-007",
+      "source": "sections/sec-007-123-payments-dpi-and-financial-transactions-in-t.md",
+      "source_hash": "9a5331db37dc89575ec9e95457f1603298adf2d8d194a65db96220ef500a85d5",
+      "narrative": [
+        {
+          "text": "Section 1.2.3 and Box 1.4 analyse the relationship between foundational payments DPI (instant payment rails, mobile money, G2P transfers) and health financing's three core functions of revenue raising, pooling, and purchasing across public financial management (PFM) and multi-payer schemes. Explains that payment rails execute disbursements only after health-specific determinations—claim adjudication against benefit packages, multi-payer coordination, provider/facility credential verification, clinical event verification, and capitation or performance calculations—which are supported in the reference architecture by the Benefits Package Registry together with client, product, and provider registries.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-008",
+      "source": "sections/sec-008-13-value-of-dpi-h.md",
+      "source_hash": "57baaf8e5909ed0534217172c871b49f9202fd6eb8b795d058c3a6ec2fec3f86",
+      "narrative": [
+        {
+          "text": "Section 1.3 introduces the value proposition of DPI-H as an investment philosophy that shifts from procuring discrete technology products to building shared, reusable capabilities serving the entire health system simultaneously, grounded in proven population-scale country implementations.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-009",
+      "source": "sections/sec-009-131-the-cost-of-fragmentation.md",
+      "source_hash": "dc9db3ce68f5d09ebfba0edec1fd7cd65339d918e46c4ac9dda1a7c9c250c6e1",
+      "narrative": [
+        {
+          "text": "Section 1.3.1 analyses the technical, economic, and political-economy costs of vertical, programme-driven digital health fragmentation across HIV, immunisation, maternal health, TB, and malaria silos. Explains that point-to-point integration costs grow quadratically as programmes are added, and—citing a 2026 Wilton Park report on leveraging DPI for health transformation—shows how programme-specific career incentives, discrete project procurement cycles, and vertical donor accountability perpetuate silos, framing DPI-H adoption as a deliberate political and institutional commitment to long-term system coherence.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-010",
+      "source": "sections/sec-010-132-what-dpi-h-makes-possible.md",
+      "source_hash": "f42c2f15f0e8b4af785866be6a86333e1cb3cadbca6d9ec2c3a733cc2a78f552",
+      "narrative": [
+        {
+          "text": "Section 1.3.2 explains what DPI-H makes possible by replacing vertical product procurement and vendor lock-in with open-standards, modular capability investment that lowers development and maintenance burdens and enables public and private local innovators to build new services on a governed foundational layer.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-011",
+      "source": "sections/sec-011-133-value-across-stakeholders.md",
+      "source_hash": "9ade6f09535a32024700834dda076e801d7aaa49d7a56e8ffd53512923d4b8d9",
+      "narrative": [
+        {
+          "text": "Section 1.3.3 summarises how shared DPI-H distributes value across ten stakeholder groups: patients (continuity of clinical history, identity, and entitlements), health workers (reduced duplicate data entry and richer point-of-care context), health programme managers (cross-programme analytics and planning), Ministries of Health (ecosystem visibility and governance), Ministries of Finance (expenditure transparency, fraud detection, and timely provider payment evidence), development partners and donors (investments outlasting single funding cycles), researchers (consistent consented datasets), the commercial sector (value-added innovation on shared foundations), DPI Authorities (extended utility of foundational DPI), and the health system overall, while enabling rather than replacing point-of-service applications.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-012",
+      "source": "sections/sec-012-14-dpi-h-principles.md",
+      "source_hash": "a83a67dab5fbbb48eafeba99f30465f46bde00a71f1ef45937c2edcfeab82023",
+      "narrative": [
+        {
+          "text": "Section 1.4 defines six core principles governing how DPI-H is conceived, built, governed, and sustained: Interoperability (data and system exchange extensible without disruption), Reusability (shared functionality and data across programmes), Open Standards and Specifications (SDO-governed open APIs and standards avoiding proprietary lock-in), Public Governance (accountable public-interest stewardship and oversight regardless of whether components are operated by public, private, or NGO actors), Security and Privacy (zero-trust security, privacy as a right, and service resilience by design), and Autonomy and Sovereignty (national ownership and control free from external jurisdictional dependency).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-013",
+      "source": "sections/sec-013-15-the-seven-priority-health-sector-goals.md",
+      "source_hash": "fa2121af971053ab0d098ea06b144b61be92c0c833bf989357057f3aa0e90fcb",
+      "narrative": [
+        {
+          "text": "Section 1.5 introduces the seven priority health sector goals as mutually reinforcing, outcome-oriented ambitions (mapped to WHO's six health system building blocks in an annex) anchored on the principle that data about a person, facility, product, or transaction should be 'captured once, governed well, and used many times.' Explains how capturing well-governed data at the point of care eliminates duplicate manual register compilation and programme reporting burdens while compounding value across workforce management, care continuity, supply chain logistics, health financing verification, and outbreak/climate surveillance.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-014",
+      "source": "sections/sec-014-151-the-health-sector-goals.md",
+      "source_hash": "fb436cbcf32cc4df37d29d273f3f8a24b37d3d9efc0ff37fa4fc6c7278750048",
+      "narrative": [
+        {
+          "text": "Section 1.5.1 and the opening of Chapter 2 articulate each of the seven priority health sector goals—(1) building trusted data foundations (supporting clinical care, CRVS, mortality, public health, and domestic AI), (2) supporting a capable, well-distributed health workforce via an authoritative registry linked to licensing and payroll, (3) ensuring quality and continuity of care via lifelong health records and computable decision support, (4) establishing trusted, consent-controlled personal health records, (5) optimising supply chain management with standardised product catalogues and real-time visibility, (6) advancing efficient and equitable health financing, and (7) strengthening climate and epidemic resilience—stressing ongoing implementation evaluation, and then introduce Chapter 2's adaptive TOGAF-based DPI-H Reference Architecture Framework.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-015",
+      "source": "sections/sec-015-21-the-reference-architecture-scope.md",
+      "source_hash": "19da9f6e9867ffe57474737791378e3477d8c416272f9d45509f6ba6103972e8",
+      "narrative": [
+        {
+          "text": "Section 2.1 defines the national health-system scope of the DPI-H reference architecture: it specifies shared capabilities and DPI-H components across two layers while explicitly excluding point-of-service and operational programme applications (such as EMRs, order-management platforms, warehouse tools, forecasting tools, and disease-specific systems) that consume shared infrastructure rather than constitute it.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-016",
+      "source": "sections/sec-016-211-metadata-registries-and-foundational-compone.md",
+      "source_hash": "71ee45a3c0db9a9865f7313dd3372cf60dca6479d46261f3542eb9346e4a04d6",
+      "narrative": [
+        {
+          "text": "Section 2.1.1 heading transition line ('44') preceding the detailed exposition of the two DPI-H architectural layers (metadata registries/foundational components and the business services layer).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-017",
+      "source": "sections/sec-017-212-business-services-layer.md",
+      "source_hash": "a5985e369544102d247ee5a4e1c28cd71bd8ed80b63f57085f486950b67b0d6d",
+      "narrative": [
+        {
+          "text": "Sections 2.1.1 and 2.1.2 define the two layers of DPI-H components and cross-cutting properties. Layer 1 (Metadata registries and foundational components) comprises the Client, Health Facility, Health Workforce, and Product registries alongside the Lifelong Health Record, Terminology Services, and Logical Information Model Repository (LIMR), tested by cross-domain reusability, stable interfaces, and domain neutrality. Layer 2 (Business services layer) groups capabilities across clinical care, public health, supply chain, and health financing realised through shared components—Computable Decision Support Engine, Benefits Package Registry, Supplier Registry, Health Management Information Systems, and Public Health Surveillance Platforms—while treating interoperability and governance as cross-cutting properties of the entire architecture.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-018",
+      "source": "sections/sec-018-213-relationship-to-foundational-dpi.md",
+      "source_hash": "3833ecd6a734d0c76dc273710ba8a551388adb9af5e96e1b31f82f6301d6ff5b",
+      "narrative": [
+        {
+          "text": "Section 2.1.3 explains that the DPI-H architecture integrates with and builds upon foundational DPI (digital identity, payments, general data exchange) where accessible without duplicating it, while ensuring health systems can operate effectively where foundational DPI is absent and sequence investments progressively starting from an essential foundation (REDDHI).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-019",
+      "source": "sections/sec-019-221-what-reddhi-is-and-its-foundational-core.md",
+      "source_hash": "e74fa0641027e1cc821d2f0aabf634990fb28242dc0b35959b236d20c924780f",
+      "narrative": [
+        {
+          "text": "Section 2.2.1 opening describes the typical country starting point of inherited vertical disease-programme systems, donor-funded tools, and unreconciled identifier lists whose repeated data capture burdens health workers and degrades data quality, trust, and security.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-020",
+      "source": "sections/sec-020-22-resilient-essential-data-and-digital-health-i.md",
+      "source_hash": "0038d682915e44e9fece9b73d2ed86304116676fe48345f1d2896cc5ce5b9d06",
+      "narrative": [
+        {
+          "text": "Section 2.2 and Table 2.2 define Resilient Essential Data and Digital Health Infrastructure (REDDHI) as an evolving condition of self-sustaining national digital health maturity rather than a fixed compliance checklist or procurement bundle. Explains the interdependence of the core registries (Client, Health Facility, Health Workforce, Product) in establishing record attribution and provenance for the Lifelong Health Record, and tabulates eight foundational capabilities alongside the DPI-H and foundational components that deliver them: unique identification, authentication/access management, longitudinal health records, standards-based data exchange, consistent terminology meaning, consistent data structure (LIMR as a maturing enabler), data governance/quality/audit, and consent/authorisation/privacy.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-021",
+      "source": "sections/sec-021-222-the-enabling-conditions-for-reddhi.md",
+      "source_hash": "ddee4ad48070d8d3d25608b277f1af3a4ac903004888796e15a03eefa5622ee4",
+      "narrative": [
+        {
+          "text": "Section 2.2.2 and Section 2.3 (Principles I–IX opening) set out the enabling conditions for REDDHI via the 'full-STAC' approach—Open Standards (HL7 FHIR, ICD, LOINC, SNOMED CT/GPS), Open Technologies, Open Architectures, and Open Content (WHO SMART Guidelines)—illustrated by Figure 2.2, and then define the first nine DPI-H Reference Architecture Design Principles translating DPI-H commitments into structural choices: (I) Governance and data-quality stewardship with contributor feedback loops, (II) Open Standards with progressive readiness pathways, (III) Interoperability including decentralised and federated models without single-mediator bottlenecks, (IV) financial and technical whole-of-life Sustainability, (V) loose-coupled Modularity, (VI) Local Capacity and operational transparency, (VII) Equity and Inclusion through context scaling and graceful degradation, (VIII) Data Ownership, Access, and Control (standards-based consent such as IHE profiles and FHIR Consent plus public practical control over data), and (IX) Trust and Security.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-022",
+      "source": "sections/sec-022-24-methodology-mapping-health-goals-to-dpi-h.md",
+      "source_hash": "fb765f081f642b4c4d21ac6620a0216b5f92e9575ebe036c0c7644d8eb537bbf",
+      "narrative": [
+        {
+          "text": "Completes Design Principle IX (Trust and Security—verified participant identity and authorisation, cryptographic provenance, containment of component compromise, and graduated assurance leveraging national PKI/verifiable-credential infrastructure) and Principle X (Ethics—preventing misuse, governing secondary use for analytics/research/AI with de-identification, group-harm protection, and audit transparency, summarised in Figure 2.3), and then presents Section 2.4 on the TOGAF-based methodology mapping the seven priority health goals both top-down (goals → stakeholder value → capabilities → services → components) and bottom-up to demonstrate how core DPI-H registries recur across goals while enabling point-of-service and functional applications.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-023",
+      "source": "sections/sec-023-241-how-each-health-goal-is-articulated.md",
+      "source_hash": "1ff25a62677d598efc05fed8208527f586fb38dc42e2fd7344af4d9750c605ae",
+      "narrative": [
+        {
+          "text": "Section 2.4.1 defines the uniform four-part structure used to articulate each of the seven priority health goals (the accountable health outcome, technology-neutral system abilities, required capabilities mapped to DPI-H components and foundational-DPI dependencies, and cross-goal component reuse) and introduces 'Advance Efficient and Equitable Health Financing' as the worked example with full mappings in Appendix E.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-024",
+      "source": "sections/sec-024-242-worked-example-advance-efficient-and-equitab.md",
+      "source_hash": "64ae47adaaf903ab1493a4eb6d5b6430d58be4679c776489f673e94076c3db58",
+      "narrative": [
+        {
+          "text": "Section 2.4.2 (Table 2.4) presents the worked example mapping 'Advance Efficient and Equitable Health Financing' to DPI-H components—showing that beneficiary identification, provider empanelment/credentialing, accurate pricing/reimbursement, fund movement, and data exchange reuse existing components (Client, Facility, Workforce, and Product registries, Terminology Services, foundational payments DPI, and shared exchange standards) while introducing only one new DPI-H component, the Benefits Package Registry, consumed by external claims and PFM applications—and opens Chapter 3 outlining Sections 3.1–3.6 of the DPI-H Reference Architecture.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-025",
+      "source": "sections/sec-025-31-the-architecture-description-approach.md",
+      "source_hash": "c926cdce06cecfe1053ef69d95d03cafbe9ce0dc706c026eb9de4162525f8dc5",
+      "narrative": [
+        {
+          "text": "Sections 3.1 and 3.2 (with Tables 3.1, 3.2, and 3.3 and Figure 3.1) explain the architecture description approach using The Open Group's ArchiMate 3.2 modelling language (authored in Archi and exchangeable via the ArchiMate Model Exchange Format) and TOGAF 10 viewpoints. Defines the nine ArchiMate element types used (Stakeholder, Goal, Outcome, Value, Capability, Application component, Application service, Data object, Product) and the typed relationships connecting them (Realisation, Composition, Serving, Access, Assignment, Triggering), and explains how different audiences read goal/capability, realisation, and motivation views as functional roles rather than one-to-one software procurement instructions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-026",
+      "source": "sections/sec-026-33-the-reference-architecture-in-practice.md",
+      "source_hash": "6798cc221d2d4dac43b988875c8b464a70a9bc780fc267159e6339ec08475d66",
+      "narrative": [
+        {
+          "text": "Section 3.3 (with Figures 3.2–3.5) illustrates the DPI-H reference architecture in practice through the integrated layered view and worked goal walkthroughs for 'Establish Trusted Personal Health Records' and 'Ensure Quality and Continuity of Care' (such as comprehensive needs assessment and shared care planning). Shows how sub-goals trace through outcomes and capabilities to shared DPI-H components (Client Registry, Lifelong Health Record, Terminology Service, Computable Decision Support Engine), functional applications/digital health wallets, and cross-cutting enablers (interoperability and governance).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-027",
+      "source": "sections/sec-027-34-governance-of-digital-health-architectures-an.md",
+      "source_hash": "ee1d5ae2c3e43efd1adc1a345256119bc17e08ec289e9b4c6393129353a9e9d0",
+      "narrative": [
+        {
+          "text": "Section 3.4 heading fragment ('DPI-H') introducing the sub-chapter on Governance of Digital Health Architectures and DPI-H.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-028",
+      "source": "sections/sec-028-341-purpose-and-framing.md",
+      "source_hash": "4480ab628e6a9ec0be0842bfb60286fa6a462bfa911b98a0436d9744ee8d1325",
+      "narrative": [
+        {
+          "text": "Section 3.4.1 frames governance as the institutional arrangements distributing, exercising, and accounting for decision authority across shared DPI-H infrastructure to preserve trust, financial sustainability, equity, and semantic consistency over time, distinguishing strategic governance from day-to-day operational governance and emphasising that institutional coordination and data harmonisation must precede technology deployment.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-029",
+      "source": "sections/sec-029-342-governance-principles.md",
+      "source_hash": "75410d1c6fd2fa817fed2c7b4a33f52e126f22e23c5bf76186bcd2444488a738",
+      "narrative": [
+        {
+          "text": "Completes Section 3.4.1—noting that governance structures are country- or region-specific policy choices distinct from whether canonical registries are implemented centrally, federated, or as a hybrid—and opens Section 3.4.2 with the first governance principle, Subsidiarity (placing decision authority at the lowest effective level and separating operational execution from strategic deliberation).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-030",
+      "source": "sections/sec-030-343-strategic-governance.md",
+      "source_hash": "82e5f9d565cf917b292eecf7313e869ff3681c389f21081576b22de5a7415620",
+      "narrative": [
+        {
+          "text": "Completes Section 3.4.2's governance principles—Inclusive representation of underserved communities, Financial sustainability as a strategic mandate, Prevention of resource overuse (drawing on commons governance), Transparency and accountability, and Adaptability and learning—and presents Section 3.4.3 on Strategic Governance responsibilities and the three substantive safeguards for the shared resource: securing financial continuity via multi-stakeholder funding models and reserves, operationalising equity in governance bodies across civil society, subnational regions, gender, and language, and managing demand on shared capacity via usage tiers and monitoring.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-031",
+      "source": "sections/sec-031-344-operational-governance.md",
+      "source_hash": "7ea13f5cc9a973c9ef657996ff3838687fb36d68a8074f851badcee52caef893",
+      "narrative": [
+        {
+          "text": "Section 3.4.4 details Operational Governance responsibilities—distributed Master Data Management across authoritative custodians, release management, change management, service levels and incident management, interoperability and semantic governance conformance, field evaluation of systems in use, and explicit, time-bound escalation pathways to strategic governance when scope, equity, capacity, security, or funding thresholds are crossed.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-032",
+      "source": "sections/sec-032-345-semantic-governance-infrastructure.md",
+      "source_hash": "112bbb4b8b4affe7dd15bcdaf5bdef03089af928ba8dfb36887a1f15c55de23c",
+      "narrative": [
+        {
+          "text": "Section 3.4.5 (with Figures 3.4.1–3.4.3) introduces the Semantic Governance Infrastructure (SGI) as a cross-cutting institutional and procedural capability—distinct from runtime terminology servers—that coordinates content lifecycle management across all DPI-H metadata registries (Client, Facility, Workforce, Product, Terminology Service, and LIMR). Distinguishes the governance, runtime, and content/application layers; defines five SGI capability categories (Intake, Authoring and publication, Monitoring of both content quality and field adoption, Distribution, and Consumption); outlines an incremental maturity spectrum adapted from OpenHIE; and explains how SGI mediates top-down global-to-national harmonisation and bottom-up local feedback drawing on frameworks such as HL7 UTG, SNOMED National Release Centres, and the OpenHIE National Health Data Dictionary (NHDD).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-033",
+      "source": "sections/sec-033-346-regional-governance-considerations.md",
+      "source_hash": "0cbf899437c5517256ef23a16f1d11891e524a23574359bf9ff4b6453e6ee513",
+      "narrative": [
+        {
+          "text": "Section 3.4.6 examines regional and multi-country DPI-H governance considerations across three dimensions: resolving jurisdictional complexity and national data sovereignty across legal frameworks, establishing a regional strategic governance body with ministerial representation and dedicated financial sustainability for shared regional components, and documenting a layered governance model with explicit handoff protocols between regional and national authorities.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-034",
+      "source": "sections/sec-034-347-governance-maturity-considerations.md",
+      "source_hash": "676772d77678d3c65c62b5fc84fc5e6fb959c231848a9077d32841013845d418",
+      "narrative": [
+        {
+          "text": "Section 3.4.7 addresses governance maturity considerations across diverse country starting points, illustrating how a lower-capacity setting may initially combine strategic and senior operational authority within a single ministerial steering committee with a roadmap to separate them as institutional capacity grows, while embedding governance maturity assessment into DPI-H readiness evaluation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-035",
+      "source": "sections/sec-035-35-dpi-h-application-components.md",
+      "source_hash": "564a20128304c5222eda22c113025c5386167f106dbfcbf7434a91aa499ee0ae",
+      "narrative": [
+        {
+          "text": "Section 3.5 introduces the sub-chapter on DPI-H Application Components—the shared, reusable digital resources established once and drawn upon across programmes and points of care—previewing their distinguishing criteria, standard description structure, two-layer architectural organisation, and full specifications in Appendix C.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-036",
+      "source": "sections/sec-036-351-what-distinguishes-a-dpi-h-application-compo.md",
+      "source_hash": "6a3afaa1c3a2d3a69be0d50307e3f57a6aa275391ab00ee1836350ae6717f3a8",
+      "narrative": [
+        {
+          "text": "Section 3.5.1 and Box 3.1 define the eight criteria that distinguish a DPI-H Application Component from functional or point-of-care applications: cross-programme reusability, stable standards-based interfaces, foundational rather than programme-specific function, public governance, full lifecycle governance, non-transactional national data orchestration, functional stability, and technology neutrality. Clarifies that point-of-care clinical systems, cross-cutting interoperability, and foundational cross-sectoral DPI (such as CRVS or national geospatial registries) sit outside DPI-H components, and distinguishes policy-level canonical registry authority from centralised, federated, or hybrid implementation choices.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-037",
+      "source": "sections/sec-037-352-how-each-component-is-described.md",
+      "source_hash": "a4adebf82083c4f0e93c547ff6174c804d76634f219cd6519d6f27260fdbfddc",
+      "narrative": [
+        {
+          "text": "Section 3.5.2 outlines the nine-part structure used to describe every DPI-H component in Appendix C: architectural placement, definition and description, relevance to health outcomes, core attributes and capabilities, connections to other DPI-H and foundational DPI components, functional requirements with SHALL/SHOULD/MAY normative status, data requirements, and governance considerations.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-038",
+      "source": "sections/sec-038-353-how-the-components-are-organised.md",
+      "source_hash": "b8f782a8b8a4634719caf96c533c7dc92f9ef8bc1bef1001d1114beca205fde1",
+      "narrative": [
+        {
+          "text": "Section 3.5.3 introduces the two-layer organisation of DPI-H application components and presents the caption for Figure 3.5 showing the layered view across functional applications, DPI-H registries and shared services, cross-cutting enablers, foundational DPI, and technology.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-039",
+      "source": "sections/sec-039-3531-the-foundational-shared-data-layer.md",
+      "source_hash": "eb8b5c336683f7aa4a348170cfb3902fb58295cba6db27b5a9e3ab6f29963aa9",
+      "narrative": [
+        {
+          "text": "Section 3.5.3.1 and Table 3.5 describe the foundational shared data layer—comprising the REDDHI core registries (Client Registry, Health Facility Registry, Health Workforce Registry, Product Registry) and the person-centred Lifelong Health Record, together with the Terminology Service (TS) and Logical Information Model Repository (LIMR)—and provide a detailed comparative matrix contrasting the LIMR (syntax/structure, cardinalities, design-time logical models, FHIR StructureDefinitions/openEHR archetypes, preventing semantic fragmentation) against the TS (semantics/coded meaning, design- and runtime code validation/expansion/translation via FHIR CodeSystem/ValueSet/ConceptMap and SNOMED CT/ICD-11/LOINC, preventing semantic drift).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-040",
+      "source": "sections/sec-040-3532-the-business-services-layer.md",
+      "source_hash": "5a1bd96da5e4eb5af3644249939035c2e3033b94e212bf1b4644c9d1f772a661",
+      "narrative": [
+        {
+          "text": "Section 3.5.3.2 describes the five shared components of the DPI-H business services layer—Computable Decision Support Engine, Public Health Surveillance Platform, Health Management Information System (HMIS), Supplier Registry, and Benefits Package Registry—that build on the foundational shared data layer to support clinical care, public health, supply chain, and health financing across programmes.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-041",
+      "source": "sections/sec-041-36-interoperability-architecture-within-dpi-h.md",
+      "source_hash": "7065fd40760c240a6b476fbae5c56d53390327b67c5332c2dfc0d0ed57bdefd1",
+      "narrative": [
+        {
+          "text": "Section 3.6 introduces the Interoperability Architecture within DPI-H, framing interoperability as a cross-cutting capability of the reference architecture rather than a single procured component or layer, and distinguishing four complementary dimensions required for safe clinical and operational data exchange: technical transport, structural consistency, semantic preservation, and organisational/governance arrangements (legal basis, consent, and data-sharing agreements).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-front-matter",
+      "source": "sections/sec-front-matter.md",
+      "source_hash": "0afcfe12912930afc3243d4be04692627d76b962f08e31fcf57ff12170547081",
+      "narrative": [
+        {
+          "text": "Front matter, table of contents, acronyms, glossary, executive summary, audience-specific reading paths matrix, and Section 1.1 opening for the WHO–ITU Draft v1.0 Reference Architecture and Guidance for Digital Public Infrastructure for the Health Sector (DPI-H). Introduces DPI-H as shared, standards-based digital resources serving multiple health agency functions; defines Resilient Essential Data and Digital Health Infrastructure (REDDHI); outlines the TOGAF and ArchiMate enterprise-architecture approach anchored on seven priority health goals; explains how the guidance extends the WHO–ITU Digital Health Platform Handbook, OpenHIE Architecture, and WHO Digital Implementation Investment Guide (DIIG); and provides a section-by-section relevance matrix for policy makers, DPI authorities, enterprise architects, development partners, and procurement teams.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://afa0a2d3-a985-46dc-841c-8509b6344c57"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    }
+  ]
+}
