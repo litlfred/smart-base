@@ -28,7 +28,7 @@ export default toolFactory((t) =>
         { name: "url", schema: t("Url"), description: "The form, on 127.0.0.1. It stores nothing; each check is one inline `$apply` round.", render: { as: "url", reason: "a reader opens the running app; the scheme is checked before it reaches an href" } },
       ],
     },
-    satisfies: ["l4-application-build"],
+    satisfies: ["l4-application-run-local"],
     selection: {
       when: "Trying or demonstrating the immunizations L4 application against a clean IG build, before anything is hosted, on the machine of whoever will look at it.",
       limits:
