@@ -3162,6 +3162,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie d'un mur ou d'un tableau recouvert de notes adhésives manuscrites jaunes et bleues, disposées en grille et utilisées pour un exercice de remue-méninges ou de planification ; le texte individuel des notes est trop petit pour être lu et n'a pas pu être déterminé à partir de l'image extraite.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de una pared o pizarra cubierta de notas adhesivas manuscritas amarillas y azules, dispuestas en cuadrícula y utilizadas para un ejercicio de lluvia de ideas o planificación; el texto individual de las notas es demasiado pequeño para leerse y no pudo determinarse a partir de la imagen extraída.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية لجدار أو لوح مغطى بملصقات ملاحظات مكتوبة بخط اليد باللونين الأصفر والأزرق، مرتبة في شبكة ومستخدمة في تمرين عصف ذهني أو تخطيط؛ نص كل ملاحظة صغير جداً بحيث يتعذر قراءته ولم يمكن تحديده من الصورة المستخرجة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография стены или доски, покрытой рукописными жёлтыми и синими стикерами, расположенными в виде сетки и используемыми для мозгового штурма или упражнения по планированию; текст отдельных заметок слишком мелок для чтения и не может быть определён по извлечённому изображению.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "一张贴满黄色和蓝色手写便签的墙面或看板照片，便签呈网格状排列，用于头脑风暴或规划练习；单张便签上的文字过小而无法辨认，无法从提取的图像中确定其具体内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3186,6 +3246,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie d'un homme assis à un bureau travaillant sur des piles de documents papier et de classeurs, avec un téléphone portable et un tableau d'affichage visibles à l'arrière-plan.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de un hombre sentado en un escritorio trabajando con pilas de documentos en papel y archivadores, con un teléfono móvil y un tablón de anuncios visibles al fondo.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية لرجل جالس إلى مكتب يعمل وسط أكداس من الأوراق والملفات، مع ظهور هاتف محمول ولوحة إعلانات في الخلفية.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография мужчины, сидящего за письменным столом и работающего со стопками бумажных документов и папок-скоросшивателей; на заднем плане видны мобильный телефон и доска объявлений.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "一名男子坐在办公桌前处理成堆纸质文件和文件夹的照片，背景中可以看到一部手机和一块公告板。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3210,6 +3330,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture du guide OMS/UNICEF « A practical guide for engaging with mobile network operators in mHealth for reproductive, maternal, newborn and child health », présentant les logos de l'OMS et de l'UNICEF, le titre et un motif d'arrière-plan composé de points reliés évoquant un réseau mobile, ainsi qu'une photographie d'une main tenant un téléphone portable en bas à droite.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta de la guía de la OMS y el UNICEF «A practical guide for engaging with mobile network operators in mHealth for reproductive, maternal, newborn and child health», en la que figuran los logotipos de la OMS y el UNICEF, el título y un patrón de fondo de puntos conectados que evoca una red móvil, junto con la fotografía de una mano que sostiene un teléfono móvil en la esquina inferior derecha.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف دليل منظمة الصحة العالمية واليونيسف المعنون «A practical guide for engaging with mobile network operators in mHealth for reproductive, maternal, newborn and child health»، ويظهر عليه شعارا منظمة الصحة العالمية واليونيسف والعنوان ونمط خلفي من النقاط المتصلة يوحي بشبكة للهواتف المحمولة، مع صورة فوتوغرافية ليد تمسك بهاتف محمول في الزاوية السفلية اليمنى.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка руководства ВОЗ/ЮНИСЕФ «A practical guide for engaging with mobile network operators in mHealth for reproductive, maternal, newborn and child health», содержащая логотипы ВОЗ и ЮНИСЕФ, заголовок и фоновый узор из соединённых точек, символизирующий мобильную сеть, а также фотографию руки с мобильным телефоном в правом нижнем углу.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "世卫组织/联合国儿童基金会指南《A practical guide for engaging with mobile network operators in mHealth for reproductive, maternal, newborn and child health》的封面，展示有世卫组织和联合国儿童基金会标志、标题、象征移动网络的连接圆点背景图案，以及右下角一只手握着手机的照片。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3234,6 +3414,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture ou première page de la note sur la gestion des contrats intitulée « Fifty Tips for Your Statement of Work », présentée sous forme de fiche de référence sur deux colonnes avec une bannière « Back to Basics » ; le corps du texte est trop petit pour être lu et n'a pas pu être déterminé à partir de l'image extraite.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta o primera página del documento breve sobre gestión de contratos «Fifty Tips for Your Statement of Work», maquetado como hoja de referencia a dos columnas con un encabezado «Back to Basics»; el cuerpo del texto es demasiado pequeño para leerse y no pudo determinarse a partir de la imagen extraída.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف أو الصفحة الأولى من موجز إدارة العقود المعنون «Fifty Tips for Your Statement of Work»، المصمم كورقة مرجعية من عمودين مع شريط عنوان «Back to Basics»؛ نص المتن صغير جداً بحيث يتعذر قراءته ولم يمكن تحديده من الصورة المستخرجة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка или первая страница краткого пособия по управлению контрактами «Fifty Tips for Your Statement of Work», свёрстанная в виде двухколоночного справочного листа с баннером «Back to Basics»; основной текст слишком мелок для чтения и не может быть определён по извлечённому изображению.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "合同管理简报《Fifty Tips for Your Statement of Work》的封面/首页，排版为双栏参考页，带有“Back to Basics”横幅；正文文字过小而无法辨认，无法从提取的图像中确定其具体内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3258,6 +3498,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture d'un rapport d'analyse de situation intitulé « ICT4SOML: Leveraging ICTs to Save the Lives of One Million Women and Children in Nigeria », daté du 11 février 2015, présentant les logos de la République fédérale du Nigéria, du ministère fédéral de la Santé, de la mHealth Alliance, d'Intel et de la GSMA.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta de un informe de análisis de situación titulado «ICT4SOML: Leveraging ICTs to Save the Lives of One Million Women and Children in Nigeria», fechado el 11 de febrero de 2015, que muestra los logotipos de la República Federal de Nigeria, el Ministerio Federal de Salud, mHealth Alliance, Intel y GSMA.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف تقرير تحليل الوضع المعنون «ICT4SOML: Leveraging ICTs to Save the Lives of One Million Women and Children in Nigeria»، المؤرخ 11 شباط/فبراير 2015، ويظهر عليه شعارات جمهورية نيجيريا الاتحادية، ووزارة الصحة الاتحادية، وتحالف الصحة المحمولة (mHealth Alliance)، وشركة إنتل (Intel)، والجمعية الدولية لشبكات الهاتف المحمول (GSMA).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка отчёта с ситуационным анализом под названием «ICT4SOML: Leveraging ICTs to Save the Lives of One Million Women and Children in Nigeria» от 11 февраля 2015 года с логотипами Федеративной Республики Нигерия, Федерального министерства здравоохранения, mHealth Alliance, Intel и GSMA.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "日期为2015年2月11日的现状分析报告《ICT4SOML: Leveraging ICTs to Save the Lives of One Million Women and Children in Nigeria》的封面，展示有尼日利亚联邦共和国、联邦卫生部、mHealth Alliance、英特尔（Intel）和全球移动通信系统协会（GSMA）的标志。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3282,6 +3582,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture de la publication GSMA mWomen intitulée « Mutual Value, Mutual Gain: Best practices from successful social sector partnerships with mobile network operators », montrant une photographie de plusieurs femmes souriantes ainsi que le logo GSMA mWomen.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta de la publicación de GSMA mWomen «Mutual Value, Mutual Gain: Best practices from successful social sector partnerships with mobile network operators», en la que aparece una fotografía de varias mujeres sonrientes y el logotipo de GSMA mWomen.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف مطبوعة برنامج mWomen التابع للجمعية الدولية لشبكات الهاتف المحمول (GSMA) المعنونة «Mutual Value, Mutual Gain: Best practices from successful social sector partnerships with mobile network operators»، ويظهر عليه صورة فوتوغرافية لعدة نساء مبتسمات وشعار GSMA mWomen.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка публикации GSMA mWomen «Mutual Value, Mutual Gain: Best practices from successful social sector partnerships with mobile network operators» с фотографией нескольких улыбающихся женщин и логотипом GSMA mWomen.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "GSMA mWomen出版物《Mutual Value, Mutual Gain: Best practices from successful social sector partnerships with mobile network operators》的封面，展示有几位微笑女性的照片以及GSMA mWomen标志。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3306,6 +3666,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture de l'ouvrage « Scaling Up Mobile Health: Developing mHealth Partnerships for Scale » (Advanced Development for Africa), illustrée d'un arbre stylisé dont les branches sont des lignes colorées reliant des icônes circulaires numérotées, symbolisant un réseau de partenariats.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta de «Scaling Up Mobile Health: Developing mHealth Partnerships for Scale» (Advanced Development for Africa), ilustrada con un árbol estilizado cuyas ramas son líneas de colores que conectan iconos circulares numerados, simbolizando una red de alianzas.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف مطبوعة «Scaling Up Mobile Health: Developing mHealth Partnerships for Scale» (الصادرة عن منظمة Advanced Development for Africa)، ويتضمن رسماً توضيحياً لشجرة منمقة تتكون فروعها من خطوط ملونة تربط بين أيقونات دائرية مرقمة، مما يرمز إلى شبكة من الشراكات.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка публикации «Scaling Up Mobile Health: Developing mHealth Partnerships for Scale» (Advanced Development for Africa), проиллюстрированная стилизованным деревом, ветви которого представляют собой цветные линии, соединяющие пронумерованные круглые значки и символизирующие сеть партнёрств.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "《Scaling Up Mobile Health: Developing mHealth Partnerships for Scale》（Advanced Development for Africa）的封面，配有风格化的树形插图，其树枝由连接编号圆形图标的彩色线条组成，象征合作伙伴关系网络。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3330,6 +3750,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie d'un kiosque d'argent mobile ou de recharge téléphonique : une femme au premier plan tend de l'argent liquide par-dessus un comptoir en bois à un guichetier assis visible à travers une fenêtre de service en bois ; un petit appareil ressemblant à un terminal d'argent mobile, un téléphone portable basique et un registre papier sont posés sur le comptoir entre eux. Illustre la section AXE 3 Santé financière.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de un quiosco de dinero móvil o recarga telefónica: una mujer en primer plano extiende la mano sobre un mostrador de madera para entregar dinero en efectivo a un empleado sentado, visible a través de una ventanilla de madera; entre ambos, sobre el mostrador, hay un pequeño dispositivo similar a un terminal de dinero móvil, un teléfono móvil básico y un libro de registro en papel. Ilustra la sección EJE 3 Salud financiera.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية لكشك خدمات الأموال عبر الهاتف المحمول أو شحن الرصيد: تمتد يد امرأة في المقدمة عبر طاولة خشبية لتسليم نقود ورقية إلى موظف جالس يظهر عبر نافذة خدمة خشبية؛ ويوجد على الطاولة بينهما جهاز صغير يشبه طرفية الدفع عبر الهاتف المحمول، وهاتف محمول أساسي، وسجل ورقي. توضح الصورة قسم المحور 3: الصحة المالية.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография киоска мобильных денег или пополнения баланса телефона: женщина на переднем плане протягивает наличные через деревянный прилавок сидящему сотруднику, видимому в деревянном окне обслуживания; между ними на прилавке лежат небольшое устройство, напоминающее терминал мобильных платежей, простой мобильный телефон и бумажный журнал учёта. Иллюстрирует раздел «ОСЬ 3. Финансовое благополучие».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "移动支付或手机话费充值亭的照片：前景中的一名女性越过木制柜台，将现金递给透过木制服务窗口可见的坐着的工作人员；他们之间的柜台上放着一台类似移动支付终端的小型设备、一部基础型手机和一本纸质账簿。用于说明“轴线3：财务健康”部分。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3354,6 +3834,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Bande verticale étroite composée de nuances de couleurs changeantes (tons bleus, orange et verts) sans contenu lisible, sur la page d'aperçu thématique de l'AXE 3 Santé financière ; semble constituer un séparateur décoratif de barre latérale plutôt qu'un graphique informatif. Aucun contenu au-delà des bandes de couleur n'a pu être déterminé à partir de l'image extraite.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Franja vertical estrecha de bandas de colores cambiantes (tonos azules, naranjas y verdes) sin contenido legible, situada en la página de sinopsis temática del EJE 3 Salud financiera; parece ser un separador decorativo de barra lateral más que un gráfico informativo. No pudo determinarse ningún contenido más allá de las bandas de color a partir de la imagen extraída.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "شريط عمودي ضيق من نطاقات لونية متدرجة (درجات الأزرق والبرتقالي والأخضر) دون محتوى مقروء، في صفحة النظرة العامة الموضوعية للمحور 3: الصحة المالية؛ ويبدو أنه فاصل زخرفي للشريط الجانبي وليس رسماً بيانياً معلوماتياً. تعذّر تحديد أي محتوى يتجاوز النطاقات اللونية من الصورة المستخرجة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Узкая вертикальная полоса с переходящими цветовыми полосами (синие, оранжевые и зелёные тона) без читаемого содержимого на странице тематического обзора раздела «ОСЬ 3. Финансовое благополучие»; по-видимому, служит декоративным разделителем боковой панели, а не информативным графическим элементом. Какое-либо содержимое, помимо цветовых полос, по извлечённому изображению определить не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "“轴线3：财务健康”主题概览页面上的一条由渐变色带（蓝、橙、绿色调）组成的窄竖条，无可辨认文字内容；看似装饰性的侧边栏分隔条而非信息图表。除色带外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3378,6 +3918,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie de deux mains tenant un téléphone intelligent affichant l'écran d'une application mobile en langue vietnamienne avec un menu à puces, au-dessus d'un registre papier de patients ouvert et réglé en colonnes (comprenant des en-têtes pour le nom, la date de naissance, les vaccinations telles que DTC/VGB-HB et les remarques).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de dos manos que sostienen un teléfono inteligente cuya pantalla muestra una aplicación móvil en vietnamita con un menú con viñetas, sobre un libro de registro de pacientes en papel abierto y pautado en columnas (con encabezados para nombre, fecha de nacimiento, vacunas como DPT/VGB-HB y observaciones).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية ليدين تمسكان بهاتف ذكي يعرض شاشة تطبيق للهاتف المحمول باللغة الفيتنامية تتضمن قائمة ذات نقاط، فوق سجل مرضى ورقي مفتوح ومسطر إلى أعمدة (تشمل عناوين للاسم، وتاريخ الميلاد، واللقاحات مثل الثلاثي البكتيري والتهاب الكبد البائي والمستدمية النزلية DPT/VGB-HB، والملاحظات).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография двух рук, держащих смартфон с экраном мобильного приложения на вьетнамском языке и маркированным меню над открытым бумажным журналом регистрации пациентов, разлинованным на столбцы (включая заголовки для имени, даты рождения, прививок, таких как АКДС/ВГB-ХИБ [DPT/VGB-HB], и примечаний).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "双手握着智能手机的照片，手机屏幕显示带有项目符号菜单的越南语移动应用程序界面，下方是一本翻开的纸质患者登记册，登记册划分为多列（包含姓名、出生日期、DPT/VGB-HB等疫苗接种及备注等表头）。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3402,6 +4002,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Tableau financier intitulé « COST MODEL » comportant des colonnes pour le type de données (Data Type), par utilisateur/centre de santé communautaire (CHC) par mois, par utilisateur/CHC par an, et pour l'ensemble des utilisateurs/CHC par mois, par an et pour le projet pilote. Les lignes couvrent des catégories telles que les SMS entrants, les SMS sortants (avec des sous-rubriques pour les rappels et les réponses aux requêtes des patients et du personnel infirmier), l'utilisation GPRS en ko (formulaires de consultation des patients, échanges d'erreurs, requêtes du personnel infirmier) et les minutes vocales entrantes et sortantes (messages patient-prestataire, inscriptions au centre d'appels, assistance au personnel infirmier et aux utilisateurs). Une ligne « TOTAL COST » mise en évidence indique des montants par mois, par an et pour le pilote de 3 522 / 42 262 / 44 998. Une section inférieure intitulée « Assumptions » donne le coût moyen par SMS (entrant et sortant) en GHS et en USD.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Tabla financiera titulada «COST MODEL» con columnas para el tipo de datos (Data Type), por usuario/centro de salud comunitario (CHC) al mes, por usuario/CHC al año, y todos los usuarios/CHC al mes, al año y en el proyecto piloto. Las filas abarcan categorías como SMS entrantes, SMS salientes (con subapartados de recordatorios y respuestas a consultas de pacientes y personal de enfermería), uso de GPRS en KB (formularios de encuentros con pacientes, intercambios de errores, consultas de enfermería) y minutos de voz entrantes y salientes (mensajes entre pacientes y proveedores, registros en el centro de llamadas, asistencia a enfermería y usuarios). Una fila resaltada de costo total («TOTAL COST») muestra cifras mensuales, anuales y del piloto de 3522 / 42 262 / 44 998. En la parte inferior, una sección de supuestos («Assumptions») indica el costo medio por SMS (entrante y saliente) en GHS y USD.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "جدول مالي بعنوان «COST MODEL» (نموذج التكاليف) يتضمن أعمدة لنوع البيانات (Data Type)، والتكلفة لكل مستخدم/مركز صحة مجتمعية (CHC) شهرياً، ولكل مستخدم/مركز صحة مجتمعية سنوياً، ولجميع المستخدمين/مراكز الصحة المجتمعية شهرياً وسنوياً وللمشروع التجريبي. وتغطي الصفوف فئات مثل الرسائل النصية القصيرة الواردة، والرسائل النصية القصيرة الصادرة (مع بنود فرعية للتذكيرات والردود على استفسارات المرضى والممرضين)، واستخدام حزم البيانات الراديوية العامة (GPRS) بالكيلوبايت (نماذج زيارات المرضى، وتبادل رسائل الخطأ، واستفسارات الممرضين)، ودقائق المكالمات الصوتية الواردة والصادرة (الرسائل بين المرضى ومقدمي الخدمة، والتسجيل في مركز الاتصال، ودعم الممرضين والمستخدمين). ويعرض صف إجمالي التكلفة المظلل («TOTAL COST») أرقاماً شهرية وسنوية وللمشروع التجريبي تبلغ 3,522 / 42,262 / 44,998. كما يوضح قسم الافتراضات («Assumptions») في الأسفل متوسط تكلفة الرسالة النصية القصيرة (الواردة والصادرة) بالسيدي الغاني (GHS) والدولار الأمريكي (USD).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Финансовая таблица модели затрат («COST MODEL») со столбцами: тип данных (Data Type), на одного пользователя/общинный медицинский центр (CHC) в месяц, на одного пользователя/CHC в год, а также на всех пользователей/CHC в месяц, в год и за пилотный проект. Строки охватывают такие категории, как входящие SMS, исходящие SMS (с подпунктами для напоминаний и ответов на запросы пациентов и медсестёр), трафик GPRS в КБ (формы приёма пациентов, обмен сообщениями об ошибках, запросы медсестёр) и входящие и исходящие минуты голосовой связи (сообщения между пациентами и поставщиками услуг, регистрации через колл-центр, поддержка медсестёр и пользователей). Выделенная строка общей стоимости («TOTAL COST») содержит показатели за месяц, за год и за пилотный проект: 3522 / 42 262 / 44 998. В нижнем разделе допущений («Assumptions») приведена средняя стоимость одного SMS (входящего и исходящего) в ганских седи (GHS) и долларах США (USD).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "财务“成本模型”（COST MODEL）表格，列包括数据类型（Data Type）、每用户/社区卫生中心（CHC）每月成本、每用户/CHC每年成本，以及所有用户/CHC每月、每年和试点期的总成本。行涵盖的类别包括：接收短信、发送短信（含面向患者和护士的提醒与查询回复子项）、以KB计的GPRS流量（患者就诊表单、错误交互、护士查询）以及呼入和呼出语音分钟数（患医消息、呼叫中心登记、护士和用户支持）。高亮显示的“总成本”（TOTAL COST）行给出的每月/每年/试点金额分别为 3,522 / 42,262 / 44,998。底部的“假设条件”（Assumptions）部分列出了以加纳塞地（GHS）和美元（USD）计的每条短信（接收和发送）平均成本。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3426,6 +4086,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture du rapport « Sustainable Financing for Mobile Health (mHealth): Options and opportunities for mHealth financial models in low and middle-income countries », publié par la mHealth Alliance et Vital Wave Consulting, illustrée d'un collage de petites photographies de personnes utilisant des appareils mobiles.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta del informe «Sustainable Financing for Mobile Health (mHealth): Options and opportunities for mHealth financial models in low and middle-income countries», publicado por mHealth Alliance y Vital Wave Consulting, ilustrada con un collage de pequeñas fotografías de personas que utilizan dispositivos móviles.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف التقرير المعنون «Sustainable Financing for Mobile Health (mHealth): Options and opportunities for mHealth financial models in low and middle-income countries»، الصادر عن تحالف الصحة المحمولة (mHealth Alliance) ومؤسسة Vital Wave Consulting، ويتضمن لوحة مجمعة من صور فوتوغرافية صغيرة لأشخاص يستخدمون أجهزة محمولة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка отчёта «Sustainable Financing for Mobile Health (mHealth): Options and opportunities for mHealth financial models in low and middle-income countries», опубликованного mHealth Alliance и Vital Wave Consulting, проиллюстрированная коллажем из небольших фотографий людей, пользующихся мобильными устройствами.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "由 mHealth Alliance 和 Vital Wave Consulting 发布的报告《Sustainable Financing for Mobile Health (mHealth): Options and opportunities for mHealth financial models in low and middle-income countries》的封面，配有由多张人们使用移动设备的小照片组成的拼贴图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3450,6 +4170,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Outil de calcul des coûts sur tableur portant la marque CommCare, montrant une section « Scale of Operations » avec des lignes pour le nombre d'agents de santé communautaires (ASC) utilisant CommCare et le nombre de personnes jointes par ASC sur cinq ans, une section « Additional staff and office needed for CommCare » indiquant les nombres d'unités, ainsi que le début d'un tableau « Detailed projected costs » précisant les types d'unités, le nombre d'unités et le coût unitaire des journées de formation annuelles par rôle (ASC, chef de projet et personnel de terrain).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Herramienta de cálculo de costos en hoja de cálculo con la marca CommCare que muestra una sección de escala de operaciones («Scale of Operations») con filas para el número de agentes de salud comunitarios (CHW) que utilizan CommCare y el número de personas alcanzadas por cada agente a lo largo de cinco años, una sección de personal y oficinas adicionales necesarios para CommCare («Additional staff and office needed for CommCare») con recuentos de unidades, y el comienzo de una tabla de costos proyectados detallados («Detailed projected costs») con tipos de unidad, número de unidades y costo por unidad para los días de capacitación anual desglosados por funciones de agente de salud comunitario, director de proyecto y personal de terreno.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "أداة تقدير التكاليف في جدول بيانات تحمل علامة CommCare، وتعرض قسماً لنطاق العمليات («Scale of Operations») يتضمن صفوفاً لعدد العاملين الصحيين المجتمعيين الذين يستخدمون CommCare وعدد الأشخاص الذين يصل إليهم كل عامل صحي مجتمعي على مدى خمس سنوات، وقسماً للموظفين والمكاتب الإضافية اللازمة لنظام CommCare («Additional staff and office needed for CommCare») مع أعداد الوحدات، وبداية جدول للتكاليف المتوقعة المفصلة («Detailed projected costs») يبيّن أنواع الوحدات وأعدادها وتكلفة الوحدة لأيام التدريب السنوية حسب أدوار العاملين الصحيين المجتمعيين ومديري المشاريع والموظفين الميدانيين.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Табличный инструмент расчёта затрат под брендом CommCare, содержащий раздел масштаба операций («Scale of Operations») со строками для численности общинных медицинских работников (CHW), использующих CommCare, и числа охваченных лиц на одного CHW за пять лет, раздел дополнительного персонала и офисов, необходимых для CommCare («Additional staff and office needed for CommCare»), с указанием количества единиц, а также начало таблицы детализированных прогнозируемых затрат («Detailed projected costs») с типами единиц, их количеством и стоимостью за единицу для ежегодных учебных дней в разбивке по ролям CHW, руководителя проекта и полевого персонала.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "带有 CommCare 标识的电子表格成本测算工具，展示了“运营规模”（Scale of Operations）部分（包含五年内使用 CommCare 的社区卫生工作者 [CHW] 人数以及每名 CHW 覆盖的人数各行）、标有单位数量的“CommCare 所需额外人员和办公场所”（Additional staff and office needed for CommCare）部分，以及“详细预计成本”（Detailed projected costs）表格的开头部分（按 CHW、项目经理和现场工作人员角色列出年度培训天数的单位类型、单位数量和单位成本）。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3474,6 +4254,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture du rapport « Preparing the Next Generation of Community Health Workers: The Power of Technology for Training » (Dalberg Global Development Advisors, mai 2012), montrant un motif de petites icônes en forme de maison au-dessus du titre et une rangée de logos d'organisations partenaires, dont Dalberg, au bas de la page.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta del informe «Preparing the Next Generation of Community Health Workers: The Power of Technology for Training» (Dalberg Global Development Advisors, mayo de 2012), que muestra un patrón de pequeños iconos con forma de casa sobre el título y una fila de logotipos de organizaciones colaboradoras, incluido el de Dalberg, en la parte inferior.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف التقرير المعنون «Preparing the Next Generation of Community Health Workers: The Power of Technology for Training» (الصادر عن مؤسسة Dalberg Global Development Advisors، أيار/مايو 2012)، ويظهر عليه نمط من أيقونات صغيرة على شكل منازل أعلى العنوان وصف من شعارات المنظمات الداعمة، بما فيها Dalberg، في الأسفل.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка отчёта «Preparing the Next Generation of Community Health Workers: The Power of Technology for Training» (Dalberg Global Development Advisors, май 2012 года) с узором из небольших значков в форме домиков над заголовком и рядом логотипов поддерживающих организаций, включая Dalberg, в нижней части.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "报告《Preparing the Next Generation of Community Health Workers: The Power of Technology for Training》（Dalberg Global Development Advisors，2012年5月）的封面，标题上方展示有小房屋形状的图标图案，底部排列着包括 Dalberg 在内的支持机构标志。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3498,6 +4338,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Modèle vierge de matrice d'affaires (Business Model Canvas) : une grille de neuf cases intitulées Partenaires clés (Key Partners), Activités clés (Key Activities), Propositions de valeur (Value Propositions), Relations clients (Customer Relationships), Segments de clientèle (Customer Segments), Ressources clés (Key Resources), Canaux (Channels), Structure de coûts (Cost Structure) et Sources de revenus (Revenue Streams), chacune accompagnée d'une petite icône, avec des champs vierges en haut pour le nom du concepteur et la date.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Plantilla en blanco del lienzo de modelo de negocio (Business Model Canvas): una cuadrícula de nueve recuadros rotulados para Socios clave (Key Partners), Actividades clave (Key Activities), Propuestas de valor (Value Propositions), Relaciones con los clientes (Customer Relationships), Segmentos de clientes (Customer Segments), Recursos clave (Key Resources), Canales (Channels), Estructura de costos (Cost Structure) y Fuentes de ingresos (Revenue Streams), cada uno marcado con un pequeño icono, y campos en blanco en la parte superior para el nombre del diseñador y la fecha.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "قالب فارغ لمخطط نموذج الأعمال (Business Model Canvas): شبكة مكونة من تسعة مربعات معنونة للشركاء الرئيسيين (Key Partners)، والأنشطة الرئيسية (Key Activities)، وعروض القيمة (Value Propositions)، وعلاقات العملاء (Customer Relationships)، وشرائح العملاء (Customer Segments)، والموارد الرئيسية (Key Resources)، والقنوات (Channels)، وهيكل التكاليف (Cost Structure)، ومصادر الإيرادات (Revenue Streams)، يحمل كل منها أيقونة صغيرة، مع حقول فارغة في الأعلى لاسم المصمم والتاريخ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Пустой шаблон канвы бизнес-модели (Business Model Canvas): сетка из девяти подписанных блоков — Ключевые партнёры (Key Partners), Ключевые виды деятельности (Key Activities), Ценностные предложения (Value Propositions), Взаимоотношения с клиентами (Customer Relationships), Клиентские сегменты (Customer Segments), Ключевые ресурсы (Key Resources), Каналы сбыта (Channels), Структура издержек (Cost Structure) и Потоки поступления доходов (Revenue Streams), — каждый из которых снабжён небольшим значком, с пустыми полями вверху для имени разработчика и даты.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "空白商业模式画布（Business Model Canvas）模板：由九个带标签方框组成的网格，分别为重要伙伴（Key Partners）、关键业务（Key Activities）、价值主张（Value Propositions）、客户关系（Customer Relationships）、客户细分（Customer Segments）、核心资源（Key Resources）、渠道通路（Channels）、成本结构（Cost Structure）和收入来源（Revenue Streams），每个方框均标有一个小图标，顶部留有填写设计者姓名和日期的空白栏。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3522,6 +4422,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture de l'ouvrage « Business Model Generation », présentant le titre en grands caractères sur un fond sombre texturé, accompagné de petites mentions de crédit en dessous.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta del libro «Business Model Generation», que muestra el título en caracteres grandes sobre un fondo oscuro texturizado con un pequeño texto de créditos debajo.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف كتاب «Business Model Generation»، ويظهر عليه العنوان بخط كبير على خلفية داكنة ذات ملمس بارز مع نص صغير لبيانات التأليف في الأسفل.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка книги «Business Model Generation» с набранным крупным шрифтом заголовком на текстурированном тёмном фоне и мелким текстом выходных сведений об авторах внизу.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "《Business Model Generation》一书的封面，在带有纹理的深色背景上以大号字体展示书名，下方配有小号字体的署名信息。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3546,6 +4506,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture de l'ouvrage « Value Proposition Design », présentant le titre à côté d'une illustration colorée de blocs géométriques empilés et de petits personnages accompagnés d'une icône de cible.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta del libro «Value Proposition Design», en la que aparece el título junto a una ilustración en color de bloques geométricos apilados y pequeñas figuras con el icono de una diana.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف كتاب «Value Proposition Design»، ويظهر عليه العنوان بجانب رسم توضيحي ملون لكتل هندسية متراكمة وأشكال أشخاص صغيرة مع أيقونة هدف (نقطة تصويب).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка книги «Value Proposition Design», на которой заголовок расположен рядом с цветной иллюстрацией из сложенных геометрических блоков и маленьких фигурок со значком мишени.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "《Value Proposition Design》一书的封面，书名旁配有一幅由堆叠几何体块、小人物和靶心图标组成的彩色插图。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3570,6 +4590,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie de deux mains tenant un téléphone intelligent affichant l'écran d'une application d'évaluation ou de saisie de données en langue swahilie comportant une question (« Chunguza mpauko wa kiganja cha mkono ») et une option sélectionnable (« Kawaida ») ; un second téléphone portable basique muni d'un câble de chargement vert est visible sur la table à l'arrière-plan. Illustre la section AXE 4 Technologie et architecture.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de dos manos que sostienen un teléfono inteligente cuya pantalla muestra una aplicación de evaluación o entrada de datos en suajili con una pregunta («Chunguza mpauko wa kiganja cha mkono») y una opción seleccionable («Kawaida»); en segundo plano, sobre la mesa, se distingue un segundo teléfono móvil básico con un cable de carga verde. Ilustra la sección EJE 4 Tecnología y arquitectura.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية ليدين تمسكان بهاتف ذكي يعرض شاشة تطبيق لإدخال البيانات أو التقييم باللغة السواحيلية تتضمن سؤالاً («Chunguza mpauko wa kiganja cha mkono») وخياراً قابلاً للتحديد («Kawaida»)؛ ويظهر على الطاولة في الخلفية هاتف محمول أساسي ثانٍ متصل بكابل شحن أخضر. توضح الصورة قسم المحور 4: التكنولوجيا والبنية المعمارية.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография двух рук, держащих смартфон с экраном приложения для ввода данных или оценки состояния на языке суахили, содержащим вопрос («Chunguza mpauko wa kiganja cha mkono») и выбираемый вариант ответа («Kawaida»); на столе на заднем плане виден второй простой мобильный телефон с зелёным зарядным кабелем. Иллюстрирует раздел «ОСЬ 4. Технологии и архитектура».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "双手握着智能手机的照片，手机屏幕显示斯瓦希里语数据录入或评估应用程序界面，上面有一个问题（“Chunguza mpauko wa kiganja cha mkono”）和一个可选项（“Kawaida”）；背景桌面上可以看到另一部连接着绿色充电线的基础型手机。用于说明“轴线4：技术与架构”部分。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3594,6 +4674,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie prise à l'intérieur d'un domicile montrant à gauche un nourrisson endormi dans un hamac vert garni de coussins roses, tandis que deux hommes sont assis en tailleur sur une natte tressée, l'un manipulant un téléphone portable pendant que l'autre regarde ; un document imprimé est posé sur la natte devant eux.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía del interior de una vivienda que muestra a la izquierda a un lactante durmiendo en una hamaca verde con cojines rosas, mientras dos hombres están sentados con las piernas cruzadas sobre una estera tejida, uno de ellos manejando un teléfono móvil mientras el otro observa; frente a ellos, sobre la estera, hay un documento impreso.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية داخل منزل تُظهر رضيعاً نائماً في أرجوحة شبكية خضراء مع وسائد وردية على اليسار، بينما يجلس رجلان متربعين على حصيرة منسوجة، أحدهما يشغّل هاتفاً محمولاً والآخر ينظر إليه؛ وتوجد وثيقة مطبوعة على الحصيرة أمامهما.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография внутри жилого дома: слева в зелёном гамаке с розовыми подушками спит младенец, а двое мужчин сидят, скрестив ноги, на плетёной циновке — один пользуется мобильным телефоном, а другой наблюдает; перед ними на циновке лежит печатный документ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "室内照片：左侧一名婴儿睡在配有粉色靠垫的绿色吊床里，两名男子盘腿坐在编织席垫上，其中一人正在操作手机，另一人在旁观看；他们面前的席垫上放着一份印刷文件。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3618,6 +4758,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie d'un petit groupe de personnes, comprenant des enfants, assises ensemble sur des coussins de sol à motifs, rassemblées autour d'une tablette tenue par l'un des membres du groupe et la regardant.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de un pequeño grupo de personas, incluidos niños, sentadas juntas sobre cojines de suelo estampados, reunidas alrededor de una tableta que sostiene uno de los integrantes del grupo y mirándola.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية لمجموعة صغيرة من الأشخاص، من بينهم أطفال، يجلسون معاً على وسائد أرضية منقوشة ويتحلقون حول جهاز لوحي يمسكه أحد أفراد المجموعة وينظرون إليه.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография небольшой группы людей, включая детей, сидящих вместе на узорчатых напольных подушках и собравшихся вокруг планшета, который держит один из участников группы.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "一小群人（包括儿童）一起坐在带图案的地垫上的照片，大家围拢在一起观看其中一名成员手持的平板电脑。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3642,6 +4842,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie d'une femme enceinte debout à l'extérieur, baissant les yeux vers un téléphone portable qu'elle tient des deux mains, avec des arbres et des broussailles défrichées à l'arrière-plan.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de una mujer embarazada de pie al aire libre, mirando hacia abajo a un teléfono móvil que sostiene con ambas manos, con árboles y maleza despejada al fondo.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية لامرأة حامل تقف في الهواء الطلق وتنظر إلى هاتف محمول تمسكه بكلتا يديها، مع ظهور أشجار وأحراش ممهدة في الخلفية.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография беременной женщины, стоящей на открытом воздухе и смотрящей вниз на мобильный телефон, который она держит обеими руками, на фоне деревьев и расчищенного кустарника.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "一名孕妇站在户外的照片，她低头看着双手握着的手机，背景是树木和清理过的灌木丛。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3666,6 +4926,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie en gros plan de deux mains tenant un téléphone intelligent affichant une interface de messagerie ou de liste verte et blanche ; le bras d'une seconde personne est visible en flou à l'arrière-plan.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía en primer plano de dos manos que sostienen un teléfono inteligente cuya pantalla muestra una interfaz de mensajería o de lista en verde y blanco; en segundo plano se ve, desenfocado, el brazo de una segunda persona.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية مقربة ليدين تمسكان بهاتف ذكي يعرض واجهة مراسلة أو قائمة باللونين الأخضر والأبيض؛ وتظهر ذراع شخص ثانٍ بشكل ضبابي في الخلفية.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Крупный план двух рук, держащих смартфон с зелёно-белым интерфейсом обмена сообщениями или списка; на заднем плане в размытии видна рука второго человека.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "双手握着智能手机的特写照片，屏幕显示绿白相间的消息或列表界面；背景中模糊可见另一个人的手臂。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3690,6 +5010,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Capture d'écran d'une documentation d'API pour un registre d'établissements de santé. Elle présente une section consacrée à l'identifiant interne du système avec un exemple de valeur « id: » et une note précisant que l'API n'impose pas de format d'identifiant particulier ; une section URL donnant un exemple de point de terminaison REST pour une ressource d'établissement (http://facilityregistry.org/api/v1/facilities/...) ; ainsi qu'une section « External Facility Identifiers » expliquant que chaque identifiant externe se compose d'un organisme (« agency », qui a créé le code), d'un contexte (« context », le système dans lequel l'organisme utilise le code, par ex. HMIS, DHIS2, RH) et d'un identifiant (« id »), suivie d'un exemple de tableau JSON d'objets d'identifiants.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Captura de pantalla de la documentación de una API para un registro de establecimientos de salud. Muestra una sección sobre el identificador interno del sistema con un valor de ejemplo «id:» y una nota que aclara que la API no impone un formato de identificador específico; una sección de URL que ofrece un ejemplo de punto de extremo REST para un recurso de establecimiento (http://facilityregistry.org/api/v1/facilities/...); y una sección de identificadores externos de establecimientos («External Facility Identifiers») donde se explica que cada identificador externo consta de un organismo («agency», quien creó el código), un contexto («context», el sistema en el que el organismo utiliza el código, p. ej., HMIS, DHIS2, RR. HH.) y un identificador («id»), seguida de un ejemplo de matriz JSON de objetos identificadores.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "لقطة شاشة لتوثيق واجهة برمجة التطبيقات (API) الخاصة بسجل للمرافق الصحية. وتعرض قسماً حول المعرّف الداخلي للنظام مع مثال لقيمة «id:» وملاحظة تفيد بأن واجهة برمجة التطبيقات لا تفرض تنسيقاً محدداً للمعرّف؛ وقسماً لعنوان URL يقدّم مثالاً لنقطة نهاية REST لمورد مرفق صحي (http://facilityregistry.org/api/v1/facilities/...)؛ وقسماً للمعرّفات الخارجية للمرافق («External Facility Identifiers») يوضح أن كل معرّف خارجي يتألف من جهة («agency»، وهي التي أنشأت الرمز)، وسياق («context»، وهو النظام الذي تستخدم فيه الجهة ذلك الرمز، مثل نظام معلومات الإدارة الصحية HMIS أو DHIS2 أو الموارد البشرية HR)، ومعرّف («id»)، يتبعه مثال لمصفوفة JSON من كائنات المعرّفات.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Снимок экрана документации API для реестра медицинских учреждений. Показан раздел о внутреннем системном идентификаторе с примером значения «id:» и примечанием о том, что API не требует строгого формата идентификатора; раздел URL с примером конечной точки REST для ресурса учреждения (http://facilityregistry.org/api/v1/facilities/...); а также раздел внешних идентификаторов учреждений («External Facility Identifiers»), поясняющий, что каждый внешний идентификатор состоит из организации («agency», создавшей код), контекста («context», системы, в которой организация использует код, например HMIS, DHIS2, HR) и идентификатора («id»), за которым следует пример JSON-массива объектов идентификаторов.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "医疗卫生机构注册库 API 文档的屏幕截图。其中包含：介绍内部系统标识符的部分，带有“id:”示例值以及说明该 API 不强制要求特定 ID 格式的注释；URL 部分，给出了机构资源的 REST 端点示例（http://facilityregistry.org/api/v1/facilities/...）；以及“外部机构标识符”（External Facility Identifiers）部分，解释每个外部标识符由机构（agency，即创建代码的机构）、上下文（context，即该机构使用该代码的系统，如 HMIS、DHIS2、HR）和标识符（id）组成，随后是一个由标识符对象组成的 JSON 数组示例。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3714,6 +5094,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture ou fiche synthétique intitulée « Principles for Digital Development », présentée sous forme d'affiche avec le titre en haut et plusieurs principes numérotés disposés en grille de courts blocs de texte en dessous ; le texte individuel des principes est trop petit pour être lu et n'a pas pu être déterminé à partir de l'image extraite.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta o ficha de resumen «Principles for Digital Development», maquetada como cartel con el título en la parte superior y varios principios numerados dispuestos debajo en una cuadrícula de bloques de texto breves; el texto individual de los principios es demasiado pequeño para leerse y no pudo determinarse a partir de la imagen extraída.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف أو ورقة ملخصة بعنوان «Principles for Digital Development» (مبادئ التنمية الرقمية)، مصممة كملصق يحمل العنوان في الأعلى وعدة مبادئ مرقمة مرتبة في شبكة من كتل نصية قصيرة بالأسفل؛ نص كل مبدأ صغير جداً بحيث يتعذر قراءته ولم يمكن تحديده من الصورة المستخرجة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка или сводный лист «Principles for Digital Development», свёрстанный в виде плаката с заголовком в верхней части и несколькими пронумерованными принципами, расположенными ниже в виде сетки коротких текстовых блоков; текст отдельных принципов слишком мелок для чтения и не может быть определён по извлечённому изображению.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "《数字发展原则》（Principles for Digital Development）的封面/摘要页，排版为海报形式，顶部为标题，下方以简短文本块网格排列着若干编号原则；各原则的具体文字过小而无法辨认，无法从提取的图像中确定其内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3738,6 +5178,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Capture d'écran de la page web d'aide de CommCare intitulée « Choosing a Device Type », montrant l'en-tête de la page, une liste à puces de liens thématiques (Android ou téléphone basique ; téléphone Android ou tablette pour un projet Android) ainsi que le début du corps du texte comparant les téléphones basiques et les appareils Android.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Captura de pantalla de la página web de ayuda de CommCare titulada «Choosing a Device Type», en la que se aprecia el encabezado de la página, una lista con viñetas de enlaces temáticos (Android o teléfono básico; teléfono Android o tableta para un proyecto Android) y el comienzo del texto principal que compara los teléfonos básicos con los dispositivos Android.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "لقطة شاشة لصفحة المساعدة الخاصة بنظام CommCare على الويب بعنوان «Choosing a Device Type» (اختيار نوع الجهاز)، وتُظهر ترويسة الصفحة، وقائمة ذات نقاط لروابط الموضوعات (نظام أندرويد أو هاتف تقليدي؛ هاتف أندرويد أو جهاز لوحي لمشروع أندرويد)، وبداية النص الأساسي الذي يقارن بين الهواتف التقليدية وأجهزة أندرويد.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Снимок экрана веб-страницы справки CommCare «Choosing a Device Type» (Выбор типа устройства), содержащий заголовок страницы, маркированный список тематических ссылок (Android или простой телефон с базовыми функциями; телефон или планшет Android для проекта на базе Android) и начало основного текста со сравнением базовых телефонов и устройств Android.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "CommCare 帮助网页“选择设备类型”（Choosing a Device Type）的屏幕截图，展示了页面标题、带有项目符号的主题链接列表（Android 或功能手机；Android 项目选用 Android 手机还是平板电脑），以及比较功能手机与 Android 设备的正文开头部分。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3762,6 +5262,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture du rapport « Patient Privacy in a Mobile World: A Framework to Address Privacy Law Issues in Mobile Health » (TrustLaw, daté de juin 2013), montrant une photographie en gros plan du visage d'un patient portant une électrode d'ECG fixée sur le front, ainsi que plusieurs logos de commanditaires au bas de la page.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta del informe «Patient Privacy in a Mobile World: A Framework to Address Privacy Law Issues in Mobile Health» (TrustLaw, fechado en junio de 2013), que muestra una fotografía en primer plano del rostro de un paciente con un electrodo de ECG adherido a la frente y varios logotipos de patrocinadores en la parte inferior.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف التقرير المعنون «Patient Privacy in a Mobile World: A Framework to Address Privacy Law Issues in Mobile Health» (الصادر عن مؤسسة TrustLaw، حزيران/يونيو 2013)، ويظهر عليه صورة فوتوغرافية مقربة لوجه مريض مع قطب تخطيط كهربية القلب (ECG) مثبت على الجبهة، وعدة شعارات للجهات الراعية على طول الجزء السفلي.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка отчёта «Patient Privacy in a Mobile World: A Framework to Address Privacy Law Issues in Mobile Health» (TrustLaw, июнь 2013 года) с фотографией лица пациента крупным планом с закреплённым на лбу электродом ЭКГ и несколькими логотипами спонсоров вдоль нижнего края.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "报告《Patient Privacy in a Mobile World: A Framework to Address Privacy Law Issues in Mobile Health》（TrustLaw，日期为2013年6月）的封面，展示有一张额头贴有心电图（ECG）电极的患者面部特写照片，底部排列着多个赞助机构的标志。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3786,6 +5346,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Logo de la « dhis2 Academy », composé du texte « dhis2 » en blanc sur fond bleu avec la mention « Academy » en dessous.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Logotipo de la «dhis2 Academy», compuesto por el texto «dhis2» en blanco sobre fondo azul con la palabra «Academy» debajo.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "شعار أكاديمية «dhis2 Academy»، ويتكون من النص «dhis2» باللون الأبيض على خلفية زرقاء وتحته كلمة «Academy».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Логотип «dhis2 Academy», состоящий из белой надписи «dhis2» на синем фоне со словом «Academy» под ней.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "“dhis2 Academy”标志，由蓝色背景上的白色“dhis2”字样及其下方的“Academy”组成。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3810,6 +5430,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Diapositive de titre ou visuel pour « Open Concept Lab: Open Source Terminology Management for Health Interoperability », avec le sous-titre « Maternal Health Use Case », des silhouettes dessinées au trait de deux personnes à côté d'icônes d'un presse-papiers et d'un ordinateur, ainsi que le logo d'Open Concept Lab.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Diapositiva de título o gráfico de «Open Concept Lab: Open Source Terminology Management for Health Interoperability», con el subtítulo «Maternal Health Use Case», figuras sencillas de trazo lineal de dos personas junto a iconos de un portapapeles y un ordenador, y el logotipo de Open Concept Lab.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "شريحة عنوان أو رسم بياني بعنوان «Open Concept Lab: Open Source Terminology Management for Health Interoperability»، مع عنوان فرعي «Maternal Health Use Case» ورسوم خطية بسيطة لشخصين بجانب أيقونتين للوح كتابة مشبكي وحاسوب، بالإضافة إلى شعار Open Concept Lab.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Титульный слайд или графическая заставка «Open Concept Lab: Open Source Terminology Management for Health Interoperability» с подзаголовком «Maternal Health Use Case», простыми контурными фигурками двух человек рядом со значками планшета-блокнота и компьютера, а также логотипом Open Concept Lab.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "“Open Concept Lab: Open Source Terminology Management for Health Interoperability”的标题幻灯片/图形，带有副标题“Maternal Health Use Case”（孕产妇保健用例）、位于写字夹板和电脑图标旁的两个人物简笔画，以及 Open Concept Lab 标志。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3834,6 +5514,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture du rapport « The State of Standards and Interoperability for mHealth among Low- and Middle-Income Countries » de Jonathan D. Payne, mHealth Alliance, daté de mars 2013, présentant une photographie d'une mère et de son enfant dans la partie inférieure de la couverture.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta del informe «The State of Standards and Interoperability for mHealth among Low- and Middle-Income Countries» de Jonathan D. Payne, mHealth Alliance, fechado en marzo de 2013, que muestra una fotografía de una madre y un niño en la parte inferior de la cubierta.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف التقرير المعنون «The State of Standards and Interoperability for mHealth among Low- and Middle-Income Countries» من إعداد جوناثان د. باين (Jonathan D. Payne)، الصادر عن تحالف الصحة المحمولة (mHealth Alliance) والمؤرخ آذار/مارس 2013، ويظهر في الجزء السفلي منه صورة فوتوغرافية لأم وطفلها.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка отчёта «The State of Standards and Interoperability for mHealth among Low- and Middle-Income Countries» Джонатана Д. Пейна (Jonathan D. Payne), mHealth Alliance, датированного мартом 2013 года, с фотографией матери и ребёнка в нижней части обложки.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "由 Jonathan D. Payne 撰写、mHealth Alliance 发布、日期为2013年3月的报告《The State of Standards and Interoperability for mHealth among Low- and Middle-Income Countries》的封面，封面下半部分展示有一张母亲和儿童的照片。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3858,6 +5598,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Logo d'OpenHIE, présentant une icône circulaire stylisée formée de points bleu sarcelle, bleus, orange et verts superposés à côté du logotype « OpenHIE ».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Logotipo de OpenHIE, que muestra un icono circular estilizado formado por puntos superpuestos de color verde azulado, azul, naranja y verde junto a la marca denominativa «OpenHIE».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "شعار OpenHIE، ويُظهر أيقونة دائرية منمقة مكونة من نقاط متداخلة بألوان الأزرق المخضر والأزرق والبرتقالي والأخضر بجانب العلامة النصية «OpenHIE».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Логотип OpenHIE, представляющий собой стилизованный круглый значок из перекрывающихся бирюзовых, синих, оранжевых и зелёных точек рядом с текстовым знаком «OpenHIE».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "OpenHIE 标志，展示了一个由青色、蓝色、橙色和绿色重叠圆点组成的风格化圆形图标，旁边配有“OpenHIE”字标。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3882,6 +5682,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture du document « eHealth Strategy South Africa », présentant une icône de globe stylisée formée de points et de lignes lumineux sur un fond orange, accompagnée du logo et de la devise du ministère national de la Santé.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Cubierta del documento «eHealth Strategy South Africa», que muestra el icono estilizado de un globo terráqueo formado por puntos y líneas brillantes sobre un fondo naranja, junto con el logotipo y el lema del Departamento Nacional de Salud.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف وثيقة «eHealth Strategy South Africa» (استراتيجية الصحة الإلكترونية في جنوب أفريقيا)، ويظهر عليه رمز كرة أرضية منمق مكون من نقاط وخطوط مضيئة على خلفية برتقالية، مع شعار وزارة الصحة الوطنية وشعارها اللفظي.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка документа «eHealth Strategy South Africa» со стилизованным значком земного шара из светящихся точек и линий на оранжевом фоне, а также логотипом и девизом Национального департамента здравоохранения.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "《南非电子卫生保健战略》（eHealth Strategy South Africa）文件的封面，在橙色背景上展示了一个由发光圆点和线条构成的风格化地球图标，并配有国家卫生部的标志和标语。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3906,6 +5766,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie prise à l'intérieur d'un bureau de clinique montrant quatre membres du personnel en blouse blanche ou en uniforme : une femme assise à un bureau à gauche, un homme debout pointant vers une fenêtre tout en posant la main sur le dossier d'une chaise, une femme assise tenant un dossier ouvert et une autre femme assise tapant sur un ordinateur de bureau. Illustre la section AXE 5 Opérations.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía del interior de la oficina de una clínica en la que aparecen cuatro miembros del personal con bata blanca o uniforme: una mujer sentada en un escritorio a la izquierda, un hombre de pie señalando hacia una ventana mientras apoya la mano en el respaldo de una silla, una mujer sentada que sostiene una carpeta abierta y otra mujer sentada escribiendo en un ordenador de sobremesa. Ilustra la sección EJE 5 Operaciones.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية داخل مكتب في عيادة تُظهر أربعة من أفراد الطاقم يرتدون معاطف أو أزياء رسمية بيضاء: امرأة جالسة إلى مكتب على اليسار، ورجل واقف يشير نحو نافذة واضعاً يده على ظهر كرسي، وامرأة جالسة تمسك بملف مفتوح، وامرأة أخرى جالسة تكتب على حاسوب مكتبي. توضح الصورة قسم المحور 5: العمليات.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография внутри кабинета клиники, на которой изображены четыре сотрудника в белых халатах или униформе: женщина, сидящая за столом слева, стоящий мужчина, указывающий в сторону окна и опирающийся рукой на спинку стула, сидящая женщина с открытой папкой в руках и ещё одна сидящая женщина, печатающая на настольном компьютере. Иллюстрирует раздел «ОСЬ 5. Операционная деятельность».",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "诊所办公室内部的照片，展示了四名身穿白大褂/制服的工作人员：左侧一名女性坐在办公桌前，一名站立的男性一手扶着椅背手指窗外，一名坐着的女性手持打开的文件夹，另一名坐着的女性正在台式电脑上打字。用于说明“轴线5：运营”部分。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3930,6 +5850,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie de deux femmes assises à l'intérieur, l'une vêtue d'un haut rouge pointant du doigt une tablette tenue par l'autre, qui porte des lunettes et un haut noir, illustrant une formation pratique sur un appareil mobile.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de dos mujeres sentadas en un interior: una de ellas, con prenda superior roja, señala una tableta que sostiene la otra, quien lleva gafas y prenda superior negra, ilustrando una capacitación práctica con un dispositivo móvil.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية لامرأتين جالستين في مكان مغلق، ترتدي إحداهما قميصاً أحمر وتشير إلى جهاز لوحي تمسكه الأخرى التي ترتدي نظارة وقميصاً أسود، مما يوضح التدريب العملي باستخدام جهاز محمول.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография двух сидящих в помещении женщин: одна в красной кофте указывает на планшет в руках другой, одетой в чёрную кофту и очки, что иллюстрирует практическое обучение работе с мобильным устройством.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "两名女性在室内就座的照片，其中一人身穿红色上衣，手指向另一名戴眼镜、穿黑色上衣的女性手持的平板电脑，展示了使用移动设备进行实操培训的场景。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
@@ -3954,6 +5934,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie de deux personnes assises sur des chaises en bois à l'extérieur, près d'une maison avec un bananier à l'arrière-plan ; l'une, coiffée d'une casquette, écrit sur des feuilles posées sur ses genoux tandis que l'autre, portant un foulard et une robe à motifs, observe.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de dos personas sentadas en sillas de madera al aire libre cerca de una vivienda con un banano al fondo; una de ellas, con gorra, escribe sobre unos papeles apoyados en su regazo mientras la otra, con pañuelo en la cabeza y vestido estampado, observa.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية لشخصين يجلسان على كرسيين خشبيين في الهواء الطلق بالقرب من منزل وتظهر شجرة موز في الخلفية؛ أحدهما يرتدي قبعة ويكتب على أوراق موضوعة في حجره، بينما تنظر إليه الأخرى التي ترتدي غطاء رأس وفستاناً منقوشاً.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография двух человек, сидящих на деревянных стульях на открытом воздухе возле дома с банановым деревом на заднем плане; один из них, в кепке, пишет на бумагах, лежащих на коленях, а другая, в платке и узорчатом платье, наблюдает.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "ru"
+        },
+        {
+          "text": "两人坐在户外木椅上的照片，靠近一处房屋，背景中有一棵香蕉树；其中一人戴着鸭舌帽，正在放在膝头的纸上书写，另一人戴着头巾、身穿印花连衣裙在旁观看。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+          },
+          "drafted_at": "2026-10-30",
+          "lang": "zh"
         }
       ]
     },
