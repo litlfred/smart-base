@@ -27,7 +27,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "3c3efa1783bd9d2f2525abe503a8983db9faef46",
+          "ref": "a67dc4d68c27dd48776324f3e00d9146a2d52b12",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -37,8 +37,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-30",
-              "ref": "3c3efa1783bd9d2f2525abe503a8983db9faef46",
-              "evidence": "owner, 2026-10-30T12:40Z, card choice: \"A. ig section in index.config\" (bean cz17 item 3; re-pin so fhir-harness registers contentTypes.ig)"
+              "ref": "a67dc4d68c27dd48776324f3e00d9146a2d52b12",
+              "evidence": "A. ig section in index.config"
             }
           }
         }
