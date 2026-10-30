@@ -801,6 +801,823 @@
       ]
     },
     {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-042",
+      "source": "sections/sec-042-361-interoperability-as-a-capability-not-just-a.md",
+      "source_hash": "afa0650cbcf8e057673f3209bea0129c8f207d4ce3b3e77625f3d135e8680635",
+      "narrative": [
+        {
+          "text": "Section 3.6.1 explains why the DPI-H reference architecture treats interoperability as a pervasive capability rather than a single central software component (contrasting with how OpenHIE's interoperability layer is often misinterpreted as a centrally procured bus creating single points of control and failure). Distinguishes bilateral system integration from true open-standards interoperability enabling one-to-many reuse, and separates the functional role of mediation (routing, translation, authentication, orchestration, and audit logging) from the implementation topology (distributed access points, central bus, component gateways, or endpoint-level exchange).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-043",
+      "source": "sections/sec-043-362-data-and-health-content-standards.md",
+      "source_hash": "504cba9d1ccd09ae11433fe6dc9617f2bb627ace2a068ae81af9179c44919855",
+      "narrative": [
+        {
+          "text": "Section 3.6.2 describes how semantic and structural interoperability depend on two complementary foundational DPI-H components—the Terminology Service ('dictionary' governing coded meaning across SNOMED CT/GPS, ICD-11, LOINC, GS1, IDMP, and DICOM) and the Logical Information Model Repository ('grammar' governing structured, versioned national information models)—together with exchange standards such as HL7 FHIR, IHE profiles, and the International Patient Summary (IPS). Explains that nationally governed information models prevent uncoordinated standard extensions ('interoperable silos') and recommends consumer-side boundary adapters for legacy representational translation without altering clinical meaning.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-044",
+      "source": "sections/sec-044-363-interoperability-between-dpi-h-and-foundatio.md",
+      "source_hash": "8bef627d72ef2eef145c3b869831f31020d9f449a8aec85de5c2878acd2ca9ce",
+      "narrative": [
+        {
+          "text": "Section 3.6.3 and Figure 3.6 define the division of responsibility between content-neutral foundational data-exchange DPI (such as the GovStack Information Mediator Building Block providing REST-based service/event gateways, signed timestamped audit logs, non-repudiation, and data-sharing agreements) and health-sector endpoints that handle clinical semantics, record correlation, and granular consent at the source. Illustrates how multiple exchange topologies—point-to-point standards-conforming connections, central service buses, component gateways, distributed access points, and asynchronous store-and-forward publish–subscribe eventing (for example, publishing a birth registration event once for both CRVS and immunisation registries across intermittent connectivity)—can coexist within a single country.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-045",
+      "source": "sections/sec-045-364-cross-border-health-data-flows.md",
+      "source_hash": "9d3190eb119be1d1e0f3096979387986d3ba280499198afdbb0c372da570d956",
+      "narrative": [
+        {
+          "text": "Section 3.6.4 examines cross-border health data flows for mobile populations, cross-border care, and infectious-disease emergencies through federated national gateways rather than supranational data stores. Contrasts the European cross-border health services infrastructure (MyHealth@EU national contact points exchanging patient summaries and e-prescriptions, alongside the EU European Health Data Space Regulation 2025/327 distinguishing primary care from secondary research/policy use) with WHO's Global Digital Health Certification Network (GDHCN, providing PKI-based cryptographic trust verification for verifiable health documents without centralising personal data), and lists five core requirements for cross-border exchange (IPS alignment, terminology/language translation, cross-jurisdiction PKI trust frameworks, explicit legal/consent bases, and reuse of foundational cross-border identity/trust DPI).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-046",
+      "source": "sections/sec-046-365-conformance.md",
+      "source_hash": "e8d2065a743b129041bb32b5df488d16e1e00cfc362d107376f7f1a8311edccb",
+      "narrative": [
+        {
+          "text": "Section 3.6.5 notes that because interoperability is realised through conformance to shared content, terminology, information-model, and exchange specifications, those requirements should be made testable to verify vendor claims before and during procurement, and introduces Section 3.7 on Conformance and Testing across Architecture and Components.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-047",
+      "source": "sections/sec-047-371-purpose.md",
+      "source_hash": "9c96a6df2e37d45807e9e0e2253e26a53c8b90e3d0c71846ecab38c97f35efc0",
+      "narrative": [
+        {
+          "text": "Section 3.7.1 sets out the purpose of the architecture's machine-readable conformance and testing model: enabling structured assessment at two complementary levels—conformance of concrete systems to the capabilities, services, and standards of their claimed roles, and conformance of a national or organisational architecture itself (completeness, traceability, and explicit documentation of adoptions, adaptations, or mappings)—alongside outcome-based validation of whether architectural goals are being achieved.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-048",
+      "source": "sections/sec-048-372-the-model.md",
+      "source_hash": "4873c96d0175e8f8a2f207fe84b4389c96b1516ed07c93f6d2a673fb3d86f2f9",
+      "narrative": [
+        {
+          "text": "Section 3.7.2 (with Table 3.7.1 and Figures 3.7.1–3.7.2) defines the ArchiMate conformance and testing model extending Section 3.1 with Application Interaction, Application Function, Assignment, and Triggering. Models abstract actors and concrete systems as Application Components linked by Realisation; distinguishes offered services (realised by the responder actor) from required services (serving the initiator actor) and separates direction (offered/required) from support obligation (mandatory/optional); explains why Application Services can be reached via multiple access patterns (machine-to-machine transactions or human UI workflows); and establishes four principles of component-level conformance tested one side at a time against a simulator or UI test operator.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-049",
+      "source": "sections/sec-049-373-alignment-with-ihe-profiles.md",
+      "source_hash": "d7474e938c425a299dbc1455b6fc642851d87991cf9def4a1841c09ea765ef15",
+      "narrative": [
+        {
+          "text": "Section 3.7.3 explains how the reference architecture aligns with Integrating the Healthcare Enterprise (IHE) profiles through selective deferral: the architecture retains ownership of the actor, service, and interaction model while deferring transaction protocol details and conformance testing to existing IHE specifications and tooling where an IHE transaction applies, and specifying non-IHE or human-initiated UI interactions by other means.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-050",
+      "source": "sections/sec-050-374-planning-testing-from-the-architecture.md",
+      "source_hash": "f7b393ee77a93ffda012a48df2342682649affcd6e57205a6cfe5f7d75c7a455",
+      "narrative": [
+        {
+          "text": "Section 3.7.4 explains how decomposing the architecture into actors and services makes conformance testing plannable from the outset by separating standardised components (which arrive with reusable IHE/standard test plans, simulators, and reference data) from bespoke or UI-driven components that the adopter must test. Defines three quantitative testing progress ratios—requirements coverage, standards conformance, and capability completeness—and shows how the machine-readable model automatically surfaces architectural gaps such as un-realised capabilities or un-served required services.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-051",
+      "source": "sections/sec-051-375-validating-goals-and-adoption.md",
+      "source_hash": "a3d803e6e936e44e3941b2bd1b148efa5422e2cab586b70e0a75ccd5c5bbf83a",
+      "narrative": [
+        {
+          "text": "Section 3.7.5 extends the formal verification model to validating health goals and measuring national architecture adoption. Shows that goal validation mirrors component testing at the motivation layer (checking Goals against measurable Outcomes via indicator behaviours), and defines how mapping country architecture elements to reference elements via ArchiMate Realisation relationships—across direct adoption, documented adaptation, or established-architecture mapping—makes reference coverage, inherited conformance criteria, and missing-element gaps mechanically quantifiable.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-052",
+      "source": "sections/sec-052-376-constructs-and-their-counterparts.md",
+      "source_hash": "99bf6c532086e97717483166be0caf4478b8b6647ccee3a4c331fdca7dab71e4",
+      "narrative": [
+        {
+          "text": "Section 3.7.6 and Table 3.7.2 summarise the ten core architectural conformance constructs (Actor, System realising an actor, Offered service, Required service, Support qualifier, Interaction, Conformance, Simulator, Goal criterion, and Country-to-reference mapping) alongside their ArchiMate 3.2 elements, binding relationships, and IHE counterparts, and then introduce Chapter 4 ('Implementing a National Digital Health Architecture') and the accountabilities of ministries, architects, implementers, and development partners.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-053",
+      "source": "sections/sec-053-41-understanding-the-starting-point.md",
+      "source_hash": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918",
+      "narrative": [
+        {
+          "text": "Section 4.1 heading transition line ('12') introducing the sub-chapter on Understanding the Starting Point for national DPI-H implementation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-054",
+      "source": "sections/sec-054-411-no-country-starts-from-zero.md",
+      "source_hash": "0aa9a19d374783463c325e4bbd8a885cd564f8c72a80164fe29e32ae20663775",
+      "narrative": [
+        {
+          "text": "Section 4.1.1 ('No Country Starts from Zero') emphasises that every country begins DPI-H implementation with legacy programme applications, siloed registries, and spreadsheet reporting, and frames Chapter 4 as practical, phased guidance for deciding which existing investments to preserve, upgrade to open standards, integrate into shared infrastructure, or retire while progressing toward REDDHI as a continuously maturing direction of travel.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-055",
+      "source": "sections/sec-055-412-assessing-where-you-are.md",
+      "source_hash": "83cabe4c6d7a53b2b9586a73825c5e18ad2eaafb704c9c7ebbb3bff4931054a9",
+      "narrative": [
+        {
+          "text": "Section 4.1.2 outlines the four core questions of a national digital health architecture baseline assessment—(1) inventorying existing health systems and registries against REDDHI functions and open standards, (2) assessing the reach and health-readiness of foundational DPI (identity, payments, data exchange), (3) evaluating legal, institutional, procurement, and government capacity conditions, and (4) selecting two to three priority health goals and high-value use cases—whose outputs feed a living national architecture roadmap backed by a benefits case, logic model, and digital-readiness baseline.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-056",
+      "source": "sections/sec-056-42-charting-a-path-to-reddhi.md",
+      "source_hash": "da4ea2a5506f2693eae190d9360a1f31793c98a1adade51d93533a6f520ace1c",
+      "narrative": [
+        {
+          "text": "Section 4.2 heading transition line ('63') introducing the sub-chapter on Charting a Path to REDDHI.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-057",
+      "source": "sections/sec-057-421-different-entry-points-toward-reddhi.md",
+      "source_hash": "c8a2e907e026cc653a928e187f71c5bec1d269fdf2e92e9072ff2126aa6bf904",
+      "narrative": [
+        {
+          "text": "Section 4.2.1 defines four common country entry points toward REDDHI and their respective priorities: Entry point 1 (Building from the ground up—establishing governance and architectural standards before donor projects create new silos, then deploying the REDDHI minimum viable layer), Entry point 2 (Integrating existing systems—deploying shared layers such as a client registry and interoperability capability alongside programme silos via APIs before gradual migration), Entry point 3 (Upgrading existing infrastructure—enforcing open standards, standard APIs, and the 'right to move' to overcome vendor lock-in), and Entry point 4 (Scaling and deepening—expanding into the business services layer, semantic governance, last-mile reach, domestic financing with Ministries of Finance, and in-house government enterprise architecture capacity).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-058",
+      "source": "sections/sec-058-422-a-phased-implementation-approach.md",
+      "source_hash": "81c03920e03c7b249e7e91e15bf8f21fd4a7915cb8e59f6f7898f71e4a04b5f2",
+      "narrative": [
+        {
+          "text": "Section 4.2.2 outlines a four-phase iterative implementation progression complementing the WHO Digital Implementation Investment Guide (DIIG): Phase 1 (Assess, align, and plan—baseline assessment, governance body, stakeholder and Ministry of Finance engagement, selecting 2–3 priority goals/use cases, aligning procurement, and producing a roadmap), Phase 2 (Establish the foundation—deploying or consolidating foundational shared data layer components needed for priority goals, integrating with foundational identity DPI, establishing interoperability capability, and connecting 2–3 priority programme systems in production), Phase 3 (Connect and expand—connecting further programmes, establishing semantic governance infrastructure, extending to subnational/primary/offline care, migrating legacy functions, and deploying the business services layer), and Phase 4 (Sustain and evolve—transitioning to domestic financing, building in-government enterprise architecture capacity, aligning development partners, and continuously evolving the architecture).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-059",
+      "source": "sections/sec-059-423-navigating-legacy-systems.md",
+      "source_hash": "44515be575eb7f00625ddde31c66adce9daa341ee6217517df2b0ef9f0758314",
+      "narrative": [
+        {
+          "text": "Section 4.2.3 sets out four principles for managing legacy systems during DPI-H implementation: (1) Assess before you act (evaluating alignment with REDDHI, API/standards upgradeability, and replacement disruption), (2) Integrate before you replace (exposing indispensable legacy data via standard APIs and interoperability capabilities in the near term), (3) Replace at natural transition points (using procurement cycles, end-of-life events, and major upgrades to migrate data into open-standards shared infrastructure), and (4) Stop creating new silos (making architectural conformance a mandatory procurement requirement for all new systems).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-060",
+      "source": "sections/sec-060-424-the-role-of-the-national-digital-architect.md",
+      "source_hash": "0c3b6e84b2d49956842dd21bbe2a55c76079aa63f5e37a5e4308bd46d8beae9e",
+      "narrative": [
+        {
+          "text": "Section 4.2.4, drawing on the February 2026 Wilton Park dialogue on DPI for health, highlights the urgent priority of establishing an enduring National Digital Architect function (an empowered individual or small team embedded in the Ministry of Health, digital health agency, or whole-of-government digital authority) prior to major implementation. Distinguishes this accountable architectural designer—holding authority to set standards, evaluate conformance, coordinate across ministries, and veto or escalate non-conformant investments—from IT managers, project coordinators, or donor-funded consultants, and notes the support available from regional and global architect networks.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-061",
+      "source": "sections/sec-061-43-profiles-and-specifications-for-implementatio.md",
+      "source_hash": "2b1a00750cd4574f50112f374b8cdea3b817393bf13b21d8b3b87c22dbe5eb21",
+      "narrative": [
+        {
+          "text": "Section 4.3 introduces the sub-chapter on Profiles and Specifications for Implementation, explaining that translating architectural intent into working systems requires a concrete specification layer defining minimum data structures, actor roles, transaction patterns, and foundational-DPI integration interfaces regardless of technology choices.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-062",
+      "source": "sections/sec-062-431-design-data-structures-and-data-models-first.md",
+      "source_hash": "6040e58f34807cf332ddadbefba6767da1e31c9f0fc51c7f8d477073cf316ebe",
+      "narrative": [
+        {
+          "text": "Section 4.3.1 emphasises that defining and standardising minimum data models before software procurement is the most consequential implementation decision for semantic interoperability. Recommends governing national data models (mandatory core attributes plus country-specific extensions) through the Logical Information Model Repository, and specifies the minimum data model scope for the Client Registry (demographic/identity attributes), Facility Registry (location, capabilities, operational status), Health Workforce Registry (credentials, specialisation, deployment), Product Registry (identity, classification, regulatory status), and metadata profiles for Terminology Services and the LIMR.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-063",
+      "source": "sections/sec-063-432-actors-and-roles-defining-who-participates.md",
+      "source_hash": "af1c3f9cc91456b2a0b5b91874f9e5a594c87e98b17338595ba98b5f7824308e",
+      "narrative": [
+        {
+          "text": "Section 4.3.2 explains why implementable DPI-H specifications must explicitly define human and system actors and their roles alongside data models to anchor role-based access control, record attribution, workflow steps, and conformance capability statements. Illustrates this discipline with WHO SMART Guidelines—where L2 Digital Adaptation Kits (DAKs) define generic personas that L3 FHIR Implementation Guides express as computable actor definitions—and recommends governing reusable actor and role schemas (such as registrant, verifying authority, and consuming system) across all DPI-H components.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-064",
+      "source": "sections/sec-064-433-services-and-transactions-fhir-as-the-recomm.md",
+      "source_hash": "d09e5bc752f0e35673b1a1886f38f9968dea741f15eea74a86e69f270da256f6",
+      "narrative": [
+        {
+          "text": "Section 4.3.3 recommends HL7 FHIR (Release 5) as the framework for specifying and implementing DPI-H health data exchange services, RESTful APIs, search parameters, and transaction patterns. Clarifies that FHIR profiles must be derived from and validated against the technology-independent Logical Information Model Repository and bound to governed Terminology Services to guarantee shared meaning, and outlines a progressive adoption path where countries align underlying data models to FHIR resource structures early even before achieving full FHIR API compliance.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-065",
+      "source": "sections/sec-065-434-integration-interfaces-with-foundational-dpi.md",
+      "source_hash": "8de01954bd20d00db957ed8f84510d71dbc51e59524bdeaa888faf6746a20019",
+      "narrative": [
+        {
+          "text": "Section 4.3.4 specifies two categories of integration interfaces between DPI-H and foundational cross-sectoral DPI: (1) general APIs enabled by foundational DPI for health use (identity verification APIs for the client registry, CRVS birth/death event APIs for client and workforce registries, payment gateway APIs for health financing, and national data exchange APIs), and (2) health-sector APIs consumed by foundational DPI or external services (client registry patient matching, facility registry geolocation/capability APIs, workforce credential verification for payments, and terminology service APIs). Advises countries to communicate missing API requirements to foundational DPI authorities rather than duplicating them, or build interim capabilities with documented transition plans.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-066",
+      "source": "sections/sec-066-434-interoperability-implementation-pathways.md",
+      "source_hash": "6e17ef8706ac320b99f5bf0c95ce0c19bde2cda7fe8a76c6abb5617ace4eefb3",
+      "narrative": [
+        {
+          "text": "Section 4.3.4 (Interoperability Implementation Pathways) recommends logically decoupling core functions (clinical data exchange, health financing, and shared registries) via open standards and profiles so countries can adopt modular capabilities incrementally across three physical topologies: centralised models (national shared infrastructure orchestrating exchange with strong public governance), federated models (direct peer-to-peer exchange anchored on shared registry identifiers and terminology), and hybrid models (combining centralised registries/policy enforcement or health information exchange with specialised or decentralised exchange such as a dedicated health financing claims exchange).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-067",
+      "source": "sections/sec-067-435-minimum-conformance-and-testing.md",
+      "source_hash": "0197603092d0cbf222049d5b2c42fa71da91feb9830aa88e83a98b352eed04f6",
+      "narrative": [
+        {
+          "text": "Section 4.3.5 recommends establishing minimum conformance requirements and reusable testing mechanisms—such as an openly available, standards-based interoperability test bed providing FHIR validators, simulators, and test-management tooling adapted to national profiles—and making conformance certification against published profiles a mandatory condition for procurement approval of DPI-H components.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-068",
+      "source": "sections/sec-068-44-measuring-progress-and-impact.md",
+      "source_hash": "4e9c8f564cf976eb5cf46c542d13a3c20432f79017c6caf73f3f1087b3009613",
+      "narrative": [
+        {
+          "text": "Section 4.4 explains how the formal verification and mapping mechanisms introduced in Section 3.7 are applied during national implementation: requiring profile conformance certification in procurement (Section 4.3), measuring the proportion of reference architecture elements realised by the national architecture (coverage), and using un-realised reference elements to surface roadmap gaps (Section 4.1) and justify continued investment.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-069",
+      "source": "sections/sec-069-441-assessing-impact-are-goals-being-achieved.md",
+      "source_hash": "224d4dc659fc7ee285fd346e3d7c117d8933b003caa60957a8bf70fb7fb6648a",
+      "narrative": [
+        {
+          "text": "Section 4.4.1 ('Assessing impact: Are goals being achieved?') describes how countries evaluate whether DPI-H implementation is achieving its intended health goals by tracing outcome indicators back through capabilities and components. Highlights two practical requirements—capturing outcome baselines during the initial current-state assessment (Section 4.1) and conducting process evaluations alongside outcome metrics to capture workflow and organisational effects—and notes that the reference architecture's canonical goal-to-component decomposition enables cross-context comparison and international learning.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-070",
+      "source": "sections/sec-070-442-tracking-progress-over-time.md",
+      "source_hash": "d3630d8745559e7f7d0e0dafdfb08a6dd511b2bf3d9a18274be246340597820b",
+      "narrative": [
+        {
+          "text": "Section 4.4.2 defines four dimensions for tracking national DPI-H progress on an annual or biannual basis—(1) component coverage (functionality, geographic, and population reach of REDDHI components), (2) standards conformance (open standards, APIs, and governed terminology/data models), (3) governance maturity (institutional, legal, and operational sustainability foundations), and (4) outcome linkage (evidence of improved health outcomes, reduced administrative burden, and resource efficiency)—to guide roadmap adjustments and sustain the investment case with Ministries of Finance and development partners.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-071",
+      "source": "sections/sec-071-45-roles-skills-and-capacity.md",
+      "source_hash": "0015545c811f87948e1f900e412d26259009d0c182520af232dc5903cc9aebf8",
+      "narrative": [
+        {
+          "text": "Section 4.5 introduces the sub-chapter on Roles, Skills, and Capacity, noting that a reference architecture's impact depends on how different actors apply it, the specialist roles and skills available to build and govern it, and how countries develop and retain that capacity over time.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-072",
+      "source": "sections/sec-072-451-how-to-use-this-architecture.md",
+      "source_hash": "3bebf66672bda710f8dfaac31b6ecf6ae5098bd8c3e2d93eb1b99ea0d297abaa",
+      "narrative": [
+        {
+          "text": "Section 4.5.1 summarises how five stakeholder groups use the DPI-H reference architecture—governments and policymakers (prioritising goals, sequencing phased investments, enforcing alignment), architects (adopting, adapting, or mapping national architectures), implementers and suppliers (building and assessing systems against data models, actors, profiles, and conformance criteria), development partners (aligning contributions to national shared components rather than parallel silos), and reviewers/assessors (benchmarking coverage, conformance, and goal-to-component impact)—emphasising that discipline, shared vocabulary, open standards, and explicit mapping matter more than verbatim adoption.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-073",
+      "source": "sections/sec-073-452-the-roles-and-skills-needed-to-build-and-gov.md",
+      "source_hash": "188ca48fc42a3a200d6c61dec31a89fa79913f8fb5e97b9a6c4fef21be10c292",
+      "narrative": [
+        {
+          "text": "Section 4.5.2 identifies nine core specialist roles required alongside the National Digital Architect to build and govern a national architecture: enterprise and solution architects, information and FHIR modellers, terminology and semantic specialists, standards and interoperability specialists, security and privacy architects, integration and implementation engineers, data governance and stewardship roles, clinical and public-health informaticians, and change and programme managers. Notes that responsibilities must be explicitly assigned even where posts are combined, with technical modelling/terminology/security skills peaking during foundation-building and governance/stewardship/change-management growing during sustained operation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-074",
+      "source": "sections/sec-074-453-building-and-sustaining-national-capacity.md",
+      "source_hash": "6fbacd2f96296a2e0f99713835413510055acc9e3912360672f7f866672a42d2",
+      "narrative": [
+        {
+          "text": "Section 4.5.3 addresses building and sustaining national capacity as a systemic public-sector capability rather than ad-hoc hiring or permanent consultant dependency. Highlights national digital health leadership and technical training programmes (citing the UK NHS Digital Academy model), regional and global peer networks of national architects and implementers, and deliberate investment in organisational change management (stakeholder engagement, training, workflow redesign, and communicating benefits).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-075",
+      "source": "sections/sec-075-46-financing-and-partnerships.md",
+      "source_hash": "e8e64e8851fc5e81a6393ac675272ac8960aeff1e1dc6fb39e27f4610908af16",
+      "narrative": [
+        {
+          "text": "Section 4.6 introduces the sub-chapter on Financing and Partnerships, emphasising that shared DPI-H infrastructure must outlive initial project cycles as a sustained national capability backed by deliberate financing and partnership arrangements from the outset.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-076",
+      "source": "sections/sec-076-461-the-investment-case.md",
+      "source_hash": "99a2e3f9f5834d5d57d78795bc3e3d8f4e03a1db6e84eaacbc14d348eef64c7b",
+      "narrative": [
+        {
+          "text": "Section 4.6.1 ('The Investment Case'), drawing on the February 2026 Wilton Park report, distinguishes two complementary arguments: how DPI for health is financed (sustaining shared infrastructure, human capital, and operations) versus what DPI for health financing delivers (revenue collection, pooling, resource allocation, fraud detection, and accountability). Explains that engaging Ministries of Finance as strategic partners requires framing DPI-H around public financial management outcomes—budget execution, reduced leakage, timely provider payments, traceable expenditure, and administrative efficiency—justifying multi-year recurrent domestic budget lines and cost-recovery rather than short-term donor project cycles.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-077",
+      "source": "sections/sec-077-462-sustainability-by-design.md",
+      "source_hash": "2c479bfbf666a63505e728e852558f0511e6f7b348c31822452b3fe1d539d6dd",
+      "narrative": [
+        {
+          "text": "Section 4.6.2 defines five mutually reinforcing dimensions of 'Sustainability by Design' for DPI-H: a clear value proposition, sound technical architecture and open standards, operational and governance organisational structures, financial resilience, and durable enabling legislation providing the legal basis to operate shared infrastructure, share data across programmes, and mandate conformance.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-078",
+      "source": "sections/sec-078-463-approaches-to-financing.md",
+      "source_hash": "4f89b650f1d7cd86b9bd9d907ca62f76ce2e05445bfa071d853e8d852eefeee4",
+      "narrative": [
+        {
+          "text": "Sections 4.6.3 and 4.6.4 outline six complementary financing mechanisms for DPI-H—recurrent national health budget lines, blended domestic/donor financing with explicit government transition plans, contributions from health coverage schemes tied to usage, captured and reinvested efficiency dividends, bounded private-sector hosting/development retaining public ownership of registries and data, and cross-programme investment pooling—supported by roadmap and Section 4.4 progress evidence, examine cross-government and development-partner partnerships coordinated by the National Digital Architect, and then open Chapter 5 ('Future proofing the Architecture') by framing artificial intelligence (from rule-based and ML models to LLMs/LMMs) and emerging technologies in relation to shared DPI-H foundations and WHO/EU AI governance frameworks.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-079",
+      "source": "sections/sec-079-51-emerging-technologies-and-the-foundations-the.md",
+      "source_hash": "ee76a25795f86423d73cd0e8a866b4a00b046c60055d87bd4b12f91c2e8b7cd4",
+      "narrative": [
+        {
+          "text": "Sections 5.1 and 5.2 explain why emerging technologies—especially artificial intelligence—depend on rather than substitute for the shared DPI-H data foundation (while noting that standalone consumer self-management apps not using health-system data sit outside this scope). Detail how five architectural elements—Terminology Services, the Logical Information Model Repository, the Client Registry, cross-cutting interoperability, and embedded governance/consent/privacy—prevent AI models from amplifying fragmented or misattributed data; emphasise that semantic governance and auditable, curated registry grounding become even more critical with large language and multi-modal models; and describe the emerging pattern of giving AI models access to deterministic, governed capabilities via skills, orchestrating agents, shared interfaces such as the Model Context Protocol (MCP), and machine-readable implementation guide metadata.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-080",
+      "source": "sections/sec-080-53-where-artificial-intelligence-can-support-the.md",
+      "source_hash": "c11146a411113fb4b4ca463eb5e57ec51a7231c6a9ba24373d305314d550a51d",
+      "narrative": [
+        {
+          "text": "Section 5.3 surveys credible near-term, assistive AI applications across priority health goals under human oversight: (1) health financing (distinguishing pattern-based fraud/waste/abuse detection across claim volumes from rule- or ML-based individual claims adjudication support), (2) supply chain (demand forecasting, catalogue mapping, quality control, and anomaly/diversion detection), (3) clinical and public health services (point-of-care diagnostic/decision support, image interpretation, risk prediction, and outbreak forecasting), (4) planning and reach (combining satellite imagery settlement estimation with governed geo/facility reference data for microplanning), and (5) cross-domain document extraction, coding assistance, and guidance navigation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-081",
+      "source": "sections/sec-081-54-readiness-oversight-and-responsible-adoption.md",
+      "source_hash": "8d27ba37c5d810106b55f3fd6cdb35842007e88754184bfc0e6035f9bcede633",
+      "narrative": [
+        {
+          "text": "Section 5.4 heading transition line ('139') introducing the sub-chapter on Readiness, oversight, and responsible adoption of AI in health.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-082",
+      "source": "sections/sec-082-541-what-ai-readiness-means.md",
+      "source_hash": "8df2df516f1fa4b1e032ea0fe33b977b59320bc5b974894ec4c4ba14f0becb6f",
+      "narrative": [
+        {
+          "text": "Section 5.4.1 defines national AI readiness as a property of the receiving environment across three dimensions: the quality and governance of the data a model uses, the legal and policy framework governing its use (covering data protection, input/output safeguards, training-data representativeness, and model-drift monitoring), and institutional capacity to deploy, evaluate, monitor, and maintain systems, citing WHO's 2021 and 2024 AI ethics/governance guidance alongside emerging national and international AI statutes.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-083",
+      "source": "sections/sec-083-542-trustworthy-ai-in-a-health-setting.md",
+      "source_hash": "15f4c3d9e473f4ac36de34b010475bf009446fe1c775c3fee954543eab85fca4",
+      "narrative": [
+        {
+          "text": "Section 5.4.2 explains that trustworthy AI in healthcare must be earned through evidence of effectiveness, safety, transparency about limitations, human accountability, fairness, and meaningful human oversight. Advises decision-makers to interrogate vendor claims (task specificity, data dependencies, evaluation evidence, error accountability, and governance) and conduct recurring evaluations ('evals') against representative cases and explicit criteria before and during deployment, referencing the Council of Europe AI Framework Convention (CETS No. 225), national AI statutes in the Republic of Korea (Act No. 20676) and Peru (Ley N.º 31814), and WHO AI resources.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-084",
+      "source": "sections/sec-084-543-equity-and-safety.md",
+      "source_hash": "be5ac39e4c35b9810ea90d31e66bd9d3fb33cd9d1f0c5e489abf9e58cc5e4185",
+      "narrative": [
+        {
+          "text": "Section 5.4.3 highlights equity and safety in health AI, explaining that models trained on poorly governed or unrepresentative data systematically reproduce and magnify inequities at scale in ways harder to detect than individual errors, making data representativeness and quality an integral part of the core data-foundation discipline rather than a separate ethical exercise.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://fddd50b8-3a30-41bc-998a-9275f821d9a8"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
       "block": "library/who-dpi-h-reference-architecture-draft-v1/blocks/prose-sec-front-matter",
       "source": "sections/sec-front-matter.md",
       "source_hash": "0afcfe12912930afc3243d4be04692627d76b962f08e31fcf57ff12170547081",
