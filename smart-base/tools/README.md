@@ -21,6 +21,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `tools`, holding `tools`.
 | [`dmn-to-html/`](dmn-to-html/) | _nothing declares what this holds_ | |
 | [`dmn-to-questionnaire/`](dmn-to-questionnaire/) | _nothing declares what this holds_ | |
 | [`extract-dak/`](extract-dak/) | _nothing declares what this holds_ | |
+| [`immz-schedule-app-local/`](immz-schedule-app-local/) | _nothing declares what this holds_ | |
 | [`l1-extraction-pages/`](l1-extraction-pages/) | _nothing declares what this holds_ | |
 | [`l1-recommendation-candidates/`](l1-recommendation-candidates/) | _nothing declares what this holds_ | |
 | [`l1-recommendation-scenarios/`](l1-recommendation-scenarios/) | _nothing declares what this holds_ | |
