@@ -22,17 +22,17 @@ export {
   instanceRootsIn,
   readDeclaration,
   repoRootFor,
-} from "../../cat-harness/schemas/kg/cat-harness.js";
-export { isBuiltAtPublish } from "../../cat-harness/schemas/kg/built-at-publish.js";
+} from "../../cat-harness-tools/schemas/kg/cat-harness.js";
+export { isBuiltAtPublish } from "../../cat-harness-tools/schemas/kg/built-at-publish.js";
 export {
   ContentTypeConflictError,
   ContentTypeRegistry,
   describeRepository,
   defaultContentTypes,
-} from "../../cat-harness/schemas/content/content-type.js";
+} from "../../cat-harness-tools/schemas/content/content-type.js";
 export {
   registerBaseContentTypes,
-} from "../../cat-harness/schemas/content/content-types-base.js";
+} from "../../cat-harness-tools/schemas/content/content-types-base.js";
 export {
   DocumentKindSchema,
   DOCUMENT_KIND_COVERAGE_SCHEMA_TAG,
@@ -40,43 +40,43 @@ export {
   DocumentKindCoverageSchema,
   type DocumentKind,
   type DocumentKindCoverage,
-} from "../../cat-harness/schemas/content/document-kind.js";
+} from "../../cat-harness-tools/schemas/content/document-kind.js";
 export {
   ExternalSchemaSchema,
-} from "../../cat-harness/schemas/kg/external-schema.js";
+} from "../../cat-harness-tools/schemas/kg/external-schema.js";
 export {
   describeRepositoryClosure,
-} from "../../cat-harness/schemas/kg/harness-config.js";
+} from "../../cat-harness-tools/schemas/kg/harness-config.js";
 export {
   SMART_BASE_NS,
-} from "../../cat-harness/schemas/kg/jsonld.js";
+} from "../../cat-harness-tools/schemas/kg/jsonld.js";
 export {
   kgNodeLabelShape,
   type KgNodeLabels,
-} from "../../cat-harness/schemas/kg/kg-node.js";
+} from "../../cat-harness-tools/schemas/kg/kg-node.js";
 export {
   termIri,
-} from "../../cat-harness/schemas/kg/namespaces.js";
+} from "../../cat-harness-tools/schemas/kg/namespaces.js";
 export {
   PINNED_TERMINOLOGY_TAG,
   PinnedTerminologySchema,
   type PinnedConcept,
   type PinnedTerminologyFile,
-} from "../../cat-harness/schemas/content/pinned-terminology.js";
+} from "../../cat-harness-tools/schemas/content/pinned-terminology.js";
 export {
   THEME_SCHEMA_TAG,
   explainThemeFailure,
   resolveTheme,
   type ResolvedTheme,
   type Theme,
-} from "../../cat-harness/schemas/ui/theme.js";
+} from "../../cat-harness-tools/schemas/ui/theme.js";
 export {
   instanceThemes,
   instanceWebpageThemes,
-} from "../../cat-harness/schemas/ui/theme-by-ref.js";
-export { defineTool, type ToolDefinition } from "../../cat-harness/schemas/tools/tool.js";
-export { toolTypeIri } from "../../cat-harness/schemas/tools/tool-types.js";
-export { toolFactory, toolsFromFolders } from "../../cat-harness/schemas/tools/tool-folders.js";
+} from "../../cat-harness-tools/schemas/ui/theme-by-ref.js";
+export { defineTool, type ToolDefinition } from "../../cat-harness-tools/schemas/tools/tool.js";
+export { toolTypeIri } from "../../cat-harness-tools/schemas/tools/tool-types.js";
+export { toolFactory, toolsFromFolders } from "../../cat-harness-tools/schemas/tools/tool-folders.js";
 export {
   writeInstanceConfig,
 } from "../../cat-harness-tools/test/support/instance-fixture.js";
@@ -92,7 +92,7 @@ export {
   kindForBuilder,
   adapterForKind,
   profileAcceptsKind,
-} from "../../cat-harness/schemas/content/block-kinds.js";
+} from "../../cat-harness-tools/schemas/content/block-kinds.js";
 export {
   criterionAdapters,
   incompatibleCompanions,
@@ -100,32 +100,32 @@ export {
   type CheckerPaths,
   type CheckerResult,
   type CompanionRole,
-} from "../../cat-harness/schemas/sdlc/block-qa.js";
+} from "../../cat-harness-tools/schemas/sdlc/block-qa.js";
 export {
   siteDirFor,
-} from "../../cat-harness/schemas/kg/cat-harness.js";
+} from "../../cat-harness-tools/schemas/kg/cat-harness.js";
 export {
   KNOWN_LABEL_PREFIXES,
   BlockBaseSchema,
-} from "../../cat-harness/schemas/constraints.js";
+} from "../../cat-harness-tools/schemas/constraints.js";
 export {
   ContributionRegistry,
   composedKindOwner,
-} from "../../cat-harness/schemas/content/contributions.js";
+} from "../../cat-harness-tools/schemas/content/contributions.js";
 export {
   pagesOf,
   readStructure,
   STRUCTURE_FILENAME,
   type BaseSection,
   type BaseStructure,
-} from "../../cat-harness/schemas/content/document-structure.js";
+} from "../../cat-harness-tools/schemas/content/document-structure.js";
 export {
   assertPrefixesInSync,
   typesForKind,
-} from "../../cat-harness/schemas/kg/jsonld.js";
+} from "../../cat-harness-tools/schemas/kg/jsonld.js";
 export {
   type BlockBase,
-} from "../../cat-harness/schemas/types.js";
+} from "../../cat-harness-tools/schemas/types.js";
 export {
   IgIdentitySchema,
   readIgIdentity,
@@ -135,15 +135,15 @@ export {
 } from "../../fhir-harness/scripts/ig-site-data.js";
 export {
   loadContributionsSync,
-} from "../../cat-harness/schemas/kg/harness-config.js";
+} from "../../cat-harness-tools/schemas/kg/harness-config.js";
 export {
   BlockKindNodeSchema,
   builderOf,
   type BlockKindNode,
-} from "../../cat-harness/schemas/kg/block-kind-node.js";
+} from "../../cat-harness-tools/schemas/kg/block-kind-node.js";
 export {
   ownDeclaredDirectories,
-} from "../../cat-harness/schemas/kg/declared-nodes.js";
+} from "../../cat-harness-tools/schemas/kg/declared-nodes.js";
 export {
   siteFilter,
 } from "../../cat-harness-tools/scripts/staging-cone.ts";
@@ -162,14 +162,14 @@ export {
 // entry's sub-graph files.
 export {
   checkoutRootFor,
-} from "../../cat-harness/schemas/kg/cat-harness.js";
+} from "../../cat-harness-tools/schemas/kg/cat-harness.js";
 export {
   checkoutDirectories,
-} from "../../cat-harness/schemas/kg/harness-config.js";
+} from "../../cat-harness-tools/schemas/kg/harness-config.js";
 export {
   siteRootFrom,
   visualiserRoute,
-} from "../../cat-harness/schemas/kg/visualiser-route.js";
+} from "../../cat-harness-tools/schemas/kg/visualiser-route.js";
 export {
   declaredVisualisers,
   pageParts,
