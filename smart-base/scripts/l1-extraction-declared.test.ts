@@ -1,6 +1,13 @@
 /**
- * Every `library/<entry>/l1-extraction/` is DECLARED, with the `l1-extraction`
+ * Every `l1-extractions/<entry>/` is DECLARED, with the `l1-extraction`
  * typology — and every such declaration names a directory that is there.
+ *
+ * Until 2026-10-30 the output sat inside its library entry, at
+ * `library/<entry>/l1-extraction/`. The handbook's sections then moved to
+ * who-iris (who-iris#107), and a library folder holding only the extraction
+ * read as a second copy of the entry, so folio-assistant's library ingest
+ * refused the duplicate slug. The extraction is smart-base's own (owner,
+ * 2026-10-16), so it moved to `l1-extractions/<entry>/` here.
  *
  * Owner, 2026-10-12, bean 8pzh item 1: the extraction output stays beside its
  * library entry AND is published with the source — "if its a part of the KG it
@@ -24,15 +31,22 @@ const KIND = "l1-extraction";
 interface Dir { id: string; path: string; graphTypologies: string[] }
 const decl = JSON.parse(readFileSync(join(ROOT, "smart-base.json"), "utf-8")) as { directories: Dir[] };
 const libraryPath = decl.directories.find((d) => d.graphTypologies.includes("library"))!.path.replace(/\/$/, "");
+const EXTRACTIONS = "l1-extractions";
 const norm = (p: string): string => p.replace(/\/$/, "");
 
-/** `library/<entry>/l1-extraction` for every entry that holds one, on disk. */
+/** `l1-extractions/<entry>` for every extraction on disk. */
 function onDisk(): string[] {
-  const lib = join(ROOT, libraryPath);
-  return readdirSync(lib)
-    .filter((e) => statSync(join(lib, e)).isDirectory() && existsSync(join(lib, e, KIND)))
-    .map((e) => `${libraryPath}/${e}/${KIND}`)
+  const dir = join(ROOT, EXTRACTIONS);
+  return readdirSync(dir)
+    .filter((e) => statSync(join(dir, e)).isDirectory())
+    .map((e) => `${EXTRACTIONS}/${e}`)
     .sort();
+}
+
+/** `library/<entry>/l1-extraction` anywhere: the old place, which must stay empty. */
+function leftInLibrary(): string[] {
+  const lib = join(ROOT, libraryPath);
+  return readdirSync(lib).filter((e) => statSync(join(lib, e)).isDirectory() && existsSync(join(lib, e, KIND)));
 }
 
 describe("l1-extraction is declared KG content", () => {
@@ -53,13 +67,17 @@ describe("l1-extraction is declared KG content", () => {
     expect(onDisk().length).toBeGreaterThan(0);
   });
 
-  it("every l1-extraction/ on disk is declared with the l1-extraction typology", () => {
+  it("every l1-extractions/<entry>/ on disk is declared with the l1-extraction typology", () => {
     expect(declared.map((d) => norm(d.path)).sort()).toEqual(onDisk());
   });
 
-  it("each declaration sits INSIDE a library entry and names that typology alone", () => {
+  it("no extraction is left inside a library entry, where it reads as a second copy of the entry", () => {
+    expect(leftInLibrary()).toEqual([]);
+  });
+
+  it("each declaration sits in l1-extractions/ and names that typology alone", () => {
     for (const d of declared) {
-      expect(norm(d.path).startsWith(`${libraryPath}/`)).toBe(true);
+      expect(norm(d.path).startsWith(`${EXTRACTIONS}/`)).toBe(true);
       expect(d.graphTypologies).toEqual([KIND]);
     }
   });

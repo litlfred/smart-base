@@ -204,16 +204,22 @@ work list cites it by reference. `--check` ignores the context, as it ignores
 
 **Declare every output directory, in the same commit.** An `--out` directory
 in or beside a library — `library/<entry>/l1-extraction/`, or a sibling such
-as `library/l1-recommendation-scenarios/` that Part 2 writes — is a directory
+as `library/l1-recommendation-scenarios/` that Part 2 writes, or
+`l1-extractions/<entry>/` when the entry lives in another instance — is a directory
 of the instance's `<name>.json` with `"graphTypologies": ["l1-extraction"]`,
 one entry per directory, never a wildcard (smart-base's own
-`library-9789240116191-eng-l1-extraction` is the pattern). Undeclared,
+`l1-extraction-9789240116191-eng` is the pattern). Undeclared,
 folio-assistant's `check:l1-complete` reads an `l1-extraction/` inside an
 entry as a stray child and a sibling directory as an entry with no
 `structure.json`; it fails the QA working copy, and with it every test
 shard, gate and the staging build that read the copy. That is what happened
 to the Uganda adaptation on 2026-10-15 (folio-assistant#2559, fixed by
-<https://github.com/litlfred/smart-immunizations-uganda/commit/6baddb4>). Before staging, run
+<https://github.com/litlfred/smart-immunizations-uganda/commit/6baddb4>).
+Never nest the output in a `library/<entry>/` folder when the entry itself
+lives in another instance's library: that folder reads as a second copy of
+the entry, and folio-assistant's library ingest refuses the duplicate slug
+(2026-10-30, when the handbook's sections moved to who-iris, who-iris#107).
+Hold it at `l1-extractions/<entry>/` instead. Before staging, run
 `bun run cat check:l1-complete` in a folio-assistant checkout that mounts the
 instance at the commit being staged; it must exit 0.
 
@@ -360,8 +366,9 @@ ones with no process to draw into yet.
 ## The worked examples
 
 **An ingested handbook, end to end.**
-`smart-base/library/9789240116191-eng/l1-extraction/` is the *Digital
-transformation handbook for health product catalogue* (WHO, 2025) run through
+`smart-base/l1-extractions/9789240116191-eng/` is the *Digital
+transformation handbook for health product catalogue* (WHO, 2025; its sections
+are in who-iris, `who-iris/library/9789240116191-eng/`) run through
 both tools: 48 normative sentences. The handbook is implementation guidance,
 so the agent's curation took **22 implementation practices** (not
 recommendations; ruling 1b) and proposed 30 exclusions (licence text, glossary

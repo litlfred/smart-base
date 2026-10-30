@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import { lookupTerminology } from "./terminology-lookup.ts";
 
 const REPO_ROOT = resolve(import.meta.dir, "..", "..");
-const DTH_VOCAB = "smart-base/library/9789240116191-eng/l1-extraction/dth-npc-vocabulary.json";
+const DTH_VOCAB = "smart-base/l1-extractions/9789240116191-eng/dth-npc-vocabulary.json";
 
 describe("terminology-lookup (bean folio-assistant-4nfs)", () => {
   test("Rung 1: resolves persona from target guide vocabulary first", () => {

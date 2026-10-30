@@ -157,7 +157,7 @@ describe("the worked example", () => {
     // The sections live in who-iris since 2026-10-30 (who-iris#107); the
     // extraction is smart-base's own and stays here.
     const X = "who-iris/library/9789240116191-eng";
-    const E = "smart-base/library/9789240116191-eng/l1-extraction";
+    const E = "smart-base/l1-extractions/9789240116191-eng";
     const r = spawnSync("bun", ["run", "smart-base/scripts/l1-recommendation-candidates.ts", "--entry", X, "--curation", `${E}/curation.yaml`, "--out", E, "--check"], {
       cwd: join(import.meta.dir, "..", ".."),
       encoding: "utf8",
@@ -167,7 +167,7 @@ describe("the worked example", () => {
   });
 
   it("its scenario candidates are current", () => {
-    const X = "smart-base/library/9789240116191-eng/l1-extraction";
+    const X = "smart-base/l1-extractions/9789240116191-eng";
     const r = spawnSync(
       "bun",
       ["run", "smart-base/scripts/l1-recommendation-scenarios.ts", "--l1", `${X}/l1.json`, "--vocabulary", `${X}/dth-npc-vocabulary.json`,

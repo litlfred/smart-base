@@ -2,7 +2,7 @@
   "$schema": "l1-recommendation-candidates/v1",
   "entry": "who-iris/library/9789240116191-eng",
   "curation": {
-    "path": "smart-base/library/9789240116191-eng/l1-extraction/curation.yaml",
+    "path": "smart-base/l1-extractions/9789240116191-eng/curation.yaml",
     "sha256": "d2054334ca3da67661e349b38ccce7082bc0c485a2b7373915513fad0d35b6a6"
   },
   "publication": {
@@ -666,6 +666,6 @@
     }
   ],
   "runContext": {
-    "sha256": "28ff000e611fa653d4a674b50b2cedb5b113eb5be23d67bb6d1b8633df11c662"
+    "sha256": "ca02e44efcbb7dd9a9c7e7b2a7abe84d0757e8499d20ea6a09981fd60a79126c"
   }
 }
