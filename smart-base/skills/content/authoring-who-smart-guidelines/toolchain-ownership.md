@@ -84,9 +84,10 @@ That is the destination, and it is why the nodes were written before any script
 moved.
 
 **Nothing at `WorldHealthOrganization/*` changes.** This is pre-work in
-`litlfred/*`, which is also why `dak.json` → `dak.config.json` is ours alone
-until upstream follows. `WorldHealthOrganization/smart-base` is read-only from
-here and stays the executing home until the gate above is satisfied per script.
+`litlfred/*`, which is also why `dak.json` → `index.config.json`
+(`contentTypes.dak`) is ours alone until upstream follows.
+`WorldHealthOrganization/smart-base` is read-only from here and stays the
+executing home until the gate above is satisfied per script.
 
 **One consequence worth stating.** Because the ownership home is a directory in
 this repository rather than a fork of the IG, a moved script arrives somewhere

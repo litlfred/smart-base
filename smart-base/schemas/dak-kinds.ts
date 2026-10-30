@@ -169,9 +169,10 @@ export type DakComponent = (typeof DAK_COMPONENTS)[number];
 /**
  * Components the owner counts that WHO's `DAK` logical model does not yet
  * declare as a field of their own (owner, 2026-09-30, #1614). Each still has a
- * {@link DAK_COMPONENT_FIELDS} entry — the name the field would take — so a
- * `dak.config.json` can carry it; the check against `DAK.fsh` skips these and
- * checks the rest field for field. When WHO formalizes one, it leaves this list.
+ * {@link DAK_COMPONENT_FIELDS} entry — the name the field would take — so
+ * `index.config.json` (`contentTypes.dak`) can carry it; the check against
+ * `DAK.fsh` skips these and checks the rest field for field. When WHO
+ * formalizes one, it leaves this list.
  */
 export const DAK_UNFORMALIZED_COMPONENTS: readonly DakComponent[] = ["scheduling-logic"];
 
@@ -181,7 +182,7 @@ export const DAK_UNFORMALIZED_COMPONENTS: readonly DakComponent[] = ["scheduling
  * From `smart-base` `input/fsh/models/DAK.fsh`, where every component is
  * declared `0..* <Name>Source`. Carrying the field names makes this table
  * checkable against WHO's model rather than merely parallel to it, and gives a
- * DAK read from `dak.config.json` somewhere to land.
+ * DAK read from `index.config.json` (`contentTypes.dak`) somewhere to land.
  */
 export const DAK_COMPONENT_FIELDS: Record<DakComponent, string> = {
   "health-interventions-and-recommendations": "healthInterventions",

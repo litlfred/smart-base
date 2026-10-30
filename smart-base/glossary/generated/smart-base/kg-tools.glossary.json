@@ -24,7 +24,7 @@
     },
     {
       "id": "dak-config-from-sushi",
-      "prefLabel": "sushi-config.yaml → dak.config.json",
+      "prefLabel": "sushi-config.yaml → index.config.json#contentTypes.dak",
       "definition": "Derive the DAK configuration from `sushi-config.yaml` plus repository and branch context.",
       "notation": "dak-config-from-sushi",
       "source": "smart-base/tools/dak-config-from-sushi/dak-config-from-sushi.ts#dak-config-from-sushi",
@@ -52,6 +52,14 @@
       "definition": "Run WHO's `extract_dak.py` in a DAK or IG repository: it reads the DAK template spreadsheets (`input/decision-logic/*.xlsx` via `dt_extractor`, `input/system-requirements/*.xlsx` via `req_extractor`, `input/dictionary/*.xlsx` via `dd_extractor`) and the BPMN, and writes the DMN decision tables, the CPG recommendation PlanDefinitions with their citations, CQL library skeletons, Requirements and logical-model FSH. The authoring path the WHO IG Starter Kit (`l3_decisiontables`, `l3_cql`) prescribes: an adapted decision or scheduling table is an edited copy of the upstream DAK's spreadsheet, never a parallel format.",
       "notation": "extract-dak",
       "source": "smart-base/tools/extract-dak/extract-dak.ts#extract-dak",
+      "status": "candidate"
+    },
+    {
+      "id": "immz-schedule-app-local",
+      "prefLabel": "Run the immunization schedule-check app locally, on a WHO or country adaptation IG",
+      "definition": "Start the schedule-check web form from litlfred/awho-mcp on this machine: a HAPI FHIR server in Docker on 127.0.0.1, the WHO SMART Immunizations IG loaded, then a country adaptation IG after it (its decision-logic tables replace WHO's, and its country profile is generated from its `input/l2/dependencies.yaml`), the CQL cache warmed, and the form served on 127.0.0.1. Unbuilt IGs are built with SUSHI first, and each Library's CQL is embedded from `input/cql/` as the IG Publisher would. Re-running reuses a server already loaded from the same commits; `--down` stops both.",
+      "notation": "immz-schedule-app-local",
+      "source": "smart-base/tools/immz-schedule-app-local/immz-schedule-app-local.ts#immz-schedule-app-local",
       "status": "candidate"
     },
     {
