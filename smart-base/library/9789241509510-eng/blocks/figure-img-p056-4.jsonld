@@ -26,6 +26,66 @@
       },
       "drafted_at": "2026-09-22T08:53:47Z",
       "lang": "en"
+    },
+    {
+      "text": "Couverture de l'ouvrage « Business Model Generation », présentant le titre en grands caractères sur un fond sombre texturé, accompagné de petites mentions de crédit en dessous.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+      },
+      "drafted_at": "2026-10-30",
+      "lang": "fr"
+    },
+    {
+      "text": "Cubierta del libro «Business Model Generation», que muestra el título en caracteres grandes sobre un fondo oscuro texturizado con un pequeño texto de créditos debajo.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+      },
+      "drafted_at": "2026-10-30",
+      "lang": "es"
+    },
+    {
+      "text": "غلاف كتاب «Business Model Generation»، ويظهر عليه العنوان بخط كبير على خلفية داكنة ذات ملمس بارز مع نص صغير لبيانات التأليف في الأسفل.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+      },
+      "drafted_at": "2026-10-30",
+      "lang": "ar"
+    },
+    {
+      "text": "Обложка книги «Business Model Generation» с набранным крупным шрифтом заголовком на текстурированном тёмном фоне и мелким текстом выходных сведений об авторах внизу.",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+      },
+      "drafted_at": "2026-10-30",
+      "lang": "ru"
+    },
+    {
+      "text": "《Business Model Generation》一书的封面，在带有纹理的深色背景上以大号字体展示书名，下方配有小号字体的署名信息。",
+      "state": "draft",
+      "drafted_by": {
+        "kind": "agent",
+        "id": "claude-code",
+        "model": "not-disclosed",
+        "session": "conversation://3428a4bf-c379-458d-9b9b-cfe94c1d386c"
+      },
+      "drafted_at": "2026-10-30",
+      "lang": "zh"
     }
   ],
   "derivedFrom": "library/9789241509510-eng/sections/page-056",
