@@ -10,7 +10,7 @@ import { describe, expect, it } from "bun:test";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-import { allQuotes, conflictingTerms, quoteProblem, render, sectionText, TermFindingsSchema } from "./gen-dth-term-findings.ts";
+import { allQuotes, conflictingTerms, quoteProblem, quoteUnverifiable, render, sectionText, TermFindingsSchema } from "./gen-dth-term-findings.ts";
 
 const root = join(import.meta.dir, "..", "..");
 const findings = TermFindingsSchema.parse(JSON.parse(readFileSync(join(root, "smart-base", "findings", "dth-term-alternatives.json"), "utf8")));
@@ -18,8 +18,15 @@ const candidates = JSON.parse(readFileSync(join(root, findings.candidates), "utf
 const terms = conflictingTerms(candidates);
 
 describe("DTH term findings", () => {
-  it("every quote matches its source", () => {
-    expect(allQuotes(findings).map((q) => quoteProblem(q)).filter(Boolean)).toEqual([]);
+  it("every quote matches its source, except one citing a file built at publish that is not built here", () => {
+    expect(allQuotes(findings).filter((q) => quoteUnverifiable(q) === null).map((q) => quoteProblem(q)).filter(Boolean)).toEqual([]);
+  });
+  it("a quote citing a built-at-publish file that is absent is not checked, and says so", () => {
+    const q = { path: "smart-base/fhir-artifact-index/index.json", locator: "x", quote: "y" };
+    const built = new Set([q.path]);
+    expect(quoteUnverifiable(q, "/nonexistent-root", built)).toContain("built at publish");
+    expect(quoteUnverifiable(q, "/nonexistent-root", new Set())).toBeNull();
+    expect(quoteProblem(q, "/nonexistent-root")).toContain("no such file");
   });
   it("a quote that is not in its source is reported", () => {
     const q = { ...findings.actor.meanings[0].sources[0], quote: "An actor is a concrete participant" };
