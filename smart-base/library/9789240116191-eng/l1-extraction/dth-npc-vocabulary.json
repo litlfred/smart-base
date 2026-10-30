@@ -8,9 +8,9 @@
     "repository": "litlfred/smart-base",
     "commit": "7cb286a2e88007f6ba20d8bc659cc8c481d316c6",
     "paths": [
-      "smart-base/library/9789240116191-eng/sections/page-026.md",
-      "smart-base/library/9789240116191-eng/sections/page-057.md",
-      "smart-base/library/9789240116191-eng/sections/page-058.md"
+      "who-iris/library/9789240116191-eng/sections/page-026.md",
+      "who-iris/library/9789240116191-eng/sections/page-057.md",
+      "who-iris/library/9789240116191-eng/sections/page-058.md"
     ]
   },
   "personas": [
@@ -19,7 +19,7 @@
       "title": "Data owner",
       "description": "Responsible for the overall strategy, governance, and quality of the product master data.",
       "source": {
-        "path": "smart-base/library/9789240116191-eng/sections/page-026.md",
+        "path": "who-iris/library/9789240116191-eng/sections/page-026.md",
         "locator": "line 26"
       }
     },
@@ -28,7 +28,7 @@
       "title": "Data custodian",
       "description": "Responsible for the technical management and security of product master data.",
       "source": {
-        "path": "smart-base/library/9789240116191-eng/sections/page-026.md",
+        "path": "who-iris/library/9789240116191-eng/sections/page-026.md",
         "locator": "line 40"
       }
     },
@@ -37,7 +37,7 @@
       "title": "Data steward",
       "description": "Responsible for the day-to-day management, maintenance, and quality control of the product master data.",
       "source": {
-        "path": "smart-base/library/9789240116191-eng/sections/page-026.md",
+        "path": "who-iris/library/9789240116191-eng/sections/page-026.md",
         "locator": "line 54"
       }
     },
@@ -46,7 +46,7 @@
       "title": "Project manager",
       "personaType": "Leadership",
       "source": {
-        "path": "smart-base/library/9789240116191-eng/sections/page-057.md",
+        "path": "who-iris/library/9789240116191-eng/sections/page-057.md",
         "locator": "line 31"
       }
     },
@@ -55,7 +55,7 @@
       "title": "Solution architect",
       "personaType": "Leadership",
       "source": {
-        "path": "smart-base/library/9789240116191-eng/sections/page-057.md",
+        "path": "who-iris/library/9789240116191-eng/sections/page-057.md",
         "locator": "line 68"
       }
     },
@@ -64,7 +64,7 @@
       "title": "Business analyst",
       "personaType": "Technical",
       "source": {
-        "path": "smart-base/library/9789240116191-eng/sections/page-058.md",
+        "path": "who-iris/library/9789240116191-eng/sections/page-058.md",
         "locator": "line 27"
       }
     },
@@ -73,7 +73,7 @@
       "title": "Developer/programmer",
       "personaType": "Technical",
       "source": {
-        "path": "smart-base/library/9789240116191-eng/sections/page-058.md",
+        "path": "who-iris/library/9789240116191-eng/sections/page-058.md",
         "locator": "line 64"
       }
     },
@@ -82,7 +82,7 @@
       "title": "Integration specialist",
       "personaType": "Technical",
       "source": {
-        "path": "smart-base/library/9789240116191-eng/sections/page-058.md",
+        "path": "who-iris/library/9789240116191-eng/sections/page-058.md",
         "locator": "line 103"
       }
     }

@@ -6,12 +6,12 @@
   "generatedAt": "2026-10-12T18:25:04Z",
   "wasDerivedFrom": [
     {
-      "path": "smart-base/library/9789240116191-eng/structure.json",
+      "path": "who-iris/library/9789240116191-eng/structure.json",
       "sha256": "37123d4bca700a1f00b5f203aa1869b434dc12983fda7786ea7f2229b531297c",
       "note": "The entry's structure; the source PDF's sha256 is 9cc9ca42d30db9ebef25509f05cfbd69fcb51bc86f9add653aa54f2a94a1a021."
     },
     {
-      "path": "smart-base/library/9789240116191-eng/sections/",
+      "path": "who-iris/library/9789240116191-eng/sections/",
       "sha256": "717cf5b6dc9c4080aea604d28571f51f02fd9d228ce978dd9c6b451a9d38dd57",
       "note": "The page texts read, hashed as a sha256sum listing in file order."
     }
@@ -35,7 +35,7 @@
       "derivation": "inferred",
       "note": "Title and electronic ISBN as printed on page 3. publicationType implementation-guidance — a \"how to\" handbook that makes no recommendations of its own (handbook for guideline development §1.9), so every statement decided below is an implementation-practice node, not a recommendation (owner ruling 1b, 2026-10-12).",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-003.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-003.md",
         "quote": "ISBN 978-92-4-011619-1 (electronic"
       },
       "skill": "smart-base/recommendation-extraction"
@@ -52,7 +52,7 @@
       "derivation": "inferred",
       "note": "Printed as the handbook's premise for product master data; a normative 'must' on all stakeholders.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-010.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-010.md",
         "quote": "For transactions to be seamless, all stakeholders must consistently identify health products using standardized information."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -69,7 +69,7 @@
       "derivation": "inferred",
       "note": "One bullet of the step table on page 22; the splitter read the table as one sentence.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-022.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-022.md",
         "quote": "Establishing regulatory policies to promote product master data standardization \b 13 INPUTS STEPS RESOURCES OUTPUTS • List of additional regulatory policies and legislations required • List of modifications needed for existing policies and legislations Develop the required policies and regulations such as master data guidelines, ensuring they are consistent with both current and emerging regulations concerning data standardization and AIDC. • Regulatory policies and guidelines must promote efficient mechanisms for stakeholders such as manufacturers, distributors and other suppliers to share the required data. • Timelines with phased roll-out of policies should be outlined to ensure effective compliance by manufacturers. • Master data guideline template • Product identification and labelling guidance and template • Master data related policies and legislations Update existing policies and legislations, if necessary INPUTS STEPS RESOURCES OUTPUTS • Master data related policies and legislations Evaluate the newly developed and the revised policies and legislations led by the NRA in collaboration with primary stakeholders like the Ministry of Health, central and regional warehouses, procurement entities, manufacturers and distributors and operational leaders • Approved master data policies and legislations Ensure that all feedback are suitably addressed, and revisions are incorporated into the final draft Obtain appropriate approvals for publishing of the policies POTENTIAL RISKS MITIGATION Preparing regulatory documents is often a lengthy process, and funding may not always be readily available. • Identify and engage all relevant government stakeholders and senior leaders early on to foster a collaborative approach and minimise rework or repeated iterations. • Identify and engage partners who can support with funding and other resources, such as technical experts. • Involve private sector stakeholders, including manufacturers and distributors, to help ensure that regulatory documents are realistic and implementable."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -86,7 +86,7 @@
       "derivation": "inferred",
       "note": "A second bullet of the same step table.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-022.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-022.md",
         "quote": "Establishing regulatory policies to promote product master data standardization \b 13 INPUTS STEPS RESOURCES OUTPUTS • List of additional regulatory policies and legislations required • List of modifications needed for existing policies and legislations Develop the required policies and regulations such as master data guidelines, ensuring they are consistent with both current and emerging regulations concerning data standardization and AIDC. • Regulatory policies and guidelines must promote efficient mechanisms for stakeholders such as manufacturers, distributors and other suppliers to share the required data. • Timelines with phased roll-out of policies should be outlined to ensure effective compliance by manufacturers. • Master data guideline template • Product identification and labelling guidance and template • Master data related policies and legislations Update existing policies and legislations, if necessary INPUTS STEPS RESOURCES OUTPUTS • Master data related policies and legislations Evaluate the newly developed and the revised policies and legislations led by the NRA in collaboration with primary stakeholders like the Ministry of Health, central and regional warehouses, procurement entities, manufacturers and distributors and operational leaders • Approved master data policies and legislations Ensure that all feedback are suitably addressed, and revisions are incorporated into the final draft Obtain appropriate approvals for publishing of the policies POTENTIAL RISKS MITIGATION Preparing regulatory documents is often a lengthy process, and funding may not always be readily available. • Identify and engage all relevant government stakeholders and senior leaders early on to foster a collaborative approach and minimise rework or repeated iterations. • Identify and engage partners who can support with funding and other resources, such as technical experts. • Involve private sector stakeholders, including manufacturers and distributors, to help ensure that regulatory documents are realistic and implementable."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -103,7 +103,7 @@
       "derivation": "inferred",
       "note": "The chapter's opening statement, without the running header the splitter joined to it.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-025.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-025.md",
         "quote": "16\b Instituting data management and governance policies For effective use of data in operations, analysis, and decision-making, the integrity and quality of data must be consistently and continuously maintained."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -120,7 +120,7 @@
       "derivation": "inferred",
       "note": "A normative 'should' on data management policies.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-025.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-025.md",
         "quote": "Data management policies should ensure adherence to principles of privacy, security, and ethical data usage."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -137,7 +137,7 @@
       "derivation": "inferred",
       "note": "The footnoted (*) statement on page 26, without the running header.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-026.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-026.md",
         "quote": "Instituting data management and governance policies \b 17 *Master data management procedures should include the following key elements to continuously and securely maintain master data: • Data governance framework: Establish clear policies, roles, responsibilities, and processes to ensure data quality and consistency for use across the health supply chain."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -154,7 +154,7 @@
       "derivation": "inferred",
       "note": "A bullet of the step table on page 27.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-027.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-027.md",
         "quote": "18\b Instituting data management and governance policies INPUTS STEPS RESOURCES OUTPUTS • Data harmonization activities plan • Master data management procedures including master data governance policies Conduct data harmonization activities such as establishing a standardized coding scheme, master data definitions and structures* to organize and maintain master data consistently and persistently • Data harmonization activities must consider all sources of product data, as well as the systems, processes, and organizations or stakeholders that will utilize this data."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -171,7 +171,7 @@
       "derivation": "inferred",
       "note": "The footnoted (*) statement on page 28, without the running header.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-028.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-028.md",
         "quote": "Instituting data management and governance policies \b 19 *Master data definitions and structures should include provisions for maintaining product classifications, generic product information, and trade item details."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -188,7 +188,7 @@
       "derivation": "inferred",
       "note": "Printed under 'Best practices'; the figure caption before it is not part of it.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md",
         "quote": "9: Relationship between generic product, trade item and regulated trade item Best practices: • It is generally recommended to avoid including product classification or product characteristics such as dosage and strength in the generic national product code."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -205,7 +205,7 @@
       "derivation": "inferred",
       "note": "Best practice, first sentence of the bullet; the splitter joined the next bullet.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md",
         "quote": "Instead, a system-generated sequential numeric or alphanumeric code should be used. • Product characteristics such as dosage, strength, pack size, and route of administration should be defined as attributes and linked to the product codes."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -222,7 +222,7 @@
       "derivation": "inferred",
       "note": "The next 'Best practices' bullet.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md",
         "quote": "Instead, a system-generated sequential numeric or alphanumeric code should be used. • Product characteristics such as dosage, strength, pack size, and route of administration should be defined as attributes and linked to the product codes."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -239,7 +239,7 @@
       "derivation": "inferred",
       "note": "A 'Best practices' bullet.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md",
         "quote": "This combination of attributes and codes facilitates comprehensive identification of products. • Generic national product codes, including drug codes and medicinal product identifiers (when using the WHO Drug Dictionary), should be mapped to trade item-specific identifiers, such as GTINs, or similar unique identifiers where GTINs are not available. • The product coding system should maintain uniform code lengths and ensure scalability to accommodate an increasing number of unique products. • Product master data structures should support the mapping of one generic national product code to multiple corresponding trade items."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -256,7 +256,7 @@
       "derivation": "inferred",
       "note": "A 'Best practices' bullet.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md",
         "quote": "This combination of attributes and codes facilitates comprehensive identification of products. • Generic national product codes, including drug codes and medicinal product identifiers (when using the WHO Drug Dictionary), should be mapped to trade item-specific identifiers, such as GTINs, or similar unique identifiers where GTINs are not available. • The product coding system should maintain uniform code lengths and ensure scalability to accommodate an increasing number of unique products. • Product master data structures should support the mapping of one generic national product code to multiple corresponding trade items."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -273,7 +273,7 @@
       "derivation": "inferred",
       "note": "A 'Best practices' bullet.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md",
         "quote": "This combination of attributes and codes facilitates comprehensive identification of products. • Generic national product codes, including drug codes and medicinal product identifiers (when using the WHO Drug Dictionary), should be mapped to trade item-specific identifiers, such as GTINs, or similar unique identifiers where GTINs are not available. • The product coding system should maintain uniform code lengths and ensure scalability to accommodate an increasing number of unique products. • Product master data structures should support the mapping of one generic national product code to multiple corresponding trade items."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -290,7 +290,7 @@
       "derivation": "inferred",
       "note": "Continues NPC-R14's bullet; the remark after it explains why (packaging hierarchies are critical).",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md",
         "quote": "In addition, the data structure should organize multiple packaging levels and quantity relationships across those. • Packaging hierarchies and quantity conversions across these levels—along with packaging variations among different brand items—are critical for countries to effectively manage supply chain operations such as inventory control and distribution."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -307,7 +307,7 @@
       "derivation": "inferred",
       "note": "A normative 'should' on data sensitivity categories.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-032.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-032.md",
         "quote": "To address these concerns, procedures and systems should be developed to categorize data attributes based on their level of sensitivity."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -324,7 +324,7 @@
       "derivation": "inferred",
       "note": "A normative 'should' on access control; follows NPC-R16.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-032.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-032.md",
         "quote": "Access should then be controlled according to these sensitivity categories, ensuring appropriate data protection while enabling secure data sharing."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -341,7 +341,7 @@
       "derivation": "inferred",
       "note": "A bullet of the step on establishing a master data governance group.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-032.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-032.md",
         "quote": "Establish a master data governance group composed of all relevant stakeholders to provide leadership and guidance in managing product master data additions and changes. • The governance group should support the overall governance and planning of product master data standardization, capture, and dissemination activities, and provide leadership and oversight for all data management efforts. • The master data governance group can be integrated into existing governance structures or steering committees."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -358,7 +358,7 @@
       "derivation": "inferred",
       "note": "Printed under 'Best practices'.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-039.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-039.md",
         "quote": "Develop a change management plan to institutionalise use of NPC STEP 1 Best practices: When global identifiers such as GTINs are not available—e.g., if a manufacturer has not yet subscribed for a GTIN—it is recommended to use a local identifier for trade items."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -375,7 +375,7 @@
       "derivation": "inferred",
       "note": "The change-management plan's required contents.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-040.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-040.md",
         "quote": "The plan should include: • Training of new users and newly hired staff involved in master data management • Encouraging participation in global and open standards conferences • Conducting advocacy sessions for operational users, emphasizing the benefits of standardized product master data."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -392,7 +392,7 @@
       "derivation": "inferred",
       "note": "A normative 'must' on the workforce.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-043.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-043.md",
         "quote": "In addition to technical skills, the workforce must also understand the purpose of improved systems and processes, along with the benefits they bring to their daily work."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -409,7 +409,7 @@
       "derivation": "inferred",
       "note": "Annex 2's lead sentence; the table it introduces lists the roles.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-057.md",
+        "location": "who-iris/library/9789240116191-eng/sections/page-057.md",
         "quote": "Additional roles for NPC implementation The following table illustrates the typical technical roles that should be considered for NPC implementation."
       },
       "skill": "smart-base/recommendation-extraction"
@@ -424,7 +424,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-010.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-010.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -436,7 +436,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-022.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-022.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -448,7 +448,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-022.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-022.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -460,7 +460,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-025.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-025.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -472,7 +472,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-025.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-025.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -484,7 +484,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-026.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-026.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -496,7 +496,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-027.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-027.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -508,7 +508,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-028.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-028.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -520,7 +520,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -532,7 +532,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -544,7 +544,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -556,7 +556,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -568,7 +568,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -580,7 +580,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -592,7 +592,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-029.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-029.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -604,7 +604,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-032.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-032.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -616,7 +616,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-032.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-032.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -628,7 +628,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-032.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-032.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -640,7 +640,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-039.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-039.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -652,7 +652,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-040.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-040.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -664,7 +664,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-043.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-043.md"
       },
       "skill": "smart-base/recommendation-extraction"
     },
@@ -676,7 +676,7 @@
       "derivation": "inferred",
       "note": "Printed in this publication.",
       "evidence": {
-        "location": "smart-base/library/9789240116191-eng/sections/page-057.md"
+        "location": "who-iris/library/9789240116191-eng/sections/page-057.md"
       },
       "skill": "smart-base/recommendation-extraction"
     }

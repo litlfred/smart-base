@@ -16,17 +16,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "2. How to use this handbook > 2.2 Targeted users, p.11 (pdf 23)",
           "note": "this handbook is written for those who will fill the business analyst role on the team"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Introduction > Who this handbook is for (Table 1), p.8 (pdf 18)",
           "note": "This handbook is for countries, organizations and teams that want to plan and implement digital transformation of the public health supply chain."
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "Introduction > How to use this handbook, p.8 (pdf 17)",
           "note": "This handbook provides a stepwise approach to implementing standardized NPC and product master data management processes."
         },
@@ -41,38 +41,38 @@
       "id": "diig-and-smart-alignment",
       "title": "Position in the DIIG process and SMART Guidelines layers",
       "required": true,
-      "description": "Which phase of the DIIG's \"planning and implementing a digital health enterprise\" process the handbook supports, and its alignment to the SMART Guidelines layers. The seven phases have ONE source, DIIG §1.1 Fig. 1.1.1 (owner, 2026-10-03, #1984: \"use one DIIG seven phase figure as source\"); a DTH cites that figure for them, and the copies the handbooks print (PHC Fig. 6, SC Fig 5, PC Fig. 4) are reproductions of it, not further sources. The primary health care DTH places itself in Phase 5, determining health content requirements; the Reference Architecture's Figure 1, which adapts the DIIG figure, places the supply chain and product catalogue handbooks in Phase 7, and the Reference Architecture itself across Phases 1-4. Its SVG rendering, drawn from the DIIG PDF's own vector layer with its provenance inside the file, is smart-base/library/9789240010567-eng/figures/vfig-p017.svg (bean 70zt); the reproductions are listed on smart-base/findings/dth-terms.md.",
+      "description": "Which phase of the DIIG's \"planning and implementing a digital health enterprise\" process the handbook supports, and its alignment to the SMART Guidelines layers. The seven phases have ONE source, DIIG §1.1 Fig. 1.1.1 (owner, 2026-10-03, #1984: \"use one DIIG seven phase figure as source\"); a DTH cites that figure for them, and the copies the handbooks print (PHC Fig. 6, SC Fig 5, PC Fig. 4) are reproductions of it, not further sources. The primary health care DTH places itself in Phase 5, determining health content requirements; the Reference Architecture's Figure 1, which adapts the DIIG figure, places the supply chain and product catalogue handbooks in Phase 7, and the Reference Architecture itself across Phases 1-4. Its SVG rendering, drawn from the DIIG PDF's own vector layer with its provenance inside the file, is who-iris/library/9789240010567-eng/figures/vfig-p017.svg (bean 70zt); the reproductions are listed on smart-base/findings/dth-terms.md.",
       "computedFrom": [
         "library"
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240010567-eng",
+          "ref": "who-iris/library/9789240010567-eng",
           "locator": "§1.1 The Guide's role in planning and implementing a digital health enterprise, Fig. 1.1.1, PDF pp.16-17; sections/page-016.md",
           "note": "The process of planning and implementing an appropriate digital health enterprise within the broader ecosystem includes several phases:"
         },
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "2.3 Before using this resource, p.12-13 (pdf 24-25)",
           "note": "This handbook is intended to support Phase 5, Determining health content requirements."
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Introduction > Alignment with the DIIG, p.5 (pdf 15)",
           "note": "This handbook uses the framework and approaches set forth in the DIIG"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Introduction > Alignment with WHO's SMART Guidelines, p.7 (pdf 17)",
           "note": "This handbook aligns with the L1 Narrative layer by providing guidelines for digital transformation of health supply chains."
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "Introduction > Digital implementation investment guide (DIIG), p.3 (pdf 12)",
           "note": "It has been developed using the framework and approaches from the Digital implementation investment guide (DIIG)."
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "Introduction > SMART Guidelines, p.6 (pdf 15)",
           "note": "This handbook complements the digital capabilities supported by SMART Guidelines by providing guidance on L1 adaptations"
         },
@@ -98,17 +98,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "1.1 Person-centred point of service systems, p.6 (pdf 18)",
           "note": "PCPOSS combines the functionality of community-based information systems, decision support systems, electronic medical record or health record systems"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Introduction (Fig. 1 partners and processes), p.1 (pdf 11)",
           "note": "Supply chain processes such as forecasting and planning, sourcing, procurement, order management, warehouse management and dispensing must operate in harmony"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "Introduction > What is Product Master Data?, p.1 (pdf 10)",
           "note": "Product master data consists of standardized information that accurately describes a health product's characteristics."
         },
@@ -129,17 +129,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 1, Step 3. Define the DHSC vision and strategic goals and objectives, p.14 (pdf 24)",
           "note": "Strategic goals guide the country's actions and decisions to achieve the vision."
         },
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "2.3 Before using this resource, p.12 (pdf 24) [prerequisite only]",
           "note": "comprehensive high-level needs assessment and strategic planning has already been conducted"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "Introduction > When to use this handbook, p.10 (pdf 19) [pointer only]",
           "note": "When developing a holistic DHSC strategy"
         },
@@ -165,17 +165,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 1, Step 1. Identify and engage all relevant stakeholders, p.12 (pdf 22)",
           "note": "Establish a technical working group (TWG) and a steering committee"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "02, Institutionalise product master data governance, p.23 (pdf 32)",
           "note": "Establish a master data governance group composed of all relevant stakeholders"
         },
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "3. Understand user requirements (chapter opener), p.16 (pdf 28) [stakeholders only, no governance section]",
           "note": "Stakeholders include, but are not limited to, end-users of the system"
         },
@@ -201,17 +201,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "2.1 Targeted scenarios of digital readiness, p.11 (pdf 23); 3.3.3 As-is and to-be analysis, p.23ff",
           "note": "Starting with some parts of the system already digitized"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 2, Step 1. Assess the current state of HSCISs, p.20 (pdf 30)",
           "note": "Assessing the current state of HSCISs involves a thorough evaluation of their capabilities, utilization, technical challenges and overall system maturity."
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "02, Define product master data management procedures, p.16 (pdf 25)",
           "note": "Begin by identifying and analyzing the existing challenges in master data management"
         },
@@ -235,12 +235,12 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "3.2.1 Create user personas, p.21 (pdf 33); Annex 4 User persona worksheet, p.70",
           "note": "A user persona is a generic depiction of a relevant stakeholder"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "02, Define product master data management procedures, p.17 (pdf 26) [roles, not personas]",
           "note": "Data steward: responsible for the day-to-day management, maintenance, and quality control of the product master data."
         },
@@ -264,12 +264,12 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "3.2.2 Gather use cases; 3.2.3 Gather user stories, p.21-22 (pdf 33-34); Annex 5",
           "note": "Use cases highlight the various points of interaction between the users and the system"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 2, Illustrative architectural approaches (SCISMM L4 to L5), p.27 (pdf 37) [mention only]",
           "note": "A critical step is defining and prioritizing the use cases that are expected to be supported within the health system and supply chain."
         },
@@ -293,17 +293,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "3.3 Map business processes and workflows, p.23 (pdf 35); Annex 6",
           "note": "These workflows also represent the functional requirements"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Introduction > Alignment with WHO's SMART Guidelines (Fig. 7), p.7 (pdf 17)",
           "note": "they define recommended public health and clinical business processes that use structured, task-based workflows"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "Introduction > SMART Guidelines (Fig. 6), p.6 (pdf 15)",
           "note": "Fig. 6: Example of an Antenatal Care Business clinical workflow with highlighted connections to supply chain"
         },
@@ -327,12 +327,12 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "3.5 Create a data dictionary, p.30 (pdf 42); 3.4 Streamline data collection, p.27",
           "note": "Data dictionaries should utilize interoperability standards."
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "02, Define coding scheme, data definitions and structures, p.18 (pdf 27)",
           "note": "Map country product identifiers to open standard and global standard structures such as Health Level Seven® (HL7) Fast Healthcare Interoperability Resources® (FHIR)"
         },
@@ -363,7 +363,7 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "3.6 Determine decision-support logic, p.32 (pdf 44); 3.7 Map health service schedules, p.35; 3.4.3 Compile aggregate indicators",
           "note": "Documented decision logic algorithms"
         },
@@ -388,17 +388,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "3.8 Gather and prioritize requirements, p.35 (pdf 47); 4.2 Validate functional requirements; Annex 13",
           "note": "Prioritized functional and non-functional requirements"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "03, Define system requirements for the NPC tool, p.26 (pdf 35)",
           "note": "Define functional and non-functional systems requirements for a NPC tool"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 2, DHSC architecture framework (key components), p.25 (pdf 35) [by reference]",
           "note": "provide details on the functional and nonfunctional requirements of various HSCISs"
         },
@@ -419,17 +419,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 2, Step 2. Define a target DHSC architecture, p.22 (pdf 32)",
           "note": "Draw the current-state architecture of the HSCISs by mapping existing systems against the DHSC architecture framework."
         },
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "4.4 Design system architecture, p.44 (pdf 56)",
           "note": "the system architecture of a PCPOSS would need to function within an Enterprise Architecture (EA)"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "Introduction > Digital health supply chain (DHSC) architectural components, p.7 (pdf 16)",
           "note": "The primary focus of this handbook is to offer guidance on the implementation and management of the foundational product registry component."
         },
@@ -455,17 +455,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "4.4.2 Types of interoperability in health; 4.4.3 Types of standards, p.45-47 (pdf 57-59); Annex 14",
           "note": "Interoperability is commonly split into four broad areas"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 2, DHSC architecture framework, Interoperability layer, p.25 (pdf 35)",
           "note": "The use of an interoperability layer eliminates the need for point-to-point integrations of systems"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "02, Define coding scheme, data definitions and structures, p.18 (pdf 27)",
           "note": "identification of medicinal products (IDMP), and GS1's global trade item numbers"
         },
@@ -491,17 +491,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "4.1 Finalize software and vendor selection, p.40 (pdf 52); 4.5 Build and QA; 5.3 Deploy the system",
           "note": "Finalize software and vendor selection"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 3, Step 4. Implement each DHSC intervention, p.41 (pdf 51)",
           "note": "DHSC implementation materials such as requirements, specifications, test scripts and job aids"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "03, Design, develop and deploy the NPC tool, p.28 (pdf 37)",
           "note": "Deploy the validated NPC tool, load the available product master data and roll out."
         },
@@ -527,12 +527,12 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 3, Step 3. Develop a budget for each DHSC intervention, p.39 (pdf 49); Ch.1 Step 4 roadmap",
           "note": "A strategic roadmap for DHSC sets out timelines and milestones for achieving goals"
         },
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "6. Prepare for scale-up, p.54 (pdf 66); 6.2 Plan for phase-out of legacy system(s)",
           "note": "Plan for phase-out of legacy system(s)"
         },
@@ -558,17 +558,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "5.1 Develop and conduct training, p.52 (pdf 64); 6.5 Adopt change management practices, p.59",
           "note": "Adopt change management practices"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 3, Step 1 (project management plan), p.37 (pdf 47)",
           "note": "change management plan (including training"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "05. Building capacity to sustainably manage NPC, p.33 (pdf 42); 04 change management, p.29",
           "note": "Human resource capacity is a critical component for the successful implementation and adoption"
         },
@@ -592,12 +592,12 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "6.3 Monitor and evaluate progress on objectives, p.59 (pdf 71)",
           "note": "it is crucial that the PCPOSS has a clear and robust monitoring and evaluation plan and methodology"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 1, Step 4. Define a strategic roadmap and performance indicators, p.15 (pdf 25)",
           "note": "Capture baseline performance for comparison with improvements after implementation"
         },
@@ -623,12 +623,12 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Chapter 5. Country examples, p.47 (pdf 57)",
           "note": "Ethiopia's DHSC initiative"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "08. Sharing implementation experiences, p.42 (pdf 51)",
           "note": "COUNTRY: RWANDA"
         },
@@ -649,17 +649,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "Annexes 2-14, p.66-84",
           "note": "User persona worksheet"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Annexes 2-7, p.57-62",
           "note": "Template for listing health supply chain information systems"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "Annex 2. Additional roles for NPC implementation, p.48",
           "note": "Develop use cases or user stories"
         }
@@ -675,15 +675,15 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "Abbreviations p.v; Glossary p.vi"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Abbreviations and acronyms p.v; Glossary p.vi"
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "Abbreviations p.v; Glossary p.vii"
         }
       ]
@@ -698,17 +698,17 @@
       ],
       "sources": [
         {
-          "ref": "smart-base/library/9789240093362-eng",
+          "ref": "who-iris/library/9789240093362-eng",
           "locator": "Annex 1: Principles for digital development, p.65 (pdf 77)",
           "note": "Principles for digital development"
         },
         {
-          "ref": "smart-base/library/9789240101197-eng",
+          "ref": "who-iris/library/9789240101197-eng",
           "locator": "Annex 1. Principles for digital development, p.56 (pdf 66)",
           "note": "The steps outlined in this handbook are informed by the Principles for Digital Development (Annex 1)."
         },
         {
-          "ref": "smart-base/library/9789240116191-eng",
+          "ref": "who-iris/library/9789240116191-eng",
           "locator": "Annex 1. Principles for Digital Development, p.47 (pdf 56)",
           "note": "Build on what works, improve what works, and share so that others can do the same."
         },
@@ -722,15 +722,15 @@
   ],
   "sources": [
     {
-      "ref": "smart-base/library/9789240093362-eng",
+      "ref": "who-iris/library/9789240093362-eng",
       "note": "DTH for primary health care"
     },
     {
-      "ref": "smart-base/library/9789240101197-eng",
+      "ref": "who-iris/library/9789240101197-eng",
       "note": "DTH for health supply chain architecture"
     },
     {
-      "ref": "smart-base/library/9789240116191-eng",
+      "ref": "who-iris/library/9789240116191-eng",
       "note": "DTH for health product catalogue"
     },
     {
@@ -739,7 +739,7 @@
       "note": "A Digital Transformation Handbook for Digital Public Infrastructure for Health (DPI-H)"
     },
     {
-      "ref": "smart-base/library/9789240010567-eng",
+      "ref": "who-iris/library/9789240010567-eng",
       "note": "Digital Implementation Investment Guide (DIIG), the process a DTH sits in"
     }
   ]

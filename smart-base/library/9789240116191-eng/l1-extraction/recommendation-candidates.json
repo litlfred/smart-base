@@ -1,9 +1,9 @@
 {
   "$schema": "l1-recommendation-candidates/v1",
-  "entry": "smart-base/library/9789240116191-eng",
+  "entry": "who-iris/library/9789240116191-eng",
   "curation": {
     "path": "smart-base/library/9789240116191-eng/l1-extraction/curation.yaml",
-    "sha256": "1e8cc3091676d70a50ed1eb8a0243eb9331e760bf4c0b17b6b65d4c60b6cd824"
+    "sha256": "d2054334ca3da67661e349b38ccce7082bc0c485a2b7373915513fad0d35b6a6"
   },
   "publication": {
     "iri": "https://smart.who.int/kg/l1/publication/isbn-9789240116191",
@@ -666,6 +666,6 @@
     }
   ],
   "runContext": {
-    "sha256": "3e08ce3ecee25956b71c19cd86287b2a009cbcd59d8d35196a1f28e51d6b94db"
+    "sha256": "28ff000e611fa653d4a674b50b2cedb5b113eb5be23d67bb6d1b8633df11c662"
   }
 }

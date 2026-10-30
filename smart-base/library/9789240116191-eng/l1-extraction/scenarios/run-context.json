@@ -1,21 +1,61 @@
 {
   "$schema": "folio-run-context/v1",
   "platform": {
-    "commit": "a034a2430d5bfc390955ca7f781b2933b1c162c8"
+    "commit": "89aa3a3a4c288ccfdc211ad9a8482d1f6e11fbdd"
   },
   "mounts": {
-    "state": "could-not-determine",
-    "reason": "no index.lock.json at /tmp/claude-0/l1rename"
+    "state": "locked",
+    "lock": {
+      "file": "index.lock.json",
+      "sha256": "189c3633f8a77a5e13bc34c0b77a917784a6865f0116a082f54a6b1b16b32ac6"
+    },
+    "instances": [
+      {
+        "instance": "bootstrap",
+        "repository": "litlfred/bootstrap",
+        "sha": "3ce2b5d641779ca78432971abb919e6e3afdc60a"
+      },
+      {
+        "instance": "bootstrap-tools",
+        "repository": "litlfred/bootstrap-tools",
+        "sha": "fdceeca33492a0bc434edc1f80c95895180ee587"
+      },
+      {
+        "instance": "cat-harness",
+        "repository": "litlfred/cat-harness",
+        "sha": "ecc231a49258ae62f75f54e0d5c3258a2df8bb7c"
+      },
+      {
+        "instance": "cat-harness-tools",
+        "repository": "litlfred/cat-harness-tools",
+        "sha": "9326f5d78c02761a15e3e465333f01f89251ac2b"
+      },
+      {
+        "instance": "fhir-harness",
+        "repository": "litlfred/fhir-harness",
+        "sha": "a67dc4d68c27dd48776324f3e00d9146a2d52b12"
+      },
+      {
+        "instance": "folio-assistant-core",
+        "repository": "litlfred/folio-assistant-core",
+        "sha": "f35c1daff72439fec61ef8f5c15d218dc9e16d09"
+      },
+      {
+        "instance": "who-iris",
+        "repository": "litlfred/who-iris",
+        "sha": "a73e75ab7e9933c81bd2db3e313a8d8bd471face"
+      }
+    ]
   },
   "releases": [],
   "invoker": {
     "kind": "system",
     "id": "smart-base/scripts/l1-recommendation-scenarios.ts",
-    "script_hash": "f02e8a97519d4227113d0052ff84fa4473b71fc90089c6469d8fdf8e7e7e3ce6"
+    "script_hash": "1ea18b967ad06613e73f3795692247927c31bb8bcdea879b07a930fee7213010"
   },
   "inputs": [
     {
-      "hash": "138b80c99722",
+      "hash": "9ea1eea3ef7e",
       "inputs": [
         "smart-base/library/9789240116191-eng/l1-extraction/dth-npc-vocabulary.json",
         "smart-base/library/9789240116191-eng/l1-extraction/l1.json",

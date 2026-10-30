@@ -8,12 +8,12 @@ origin: >
   `smart-base/library/mehl-2021-who-smart-guidelines/`); *Classification of
   digital health interventions, services and applications in health (CDISAH)
   v2.0* (WHO, 2023, ISBN 978-92-4-008194-9, ingested at
-  `smart-base/library/9789240081949-eng/`, superseding CDHI v1.0 at
-  `smart-base/library/who-rhr-1806-eng/`); *Digital transformation handbook for
+  `who-iris/library/9789240081949-eng/`, superseding CDHI v1.0 at
+  `who-iris/library/who-rhr-1806-eng/`); *Digital transformation handbook for
   health supply chain architecture* (WHO, 2024, ISBN 978-92-4-010119-7, ingested
-  at `smart-base/library/9789240101197-eng/`); and *Digital transformation
+  at `who-iris/library/9789240101197-eng/`); and *Digital transformation
   handbook for health product catalogue* (WHO, 2025, ISBN 978-92-4-011619-1,
-  ingested at `smart-base/library/9789240116191-eng/`).
+  ingested at `who-iris/library/9789240116191-eng/`).
 evidence:
   - library/mehl-2021-who-smart-guidelines
   - library/9789240081949-eng

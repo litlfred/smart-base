@@ -2,7 +2,7 @@
 $schema: l1-recommendation-curation/v1
 _comment: 'AUTHORED by an agent under the recommendation-extraction skill (step 4), against the work list l1-recommendation-candidates.ts wrote for this entry. Every decision is a CANDIDATE: no exclusion
   is signed (only a person signs one), so coverage stays below 100 % until a person reviews.'
-entry: smart-base/library/9789240116191-eng
+entry: who-iris/library/9789240116191-eng
 publication:
   identifiers:
   - type: isbn
