@@ -53,3 +53,18 @@ mount it at a pinned commit.
    publish by fhir-harness's `ig-index:build` from the IG's AST and its
    `sushi-config.yaml` (fhir-harness#124), and is gitignored. Never commit it,
    hand-edit it, or re-ingest it from the published site.
+6. **The harness reads only what `contentTypes.ig.include` lists.**
+   `index.config.json` declares this repository an IG source
+   (`contentTypes.ig`, fhir-harness's `ig` content type; owner, 2026-10-30:
+   "harness desclares what it it pays attention to in the repo"). Its
+   `include` list is every path fhir-harness's IG readers (the artefact
+   index, the IG site, the menu, the API hub, the review data) may read here,
+   and nothing else is read. When you add a directory or file under `input/`
+   that the site or the index needs, add it to `include` in the same pull
+   request: a directory ends in `/`, and the narrowest path wins. A path left
+   off is silently absent from the site, which is how `input/diagrams/`,
+   `input/archimate/` and `input/dmn/` went missing before #215. The rules
+   and the legacy warning are fhir-harness's
+   [`ig-build-pipeline`](https://github.com/litlfred/fhir-harness/blob/main/skills/fhir-ig-base/ig-build-pipeline.md#what-this-layer-reads-contenttypesiginclude)
+   §"What this layer reads". SUSHI and the IG Publisher still read what they
+   read; the list bounds the harness, not them.
