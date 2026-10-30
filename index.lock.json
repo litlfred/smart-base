@@ -9,7 +9,7 @@
     {
       "harness": "who-iris",
       "repository": "litlfred/who-iris",
-      "ref": "a73e75ab7e9933c81bd2db3e313a8d8bd471face"
+      "ref": "04472dc8c3a66dfef6377c45a8b24a23acf88350"
     },
     {
       "harness": "folio-assistant-core",
@@ -19,12 +19,12 @@
     {
       "harness": "cat-harness",
       "repository": "litlfred/cat-harness",
-      "ref": "6dff1e1a31e47a56c935b33aee010f54d34dbc6e"
+      "ref": "ad64a09a7f060cf350b8b4ed7c4d163435120c30"
     },
     {
       "harness": "cat-harness-tools",
       "repository": "litlfred/cat-harness-tools",
-      "ref": "c98abe5569f94df167173def9239a8128dd2cd0e"
+      "ref": "eaf4e03d99fcea9915afdb091fdf98a56ecf27b9"
     },
     {
       "harness": "bootstrap",
@@ -99,36 +99,36 @@
     {
       "instance": "cat-harness",
       "repository": "litlfred/cat-harness",
-      "sha": "6dff1e1a31e47a56c935b33aee010f54d34dbc6e",
+      "sha": "ad64a09a7f060cf350b8b4ed7c4d163435120c30",
       "upstreamRoot": "",
       "path": "cat-harness",
       "via": "cat-harness",
       "pinnedBy": "declared",
       "declaration": {
         "file": "cat-harness.json",
-        "sha256": "8c2004c7534fe1f23c0b841af7f91069c93a9fbb2f729e78e784dc87e244dc96"
+        "sha256": "09d9700f79de255d1eb828016fdfb06e6a8b47fa714f22914bb2b3d1fc4ef87e"
       },
       "directories": [
         {
           "id": "*",
           "path": "cat-harness",
           "upstreamPath": ".",
-          "treeDigest": "7ee0ed5857e9839ab5410e97773233c5e9beb0e2700a4cfbf50b67336f84eb9e",
-          "files": 12949
+          "treeDigest": "069b4844e3d889a1f9b48a988c87c565229c0b7ebb3c596950c7f783fa007f6c",
+          "files": 12923
         }
       ],
       "trust": {
         "basis": "consent",
         "by": "litlfred",
         "on": "2026-10-30",
-        "ref": "6dff1e1a31e47a56c935b33aee010f54d34dbc6e",
+        "ref": "ad64a09a7f060cf350b8b4ed7c4d163435120c30",
         "approver": "unverified"
       }
     },
     {
       "instance": "cat-harness-tools",
       "repository": "litlfred/cat-harness-tools",
-      "sha": "c98abe5569f94df167173def9239a8128dd2cd0e",
+      "sha": "eaf4e03d99fcea9915afdb091fdf98a56ecf27b9",
       "upstreamRoot": "",
       "path": "cat-harness-tools",
       "via": "cat-harness-tools",
@@ -142,15 +142,15 @@
           "id": "*",
           "path": "cat-harness-tools",
           "upstreamPath": ".",
-          "treeDigest": "e57c8327a66e4fb4924bd7578f79f8fe9c0fbac24751c4ad96361d4a8ff33e4e",
-          "files": 2924
+          "treeDigest": "d868f5e7d5457ffa5e0a9e38e26570de72fd42860bdef494a9bd56613f3cb4e5",
+          "files": 2926
         }
       ],
       "trust": {
         "basis": "consent",
         "by": "litlfred",
         "on": "2026-10-30",
-        "ref": "c98abe5569f94df167173def9239a8128dd2cd0e",
+        "ref": "eaf4e03d99fcea9915afdb091fdf98a56ecf27b9",
         "approver": "unverified"
       }
     },
@@ -215,29 +215,29 @@
     {
       "instance": "who-iris",
       "repository": "litlfred/who-iris",
-      "sha": "a73e75ab7e9933c81bd2db3e313a8d8bd471face",
+      "sha": "04472dc8c3a66dfef6377c45a8b24a23acf88350",
       "upstreamRoot": "",
       "path": "who-iris",
       "via": "who-iris",
       "pinnedBy": "declared",
       "declaration": {
         "file": "who-iris.json",
-        "sha256": "fb2abd3a2d808b4f367c33d967216229d529eb9f5101096f2d1f655edb491a90"
+        "sha256": "359145386a10691835dc86537dd2a17627183810931727de4a558c7de750c02d"
       },
       "directories": [
         {
           "id": "*",
           "path": "who-iris",
           "upstreamPath": ".",
-          "treeDigest": "075f80a70f7860a7efd7efb2db8e6f873d969062746681f817d572cc987e6007",
-          "files": 5572
+          "treeDigest": "81479b240c2bc68f7e68767cff178eefbab99f5d86d22060a579956f1f814fa6",
+          "files": 5573
         }
       ],
       "trust": {
         "basis": "consent",
         "by": "litlfred",
         "on": "2026-10-30",
-        "ref": "a73e75ab7e9933c81bd2db3e313a8d8bd471face",
+        "ref": "04472dc8c3a66dfef6377c45a8b24a23acf88350",
         "approver": "unverified"
       }
     }

@@ -49,7 +49,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "a73e75ab7e9933c81bd2db3e313a8d8bd471face",
+          "ref": "04472dc8c3a66dfef6377c45a8b24a23acf88350",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -74,8 +74,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-30",
-              "ref": "a73e75ab7e9933c81bd2db3e313a8d8bd471face",
-              "evidence": "litlfred 2026-10-30 chose option B on who-iris#107 (full move: IRIS items smart-base had ingested now live, materialized, in who-iris as the 'pre-CDN preview'); smart-base mounts who-iris to read them. Merge and repin window litlfred 2026-10-30 11:13Z, extended 16:38Z to ~19:38Z. Pinned to who-iris main a73e75a (who-iris#108 merged)."
+              "ref": "04472dc8c3a66dfef6377c45a8b24a23acf88350",
+              "evidence": "litlfred 2026-10-30 chose option B on who-iris#107 (full move: IRIS items smart-base had ingested now live, materialized, in who-iris as the 'pre-CDN preview'); smart-base mounts who-iris to read them. Merge and repin window litlfred 2026-10-30 11:13Z, extended 16:38Z to ~19:38Z. Pinned to who-iris main a73e75a (who-iris#108 merged); main tip 04472dc (IRIS assets #108, dark replica #110, navbar #112, direction #114 #118, CI #116). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
             }
           }
         }
@@ -114,7 +114,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "6dff1e1a31e47a56c935b33aee010f54d34dbc6e",
+          "ref": "ad64a09a7f060cf350b8b4ed7c4d163435120c30",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -130,8 +130,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-30",
-              "ref": "6dff1e1a31e47a56c935b33aee010f54d34dbc6e",
-              "evidence": "Owner litlfred, 2026-10-30: card 'A. One coordinated move' (bean 8lcl), merge window to 19:38Z"
+              "ref": "ad64a09a7f060cf350b8b4ed7c4d163435120c30",
+              "evidence": "Owner litlfred, 2026-10-30: card 'A. One coordinated move' (bean 8lcl), merge window to 19:38Z; main tip ad64a09 (schemas move #773, direction #784, attestations #786, CI #775 #778 #780). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
             }
           }
         }
@@ -142,7 +142,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "c98abe5569f94df167173def9239a8128dd2cd0e",
+          "ref": "eaf4e03d99fcea9915afdb091fdf98a56ecf27b9",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -155,8 +155,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-30",
-              "ref": "c98abe5569f94df167173def9239a8128dd2cd0e",
-              "evidence": "Owner litlfred, 2026-10-30: card 'A. One coordinated move' (bean 8lcl), merge window to 19:38Z"
+              "ref": "eaf4e03d99fcea9915afdb091fdf98a56ecf27b9",
+              "evidence": "Owner litlfred, 2026-10-30: card 'A. One coordinated move' (bean 8lcl), merge window to 19:38Z; main tip eaf4e03 (schemas move #952, uml/readme gates #897, direction #968, CI #951 #957 #964). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
             }
           }
         }
