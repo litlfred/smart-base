@@ -1,0 +1,785 @@
+{
+  "$schema": "folio-block-summaries/v1",
+  "entry": "9789241549912-websupplement-eng",
+  "summaries": [
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-000",
+      "source": "sections/sec-000-a-nutritional-interventions.md",
+      "source_hash": "13b016d497d9e9259d237209e9f4db6be38503ab72445afaa7ee68ae6ab27998",
+      "narrative": [
+        {
+          "text": "Section heading introducing Part A (Nutritional interventions) of the WHO antenatal care guideline evidence base web supplement.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-002",
+      "source": "sections/sec-002-eb-table-a11-all-diet-andor-physical-activityexe.md",
+      "source_hash": "78842c9203a6f5e9d6fa987fbf1afaad493b9bb384d24f4b0f568d29b6e67b55",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.1.1) from the Cochrane review by Muktabhant et al. (2015) comparing all diet and/or physical activity/exercise interventions during pregnancy against standard or other care. Presents GRADE quality assessments, study counts, event rates, relative risks, absolute effects, and certainty ratings across overall and intervention-subgroup analyses for pre-eclampsia (RR 0.95, high certainty), caesarean section (RR 0.95, low certainty; diet and exercise counselling RR 0.87, high certainty), excessive gestational weight gain (RR 0.80, high certainty, with consistent reductions across diet, counselling, and supervised/unsupervised exercise subgroups), preterm birth (RR 0.91, low certainty), macrosomia (> 4000 g; RR 0.93, moderate certainty), low birth weight (< 2500 g; RR 0.88, very low certainty), induction of labour (RR 1.06, moderate certainty), shoulder dystocia (RR 1.02, moderate certainty), neonatal hypoglycaemia (RR 0.95, moderate certainty), and neonatal respiratory distress (RR 0.47, low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-003",
+      "source": "sections/sec-003-figure-a11-additional-meta-analysis-effect-of-di.md",
+      "source_hash": "8fc29ef57c88042c5654b0e53291ceb7544578b79d4d5311a7d75461e467018f",
+      "narrative": [
+        {
+          "text": "Caption for Figure A.1.1 (additional meta-analysis on the effect of diet and/or exercise interventions versus control on gestational diabetes mellitus, not included in Muktabhant et al., 2015) followed by EB Table A.1.2 from Ota et al. (2015) evaluating antenatal energy and protein nutrition education versus no nutritional education or normal care. Reports GRADE evidence profiles for total gestational weight gain (MD 0.41 kg lower, very low certainty), small for gestational age (RR 0.97, low certainty), low birth weight (RR 0.04, low certainty), preterm birth (RR 0.46, very low certainty), stillbirth (RR 0.37, low certainty), and neonatal death (RR 1.28, low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-004",
+      "source": "sections/sec-004-eb-table-a13-energy-and-protein-dietary-suppleme.md",
+      "source_hash": "2f207d2c5f2d32ff2e98e53eb5113601d80c1642027ceb85f9fe2d0e94a05344",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.1.3) from Ota et al. (2015) comparing balanced energy and protein dietary supplementation during pregnancy with control. Summarizes GRADE evidence showing reductions in small-for-gestational-age neonates (7 RCTs; RR 0.79, 95% CI 0.69–0.90; 36 fewer per 1000; moderate certainty) and stillbirth (5 RCTs; RR 0.60, 95% CI 0.39–0.94; 12 fewer per 1000; moderate certainty), alongside estimates for pre-eclampsia (RR 1.48, very low certainty), preterm birth (RR 0.96, moderate certainty), and neonatal death (RR 0.68, low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-005",
+      "source": "sections/sec-005-eb-table-a14-high-protein-supplements-versus-con.md",
+      "source_hash": "9dc23dcc461c2704ac817d5c4c9c9e55dea6019b610ebae60f64e98c3216afee",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.1.4) from Ota et al. (2015) evaluating high-protein dietary supplementation versus control during pregnancy (1 RCT). Reports GRADE evidence demonstrating an increased risk of small-for-gestational-age neonates (RR 1.58, 95% CI 1.03–2.41; 68 more per 1000; high certainty), with uncertain effects on preterm birth (RR 1.14, moderate certainty), stillbirth (RR 0.81, low certainty), and neonatal death (RR 2.78, low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-006",
+      "source": "sections/sec-006-a2-iron-and-folic-acid-supplements.md",
+      "source_hash": "2de8fd7a795eca612c2af44f49e08f8040010a9dafbff963d8bba6337e5328af",
+      "narrative": [
+        {
+          "text": "Section heading introducing Section A.2 (Iron and folic acid supplements) under Nutritional interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-007",
+      "source": "sections/sec-007-eb-table-a21-daily-iron-and-folic-acid-supplemen.md",
+      "source_hash": "92c30bf8a9ee14fc0569f2938d3c03152c47a5852add32185c4e2b5c9d03c9b5",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.2.1) from Peña-Rosas et al. (2015) comparing daily oral iron and folic acid supplementation during pregnancy against supplements without iron or placebo/no treatment. Presents GRADE ratings across maternal and perinatal outcomes, showing reduced maternal anaemia at term (RR 0.30, low certainty), higher maternal haemoglobin at or near term (MD 8.88 g/L higher, low certainty), increased high haemoglobin concentrations (> 130 g/L; RR 3.07, low certainty), reduced severe postpartum anaemia (RR 0.04, low certainty), reduced puerperal infection (RR 0.68, moderate certainty), reduced diarrhoea (RR 0.55, high certainty), reduced very preterm birth (< 34 weeks; RR 0.51, high certainty), and effects on maternal death, side-effects, antepartum/postpartum haemorrhage, transfusion, constipation, nausea, heartburn, vomiting, maternal satisfaction, placental abruption, pre-eclampsia, low birth weight (RR 0.84, low certainty), preterm birth (< 37 weeks; RR 0.93, high certainty), neonatal death, and congenital anomalies.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-008",
+      "source": "sections/sec-008-eb-table-a22-intermittent-iron-and-folic-acid-su.md",
+      "source_hash": "bf57e3b7539056a6141246a0ff58680ad4e2c387abf2c02272c954792de3250f",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.2.2) from Peña-Rosas et al. (2015) comparing intermittent oral iron and folic acid regimens during pregnancy against daily iron supplementation regimens. Provides GRADE evidence profiles showing higher maternal anaemia at or near term (RR 1.66, moderate certainty), lower risk of high haemoglobin concentrations (> 130 g/L) in the second or third trimester (RR 0.53, moderate certainty), fewer overall side-effects (RR 0.56, very low certainty) and nausea (RR 0.60, moderate certainty), no events of severe anaemia (< 70 g/L; moderate certainty), and low- to very-low-certainty estimates for maternal anaemia at term, severe postpartum anaemia, mean haemoglobin concentration, antepartum haemorrhage, placental abruption, diarrhoea, constipation, heartburn, vomiting, preterm rupture of membranes, low birth weight (RR 0.82), preterm birth (RR 1.03), very preterm birth, and neonatal death.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-009",
+      "source": "sections/sec-009-a3-calcium-supplements.md",
+      "source_hash": "81c17fabb02c141dfa6858df74a69591ce8daf4235925fc3dffe668d18a3c783",
+      "narrative": [
+        {
+          "text": "Section heading introducing Section A.3 (Calcium supplements) under Nutritional interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-010",
+      "source": "sections/sec-010-eb-table-a3-calcium-supplements-versus-placebo-o.md",
+      "source_hash": "cd7408baf4437c0930e803133a0ec67bb8e6e828e938795d93158fd3f0496b72",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.3) from Buppasiri et al. (2015) evaluating calcium supplementation (other than for preventing or treating hypertension) versus placebo or no treatment for maternal and infant outcomes. Reports GRADE evidence showing little or no difference in maternal anaemia (RR 1.04, high certainty), caesarean section (RR 0.99, high certainty), side-effects (RR 1.02, high certainty), urinary tract infection, maternal weight gain, maternal death, gall stones, urinary stones, renal colic, impaired renal function, low birth weight (RR 0.93, moderate certainty), stillbirth (RR 0.91, moderate certainty), and perinatal mortality (RR 0.87, low certainty), while high-dose calcium supplementation reduced preterm birth (12 RCTs; RR 0.81, 95% CI 0.66–0.99; moderate certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-011",
+      "source": "sections/sec-011-a4-vitamin-a-supplements.md",
+      "source_hash": "dfca047c873492c31b77bbf2f750e5cc426f76418e1d5b7789e15b18df1369c2",
+      "narrative": [
+        {
+          "text": "Section heading introducing Section A.4 (Vitamin A supplements) under Nutritional interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-012",
+      "source": "sections/sec-012-eb-table-a4-vitamin-a-supplements-alone-versus-p.md",
+      "source_hash": "d401dc75eb82ba70aedc5cc24e53deb2d2494fee9bbf094074f477605570dd85",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.4) from McCauley et al. (2015) comparing antenatal vitamin A supplementation alone against placebo or no treatment. Summarizes GRADE evidence indicating reductions in maternal anaemia (3 RCTs; RR 0.64, moderate certainty), maternal infection (5 RCTs; RR 0.45, low certainty), and maternal night blindness (2 RCTs; RR 0.79, low certainty), with no clear effect on perinatal mortality (RR 1.01, high certainty), neonatal mortality (RR 0.97, high certainty), stillbirth (RR 1.04, high certainty), maternal death (RR 0.88, moderate certainty), low birth weight (RR 1.02, moderate certainty), or preterm birth (RR 0.98, low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-013",
+      "source": "sections/sec-013-a5-zinc-supplements.md",
+      "source_hash": "c392f0f089f50529c908d5f60265073d4212b50411e92f5efe7c48679bf1abdc",
+      "narrative": [
+        {
+          "text": "Section heading introducing Section A.5 (Zinc supplements) under Nutritional interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-014",
+      "source": "sections/sec-014-eb-table-a5-zinc-supplements-versus-no-intervent.md",
+      "source_hash": "6e9eae356c93558f634f1f8f84532a0068d1590758a522f601dbb3757ceb4b55",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.5) from Ota et al. (2015) evaluating zinc supplementation versus placebo or no intervention during pregnancy. Reports GRADE evidence showing a reduction in preterm birth (16 RCTs; RR 0.86, 95% CI 0.76–0.97; 18 fewer per 1000; low certainty), with no clear difference across maternal infection (RR 1.06, moderate certainty), pregnancy hypertension or pre-eclampsia (RR 0.83, very low certainty), caesarean section (RR 0.95, very low certainty), instrumental vaginal birth (RR 1.12, very low certainty), smell or taste dysfunction side-effects, neonatal infection (RR 0.17, low certainty), small for gestational age (RR 1.02, low certainty), low birth weight (RR 0.93, low certainty), or congenital malformation (RR 0.67, low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-015",
+      "source": "sections/sec-015-a6-multiple-micronutrient-mmn-supplements.md",
+      "source_hash": "ae2c1989fb667255e5ccaad4cdbaae8b909eede8366b19b93f22cbb359f2d851",
+      "narrative": [
+        {
+          "text": "Section heading introducing Section A.6 (Multiple micronutrient (MMN) supplements) under Nutritional interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-016",
+      "source": "sections/sec-016-eb-table-a6-multiple-micronutrient-supplements-v.md",
+      "source_hash": "c5bc0088b65f59a3e5d3f6c36cd150e74db00e01ab8cce20b9dad7edb23f68ee",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.6) from Haider and Bhutta (2015) comparing multiple micronutrient (MMN) supplements containing 13–15 micronutrients against iron supplements (with or without folic acid) during pregnancy. Reports GRADE ratings showing a reduction in low birth weight (14 RCTs; RR 0.88, 95% CI 0.85–0.91; high certainty) and a borderline reduction in small for gestational age (13 RCTs; RR 0.98, 95% CI 0.96–1.00; moderate certainty), alongside little or no difference in maternal third-trimester anaemia (RR 0.98, high certainty), preterm birth (RR 0.95, high certainty), caesarean section (RR 1.03, moderate certainty), perinatal mortality (RR 1.00, moderate certainty), stillbirths (RR 0.97, moderate certainty), neonatal mortality (RR 0.99, moderate certainty), maternal mortality (RR 0.97, low certainty), and congenital anomalies (RR 0.99, low certainty), plus an introductory note on the additional iron-dose subgroup and UNIMMAP meta-analyses.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-017",
+      "source": "sections/sec-017-i-subgroup-analyses-grouping-trials-according-to.md",
+      "source_hash": "7d7817d33222231386c0b8b6b53355cd74f1365b70e21fdd54228ae54c0d6a7f",
+      "narrative": [
+        {
+          "text": "Section headings and figure captions (pages 28–39) for the additional subgroup meta-analyses of multiple micronutrient (MMN) supplementation trials grouped by the iron dose in the control arm (60 mg, 30 mg, or not stated, with 0.4 mg folic acid unless footnoted), covering maternal anaemia (1), caesarean section (2), maternal mortality (3), small for gestational age (4 and exploratory analysis 4b restricted to 60 mg or 30 mg iron plus 0.4 mg folic acid controls), low birth weight (5), preterm birth (6), congenital anomalies (7), perinatal mortality (8), stillbirth (9), and neonatal mortality (10 and exploratory analysis 10b).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-018",
+      "source": "sections/sec-018-ii-meta-analyses-of-trials-evaluating-unimmap-su.md",
+      "source_hash": "18fd2fc5ecd4ac2238d5bdec925eefd69137b69037c325773b2684a8c8036061",
+      "narrative": [
+        {
+          "text": "Section headings and figure captions (pages 39–47) for the additional meta-analyses of trials specifically evaluating the United Nations international multiple micronutrient preparation (UNIMMAP) supplement, grouped by the control group iron dose (60 mg, 30 mg, or not stated, with 0.4 mg folic acid unless footnoted), across maternal anaemia (1), caesarean section (2), maternal mortality (3), small for gestational age (4), low birth weight (5), preterm birth (6), congenital anomalies (7), perinatal mortality (8), stillbirth (9), and neonatal mortality (10a and exploratory analysis 10b restricted to 60 mg or 30 mg iron plus 0.4 mg folic acid controls).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-019",
+      "source": "sections/sec-019-a7-vitamin-b6-pyridoxine-supplements.md",
+      "source_hash": "9aae6cd11014c2d0650d469e8849c31d778aff2c2a7881cc471b001b5567c281",
+      "narrative": [
+        {
+          "text": "Section heading introducing Section A.7 (Vitamin B6 (pyridoxine) supplements) under Nutritional interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-020",
+      "source": "sections/sec-020-eb-table-a7-vitamin-b6-pyridoxine-supplements-ve.md",
+      "source_hash": "237d0630ac58937298f1e3ece51c12d6c746b579e5378070e96370fce08b79dd",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.7) from Salam et al. (2015) comparing antenatal vitamin B6 (pyridoxine) supplementation against control. Reports GRADE evidence for pre-eclampsia with antenatal oral pyridoxine tablets (2 RCTs; RR 1.71, 95% CI 0.85–3.45; low certainty) and antenatal pyridoxine lozenges (1 RCT; RR 1.43, 95% CI 0.64–3.22; very low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-021",
+      "source": "sections/sec-021-a8-vitamin-e-and-c-supplements.md",
+      "source_hash": "3e04e8eba640366c7ed9c6acd0ca31898dac5e588652c7a3ca0ed3d2c7cbbe37",
+      "narrative": [
+        {
+          "text": "Section heading introducing Section A.8 (Vitamin E and C supplements) under Nutritional interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-022",
+      "source": "sections/sec-022-eb-table-a8a-vitamin-e-and-c-supplementation-ver.md",
+      "source_hash": "d67add0e1a1517a2e5a2d75b0bfe41e88bde41cf9f34762a463f0c125d57c843",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.8a) from Rumbold et al. (2015) comparing combined vitamin E and C supplementation during pregnancy against placebo or no treatment. Presents GRADE evidence showing increased risks of abdominal pain (1 RCT; RR 1.66, high certainty) and term prelabour rupture of membranes (PROM >= 37 weeks; 2 RCTs; RR 1.77, high certainty), a reduction in placental abruption (7 RCTs; RR 0.64, moderate certainty), and no clear benefit for pre-eclampsia (14 RCTs; RR 0.91, moderate certainty), eclampsia (RR 1.67, moderate certainty), caesarean section (RR 1.02, high certainty), induction of labour, maternal death, antepartum haemorrhage, overall side-effects, small for gestational age (RR 0.98, high certainty), preterm birth (RR 0.98, moderate certainty), congenital malformations, stillbirth, neonatal death, perinatal death, or preterm PROM (RR 1.27, low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-023",
+      "source": "sections/sec-023-eb-table-a8b-vitamin-c-supplementation-alone-ver.md",
+      "source_hash": "8a93f6aebe22ff3bcd439bfe5cdce812e90877ce7a6d65da91699d4fbc94b41c",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.8b) from Rumbold et al. (2015) evaluating vitamin C supplementation alone versus placebo or no treatment during pregnancy. Reports GRADE evidence for overall prelabour rupture of membranes (6 RCTs; RR 0.63, 95% CI 0.48–0.83; moderate certainty), preterm PROM (5 RCTs; RR 0.66, 95% CI 0.48–0.91; moderate certainty), and term PROM (1 RCT; RR 0.55, 95% CI 0.32–0.94; low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-024",
+      "source": "sections/sec-024-a9-vitamin-d-supplements.md",
+      "source_hash": "4c03e82202de6887bfc05f0d6298181a6c52e0d793777fab49d34e50b7c25da6",
+      "narrative": [
+        {
+          "text": "Section heading introducing Section A.9 (Vitamin D supplements) under Nutritional interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-025",
+      "source": "sections/sec-025-eb-table-a9-vitamin-d-supplementation-alone-or-w.md",
+      "source_hash": "beb911649ee62d3302507216c4ff6c6bdd1b11f040d75dfb97c86627244198cc",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.9) from De-Regil et al. (2016) evaluating antenatal vitamin D supplementation alone or combined with calcium versus placebo or no treatment. For vitamin D alone, reports GRADE evidence of low certainty for reductions in preterm birth (3 RCTs; RR 0.36, 95% CI 0.14–0.93) and low birth weight (3 RCTs; RR 0.40, 95% CI 0.24–0.67), alongside low- or very-low-certainty estimates for pre-eclampsia (RR 0.52), gestational diabetes (RR 0.43), caesarean section (RR 0.95), maternal death, stillbirth (RR 0.35), and neonatal death (RR 0.27). For vitamin D plus calcium, shows reduced pre-eclampsia (3 RCTs; RR 0.51, 95% CI 0.32–0.80; moderate certainty) but increased preterm birth (3 RCTs; RR 1.57, 95% CI 1.02–2.43; moderate certainty), with uncertain effects on gestational diabetes and neonatal death.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-026",
+      "source": "sections/sec-026-a10-restricting-caffeine-intake.md",
+      "source_hash": "40a52a2942695eb21d57ba8e87ea61b72bc3408b50e8caa8c954034852328fc8",
+      "narrative": [
+        {
+          "text": "Section heading introducing Section A.10 (Restricting caffeine intake) under Nutritional interventions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-027",
+      "source": "sections/sec-027-eb-table-a10a-caffeinated-coffee-versus-decaffei.md",
+      "source_hash": "2a9daab4e649291d916aed16a4f9ffeae01dcdaf488887aafeb597fd9fe65854",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table A.10a) from the Cochrane review by Jahanfar and Jaafar (2015) comparing caffeinated coffee against decaffeinated coffee during pregnancy (1 RCT). Reports moderate-certainty GRADE evidence showing no clear difference in preterm birth (RR 0.81, 95% CI 0.48–1.37) or small for gestational age (RR 0.97, 95% CI 0.57–1.64), downgraded for indirectness (only coffee restricted) and wide confidence intervals.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-028",
+      "source": "sections/sec-028-eb-table-a10b-non-randomized-evidence-of-effect.md",
+      "source_hash": "8ff4f55c394a4530091d792fecac4ec238aeef0e14123f070da5a7d581be491c",
+      "narrative": [
+        {
+          "text": "Evidence base tables (EB Table A.10b – 1 and 2) summarizing non-randomized observational meta-analyses on maternal caffeine intake during pregnancy and low birth weight. Part 1 (Chen et al., 2014) shows a dose-dependent increase in low birth weight risk across low (RR 1.13, moderate certainty), moderate (RR 1.38, low certainty), and high (RR 1.60, very low certainty) caffeine intake versus very low or no intake; Part 2 (Rhee et al., 2015; 12 observational studies) likewise shows higher odds of low birth weight for higher versus lower caffeine intake (OR 1.38, 95% CI 1.10–1.73; moderate certainty, upgraded for linear dose–response gradient).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-029",
+      "source": "sections/sec-029-eb-table-a10c-non-randomized-evidence-of-effect.md",
+      "source_hash": "334bf2e238fb0e8282772a4c4e358743c1dbb09773d4cbf0c96f4b8c6d2bc1d3",
+      "narrative": [
+        {
+          "text": "Evidence base tables (EB Table A.10c – 1 and 2) presenting non-randomized observational meta-analyses of maternal caffeine consumption and pregnancy loss. Part 1 (Chen et al., 2016) reports very-low-certainty odds ratios across low (OR 1.02), moderate (OR 1.16), high (OR 1.40), and very high (OR 1.72) caffeine intake versus very low/no intake due to funnel plot asymmetry; Part 2 (Li et al., 2015) reports moderate-certainty evidence (upgraded for a linear 19% risk increase per 150 mg/day caffeine) showing elevated pregnancy loss for any caffeine intake (18 studies; OR 1.32, 95% CI 1.24–1.40), moderate intake (OR 1.28), and high intake (OR 1.60), but not low intake (OR 1.04).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-030",
+      "source": "sections/sec-030-b-maternal-and-fetal-assessment.md",
+      "source_hash": "86534fa14aa3c984f9328071f0393808c8a2324a3b96d1ac13c0cf4a9a2c2bad",
+      "narrative": [
+        {
+          "text": "Section heading introducing Part B (Maternal and fetal assessment) of the WHO antenatal care guideline evidence base web supplement.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-032",
+      "source": "sections/sec-032-eb-table-b11a-anaemia-test-accuracy-haemoglobino.md",
+      "source_hash": "2d9c791269c38009e86c5fb992c80796822ba7f783603143cedb6d8e6fd3d598",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table B.1.1a) from the systematic review by Sobhy, Rogozinska, and Khan (2016) evaluating the diagnostic test accuracy of on-site haemoglobinometer testing for detecting anaemia (Hb < 11 g/dL) in pregnancy (1 study; 157 women with anaemia, 514 without). Reports a pooled sensitivity of 0.85 (95% CI 0.79–0.90) and pooled specificity of 0.80 (95% CI 0.76–0.83), with moderate certainty of evidence and anticipated true/false positive and negative counts per 1000 women tested at 24%, 42%, and 57% anaemia prevalence.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-033",
+      "source": "sections/sec-033-eb-table-b11b-anaemia-test-accuracy-hb-colour-sc.md",
+      "source_hash": "ccf7a425228c409589b6eee40ca5c762b00d46264432cee85cb49e022a506ef5",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table B.1.1b) from Sobhy, Rogozinska, and Khan (2016) assessing the diagnostic accuracy of the Haemoglobin (Hb) Colour Scale method for diagnosing anaemia (Hb < 11 g/dL) during pregnancy. Reports a pooled sensitivity of 0.75 (95% CI 0.71–0.80) and pooled specificity of 0.47 (95% CI 0.41–0.53) at moderate certainty, alongside illustrative true/false positive and negative counts per 1000 women across 24%, 42%, and 57% pre-test prevalence levels.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-034",
+      "source": "sections/sec-034-eb-table-b12a-asymptomatic-bacteriuria-asb-dipst.md",
+      "source_hash": "fc815a0e2ed5faaf22dd553bad6f6b6a12bd050069be2b10806ab82d2fe18cbc",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table B.1.2a) from Rogozinska et al. (2016) evaluating the diagnostic test accuracy of on-site urine dipstick testing (nitrites or leukocytes) for detecting asymptomatic bacteriuria (ASB) in pregnancy (7 studies; 603 women with ASB, 5087 without). Reports a pooled sensitivity of 0.73 (95% CI 0.59–0.83) and pooled specificity of 0.89 (95% CI 0.79–0.94) with very low certainty due to risk of bias, inconsistency, and imprecision, modelling true/false positive and negative rates per 1000 women at 3%, 9%, and 19% ASB prevalence.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-035",
+      "source": "sections/sec-035-eb-table-b12b-asymptomatic-bacteriuria-asb-gram.md",
+      "source_hash": "c4c04f7cfc08ca692ed492df1cb6f4f8ad2bc67aa68b302797cfe546a03011a6",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table B.1.2b) from Rogozinska et al. (2016) assessing the diagnostic accuracy of on-site Gram staining for diagnosing asymptomatic bacteriuria (ASB) in pregnancy (4 studies; 156 women with ASB, 1748 without). Reports a pooled sensitivity of 0.86 (95% CI 0.80–0.91) and pooled specificity of 0.97 (95% CI 0.93–0.99) with very low certainty of evidence, along with expected true/false positive and negative results per 1000 women tested at 3%, 9%, and 19% prevalence.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-036",
+      "source": "sections/sec-036-eb-table-b13-intimate-partner-violence-ipv-scree.md",
+      "source_hash": "0aaddb3daea92f43990dadc5ae7fc02c1e06c54b6cbc8b1595bed14a79bf7d37",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table B.1.3) evaluating universal antenatal screening for intimate partner violence (IPV) compared with usual antenatal care (2 RCTs, 663 participants). Shows that universal screening substantially increases identification of IPV (RR 4.28, 95% CI 1.77–10.36; 57 more per 1000 from a baseline of 17 per 1000; low certainty due to high risk of bias).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-037",
+      "source": "sections/sec-037-b2-fetal-assessment.md",
+      "source_hash": "5ed964c95668a317da7e8d84522c7e8a2f565e9b10d4255b2ab73892760afe8f",
+      "narrative": [
+        {
+          "text": "Section B.2 heading (Fetal assessment) and EB Table B.2.1 from Mangesi et al. (2015) comparing routine daily fetal movement counting with usual practice (mixed or undefined counting; 1 RCT, 1076 participants). Reports low- to very-low-certainty GRADE evidence showing slightly lower maternal anxiety scores (1013 women; SMD -0.22, 95% CI -0.35 to -0.10; low certainty), no perinatal deaths in either group, and uncertain effects on caesarean section (RR 0.93), assisted vaginal birth (RR 1.04), preterm birth (RR 0.81), and low birth weight (RR 0.98).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-038",
+      "source": "sections/sec-038-eb-table-b22-symphysis-fundal-height-sfh-measure.md",
+      "source_hash": "0efacfccb148503775b1a636380f9e8d74c41e00a05921ad884a17f2c89f70ad",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table B.2.2) from Robert Peter et al. (2015) comparing tape measurement of symphysis-fundal height (SFH) against clinical abdominal palpation for detecting abnormal fetal growth (1 RCT, 1639 participants). Reports GRADE evidence showing no clear difference in small for gestational age (RR 1.32, 95% CI 0.92–1.90; moderate certainty), caesarean section (RR 0.72, low certainty), induction of labour (RR 0.84, low certainty), or perinatal mortality (RR 1.25, low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-039",
+      "source": "sections/sec-039-eb-table-b23-routine-antenatal-cardiotocography.md",
+      "source_hash": "0e15fee5ba1cd85c61e70e625b9e95ae9f77c51847edfab7a77a1eef926c2e8d",
+      "narrative": [
+        {
+          "text": "Evidence base entry (EB Table B.2.3) citing the Cochrane review by Grivell et al. (2015) on antenatal cardiotocography (CTG) for fetal assessment and noting that there was no direct randomized evidence on the effects of routine antenatal CTG versus no routine antenatal CTG in normal pregnancy.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-040",
+      "source": "sections/sec-040-eb-table-b24a-early-ultrasound-scan-24-weeks-of.md",
+      "source_hash": "b7a43201900cf6b925697c05c74d37780b6507a1915d59aa4eb6311a1d0b5f2a",
+      "narrative": [
+        {
+          "text": "Evidence base table (EB Table B.2.4a) from Whitworth, Bricker, and Mullan (2015) comparing routine/revealed early ultrasound scan (< 24 weeks of gestation) with selective or concealed early ultrasound. Presents GRADE evidence showing reductions in labour induction for post-term pregnancy (8 RCTs, 25 516 women; RR 0.59, 95% CI 0.42–0.83; low certainty) and maternal dissatisfaction/worry (1 RCT, 634 women; RR 0.80; low certainty), marked increases in detection of major fetal anomalies before birth (2 RCTs, 387 women; RR 3.19; low certainty) and before 24 weeks (RR 3.46; low certainty), and little or no difference in caesarean section (RR 1.05, moderate certainty), small for gestational age (RR 1.05, moderate certainty), perinatal death (10 RCTs, 35 735 births; RR 0.89, low certainty), or low birth weight (RR 0.83, low certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-041",
+      "source": "sections/sec-041-eb-table-b24b-late-ultrasound-scan-24-weeks-of-g.md",
+      "source_hash": "7c90eede9c01e39e107492a7b369ec943f9c955d95d9367f49316bffdff69d71",
+      "narrative": [
+        {
+          "text": "Evidence base tables (EB Table B.2.4b and EB Table B.2.5a) evaluating late pregnancy ultrasound (> 24 weeks; Bricker, Medley, and Pratt, 2015) and routine fetal/umbilical Doppler ultrasound in normal pregnancy (Alfirevic, Stampalija, and Medley, 2015). EB Table B.2.4b shows no clear difference between routine and no/concealed/selective late ultrasound across caesarean section (RR 1.03, moderate certainty), induction of labour (RR 0.93, moderate certainty), instrumental delivery (RR 1.05, moderate certainty), perinatal mortality (8 RCTs, 30 675 births; RR 1.01, moderate certainty), preterm birth (RR 0.96, moderate certainty), small for gestational age (RR 0.98, low certainty), or low birth weight. EB Table B.2.5a similarly shows no clear difference with all routine Doppler ultrasound versus no Doppler ultrasound in normal pregnancy for caesarean section (RR 0.98, moderate certainty), operative vaginal birth (RR 1.04, moderate certainty), perinatal death (4 RCTs, 11 183 births; RR 0.80, low certainty), or preterm birth (RR 1.02, moderate certainty).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241549912-websupplement-eng/blocks/prose-sec-front-matter",
+      "source": "sections/sec-front-matter.md",
+      "source_hash": "faf51336773b6f9a4c36259bf5b60d07f20d59ea7a77d68ef725ac1b9d99c8eb",
+      "narrative": [
+        {
+          "text": "Front matter for the Web supplement to the WHO recommendations on antenatal care for a positive pregnancy experience (evidence base), containing publication credits (editing, design, and layout by Green Ink), the complete table of contents across Sections A (Nutritional interventions A.1–A.10), B (Maternal and fetal assessment B.1–B.2), C (Preventive measures C.1–C.5), D (Interventions for common physiological symptoms D.1–D.6), E (Health systems interventions to improve antenatal care utilization and quality E.1–E.4, E.7), and Search strategies for the evidence base (1–5), plus a list of acronyms and abbreviations (ANC, CI, EB, Hb, MD, RCT, RR, UNIMMAP).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://6b4c4c7e-32d3-4664-82ae-6bfedd5a091d"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    }
+  ]
+}
