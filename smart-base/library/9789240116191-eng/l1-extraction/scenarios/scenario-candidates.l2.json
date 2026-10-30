@@ -3,16 +3,16 @@
   "id": "https://smart.who.int/dth-health-product-catalogue/graph/l1-scenarios/dth-npc-9789240116191",
   "type": "Entity",
   "ontologyVersion": "1.0",
-  "generatedAt": "2026-10-12T19:24:24Z",
+  "generatedAt": "2026-10-30T17:21:57Z",
   "wasDerivedFrom": [
     {
       "path": "smart-base/library/9789240116191-eng/l1-extraction/l1.json",
-      "sha256": "b582ea1f3c44c86688d3e50c8abe19ac4ed195f3f8561038ac91bfa77054d71e",
+      "sha256": "72b31384edecbb3af811ca204910ac8097a31d354242027b801363d57a357646",
       "note": "The L1 recommendations, each the source of one implementedBy edge."
     },
     {
       "path": "smart-base/library/9789240116191-eng/l1-extraction/dth-npc-vocabulary.json",
-      "sha256": "c23909e6b047a8ac0139dc174491e30da1dd91f0a73b2a3a1b34afc681b6db94",
+      "sha256": "56704e90220761eb06920e3a60db36f3b510113e3e41f7131f466b9326ee9c0b",
       "note": "The personas and processes of dth-health-product-catalogue, read at litlfred/smart-base@7cb286a2e88007f6ba20d8bc659cc8c481d316c6."
     },
     {

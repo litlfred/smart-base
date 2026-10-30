@@ -29,7 +29,7 @@
  * @covers docs
  */
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { join, resolve } from "node:path";
+import { join, relative, resolve } from "node:path";
 import { z } from "zod";
 
 const ROOT = resolve(import.meta.dir, "..", "..");
@@ -134,7 +134,7 @@ const norm = (s: string): string => s.replace(/\s+/g, " ").trim();
 /** The findings page's sentence about the figure's SVG: a link once it exists, the bean until then. */
 function svgSentence(fig: { svg?: string; svgBean: string }): string {
   if (!fig.svg) return `An SVG rendering from the DIIG's vector layer is bean \`${fig.svgBean}\`.`;
-  return `Its SVG rendering is [\`${fig.svg.split("/").pop()}\`](../${fig.svg.replace(/^smart-base\//, "")}) (bean \`${fig.svgBean}\`). It is drawn from the DIIG PDF's own vector layer, never by hand, and records its source (the PDF's sha256, the page and the crop) in its \`<metadata>\`; \`bun run cat smart-base:diig-figure:check\` fails if the drawing is edited or the crop drifts.`;
+  return `Its SVG rendering is [\`${fig.svg.split("/").pop()}\`](${relative("smart-base/findings", fig.svg)}) (bean \`${fig.svgBean}\`). It is drawn from the DIIG PDF's own vector layer, never by hand, and records its source (the PDF's sha256, the page and the crop) in its \`<metadata>\`; \`bun run cat smart-base:diig-figure:check\` fails if the drawing is edited or the crop drifts.`;
 }
 
 export function sectionText(raw: string): string {
@@ -168,9 +168,21 @@ export function quoteUnverifiable(q: Quote, root = ROOT, built = builtAtPublishP
   return `${q.path}: built at publish and not built in this checkout — "${q.quote}" not checked`;
 }
 
+/**
+ * The library that holds a libraryId's sections. smart-base's own library comes first;
+ * the IRIS publications it cites live in who-iris since 2026-10-30
+ * (who-iris#107), which smart-base mounts. A handbook can keep its own
+ * extraction here while its sections live there, so look for the sections.
+ */
+const LIBRARY_ROOTS = ["smart-base/library", "who-iris/library"];
+function libraryRootOf(libraryId: string, root: string): string {
+  const hit = LIBRARY_ROOTS.find((r) => existsSync(join(root, r, libraryId, "sections")));
+  return join(root, hit ?? LIBRARY_ROOTS[0]!);
+}
+
 /** Why a quote does not match what it cites, or null when it does. */
 export function quoteProblem(q: Quote, root = ROOT): string | null {
-  const file = "path" in q ? join(root, q.path) : join(root, "who-iris", "library", q.libraryId, "sections", `${q.sectionId}.md`);
+  const file = "path" in q ? join(root, q.path) : join(libraryRootOf(q.libraryId, root), q.libraryId, "sections", `${q.sectionId}.md`);
   const label = "path" in q ? q.path : `${q.libraryId}/${q.sectionId}`;
   if (!existsSync(file)) return `${label}: no such file`;
   const raw = readFileSync(file, "utf8");

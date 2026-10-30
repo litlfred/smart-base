@@ -45,6 +45,43 @@
       }
     },
     {
+      "name": "who-iris",
+      "source": {
+        "remote": {
+          "repository": "litlfred/who-iris",
+          "ref": "a73e75ab7e9933c81bd2db3e313a8d8bd471face",
+          "overrides": {
+            "who-iris": {
+              "whole": true
+            },
+            "folio-assistant-core": {
+              "skip": true
+            },
+            "cat-harness": {
+              "skip": true
+            },
+            "cat-harness-tools": {
+              "skip": true
+            },
+            "bootstrap": {
+              "skip": true
+            },
+            "bootstrap-tools": {
+              "skip": true
+            }
+          },
+          "trust": {
+            "consent": {
+              "by": "litlfred",
+              "on": "2026-10-30",
+              "ref": "a73e75ab7e9933c81bd2db3e313a8d8bd471face",
+              "evidence": "litlfred 2026-10-30 chose option B on who-iris#107 (full move: IRIS items smart-base had ingested now live, materialized, in who-iris as the 'pre-CDN preview'); smart-base mounts who-iris to read them. Merge and repin window litlfred 2026-10-30 11:13Z, extended 16:38Z to ~19:38Z. Pinned to who-iris main a73e75a (who-iris#108 merged)."
+            }
+          }
+        }
+      }
+    },
+    {
       "name": "folio-assistant-core",
       "source": {
         "remote": {
