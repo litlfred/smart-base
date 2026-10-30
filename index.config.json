@@ -27,7 +27,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "a67dc4d68c27dd48776324f3e00d9146a2d52b12",
+          "ref": "5545d6b5f803f9b4e38b9d0d55f38da82e2f8c93",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -37,8 +37,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-30",
-              "ref": "a67dc4d68c27dd48776324f3e00d9146a2d52b12",
-              "evidence": "A. ig section in index.config"
+              "ref": "5545d6b5f803f9b4e38b9d0d55f38da82e2f8c93",
+              "evidence": "Owner litlfred, 2026-10-30: card 'A. One coordinated move' (bean 8lcl), merge window to 19:38Z"
             }
           }
         }
@@ -86,7 +86,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "f35c1daff72439fec61ef8f5c15d218dc9e16d09",
+          "ref": "be4e571d8dad29db098542ede6d0979c24c0ea13",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -101,9 +101,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-21",
-              "ref": "f35c1daff72439fec61ef8f5c15d218dc9e16d09",
-              "evidence": "owner, 2026-10-21 12:49Z, session_016heucWhrncLm4uy52csBcz: \"Extend window +3hrs\" (re-pin and merge; the platform layers move together to their mains so cat-harness carries narrativeFor, cat-harness#396)"
+              "on": "2026-10-30",
+              "ref": "be4e571d8dad29db098542ede6d0979c24c0ea13",
+              "evidence": "Owner litlfred, 2026-10-30: card 'A. One coordinated move' (bean 8lcl), merge window to 19:38Z"
             }
           }
         }
@@ -114,7 +114,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "ecc231a49258ae62f75f54e0d5c3258a2df8bb7c",
+          "ref": "6dff1e1a31e47a56c935b33aee010f54d34dbc6e",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -130,8 +130,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-30",
-              "ref": "ecc231a49258ae62f75f54e0d5c3258a2df8bb7c",
-              "evidence": "owner, 2026-10-30T12:40Z, card choice: \"A. ig section in index.config\" (bean cz17 item 3; re-pin so fhir-harness registers contentTypes.ig)"
+              "ref": "6dff1e1a31e47a56c935b33aee010f54d34dbc6e",
+              "evidence": "Owner litlfred, 2026-10-30: card 'A. One coordinated move' (bean 8lcl), merge window to 19:38Z"
             }
           }
         }
@@ -142,7 +142,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "9326f5d78c02761a15e3e465333f01f89251ac2b",
+          "ref": "c98abe5569f94df167173def9239a8128dd2cd0e",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -155,8 +155,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-10-30",
-              "ref": "9326f5d78c02761a15e3e465333f01f89251ac2b",
-              "evidence": "owner, 2026-10-30T12:40Z, card choice: \"A. ig section in index.config\" (bean cz17 item 3; re-pin so fhir-harness registers contentTypes.ig)"
+              "ref": "c98abe5569f94df167173def9239a8128dd2cd0e",
+              "evidence": "Owner litlfred, 2026-10-30: card 'A. One coordinated move' (bean 8lcl), merge window to 19:38Z"
             }
           }
         }
