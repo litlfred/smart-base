@@ -209,6 +209,10 @@
         "input/images/",
         "input/images-source/",
         "input/data/",
+        "input/diagrams/",
+        "input/archimate/",
+        "input/dmn/",
+        "input/ignoreWarnings.txt",
         "fsh-generated/"
       ]
     }
