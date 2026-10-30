@@ -42,11 +42,22 @@
  * with this file as the checker's `sourceFile`, which is what keeps their
  * verdicts freshness-hashed (bean riit, step 3b).
  *
+ * ## It also registers this layer's content types
+ *
+ * `loadContributions` requires this module for every repository that depends
+ * on smart-base, when the QA sweep, the site publisher or the server starts.
+ * That is this layer's load-time entry, so the `dak` and `sushi` content
+ * types (`schemas/dak-content-type.ts`) are registered here, in the default
+ * registry, before anything asks a repository what it is. Until this import
+ * nothing outside the tests loaded that module, so the registry learned
+ * `dak` only by accident (bean `cz17`).
+ *
  * @module smart-base/pipeline/qa-checkers-dak
  */
 
 import { existsSync, readFileSync } from "fs";
 import type { CheckerPaths, CheckerResult } from "../platform/index.js";
+import "../schemas/dak-content-type";
 
 import { DAK_LABEL_PREFIXES, type DakBlockKind } from "../schemas/dak-kinds";
 
