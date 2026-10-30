@@ -1,0 +1,918 @@
+{
+  "$schema": "folio-block-summaries/v1",
+  "entry": "9789241511766-eng",
+  "summaries": [
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-001",
+      "source": "sections/page-001.md",
+      "source_hash": "c58326cbca7d18c44d2237412ff629a4f75898ffb175bbaba90635d43470d52d",
+      "narrative": [
+        {
+          "text": "Front cover and title page of 'Monitoring and Evaluating Digital Health Interventions: A practical guide to conducting research and assessment', co-published with the Johns Hopkins University Global mHealth Initiative.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-002",
+      "source": "sections/page-002.md",
+      "source_hash": "4fbd885a85059799524357b8b2480e03cfaa45434f161ba5064d382719ec24e3",
+      "narrative": [
+        {
+          "text": "Copyright and publication page for 'Monitoring and evaluating digital health interventions: a practical guide to conducting research and assessment' (WHO, 2016, ISBN 978-92-4-151176-6), detailing CC BY-NC-SA 3.0 IGO licensing terms, suggested citation, Cataloguing-in-Publication data, third-party material policies, general disclaimers, and design and photography credits.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-003",
+      "source": "sections/page-003.md",
+      "source_hash": "90feda17f3d9f586afd3046fce739cc2fa3c424ba6cde40bd27b749536faff89",
+      "narrative": [
+        {
+          "text": "Table of contents listing front matter (Acknowledgements, Acronyms and abbreviations, Preface, Executive summary, Introduction), Chapters 1 through 6 and their subsections (covering M&E overview, claims and frameworks, monitoring, evaluation, data quality assessment, and the mERA reporting checklist), and Annex I (Glossary).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-004",
+      "source": "sections/page-004.md",
+      "source_hash": "ff41c404237ec2f4d17a6e91a24aa352f901c7a3671a72d0ccadec903ec4b1dd",
+      "narrative": [
+        {
+          "text": "Acknowledgements page crediting authors and contributors from the WHO Department of Reproductive Health and Research (RHR), Johns Hopkins University Global mHealth Initiative (JHU-GmI), Duke University, United Nations Foundation (UNF), African Centre for eHealth Excellence, implementing partner organizations, the Innovation Working Group (IWG) Catalytic mHealth Grant Mechanism, Green Ink, and Norad.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-005",
+      "source": "sections/page-005.md",
+      "source_hash": "c023fc86784735dda8b4dc0358e3bb81b4255f885807a7d0dbd5829ac02b65f1",
+      "narrative": [
+        {
+          "text": "First page of the Acronyms and abbreviations list (ANC through KEMRI), defining clinical, economic evaluation, health information system, and organizational abbreviations used throughout the Guide.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-006",
+      "source": "sections/page-006.md",
+      "source_hash": "ed44969c5ae0a3acc82bb106dfec0a05c124991895917bd46c4ef6fda5db138b",
+      "narrative": [
+        {
+          "text": "Second page of the Acronyms and abbreviations list (M&E through WHO), defining monitoring and evaluation, digital health, maternal and child health, study reporting, and agency abbreviations.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-007",
+      "source": "sections/page-007.md",
+      "source_hash": "210384f824286d8a8087bda8f555be4b5a8faf761b996145d0d3b155fc7a6a87",
+      "narrative": [
+        {
+          "text": "Preface situating the Guide within five years of collaborative learning across 26 mHealth projects supported by WHO RHR, UNF, Norad, and JHU-GmI, and outlining its pragmatic focus on monitoring deployment fidelity and evaluating outputs, health outcomes, and cost-effectiveness.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-008",
+      "source": "sections/page-008.md",
+      "source_hash": "d25792045457e628181219a78c1e09711c68e4a157a190806872ca597b5d3c76",
+      "narrative": [
+        {
+          "text": "Executive summary explaining how monitoring and evaluation (M&E) needs evolve across digital health intervention maturity stages—from technical functionality and feasibility to usability, effectiveness, attributable impact, and value for money—and outlining the Guide's progression from value claims and indicators to data quality assessment and reporting.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-009",
+      "source": "sections/page-009.md",
+      "source_hash": "a242be1c51f465b94362199b1bfc50f7d5514e04d2dec665c39f858c0998711b",
+      "narrative": [
+        {
+          "text": "Introduction to the Guide and Figure 1 ('The Guide Roadmap: six steps for the M&E of digital health interventions'), summarizing the contents of Chapters 1 through 6 across maturity stages, claims and frameworks, technical and process monitoring, qualitative/quantitative/economic evaluation designs, data quality assessment, and the mERA checklist.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-010",
+      "source": "sections/page-010.md",
+      "source_hash": "d6ddef5f5d71d4411e40bd715cc261326ad6c8421943817758b7e5a9e5365ea7",
+      "narrative": [
+        {
+          "text": "Continuation of the Introduction distinguishing implementation monitoring (fidelity, quality, and coverage) from programme evaluation (attributing outputs, outcomes, and economic value), identifying the intended audience of implementers, researchers, and policy-makers, and defining the key term 'Digital health'.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-011",
+      "source": "sections/page-011.md",
+      "source_hash": "6410a10ca9566e568cf1364a312438b6cc58d3fe5290230f1127bdb2746bf2cd",
+      "narrative": [
+        {
+          "text": "Section divider title page for Chapter 1: Overview of monitoring and evaluation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-012",
+      "source": "sections/page-012.md",
+      "source_hash": "6fdf4c0057bbada1ac7d7d0ec0e9c9970442d3122568f3bda11f111ab58f062f",
+      "narrative": [
+        {
+          "text": "Opening of Chapter 1 introducing the intervention maturity life-cycle schematic (Figure 1.1), which illustrates how concurrent monitoring activities (functionality, stability, quality, fidelity) and evaluation activities (usability, feasibility, efficacy, effectiveness, implementation research, and economic/financial evaluation) evolve from prototype to national implementation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-013",
+      "source": "sections/page-013.md",
+      "source_hash": "ee5892ecdaed687b1ff6d40e7555ed83cc3dc41b85ebf5ee3e6752ea37e02a31",
+      "narrative": [
+        {
+          "text": "Part 1a ('Defining goals for monitoring and evaluation'), defining process monitoring in digital health, explaining how inquiry graduates across the six stages of intervention maturity from device factors to user interaction and health system scale-up, and listing core monitoring questions on specifications, stability, consistency, site variation, and deployment benchmarks.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-014",
+      "source": "sections/page-014.md",
+      "source_hash": "dbd500659cf31bb35e73759b5f6c1e5c27bc9ce03514e51eff82484bee4d82a9",
+      "narrative": [
+        {
+          "text": "Box 1.1 mapping the six stages of the intervention maturity life-cycle (pre-prototype/prototype, pilot, demonstration, scale-up, and integration/sustainability) against monitoring goals, evaluation stages, user scale (10–100 to 100 000+), and measurement targets, followed by the definition of evaluation and the challenge of attributing extrinsic changes to the digital health intervention.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-015",
+      "source": "sections/page-015.md",
+      "source_hash": "65d5246fcfea169402eb3938dd7b2205f1ce37fb9d8e8ade75f95ca23bff390b",
+      "narrative": [
+        {
+          "text": "Continuation of Part 1a listing illustrative evaluation questions for measuring attribution across usability, efficacy, effectiveness, and cost, explaining how monitoring and evaluation complement each other, and defining the key terms 'Benchmark', 'Evaluation', and 'Process monitoring'.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-016",
+      "source": "sections/page-016.md",
+      "source_hash": "88978b5122e071893448e4d745c6f9f51c9764070871622699f84698bf75fd2d",
+      "narrative": [
+        {
+          "text": "Concluding paragraph of Part 1a explaining how poor implementation and weak process monitoring can confound evaluation results—illustrated by unreceived SMS reminders due to connectivity issues being mistaken for intervention ineffectiveness.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-017",
+      "source": "sections/page-017.md",
+      "source_hash": "b44d706092aba500e1ded0491e6e881bb7e096db671993f6ce66981db67daa12",
+      "narrative": [
+        {
+          "text": "Part 1b ('Developing an M&E plan for your digital health intervention'), presenting the seven-step M&E pathway (Figure 1.2), defining the key term 'Claim', and detailing Step 1 on classifying the stage of maturity and corresponding stage of evaluation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-018",
+      "source": "sections/page-018.md",
+      "source_hash": "2ea81a9029ee1d5f87b4e2cfec9eba1d747c1f160e3276090f5b5628cd1f39fc",
+      "narrative": [
+        {
+          "text": "Continuation of Step 1 on formulating appropriate claims (distinguishing optimization of a validated health intervention from novel digital health interventions, summarized in Box 1.2), followed by Step 2 ('Develop an underlying framework') and Step 3 ('Identify evidence needs and evaluation objectives' using SMART criteria).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-019",
+      "source": "sections/page-019.md",
+      "source_hash": "67c7bace272163f4945f78cb0c308d9c997fbb079a5993f0bf2d889dde24d200",
+      "narrative": [
+        {
+          "text": "Box 1.3 listing the six steps for defining SMART M&E objectives, and Table 1.1 ('Linking stages of maturity with evaluation methods and claims') mapping Early (pre-prototype, prototype, pilot), Mid (demonstration), and Advanced (scale-up, integrated and sustained programme) maturity stages to evaluation stages and technology, intervention, and health claims.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-020",
+      "source": "sections/page-020.md",
+      "source_hash": "2f5c28d8a1bbf4ecf0cbd186eeeba0885a3ee41ab4580016d5647d4774acf11d",
+      "narrative": [
+        {
+          "text": "Steps 4, 5, and 6 of the M&E planning pathway: finalizing an appropriate study design, deciding between internal and external evaluators (illustrated in Figure 1.3 across inputs, processes, outputs, outcomes, and impact), and weighing prospective versus retrospective evaluation timing.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-021",
+      "source": "sections/page-021.md",
+      "source_hash": "ae92372ccb9b8a35ecd8603d4e6561a074b3687b34b5b13d434453f374bf4b6c",
+      "narrative": [
+        {
+          "text": "Continuation of Step 6 on quantifying time and financial, human, and physical resources (Box 1.4, noting the 10% budget benchmark), followed by Step 7 ('Develop an M&E implementation plan') detailing required components: activities and sub-activities, responsible persons, timelines, and budgets.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-022",
+      "source": "sections/page-022.md",
+      "source_hash": "b33b391eb6f11b04c703371ab39e02ef501a3cf834b173a7c7e5d2bc99026153",
+      "narrative": [
+        {
+          "text": "Table 1.2 providing an illustrative format for an M&E implementation plan (monitoring antenatal care coverage and pregnancy outcomes via SOP development and staff training), followed by the Chapter 1 reference list (citations 1–9).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-023",
+      "source": "sections/page-023.md",
+      "source_hash": "ab317d7e5f3099017a9f2282d50bac9b86f6a4e6236f7c46d7ce757a7ff6d909",
+      "narrative": [
+        {
+          "text": "Section divider title page for Chapter 2: Setting the stage for monitoring and evaluation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-024",
+      "source": "sections/page-024.md",
+      "source_hash": "43ac6cc2bacf0fd6532cb609693cb4baa3179fced52b6d4a979d3f164250a0a6",
+      "narrative": [
+        {
+          "text": "Opening of Chapter 2 outlining the three core M&E questions (goal, process organization, and measurement) and introducing Part 2a ('Articulating claims'), which defines 'Claim' and 'Value proposition' and explains how value propositions communicate end-user benefits relative to a comparator.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-025",
+      "source": "sections/page-025.md",
+      "source_hash": "34262c3d721817f83d30695c169ffc5c1958d6085267bcb65028ecdf64e10818",
+      "narrative": [
+        {
+          "text": "Continuation of Part 2a explaining how a claims-based approach aligns M&E objectives with stakeholder expectations, streamlines measurement, and guides indicator selection, illustrated by Box 2.1 (comparing a claim, evaluation objective, hypothesis, and indicator for SMS measles vaccination reminders) and introducing the two pathways for digital health claims.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-026",
+      "source": "sections/page-026.md",
+      "source_hash": "d490677a58f8ba9acb25687c8a7bfa78f71ece26dedf74bb42e3a13c81090bde",
+      "narrative": [
+        {
+          "text": "Figure 2.1 and accompanying guidance distinguishing Pathway 1 (evaluating the added benefit of a digital health system in optimizing delivery of an already validated health intervention, focusing on process and coverage outcomes) from Pathway 2 (evaluating whether a novel digital health intervention directly and independently improves health outcomes).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-027",
+      "source": "sections/page-027.md",
+      "source_hash": "cf83432a0d87a84baafaa5c67072359a08b493ae4820bfeb788ab37cd0c3857d",
+      "narrative": [
+        {
+          "text": "Section on linking digital health claims with the Sustainable Development Goals (SDGs) and universal health coverage (UHC), featuring Table 2.1 which maps UHC determinant layers (accountability, supply of commodities/human resources/facilities, demand/contact/continuous coverage, quality/effective coverage, and cost/financial coverage) to digital health strategies and illustrative claims.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-028",
+      "source": "sections/page-028.md",
+      "source_hash": "f58b1d18cc72e94f61c4d591af2396518e38a9a1feda0d8d8cb69ec7e261505f",
+      "narrative": [
+        {
+          "text": "Overview of the five steps in a claims-based approach (Figure 2.2) and detailed guidance on Step i ('Map stakeholders'), explaining how to identify and prioritize decision-makers, project staff, end-users, and scientific or scale-up partners.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-029",
+      "source": "sections/page-029.md",
+      "source_hash": "e7963f34b6e4aa82f8d5ff7cdb540524b3b7d9da289a844f59dc305b506b491b",
+      "narrative": [
+        {
+          "text": "Steps ii through v of the claims-based approach: clarifying stakeholder expectations (with sample stakeholder interview questions in Box 2.2), articulating specific and measurable top claims per stakeholder, measuring claims through M&E and process documentation, and updating claims to match observed evidence.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-030",
+      "source": "sections/page-030.md",
+      "source_hash": "b63da282b718be4297e72e0e94c5ddaf0d874040a413ab7fab531351069c15f5",
+      "narrative": [
+        {
+          "text": "First part of Table 2.2 ('Illustrative categories of digital health stakeholders and claims'), mapping government entities (e.g. ministries of health), private sector organizations/mobile network operators, donors, technical agencies (e.g. WHO), beneficiaries/clients, and NGOs to their roles, relevant claim categories, and example claim statements.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-031",
+      "source": "sections/page-031.md",
+      "source_hash": "04673c6cb8cedb479e56bf780248a7f9d2eded03f1bb3cf7aa3e86766a2a175e",
+      "narrative": [
+        {
+          "text": "Continuation of Table 2.2 covering the digital health community (including technical working groups) and the scientific community, detailing their roles as peers and future adopters along with relevant claim categories and illustrative claim statements.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-032",
+      "source": "sections/page-032.md",
+      "source_hash": "9db6feae66e5e3d93bf3812f699d25092ca619cbea846186b9b42147c09881c3",
+      "narrative": [
+        {
+          "text": "Part 2b ('Developing an M&E framework'), introducing the role of frameworks in conceptualizing project goals, activities, and outcomes, and defining the key terms 'Conceptual framework', 'Results framework', 'Logical framework/logic model', 'Theory of change', 'Inputs', 'Processes', and 'Outputs'.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-033",
+      "source": "sections/page-033.md",
+      "source_hash": "70008b0585d736e15d87542f67acdd71192c3362b990c8bc9f8d9a8c99752942",
+      "narrative": [
+        {
+          "text": "Guidance on constructing a conceptual framework (illustrated in Figure 2.4 connecting intervention X through intermediate factors A, B, and C to anticipated goal Z), definitions of 'Outcomes' and 'Impact', and a pointer to K4Health framework toolkits (Figure 2.3).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-034",
+      "source": "sections/page-034.md",
+      "source_hash": "0ac50f62f34545d9a5b65a9cb606d3ea793f1d3262b90d9a85b6d11618cd6c8f",
+      "narrative": [
+        {
+          "text": "Table 2.3 comparing the description and purpose of conceptual frameworks, results frameworks, theories of change, and logical frameworks, followed by detailed guidance and the first three steps for building a results framework.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-035",
+      "source": "sections/page-035.md",
+      "source_hash": "5200ed9b61296a5d18165d71d246e35f409f276ecaee17c153407e78b8ec44bc",
+      "narrative": [
+        {
+          "text": "Steps 4–6 for creating a results framework and Box 2.3/Figure 2.5 describing the Mobile Technology for Community Health (MOTECH) initiative in Ghana (comprising the Mobile Midwife voice messaging service and the nurse-facing Client Data Application) and its five immediate results.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-036",
+      "source": "sections/page-036.md",
+      "source_hash": "c80185e7942062330d43d13e3832abdf36dae15ce50ff7104b2264c194e2c1be",
+      "narrative": [
+        {
+          "text": "Figure 2.6 presenting the illustrative results framework for MOTECH in Ghana, linking the overall project goal ('Improve maternal and child health') to five immediate results (IR1–IR5), lower-level results (LLR2a–b, LLR4a–b), and specific quantitative indicators.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-037",
+      "source": "sections/page-037.md",
+      "source_hash": "a339ac2600b24e04c2fa2f4524e5ffaf38cad5e83eee29b6d605fe9d5783c673",
+      "narrative": [
+        {
+          "text": "Detailed explanation of logical frameworks (logic models) in digital health M&E, defining and distinguishing technology, programmatic, and policy inputs; implementation and supervision processes; technological and service delivery outputs; health system, provider, and client outcomes; and medium- to long-term health and financial impacts.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-038",
+      "source": "sections/page-038.md",
+      "source_hash": "b8caad707cae5b790a66fc659e1108309eca29fcf19eaa91e2c11662bb9e695b",
+      "narrative": [
+        {
+          "text": "Figure 2.7 presenting an illustrative logic model for the MomConnect maternal health SMS initiative in South Africa, mapping partnerships, health promotion messaging, facility/community, technology, and funding inputs and processes to outputs, outcomes, and mortality reduction impacts.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-039",
+      "source": "sections/page-039.md",
+      "source_hash": "bc6f93f95e5fcd1b70ac756137fb3c276b07b0b5cd2ce873ea7d48947cef6bda",
+      "narrative": [
+        {
+          "text": "Box 2.4 and Figure 2.8 describing how South Africa's MomConnect initiative registers pregnant women via USSD at clinics to deliver stage-based maternal and infant health SMS messages, followed by an introduction to Theory of Change models and the six core questions required to test them.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-040",
+      "source": "sections/page-040.md",
+      "source_hash": "a0c06679ad2030c22e66f2a8feaa8edff22a31d411467849c5a8ee61a0b1291c",
+      "narrative": [
+        {
+          "text": "Minimum required components of a Theory of Change (context, causal pathway of outcomes/preconditions, intervention sequence, assumptions, and diagram/narrative summary) and a Further Reading box citing foundational references on conceptual frameworks, results frameworks, and theories of change.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-041",
+      "source": "sections/page-041.md",
+      "source_hash": "0a7abcea8583e01326d19900a9ae1f2f6d5d280bc16c8a1fb8ad0e60af42d7d1",
+      "narrative": [
+        {
+          "text": "Part 2c ('Setting the stage: selecting indicators for digital health interventions'), defining the key terms 'Functionality', 'Indicator', 'Usability', and 'Users', introducing qualitative and quantitative indicators (recommending 10–15 per programmatic area), and presenting the Specific and Measurable components of the SMART criteria.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-042",
+      "source": "sections/page-042.md",
+      "source_hash": "529bbc9ab271633d52a90b7d1eaa8fe308a342fb9a91eefde807bfbd2299dce1",
+      "narrative": [
+        {
+          "text": "Continuation of Part 2c completing the SMART indicator criteria (Attainable, Relevant, Time-bound), explaining how indicator selection shifts along a 'barometer' (Figure 2.9) between process indicators (for interventions of known efficacy) and outcome indicators (where an evidence base is absent), and introducing the four-part indicator classification framework.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-043",
+      "source": "sections/page-043.md",
+      "source_hash": "8624dc57810e478e7959207f4db9d6f328949b726efd0a112f76b7ee64cd263c",
+      "narrative": [
+        {
+          "text": "Figure 2.10 ('Categorization of digital health indicators') organizing indicators around four sequential questions—Does the technology work? How do people interact with the technology? How does the technology improve the process? How do improvements in service delivery affect health?—accompanied by Box 2.6 on the PRISM framework and an introduction to Functionality indicators.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-044",
+      "source": "sections/page-044.md",
+      "source_hash": "7272b19fc89f44d39edae886bc8b10b02e359fe0f719bb308f0c0be06d70f9f6",
+      "narrative": [
+        {
+          "text": "Discussion of technical factors and qualitative software quality assessments (including ISO/IEC 25000:2014 SQuaRE criteria), alongside Table 2.4 listing sample functionality indicators across technical factors (connectivity, power, skilled local staff, maintenance, functionality) and organizational factors (staff training hours).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-045",
+      "source": "sections/page-045.md",
+      "source_hash": "1df63943a3d0f474900956bc3631420c7d7e13d1e3b4225c35925c16c823dad1",
+      "narrative": [
+        {
+          "text": "Discussion of organizational factors and primary/secondary data sources for functionality indicators, followed by the 'Usability – How do people interact with the technology?' section covering functional and service output indicators, behavioural factors, and core questions on user coverage, user response, and user adoption.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-046",
+      "source": "sections/page-046.md",
+      "source_hash": "6f32fbadff4b54a4913d6994bb93781289c72d26532d1a49b8bbfaf329522465",
+      "narrative": [
+        {
+          "text": "Table 2.5 listing sample usability indicators across user coverage, user response, and user adoption, followed by discussion of back-end digital data sources and user surveys, and Figure 2.11 illustrating the iterative spiral feedback loop between technology performance and user interaction.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-047",
+      "source": "sections/page-047.md",
+      "source_hash": "8dcede0a1b62e39d0f1d27ccf3d0f19fafd0f582e7219b0ac0a04ef68fe43a55",
+      "narrative": [
+        {
+          "text": "Section on 'Process improvement – How does the technology improve service delivery?', introducing Figure 2.12 on addressing cost, efficiency, quality, and utilization constraints across health system, provider, and client levels, and defining client-level indicators.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-048",
+      "source": "sections/page-048.md",
+      "source_hash": "bacb047ce23d6be9c15c65350523ad0fc29aa58a6667a25f73a312e36e3ef422",
+      "narrative": [
+        {
+          "text": "Case study and monthly monitoring chart (Figure 2.13) for FHI 360's Mobile for Reproductive Health (m4RH) SMS programme in Kenya and Tanzania, followed by definitions of provider-level and health-system-level indicators (aligned with the six WHO health system building blocks) and client/system cost constraint considerations.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://37f2dbd5-017f-4297-8fa4-22f72512b84c"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    }
+  ]
+}
