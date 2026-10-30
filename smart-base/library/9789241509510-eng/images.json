@@ -8,7 +8,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 2.7e-05,
+        "coverage": 0.000027,
         "imagesOnPage": 63,
         "page": 1
       },
@@ -23,6 +23,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -32,7 +92,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 6.8e-05,
+        "coverage": 0.000068,
         "imagesOnPage": 63,
         "page": 1
       },
@@ -47,6 +107,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -71,6 +191,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -142,7 +322,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 9.1e-05,
+        "coverage": 0.000091,
         "imagesOnPage": 63,
         "page": 1
       },
@@ -157,6 +337,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -181,6 +421,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -357,6 +657,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -388,7 +748,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 7.6e-05,
+        "coverage": 0.000076,
         "imagesOnPage": 63,
         "page": 1
       },
@@ -403,6 +763,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -427,6 +847,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -437,7 +917,7 @@
         },
         {
           "page": 1,
-          "coverage": 9.7e-05,
+          "coverage": 0.000097,
           "imagesOnPage": 63
         },
         {
@@ -447,7 +927,7 @@
         },
         {
           "page": 1,
-          "coverage": 9.7e-05,
+          "coverage": 0.000097,
           "imagesOnPage": 63
         }
       ]
@@ -458,7 +938,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 5e-05,
+        "coverage": 0.00005,
         "imagesOnPage": 63,
         "page": 1
       },
@@ -473,6 +953,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -482,7 +1022,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 7e-05,
+        "coverage": 0.00007,
         "imagesOnPage": 63,
         "page": 1
       },
@@ -497,6 +1037,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -521,6 +1121,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie de couverture montrant la main d'un agent de santé tendant un téléphone portable à une femme assise portant un foulard jaune à motifs floraux, qui regarde l'écran du téléphone. Derrière elle, un homme coiffé d'une casquette blanche et vêtu d'une chemise bleu clair regarde vers le téléphone, et un jeune enfant est assis à ses côtés. La scène semble se dérouler à l'intérieur d'un dispensaire ou d'un espace de santé communautaire, avec un mur à motifs visible à l'arrière-plan.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de cubierta que muestra la mano de un trabajador sanitario acercando un teléfono móvil a una mujer sentada que lleva un pañuelo amarillo con estampado floral y mira la pantalla del teléfono. Detrás de ella, un hombre con gorra blanca y camisa azul claro mira hacia el teléfono, con un niño pequeño sentado a su lado. El entorno parece ser el interior de una clínica o un espacio de salud comunitaria con una pared estampada visible al fondo.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة غلاف تُظهر يد عامل صحي يمدّ هاتفاً محمولاً إلى امرأة جالسة ترتدي غطاء رأس أصفر بنقوش زهرية وتنظر إلى شاشة الهاتف. وخلفها رجل يرتدي قبعة بيضاء وقميصاً أزرق فاتحاً ينظر نحو الهاتف، وبجانبه طفل صغير جالس. ويبدو المكان عيادة داخلية أو فضاءً للصحة المجتمعية مع جدار منقوش ظاهر في الخلفية.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография на обложке, на которой рука медицинского работника протягивает мобильный телефон сидящей женщине в жёлтом платке с цветочным узором, смотрящей на экран телефона. Позади неё мужчина в белой кепке и светло-голубой рубашке смотрит в сторону телефона, а рядом с ним сидит маленький ребёнок. Обстановка напоминает помещение клиники или общественного центра здоровья с узорчатой стеной на заднем плане.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "封面照片展示一名卫生工作者的手将一部手机递向一位戴着黄色碎花头巾的坐姿女性，她正注视着手机屏幕。在她身后，一名戴白色帽子、穿浅蓝色衬衫的男子朝手机方向望去，身旁坐着一名幼童。场景似为室内诊所或社区卫生空间，背景可见带有图案的墙壁。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -545,6 +1205,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -569,6 +1289,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -578,7 +1358,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 9.6e-05,
+        "coverage": 0.000096,
         "imagesOnPage": 63,
         "page": 1
       },
@@ -593,6 +1373,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -602,7 +1442,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 9e-05,
+        "coverage": 0.00009,
         "imagesOnPage": 63,
         "page": 1
       },
@@ -617,6 +1457,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -626,7 +1526,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 5.1e-05,
+        "coverage": 0.000051,
         "imagesOnPage": 63,
         "page": 1
       },
@@ -641,17 +1541,77 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Fragment d'image extrait de la page de couverture ne contenant aucun contenu visible (pixels uniformément blancs/vierges). Il correspond à l'espacement entre les glyphes du texte du titre de couverture plutôt qu'à un élément pictural distinct ; aucun contenu n'a pu être déterminé à partir de l'image extraite au-delà de cet aspect vierge.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fragmento de imagen extraído de la página de cubierta que no contiene contenido visible (píxeles uniformemente blancos o en blanco). Corresponde al espaciado entre las formas tipográficas del texto del título de la cubierta más que a un elemento pictórico distinto; no fue posible determinar ningún contenido a partir de la imagen extraída más allá de esta apariencia en blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "جزء صورة مستخرج من صفحة الغلاف لا يتضمن أي محتوى مرئي (وحدات بكسل بيضاء أو فارغة بشكل متجانس). وهو يقابل المسافات الفاصلة بين حروف نص عنوان الغلاف لا عنصراً تصويرياً مميزاً؛ وتعذّر تحديد أي محتوى من الصورة المستخرجة يتجاوز هذا المظهر الفارغ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Извлечённый фрагмент изображения со страницы обложки, не содержащий видимого контента (равномерно белые или пустые пиксели). Он соответствует интервалам между буквенными формами текста заголовка обложки, а не отдельному изобразительному элементу; определить какое-либо содержимое по извлечённому изображению, помимо этого пустого вида, не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "从封面页提取的图像碎片，不包含任何可见内容（像素呈均匀的空白/白色）。它对应于封面标题文字字形之间的间距，而非独立的图形元素；除这一空白外观外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
         {
           "page": 1,
-          "coverage": 5.1e-05,
+          "coverage": 0.000051,
           "imagesOnPage": 63
         },
         {
           "page": 1,
-          "coverage": 5.1e-05,
+          "coverage": 0.000051,
           "imagesOnPage": 63
         }
       ]
@@ -677,6 +1637,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Bande verticale étroite composée de bandes de couleur changeantes sans contenu lisible, sur la page des remerciements ; il semble s'agir d'un séparateur latéral décoratif plutôt que d'un graphique informatif. Aucun contenu au-delà des bandes de couleur n'a pu être déterminé à partir de l'image extraite.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Franja vertical estrecha de bandas de colores cambiantes sin contenido legible, en la página de agradecimientos; parece ser un divisor lateral decorativo más que un gráfico informativo. No fue posible determinar ningún contenido más allá de las bandas de color a partir de la imagen extraída.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "شريط عمودي ضيق من نطاقات لونية متدرجة دون محتوى مقروء في صفحة الشكر والتقدير؛ ويبدو أنه فاصل جانبي زخرفي وليس رسماً معلوماتياً. وتعذّر تحديد أي محتوى يتجاوز النطاقات اللونية من الصورة المستخرجة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Узкая вертикальная полоса чередующихся цветовых сегментов без читаемого содержимого на странице благодарностей; по всей видимости, представляет собой декоративный боковой разделитель, а не информационную графику. Определить какое-либо содержимое, помимо цветовых полос, по извлечённому изображению не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "致谢页上的一条由渐变色带组成的窄竖条，无可辨读内容；看起来是装饰性的侧栏分隔条而非信息图表。除色带本身外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -701,6 +1721,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie, sur la page du résumé d'orientation, montrant un groupe de six garçons assis ensemble à l'extérieur contre un mur de briques, la plupart regardant un téléphone portable rouge tenu par l'un des garçons au centre du groupe.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía, en la página del resumen ejecutivo, de un grupo de seis niños sentados juntos al aire libre contra una pared de ladrillos, la mayoría mirando un teléfono móvil rojo que sostiene uno de los niños en el centro del grupo.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية في صفحة الملخص التنفيذي لمجموعة من ستة فتيان يجلسون معاً في الهواء الطلق مستندين إلى جدار من الطوب، وينظر معظمهم إلى هاتف محمول أحمر يحمله أحد الفتيان في وسط المجموعة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография на странице резюме, изображающая группу из шести мальчиков, сидящих вместе на улице у кирпичной стены; большинство из них смотрит на красный мобильный телефон в руках одного из мальчиков в центре группы.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "执行摘要页上的一张照片，展示六名男孩在户外背靠砖墙坐在一起，大多数人正注视着居中的一名男孩手里拿着的红色手机。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -725,6 +1805,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie, sur la page d'introduction, montrant deux femmes assises côte à côte en pleine conversation à l'extérieur devant un mur de pierre blanchi à la chaux : l'une porte un foulard à motifs verts et noirs, l'autre un foulard jaune et tient un nourrisson enveloppé dans une couverture couleur pêche, tandis qu'un petit téléphone portable est visible dans la main de la première femme.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía, en la página de introducción, de dos mujeres sentadas muy juntas conversando al aire libre frente a un muro de piedra encalado: una lleva un pañuelo con estampado verde y negro y la otra un pañuelo amarillo mientras sostiene a un lactante envuelto en una manta de color melocotón, con un pequeño teléfono móvil visible en la mano de la primera mujer.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية في صفحة المقدمة لامرأتين تجلسان متقاربتين وتتحدثان في الهواء الطلق أمام جدار حجري مطلي بالكلس الأبيض: إحداهما ترتدي غطاء رأس بنقوش خضراء وسوداء، والأخرى ترتدي غطاء رأس أصفر وتحمل رضيعاً ملفوفاً ببطانية بلون الخوخ، مع ظهور هاتف محمول صغير في يد المرأة الأولى.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография на странице введения, на которой две женщины сидят рядом и беседуют на улице у побелённой каменной стены: одна в зелёно-чёрном узорчатом платке, другая — в жёлтом платке с младенцем на руках, завёрнутым в персиковое одеяло; в руке первой женщины виден небольшой мобильный телефон.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "引言页上的一张照片，展示两名女性在户外一堵白灰石墙前紧挨着坐在一起交谈：一人戴绿黑相间的印花头巾，另一人戴黄色头巾并抱着裹在桃色毛毯中的婴儿，第一名女性手中可见一部小型手机。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -749,6 +1889,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Bande verticale étroite composée de bandes de couleur changeantes sans contenu lisible, sur la page « Contexte : passage à l'échelle de la santé mobile (mHealth) » ; il semble s'agir d'un séparateur latéral décoratif plutôt que d'un graphique informatif. Aucun contenu au-delà des bandes de couleur n'a pu être déterminé à partir de l'image extraite.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Franja vertical estrecha de bandas de colores cambiantes sin contenido legible, en la página de antecedentes sobre la ampliación de la mSalud (Background: scaling up mHealth); parece ser un divisor lateral decorativo más que un gráfico informativo. No fue posible determinar ningún contenido más allá de las bandas de color a partir de la imagen extraída.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "شريط عمودي ضيق من نطاقات لونية متدرجة دون محتوى مقروء في صفحة الخلفية الخاصة بتوسيع نطاق الصحة المحمولة (Background: scaling up mHealth)؛ ويبدو أنه فاصل جانبي زخرفي وليس رسماً معلوماتياً. وتعذّر تحديد أي محتوى يتجاوز النطاقات اللونية من الصورة المستخرجة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Узкая вертикальная полоса чередующихся цветовых сегментов без читаемого содержимого на странице «Предпосылки: масштабирование мобильного здравоохранения (mHealth)»; по всей видимости, представляет собой декоративный боковой разделитель, а не информационную графику. Определить какое-либо содержимое, помимо цветовых полос, по извлечённому изображению не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“背景：推广移动医疗（Background: scaling up mHealth）”页面上的一条由渐变色带组成的窄竖条，无可辨读内容；看起来是装饰性的侧栏分隔条而非信息图表。除色带本身外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -773,6 +1973,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie, sur la page d'ouverture de la section AXE 1 Travaux préparatoires (AXIS 1 Groundwork), montrant un nourrisson endormi assis dans un siège à motif camouflage à côté de la main d'un adulte tenant un téléphone portable rose qui affiche un message texte SMS (en vietnamien, mentionnant d'amener l'enfant à un poste de santé pour la vaccination à une date donnée).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía, en la página de apertura de la sección EJE 1 Trabajo preliminar (AXIS 1 Groundwork), de un lactante dormido sentado en una silla con estampado de camuflaje junto a la mano de un adulto que sostiene un teléfono móvil rosa con un mensaje de texto SMS en pantalla (en vietnamita, en el que se indica llevar al niño a un puesto de salud para su vacunación en una fecha determinada).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية في الصفحة الافتتاحية لقسم المحور 1: العمل التأسيسي (AXIS 1 Groundwork)، تُظهر رضيعاً نائماً جالساً على كرسي بنقش مموّه بجانب يد شخص بالغ يحمل هاتفاً محمولاً وردي اللون يعرض رسالة نصية قصيرة SMS (باللغة الفيتنامية، تشير إلى إحضار الطفل إلى مركز صحي للتطعيم في تاريخ محدد).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография на титульной странице раздела «ОСЬ 1: Подготовительная работа» (AXIS 1 Groundwork), изображающая спящего младенца в кресле с камуфляжным рисунком рядом с рукой взрослого, держащего розовый мобильный телефон с отображаемым SMS-сообщением (на вьетнамском языке, с напоминанием привести ребёнка в медицинский пункт на вакцинацию в указанную дату).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "“轴心 1：基础工作（AXIS 1 Groundwork）”章节起始页上的一张照片，展示一名熟睡的婴儿坐在迷彩图案座椅中，旁边一名成人的手拿着一部粉色手机，屏幕上显示一条越南语短信（内容提及在指定日期带孩子前往卫生站接种疫苗）。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -797,6 +2057,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Diagramme intitulé « COUCHES DE DÉTERMINANTS DE LA CSU » (DETERMINANT LAYERS OF UHC) présentant des barres horizontales de couverture regroupées par catégorie (Coût : couverture financière ; Qualité : couverture effective ; Demande : couverture continue, couverture par contact ; Offre : accessibilité des établissements de santé, disponibilité des ressources humaines, disponibilité des produits et équipements ; Redevabilité : couverture de la redevabilité, population cible, population totale). Chacune des huit barres supérieures se termine par un cercle identifié par une lettre (A–H) relié par une ligne pointillée — représentant l'écart de performance actuel — à une barre verticale rouge intitulée « CIBLE : couverture effective universelle par des interventions de santé d'efficacité prouvée ». Un panneau latéral intitulé « STRATÉGIES DE SANTÉ MOBILE (mHEALTH) » énumère, pour chaque lettre, les applications de santé mobile permettant de combler cet écart : H – Transactions financières mobiles ; G – Aide à la décision, diagnostics au point de soins (POC), télémédecine, rappels, incitations ; F – Dossiers de santé électroniques permanents, communication entre prestataires, planification du travail, rappels ; E – Communication pour le changement de comportement (CCC), incitations ; D – Lignes d'assistance téléphonique, applications mobiles pour les patients, abonnements à des contenus d'information pour les patients ; C – Gestion des ressources humaines, formation des prestataires, télémédecine ; B – Gestion des approvisionnements, lutte contre la contrefaçon ; A – Enregistrement des patients, dossiers médicaux électroniques, identifiants uniques, collecte et notification de données, outils de dépistage, enregistrement des faits d'état civil et des statistiques d'état civil. Une légende au bas de la figure précise que la ligne pointillée représente l'écart actuel de performance du déterminant, que le cercle accompagné d'une flèche indique des stratégies illustratives de santé mobile visant à combler les écarts de performance, et qu'une ligne verticale tiretée indique la performance minimale du déterminant lié à l'offre.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Diagrama titulado «CAPAS DE DETERMINANTES DE LA CSU» (DETERMINANT LAYERS OF UHC) que muestra barras horizontales de cobertura agrupadas por categoría (Costo: cobertura financiera; Calidad: cobertura efectiva; Demanda: cobertura continua, cobertura de contacto; Oferta: accesibilidad de los centros de salud, disponibilidad de recursos humanos, disponibilidad de insumos y equipos; Rendición de cuentas: cobertura de rendición de cuentas, población objetivo, población total). Cada una de las ocho barras superiores termina en un círculo con una letra (A–H) conectado mediante una línea de puntos —que representa la brecha de desempeño actual— a una barra vertical roja etiquetada «META: cobertura efectiva universal de intervenciones de salud de eficacia conocida». Un panel lateral titulado «ESTRATEGIAS DE mSALUD» enumera, para cada letra, las aplicaciones de salud móvil que pueden cerrar dicha brecha: H – Transacciones financieras móviles; G – Apoyo a la toma de decisiones, diagnósticos en el punto de atención (POC), telemedicina, recordatorios, incentivos; F – Historias clínicas electrónicas persistentes, comunicación entre proveedores, planificación del trabajo, recordatorios; E – Comunicación para el cambio de comportamiento (CCC), incentivos; D – Líneas telefónicas de ayuda, aplicaciones móviles para usuarios, suscripciones a contenidos informativos para usuarios; C – Gestión de recursos humanos, capacitación de proveedores, telemedicina; B – Gestión de suministros, prevención de falsificaciones; A – Registro de usuarios, historias clínicas electrónicas, identificadores únicos, recopilación y notificación de datos, herramientas de tamizaje, registro civil y estadísticas vitales. Una leyenda en la parte inferior explica la línea de puntos como la brecha actual en el desempeño del determinante, el círculo con flecha como estrategias ilustrativas de mSalud para cerrar las brechas de desempeño y una línea vertical discontinua como el desempeño mínimo del determinante de oferta.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "مخطط بعنوان «طبقات محددات التغطية الصحية الشاملة» (DETERMINANT LAYERS OF UHC) يعرض أشرطة تغطية أفقية مصنفة حسب الفئة (التكلفة: التغطية المالية؛ الجودة: التغطية الفعالة؛ الطلب: التغطية المستمرة، تغطية التواصل؛ العرض: إتاحة المرافق الصحية، توافر الموارد البشرية، توافر السلع والمعدات؛ المساءلة: تغطية المساءلة، السكان المستهدفون، إجمالي السكان). وينتهي كل شريط من الأشرطة الثمانية العليا بدائرة تحمل حرفاً (A–H) متصلة بخط منقّط — يمثّل فجوة الأداء الحالية — بشريط عمودي أحمر يحمل تسمية «الهدف: التغطية الفعالة الشاملة بالتدخلات الصحية ذات الفعالية المثبتة». وتعرض لوحة جانبية بعنوان «استراتيجيات الصحة المحمولة (mHEALTH STRATEGIES)» لكل حرف تطبيقات الصحة المحمولة القادرة على سد تلك الفجوة: H – المعاملات المالية عبر الهاتف المحمول؛ G – دعم اتخاذ القرار، التشخيص عند نقطة الرعاية (POC)، التطبيب عن بُعد، التذكيرات، الحوافز؛ F – السجلات الصحية الإلكترونية الدائمة، التواصل بين مقدمي الخدمة، تخطيط العمل، التذكيرات؛ E – التواصل لتغيير السلوك (BCC)، الحوافز؛ D – الخطوط الساخنة، تطبيقات الهواتف المحمولة للمراجعين، اشتراكات المحتوى المعلوماتي للمراجعين؛ C – إدارة الموارد البشرية، تدريب مقدمي الخدمة، التطبيب عن بُعد؛ B – إدارة الإمدادات، مكافحة التزييف؛ A – تسجيل المراجعين، السجلات الطبية الإلكترونية، المعرّفات الفريدة، جمع البيانات والإبلاغ عنها، أدوات الفحص والتحري، التسجيل المدني والأحداث الحيوية. ويوضح مفتاح الرسم في الأسفل أن الخط المنقّط يمثّل الفجوة الحالية في أداء المحدد، والدائرة مع السهم تمثّل استراتيجيات توضيحية للصحة المحمولة لسد فجوات الأداء، والخط العمودي المتقطع يمثّل الحد الأدنى لأداء محدد العرض.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Диаграмма под названием «УРОВНИ ДЕТЕРМИНАНТ ВОУЗ» (DETERMINANT LAYERS OF UHC), отображающая горизонтальные полосы охвата, сгруппированные по категориям (Стоимость: финансовый охват; Качество: эффективный охват; Спрос: непрерывный охват, контактный охват; Предложение: доступность медицинских учреждений, наличие кадровых ресурсов, наличие товаров медицинского назначения и оборудования; Подотчётность: охват механизмами подотчётности, целевое население, общая численность населения). Каждая из восьми верхних полос заканчивается кружком с буквой (A–H), соединённым пунктирной линией, обозначающей текущий разрыв в результативности, с вертикальной красной полосой с подписью «ЦЕЛЬ: всеобщий эффективный охват медицинскими вмешательствами с доказанной эффективностью». На боковой панели «СТРАТЕГИИ МОБИЛЬНОГО ЗДРАВООХРАНЕНИЯ (mHEALTH STRATEGIES)» для каждой буквы перечислены приложения mHealth, способные сократить этот разрыв: H — мобильные финансовые транзакции; G — поддержка принятия решений, диагностика в месте оказания помощи (POC), телемедицина, напоминания, стимулы; F — постоянные электронные медицинские карты, взаимодействие между поставщиками медицинских услуг, планирование работы, напоминания; E — коммуникация для изменения поведения (BCC), стимулы; D — горячие линии, мобильные приложения для пациентов, подписки пациентов на информационный контент; C — управление кадровыми ресурсами, обучение медицинского персонала, телемедицина; B — управление снабжением, предотвращение фальсификации; A — регистрация пациентов, электронные медицинские карты, уникальные идентификаторы, сбор данных и отчётность, инструменты скрининга, регистрация актов гражданского состояния и естественного движения населения. Легенда внизу поясняет, что точечная линия обозначает текущий разрыв в показателях детерминанты, кружок со стрелкой — иллюстративные стратегии mHealth для устранения разрывов в результативности, а штриховая вертикальная линия — минимальный показатель детерминанты предложения.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "题为“全民健康覆盖决定因素层级（DETERMINANT LAYERS OF UHC）”的图表，展示按类别分组的水平覆盖条形（成本：财务覆盖；质量：有效覆盖；需求：连续覆盖、接触覆盖；供给：卫生机构可及性、人力资源可用性、物资与设备可用性；问责：问责覆盖、目标人群、总人口）。上方八条水平条形的末端各有一个带字母（A–H）的圆圈，通过代表当前绩效差距的点状虚线连接到标有“目标：已知疗效卫生干预措施的全民有效覆盖”的红色竖条。题为“移动医疗策略（mHEALTH STRATEGIES）”的侧边面板按字母列出了可弥合相应差距的移动医疗应用：H——移动金融交易；G——决策支持、床旁（POC）诊断、远程医疗、提醒、激励措施；F——持久电子健康档案、医护人员间沟通、工作规划、提醒；E——行为改变沟通（BCC）、激励措施；D——热线、服务对象移动应用、服务对象信息内容订阅；C——人力资源管理、医护人员培训、远程医疗；B——供应管理、防伪；A——服务对象登记、电子病历、唯一标识符、数据收集与报告、筛查工具、民事登记与生命统计。下方图例说明：点状线代表决定因素绩效的当前差距，带箭头的圆圈代表弥合绩效差距的示例性移动医疗策略，竖向虚线代表供给决定因素的最低绩效水平。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -821,6 +2141,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Capture d'écran de la plateforme de discussion en ligne du groupe de travail sur la santé mobile (mHealth Working Group), montrant une barre de navigation (Home, Discussions, Library, Calendar), un filtre réglé sur « Last modified » (Dernière modification) et une liste d'aperçus de fils de discussion avec les noms des auteurs, les dates et de brefs extraits, portant notamment sur les chargeurs solaires pour tablettes, les webinaires CommCare et la publication d'un compendium mHealth de l'USAID/ASH.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Captura de pantalla de la plataforma de debate en línea del Grupo de Trabajo sobre mSalud (mHealth Working Group), que muestra una barra de navegación (Home, Discussions, Library, Calendar), un filtro configurado en «Last modified» (Última modificación) y una lista de vistas previas de hilos de discusión con los nombres de los autores, fechas y breves extractos, incluidos temas sobre cargadores solares para tabletas, seminarios web de CommCare y la publicación de un compendio de mSalud de USAID/ASH.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "لقطة شاشة لمنصة النقاش الإلكترونية الخاصة بمجموعة العمل المعنية بالصحة المحمولة (mHealth Working Group)، تُظهر شريط تنقل (Home, Discussions, Library, Calendar)، ومرشحاً مضبوطاً على «Last modified» (آخر تعديل)، وقائمة بمعاينات سلاسل النقاش تتضمن أسماء المشاركين والتواريخ ومقتطفات موجزة، بما في ذلك موضوعات حول الشواحن الشمسية للأجهزة اللوحية، وندوات CommCare عبر الإنترنت، وإصدار خلاصة وافية للصحة المحمولة من قِبل USAID/ASH.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Снимок экрана онлайн-платформы дискуссий Рабочей группы по мобильному здравоохранению (mHealth Working Group), на котором показаны панель навигации (Home, Discussions, Library, Calendar), фильтр со значением «Last modified» (Последнее изменение) и список анонсов веток обсуждений с именами авторов, датами и краткими выдержками, включая темы солнечных зарядных устройств для планшетов, вебинаров CommCare и выпуска сборника по mHealth от USAID/ASH.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "移动医疗工作组（mHealth Working Group）在线讨论平台的屏幕截图，显示导航栏（Home、Discussions、Library、Calendar）、设为“Last modified（最近修改）”的筛选器，以及包含发帖人姓名、日期和简短摘录的讨论帖预览列表，主题涵盖平板电脑太阳能充电器、CommCare 网络研讨会以及 USAID/ASH 移动医疗汇编发布等。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -845,6 +2225,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie de deux personnes assises à l'extérieur sur des chaises en bois dans un cadre ombragé bordé d'arbres, engagées dans une conversation ; l'une porte un chapeau et une chemise de couleur claire, l'autre un foulard rose.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de dos personas sentadas al aire libre en sillas de madera en un entorno sombreado y arbolado, manteniendo una conversación; una lleva sombrero y camisa de color claro, y la otra un turbante rosa.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية لشخصين يجلسان في الهواء الطلق على كرسيين خشبيين في مكان مظلل تحفه الأشجار ويتبادلان الحديث؛ يرتدي أحدهما قبعة وقميصاً فاتحي اللون، بينما ترتدي الأخرى غطاء رأس وردي اللون.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография двух человек, сидящих на улице на деревянных стульях в тенистом, окружённом деревьями месте и ведущих беседу; один из них в светлой шляпе и рубашке, другой — в розовом головном платке.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "一张展示两人坐在户外绿树成荫处的木椅上交谈的照片；其中一人戴浅色帽子、穿浅色衬衫，另一人戴粉色头巾。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -869,6 +2309,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture de la publication de JSI intitulée « The Pathway to Supply Chain Sustainability: A Planning Tool for Scaling & Institutionalizing Innovations within Public Sector Supply Chains », présentant le logo de JSI en haut et une rangée de petites silhouettes humaines sous le titre.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Portada de la publicación de JSI titulada «The Pathway to Supply Chain Sustainability: A Planning Tool for Scaling & Institutionalizing Innovations within Public Sector Supply Chains», que muestra el logotipo de JSI en la parte superior y una fila de pequeñas figuras humanas debajo del título.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف مطبوعة معهد جون سنو (JSI) المعنونة «The Pathway to Supply Chain Sustainability: A Planning Tool for Scaling & Institutionalizing Innovations within Public Sector Supply Chains»، ويظهر فيه شعار JSI في الأعلى وصفّ من الأشكال البشرية الصغيرة أسفل العنوان.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка публикации JSI «The Pathway to Supply Chain Sustainability: A Planning Tool for Scaling & Institutionalizing Innovations within Public Sector Supply Chains» с логотипом JSI в верхней части и рядом небольших человеческих фигурок под заголовком.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "JSI 出版物《供应链可持续性之路：在公共部门供应链中推广和制度化创新的规划工具》（The Pathway to Supply Chain Sustainability: A Planning Tool for Scaling & Institutionalizing Innovations within Public Sector Supply Chains）的封面，顶部为 JSI 标志，标题下方有一排小人形图标。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -893,6 +2393,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture du guide « How to Approach mHealth » (collection Introduction to mHealth, préparé par Kelly Keisling), montrant la photographie d'une femme dans un cadre clinique et un court paragraphe descriptif sous le titre.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Portada de la guía «How to Approach mHealth» (serie Introduction to mHealth, elaborada por Kelly Keisling), que muestra la fotografía de una mujer en un entorno clínico y un breve párrafo descriptivo debajo del título.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف دليل «How to Approach mHealth» (من سلسلة Introduction to mHealth، إعداد Kelly Keisling)، ويُظهر صورة فوتوغرافية لامرأة في بيئة عيادة وفقرة وصفية قصيرة أسفل العنوان.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка руководства «How to Approach mHealth» (серия Introduction to mHealth, подготовлено Келли Кейслинг) с фотографией женщины в клинике и коротким описательным абзацем под заголовком.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "指南《如何开展移动医疗》（How to Approach mHealth，属 Introduction to mHealth 系列，由 Kelly Keisling 编写）的封面，展示一张女性在诊所环境中的照片，标题下方有一段简短的说明文字。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -917,6 +2477,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture de la publication OMS-UIT « National eHealth Strategy Toolkit » (Boîte à outils pour une stratégie nationale de cybersanté), montrant une carte du monde sur laquelle se superposent une ligne lumineuse de battements cardiaques/pouls et une icône de stéthoscope, avec les logos de l'OMS et de l'UIT au bas de la page.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Portada de la publicación de la OMS y la UIT «National eHealth Strategy Toolkit» (Conjunto de herramientas para una estrategia nacional de ciberSalud), que muestra un mapa mundial superpuesto con una línea brillante de pulso o latido cardíaco y el icono de un estetoscopio, con los logotipos de la OMS y la UIT en la parte inferior.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف مطبوعة منظمة الصحة العالمية والاتحاد الدولي للاتصالات «National eHealth Strategy Toolkit» (مجموعة أدوات الاستراتيجية الوطنية للصحة الإلكترونية)، ويُظهر خريطة للعالم يعلوها خط نبض قلب متوهج وأيقونة سماعة طبيب، مع شعاري منظمة الصحة العالمية والاتحاد الدولي للاتصالات في الأسفل.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка совместной публикации ВОЗ и МСЭ «National eHealth Strategy Toolkit» (Комплект инструментов для национальной стратегии электронного здравоохранения), на которой изображена карта мира с наложенной светящейся линией пульса/сердцебиения и значком стетоскопа, а внизу расположены логотипы ВОЗ и МСЭ.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "世卫组织与国际电联联合出版物《国家电子卫生战略工具包》（National eHealth Strategy Toolkit）的封面，展示一幅叠加有发光心跳/脉搏线和听诊器图标的世界地图，底部印有世卫组织（WHO）与国际电联（ITU）标志。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -941,6 +2561,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture de l'ouvrage « Information and Communication Technologies for Women's and Children's Health: A Planning Workbook », présentant trois photographies de femmes et d'enfants dans des contextes communautaires ou cliniques au-dessus du titre et une rangée de logos d'organisations partenaires le long du bord inférieur.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Portada de «Information and Communication Technologies for Women's and Children's Health: A Planning Workbook», que muestra tres fotografías de mujeres y niños en entornos comunitarios o clínicos sobre el título y una fila de logotipos de organizaciones asociadas en el borde inferior.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف دليل العمل «Information and Communication Technologies for Women's and Children's Health: A Planning Workbook»، ويُظهر ثلاث صور فوتوغرافية لنساء وأطفال في بيئات مجتمعية وسريرية أعلى العنوان وصفّاً من شعارات المنظمات الشريكة على طول الحافة السفلية.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка издания «Information and Communication Technologies for Women's and Children's Health: A Planning Workbook», содержащая три фотографии женщин и детей в общественных и клинических условиях над заголовком и ряд логотипов партнерских организаций вдоль нижнего края.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "《妇女和儿童健康信息与通信技术：规划工作手册》（Information and Communication Technologies for Women's and Children's Health: A Planning Workbook）的封面，标题上方展示三张处于社区/临床环境中的妇女与儿童照片，底部沿边排列一排合作机构标志。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ],
       "placements": [
@@ -978,6 +2658,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Capture d'écran de l'en-tête du site Web « Toolkits » de K4Health et de la page d'accueil du guide « The mHealth Planning Guide: Key Considerations for Integrating Mobile Technology into Health Programs », comprenant la barre de navigation du site et la photographie d'une femme utilisant un téléphone portable.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Captura de pantalla del encabezado del sitio web «Toolkits» de K4Health y de la página de inicio de «The mHealth Planning Guide: Key Considerations for Integrating Mobile Technology into Health Programs», que incluye la barra de navegación del sitio y la fotografía de una mujer utilizando un teléfono móvil.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "لقطة شاشة لترويسة موقع «Toolkits» التابع لـ K4Health والصفحة الرئيسية لدليل «The mHealth Planning Guide: Key Considerations for Integrating Mobile Technology into Health Programs»، بما في ذلك شريط التنقل في الموقع وصورة فوتوغرافية لامرأة تستخدم هاتفاً محمولاً.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Снимок экрана шапки веб-сайта K4Health «Toolkits» и целевой страницы руководства «The mHealth Planning Guide: Key Considerations for Integrating Mobile Technology into Health Programs», включая панель навигации сайта и фотографию женщины, пользующейся мобильным телефоном.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "K4Health“工具包（Toolkits）”网站页眉及《移动医疗规划指南：将移动技术纳入卫生规划的关键考量》（The mHealth Planning Guide: Key Considerations for Integrating Mobile Technology into Health Programs）着陆页的屏幕截图，包含网站导航栏和一张女性使用手机的照片。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1002,6 +2742,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Couverture d'un rapport de faisabilité par pays du programme « Mobile for Development » de la GSMA, intitulé « mHealth Country Feasibility Report: Mozambique », avec le logo de la GSMA et un motif géométrique de losanges bleu sarcelle et gris sur fond blanc.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Portada de un informe de viabilidad por país del programa «Mobile for Development» de la GSMA, titulado «mHealth Country Feasibility Report: Mozambique», con el logotipo de la GSMA y un patrón geométrico de rombos de color verde azulado y gris sobre fondo blanco.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "غلاف تقرير جدوى قُطري صادر عن برنامج «Mobile for Development» التابع لرابطة GSMA بعنوان «mHealth Country Feasibility Report: Mozambique»، ويحمل شعار GSMA ونمطاً هندسياً من المعيّنات باللونين الأزرق المخضر والرمادي على خلفية بيضاء.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Обложка странового отчёта о технико-экономической осуществимости программы GSMA «Mobile for Development» под названием «mHealth Country Feasibility Report: Mozambique» с логотипом GSMA и геометрическим узором из бирюзовых и серых ромбов на белом фоне.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "GSMA“移动促发展（Mobile for Development）”国家可行性报告《移动医疗国家可行性报告：莫桑比克》（mHealth Country Feasibility Report: Mozambique）的封面，白色背景上印有 GSMA 标志及蓝绿与灰色相间的菱形几何图案。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1026,6 +2826,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Vignette d'un tableau de bord numérique africain (« African Digital Dashboard ») de HealthEnabled, profil de pays d'une page de style infographique comprenant une carte de l'Afrique, des encadrés de texte colorés et de petits graphiques résumant les informations sur la politique nationale et le déploiement de la cybersanté ; le texte individuel à l'intérieur de la vignette est trop petit pour être lu et n'a pas pu être déterminé à partir de l'image extraite.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Miniatura de un panel digital africano («African Digital Dashboard») de HealthEnabled, un perfil de país de una página con estilo infográfico que incluye un mapa de África, cuadros de texto en color y pequeños gráficos que resumen la información sobre políticas nacionales y despliegue de ciberSalud; el texto individual dentro de la miniatura es demasiado pequeño para leerse y no pudo determinarse a partir de la imagen extraída.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة مصغّرة للوحة المعلومات الرقمية الأفريقية (African Digital Dashboard) الصادرة عن HealthEnabled، وهي ملف تعريف قُطري من صفحة واحدة بأسلوب إنفوغرافيك يتضمن خريطة لأفريقيا ومربعات نصية ملونة ورسوماً بيانية صغيرة تلخص معلومات السياسات الوطنية للصحة الإلكترونية ونشرها؛ والنصوص الفردية داخل الصورة المصغّرة صغيرة جداً بحيث يتعذر قراءتها أو تحديدها من الصورة المستخرجة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Миниатюра «Африканской цифровой панели» (African Digital Dashboard) организации HealthEnabled — одностраничного странового профиля в стиле инфографики с картой Африки, цветными текстовыми блоками и небольшими диаграммами, обобщающими сведения о национальной политике и внедрении электронного здравоохранения; отдельные надписи внутри миниатюры слишком мелки для чтения и не могут быть определены по извлечённому изображению.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "HealthEnabled 非洲数字仪表板（African Digital Dashboard）的缩略图，是一页信息图风格的国别概况，包含非洲地图、彩色文本框和汇总国家电子卫生政策与部署信息的小型图表；缩略图内的具体文字过小而无法辨读，无法从提取的图像中确定。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1050,6 +2910,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie de deux femmes assises à l'intérieur, vêtues de saris bleu vif assortis, la tête penchée l'une vers l'autre pour regarder le téléphone portable que tient l'une d'elles, avec des documents et des dossiers posés sur le sol devant elles. Illustre la section AXE 2 Partenariats (AXIS 2 Partnerships).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de dos mujeres sentadas en un interior con saris de color azul vivo a juego, con las cabezas inclinadas juntas mirando el teléfono móvil que sostiene una de ellas y con papeles y carpetas en el suelo frente a ellas. Ilustra la sección EJE 2 Alianzas (AXIS 2 Partnerships).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية لامرأتين تجلسان في مكان داخلي وترتديان ساريين متماثلين باللون الأزرق الزاهي، وتميلان برأسيهما معاً للنظر إلى هاتف محمول تمسكه إحداهما، وأمامهما أوراق وملفات على الأرض. وتوضح هذه الصورة قسم المحور 2: الشراكات (AXIS 2 Partnerships).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография двух женщин в одинаковых ярко-синих сари, сидящих в помещении и склонивших головы друг к другу над мобильным телефоном в руках одной из них; на полу перед ними лежат бумаги и папки. Иллюстрирует раздел «ОСЬ 2: Партнёрства» (AXIS 2 Partnerships).",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "一张展示两名身穿同款亮蓝色纱丽的女性坐在室内的照片，两人低头凑在一起看着其中一人手中的手机，面前的地上放着文件和文件夹。用于配图说明“轴心 2：伙伴关系（AXIS 2 Partnerships）”章节。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1074,6 +2994,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Bande verticale étroite composée de bandes de couleur (bleu, orange et noir) sans contenu lisible ; il semble s'agir d'un séparateur latéral décoratif plutôt que d'un graphique informatif. Aucun contenu au-delà des bandes de couleur n'a pu être déterminé à partir de l'image extraite.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Franja vertical estrecha de bandas de color (azul, naranja y negro) sin contenido legible; parece ser un divisor lateral decorativo más que un gráfico informativo. No fue posible determinar ningún contenido más allá de las bandas de color a partir de la imagen extraída.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "شريط عمودي ضيق من نطاقات لونية (الأزرق والبرتقالي والأسود) دون محتوى مقروء؛ ويبدو أنه فاصل جانبي زخرفي وليس رسماً معلوماتياً. وتعذّر تحديد أي محتوى يتجاوز النطاقات اللونية من الصورة المستخرجة.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Узкая вертикальная полоса из цветовых сегментов (синего, оранжевого и чёрного) без читаемого содержимого; по всей видимости, представляет собой декоративный боковой разделитель, а не информационную графику. Определить какое-либо содержимое, помимо цветовых полос, по извлечённому изображению не удалось.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "由蓝、橙、黑三色色带组成的窄竖条，无可辨读内容；看起来是装饰性的侧栏分隔条而非信息图表。除色带本身外，无法从提取的图像中确定其他内容。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -1098,6 +3078,66 @@
           },
           "drafted_at": "2026-09-22T08:53:47Z",
           "lang": "en"
+        },
+        {
+          "text": "Photographie de deux personnes, l'une vêtue d'une chemise rouge et l'autre portant un foulard et un sac en bandoulière, s'éloignant de l'objectif le long d'un sentier de terre bordé d'une végétation verdoyante, avec un chien visible sur le sentier entre elles.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "fr"
+        },
+        {
+          "text": "Fotografía de dos personas, una con camisa roja y la otra con pañuelo en la cabeza y bolso al hombro, que se alejan de la cámara por un sendero de tierra rodeado de vegetación verde, con un perro visible en el camino entre ambas.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "es"
+        },
+        {
+          "text": "صورة فوتوغرافية لشخصين، يرتدي أحدهما قميصاً أحمر وترتدي الأخرى غطاء رأس وتحمل حقيبة كتف، يسيران مبتعدين عن الكاميرا على طول ممر ترابي وسط نباتات خضراء، مع ظهور كلب على الممر بينهما.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ar"
+        },
+        {
+          "text": "Фотография двух человек — одного в красной рубашке, другого в головном платке и с сумкой на плече, — уходящих от камеры по грунтовой тропе среди зелёной растительности; на тропе между ними видна собака.",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "ru"
+        },
+        {
+          "text": "一张展示两人在绿植环绕的土路上背对镜头前行的照片，其中一人穿红色衬衫，另一人戴头巾并背着单肩包，两人之间的路面上有一只狗。",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://8251a666-3441-45fd-af8e-cb2fa192bb91"
+          },
+          "drafted_at": "2026-10-28",
+          "lang": "zh"
         }
       ]
     },
@@ -2211,7 +4251,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 2.7e-05,
+        "coverage": 0.000027,
         "imagesOnPage": 33,
         "page": 106
       },
@@ -2235,7 +4275,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 6.8e-05,
+        "coverage": 0.000068,
         "imagesOnPage": 33,
         "page": 106
       },
@@ -2295,7 +4335,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 9.1e-05,
+        "coverage": 0.000091,
         "imagesOnPage": 33,
         "page": 106
       },
@@ -2415,7 +4455,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 7.6e-05,
+        "coverage": 0.000076,
         "imagesOnPage": 33,
         "page": 106
       },
@@ -2487,7 +4527,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 9.7e-05,
+        "coverage": 0.000097,
         "imagesOnPage": 33,
         "page": 106
       },
@@ -2511,7 +4551,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 5e-05,
+        "coverage": 0.00005,
         "imagesOnPage": 33,
         "page": 106
       },
@@ -2535,7 +4575,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 7e-05,
+        "coverage": 0.00007,
         "imagesOnPage": 33,
         "page": 106
       },
@@ -2667,7 +4707,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 9.6e-05,
+        "coverage": 0.000096,
         "imagesOnPage": 33,
         "page": 106
       },
@@ -2691,7 +4731,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 9e-05,
+        "coverage": 0.00009,
         "imagesOnPage": 33,
         "page": 106
       },
@@ -2776,7 +4816,7 @@
       "role": "figure",
       "basis": {
         "method": "geometry",
-        "coverage": 5.1e-05,
+        "coverage": 0.000051,
         "imagesOnPage": 33,
         "page": 106
       },
@@ -2796,12 +4836,12 @@
       "placements": [
         {
           "page": 106,
-          "coverage": 5.1e-05,
+          "coverage": 0.000051,
           "imagesOnPage": 33
         },
         {
           "page": 106,
-          "coverage": 5.1e-05,
+          "coverage": 0.000051,
           "imagesOnPage": 33
         }
       ]
