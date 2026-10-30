@@ -110,7 +110,7 @@
       "counterintuitive": true,
       "commonError": "Using 'DPI' for health-sector infrastructure such as a client registry or terminology service, calling a national ID system 'DPI-H', or counting an EMR or point-of-service app as DPI-H; or writing 'HDPI'.",
       "source": {
-        "instance": "litlfred/who-iris",
+        "instance": "litlfred/smart-base",
         "libraryId": "who-dpi-h-reference-architecture-draft-v1",
         "sectionId": "sec-001-112-understanding-digital-public-infrastructure",
         "pages": "20",
@@ -251,7 +251,7 @@
       "counterintuitive": true,
       "commonError": "Describing a point-to-point custom interface between two systems as making them 'interoperable'.",
       "source": {
-        "instance": "litlfred/who-iris",
+        "instance": "litlfred/smart-base",
         "libraryId": "who-dpi-h-reference-architecture-draft-v1",
         "sectionId": "sec-front-matter",
         "pages": "9",
