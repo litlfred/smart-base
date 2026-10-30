@@ -11,25 +11,25 @@
     {
       "title": "Digital transformation handbook for primary health care: optimizing person-centred point of service systems",
       "libraryId": "9789240093362-eng",
-      "instance": "litlfred/smart-base",
+      "instance": "litlfred/who-iris",
       "year": 2024
     },
     {
       "title": "Digital transformation handbook for health supply chain architecture",
       "libraryId": "9789240101197-eng",
-      "instance": "litlfred/smart-base",
+      "instance": "litlfred/who-iris",
       "year": 2024
     },
     {
       "title": "Digital transformation handbook for health product catalogue",
       "libraryId": "9789240116191-eng",
-      "instance": "litlfred/smart-base",
+      "instance": "litlfred/who-iris",
       "year": 2025
     },
     {
       "title": "Reference Architecture and Guidance for Digital Public Infrastructure for the Health Sector — A Digital Transformation Handbook for Digital Public Infrastructure for Health (DPI-H), DRAFT V1.0",
       "libraryId": "who-dpi-h-reference-architecture-draft-v1",
-      "instance": "litlfred/smart-base",
+      "instance": "litlfred/who-iris",
       "year": 2026
     }
   ],
@@ -45,7 +45,7 @@
       "counterintuitive": true,
       "commonError": "Calling a national, cross-programme change 'digitalization', or a programme-level process automation 'digital transformation'; or using 'digitization' for anything beyond converting paper records.",
       "source": {
-        "instance": "litlfred/smart-base",
+        "instance": "litlfred/who-iris",
         "libraryId": "9789240101197-eng",
         "sectionId": "page-008",
         "pages": "vi (PDF p. 8)",
@@ -77,7 +77,7 @@
       "counterintuitive": true,
       "commonError": "Calling a facility's tally book or line list of clients a 'registry', or calling a national master facility list a 'register'.",
       "source": {
-        "instance": "litlfred/smart-base",
+        "instance": "litlfred/who-iris",
         "libraryId": "9789240093362-eng",
         "sectionId": "sec-002-glossary",
         "pages": "x (PDF p. 11)",
@@ -109,7 +109,7 @@
       "counterintuitive": true,
       "commonError": "Using 'DPI' for health-sector infrastructure such as a client registry or terminology service, calling a national ID system 'DPI-H', or counting an EMR or point-of-service app as DPI-H; or writing 'HDPI'.",
       "source": {
-        "instance": "litlfred/smart-base",
+        "instance": "litlfred/who-iris",
         "libraryId": "who-dpi-h-reference-architecture-draft-v1",
         "sectionId": "sec-001-112-understanding-digital-public-infrastructure",
         "pages": "20",
@@ -142,7 +142,7 @@
       "counterintuitive": true,
       "commonError": "Treating 'PCPOSS' as a synonym for an electronic medical record, or expanding POS as 'point of sale'.",
       "source": {
-        "instance": "litlfred/smart-base",
+        "instance": "litlfred/who-iris",
         "libraryId": "9789240093362-eng",
         "sectionId": "sec-002-glossary",
         "pages": "ix (PDF p. 10)",
@@ -168,7 +168,7 @@
       "counterintuitive": true,
       "commonError": "Listing batch number, expiry or serial number among the product master data attributes a national product catalogue holds.",
       "source": {
-        "instance": "litlfred/smart-base",
+        "instance": "litlfred/who-iris",
         "libraryId": "9789240116191-eng",
         "sectionId": "page-010",
         "pages": "1 (PDF p. 10)",
@@ -184,7 +184,7 @@
       "counterintuitive": true,
       "commonError": "Reading 'generic product' as 'generic (off-patent) medicine', or attaching a manufacturer or GTIN to a generic product record.",
       "source": {
-        "instance": "litlfred/smart-base",
+        "instance": "litlfred/who-iris",
         "libraryId": "9789240116191-eng",
         "sectionId": "page-008",
         "pages": "vii (PDF p. 8)",
@@ -200,7 +200,7 @@
       "counterintuitive": true,
       "commonError": "Writing 'HSCIS' to mean only software, so that an as-is assessment leaves out the paper-based systems still in use.",
       "source": {
-        "instance": "litlfred/smart-base",
+        "instance": "litlfred/who-iris",
         "libraryId": "9789240101197-eng",
         "sectionId": "page-008",
         "pages": "vi (PDF p. 8)",
@@ -224,7 +224,7 @@
       "severity": "minor",
       "counterintuitive": false,
       "source": {
-        "instance": "litlfred/smart-base",
+        "instance": "litlfred/who-iris",
         "libraryId": "9789240116191-eng",
         "sectionId": "page-012",
         "pages": "3 (PDF p. 12)",
@@ -250,7 +250,7 @@
       "counterintuitive": true,
       "commonError": "Describing a point-to-point custom interface between two systems as making them 'interoperable'.",
       "source": {
-        "instance": "litlfred/smart-base",
+        "instance": "litlfred/who-iris",
         "libraryId": "who-dpi-h-reference-architecture-draft-v1",
         "sectionId": "sec-front-matter",
         "pages": "9",

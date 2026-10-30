@@ -153,9 +153,12 @@ describe("the curation gates", () => {
 });
 
 describe("the worked example", () => {
-  it("smart-base/library/9789240116191-eng is current", () => {
-    const X = "smart-base/library/9789240116191-eng";
-    const r = spawnSync("bun", ["run", "smart-base/scripts/l1-recommendation-candidates.ts", "--entry", X, "--curation", `${X}/l1-extraction/curation.yaml`, "--out", `${X}/l1-extraction`, "--check"], {
+  it("who-iris/library/9789240116191-eng is current", () => {
+    // The sections live in who-iris since 2026-10-30 (who-iris#107); the
+    // extraction is smart-base's own and stays here.
+    const X = "who-iris/library/9789240116191-eng";
+    const E = "smart-base/library/9789240116191-eng/l1-extraction";
+    const r = spawnSync("bun", ["run", "smart-base/scripts/l1-recommendation-candidates.ts", "--entry", X, "--curation", `${E}/curation.yaml`, "--out", E, "--check"], {
       cwd: join(import.meta.dir, "..", ".."),
       encoding: "utf8",
     });

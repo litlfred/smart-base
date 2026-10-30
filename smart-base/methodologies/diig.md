@@ -7,7 +7,7 @@ origin: >
   United Nations Foundation Digital Health Initiative, *Digital implementation
   investment guide (DIIG): integrating digital interventions into health
   programmes* (2020), ISBN 978-92-4-001056-7. Ingested at
-  `smart-base/library/9789240010567-eng/`; every citation below resolves to a
+  `who-iris/library/9789240010567-eng/`; every citation below resolves to a
   section there.
 evidence:
   - library/9789240010567-eng

@@ -170,7 +170,7 @@ export function quoteUnverifiable(q: Quote, root = ROOT, built = builtAtPublishP
 
 /** Why a quote does not match what it cites, or null when it does. */
 export function quoteProblem(q: Quote, root = ROOT): string | null {
-  const file = "path" in q ? join(root, q.path) : join(root, "smart-base", "library", q.libraryId, "sections", `${q.sectionId}.md`);
+  const file = "path" in q ? join(root, q.path) : join(root, "who-iris", "library", q.libraryId, "sections", `${q.sectionId}.md`);
   const label = "path" in q ? q.path : `${q.libraryId}/${q.sectionId}`;
   if (!existsSync(file)) return `${label}: no such file`;
   const raw = readFileSync(file, "utf8");
