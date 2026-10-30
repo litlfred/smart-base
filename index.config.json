@@ -27,7 +27,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "122e16e3b1d4253203a3a3cd0fa6e838c95b7ca2",
+          "ref": "a67dc4d68c27dd48776324f3e00d9146a2d52b12",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -36,9 +36,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-16",
-              "ref": "122e16e3b1d4253203a3a3cd0fa6e838c95b7ca2",
-              "evidence": "owner, 2026-10-16: \"c\" (re-pin and republish smart-base and smart-ra on the newest layers); window to 09:10Z"
+              "on": "2026-10-30",
+              "ref": "a67dc4d68c27dd48776324f3e00d9146a2d52b12",
+              "evidence": "A. ig section in index.config"
             }
           }
         }
@@ -77,7 +77,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "6f7f10a5711f0b838cb4d9ff016f4457e85e2794",
+          "ref": "ecc231a49258ae62f75f54e0d5c3258a2df8bb7c",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -92,9 +92,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-26",
-              "ref": "6f7f10a5711f0b838cb4d9ff016f4457e85e2794",
-              "evidence": "litlfred, 2026-10-26 10:37Z (folio-assistant project chat): \"merge/repin window open 6 hours. drain beans/issues and merge when green\"; cat-harness#521 approved by card A on 2026-10-24"
+              "on": "2026-10-30",
+              "ref": "ecc231a49258ae62f75f54e0d5c3258a2df8bb7c",
+              "evidence": "owner, 2026-10-30T12:40Z, card choice: \"A. ig section in index.config\" (bean cz17 item 3; re-pin so fhir-harness registers contentTypes.ig)"
             }
           }
         }
@@ -105,7 +105,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "5d68cd2fedcc3abef76db28a365c21ac2a289c87",
+          "ref": "9326f5d78c02761a15e3e465333f01f89251ac2b",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -117,9 +117,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-21",
-              "ref": "5d68cd2fedcc3abef76db28a365c21ac2a289c87",
-              "evidence": "owner, 2026-10-21 12:49Z, session_016heucWhrncLm4uy52csBcz: \"Extend window +3hrs\" (re-pin and merge; the platform layers move together to their mains so cat-harness carries narrativeFor, cat-harness#396)"
+              "on": "2026-10-30",
+              "ref": "9326f5d78c02761a15e3e465333f01f89251ac2b",
+              "evidence": "owner, 2026-10-30T12:40Z, card choice: \"A. ig section in index.config\" (bean cz17 item 3; re-pin so fhir-harness registers contentTypes.ig)"
             }
           }
         }
@@ -130,7 +130,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "c71b96a3f2e8caf143b78bcf3ab6bb80060c82c2",
+          "ref": "3ce2b5d641779ca78432971abb919e6e3afdc60a",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -139,9 +139,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-21",
-              "ref": "c71b96a3f2e8caf143b78bcf3ab6bb80060c82c2",
-              "evidence": "owner, 2026-10-21 12:49Z, session_016heucWhrncLm4uy52csBcz: \"Extend window +3hrs\" (re-pin and merge; the platform layers move together to their mains so cat-harness carries narrativeFor, cat-harness#396)"
+              "on": "2026-10-30",
+              "ref": "3ce2b5d641779ca78432971abb919e6e3afdc60a",
+              "evidence": "owner, 2026-10-30T12:40Z, card choice: \"A. ig section in index.config\" (bean cz17 item 3; re-pin so fhir-harness registers contentTypes.ig)"
             }
           }
         }
@@ -152,7 +152,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "3f5b43c8c9454da1272e5b08067535941b70178a",
+          "ref": "fdceeca33492a0bc434edc1f80c95895180ee587",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -164,9 +164,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-21",
-              "ref": "3f5b43c8c9454da1272e5b08067535941b70178a",
-              "evidence": "owner, 2026-10-21 12:49Z, session_016heucWhrncLm4uy52csBcz: \"Extend window +3hrs\" (re-pin and merge; the platform layers move together to their mains so cat-harness carries narrativeFor, cat-harness#396)"
+              "on": "2026-10-30",
+              "ref": "fdceeca33492a0bc434edc1f80c95895180ee587",
+              "evidence": "owner, 2026-10-30T12:40Z, card choice: \"A. ig section in index.config\" (bean cz17 item 3; re-pin so fhir-harness registers contentTypes.ig)"
             }
           }
         }
@@ -196,6 +196,21 @@
         "name": "WHO",
         "url": "http://who.int"
       }
+    },
+    "ig": {
+      "_comment": "This repository is the source of a FHIR IG (fhir-harness's `ig` content type; owner, 2026-10-30, bean cz17 item 3). `include` is what the harness reads in this repository, and nothing else is read (owner, 2026-10-30: \"harness desclares what it it pays attention to in the repo\"). sushi-config.yaml stays SUSHI's file.",
+      "include": [
+        "sushi-config.yaml",
+        "ig.ini",
+        "input/fsh/",
+        "input/cql/",
+        "input/pagecontent/",
+        "input/includes/",
+        "input/images/",
+        "input/images-source/",
+        "input/data/",
+        "fsh-generated/"
+      ]
     }
   }
 }
