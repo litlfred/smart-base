@@ -1825,6 +1825,918 @@
           "drafted_at": "2026-10-30"
         }
       ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-097",
+      "source": "sections/page-097.md",
+      "source_hash": "b4bf2ffe767bf14cc1fe9df70ae67930e150b84e1b5e7a37b8fbb336c463b563",
+      "narrative": [
+        {
+          "text": "Introduction to economic and financial evaluations in Chapter 4 Part 4b, distinguishing financial evaluations (budget impact analysis and sustainable financing plans) from economic evaluations (cost–effectiveness analysis [CEA], cost–utility analysis [CUA] using QALYs and DALYs, cost–benefit analysis [CBA] using willingness-to-pay techniques, cost–consequence analysis [CCA], and cost-minimization analysis [CMA]).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-098",
+      "source": "sections/page-098.md",
+      "source_hash": "01a76adb2bcd90020f648a3ed979b58a9eeefe2f41da329a899e608b0de181f7",
+      "narrative": [
+        {
+          "text": "Conclusion of the cost–benefit analysis (CBA) discussion (including the eHealth Impact [eHI] methodology) and Table 4.8 ('Types of economic evaluation for digital health'), comparing CEA, CUA, CBA, CCA, and CMA across definition, costs, consequences, and illustrative digital health evaluation questions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-099",
+      "source": "sections/page-099.md",
+      "source_hash": "5ebe3a5752b2b40e15d71084db77e4826a32de47ba5ac945c98863bf55efe5e7",
+      "narrative": [
+        {
+          "text": "Start of Chapter 4 Part 4c ('Which evaluation activities are right for you?'), covering maturity-guided evaluation selection, predictive modelling at scale (such as the OneHealth tool), Table 4.9 ('Linking stages of maturity with evaluation methods and claims' across Early, Mid, and Advanced stages), formative versus summative evaluations, and defining study inferences.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-100",
+      "source": "sections/page-100.md",
+      "source_hash": "71da7d31ae4c36e5c676dbbffe3f45d4ebd35bf8c63b25facd0a318cd7087bb0",
+      "narrative": [
+        {
+          "text": "Guidance in Chapter 4 Part 4c on prioritizing research inferences (adequacy, plausibility, and probability), selecting study designs (RCTs, quasi-experimental, observational, and effectiveness–implementation hybrid designs), choosing evaluation methods, and the first part of Table 4.10 ('Illustrative evaluation activities by type and stage of evaluation') covering formative needs assessment, process evaluation, and implementation monitoring for feasibility/usability, efficacy, and effectiveness stages.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-101",
+      "source": "sections/page-101.md",
+      "source_hash": "7496b7079ff556d56f63761b20d4636b4064b13b5f79c79f82a9e0b87b4826db",
+      "narrative": [
+        {
+          "text": "Continuation and conclusion of Table 4.10 ('Illustrative evaluation activities by type and stage of evaluation'), covering formative evaluation activities for implementation science and summative evaluation activities (outcome evaluation, impact evaluation, economic evaluation, and financial evaluation) across feasibility/usability, efficacy, effectiveness, and implementation science stages.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-102",
+      "source": "sections/page-102.md",
+      "source_hash": "6b106de86fe2ccc45ad5a6d099d9f5a2e4679bf014d7db987fadfff917df6f80",
+      "narrative": [
+        {
+          "text": "First page of the Further Reading ('Relevant resources for evaluation') list for Chapter 4, citing methodological references for study designs (stepped-wedge and quasi-experimental designs), qualitative methods, quantitative survey methods, and mixed-methods integration.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-103",
+      "source": "sections/page-103.md",
+      "source_hash": "09284191f910acd9f0698650b06bd410ef5b0af69bfcad4bc71b74f3ee646827",
+      "narrative": [
+        {
+          "text": "Conclusion of the Chapter 4 Further Reading list (mixed methods and participatory action research [PAR]) and the first part of the Chapter 4 References list (items 1–15).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-104",
+      "source": "sections/page-104.md",
+      "source_hash": "7578bc752e2ee5711576b3a1d55c8536d1cc4b31484054a3861f91d2467c204f",
+      "narrative": [
+        {
+          "text": "Continuation of the Chapter 4 References list (items 16–34), covering qualitative, quantitative, observational, quasi-experimental, implementation research, and community-based participatory research methodologies.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-105",
+      "source": "sections/page-105.md",
+      "source_hash": "516bd9fd38e24c357495bfb64c270393a19c0428d4c01fecc0527f445a026488",
+      "narrative": [
+        {
+          "text": "Conclusion of the Chapter 4 References list (items 35–53), covering participatory action research, qualitative data analysis, questionnaire design, sample size calculation, health policy and systems research, budget impact analysis, economic evaluation (CEA, CUA, CBA, eHealth Impact), and the WHO OneHealth Tool.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-106",
+      "source": "sections/page-106.md",
+      "source_hash": "efa3cdd93894986172927432f40ae343a3ffce5868875a7dd2c060f80372cf1d",
+      "narrative": [
+        {
+          "text": "Section divider title page for Chapter 5: 'Assessing data sources and quality for M&E'.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-107",
+      "source": "sections/page-107.md",
+      "source_hash": "85348e87eaf8d97aec5455f1b66c5169b6759e15626483cbd758a4cde825ae39",
+      "narrative": [
+        {
+          "text": "Chapter 5 opening overview ('How will this chapter help me?' and 'Why assess your digital data?'), introducing data quality assessment to align intervention data streams with programme claims, map health-system data flows, and strengthen data collection, storage, analytics, management, and use.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-108",
+      "source": "sections/page-108.md",
+      "source_hash": "eb6d69be379590e195662c2631f83520371eec2ec710c72d619887829174e6b5",
+      "narrative": [
+        {
+          "text": "Start of Chapter 5 Part 5a ('Introducing the data quality assessment approach and how to do it'), outlining the three assessment steps (Step 1: alignment of available data with programme claims; Step 2: data source mapping; Step 3: data management protocol and data quality adapted from the PRISM Framework), Key Terms (Claim and Indicator), and Figure 5.1 ('Key components of the three steps of data quality assessment').",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-109",
+      "source": "sections/page-109.md",
+      "source_hash": "4047469f658eccd0a26084ec4d8b5f1d8d9f96a0fcfebe06e25e58cb1c5985c9",
+      "narrative": [
+        {
+          "text": "Conclusion of Chapter 5 Part 5a, providing practical guidance on conducting the three-hour data quality assessment internally with an M&E lead or externally with a consultant, engaging stakeholders across Steps 2 and 3, acting on summary recommendations, and repeating assessments annually.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-110",
+      "source": "sections/page-110.md",
+      "source_hash": "a66992eb1347d7a0a94d7430b222b0baf3e49a8df1881f2565921fe7ef4e78c9",
+      "narrative": [
+        {
+          "text": "Start of Chapter 5 Part 5b ('Data quality assessment worksheet and instructions'), presenting the printable worksheet header, Step 1 ('Assessment of alignment of available data with programme claims'), Step 1.i ('Identification of the intervention's claims' worksheet table), and the start of Step 1.ii ('Indicators' instructions for numerators, denominators, time frames, and WHO/UN standard indicator alignment).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-111",
+      "source": "sections/page-111.md",
+      "source_hash": "2a0144c887f1c1c2ef3052e1c53d615c09cb55594047dd703dbb3fd3236d8aa4",
+      "narrative": [
+        {
+          "text": "Continuation of Chapter 5 Part 5b Step 1.ii ('Indicators' worksheet table for claims, numerators, denominators, and time frames) and instructions for Step 1.iii ('Data sources'), covering system-generated/metadata versus survey data, paper versus digital formats, collection frequency, comparison groups, and indicator mapping.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-112",
+      "source": "sections/page-112.md",
+      "source_hash": "7b9dc54201de8c604d1760ed86cbeb63171b70d6180569fea3dfd91e7a3431bc",
+      "narrative": [
+        {
+          "text": "Continuation of Chapter 5 Part 5b, presenting the Step 1.iii data sources worksheet table (with illustrative examples for a women's household survey and district health-care facility records) and Step 1.iv ('Alignment of indicators with data sources' instructions and summary table checking numerator and denominator availability per claim).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-113",
+      "source": "sections/page-113.md",
+      "source_hash": "73e7cce7c813387de1aadc2ea57eb936def364d12c10996d160b5e0d96a83749",
+      "narrative": [
+        {
+          "text": "Continuation of Chapter 5 Part 5b, covering 'Summary of recommendations – Step 1' (actions when sufficient data are or are not available to support claims) and instructions for Step 2 ('Data mapping': Step 2.i on understanding data collection, collation, analysis, and decision-making use, and Step 2.ii on charting stakeholder data flows across health system levels).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-114",
+      "source": "sections/page-114.md",
+      "source_hash": "a22c850935104fed6d46729538ea671f07a12494c3e5b88cf2a9bdf25ef44da7",
+      "narrative": [
+        {
+          "text": "Continuation of Chapter 5 Part 5b Step 2, presenting the stakeholder data flow mapping grid (across Research worker, Client-generated, Front-line health worker, Private clinic, NGO, Government facility, District, Regional, and National levels for Data collection, Compilation, Storage, Analysis, Reporting, and Use) and 'Summary of recommendations – Step 2' guiding questions.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-115",
+      "source": "sections/page-115.md",
+      "source_hash": "227c1d5eecaf15285e71ba3570ed28cdcbb11481d29b06754a4462e77e9fd1cd",
+      "narrative": [
+        {
+          "text": "Start of Chapter 5 Part 5b Step 3 ('Assessment of data management protocols and data quality' checklist), covering Step 3.i Data collection (Item 1: Data elements and identifiers; Item 2: Data collection using paper forms), Step 3.ii Data storage (Item 3: Data transmission; Item 4: Data security), and the first part of Step 3.iii Data analytics and dashboards (Item 5: Data dashboard items 5.1–5.5).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-116",
+      "source": "sections/page-116.md",
+      "source_hash": "68d83ae45ec867b7ceab8c3ed8a8262f6850cae69388dbacfc4033407ccda1a9",
+      "narrative": [
+        {
+          "text": "Continuation of the Chapter 5 Part 5b Step 3 checklist, completing Step 3.iii Data analytics and dashboards (items 5.6–5.8 on data entry/access frequency and visual outputs), Step 3.iv Data management (Item 6: Staff training; Item 7: Supervision; Item 8: Data documentation), and Step 3.v Data use (Item 9: Regularity of meetings and review of meeting records).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-117",
+      "source": "sections/page-117.md",
+      "source_hash": "32eee9d4f67ebc22b69605d045412795141714d13ab2ac50be2308636d3a4aa0",
+      "narrative": [
+        {
+          "text": "Conclusion of Chapter 5 Part 5b ('Summary of recommendations – Step 3'), providing review questions for the M&E team to formulate recommendations across Step 3.i Data collection, Step 3.ii Data storage, Step 3.iii Data analytics/dashboards, Step 3.iv Data management, and Step 3.v Data use.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-118",
+      "source": "sections/page-118.md",
+      "source_hash": "cf94b7995c35a8aa14f1aa2a40cefae6068d64c44b980cb1b74aa1710c2fd7f0",
+      "narrative": [
+        {
+          "text": "Start of Chapter 5 Part 5c ('Sample application of data quality assessment'), illustrating Step 1 ('Alignment of available data with programme claims') using the Kenya Medical Research Institute (KEMRI) 'Texting to improve testing' (TextIT) PMTCT/EMTCT retention project, including Step 1.i programme claims and Step 1.ii indicators (numerators N1–N4 and denominators D1–D4).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-119",
+      "source": "sections/page-119.md",
+      "source_hash": "e624bbf0e602f1c0e247243e4c10f7dc3e60d3fd2889c746e149e4f6a78ca194",
+      "narrative": [
+        {
+          "text": "Continuation of the KEMRI TextIT sample application in Chapter 5 Part 5c, showing completed tables for Step 1.iii ('Data sources': baseline, postpartum-1 mother, and postpartum-2 baby surveys), Step 1.iv ('Alignment of indicators with data sources'), and Step 2.1 ('Current data map' across Mentor mother, KEMRI study team, International donors, and Kenya MOH/NASCOP).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-120",
+      "source": "sections/page-120.md",
+      "source_hash": "13a74b7dd97ec640f1417162dd29b5eb2874a27a0cfb8feb593d65504ec44f56",
+      "narrative": [
+        {
+          "text": "Conclusion of Chapter 5 Part 5c and Chapter 5, presenting Step 2.2 ('Map with additional opportunities for data use' adding feedback reporting and care-improvement use for mentor mothers), Further Reading links (K4Health DDIU Information Use Mapping and MEASURE Evaluation PRISM framework tools), and Chapter 5 References (items 1–3).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-121",
+      "source": "sections/page-121.md",
+      "source_hash": "22eb864d4da0e607ac39a3ec0b296ad72515747213a3ebd9632a5af8a1c0895f",
+      "narrative": [
+        {
+          "text": "Section divider title page for Chapter 6: 'Reporting your findings: the mHealth Evidence Reporting and Assessment (mERA) checklist', with a footnote attributing the checklist to the WHO mHealth Technical Evidence Review Group (mTERG) and Agarwal et al. (2016).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-122",
+      "source": "sections/page-122.md",
+      "source_hash": "aceb511114acaf2d6c6a4caba77c0e0f7d5a6186b1ceca056b727480ccc0053e",
+      "narrative": [
+        {
+          "text": "Chapter 6 opening overview introducing the purpose and target audiences (manuscript authors, peer-reviewers, and journal editors) of the mHealth Evidence Reporting and Assessment (mERA) checklist, together with the 'How will this section help me?' summary box.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-123",
+      "source": "sections/page-123.md",
+      "source_hash": "e4de75b645808d5bda5251f10563c469b5eff5eb3217def6dea43aa3f8a455bd",
+      "narrative": [
+        {
+          "text": "Start of Chapter 6 Part 6a ('How to use mERA'), explaining how the 16 core mERA items complement study-design-specific reporting guidelines (CONSORT, STROBE) and the 29 general methodological criteria in Part 6b, followed by the first part of Table 6.1 ('Core mERA criteria', items 1–10: Infrastructure through Adoption inputs/Programme entry).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-124",
+      "source": "sections/page-124.md",
+      "source_hash": "b6d04ca4273e5e2647957c60d03cca8fc1f5c7d4c3f5b57188c5d3f1c1cbd387",
+      "narrative": [
+        {
+          "text": "Completion of Table 6.1 ('Core mERA criteria', items 11–16: Limitations for delivery at scale, Contextual adaptability, Replicability, Data security, Compliance with national guidelines or regulatory statutes, and Fidelity of the intervention) and detailed explanations with published reporting examples for Item 1 (Infrastructure) and Item 2 (Technology platform).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-125",
+      "source": "sections/page-125.md",
+      "source_hash": "5b4ec8e2b00192ad7646ee01589e43cc86af0a94c9435db53d085fdd787e7de3",
+      "narrative": [
+        {
+          "text": "Detailed explanations and published reporting examples in Chapter 6 Part 6a for mERA core criteria Item 3 (Interoperability/HIS context), Item 4 (Intervention delivery), and Item 5 (Intervention content).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-126",
+      "source": "sections/page-126.md",
+      "source_hash": "261ab1721d154fce16e6d109ddf6116af611004183abd7a26d84e8fdffa18d37",
+      "narrative": [
+        {
+          "text": "Detailed explanations and published reporting examples in Chapter 6 Part 6a for mERA core criteria Item 6 (Usability/content testing), Item 7 (User feedback), and Item 8 (Access of individual participants).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-127",
+      "source": "sections/page-127.md",
+      "source_hash": "ba04ce3317bd488206514a92e0ca94d8fb597265c391fb197929a592cf0c42b1",
+      "narrative": [
+        {
+          "text": "Detailed explanations and published reporting examples in Chapter 6 Part 6a for mERA core criteria Item 9 (Cost assessment, referencing the CHEERS statement), Item 10 (Adoption inputs/programme entry), and Item 11 (Limitations for delivery at scale).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-128",
+      "source": "sections/page-128.md",
+      "source_hash": "578350e3caa6fef434c8dc6d828120ff48b5b49fbbac5c5077dbc19e798a291b",
+      "narrative": [
+        {
+          "text": "Detailed explanations and published reporting examples in Chapter 6 Part 6a for mERA core criteria Item 12 (Contextual adaptability) and Item 13 (Replicability, illustrated by Figure 6.1 showing mobile phone screenshots of the CommCare-based Mobilize application).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-129",
+      "source": "sections/page-129.md",
+      "source_hash": "d21758116464950107cadda07e7fa463a267ba2d82afab49b58f518ce3f570fb",
+      "narrative": [
+        {
+          "text": "Conclusion of Chapter 6 Part 6a, presenting detailed explanations and published reporting examples for mERA core criteria Item 14 (Data security), Item 15 (Compliance with national guidelines or regulatory statutes, including HIPAA and medical device oversight), and Item 16 (Fidelity of the intervention).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-130",
+      "source": "sections/page-130.md",
+      "source_hash": "966639e3ad595ac7f1608aeb987f2423091e8fbf67b301809ddd6bbe9829d3f4",
+      "narrative": [
+        {
+          "text": "Start of Chapter 6 Part 6b ('Methodological criteria') and Table 6.2 ('mERA Methodological criteria'), covering Section A ('Essential criteria for all studies') Introduction items 1–3 (Rationale/scientific background, Objectives/hypotheses, Logic model/theoretical framework) and Methods items 4–8 (Study design, Outcomes, Data collection methods, Participant eligibility, and Participant recruitment).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-131",
+      "source": "sections/page-131.md",
+      "source_hash": "26a84c03ade2d5c9f3d8c706f6924c9b83f45d92555d38f42ca0b1254295902f",
+      "narrative": [
+        {
+          "text": "Continuation of Table 6.2 ('mERA Methodological criteria') Section A in Chapter 6 Part 6b, covering Methods items 9–13 (Bias, Sampling, Setting and locations, Comparator, and Data sources/measurement), Results items 14–16 (Enrolment, Description of study population, and Reporting on outcomes), and Discussion item 17 (Summary of evidence).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-132",
+      "source": "sections/page-132.md",
+      "source_hash": "fba71c3d28170599fe78f59f166575ce0edcf20b61361da47ef9af513a15ab54",
+      "narrative": [
+        {
+          "text": "Continuation of Table 6.2 ('mERA Methodological criteria') in Chapter 6 Part 6b, completing Section A Discussion items 18–20 (Limitations, Generalizability/external validity, Conclusions/interpretation) and Conflicts items 21–23 (Funding, Ethical considerations, Competing interests), and presenting Section B ('Essential criteria by type of study') B.1 Quantitative study items 1–3 (Confounding, Statistical methods, Missing data) and B.2 Qualitative criteria item 1 (Analytical methods).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-133",
+      "source": "sections/page-133.md",
+      "source_hash": "b74b590007961b8ce330ac9421e385f17f271d1b854d320c596d6ea1f5c03b00",
+      "narrative": [
+        {
+          "text": "Completion of Table 6.2 ('mERA Methodological criteria') Section B.2 Qualitative criteria items 2–3 (Data validation and Reflexivity of account provided) and the first part of the Chapter 6 References list (items 1–11).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-134",
+      "source": "sections/page-134.md",
+      "source_hash": "727e0abdabc01c8531e5828a3e0a0e8cfaadb3566e267830daf504a3c006c10c",
+      "narrative": [
+        {
+          "text": "Continuation of the Chapter 6 References list (items 12–27), citing the CHEERS statement and empirical mHealth evaluation studies used as reporting examples across the mERA checklist.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-135",
+      "source": "sections/page-135.md",
+      "source_hash": "59a8da5e487128e53f65a048b082afc39775c8b1a9e3053e7656b9f765816831",
+      "narrative": [
+        {
+          "text": "Conclusion of the Chapter 6 References list (items 28–37), citing empirical mHealth studies and foundational reporting guidelines (TREND, STROBE, STARD, CONSORT 2010, COREQ, and SQUIRE).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-136",
+      "source": "sections/page-136.md",
+      "source_hash": "ff933f4de7cf0b942ed384e43adca9b8968e0b3c8ec8900af560101e8f393f70",
+      "narrative": [
+        {
+          "text": "First page of Annex I: Glossary, defining key monitoring, evaluation, and digital health terms from 'Analytic study' through 'Focus group discussions (FGDs)' (including Benchmark, Claim, Codebook, Conceptual framework, Descriptive study, Digital health, Digital health intervention, Effectiveness, Efficacy, Evaluation, Experimental studies, Feasibility, and Fidelity).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-137",
+      "source": "sections/page-137.md",
+      "source_hash": "d4232ab2262c9b48e0dfb71696029aa142c58f2d2207a6473a43e11eb12b9795",
+      "narrative": [
+        {
+          "text": "Second page of Annex I: Glossary, defining key terms from 'Formative evaluation' through 'Observation' (including Functionality, Hierarchy of study designs, Human-centered design, Impact, Impact evaluations, Implementation research, In-depth interviews [IDIs], Indicator, Inputs, Logical framework, Mobile health [mHealth], Monitoring, Monitoring burden, and Non-probability sampling).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-138",
+      "source": "sections/page-138.md",
+      "source_hash": "5cddeb0b14c5f97559be0a8c8a5803eea7650f9f0251d07fe7df095618a2c0d7",
+      "narrative": [
+        {
+          "text": "Third page of Annex I: Glossary, defining key terms from 'Observational studies' through 'Stability' (including Outcomes, Outputs, Participatory action research [PAR], Performance, Pilot, Probability sampling, Processes, Process monitoring, Quality, Quality assurance [QA] test cases, Randomized controlled trial [RCT], Results framework, and Software requirements specification [SRS]).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-139",
+      "source": "sections/page-139.md",
+      "source_hash": "0af21febc7f19a6138c74f19d42348b1da1daf335289512842490983edb28c04",
+      "narrative": [
+        {
+          "text": "Conclusion of Annex I: Glossary definitions ('Stakeholders', 'Summative evaluation', 'Theory of change', 'Usability', 'Use cases', 'Users', 'Value proposition', and 'Wireframes') and the first part of the Annex I References list (items 1–9).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-140",
+      "source": "sections/page-140.md",
+      "source_hash": "1cf0479bace852097f77cae4061f65f53696248b54a90355037eaae74670875a",
+      "narrative": [
+        {
+          "text": "Continuation of the Annex I: Glossary References list (items 10–28), citing qualitative, quantitative, evaluation, software quality (ISO 25000), and implementation research sources.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-141",
+      "source": "sections/page-141.md",
+      "source_hash": "c7188de4f227e350002af6bf26cc27bfbcaca8f7b9496807bff29ebd52564397",
+      "narrative": [
+        {
+          "text": "Conclusion of the Annex I: Glossary References list (items 29–35), citing USAID results framework guidance, stakeholder evaluation, Theory of Change, ISO 25000 usability, usability.gov use cases and wireframing, and MaRS value proposition resources.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-142",
+      "source": "sections/page-142.md",
+      "source_hash": "b8fc4d944e922eb6135e64f106cbff87aed98134db08b31a2eb178e7e80e35c3",
+      "narrative": [
+        {
+          "text": "Blank end-matter page (no text on page 142 of the PDF).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-143",
+      "source": "sections/page-143.md",
+      "source_hash": "b8fc4d944e922eb6135e64f106cbff87aed98134db08b31a2eb178e7e80e35c3",
+      "narrative": [
+        {
+          "text": "Blank inside back cover page (no text on page 143 of the PDF).",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "block": "library/9789241511766-eng/blocks/prose-page-144",
+      "source": "sections/page-144.md",
+      "source_hash": "659fa0be7f9dbcda14ca37e0fee6e1888145a78299dec6fedf1b23d5042fe4fa",
+      "narrative": [
+        {
+          "text": "Back cover page providing contact details for the WHO Department of Reproductive Health and Research in Geneva, Switzerland.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "conversation://81195b97-87ea-4950-abe5-11f8746a3bd9"
+          },
+          "drafted_at": "2026-10-30"
+        }
+      ]
     }
   ]
 }
