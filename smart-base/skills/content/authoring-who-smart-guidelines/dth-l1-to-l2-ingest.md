@@ -70,6 +70,11 @@ Ids are per handbook and per kind: `<HB>-BP-nn` (business process), `<HB>-R-nn`
 - **Issues on the fork.** GitHub turns Issues off on a fork. Ask the owner to
   tick Settings > Features > Issues, then put the workplan issue there, not on
   smart-ra.
+- **When in doubt, file an issue; do not guess** (owner, 2026-10-31). An
+  agent that hits a problem or is unsure during ingestion files it where the
+  handbook tracks work: a GitHub issue on the fork, or a row in its review
+  sheet, whichever is available. It records what it found, the page, and the
+  options it sees, then carries on with work that does not depend on it.
 - **Conflicts are issues, not choices.** When the handbook defines a term
   differently from smart-ra, open an issue on `litlfred/smart-ra` that keeps
   both definitions, each quoted with its page. Do not pick one.
