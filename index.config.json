@@ -189,7 +189,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "fdceeca33492a0bc434edc1f80c95895180ee587",
+          "ref": "72344e16b3829bc85e5b9a5742a2c6f88c14a215",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -201,9 +201,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-30",
-              "ref": "fdceeca33492a0bc434edc1f80c95895180ee587",
-              "evidence": "owner, 2026-10-30T12:40Z, card choice: \"A. ig section in index.config\" (bean cz17 item 3; re-pin so fhir-harness registers contentTypes.ig)"
+              "on": "2026-10-31",
+              "ref": "72344e16b3829bc85e5b9a5742a2c6f88c14a215",
+              "evidence": "Owner litlfred, 2026-10-31: re-pin bootstrap-tools to 72344e1 (#54 — BPMN TEXT_STYLE 16px inside shapes / 15px outside) and refresh smart-base process SVGs"
             }
           }
         }
