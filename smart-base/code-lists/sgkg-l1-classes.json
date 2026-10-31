@@ -41,7 +41,7 @@
     {
       "code": "population",
       "label": "Population",
-      "definition": "PICO P.",
+      "definition": "PICO P (population).",
       "value": "http://smart.who.int/kg/population"
     },
     {
@@ -59,7 +59,7 @@
     {
       "code": "outcome",
       "label": "Outcome",
-      "definition": "PICO O.",
+      "definition": "PICO O (outcome).",
       "value": "http://smart.who.int/kg/outcome"
     },
     {
