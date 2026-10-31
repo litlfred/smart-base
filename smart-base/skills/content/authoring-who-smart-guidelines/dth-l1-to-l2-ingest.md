@@ -84,6 +84,33 @@ Ids are per handbook and per kind: `<HB>-BP-nn` (business process), `<HB>-R-nn`
   copied word for word, each with its page.
 - **Fetching what the sandbox cannot reach** (a missing PDF, a private repo):
   file a bean and give the owner a ready-to-paste prompt for the local agent.
+- **Read the workplan issue's comments first.** The owner's local agent may
+  already have done some steps.
+- **The first merge into a bare fork needs the owner's OK.** After it, turn on
+  Pages for the fork.
+- **Check verbatim quotes by script.** Text shown as a verbatim quote must be
+  found in the normalised L1 text by a check, not by eye (dth-phc#3: seven
+  chapter 2 role quotes were not in the L1).
+- **Agents never sign off.** An agent never writes the owner's name into
+  `signedOffBy` in `l1-exclusions.json`. An exclusion an agent writes stays a
+  proposal until the owner signs it.
+- **Validators live in the platform.** Glossary validators and L1 coverage
+  checks belong in folio-assistant-core, not in the handbook repo (core#377).
+
+## Blocks, figures, ArchiMate and DMN
+
+- **Blocks link to ArchiMate through the glossary.** A block's Markdown shows a
+  `**Concepts:**` line built from `meta.glossaryTerms`. Only figure blocks link
+  straight to an ArchiMate view (core#407).
+- **Figures are rebuilt by type.** An architecture figure becomes ArchiMate, a
+  process becomes BPMN, a data model becomes a class diagram, and a chart becomes
+  SVG from its data. Third-party and country figures stay cited images. The
+  original PNG is kept as evidence.
+- **Never edit a shipped ArchiMate draft** (for example `0.3.0-draft.1`). Write
+  the next draft.
+- **DMN house rules.** A table is complete. It has an explicit "unknown"
+  outcome, and catch-all rules name their inputs. No rule is narrower than the
+  source. Names are noun phrases. Each table has one source.
 
 ## Terms
 
