@@ -56,6 +56,7 @@ from typing import Dict, List, Optional, Tuple
 # ---------------------------------------------------------------------------
 try:
     import lxml.etree as ET
+    from safe_xml import safe_xml_parser
     _HAVE_LXML = True
 except ImportError:  # pragma: no cover
     import xml.etree.ElementTree as ET  # type: ignore
@@ -449,7 +450,7 @@ def extract_svg(file_path: str, canonical: str) -> List[TranslationEntry]:
 
     try:
         if _HAVE_LXML:
-            parser = ET.XMLParser(recover=True)
+            parser = safe_xml_parser(recover=True)
             tree = ET.parse(file_path, parser)
         else:
             tree = ET.parse(file_path)
@@ -498,7 +499,7 @@ def extract_archimate(file_path: str, canonical: str) -> List[TranslationEntry]:
 
     try:
         if _HAVE_LXML:
-            parser = ET.XMLParser(recover=True)
+            parser = safe_xml_parser(recover=True)
             tree = ET.parse(file_path, parser)
         else:
             tree = ET.parse(file_path)

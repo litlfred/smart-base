@@ -8,6 +8,7 @@ namespaces (no Zeebe/Camunda extensions), and follows basic structural rules.
 from typing import List
 from lxml import etree
 
+from common.safe_xml import safe_xml_parser
 from common.ig_errors import Issue, error, warning, info
 
 BPMN_NS = "http://www.omg.org/spec/BPMN/20100524/MODEL"
@@ -34,7 +35,7 @@ def validate_bpmn_xml(bpmn_content: str, *, filename: str = "unknown.bpmn") -> L
 
     # 1. Well-formed XML
     try:
-        tree = etree.fromstring(bpmn_content.encode("utf-8"))
+        tree = etree.fromstring(bpmn_content.encode("utf-8"), parser=safe_xml_parser())
     except etree.XMLSyntaxError as exc:
         issues.append(error("BPMN-001", f"Malformed XML: {exc}", file=filename))
         return issues  # Can't continue
