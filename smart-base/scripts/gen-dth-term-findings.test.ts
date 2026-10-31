@@ -49,6 +49,17 @@ describe("DTH term findings", () => {
   it("records every approach with at least two alternatives and picks none", () => {
     for (const a of findings.approaches) expect(a.alternatives.length).toBeGreaterThanOrEqual(2);
   });
+  it("covers the Substandard and Falsified Medical Products DTH (9789240120747-eng) 35 glossary terms, RA conflicts, and internal alternatives", () => {
+    expect(findings.sfp.libraryId).toBe("9789240120747-eng");
+    expect(findings.sfp.terms.length).toBe(35);
+    expect(findings.sfp.raConflicts.length).toBe(5);
+    expect(findings.sfp.internalConflicts.some((c) => c.id === "sfp-f1-substandard")).toBe(true);
+    expect(findings.figure.reproductions.some((r) => !("path" in r) && r.libraryId === "9789240120747-eng" && r.sectionId === "page-016")).toBe(true);
+    const page = render(findings, terms);
+    for (const t of findings.sfp.terms) {
+      expect(page).toContain(`| **${t.term}** |`);
+    }
+  });
   it("one proposal per layer, each naming artefacts that exist", () => {
     expect(findings.actor.proposals.map((p) => p.layer).sort()).toEqual(["F-A", "RA", "SG"]);
     for (const p of findings.actor.proposals) for (const a of p.artefacts ?? []) expect(existsSync(join(root, a))).toBe(true);

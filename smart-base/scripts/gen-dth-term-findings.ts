@@ -94,6 +94,31 @@ export const TermFindingsSchema = z.object({
       artefacts: z.array(z.string().min(1)).optional(),
     }).strict()).length(3),
   }).strict(),
+  sfp: z.object({
+    libraryId: z.literal("9789240120747-eng"),
+    title: z.string().min(1),
+    summary: z.string().min(1),
+    internalConflicts: z.array(z.object({
+      id: z.string().min(1),
+      term: z.string().min(1),
+      summary: z.string().min(1),
+      alternatives: z.array(QuoteSchema).min(2),
+    }).strict()).min(1),
+    raConflicts: z.array(z.object({
+      term: z.string().min(1),
+      kind: z.enum(["conflict", "truncation-match"]),
+      raId: z.string().min(1),
+      difference: z.string().min(1),
+      sfpQuote: QuoteSchema,
+    }).strict()).min(1),
+    terms: z.array(z.object({
+      term: z.string().min(1),
+      cluster: z.string().min(1),
+      status: z.string().min(1),
+      comparison: z.string().min(1),
+      quote: QuoteSchema,
+    }).strict()).length(35),
+  }).strict(),
 }).strict();
 export type TermFindings = z.infer<typeof TermFindingsSchema>;
 
@@ -118,11 +143,12 @@ const GlossarySchema = z.object({
 }).passthrough();
 export type CandidateTerm = z.infer<typeof GlossarySchema>;
 
-/** Short names the candidate list already uses for the four sources. */
+/** Short names the candidate list already uses for the sources. */
 const SHORT: Record<string, string> = {
   "9789240093362-eng": "PHC",
   "9789240101197-eng": "SC",
   "9789240116191-eng": "PC",
+  "9789240120747-eng": "SFP",
   "who-dpi-h-reference-architecture-draft-v1": "RA (draft)",
   "9789240010567-eng": "DIIG",
 };
@@ -185,13 +211,11 @@ const EXAMPLE_POINTERS: Record<string, string> = {
 
 /**
  * The library that holds a libraryId's sections. smart-base's own library comes first;
- * the IRIS publications it cites live in who-iris since 2026-10-30
- * (who-iris#107), which smart-base mounts. A handbook can keep its own
- * extraction here while its sections live there, so look for the sections.
+ * the IRIS publications it cites live in who-iris since 57aa.
  */
-const LIBRARY_ROOTS = ["smart-base/library", "who-iris/library"];
-function libraryRootOf(libraryId: string, root: string): string {
-  const hit = LIBRARY_ROOTS.find((r) => existsSync(join(root, r, libraryId, "sections")));
+const LIBRARY_ROOTS = ["smart-base/library", "who-iris/library"] as const;
+function libraryRootOf(libraryId: string, root = ROOT): string {
+  const hit = LIBRARY_ROOTS.find((r) => existsSync(join(root, r, libraryId)));
   return join(root, hit ?? LIBRARY_ROOTS[0]!);
 }
 
@@ -211,6 +235,9 @@ export function allQuotes(f: TermFindings): Quote[] {
     ...f.figure.reproductions,
     ...f.approaches.flatMap((a) => a.alternatives.flatMap((x) => x.sources)),
     ...f.actor.meanings.flatMap((m) => m.sources),
+    ...f.sfp.internalConflicts.flatMap((c) => c.alternatives),
+    ...f.sfp.raConflicts.map((c) => c.sfpQuote),
+    ...f.sfp.terms.map((t) => t.quote),
   ];
 }
 
@@ -243,8 +270,8 @@ export function render(f: TermFindings, terms: CandidateTerm[]): string {
   L.push(`# ${f.title}`, "");
   L.push(`Owner, ${f.ruling.date} ([#${f.ruling.issue.split("/").pop()}](${f.ruling.issue}), bean \`${f.ruling.bean}\`):`, "", `> "${f.ruling.quote}"`, "");
   L.push("**Where sources disagree, every version is recorded here as an alternative, with its source. None is chosen.** The only changes this page records beyond that are the three per-layer Actor proposals, and their status is shown with each one. No empirical claim from a handbook is turned into a formal statement here.", "");
-  L.push("Sources: **PHC** is the DTH for primary health care (9789240093362), **SC** the DTH for health supply chain architecture (9789240101197), **PC** the DTH for health product catalogue (9789240116191), **RA (draft)** the Reference Architecture for DPI-H, DRAFT V1.0, and **DIIG** the Digital Implementation Investment Guide (9789240010567).", "");
-  L.push("## Contents", "", "1. [One phase figure: DIIG Fig. 1.1.1](#one-phase-figure-diig-fig-111)", "2. [Approaches recorded as alternatives](#approaches-recorded-as-alternatives)", '3. [What "actor" means, and what each layer could change](#what-actor-means-and-what-each-layer-could-change)', `4. [Terms defined differently (${terms.length})](#terms-defined-differently)`, "");
+  L.push("Sources: **PHC** is the DTH for primary health care (9789240093362), **SC** the DTH for health supply chain architecture (9789240101197), **PC** the DTH for health product catalogue (9789240116191), **SFP** the DTH for reporting substandard and falsified medical products (9789240120747), **RA (draft)** the Reference Architecture for DPI-H, DRAFT V1.0, and **DIIG** the Digital Implementation Investment Guide (9789240010567).", "");
+  L.push("## Contents", "", "1. [One phase figure: DIIG Fig. 1.1.1](#one-phase-figure-diig-fig-111)", "2. [Approaches recorded as alternatives](#approaches-recorded-as-alternatives)", '3. [What "actor" means, and what each layer could change](#what-actor-means-and-what-each-layer-could-change)', `4. [Terms defined differently (${terms.length})](#terms-defined-differently)`, `5. [Substandard and falsified medical products DTH (SFP, ${f.sfp.terms.length} terms)](#substandard-and-falsified-medical-products-dth-sfp-${f.sfp.terms.length}-terms)`, "");
 
   L.push("## One phase figure: DIIG Fig. 1.1.1", "");
   L.push(`The seven phases of "${f.figure.title.split(":")[0].toLowerCase()}" have ONE source, the DIIG's own figure. The handbooks that print it are reproductions of it and cite it; they are not separate sources for it. ${svgSentence(f.figure)}`, "");
@@ -299,6 +326,25 @@ export function render(f: TermFindings, terms: CandidateTerm[]): string {
       L.push("");
     }
   }
+
+  L.push(`## Substandard and falsified medical products DTH (SFP, ${f.sfp.terms.length} terms)`, "", f.sfp.summary, "");
+  L.push("### Internal alternatives within SFP", "");
+  for (const ic of f.sfp.internalConflicts) {
+    L.push(`#### ${ic.term} (\`${ic.id}\`)`, "", ic.summary, "");
+    ic.alternatives.forEach((q, idx) => {
+      L.push(`**Alternative ${String.fromCharCode(65 + idx)}:**`, "", quoted(q), "");
+    });
+  }
+  L.push("### Differences against the DPI-H Reference Architecture glossary (`smart-ra#139`)", "", "| term | relation | `smart-ra` concept | SFP definition (verbatim) | how it differs |", "|---|---|---|---|---|");
+  for (const rc of f.sfp.raConflicts) {
+    L.push(`| ${cell(rc.term)} | \`${rc.kind}\` | \`${rc.raId}\` | ${cell(rc.sfpQuote.quote)}<br>— ${cell(src(rc.sfpQuote))} | ${cell(rc.difference)} |`);
+  }
+  L.push("", "### All 35 SFP glossary terms (pp. vii–ix) by cluster and cross-DTH comparison", "", "| term | cluster | status | SFP glossary definition (verbatim) | cross-DTH comparison |", "|---|---|---|---|---|");
+  for (const t of f.sfp.terms) {
+    L.push(`| **${cell(t.term)}** | ${cell(t.cluster)} | ${cell(t.status)} | ${cell(t.quote.quote)}<br>— ${cell(src(t.quote))} | ${cell(t.comparison)} |`);
+  }
+  L.push("");
+
   return `${L.join("\n").trimEnd()}\n`;
 }
 
