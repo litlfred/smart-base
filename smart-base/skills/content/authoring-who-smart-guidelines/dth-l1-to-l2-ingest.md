@@ -32,7 +32,10 @@ handbook can *"naturally utilize and validate against the glossaries"*, and its
 ## The workplan comes first
 
 Write one workplan per handbook and show it to the owner before any content
-work. It lives as an issue on the handbook's own repo. Every workplan has these
+work. It lives as an issue on the handbook's own repo. Open it with the issue
+form [`dth-workplan.yml`](../../../templates/issue-forms/dth-workplan.yml):
+copy it to `.github/ISSUE_TEMPLATE/` in the fork, so the BPMN, roles and DMN
+sections cannot be skipped (owner, 2026-10-31, option A: skill plus issue form). Every workplan has these
 sections; the last three are required (owner, 2026-10-31):
 
 1. **Source**: IRIS item, ISBN, edition, who-iris entry, and anything missing
