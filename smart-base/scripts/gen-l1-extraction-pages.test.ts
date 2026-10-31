@@ -171,7 +171,7 @@ describe("readExtraction", () => {
   });
 
   it("reads the committed handbook extraction: 22 statements and the candidate work list", () => {
-    const x = readExtraction(join(INSTANCE, "library", "9789240116191-eng", "l1-extraction"))!;
+    const x = readExtraction(join(INSTANCE, "l1-extractions", "9789240116191-eng"))!;
     expect(x.statements.length).toBe(22);
     expect(x.candidates.length).toBe(1);
     expect(x.files.some((f) => f.error !== undefined)).toBe(false);

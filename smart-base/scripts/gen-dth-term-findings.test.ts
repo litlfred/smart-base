@@ -29,7 +29,11 @@ describe("DTH term findings", () => {
     expect(quoteProblem(q, "/nonexistent-root")).toContain("no such file");
   });
   it("a quote that is not in its source is reported", () => {
-    const q = { ...findings.actor.meanings[0].sources[0], quote: "An actor is a concrete participant" };
+    // A source this checkout holds: the first one may be an example held by
+    // another repository (EXAMPLE_POINTERS), which is not checked here.
+    const held = allQuotes(findings).find((s) => quoteUnverifiable(s) === null && quoteProblem(s) === null)!;
+    expect(held).toBeDefined();
+    const q = { ...held, quote: "An actor is a concrete participant" };
     expect(quoteProblem(q)).toContain("quote not found");
   });
   it("matches across the RA draft's number-only line markers", () => {
