@@ -15,25 +15,25 @@ Classifies and codes L1 extracted statements (recommendations, implementation pr
 ### Merge — `Gateway_Rework`
 
 - Nothing to do or decide: the paths meet here and the engine passes through.
-- next: → `Task_IdentifySlots` (Identify slots and proposed exclusions [classify-and-code-content · recommendation-extraction])
+- next: → `Task_IdentifySlots` (Identify slots and proposed exclusions)
 
-### 1. Identify slots and proposed exclusions [classify-and-code-content · recommendation-extraction] (`Task_IdentifySlots`)
+### 1. Identify slots and proposed exclusions (`Task_IdentifySlots`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `classify-and-code-content`, `recommendation-extraction`.
 - What: Enumerate the classifiable slots in the L1 statements or L2 component (condition, intervention, persona, medicine, domain, business-process, recommendation-strength, recommendation-direction, evidence-certainty) and any proposed L1 coverage exclusions in exclusions.proposed.json naming l1-extraction
 - Record it: `workflow_complete` with `node: "Task_IdentifySlots"`.
-- next: → `Task_LookupAndCode` (Run reuse-first lookup and record candidates [classify-and-code-content · recommendation-scenarios · glossary-terms])
+- next: → `Task_LookupAndCode` (Run reuse-first lookup and record candidates)
 
-### 2. Run reuse-first lookup and record candidates [classify-and-code-content · recommendation-scenarios · glossary-terms] (`Task_LookupAndCode`)
+### 2. Run reuse-first lookup and record candidates (`Task_LookupAndCode`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `classify-and-code-content`, `recommendation-scenarios`, `glossary-terms`.
 - What: Run the terminology-lookup Tool across the four reuse-first rungs of the terminology-coding methodology: (1) target guide vocabulary, (2) smart-base generic personas, GRADE code lists and guideline-domain glossary, (3) external WHO-FIC/ILO standards (ICD-11, ICHI/CDHIv2, ISCO-08, ATC), and (4) local
 - Record it: `workflow_complete` with `node: "Task_LookupAndCode"`.
-- next: → `Task_StageForReview` (Stage codings, warnings and exclusions for review [staging-review · interaction-modality])
+- next: → `Task_StageForReview` (Stage codings, warnings and exclusions for review)
 
-### 3. Stage codings, warnings and exclusions for review [staging-review · interaction-modality] (`Task_StageForReview`)
+### 3. Stage codings, warnings and exclusions for review (`Task_StageForReview`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `staging-review`, `interaction-modality`.
@@ -45,10 +45,10 @@ Classifies and codes L1 extracted statements (recommendations, implementation pr
 
 - When the L1 extraction includes unsigned entries in exclusions.proposed.json, route them to the l1-extraction-reviewer lane first so coverage exclusions are verified against the printed page before final coding sign-off; otherwise proceed directly to the terminologist/ontologist review lane.
 - Call `workflow_complete` with `node: "Gateway_HasExclusions"` and `outcome` set to the label that holds:
-  - «yes» → `Task_ReviewExclusions` (Read proposed exclusions against page and sign [classify-and-code-content · recommendation-extraction · content-review])
-  - «no» → `Task_ReviewCodings` (Adjudicate slot codings and glossary candidates [classify-and-code-content · ontologist · glossary-terms · terminology-management · content-review])
+  - «yes» → `Task_ReviewExclusions` (Read proposed exclusions against page and sign)
+  - «no» → `Task_ReviewCodings` (Adjudicate slot codings and glossary candidates)
 
-### 4. Read proposed exclusions against page and sign [classify-and-code-content · recommendation-extraction · content-review] (`Task_ReviewExclusions`)
+### 4. Read proposed exclusions against page and sign (`Task_ReviewExclusions`)
 
 - Who: the `L1 extraction reviewer (person)` lane (role `l1-extraction-reviewer`).
 - Skill: `classify-and-code-content`, `recommendation-extraction`, `content-review`.
@@ -56,7 +56,7 @@ Classifies and codes L1 extracted statements (recommendations, implementation pr
 - Record it: `workflow_complete` with `node: "Task_ReviewExclusions"`.
 - next: → `Gateway_ExclusionVerdict` (Exclusions signed?)
 
-### 5. Adjudicate slot codings and glossary candidates [classify-and-code-content · ontologist · glossary-terms · terminology-management · content-review] (`Task_ReviewCodings`)
+### 5. Adjudicate slot codings and glossary candidates (`Task_ReviewCodings`)
 
 - Who: the `Terminologist / ontologist reviewer (person)` lane (role `terminologist`).
 - Skill: `classify-and-code-content`, `ontologist`, `glossary-terms`, `terminology-management`, `content-review`.
@@ -69,7 +69,7 @@ Classifies and codes L1 extracted statements (recommendations, implementation pr
 - If all proposed exclusions are verified and signed by the l1-extraction-reviewer, proceed to terminologist/ontologist review; if any exclusion is rejected as normative, return to the authoring agent to re-curate the sentence as an L1 node.
 - Call `workflow_complete` with `node: "Gateway_ExclusionVerdict"` and `outcome` set to the label that holds:
   - «reject-exclusion» → `Gateway_Rework`
-  - «signed» → `Task_ReviewCodings` (Adjudicate slot codings and glossary candidates [classify-and-code-content · ontologist · glossary-terms · terminology-management · content-review])
+  - «signed» → `Task_ReviewCodings` (Adjudicate slot codings and glossary candidates)
 
 ### Decide — Coding verdict? (`Gateway_TerminologistVerdict`)
 

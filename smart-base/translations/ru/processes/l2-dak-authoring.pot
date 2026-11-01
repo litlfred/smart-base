@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:214
 #. Diagram label
-msgid "Assemble and validate the DAK [content-validate]"
+msgid "Assemble and validate the DAK"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:215
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:100
 #. Diagram label
-msgid "Build the L1 library from Component 1 [dak-l1-library]"
+msgid "Build the L1 library from Component 1"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:58
@@ -71,7 +71,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:140
 #. Diagram label
-msgid "Business processes · BPMN 2.0 [bpmn-authoring]"
+msgid "Business processes · BPMN 2.0"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:278
@@ -91,7 +91,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:200
 #. Diagram label
-msgid "Clinical validation [content-review]"
+msgid "Clinical validation"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:195
@@ -116,17 +116,17 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:245
 #. Diagram label
-msgid "Close the bean [bean-close]"
+msgid "Close the bean"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:158
 #. Diagram label
-msgid "Data dictionary and core data elements [l2-dak-authoring]"
+msgid "Data dictionary and core data elements"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:149
 #. Diagram label
-msgid "Decision logic · DMN tables [dmn-authoring]"
+msgid "Decision logic · DMN tables"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:93
@@ -151,7 +151,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:167
 #. Diagram label
-msgid "Indicators and requirements [l2-dak-authoring]"
+msgid "Indicators and requirements"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:101
@@ -186,7 +186,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:229
 #. Diagram label
-msgid "Open the bean [bean-open]"
+msgid "Open the bean"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:59
@@ -196,7 +196,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:131
 #. Diagram label
-msgid "Personas and scenarios [l2-dak-authoring]"
+msgid "Personas and scenarios"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:246
@@ -221,12 +221,12 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:92
 #. Diagram label
-msgid "Scope the DAK [content-plan]"
+msgid "Scope the DAK"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:108
 #. Diagram label
-msgid "Seed the work plan [todo-manager]"
+msgid "Seed the work plan"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:45
@@ -246,7 +246,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:176
 #. Diagram label
-msgid "Terminology bindings [terminology-management]"
+msgid "Terminology bindings"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-dak-authoring.bpmn:209

@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:132
 #. Diagram label
-msgid "Adjudicate slot codings and glossary candidates [classify-and-code-content · ontologist · glossary-terms · terminology-management · content-review]"
+msgid "Adjudicate slot codings and glossary candidates"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:157
@@ -86,7 +86,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:70
 #. Diagram label
-msgid "Identify slots and proposed exclusions [classify-and-code-content · recommendation-extraction]"
+msgid "Identify slots and proposed exclusions"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:123
@@ -126,7 +126,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:111
 #. Diagram label
-msgid "Read proposed exclusions against page and sign [classify-and-code-content · recommendation-extraction · content-review]"
+msgid "Read proposed exclusions against page and sign"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:169
@@ -146,7 +146,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:80
 #. Diagram label
-msgid "Run reuse-first lookup and record candidates [classify-and-code-content · recommendation-scenarios · glossary-terms]"
+msgid "Run reuse-first lookup and record candidates"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:81
@@ -161,7 +161,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:91
 #. Diagram label
-msgid "Stage codings, warnings and exclusions for review [staging-review · interaction-modality]"
+msgid "Stage codings, warnings and exclusions for review"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:49
