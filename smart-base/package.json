@@ -6,6 +6,7 @@
     "check:fhir-harness-exclusions": "bun run smart-base/scripts/check-fhir-harness-exclusions.ts",
     "ingest:ig-chrome:check": "bun run fhir-harness/scripts/ingest-ig-chrome.ts --out smart-base/themes --check",
     "smart-base:pages": "bun run fhir-harness/scripts/gen-ig-pages.ts --instance smart-base --publish-note \"This page mirrors a published WHO Implementation Guide.\" --sidecar-label \"DAK API\" --label \"WHO SMART Base\" --chrome-owner smart-base --summary",
+    "dth:init": "bun run smart-base/scripts/dth-init.ts",
     "smart-base:document-kinds": "bun run smart-base/scripts/gen-document-kinds.ts",
     "smart-base:document-kinds:check": "bun run smart-base/scripts/gen-document-kinds.ts --check",
     "smart-base:smart-kg-l1": "bun run smart-base/scripts/extract-smart-kg-l1.ts",

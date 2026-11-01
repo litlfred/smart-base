@@ -230,7 +230,15 @@
       "graphTypologies": [
         "code"
       ],
-      "description": "This layer's own scripts and their tests: document-kinds, the DAK components figure, the DTH term findings, the smart-kg L1 extraction and pin, and the fhir-harness exclusions check, and the L1 recommendation scenario candidates with the vocabulary reader they resolve against (bean kvd2), whose test fixtures and measles run sit under `scripts/fixtures/`. Declared at the cutover (bean hupw) so a remote mount brings them."
+      "description": "This layer's own scripts and their tests: document-kinds, the DAK components figure, the DTH term findings, the smart-kg L1 extraction and pin, and the fhir-harness exclusions check, and the L1 recommendation scenario candidates with the vocabulary reader they resolve against (bean kvd2), whose test fixtures and measles run sit under `scripts/fixtures/`. It also holds `dth-init.ts`, which writes a new DTH repository's wiring and moved here from folio-assistant-core on 2026-11-01. Declared at the cutover (bean hupw) so a remote mount brings them."
+    },
+    {
+      "id": "smart-base-templates",
+      "path": "templates/",
+      "graphTypologies": [
+        "code"
+      ],
+      "description": "Files this layer's tools WRITE INTO a repository they set up, kept as real files rather than strings inside a script. `dth/` holds the AGENTS.md, session-start hook, PR checks workflow and other wiring that `scripts/dth-init.ts` copies into a new DTH repository (`TEMPLATE_DIR`). They moved here from folio-assistant-core's `templates/dth/` on 2026-11-01, because they name smart-base and who-iris, which sit above core."
     },
     {
       "id": "smart-base-kg",

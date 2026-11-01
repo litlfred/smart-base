@@ -189,7 +189,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "fdceeca33492a0bc434edc1f80c95895180ee587",
+          "ref": "c5b291b6e9bfd71c4f8d99b08d8f6634a5bdfd9e",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -201,9 +201,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-30",
-              "ref": "fdceeca33492a0bc434edc1f80c95895180ee587",
-              "evidence": "owner, 2026-10-30T12:40Z, card choice: \"A. ig section in index.config\" (bean cz17 item 3; re-pin so fhir-harness registers contentTypes.ig)"
+              "on": "2026-11-01",
+              "ref": "c5b291b6e9bfd71c4f8d99b08d8f6634a5bdfd9e",
+              "evidence": "owner, 2026-11-01T08:55:27Z, card Q-RED-1 \"A. Yes, PR + merge on green\" (redraw smart-base process SVGs with the bootstrap-tools folio-assistant pins); merge+repin window 2026-11-01T07:27Z \"+3hrs merge + repin\""
             }
           }
         }

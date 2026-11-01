@@ -8,6 +8,9 @@ on:
   workflow_call: # Reusable by other workflows
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
