@@ -176,76 +176,74 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
   <bpmndi:BPMNDiagram id="BPMNDiagram_ClassifyAndCodeContent">
     <bpmndi:BPMNPlane id="BPMNPlane_ClassifyAndCodeContent" bpmnElement="Collaboration_ClassifyAndCodeContent">
       <bpmndi:BPMNShape id="Participant_ClassifyAndCodeContent_di" bpmnElement="Participant_ClassifyAndCodeContent" isHorizontal="true">
-        <dc:Bounds x="160" y="80" width="1600" height="690" />
+        <dc:Bounds x="160" y="80" width="1660" height="700" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_Agent_di" bpmnElement="Lane_Agent" isHorizontal="true">
-        <dc:Bounds x="190" y="80" width="1570" height="230" />
+        <dc:Bounds x="190" y="80" width="1630" height="230" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_ExtractionReviewer_di" bpmnElement="Lane_ExtractionReviewer" isHorizontal="true">
-        <dc:Bounds x="190" y="310" width="1570" height="230" />
+        <dc:Bounds x="190" y="310" width="1630" height="230" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_Terminologist_di" bpmnElement="Lane_Terminologist" isHorizontal="true">
-        <dc:Bounds x="190" y="540" width="1570" height="230" />
+        <dc:Bounds x="190" y="540" width="1630" height="240" />
       </bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="Start_ContentReady_di" bpmnElement="Start_ContentReady">
         <dc:Bounds x="252" y="177" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="225" y="218" width="90" height="40" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
+        
+      <bpmndi:BPMNLabel><dc:Bounds x="219.55" y="219" width="135" height="90" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="Gateway_Rework_di" bpmnElement="Gateway_Rework" isMarkerVisible="true">
         <dc:Bounds x="335" y="170" width="50" height="50" />
       </bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="Task_IdentifySlots_di" bpmnElement="Task_IdentifySlots">
-        <dc:Bounds x="430" y="155" width="160" height="80" />
+        <dc:Bounds x="425" y="130" width="180" height="130" />
       </bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="Task_LookupAndCode_di" bpmnElement="Task_LookupAndCode">
-        <dc:Bounds x="640" y="155" width="160" height="80" />
+        <dc:Bounds x="645" y="120" width="180" height="150" />
       </bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="Task_StageForReview_di" bpmnElement="Task_StageForReview">
-        <dc:Bounds x="850" y="155" width="160" height="80" />
+        <dc:Bounds x="865" y="139.5" width="180" height="111" />
       </bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="Gateway_HasExclusions_di" bpmnElement="Gateway_HasExclusions" isMarkerVisible="true">
-        <dc:Bounds x="1065" y="170" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1050" y="136" width="80" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
+        <dc:Bounds x="1110" y="170" width="50" height="50" />
+        
+      <bpmndi:BPMNLabel>
+          <dc:Bounds x="1095" y="136" width="80" height="27" />
+        </bpmndi:BPMNLabel></bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="Task_ReviewExclusions_di" bpmnElement="Task_ReviewExclusions">
-        <dc:Bounds x="1010" y="385" width="160" height="80" />
+        <dc:Bounds x="1045" y="326.5" width="180" height="197" />
       </bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="Gateway_ExclusionVerdict_di" bpmnElement="Gateway_ExclusionVerdict" isMarkerVisible="true">
-        <dc:Bounds x="1235" y="400" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1295" y="412" width="75" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
+        <dc:Bounds x="1295" y="400" width="50" height="50" />
+        
+      <bpmndi:BPMNLabel>
+          <dc:Bounds x="1355" y="412" width="75" height="27" />
+        </bpmndi:BPMNLabel></bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="Task_ReviewCodings_di" bpmnElement="Task_ReviewCodings">
-        <dc:Bounds x="1180" y="615" width="170" height="80" />
+        <dc:Bounds x="1235" y="552" width="180" height="216" />
       </bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="Gateway_TerminologistVerdict_di" bpmnElement="Gateway_TerminologistVerdict" isMarkerVisible="true">
-        <dc:Bounds x="1415" y="630" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1400" y="686" width="80" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
+        <dc:Bounds x="1475" y="630" width="50" height="50" />
+        
+      <bpmndi:BPMNLabel>
+          <dc:Bounds x="1460" y="686" width="80" height="14" />
+        </bpmndi:BPMNLabel></bpmndi:BPMNShape>
 
       <bpmndi:BPMNShape id="End_ClassifiedAndCoded_di" bpmnElement="End_ClassifiedAndCoded">
-        <dc:Bounds x="1572" y="637" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1540" y="680" width="100" height="40" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
+        <dc:Bounds x="1632" y="637" width="36" height="36" />
+        
+      <bpmndi:BPMNLabel>
+          <dc:Bounds x="1600" y="680" width="100" height="40" />
+        </bpmndi:BPMNLabel></bpmndi:BPMNShape>
 
       <bpmndi:BPMNEdge id="C01_di" bpmnElement="C01">
         <di:waypoint x="288" y="195" />
@@ -253,75 +251,61 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C02_di" bpmnElement="C02">
         <di:waypoint x="385" y="195" />
-        <di:waypoint x="430" y="195" />
+        <di:waypoint x="425" y="195" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C03_di" bpmnElement="C03">
-        <di:waypoint x="590" y="195" />
-        <di:waypoint x="640" y="195" />
+        <di:waypoint x="605" y="195" />
+        <di:waypoint x="645" y="195" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C04_di" bpmnElement="C04">
-        <di:waypoint x="800" y="195" />
-        <di:waypoint x="850" y="195" />
+        <di:waypoint x="825" y="195" />
+        <di:waypoint x="865" y="195" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C05_di" bpmnElement="C05">
-        <di:waypoint x="1010" y="195" />
-        <di:waypoint x="1065" y="195" />
+        <di:waypoint x="1045" y="195" />
+        <di:waypoint x="1110" y="195" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C06_di" bpmnElement="C06">
-        <di:waypoint x="1090" y="220" />
-        <di:waypoint x="1090" y="385" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1098" y="275" width="20" height="14" />
-        </bpmndi:BPMNLabel>
+        <di:waypoint x="1135" y="220" />
+        <di:waypoint x="1135" y="326.5" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C07_di" bpmnElement="C07">
-        <di:waypoint x="1115" y="195" />
-        <di:waypoint x="1150" y="195" />
-        <di:waypoint x="1150" y="655" />
-        <di:waypoint x="1180" y="655" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1125" y="177" width="16" height="14" />
-        </bpmndi:BPMNLabel>
+        <di:waypoint x="1160" y="195" />
+        <di:waypoint x="1197.5" y="195" />
+        <di:waypoint x="1197.5" y="660" />
+        <di:waypoint x="1235" y="660" />
+        <bpmndi:BPMNLabel><dc:Bounds x="1166" y="175" width="90" height="17" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C08_di" bpmnElement="C08">
-        <di:waypoint x="1170" y="425" />
-        <di:waypoint x="1235" y="425" />
+        <di:waypoint x="1225" y="425" />
+        <di:waypoint x="1295" y="425" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C09_di" bpmnElement="C09">
-        <di:waypoint x="1260" y="400" />
-        <di:waypoint x="1260" y="115" />
+        <di:waypoint x="1320" y="400" />
+        <di:waypoint x="1320" y="115" />
         <di:waypoint x="360" y="115" />
         <di:waypoint x="360" y="170" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="820" y="97" width="85" height="14" />
-        </bpmndi:BPMNLabel>
+        <bpmndi:BPMNLabel><dc:Bounds x="1324" y="240" width="90" height="35" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C10_di" bpmnElement="C10">
-        <di:waypoint x="1260" y="450" />
-        <di:waypoint x="1260" y="615" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1268" y="520" width="36" height="14" />
-        </bpmndi:BPMNLabel>
+        <di:waypoint x="1320" y="450" />
+        <di:waypoint x="1320" y="552" />
+        <bpmndi:BPMNLabel><dc:Bounds x="1324" y="492" width="90" height="18" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C11_di" bpmnElement="C11">
-        <di:waypoint x="1350" y="655" />
         <di:waypoint x="1415" y="655" />
+        <di:waypoint x="1475" y="655" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C12_di" bpmnElement="C12">
-        <di:waypoint x="1440" y="630" />
-        <di:waypoint x="1440" y="100" />
+        <di:waypoint x="1500" y="630" />
+        <di:waypoint x="1500" y="100" />
         <di:waypoint x="360" y="100" />
         <di:waypoint x="360" y="170" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1335" y="82" width="90" height="14" />
-        </bpmndi:BPMNLabel>
+        <bpmndi:BPMNLabel><dc:Bounds x="1504" y="338.5" width="90" height="53" /></bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="C13_di" bpmnElement="C13">
-        <di:waypoint x="1465" y="655" />
-        <di:waypoint x="1572" y="655" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1495" y="637" width="45" height="14" />
-        </bpmndi:BPMNLabel>
+        <di:waypoint x="1525" y="655" />
+        <di:waypoint x="1632" y="655" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
