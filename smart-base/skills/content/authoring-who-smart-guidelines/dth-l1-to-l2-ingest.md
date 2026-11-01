@@ -99,6 +99,16 @@ Ids are per handbook and per kind: `<HB>-BP-nn` (business process), `<HB>-R-nn`
 - **Agents never sign off.** An agent never writes the owner's name into
   `signedOffBy` in `l1-exclusions.json`. An exclusion an agent writes stays a
   proposal until the owner signs it.
+- **A table in the PDF is a table in the L1.** When ingestion flattens a
+  table or a figure's cells into lines, fix the L1 entry in who-iris so the
+  cells sit in a table, word for word. Flattened cells that cite another
+  guideline's figure ("Fig. 8.4 ...") read as figures this handbook declares,
+  and `figure:coverage` reports them missing (who-iris#157, PHC Fig. 13).
+- **Regenerate coverage after every L1 repin.** Sentence keys move when the
+  L1 entry changes, so committed `l1-coverage*` outputs go stale. Rerun the
+  coverage writer in the same PR as the who-iris repin (dth-phc#5).
+- **Texts name things by title or number.** A handbook text cites a block,
+  figure or table by its title or number, never by a raw id.
 - **Validators live in the platform.** Glossary validators and L1 coverage
   checks belong in folio-assistant-core, not in the handbook repo (core#377).
 
