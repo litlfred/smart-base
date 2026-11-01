@@ -145,44 +145,54 @@ jobs:
             exit 1
           fi
 
-          # Always pin downloads to main — do NOT use scripts_ref here.
-          # This prevents an attacker from supplying a malicious branch
-          # via scripts_ref to get arbitrary code executed in downstream
-          # repos or via workflow_dispatch.
-          SCRIPTS_BASE_URL="https://raw.githubusercontent.com/WorldHealthOrganization/smart-base/main"
+          # Pin downloads to an immutable 40-hex commit SHA in litlfred/smart-base,
+          # never a moving branch of another organisation (bean folio-assistant-vl71).
+          SCRIPTS_BASE_COMMIT="49178a48d460bb53acf6e90d8c0aee3f0146d8f7"
+          SCRIPTS_BASE_URL="https://raw.githubusercontent.com/litlfred/smart-base/${SCRIPTS_BASE_COMMIT}"
 
           printf 'SCRIPTS_REF=%s\n' "$SCRIPTS_REF"
           printf 'SCRIPTS_REF=%s\n' "$SCRIPTS_REF" >> "$GITHUB_ENV"
+          printf 'SCRIPTS_BASE_COMMIT=%s\n' "$SCRIPTS_BASE_COMMIT" >> "$GITHUB_ENV"
           printf 'SCRIPTS_BASE_URL=%s\n' "$SCRIPTS_BASE_URL"
           printf 'SCRIPTS_BASE_URL=%s\n' "$SCRIPTS_BASE_URL" >> "$GITHUB_ENV"
 
       # ── Overlay smart-base scripts onto content checkout ───────────────
-      # When running inside the smart-base repository, the content checkout
-      # may contain locally-modified copies of scripts.  This step replaces
-      # them with the canonical versions from SCRIPTS_REF so that PR
-      # branches only need to carry content, not build tooling.
-      #
-      # For downstream repos this step is a no-op — those repos don't have
-      # input/scripts/ in their own tree and rely on the curl-based
-      # fallback downloads in subsequent steps.
+      # In smart-base itself, use the checked-out input/scripts/ unless an
+      # explicit 40-hex commit SHA is given in SCRIPTS_REF. In downstream
+      # repositories (where input/scripts/ is absent), fetch input/scripts/
+      # and input/includes/ once from the pinned commit SHA so subsequent
+      # steps execute local scripts rather than curling a moving branch.
       - name: Overlay smart-base scripts
         env:
           GH_REPOSITORY: ${{ github.repository }}
         run: |
-          # Only overlay when running inside the smart-base repository.
-          SMART_BASE_REPO="WorldHealthOrganization/smart-base"
-          if [[ "$GH_REPOSITORY" != "$SMART_BASE_REPO" ]]; then
-            echo "Downstream repository — scripts will be fetched on demand"
+          SMART_BASE_REPO="litlfred/smart-base"
+          if [[ "$GH_REPOSITORY" == "$SMART_BASE_REPO" ]]; then
+            if [[ "$SCRIPTS_REF" == "main" ]]; then
+              echo "Using input/scripts/ from this checkout"
+              exit 0
+            fi
+            if ! [[ "$SCRIPTS_REF" =~ ^[0-9a-f]{40}$ ]]; then
+              echo "::error::scripts_ref override must be a 40-hex commit SHA, got ${SCRIPTS_REF}"
+              exit 1
+            fi
+            git fetch origin "${SCRIPTS_REF}" --depth=1
+            git checkout FETCH_HEAD -- input/scripts/
+            git checkout FETCH_HEAD -- input/includes/dmn2html.xslt input/includes/dmn.css 2>/dev/null || true
+            echo "✅ Scripts overlaid from ${SCRIPTS_REF}"
             exit 0
           fi
 
-          echo "Smart-base repo detected — overlaying scripts from ${SCRIPTS_REF}"
-          git fetch origin "${SCRIPTS_REF}" --depth=1
-          # Overlay input/scripts/ and supporting includes from the scripts ref.
-          # This overwrites any locally-modified copies with the canonical versions.
-          git checkout FETCH_HEAD -- input/scripts/
-          git checkout FETCH_HEAD -- input/includes/dmn2html.xslt input/includes/dmn.css 2>/dev/null || true
-          echo "✅ Scripts overlaid from ${SCRIPTS_REF}"
+          echo "Downstream repository — seeding input/scripts/ from ${SMART_BASE_REPO}@${SCRIPTS_BASE_COMMIT}"
+          SDIR="$(mktemp -d)"
+          git init -q "$SDIR"
+          git -C "$SDIR" fetch -q --depth=1 "https://github.com/${SMART_BASE_REPO}.git" "${SCRIPTS_BASE_COMMIT}"
+          git -C "$SDIR" checkout -q FETCH_HEAD -- input/scripts input/includes/dmn2html.xslt input/includes/dmn.css
+          mkdir -p input/scripts input/includes
+          cp -R "$SDIR/input/scripts/." input/scripts/
+          cp "$SDIR/input/includes/dmn2html.xslt" "$SDIR/input/includes/dmn.css" input/includes/ 2>/dev/null || true
+          rm -rf "$SDIR"
+          echo "✅ Seeded input/scripts/ from ${SMART_BASE_REPO}@${SCRIPTS_BASE_COMMIT}"
 
       - name: Setup Python
         uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
@@ -501,7 +511,7 @@ jobs:
           docker run -d --name ig-run \
             -v "${GH_WORKSPACE}":/work \
             -w /work \
-            hl7fhir/ig-publisher-base:latest \
+            hl7fhir/ig-publisher-base@sha256:245d363857d76dfb58145a9a1dcd2f138809d2eccf739e285d55439771bc8baf \
             sleep infinity
 
           # Wait for entrypoint to finish setup

@@ -43,6 +43,7 @@ from typing import Dict, List, Optional, Tuple
 # ---------------------------------------------------------------------------
 try:
     import lxml.etree as ET
+    from safe_xml import safe_xml_parser
     _HAVE_LXML = True
 except ImportError:  # pragma: no cover
     import xml.etree.ElementTree as ET  # type: ignore
@@ -470,7 +471,7 @@ def inject_svg(
 
     try:
         if _HAVE_LXML:
-            parser = ET.XMLParser(recover=True)
+            parser = safe_xml_parser(recover=True)
             tree = ET.parse(source_path, parser)
         else:
             tree = ET.parse(source_path)
@@ -542,7 +543,7 @@ def inject_archimate(
 
     try:
         if _HAVE_LXML:
-            parser = ET.XMLParser(recover=True)
+            parser = safe_xml_parser(recover=True)
             tree = ET.parse(source_path, parser)
         else:
             tree = ET.parse(source_path)
