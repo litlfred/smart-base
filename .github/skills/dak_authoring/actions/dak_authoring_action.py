@@ -26,16 +26,17 @@ def main() -> None:
         sys.exit(0)
 
     from common.llm_utils import dak_completion
-    from common.prompt_loader import load_prompt
+    from common.prompt_loader import fence_untrusted, load_prompt
 
+    issue_number = os.environ.get("ISSUE_NUMBER", "unknown")
     issue_title = os.environ.get("ISSUE_TITLE", "")
     issue_body = os.environ.get("ISSUE_BODY", "")
     model = os.environ.get("DAK_LLM_MODEL", "gpt-4o")
 
     prompt = load_prompt(
         "dak_authoring", "l2_authoring",
-        issue_title=issue_title,
-        issue_body=issue_body[:4000],
+        issue_title=fence_untrusted(issue_title, f"issue #{issue_number} title", max_len=500),
+        issue_body=fence_untrusted(issue_body, f"issue #{issue_number} body", max_len=4000),
     )
 
     print(f"🤖 Planning L2 content changes with {model}...")
