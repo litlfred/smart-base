@@ -32,7 +32,7 @@
     },
     {
       "id": "process_classifyandcodecontent.task_reviewexclusions",
-      "prefLabel": "Read proposed exclusions against page and sign",
+      "prefLabel": "Check exclusions against page and sign",
       "definition": "Open library/<doc_id>/sections/page-NNN.md beside exclusions.proposed.json. Read each candidate sentence in place on the printed page, check whether the proposed exclusion reason (background-fact, manufacturer-statement, editorial, research-question, duplicate-of) holds without dropping normative guidance, and either sign the exclusion (signedOffBy) or reject it with a reason.",
       "notation": "Task_ReviewExclusions",
       "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_ReviewExclusions",

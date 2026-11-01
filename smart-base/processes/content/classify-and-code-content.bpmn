@@ -108,7 +108,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
       <bpmn:outgoing>C07</bpmn:outgoing>
     </bpmn:exclusiveGateway>
 
-    <bpmn:userTask id="Task_ReviewExclusions" name="Read proposed exclusions against page and sign">
+    <bpmn:userTask id="Task_ReviewExclusions" name="Check exclusions against page and sign">
       <bpmn:documentation>Open library/&lt;doc_id&gt;/sections/page-NNN.md beside exclusions.proposed.json. Read each candidate sentence in place on the printed page, check whether the proposed exclusion reason (background-fact, manufacturer-statement, editorial, research-question, duplicate-of) holds without dropping normative guidance, and either sign the exclusion (signedOffBy) or reject it with a reason.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="classify-and-code-content" />

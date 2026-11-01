@@ -45,10 +45,10 @@ Classifies and codes L1 extracted statements (recommendations, implementation pr
 
 - When the L1 extraction includes unsigned entries in exclusions.proposed.json, route them to the l1-extraction-reviewer lane first so coverage exclusions are verified against the printed page before final coding sign-off; otherwise proceed directly to the terminologist/ontologist review lane.
 - Call `workflow_complete` with `node: "Gateway_HasExclusions"` and `outcome` set to the label that holds:
-  - «yes» → `Task_ReviewExclusions` (Read proposed exclusions against page and sign)
+  - «yes» → `Task_ReviewExclusions` (Check exclusions against page and sign)
   - «no» → `Task_ReviewCodings` (Adjudicate slot codings and glossary candidates)
 
-### 4. Read proposed exclusions against page and sign (`Task_ReviewExclusions`)
+### 4. Check exclusions against page and sign (`Task_ReviewExclusions`)
 
 - Who: the `L1 extraction reviewer (person)` lane (role `l1-extraction-reviewer`).
 - Skill: `classify-and-code-content`, `recommendation-extraction`, `content-review`.
