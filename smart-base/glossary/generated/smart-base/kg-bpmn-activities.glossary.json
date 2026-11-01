@@ -529,7 +529,7 @@
     },
     {
       "id": "process_planning.task_identifyinterventions",
-      "prefLabel": "Identify health interventions and recommendations (Component 1)",
+      "prefLabel": "Identify interventions and recommendations (Component 1)",
       "notation": "Task_IdentifyInterventions",
       "source": "smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn#Task_IdentifyInterventions",
       "status": "candidate"
