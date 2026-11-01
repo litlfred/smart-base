@@ -189,7 +189,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "20eba6db562a988e8ff359e6d1da9969b0c99a89",
+          "ref": "4043da041868f4d99ce21993f1b6f80a9fb4cd5b",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -202,7 +202,7 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-01",
-              "ref": "20eba6db562a988e8ff359e6d1da9969b0c99a89",
+              "ref": "4043da041868f4d99ce21993f1b6f80a9fb4cd5b",
               "evidence": "owner, 2026-11-01T20:54:31Z, card Q-S8-2 \"A: trial smart-base PR\" (trial pin of bootstrap-tools#66 to prove smart-base#272 on CI)"
             }
           }
