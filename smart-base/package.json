@@ -2,6 +2,13 @@
   "name": "@litlfred/smart-base",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "bootstrap-tool[s]",
+    "../bootstrap-tool[s]"
+  ],
+  "devDependencies": {
+    "@litlfred/bootstrap-tools": "0.1.0"
+  },
   "checkoutScripts": {
     "check:fhir-harness-exclusions": "bun run smart-base/scripts/check-fhir-harness-exclusions.ts",
     "ingest:ig-chrome:check": "bun run fhir-harness/scripts/ingest-ig-chrome.ts --out smart-base/themes --check",
