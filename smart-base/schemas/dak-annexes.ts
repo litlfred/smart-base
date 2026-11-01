@@ -16,6 +16,7 @@
  * each format was a TypeScript type and a `$schema` string, and
  * `check:kind-validators:require-all` reported both families as unmapped.
  *
+ * @graphNode schema
  * @module smart-base/schemas/dak-annexes
  */
 import { z } from "zod";
