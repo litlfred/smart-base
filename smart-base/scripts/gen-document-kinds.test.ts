@@ -48,13 +48,21 @@ describe("the document-kind schema refuses what a kind may not be", () => {
 describe("the authored kinds resolve as a set (bean pebe)", () => {
   const read = (id: string) =>
     DocumentKindSchema.parse(JSON.parse(readFileSync(join(import.meta.dir, "..", "document-kinds", `${id}.json`), "utf-8")));
-  const kinds = ["dak", "l1", "l1-guideline", "dth"].map(read);
+  const kinds = ["dak", "l1", "l1-guideline", "dth", "l2-dth"].map(read);
   const pinned = kgClasses();
   it("the committed kinds have no problem", () => {
     expect(kindSetProblems(kinds, pinned)).toEqual([]);
   });
   it("l1-guideline and dth both extend l1, and neither redeclares its sections", () => {
     expect(kinds.filter((k) => k.extends === "l1").map((k) => k.id).sort()).toEqual(["dth", "l1-guideline"]);
+  });
+  it("l2-dth extends dth (and transitively l1) without redeclaring any inherited section", () => {
+    const l2dth = kinds.find((k) => k.id === "l2-dth")!;
+    expect(l2dth.extends).toBe("dth");
+    expect(l2dth.structure).toBe("semi-fixed");
+    expect(l2dth.sections.map((s) => s.id)).toContain("skos-glossary-alignment");
+    expect(l2dth.sections.map((s) => s.id)).toContain("archimate-model-linkage");
+    expect(l2dth.sections.map((s) => s.id)).toContain("role-bound-bpmn-workflows");
   });
   it("every section and every kind names a source", () => {
     for (const k of kinds.filter((k) => k.id !== "dak")) for (const s of k.sections) expect(s.sources?.length ?? 0).toBeGreaterThan(0);
