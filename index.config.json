@@ -189,7 +189,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "c5b291b6e9bfd71c4f8d99b08d8f6634a5bdfd9e",
+          "ref": "20eba6db562a988e8ff359e6d1da9969b0c99a89",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -202,8 +202,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-01",
-              "ref": "c5b291b6e9bfd71c4f8d99b08d8f6634a5bdfd9e",
-              "evidence": "owner, 2026-11-01T08:55:27Z, card Q-RED-1 \"A. Yes, PR + merge on green\" (redraw smart-base process SVGs with the bootstrap-tools folio-assistant pins); merge+repin window 2026-11-01T07:27Z \"+3hrs merge + repin\""
+              "ref": "20eba6db562a988e8ff359e6d1da9969b0c99a89",
+              "evidence": "owner, 2026-11-01T20:54:31Z, card Q-S8-2 \"A: trial smart-base PR\" (trial pin of bootstrap-tools#66 to prove smart-base#272 on CI)"
             }
           }
         }
