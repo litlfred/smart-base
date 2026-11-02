@@ -86,7 +86,7 @@ import { dc, heldIntakes, identifiersOf, publicationProperties, type Held } from
 
 /** A library entry, with the checkout it is read from. */
 type LibraryEntry = BaseEntry & { repo: string };
-const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/0.1.0/ns#";
+const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/0.1.0/ns/";
 
 /** Written beside the DAK's entry. Not `smart-kg-l1.json`: that name is the recommendation extractor's. */
 export const DAK_L1_FILENAME = "smart-kg-l1-dak-references.json";

@@ -52,7 +52,7 @@ export const LAYERING_RULE =
   "A layer may point at any layer above it and never at one below it.";
 
 /** folio-assistant's namespaces, from its `cat-harness/code-lists/own-namespaces.json` and `schemas/jsonld.ts`. */
-export const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/0.1.0/ns#";
+export const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/0.1.0/ns/";
 export const DOCO_NS = "http://purl.org/spar/doco/";
 export const PROV_NS = "http://www.w3.org/ns/prov#";
 

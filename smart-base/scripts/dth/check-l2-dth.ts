@@ -38,7 +38,7 @@
  * @module smart-base/scripts/dth/check-l2-dth
  */
 import { existsSync, readdirSync, readFileSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { join, resolve } from "node:path";
 import { readArchimate } from "../../../cat-harness-tools/archimate/schemas/archimate.ts";
 import {
   loadDecisionTable,
@@ -337,6 +337,7 @@ export function hasDecisionTableSourceCitation(
 function parseMetaFromBlockTs(
   file: string,
   src: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- parsed block meta JSON, read loosely by the checks below
 ): { meta?: Record<string, any>; parseError?: string } {
   const singleLine = src.match(/meta:\s*(\{.*\}),\r?\n/);
   if (singleLine) {
@@ -565,7 +566,6 @@ export async function validateL2DthFolio(
   for (const file of allTsFiles) {
     const relFile = file.startsWith(`${rootDir}/`) ? file.slice(rootDir.length + 1) : file;
     const src = readFileSync(file, "utf-8");
-    const dir = dirname(file);
     const { meta } = parseMetaFromBlockTs(relFile, src);
 
     if (src.includes("export default businessProcess(")) {

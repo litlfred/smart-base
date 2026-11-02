@@ -117,10 +117,10 @@ function makeFixtureFolio(mutate?: (root: string) => void): string {
           definition: "A report of a suspected substandard or falsified product.",
           status: "authored",
           broader: [
-            "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/pharmacovigilance",
+            "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/pharmacovigilance",
           ],
           related: [
-            "https://litlfred.github.io/dth-sc/v0/ns#glossary/dth-sc/track-and-trace",
+            "https://litlfred.github.io/dth-sc/v0/ns/glossary/dth-sc/track-and-trace",
           ],
         },
       ],
@@ -154,7 +154,7 @@ function makeFixtureFolio(mutate?: (root: string) => void): string {
 export default persona({
   label: "pers:health-care-professional",
   title: "Health care professional (reporter)",
-  meta: {"roleId":"SFP-R-01","bpmnLanes":[{"processId":"SFP-BP-01","bpmnFile":"${bpmnRel}","laneId":"Lane_Reporter"}],"archimate":{"elements":[{"iri":"https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-role-hcp.jsonld","name":"Health Worker"}]},"glossaryTerms":["https://litlfred.github.io/dth-sfp/v0/ns#glossary/dth-sfp/sf-report"]},
+  meta: {"roleId":"SFP-R-01","bpmnLanes":[{"processId":"SFP-BP-01","bpmnFile":"${bpmnRel}","laneId":"Lane_Reporter"}],"archimate":{"elements":[{"iri":"https://litlfred.github.io/smart-ra/archimate/0.2.0/elements/id-role-hcp.jsonld","name":"Health Worker"}]},"glossaryTerms":["https://litlfred.github.io/dth-sfp/v0/ns/glossary/dth-sfp/sf-report"]},
 });
 `,
   );
@@ -247,7 +247,7 @@ describe("validateL2DthFolio", () => {
               definition: "A report of a suspected product.",
               status: "authored",
               closeMatch: [
-                "https://litlfred.github.io/smart-ra/v0/ns#glossary/dpi-h-ra/nonexistent-term",
+                "https://litlfred.github.io/smart-ra/v0/ns/glossary/dpi-h-ra/nonexistent-term",
               ],
             },
           ],
