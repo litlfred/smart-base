@@ -21,7 +21,7 @@ Sources: **PHC** is the DTH for primary health care (9789240093362), **SC** the 
 1. [One phase figure: DIIG Fig. 1.1.1](#one-phase-figure-diig-fig-111)
 2. [Approaches recorded as alternatives](#approaches-recorded-as-alternatives)
 3. [What "actor" means, and what each layer could change](#what-actor-means-and-what-each-layer-could-change)
-4. [Terms defined differently (40)](#terms-defined-differently)
+4. [Terms defined differently (45)](#terms-defined-differently)
 5. [Substandard and falsified medical products DTH (SFP, 35 terms)](#substandard-and-falsified-medical-products-dth-sfp-35-terms)
 
 ## One phase figure: DIIG Fig. 1.1.1
@@ -126,9 +126,9 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 
 ## Terms defined differently
 
-40 terms carry more than one definition across the sources: 10 with a different meaning or an added claim (**substantive**), 4 defined two ways inside one source (**internal**), and 26 that differ only in wording. A term is listed under the most severe difference it has. In each table, row A is the first source in the order PHC, SC, PC, RA; that order is a reading order, not a ranking.
+45 terms carry more than one definition across the sources: 13 with a different meaning or an added claim (**substantive**), 5 defined two ways inside one source (**internal**), and 27 that differ only in wording. A term is listed under the most severe difference it has. In each table, row A is the first source in the order PHC, SC, PC, RA, SFP; that order is a reading order, not a ranking.
 
-### Substantive (10)
+### Substantive (13)
 
 #### Actor (conformance model)
 
@@ -144,6 +144,7 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | A | The process of digitally automating and simplifying processes to streamline individual health programmes and reduce manual efforts for greater efficiency (12,13). | PHC `sec-002-glossary`, PDF p.9 | — |
 | B | In the health context, the process of digitally automating and simplifying processes to streamline individual health programmes and reduce manual efforts for greater efficiency. Digitalization is the second step in digital transformation (3, 6). | SC `page-008` | *substantive*: SC and PC add the claim that digitalization is "the second step" in/towards digital transformation; PHC does not. |
 | C | The process of digitally automating and simplifying processes to streamline individual health programmes and reducing manual efforts for greater efficiency. Digitalization is the second step towards digital transformation.3, 4 | PC `page-008` | *substantive*: SC and PC add the claim that digitalization is "the second step" in/towards digital transformation; PHC does not. |
+| D | The process of digitally automating and simplifying processes to streamline individual health programmes and reducing manual efforts for greater efficiency. Digitalization is the second step towards digital transformation (5, 6). | SFP `sec-002-glossary` | *substantive*: SFP, like SC and PC, adds a sequencing claim (digitalization is the second step towards digital transformation) that PHC does not make. |
 
 #### Digitization
 
@@ -152,6 +153,7 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | A | The process of converting and organizing data from paper records into a digital format for easier entry, storage and retrieval (12,16). | PHC `sec-002-glossary`, PDF p.9 | — |
 | B | The process of converting and organizing data from manual paper records into a digital format for easier entry, storage and retrieval. Digitization is the initial step in digital transformation (3, 7). | SC `page-008` | *substantive*: SC and PC add a sequencing claim (digitization is the initial step in/towards digital transformation) that PHC does not make; SC also adds "manual". |
 | C | The process of converting and organizing data from paper records into a digital format for easier entry, storage and retrieval. Digitization is the initial step towards digital transformation.1, 2 | PC `page-008` | *substantive*: SC and PC add a sequencing claim (digitization is the initial step in/towards digital transformation) that PHC does not make; SC also adds "manual". |
+| D | The process of converting and organizing data from paper records into a digital format for easier entry, storage and retrieval. Digitization is the initial step towards digital transformation (5, 6). | SFP `sec-002-glossary` | *substantive*: SFP, like SC and PC, adds a sequencing claim (digitization is the initial step towards digital transformation) that PHC does not make. |
 
 #### Enterprise architecture
 
@@ -160,6 +162,7 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | A | A blueprint of business processes, data, systems and technologies used to help planners, software developers and managers design increasingly complex systems to support the workflow and roles of people in a large enterprise, such as a health system (11). | PHC `sec-002-glossary`, PDF p.9 | — |
 | B | A blueprint of business processes, data, systems and technologies that helps planners, software developers and managers design increasingly complex systems to support the workflow and roles of people in a large enterprise such as a health system (1). | SC `page-008` | *wording*: Near-identical: differs only in phrasing, punctuation or citation markers. |
 | C | The organising logic for business processes and IT infrastructure reflecting the integration and standardisation requirements of the organisation's operating model. [Under review] | RA (draft) `sec-front-matter` | *substantive*: PHC and SC: "a blueprint of business processes, data, systems and technologies"; RA: "the organising logic for business processes and IT infrastructure" reflecting the operating model, marked [Under review]. |
+| D | A blueprint of business processes, data, systems and technologies used to help implementers design increasingly complex systems to support the workflow and roles of people in a large enterprise, such as a health system (3). | SFP `sec-002-glossary` | *wording*: SFP says the blueprint helps "implementers"; PHC and SC say "planners, software developers and managers". |
 
 #### Functions
 
@@ -191,6 +194,15 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | A | General attributes and features of the digital system to ensure usability and overcome technical and physical constraints. Examples of non-functional requirements include ability to work offline, multiple language settings, and password protection (see section 3.8). | PHC `sec-002-glossary`, PDF p.10 | — |
 | B | A description of how the digital system needs to operate and perform in order to support the tasks that make up the business process. | SC `page-008` | *substantive*: PHC: attributes and features "to ensure usability and overcome technical and physical constraints"; SC: "how the digital system needs to operate and perform" for business-process tasks; PC: "attributes and constraints ... to ensure its quality and performance". |
 | C | Description of the attributes and constraints that the system must have to ensure its quality and performance. These requirements do not specify what the system should do, but rather how the system should perform its functions. | PC `page-008` | *substantive*: PHC: attributes and features "to ensure usability and overcome technical and physical constraints"; SC: "how the digital system needs to operate and perform" for business-process tasks; PC: "attributes and constraints ... to ensure its quality and performance". |
+| D | General attributes and features of the digital system to ensure usability and overcome technical and physical constraints. Examples of non-functional requirements include the ability to work offline, multiple language settings and password protection. | SFP `sec-002-glossary` | *wording*: Near-identical to PHC: differs only in phrasing, punctuation and the section pointer. |
+
+#### Open source
+
+| | definition | source | how it differs |
+|---|---|---|---|
+| A | Open-source software is software with source code that is published and made freely available to the public, enabling anyone to inspect, modify and enhance the code (18). | PHC `sec-002-glossary`, PDF p.10 | — |
+| B | Software with source code that is published and made freely available to the public so anyone can inspect, modify and enhance the code within set guidelines (8). | SC `page-008` | *wording*: Wording differs (automatic comparison; not reviewed as substantive). |
+| C | Open-source software is software with source code that is published and made freely available to the public, enabling anyone to inspect, modify and enhance the code. While the source code is open to everyone, this does not mean that implementation of software is necessarily without costs. An open-source software must have a licence approved by the Open-Source Initiative (12). | SFP `sec-002-glossary` | *substantive*: SFP adds two claims PHC does not make: open source does not mean implementation is without costs, and open-source software must have a licence approved by the Open-Source Initiative. |
 
 #### SMART Guidelines
 
@@ -200,6 +212,7 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | B | The WHO guidelines for developing Standards-based, Machine-readable, Adaptive, Requirements-based and Testable components for implementing digital health capabilities. The components include interoperability standards, code libraries, algorithms, and technical and operational specifications. | SC `page-009` | *substantive*: PHC: "recommended digital capabilities, health and data content aligned with normative recommendations"; SC: "The WHO guidelines for developing" SMART components; PC and RA: "a comprehensive set of reusable digital health components" with a five-step pathway. |
 | C | WHO standards-based, machine-readable, adaptive, requirements-based, and testable Guidelines are recommended digital capabilities, health and data content. They represent a comprehensive set of reusable digital health components (e.g., interoperability standards, code libraries, algorithms, technical and operational specifications) that transform the guideline adaptation and implementation process to preserve fidelity and accelerate uptake. | PC `page-009` | *substantive*: PHC: "recommended digital capabilities, health and data content aligned with normative recommendations"; SC: "The WHO guidelines for developing" SMART components; PC and RA: "a comprehensive set of reusable digital health components" with a five-step pathway. |
 | D | Standards-based, Machine-readable, Adaptive, Requirements-based, Testable Guidelines are a comprehensive set of reusable digital health components (e.g., interoperability standards, code libraries, algorithms, technical and operational specifications) that transform the guideline adaptation and implementation process to preserve fidelity and accelerate uptake. SMART Guidelines provide a five-step pathway to advance the adoption of best clinical and data practices, even if a country is not yet fully digital. | RA (draft) `sec-front-matter` | *substantive*: PHC: "recommended digital capabilities, health and data content aligned with normative recommendations"; SC: "The WHO guidelines for developing" SMART components; PC and RA: "a comprehensive set of reusable digital health components" with a five-step pathway. |
+| E | Standards-based, Machine-readable, Adaptive, Requirements-based and Testable Guidelines are recommended digital capabilities, health and data content aligned with normative recommendations. They represent packages of comprehensive documentation and reusable digital health components (e.g. health content, interoperability standards, code libraries, algorithms, technical and operational specifications) that facilitate country adaptation and adoption of clinical and public health protocols, health systems strengthening recommendations, and data and interoperability standards into digital health information systems with fidelity. SMART Guidelines serve as a starting point and as foundational specifications to advance the development of robust person-centred digital systems. These specifications are software-agnostic, context-agnostic and are applicable to all levels of digital maturity (17, 18). | SFP `sec-002-glossary` | *substantive*: SFP keeps PHC's first sentence and adds that the guidelines are packages of documentation and reusable components, a starting point and foundational specifications, and "software-agnostic, context-agnostic and ... applicable to all levels of digital maturity". |
 
 #### stakeholder
 
@@ -209,7 +222,23 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | B | An individual, role, or organisation with an interest in the outcomes of the architecture. | RA (draft) `sec-front-matter` | *substantive*: SC: "anyone who is affected by or interested in the consequences of the efforts"; RA glossary: "An individual, role, or organisation with an interest in the outcomes of the architecture"; RA Table 3.1: "...in the architecture and its outcomes". |
 | C | An individual, role, or organisation with an interest in the architecture and its outcomes. | RA (draft) `sec-025-31-the-architecture-description-approach` | *substantive*: SC: "anyone who is affected by or interested in the consequences of the efforts"; RA glossary: "An individual, role, or organisation with an interest in the outcomes of the architecture"; RA Table 3.1: "...in the architecture and its outcomes". |
 
-### Internal (4)
+#### User persona
+
+| | definition | source | how it differs |
+|---|---|---|---|
+| A | A generic or archetypical profile of an end-user that is representative of a single type of end-user. | PHC `sec-002-glossary`, PDF p.11 | — |
+| B | A user persona is a generic depiction of a relevant stakeholder, or end-user of the system who would be interacting with the PCPOSS. | PHC `sec-013-32-get-to-know-the-users` | *wording*: Glossary: profile "of an end-user"; section 3.2.1: depiction "of a relevant stakeholder, or end-user". |
+| C | A generic aggregate description of a person involved in or benefiting from a health programme. | SFP `sec-002-glossary` | *substantive*: SFP's "Persona" covers any person "involved in or benefiting from a health programme"; PHC's "User persona" is a profile of an end-user only. |
+
+#### Workflow
+
+| | definition | source | how it differs |
+|---|---|---|---|
+| A | The sequence of activities from one task to another (see section 3.3). | PHC `sec-002-glossary`, PDF p.11 | — |
+| B | Workflows are a visual representation of the progression of activities (tasks, events, interactions) performed within a business process (45). | PHC `sec-014-33-map-business-processes-and-workflows` | *internal*: PHC glossary: "The sequence of activities from one task to another"; PHC section 3.3 body: "a visual representation of the progression of activities" within a business process. |
+| C | A visual representation of the progression of activities (tasks, events, decision points) in a logical flow illustrating the interactions within the business process (21). | SFP `sec-002-glossary` | *substantive*: SFP defines a workflow as "a visual representation" of activities, as PHC's body text does, where PHC's glossary defines it as "the sequence of activities"; SFP also names decision points and "a logical flow". |
+
+### Internal (5)
 
 #### Digital health
 
@@ -219,6 +248,20 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | B | The systematic application of information and communications technologies, computer science and data to support informed decision-making by individuals, the health workforce and health systems, to strengthen resilience to disease and improve health and wellness (1, 2). | SC `page-008` | *wording*: Near-identical: differs only in phrasing, punctuation or citation markers. |
 | C | digital health refers to “the field of knowledge and practice associated with the development and use of digital technologies to improve health.” | SC `page-012` | *internal*: PHC, SC and RA glossaries agree; the SC introduction body quotes a different Global Strategy definition, "the field of knowledge and practice associated with the development and use of digital technologies to improve health". |
 | D | The systematic application of information and communications technologies, computer science, and data to support informed decision-making by individuals, the health workforce, and health systems, to strengthen resilience to disease and improve health and wellness. | RA (draft) `sec-front-matter` | *wording*: Near-identical: differs only in phrasing, punctuation or citation markers. |
+
+#### Falsified medical products
+
+| | definition | source | how it differs |
+|---|---|---|---|
+| A | Medical products that deliberately or fraudulently misrepresent their identity, composition or source. Any consideration related to intellectual property rights does not fall within this definition. Such deliberate or fraudulent misrepresentation refers to any substitution, adulteration or reproduction of an authorized medical product or the manufacture of a medical product that is not an authorized product (9). | SFP `sec-002-glossary`, PDF p.9-11 | — |
+| B | “Falsified medical products” deliberately and or fraudulently misrepresent their identity, composition or source. | SFP `sec-003-introduction` | *internal*: SFP Introduction gives only the first sentence of the glossary definition (with "and or" for "or") and leaves out the intellectual-property exclusion and the substitution, adulteration or reproduction clause. |
+
+#### Substandard products
+
+| | definition | source | how it differs |
+|---|---|---|---|
+| A | Medical products authorized by national regulatory authorities but that fail to meet either national or international quality standards or specifications or, in some cases, both (9). | SFP `sec-002-glossary`, PDF p.9-11 | — |
+| B | “Substandard medical products”, also called “out-of-specification”, are authorized medical products that fail to meet either their quality standards or their specifications, or both. | SFP `sec-003-introduction` | *internal*: SFP glossary (ref 9, WHO quality assurance terminology): "fail to meet either national or international quality standards or specifications"; SFP Introduction (ref 23, WHA70, A70/23): "fail to meet either their quality standards or their specifications, or both" (dth-sfp#1 finding F1). |
 
 #### traceability
 
@@ -234,14 +277,7 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | A | Products or services that are priced, ordered or invoiced at any point in the supply chain.13 | PC `page-009`, PDF p.9 | — |
 | B | Trade items are manufacturer-specific branded health products that are identifiable and unique to a particular brand or manufacturer. | PC `page-028` | *internal*: PC glossary (GS1): "Products or services that are priced, ordered or invoiced"; PC Chapter 02 body: "manufacturer-specific branded health products". |
 
-#### Workflow
-
-| | definition | source | how it differs |
-|---|---|---|---|
-| A | The sequence of activities from one task to another (see section 3.3). | PHC `sec-002-glossary`, PDF p.11 | — |
-| B | Workflows are a visual representation of the progression of activities (tasks, events, interactions) performed within a business process (45). | PHC `sec-014-33-map-business-processes-and-workflows` | *internal*: PHC glossary: "The sequence of activities from one task to another"; PHC section 3.3 body: "a visual representation of the progression of activities" within a business process. |
-
-### Wording (26)
+### Wording (27)
 
 #### Application Service
 
@@ -249,6 +285,13 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 |---|---|---|---|
 | A | An explicitly defined unit of application behaviour. An application service exposes the functionality of an application component to its environment. | RA (draft) `sec-front-matter`, PDF p.1-19 | — |
 | B | The functionality an application component exposes to its environment, as a unit of useful behaviour. | RA (draft) `sec-025-31-the-architecture-description-approach` | *wording*: RA glossary vs Table 3.1 phrasing. |
+
+#### Business process
+
+| | definition | source | how it differs |
+|---|---|---|---|
+| A | A set of activities and tasks performed in coordination to achieve a specified business objective, or to deliver value in a specific way to a health service user. In the context of digitizing care pathways, this could include “health service user registration” and “referrals”, for example (see section 3.3). | PHC `sec-002-glossary`, PDF p.8 | — |
+| B | A set of related activities or tasks performed together to achieve the objectives of the health programme area, such as registration, counselling and referrals (3). | SFP `sec-002-glossary` | *wording*: SFP ties the objectives to "the health programme area" and lists counselling as an example; PHC speaks of "a specified business objective, or to deliver value in a specific way to a health service user". |
 
 #### Capability
 
@@ -292,6 +335,7 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | A | The characteristics of a system that include look and feel as well as what the system can do (e.g. “reporting” can be a feature of a PCPOSS). | PHC `sec-002-glossary`, PDF p.9 | — |
 | B | The characteristics of a system that include look and feel as well as what the system can do (e.g., “order processing” can be a feature of an order management solution). | SC `page-008` | *wording*: Domain examples differ; PC says "your system". |
 | C | The characteristics of your system that include look and feel as well as what the system can do (e.g., “approval workflow” can be a feature of a product master data management solution). | PC `page-008` | *wording*: Domain examples differ; PC says "your system". |
+| D | The characteristics of your system that include look and feel as well as what the system can do (e.g. “approval workflow” can be a feature of a product master data management solution). | SFP `sec-002-glossary` | *wording*: Same text as PC (example: "approval workflow" of a product master data management solution); PHC's example is "reporting" in a PCPOSS. |
 
 #### Functional requirements
 
@@ -300,6 +344,7 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | A | Description of what the digital system needs to do to support the tasks that make up the health system process and address the identified health system challenges (e.g. a PCPOSS must be able to remind health workers which health service users to follow-up with). | PHC `sec-002-glossary`, PDF p.9 | — |
 | B | A description of what the digital system needs to do to support the tasks that make up the business process and address the identified challenges. | SC `page-008` | *wording*: PHC/PC: tasks of "the health system process"; SC: tasks of "the business process". |
 | C | Description of what the digital system needs to do to support the tasks that make up the health system process and address the identified challenges (e.g., a product master data management solution must be able to define categories and attributes to organize product information). | PC `page-008` | *wording*: PHC/PC: tasks of "the health system process"; SC: tasks of "the business process". |
+| D | Capabilities the system must have to meet the end users’ needs and achieve tasks within the business process. | SFP `sec-002-glossary` | *wording*: SFP: "Capabilities the system must have to meet the end users' needs"; PHC: "what the digital system needs to do to support the tasks" and "address the identified health system challenges". |
 
 #### Generic product or product information
 
@@ -315,19 +360,27 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | A | Health Digital Public Infrastructure (DPI-H) refers to digital resources that are built as a shared means for fulfilling multiple health agency functions. | RA (draft) `sec-front-matter`, PDF p.1-19 | — |
 | B | Health Digital Public Infrastructure (DPI-H) refers to digital resources that are built as a shared means for fulfilling multiple health agency functions. These digital resources for health — encompassing both systems and specifications — leverage foundational DPI, are interoperable, reusable, publicly governed and built on open standards. | RA (draft) `sec-001-112-understanding-digital-public-infrastructure` | *wording*: Body adds the systems-and-specifications sentence. |
 
+#### ICT
+
+| | definition | source | how it differs |
+|---|---|---|---|
+| A | information and communications technology | SC `page-007`, PDF p.7 | — |
+| B | information and communication technology | SFP `sec-001-abbreviations-and-acronyms` | *wording*: SFP "communication" vs PHC "communications". |
+
+#### ID
+
+| | definition | source | how it differs |
+|---|---|---|---|
+| A | identity/identification | PHC `sec-001-abbreviations`, PDF p.7-8 | — |
+| B | identity/identification/identifier | SFP `sec-001-abbreviations-and-acronyms` | *wording*: SFP adds "identifier" to "identity/identification". |
+
 #### ITU
 
 | | definition | source | how it differs |
 |---|---|---|---|
 | A | International Telecommunications Union | PHC `sec-001-abbreviations`, PDF p.7-8 | — |
 | B | International Telecommunication Union | SC `page-007` | *wording*: PHC "Telecommunications" vs SC "Telecommunication" (the organisation's own name is singular). |
-
-#### Open source
-
-| | definition | source | how it differs |
-|---|---|---|---|
-| A | Open-source software is software with source code that is published and made freely available to the public, enabling anyone to inspect, modify and enhance the code (18). | PHC `sec-002-glossary`, PDF p.10 | — |
-| B | Software with source code that is published and made freely available to the public so anyone can inspect, modify and enhance the code within set guidelines (8). | SC `page-008` | *wording*: Wording differs (automatic comparison; not reviewed as substantive). |
+| C | International Telecommunication Union | SFP `sec-001-abbreviations-and-acronyms` | *wording*: SFP, like SC, has "Telecommunication" (the organisation's own name is singular); PHC has "Telecommunications". |
 
 #### Open standards
 
@@ -342,6 +395,7 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 |---|---|---|---|
 | A | A visual representation of an organization’s structure that shows the hierarchy of various roles and reporting relationships. | SC `page-009`, PDF p.9 | — |
 | B | A visual representation of the organization structure showing the hierarchy of various roles and their reporting relationships | PC `page-008` | *wording*: Wording differs (automatic comparison; not reviewed as substantive). |
+| C | A visual representation of the organization structure showing the hierarchy of various roles and their reporting relationships. | SFP `sec-002-glossary` | *wording*: Same text as PC; SC words it "an organization's structure that shows". |
 
 #### Outcome
 
@@ -372,6 +426,7 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 | B | A governed, authoritative and centralized information system that captures, stores and maintains the unique attributes and identifiers of health facilities, health service users, health products and/or the health workforce using a predefined canonical minimum data set. | SC `page-009` | *wording*: Near-identical: differs only in phrasing, punctuation or citation markers. |
 | C | A governed, authoritative and centralized information system that captures, stores, and maintains the unique attributes and identifiers of health facilities, health service users, products and/or health workforce using a predefined canonical minimum data set. | PC `page-009` | *wording*: Near-identical: differs only in phrasing, punctuation or citation markers. |
 | D | A governed, authoritative and centralized information system that captures, stores and maintains the unique attributes and identifiers of health facilities, health service users, health products and/or the health workforce using a predefined canonical minimum data set. [Under review] | RA (draft) `sec-front-matter` | *wording*: Near-identical: differs only in phrasing, punctuation or citation markers. |
+| E | A governed, authoritative and centralized information system that captures, stores and maintains the unique attributes and identifiers of health facilities, health service users, products and/or health workforce using predefined canonical minimum data etc. | SFP `sec-002-glossary` | *wording*: SFP's text is cut short: it ends "using predefined canonical minimum data etc." where the others say "a predefined canonical minimum data set" (dth-sfp#1 finding F6). |
 
 #### RFQ
 
@@ -415,13 +470,7 @@ Owner, 2026-10-03: "1. F-A mapping, 2. Draft RA comment, 3. SMART Base proposal"
 |---|---|---|---|
 | A | User acceptance testing (UAT) is conducted to see whether the end-users are satisfied with the end product (24). | PHC `sec-002-glossary`, PDF p.11 | — |
 | B | UAT is done to see whether the end-users are satisfied with the end product.14 | PC `page-009` | *wording*: Wording differs (automatic comparison; not reviewed as substantive). |
-
-#### User persona
-
-| | definition | source | how it differs |
-|---|---|---|---|
-| A | A generic or archetypical profile of an end-user that is representative of a single type of end-user. | PHC `sec-002-glossary`, PDF p.11 | — |
-| B | A user persona is a generic depiction of a relevant stakeholder, or end-user of the system who would be interacting with the PCPOSS. | PHC `sec-013-32-get-to-know-the-users` | *wording*: Glossary: profile "of an end-user"; section 3.2.1: depiction "of a relevant stakeholder, or end-user". |
+| C | User acceptance testing is done to see whether the end users are satisfied with the end product (20). | SFP `sec-002-glossary` | *wording*: Near-identical: differs only in phrasing and citation markers. |
 
 #### User story
 

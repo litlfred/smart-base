@@ -314,7 +314,7 @@ export function render(f: TermFindings, terms: CandidateTerm[]): string {
   L.push("");
 
   L.push("## Terms defined differently", "");
-  L.push(`${terms.length} terms carry more than one definition across the sources: ${counts.substantive} with a different meaning or an added claim (**substantive**), ${counts.internal} defined two ways inside one source (**internal**), and ${counts.wording} that differ only in wording. A term is listed under the most severe difference it has. In each table, row A is the first source in the order PHC, SC, PC, RA; that order is a reading order, not a ranking.`, "");
+  L.push(`${terms.length} terms carry more than one definition across the sources: ${counts.substantive} with a different meaning or an added claim (**substantive**), ${counts.internal} defined two ways inside one source (**internal**), and ${counts.wording} that differ only in wording. A term is listed under the most severe difference it has. In each table, row A is the first source in the order PHC, SC, PC, RA, SFP; that order is a reading order, not a ranking.`, "");
   for (const sev of SEVERITY_ORDER) {
     const group = terms.filter((t) => worst(t) === sev).sort((a, b) => a.term.localeCompare(b.term));
     if (group.length === 0) continue;
