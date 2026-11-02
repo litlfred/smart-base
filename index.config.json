@@ -114,7 +114,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "ad64a09a7f060cf350b8b4ed7c4d163435120c30",
+          "ref": "5c408eca7c16c4db5144ac5ef9ba26a27f416432",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -129,9 +129,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-30",
-              "ref": "ad64a09a7f060cf350b8b4ed7c4d163435120c30",
-              "evidence": "Owner litlfred, 2026-10-30: card 'A. One coordinated move' (bean 8lcl), merge window to 19:38Z; main tip ad64a09 (schemas move #773, direction #784, attestations #786, CI #775 #778 #780). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
+              "on": "2026-11-02",
+              "ref": "5c408eca7c16c4db5144ac5ef9ba26a27f416432",
+              "evidence": "litlfred, 2026-11-02 (thread 'Finish the dth-sfp workplan', card Q-DTH3-2 tapped 2026-11-01 22:38Z): 'A. Merge it' — merge cat-harness#889 (SFP added to the DTH term comparison), then add SFP to smart-base's term findings page and regenerate it. cat-harness main 5c408ec = merge of #889."
             }
           }
         }
