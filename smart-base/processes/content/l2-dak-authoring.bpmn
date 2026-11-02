@@ -89,7 +89,7 @@
     <bpmn:startEvent id="StartEvent_Guideline" name="WHO guideline / recommendations">
       <bpmn:outgoing>B01</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:userTask id="Task_ScopeDak" name="Scope the DAK&#10;[content-plan]">
+    <bpmn:userTask id="Task_ScopeDak" name="Scope the DAK">
       <bpmn:documentation>Enumerate the processes, decisions and data elements the guideline implies; identify the actors.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-plan" />
@@ -97,7 +97,7 @@
       <bpmn:incoming>B01</bpmn:incoming>
       <bpmn:outgoing>B02</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Task_L1Library" name="Build the L1 library from Component 1&#10;[dak-l1-library]">
+    <bpmn:userTask id="Task_L1Library" name="Build the L1 library from Component 1">
       <bpmn:documentation>Ingest the DAK into the library; it is L2, so it gets no L1 graph. Read Component 1 §1.2 for the sources it draws on (extract-dak-l1-references.ts --context-only), then fetch each L1 source on its own — fetch-dspace-item.ts for an IRIS handle, fetch-who-publication.ts for a who.int item page — and ingest it. Record whether each is L1 on its intake (declared &gt; context &gt; inferred; --record-context writes §1.2's context). For each L1 source, run l1-specialise.ts: its publication, sections and elements as specialisations of its library nodes, since the library is upstream of L1. Validate with the smart-base Zod validator. Fidelity — does each citation name the source it resolves to — and a cited edition older than the one fetched are left to a person, never passed automatically.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="dak-l1-library" />
@@ -105,7 +105,7 @@
       <bpmn:incoming>B02</bpmn:incoming>
       <bpmn:outgoing>B22</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:task id="Task_SeedBeans" name="Seed the work plan&#10;[todo-manager]">
+    <bpmn:task id="Task_SeedBeans" name="Seed the work plan">
       <bpmn:documentation>Turn the scope into beans on the shared work plan — one per DAK component, since a DAK is completed component by component. beans create is not idempotent: check for an existing bean before every create, or a re-run duplicates the plan.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
@@ -128,7 +128,7 @@
       <bpmn:outgoing>B10</bpmn:outgoing>
       <bpmn:outgoing>B07</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:callActivity id="Task_Personas" name="Personas and scenarios&#10;[l2-dak-authoring]" calledElement="Process_L2ComponentEditReview">
+    <bpmn:callActivity id="Task_Personas" name="Personas and scenarios" calledElement="Process_L2ComponentEditReview">
       <bpmn:documentation>Author the DAK's personas and the user journeys (scenarios) they appear in, then have them reviewed: calls Process_L2ComponentEditReview with the personas-and-scenarios inputs of the skill l2-component-edit-review (checker: dak-swimlanes.ts and traceability to L1 recommendations; renderer: the persona card and a prose diff; reviewer: clinical SME). These are the DAK's own actors, not this harness's scenarios/roles.json — the two vocabularies must not be conflated.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
@@ -137,7 +137,7 @@
       <bpmn:incoming>B05</bpmn:incoming>
       <bpmn:outgoing>B11</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:callActivity id="Task_Bpmn" name="Business processes · BPMN 2.0&#10;[bpmn-authoring]" calledElement="Process_L2ComponentEditReview">
+    <bpmn:callActivity id="Task_Bpmn" name="Business processes · BPMN 2.0" calledElement="Process_L2ComponentEditReview">
       <bpmn:documentation>Author the DAK's L2 business processes as BPMN 2.0, with Diagram Interchange: a .bpmn with no x/y on its shapes parses and renders blank. Stay at L2 — reviewable by a clinician, not FHIR. Calls Process_L2ComponentEditReview with the BPMN inputs of the skill l2-component-edit-review (checker: bpmn-js import with no warnings, dak-swimlanes.ts, artefact-reachability; renderer: render:bpmn with a visual-diff before/after; reviewer: clinical SME).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="bpmn-authoring" />
@@ -146,7 +146,7 @@
       <bpmn:incoming>B06</bpmn:incoming>
       <bpmn:outgoing>B12</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:callActivity id="Task_Dmn" name="Decision logic · DMN tables&#10;[dmn-authoring]" calledElement="Process_L2ComponentEditReview">
+    <bpmn:callActivity id="Task_Dmn" name="Decision logic · DMN tables" calledElement="Process_L2ComponentEditReview">
       <bpmn:documentation>Author the decision and scheduling logic as DMN tables, within the FEEL subset the interpreter implements (any, literals, comparisons, one-of). Ranges, not() and function calls are refused at load, so write inside the subset. Calls Process_L2ComponentEditReview with the DMN inputs of the skill l2-component-edit-review (checker: load, reachability, test cases; renderer: dmn2html table before/after, each rule beside its L1 citation; reviewer: clinical SME).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="dmn-authoring" />
@@ -155,7 +155,7 @@
       <bpmn:incoming>B07</bpmn:incoming>
       <bpmn:outgoing>B13</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:callActivity id="Task_DataDict" name="Data dictionary and core data elements&#10;[l2-dak-authoring]" calledElement="Process_L2ComponentEditReview">
+    <bpmn:callActivity id="Task_DataDict" name="Data dictionary and core data elements" calledElement="Process_L2ComponentEditReview">
       <bpmn:documentation>Author the data dictionary and core data elements for this component. Stay structured but not FHIR: a data element a clinician can review, from which L3 can later be derived rather than written twice. Calls Process_L2ComponentEditReview with the glossary inputs of the skill l2-component-edit-review (checker: check-web-annexes.ts, on the data dictionary web annex; renderer: the term diff from dak-data-dictionary-diff.ts and each form's chosen wireframe; reviewer: clinical SME, terminologist for codes).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
@@ -164,7 +164,7 @@
       <bpmn:incoming>B08</bpmn:incoming>
       <bpmn:outgoing>B14</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:callActivity id="Task_Indicators" name="Indicators and requirements&#10;[l2-dak-authoring]" calledElement="Process_L2ComponentEditReview">
+    <bpmn:callActivity id="Task_Indicators" name="Indicators and requirements" calledElement="Process_L2ComponentEditReview">
       <bpmn:documentation>Author the component's indicators and its functional and non-functional requirements. These are the DAK's requirements, distinct from skills/requirements/*.json, which are this harness's own conformance obligations. Calls Process_L2ComponentEditReview with the indicators-and-requirements inputs of the skill l2-component-edit-review (checker: each names the persona and process it serves and traces to L1; renderer: prose diff; reviewer: business analyst with the programme manager).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
@@ -173,7 +173,7 @@
       <bpmn:incoming>B09</bpmn:incoming>
       <bpmn:outgoing>B15</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:callActivity id="Task_Terminology" name="Terminology bindings&#10;[terminology-management]" calledElement="Process_L2ComponentEditReview">
+    <bpmn:callActivity id="Task_Terminology" name="Terminology bindings" calledElement="Process_L2ComponentEditReview">
       <bpmn:documentation>ICD-11, SNOMED CT, LOINC bindings — governed separately from the artifacts that cite them. Calls Process_L2ComponentEditReview with the terminology inputs of the skill l2-component-edit-review (checker: bindings resolve and unmappedConcepts is reported; renderer: the term diff on the code columns; reviewer: a terminologist other than the one who bound it).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="terminology-management" />
@@ -197,7 +197,7 @@
       <bpmn:outgoing>B23</bpmn:outgoing>
       <bpmn:outgoing>B24</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:userTask id="Task_SmeValidate" name="Clinical validation&#10;[content-review]">
+    <bpmn:userTask id="Task_SmeValidate" name="Clinical validation">
       <bpmn:documentation>Ground truth: does the DAK say what the guideline says? This is the whole-DAK reading, across components: whether the personas, processes, decisions, data elements and indicators tell one consistent story. Each component has already had its own review, forking off inside its track (Process_L2ComponentEditReview, skill l2-component-edit-review), so this step does not repeat those per-component reviews.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-review" />
@@ -211,7 +211,7 @@
       <bpmn:outgoing>B19</bpmn:outgoing>
       <bpmn:outgoing>B20</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:userTask id="Task_AssembleDak" name="Assemble and validate the DAK&#10;[content-validate]">
+    <bpmn:userTask id="Task_AssembleDak" name="Assemble and validate the DAK">
       <bpmn:documentation>Assemble the validated components and run content validation: schemas, cross-component consistency and terminology bindings. The smart-base extractors read the authored artefacts; with SMART_BASE_HOME unset they report skip, never a clean run.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-validate" />
@@ -226,7 +226,7 @@
     <bpmn:endEvent id="EndEvent_L2Ready" name="L2 DAK ready for L3">
       <bpmn:incoming>SF_Bean_4</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:callActivity id="Call_BeanOpen" name="Open the bean&#10;[bean-open]" calledElement="Process_BeanOpen">
+    <bpmn:callActivity id="Call_BeanOpen" name="Open the bean" calledElement="Process_BeanOpen">
       <bpmn:documentation>Process_BeanOpen: check before you create, find out whose the bean is, and claim it — or leave it alone when it is someone else's. The one place a claim is drawn (bean m8gz, owner 2026-10-24); the gateway after this reads which end it reached.</bpmn:documentation>
       <bpmn:extensionElements><bootstrap.processes:skill ref="bean-coordination"/></bpmn:extensionElements>
       <bpmn:incoming>B22</bpmn:incoming>
@@ -242,13 +242,13 @@
       <bpmn:documentation>Someone else holds the bean; this run stops without touching it.</bpmn:documentation>
       <bpmn:incoming>SF_Bean_3</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:callActivity id="Call_BeanClose" name="Close the bean&#10;[bean-close]" calledElement="Process_BeanClose">
+    <bpmn:callActivity id="Call_BeanClose" name="Close the bean" calledElement="Process_BeanClose">
       <bpmn:documentation>Process_BeanClose: end the bean in a state that says why — complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back. The one place resolve and archive are drawn (bean m8gz, owner 2026-10-24); placed straight before the end so the engine's resolve sees nothing left but the archive step.</bpmn:documentation>
       <bpmn:extensionElements><bootstrap.processes:skill ref="todo-manager"/></bpmn:extensionElements>
       <bpmn:incoming>B21</bpmn:incoming>
       <bpmn:outgoing>SF_Bean_4</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:callActivity id="Call_BeanClose_2" name="Close the bean&#10;[bean-close]" calledElement="Process_BeanClose">
+    <bpmn:callActivity id="Call_BeanClose_2" name="Close the bean" calledElement="Process_BeanClose">
       <bpmn:documentation>Process_BeanClose: end the bean in a state that says why — complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back. The one place resolve and archive are drawn (bean m8gz, owner 2026-10-24); placed straight before the end so the engine's resolve sees nothing left but the archive step.</bpmn:documentation>
       <bpmn:extensionElements><bootstrap.processes:skill ref="todo-manager"/></bpmn:extensionElements>
       <bpmn:incoming>B20</bpmn:incoming>

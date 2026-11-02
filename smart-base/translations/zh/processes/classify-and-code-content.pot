@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: classify-and-code-content\n"
-"POT-Creation-Date: 2026-10-24T07:25:39.404Z\n"
+"POT-Creation-Date: 2026-11-02T07:09:05.270Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:132
 #. Diagram label
-msgid "Adjudicate slot codings and glossary candidates [classify-and-code-content · ontologist · glossary-terms · terminology-management · content-review]"
+msgid "Adjudicate slot codings and glossary candidates"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:157
@@ -42,6 +42,11 @@ msgstr ""
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:35
 #. Diagram label
 msgid "Authoring agent"
+msgstr ""
+
+#: ../smart-base/processes/content/classify-and-code-content.bpmn:111
+#. Diagram label
+msgid "Check exclusions against page and sign"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:28
@@ -86,7 +91,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:70
 #. Diagram label
-msgid "Identify slots and proposed exclusions [classify-and-code-content · recommendation-extraction]"
+msgid "Identify slots and proposed exclusions"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:123
@@ -124,11 +129,6 @@ msgstr ""
 msgid "Proposed exclusions?"
 msgstr ""
 
-#: ../smart-base/processes/content/classify-and-code-content.bpmn:111
-#. Diagram label
-msgid "Read proposed exclusions against page and sign [classify-and-code-content · recommendation-extraction · content-review]"
-msgstr ""
-
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:169
 #. Diagram label
 msgid "reject-exclusion"
@@ -146,7 +146,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:80
 #. Diagram label
-msgid "Run reuse-first lookup and record candidates [classify-and-code-content · recommendation-scenarios · glossary-terms]"
+msgid "Run reuse-first lookup and record candidates"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:81
@@ -161,7 +161,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:91
 #. Diagram label
-msgid "Stage codings, warnings and exclusions for review [staging-review · interaction-modality]"
+msgid "Stage codings, warnings and exclusions for review"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:49

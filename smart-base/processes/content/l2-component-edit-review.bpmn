@@ -70,7 +70,7 @@ One process rather than one per component because nothing but those inputs diffe
       <bpmn:incoming>R11</bpmn:incoming>
       <bpmn:outgoing>R02</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_Edit" name="Edit the component&#10;[l2-component-edit-review]">
+    <bpmn:task id="Task_Edit" name="Edit the component">
       <bpmn:documentation>Create or change the component with the authoring skill the call names (l2-dak-authoring, bpmn-authoring, dmn-authoring or terminology-management), one component per pass. On rework, apply the review's findings; a fix the reviewer wrote in an AuditNote is applied as given. An adapted component is edited against its pinned upstream, so the before side of the diff is that upstream, not an empty file.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-component-edit-review" />
@@ -78,7 +78,7 @@ One process rather than one per component because nothing but those inputs diffe
       <bpmn:incoming>R02</bpmn:incoming>
       <bpmn:outgoing>R03</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="Task_Check" name="Run the component's checker&#10;[content-validate · content-test]">
+    <bpmn:task id="Task_Check" name="Run the component's checker">
       <bpmn:documentation>The mechanical checks for this component, before anyone is asked (skill l2-component-edit-review, column "checker"): BPMN imports in bpmn-js with no warnings and its lanes map to personas (dak-swimlanes.ts); DMN loads, its decisions are reachable (artefact-reachability, audit:reachability) and its test cases run (content-test); the data dictionary web annex's ids are unique and its references and terminology bindings resolve (check-web-annexes.ts); personas, scenarios and requirements each trace to an L1 recommendation (recommendation-extraction's implementedBy edges). Findings travel with the review request; a failing check does not stop the hand-on, it is a finding the reviewer sees.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-validate" />
@@ -88,7 +88,7 @@ One process rather than one per component because nothing but those inputs diffe
       <bpmn:incoming>R03</bpmn:incoming>
       <bpmn:outgoing>R04</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="Task_RenderStage" name="Render, stage, before/after&#10;[before-after-preview · feature-staging]">
+    <bpmn:task id="Task_RenderStage" name="Render, stage, before/after">
       <bpmn:documentation>Render the component the way its reviewer reads it (column "renderer and diff"): the BPMN diagram (render:bpmn) with a visual-diff picture; the DMN decision table (smart-base-transform.py dmn2html) with each rule's L1 citation; the data dictionary's term diff (dak-data-dictionary-diff.ts) and the chosen wireframe of each form; personas, scenarios and requirements as a prose diff. Commit to the feature branch so it is staged as STAGING/&lt;slug&gt;/ on the platform's just-the-docs site (for smart-base, a folio-assistant staging re-pin, never the IG's /deploy), and make the before/after preview here, in the producing lane, so it exists when review starts.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="before-after-preview" />
@@ -107,7 +107,7 @@ One process rather than one per component because nothing but those inputs diffe
       <bpmn:documentation>The calling track continues with this component. Anything derived from it carries adjudication: pending on its wasDerivedFrom edge until the verdict is recorded (smart-guideline-end-to-end, rule 2).</bpmn:documentation>
       <bpmn:incoming>R06</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:task id="Task_RequestReview" name="Ask for review with staging deep links&#10;[staging-review]">
+    <bpmn:task id="Task_RequestReview" name="Ask for review with staging deep links">
       <bpmn:documentation>Ask the person in the reviewing role, following staging-review's deep-link rule: one deep link per changed page and anchor on STAGING/&lt;slug&gt;/, each beside the same page on main as before (or "new page"), the pages taken from the change (rendered-impact) rather than chosen; no preview yet is said, not hidden. The request leads with what changed in prose, then the links, the before/after and the checker's findings, and puts its question in interaction-modality's form. Where it goes is a judgement, and more than one place may be right: this conversation, the GitHub issue the work came from, the pull request; each place carries the same links. A comment tagged on the PR becomes a review-comment todo (review-comments).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="staging-review" />
@@ -116,7 +116,7 @@ One process rather than one per component because nothing but those inputs diffe
       <bpmn:incoming>R07</bpmn:incoming>
       <bpmn:outgoing>R08</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:callActivity id="Call_Review" name="Review the staged component&#10;[content-review]" calledElement="Process_Review">
+    <bpmn:callActivity id="Call_Review" name="Review the staged component" calledElement="Process_Review">
       <bpmn:documentation>cat-harness's generic review, not a copy of it: classify what changed, review it, and record the decision as a qa-review/v1 QaReview whose subject is the component and whose Decision carries the reviewing role. The reviewer reads the staged page and the before/after; for a figure or table, the visual-diff picture and its changed-pixel count; for a form, the wireframe (wireframe-design-review; at L3 its Questionnaire follows fhir-questionnaire-wireframe). What to judge per component is the skill l2-component-edit-review's column "the reviewer judges".</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-review" />
@@ -140,7 +140,7 @@ One process rather than one per component because nothing but those inputs diffe
       <bpmn:documentation>adjudication: pending on derived edges becomes the recorded outcome.</bpmn:documentation>
       <bpmn:incoming>R10</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:task id="Task_ReopenUpstream" name="Reopen upstream, flag derived assets&#10;[todo-manager]">
+    <bpmn:task id="Task_ReopenUpstream" name="Reopen upstream, flag derived assets">
       <bpmn:documentation>File a bean against the stage that chose the rejected source or dependency (check for an existing bean first), and mark every asset derived from this component adjudication: rejected-upstream on its wasDerivedFrom edge. Nothing is deleted ahead of time: the re-derivation may come out the same.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />

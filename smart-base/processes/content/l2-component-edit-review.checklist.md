@@ -23,17 +23,17 @@ One pass over one L2 DAK component: the agent edits it, runs its checker, render
 - Skill: `l2-component-edit-review`.
 - What: Create or change the component with the authoring skill the call names (l2-dak-authoring, bpmn-authoring, dmn-authoring or terminology-management), one component per pass.
 - Record it: `workflow_complete` with `node: "Task_Edit"`.
-- next: → `Task_Check` (Run the component's checker [content-validate · content-test])
+- next: → `Task_Check` (Run the component's checker)
 
-### 2. Run the component's checker [content-validate · content-test] (`Task_Check`)
+### 2. Run the component's checker (`Task_Check`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `content-validate`, `content-test`, `artefact-reachability`.
 - What: The mechanical checks for this component, before anyone is asked (skill l2-component-edit-review, column "checker"): BPMN imports in bpmn-js with no warnings and its lanes map to personas (dak-swimlanes.ts); DMN loads, its decisions are reachable (artefact-reachability, audit:reachability) and its t
 - Record it: `workflow_complete` with `node: "Task_Check"`.
-- next: → `Task_RenderStage` (Render, stage, before/after [before-after-preview · feature-staging])
+- next: → `Task_RenderStage` (Render, stage, before/after)
 
-### 3. Render, stage, before/after [before-after-preview · feature-staging] (`Task_RenderStage`)
+### 3. Render, stage, before/after (`Task_RenderStage`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `before-after-preview`, `feature-staging`.
