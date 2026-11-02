@@ -67,7 +67,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
       <bpmn:outgoing>C02</bpmn:outgoing>
     </bpmn:exclusiveGateway>
 
-    <bpmn:task id="Task_IdentifySlots" name="Identify slots and proposed exclusions&#10;[classify-and-code-content · recommendation-extraction]">
+    <bpmn:task id="Task_IdentifySlots" name="Identify slots and proposed exclusions">
       <bpmn:documentation>Enumerate the classifiable slots in the L1 statements or L2 component (condition, intervention, persona, medicine, domain, business-process, recommendation-strength, recommendation-direction, evidence-certainty) and any proposed L1 coverage exclusions in exclusions.proposed.json naming l1-extraction-reviewer as signerRole.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="classify-and-code-content" />
@@ -77,7 +77,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
       <bpmn:outgoing>C03</bpmn:outgoing>
     </bpmn:task>
 
-    <bpmn:task id="Task_LookupAndCode" name="Run reuse-first lookup and record candidates&#10;[classify-and-code-content · recommendation-scenarios · glossary-terms]">
+    <bpmn:task id="Task_LookupAndCode" name="Run reuse-first lookup and record candidates">
       <bpmn:documentation>Run the terminology-lookup Tool across the four reuse-first rungs of the terminology-coding methodology: (1) target guide vocabulary, (2) smart-base generic personas, GRADE code lists and guideline-domain glossary, (3) external WHO-FIC/ILO standards (ICD-11, ICHI/CDHIv2, ISCO-08, ATC), and (4) local glossary candidate (status: candidate, source: extracted) or could-not-determine for business-process with its WARNING line.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="classify-and-code-content" />
@@ -88,7 +88,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
       <bpmn:outgoing>C04</bpmn:outgoing>
     </bpmn:task>
 
-    <bpmn:task id="Task_StageForReview" name="Stage codings, warnings and exclusions for review&#10;[staging-review · interaction-modality]">
+    <bpmn:task id="Task_StageForReview" name="Stage codings, warnings and exclusions for review">
       <bpmn:documentation>Write the candidate codings, provenance bases, warnings report, and any unsigned exclusions.proposed.json entries, and request human review with deep links to the staged extraction or component pages and the printed page sections.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="staging-review" />
@@ -108,7 +108,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
       <bpmn:outgoing>C07</bpmn:outgoing>
     </bpmn:exclusiveGateway>
 
-    <bpmn:userTask id="Task_ReviewExclusions" name="Read proposed exclusions against page and sign&#10;[classify-and-code-content · recommendation-extraction · content-review]">
+    <bpmn:userTask id="Task_ReviewExclusions" name="Check exclusions against page and sign">
       <bpmn:documentation>Open library/&lt;doc_id&gt;/sections/page-NNN.md beside exclusions.proposed.json. Read each candidate sentence in place on the printed page, check whether the proposed exclusion reason (background-fact, manufacturer-statement, editorial, research-question, duplicate-of) holds without dropping normative guidance, and either sign the exclusion (signedOffBy) or reject it with a reason.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="classify-and-code-content" />
@@ -129,7 +129,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
       <bpmn:outgoing>C10</bpmn:outgoing>
     </bpmn:exclusiveGateway>
 
-    <bpmn:userTask id="Task_ReviewCodings" name="Adjudicate slot codings and glossary candidates&#10;[classify-and-code-content · ontologist · glossary-terms · terminology-management · content-review]">
+    <bpmn:userTask id="Task_ReviewCodings" name="Adjudicate slot codings and glossary candidates">
       <bpmn:documentation>Review each slot's classification and code against the terminology-coding methodology: verify that the authoritative scheme for the slot was used, confirm reuse-first rung selection, check skos:exactMatch vs skos:closeMatch precision (ontologist), and adjudicate any Rung 4 glossary candidates (promoting valid entries from candidate to authored per glossary-terms, or replacing them with an existing code).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="classify-and-code-content" />

@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:110
 #. Diagram label
-msgid "Ask for review with staging deep links [staging-review]"
+msgid "Ask for review with staging deep links"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:111
@@ -76,7 +76,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:73
 #. Diagram label
-msgid "Edit the component [l2-component-edit-review]"
+msgid "Edit the component"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:144
@@ -126,12 +126,12 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:91
 #. Diagram label
-msgid "Render, stage, before/after [before-after-preview · feature-staging]"
+msgid "Render, stage, before/after"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:143
 #. Diagram label
-msgid "Reopen upstream, flag derived assets [todo-manager]"
+msgid "Reopen upstream, flag derived assets"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:165
@@ -146,12 +146,12 @@ msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:119
 #. Diagram label
-msgid "Review the staged component [content-review]"
+msgid "Review the staged component"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:81
 #. Diagram label
-msgid "Run the component's checker [content-validate · content-test]"
+msgid "Run the component's checker"
 msgstr ""
 
 #: ../smart-base/processes/content/l2-component-edit-review.bpmn:107
