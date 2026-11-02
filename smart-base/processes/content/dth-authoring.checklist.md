@@ -177,7 +177,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 ### 20. Data elements, indicators, requirements (`Call_Data`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
-- Skill: `l2-dak-authoring`, `l2-component-edit-review`.
+- Skill: `l2-dak-authoring`, `indicator-extraction`, `l2-component-edit-review`.
 - What: data-element, indicator, functional and non-functional requirement blocks, with their fields as data rather than Markdown tables.
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `GW_DraftJoin`

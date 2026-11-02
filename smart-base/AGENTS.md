@@ -90,9 +90,9 @@ misrepresents the standard.
 
 <!-- skills:index:begin -->
 
-_23 skills in 1 directory, generated from each skill's front matter. `bun run cat readme:sync` rewrites this list and `readme:sync:check` fails when it is stale. Skills this repository inherits are listed by the repositories that publish them._
+_24 skills in 1 directory, generated from each skill's front matter. `bun run cat readme:sync` rewrites this list and `readme:sync:check` fails when it is stale. Skills this repository inherits are listed by the repositories that publish them._
 
-**`skills/content/authoring-who-smart-guidelines/`** (23)
+**`skills/content/authoring-who-smart-guidelines/`** (24)
 
 | Skill | What it is for |
 |---|---|
@@ -103,6 +103,7 @@ _23 skills in 1 directory, generated from each skill's front matter. `bun run ca
 | [`grade`](skills/content/authoring-who-smart-guidelines/grade.md) | GRADE — the grading system a WHO guideline folio declares for certainty of evidence, and the Evidence-to-Decision judgement a recommendation rests on. |
 | [`guideline-use-case`](skills/content/authoring-who-smart-guidelines/guideline-use-case.md) | Stage 0 of smart-guideline-end-to-end: turn a request for a SMART Guideline into a use case — population, setting, jurisdiction and interventions in scope, new or an adaptation — in the requester's… |
 | [`ig-artifact-ingestion`](skills/content/authoring-who-smart-guidelines/ig-artifact-ingestion.md) | Point at a published FHIR Implementation Guide, read what it actually published, and reconstruct its artefact index as a knowledge graph keyed by the IG's own canonical URLs — linking each artefact… |
+| [`indicator-extraction`](skills/content/authoring-who-smart-guidelines/indicator-extraction.md) | Extract the indicators an L1 source prints (indicator reference or metadata sheets: name, numerator, denominator, disaggregation, definition, data sources) as L1 `indicator` nodes with every printed… |
 | [`l2-component-edit-review`](skills/content/authoring-who-smart-guidelines/l2-component-edit-review.md) | How one L2 DAK component is edited by the agent and reviewed by a person: personas and user scenarios, BPMN business processes, DMN decision and scheduling logic, core data elements and glossary… |
 | [`l2-dak-authoring`](skills/content/authoring-who-smart-guidelines/l2-dak-authoring.md) | Author the L2 layer of a WHO SMART Guideline — the Digital Adaptation Kit between the narrative L1 guideline and the L3 FHIR artefacts — one DAK component per pass (personas, user scenarios,… |
 | [`l2-dependency-choice`](skills/content/authoring-who-smart-guidelines/l2-dependency-choice.md) | Stage 3 of smart-guideline-end-to-end: choose which existing DAKs (WHO's, or a jurisdiction's adaptation) the guideline builds on. |

@@ -168,6 +168,7 @@
       <bpmn:documentation>Author the component's indicators and its functional and non-functional requirements. These are the DAK's requirements, distinct from skills/requirements/*.json, which are this harness's own conformance obligations. Calls Process_L2ComponentEditReview with the indicators-and-requirements inputs of the skill l2-component-edit-review (checker: each names the persona and process it serves and traces to L1; renderer: prose diff; reviewer: business analyst with the programme manager).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
+        <bootstrap.processes:skill ref="indicator-extraction" />
         <bootstrap.processes:skill ref="l2-component-edit-review" />
       </bpmn:extensionElements>
       <bpmn:incoming>B09</bpmn:incoming>

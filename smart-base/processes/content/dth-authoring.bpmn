@@ -296,6 +296,7 @@
       <bpmn:documentation>data-element, indicator, functional and non-functional requirement blocks, with their fields as data rather than Markdown tables. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
+        <bootstrap.processes:skill ref="indicator-extraction" />
         <bootstrap.processes:skill ref="l2-component-edit-review" />
       </bpmn:extensionElements>
       <bpmn:incoming>F22</bpmn:incoming>
