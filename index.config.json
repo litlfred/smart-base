@@ -49,7 +49,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "04472dc8c3a66dfef6377c45a8b24a23acf88350",
+          "ref": "234f2ff91b6b19d7875df0d219e3d0acc7d79b07",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -73,9 +73,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-10-30",
-              "ref": "04472dc8c3a66dfef6377c45a8b24a23acf88350",
-              "evidence": "litlfred 2026-10-30 chose option B on who-iris#107 (full move: IRIS items smart-base had ingested now live, materialized, in who-iris as the 'pre-CDN preview'); smart-base mounts who-iris to read them. Merge and repin window litlfred 2026-10-30 11:13Z, extended 16:38Z to ~19:38Z. Pinned to who-iris main a73e75a (who-iris#108 merged); main tip 04472dc (IRIS assets #108, dark replica #110, navbar #112, direction #114 #118, CI #116). Window: litlfred 2026-10-30 11:13Z 'merge and repin window open for 4 horus', extended 16:37Z 'merge window +3 hrs' (to ~19:38Z)."
+              "on": "2026-11-02",
+              "ref": "234f2ff91b6b19d7875df0d219e3d0acc7d79b07",
+              "evidence": "litlfred, 2026-11-02 06:23:37Z, thread 'Finish the dth-sfp workplan', card Q-DTH3-3 'A. One PR, merge on green': move smart-base to who-iris b727f82 or later and re-point its 43 SFP quotes (who-iris#154 replaced 9789240120747-eng page-NNN with outline sections). Pinned to who-iris main 234f2ff."
             }
           }
         }
