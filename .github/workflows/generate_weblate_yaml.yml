@@ -36,7 +36,7 @@ jobs:
           cache-dependency-path: input/scripts/requirements.txt
 
       - name: Install Python dependencies
-        run: pip install -r input/scripts/requirements.txt
+        run: pip install --require-hashes -r input/scripts/requirements.lock
 
       - name: Generate weblate.yaml
         run: python input/scripts/generate_weblate_yaml.py --repo-root "."
