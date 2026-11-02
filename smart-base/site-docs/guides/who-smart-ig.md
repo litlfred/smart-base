@@ -101,10 +101,10 @@ Run `bun run cat check-deps` and the agent's `check_dependencies` tool to confir
 
 Every trigger in a DAK repository — a push to a PR branch, `/validate`, `/deploy`, a
 push to `main`, a release — runs the same full IG Publisher build, and a one-line edit to
-one profile costs all of it. [Proposal: incremental IG build]({{ '/proposals/ig-incremental-build.html' | relative_url }})
+one profile costs all of it. [Proposal: incremental IG build](https://github.com/litlfred/folio-assistant/issues/204)
 measures why that is avoidable: on the immunizations IG the median artefact has no
 dependents and the 90th percentile has six, so almost every edit invalidates a handful
-of resources and the index. [Its overview]({{ '/proposals/ig-incremental-build-overview.html' | relative_url }})
+of resources and the index. [Its overview](https://github.com/litlfred/folio-assistant/issues/199)
 lists the eleven changes and pins each to the stage of the review and publish pipeline
 where it runs.
 

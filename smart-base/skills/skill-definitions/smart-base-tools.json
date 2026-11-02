@@ -2,7 +2,6 @@
   "id": "smart-base-tools",
   "name": "smart-base Toolchain",
   "description": "Invoke WHO's smart-base DAK scripts — extractors (data dictionary, decision tables, requirements, BPMN, personas), generators (JSON-LD vocabularies, JSON Schemas, questionnaires) and the BPMN-to-FSH / DMN-to-HTML transforms — from a checkout, without vendoring them.",
-  "roles": ["business-analyst", "author", "admin"],
   "requiredCapabilities": [
     { "capabilityId": "smart-base", "degradation": "skip" },
     { "capabilityId": "python3", "degradation": "skip" }

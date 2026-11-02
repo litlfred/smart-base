@@ -83,7 +83,7 @@
       <bpmn:documentation>Someone needs a SMART Guideline, new or adapted, for a use case.</bpmn:documentation>
       <bpmn:outgoing>E01</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:userTask id="Task_DescribeUseCase" name="0 · Describe the use case&#10;[guideline-use-case]">
+    <bpmn:userTask id="Task_DescribeUseCase" name="0 · Describe the use case">
       <bpmn:documentation>Population, setting, jurisdiction, interventions in scope. The user's own words; the agent asks a numbered question if the request did not say.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="guideline-use-case" />
@@ -91,7 +91,7 @@
       <bpmn:incoming>E01</bpmn:incoming>
       <bpmn:outgoing>E02</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:task id="Task_IdentifyL1" name="1 · Identify L1 guidelines and recommendations&#10;[dak-l1-library]">
+    <bpmn:task id="Task_IdentifyL1" name="1 · Identify L1 guidelines and recommendations">
       <bpmn:documentation>Component 1 sources of any DAK already in scope first, then WHO IRIS and the jurisdiction's own guidelines. Each candidate marked in-library / in-KG / not yet.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="dak-l1-library" />
@@ -117,7 +117,7 @@
       <bpmn:outgoing>E06</bpmn:outgoing>
       <bpmn:outgoing>E07</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_IngestKg" name="2 · Ingest into the L1 KG&#10;[recommendation-extraction]">
+    <bpmn:task id="Task_IngestKg" name="2 · Ingest into the L1 KG">
       <bpmn:documentation>Per source not yet extracted: cat ingest into library/, the generic-document layer (l1-library), then the L1 layer (recommendations, remarks, practices, scenario candidates) into library/&lt;bib&gt;/l1-extraction/.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="recommendation-extraction" />
@@ -145,7 +145,7 @@
       <bpmn:incoming>E10</bpmn:incoming>
       <bpmn:outgoing>E11</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_DepsL2" name="3 · Choose L2 dependencies&#10;(WHO / jurisdiction DAKs)&#10;[l2-dependency-choice]">
+    <bpmn:task id="Task_DepsL2" name="3 · Choose L2 dependencies&#10;(WHO / jurisdiction DAKs)">
       <bpmn:documentation>From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason. Reuse first; prefer the jurisdiction's adaptation, recording the WHO original as its upstream. For each component kept, record its toolchain: how the candidate produces it (the tools graph, the candidate repository's own source spreadsheets and converters, WHO's DAK toolchain), which stage 4 then uses.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dependency-choice" />
@@ -169,7 +169,7 @@
       <bpmn:incoming>E13</bpmn:incoming>
       <bpmn:outgoing>E31</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:task id="Task_L2" name="4 · Create / adapt L2 DAK assets&#10;[l2-dak-authoring]">
+    <bpmn:task id="Task_L2" name="4 · Create / adapt L2 DAK assets">
       <bpmn:documentation>The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data elements. Its clinical validation is this stage's adjudication and does not hold up stage 5. The IG is built through fhir-harness's AST cache lifecycle (ig-ast-refresh.yml), with the DAK pre-processing as smart-base's pre-export overlay (dak-preprocessing, dak-pre-export.sh) and the DAK sidecars made from the AST (dak-postprocessing).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
@@ -199,7 +199,7 @@
       <bpmn:incoming>E16</bpmn:incoming>
       <bpmn:outgoing>E32</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:task id="Task_DepsL3" name="5 · Choose L3 dependencies&#10;(WHO / jurisdiction IGs)&#10;[l3-dependency-choice]">
+    <bpmn:task id="Task_DepsL3" name="5 · Choose L3 dependencies&#10;(WHO / jurisdiction IGs)">
       <bpmn:documentation>Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG, and record per artefact type the candidate's toolchain (CQL refresh, test-case format, example generator), which stage 6 then uses.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l3-dependency-choice" />
@@ -224,7 +224,7 @@
       <bpmn:incoming>E19</bpmn:incoming>
       <bpmn:outgoing>E33</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:task id="Task_L3Ready" name="Check L3 readiness&#10;[l3-readiness]">
+    <bpmn:task id="Task_L3Ready" name="Check L3 readiness">
       <bpmn:documentation>The order rule as a check with its own contract (owner, 2026-10-16: its own skill). Every source has its L1 extraction, every L2 asset names an L1 node, every L3 artefact about to be written names its L2 asset, and the review of each extraction and L2 asset has been requested. Returns ready and the findings, each with the stage that fixes it; Gateway_L3Ready decides on ready.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l3-readiness" />
@@ -238,7 +238,7 @@
       <bpmn:outgoing>E36</bpmn:outgoing>
       <bpmn:outgoing>E37</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_L3" name="6 · Produce L3 assets&#10;[l3-fhir-authoring]">
+    <bpmn:task id="Task_L3" name="6 · Produce L3 assets">
       <bpmn:documentation>The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build. Every L3 asset names the L2 asset it implements in wasDerivedFrom, with that edge's adjudication state. Each Questionnaire is derived from the chosen L2 wireframe of its form. Publication continues in that process and is not on the path to stage 8.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l3-fhir-authoring" />
@@ -266,7 +266,7 @@
       <bpmn:incoming>E22</bpmn:incoming>
       <bpmn:outgoing>E34</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:userTask id="Task_DescribeApp" name="7 · L4: describe the consuming application&#10;[l4-application-brief]">
+    <bpmn:userTask id="Task_DescribeApp" name="7 · L4: describe the consuming application">
       <bpmn:documentation>Who uses it, on what device, which L2 processes and L3 resources it covers, connectivity, the systems it talks to. The agent offers options drawn from the L2 personas and processes. This is the written intent wireframe-design-review starts from.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l4-application-brief" />
@@ -274,7 +274,7 @@
       <bpmn:incoming>E23</bpmn:incoming>
       <bpmn:outgoing>E24</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:task id="Task_WireframeApp" name="8a · L4: wireframe the application&#10;[wireframe-design-review]">
+    <bpmn:task id="Task_WireframeApp" name="8a · L4: wireframe the application">
       <bpmn:documentation>To-be mode, from the stage-7 intent: two or more candidates, web and mobile, with real content from the L2 personas and scenarios. The agent goes on with its recommended candidate; the requester may choose another during adjudication.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="wireframe-design-review" />
@@ -282,7 +282,7 @@
       <bpmn:incoming>E24</bpmn:incoming>
       <bpmn:outgoing>E25</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="Task_BuildApp" name="8b · L4: build the consuming application&#10;[l4-application-build]">
+    <bpmn:task id="Task_BuildApp" name="8b · L4: build the consuming application">
       <bpmn:documentation>Against the stage-6 IG build, with conformance tests from the IG's examples and test cases.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l4-application-build" />

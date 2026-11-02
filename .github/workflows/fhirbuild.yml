@@ -8,12 +8,15 @@ on:
   workflow_call: # Reusable by other workflows
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
       - name: Output repository information
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
           script: |
             console.log(context.ref + ' - ' + context.repo.owner + '/' + context.repo.repo);

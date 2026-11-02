@@ -47,7 +47,11 @@ mount it at a pinned commit.
    cache from npm and fhir-package-mirror at exact versions only. Never report
    "SUSHI cannot run here" before running the seeder, and never stand in
    another version for a pin; its `--missing-out` list is what the mirror
-   still needs.
+   still needs. WHO's own packages (`smart.who.int.*`, such as
+   `smart.who.int.base#1.0.0`) are on neither npm nor the mirror: WHO
+   publishes them in its site repository, so pass
+   `--site-repo smart.who.int.=WorldHealthOrganization/smart-html`, which
+   reads `<name>/<version>/package.tgz` there (for example `base/1.0.0/`).
 5. **This IG does not commit its artefact index.** `smart-base/fhir-artifact-index/`
    (`index.json`, `menu.json`, `releases.json`, `package.tgz`, `sidecars/`) is written at
    publish by fhir-harness's `ig-index:build` from the IG's AST and its

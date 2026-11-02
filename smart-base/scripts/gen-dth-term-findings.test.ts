@@ -29,7 +29,11 @@ describe("DTH term findings", () => {
     expect(quoteProblem(q, "/nonexistent-root")).toContain("no such file");
   });
   it("a quote that is not in its source is reported", () => {
-    const q = { ...findings.actor.meanings[0].sources[0], quote: "An actor is a concrete participant" };
+    // A source this checkout holds: the first one may be an example held by
+    // another repository (EXAMPLE_POINTERS), which is not checked here.
+    const held = allQuotes(findings).find((s) => quoteUnverifiable(s) === null && quoteProblem(s) === null)!;
+    expect(held).toBeDefined();
+    const q = { ...held, quote: "An actor is a concrete participant" };
     expect(quoteProblem(q)).toContain("quote not found");
   });
   it("matches across the RA draft's number-only line markers", () => {
@@ -44,6 +48,17 @@ describe("DTH term findings", () => {
   });
   it("records every approach with at least two alternatives and picks none", () => {
     for (const a of findings.approaches) expect(a.alternatives.length).toBeGreaterThanOrEqual(2);
+  });
+  it("covers the Substandard and Falsified Medical Products DTH (9789240120747-eng) 35 glossary terms, RA conflicts, and internal alternatives", () => {
+    expect(findings.sfp.libraryId).toBe("9789240120747-eng");
+    expect(findings.sfp.terms.length).toBe(35);
+    expect(findings.sfp.raConflicts.length).toBe(5);
+    expect(findings.sfp.internalConflicts.some((c) => c.id === "sfp-f1-substandard")).toBe(true);
+    expect(findings.figure.reproductions.some((r) => !("path" in r) && r.libraryId === "9789240120747-eng" && r.sectionId === "page-016")).toBe(true);
+    const page = render(findings, terms);
+    for (const t of findings.sfp.terms) {
+      expect(page).toContain(`| **${t.term}** |`);
+    }
   });
   it("one proposal per layer, each naming artefacts that exist", () => {
     expect(findings.actor.proposals.map((p) => p.layer).sort()).toEqual(["F-A", "RA", "SG"]);

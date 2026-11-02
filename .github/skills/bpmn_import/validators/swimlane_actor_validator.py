@@ -9,6 +9,7 @@ import os
 from typing import List
 from lxml import etree
 
+from common.safe_xml import safe_xml_parser
 from common.ig_errors import Issue, error, warning, info
 from common.fsh_utils import instance_exists
 
@@ -39,7 +40,7 @@ def validate_swimlane_actors(
     issues: List[Issue] = []
 
     try:
-        tree = etree.fromstring(bpmn_content.encode("utf-8"))
+        tree = etree.fromstring(bpmn_content.encode("utf-8"), parser=safe_xml_parser())
     except etree.XMLSyntaxError as exc:
         issues.append(error("ACTOR-001", f"Cannot parse BPMN XML: {exc}", file=filename))
         return issues

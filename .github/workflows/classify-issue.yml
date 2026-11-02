@@ -13,7 +13,7 @@ jobs:
       issues: write
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Check DAK enabled
         # A contentTypes.dak section in the root index.config.json signals that
@@ -27,7 +27,7 @@ jobs:
 
       - name: Install Python dependencies
         if: steps.dak.outputs.enabled == 'true'
-        run: pip install litellm requests
+        run: pip install --require-hashes --no-deps -r .github/skills/requirements.lock
 
       - name: Classify and label
         if: steps.dak.outputs.enabled == 'true'
