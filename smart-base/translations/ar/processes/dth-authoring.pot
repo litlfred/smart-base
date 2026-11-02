@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dth-authoring\n"
-"POT-Creation-Date: 2026-11-02T10:26:16.515Z\n"
+"POT-Creation-Date: 2026-11-02T13:53:48.488Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language: ar\n"
@@ -34,22 +34,22 @@ msgstr ""
 msgid "3 · Structured drafting"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:377
+#: ../smart-base/processes/content/dth-authoring.bpmn:378
 #. Diagram label
 msgid "4 · Comment via contributor log sheet or GitHub pc: [content-feedback]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:407
+#: ../smart-base/processes/content/dth-authoring.bpmn:408
 #. Diagram label
 msgid "5 · Open public comment [public-comment]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:448
+#: ../smart-base/processes/content/dth-authoring.bpmn:449
 #. Diagram label
 msgid "6 · Editorial, voice and translation QA [quality-control]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:408
+#: ../smart-base/processes/content/dth-authoring.bpmn:409
 #. Diagram element documentation
 msgid "A separate store, review/public-comment, and the public-comment review sheet."
 msgstr ""
@@ -59,7 +59,7 @@ msgstr ""
 msgid "Account for every normative sentence [l1-coverage]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:393
+#: ../smart-base/processes/content/dth-authoring.bpmn:394
 #. Diagram label
 msgid "All working-group comments dispositioned?"
 msgstr ""
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Architect group and handbook owners"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:355
+#: ../smart-base/processes/content/dth-authoring.bpmn:356
 #. Diagram label
 msgid "Architect group and handbook owners review [content-review]"
 msgstr ""
@@ -99,7 +99,7 @@ msgstr ""
 msgid "Business processes · BPMN [bpmn-authoring]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:432
+#: ../smart-base/processes/content/dth-authoring.bpmn:433
 #. Diagram element documentation
 msgid "Changes to structured content go back through its kind's edit-and-review subprocess."
 msgstr ""
@@ -134,7 +134,7 @@ msgstr ""
 msgid "Declaration, index.config.json (needs smart-ra, and any DTH it mounts), glossary, review store and hooks, copied from dth-hrh's layout. Placeholder: the platform has no subprocess for this yet (smart-base#243); until it exists the step is done by hand, as dth-hrh's was."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:431
+#: ../smart-base/processes/content/dth-authoring.bpmn:432
 #. Diagram label
 msgid "Disposition comments and apply change sets [public-comment]"
 msgstr ""
@@ -164,12 +164,12 @@ msgstr ""
 msgid "DTH requested"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:305
+#: ../smart-base/processes/content/dth-authoring.bpmn:306
 #. Diagram element documentation
 msgid "Each chapter's inputs, steps, resources, outputs, risks and mitigations as the shared step table (smart-base#242). Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:323
+#: ../smart-base/processes/content/dth-authoring.bpmn:324
 #. Diagram element documentation
 msgid "Each handbook term is exactMatch, closeMatch or narrower to a smart-ra concept; conflicts are raised as issues on smart-ra. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate."
 msgstr ""
@@ -184,7 +184,7 @@ msgstr ""
 msgid "Editor"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:314
+#: ../smart-base/processes/content/dth-authoring.bpmn:315
 #. Diagram element documentation
 msgid "Every block that names an architecture element links to its smart-ra element or view; new elements go to smart-ra, not the handbook. Placeholder: the platform has no subprocess for this yet (smart-base#243); until it exists the step is done by hand, as dth-hrh's was. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate."
 msgstr ""
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Every source as received, frozen: WHO publications through who-iris, the TWG outline and workbooks from uploads/."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:348
+#: ../smart-base/processes/content/dth-authoring.bpmn:349
 #. Diagram element documentation
 msgid "Every structured block validates against its kind; required dth sections present; no unlinked architecture names; no empirical claims in formal content."
 msgstr ""
@@ -214,7 +214,7 @@ msgstr ""
 msgid "Form the TWG; record roles and RACI [content-plan]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:385
+#: ../smart-base/processes/content/dth-authoring.bpmn:386
 #. Diagram label
 msgid "Import into review/wg-comment and form change sets [public-comment]"
 msgstr ""
@@ -229,12 +229,12 @@ msgstr ""
 msgid "Librarian"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:322
+#: ../smart-base/processes/content/dth-authoring.bpmn:323
 #. Diagram label
 msgid "Link glossary to smart-ra SKOS [terminology-management]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:313
+#: ../smart-base/processes/content/dth-authoring.bpmn:314
 #. Diagram label
 msgid "Link to smart-ra ArchiMate [archimate-models]"
 msgstr ""
@@ -244,7 +244,7 @@ msgstr ""
 msgid "List processes, roles, decisions and indicators to model [content-plan]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:463
+#: ../smart-base/processes/content/dth-authoring.bpmn:464
 #. Diagram label
 msgid "M7 · Final published"
 msgstr ""
@@ -254,17 +254,17 @@ msgstr ""
 msgid "Map the outline onto the dth document kind's sections and report every required section that is missing. dth-hrh's build_from_outline.py is the first instance; a general outline seed does not exist yet. Placeholder: the platform has no subprocess for this yet (smart-base#243); until it exists the step is done by hand, as dth-hrh's was."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:399
+#: ../smart-base/processes/content/dth-authoring.bpmn:400
 #. Diagram element documentation
 msgid "Milestone: all working-group comments dispositioned. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:440
+#: ../smart-base/processes/content/dth-authoring.bpmn:441
 #. Diagram element documentation
 msgid "Milestone: every public comment dispositioned. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:369
+#: ../smart-base/processes/content/dth-authoring.bpmn:370
 #. Diagram element documentation
 msgid "Milestone: every required section drafted and every structured block validates. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress."
 msgstr ""
@@ -284,7 +284,7 @@ msgstr ""
 msgid "Milestone: the outline's round-1 comments are dispositioned. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:416
+#: ../smart-base/processes/content/dth-authoring.bpmn:417
 #. Diagram element documentation
 msgid "Milestone: the public draft is out for comment. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress."
 msgstr ""
@@ -294,7 +294,7 @@ msgstr ""
 msgid "Name the health-system area, the audience and the DIIG phase the handbook supports, citing the one DIIG phase figure (DIIG section 1.1, Figure 1.1.1). Decide which DTHs and which smart-ra content it builds on."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:509
+#: ../smart-base/processes/content/dth-authoring.bpmn:510
 #. Diagram label
 msgid "no: revise"
 msgstr ""
@@ -334,7 +334,7 @@ msgstr ""
 msgid "Personas and roles [l2-dak-authoring]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:304
+#: ../smart-base/processes/content/dth-authoring.bpmn:305
 #. Diagram label
 msgid "Planning steps per chapter [document-authoring]"
 msgstr ""
@@ -344,12 +344,12 @@ msgstr ""
 msgid "Produces a WHO Digital Transformation Handbook (DTH) from its sources to publication, in seven stages that each end in a recorded milestone: initiate (M0 charter), ingest sources into the library (M1 library frozen), outline and scope (M2 outline agreed), structured drafting (M3 zero draft), working-group feedback (M4), public comment (M5 released, M6 dispositioned), and finalise and publish (M7). Milestones are recorded checkpoints, not gates; review runs beside drafting as QA, as in smart-guideline-end-to-end.bpmn. Structured drafting uses the smart-base DAK block kinds for personas, scenarios, processes, decisions, data elements, indicators and requirements (owner, 2026-10-31: a DTH uses the DAK kinds for its personas and similar content), and each track calls Process_L2ComponentEditReview, as l2-dak-authoring.bpmn does. Contributor feedback from the contributor log sheet and from GitHub pc: comments lands in one review store. Handbooks ingested from a published WHO PDF (PHC, SC, PC, SFP) enter at stage 1 with their library built and their outline given by the publication; dth-hrh, authored natively, is the pilot. Steps whose platform subprocess does not exist yet are marked as placeholders in their documentation. Empirical content (figures, statistics, country examples) stays as cited narrative blocks and never enters formal content."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:424
+#: ../smart-base/processes/content/dth-authoring.bpmn:425
 #. Diagram label
 msgid "Public comments [content-feedback]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:386
+#: ../smart-base/processes/content/dth-authoring.bpmn:387
 #. Diagram element documentation
 msgid "public-comment import --store review/wg-comment; change sets group comments that change the same text."
 msgstr ""
@@ -359,7 +359,7 @@ msgstr ""
 msgid "Publication manager"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:456
+#: ../smart-base/processes/content/dth-authoring.bpmn:457
 #. Diagram label
 msgid "Publish the handbook [document-publishing]"
 msgstr ""
@@ -384,22 +384,22 @@ msgstr ""
 msgid "Record milestone M2 · Outline agreed [todo-manager]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:368
+#: ../smart-base/processes/content/dth-authoring.bpmn:369
 #. Diagram label
 msgid "Record milestone M3 · Zero draft [todo-manager]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:398
+#: ../smart-base/processes/content/dth-authoring.bpmn:399
 #. Diagram label
 msgid "Record milestone M4 · Working-group draft [todo-manager]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:415
+#: ../smart-base/processes/content/dth-authoring.bpmn:416
 #. Diagram label
 msgid "Record milestone M5 · Public draft released [todo-manager]"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:439
+#: ../smart-base/processes/content/dth-authoring.bpmn:440
 #. Diagram label
 msgid "Record milestone M6 · Comments dispositioned [todo-manager]"
 msgstr ""
@@ -414,7 +414,7 @@ msgstr ""
 msgid "Review the structured content beside drafting, as QA and not as a gate: the architect group for ArchiMate links and new kinds, the owners of each handbook for content shared with theirs."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:356
+#: ../smart-base/processes/content/dth-authoring.bpmn:357
 #. Diagram element documentation
 msgid "Runs beside validation, as QA. New kinds and shared schemas are reviewed here before they are built."
 msgstr ""
@@ -439,12 +439,12 @@ msgstr ""
 msgid "Terminologist"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:378
+#: ../smart-base/processes/content/dth-authoring.bpmn:379
 #. Diagram element documentation
 msgid "The contributor log (Google Sheet) and pc: lines on GitHub issues and PRs."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:449
+#: ../smart-base/processes/content/dth-authoring.bpmn:450
 #. Diagram element documentation
 msgid "The DTH voice (smart-base skills/voices/who-digital-transformation-handbook), figures and translations."
 msgstr ""
@@ -479,7 +479,7 @@ msgstr ""
 msgid "User-scenario blocks naming their personas by id. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate."
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:347
+#: ../smart-base/processes/content/dth-authoring.bpmn:348
 #. Diagram label
 msgid "Validate the draft [content-validate]"
 msgstr ""
@@ -494,7 +494,7 @@ msgstr ""
 msgid "Work plan (beans)"
 msgstr ""
 
-#: ../smart-base/processes/content/dth-authoring.bpmn:508
+#: ../smart-base/processes/content/dth-authoring.bpmn:509
 #. Diagram label
 msgid "yes"
 msgstr ""
