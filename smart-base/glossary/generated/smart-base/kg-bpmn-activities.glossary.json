@@ -151,6 +151,292 @@
       "status": "candidate"
     },
     {
+      "id": "process_dthauthoring.call_archimate",
+      "prefLabel": "Link to smart-ra ArchiMate [archimate-models]",
+      "definition": "Every block that names an architecture element links to its smart-ra element or view; new elements go to smart-ra, not the handbook. Placeholder: the platform has no subprocess for this yet (smart-base#243); until it exists the step is done by hand, as dth-hrh's was. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.",
+      "notation": "Call_Archimate",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Archimate",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.call_bpmn",
+      "prefLabel": "Business processes · BPMN [bpmn-authoring]",
+      "definition": "One BPMN per business process; every lane bound to a persona or role id. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.",
+      "notation": "Call_Bpmn",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Bpmn",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.call_data",
+      "prefLabel": "Data elements, indicators, requirements [l2-dak-authoring]",
+      "definition": "data-element, indicator, functional and non-functional requirement blocks, with their fields as data rather than Markdown tables. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.",
+      "notation": "Call_Data",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Data",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.call_dmn",
+      "prefLabel": "Decision tables · DMN [dmn-authoring]",
+      "definition": "Only rules the text states. A decision the text names without a rule is recorded as a decision point, not filled in. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.",
+      "notation": "Call_Dmn",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Dmn",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.call_glossary",
+      "prefLabel": "Link glossary to smart-ra SKOS [terminology-management]",
+      "definition": "Each handbook term is exactMatch, closeMatch or narrower to a smart-ra concept; conflicts are raised as issues on smart-ra. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.",
+      "notation": "Call_Glossary",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Glossary",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.call_personas",
+      "prefLabel": "Personas and roles [l2-dak-authoring]",
+      "definition": "Persona and actor-definition blocks; organisational roles and governance bodies as their own kind once it exists. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.",
+      "notation": "Call_Personas",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Personas",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.call_scenarios",
+      "prefLabel": "User scenarios [l2-dak-authoring]",
+      "definition": "User-scenario blocks naming their personas by id. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.",
+      "notation": "Call_Scenarios",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Scenarios",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.call_steps",
+      "prefLabel": "Planning steps per chapter [document-authoring]",
+      "definition": "Each chapter's inputs, steps, resources, outputs, risks and mitigations as the shared step table (smart-base#242). Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.",
+      "notation": "Call_Steps",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Steps",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.m0",
+      "prefLabel": "Record milestone M0 · Charter recorded [todo-manager]",
+      "definition": "Milestone: repository, declaration, TWG, roles and RACI exist. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.",
+      "notation": "M0",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#M0",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.m1",
+      "prefLabel": "Record milestone M1 · Library frozen [todo-manager]",
+      "definition": "Milestone: every source in library/, coverage accounted. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.",
+      "notation": "M1",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#M1",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.m2",
+      "prefLabel": "Record milestone M2 · Outline agreed [todo-manager]",
+      "definition": "Milestone: the outline's round-1 comments are dispositioned. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.",
+      "notation": "M2",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#M2",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.m3",
+      "prefLabel": "Record milestone M3 · Zero draft [todo-manager]",
+      "definition": "Milestone: every required section drafted and every structured block validates. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.",
+      "notation": "M3",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#M3",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.m4",
+      "prefLabel": "Record milestone M4 · Working-group draft [todo-manager]",
+      "definition": "Milestone: all working-group comments dispositioned. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.",
+      "notation": "M4",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#M4",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.m5",
+      "prefLabel": "Record milestone M5 · Public draft released [todo-manager]",
+      "definition": "Milestone: the public draft is out for comment. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.",
+      "notation": "M5",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#M5",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.m6",
+      "prefLabel": "Record milestone M6 · Comments dispositioned [todo-manager]",
+      "definition": "Milestone: every public comment dispositioned. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.",
+      "notation": "M6",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#M6",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_archreview",
+      "prefLabel": "Architect group and handbook owners review [content-review]",
+      "definition": "Runs beside validation, as QA. New kinds and shared schemas are reviewed here before they are built.",
+      "notation": "Task_ArchReview",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_ArchReview",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_comments",
+      "prefLabel": "4 · Comment via contributor log sheet or GitHub pc: [content-feedback]",
+      "definition": "The contributor log (Google Sheet) and pc: lines on GitHub issues and PRs.",
+      "notation": "Task_Comments",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Comments",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_coverage",
+      "prefLabel": "Account for every normative sentence [l1-coverage]",
+      "definition": "Each normative sentence is captured or excluded; exclusions are signed by a person, never by the agent that proposed them.",
+      "notation": "Task_Coverage",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Coverage",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_disposition",
+      "prefLabel": "Disposition comments and apply change sets [public-comment]",
+      "definition": "Changes to structured content go back through its kind's edit-and-review subprocess.",
+      "notation": "Task_Disposition",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Disposition",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_glossarycandidates",
+      "prefLabel": "Build glossary candidates from the TWG workbook [terminology-management]",
+      "definition": "One SKOS candidate per (concept, source); only a person moves a term to authored.",
+      "notation": "Task_GlossaryCandidates",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_GlossaryCandidates",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_import",
+      "prefLabel": "Import into review/wg-comment and form change sets [public-comment]",
+      "definition": "public-comment import --store review/wg-comment; change sets group comments that change the same text.",
+      "notation": "Task_Import",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Import",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_ingest",
+      "prefLabel": "1 · Ingest sources into library/ [library-ingestion]",
+      "definition": "Every source as received, frozen: WHO publications through who-iris, the TWG outline and workbooks from uploads/.",
+      "notation": "Task_Ingest",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Ingest",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_intro",
+      "prefLabel": "Draft introduction, audience and DIIG alignment [document-authoring]",
+      "definition": "The three required opening sections of the dth kind: audience and how to use, DIIG and SMART alignment, health programme context.",
+      "notation": "Task_Intro",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Intro",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_inventory",
+      "prefLabel": "List processes, roles, decisions and indicators to model [content-plan]",
+      "definition": "The inventory that seeds the structured-drafting tracks: each business process becomes BPMN, each role a structured block, each stated decision rule a DMN table.",
+      "notation": "Task_Inventory",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Inventory",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_l1",
+      "prefLabel": "Extract L1 from WHO publications [l1-document-ingestion]",
+      "definition": "Sections, figures, tables and the L1 knowledge graph for each WHO publication the handbook draws on.",
+      "notation": "Task_L1",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_L1",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_openpublic",
+      "prefLabel": "5 · Open public comment [public-comment]",
+      "definition": "A separate store, review/public-comment, and the public-comment review sheet.",
+      "notation": "Task_OpenPublic",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_OpenPublic",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_outline",
+      "prefLabel": "2 · Outline chapters against the dth kind [document-structure]",
+      "definition": "Map the outline onto the dth document kind's sections and report every required section that is missing. dth-hrh's build_from_outline.py is the first instance; a general outline seed does not exist yet. Placeholder: the platform has no subprocess for this yet (smart-base#243); until it exists the step is done by hand, as dth-hrh's was.",
+      "notation": "Task_Outline",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Outline",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_outlinereview",
+      "prefLabel": "TWG reviews the outline [content-feedback]",
+      "definition": "First contributor-feedback round, through the contributor log sheet and GitHub.",
+      "notation": "Task_OutlineReview",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_OutlineReview",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_publiccomments",
+      "prefLabel": "Public comments [content-feedback]",
+      "notation": "Task_PublicComments",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_PublicComments",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_publish",
+      "prefLabel": "Publish the handbook [document-publishing]",
+      "notation": "Task_Publish",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Publish",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_qa",
+      "prefLabel": "6 · Editorial, voice and translation QA [quality-control]",
+      "definition": "The DTH voice (smart-base skills/voices/who-digital-transformation-handbook), figures and translations.",
+      "notation": "Task_Qa",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Qa",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_scaffold",
+      "prefLabel": "Create the DTH repository from the DTH layout [document-structure]",
+      "definition": "Declaration, index.config.json (needs smart-ra, and any DTH it mounts), glossary, review store and hooks, copied from dth-hrh's layout. Placeholder: the platform has no subprocess for this yet (smart-base#243); until it exists the step is done by hand, as dth-hrh's was.",
+      "notation": "Task_Scaffold",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Scaffold",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_scope",
+      "prefLabel": "0 · Scope the DTH and place it in the DIIG [content-plan]",
+      "definition": "Name the health-system area, the audience and the DIIG phase the handbook supports, citing the one DIIG phase figure (DIIG section 1.1, Figure 1.1.1). Decide which DTHs and which smart-ra content it builds on.",
+      "notation": "Task_Scope",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Scope",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_seedbeans",
+      "prefLabel": "Seed the work plan [todo-manager]",
+      "definition": "One bean per stage and per drafting track, children of the handbook's epic.",
+      "notation": "Task_SeedBeans",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_SeedBeans",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_team",
+      "prefLabel": "Form the TWG; record roles and RACI [content-plan]",
+      "definition": "Record who is involved and in which role. Roles are named by id, never free text, so they can bind BPMN lanes later. A RACI kind does not exist yet (smart-base#242 and the structured-authoring decision doc); until it does, the RACI is a table block.",
+      "notation": "Task_Team",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Team",
+      "status": "candidate"
+    },
+    {
+      "id": "process_dthauthoring.task_validate",
+      "prefLabel": "Validate the draft [content-validate]",
+      "definition": "Every structured block validates against its kind; required dth sections present; no unlinked architecture names; no empirical claims in formal content.",
+      "notation": "Task_Validate",
+      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Validate",
+      "status": "candidate"
+    },
+    {
       "id": "process_l2componenteditreview.call_review",
       "prefLabel": "Review the staged component",
       "definition": "cat-harness's generic review, not a copy of it: classify what changed, review it, and record the decision as a qa-review/v1 QaReview whose subject is the component and whose Decision carries the reviewing role. The reviewer reads the staged page and the before/after; for a figure or table, the visual-diff picture and its changed-pixel count; for a form, the wireframe (wireframe-design-review; at L3 its Questionnaire follows fhir-questionnaire-wireframe). What to judge per component is the skill l2-component-edit-review's column \"the reviewer judges\".",
