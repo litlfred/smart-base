@@ -60,7 +60,7 @@
       {
         "relation": "reproduces",
         "libraryId": "9789240120747-eng",
-        "sectionId": "page-016",
+        "sectionId": "sec-006-how-to-use-this-handbook",
         "locator": "SFP Introduction, Fig. 1, PDF p.16 (printed p.4)",
         "quote": "Fig. 1. Planning and implementing a digital health enterprise: phases, steps and resources"
       },
@@ -272,13 +272,13 @@
         "alternatives": [
           {
             "libraryId": "9789240120747-eng",
-            "sectionId": "page-011",
+            "sectionId": "sec-002-glossary",
             "locator": "SFP Glossary, PDF p.11 (printed p.ix)",
             "quote": "Medical products authorized by national regulatory authorities but that fail to meet either national or international quality standards or specifications or, in some cases, both (9)."
           },
           {
             "libraryId": "9789240120747-eng",
-            "sectionId": "page-013",
+            "sectionId": "sec-003-introduction",
             "locator": "SFP §1 Introduction, PDF p.13 (printed p.1)",
             "quote": "“Substandard medical products”, also called “out-of-specification”, are authorized medical products that fail to meet either their quality standards or their specifications, or both."
           }
@@ -293,7 +293,7 @@
         "difference": "Matches PHC, SC and PC (citing DIIG: 'A blueprint of business processes, data, systems and technologies...'); conflicts with smart-ra ('The organising logic for business processes and IT infrastructure...') (smart-ra#139).",
         "sfpQuote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "A blueprint of business processes, data, systems and technologies used to help implementers design increasingly complex systems to support the workflow and roles of people in a large enterprise, such as a health system (3)."
         }
@@ -305,7 +305,7 @@
         "difference": "Exact match to PC (page-008); homonym with smart-ra's ArchiMate 'Product' ('A concrete offering, bundling services and data, that is made available to stakeholders') (smart-ra#139).",
         "sfpQuote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "In this handbook, the terms “generic product”, “product” or “product information” pertain to the general identifying details of a health product, excluding any manufacturer-specific information."
         }
@@ -317,7 +317,7 @@
         "difference": "Exact match to PHC (sec-002-glossary) and PC (page-008); adds organizational/regional/national boundaries and health outcome optimization compared with smart-ra (smart-ra#139).",
         "sfpQuote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "Ability of different applications to access, exchange, integrate and use data in a coordinated and consistent manner through the use of shared application interfaces, value sets, concepts and standards, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize health outcomes."
         }
@@ -329,7 +329,7 @@
         "difference": "Exact match to PC (page-009); adds 'recommended digital capabilities, health and data content aligned with normative recommendations' and 'software-agnostic, context-agnostic and are applicable to all levels of digital maturity' relative to smart-ra (smart-ra#139).",
         "sfpQuote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-011",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.11 (printed p.ix)",
           "quote": "Standards-based, Machine-readable, Adaptive, Requirements-based and Testable Guidelines are recommended digital capabilities, health and data content aligned with normative recommendations. They represent packages of comprehensive documentation and reusable digital health components (e.g. health content, interoperability standards, code libraries, algorithms, technical and operational specifications) that facilitate country adaptation and adoption of clinical and public health protocols, health systems strengthening recommendations, and data and interoperability standards into digital health information systems with fidelity. SMART Guidelines serve as a starting point and as foundational specifications to advance the development of robust person-centred digital systems. These specifications are software-agnostic, context-agnostic and are applicable to all levels of digital maturity (17, 18)."
         }
@@ -341,7 +341,7 @@
         "difference": "Same text as PHC, SC, PC, HRH and smart-ra ('...using a predefined canonical minimum data set.'), but truncated at the end in the printed SFP glossary ('...using predefined canonical minimum data etc.', smart-ra#139 / F6).",
         "sfpQuote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "A governed, authoritative and centralized information system that captures, stores and maintains the unique attributes and identifiers of health facilities, health service users, products and/or health workforce using predefined canonical minimum data etc."
         }
@@ -355,7 +355,7 @@
         "comparison": "Not in PHC, SC, PC or HRH glossaries; part of the 13 medicine quality and safety terms (smart-ra#146).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "Proactive measures that are taken to detect adverse events (1)."
         }
@@ -367,7 +367,7 @@
         "comparison": "Not in PHC, SC, PC or HRH glossaries; part of the 13 medicine quality and safety terms (smart-ra#146).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "Harmful, unintended reactions to medicines that occur at doses normally used for treatment (2)."
         }
@@ -379,7 +379,7 @@
         "comparison": "Exact match to PHC (sec-002-glossary), SC (page-008) and PC (page-008), citing DIIG (ref 3).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "A set of related activities or tasks performed together to achieve the objectives of the health programme area, such as registration, counselling and referrals (3)."
         }
@@ -391,7 +391,7 @@
         "comparison": "Exact match to PHC (sec-002-glossary), PC (page-008) and HRH glossary.",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "A unit of data that has a specific and precise meaning (4)."
         }
@@ -403,7 +403,7 @@
         "comparison": "Matches PC (page-008) and SC (page-008) in adding 'Digitization is the initial step towards digital transformation (5, 6)', which PHC omits.",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "The process of converting and organizing data from paper records into a digital format for easier entry, storage and retrieval. Digitization is the initial step towards digital transformation (5, 6)."
         }
@@ -415,7 +415,7 @@
         "comparison": "Exact match to PC (page-008) ('reducing manual efforts... Digitalization is the second step towards digital transformation'); SC says 'in digital transformation'; PHC omits the second-step claim.",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "The process of digitally automating and simplifying processes to streamline individual health programmes and reducing manual efforts for greater efficiency. Digitalization is the second step towards digital transformation (5, 6)."
         }
@@ -427,7 +427,7 @@
         "comparison": "Exact match to PC (page-008); near-identical to PHC and SC (differing only in hyphenation of 'systems-level').",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "The process of digitally optimizing and driving systems-level changes by leveraging innovation, analytics and feedback mechanisms to improve person-centred health systems. Digital technologies are used to fundamentally change and improve how health services are delivered and accessed across all health programme areas (5, 6, 7)."
         }
@@ -439,7 +439,7 @@
         "comparison": "Exact match to PHC (sec-002-glossary), SC (page-008) and PC (page-008), citing DIIG (ref 3).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "Attitudes, actions, policies and practices that stimulate and support effective and efficient functioning of organizations, individuals and programmes. The enabling environment includes legal, regulatory and policy frameworks and political, sociocultural, institutional and economic factors (3)."
         }
@@ -451,7 +451,7 @@
         "comparison": "Matches PC ('End user: People who will be using the digital system(s).'); PHC hyphenates 'End-user'; SC writes 'A person who will use a digital system.'",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "People who will be using the digital system(s)."
         }
@@ -463,7 +463,7 @@
         "comparison": "Matches PHC, SC and PC (citing DIIG: 'A blueprint of business processes, data, systems and technologies...'); conflicts with smart-ra ('The organising logic for business processes and IT infrastructure...') (smart-ra#139).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "A blueprint of business processes, data, systems and technologies used to help implementers design increasingly complex systems to support the workflow and roles of people in a large enterprise, such as a health system (3)."
         }
@@ -475,7 +475,7 @@
         "comparison": "Exact match to PHC (sec-002-glossary), SC (page-008) and PC (page-008).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "The systematic and objective assessment of an ongoing or completed intervention with the aim of determining the fulfilment of objectives, efficiency, effectiveness, impact and sustainability (8)."
         }
@@ -487,7 +487,7 @@
         "comparison": "Full WHO QA terminology definition in Glossary (ref 9); Introduction p.1 (page-013, ref 23 WHA70) gives the shorter sentence 'deliberately and or fraudulently misrepresent their identity, composition or source.'",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "Medical products that deliberately or fraudulently misrepresent their identity, composition or source. Any consideration related to intellectual property rights does not fall within this definition. Such deliberate or fraudulent misrepresentation refers to any substitution, adulteration or reproduction of an authorized medical product or the manufacture of a medical product that is not an authorized product (9)."
         }
@@ -499,7 +499,7 @@
         "comparison": "Exact match to PC (page-008, including the product master data management example); PHC gives a clinical reminder example instead.",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "The characteristics of your system that include look and feel as well as what the system can do (e.g. “approval workflow” can be a feature of a product master data management solution)."
         }
@@ -511,7 +511,7 @@
         "comparison": "Exact match to PC (page-008); near-identical to PHC and SC ('end-users’' vs 'end users’').",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-009",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.9 (printed p.vii)",
           "quote": "Capabilities the system must have to meet the end users’ needs and achieve tasks within the business process."
         }
@@ -523,7 +523,7 @@
         "comparison": "Exact match to PC (page-008); homonym with smart-ra's ArchiMate 'Product' ('A concrete offering, bundling services and data, that is made available to stakeholders') (smart-ra#139).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "In this handbook, the terms “generic product”, “product” or “product information” pertain to the general identifying details of a health product, excluding any manufacturer-specific information."
         }
@@ -535,7 +535,7 @@
         "comparison": "Part of the 13 medicine quality and safety terms (smart-ra#146); aligns with HRH occupation concepts (doctors, nurses, pharmacists, allied health professionals).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "An individual who provides health care treatment and advice based on formal training and experience. This includes a wide range of occupations such as doctors, nurses, pharmacists and other allied health professionals (10)."
         }
@@ -547,7 +547,7 @@
         "comparison": "Exact match to PHC (sec-002-glossary) and PC (page-008); adds organizational/regional/national boundaries and health outcome optimization compared with smart-ra (smart-ra#139).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "Ability of different applications to access, exchange, integrate and use data in a coordinated and consistent manner through the use of shared application interfaces, value sets, concepts and standards, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize health outcomes."
         }
@@ -559,7 +559,7 @@
         "comparison": "WHO governance mechanism for SF medical products; part of the 13 medicine quality and safety terms (smart-ra#146).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "A mechanism established by WHO to address the issue of tackling substandard and falsified medical products in a transparent and inclusive way, from a public health perspective and expressly excluding considerations of intellectual property rights (11)."
         }
@@ -571,7 +571,7 @@
         "comparison": "Exact match to PHC (sec-002-glossary), SC (page-008) and PC (page-008).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "The continuous process of collecting and analysing data to compare how well an intervention is being implemented against expected results (8)."
         }
@@ -583,7 +583,7 @@
         "comparison": "Exact match to PHC (sec-002-glossary), SC (page-008) and PC (page-008).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "General attributes and features of the digital system to ensure usability and overcome technical and physical constraints. Examples of non-functional requirements include the ability to work offline, multiple language settings and password protection."
         }
@@ -595,9 +595,9 @@
         "comparison": "Exact match to PC (page-009); near-identical to PHC and SC ('Open-source software' headword and British 'licence' spelling).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
-          "quote": "Open-source software is software with source code that is published and made freely available to the public, enabling anyone to inspect, modify and enhance the code. While the source code is open to everyone, this does not mean that implementation of software is necessarily without costs. An open- source software must have a licence approved by the Open-Source Initiative (12)."
+          "quote": "Open-source software is software with source code that is published and made freely available to the public, enabling anyone to inspect, modify and enhance the code. While the source code is open to everyone, this does not mean that implementation of software is necessarily without costs. An open-source software must have a licence approved by the Open-Source Initiative (12)."
         }
       },
       {
@@ -607,7 +607,7 @@
         "comparison": "Exact match to PHC (sec-002-glossary), SC (page-008) and PC (page-009).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "Standards that are documented and made freely available to the public, which are developed, approved and maintained via a collaborative and consensus-driven process. Open standards facilitate interoperability and data exchange and are intended for widespread adoption (13)."
         }
@@ -619,7 +619,7 @@
         "comparison": "Exact match to PC (page-009).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "A visual representation of the organization structure showing the hierarchy of various roles and their reporting relationships."
         }
@@ -631,7 +631,7 @@
         "comparison": "Not in PHC, SC, PC or HRH glossaries; part of the 13 medicine quality and safety terms (smart-ra#146).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "Passive surveillance that mainly involves spontaneous adverse effects reports from case series and other safety reports."
         }
@@ -643,7 +643,7 @@
         "comparison": "Exact match to PC (page-009); differs in wording from PHC ('User persona: A generic or archetypical profile of an end-user...') and SMART Guidelines GenericPersona.",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "A generic aggregate description of a person involved in or benefiting from a health programme."
         }
@@ -655,9 +655,9 @@
         "comparison": "Standard WHO definition (ref 14); part of the 13 medicine quality and safety terms (smart-ra#146).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
-          "quote": "The science and activities relating to the detection, assessment, understanding and prevention of adverse effects or any other medicine/ vaccine-related problem (14)."
+          "quote": "The science and activities relating to the detection, assessment, understanding and prevention of adverse effects or any other medicine/vaccine-related problem (14)."
         }
       },
       {
@@ -667,7 +667,7 @@
         "comparison": "Used in SFP as a clinical reporting barrier (difficulty attributing therapeutic failure or adverse reaction when multiple medications are used concurrently).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "The concurrent use of multiple medications (15)."
         }
@@ -679,7 +679,7 @@
         "comparison": "Part of the 13 medicine quality and safety terms (smart-ra#146); paired with risk-based post-market surveillance (Rb-PMS) on page-008 and page-013.",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "The practice of monitoring the safety of a pharmaceutical drug or medical device after it has been released on the market, through collection and evaluation of experiences relating to the product (16)."
         }
@@ -691,7 +691,7 @@
         "comparison": "Same text as PHC, SC, PC, HRH and smart-ra ('...using a predefined canonical minimum data set.'), but truncated at the end in the printed SFP glossary ('...using predefined canonical minimum data etc.', smart-ra#139 / F6).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-010",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.10 (printed p.viii)",
           "quote": "A governed, authoritative and centralized information system that captures, stores and maintains the unique attributes and identifiers of health facilities, health service users, products and/or health workforce using predefined canonical minimum data etc."
         }
@@ -703,7 +703,7 @@
         "comparison": "Exact match to PC (page-009); adds 'recommended digital capabilities, health and data content aligned with normative recommendations' and 'software-agnostic, context-agnostic and are applicable to all levels of digital maturity' relative to smart-ra (smart-ra#139).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-011",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.11 (printed p.ix)",
           "quote": "Standards-based, Machine-readable, Adaptive, Requirements-based and Testable Guidelines are recommended digital capabilities, health and data content aligned with normative recommendations. They represent packages of comprehensive documentation and reusable digital health components (e.g. health content, interoperability standards, code libraries, algorithms, technical and operational specifications) that facilitate country adaptation and adoption of clinical and public health protocols, health systems strengthening recommendations, and data and interoperability standards into digital health information systems with fidelity. SMART Guidelines serve as a starting point and as foundational specifications to advance the development of robust person-centred digital systems. These specifications are software-agnostic, context-agnostic and are applicable to all levels of digital maturity (17, 18)."
         }
@@ -715,7 +715,7 @@
         "comparison": "Glossary (ref 9, QA terminology database) specifies 'either national or international quality standards or specifications or, in some cases, both'; Introduction p.1 (page-013, ref 23 WHA70/A70/23) says 'Also called “out-of-specification”, are authorized medical products that fail to meet either their quality standards or their specifications, or both' (smart-ra#136 F1).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-011",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.11 (printed p.ix)",
           "quote": "Medical products authorized by national regulatory authorities but that fail to meet either national or international quality standards or specifications or, in some cases, both (9)."
         }
@@ -727,7 +727,7 @@
         "comparison": "Exact match to PC (page-009) and GS1 terminology.",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-011",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.11 (printed p.ix)",
           "quote": "Products or services that are priced, ordered or invoiced at any point in the supply chain (19)."
         }
@@ -739,9 +739,9 @@
         "comparison": "Defined in the SFP Glossary (ref 9) as the third WHO SF category alongside substandard and falsified, though omitted from the Chapter 4 workflow and DE8 value set (smart-ra#136 F2).",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-011",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.11 (printed p.ix)",
-          "quote": "A medical product that has not undergone evaluation and/or approval by the national regulatory authority for the market in which it is marketed/ distributed or used, subject to permitted conditions under national or regional regulation and legislation. This medical product may or may not have obtained the relevant authorization from the national/regional regulatory authority of its geographical origin (9)."
+          "quote": "A medical product that has not undergone evaluation and/or approval by the national regulatory authority for the market in which it is marketed/distributed or used, subject to permitted conditions under national or regional regulation and legislation. This medical product may or may not have obtained the relevant authorization from the national/regional regulatory authority of its geographical origin (9)."
         }
       },
       {
@@ -751,7 +751,7 @@
         "comparison": "Near-identical to PHC ('User acceptance testing (UAT) is conducted to see whether the end-users are satisfied with the end product (24).') and PC ('UAT is done to see whether the end-users are satisfied with the end product.14').",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-011",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.11 (printed p.ix)",
           "quote": "User acceptance testing is done to see whether the end users are satisfied with the end product (20)."
         }
@@ -763,7 +763,7 @@
         "comparison": "Exact match to PC (page-009) and SC (page-009); PHC adds a second sentence on workflow mapping.",
         "quote": {
           "libraryId": "9789240120747-eng",
-          "sectionId": "page-011",
+          "sectionId": "sec-002-glossary",
           "locator": "SFP Glossary, PDF p.11 (printed p.ix)",
           "quote": "A visual representation of the progression of activities (tasks, events, decision points) in a logical flow illustrating the interactions within the business process (21)."
         }

@@ -54,7 +54,7 @@ describe("DTH term findings", () => {
     expect(findings.sfp.terms.length).toBe(35);
     expect(findings.sfp.raConflicts.length).toBe(5);
     expect(findings.sfp.internalConflicts.some((c) => c.id === "sfp-f1-substandard")).toBe(true);
-    expect(findings.figure.reproductions.some((r) => !("path" in r) && r.libraryId === "9789240120747-eng" && r.sectionId === "page-016")).toBe(true);
+    expect(findings.figure.reproductions.some((r) => !("path" in r) && r.libraryId === "9789240120747-eng" && r.sectionId === "sec-006-how-to-use-this-handbook")).toBe(true);
     const page = render(findings, terms);
     for (const t of findings.sfp.terms) {
       expect(page).toContain(`| **${t.term}** |`);
