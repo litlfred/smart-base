@@ -37,6 +37,13 @@
  * - **unlisted link** — an external link in a references section, outside a
  *   generated list, whose URL is no bibliography entry's URL or DOI.
  *
+ * ## Ratchet
+ *
+ * An IG that declares no bibliography (no `references` or `catalogue`
+ * directory) has not adopted the KG one yet: its findings are printed as
+ * advisories and the gate passes, so a re-pin never turns an untouched site
+ * red. Once the IG declares a bibliography, every finding fails the gate.
+ *
  * An IG with no references section and no `#ref-` citation is reported as
  * having nothing to judge, and passes.
  *
@@ -253,6 +260,11 @@ export function judge(root: string, extra: string[] = []): { bib: Bibliography; 
   return { bib, findings, pages };
 }
 
+/** An IG has adopted the KG bibliography once it declares a references or catalogue directory. */
+export function adopted(bib: Bibliography): boolean {
+  return bib.dirs.length > 0;
+}
+
 function main(): void {
   const args = process.argv.slice(2);
   const at = args.indexOf("--root");
@@ -265,6 +277,10 @@ function main(): void {
   } else {
     for (const f of findings) console.error(`${f.file}:${f.line}: ${f.rule}: ${f.detail}`);
     console.log(`ig-citations: ${pages} page(s), bibliography ${bib.dirs.join(", ") || "(none declared)"}; ${findings.length} finding(s)`);
+  }
+  if (findings.length && !adopted(bib)) {
+    console.log("ig-citations: advisory only — this IG declares no KG bibliography yet (no references/catalogue directory); declare one to enforce.");
+    process.exit(0);
   }
   process.exit(findings.length ? 1 : 0);
 }

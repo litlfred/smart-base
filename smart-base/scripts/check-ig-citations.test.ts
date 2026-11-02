@@ -7,7 +7,7 @@ import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
-import { judge, judgePage, knownUrl, normUrl, type Bibliography } from "./check-ig-citations.ts";
+import { adopted, judge, judgePage, knownUrl, normUrl, readBibliography, type Bibliography } from "./check-ig-citations.ts";
 
 const bib = (): Bibliography => ({
   keys: new Set(["voo2021", "w3c-did-core"]),
@@ -68,5 +68,15 @@ describe("check-ig-citations", () => {
     const r = judge(root);
     expect(r.bib.dirs).toEqual(["references"]);
     expect(r.findings.map((x) => x.detail)).toEqual(["#ref-k2 is no entry of the KG bibliography"]);
+  });
+});
+
+describe("ratchet", () => {
+  it("an IG with no declared bibliography has not adopted the gate; one with a references directory has", () => {
+    const root = mkdtempSync(join(tmpdir(), "igc-ratchet-"));
+    expect(adopted(readBibliography(root))).toBe(false);
+    mkdirSync(join(root, "references"));
+    writeFileSync(join(root, "ig.json"), JSON.stringify({ directories: [{ path: "references/", graphTypologies: ["references"] }] }));
+    expect(adopted(readBibliography(root))).toBe(true);
   });
 });
