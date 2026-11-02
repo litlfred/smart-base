@@ -55,7 +55,7 @@ import { decideL1, type IntakeRecord, type L1Decision } from "./l1-membership.ts
 
 export const L1_LIBRARY_FILENAME = "smart-kg-l1-library.jsonld";
 const SKILL = "smart-base/dak-l1-library";
-const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/0.1.0/ns#";
+const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/0.1.0/ns/";
 const DOCO_NS = "http://purl.org/spar/doco/";
 /** Element types L1 3.0 defines that the library does not extract yet — reported, never guessed. */
 export const NOT_EXTRACTED = ["table-row", "footnote", "chart", "image", "flowchart", "list"] as const;
