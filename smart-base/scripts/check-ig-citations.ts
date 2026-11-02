@@ -165,10 +165,18 @@ const HEADING = /^(#{1,6})\s+(.*?)\s*#*\s*$/;
 const REF_HEADING = /^(\d+(\.\d+)*\.?\s+)?(references|bibliography|sources|further reading|works cited|literature)\s*:?$/i;
 const CITE = /href="([^"#]*)#ref-([A-Za-z0-9._:+-]+)"|\]\(([^)\s#]*)#ref-([A-Za-z0-9._:+-]+)\)/g;
 const LINK = /href="(https?:\/\/[^"]+)"|\]\((https?:\/\/[^)\s]+)\)|<(https?:\/\/[^>\s]+)>/g;
+/** An HTML comment's end: `-->`, or `--!>`, which browsers also accept. */
+const COMMENT_END = /--!?>/;
 const ITEM = /^\s*(<li\b|[-*+]\s+\S|\d+[.)]\s+\S|<p[^>]*>\s*\[\d+\]|\[\d+\]\s)/;
 
+/** A line's text, for a report: tags removed until none are left, and any stray `<` or `>` dropped. */
 function stripTags(s: string): string {
-  return s.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").trim();
+  let prev: string;
+  do {
+    prev = s;
+    s = s.replace(/<[^<>]*>/g, "");
+  } while (s !== prev);
+  return s.replace(/[<>]/g, "").replace(/&nbsp;/g, " ").trim();
 }
 
 /** A Markdown (`## x`) or HTML (`<h2>x</h2>`) heading: its level and text. */
@@ -198,10 +206,10 @@ export function judgePage(file: string, src: string, b: Bibliography): Finding[]
       continue;
     }
     if (inComment) {
-      if (line.includes("-->")) inComment = false;
+      if (COMMENT_END.test(line)) inComment = false;
       continue;
     }
-    if (/<!--/.test(line) && !/-->/.test(line)) {
+    if (/<!--/.test(line) && !COMMENT_END.test(line)) {
       inComment = true;
       continue;
     }
