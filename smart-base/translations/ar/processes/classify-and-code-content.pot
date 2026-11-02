@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: classify-and-code-content\n"
-"POT-Creation-Date: 2026-10-24T07:25:39.403Z\n"
+"POT-Creation-Date: 2026-11-02T07:09:05.269Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language: ar\n"
@@ -42,6 +42,11 @@ msgstr ""
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:35
 #. Diagram label
 msgid "Authoring agent"
+msgstr ""
+
+#: ../smart-base/processes/content/classify-and-code-content.bpmn:111
+#. Diagram label
+msgid "Check exclusions against page and sign"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:28
@@ -122,11 +127,6 @@ msgstr ""
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:101
 #. Diagram label
 msgid "Proposed exclusions?"
-msgstr ""
-
-#: ../smart-base/processes/content/classify-and-code-content.bpmn:111
-#. Diagram label
-msgid "Check exclusions against page and sign"
 msgstr ""
 
 #: ../smart-base/processes/content/classify-and-code-content.bpmn:169
