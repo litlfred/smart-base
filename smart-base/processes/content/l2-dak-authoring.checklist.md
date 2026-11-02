@@ -92,7 +92,7 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 ### 8. Indicators and requirements (`Task_Indicators`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
-- Skill: `l2-dak-authoring`, `l2-component-edit-review`.
+- Skill: `l2-dak-authoring`, `indicator-extraction`, `l2-component-edit-review`.
 - What: Author the component's indicators and its functional and non-functional requirements.
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `Gateway_AuthorJoin`
