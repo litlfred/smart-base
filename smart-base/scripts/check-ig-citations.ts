@@ -7,8 +7,10 @@
  * migrate them all to KG managed", with a "QA check for things not in [the]
  * harnessed biblio". The KG bibliography is the one `bibliography-page.ts`
  * (folio-assistant-core) publishes: every `folio-reference/v1` node in a
- * declared `references` directory, and every Dublin Core record in a declared
- * `catalogue` directory. This gate reads the IG's own pages and reports what
+ * declared `references` directory, every Dublin Core record in a declared
+ * `catalogue` directory, and every entry of a declared `library` directory
+ * (bean folio-assistant-djj5, owner 2026-11-03: "any references that were
+ * ingested should be under library/"). This gate reads the IG's own pages and reports what
  * they cite that the bibliography does not hold.
  *
  * ## What it reads
@@ -16,9 +18,13 @@
  * - The IG's OWN bibliography, declared at the checkout root (`<name>.json`
  *   with `directories`): each directory whose
  *   `graphTypologies` names `references` (one `<key>.json` CSL-JSON node each)
- *   or `catalogue` (`records/<slug>.dc.json`). Keys, URLs, DOIs, ISBNs and
- *   IRIS handles are collected, so a link to a WHO publication's page names
- *   the catalogue record that holds its ISBN.
+ *   or `catalogue` (`records/<slug>.dc.json`) or `library` (`<slug>/` or
+ *   `<group>/<slug>/` holding a `manifest.jsonld`; its slug is its key, its
+ *   manifest's `sourceUrl` and `meta.doi` its links, and an ISBN in the slug
+ *   its id). Keys, URLs, DOIs, ISBNs and IRIS handles are collected, so a link
+ *   to a WHO publication's page names the catalogue record that holds its ISBN.
+ *   `references` is read while an IG still holds one; the owner retired it
+ *   (bean djj5), and a work that is not ingested is a catalogue record.
  * - The IG's pages, `input/pagecontent/*.md`.
  *
  * ## What it reports
@@ -52,7 +58,7 @@
  * Exit: 0 every reference is in the bibliography, 1 a finding.
  *
  * @module smart-base/scripts/check-ig-citations
- * @covers references, catalogue
+ * @covers references, catalogue, library
  */
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative, resolve } from "node:path";
@@ -132,10 +138,13 @@ function readDeclared(base: string, root: string, b: Bibliography): void {
     if (!Array.isArray(decl?.directories)) continue;
     for (const d of decl.directories) {
       const t = d.graphTypologies ?? [];
-      if (!d.path || !(t.includes("references") || t.includes("catalogue"))) continue;
+      if (!d.path || !(t.includes("references") || t.includes("catalogue") || t.includes("library"))) continue;
       const dir = join(base, d.path);
       if (!existsSync(dir)) continue;
-      b.dirs.push(relative(root, dir) || ".");
+      // Library entries are bibliography entries, but declaring a library is not
+      // adopting the KG bibliography: many IGs hold sources they never cite.
+      if (t.includes("references") || t.includes("catalogue")) b.dirs.push(relative(root, dir) || ".");
+      if (t.includes("library")) readLibrary(dir, b);
       if (t.includes("references")) {
         for (const g of readdirSync(dir).filter((g) => g.endsWith(".json"))) {
           try {
@@ -158,6 +167,30 @@ function readDeclared(base: string, root: string, b: Bibliography): void {
           }
         }
       }
+    }
+  }
+}
+
+/** One library entry: a directory holding `manifest.jsonld`, flat or filed in one concern group. */
+function readLibrary(dir: string, b: Bibliography): void {
+  const entry = (slug: string, at: string): boolean => {
+    const m = join(at, "manifest.jsonld");
+    if (!existsSync(m)) return false;
+    let man: { sourceUrl?: unknown; meta?: { doi?: unknown } } = {};
+    try {
+      man = JSON.parse(readFileSync(m, "utf-8"));
+    } catch {
+      /* the library's own gates report it */
+    }
+    addEntry(b, slug, [man.sourceUrl, man.meta?.doi, slug]);
+    return true;
+  };
+  for (const g of readdirSync(dir).sort()) {
+    const at = join(dir, g);
+    if (!statSync(at).isDirectory() || entry(g, at)) continue;
+    for (const s of readdirSync(at).sort()) {
+      const sat = join(at, s);
+      if (statSync(sat).isDirectory()) entry(s, sat);
     }
   }
 }
