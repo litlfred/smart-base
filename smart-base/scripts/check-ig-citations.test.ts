@@ -69,6 +69,21 @@ describe("check-ig-citations", () => {
     expect(r.bib.dirs).toEqual(["references"]);
     expect(r.findings.map((x) => x.detail)).toEqual(["#ref-k2 is no entry of the KG bibliography"]);
   });
+
+  it("reads library entries, flat and filed in a group, by slug, source URL and the ISBN in the slug (bean djj5)", () => {
+    const root = mkdtempSync(join(tmpdir(), "igc-lib-"));
+    mkdirSync(join(root, "library", "gdhcn-framework"), { recursive: true });
+    mkdirSync(join(root, "library", "who", "9789240010567-eng"), { recursive: true });
+    writeFileSync(join(root, "ig.json"), JSON.stringify({ directories: [{ id: "library", path: "library/", graphTypologies: ["library"] }] }));
+    writeFileSync(join(root, "library", "gdhcn-framework", "manifest.jsonld"), JSON.stringify({ sourceUrl: "https://smart.who.int/trust/Framework.pdf" }));
+    writeFileSync(join(root, "library", "who", "9789240010567-eng", "manifest.jsonld"), JSON.stringify({}));
+    const b = readBibliography(root);
+    expect(b.keys.has("gdhcn-framework")).toBe(true);
+    expect(b.keys.has("9789240010567-eng")).toBe(true);
+    expect(knownUrl(b, "https://smart.who.int/trust/Framework.pdf")).toBe(true);
+    expect(knownUrl(b, "https://www.who.int/publications/i/item/9789240010567")).toBe(true);
+    expect(judgePage("p.md", `[[g]](${B}#ref-gdhcn-framework)`, b)).toEqual([]);
+  });
 });
 
 describe("ratchet", () => {
@@ -78,5 +93,12 @@ describe("ratchet", () => {
     mkdirSync(join(root, "references"));
     writeFileSync(join(root, "ig.json"), JSON.stringify({ directories: [{ path: "references/", graphTypologies: ["references"] }] }));
     expect(adopted(readBibliography(root))).toBe(true);
+  });
+
+  it("declaring only a library is not adopting the KG bibliography: a re-pin does not turn an untouched IG red", () => {
+    const root = mkdtempSync(join(tmpdir(), "igc-ratchet-lib-"));
+    mkdirSync(join(root, "library"));
+    writeFileSync(join(root, "ig.json"), JSON.stringify({ directories: [{ path: "library/", graphTypologies: ["library"] }] }));
+    expect(adopted(readBibliography(root))).toBe(false);
   });
 });
