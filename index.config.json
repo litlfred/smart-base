@@ -27,7 +27,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "a6e641193a4c4bce450548473d18034eb36e76ca",
+          "ref": "01b7edb92e7119d5a34d6754788a4abdeb5d0ae8",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -36,9 +36,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "a6e641193a4c4bce450548473d18034eb36e76ca",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-03",
+              "ref": "01b7edb92e7119d5a34d6754788a4abdeb5d0ae8",
+              "evidence": "Owner litlfred tapped card 'Re-pin smart-base (Recommended)' on 2026-11-03 in session https://claude.ai/code/session_01EucfRodNcVYWoFyT9Zwyb3 (bean folio-assistant-djj5): re-pin smart-base's platform mounts to their mains, so the check:reference-direction findings already fixed upstream leave smart-base."
             }
           }
         }
@@ -49,7 +49,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "234f2ff91b6b19d7875df0d219e3d0acc7d79b07",
+          "ref": "c7590682c6eb17bb19e76bc7f4fb5cee23c22634",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -73,9 +73,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "234f2ff91b6b19d7875df0d219e3d0acc7d79b07",
-              "evidence": "litlfred, 2026-11-02 06:23:37Z, thread 'Finish the dth-sfp workplan', card Q-DTH3-3 'A. One PR, merge on green' (confirmed again 07:25:45Z on the MVP thread's card): move smart-base to the current who-iris and re-point its 43 SFP quotes (who-iris#154 replaced 9789240120747-eng page-NNN with outline sections). Pinned to who-iris main 234f2ff."
+              "on": "2026-11-03",
+              "ref": "c7590682c6eb17bb19e76bc7f4fb5cee23c22634",
+              "evidence": "Owner litlfred tapped card 'Re-pin smart-base (Recommended)' on 2026-11-03 in session https://claude.ai/code/session_01EucfRodNcVYWoFyT9Zwyb3 (bean folio-assistant-djj5): re-pin smart-base's platform mounts to their mains, so the check:reference-direction findings already fixed upstream leave smart-base."
             }
           }
         }
@@ -86,7 +86,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "d19145a45f89b731d1d7c070875de747ed5459c1",
+          "ref": "ccb599723c72a134f5bb24101a411679de0edba3",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -101,9 +101,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "d19145a45f89b731d1d7c070875de747ed5459c1",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-03",
+              "ref": "ccb599723c72a134f5bb24101a411679de0edba3",
+              "evidence": "Owner litlfred tapped card 'Re-pin smart-base (Recommended)' on 2026-11-03 in session https://claude.ai/code/session_01EucfRodNcVYWoFyT9Zwyb3 (bean folio-assistant-djj5): re-pin smart-base's platform mounts to their mains, so the check:reference-direction findings already fixed upstream leave smart-base."
             }
           }
         }
@@ -114,7 +114,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "5d9ff3e31cd551fda0069f44ce699be821fd0fa1",
+          "ref": "9d2a99beb50090fc073d827de754d923cdde8f66",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -129,9 +129,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "5d9ff3e31cd551fda0069f44ce699be821fd0fa1",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-03",
+              "ref": "9d2a99beb50090fc073d827de754d923cdde8f66",
+              "evidence": "Owner litlfred tapped card 'Re-pin smart-base (Recommended)' on 2026-11-03 in session https://claude.ai/code/session_01EucfRodNcVYWoFyT9Zwyb3 (bean folio-assistant-djj5): re-pin smart-base's platform mounts to their mains, so the check:reference-direction findings already fixed upstream leave smart-base."
             }
           }
         }
@@ -142,7 +142,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "837434cd560e625ba334a6a845046136038b5dd0",
+          "ref": "750d74c485ff62fb9a18d70087529b2c78348ba6",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -154,9 +154,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "837434cd560e625ba334a6a845046136038b5dd0",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-03",
+              "ref": "750d74c485ff62fb9a18d70087529b2c78348ba6",
+              "evidence": "Owner litlfred tapped card 'Re-pin smart-base (Recommended)' on 2026-11-03 in session https://claude.ai/code/session_01EucfRodNcVYWoFyT9Zwyb3 (bean folio-assistant-djj5): re-pin smart-base's platform mounts to their mains, so the check:reference-direction findings already fixed upstream leave smart-base."
             }
           }
         }
@@ -167,7 +167,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "0d655b74e9ffd1e246a0bd4df60967e158d665de",
+          "ref": "c90ef456067a874fd7017a370232908ba62e9fcd",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -176,9 +176,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "0d655b74e9ffd1e246a0bd4df60967e158d665de",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-03",
+              "ref": "c90ef456067a874fd7017a370232908ba62e9fcd",
+              "evidence": "Owner litlfred tapped card 'Re-pin smart-base (Recommended)' on 2026-11-03 in session https://claude.ai/code/session_01EucfRodNcVYWoFyT9Zwyb3 (bean folio-assistant-djj5): re-pin smart-base's platform mounts to their mains, so the check:reference-direction findings already fixed upstream leave smart-base."
             }
           }
         }
@@ -189,7 +189,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "f57b9e72a5a4fd3777aa8c1cee33088ce5899188",
+          "ref": "aa25987a2e637838be02baf4ed239d58086551a3",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -201,9 +201,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-02",
-              "ref": "f57b9e72a5a4fd3777aa8c1cee33088ce5899188",
-              "evidence": "Owner litlfred, 2026-11-01 (20:41Z, MVP thread): 'i want to get all functional stuff done, the full repin on harnesses done and stablized as MVP goal.' and 21:41Z card Q-PIN-4 'B. All, including smart-ra' (re-pin every smart-* site)."
+              "on": "2026-11-03",
+              "ref": "aa25987a2e637838be02baf4ed239d58086551a3",
+              "evidence": "Owner litlfred tapped card 'Re-pin smart-base (Recommended)' on 2026-11-03 in session https://claude.ai/code/session_01EucfRodNcVYWoFyT9Zwyb3 (bean folio-assistant-djj5): re-pin smart-base's platform mounts to their mains, so the check:reference-direction findings already fixed upstream leave smart-base."
             }
           }
         }
