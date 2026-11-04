@@ -21,9 +21,6 @@ output: schemas/skills/l2-dependency-choice/output.schema.json
 > [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn).
 > Adjudicated by the programme manager and the business analyst.
 
-**A dependency decides what the guideline inherits, so the choice is an asset
-in its own right and is adjudicated like one.**
-
 ## Input and output
 
 The contract is [`input.schema.json`](../../../schemas/skills/l2-dependency-choice/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l2-dependency-choice/output.schema.json).
@@ -35,7 +32,7 @@ The contract is [`input.schema.json`](../../../schemas/skills/l2-dependency-choi
 
 | field | from | meaning |
 |---|---|---|
-| `packageId`, `version`, `uri` | cat-harness `DependsOnRecord` (`schemas/depends-on.ts`), the same three fields as FHIR `ImplementationGuide.dependsOn` | the candidate DAK (or, at stage 5, IG). A candidate missing one of the three is a `DependsOnGap`, listed in `gaps`, not a row |
+| `packageId`, `version`, `uri` | cat-harness `DependsOnRecord` (`cat-harness-tools/schemas/kg/depends-on.ts`), the same three fields as FHIR `ImplementationGuide.dependsOn` | the candidate DAK (or, at stage 5, IG). A candidate missing one of the three is a `DependsOnGap`, listed in `gaps`, not a row |
 | `publisher`, `upstream` | — | WHO, or the adapting jurisdiction; for an adaptation, the WHO original it adapts |
 | `evidence` | smart-base KG `evidence` (`smart-base/kg/src/graph.ts`) | the L1 KG nodes (and, at L3, the L2 assets) that point at it |
 | `decision` | this skill | `reuse` (unchanged) · `adapt` (fork and change) · `extend` (depend and add) · `reject` |
@@ -43,9 +40,9 @@ The contract is [`input.schema.json`](../../../schemas/skills/l2-dependency-choi
 | `components` | — | what is taken, piece by piece: DAK components here, profiles, value sets and libraries at L3 |
 | `toolchain` | this skill | on each component reused, adapted or extended: how the candidate produces it — a Tool id from `bun run cat check:tools`, or a script in the candidate's own repository (its source spreadsheet, converter, CQL refresh, test format), found by the search in [`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK*. Stages 4 and 6 produce the component with that toolchain. `none` only after that search came back empty, naming where it looked; the new tool is then a Tool node, never a script in the adaptation repository |
 
-Only `decision`, `reason` and `toolchain` are new. Once adjudicated, a `reuse`, `adapt`
-or `extend` row becomes an ordinary dependency: the DAK's own reference at
-L2, a `dependencies:` entry in `sushi-config.yaml` at L3.
+Only `decision`, `reason` and `toolchain` are new. Once adjudicated, a
+`reuse`, `adapt` or `extend` row becomes an ordinary dependency: the DAK's
+own reference at L2, a `dependencies:` entry in `sushi-config.yaml` at L3.
 
 ## Steps
 
@@ -54,18 +51,18 @@ L2, a `dependencies:` entry in `sushi-config.yaml` at L3.
    For each, find how it produces each component it would give
    ([`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK*): that is
    the component's `toolchain`, which stage 4 uses.
-2. **Reuse first.** This is the precedence `recommendation-extraction`
-   already uses for personas and processes: reuse an existing asset, then
-   adapt one, and create only when neither fits, with a `WARNING` saying none
-   fitted. The same precedence holds for the **tooling** that makes an
-   asset: an adapted decision table is an edited copy of the upstream's
-   source spreadsheet run through the upstream's converter, not a table
-   re-typed in a new format with a new converter (2026-10-15, Uganda).
-   Prefer the jurisdiction's adaptation over the WHO original when
-   one exists for the same scope, because it already holds the local
-   decisions. Record the WHO original too, as that row's `upstream`.
+2. **Reuse first** (`recommendation-extraction`'s precedence): reuse an
+   existing asset, then adapt one, and create only when neither fits, with
+   a `WARNING` saying none fitted. The same holds for the **tooling** that
+   makes an asset: an adapted decision table is an edited copy of the
+   upstream's source spreadsheet run through the upstream's converter, not
+   a table re-typed in a new format with a new converter. Prefer the
+   jurisdiction's adaptation over the WHO original for the same scope, since
+   it already holds the local decisions, and record the WHO original as
+   that row's `upstream`.
 3. **Lay the rows out** as a `decision-comparison` table and ask through a
-   `DecisionRequest` (`schemas/decision-request.ts`: two to four options, a
-   recommendation, and what happens if nobody answers).
+   `DecisionRequest` (`cat-harness-tools/schemas/process/decision-request.ts`:
+   two to four options, a recommendation, and what happens if nobody
+   answers).
 4. **Go on.** Under the QA rule the agent proceeds with its recommendation;
    the adjudicator's answer is the stage's review decision.
