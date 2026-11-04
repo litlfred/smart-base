@@ -12,13 +12,10 @@ description: >
 
 > Skill id: `dth-l1-to-l2-ingest` · Package: `authoring-who-smart-guidelines` ·
 > Stages 0-2 of [`dth-authoring`](dth-authoring.md) for a handbook that WHO has
-> already published. Worked examples (2026-10-31): `litlfred/dth-phc#1`,
-> `dth-sc#2`, `dth-pc#2`, `dth-sfp#1`; pilot `litlfred/dth-hrh#47`.
+> already published.
 
 **An L2 DTH is a handbook whose narrative validates against the glossaries and
-links to the ArchiMate model.** The owner's definition (2026-10-31): the
-handbook can *"naturally utilize and validate against the glossaries"*, and its
-*"narrative content has a rendering/linkage/representation in ArchiMate"*.
+has a representation in, and links to, the ArchiMate model.**
 
 ## Where things go
 
@@ -32,11 +29,10 @@ handbook can *"naturally utilize and validate against the glossaries"*, and its
 ## The workplan comes first
 
 Write one workplan per handbook and show it to the owner before any content
-work. It lives as an issue on the handbook's own repo. Open it with the issue
-form [`dth-workplan.yml`](https://github.com/litlfred/smart-base/blob/main/smart-base/templates/issue-forms/dth-workplan.yml):
-copy it to `.github/ISSUE_TEMPLATE/` in the fork, so the BPMN, roles and DMN
-sections cannot be skipped (owner, 2026-10-31, option A: skill plus issue form). Every workplan has these
-sections; the last three are required (owner, 2026-10-31):
+work. It is an issue on the handbook's own repo, opened with the issue form
+[`dth-workplan.yml`](https://github.com/litlfred/smart-base/blob/main/smart-base/templates/issue-forms/dth-workplan.yml)
+copied to `.github/ISSUE_TEMPLATE/` in the fork. The form requires sections
+1, 2, 4 and 6 to 8, so the BPMN, roles and DMN cannot be skipped:
 
 1. **Source**: IRIS item, ISBN, edition, who-iris entry, and anything missing
    from it (a missing PDF, a missed glossary).
@@ -70,11 +66,10 @@ Ids are per handbook and per kind: `<HB>-BP-nn` (business process), `<HB>-R-nn`
 - **Issues on the fork.** GitHub turns Issues off on a fork. Ask the owner to
   tick Settings > Features > Issues, then put the workplan issue there, not on
   smart-ra.
-- **When in doubt, file an issue; do not guess** (owner, 2026-10-31). An
-  agent that hits a problem or is unsure during ingestion files it where the
-  handbook tracks work: a GitHub issue on the fork, or a row in its review
-  sheet, whichever is available. It records what it found, the page, and the
-  options it sees, then carries on with work that does not depend on it.
+- **When in doubt, file an issue; do not guess.** File it where the handbook
+  tracks work (an issue on the fork, or a row in its review sheet) with what
+  you found, the page and the options, then carry on with work that does not
+  depend on it.
 - **Conflicts are issues, not choices.** When the handbook defines a term
   differently from smart-ra, open an issue on `litlfred/smart-ra` that keeps
   both definitions, each quoted with its page. Do not pick one.
@@ -89,34 +84,33 @@ Ids are per handbook and per kind: `<HB>-BP-nn` (business process), `<HB>-R-nn`
   copied word for word, each with its page.
 - **Fetching what the sandbox cannot reach** (a missing PDF, a private repo):
   file a bean and give the owner a ready-to-paste prompt for the local agent.
-- **Read the workplan issue's comments first.** The owner's local agent may
-  already have done some steps.
+- **Read the workplan issue's comments first**: the owner's local agent may
+  have done some steps.
 - **The first merge into a bare fork needs the owner's OK.** After it, turn on
   Pages for the fork.
 - **Check verbatim quotes by script.** Text shown as a verbatim quote must be
-  found in the normalised L1 text by a check, not by eye (dth-phc#3: seven
-  chapter 2 role quotes were not in the L1).
+  found in the normalised L1 text by a check, not by eye.
 - **Agents never sign off.** An agent never writes the owner's name into
   `signedOffBy` in `l1-exclusions.json`. An exclusion an agent writes stays a
   proposal until the owner signs it.
 - **A table in the PDF is a table in the L1.** When ingestion flattens a
   table or a figure's cells into lines, fix the L1 entry in who-iris so the
   cells sit in a table, word for word. Flattened cells that cite another
-  guideline's figure ("Fig. 8.4 ...") read as figures this handbook declares,
-  and `figure:coverage` reports them missing (who-iris#157, PHC Fig. 13).
+  guideline's figure ("Fig. 8.4 ...") otherwise read as figures this handbook
+  declares, and `figure:coverage` reports them missing.
 - **Regenerate coverage after every L1 repin.** Sentence keys move when the
   L1 entry changes, so committed `l1-coverage*` outputs go stale. Rerun the
-  coverage writer in the same PR as the who-iris repin (dth-phc#5).
+  coverage writer in the same PR as the who-iris repin.
 - **Texts name things by title or number.** A handbook text cites a block,
   figure or table by its title or number, never by a raw id.
 - **Validators live in the platform.** Glossary validators and L1 coverage
-  checks belong in folio-assistant-core, not in the handbook repo (core#377).
+  checks belong in folio-assistant-core, not in the handbook repo.
 
 ## Blocks, figures, ArchiMate and DMN
 
 - **Blocks link to ArchiMate through the glossary.** A block's Markdown shows a
   `**Concepts:**` line built from `meta.glossaryTerms`. Only figure blocks link
-  straight to an ArchiMate view (core#407).
+  straight to an ArchiMate view.
 - **Figures are rebuilt by type.** An architecture figure becomes ArchiMate, a
   process becomes BPMN, a data model becomes a class diagram, and a chart becomes
   SVG from its data. Third-party and country figures stay cited images. The
