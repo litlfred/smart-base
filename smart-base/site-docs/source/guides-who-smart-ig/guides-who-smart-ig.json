@@ -27,7 +27,7 @@
           "sourceLinks": [
             {
               "text": "BPMN 2.0 source",
-              "href": "https://github.com/litlfred/folio-assistant/blob/main/processes/l3-fhir-pipeline.bpmn"
+              "href": "https://github.com/litlfred/fhir-harness/blob/main/processes/content/l3-fhir-pipeline.bpmn"
             },
             {
               "text": "full-size SVG",
@@ -54,7 +54,7 @@
           "sourceLinks": [
             {
               "text": "BPMN 2.0 source",
-              "href": "https://github.com/litlfred/folio-assistant/blob/main/processes/ig-incremental-build.bpmn"
+              "href": "https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-incremental-build.bpmn"
             },
             {
               "text": "full-size SVG",

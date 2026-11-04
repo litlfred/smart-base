@@ -7,7 +7,7 @@ export default toolFactory((t) =>
     description:
       "Derive FSH from a DAK's BPMN business processes (the inverse of the extractors).",
     install: { none: true },
-    invoke: { shell: "python3 scripts/smart-base-transform.py" },
+    invoke: { shell: "python3 smart-base/scripts/smart-base-transform.py bpmn2fsh <file.bpmn|dir> [-o OUTDIR]" },
     io: {
       inputs: [{ name: "bpmn", schema: t("FilesystemPath"), required: true }],
       outputs: [{ name: "fsh", schema: t("RepoPath"), description: "Generated FSH, for SUSHI to compile." }],
