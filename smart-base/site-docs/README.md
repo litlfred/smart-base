@@ -17,6 +17,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-site-docs`, ho
 | [`concepts/`](concepts/) | _nothing declares what this holds_ | |
 | [`guides/`](guides/) | _nothing declares what this holds_ | |
 | [`site/`](site/) | _nothing declares what this holds_ | |
-| [`source/`](source/) | This instance's docs source: one directory per generated page (`<group>-<slug>/`), holding its authored blocks (`.md`), its manifests (`.ts`) and their generated `.jsonld`. The platform's docs-page run (`gen-docs-pages.ts`), which reads the docs source every mounted instance declares, renders each into the page beside it (`<group>/<slug>.md`), and the site build composes this directory under `/smart-base/`. `compose-docs` leaves `source/` out, so a block is never published as a page of its own. | |
+| [`source/`](source/README.md) | This instance's docs source: one directory per generated page (`<group>-<slug>/`), holding its authored blocks (`.md`), its manifests (`.ts`) and their generated `.jsonld`. The platform's docs-page run (`gen-docs-pages.ts`), which reads the docs source every mounted instance declares, renders each into the page beside it (`<group>/<slug>.md`), and the site build composes this directory under `/smart-base/`. `compose-docs` leaves `source/` out, so a block is never published as a page of its own. | |
 
 <!-- kg:subgraph:end -->
