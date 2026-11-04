@@ -41,38 +41,31 @@ FHIR content generally:
 | L4 Executable | reference applications and services that execute the static algorithms | software |
 | L5 Dynamic | dynamic algorithms trained and optimised on data — the precision-health model | models, analytics |
 
-The five names and their one-line meanings are the WHO *Digital
-transformation handbook for primary health care* (2024), §1.2 pp. 20–21,
-ingested as the DAK layer's `library/9789240093362-eng`. It cites, as its ref. 18,
-the primary source: Mehl G. et al., *WHO SMART guidelines: optimising
-country-level use of guideline recommendations in the digital age*, Lancet
-Digital Health 2021;3(4):e213–e216, ingested as
-the DAK layer's `library/mehl-2021-who-smart-guidelines` (CC BY 3.0 IGO). It
-presents the same five as "knowledge layers (L1–L5)".
+The five names and their meanings are from the WHO *Digital transformation
+handbook for primary health care* (2024), §1.2 pp. 20–21
+(`who-iris/library/9789240093362-eng`). Its ref. 18 is the primary source:
+Mehl G. et al., *WHO SMART guidelines: optimising country-level use of
+guideline recommendations in the digital age*, Lancet Digital Health
+2021;3(4):e213–e216 (`smart-base/library/mehl-2021-who-smart-guidelines`,
+CC BY 3.0 IGO), which presents the same five as "knowledge layers (L1–L5)".
 
-**This page stops at L3 on purpose.** L4 and L5 are software and trained
-models. They consume what L1–L3 publish, but they are not authored as FHIR
-content, so nothing in this platform validates them as content. An earlier
-version of this page said SMART Guidelines "names three layers". That is the
-kind of rounding that tells a reader L4 and L5 do not exist.
+**This page stops at L3.** L4 and L5 are software and trained models. They
+consume what L1–L3 publish, but they are not authored as FHIR content, so
+nothing in this platform validates them as content.
 
-**They are layers, not stages, and the difference is load-bearing.** A stage
-model says each is produced from the one before and then left behind. In
-practice all three are live at once: an L2 decision table and the L3
-`PlanDefinition` derived from it both exist, both are published, and both can
-change. Treating L2 as scaffolding that L3 replaces is how a decision table
-and its FHIR representation drift apart with nothing to notice.
+**They are layers, not stages.** All three are live at once: an L2 decision
+table and the L3 `PlanDefinition` derived from it are both published and both
+can change. Treating L2 as scaffolding that L3 replaces lets the two drift
+apart unnoticed. An instance may also hold any one of the three without the
+others: an L1 corpus with no DAK, or an IG with no L1.
 
-It is also why an instance may hold any one of the three without the others.
-An L1 corpus with no DAK behind it is a real thing; so is an IG with no L1.
-
-**The SMART layers are not the platform's layers.** `cat-harness`,
-the content core and the science layer are layers of *this software*.
-Each depends on the one before and inherits its skills and directories. L1–L5
-are layers of *guideline knowledge*. A WHO folio holds L1–L3 *content*; the
-platform layers are the tools that author and check it, and none of them is
-"the L2 layer". The deck that set the two side by side is
-`cat-harness/library/kg-folio-asst-2026-09-30` (slide 1).
+**The SMART layers are not the platform's layers.** `cat-harness`, the content
+core and the science layer are layers of *this software*; each depends on the
+one before and inherits its skills and directories. L1–L5 are layers of
+*guideline knowledge*. A WHO folio holds L1–L3 *content*; the platform layers
+author and check it, and none of them is "the L2 layer". The deck that sets
+the two side by side is `cat-harness/library/content/kg-folio-asst-2026-09-30`
+(slide 1).
 
 ## WHO SMART Guidelines DAKs (L2)
 {: #who-smart-guidelines-daks-l2 data-fa-label="sec:content-types-who-smart-guidelines-daks-l2" }
@@ -155,16 +148,14 @@ exits:
 - `<stem>.jsonld` — a JSON-LD vocabulary, built from ValueSet **expansions**
 - `dak-api.html` — the hub a reader enters through
 
-Its size varies by two orders of magnitude between IGs, so treat any figure
-you have seen as a fact about one IG at one version rather than as a property
-of the surface.
+Its size varies by two orders of magnitude between IGs; a figure describes one
+IG at one version.
 
-**None of this is the Publisher's work**, which is the practical reason to
-know the boundary: a question about why a schema is missing is a question
-about a post-processing script, not about the build. And because the JSON-LD
-vocabularies are built from expansions, they inherit the terminology server's
-availability — a thin vocabulary may mean a thin ValueSet or may mean nobody
-could expand it, and the artefact alone does not say which.
+**None of this is the Publisher's work**: a missing schema is a question about
+a post-processing script, not the build. The JSON-LD vocabularies inherit the
+terminology server's availability, so a thin vocabulary may mean a thin
+ValueSet or one nobody could expand, and the artefact alone does not say
+which.
 
 ## The WHO build around the IG Publisher
 {: #the-who-build data-fa-label="sec:who-smart-content-types-the-who-build" }
@@ -174,14 +165,12 @@ could expand it, and the artefact alone does not say which.
 The FHIR IG Publisher and FHIR content in general are described on the
 [FHIR IG Publisher](https://litlfred.github.io/folio-assistant/fhir-harness/fhir/ig-publisher.html)
 and [FHIR content](https://litlfred.github.io/folio-assistant/fhir-harness/fhir/fhir-content.html)
-pages of the FHIR IG layer. This section holds what is specific to the WHO
+pages of the FHIR IG layer. This section covers what is specific to the WHO
 SMART Guidelines build.
 
-**The Publisher is one step of many.** In the WHO SMART Guidelines build it
-runs between six pre-processing invocations and nine post-processing ones.
-Most of what a reader sees on a published SMART Guideline (the DAK API, the
-JSON Schemas, the JSON-LD vocabularies) is produced *after* the Publisher
-exits, by scripts, and is not the Publisher's work at all.
+**The Publisher is one step of many.** It runs between six pre-processing
+invocations and nine post-processing ones. The DAK API, the JSON Schemas and
+the JSON-LD vocabularies are produced *after* it exits, by scripts.
 
 **The version floats.** The WHO build downloads `publisher.jar` from the
 **latest** release on every run, so two builds of an unchanged commit can
@@ -191,8 +180,7 @@ differ, and nothing in the output says which version produced them.
 `hl7.terminology`, `hl7.fhir.uv.extensions.r4`, `hl7.fhir.uv.cql`,
 `hl7.fhir.uv.cpg`, `hl7.fhir.uv.crmi` and `hl7.fhir.uv.sdc`.
 
-The rules are skills, and where the two disagree the skill wins and this page
-is wrong:
+The rules are skills; where a skill and this page disagree, the skill wins:
 
 - **`l2-dak-authoring`**: authoring at L2, and deriving rather than retyping.
 - **`ig-artifact-ingestion`**: reading a *published* IG back as a knowledge
