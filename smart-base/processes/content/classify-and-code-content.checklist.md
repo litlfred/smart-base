@@ -4,11 +4,11 @@
 
 > **Generated, and not the authority.** This is `smart-base/processes/content/classify-and-code-content.bpmn` (process `Process_ClassifyAndCodeContent`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
 
-Classifies and codes L1 extracted statements (recommendations, implementation practices, remarks, and proposed coverage exclusions) and L2 DAK slots (personas, business processes, guideline domains, conditions, interventions, medicines, and GRADE ratings) following the terminology-coding methodology
+Classifies and codes L1 extracted statements (recommendations, implementation practices, remarks, proposed coverage exclusions) and L2 DAK slots (personas, business processes, guideline domains, conditions, interventions, medicines, GRADE ratings), following the terminology-coding methodology and th
 
 ## Begin — L1 extraction or L2 component ready to classify and code (`Start_ContentReady`)
 
-- Begin here: Triggered when an L1 source has been extracted into candidate statements and exclusions, or when an L2 DAK component (personas, user scenarios, business processes, data dictionary, decision tables) requires terminology classification and coding.
+- Begin here: An L1 source has been extracted into candidate statements and exclusions, or an L2 DAK component (personas, user scenarios, business processes, data dictionary, decision tables) needs classification and coding.
 - Call `workflow_start` with `process: "Process_ClassifyAndCodeContent"` and the subject this run is about; keep the instance id it returns.
 - next: → `Gateway_Rework`
 
@@ -29,7 +29,7 @@ Classifies and codes L1 extracted statements (recommendations, implementation pr
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `classify-and-code-content`, `recommendation-scenarios`, `glossary-terms`.
-- What: Run the terminology-lookup Tool across the four reuse-first rungs of the terminology-coding methodology: (1) target guide vocabulary, (2) smart-base generic personas, GRADE code lists and guideline-domain glossary, (3) external WHO-FIC/ILO standards (ICD-11, ICHI/CDHIv2, ISCO-08, ATC), and (4) local
+- What: Run the terminology-lookup Tool down the four reuse-first rungs of the terminology-coding methodology: (1) target guide vocabulary, (2) smart-base generic personas, GRADE code lists and guideline-domain glossary, (3) external WHO-FIC/ILO standards (ICD-11, ICHI/CDHIv2, ISCO-08, ATC), (4) local gloss
 - Record it: `workflow_complete` with `node: "Task_LookupAndCode"`.
 - next: → `Task_StageForReview` (Stage codings, warnings and exclusions for review)
 
@@ -37,13 +37,13 @@ Classifies and codes L1 extracted statements (recommendations, implementation pr
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `staging-review`, `interaction-modality`.
-- What: Write the candidate codings, provenance bases, warnings report, and any unsigned exclusions.proposed.json entries, and request human review with deep links to the staged extraction or component pages and the printed page sections.
+- What: Write the candidate codings, provenance bases, warnings report and any unsigned exclusions.proposed.json entries, and request review with deep links to the staged pages and the printed page sections.
 - Record it: `workflow_complete` with `node: "Task_StageForReview"`.
 - next: → `Gateway_HasExclusions` (Proposed exclusions?)
 
 ### Decide — Proposed exclusions? (`Gateway_HasExclusions`)
 
-- When the L1 extraction includes unsigned entries in exclusions.proposed.json, route them to the l1-extraction-reviewer lane first so coverage exclusions are verified against the printed page before final coding sign-off; otherwise proceed directly to the terminologist/ontologist review lane.
+- Unsigned entries in exclusions.proposed.json go to the l1-extraction-reviewer first, so exclusions are verified against the printed page before coding sign-off; otherwise straight to terminologist/ontologist review.
 - Call `workflow_complete` with `node: "Gateway_HasExclusions"` and `outcome` set to the label that holds:
   - «yes» → `Task_ReviewExclusions` (Check exclusions against page and sign)
   - «no» → `Task_ReviewCodings` (Adjudicate slot codings and glossary candidates)
@@ -60,20 +60,20 @@ Classifies and codes L1 extracted statements (recommendations, implementation pr
 
 - Who: the `Terminologist / ontologist reviewer (person)` lane (role `terminologist`).
 - Skill: `classify-and-code-content`, `ontologist`, `glossary-terms`, `terminology-management`, `content-review`.
-- What: Review each slot's classification and code against the terminology-coding methodology: verify that the authoritative scheme for the slot was used, confirm reuse-first rung selection, check skos:exactMatch vs skos:closeMatch precision (ontologist), and adjudicate any Rung 4 glossary candidates (promo
+- What: Review each slot's classification and code against the terminology-coding methodology: the authoritative scheme for the slot, the reuse-first rung, skos:exactMatch vs skos:closeMatch precision (ontologist), and any Rung 4 glossary candidates (promote valid ones from candidate to authored per glossar
 - Record it: `workflow_complete` with `node: "Task_ReviewCodings"`.
 - next: → `Gateway_TerminologistVerdict` (Coding verdict?)
 
 ### Decide — Exclusions signed? (`Gateway_ExclusionVerdict`)
 
-- If all proposed exclusions are verified and signed by the l1-extraction-reviewer, proceed to terminologist/ontologist review; if any exclusion is rejected as normative, return to the authoring agent to re-curate the sentence as an L1 node.
+- All signed: on to terminologist/ontologist review.
 - Call `workflow_complete` with `node: "Gateway_ExclusionVerdict"` and `outcome` set to the label that holds:
   - «reject-exclusion» → `Gateway_Rework`
   - «signed» → `Task_ReviewCodings` (Adjudicate slot codings and glossary candidates)
 
 ### Decide — Coding verdict? (`Gateway_TerminologistVerdict`)
 
-- The terminologist/ontologist reviewer's decision: approve promotes candidate links to reviewed and approved glossary candidates to authored; request-changes returns the mapping or glossary candidates to the authoring agent with specific findings.
+- approve marks candidate links reviewed and promotes approved glossary candidates to authored; request-changes returns the mappings or glossary candidates to the authoring agent with findings.
 - Call `workflow_complete` with `node: "Gateway_TerminologistVerdict"` and `outcome` set to the label that holds:
   - «request-changes» → `Gateway_Rework`
   - «approve» → `End_ClassifiedAndCoded` (Content classified, coded and signed off)
