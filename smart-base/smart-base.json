@@ -17,7 +17,7 @@
     "tone": 199,
     "reads": "a broad base under narrowing courses — the layer the SMART stack rests on, in WHO blue"
   },
-  "_avatar_comment": "SMART-BASE — THE SAME WHO BLUE, AND FOR THE SAME REASON. Owner, 2026-09-23: *\"smart-base avatar: use who-iris route, WHO blue no logo\"*, taking the route this instance's exemption had named as open and preferable rather than leaving it exempt. TONE 199 IS SHARED WITH `who-iris` ON PURPOSE, not by oversight. It is measured from the same #0093D5 — the organisation's own blue — and these are two instances of the SAME organisation's material. A reader scanning the navbar should see them as a family; giving smart-base a near-miss hue would assert a distinction that does not exist. The registry requires distinct GLYPHS, not distinct tones, and that is the right constraint: the glyph says which instance, the tone says whose. And no emblem, which is the whole of \"the who-iris route\": an organisation's published colour with a neutral glyph is not inventing its identity, where cropping its logo would be. A broad base with three narrowing courses above it — the layer the rest of the stack rests on. smart-base is exactly that: `fhir-harness` sits under it, and `smart-ig` (and the IGs that need it) is built on top, so the glyph reads the instance's position rather than its subject. Moved here from cat-harness/schemas/avatars.ts, 2026-10-05 (bean sod4 #4): an instance declares its own mark.",
+  "_avatar_comment": "WHO blue (tone 199, measured from #0093D5), shared with `who-iris` on purpose: both are the same organisation's material, so the navbar shows them as a family. The registry requires distinct glyphs, not distinct tones: the glyph says which instance, the tone says whose. No emblem: an organisation's published colour with a neutral glyph does not invent its identity. The glyph is a broad base with three narrowing courses above it, the layer the stack rests on: `fhir-harness` sits under smart-base and `smart-ig` and the IGs that need it are built on top.",
   "directories": [
     {
       "id": "smart-base-site-docs",
@@ -109,7 +109,7 @@
         "fhir-artifact-index"
       ],
       "readOnly": true,
-      "readOnlyBasis": "Built from the IG's own AST, and GENERATED -- fhir-harness's `ig-index:build` writes this index at publish, a person does not edit or commit it (fhir-harness#124). Read-only is about the second: a hand edit here silently changes what this repository claims upstream published, and `check:materialized-fixity` is what catches one that happened. Answered rather than left silent, because absent is NOT a declaration of writability -- a directory that has not answered has asserted nothing, which is why the verdict for silence is `undeclared` and never `false`.",
+      "readOnlyBasis": "Generated: fhir-harness's `ig-index:build` writes this index from the IG's own AST at publish; a person does not edit or commit it. A hand edit here would silently change what this repository claims upstream published, and `check:materialized-fixity` catches one. Declared rather than left silent, because silence is read as `undeclared`, never as writable.",
       "served": true
     },
     {
@@ -160,7 +160,7 @@
         "fhir-harness/scripts/templates/ig-pages/"
       ],
       "igSite": true,
-      "_comment_igSite": "Built INTO smart-base's own IG site at /smart-base/, as the WHO SMART Trust IG's are -- the same reasoning, recorded on that IG's docs directory (bean mftp). Owner, 2026-10-05 (paraphrased): changes made for the WHO SMART Trust IG are to be reflected in smart-base and so in every IG built on it, with no drift. The IG's own home page is the root; the harness is reached through the navbar.",
+      "_comment_igSite": "Built into smart-base's own IG site at /smart-base/, as the WHO SMART Trust IG's docs are, so a change reaches every IG built on smart-base without drift. The IG's own home page is the root; the harness is reached through the navbar.",
       "tile": {
         "icon": "docs"
       }
@@ -281,7 +281,7 @@
       ]
     }
   ],
-  "_directories_comment": "The list above is the count; this comment said FIVE entries while there were six, and gives none now. `scenarios/` is declared now that it holds `roles.json` (bean hupw); a declared-but-absent directory would be the `dh4f` defect, where every consumer scans nothing and reports a clean run over it.",
+  "_directories_comment": "Every directory declared here exists and holds content; a declared-but-absent directory would make every consumer scan nothing and report a clean run.",
   "assets": [
     {
       "id": "agent-instructions",
@@ -305,7 +305,7 @@
       "description": "The checkout scripts this instance's code runs, under `checkoutScripts`, each relative to the downstream checkout root. A downstream that mounts this instance reads them with `bun run cat` and `check:script-placement` only while this file's sha256 matches the mount lock."
     }
   ],
-  "_visualisers_comment": "THE VISUALISERS THIS HARNESS DECLARES, at its own level (owner, 2026-10-09: \"I still want the harness to be where specific visualizers/pages are declared for the harness at the level … Need harness to declare visualizer is renderedBy\"). `artifact-index` is the artefact index of the SMART IGs, drawn by fhir-harness's `ig-pages` Tool, by KIND and per instance: <base>/smart-base/artifact-index/ opens this IG's own artifacts page, and <base>/smart-base/artifact-index/<instance>/ each covered IG's (smart-trust, smart-immunizations), whose own repositories declare no visualiser yet. `l1-extraction` is this layer's own kind (owner, 2026-10-16: \"l1-extraction is part of smart-base\"), drawn by smart-base's `l1-extraction-pages` Tool per instance: <base>/smart-base/l1-extraction/<instance>/ shows what each declared extraction holds (smart-base's handbook extraction, smart-immunizations' measles example), unknown where the directory is not in the build. Routes computed by visualiserRoute. Not `artifacts`: the IG already publishes artifacts.html beside it, and check:visualiser-routes refuses a route a harness's own served directory also answers. Until then the IG's front-matter page said `renders: [smart-base/fhir-artifact-index]`, which is the page claiming the directory.",
+  "_visualisers_comment": "The visualisers this harness declares. `artifact-index` is the artefact index of the SMART IGs, drawn by fhir-harness's `ig-pages` Tool per instance: <base>/smart-base/artifact-index/ opens this IG's own artifacts page, and <base>/smart-base/artifact-index/<instance>/ each covered IG's (smart-trust, smart-immunizations). `l1-extraction` is this layer's own kind, drawn by smart-base's `l1-extraction-pages` Tool per instance: <base>/smart-base/l1-extraction/<instance>/ shows what each declared extraction holds, or unknown where the directory is not in the build. Routes are computed by visualiserRoute. Not `artifacts`: the IG already publishes artifacts.html beside it, and check:visualiser-routes refuses a route a harness's own served directory also answers.",
   "visualisers": [
     {"id": "artifact-index", "renderedBy": "ig-pages", "coversKinds": ["fhir-artifact-index"], "subgraphs": "instance", "title": "Artefact index"},
     {"id": "l1-extraction", "renderedBy": "l1-extraction-pages", "coversKinds": ["l1-extraction"], "subgraphs": "instance", "title": "L1 extraction"}
@@ -314,40 +314,40 @@
     "fhir-harness",
     "who-iris"
   ],
-  "_canonicalUrl_comment": "smart-base's published base, as `sushi-config.yaml` declares it (`canonical: http://smart.who.int/base`). Added 2026-09-22 with `tools/`, because a Tool node's I/O type IRIs are minted against this at load and Zod refuses a relative one. It is READ from upstream rather than chosen here, so it is a fact about smart-base and not a decision about where this staging directory publishes.",
+  "_canonicalUrl_comment": "smart-base's published base, read from `sushi-config.yaml` (`canonical: http://smart.who.int/base`). A Tool node's I/O type IRIs are minted against it at load, and Zod refuses a relative one.",
   "canonicalUrl": "http://smart.who.int/base",
-  "_needs_comment": "ADDED who-iris 2026-10-30 (who-iris#107): the WHO IRIS publications smart-base cites (DIIG, the classifications, the digital transformation handbooks) moved there, so smart-base's voices, methodologies and l1-extraction read that corpus. REPOINTED 2026-09-22 (issue #975) from `folio-assistant-core` to `fhir-harness`, per the owner's stack ruling. It read `folio-assistant-core` because it was staged (PR #881) BEFORE `fhir-harness` existed, and taking no position on the pipeline layering was that PR's explicit scope. `needs` governs the LAYER ORDER: `dependency-order.ts` topologically sorts on it and `harness-tiles.ts` builds the LHS navbar spine from it. It does NOT compose the skill or content overlay -- that is `dependencies.folioAssistant` in `<name>.config.json`, walked recursively by `resolveSkillDirs`, and the two are different mechanisms with different files. MEASURED 2026-09-22 rather than assumed, after this comment first claimed otherwise: with `needs` set correctly, `resolveSkillDirs` still returns each instance's OWN skills and nothing from the layer below. No `smart-*` instance declares config dependencies at all, so no overlay composes anywhere in this stack -- bean recorded, not fixed here.",
+  "_needs_comment": "`needs` governs the layer order: `dependency-order.ts` sorts on it and `harness-tiles.ts` builds the navbar spine from it. smart-base needs `fhir-harness` (the layer below) and `who-iris`, which holds the WHO IRIS publications its voices, methodologies and l1-extraction cite. `needs` does not compose the skill or content overlay: that is `dependencies.folioAssistant` in `<name>.config.json`, walked by `resolveSkillDirs`. No `smart-*` instance declares config dependencies, so `resolveSkillDirs` returns each instance's own skills only.",
   "taskIo": {
     "smart-base:diig-figure:check": {
       "outputs": [],
-      "because": "python; `write_text` only without `--check` — measured 2026-10-01 (bean xpcu); moved out of cat-harness/scripts/task-io.ts 2026-10-06 (bean 0r7u)"
+      "because": "python; `write_text` only without `--check`"
     },
     "smart-base:pages:check": {
       "inputs": ["{tracked}"],
       "outputs": [],
-      "because": "measured 2026-10-01 (bean xpcu); moved from cat-harness/scripts/task-io.ts to its owning instance 2026-10-06 (bean 0r7u)"
+      "because": "writes nothing under `--check`"
     },
     "smart-base:document-kinds:check": {
       "inputs": ["{tracked}"],
       "outputs": [],
-      "because": "measured 2026-10-01 (bean xpcu); moved from cat-harness/scripts/task-io.ts to its owning instance 2026-10-06 (bean 0r7u)"
+      "because": "writes nothing under `--check`"
     },
     "smart-base:l1-scenarios:check": {
       "inputs": ["{tracked}"],
       "outputs": [],
       "writer": "smart-base:l1-scenarios",
-      "because": "exits before either writeFileSync under `--check` -- measured 2026-10-10 for the measles run of the same script (bean kvd2), which moved to the WHO SMART Immunizations IG with its data; this is the handbook example's run (9789240116191-eng), the one smart-base keeps"
+      "because": "exits before either writeFileSync under `--check`; this is the handbook example's run (9789240116191-eng)"
     },
     "smart-base:dth-terms:check": {
       "inputs": ["{tracked}"],
       "outputs": [],
-      "because": "measured 2026-10-01 (bean xpcu); moved from cat-harness/scripts/task-io.ts to its owning instance 2026-10-06 (bean 0r7u)"
+      "because": "writes nothing under `--check`"
     },
     "smart-base:smart-kg-l1:check": {
       "outputs": [],
       "writer": "smart-base:smart-kg-l1:all",
       "afterMerge": true,
-      "because": "`continue`s before `writeFileSync` under `check` — measured 2026-10-01 (bean xpcu); moved from cat-harness/scripts/task-io.ts to its owning instance 2026-10-06 (bean 0r7u). Writer: `--all` rewrites every entry `--check` examines (bean wczm); afterMerge replaces merge-train's hard-coded per-entry re-extract (bean 0r7u)"
+      "because": "`continue`s before `writeFileSync` under `check`. Writer: `--all` rewrites every entry `--check` examines; afterMerge re-extracts per entry"
     }
   },
   "contentTranslations": [
@@ -428,22 +428,22 @@
       {
         "script": "smart-base:pages:check",
         "kind": "covered-by",
-        "reason": "covered-by `smart:pages`, which every reader job in the index checkout runs straight after the mount (cutover 1ad43df727, bean hupw). This `:check` compared a committed copy of the generated pages; since the cutover the pages are built from the mount and never committed, so there is no copy to compare and the build itself is the gate. folio-assistant#2518."
+        "reason": "covered-by `smart:pages`, which every reader job in the index checkout runs straight after the mount. The pages are built from the mount and never committed, so there is no copy for this `:check` to compare; the build itself is the gate."
       },
       {
         "script": "check:dak-annexes",
         "kind": "covered-by",
-        "reason": "covered-by `check:web-annexes`, which `code-quality-gates.yml` runs: this is the same script under its name before the `web-annex` widening (2026-10-24), kept as an alias for callers that still use it. Running both would judge the same annexes twice. folio-assistant#2681."
+        "reason": "covered-by `check:web-annexes`, which `code-quality-gates.yml` runs: this is the same script under an older name, kept as an alias for callers that still use it. Running both would judge the same annexes twice."
       }
     ]
   },
-  "_builtAtPublish_comment": "Owner, 2026-10-14 (B1; schemas/built-at-publish.ts in cat-harness). This instance's JSON-LD @context is generated by `jsonld:contexts` (cat-harness-tools scripts/gen-instance-contexts.ts) from the prefixes and content-context terms its documents use, flattened with the prefix tables of every instance it needs. Those tables are read at the CHECKOUT's pins, not at pins this instance's commit names, so no commit of it can hold the file current: it is built at publish and never committed (bean folio-assistant-63q4).",
+  "_builtAtPublish_comment": "This instance's JSON-LD @context is generated by `jsonld:contexts` (cat-harness-tools scripts/gen-instance-contexts.ts) from the prefixes and content-context terms its documents use, flattened with the prefix tables of every instance it needs. Those tables are read at the checkout's pins, so no commit can hold the file current: it is built at publish and never committed (schema: cat-harness's built-at-publish.ts).",
   "builtAtPublish": [
-    {"path": "fhir-artifact-index/index.json", "writer": ["ig-index:build"], "because": "checkout", "reason": "the IG's artefact index: built by fhir-harness's ig-index:build from the IG's AST (restored from the IG repository's AST cache) and its own sushi-config.yaml, so it moves when the IG's default branch or its AST cache moves, not with a commit of this instance (fhir-harness#124)"},
-    {"path": "fhir-artifact-index/menu.json", "writer": ["ig-index:build"], "because": "checkout", "reason": "the IG's menu: built by fhir-harness's ig-index:build from the IG's AST (restored from the IG repository's AST cache) and its own sushi-config.yaml, so it moves when the IG's default branch or its AST cache moves, not with a commit of this instance (fhir-harness#124)"},
-    {"path": "fhir-artifact-index/releases.json", "writer": ["ig-index:build"], "because": "checkout", "reason": "the IG's release list: built by fhir-harness's ig-index:build from the IG's AST (restored from the IG repository's AST cache) and its own sushi-config.yaml, so it moves when the IG's default branch or its AST cache moves, not with a commit of this instance (fhir-harness#124)"},
-    {"path": "fhir-artifact-index/package.tgz", "writer": ["ig-index:build"], "because": "checkout", "reason": "the Publisher-shaped package the JSON view pages read each resource from: built by fhir-harness's ig-index:build from the IG's AST (restored from the IG repository's AST cache) and its own sushi-config.yaml, so it moves when the IG's default branch or its AST cache moves, not with a commit of this instance (fhir-harness#124)"},
-    {"path": "document-kinds/dak.coverage.smart-base.json", "writer": ["smart-base:document-kinds"], "because": "checkout", "directory": "smart-base-document-kinds", "reason": "the DAK view of this IG's artefact index, which is itself built at publish (fhir-artifact-index/index.json above), so the report moves with the index and is built after it (fhir-harness#124)"},
+    {"path": "fhir-artifact-index/index.json", "writer": ["ig-index:build"], "because": "checkout", "reason": "the IG's artefact index: built by fhir-harness's ig-index:build from the IG's AST (restored from the IG repository's AST cache) and its own sushi-config.yaml, so it moves when the IG's default branch or its AST cache moves, not with a commit of this instance"},
+    {"path": "fhir-artifact-index/menu.json", "writer": ["ig-index:build"], "because": "checkout", "reason": "the IG's menu: built by fhir-harness's ig-index:build from the IG's AST (restored from the IG repository's AST cache) and its own sushi-config.yaml, so it moves when the IG's default branch or its AST cache moves, not with a commit of this instance"},
+    {"path": "fhir-artifact-index/releases.json", "writer": ["ig-index:build"], "because": "checkout", "reason": "the IG's release list: built by fhir-harness's ig-index:build from the IG's AST (restored from the IG repository's AST cache) and its own sushi-config.yaml, so it moves when the IG's default branch or its AST cache moves, not with a commit of this instance"},
+    {"path": "fhir-artifact-index/package.tgz", "writer": ["ig-index:build"], "because": "checkout", "reason": "the Publisher-shaped package the JSON view pages read each resource from: built by fhir-harness's ig-index:build from the IG's AST (restored from the IG repository's AST cache) and its own sushi-config.yaml, so it moves when the IG's default branch or its AST cache moves, not with a commit of this instance"},
+    {"path": "document-kinds/dak.coverage.smart-base.json", "writer": ["smart-base:document-kinds"], "because": "checkout", "directory": "smart-base-document-kinds", "reason": "the DAK view of this IG's artefact index, which is itself built at publish (fhir-artifact-index/index.json above), so the report moves with the index and is built after it"},
     {"path": "ns/context/v1.jsonld", "writer": ["jsonld:contexts"], "because": "checkout", "reason": "the prefixes and content-context terms its documents use, flattened with the jsonldPrefixes of the layers it needs at the checkout's pins"},
     {"path": "docs/", "writer": ["smart-base:pages", "smart-base:l1-extraction:pages"], "because": "checkout", "directory": "smart-base-docs", "reason": "the artefact pages gen-ig-pages renders from this instance's artefact index with fhir-harness's IG-page templates and this instance's themes and chrome, all read at the checkout's pins; and, where this instance's docs are the site (no cat-harness mounted), the l1-extraction viewer's pages under docs/en/smart-base/l1-extraction/, read from every instance in the checkout that declares the kind. One entry, because a second nested inside docs/ is refused (one route, one declared writer); its writer runs after smart-base:pages, which replaces docs/ wholesale"}
   ]
