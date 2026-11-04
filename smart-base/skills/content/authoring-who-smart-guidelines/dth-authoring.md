@@ -14,11 +14,10 @@ description: >
 > Skill id: `dth-authoring` · Package: `authoring-who-smart-guidelines` ·
 > Process: [`dth-authoring.bpmn`](../../../processes/content/dth-authoring.bpmn)
 > (generated walk: [`dth-authoring.checklist.md`](../../../processes/content/dth-authoring.checklist.md)).
-> Pilot: `litlfred/dth-hrh`. Issue: smart-base#248 (follows #243).
+> Pilot: `litlfred/dth-hrh`.
 
-**The diagram is the authority for the steps.** This file does not restate
-them. It holds the rules that apply across the steps and that the owner set
-while the first DTHs were being built (2026-10-30/31).
+**The diagram is the authority for the steps.** This file holds only the rules
+that apply across them.
 
 ## The stages, in one line each
 
@@ -37,8 +36,7 @@ work in a later stage that is ready early.
 
 ## Which review sheet, by stage
 
-The sheet follows the stage the document is in (owner, 2026-10-31: *"sheet
-depends on the stage of authoring process you are in"*).
+The sheet follows the stage the document is in.
 
 | stage | sheet | template | mode in `review-sheet-script` |
 |---|---|---|---|
@@ -46,16 +44,14 @@ depends on the stage of authoring process you are in"*).
 | 5 public comment | **Public Comment sheet**: comment source, review of public comments, change sets with TWG and architect feedback | Folio Assistant - Public Comment Review Template | `public-comment` |
 
 How the sheets work, the template links, the generic Code.gs and its Config
-tab, and the setup steps are in folio-assistant-core's
-`review-sheet-script` skill. The Agent-tab rule is `review-sheet-agent-columns`.
-Do not set up the Public Comment sheet before stage 5: dth-hrh in drafting
-uses only the Contributor sheet.
+tab, and setup are in folio-assistant-core's `review-sheet-script` skill; the
+Agent-tab rule is `review-sheet-agent-columns`. Do not set up the Public
+Comment sheet before stage 5.
 
 ## Every DTH is written in the DAK kinds
 
-Owner, 2026-10-31: *"every DTH needs the DAK kinds for its user personas and
-similar content"*. Content that has a DAK kind goes in that kind's block, never
-only in prose or a Markdown table:
+Content that has a DAK kind goes in that kind's block, never only in prose or
+a Markdown table:
 
 | content | DAK kind |
 |---|---|
@@ -67,24 +63,21 @@ only in prose or a Markdown table:
 | functional and non-functional requirements | requirement |
 | indicators | program indicator |
 
-The fields of each kind are WHO's own DAK logical-model fields (smart-base#246).
-The `dth` document kind admits these blocks (smart-base#242). Planning kinds
-that are not DAK kinds yet (planning step, RACI, risk register,
-barrier-to-solution map, stakeholder analysis, form inventory) are proposals:
-they need review by the architect group and the handbook owners before any
-schema is built.
+The fields of each kind are WHO's DAK logical-model fields, and the `dth`
+document kind admits these blocks. Planning kinds that are not DAK kinds
+(planning step, RACI, risk register, barrier-to-solution map, stakeholder
+analysis, form inventory) have no schema until the architect group and the
+handbook owners have reviewed them.
 
 ## Terms
 
 - Terms come from the source's own glossary first. See folio-assistant-core's
   `glossary-terms` skill ("Source glossary first").
-- **Deprecating a term is a change set, decided later by an editor.** When a
-  term is to be replaced (dth-hrh CS-001: "Core Data Element" and "CDE-HRH"
-  replace "MDS-HRH" because the old term causes confusion and is not precise),
-  the agent records it as a change set: the old term, the new term, the reason,
-  and every place the old term appears. It changes nothing in the text. An
-  editor later starts an agent review that decides it; only then is the text
-  changed. Quoted source text always stays as published.
+- **Deprecating a term is a change set, decided later by an editor.** The
+  agent records the old term, the new term, the reason and every place the old
+  term appears (e.g. "CDE-HRH" replacing "MDS-HRH"), and changes nothing in the
+  text. The text changes only after an editor-started agent review decides the
+  change set. Quoted source text always stays as published.
 
 ## A new DTH from an existing WHO publication
 
