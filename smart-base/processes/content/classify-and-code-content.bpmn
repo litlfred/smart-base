@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   smart-base — classify and code L1/L2 content, review L1 exclusions, and
-  adjudicate candidate terminology codings and glossary terms (bean 4nfs).
+  adjudicate candidate terminology codings and glossary terms.
 
-  Source of truth: this file. The picture beside it (classify-and-code-content.svg)
-  is drawn by `bun run smart-base/scripts/render-processes.ts`; never hand-edit it.
+  Source of truth: this file. The picture beside it (classify-and-code-content.svg) is drawn by
+  `NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`;
+  never hand-edit it.
 -->
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
                   xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
@@ -25,15 +26,13 @@
   </bpmn:collaboration>
 
   <bpmn:process id="Process_ClassifyAndCodeContent" name="Classify and code content" isExecutable="false">
-    <bpmn:documentation>Classifies and codes L1 extracted statements (recommendations, implementation practices, remarks, and proposed coverage exclusions) and L2 DAK slots (personas, business processes, guideline domains, conditions, interventions, medicines, and GRADE ratings) following the terminology-coding methodology and the classify-and-code-content skill (bean folio-assistant-4nfs).
-
-The authoring agent runs terminology-lookup across the four-rung reuse-first precedence ladder, records provenance (declared, context, inferred) and candidate status, and stages the result for review. When the L1 extraction proposes exclusions in exclusions.proposed.json, a person in the l1-extraction-reviewer lane reads each proposed exclusion against the printed page (sections/page-NNN.md) and signs or rejects it (owner ruling 3b, 2026-10-12). A person in the terminologist / ontologist reviewer lane then adjudicates the candidate codings, SKOS match precision (exactMatch vs closeMatch), and any Rung 4 local glossary candidates.</bpmn:documentation>
+    <bpmn:documentation>Classifies and codes L1 extracted statements (recommendations, implementation practices, remarks, proposed coverage exclusions) and L2 DAK slots (personas, business processes, guideline domains, conditions, interventions, medicines, GRADE ratings), following the terminology-coding methodology and the classify-and-code-content skill. The authoring agent runs terminology-lookup down the four-rung reuse-first ladder, records provenance (declared, context, inferred) and candidate status, and stages the result. A person in the l1-extraction-reviewer lane signs or rejects each exclusion proposed in exclusions.proposed.json against the printed page (sections/page-NNN.md). A person in the terminologist / ontologist lane then adjudicates the candidate codings, SKOS match precision (exactMatch vs closeMatch) and any Rung 4 local glossary candidates.</bpmn:documentation>
     <bpmn:extensionElements>
       <cat-harness.processes:policy enforcement="advisory" />
     </bpmn:extensionElements>
     <bpmn:laneSet id="Process_ClassifyAndCodeContent_LaneSet">
       <bpmn:lane id="Lane_Agent" name="Authoring agent" partitionElementRef="authoring-agent">
-        <bpmn:documentation>Identifies classifiable slots and normative sentences in L1/L2 content, runs terminology-lookup down the four-rung reuse-first ladder (target guide vocabulary, smart-base generic personas and code lists, external WHO/ILO standards, or Rung 4 glossary candidate / could-not-determine), records link provenance and candidate status, and stages the codings and proposed exclusions for human review. Never signs an exclusion or self-approves a candidate term.</bpmn:documentation>
+        <bpmn:documentation>Identifies classifiable slots and normative sentences, runs terminology-lookup down the reuse-first ladder, records link provenance and candidate status, and stages codings and proposed exclusions for human review. Never signs an exclusion or approves its own candidate term.</bpmn:documentation>
         <bpmn:flowNodeRef>Start_ContentReady</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_Rework</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_IdentifySlots</bpmn:flowNodeRef>
@@ -42,12 +41,12 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
         <bpmn:flowNodeRef>Gateway_HasExclusions</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_ExtractionReviewer" name="L1 extraction reviewer (person)" partitionElementRef="l1-extraction-reviewer">
-        <bpmn:documentation>A person acting in the l1-extraction-reviewer role (owner ruling 3b, 2026-10-12). Opens the printed page (sections/page-NNN.md) beside exclusions.proposed.json, reads each sentence proposed for exclusion in its surrounding context, verifies that the stated reason (background-fact, manufacturer-statement, editorial, research-question, duplicate-of) holds, and signs the exclusion (signedOffBy) or rejects it back to the authoring agent so no normative guidance is silently dropped.</bpmn:documentation>
+        <bpmn:documentation>A person in the l1-extraction-reviewer role. Reads each sentence proposed for exclusion in its printed-page context and signs the exclusion (signedOffBy) or rejects it, so no normative guidance is silently dropped.</bpmn:documentation>
         <bpmn:flowNodeRef>Task_ReviewExclusions</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_ExclusionVerdict</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_Terminologist" name="Terminologist / ontologist reviewer (person)" partitionElementRef="terminologist">
-        <bpmn:documentation>A person acting in the terminologist role, equipped with ontologist, glossary-terms, terminology-management, and classify-and-code-content. Reviews the staged slot classifications and codings against the terminology-coding methodology: checks that the right scheme and reuse-first rung were selected, verifies skos:exactMatch vs skos:closeMatch precision, adjudicates Rung 4 local glossary candidates (promoting valid terms from candidate to authored or replacing them with a standard code), and records the review verdict.</bpmn:documentation>
+        <bpmn:documentation>A person in the terminologist role, equipped with ontologist, glossary-terms, terminology-management and classify-and-code-content. Reviews the staged classifications and codings and records the verdict.</bpmn:documentation>
         <bpmn:flowNodeRef>Task_ReviewCodings</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_TerminologistVerdict</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>End_ClassifiedAndCoded</bpmn:flowNodeRef>
@@ -55,12 +54,12 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
     </bpmn:laneSet>
 
     <bpmn:startEvent id="Start_ContentReady" name="L1 extraction or L2 component ready to classify and code">
-      <bpmn:documentation>Triggered when an L1 source has been extracted into candidate statements and exclusions, or when an L2 DAK component (personas, user scenarios, business processes, data dictionary, decision tables) requires terminology classification and coding.</bpmn:documentation>
+      <bpmn:documentation>An L1 source has been extracted into candidate statements and exclusions, or an L2 DAK component (personas, user scenarios, business processes, data dictionary, decision tables) needs classification and coding.</bpmn:documentation>
       <bpmn:outgoing>C01</bpmn:outgoing>
     </bpmn:startEvent>
 
     <bpmn:exclusiveGateway id="Gateway_Rework" name="">
-      <bpmn:documentation>Merge only: the first pass and any rework requested by the L1 extraction reviewer or the terminologist/ontologist reviewer enter slot identification and coding here.</bpmn:documentation>
+      <bpmn:documentation>Merge only: the first pass and any rework requested by either reviewer enter here.</bpmn:documentation>
       <bpmn:incoming>C01</bpmn:incoming>
       <bpmn:incoming>C09</bpmn:incoming>
       <bpmn:incoming>C12</bpmn:incoming>
@@ -78,7 +77,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
     </bpmn:task>
 
     <bpmn:task id="Task_LookupAndCode" name="Run reuse-first lookup and record candidates">
-      <bpmn:documentation>Run the terminology-lookup Tool across the four reuse-first rungs of the terminology-coding methodology: (1) target guide vocabulary, (2) smart-base generic personas, GRADE code lists and guideline-domain glossary, (3) external WHO-FIC/ILO standards (ICD-11, ICHI/CDHIv2, ISCO-08, ATC), and (4) local glossary candidate (status: candidate, source: extracted) or could-not-determine for business-process with its WARNING line.</bpmn:documentation>
+      <bpmn:documentation>Run the terminology-lookup Tool down the four reuse-first rungs of the terminology-coding methodology: (1) target guide vocabulary, (2) smart-base generic personas, GRADE code lists and guideline-domain glossary, (3) external WHO-FIC/ILO standards (ICD-11, ICHI/CDHIv2, ISCO-08, ATC), (4) local glossary candidate (status: candidate, source: extracted), or could-not-determine for business-process with its WARNING line.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="classify-and-code-content" />
         <bootstrap.processes:skill ref="recommendation-scenarios" />
@@ -89,7 +88,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
     </bpmn:task>
 
     <bpmn:task id="Task_StageForReview" name="Stage codings, warnings and exclusions for review">
-      <bpmn:documentation>Write the candidate codings, provenance bases, warnings report, and any unsigned exclusions.proposed.json entries, and request human review with deep links to the staged extraction or component pages and the printed page sections.</bpmn:documentation>
+      <bpmn:documentation>Write the candidate codings, provenance bases, warnings report and any unsigned exclusions.proposed.json entries, and request review with deep links to the staged pages and the printed page sections.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="staging-review" />
         <bootstrap.processes:skill ref="interaction-modality" />
@@ -99,7 +98,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
     </bpmn:task>
 
     <bpmn:exclusiveGateway id="Gateway_HasExclusions" name="Proposed exclusions?">
-      <bpmn:documentation>When the L1 extraction includes unsigned entries in exclusions.proposed.json, route them to the l1-extraction-reviewer lane first so coverage exclusions are verified against the printed page before final coding sign-off; otherwise proceed directly to the terminologist/ontologist review lane.</bpmn:documentation>
+      <bpmn:documentation>Unsigned entries in exclusions.proposed.json go to the l1-extraction-reviewer first, so exclusions are verified against the printed page before coding sign-off; otherwise straight to terminologist/ontologist review.</bpmn:documentation>
       <bpmn:extensionElements>
         <cat-harness.processes:judgement reason="Branches on whether exclusions.proposed.json holds unsigned proposed exclusions for this source; when present, a person in l1-extraction-reviewer must judge them against the printed page." />
       </bpmn:extensionElements>
@@ -109,7 +108,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
     </bpmn:exclusiveGateway>
 
     <bpmn:userTask id="Task_ReviewExclusions" name="Check exclusions against page and sign">
-      <bpmn:documentation>Open library/&lt;doc_id&gt;/sections/page-NNN.md beside exclusions.proposed.json. Read each candidate sentence in place on the printed page, check whether the proposed exclusion reason (background-fact, manufacturer-statement, editorial, research-question, duplicate-of) holds without dropping normative guidance, and either sign the exclusion (signedOffBy) or reject it with a reason.</bpmn:documentation>
+      <bpmn:documentation>Open library/&lt;doc_id&gt;/sections/page-NNN.md beside exclusions.proposed.json. Read each candidate sentence on the printed page, check that the proposed reason (background-fact, manufacturer-statement, editorial, research-question, duplicate-of) holds without dropping normative guidance, and sign the exclusion (signedOffBy) or reject it with a reason.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="classify-and-code-content" />
         <bootstrap.processes:skill ref="recommendation-extraction" />
@@ -120,7 +119,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
     </bpmn:userTask>
 
     <bpmn:exclusiveGateway id="Gateway_ExclusionVerdict" name="Exclusions signed?">
-      <bpmn:documentation>If all proposed exclusions are verified and signed by the l1-extraction-reviewer, proceed to terminologist/ontologist review; if any exclusion is rejected as normative, return to the authoring agent to re-curate the sentence as an L1 node.</bpmn:documentation>
+      <bpmn:documentation>All signed: on to terminologist/ontologist review. Any rejected as normative: back to the authoring agent to re-curate the sentence as an L1 node.</bpmn:documentation>
       <bpmn:extensionElements>
         <cat-harness.processes:judgement reason="A person acting as l1-extraction-reviewer reads the printed page context of each proposed exclusion and judges whether the sentence is genuinely non-normative." />
       </bpmn:extensionElements>
@@ -130,7 +129,7 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
     </bpmn:exclusiveGateway>
 
     <bpmn:userTask id="Task_ReviewCodings" name="Adjudicate slot codings and glossary candidates">
-      <bpmn:documentation>Review each slot's classification and code against the terminology-coding methodology: verify that the authoritative scheme for the slot was used, confirm reuse-first rung selection, check skos:exactMatch vs skos:closeMatch precision (ontologist), and adjudicate any Rung 4 glossary candidates (promoting valid entries from candidate to authored per glossary-terms, or replacing them with an existing code).</bpmn:documentation>
+      <bpmn:documentation>Review each slot's classification and code against the terminology-coding methodology: the authoritative scheme for the slot, the reuse-first rung, skos:exactMatch vs skos:closeMatch precision (ontologist), and any Rung 4 glossary candidates (promote valid ones from candidate to authored per glossary-terms, or replace them with an existing code).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="classify-and-code-content" />
         <bootstrap.processes:skill ref="ontologist" />
@@ -144,9 +143,9 @@ The authoring agent runs terminology-lookup across the four-rung reuse-first pre
     </bpmn:userTask>
 
     <bpmn:exclusiveGateway id="Gateway_TerminologistVerdict" name="Coding verdict?">
-      <bpmn:documentation>The terminologist/ontologist reviewer's decision: approve promotes candidate links to reviewed and approved glossary candidates to authored; request-changes returns the mapping or glossary candidates to the authoring agent with specific findings.</bpmn:documentation>
+      <bpmn:documentation>approve marks candidate links reviewed and promotes approved glossary candidates to authored; request-changes returns the mappings or glossary candidates to the authoring agent with findings.</bpmn:documentation>
       <bpmn:extensionElements>
-        <cat-harness.processes:judgement reason="Semantic and ontological review by a human terminologist judging whether each code and SKOS mapping predicate accurately represents the clinical or public-health concept in context." />
+        <cat-harness.processes:judgement reason="A human terminologist judges whether each code and SKOS mapping predicate represents the clinical or public-health concept in context." />
       </bpmn:extensionElements>
       <bpmn:incoming>C11</bpmn:incoming>
       <bpmn:outgoing>C12</bpmn:outgoing>

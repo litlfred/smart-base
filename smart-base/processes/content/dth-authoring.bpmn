@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   smart-base — producing a WHO Digital Transformation Handbook (DTH), from
-  sources to publication, in seven stages with recorded milestones
-  (smart-base#243).
+  sources to publication, in seven stages with recorded milestones.
 
-  Source of truth: this file. The picture beside it (dth-authoring.svg) is
-  drawn by `bun run smart-base/scripts/render-processes.ts`; never hand-edit it.
+  Source of truth: this file. The picture beside it (dth-authoring.svg) is drawn by
+  `NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`;
+  never hand-edit it.
 
   The <bootstrap.processes:skill> extension on an activity names the skill that
   implements it; <cat-harness.processes:bean> marks a step that writes the
@@ -36,7 +36,11 @@
   </bpmn:collaboration>
 
   <bpmn:process id="Process_DthAuthoring" name="DTH authoring" isExecutable="false">
-    <bpmn:documentation>Produces a WHO Digital Transformation Handbook (DTH) from its sources to publication, in seven stages that each end in a recorded milestone: initiate (M0 charter), ingest sources into the library (M1 library frozen), outline and scope (M2 outline agreed), structured drafting (M3 zero draft), working-group feedback (M4), public comment (M5 released, M6 dispositioned), and finalise and publish (M7).&#10;Milestones are recorded checkpoints, not gates; review runs beside drafting as QA, as in smart-guideline-end-to-end.bpmn. Structured drafting uses the smart-base DAK block kinds for personas, scenarios, processes, decisions, data elements, indicators and requirements (owner, 2026-10-31: a DTH uses the DAK kinds for its personas and similar content), and each track calls Process_L2ComponentEditReview, as l2-dak-authoring.bpmn does. Contributor feedback from the contributor log sheet and from GitHub pc: comments lands in one review store.&#10;Handbooks ingested from a published WHO PDF (PHC, SC, PC, SFP) enter at stage 1 with their library built and their outline given by the publication; dth-hrh, authored natively, is the pilot. Steps whose platform subprocess does not exist yet are marked as placeholders in their documentation.&#10;Empirical content (figures, statistics, country examples) stays as cited narrative blocks and never enters formal content.</bpmn:documentation>
+    <bpmn:documentation>Produces a WHO Digital Transformation Handbook (DTH) from its sources to publication, in seven stages that each end in a recorded milestone: initiate (M0 charter), ingest sources into the library (M1 library frozen), outline and scope (M2 outline agreed), structured drafting (M3 zero draft), working-group feedback (M4), public comment (M5 released, M6 dispositioned), and finalise and publish (M7).
+Milestones are recorded checkpoints, not gates: each is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress. Review runs beside drafting as QA, as in smart-guideline-end-to-end.bpmn.
+Structured drafting uses the smart-base DAK block kinds for personas, scenarios, processes, decisions, data elements, indicators and requirements, and each track calls Process_L2ComponentEditReview, as l2-dak-authoring.bpmn does. Contributor feedback from the contributor log sheet and from GitHub pc: comments lands in one review store.
+Handbooks ingested from a published WHO PDF (PHC, SC, PC, SFP) enter at stage 1 with their library built and their outline given by the publication; dth-hrh, authored natively, is the pilot. Steps with no platform subprocess are marked as placeholders in their documentation.
+Empirical content (figures, statistics, country examples) stays as cited narrative blocks and never enters formal content.</bpmn:documentation>
     <bpmn:extensionElements>
       <cat-harness.processes:policy enforcement="advisory" />
     </bpmn:extensionElements>
@@ -60,7 +64,7 @@
         <bpmn:flowNodeRef>M1</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_Analyst" name="Business analyst" partitionElementRef="business-analyst">
-        <bpmn:documentation>Drafts the outline and the structured content. Every structured track uses a smart-base DAK block kind (owner, 2026-10-31: a DTH uses the DAK kinds for its personas and similar content) and calls the shared edit-and-review subprocess.</bpmn:documentation>
+        <bpmn:documentation>Drafts the outline and the structured content. Every structured track uses a smart-base DAK block kind and calls the shared edit-and-review subprocess.</bpmn:documentation>
         <bpmn:flowNodeRef>Task_Scaffold</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Outline</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Intro</bpmn:flowNodeRef>
@@ -125,7 +129,7 @@
       <bpmn:outgoing>F02</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:userTask id="Task_Team" name="Form the TWG; record roles and RACI&#10;[content-plan]">
-      <bpmn:documentation>Record who is involved and in which role. Roles are named by id, never free text, so they can bind BPMN lanes later. A RACI kind does not exist yet (smart-base#242 and the structured-authoring decision doc); until it does, the RACI is a table block.</bpmn:documentation>
+      <bpmn:documentation>Record who is involved and in which role. Roles are named by id, never free text, so they can bind BPMN lanes later. There is no RACI kind; the RACI is a table block.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-plan" />
       </bpmn:extensionElements>
@@ -133,7 +137,7 @@
       <bpmn:outgoing>F03</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:task id="Task_Scaffold" name="Create the DTH repository from the DTH layout&#10;[document-structure]">
-      <bpmn:documentation>Declaration, index.config.json (needs smart-ra, and any DTH it mounts), glossary, review store and hooks, copied from dth-hrh's layout. Placeholder: the platform has no subprocess for this yet (smart-base#243); until it exists the step is done by hand, as dth-hrh's was.</bpmn:documentation>
+      <bpmn:documentation>Run `bun run smart-base/scripts/dth-init.ts` with --pins-from an existing DTH's index.config.json. It writes the instance declaration (folio, glossary, uploads, beans and todos branches), index.config.json (mounting who-iris, smart-base, the platform layers and smart-ra), package.json scripts for the shared checks, the review sheet sync (--sheet) and the files from templates/dth/ (AGENTS.md, session-start hook, PR checks workflow).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="document-structure" />
       </bpmn:extensionElements>
@@ -150,7 +154,7 @@
       <bpmn:outgoing>F05</bpmn:outgoing>
     </bpmn:task>
     <bpmn:task id="M0" name="Record milestone&#10;M0 · Charter recorded&#10;[todo-manager]">
-      <bpmn:documentation>Milestone: repository, declaration, TWG, roles and RACI exist. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.</bpmn:documentation>
+      <bpmn:documentation>Milestone: repository, declaration, TWG, roles and RACI exist. Recorded, not enforced.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
         <cat-harness.processes:bean op="note"/>
@@ -183,7 +187,7 @@
       <bpmn:outgoing>F09</bpmn:outgoing>
     </bpmn:task>
     <bpmn:task id="M1" name="Record milestone&#10;M1 · Library frozen&#10;[todo-manager]">
-      <bpmn:documentation>Milestone: every source in library/, coverage accounted. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.</bpmn:documentation>
+      <bpmn:documentation>Milestone: every source in library/, coverage accounted. Recorded, not enforced.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
         <cat-harness.processes:bean op="note"/>
@@ -192,7 +196,7 @@
       <bpmn:outgoing>F10</bpmn:outgoing>
     </bpmn:task>
     <bpmn:task id="Task_Outline" name="2 · Outline chapters against the dth kind&#10;[document-structure]">
-      <bpmn:documentation>Map the outline onto the dth document kind's sections and report every required section that is missing. dth-hrh's build_from_outline.py is the first instance; a general outline seed does not exist yet. Placeholder: the platform has no subprocess for this yet (smart-base#243); until it exists the step is done by hand, as dth-hrh's was.</bpmn:documentation>
+      <bpmn:documentation>Map the outline onto the dth document kind's sections and report every required section that is missing. dth-hrh's build_from_outline.py is the only instance; there is no general outline seed. Placeholder: no platform subprocess; done by hand, as for dth-hrh.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="document-structure" />
       </bpmn:extensionElements>
@@ -232,7 +236,7 @@
       <bpmn:outgoing>F15</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:task id="M2" name="Record milestone&#10;M2 · Outline agreed&#10;[todo-manager]">
-      <bpmn:documentation>Milestone: the outline's round-1 comments are dispositioned. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.</bpmn:documentation>
+      <bpmn:documentation>Milestone: the outline's round-1 comments are dispositioned. Recorded, not enforced.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
         <cat-harness.processes:bean op="note"/>
@@ -257,7 +261,7 @@
       <bpmn:outgoing>F25</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:callActivity id="Call_Personas" name="Personas and roles&#10;[l2-dak-authoring]" calledElement="Process_L2ComponentEditReview">
-      <bpmn:documentation>Persona and actor-definition blocks; organisational roles and governance bodies as their own kind once it exists. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.</bpmn:documentation>
+      <bpmn:documentation>Persona and actor-definition blocks; organisational roles and governance bodies get their own kind once it exists. Calls Process_L2ComponentEditReview.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
         <bootstrap.processes:skill ref="l2-component-edit-review" />
@@ -266,7 +270,7 @@
       <bpmn:outgoing>F26</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:callActivity id="Call_Scenarios" name="User scenarios&#10;[l2-dak-authoring]" calledElement="Process_L2ComponentEditReview">
-      <bpmn:documentation>User-scenario blocks naming their personas by id. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.</bpmn:documentation>
+      <bpmn:documentation>User-scenario blocks naming their personas by id. Calls Process_L2ComponentEditReview.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
         <bootstrap.processes:skill ref="l2-component-edit-review" />
@@ -275,7 +279,7 @@
       <bpmn:outgoing>F27</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:callActivity id="Call_Bpmn" name="Business processes · BPMN&#10;[bpmn-authoring]" calledElement="Process_L2ComponentEditReview">
-      <bpmn:documentation>One BPMN per business process; every lane bound to a persona or role id. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.</bpmn:documentation>
+      <bpmn:documentation>One BPMN per business process; every lane bound to a persona or role id. Calls Process_L2ComponentEditReview.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="bpmn-authoring" />
         <bootstrap.processes:skill ref="l2-component-edit-review" />
@@ -284,7 +288,7 @@
       <bpmn:outgoing>F28</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:callActivity id="Call_Dmn" name="Decision tables · DMN&#10;[dmn-authoring]" calledElement="Process_L2ComponentEditReview">
-      <bpmn:documentation>Only rules the text states. A decision the text names without a rule is recorded as a decision point, not filled in. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.</bpmn:documentation>
+      <bpmn:documentation>Only rules the text states. A decision the text names without a rule is recorded as a decision point, not filled in. Calls Process_L2ComponentEditReview.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="dmn-authoring" />
         <bootstrap.processes:skill ref="l2-component-edit-review" />
@@ -293,7 +297,7 @@
       <bpmn:outgoing>F29</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:callActivity id="Call_Data" name="Data elements, indicators, requirements&#10;[l2-dak-authoring]" calledElement="Process_L2ComponentEditReview">
-      <bpmn:documentation>data-element, indicator, functional and non-functional requirement blocks, with their fields as data rather than Markdown tables. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.</bpmn:documentation>
+      <bpmn:documentation>data-element, indicator, functional and non-functional requirement blocks, with their fields as data rather than Markdown tables. Calls Process_L2ComponentEditReview.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
         <bootstrap.processes:skill ref="indicator-extraction" />
@@ -303,7 +307,7 @@
       <bpmn:outgoing>F30</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:callActivity id="Call_Steps" name="Planning steps per chapter&#10;[document-authoring]" calledElement="Process_L2ComponentEditReview">
-      <bpmn:documentation>Each chapter's inputs, steps, resources, outputs, risks and mitigations as the shared step table (smart-base#242). Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.</bpmn:documentation>
+      <bpmn:documentation>Each chapter's inputs, steps, resources, outputs, risks and mitigations as the shared step table. Calls Process_L2ComponentEditReview.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="document-authoring" />
         <bootstrap.processes:skill ref="l2-component-edit-review" />
@@ -312,7 +316,7 @@
       <bpmn:outgoing>F31</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:callActivity id="Call_Archimate" name="Link to smart-ra ArchiMate&#10;[archimate-models]" calledElement="Process_L2ComponentEditReview">
-      <bpmn:documentation>Every block that names an architecture element links to its smart-ra element or view; new elements go to smart-ra, not the handbook. Placeholder: the platform has no subprocess for this yet (smart-base#243); until it exists the step is done by hand, as dth-hrh's was. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.</bpmn:documentation>
+      <bpmn:documentation>Every block that names an architecture element links to its smart-ra element or view; new elements go to smart-ra, not the handbook. Placeholder: no platform subprocess; done by hand, as for dth-hrh. Calls Process_L2ComponentEditReview.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="archimate-models" />
         <bootstrap.processes:skill ref="l2-component-edit-review" />
@@ -321,7 +325,7 @@
       <bpmn:outgoing>F32</bpmn:outgoing>
     </bpmn:callActivity>
     <bpmn:callActivity id="Call_Glossary" name="Link glossary to smart-ra SKOS&#10;[terminology-management]" calledElement="Process_L2ComponentEditReview">
-      <bpmn:documentation>Each handbook term is exactMatch, closeMatch or narrower to a smart-ra concept; conflicts are raised as issues on smart-ra. Calls Process_L2ComponentEditReview: the agent edits, checks, renders and stages; a person in the reviewing role reviews alongside, never as a gate.</bpmn:documentation>
+      <bpmn:documentation>Each handbook term is exactMatch, closeMatch or narrower to a smart-ra concept; conflicts are raised as issues on smart-ra. Calls Process_L2ComponentEditReview.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="terminology-management" />
         <bootstrap.processes:skill ref="l2-component-edit-review" />
@@ -367,7 +371,7 @@
       <bpmn:outgoing>F39</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:task id="M3" name="Record milestone&#10;M3 · Zero draft&#10;[todo-manager]">
-      <bpmn:documentation>Milestone: every required section drafted and every structured block validates. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.</bpmn:documentation>
+      <bpmn:documentation>Milestone: every required section drafted and every structured block validates. Recorded, not enforced.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
         <cat-harness.processes:bean op="note"/>
@@ -397,7 +401,7 @@
       <bpmn:outgoing>F44</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:task id="M4" name="Record milestone&#10;M4 · Working-group draft&#10;[todo-manager]">
-      <bpmn:documentation>Milestone: all working-group comments dispositioned. Recorded, not enforced. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.</bpmn:documentation>
+      <bpmn:documentation>Milestone: all working-group comments dispositioned. Recorded, not enforced.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
         <cat-harness.processes:bean op="note"/>
@@ -414,7 +418,7 @@
       <bpmn:outgoing>F46</bpmn:outgoing>
     </bpmn:task>
     <bpmn:task id="M5" name="Record milestone&#10;M5 · Public draft released&#10;[todo-manager]">
-      <bpmn:documentation>Milestone: the public draft is out for comment. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.</bpmn:documentation>
+      <bpmn:documentation>Milestone: the public draft is out for comment.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
         <cat-harness.processes:bean op="note"/>
@@ -438,7 +442,7 @@
       <bpmn:outgoing>F49</bpmn:outgoing>
     </bpmn:task>
     <bpmn:task id="M6" name="Record milestone&#10;M6 · Comments dispositioned&#10;[todo-manager]">
-      <bpmn:documentation>Milestone: every public comment dispositioned. It is written as a note on the handbook's epic bean (which milestone, when, evidence), so the site can show stage and progress.</bpmn:documentation>
+      <bpmn:documentation>Milestone: every public comment dispositioned.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
         <cat-harness.processes:bean op="note"/>
