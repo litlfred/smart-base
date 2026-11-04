@@ -65,7 +65,7 @@ CRDM's three areas of concentration, verbatim from the same page:
 2. **Business process redesign**
 3. **Requirements definition**
 
-cat-harness runs CRDM (skills in `cat-harness/skills/sdlc/crdm/`, processes
+cat-harness runs CRDM (skills in `cat-harness/sdlc/skills/crdm/`, processes
 including `cat-harness/processes/process/crdm-needs.bpmn` and
 `crdm-requirements-definition.bpmn`), so DIIG Chapter 3 and the platform's
 requirements process descend from one published method.
