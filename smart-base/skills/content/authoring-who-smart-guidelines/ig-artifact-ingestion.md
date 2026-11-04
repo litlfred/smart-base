@@ -6,8 +6,7 @@ graph-typologies:
 # ig-artifact-ingestion
 
 > Skill id: `ig-artifact-ingestion` · Package: `authoring-who-smart-guidelines` ·
-> Covers the `fhir-artifact-index` graph typology
-> (`fhir-harness/typologies/fhir-artifact-index.json`, schema
+> Covers fhir-harness's `fhir-artifact-index` graph typology (schema
 > `fhir-harness/schemas/fhir-artifact-index.ts`).
 
 The artefact index of a FHIR Implementation Guide is a knowledge graph keyed
