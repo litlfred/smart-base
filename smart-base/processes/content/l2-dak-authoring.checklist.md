@@ -47,7 +47,7 @@ How a WHO SMART Guidelines L2 Digital Adaptation Kit is authored by a business a
 
 - Who: the `Work plan — beans (shared by humans and agents)` lane (role `work-plan`).
 - Skill: `todo-manager`.
-- What: Turn the scope into beans on the shared work plan, one per DAK component.
+- What: Turn the scope into child beans of the DAK's bean, one per DAK component: the DAK's work plan holds the work plan of each component.
 - Record it: `workflow_complete` with `node: "Task_SeedBeans"`.
 - next: → `Gateway_AuthorMerge`
 

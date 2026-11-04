@@ -36,7 +36,7 @@
         <bpmn:flowNodeRef>Task_ScopeDak</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_WorkPlan" name="Work plan — beans (shared by humans and agents)">
-        <bpmn:documentation>Claims the DAK's bean (Process_BeanOpen) once the L1 library is built, then seeds the work plan, before the parallel fork. Nothing returns to this lane: the bean is closed at each end (Process_BeanClose), and per-track progress is not tracked here.</bpmn:documentation>
+        <bpmn:documentation>Claims the DAK's bean (Process_BeanOpen) once the L1 library is built, then seeds the DAK's work plan with one child bean per component, before the parallel fork. Nothing returns to this lane: the bean is closed at each end (Process_BeanClose), and per-track progress is not tracked here.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="work-plan"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Task_SeedBeans</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Call_BeanOpen</bpmn:flowNodeRef>
@@ -94,7 +94,7 @@
       <bpmn:outgoing>B22</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:task id="Task_SeedBeans" name="Seed the work plan">
-      <bpmn:documentation>Turn the scope into beans on the shared work plan, one per DAK component. beans create is not idempotent: check for an existing bean before every create, or a re-run duplicates the plan.</bpmn:documentation>
+      <bpmn:documentation>Turn the scope into child beans of the DAK's bean, one per DAK component: the DAK's work plan holds the work plan of each component. beans create is not idempotent: check for an existing bean before every create, or a re-run duplicates the plan.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
         <cat-harness.processes:bean op="note"/>
