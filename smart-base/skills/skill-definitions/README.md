@@ -1,7 +1,7 @@
 <!-- kg:subgraph:begin -->
 # smart-base-skill-definitions
 
-The WHO SMART workflow-skill definitions this layer owns (l2-dak-authoring, smart-base-tools): JSON SkillDefinitions naming roles, capabilities and dependencies. Moved from .claude/skills/local/ by theme (owner, 2026-09-30, bean rqao).
+The WHO SMART workflow-skill definitions this layer owns (l2-dak-authoring, smart-base-tools): JSON SkillDefinitions naming roles, capabilities and dependencies.
 
 Part of [SMART Base](../../README.md) 0.1.0, declared as `smart-base-skill-definitions`, holding `skills`.
 

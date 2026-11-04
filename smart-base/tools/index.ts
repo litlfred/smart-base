@@ -4,49 +4,32 @@
  * @module smart-base/tools
  * @graphNode tool
  *
- * ## Why these are here, and what changed on 2026-09-22
+ * ## Declared here, executed upstream
  *
- * The owner: *"things like dmn -> fhir questionnaire should be a tool. the
- * skill/tools under smart-base should consolidate under the smart-base/tools/
- * directory under this repo"*, and the goal it serves — *"want to slowly get
- * smart-base back to a more conventional IG state w/o tooling"*.
- *
- * So the direction of travel is: `WorldHealthOrganization/smart-base` stops
- * being a toolchain host and becomes an ordinary FHIR IG. The capabilities it
- * hosts today move here, where the harness can declare, bind and audit them.
- *
- * ## This is NOT vendoring, and the distinction is the whole reconciliation
- *
- * `smart-base.json`'s own header says the upstream toolchain is not vendored
- * here, and [`smart-base-tools`](../../smart-base/skills/content/authoring-who-smart-guidelines/smart-base-tools.md)
- * argues why: a copy of the Python would be a second, drifting toolchain.
- *
- * **That argument is about copies of the CODE and it still stands.** A Tool
- * node is a DECLARATION — what the capability is, what it consumes and
- * produces, which skill it satisfies, and how it is invoked. Declaring that
- * `dmn_questionnaire_generator.py` exists and consumes DMN to produce
- * `Questionnaire` resources does not duplicate a line of it, and it is what
- * lets a process bind the step at all. The two statements are compatible:
- * **declare here, execute upstream, until the execution moves too.**
+ * The capabilities `WorldHealthOrganization/smart-base` hosts are declared
+ * here, where the harness can bind and audit them, so that repository can
+ * become an ordinary FHIR IG. A Tool node is a declaration — what the
+ * capability is, what it consumes and produces, which skill it satisfies and
+ * how it is invoked. The upstream code is not vendored
+ * ([`smart-base-tools`](../../smart-base/skills/content/authoring-who-smart-guidelines/smart-base-tools.md)).
  *
  * ## Two tools are deliberately absent
  *
- * `strip_library_binaries.py` and `strip_library_content.py` arrived labelled
- * *DAK Postprocessing* and are not DAK-shaped — any IG depending on
- * `hl7.fhir.uv.cql` produces oversized `Library` resources. By the placement
- * question in
+ * `strip_library_binaries.py` and `strip_library_content.py` are not
+ * DAK-specific (any IG depending on `hl7.fhir.uv.cql` produces oversized
+ * `Library` resources), so by
  * [`smart-stack-layering`](../../smart-base/skills/content/authoring-who-smart-guidelines/smart-stack-layering.md)
- * they belong to `fhir-harness`, and putting them here to keep the list
- * tidy would be the layering rule being overruled by a step's own name.
+ * they are fhir-harness's `strip-library-binaries` and
+ * `strip-library-content`.
  *
- * ## `install: { none: true }` throughout, on purpose
+ * ## `install: { none: true }`
  *
- * Every tool below is a Python script in a checkout whose location is given by
- * `SMART_BASE_HOME`. There is no install step and saying so explicitly is what
- * distinguishes "nothing to install" from "nobody finished the record" — the
- * distinction the `none` flag exists for, per `beans-manual`'s precedent.
+ * Every Tool here except `immz-schedule-app-local` runs a script already on
+ * disk (upstream Python in the checkout at `SMART_BASE_HOME` or in `input/`,
+ * or bun scripts under `smart-base/scripts/`), and says so explicitly: nothing
+ * to install, as distinct from an unfinished record.
  *
- * ## One Tool per folder — bean `tdir`
+ * ## One Tool per folder
  *
  * Each Tool is declared in `<id>/<id>.ts` beside this file, with its scripts
  * and tests when they are its alone; this file only loads the folders

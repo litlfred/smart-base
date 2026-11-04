@@ -33,9 +33,9 @@ The contract is [`input.schema.json`](../../../schemas/skills/l4-application-bui
    later choice of another candidate marks the screens built from the first
    `rejected-upstream`, as any derived asset.
 2. **Build against the IG build, not its publication.** The stage-6 IG need
-   not be published: publication runs on in `dak-l3-ig.bpmn` and is not on
-   this path. Use the IG's canonicals and resources; the application adds no
-   profile or value set of its own (one it needs is a stage-6 finding).
+   not be published. Use the IG's canonicals and resources; the application
+   adds no profile or value set of its own (one it needs is a stage-6
+   finding).
 3. **Test.** One `conformance` test per IG example and test case the
    application touches, and one `scenario` walk per L2 user scenario in the
    brief's `l2Processes`. Failing tests are reported, not hidden.

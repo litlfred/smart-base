@@ -32,7 +32,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `document-structure`.
-- What: Declaration, index.config.json (needs smart-ra, and any DTH it mounts), glossary, review store and hooks, copied from dth-hrh's layout.
+- What: Run `bun run smart-base/scripts/dth-init.ts` with --pins-from an existing DTH's index.config.json.
 - Record it: `workflow_complete` with `node: "Task_Scaffold"`.
 - next: → `Task_SeedBeans` (Seed the work plan)
 
@@ -146,7 +146,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `l2-dak-authoring`, `l2-component-edit-review`.
-- What: Persona and actor-definition blocks; organisational roles and governance bodies as their own kind once it exists.
+- What: Persona and actor-definition blocks; organisational roles and governance bodies get their own kind once it exists.
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `GW_DraftJoin`
 
@@ -186,7 +186,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `document-authoring`, `l2-component-edit-review`.
-- What: Each chapter's inputs, steps, resources, outputs, risks and mitigations as the shared step table (smart-base#242).
+- What: Each chapter's inputs, steps, resources, outputs, risks and mitigations as the shared step table.
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `GW_DraftJoin`
 

@@ -20,8 +20,8 @@ output: schemas/skills/l3-dependency-choice/output.schema.json
 > Adjudicated by the FHIR modeller and the terminologist.
 
 The L3 half of [`l2-dependency-choice`](l2-dependency-choice.md): the same
-decision row, the same reuse-first precedence, the same `decision-comparison`
-table and `DecisionRequest`. Only the candidates and the evidence differ.
+decision row, reuse-first precedence, `decision-comparison` table and
+`DecisionRequest`, with IGs as candidates and an IG index as evidence.
 
 ## Input and output
 

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  folio-assistant — a WHO SMART Guidelines L2 DAK to its published L3 FHIR IG.
+  smart-base — a WHO SMART Guidelines L2 DAK to its published L3 FHIR IG.
 
-  Source of truth: this file. Open it in bpmn.io, Camunda Modeler, or any other
-  BPMN 2.0 tool. The SVG under docs/assets/img/workflows/ is generated from it
-  by `bun run render:bpmn` — never hand-edit the SVG.
+  Source of truth: this file. The picture beside it (dak-l3-ig.svg) is drawn by
+  `NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`;
+  never hand-edit it.
 
-  The <bootstrap.processes:skill> extension on an activity names the folio-assistant skill
-  that implements it; <cat-harness.processes:bean> marks a step that reads or writes the shared
-  work plan in beans/.
+  The <bootstrap.processes:skill> extension on an activity names the skill
+  that implements it.
 -->
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
                   xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
@@ -24,21 +23,13 @@
     <bpmn:participant id="Participant_DakL3Ig" name="WHO SMART Guidelines — L2 DAK to published FHIR IG" processRef="Process_DakL3Ig" />
   </bpmn:collaboration>
   <bpmn:process id="Process_DakL3Ig" name="L2 DAK to L3 FHIR IG" isExecutable="false">
-    <bpmn:documentation>
-      How a WHO SMART Guidelines L2 Digital Adaptation Kit becomes a published L3 FHIR Implementation Guide: map the DAK's L2 content to the FHIR artefacts it calls for, then run fhir-harness's generic L3 pipeline (Process_L3Fhir) with that mapping as its source model. Split out of fhir-harness's l3-fhir-pipeline.bpmn on 2026-10-09 (owner, bean veiu item 4): that layer may not know about DAKs, so the WHO L2 → L3 ordering lives here and the generic pipeline is CALLED, not copied. folio-assistant — a WHO SMART Guidelines L2 DAK to its published L3 FHIR IG.
-      Source of truth: this file. Open it in bpmn.io, Camunda Modeler, or any other
-      BPMN 2.0 tool. The SVG under docs/assets/img/workflows/ is generated from it
-      by `bun run render:bpmn` — never hand-edit the SVG.
-      The &lt;bootstrap.processes:skill&gt; extension on an activity names the folio-assistant skill
-      that implements it; &lt;cat-harness.processes:bean&gt; marks a step that reads or writes the shared
-      work plan in beans/.
-    </bpmn:documentation>
+    <bpmn:documentation>How a WHO SMART Guidelines L2 Digital Adaptation Kit becomes a published L3 FHIR Implementation Guide: map the DAK's L2 content to the FHIR artefacts it calls for, then run fhir-harness's generic L3 pipeline (Process_L3Fhir) with that mapping as its source model. The WHO L2 → L3 ordering lives here because fhir-harness's pipeline does not know about DAKs; that pipeline is called, not copied.</bpmn:documentation>
     <bpmn:extensionElements>
       <cat-harness.processes:policy enforcement="advisory" />
     </bpmn:extensionElements>
     <bpmn:laneSet id="Process_DakL3Ig_LaneSet">
       <bpmn:lane id="Lane_Modeller" name="FHIR modeller">
-        <bpmn:documentation>One lane, because this diagram adds exactly one step to the generic pipeline: the mapping from the DAK's L2 content. Every lane after it — build, QC, work plan, publication — belongs to Process_L3Fhir, which CallActivity_L3Fhir runs whole.</bpmn:documentation>
+        <bpmn:documentation>One lane: this process adds one step, the mapping from the DAK's L2 content. Build, QC, work plan and publication belong to Process_L3Fhir, which CallActivity_L3Fhir runs whole.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="fhir-modeller"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>StartEvent_L2Ready</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_MapL2</bpmn:flowNodeRef>
@@ -51,7 +42,7 @@
       <bpmn:outgoing>D01</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:userTask id="Task_MapL2" name="Map L2 → L3">
-      <bpmn:documentation>Each data element becomes a profile, each value set a ValueSet, each decision a PlanDefinition / Library. The DAK's L2 content is l3-fhir-authoring's sourceModel; this step binds l2-dak-authoring beside it, which is where the WHO L2 → L3 ordering lives now that the generic skill names no DAK (smart-* separation stage D, #1767).</bpmn:documentation>
+      <bpmn:documentation>Each data element becomes a profile, each value set a ValueSet, each decision a PlanDefinition / Library. The DAK's L2 content is l3-fhir-authoring's sourceModel; l2-dak-authoring, bound beside it, carries the WHO L2 → L3 ordering, which the generic skill does not name.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l3-fhir-authoring" />
         <bootstrap.processes:skill ref="l2-dak-authoring" />

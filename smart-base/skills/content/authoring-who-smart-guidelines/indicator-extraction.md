@@ -19,10 +19,8 @@ output: schemas/skills/indicator-extraction/output.schema.json
 > Sibling of [`recommendation-extraction`](recommendation-extraction.md): that
 > one takes a source's recommendations, this one its indicators.
 
-Owner, 2026-11-02, on the NHWA handbook: *"recreate NHWA 2nd edition and
-extract indicators into L2 style. this is a process added as part of L1 -> L2
-extraction for DAK or DTH"*. It is a step of the L2 authoring processes, bound
-to `Task_Indicators` in [`l2-dak-authoring`](../../../processes/content/l2-dak-authoring.bpmn)
+It is a step of L1 → L2 extraction for a DAK or DTH, bound to
+`Task_Indicators` in [`l2-dak-authoring`](../../../processes/content/l2-dak-authoring.bpmn)
 and `Call_Data` in [`dth-authoring`](../../../processes/content/dth-authoring.bpmn).
 
 ## Two layers, kept apart
@@ -32,10 +30,9 @@ and `Call_Data` in [`dth-authoring`](../../../processes/content/dth-authoring.bp
 | L1 | the indicator **as the source prints it**, verbatim | `indicator` block (folio type `smart-base:Indicator`; KG L1 `indicator`, `kg/src/l1.ts`) | `scripts/l1-indicator-sheets.py` → `candidates.json` → `gen-library-jsonld` |
 | L2 | the DAK's or DTH's **own** operational measure, a draft that points back | `program-indicator` (sgkg-l2), logical model `ProgramIndicator` | `scripts/l2-program-indicators.py` |
 
-sgkg-l2 keeps `program-indicator` apart from L1 `indicator` on purpose:
-collapsing them "would silently merge a WHO definition with a country's
-implementation of it". So the L2 record is a draft with `derivedFrom` its L1
-node, and the L2 author adopts, edits or drops it.
+sgkg-l2 keeps them apart: merging them would merge a WHO definition with a
+country's implementation of it. The L2 record is a draft with `derivedFrom`
+its L1 node, and the L2 author adopts, edits or drops it.
 
 ## Rules
 
@@ -61,9 +58,8 @@ node, and the L2 author adopts, edits or drops it.
   in L2 they are the parent's `components`, not program indicators of their
   own.
 - **Read the page layout, not the section text,** when the source prints
-  sheets as a label column and a value column. Stage A's text reads side bars
-  and columns out of order (NHWA: numbers on the wrong sheet, a lost name, no
-  section for 4-04).
+  sheets as a label column and a value column: Stage A's text reads side bars
+  and columns out of order.
 
 ## Steps
 
@@ -78,9 +74,9 @@ node, and the L2 author adopts, edits or drops it.
      --pdf uploads/<doc-id>/<doc-id>.pdf --pages <first>-<last> --write
    ```
 
-   `--write` merges into `candidates.json` as the `indicators` aspect, and
-   replaces an older `indicator` candidate with the same number, so a re-run
-   is idempotent. Check the count against the source's own list of
+   `--write` merges into `candidates.json` as the `indicators` aspect,
+   replacing an `indicator` candidate with the same number (re-runs are
+   idempotent). Check the count against the source's own list of
    indicators (NHWA: the synthesis table, 29 indicators).
 3. **L1 nodes.** `bun cat-harness-tools/pipeline/gen-library-jsonld.ts --entry library/<doc-id>`
    writes `blocks/indicator-<section>-NN.{jsonld,md}`, each `derivedFrom` its
@@ -95,15 +91,14 @@ node, and the L2 author adopts, edits or drops it.
    ```
 
 5. **Into the DAK or DTH.** The L2 author takes the drafts into the guide's
-   indicators component (DAK component 7; a DTH's data elements, indicators
-   and requirements). That is content: it goes through the guide's own review
+   indicators component (DAK component 8; a DTH's data elements, indicators
+   and requirements), through the guide's own review
    (`l2-component-edit-review`) and, for a DTH, a change set.
 
 ## Validated against
 
 - NHWA handbook, 2nd edition (who-iris `9789240081291-eng`): 29 indicators,
-  33 sub-indicators, PDF pages 51-91. The 12 indicators taken by hand earlier
-  (who-iris#165) match word for word.
+  33 sub-indicators, PDF pages 51-91.
 
 Not yet run on a guideline whose indicator sheets use a different layout
 (HIV SI 2022's reference sheets: "What it measures", "Rationale", "Method of

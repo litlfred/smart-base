@@ -123,7 +123,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 - Who: the `Human adjudicators` lane (role `reviewer`).
 - Skill: `content-review`, `staging-review`, `visual-diff`, `wireframe-design-review`.
-- What: One review item per created or changed asset, shown as its reviewer reads it (diagram, table, data-dictionary rows); each form's wireframe candidates are reviewed blind and one is chosen (Process_Adjudication, Process_OptionsAnalysis); an adapted asset as a diff against its pinned upstream.
+- What: One review item per created or changed asset, shown as its reviewer reads it (diagram, table, data-dictionary rows); an adapted asset as a diff against its pinned upstream.
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `End_AdjL2` (Adjudicated)
 
@@ -156,7 +156,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `l3-readiness`.
-- What: The order rule as a check with its own contract (owner, 2026-10-16: its own skill).
+- What: The order rule as a check with its own contract (skill l3-readiness).
 - Record it: `workflow_complete` with `node: "Task_L3Ready"`.
 - next: → `Gateway_L3Ready` (L1 extraction and L2 assets exist, review requested?)
 
@@ -166,7 +166,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### Decide — L1 extraction and L2 assets exist, review requested? (`Gateway_L3Ready`)
 
-- The order rule (owner, 2026-10-15: "order strict, sign-off QA"), decided on Task_L3Ready's ready (skill l3-readiness).
+- Decided on Task_L3Ready's ready: yes only when every L3 asset about to be written has an L2 asset upstream, every L2 asset an L1 node, and each review has been requested (opened and staged, verdict not awaited).
 - Call `workflow_complete` with `node: "Gateway_L3Ready"` and `outcome` set to the label that holds:
   - «yes» → `Task_L3` (6 · Produce L3 assets)
   - «no» → `Task_L2` (4 · Create / adapt L2 DAK assets)

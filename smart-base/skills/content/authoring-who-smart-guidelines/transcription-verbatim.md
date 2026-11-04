@@ -14,14 +14,14 @@ output: schemas/skills/transcription-verbatim/output.schema.json
 
 # transcription-verbatim
 
-A step of [`recommendation-extraction`](recommendation-extraction.md), for a
+A step of [`recommendation-extraction`](recommendation-extraction.md) for a
 source whose recommendations are printed only as images. When
 [`recommendation-candidates`](recommendation-candidates.md) finds no
 normative sentence in the entry's text layer, the L1 is authored by hand
 (`*.l1.yaml`, the measles pattern) from the inspected image narratives and
-transcriptions of the rendered page. This step is the check on that
-authoring. recommendation-extraction's section *An authored L1 from pictures*
-holds the judgement; this one is the mechanical gate.
+transcriptions of the rendered page; this step is the mechanical gate on
+that authoring (judgement: recommendation-extraction's *An authored L1 from
+pictures*).
 
 ## Input and output
 
