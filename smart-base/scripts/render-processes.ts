@@ -13,7 +13,7 @@
  * It is NOT how the processes reach a site. smart-base is mounted into
  * folio-assistant, whose just-the-docs site draws every mounted instance's
  * processes (`cat-harness-tools` `render:bpmn`), and a branch is previewed
- * there under `STAGING/<slug>/` (`feature-staging`). Nothing here writes into
+ * there under `branches/<slug>/` (`feature-staging`). Nothing here writes into
  * the IG's `input/`.
  *
  * The drawing is bootstrap-tools' (`scripts/render-bpmn.ts`: bpmn-js in
