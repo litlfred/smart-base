@@ -20,7 +20,7 @@
           ]
         }
       },
-      "_site_comment": "`site.build.keep`: root entries of gh-pages that the harness site's root publish (stage-local.ts, the IG folio route) keeps besides STAGING/, _render-log/ and the IG's branches/: `ns` and `0.1.0`, the JSON-LD context and vocabulary layer-publish-context.yml writes, and `sitepreview`. No steps are declared: the IG route supplies them."
+      "_site_comment": "`site.build.keep`: root entries of gh-pages that the harness site's root publish (stage-local.ts, the IG folio route) keeps besides branches/, _render-log/ and the IG's branches/: `ns` and `0.1.0`, the JSON-LD context and vocabulary layer-publish-context.yml writes, and `sitepreview`. No steps are declared: the IG route supplies them."
     },
     {
       "name": "fhir-harness",

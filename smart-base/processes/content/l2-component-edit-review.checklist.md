@@ -54,7 +54,7 @@ One pass over one L2 DAK component: the agent edits it, runs its checker, render
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `staging-review`, `interaction-modality`.
-- What: Ask the person in the reviewing role, following staging-review's deep-link rule: one deep link per changed page and anchor on STAGING/<slug>/, each beside the same page on main (or "new page"), the pages taken from the change (rendered-impact); say so if there is no preview yet.
+- What: Ask the person in the reviewing role, following staging-review's deep-link rule: one deep link per changed page and anchor on branches/<slug>/, each beside the same page on main (or "new page"), the pages taken from the change (rendered-impact); say so if there is no preview yet.
 - Record it: `workflow_complete` with `node: "Task_RequestReview"`.
 - next: → `Call_Review` (Review the staged component)
 

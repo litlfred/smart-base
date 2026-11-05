@@ -67,7 +67,7 @@ its own right.
 `Task_RequestReview` follows `staging-review`'s **deep-link rule**:
 
 - the request carries one deep link per changed page, to the anchor
-  (`…/STAGING/<slug>/<path>#<anchor>`), beside the same page on main as
+  (`…/branches/<slug>/<path>#<anchor>`), beside the same page on main as
   *before*;
 - the pages come from the change (`rendered-impact`), not from judgement;
 - if there is no preview yet, the request says so.
