@@ -121,7 +121,7 @@ are generic and name no DAK. What a DAK adds to each:
   in the generated FSH. Author it knowing it will be transformed. A changed
   diagram also changes its picture and its translation templates: re-render
   it (`smart-base/scripts/render-processes.ts`) and run `bun run cat regen`
-  ([`prepare-merge`](../../../../cat-harness/skills/sdlc/sdlc-core/prepare-merge.md)),
+  ([`prepare-merge`](../../../../cat-harness/sdlc/skills/sdlc-core/prepare-merge.md)),
   which re-extracts the `.pot` files `translate-bpmn:check` gates on.
 - **DMN is a source artefact.** `dmn2html` renders decision tables for human
   review, and `dmn_questionnaire_generator` derives questionnaires from them;
