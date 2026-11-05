@@ -7,12 +7,13 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # smart-base-platform
 
-The import seam: `platform/index.ts` re-exports every platform symbol this instance uses, so re-pointing the platform is a one-file edit. Declared because a remote mount brings declared directories only.
+The import seam: `platform/index.ts` re-exports every platform symbol this instance uses, so re-pointing the platform is an edit in this directory only; `platform/theme.ts` carries the theme schema alone, so `themes/themes.ts`, which every theme lookup loads, does not pull the IG-site code into that closure. Declared because a remote mount brings declared directories only.
 
 Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-platform`, holding `code`.
 
 | file | what it is | used by |
 |---|---|---|
 | [`index.ts`](index.ts) | a file |  |
+| [`theme.ts`](theme.ts) | a file |  |
 
 <!-- kg:subgraph:end -->

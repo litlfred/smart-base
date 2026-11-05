@@ -9,6 +9,11 @@
  * and never folio-assistant directly. `instance-separation-imports.test.ts`
  * holds the rule: no other file here may reach outside the instance.
  *
+ * The one exception is `./theme.ts`, re-exported below: the theme schema
+ * alone, so `themes/themes.ts` (loaded by every platform theme lookup) does
+ * not carry this barrel's IG-site imports into that closure. The platform's
+ * location is still named in this directory only.
+ *
  * Grouped by the platform module each symbol comes from; a module that
  * moves is one line to change. Includes one test-support export
  * (`writeInstanceConfig`), because a test in this instance uses it.
@@ -69,7 +74,7 @@ export {
   resolveTheme,
   type ResolvedTheme,
   type Theme,
-} from "../../cat-harness-tools/schemas/ui/theme.js";
+} from "./theme.js";
 export {
   instanceThemes,
   instanceWebpageThemes,
