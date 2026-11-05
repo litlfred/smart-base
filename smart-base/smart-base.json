@@ -189,7 +189,7 @@
       "graphTypologies": [
         "code"
       ],
-      "description": "The import seam: `platform/index.ts` re-exports every platform symbol this instance uses, so re-pointing the platform is an edit in this directory only; `platform/theme.ts` carries the theme schema alone, so `themes/themes.ts`, which every theme lookup loads, does not pull the IG-site code into that closure. Declared because a remote mount brings declared directories only."
+      "description": "The import seam: `platform/index.ts` re-exports every platform symbol this instance uses, so re-pointing the platform is an edit in this directory only; `platform/schema.ts` carries the symbols of the files the platform loads by glob (`themes/`, `schemas/`, `pipeline/qa-checkers-*`), so the checks that load them do not pull the IG-site code into their closure. Declared because a remote mount brings declared directories only."
     },
     {
       "id": "smart-base-typologies",
