@@ -9,12 +9,19 @@
  * and never folio-assistant directly. `instance-separation-imports.test.ts`
  * holds the rule: no other file here may reach outside the instance.
  *
+ * The one split is `./schema.ts`, re-exported first below: the symbols of
+ * the files the platform loads by glob (`themes/`, `schemas/`,
+ * `pipeline/qa-checkers-*`), kept apart so those files do not carry this
+ * barrel's IG-site imports into every check that loads them. The platform's
+ * location is still named in this directory only.
+ *
  * Grouped by the platform module each symbol comes from; a module that
  * moves is one line to change. Includes one test-support export
  * (`writeInstanceConfig`), because a test in this instance uses it.
  *
  * @module smart-base/platform
  */
+export * from "./schema.js";
 export {
   declarationPathIn,
   directoriesForGraph,
@@ -26,9 +33,7 @@ export {
 export { isBuiltAtPublish } from "../../cat-harness-tools/schemas/kg/built-at-publish.js";
 export {
   ContentTypeConflictError,
-  ContentTypeRegistry,
   describeRepository,
-  defaultContentTypes,
 } from "../../cat-harness-tools/schemas/content/content-type.js";
 export {
   registerBaseContentTypes,
@@ -48,28 +53,11 @@ export {
   describeRepositoryClosure,
 } from "../../cat-harness-tools/schemas/kg/harness-config.js";
 export {
-  SMART_BASE_NS,
-} from "../../cat-harness-tools/schemas/kg/jsonld.js";
-export {
-  kgNodeLabelShape,
-  type KgNodeLabels,
-} from "../../cat-harness-tools/schemas/kg/kg-node.js";
-export {
-  termIri,
-} from "../../cat-harness-tools/schemas/kg/namespaces.js";
-export {
   PINNED_TERMINOLOGY_TAG,
   PinnedTerminologySchema,
   type PinnedConcept,
   type PinnedTerminologyFile,
 } from "../../cat-harness-tools/schemas/content/pinned-terminology.js";
-export {
-  THEME_SCHEMA_TAG,
-  explainThemeFailure,
-  resolveTheme,
-  type ResolvedTheme,
-  type Theme,
-} from "../../cat-harness-tools/schemas/ui/theme.js";
 export {
   instanceThemes,
   instanceWebpageThemes,
@@ -97,8 +85,6 @@ export {
   criterionAdapters,
   incompatibleCompanions,
   COMPANION_ROLES,
-  type CheckerPaths,
-  type CheckerResult,
   type CompanionRole,
 } from "../../cat-harness-tools/schemas/sdlc/block-qa.js";
 export {
@@ -106,7 +92,6 @@ export {
 } from "../../cat-harness-tools/schemas/kg/cat-harness.js";
 export {
   KNOWN_LABEL_PREFIXES,
-  BlockBaseSchema,
 } from "../../cat-harness-tools/schemas/constraints.js";
 export {
   ContributionRegistry,
@@ -124,9 +109,6 @@ export {
   typesForKind,
 } from "../../cat-harness-tools/schemas/kg/jsonld.js";
 export {
-  type BlockBase,
-} from "../../cat-harness-tools/schemas/types.js";
-export {
   IgIdentitySchema,
   readIgIdentity,
 } from "../../fhir-harness/schemas/ig-identity.js";
@@ -136,14 +118,6 @@ export {
 export {
   loadContributionsSync,
 } from "../../cat-harness-tools/schemas/kg/harness-config.js";
-export {
-  BlockKindNodeSchema,
-  builderOf,
-  type BlockKindNode,
-} from "../../cat-harness-tools/schemas/kg/block-kind-node.js";
-export {
-  ownDeclaredDirectories,
-} from "../../cat-harness-tools/schemas/kg/declared-nodes.js";
 export {
   siteFilter,
 } from "../../cat-harness-tools/scripts/staging-cone.ts";
