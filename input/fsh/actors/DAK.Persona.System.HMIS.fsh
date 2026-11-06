@@ -6,6 +6,8 @@ Usage: #definition
 * name = "HealthManagementInformationSystem"
 * title = "Health Management Information System (HMIS)"
 * type = #system
+// smart-ra's actor is canonical; this id stays as an alias (smart-base#338).
+* derivedFrom = "http://smart.who.int/ra/ActorDefinition/HealthManagementInformationSystem"
 * description = """
 A digital system used to collect, process, report, and use aggregate health data
 for programme planning, monitoring, and evaluation at district and national levels.
@@ -21,5 +23,7 @@ The HMIS supports DHIs including:
 
 **Functional areas**: Data collection, reporting dashboards, target monitoring,
 programme performance tracking, data quality management.
+
+**Canonical definition**: smart-ra's [Health Management Information System](http://smart.who.int/ra/ActorDefinition/HealthManagementInformationSystem) is the main definition of this system. This persona is derived from it and keeps the id `DAK.Persona.System.HMIS` as an alias, so existing DAK references still resolve (WorldHealthOrganization/smart-base#338, WorldHealthOrganization/smart-ra#45).
 """
 * documentation = "https://www.who.int/publications/i/item/9789240081949"
