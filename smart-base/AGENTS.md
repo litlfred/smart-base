@@ -72,7 +72,7 @@ rendering stops and what was refused.
 
 <!-- skills:index:begin -->
 
-_27 skills in 1 directory, generated from each skill's front matter. `bun run cat readme:sync` rewrites this list and `readme:sync:check` fails when it is stale. Skills this repository inherits are listed by the repositories that publish them._
+_33 skills in 2 directories, generated from each skill's front matter. `bun run cat readme:sync` rewrites this list and `readme:sync:check` fails when it is stale. Skills this repository inherits are listed by the repositories that publish them._
 
 **`skills/content/authoring-who-smart-guidelines/`** (27)
 
@@ -105,5 +105,16 @@ _27 skills in 1 directory, generated from each skill's front matter. `bun run ca
 | [`smart-stack-layering`](skills/content/authoring-who-smart-guidelines/smart-stack-layering.md) | Which layer a WHO SMART asset, rule, script or page belongs to — fhir-harness, smart-base (with its L1 and DAK document kinds) or smart-ig — and the one question that settles it. |
 | [`toolchain-ownership`](skills/content/authoring-who-smart-guidelines/toolchain-ownership.md) | Taking ownership of the WHO smart-base scripts in litlfred, rewriting them to the Skill I/O contract, and the one gate that governs when a script may actually move. |
 | [`transcription-verbatim`](skills/content/authoring-who-smart-guidelines/transcription-verbatim.md) | Check L1 authored from pictures (a schedule poster, a slide deck: a source with no usable text layer) against the image narratives and transcriptions it names: every statement verbatim in one of… |
+
+**`skills/content/point-of-care/`** (6)
+
+| Skill | What it is for |
+|---|---|
+| [`activate-accepted-guidance`](skills/content/point-of-care/activate-accepted-guidance.md) | The point-of-care system carries out the health worker's decisions on decision-support guidance: each accepted action's request becomes active (intent plan or order) and joins the client's CarePlan;… |
+| [`apply-decision-support`](skills/content/point-of-care/apply-decision-support.md) | The point-of-care system applies a DAK decision table's PlanDefinition to one client ($apply) and gets the proposed actions back as a RequestGroup (R4; RequestOrchestration in R5), or as CDS Hooks… |
+| [`complete-sdc-questionnaire`](skills/content/point-of-care/complete-sdc-questionnaire.md) | A health worker (or a client, on their own device) completes a FHIR R4 Questionnaire conforming to Structured Data Capture as their device renders it, and the result is a QuestionnaireResponse. |
+| [`extract-questionnaire-response`](skills/content/point-of-care/extract-questionnaire-response.md) | The point-of-care system turns a completed QuestionnaireResponse into the FHIR resources it stands for, by the extraction its SDC Questionnaire declares (StructureMap-based, definition-based or… |
+| [`record-decision-rationale`](skills/content/point-of-care/record-decision-rationale.md) | OPTIONAL and never blocking: a health worker who chooses to may note why they accepted or declined decision-support guidance, in one tap plus an optional coded or free-text reason. |
+| [`review-decision-support-guidance`](skills/content/point-of-care/review-decision-support-guidance.md) | A health worker sees the decision-support guidance for one client on their device (the proposed actions of a RequestGroup or CDS Hooks cards) and accepts or declines each action; modifies one only… |
 
 <!-- skills:index:end -->
