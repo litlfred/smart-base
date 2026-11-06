@@ -1,7 +1,7 @@
 ---
 name: voice-who-digital-transformation-handbook
 description: >
-  Write and review digital transformation handbook prose in the DTHs' own register — 9 rules, each citing the handbook section it was read from.
+  Write and review digital transformation handbook prose in the DTHs' own register — 10 rules, each citing the handbook section it was read from.
 allowed-tools: Read Grep Glob
 ---
 
