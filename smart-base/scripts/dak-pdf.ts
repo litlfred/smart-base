@@ -213,6 +213,7 @@ export function assemble(root: string, diagrams: Diagram[] = []): Assembly {
       sections.push({
         title: "Business processes",
         html: parts.join("\n"),
+        // declared-path-literal: a display label naming the source in the report, never opened as a path.
         source: "input/business-processes/",
       });
     }
