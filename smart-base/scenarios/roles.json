@@ -31,7 +31,11 @@
         "review-decision-support-guidance",
         "record-decision-rationale"
       ],
-      "persona": "Overburdened and often offline, on a shared or low-end device, with a queue of clients waiting: every extra tap costs care time, so a step that is not needed for care is never required of them."
+      "persona": "Overburdened and often offline, on a shared or low-end device, with a queue of clients waiting: every extra tap costs care time, so a step that is not needed for care is never required of them.",
+      "otherNames": [
+        "Healthcare Provider (SMART Base generic persona DAK.Persona.HealthcareProvider)",
+        "Health worker (WHO PHC digital transformation handbook)"
+      ]
     },
     {
       "id": "point-of-care-system",
@@ -45,7 +49,10 @@
         "apply-decision-support",
         "activate-accepted-guidance"
       ],
-      "persona": "Software on the health worker's device or the facility's server that works offline and synchronises later, and never writes to the record what the health worker did not accept."
+      "persona": "Software on the health worker's device or the facility's server that works offline and synchronises later, and never writes to the record what the health worker did not accept.",
+      "otherNames": [
+        "Person-centred point of service system (PCPOSS, WHO PHC digital transformation handbook)"
+      ]
     }
   ],
   "extensions": [
