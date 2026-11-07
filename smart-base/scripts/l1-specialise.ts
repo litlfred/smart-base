@@ -60,7 +60,7 @@ const SKILL = "smart-base/dak-l1-library";
 /**
  * cat-harness's namespace, `<iriBase>v<major>/ns/`, derived from its declaration's
  * `iriBase` and `version` (bootstrap-tools `release-iri.ts`). Not a literal: a
- * hand-written `0.1.0/ns/` went stale and smart-immunizations#117 rewrote 29 IRIs by hand.
+ * hand-written `0.1.0/ns/` went stale, and every IRI minted under it had to be rewritten by hand.
  */
 export const CAT_HARNESS_NS = instanceNamespaceOf(JSON.parse(readFileSync(join(requireHarnessRoot(), "cat-harness.json"), "utf-8")));
 const DOCO_NS = "http://purl.org/spar/doco/";
