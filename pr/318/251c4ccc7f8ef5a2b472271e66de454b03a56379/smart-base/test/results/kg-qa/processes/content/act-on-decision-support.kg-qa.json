@@ -1,0 +1,421 @@
+{
+  "$schema": "kg-qa/v1",
+  "subject": {
+    "kind": "process",
+    "id": "act-on-decision-support",
+    "path": "processes/content/act-on-decision-support.bpmn"
+  },
+  "source_hash": "sha256:18b177207c309ea41c02889c26d95982cdcb2e575a1711e35d7914b88840c5a2",
+  "criteria": {
+    "skill-ref-resolves": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "decision-ref-resolves": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "variable-performer-declared-alone": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "role-ref-resolves": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "activity-in-lane": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "lane-binds-role": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "role-carries-activity-skill": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "lane-role-legacy-binding": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "task-skill-outside-lane-role": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "skill-servable": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "convention-ref-resolves": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "activity-names-skill": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "activity-skill-has-tool": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "raci-role-resolves": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "raci-single-accountable": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "raci-accountable-not-consulted": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "raci-involvement-vocabulary": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "activity-fulfilment-kind": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "call-activity-resolves": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "process-diagram-published": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "activity-documented": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "activity-calls-skill-process": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "gateway-documented": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "gateway-branches-named": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "node-reachable": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "node-has-exit": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "activity-implicit-split": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "gateway-mixed": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "process-size": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "process-decompose": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "process-single-start": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "decision-label-question": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "activity-label-verb-first": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "edge-rectilinear": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "edge-crossing": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "edge-through-node": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "diagram-too-wide": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "diagram-too-tall": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "label-overlap": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "label-on-edge": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "label-on-shape": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "label-on-lane-line": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "shape-overlap": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "lane-order": {
+      "result": "unknown",
+      "findings": [
+        {
+          "where": "—",
+          "detail": "the diagram would not load: act-on-decision-support.bpmn uses BPMN this interpreter does not implement: bpmn:BoundaryEvent. Supported: bpmn:StartEvent, bpmn:EndEvent, bpmn:ExclusiveGateway, bpmn:ParallelGateway, bpmn:SequenceFlow, bpmn:Task, bpmn:UserTask, bpmn:ServiceTask, bpmn:SendTask, bpmn:ReceiveTask, bpmn:CallActivity. Extend the interpreter rather than letting the element be skipped — a process that silently omits a step is not the process on the diagram."
+        }
+      ]
+    },
+    "prose-reviewed-since-code-changed": {
+      "result": "n/a",
+      "findings": []
+    },
+    "prose-claims-resolve": {
+      "result": "n/a",
+      "findings": []
+    }
+  },
+  "totals": {
+    "pass": 0,
+    "fail": 0,
+    "n/a": 2,
+    "unknown": 44
+  }
+}
