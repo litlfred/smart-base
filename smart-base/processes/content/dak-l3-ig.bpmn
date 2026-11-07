@@ -3,7 +3,7 @@
   smart-base — a WHO SMART Guidelines L2 DAK to its published L3 FHIR IG.
 
   Source of truth: this file. The picture beside it (dak-l3-ig.svg) is drawn by
-  `NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`;
+  `bun run cat render:bpmn`;
   never hand-edit it.
 
   The <bootstrap.processes:skill> extension on an activity names the skill

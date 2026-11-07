@@ -142,7 +142,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "5863c3cabf0f4b02e38d55ad595fd4dc03226ad2",
+          "ref": "64f0aa0b4b13384dd5ea8ac15c80cbe931f40efe",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -154,9 +154,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-04",
-              "ref": "5863c3cabf0f4b02e38d55ad595fd4dc03226ad2",
-              "evidence": "this session's user, 2026-11-04: \"merge repin window open 4 hrs\", then \"Try again\" (https://claude.ai/code/session_01EucfRmwUEL1hMiu6mZ8v5z)"
+              "on": "2026-11-06",
+              "ref": "64f0aa0b4b13384dd5ea8ac15c80cbe931f40efe",
+              "evidence": "this session's user, 2026-11-06: chose \"1 Re-pin in #309 (Recommended)\" — re-pin smart-base's cat-harness-tools inside smart-base#309 after cat-harness-tools#1579 merges (https://claude.ai/code/session_01VQDpPfJKxVERPVKKWBTY8z)"
             }
           }
         }

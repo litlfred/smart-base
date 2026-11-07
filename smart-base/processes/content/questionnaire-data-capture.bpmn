@@ -7,7 +7,7 @@
   (registering a client is the commonest use).
 
   Source of truth: this file. The picture beside it (questionnaire-data-capture.svg) is drawn by
-  `NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`;
+  `bun run cat render:bpmn`;
   never hand-edit it.
 -->
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
