@@ -75,7 +75,7 @@ function globbedByPlatform(): string[] {
 const mounted = existsSync(join(CHECKOUT, "cat-harness-tools", "schemas"));
 
 describe.skipIf(!mounted)("platform/schema.ts: the seam of the files the platform loads", () => {
-  test("no globbed file reaches the platform except through schema.ts", () => {
+  test("globbedFilesReachPlatformViaSchemaOnly", () => {
     const wrong: string[] = [];
     for (const f of globbedByPlatform()) {
       for (const spec of specifiers(f)) {
@@ -88,12 +88,12 @@ describe.skipIf(!mounted)("platform/schema.ts: the seam of the files the platfor
     expect(wrong).toEqual([]);
   });
 
-  test("schema.ts reaches no fhir-harness file and no platform script", () => {
+  test("schemaReachesNoFhirHarnessOrScript", () => {
     const files = closureOf(join(INSTANCE, "platform", "schema.ts"));
     expect(files.filter((f) => f.startsWith("fhir-harness/") || /^[^/]+\/scripts\//.test(f))).toEqual([]);
   });
 
-  test("the globbed files' whole closure stays off fhir-harness", () => {
+  test("globbedClosureStaysOffFhirHarness", () => {
     const heavy = new Set<string>();
     for (const f of globbedByPlatform()) {
       for (const c of closureOf(f)) if (c.startsWith("fhir-harness/") || /^[^/]+\/scripts\//.test(c)) heavy.add(`${relative(CHECKOUT, f)} ⇒ ${c}`);

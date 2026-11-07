@@ -4,14 +4,14 @@ import * as k from "./l1-kgid.ts";
 
 // Outputs of WHO smart-kg tools/kgid.mjs at 3f5e477, recorded 2026-10-07.
 describe("l1-kgid mints smart-kg's IRIs", () => {
-  test("publication IRI from the first of isbn, iris-handle, doi, issn, url", () => {
+  test("publicationIriFromFirstIdentifier", () => {
     expect(k.publicationId([{ type: "iris-handle", value: "10665/340749" }, { type: "isbn", value: "978-92-4-001651-4" }])).toBe(
       "https://smart.who.int/kg/l1/publication/isbn-9789240016514",
     );
     expect(k.publicationId([{ type: "iris-handle", value: "10665/340749" }])).toBe("https://smart.who.int/kg/l1/publication/iris-handle-10665-340749");
     expect(() => k.publicationId([])).toThrow();
   });
-  test("section, element, reference, citation", () => {
+  test("mintsSectionElementReferenceCitationIris", () => {
     const pub = "https://smart.who.int/kg/l1/publication/isbn-9789240016514";
     expect(k.sectionId(pub, "1.2")).toBe(`${pub}/section/1.2`);
     expect(k.sectionId(pub, "Annex 3")).toBe(`${pub}/section/Annex-3`);

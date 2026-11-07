@@ -10,7 +10,7 @@ import { spawnSync } from "node:child_process";
 import { join } from "node:path";
 
 describe("qa-checkers-dak.ts", () => {
-  it("registers dak and sushi in the default registry when the contributions loader requires it", () => {
+  it("registersDakAndSushiContentTypes", () => {
     const here = import.meta.dir;
     const script = [
       `require(${JSON.stringify(join(here, "qa-checkers-dak.ts"))});`,

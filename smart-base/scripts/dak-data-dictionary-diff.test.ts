@@ -39,13 +39,13 @@ const BEFORE = annex([
 ]);
 
 describe("diffDataDictionary", () => {
-  test("identical annexes: nothing changed, exit-0 shape", () => {
+  test("identicalAnnexesNothingChanged", () => {
     const d = diffDataDictionary(BEFORE, BEFORE);
     expect(isEmpty(d)).toBe(true);
     expect(renderMarkdown(d)).toBe("No data element changed.\n");
   });
 
-  test("added, removed and changed are keyed by id, with the changed cell named", () => {
+  test("addedRemovedChangedKeyedById", () => {
     const after = annex([
       {
         name: "IMMZ.C Client registration",
@@ -73,7 +73,7 @@ describe("diffDataDictionary", () => {
     expect(md).toContain("| IMMZ.C.DE.1 | Unique identifier | data type | ID | Identifier |");
   });
 
-  test("reordered rows and reordered columns are not changes", () => {
+  test("reorderedRowsColumnsNotChanges", () => {
     const swapped = [COLS[1]!, COLS[0]!, COLS[3]!, COLS[2]!];
     const after = annex([
       {
@@ -90,7 +90,7 @@ describe("diffDataDictionary", () => {
     expect(isEmpty(diffDataDictionary(BEFORE, after))).toBe(true);
   });
 
-  test("an element that moves sheet is moved, not removed and added", () => {
+  test("sheetMoveIsMoved", () => {
     const after = annex([
       {
         name: "IMMZ.C Client registration",
@@ -113,7 +113,7 @@ describe("diffDataDictionary", () => {
     expect(d.moved).toEqual([{ id: "IMMZ.C.DE.3", from: "IMMZ.C Client registration", to: "IMMZ.D Administer vaccine" }]);
   });
 
-  test("a column added is reported once per sheet, not once per row", () => {
+  test("addedColumnReportedPerSheet", () => {
     const wider = [...COLS, { key: "input option", label: "Input options" }];
     const after = annex([
       {
@@ -132,7 +132,7 @@ describe("diffDataDictionary", () => {
     expect(d.columns).toEqual([{ sheet: "IMMZ.C Client registration", added: ["input option"], removed: [] }]);
   });
 
-  test("a duplicated id is refused, not diffed", () => {
+  test("duplicatedIdRefused", () => {
     const dup = annex([
       { name: "A", rows: [["x", "IMMZ.C.DE.1", "One", "ID"]] },
       { name: "B", rows: [["x", "IMMZ.C.DE.1", "Other", "ID"]] },
@@ -151,7 +151,7 @@ describe("the CLI", () => {
   };
   const run = (...a: string[]) => Bun.spawnSync(["bun", script, ...a]);
 
-  test("exit 0 when nothing changed, 1 when terms changed, 2 on an unreadable input", () => {
+  test("cliExitCodes", () => {
     const b = write("before.json", BEFORE);
     const changed = write("after.json", annex([{ name: "IMMZ.C Client registration", rows: [["IMMZ.C4", "IMMZ.C.DE.1", "Unique identifier", "ID"]] }]));
     expect(run(b, b).exitCode).toBe(0);

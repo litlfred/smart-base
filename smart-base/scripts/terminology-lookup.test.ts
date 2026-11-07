@@ -7,7 +7,7 @@ const REPO_ROOT = resolve(import.meta.dir, "..", "..");
 const DTH_VOCAB = "smart-base/l1-extractions/9789240116191-eng/dth-npc-vocabulary.json";
 
 describe("terminology-lookup (bean folio-assistant-4nfs)", () => {
-  test("Rung 1: resolves persona from target guide vocabulary first", () => {
+  test("rung1ResolvesPersonaFromTargetGuide", () => {
     const res = lookupTerminology({
       slot: "persona",
       query: "data-steward",
@@ -20,7 +20,7 @@ describe("terminology-lookup (bean folio-assistant-4nfs)", () => {
     expect(res.candidateToMint).toBeUndefined();
   });
 
-  test("Rung 2: falls back to smart-base generic DAK.Persona.* when not in target guide", () => {
+  test("rung2FallsBackToGenericPersona", () => {
     const res = lookupTerminology({
       slot: "persona",
       query: "DAK.Persona.DataManager",
@@ -32,7 +32,7 @@ describe("terminology-lookup (bean folio-assistant-4nfs)", () => {
     expect(res.matches[0]?.code).toBe("DAK.Persona.DataManager");
   });
 
-  test("Rung 2: resolves guideline-domain SKOS concepts and GRADE code lists", () => {
+  test("rung2ResolvesDomainAndGrade", () => {
     const domainRes = lookupTerminology({
       slot: "domain",
       query: "health-system-strengthening",
@@ -52,7 +52,7 @@ describe("terminology-lookup (bean folio-assistant-4nfs)", () => {
     expect(gradeRes.matches[0]?.code).toBe("conditional");
   });
 
-  test("Rung 3: resolves external standard codes (CDHIv2, ISCO08)", () => {
+  test("rung3ResolvesExternalStandardCodes", () => {
     const cdhiRes = lookupTerminology({
       slot: "intervention",
       query: "2.3.1",
@@ -73,7 +73,7 @@ describe("terminology-lookup (bean folio-assistant-4nfs)", () => {
     expect(iscoRes.matches[0]?.scheme).toBe("ISCO08");
   });
 
-  test("Rung 4: returns glossary-terms candidate (status: candidate) for unmatched persona and could-not-determine for unmatched business-process", () => {
+  test("rung4CandidateOrCouldNotDetermine", () => {
     const personaMiss = lookupTerminology({
       slot: "persona",
       query: "National Regulatory Authority",

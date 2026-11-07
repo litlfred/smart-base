@@ -18,22 +18,22 @@ const bib = (): Bibliography => ({
 const B = "en/folio-assistant-core/bibliography/";
 
 describe("check-ig-citations", () => {
-  it("passes a citation into the bibliography page", () => {
+  it("passesCitationIntoBibliography", () => {
     expect(judgePage("p.md", `As shown <a href="${B}#ref-voo2021">[voo2021]</a> and [[w3c-did-core]](${B}#ref-w3c-did-core).`, bib())).toEqual([]);
   });
 
-  it("flags a key with no entry, and a citation to the page itself", () => {
+  it("flagsDanglingKeyAndSelfCitation", () => {
     const f = judgePage("p.md", `See [[x]](${B}#ref-nope) and <a href="#ref-voo2021">(1)</a>.`, bib());
     expect(f.map((x) => x.rule)).toEqual(["dangling-citation", "dangling-citation"]);
     expect(f[1]!.detail).toContain("not the bibliography page");
   });
 
-  it("flags a page reference list", () => {
+  it("flagsPageReferenceList", () => {
     const f = judgePage("p.md", "### References\n<!-- references:begin style=ul keys=voo2021 -->\n<ul><li>x</li></ul>\n<!-- references:end -->\n", bib());
     expect(f.map((x) => x.rule)).toEqual(["page-reference-list"]);
   });
 
-  it("flags hand-written entries and unlisted links in a references section, and stops at the next heading", () => {
+  it("flagsHandWrittenAndUnlistedReferences", () => {
     const page = [
       "## References",
       "- WHO. Global strategy on digital health 2020-2025.",
@@ -48,17 +48,17 @@ describe("check-ig-citations", () => {
     expect(f.map((x) => `${x.line}:${x.rule}`)).toEqual(["2:hand-written-reference", "5:unlisted-link"]);
   });
 
-  it("treats a whole references.md as a references section, but not a 'Reference Implementations' heading", () => {
+  it("referencesMdIsReferencesSection", () => {
     expect(judgePage("input/pagecontent/references.md", "- [x](https://example.org/x)", bib()).map((x) => x.rule)).toEqual(["unlisted-link"]);
     expect(judgePage("p.md", "## Reference Implementations\n- Set Passcode: do it", bib())).toEqual([]);
   });
 
-  it("matches a link by its ISBN or IRIS handle", () => {
+  it("matchesLinkByIsbnOrIrisHandle", () => {
     expect(knownUrl(bib(), "https://iris.who.int/handle/10665/334306")).toBe(true);
     expect(knownUrl(bib(), "https://www.who.int/publications/i/item/9789241548960")).toBe(false);
   });
 
-  it("reads the own instance's references directory through its declaration", () => {
+  it("readsDeclaredReferencesDirectory", () => {
     const root = mkdtempSync(join(tmpdir(), "igc-"));
     mkdirSync(join(root, "references"));
     mkdirSync(join(root, "input", "pagecontent"), { recursive: true });
@@ -70,7 +70,7 @@ describe("check-ig-citations", () => {
     expect(r.findings.map((x) => x.detail)).toEqual(["#ref-k2 is no entry of the KG bibliography"]);
   });
 
-  it("reads library entries, flat and filed in a group, by slug, source URL and the ISBN in the slug (bean djj5)", () => {
+  it("readsLibraryEntriesAsBibliography", () => {
     const root = mkdtempSync(join(tmpdir(), "igc-lib-"));
     mkdirSync(join(root, "library", "gdhcn-framework"), { recursive: true });
     mkdirSync(join(root, "library", "who", "9789240010567-eng"), { recursive: true });
@@ -87,7 +87,7 @@ describe("check-ig-citations", () => {
 });
 
 describe("ratchet", () => {
-  it("an IG with no declared bibliography has not adopted the gate; one with a references directory has", () => {
+  it("adoptedOnlyWithReferencesDirectory", () => {
     const root = mkdtempSync(join(tmpdir(), "igc-ratchet-"));
     expect(adopted(readBibliography(root))).toBe(false);
     mkdirSync(join(root, "references"));
@@ -95,7 +95,7 @@ describe("ratchet", () => {
     expect(adopted(readBibliography(root))).toBe(true);
   });
 
-  it("declaring only a library is not adopting the KG bibliography: a re-pin does not turn an untouched IG red", () => {
+  it("libraryOnlyIsNotAdopted", () => {
     const root = mkdtempSync(join(tmpdir(), "igc-ratchet-lib-"));
     mkdirSync(join(root, "library"));
     writeFileSync(join(root, "ig.json"), JSON.stringify({ directories: [{ path: "library/", graphTypologies: ["library"] }] }));

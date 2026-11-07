@@ -22,7 +22,7 @@ const svg = (...lanes: string[]) => lanes.map((l) => `<v:ud v:nameU="visHeadingT
 const figures: Record<string, string> = { "a.svg": svg("Function", "Vaccination location\nHealth worker", "Client", "Client"), "f.svg": svg("Community\nCHW", "PCPOSS") };
 
 describe("dak-swimlanes", () => {
-  test("reads personas, enumerated processes with their figure, and Visio lane titles", () => {
+  test("readsPersonasProcessesAndLaneTitles", () => {
     expect(personasFrom(personasPage)).toEqual(["Health worker (HW)", "Community health worker", "Client", "Caregiver"]);
     const p = processesFrom(processesPage);
     expect(p.map((x) => [x.letter, x.name, x.anchor, x.figure])).toEqual([
@@ -32,13 +32,13 @@ describe("dak-swimlanes", () => {
     expect(lanesFrom(figures["a.svg"]!)).toContain("Vaccination location Health worker");
   });
 
-  test("a lane resolves through declared aliases; pools and header lanes are accounted for; the rest is reported", () => {
+  test("resolvesLaneThroughAliases", () => {
     expect(resolveLane("Vaccination location Health worker", map)).toEqual({ personas: ["Health worker (HW)"], rest: "" });
     expect(resolveLane("Community CHW", map)).toEqual({ personas: ["Community health worker"], rest: "" });
     expect(resolveLane("PCPOSS", map)).toEqual({ personas: [], rest: "PCPOSS" });
   });
 
-  test("the crosswalk links both ways and its QA names each gap", () => {
+  test("crosswalkLinksBothWaysQaNamesGaps", () => {
     const personas = personasFrom(personasPage);
     const cw = crosswalk(personas, processesFrom(processesPage), (f) => lanesFrom(figures[f] ?? ""), map);
     // Client appears twice in a.svg and is one row.

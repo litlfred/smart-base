@@ -11,15 +11,15 @@ import { describe, expect, test } from "bun:test";
 import { SMART_PUBLISHER_SITE_REPOS, smartSiteRepoArgs, tools } from "../../tools/index.ts";
 
 describe("smart-base publisher-site rules for fhir-cache-seed-npm", () => {
-  test("the WHO rule is supplied, naming the repository the seeder used before #2436", () => {
+  test("suppliesWhoPublisherSiteRule", () => {
     expect(SMART_PUBLISHER_SITE_REPOS["smart.who.int."]).toBe("WorldHealthOrganization/smart-html@main");
   });
 
-  test("the rule is passed as the seeder's --site-repo PREFIX=OWNER/REPO[@BRANCH] arguments", () => {
+  test("passesRuleAsSiteRepoArguments", () => {
     expect(smartSiteRepoArgs()).toEqual(["--site-repo", "smart.who.int.=WorldHealthOrganization/smart-html@main"]);
   });
 
-  test("the smart-base Tool invokes the seeder with the rule", () => {
+  test("toolInvokesSeederWithRule", () => {
     const tool = tools("https://example.org").find((x) => x.id === "smart-fhir-cache-seed");
     const shell = (tool?.invoke as { shell?: string } | undefined)?.shell ?? "";
     expect(shell).toContain("fhir-harness/scripts/fhir-cache-seed-npm.ts");
