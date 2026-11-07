@@ -66,6 +66,6 @@ test("publicationAndTerminologyCodeReuseParents", () => {
 test("specialisationEmittedAsLinkedData", () => {
   const ld = JSON.parse(readFileSync(join(REPO, "smart-base/kg/generated/l1/l1-library.jsonld"), "utf8"));
   const sub = Object.fromEntries(ld["@graph"].map((n: { "@id": string; subClassOf: unknown }) => [n["@id"], n.subClassOf]));
-  assert.equal(sub["http://smart.who.int/kg/publication"], "https://litlfred.github.io/cat-harness/0.1.0/ns/SourceDocument");
+  assert.equal(sub["http://smart.who.int/kg/publication"], "https://litlfred.github.io/cat-harness/v0/ns/SourceDocument");
   assert.equal(sub["http://smart.who.int/kg/publication-section"], "http://purl.org/spar/doco/Section");
 });
