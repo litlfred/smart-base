@@ -41,7 +41,7 @@ const DOC = {
       derivation: "decided",
     },
     { id: `${PUB}/section/1.2`, type: "publication-section", label: "1.2", properties: { heading: "Availability", pageRange: "2-4" }, derivation: "inferred" },
-    { id: LIB, type: "library-node", label: "entry", properties: { iri: LIB, libraryClass: "https://litlfred.github.io/cat-harness/0.1.0/ns/SourceDocument" }, derivation: "derived" },
+    { id: LIB, type: "library-node", label: "entry", properties: { iri: LIB, libraryClass: "https://litlfred.github.io/cat-harness/v0/ns/SourceDocument" }, derivation: "derived" },
   ],
   edges: [
     { type: "Statement", predicate: "specializationOf", source: PUB, target: LIB, derivation: "derived" },

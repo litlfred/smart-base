@@ -40,3 +40,4 @@ Feature: l1LibraryDocument specialises a library entry into an L1 graph
     Then the cat-harness namespace is cat-harness.json's iriBase followed by "v<major>/ns/"
     And the library entry's class is "SourceDocument" in that namespace
     And every cat-harness class on a library node is in that namespace
+    And the kg package's literal cat-harness namespace equals it
