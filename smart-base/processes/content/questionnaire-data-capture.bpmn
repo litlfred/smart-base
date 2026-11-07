@@ -28,7 +28,7 @@
   </bpmn:collaboration>
 
   <bpmn:process id="Process_QuestionnaireDataCapture" name="Capture data with an SDC questionnaire" isExecutable="false">
-    <bpmn:documentation>A health worker completes one of the DAK's forms, a FHIR R4 Questionnaire conforming to Structured Data Capture, as their device renders it, and the point-of-care system turns the completed QuestionnaireResponse into the resources it stands for by the extraction the form declares (SDC $extract). Generic for any DAK: registering a client, recording a visit, a referral. A DAK's diagram calls it by call activity; the caller's lanes take on health-worker and point-of-care-system for the duration of the call. Skills: complete-sdc-questionnaire, extract-questionnaire-response (package point-of-care).</bpmn:documentation>
+    <bpmn:documentation>A health worker completes one of the DAK's forms, a FHIR R4 Questionnaire conforming to Structured Data Capture, as their device renders it, and the point-of-care system turns the completed QuestionnaireResponse into the resources it stands for by the extraction the form declares (SDC $extract). Generic for any DAK: registering a client, recording a visit, a referral. A DAK's diagram calls it by call activity; the caller's lanes take on health-worker and point-of-care-system for the duration of the call. Skills: complete-sdc-questionnaire, extract-questionnaire-response (package authoring-who-smart-guidelines).</bpmn:documentation>
     <bpmn:extensionElements>
       <cat-harness.processes:policy enforcement="advisory" />
     </bpmn:extensionElements>

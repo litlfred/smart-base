@@ -12,7 +12,7 @@ output: schemas/skills/activate-accepted-guidance/output.schema.json
 
 # Activate accepted guidance
 
-> Skill id: `activate-accepted-guidance` · Package: `point-of-care` · Task
+> Skill id: `activate-accepted-guidance` · Package: `authoring-who-smart-guidelines` · Task
 > `Task_Activate` of
 > [`act-on-decision-support.bpmn`](../../../processes/content/act-on-decision-support.bpmn)
 > (`Process_ActOnDecisionSupport`), lane `point-of-care-system`.

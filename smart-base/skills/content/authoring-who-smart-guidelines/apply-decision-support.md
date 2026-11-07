@@ -12,7 +12,7 @@ output: schemas/skills/apply-decision-support/output.schema.json
 
 # Apply decision support
 
-> Skill id: `apply-decision-support` · Package: `point-of-care` · Task
+> Skill id: `apply-decision-support` · Package: `authoring-who-smart-guidelines` · Task
 > `Task_Apply` of
 > [`act-on-decision-support.bpmn`](../../../processes/content/act-on-decision-support.bpmn)
 > (`Process_ActOnDecisionSupport`), lane `point-of-care-system`.

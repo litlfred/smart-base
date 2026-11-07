@@ -12,7 +12,7 @@ output: schemas/skills/record-decision-rationale/output.schema.json
 
 # Record a decision rationale (optional)
 
-> Skill id: `record-decision-rationale` · Package: `point-of-care` · Task
+> Skill id: `record-decision-rationale` · Package: `authoring-who-smart-guidelines` · Task
 > `Task_Rationale` of
 > [`act-on-decision-support.bpmn`](../../../processes/content/act-on-decision-support.bpmn)
 > (`Process_ActOnDecisionSupport`), lane `health-worker`, reached only

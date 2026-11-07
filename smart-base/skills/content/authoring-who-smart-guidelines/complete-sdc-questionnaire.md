@@ -13,7 +13,7 @@ output: schemas/skills/complete-sdc-questionnaire/output.schema.json
 
 # Complete an SDC questionnaire
 
-> Skill id: `complete-sdc-questionnaire` · Package: `point-of-care` · Task
+> Skill id: `complete-sdc-questionnaire` · Package: `authoring-who-smart-guidelines` · Task
 > `Task_Complete` of
 > [`questionnaire-data-capture.bpmn`](../../../processes/content/questionnaire-data-capture.bpmn)
 > (`Process_QuestionnaireDataCapture`), lane `health-worker`.

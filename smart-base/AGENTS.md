@@ -72,18 +72,22 @@ rendering stops and what was refused.
 
 <!-- skills:index:begin -->
 
-_33 skills in 2 directories, generated from each skill's front matter. `bun run cat readme:sync` rewrites this list and `readme:sync:check` fails when it is stale. Skills this repository inherits are listed by the repositories that publish them._
+_33 skills in 1 directory, generated from each skill's front matter. `bun run cat readme:sync` rewrites this list and `readme:sync:check` fails when it is stale. Skills this repository inherits are listed by the repositories that publish them._
 
-**`skills/content/authoring-who-smart-guidelines/`** (27)
+**`skills/content/authoring-who-smart-guidelines/`** (33)
 
 | Skill | What it is for |
 |---|---|
+| [`activate-accepted-guidance`](skills/content/authoring-who-smart-guidelines/activate-accepted-guidance.md) | The point-of-care system carries out the health worker's decisions on decision-support guidance: each accepted action's request becomes active (intent plan or order) and joins the client's CarePlan;… |
+| [`apply-decision-support`](skills/content/authoring-who-smart-guidelines/apply-decision-support.md) | The point-of-care system applies a DAK decision table's PlanDefinition to one client ($apply) and gets the proposed actions back as a RequestGroup (R4; RequestOrchestration in R5), or as CDS Hooks… |
 | [`classify-and-code-content`](skills/content/authoring-who-smart-guidelines/classify-and-code-content.md) | Classify and code L1 narrative content (recommendations, implementation practices, remarks, and proposed coverage exclusions) and L2 DAK slots (personas, business processes, guideline domains,… |
+| [`complete-sdc-questionnaire`](skills/content/authoring-who-smart-guidelines/complete-sdc-questionnaire.md) | A health worker (or a client, on their own device) completes a FHIR R4 Questionnaire conforming to Structured Data Capture as their device renders it, and the result is a QuestionnaireResponse. |
 | [`dak-l1-library`](skills/content/authoring-who-smart-guidelines/dak-l1-library.md) | Build a DAK's library from the L1 sources its Component 1 cites, and the L1 knowledge graph that records them. |
 | [`dak-postprocessing`](skills/content/authoring-who-smart-guidelines/dak-postprocessing.md) | What the DAK post-processing phase produces after the IG Publisher runs — the JSON/JSON-LD surface, the DAK API hub, and the metadata-to-Liquid bridge — and how an IG repository's own site gets the… |
 | [`dak-preprocessing`](skills/content/authoring-who-smart-guidelines/dak-preprocessing.md) | What each DAK pre-processing step does before the IG Publisher runs, which steps exist only to feed the Publisher's page index, and how the phase runs as the overlay on fhir-harness's AST cache… |
 | [`dth-authoring`](skills/content/authoring-who-smart-guidelines/dth-authoring.md) | How a WHO Digital Transformation Handbook (DTH) is produced, from sources to publication, in the seven stages and milestones of dth-authoring.bpmn — and the rules the diagram cannot carry: which… |
 | [`dth-l1-to-l2-ingest`](skills/content/authoring-who-smart-guidelines/dth-l1-to-l2-ingest.md) | Turn a WHO Digital Transformation Handbook that exists only as an L1 publication (ingested in who-iris) into an L2 DTH in its own repository that depends on smart-ra: write the handbook's workplan… |
+| [`extract-questionnaire-response`](skills/content/authoring-who-smart-guidelines/extract-questionnaire-response.md) | The point-of-care system turns a completed QuestionnaireResponse into the FHIR resources it stands for, by the extraction its SDC Questionnaire declares (StructureMap-based, definition-based or… |
 | [`grade`](skills/content/authoring-who-smart-guidelines/grade.md) | GRADE — the grading system a WHO guideline folio declares for certainty of evidence, and the Evidence-to-Decision judgement a recommendation rests on. |
 | [`guideline-use-case`](skills/content/authoring-who-smart-guidelines/guideline-use-case.md) | Stage 0 of smart-guideline-end-to-end: turn a request for a SMART Guideline into a use case — population, setting, jurisdiction and interventions in scope, new or an adaptation — in the requester's… |
 | [`ig-artifact-ingestion`](skills/content/authoring-who-smart-guidelines/ig-artifact-ingestion.md) | The artefact index of a FHIR Implementation Guide is a knowledge graph keyed by the IG's own canonical URLs, linking each artefact to its JSON, JSON Schema and JSON-LD representations. |
@@ -99,22 +103,13 @@ _33 skills in 2 directories, generated from each skill's front matter. `bun run 
 | [`recommendation-candidates`](skills/content/authoring-who-smart-guidelines/recommendation-candidates.md) | Turn one ingested L1 source into L1 3.0 recommendation nodes: list every normative sentence as a candidate, let the agent decide each in a curation file, then refuse a non-verbatim statement or… |
 | [`recommendation-extraction`](skills/content/authoring-who-smart-guidelines/recommendation-extraction.md) | Extract the recommendations of an L1 source as L1 3.0 recommendation and remark nodes, then describe each one's scenario: the persona (role) who acts on it, the business process they act in, and the… |
 | [`recommendation-scenarios`](skills/content/authoring-who-smart-guidelines/recommendation-scenarios.md) | Join each L1 recommendation to who acts on it and during which business process: one smart-kg L2 user-scenario candidate per recommendation, from the agent's mapping, reusing the target guide's… |
+| [`record-decision-rationale`](skills/content/authoring-who-smart-guidelines/record-decision-rationale.md) | OPTIONAL and never blocking: a health worker who chooses to may note why they accepted or declined decision-support guidance, in one tap plus an optional coded or free-text reason. |
+| [`review-decision-support-guidance`](skills/content/authoring-who-smart-guidelines/review-decision-support-guidance.md) | A health worker sees the decision-support guidance for one client on their device (the proposed actions of a RequestGroup or CDS Hooks cards) and accepts or declines each action; modifies one only… |
 | [`smart-base-tools`](skills/content/authoring-who-smart-guidelines/smart-base-tools.md) | smart-base Toolchain |
 | [`smart-guideline-create`](skills/content/authoring-who-smart-guidelines/smart-guideline-create.md) | Somebody asked for a new WHO SMART Guideline (an IG built on smart-base, or a DAK that will feed one). |
 | [`smart-guideline-end-to-end`](skills/content/authoring-who-smart-guidelines/smart-guideline-end-to-end.md) | The whole road from a use case to a running application on WHO SMART Guidelines, for a new guideline or a jurisdiction's adaptation, as an orchestrator of ten named stage skills, each with its own… |
 | [`smart-stack-layering`](skills/content/authoring-who-smart-guidelines/smart-stack-layering.md) | Which layer a WHO SMART asset, rule, script or page belongs to — fhir-harness, smart-base (with its L1 and DAK document kinds) or smart-ig — and the one question that settles it. |
 | [`toolchain-ownership`](skills/content/authoring-who-smart-guidelines/toolchain-ownership.md) | Taking ownership of the WHO smart-base scripts in litlfred, rewriting them to the Skill I/O contract, and the one gate that governs when a script may actually move. |
 | [`transcription-verbatim`](skills/content/authoring-who-smart-guidelines/transcription-verbatim.md) | Check L1 authored from pictures (a schedule poster, a slide deck: a source with no usable text layer) against the image narratives and transcriptions it names: every statement verbatim in one of… |
-
-**`skills/content/point-of-care/`** (6)
-
-| Skill | What it is for |
-|---|---|
-| [`activate-accepted-guidance`](skills/content/point-of-care/activate-accepted-guidance.md) | The point-of-care system carries out the health worker's decisions on decision-support guidance: each accepted action's request becomes active (intent plan or order) and joins the client's CarePlan;… |
-| [`apply-decision-support`](skills/content/point-of-care/apply-decision-support.md) | The point-of-care system applies a DAK decision table's PlanDefinition to one client ($apply) and gets the proposed actions back as a RequestGroup (R4; RequestOrchestration in R5), or as CDS Hooks… |
-| [`complete-sdc-questionnaire`](skills/content/point-of-care/complete-sdc-questionnaire.md) | A health worker (or a client, on their own device) completes a FHIR R4 Questionnaire conforming to Structured Data Capture as their device renders it, and the result is a QuestionnaireResponse. |
-| [`extract-questionnaire-response`](skills/content/point-of-care/extract-questionnaire-response.md) | The point-of-care system turns a completed QuestionnaireResponse into the FHIR resources it stands for, by the extraction its SDC Questionnaire declares (StructureMap-based, definition-based or… |
-| [`record-decision-rationale`](skills/content/point-of-care/record-decision-rationale.md) | OPTIONAL and never blocking: a health worker who chooses to may note why they accepted or declined decision-support guidance, in one tap plus an optional coded or free-text reason. |
-| [`review-decision-support-guidance`](skills/content/point-of-care/review-decision-support-guidance.md) | A health worker sees the decision-support guidance for one client on their device (the proposed actions of a RequestGroup or CDS Hooks cards) and accepts or declines each action; modifies one only… |
 
 <!-- skills:index:end -->

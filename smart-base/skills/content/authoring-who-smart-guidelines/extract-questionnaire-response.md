@@ -12,7 +12,7 @@ output: schemas/skills/extract-questionnaire-response/output.schema.json
 
 # Extract resources from a questionnaire response
 
-> Skill id: `extract-questionnaire-response` · Package: `point-of-care` ·
+> Skill id: `extract-questionnaire-response` · Package: `authoring-who-smart-guidelines` ·
 > Task `Task_Extract` of
 > [`questionnaire-data-capture.bpmn`](../../../processes/content/questionnaire-data-capture.bpmn)
 > (`Process_QuestionnaireDataCapture`), lane `point-of-care-system`.

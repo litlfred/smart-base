@@ -12,7 +12,7 @@ output: schemas/skills/review-decision-support-guidance/output.schema.json
 
 # Review decision-support guidance
 
-> Skill id: `review-decision-support-guidance` · Package: `point-of-care` ·
+> Skill id: `review-decision-support-guidance` · Package: `authoring-who-smart-guidelines` ·
 > Task `Task_Review` of
 > [`act-on-decision-support.bpmn`](../../../processes/content/act-on-decision-support.bpmn)
 > (`Process_ActOnDecisionSupport`), lane `health-worker`.
