@@ -72,9 +72,9 @@ rendering stops and what was refused.
 
 <!-- skills:index:begin -->
 
-_33 skills in 1 directory, generated from each skill's front matter. `bun run cat readme:sync` rewrites this list and `readme:sync:check` fails when it is stale. Skills this repository inherits are listed by the repositories that publish them._
+_35 skills in 1 directory, generated from each skill's front matter. `bun run cat readme:sync` rewrites this list and `readme:sync:check` fails when it is stale. Skills this repository inherits are listed by the repositories that publish them._
 
-**`skills/content/authoring-who-smart-guidelines/`** (33)
+**`skills/content/authoring-who-smart-guidelines/`** (35)
 
 | Skill | What it is for |
 |---|---|
@@ -92,6 +92,7 @@ _33 skills in 1 directory, generated from each skill's front matter. `bun run ca
 | [`guideline-use-case`](skills/content/authoring-who-smart-guidelines/guideline-use-case.md) | Stage 0 of smart-guideline-end-to-end: turn a request for a SMART Guideline into a use case — population, setting, jurisdiction and interventions in scope, new or an adaptation — in the requester's… |
 | [`ig-artifact-ingestion`](skills/content/authoring-who-smart-guidelines/ig-artifact-ingestion.md) | The artefact index of a FHIR Implementation Guide is a knowledge graph keyed by the IG's own canonical URLs, linking each artefact to its JSON, JSON Schema and JSON-LD representations. |
 | [`indicator-extraction`](skills/content/authoring-who-smart-guidelines/indicator-extraction.md) | Extract the indicators an L1 source prints (indicator reference or metadata sheets: name, numerator, denominator, disaggregation, definition, data sources) as L1 `indicator` nodes with every printed… |
+| [`inform-client`](skills/content/authoring-who-smart-guidelines/inform-client.md) | A health worker tells the client (or caregiver) what was decided and what happens next, in words and, where the DAK gives one, on a slip or card: a referral, a return date, a result. |
 | [`l2-component-edit-review`](skills/content/authoring-who-smart-guidelines/l2-component-edit-review.md) | How one L2 DAK component is edited by the agent and reviewed by a person: personas and user scenarios, BPMN business processes, DMN decision and scheduling logic, core data elements and glossary… |
 | [`l2-dak-authoring`](skills/content/authoring-who-smart-guidelines/l2-dak-authoring.md) | Author the L2 layer of a WHO SMART Guideline — the Digital Adaptation Kit between the narrative L1 guideline and the L3 FHIR artefacts — one DAK component per pass (personas, user scenarios,… |
 | [`l2-dependency-choice`](skills/content/authoring-who-smart-guidelines/l2-dependency-choice.md) | Stage 3 of smart-guideline-end-to-end: choose which existing DAKs (WHO's, or a jurisdiction's adaptation) the guideline builds on. |
@@ -104,6 +105,7 @@ _33 skills in 1 directory, generated from each skill's front matter. `bun run ca
 | [`recommendation-extraction`](skills/content/authoring-who-smart-guidelines/recommendation-extraction.md) | Extract the recommendations of an L1 source as L1 3.0 recommendation and remark nodes, then describe each one's scenario: the persona (role) who acts on it, the business process they act in, and the… |
 | [`recommendation-scenarios`](skills/content/authoring-who-smart-guidelines/recommendation-scenarios.md) | Join each L1 recommendation to who acts on it and during which business process: one smart-kg L2 user-scenario candidate per recommendation, from the agent's mapping, reusing the target guide's… |
 | [`record-decision-rationale`](skills/content/authoring-who-smart-guidelines/record-decision-rationale.md) | OPTIONAL and never blocking: a health worker who chooses to may note why they accepted or declined decision-support guidance, in one tap plus an optional coded or free-text reason. |
+| [`review-client-history`](skills/content/authoring-who-smart-guidelines/review-client-history.md) | A health worker reads the client's history as their device shows it (an International Patient Summary, imported records, or a paper card and what the client reports) and takes into account what… |
 | [`review-decision-support-guidance`](skills/content/authoring-who-smart-guidelines/review-decision-support-guidance.md) | A health worker sees the decision-support guidance for one client on their device (the proposed actions of a RequestGroup or CDS Hooks cards) and accepts or declines each action; modifies one only… |
 | [`smart-base-tools`](skills/content/authoring-who-smart-guidelines/smart-base-tools.md) | smart-base Toolchain |
 | [`smart-guideline-create`](skills/content/authoring-who-smart-guidelines/smart-guideline-create.md) | Somebody asked for a new WHO SMART Guideline (an IG built on smart-base, or a DAK that will feed one). |
