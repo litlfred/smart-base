@@ -142,7 +142,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "64f0aa0b4b13384dd5ea8ac15c80cbe931f40efe",
+          "ref": "90d40153d784302431148c82c6bba4558fc72a86",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -154,9 +154,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-06",
-              "ref": "64f0aa0b4b13384dd5ea8ac15c80cbe931f40efe",
-              "evidence": "this session's user, 2026-11-06: chose \"1 Re-pin in #309 (Recommended)\" — re-pin smart-base's cat-harness-tools inside smart-base#309 after cat-harness-tools#1579 merges (https://claude.ai/code/session_01VQDpPfJKxVERPVKKWBTY8z)"
+              "on": "2026-11-07",
+              "ref": "90d40153d784302431148c82c6bba4558fc72a86",
+              "evidence": "Owner (litlfred), 2026-11-07: 'repin + merge open 12 hrs' (relayed by the coordinating session, which merged cat-harness-tools#1600 for this). Re-pinned to cat-harness-tools main 90d40153, which runs non-interrupting boundary events: act-on-decision-support.bpmn draws one (#318)."
             }
           }
         }
