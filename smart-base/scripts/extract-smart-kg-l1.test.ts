@@ -3,8 +3,8 @@
  *
  * Calibrated: dropping the qualifier line from the GRADE search makes the
  * strong/moderate case fail; reading strength from the whole section rather
- * than the block makes "a GRADE phrase outside the block is not read" fail;
- * comparing `generatedAt` in `isCurrent` makes "is current up to generatedAt" fail.
+ * than the block makes `ignoresGradePhraseOutsideBlock` fail;
+ * comparing `generatedAt` in `isCurrent` makes `currentUpToGeneratedAtStaleOnEdit` fail.
  */
 import { describe, expect, it } from "bun:test";
 import { spawnSync } from "node:child_process";
@@ -74,7 +74,7 @@ function entryOf(sections: Record<string, string>): LibraryEntry {
 const recommendations = (doc: L1Document) => doc.nodes.flatMap((n) => (n.type === "recommendation" ? [n] : []));
 
 describe("a recommendation is read, never inferred", () => {
-  it("reads GRADE strength and certainty only from the labelled block, and quotes them", () => {
+  it("readsGradeFromLabelledBlock", () => {
     const [r] = recommendations(l1Document(entryOf({ "page-001": GRADED }), AT).doc);
     expect(r!.properties.statement).toBe("WHO recommends offering the vaccine to every infant at birth.");
     expect(r!.properties.strength).toBe("strong");
@@ -83,21 +83,21 @@ describe("a recommendation is read, never inferred", () => {
     expect(r!.evidence!.quote).toContain("moderate-certainty evidence");
   });
 
-  it("leaves a non-GRADE category unset and says what the source said", () => {
+  it("leavesNonGradeCategoryUnset", () => {
     const [r] = recommendations(l1Document(entryOf({ "page-001": UNGRADED }), AT).doc);
     expect(r!.properties.strength).toBeUndefined();
     expect(r!.properties.certainty).toBeUndefined();
     expect(r!.note).toContain('"(Recommended only in specific contexts or conditions)"');
   });
 
-  it("a GRADE phrase outside the block is not read", () => {
+  it("ignoresGradePhraseOutsideBlock", () => {
     const body = `${UNGRADED}\n\nElsewhere: a strong recommendation, high-certainty evidence.`;
     const [r] = recommendations(l1Document(entryOf({ "page-001": body }), AT).doc);
     expect(r!.properties.strength).toBeUndefined();
     expect(r!.properties.certainty).toBeUndefined();
   });
 
-  it("no strength or certainty appears unless its source phrase is in the quote", () => {
+  it("gradeOnlyWithSourcePhraseInQuote", () => {
     const doc = l1Document(entryOf({ "page-001": GRADED, "page-002": UNGRADED }), AT).doc;
     for (const r of recommendations(doc)) {
       const quote = r.evidence!.quote!.toLowerCase();
@@ -106,20 +106,20 @@ describe("a recommendation is read, never inferred", () => {
     }
   });
 
-  it("is inferred, so carries a note and evidence pointing at the file and line", () => {
+  it("inferredCarriesNoteAndEvidence", () => {
     const [r] = recommendations(l1Document(entryOf({ "page-001": GRADED }), AT).doc);
     expect(r!.derivation).toBe("inferred");
     expect(r!.evidence!.location).toMatch(/sections\/page-001\.md:4 /);
     expect(r!.note).toContain('"Source: WHO, 2020 (4)."');
   });
 
-  it("prose that recommends without a label is counted, not emitted", () => {
+  it("unlabelledProseCountedNotEmitted", () => {
     const { doc, coverage } = l1Document(entryOf({ "page-001": "WHO recommends (recommendation 8) the use of it." }), AT);
     expect(recommendations(doc)).toHaveLength(0);
     expect(coverage.unlabelledMentions).toBe(1);
   });
 
-  it("refuses a label whose block never ends rather than cutting it at a guess", () => {
+  it("refusesUnendingBlock", () => {
     const body = ["Recommendation 1: WHO recommends", ...Array.from({ length: MAX_STATEMENT_LINES + 5 }, () => "more text")].join("\n");
     const { found, refused } = findRecommendations(body);
     expect(found).toHaveLength(0);
@@ -128,35 +128,35 @@ describe("a recommendation is read, never inferred", () => {
 });
 
 describe("the publication", () => {
-  it("takes the ISBN labelled electronic when several are stated", () => {
+  it("takesElectronicIsbn", () => {
     const r = readIsbn([{ path: "x.md", text: "ISBN 978-92-4-009336-2 (electronic version)\nISBN 978-92-4-009337-9 (print version)" }]);
     expect(r.isbn).toBe("978-92-4-009336-2");
   });
-  it("takes none when several are stated and none is labelled", () => {
+  it("takesNoUnlabelledIsbn", () => {
     const r = readIsbn([{ path: "x.md", text: "ISBN 978-92-4-009336-2\nISBN 978-92-4-009337-9" }]);
     expect(r.isbn).toBeUndefined();
     expect(r.reason).toContain("2 ISBNs");
   });
-  it("is the file's hash when no ISBN is read", () => {
+  it("publicationIsFileHashWithoutIsbn", () => {
     const { doc } = l1Document(entryOf({ "page-001": GRADED }), AT);
     expect(doc.nodes[0]!.id).toBe(`urn:sha256:${"a".repeat(64)}`);
   });
 });
 
 describe("the vocabulary is smart-base's own", () => {
-  it("every class the document uses is in the KG class lists", () => {
+  it("everyClassInKgClassLists", () => {
     const { doc } = l1Document(entryOf({ "page-001": GRADED, "page-002": UNGRADED }), AT);
     expect(new Set(doc.nodes.map((n) => n.type))).toEqual(new Set(["publication", "publication-section", "recommendation"]));
     expect(unpinnedClasses(doc, kgClasses())).toEqual([]);
   });
-  it("a class outside the lists is caught", () => {
+  it("catchesClassOutsideLists", () => {
     const { doc } = l1Document(entryOf({ "page-001": GRADED }), AT);
     expect(unpinnedClasses(doc, new Set(["sgkg-l1#publication"]))).toEqual(["publication-section", "recommendation"]);
   });
 });
 
 describe("staleness", () => {
-  it("is current up to generatedAt, and stale when a source text changes", () => {
+  it("currentUpToGeneratedAtStaleOnEdit", () => {
     const dir = writeEntry({ "page-001": GRADED });
     const before = readEntry(dir, dir);
     if ("reason" in before) throw new Error(before.reason);
@@ -168,7 +168,7 @@ describe("staleness", () => {
     expect(isCurrent(written, l1Document(after, AT).doc)).toBe(false);
   });
 
-  it("--check fails on a stale document and passes on a current one", () => {
+  it("checkFailsStalePassesCurrent", () => {
     const dir = writeEntry({ "page-001": GRADED });
     const run = (...a: string[]) => spawnSync("bun", ["run", SCRIPT, ...a], { encoding: "utf-8" });
     expect(run("--entry", dir).status).toBe(0);
@@ -182,14 +182,14 @@ describe("staleness", () => {
 });
 
 describe("T3 fidelity is left to a person (bean 8pzh)", () => {
-  it("every run reports T3 pending a person, counting the inferred nodes awaiting review", () => {
+  it("reportsT3PendingPerson", () => {
     const { doc, coverage } = l1Document(entryOf({ "page-001": GRADED }), AT);
     expect(coverage.fidelity.t3).toBe("pending-person");
     expect(coverage.fidelity.inferredNodes).toBe(doc.nodes.filter((n) => n.derivation === "inferred").length);
     expect(coverage.fidelity.inferredNodes).toBeGreaterThan(0);
   });
 
-  it("the extractor never sets T3 to anything but pending", () => {
+  it("neverSetsT3OtherThanPending", () => {
     const src = readFileSync(join(import.meta.dir, "extract-smart-kg-l1.ts"), "utf-8");
     const assigned = [...src.matchAll(/t3:\s*"([^"]+)"/g)].map((m) => m[1]);
     expect(assigned.length).toBeGreaterThan(0);

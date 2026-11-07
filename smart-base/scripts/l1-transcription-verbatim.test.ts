@@ -16,11 +16,11 @@ function fixture(l1: string): { root: string; file: string } {
 }
 
 describe("l1-transcription-verbatim", () => {
-  test("drops private-use glyphs when normalising", () => {
+  test("normDropsPrivateUseGlyphs", () => {
     expect(norm("Hepatitis\u{E001} B")).toBe("Hepatitis B");
   });
 
-  test("passes verbatim statements and corroborated transcriptions", () => {
+  test("passesVerbatimAndCorroborated", () => {
     const { root, file } = fixture(`graph: {source: {entry: library/poster}}
 transcription: [{key: T1, text: "Birth: Polio, Tuberculosis, Hepatitis B"}]
 recommendations:
@@ -30,7 +30,7 @@ recommendations:
     expect(checkFile(file, root).findings).toEqual([]);
   });
 
-  test("reports a non-verbatim statement, an uncorroborated word and a duplicate key", () => {
+  test("reportsNonVerbatimUncorroboratedDuplicate", () => {
     const { root, file } = fixture(`graph: {source: {entry: library/poster}}
 transcription: [{key: T1, text: "Birth: Polio, Measles"}]
 recommendations:
@@ -43,7 +43,7 @@ recommendations:
     expect(f.some((x) => x.includes("P01: duplicate key"))).toBe(true);
   });
 
-  test("an inspectionOnly word is allowed", () => {
+  test("allowsInspectionOnlyWord", () => {
     const { root, file } = fixture(`graph: {source: {entry: library/poster}}
 transcription: [{key: T1, text: "Birth Measles", inspectionOnly: {words: [measles]}}]
 recommendations: []
