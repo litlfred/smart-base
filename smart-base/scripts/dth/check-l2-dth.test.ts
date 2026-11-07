@@ -214,7 +214,7 @@ export default decisionTable({
 }
 
 describe("validateL2DthFolio", () => {
-  it("passes a complete L2 DTH fixture with cross-instance SKOS links, personas, BPMN lanes, and DMN table citing its source", async () => {
+  it("passesCompleteL2DthFixture", async () => {
     const root = makeFixtureFolio();
     try {
       const res = await validateL2DthFolio({ rootDir: root });
@@ -231,7 +231,7 @@ describe("validateL2DthFolio", () => {
     }
   });
 
-  it("reports a broken cross-instance SKOS match into smart-ra or dth-sc", async () => {
+  it("reportsBrokenCrossInstanceSkosMatch", async () => {
     const root = makeFixtureFolio((r) => {
       writeFileSync(
         join(r, "glossary", "dth-sfp.glossary.json"),
@@ -263,7 +263,7 @@ describe("validateL2DthFolio", () => {
     }
   });
 
-  it("fails a persona block missing BPMN lane, ArchiMate element, or glossary link", async () => {
+  it("failsPersonaMissingLinks", async () => {
     const root = makeFixtureFolio((r) => {
       const pFile = join(
         r,
@@ -294,7 +294,7 @@ export default persona({
     }
   });
 
-  it("fails a DMN decision-table block that does not cite its source handbook passage", async () => {
+  it("failsDecisionTableWithoutSource", async () => {
     const root = makeFixtureFolio((r) => {
       const dtFile = join(
         r,
@@ -338,7 +338,7 @@ describe("ArchiMate-link QA checks", () => {
     ]),
   };
 
-  it("validates element, view, and figure-view IRIs against the mounted ArchiMate model", () => {
+  it("validatesArchimateIris", () => {
     const good = checkBlockArchimateLinks(
       "folio/dth-sc/ch02/p-1.ts",
       {
@@ -378,7 +378,7 @@ describe("ArchiMate-link QA checks", () => {
     expect(bad.errors[0]).toContain("id-missing.jsonld");
   });
 
-  it("flags a narrative block that names an expected architecture element without linking to its smart-ra IRI", () => {
+  it("flagsUnlinkedArchitectureMention", () => {
     const expected = [
       {
         name: "Product Registry",
@@ -405,7 +405,7 @@ describe("ArchiMate-link QA checks", () => {
 });
 
 describe("L1 coverage with anchored BPMN tasks and DMN decision tables", () => {
-  it("counts a normative sentence anchored to a BPMN task or DMN table as captured", () => {
+  it("countsAnchoredSentencesCaptured", () => {
     const pages = [
       {
         page: 13,
@@ -445,7 +445,7 @@ describe("L1 coverage with anchored BPMN tasks and DMN decision tables", () => {
     expect(reportWithAnchors.sentences[1]!.node).toContain("dmn-table:dt:sc-dt-02-traceability-model");
   });
 
-  it("recognises source citations across meta.source, uses, .md and .dmn", () => {
+  it("recognisesSourceCitations", () => {
     expect(hasDecisionTableSourceCitation("export default decisionTable({})", undefined)).toBe(false);
     expect(
       hasDecisionTableSourceCitation(

@@ -61,7 +61,7 @@ describe("l1LibraryDocument", () => {
   const { doc, report } = l1LibraryDocument(input());
   const byType = (t: string) => doc.nodes.filter((n) => n.type === t);
 
-  test("publication IRI from the electronic ISBN; decided when declared", () => {
+  test("publicationIriFromElectronicIsbn", () => {
     expect(identifiersOf(record)[0]).toEqual({ type: "isbn", value: "9789240016514" });
     const [p] = byType("publication");
     expect(p!.id).toBe("https://smart.who.int/kg/l1/publication/isbn-9789240016514");
@@ -69,7 +69,7 @@ describe("l1LibraryDocument", () => {
     expect(p!.evidence).toMatchObject({ by: "ritikarawlani", at: "2026-10-07" });
   });
 
-  test("every L1 layout node specialises an absolute library IRI — upstream only", () => {
+  test("layoutNodesSpecialiseLibraryIris", () => {
     const spec = doc.edges.filter((e) => e.predicate === "specializationOf");
     expect(spec).toHaveLength(1 + 3 + 1);
     for (const e of spec) {
@@ -81,19 +81,19 @@ describe("l1LibraryDocument", () => {
     expect(doc.edges.some((e) => lib.has(e.source))).toBe(false);
   });
 
-  test("printed numbers are recovered, so an annex does not collide with a chapter", () => {
+  test("recoversPrintedNumbers", () => {
     expect(byType("publication-section").map((n) => n.id.split("/section/")[1])).toEqual(["Section-1", "1.1", "Annex-1"]);
     expect(printedNumber("3", "x", "Annex 3. y")).toBe("3");
   });
 
-  test("sections nest, and an element sits in the deepest section holding its page", () => {
+  test("sectionsNestElementInDeepestSection", () => {
     const contains = doc.edges.filter((e) => e.predicate === "contains").map((e) => [e.source.split("/").pop(), e.target.split("/").pop()]);
     expect(contains).toContainEqual(["Section-1", "1.1"]);
     expect(contains).toContainEqual(["Annex-1", "table-a1-1"]);
     expect(byType("publication-element")[0]!.properties).toMatchObject({ elementType: "table", label: "Table A1.1", pageRange: "11" });
   });
 
-  test("front matter is reported, not emitted", () => {
+  test("frontMatterReportedNotEmitted", () => {
     expect(report.some((r) => r.includes("front matter"))).toBe(true);
     expect(byType("publication-section").some((n) => n.label.includes("Front matter"))).toBe(false);
   });
