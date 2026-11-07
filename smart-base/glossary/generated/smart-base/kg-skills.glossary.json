@@ -118,6 +118,14 @@
       "status": "candidate"
     },
     {
+      "id": "inform-client",
+      "prefLabel": "inform-client",
+      "definition": "A health worker tells the client (or caregiver) what was decided and what happens next, in words and, where the DAK gives one, on a slip or card: a referral, a return date, a result. Input is what to tell and the client's language; output is that the client was told, and what they were handed. Generic for any DAK step that ends with the client being informed.",
+      "notation": "inform-client",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/inform-client.md",
+      "status": "candidate"
+    },
+    {
       "id": "l2-component-edit-review",
       "prefLabel": "l2-component-edit-review",
       "definition": "How one L2 DAK component is edited by the agent and reviewed by a person: personas and user scenarios, BPMN business processes, DMN decision and scheduling logic, core data elements and glossary with their terminology bindings, indicators and requirements. One subprocess for all of them. The agent edits, checks, renders and stages with a before/after, then hands the component on, and review forks alongside it without blocking. Per component, it lists the authoring skill, checker, renderer and diff, reviewing role, and what the reviewer judges. Read before authoring or reviewing any L2 component, and when an L2 track asks what its reviewer needs to see.",
@@ -211,6 +219,14 @@
       "definition": "OPTIONAL and never blocking: a health worker who chooses to may note why they accepted or declined decision-support guidance, in one tap plus an optional coded or free-text reason. Input is the decision; output is one FHIR Provenance (or nothing, when skipped, which is the default). The care plan is updated whether or not this is ever done.",
       "notation": "record-decision-rationale",
       "source": "smart-base/skills/content/authoring-who-smart-guidelines/record-decision-rationale.md",
+      "status": "candidate"
+    },
+    {
+      "id": "review-client-history",
+      "prefLabel": "review-client-history",
+      "definition": "A health worker reads the client's history as their device shows it (an International Patient Summary, imported records, or a paper card and what the client reports) and takes into account what bears on today's care, weighing each item by where it came from: verified, unverified or reported. Input is the records with their provenance; output is what the health worker relies on.",
+      "notation": "review-client-history",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/review-client-history.md",
       "status": "candidate"
     },
     {
