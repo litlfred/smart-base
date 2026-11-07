@@ -16,12 +16,13 @@ output: schemas/skills/record-decision-rationale/output.schema.json
 > `Task_Rationale` of
 > [`act-on-decision-support.bpmn`](../../../processes/content/act-on-decision-support.bpmn)
 > (`Process_ActOnDecisionSupport`), lane `health-worker`, reached only
-> when `Gateway_AddReason` reads that the health worker tapped "add a reason".
+> through `Event_AddReason`, a non-interrupting boundary event on the review
+> that happens when the health worker taps "add a reason".
 
 **Opt-in, skippable, and skipped by default.** It is never required to
-finish the review, the visit or the process: the diagram puts it on a branch
-of a parallel split that is never joined, so the care plan is updated
-without waiting for it. A DAK must not make it
+finish the review, the visit or the process: the diagram starts it from a
+non-interrupting boundary event on the review, which takes nothing from the
+review, so the care plan is updated without waiting for it. A DAK must not make it
 mandatory; a programme that needs a reason recorded every time is asking
 for a different, blocking step, and should draw one.
 
