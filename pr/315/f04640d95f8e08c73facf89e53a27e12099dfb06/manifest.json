@@ -1,0 +1,16 @@
+{
+  "$schema": "qa-reports-manifest/v1",
+  "key": "pr/315/f04640d95f8e08c73facf89e53a27e12099dfb06",
+  "source": "f04640d95f8e08c73facf89e53a27e12099dfb06",
+  "pr": 315,
+  "written_at": "2026-11-07T08:40:46.403Z",
+  "producer": {
+    "run": "https://github.com/litlfred/smart-base/actions/runs/42355778192"
+  },
+  "roots": [
+    "smart-base/test/results"
+  ],
+  "payloadTree": "317fafac89297629f195de9a0d55e7fd8b19333e",
+  "files": 54,
+  "bytes": 129507
+}
