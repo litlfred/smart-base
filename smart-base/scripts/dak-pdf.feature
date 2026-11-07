@@ -15,6 +15,13 @@ Feature: The DAK PDF renderer's assembly step
     Given a tree with a page and no sushi-config.yaml
     Then the assembly's title is the directory's name
 
+  @test:smart-base/scripts/dak-pdf.test.ts::assembly::findsDeclaredBusinessProcesses
+  Scenario: finds the business processes where the instance declares them
+    Given a temporary instance whose declaration names "processes/" with the graph typology "business-processes"
+    When its business-process directory is resolved and the document is assembled
+    Then the directory is its "processes" folder and the "Business processes" section's source is "processes/"
+    And for the repository root, which declares none, the directory is "input/business-processes" and the section's source is "input/business-processes/"
+
   @test:smart-base/scripts/dak-pdf.test.ts::assembly::rendersMarkdownNarrative
   Scenario: renders markdown narrative to HTML
     Then the "index" section's HTML has "<h1>Overview</h1>" and "<em>narrative</em>"

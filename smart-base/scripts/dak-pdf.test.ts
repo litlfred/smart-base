@@ -18,7 +18,7 @@ import { describe, test, expect, beforeAll, afterAll } from "bun:test";
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from "fs";
 import { join } from "path";
 import { tmpdir } from "os";
-import { assemble, toHtml, dakIdentity } from "./dak-pdf.ts";
+import { assemble, businessProcessesDir, toHtml, dakIdentity } from "./dak-pdf.ts";
 
 const ROOT = mkdtempSync(join(tmpdir(), "dak-pdf-"));
 
@@ -52,6 +52,25 @@ describe("assembly", () => {
     writeFileSync(join(bare, "input", "pagecontent", "x.md"), "hi\n");
     expect(assemble(bare).title).toBe(bare.split("/").pop()!);
     rmSync(bare, { recursive: true, force: true });
+  });
+
+  test("findsDeclaredBusinessProcesses", () => {
+    // An instance names its BPMN directory by graph typology; the IG
+    // Publisher's input/business-processes/ is the fallback for a DAK
+    // repository that declares nothing, never a path read past a declaration.
+    const inst = mkdtempSync(join(tmpdir(), "declared-dak-"));
+    const name = inst.split("/").pop()!;
+    mkdirSync(join(inst, "processes"), { recursive: true });
+    writeFileSync(join(inst, "processes", "P.bpmn"), "<definitions/>");
+    writeFileSync(
+      join(inst, `${name}.json`),
+      JSON.stringify({ name, directories: [{ id: "bp", path: "processes/", graphTypologies: ["business-processes"] }] }),
+    );
+    expect(businessProcessesDir(inst)).toBe(join(inst, "processes"));
+    expect(assemble(inst).sections.find((x) => x.title === "Business processes")?.source).toBe("processes/");
+    expect(businessProcessesDir(ROOT)).toBe(join(ROOT, "input", "business-processes"));
+    expect(assemble(ROOT).sections.find((x) => x.title === "Business processes")?.source).toBe("input/business-processes/");
+    rmSync(inst, { recursive: true, force: true });
   });
 
   test("rendersMarkdownNarrative", () => {

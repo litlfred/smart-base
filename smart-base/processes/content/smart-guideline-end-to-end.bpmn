@@ -4,7 +4,7 @@
   graph, L2 DAK, L3 FHIR IG, L4 consuming application, new or adapted.
 
   Source of truth: this file. The picture beside it (smart-guideline-end-to-end.svg) is drawn by
-  `NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`;
+  `bun run cat render:bpmn`;
   never hand-edit it.
 
   The <bootstrap.processes:skill> extension on an activity names the skill
