@@ -7,6 +7,38 @@
   "source": "BPMN activities of smart-base",
   "terms": [
     {
+      "id": "process_actondecisionsupport.task_activate",
+      "prefLabel": "Update the care plan",
+      "definition": "Make each accepted request active (intent plan or order) and reference it from the client's CarePlan, in one transaction; write nothing for a declined action.",
+      "notation": "Task_Activate",
+      "source": "smart-base/processes/content/act-on-decision-support.bpmn#Task_Activate",
+      "status": "candidate"
+    },
+    {
+      "id": "process_actondecisionsupport.task_apply",
+      "prefLabel": "Apply the PlanDefinition",
+      "definition": "PlanDefinition/$apply for this client (or a CDS Hooks call): every proposed request is a draft proposal, and nothing is written to the record.",
+      "notation": "Task_Apply",
+      "source": "smart-base/processes/content/act-on-decision-support.bpmn#Task_Apply",
+      "status": "candidate"
+    },
+    {
+      "id": "process_actondecisionsupport.task_rationale",
+      "prefLabel": "Note the reason (optional)",
+      "definition": "Optional: pick a coded reason or type one, or neither; one FHIR Provenance records who decided what about which guidance, and why. Never required, never waited for.",
+      "notation": "Task_Rationale",
+      "source": "smart-base/processes/content/act-on-decision-support.bpmn#Task_Rationale",
+      "status": "candidate"
+    },
+    {
+      "id": "process_actondecisionsupport.task_review",
+      "prefLabel": "Accept or decline the guidance",
+      "definition": "See the proposed actions on the device and accept or decline each one, one tap each (\"accept all\" is one tap); modify one only where the device offers it. Nothing else is asked; an \"add a reason\" link is shown, never required.",
+      "notation": "Task_Review",
+      "source": "smart-base/processes/content/act-on-decision-support.bpmn#Task_Review",
+      "status": "candidate"
+    },
+    {
       "id": "process_classifyandcodecontent.task_identifyslots",
       "prefLabel": "Identify slots and proposed exclusions",
       "definition": "Enumerate the classifiable slots in the L1 statements or L2 component (condition, intervention, persona, medicine, domain, business-process, recommendation-strength, recommendation-direction, evidence-certainty) and any proposed L1 coverage exclusions in exclusions.proposed.json naming l1-extraction-reviewer as signerRole.",
@@ -1021,6 +1053,22 @@
       "prefLabel": "Verify L2 input availability and consistency",
       "notation": "Task_VerifyL2Input",
       "source": "smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn#Task_VerifyL2Input",
+      "status": "candidate"
+    },
+    {
+      "id": "process_questionnairedatacapture.task_complete",
+      "prefLabel": "Complete the form",
+      "definition": "Complete the SDC Questionnaire as the device renders it: confirm or correct each pre-populated answer, answer every enabled required item within its constraints, and submit. The result is a completed QuestionnaireResponse.",
+      "notation": "Task_Complete",
+      "source": "smart-base/processes/content/questionnaire-data-capture.bpmn#Task_Complete",
+      "status": "candidate"
+    },
+    {
+      "id": "process_questionnairedatacapture.task_extract",
+      "prefLabel": "Extract and save the resources",
+      "definition": "Run SDC $extract by the method the Questionnaire declares and save the resulting transaction Bundle whole, queued when offline.",
+      "notation": "Task_Extract",
+      "source": "smart-base/processes/content/questionnaire-data-capture.bpmn#Task_Extract",
       "status": "candidate"
     },
     {
