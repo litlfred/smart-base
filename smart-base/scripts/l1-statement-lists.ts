@@ -24,7 +24,7 @@
  *   row is quoted from where it starts.
  * - A **scenario candidate** came from the row its `evidence.location` names
  *   (`<l1 yaml>#<KEY> (p<N>)`), so it takes that L1 source's entry and the
- *   page in the location.
+ *   page in the location, and names the row's key as `derivedFrom`.
  *
  * Usage:
  *   bun run smart-base/scripts/l1-statement-lists.ts --dir <l1-extraction dir> --out <dir> [--check]
@@ -122,6 +122,8 @@ export function scenariosOf(graph: unknown, entryOfFile: (file: string) => strin
       statement: oneLine(text),
       kind: str(n["type"]) ?? "candidate",
       ...(str(n["derivation"]) ? { status: str(n["derivation"])! } : {}),
+      // The L1 row it was written from, so a reviewer can check one against the other.
+      derivedFrom: loc.key,
       source: { libraryId, ...(loc.page !== undefined ? { page: loc.page } : {}) },
     });
   }

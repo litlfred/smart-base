@@ -41,6 +41,7 @@ describe("statements", () => {
     };
     const r = scenariosOf(graph, (f) => (f === "src.l1.yaml" ? "deck" : f === "mapping.yaml" ? null : undefined));
     expect(r.statements.map((x) => x.id)).toEqual(["a"]);
+    expect(r.statements[0]!.derivedFrom).toBe("R1");
     expect(r.unresolved).toHaveLength(1);
   });
 });
