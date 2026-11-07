@@ -15,30 +15,30 @@ const PINS = [
 const OPTS = { name: "dth-xx", title: "Digital transformation handbook for testing", isbn: "9789240000000", pins: PINS };
 
 describe("dth init", () => {
-  it("names the shared core checks, never a local copy", () => {
+  it("namesSharedCoreChecks", () => {
     const pkg = JSON.parse(plan(OPTS).find((f) => f.path === "package.json")!.content);
     expect(pkg.scripts["check:l1-coverage"]).toContain("folio-assistant-core/scripts/folio-l1-coverage.ts --document dth-xx --l1 who-iris/library/9789240000000-eng --check");
     expect(pkg.scripts["check:dth-glossary"]).toContain("folio-assistant-core/scripts/glossary-validate.ts --instance dth-xx");
     expect(Object.values(pkg.scripts).some((s) => String(s).includes("scripts/folio/") || String(s).includes("scripts/glossary/"))).toBe(false);
   });
 
-  it("mounts the remote pins as written, and only its own local instance", () => {
+  it("mountsRemotePinsAndOwnInstance", () => {
     const cfg = JSON.parse(plan(OPTS).find((f) => f.path === "index.config.json")!.content);
     expect(cfg.instances.map((i: { name: string }) => i.name)).toEqual(["dth-xx", "who-iris"]);
     expect(cfg.instances[1].source.remote.trust).toEqual({ consent: { by: "x" } });
   });
 
-  it("fills every template placeholder", () => {
+  it("fillsEveryTemplatePlaceholder", () => {
     for (const f of plan(OPTS)) expect(f.content.match(/(?<!\$)\{\{\w+\}\}/)).toBeNull();
     expect(plan(OPTS).some((f) => f.path === ".gitignore")).toBe(true);
   });
 
-  it("writes the sheet link only when given a sheet", () => {
+  it("writesSheetLinkOnlyWithSheet", () => {
     expect(plan(OPTS).some((f) => f.path.startsWith("review/"))).toBe(false);
     expect(plan({ ...OPTS, sheet: "S" }).some((f) => f.path === "review/drafting/sheet-sync.json")).toBe(true);
   });
 
-  it("leaves existing files alone unless forced, and merges package.json", () => {
+  it("keepsExistingFilesMergesPackageJson", () => {
     const dir = mkdtempSync(join(tmpdir(), "dth-init-"));
     writeFileSync(join(dir, "AGENTS.md"), "mine\n");
     writeFileSync(join(dir, "package.json"), JSON.stringify({ name: "dth-xx", scripts: { "seed:folio": "python3 seed.py", cat: "old" } }));
@@ -52,7 +52,7 @@ describe("dth init", () => {
     expect(readFileSync(join(dir, "AGENTS.md"), "utf8")).toContain("dth init");
   });
 
-  it("keeps a repository's own dependency versions", () => {
+  it("keepsOwnDependencyVersions", () => {
     const m = JSON.parse(mergePackage(JSON.stringify({ dependencies: { zod: "^4.6.5" } }), plan(OPTS).find((f) => f.path === "package.json")!.content));
     expect(m.dependencies.zod).toBe("^4.6.5");
   });

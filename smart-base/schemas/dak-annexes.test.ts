@@ -13,7 +13,7 @@ describe("dak-annexes", () => {
     sheets: [{ name: "S", columns: [{ key: "data element id", label: "Data element ID" }], rows: [["IMMZ.C.DE.1"]] }],
   };
 
-  test("a data-dictionary annex parses, and a ragged row or a stray key does not", () => {
+  test("dataDictionaryRejectsRaggedRowAndStrayKey", () => {
     expect(DakDataDictionaryAnnexSchema.safeParse(annex).success).toBe(true);
     const ragged = structuredClone(annex);
     ragged.sheets[0]!.rows.push(["a", "b"]);
@@ -21,13 +21,13 @@ describe("dak-annexes", () => {
     expect(DakDataDictionaryAnnexSchema.safeParse({ ...annex, extra: 1 }).success).toBe(false);
   });
 
-  test("a swimlane map parses; a persona's aliases must be a list", () => {
+  test("swimlaneMapPersonaAliasesMustBeList", () => {
     const map = { $schema: "dak-swimlanes/v1", annexOf: "who-iris/library/9789240099456-eng", label: "Web Annex B", section: "dak#generic-business-processes-and-workflows", personas: { "Health worker": ["HW"] }, notPersonas: { Function: "header lane" } };
     expect(DakSwimlaneMapSchema.safeParse(map).success).toBe(true);
     expect(DakSwimlaneMapSchema.safeParse({ ...map, personas: { "Health worker": "HW" } }).success).toBe(false);
   });
 
-  test("a web annex names its publication, its label and its section; its own IRIS record is optional", () => {
+  test("webAnnexNamesPublicationAndSection", () => {
     expect(DakDataDictionaryAnnexSchema.safeParse({ ...annex, iris: "10665/123" }).success).toBe(true);
     const { annexOf: _a, ...noParent } = annex;
     expect(DakDataDictionaryAnnexSchema.safeParse(noParent).success).toBe(false);

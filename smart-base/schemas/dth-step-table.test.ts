@@ -15,7 +15,7 @@ import {
 } from "./dth-step-table.ts";
 
 describe("DthStepTableSchema", () => {
-  it("validates a flat DTH step table with INPUTS, STEPS, RESOURCES, OUTPUTS, RISKS and MITIGATION", () => {
+  it("validatesFlatStepTable", () => {
     const parsed = DthStepTableSchema.parse({
       $schema: DTH_STEP_TABLE_SCHEMA,
       id: "pc-ch01-steps",
@@ -86,7 +86,7 @@ describe("DthStepTableSchema", () => {
     ]);
   });
 
-  it("supports grouped steps for chapter/phase panels (PHC and HRH planning steps)", () => {
+  it("supportsGroupedSteps", () => {
     const parsed = DthStepTableSchema.parse({
       id: "phc-ch03-panel",
       title: "Chapter 3: Determine health content requirements",
@@ -146,7 +146,7 @@ describe("DthStepTableSchema", () => {
     expect(flattenDthRisks(parsed)).toHaveLength(1);
   });
 
-  it("rejects free-text prose in roleIds and ownerRoleId", () => {
+  it("rejectsProseRoleIds", () => {
     expect(
       DthStepTableSchema.safeParse({
         id: "bad-role",
@@ -162,7 +162,7 @@ describe("DthStepTableSchema", () => {
     ).toBe(false);
   });
 
-  it("rejects undeclared roles when declaredRoles is provided", () => {
+  it("rejectsUndeclaredRoles", () => {
     const res = DthStepTableSchema.safeParse({
       id: "undeclared-role",
       title: "Undeclared role check",
@@ -195,7 +195,7 @@ describe("DthStepTableSchema", () => {
     )[0]).toContain("PC-R-99");
   });
 
-  it("derives BPMN 2.0 swimlane stubs and XML mechanically from a step table", () => {
+  it("derivesBpmnLanesAndXml", () => {
     const table = DthStepTableSchema.parse({
       id: "pc-bp-01",
       title: "Establish NPC Governance",
