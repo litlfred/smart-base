@@ -34,9 +34,9 @@ mount it at a pinned commit.
    `branches/<slug>/` and comments the links. `/deploy` builds the IG, which
    does not contain this content.
 2. **Processes live under `smart-base/processes/`**: the `.bpmn`, its
-   documentation, and its picture beside it
-   (`NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`,
-   which draws with the mounted bootstrap-tools). Do not copy a process
+   documentation, and its picture beside it (`bun run cat render:bpmn`,
+   cat-harness-tools' renderer, which draws every layer's diagrams beside
+   their source with the mounted bootstrap-tools). Do not copy a process
    or its picture into `input/`; the just-the-docs site draws every mounted
    process itself.
 3. **Reuse before adding.** A skill, schema, process or role the platform

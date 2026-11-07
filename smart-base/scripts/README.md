@@ -7,7 +7,7 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # smart-base-scripts
 
-This layer's own scripts and their tests: document kinds, the DAK components figure, the DTH term findings, the smart-kg L1 extraction, the fhir-harness exclusions check, the L1 recommendation scenario candidates with the vocabulary reader they resolve against (fixtures and the measles run under `scripts/fixtures/`), the process renderer, and `dth-init.ts`, which writes a new DTH repository's wiring. Declared so a remote mount brings them.
+This layer's own scripts and their tests: document kinds, the DAK components figure, the DTH term findings, the smart-kg L1 extraction, the fhir-harness exclusions check, the L1 recommendation scenario candidates with the vocabulary reader they resolve against (fixtures and the measles run under `scripts/fixtures/`), and `dth-init.ts`, which writes a new DTH repository's wiring. Declared so a remote mount brings them.
 
 Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, holding `code`.
 
@@ -67,7 +67,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`l1-transcription-verbatim.test.ts`](l1-transcription-verbatim.test.ts) | a file |  |
 | [`l1-transcription-verbatim.ts`](l1-transcription-verbatim.ts) | a file |  |
 | [`l2-program-indicators.py`](l2-program-indicators.py) | a file |  |
-| [`render-processes.ts`](render-processes.ts) | a file |  |
 | [`smart-base-transform.py`](smart-base-transform.py) | a file |  |
 | [`smart-base-transform.test.py`](smart-base-transform.test.py) | a file |  |
 | [`terminology-lookup.test.ts`](terminology-lookup.test.ts) | a file |  |
