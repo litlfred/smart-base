@@ -51,8 +51,12 @@ export const LAYERING_RULE =
   "Every layer points only upstream: L3 → L2 → L1 → library (the ingested source document, its sections and blocks). " +
   "A layer may point at any layer above it and never at one below it.";
 
-/** folio-assistant's namespaces, from its `cat-harness/code-lists/own-namespaces.json` and `schemas/jsonld.ts`. */
-export const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/0.1.0/ns/";
+/**
+ * cat-harness's namespace: its release IRI, `<iriBase>v<major>/ns/` from `cat-harness.json`.
+ * A literal because this package builds without the mounted platform (`kg.yml`); the
+ * bun test `scripts/l1-specialise.test.ts` fails when it drifts from the declaration.
+ */
+export const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/v0/ns/";
 export const DOCO_NS = "http://purl.org/spar/doco/";
 export const PROV_NS = "http://www.w3.org/ns/prov#";
 

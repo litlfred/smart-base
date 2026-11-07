@@ -10,6 +10,7 @@ from it.
 
 - [What this layer is for](#what-this-layer-is-for)
 - [What it is not](#what-it-is-not)
+- [Building and publishing the IG](#building-and-publishing-the-ig)
 - [Re-deriving an entry](#re-deriving-an-entry)
 - [Counts](#counts)
 
@@ -30,6 +31,23 @@ repositories' GitHub Actions). This layer references it and never vendors it;
 `smart-base-tools` carries the wrapper.
 
 **It does not own the IG pipeline layering.** It holds knowledge-graph assets.
+
+## Building and publishing the IG
+
+The IG in this repository is rendered through the FHIR IG layer, with the
+DAK pre-processing and the DAK API sidecars added. From a checkout with its
+layers mounted:
+
+```bash
+bun run cat stage:local --repo . --dry-run   # render the site; push nothing
+```
+
+The full guide, with the plain IG Publisher build beside it, the workflows,
+the live addresses and the deployment options, is
+[Building and publishing the SMART Base IG](site-docs/source/guides-smart-base-build/)
+(published at
+<https://litlfred.github.io/folio-assistant/smart-base/guides/smart-base-build.html>).
+The site itself is <https://litlfred.github.io/smart-base/>.
 
 ## Re-deriving an entry
 

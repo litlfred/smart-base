@@ -5,7 +5,7 @@
   declines what it proposes, and the system writes what was accepted. The
   health worker MAY note why, on a side path the main path never waits for.
   Generic for any DAK; a DAK's diagram calls it with
-  <bpmn:callActivity calledElement="Process_ActOnDecisionSupport">.
+  a callActivity whose calledElement is Process_ActOnDecisionSupport.
 
   Source of truth: this file. The picture beside it (act-on-decision-support.svg) is drawn by
   `bun run cat render:bpmn`;

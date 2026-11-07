@@ -16,11 +16,11 @@ import { L1, MIGRATED_FROM } from "../src/l1.ts";
 import { L1_LIBRARY } from "../src/l1-library.ts";
 import { OntologyLayerSchema, toOntologyJson } from "../src/ontology.ts";
 
-test("the migration records the commit it was taken from", () => {
+test("migrationRecordsSourceCommit", () => {
   assert.match(MIGRATED_FROM.commit, /^[0-9a-f]{40}$/);
 });
 
-test("both layers are internally consistent", () => {
+test("bothLayersInternallyConsistent", () => {
   OntologyLayerSchema.parse(toOntologyJson(L1));
   assert.equal(toOntologyJson(L1_LIBRARY).imports?.[0], "l1");
 });
@@ -40,12 +40,12 @@ const stale = (paths: (p: string) => boolean) =>
     })
     .map((a) => a.path);
 
-test("every committed generated file of the package is current", () => {
+test("packageGeneratedFilesCurrent", () => {
   assert.deepEqual(stale((p) => !p.startsWith("input/")), [], "run `npm run build` in smart-base/kg/");
 });
 
 test(
-  "every committed generated FSH file is current, and none is orphaned",
+  "generatedFshCurrentNoneOrphaned",
   { skip: IG_FSH ? false : "no input/fsh/ here (an index mounts the package, not the IG): NOT checked (n/a, not a pass)" },
   () => {
     assert.deepEqual(stale((p) => p.startsWith("input/")), [], "run `npm run build` in smart-base/kg/");
@@ -53,7 +53,7 @@ test(
   },
 );
 
-test("reuse is real: publication derives from DublinCore, terminology-code from Coding", () => {
+test("publicationAndTerminologyCodeReuseParents", () => {
   // The emitted text, not the committed copy: the test above holds the two equal.
   const fsh = artefacts().find((a) => a.path === "input/fsh/models/KGL1.fsh")!.text;
   assert.match(fsh, /Logical: KGPublication\nParent: DublinCore\n/);
@@ -63,9 +63,9 @@ test("reuse is real: publication derives from DublinCore, terminology-code from 
   assert.match(pub, /^\* identifiers 0\.\.\* BackboneElement /m);
 });
 
-test("the specialisation ruling is emitted as linked data", () => {
+test("specialisationEmittedAsLinkedData", () => {
   const ld = JSON.parse(readFileSync(join(REPO, "smart-base/kg/generated/l1/l1-library.jsonld"), "utf8"));
   const sub = Object.fromEntries(ld["@graph"].map((n: { "@id": string; subClassOf: unknown }) => [n["@id"], n.subClassOf]));
-  assert.equal(sub["http://smart.who.int/kg/publication"], "https://litlfred.github.io/cat-harness/0.1.0/ns/SourceDocument");
+  assert.equal(sub["http://smart.who.int/kg/publication"], "https://litlfred.github.io/cat-harness/v0/ns/SourceDocument");
   assert.equal(sub["http://smart.who.int/kg/publication-section"], "http://purl.org/spar/doco/Section");
 });

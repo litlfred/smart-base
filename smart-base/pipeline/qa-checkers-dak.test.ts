@@ -95,30 +95,30 @@ afterAll(() => {
 });
 
 describe("dak-companion-present", () => {
-  test("passes when the artefact is there", () => {
+  test("companionPassesWhenPresent", () => {
     expect(
       checkDakCompanionPresent({ ts: p("dt-good.ts"), dmn: p("dt-good.dmn") }).result,
     ).toBe("pass");
   });
 
-  test("fails a manifest with no artefact — the case depends_on could not express", () => {
+  test("companionFailsWhenMissing", () => {
     const r = checkDakCompanionPresent({ ts: p("cql-naked.ts") });
     expect(r.result).toBe("fail");
     expect(r.hits[0]!.text).toContain("no .cql companion");
   });
 
-  test("ignores a paper block entirely", () => {
+  test("companionIgnoresPaperBlock", () => {
     expect(checkDakCompanionPresent({ ts: p("thm-paper.ts") }).result).toBe("pass");
   });
 
-  test("the criterion does NOT depend on the artefact it looks for", () => {
+  test("companionCriterionDependsOnTsOnly", () => {
     // Listing `.dmn` in depends_on would n/a exactly the blocks this catches.
     const def = QA_CRITERIA_REGISTRY.find((d) => d.id === "dak-companion-present")!;
     expect(def.depends_on).toEqual(["ts"]);
     expect(def.also_invalidated_by).toContain("dmn");
   });
 
-  test("every kind with a required companion is one this can check", () => {
+  test("requiredCompanionRolesCheckable", () => {
     // Checked against the declared vocabulary rather than a hand-kept list:
     // the point is that the checker can resolve the role, and resolution
     // iterates COMPANION_ROLES. A role outside it would never be found and the
@@ -132,7 +132,7 @@ describe("dak-companion-present", () => {
     }
   });
 
-  test("workbook-backed kinds require no companion — measured, not overlooked", () => {
+  test("workbookBackedKindsNeedNoCompanion", () => {
     // Zero .dmn files exist across smart-dak-immz, smart-dak-bds and
     // smart-immunizations: WHO authors decision-support logic as a
     // spreadsheet, and one workbook covers MANY blocks. Requiring a per-block
@@ -144,12 +144,12 @@ describe("dak-companion-present", () => {
     expect(WORKBOOK_BACKED_KINDS).toContain("decision-table");
   });
 
-  test("a decision-table with no artefact is NOT flagged", () => {
+  test("nakedDecisionTableNotFlagged", () => {
     const r = checkDakCompanionPresent({ ts: p("dt-naked.ts") });
     expect(r.result).toBe("pass");
   });
 
-  test("a business-process with no .bpmn IS flagged — one file per process", () => {
+  test("nakedBusinessProcessFlagged", () => {
     const r = checkDakCompanionPresent({ ts: p("bp-naked.ts") });
     expect(r.result).toBe("fail");
     expect(r.hits[0]!.text).toContain("no .bpmn companion");
@@ -157,27 +157,27 @@ describe("dak-companion-present", () => {
 });
 
 describe("dak-bpmn-has-process", () => {
-  test("passes a namespaced <bpmn:process>", () => {
+  test("bpmnPassesNamespacedProcess", () => {
     expect(checkDakBpmnHasProcess({ bpmn: p("bp-good.bpmn") }).result).toBe("pass");
   });
 
-  test("fails a definitions shell", () => {
+  test("bpmnFailsDefinitionsShell", () => {
     const r = checkDakBpmnHasProcess({ bpmn: p("bp-empty.bpmn") });
     expect(r.result).toBe("fail");
     expect(r.hits[0]!.text).toContain("no <process>");
   });
 
-  test("no .bpmn is not this checker's business — the gate handles that", () => {
+  test("bpmnAbsentPasses", () => {
     expect(checkDakBpmnHasProcess({}).result).toBe("pass");
   });
 });
 
 describe("dak-dmn-has-decision-table", () => {
-  test("passes a decision carrying a table", () => {
+  test("dmnPassesDecisionWithTable", () => {
     expect(checkDakDmnHasDecisionTable({ dmn: p("dt-good.dmn") }).result).toBe("pass");
   });
 
-  test("fails logic that expresses no decision", () => {
+  test("dmnFailsWithoutDecision", () => {
     const r = checkDakDmnHasDecisionTable({ dmn: p("dt-shell.dmn") });
     expect(r.result).toBe("fail");
     expect(r.hits[0]!.text).toContain("no <decision>");
@@ -185,13 +185,13 @@ describe("dak-dmn-has-decision-table", () => {
 });
 
 describe("dak-fsh-declares-kind", () => {
-  test("passes when kind and FSH declaration agree", () => {
+  test("fshPassesWhenKindAgrees", () => {
     expect(
       checkDakFshDeclaresKind({ ts: p("vs-good.ts"), fsh: p("vs-good.fsh") }).result,
     ).toBe("pass");
   });
 
-  test("fails a value-set block whose FSH declares a Profile", () => {
+  test("fshFailsValueSetDeclaringProfile", () => {
     // Both files are individually valid; only the pairing is wrong, which is
     // why no schema can catch this.
     expect(
@@ -201,28 +201,28 @@ describe("dak-fsh-declares-kind", () => {
 });
 
 describe("dak-label-prefix-matches-kind", () => {
-  test("passes a correctly-prefixed label", () => {
+  test("labelPassesCorrectPrefix", () => {
     expect(checkDakLabelPrefixMatchesKind({ ts: p("dt-good.ts") }).result).toBe("pass");
   });
 
-  test("fails a manifest hand-edited past its builder's validation", () => {
+  test("labelFailsWrongPrefix", () => {
     const r = checkDakLabelPrefixMatchesKind({ ts: p("dt-mislabel.ts") });
     expect(r.result).toBe("fail");
     expect(r.hits[0]!.text).toContain('must start with "dt:"');
   });
 
-  test("leaves paper blocks alone", () => {
+  test("labelIgnoresPaperBlock", () => {
     expect(checkDakLabelPrefixMatchesKind({ ts: p("thm-paper.ts") }).result).toBe("pass");
   });
 });
 
 describe("registration", () => {
-  test("every DAK criterion has a checker and vice versa", () => {
+  test("everyDakCriterionHasChecker", () => {
     const registered = QA_CRITERIA_REGISTRY.filter((d) => d.domain === "dak").map((d) => d.id);
     expect(registered.sort()).toEqual(Object.keys(DAK_AUTOMATED_CHECKERS).sort());
   });
 
-  test("all of them are dak-scoped, automated, and answered by smart-base", () => {
+  test("dakCriteriaScopedAutomatedContributed", () => {
     for (const def of QA_CRITERIA_REGISTRY.filter((d) => d.domain === "dak")) {
       expect(criterionAdapters(def)).toEqual(["dak"]);
       expect(def.automated).toBe(true);
@@ -234,7 +234,7 @@ describe("registration", () => {
     }
   });
 
-  test("no DAK criterion depends on a companion a DAK block cannot have", () => {
+  test("noDakCriterionNeedsImpossibleCompanion", () => {
     for (const def of QA_CRITERIA_REGISTRY.filter((d) => d.domain === "dak")) {
       expect({ id: def.id, bad: incompatibleCompanions(def, registry) }).toEqual({ id: def.id, bad: [] });
     }
@@ -242,21 +242,21 @@ describe("registration", () => {
 });
 
 describe("generated artefacts are not judged as authored content", () => {
-  test("detects WHO's row-provenance marker", () => {
+  test("detectsGeneratedMarkers", () => {
     // Measured: 266 of 536 .fsh in smart-dak-immz carry one; 0 of 739 in the
     // L3 IG smart-immunizations, whose FSH is authored.
     expect(isGeneratedArtefact(p("vs-gen.fsh"))).toBe(true);
     expect(isGeneratedArtefact(p("vs-auto.fsh"))).toBe(true);
   });
 
-  test("an authored artefact is not mistaken for generated", () => {
+  test("authoredNotMistakenForGenerated", () => {
     // Conservative by construction: only an explicit marker counts, because
     // silently exempting authored content from review is the costlier error.
     expect(isGeneratedArtefact(p("vs-good.fsh"))).toBe(false);
     expect(isGeneratedArtefact(undefined)).toBe(false);
   });
 
-  test("a generated file yields n/a with a reason, not a fail", () => {
+  test("generatedFileYieldsNotApplicable", () => {
     // vs-gen.fsh declares a Profile under a value-set block, so the authored
     // path would report `fail` — an unactionable finding, since the fix is in
     // the spreadsheet row or the generator.
@@ -265,7 +265,7 @@ describe("generated artefacts are not judged as authored content", () => {
     expect(r.notes).toContain("generated from an L2 source");
   });
 
-  test("the same mismatch IS flagged when the file is authored", () => {
+  test("authoredMismatchFlagged", () => {
     expect(
       checkDakFshDeclaresKind({ ts: p("vs-wrong.ts"), fsh: p("vs-wrong.fsh") }).result,
     ).toBe("fail");
