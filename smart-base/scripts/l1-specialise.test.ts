@@ -1,11 +1,12 @@
 import { describe, expect, test } from "bun:test";
-import { mkdtempSync, writeFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
+import { requireHarnessRoot } from "../../cat-harness-tools/schemas/harness-root.ts";
 import type { DublinCoreRecord } from "../platform/index.js";
 import { decideL1, LAYER_SCHEME, type IntakeRecord } from "./l1-membership.ts";
-import { identifiersOf, l1LibraryDocument, printedNumber, type Held, type Input } from "./l1-specialise.ts";
+import { CAT_HARNESS_NS, identifiersOf, l1LibraryDocument, printedNumber, type Held, type Input } from "./l1-specialise.ts";
 
 const dir = mkdtempSync(join(tmpdir(), "l1-specialise-"));
 writeFileSync(join(dir, "intake.json"), "{}");
@@ -96,5 +97,14 @@ describe("l1LibraryDocument", () => {
   test("frontMatterReportedNotEmitted", () => {
     expect(report.some((r) => r.includes("front matter"))).toBe(true);
     expect(byType("publication-section").some((n) => n.label.includes("Front matter"))).toBe(false);
+  });
+
+  test("catHarnessClassesUnderDeclaredRelease", () => {
+    const decl = JSON.parse(readFileSync(join(requireHarnessRoot(), "cat-harness.json"), "utf-8")) as { iriBase: string; version: string };
+    const expected = `${decl.iriBase}v${decl.version.split(".")[0]}/ns/`;
+    expect(CAT_HARNESS_NS).toBe(expected);
+    const classes = byType("library-node").map((n) => String(n.properties.libraryClass)).filter((c) => c.startsWith(decl.iriBase));
+    expect(classes).toContain(`${expected}SourceDocument`);
+    expect(classes.every((c) => c.startsWith(expected))).toBe(true);
   });
 });

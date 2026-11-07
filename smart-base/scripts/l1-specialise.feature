@@ -34,3 +34,9 @@ Feature: l1LibraryDocument specialises a library entry into an L1 graph
   Scenario: front matter is reported, not emitted
     Then the report mentions "front matter"
     And no section node is labelled "Front matter"
+
+  @test:smart-base/scripts/l1-specialise.test.ts::l1LibraryDocument::catHarnessClassesUnderDeclaredRelease
+  Scenario: cat-harness classes are minted under its declared release, not a hard-coded version
+    Then the cat-harness namespace is cat-harness.json's iriBase followed by "v<major>/ns/"
+    And the library entry's class is "SourceDocument" in that namespace
+    And every cat-harness class on a library node is in that namespace
