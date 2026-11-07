@@ -159,3 +159,13 @@ export {
 export {
   entryGraphSitePath,
 } from "../../cat-harness-tools/scripts/lib/library-entry-graphs.ts";
+export {
+  EXTRACTED_STATEMENTS_SCHEMA_ID,
+  ExtractedStatementsSchema,
+  type ExtractedStatement,
+  type ExtractedStatements,
+} from "../../folio-assistant-core/schemas/extracted-statement.ts";
+export {
+  resolveSource,
+  type ResolvedSource,
+} from "../../folio-assistant-core/scripts/publish-extracted-statements.ts";
