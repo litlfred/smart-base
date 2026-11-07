@@ -86,19 +86,19 @@ const STEPS = page("p42.md", "1.\t Obtain vaccination location information\n2.\t
 
 describe("§1.2 citations", () => {
   const { section, citations } = readCitations([P26, P27]);
-  test("found under the 1.2 heading", () => expect(section?.heading).toContain("1.2"));
-  test("each (n) with its card text, verbatim, lines joined by one space", () => {
+  test("citationsFoundUnder12Heading", () => expect(section?.heading).toContain("1.2"));
+  test("citationCardTextVerbatim", () => {
     expect(citations.map((c) => c.number)).toEqual([29, 31]);
     expect(citations[0]!.text).toBe("Summarizes recommended routine immunizations for all age groups (updated in 2024), including cited WHO vaccine position papers (29)");
     // Not de-hyphenated: the rule extract-smart-kg-l1.ts follows.
     expect(citations[1]!.text).toBe("Leave no one behind: guidance for planning and implementing catch- up vaccination (31)");
   });
-  test("the run-in sentence before the first card is not part of it", () => expect(citations[0]!.text.startsWith("These")).toBe(false));
+  test("runInSentenceNotPartOfCard", () => expect(citations[0]!.text.startsWith("These")).toBe(false));
 });
 
 describe("§1.1 interventions", () => {
   const { section, items } = readInterventions([P26, P27]);
-  test("items under their group, multi-line items joined", () => {
+  test("interventionItemsUnderGroup", () => {
     expect(items.map((i) => i.name)).toEqual([
       "counselling on the vaccine(s) to be administered",
       "document vaccinations received on a personal immunization record, including the home-based record",
@@ -107,32 +107,32 @@ describe("§1.1 interventions", () => {
     ]);
     expect(items[2]!.group).toBe("Vaccination, based on individual characteristics, include:");
   });
-  test("stops at the Note", () => expect(items.some((i) => i.name.includes("COVID"))).toBe(false));
-  test("keeps the lead sentence that names the unnumbered source", () => expect(section?.lead).toContain("universal health coverage"));
+  test("interventionsStopAtNote", () => expect(items.some((i) => i.name.includes("COVID"))).toBe(false));
+  test("keepsLeadSentence", () => expect(section?.lead).toContain("universal health coverage"));
 });
 
 describe("reference lists", () => {
   const lists = readReferenceLists([STEPS, REFS, REFS2]);
   const refs = lists.find((l) => l.some((r) => r.number === 29))!;
-  test("a reference does not end at its title's full stop (reference 26 lost its URL to that)", () => {
+  test("referenceNotEndedAtTitleStop", () => {
     const r26 = lists.flat().find((r) => r.number === 26)!;
     expect(r26.text).toContain("(https://www.who.int/publications/m/item/analysis-and-use");
     expect(titleOf(r26.text)).toBe("Analysis and use of health facility data: guidance for Immunization programme managers");
   });
-  test("page furniture is not swallowed", () => expect(refs.every((r) => !/\b85\b|References/.test(r.text))).toBe(true));
-  test("the list chosen holds every cited number — not the workflow steps", () => {
+  test("pageFurnitureNotSwallowed", () => expect(refs.every((r) => !/\b85\b|References/.test(r.text))).toBe(true));
+  test("chosenListHoldsCitedNumbers", () => {
     const { citations } = readCitations([P27]);
     expect(chooseList(lists, citations)?.list).toBe(refs);
   });
-  test("[website] is not part of the title", () => expect(titleOf(refs[0]!.text)).toBe("WHO recommendations for routine immunization – summary tables"));
+  test("websiteMarkerNotInTitle", () => expect(titleOf(refs[0]!.text)).toBe("WHO recommendations for routine immunization – summary tables"));
 });
 
 describe("judgements", () => {
-  test("title agreement is a share of the citation's words", () => {
+  test("titleAgreementIsWordShare", () => {
     expect(agreement("Leave no one behind: guidance for planning", "Leave no one behind: guidance for planning and implementing catch-up vaccination. Geneva")).toBe(1);
     expect(agreement("The WHO Immunization Data Portal", "Immunization dashboard [website]. Geneva")).toBeLessThan(0.34);
   });
-  test("publicationType only from the title's own words", () => {
+  test("publicationTypeFromTitleWords", () => {
     expect(publicationTypeOf("WHO recommendations for routine immunization – summary tables")).toBe("summary-table");
     expect(publicationTypeOf("Leave no one behind: guidance for planning")).toBe("implementation-guidance");
     // L1 3.0 has no bare "guideline" type: the subtype needs the GRC record.
@@ -142,7 +142,7 @@ describe("judgements", () => {
 });
 
 describe("context", () => {
-  test("§1.2 decides L1 by context, and says which reference and section", () => {
+  test("section12DecidesL1ByContext", () => {
     const c = contextClassification(31, "1.2 WHO guidelines, recommendations and guidance");
     expect(c).toMatchObject({ code: "l1", member: true, source: "context" });
     expect(c.basis).toContain("reference 31");
@@ -150,7 +150,7 @@ describe("context", () => {
 });
 
 describe("urlKey", () => {
-  test("a reference URL and a record URI for the same page meet", () => {
+  test("urlKeyMatchesSamePage", () => {
     expect(urlKey("https://www.who.int/publications/m/item/x/")).toBe(urlKey("http://who.int/publications/m/item/X?download=true"));
     expect(urlKey("https://iris.who.int/handle/10665/1")).not.toBe(urlKey("https://iris.who.int/handle/10665/2"));
   });

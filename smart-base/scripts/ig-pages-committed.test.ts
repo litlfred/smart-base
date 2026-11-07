@@ -45,7 +45,7 @@ describe("the committed pages: the banner's identity is the index's", () => {
   // a thin `.html` shell that draws itself from its JSON-LD node and carries no
   // banner; the banner is on the full pages that remain — the JSON view and
   // tab pages, and the IG API view pages — so it is read there.
-  it("smart-trust, whose chrome IS its own, keeps its draft watermark", () => {
+  it("smartTrustKeepsDraftWatermark", () => {
     const b = banner(readFileSync(join(ROOT, "smart-trust", "docs", "artifact", "ActorDefinition-Holder.json.md"), "utf8"));
     expect(b).toContain(">smart.who.int.trust</a>");
     expect(b).toContain('class="ig-status-draft"');
@@ -54,7 +54,7 @@ describe("the committed pages: the banner's identity is the index's", () => {
   // smart-base's docs build into its IG site too (bean `mftp`, "no drift").
   // Its index holds no package, so it has no JSON view pages; its full pages
   // are the IG API views, and the DAK schema's carries the banner.
-  it("smart-base names itself and asserts no status borrowed from smart-trust", () => {
+  it("smartBaseBannerNamesItselfNoStatus", () => {
     const b = banner(readFileSync(join(ROOT, "smart-base", "docs", "artifact", "StructureDefinition-DAK.schema.json.md"), "utf8"));
     expect(b).toContain(">smart.who.int.base</a>");
     expect(b).toContain("http://smart.who.int/base");
@@ -75,7 +75,7 @@ describe("the committed pages: the landing page", () => {
   const indexNode = (instance: string) =>
     JSON.parse(readFileSync(join(ROOT, instance, "docs", "artifact", "index.jsonld"), "utf8")) as Record<string, unknown>;
 
-  it("smart-base commits no landing page, and its artefact index is the thin page's node", () => {
+  it("smartBaseNoLandingPageIndexNode", () => {
     expect(existsSync(join(ROOT, "smart-base", "docs", "index.md"))).toBe(false);
     expect(existsSync(join(ROOT, "smart-base", "docs", "artifacts.md"))).toBe(false);
     const n = indexNode("smart-base");
@@ -84,7 +84,7 @@ describe("the committed pages: the landing page", () => {
     expect(n["dcterms:title"]).toBe("WHO SMART Base");
   });
 
-  it("smart-trust commits no landing page, and its artefact index is the thin page's node", () => {
+  it("smartTrustNoLandingPageIndexNode", () => {
     expect(existsSync(join(ROOT, "smart-trust", "docs", "index.md"))).toBe(false);
     expect(existsSync(join(ROOT, "smart-trust", "docs", "artifacts.md"))).toBe(false);
     const n = indexNode("smart-trust");
@@ -95,13 +95,13 @@ describe("the committed pages: the landing page", () => {
 });
 
 describe("the committed identities", () => {
-  it("smart-trust's validates and names its own package", () => {
+  it("smartTrustIdentityValidates", () => {
     const id = readIgIdentity(join(ROOT, "smart-trust", "fhir-artifact-index"));
     expect(id).toBeDefined();
     expect(IgIdentitySchema.safeParse(id).success).toBe(true);
     expect(id!.id).toBe("smart.who.int.trust");
   });
-  it("smart-base has none, so it states no status (the third state)", () => {
+  it("smartBaseHasNoIdentity", () => {
     expect(readIgIdentity(join(ROOT, "smart-base", "fhir-artifact-index"))).toBeUndefined();
   });
 });
@@ -109,7 +109,7 @@ describe("the committed identities", () => {
 describe("site.data.fhir from smart-base's committed artifact index", () => {
   const r = igSiteData(join(ROOT, "smart-base"));
 
-  it("writes what the index carries, from the index", () => {
+  it("writesWhatIndexCarries", () => {
     expect(r.data.packageId).toBe("smart.who.int.base");
     expect(r.data.canonical).toBe("http://smart.who.int/base");
     expect(r.data.ig.version).toBe("0.3.0");
@@ -117,12 +117,12 @@ describe("site.data.fhir from smart-base's committed artifact index", () => {
     expect(r.provenance["ig.version"]).toBe("fhir-artifact-index/index.json");
   });
 
-  it("lists what it could not source instead of writing empty strings", () => {
+  it("listsUndeterminedNotEmptyStrings", () => {
     expect(r.undetermined).toEqual(expect.arrayContaining(["ig.id", "ig.name", "ig.publisher"]));
     expect(JSON.stringify(r.data)).not.toContain('""');
   });
 
-  it("states no status: smart-base has no ig-identity.json, and the template's chrome states none", () => {
+  it("smartBaseStatesNoStatus", () => {
     expect(r.data.ig.status).toBeUndefined();
     expect(r.refused).toEqual([]);
   });
@@ -131,7 +131,7 @@ describe("site.data.fhir from smart-base's committed artifact index", () => {
 describe("site.data.fhir from smart-trust's index, which carries its own ig-identity.json", () => {
   const r = igSiteData(join(ROOT, "smart-trust"));
 
-  it("status comes from the IG's own identity file", () => {
+  it("statusFromOwnIdentityFile", () => {
     expect(r.data.ig.status).toBe("draft");
     expect(r.provenance["ig.status"]).toBe("fhir-artifact-index/ig-identity.json");
   });
