@@ -2,11 +2,11 @@
  * Recommendation candidates: mechanical candidates, an agent's curation, and
  * the verbatim and shape gates over it.
  *
- * Calibrated: dropping the verbatim check makes "refuses a paraphrase" fail;
- * letting a remark name an undeclared key makes "refuses a remark of nothing"
- * fail; counting an unsigned exclusion as excluded makes "an unsigned
- * exclusion is not accounted for" fail; emitting a wrong contentHash makes the
- * L1 3.0 validator refuse the graph, which "writes a valid L1 3.0 graph" sees.
+ * Calibrated: dropping the verbatim check makes `refusesParaphrase` fail;
+ * letting a remark name an undeclared key makes `refusesRemarkOfUndeclared`
+ * fail; counting an unsigned exclusion as excluded makes
+ * `unsignedExclusionNotAccountedFor` fail; emitting a wrong contentHash makes the
+ * L1 3.0 validator refuse the graph, which `writesValidL1Graph` sees.
  */
 import { describe, expect, it } from "bun:test";
 import { spawnSync } from "node:child_process";
@@ -52,14 +52,14 @@ const curation = (decisions: Curation["decisions"]): Curation =>
   CurationSchema.parse({ $schema: "l1-recommendation-curation/v1", entry: "e", decisions });
 
 describe("the mechanical half", () => {
-  it("finds every normative sentence and decides none", () => {
+  it("findsNormativeSentencesDecidesNone", () => {
     const r = run(readEntry(entry()), undefined, "lib/test-entry", "2026-10-12T00:00:00Z");
     expect(r.candidates.map((c) => c.location)).toEqual(["p1:s2", "p2:s1", "p2:s2", "p2:s3"]);
     expect(r.counts.undecided).toBe(4);
     expect(r.graph).toBeUndefined();
   });
 
-  it("proposes the publication from the printed electronic ISBN, and says so", () => {
+  it("proposesPublicationFromIsbn", () => {
     const e = readEntry(entry());
     expect(proposedIdentifiers(e).identifiers).toEqual([{ type: "isbn", value: "978-92-4-011619-1" }]);
     const r = run(e, undefined, "lib/test-entry", "2026-10-12T00:00:00Z");
@@ -67,7 +67,7 @@ describe("the mechanical half", () => {
     expect(r.warnings.some((w) => w.code === "publication-proposed")).toBe(true);
   });
 
-  it("hints licence text and layout fragments, and proposes — never signs — the licence exclusion", () => {
+  it("hintsAndProposesUnsignedExclusion", () => {
     expect(hintsFor("You must license your work under the same licence.", "")).toContain("licence-or-imprint");
     expect(hintsFor("• Codes should be numeric", "")).toContain("layout-fragment");
     const r = run(readEntry(entry()), undefined, "lib/test-entry", "2026-10-12T00:00:00Z");
@@ -87,7 +87,7 @@ describe("the curation gates", () => {
     "p2:s3": { as: "remark", of: "R1", remarkType: "implementation", basis: "why R1" },
   });
 
-  it("writes a valid L1 3.0 graph, narrowing a joined list to its bullets", () => {
+  it("writesValidL1Graph", () => {
     const r = run(readEntry(entry()), good, "lib/test-entry", "2026-10-12T00:00:00Z");
     expect(r.counts).toEqual({ statementClass: "recommendation", recommendations: 3, remarks: 1, partOf: 0, excluded: 1, undecided: 0 });
     const v = check(r.graph);
@@ -98,7 +98,7 @@ describe("the curation gates", () => {
     expect((r.graph!.nodes as { derivation: string }[]).every((n) => n.derivation === "inferred")).toBe(true);
   });
 
-  it("implementation guidance emits implementation-practice nodes, not recommendations (ruling 1b)", () => {
+  it("implementationGuidanceEmitsPractices", () => {
     const { "p2:s3": _remark, ...rest } = good.decisions;
     const c: Curation = { ...curation(rest), publication: { identifiers: [{ type: "isbn", value: "978-92-4-011619-1" }], publicationType: "implementation-guidance", basis: "x" } };
     const r = run(readEntry(entry()), c, "lib/test-entry", "2026-10-12T00:00:00Z");
@@ -112,14 +112,14 @@ describe("the curation gates", () => {
     expect(refused({ ...c, decisions: { ...c.decisions, "p2:s1": { as: "recommendation", key: "R1", kind: "good-practice-statement", basis: "x" } } }).join()).toMatch(/makes no recommendations of its own/);
   });
 
-  it("the validator refuses a recommendation defined in implementation guidance", () => {
+  it("validatorRefusesRecommendationInGuidance", () => {
     const r = run(readEntry(entry()), good, "lib/test-entry", "2026-10-12T00:00:00Z");
     const g = structuredClone(r.graph!) as { nodes: { type: string; properties: Record<string, unknown> }[] };
     g.nodes.find((n) => n.type === "publication")!.properties.publicationType = "implementation-guidance";
     expect(check(g).errors.join()).toMatch(/makes no recommendations of its own/);
   });
 
-  it("an unsigned exclusion is not accounted for; a signed one is", () => {
+  it("unsignedExclusionNotAccountedFor", () => {
     const r = run(readEntry(entry()), good, "lib/test-entry", "2026-10-12T00:00:00Z");
     expect(r.coverage).toMatchObject({ normative: 4, captured: 3, excluded: 0, unaccounted: 1 });
     expect(r.warnings.some((w) => w.code === "exclusion-unsigned")).toBe(true);
@@ -137,15 +137,15 @@ describe("the curation gates", () => {
     return [];
   };
 
-  it("refuses a paraphrase", () => {
+  it("refusesParaphrase", () => {
     expect(refused(curation({ "p2:s1": { as: "recommendation", key: "R1", statement: "Products should be identified by a national code, always.", basis: "x" } })).join()).toMatch(/not verbatim/);
   });
 
-  it("refuses a remark of a recommendation nobody declared", () => {
+  it("refusesRemarkOfUndeclared", () => {
     expect(refused(curation({ "p2:s3": { as: "remark", of: "R9", basis: "x" } })).join()).toMatch(/no recommendation decision declares/);
   });
 
-  it("refuses a location the entry does not hold, and a reused key", () => {
+  it("refusesUnknownLocationAndReusedKey", () => {
     const p = refused(curation({ "p9:s1": { as: "exclude", reason: "editorial", basis: "x" }, "p2:s1": { as: "recommendation", key: "R1", basis: "x" }, "p2:s3": { as: "recommendation", key: "R1", basis: "x" } }));
     expect(p.join()).toMatch(/no normative sentence at this location/);
     expect(p.join()).toMatch(/already used/);
@@ -153,7 +153,7 @@ describe("the curation gates", () => {
 });
 
 describe("the worked example", () => {
-  it("who-iris/library/9789240116191-eng is current", () => {
+  it("workedExampleIsCurrent", () => {
     // The sections live in who-iris since 2026-10-30 (who-iris#107); the
     // extraction is smart-base's own and stays here.
     const X = "who-iris/library/9789240116191-eng";
@@ -166,7 +166,7 @@ describe("the worked example", () => {
     expect(r.status).toBe(0);
   });
 
-  it("its scenario candidates are current", () => {
+  it("workedExampleScenariosCurrent", () => {
     const X = "smart-base/l1-extractions/9789240116191-eng";
     const r = spawnSync(
       "bun",
