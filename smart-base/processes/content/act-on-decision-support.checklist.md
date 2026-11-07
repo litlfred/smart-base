@@ -33,16 +33,17 @@ The point-of-care system applies one of the DAK's decision tables, published as 
 - Skill: `review-decision-support-guidance`.
 - What: See the proposed actions on the device and accept or decline each one, one tap each ("accept all" is one tap); modify one only where the device offers it.
 - Record it: `workflow_complete` with `node: "Task_Review"`.
-- next: → `Gateway_Fork`
+- next: → `Gateway_Accepted` (Any action accepted?)
+
+### Optional, while `Task_Review` (Accept or decline the guidance) is open — Taps "add a reason" (`Event_AddReason`)
+
+- Non-interrupting and opt-in: it happens only when the health worker taps "add a reason" while reviewing.
+- Only if it happens: `workflow_complete` with `node: "Event_AddReason"` while `Task_Review` (Accept or decline the guidance) is enabled. That step stays enabled and nothing waits for this path; skipping it is the default.
+- next: → `Task_Rationale` (Note the reason (optional))
 
 ## Done — Nothing to act on (`End_NoGuidance`)
 
 - The instance completes here: The decision table proposed no action for this client. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
-
-### Do all of — `Gateway_Fork`
-
-- Work every branch; none is optional. Branches: → `Gateway_Accepted` (Any action accepted?), → `Gateway_AddReason` (Tapped "add a reason"?)
-- The engine passes through this gateway itself; there is nothing to record here.
 
 ### Decide — Any action accepted? (`Gateway_Accepted`)
 
@@ -51,14 +52,15 @@ The point-of-care system applies one of the DAK's decision tables, published as 
   - «yes» → `Task_Activate` (Update the care plan)
   - «no» → `End_NoChange` (Guidance declined)
 
-### Decide — Tapped "add a reason"? (`Gateway_AddReason`)
+### 3. Note the reason (optional) (`Task_Rationale`)
 
-- Read from the review, not asked again: true only when the health worker tapped "add a reason" while reviewing.
-- Call `workflow_complete` with `node: "Gateway_AddReason"` and `outcome` set to the label that holds:
-  - «yes» → `Task_Rationale` (Note the reason (optional))
-  - «no» → `End_NoReason` (No reason noted)
+- Who: the `Health worker` lane (role `health-worker`).
+- Skill: `record-decision-rationale`.
+- What: Optional: pick a coded reason or type one, or neither; one FHIR Provenance records who decided what about which guidance, and why.
+- Record it: `workflow_complete` with `node: "Task_Rationale"`.
+- next: → `End_Noted` (Reason recorded)
 
-### 3. Update the care plan (`Task_Activate`)
+### 4. Update the care plan (`Task_Activate`)
 
 - Who: the `Point-of-care system` lane (role `point-of-care-system`).
 - Skill: `activate-accepted-guidance`.
@@ -70,22 +72,10 @@ The point-of-care system applies one of the DAK's decision tables, published as 
 
 - The instance completes here: Nothing was accepted; the record is unchanged. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
 
-### 4. Note the reason (optional) (`Task_Rationale`)
+## Done — Reason recorded (`End_Noted`)
 
-- Who: the `Health worker` lane (role `health-worker`).
-- Skill: `record-decision-rationale`.
-- What: Optional: pick a coded reason or type one, or neither; one FHIR Provenance records who decided what about which guidance, and why.
-- Record it: `workflow_complete` with `node: "Task_Rationale"`.
-- next: → `End_Noted` (Reason recorded)
-
-## Done — No reason noted (`End_NoReason`)
-
-- The instance completes here: The default: nothing is recorded, and nothing is missing. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
+- The instance completes here: The Provenance is saved beside the decision. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
 
 ## Done — Care plan updated (`End_Activated`)
 
 - The instance completes here: The accepted actions are in the client's care plan. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
-
-## Done — Reason recorded (`End_Noted`)
-
-- The instance completes here: The Provenance is saved beside the decision. `workflow_next` then reports nothing enabled — that, not this line, is the record of completion.
