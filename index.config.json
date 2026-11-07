@@ -49,7 +49,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "6c49d7ace5a8716b8ef1674ec54456f949c85389",
+          "ref": "33ebe87f691e9a72e308bec8390e2882b5b7ff73",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -74,8 +74,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-07",
-              "ref": "6c49d7ace5a8716b8ef1674ec54456f949c85389",
-              "evidence": "litlfred, 2026-11-07, via the merge manager (session_01VQDpPffYARDQ8juksAZScf): card 'Pin target' 'A. Never move back', and 'repin + merge open 12 hrs'; earlier in this session: 'align pins'. Align against folio-assistant#2985's pins, never moving a pin back; stacked on who-iris#191 and folio-assistant-core#666; bean cat-tools-sm8r."
+              "ref": "33ebe87f691e9a72e308bec8390e2882b5b7ff73",
+              "evidence": "litlfred, 2026-11-07, via the merge manager (session_01VQDpPffYARDQ8juksAZScf): card 'Pin target' 'A. Never move back', and 'repin + merge open 12 hrs'; earlier in this session: 'align pins'. who-iris at who-iris#191's merge commit, each lower layer at the commit who-iris pins; bean cat-tools-sm8r."
             }
           }
         }
@@ -86,7 +86,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "742bbe02e5f227e5a262ba9008e3d1e3ccefde54",
+          "ref": "6086f86b80d5d3cde4f98fd95a15e47641d6ce0f",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -102,8 +102,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-07",
-              "ref": "742bbe02e5f227e5a262ba9008e3d1e3ccefde54",
-              "evidence": "litlfred, 2026-11-07, via the merge manager (session_01VQDpPffYARDQ8juksAZScf): card 'Pin target' 'A. Never move back', and 'repin + merge open 12 hrs'; earlier in this session: 'align pins'. Align against folio-assistant#2985's pins, never moving a pin back; stacked on who-iris#191 and folio-assistant-core#666; bean cat-tools-sm8r."
+              "ref": "6086f86b80d5d3cde4f98fd95a15e47641d6ce0f",
+              "evidence": "litlfred, 2026-11-07, via the merge manager (session_01VQDpPffYARDQ8juksAZScf): card 'Pin target' 'A. Never move back', and 'repin + merge open 12 hrs'; earlier in this session: 'align pins'. who-iris at who-iris#191's merge commit, each lower layer at the commit who-iris pins; bean cat-tools-sm8r."
             }
           }
         }
@@ -189,7 +189,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "9f478d4d9fcd87842e9a4f5b886232ec806e657e",
+          "ref": "1dc08c906f3a9377534b753fed493b811e040ad7",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -202,8 +202,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-07",
-              "ref": "9f478d4d9fcd87842e9a4f5b886232ec806e657e",
-              "evidence": "litlfred, 2026-11-07, Claude Code session session_01VQDpPeA2N8L3orQCPPMAas: 'align pins' (2026-11-06), decision card 'Re-pin merges' '1. Merge when green (Recommended)', and 'repin + merge open 12 hrs' (2026-11-07 05:27Z). Wave 3: each lower layer at the commit who-iris pins, so the locks agree; cat-harness-tools kept at 64f0aa0 (not moved back past #1579, which this instance needs); bean cat-tools-sm8r."
+              "ref": "1dc08c906f3a9377534b753fed493b811e040ad7",
+              "evidence": "litlfred, 2026-11-07, via the merge manager (session_01VQDpPffYARDQ8juksAZScf): card 'Pin target' 'A. Never move back', and 'repin + merge open 12 hrs'; earlier in this session: 'align pins'. who-iris at who-iris#191's merge commit, each lower layer at the commit who-iris pins; bean cat-tools-sm8r."
             }
           }
         }
