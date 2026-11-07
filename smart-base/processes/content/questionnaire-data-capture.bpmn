@@ -3,7 +3,7 @@
   smart-base — capture data with an SDC questionnaire: a health worker
   completes a DAK form on their device and the point-of-care system extracts
   the resources it stands for. Generic for any DAK; a DAK's diagram calls it
-  with <bpmn:callActivity calledElement="Process_QuestionnaireDataCapture">
+  with a callActivity whose calledElement is Process_QuestionnaireDataCapture
   (registering a client is the commonest use).
 
   Source of truth: this file. The picture beside it (questionnaire-data-capture.svg) is drawn by
