@@ -27,90 +27,90 @@ Feature: A repository is described as a set of content types
     When it is described
     Then it has 3 types
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::a_marker_that_is_present_and_unreadable_is_its_OWN_state::unparseableMarkerParsedFalse
+  @test:smart-base/schemas/content-types-stack.test.ts::a_marker_that_is_present_and_unreadable_is_its_OWN_state::unparseableMarkerParsedFalse
   Scenario: unparseable → membership reported, `parsed: false`, no facts
     Given a repository whose x.config.json is not JSON
     When it is described
     Then it has one type, not parsed, with no facts
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::a_marker_that_is_present_and_unreadable_is_its_OWN_state::yamlMarkerParsedFalse
+  @test:smart-base/schemas/content-types-stack.test.ts::a_marker_that_is_present_and_unreadable_is_its_OWN_state::yamlMarkerParsedFalse
   Scenario: YAML marker → membership reported, parsed false, and that is deliberate
     Given a repository with only a sushi-config.yaml
     When it is described
     Then its types are "sushi", not parsed
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::a_marker_that_is_present_and_unreadable_is_its_OWN_state::markerWithoutFactsContributesNone
+  @test:smart-base/schemas/content-types-stack.test.ts::a_marker_that_is_present_and_unreadable_is_its_OWN_state::markerWithoutFactsContributesNone
   Scenario: a marker with no facts contributes none — absent is not 'agrees'
     Given a repository whose x.config.json is "{}"
     When it is described
     Then its type has no facts and there are no disagreements
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::two_markers_stating_one_fact_differently_are_REPORTED,_not_resolved::disagreementFoundBothClaimsKept
+  @test:smart-base/schemas/content-types-stack.test.ts::two_markers_stating_one_fact_differently_are_REPORTED,_not_resolved::disagreementFoundBothClaimsKept
   Scenario: a disagreement is found and both claims are kept
     Given a declaration with canonicalUrl "http://one.example/" and a DAK index with canonicalUrl "http://two.example/"
     When the repository is described
     Then there is one disagreement, about "canonicalUrl"
     And its claims are harness "http://one.example/" and dak "http://two.example/"
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::two_markers_stating_one_fact_differently_are_REPORTED,_not_resolved::nothingResolvedNeitherClaimDropped
+  @test:smart-base/schemas/content-types-stack.test.ts::two_markers_stating_one_fact_differently_are_REPORTED,_not_resolved::nothingResolvedNeitherClaimDropped
   Scenario: NOTHING is resolved — neither claim is dropped or preferred
     Given the same two disagreeing markers
     When the repository is described
     Then the harness type's canonicalUrl fact is "http://one.example/" and the dak type's is "http://two.example/"
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::two_markers_stating_one_fact_differently_are_REPORTED,_not_resolved::agreementIsSilence
+  @test:smart-base/schemas/content-types-stack.test.ts::two_markers_stating_one_fact_differently_are_REPORTED,_not_resolved::agreementIsSilence
   Scenario: agreement is silence, not a finding
     Given a declaration and a DAK index with the same canonicalUrl
     Then there are no disagreements
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::two_markers_stating_one_fact_differently_are_REPORTED,_not_resolved::comparesCanonicalWithCanonicalUrl
+  @test:smart-base/schemas/content-types-stack.test.ts::two_markers_stating_one_fact_differently_are_REPORTED,_not_resolved::comparesCanonicalWithCanonicalUrl
   Scenario: the DAK section spelling `canonical` is compared against `canonicalUrl`
     Given a declaration with canonicalUrl "http://ours.example/" and a DAK index with canonical "http://theirs.example/"
     Then the disagreements are about "canonicalUrl"
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::the_registry_refuses_a_conflicting_redefinition_and_tolerates_a_diamond::reRegisteringSameIsNoOp
+  @test:smart-base/schemas/content-types-stack.test.ts::the_registry_refuses_a_conflicting_redefinition_and_tolerates_a_diamond::reRegisteringSameIsNoOp
   Scenario: re-registering the SAME definition is a no-op
     Given a registry with the base and DAK content types
     Then registering them again does not throw
     And the registered ids are unchanged, and there is at least one
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::the_registry_refuses_a_conflicting_redefinition_and_tolerates_a_diamond::reRegisteringDifferentThrows
+  @test:smart-base/schemas/content-types-stack.test.ts::the_registry_refuses_a_conflicting_redefinition_and_tolerates_a_diamond::reRegisteringDifferentThrows
   Scenario: re-registering a DIFFERENT definition throws, naming the id
     Given a registry with the base and DAK content types
     Then registering "dak" with a different definition throws a content type conflict error
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::the_set_is_closed_under_the_dependency_tree::closureAttributesDependencyTypes
+  @test:smart-base/schemas/content-types-stack.test.ts::the_set_is_closed_under_the_dependency_tree::closureAttributesDependencyTypes
   Scenario: a dependency's types are in the closure, ATTRIBUTED to it
     Given a root declaration "mine" depending on "who-adapter", a repository declaring a DAK
     When the closure is described
     Then its types are dak by "who-adapter" (not own), then harness and folio by the root (own)
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::the_set_is_closed_under_the_dependency_tree::ownSeparatesRootFromDependency
+  @test:smart-base/schemas/content-types-stack.test.ts::the_set_is_closed_under_the_dependency_tree::ownSeparatesRootFromDependency
   Scenario: `own` separates 'this repo IS a DAK' from 'something it depends on is'
     Given the same root and DAK dependency
     When the closure is described
     Then its own types are "folio" and "harness"
     And no own type is "dak"
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::the_set_is_closed_under_the_dependency_tree::typeAssertedByBothAppearsTwice
+  @test:smart-base/schemas/content-types-stack.test.ts::the_set_is_closed_under_the_dependency_tree::typeAssertedByBothAppearsTwice
   Scenario: a type asserted by BOTH appears twice — not a duplicate to collapse
     Given a root declaring a DAK that depends on another repository declaring a DAK
     When the closure is described
     Then "dak" appears twice, by "who-adapter" and by the root
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::the_set_is_closed_under_the_dependency_tree::noDependenciesClosureIsRoot
+  @test:smart-base/schemas/content-types-stack.test.ts::the_set_is_closed_under_the_dependency_tree::noDependenciesClosureIsRoot
   Scenario: no dependencies → the closure is just the root
     Given a root declaration with no dependencies
     When the closure is described
     Then its only type is harness by the root
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::the_set_is_closed_under_the_dependency_tree::differentReposCanonicalsNotDisagreement
+  @test:smart-base/schemas/content-types-stack.test.ts::the_set_is_closed_under_the_dependency_tree::differentReposCanonicalsNotDisagreement
   Scenario: two repos naming different canonicalUrls is NOT a disagreement
     Given a root and its dependency naming different canonicalUrls
     When the closure is described
     Then there are no disagreements
 
-  @test:smart-base/schemas/content-types-stack.test.ts::a_repository_is_a_SET_of_types,_not_a_boolean::the_set_is_closed_under_the_dependency_tree::disagreementWithinInstanceReported
+  @test:smart-base/schemas/content-types-stack.test.ts::the_set_is_closed_under_the_dependency_tree::disagreementWithinInstanceReported
   Scenario: ...but a disagreement WITHIN one instance is reported, tagged with it
     Given a dependency "who-adapter" whose config and DAK index name different canonicalUrls
     When the root's closure is described
