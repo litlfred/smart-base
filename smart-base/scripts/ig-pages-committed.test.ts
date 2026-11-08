@@ -3,7 +3,7 @@
  * produce: what a reader of `/smart-base/` and `/smart-trust/` is served.
  *
  * These assertions lived in fhir-harness's own tests until #1963. They are
- * facts about WHO instances, and fhir-harness refuses to know about WHO
+ * facts about WHO layers, and fhir-harness refuses to know about WHO
  * (`fhir-harness/skills/fhir-ig-base/ig-build-pipeline.md`), so they moved
  * here unchanged. The generic behaviour behind them is still tested in
  * fhir-harness, over a non-WHO IG.
@@ -70,7 +70,7 @@ describe("the committed pages: the landing page", () => {
   // front matter either: `artifacts.html` is a finished thin page that
   // `build-ig-site` draws from the index NODE and that carries `rendered-by`
   // itself, so what each commits for the index is that node, naming its own
-  // IG; the visualiser is declared in the instance's `visualisers` (owner
+  // IG; the visualiser is declared in the layer's `visualisers` (owner
   // 2026-10-09).
   const indexNode = (instance: string) =>
     JSON.parse(readFileSync(join(ROOT, instance, "docs", "artifact", "index.jsonld"), "utf8")) as Record<string, unknown>;

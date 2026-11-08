@@ -6,12 +6,12 @@
  * Generalises `dth-hrh` (#47) and `dth-sc` (#2) `check:dth-glossary` into a
  * platform validator in `smart-base` that checks:
  *
- * 1. **Cross-instance SKOS glossary links**: validates all `.glossary.json`
+ * 1. **Cross-layer SKOS glossary links**: validates all `.glossary.json`
  *    files in `glossary/` against `GlossarySchema`, and resolves `broader`,
  *    `narrower`, `related`, `exactMatch`, `closeMatch`, `broadMatch`, and
  *    `narrowMatch` IRIs (as well as block `meta.glossary` / `meta.glossaryTerms`
  *    links) against the folio's own glossary scheme AND any mounted upstream
- *    instances (`dpi-h-ra` / `smart-ra`, `dth-sc`, `dth-pc`, `dth-hrh`,
+ *    layers (`dpi-h-ra` / `smart-ra`, `dth-sc`, `dth-pc`, `dth-hrh`,
  *    `dth-phc`, `dth-sfp`).
  * 2. **ArchiMate-link QA check**: verifies that every ArchiMate element, view,
  *    or figure-view mapping in a block's `meta.archimate` resolves against the
@@ -125,7 +125,7 @@ export interface L2DthValidationSummary {
   };
 }
 
-/** Load an instance declaration and compute its canonical namespace URI. */
+/** Load a layer declaration and compute its canonical namespace URI. */
 export function loadInstanceInfo(root: string, file: string): DthInstanceInfo {
   const decl = JSON.parse(readFileSync(join(root, file), "utf-8"));
   return {
@@ -158,7 +158,7 @@ export function discoverSelfInstanceFile(rootDir: string): string | undefined {
   return undefined;
 }
 
-/** Index every term IRI, scheme IRI, and bare term ID in an instance's `glossary/` directory. */
+/** Index every term IRI, scheme IRI, and bare term ID in a layer's `glossary/` directory. */
 export function indexInstanceGlossary(inst: DthInstanceInfo): GlossaryIndex {
   const dir = join(inst.root, "glossary");
   const knownIris = new Set<string>();
@@ -177,7 +177,7 @@ export function indexInstanceGlossary(inst: DthInstanceInfo): GlossaryIndex {
   return { knownIris, bareIds, docs };
 }
 
-/** Load the ArchiMate element and view IDs from a mounted `dpi-h-ra` instance. */
+/** Load the ArchiMate element and view IDs from a mounted `dpi-h-ra` layer. */
 export function loadArchimateModelIndex(raRoot: string): ArchimateModelIndex {
   const models = new Map<string, { elements: Set<string>; views: Set<string> }>();
   const cfgPath = join(raRoot, "archimate", "cat-archimate.config.json");
@@ -370,7 +370,7 @@ function walkTsFiles(dir: string): string[] {
 }
 
 /**
- * Validate an L2 DTH folio's glossaries, cross-instance SKOS matches, ArchiMate
+ * Validate an L2 DTH folio's glossaries, cross-layer SKOS matches, ArchiMate
  * links, persona links, BPMN swimlanes, and DMN decision tables.
  */
 export async function validateL2DthFolio(
@@ -440,7 +440,7 @@ export async function validateL2DthFolio(
     return true;
   };
 
-  // 1. Validate glossary schemes and cross-instance SKOS links
+  // 1. Validate glossary schemes and cross-layer SKOS links
   const requireCap = opts.requireCapitalizedPrefLabel ?? true;
   for (const { file, glossary } of here.docs) {
     counts.glossarySchemes++;

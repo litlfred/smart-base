@@ -9,7 +9,7 @@
  * difference, which is what makes a hand edit visibly a defect.
  *
  * `dak.coverage.<ig>.json` — the DAK view of each ingested IG's artefact
- * index, written into the `document-kinds` directory that IG's OWN instance
+ * index, written into the `document-kinds` directory that IG's OWN layer
  * declares ({@link coverageDirFor}); only this layer's own coverage is
  * written here.
  *
@@ -47,7 +47,7 @@ const GENERATOR = "smart-base/scripts/gen-document-kinds.ts";
  * Every file this writes says so itself, in a top-level `_generated` key — the
  * self-declaration the harness's reference-direction check reads
  * (`declaresGenerated`), in the form `sync-docs-harness.ts` writes it. The
- * coverage reports name the instances they classify, and without it each of
+ * coverage reports name the layers they classify, and without it each of
  * those names read as authored text in this layer naming a layer above it.
  *
  * Added at serialisation, after the schema parse: the node kinds strip a key
@@ -190,17 +190,17 @@ export function dakCoverage(subject: string, from: string, artifacts: readonly I
   });
 }
 
-/** One instance holding a fhir-artifact-index: whose it is, where its index is, and its artefacts. */
+/** One layer holding a fhir-artifact-index: whose it is, where its index is, and its artefacts. */
 interface IngestedIg {
   subject: string;
-  /** The instance's root, where its own `document-kinds` directory is declared. */
+  /** The layer's root, where its own `document-kinds` directory is declared. */
   root: string;
   /** Repo-relative path of the index. */
   from: string;
   artifacts: IndexArtifact[];
 }
 
-/** Every instance holding a fhir-artifact-index. */
+/** Every layer holding a fhir-artifact-index. */
 function ingestedIgs(repoRoot: string): IngestedIg[] {
   const out: IngestedIg[] = [];
   for (const root of instanceRootsIn(repoRoot)) {
@@ -218,12 +218,12 @@ function ingestedIgs(repoRoot: string): IngestedIg[] {
 
 /**
  * Where an IG's DAK coverage report is written: the `document-kinds` directory
- * the IG's OWN instance declares — never this one (wrong-direction move M13).
+ * the IG's OWN layer declares — never this one (wrong-direction move M13).
  * A coverage report is data about one IG, so it lives in that IG's layer, which
  * depends on this one; written here, it was this layer holding a file about a
  * layer above it. This layer's own coverage stays in {@link OUT}.
  *
- * `undefined` when the IG's instance declares no such directory: the caller
+ * `undefined` when the IG's layer declares no such directory: the caller
  * reports it rather than falling back here, which is the move this undoes.
  */
 export function coverageDirFor(ig: { subject: string; root: string }, ownName: string): string | undefined {
@@ -238,7 +238,7 @@ if (import.meta.main) {
   const ownName = readDeclaration(resolve(import.meta.dir, ".."))?.name ?? "smart-base";
   const homeless: string[] = [];
   // A coverage report is a view of its IG's artefact index. Where the IG's
-  // instance builds that index at publish, it builds the report at publish
+  // layer builds that index at publish, it builds the report at publish
   // too (`builtAtPublish`, writer `smart-base:document-kinds`), so --check
   // has no committed copy to compare (fhir-harness#124).
   const builtAtPublish = new Set<string>();

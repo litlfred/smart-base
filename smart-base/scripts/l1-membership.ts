@@ -41,7 +41,7 @@ export interface IntakeClassification {
   by?: string;
   at?: string;
 }
-/** The fields of an intake (`folio-intake/v1`) this instance reads. */
+/** The fields of an intake (`folio-intake/v1`) this layer reads. */
 export interface IntakeRecord {
   record?: string;
   files: { role: string; sha256?: string | null }[];

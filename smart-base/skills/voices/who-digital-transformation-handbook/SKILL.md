@@ -49,7 +49,7 @@ finding on them.
 
 **A finding against this voice is upheld by opening the cited section, never by
 trusting the rule's wording.** Every rule names `{ libraryId, sectionId, pages,
-quote }` and resolves into the cited instance's `library/`, and
+quote }` and resolves into the cited layer's `library/`, and
 `check:voices` refuses a
 rule whose citation does not resolve.
 

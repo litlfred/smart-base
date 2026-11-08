@@ -33,7 +33,7 @@ An IG with no IG API is a thin index, not an error.
 
 ## Where the index is built: at publish, from the AST
 
-An IG instance does not commit its `fhir-artifact-index/`. fhir-harness's
+An IG layer does not commit its `fhir-artifact-index/`. fhir-harness's
 `ig-index:build` (`fhir-harness/scripts/build-ig-indexes.ts`) writes it at
 publish:
 
@@ -113,7 +113,7 @@ not a gate. Run it by hand after cloning the IG and its templates.
   of a committed index still on disk).
 - **Where it is published.** A canonical URL is an identity, not an address.
   The published base is the committed copy's `source.of` when that names a
-  published site, else the instance declaration's `iriBase`, else none, and
+  published site, else the layer declaration's `iriBase`, else none, and
   the run says which. Never derive either the published base or
   `canonicalBase` from the other.
 
@@ -168,8 +168,8 @@ bun run cat ig-index:build -- [--only <instance>] [--work <dir>] [--plan]
 `--plan` prints what would be built and touches nothing. Exit 0: every IG
 found was built; 1: one or more failed (each named); 2: usage.
 
-An IG instance is found, with no declaration of its own, when it needs
+An IG layer is found, with no declaration of its own, when it needs
 fhir-harness (directly or through a layer above), declares a `repository`,
-and that repository carries an AST branch family. An instance missing any of
+and that repository carries an AST branch family. A layer missing any of
 the three is skipped, and the run says which and why. To add an IG, give it
 those three; never commit or hand-edit the index it produces.

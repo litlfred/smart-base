@@ -254,7 +254,7 @@ describe("the set is closed under the dependency tree", () => {
   }
 
   function dependsOn(root: string, depName: string, depPath: string): void {
-    // Through the helper: the config is named after the instance now, and
+    // Through the helper: the config is named after the layer now, and
     // these roots pin their own name in `harness.json` (`{"name":"mine"}`),
     // which `declareInstance` honours rather than overwrites.
     writeInstanceConfig(
@@ -330,8 +330,8 @@ describe("the set is closed under the dependency tree", () => {
     const dep = instance("dep5", {
       // `name` is REQUIRED, and it is what makes this a declaration rather
       // than a file that happens to be called `harness.json`. The fixture got
-      // away without one while nothing walked into a dependency as an
-      // instance; `readHarnessConfig` now resolves the config through the
+      // away without one while nothing walked into a dependency as a
+      // layer; `readHarnessConfig` now resolves the config through the
       // declaration, and a present-but-invalid declaration throws by design
       // (AGENTS.md: "Absent declaration is fine … a present-but-unreadable one
       // throws"). The subject here is two markers disagreeing about

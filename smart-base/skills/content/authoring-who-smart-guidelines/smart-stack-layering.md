@@ -67,7 +67,7 @@ kinds import. A rule that L1, DAK and the IG all need is `smart-base`'s. A
 ## Two consequences
 
 **1. There is no per-IG harness.** `smart-trust` and `smart-immunizations`
-are **instances of `smart-ig`**, not harnesses: they add no new
+are **layers on `smart-ig`**, not harnesses: they add no new
 functionality.
 
 **2. `fhir-harness` may not import the WHO package.** A dependency on
@@ -124,12 +124,12 @@ The deploy phase is entirely generic — see
 [`ig-build-pipeline`](../../../../fhir-harness/skills/fhir-ig-base/ig-build-pipeline.md)
 §"The deploy phase". Re-run the test when a step is added upstream.
 
-## Where an instance says which layer it is
+## Where a layer says which layer it is
 
 In its declaration's `needs`, and nowhere else: `needs: ["smart-ig"]` is a
-published WHO SMART IG, `needs: ["smart-base"]` a WHO SMART instance that
+published WHO SMART IG, `needs: ["smart-base"]` a WHO SMART layer that
 publishes no IG, `needs: ["fhir-harness"]` a non-WHO IG. Which document kinds
-an instance authors (L1, DAK) is a property of its content. There is no
+a layer authors (L1, DAK) is a property of its content. There is no
 `layer` field.
 
 Conventions for the declaration:
