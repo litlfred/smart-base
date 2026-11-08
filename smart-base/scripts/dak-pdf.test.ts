@@ -55,7 +55,7 @@ describe("assembly", () => {
   });
 
   test("findsDeclaredBusinessProcesses", () => {
-    // An instance names its BPMN directory by graph typology; the IG
+    // A layer names its BPMN directory by graph typology; the IG
     // Publisher's input/business-processes/ is the fallback for a DAK
     // repository that declares nothing, never a path read past a declaration.
     const inst = mkdtempSync(join(tmpdir(), "declared-dak-"));

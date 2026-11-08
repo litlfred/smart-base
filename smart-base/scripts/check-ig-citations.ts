@@ -113,9 +113,9 @@ function dcIdentifiers(r: Record<string, unknown>): unknown[] {
 }
 
 /**
- * The IG's own bibliography: the instance declared at `root` (and, for a run
+ * The IG's own bibliography: the layer declared at `root` (and, for a run
  * with no checkout of its own, the declarations in `extra`). Only the own
- * instance counts: the IG is one document, and its bibliography page lists
+ * layer counts: the IG is one document, and its bibliography page lists
  * what the document cites (owner, 2026-11-02: "each document should have a
  * bibliography page which includes referenced content in the document").
  * A work a dependency already holds (a who-iris catalogue record) gets an

@@ -4,7 +4,7 @@
  *
  * **This is a placeholder, and the placeholder is the point.** A repo declares
  * itself a DAK by carrying a {@link DAK_INDEX_SECTION} section in its root
- * `index.config.json`, as it declares itself a harness instance by carrying
+ * `index.config.json`, as it declares itself a harness layer by carrying
  * `harness.json`. That
  * much is settled and is modelled here, and so is the wrapper each of WHO's
  * nine components uses (url, canonical or inline instance). What this module

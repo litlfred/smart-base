@@ -2,7 +2,7 @@
  * `gen-l1-extraction-pages.ts`: the `l1-extraction` viewer's pages, written
  * into a site.
  *
- * A scratch checkout of two instances. `lib` declares the visualiser and a
+ * A scratch checkout of two layers. `lib` declares the visualiser and a
  * library entry with an `l1-extraction/` holding one of each document the
  * page reads: an L1 graph, a candidate work list, an L2 scenario graph, a
  * curation, and a file that does not parse. `remote` declares an

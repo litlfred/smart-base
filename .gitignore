@@ -101,7 +101,7 @@ package.json
 
 # Written by a local publish (stage-local.ts, IG route): the IG AST fetched from
 # its cache branch, and the landing data the site build writes into the local
-# instance. Never committed; the site is built from them.
+# layer. Never committed; the site is built from them.
 output-ast/
 smart-base/docs/_data/
 

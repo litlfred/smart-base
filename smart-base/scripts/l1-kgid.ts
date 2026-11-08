@@ -1,6 +1,6 @@
 /**
  * L1 identity — the functions of WHO smart-kg `tools/kgid.mjs` (main
- * `3f5e477`, L1 3.0) this instance's extractors mint IRIs with.
+ * `3f5e477`, L1 3.0) this layer's extractors mint IRIs with.
  *
  * A copy, and a deliberate one: smart-kg's module lives in another repository,
  * and an L1 IRI that differs from the one smart-kg mints for the same guideline

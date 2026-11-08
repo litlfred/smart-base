@@ -4,7 +4,7 @@
  *
  * Moved from cat-harness-tools' `test/coordinator/harnessed-kg-overview.test.ts`
  * with the section it reads, which left the harness's FHIR content page for
- * this instance's WHO SMART content types page (bean p9bu). The claim is
+ * this layer's WHO SMART content types page (bean p9bu). The claim is
  * unchanged; only who makes it moved, as slide 3's did (bean 1335).
  *
  * @module smart-base/scripts/who-smart-content-types.test

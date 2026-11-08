@@ -21,7 +21,7 @@ jobs:
     with:
       # On a draft PR: prepare and typecheck only; the full tier runs on ready_for_review.
       draft-fast-tier: true
-      # The instance is a sub-directory of this repository, not its root.
+      # The layer is a sub-directory of this repository, not its root.
       path-in-repo: smart-base
   # Post-merge QA of main (owner, 2026-10-30, "Both"): the push run above
   # judged main's whole gate set; this keeps one `main-red` issue open while

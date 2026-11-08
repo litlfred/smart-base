@@ -169,7 +169,7 @@ export function sectionText(raw: string): string {
 }
 
 /**
- * The files this instance declares `builtAtPublish` (`smart-base.json`), as
+ * The files this layer declares `builtAtPublish` (`smart-base.json`), as
  * checkout-relative paths: `smart-base/fhir-artifact-index/index.json` is
  * written by `ig-index:build` at publish (fhir-harness#124), so a checkout
  * that has not built it, a repository mounting this layer included, holds

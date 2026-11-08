@@ -541,7 +541,7 @@ function report(path: string, c: Coverage): void {
   if (c.unlabelledMentions) console.log(`    not extracted: ${c.unlabelledMentions} "WHO recommends" mention(s) in prose outside a labelled block — paraphrase, not a statement`);
 }
 
-/** Entries of this instance's library graph that already carry a document. */
+/** Entries of this layer's library graph that already carry a document. */
 function entriesWithDocument(): string[] {
   const out: string[] = [];
   for (const lib of directoriesForGraph(HERE, "library")) {

@@ -76,7 +76,7 @@ or test runner, find that way, in this order, and record it in the stage-3 or
 stage-5 dependency row of
 [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md) (`toolchain`):
 
-1. **The tools graph.** `bun run cat check:tools` from the instance root lists
+1. **The tools graph.** `bun run cat check:tools` from the layer root lists
    every Tool the mounted layers declare (smart-base, fhir-harness,
    folio-assistant-core, cat-harness), with the skills each satisfies.
 2. **The upstream repository's own toolchain.** Read the dependency's

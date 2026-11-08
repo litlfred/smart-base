@@ -6,7 +6,7 @@ ways. Most mistakes here come from treating one as the other.
 | | what | published by | previewed at |
 |---|---|---|---|
 | `input/`, `sushi-config.yaml` | the WHO SMART Base **FHIR IG** | the gh-pages ROOT: an agent, by the IG route every smart-* IG uses (`bun run cat-harness-tools/scripts/stage-local.ts --repo .`, from the cached AST; `index.config.json` `site`). The IG Publisher (`ghbuild.yml`) only previews, and never deploys over a folio root | `branches/<branch>/` (stage-local); Publisher output at `gh-pages/branches/<branch>/` (`/deploy`) |
-| `smart-base/` | the smart-base **harness instance**: skills, processes (BPMN), library, KG | folio-assistant's just-the-docs site, which **mounts** this directory | folio-assistant `branches/<slug>/` (`feature-staging`) |
+| `smart-base/` | the smart-base **harness layer**: skills, processes (BPMN), library, KG | folio-assistant's just-the-docs site, which **mounts** this directory | folio-assistant `branches/<slug>/` (`feature-staging`) |
 
 ## The platform is mounted, not absent
 
@@ -20,7 +20,7 @@ platform's skills there before choosing how to build, render, review or
 stage anything** (`cat-harness/skills/`, `fhir-harness/skills/`). If they
 are missing, run `bash .claude/mount-platform.sh`.
 
-`./smart-base/` is this repository's own copy of the harness instance (its
+`./smart-base/` is this repository's own copy of the harness layer (its
 `index.config.json` entry is `source.local`). Edit it here; downstream IGs
 mount it at a pinned commit.
 

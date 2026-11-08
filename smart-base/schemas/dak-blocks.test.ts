@@ -525,7 +525,7 @@ describe("profiles do not reach a DAK kind", () => {
 });
 
 describe("DAK kinds reach a folio only through its dependency tree (bean riit, step 3)", () => {
-  // Owner, 2026-10-04: a folio sees the nodes of the instances it depends on
+  // Owner, 2026-10-04: a folio sees the nodes of the layers it depends on
   // (option 1 of 3). folio-assistant-core's tree does not include smart-base.
   test("smartBaseTreeRegistersDakKinds", () => {
     expect(registry.contributedKinds().filter((k) => k.adapter === "dak").length).toBe(DAK_BLOCK_KINDS.length);

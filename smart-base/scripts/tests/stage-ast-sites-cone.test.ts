@@ -2,7 +2,7 @@
  * The AST sites a preview stages, under the staging cone (bean 4j86): the
  * measurements its Done-when names, on this checkout. Here rather than beside
  * the cone, because the cone lives in cat-harness and must not import upward;
- * and in smart-base rather than fhir-harness, because the instances it measures
+ * and in smart-base rather than fhir-harness, because the layers it measures
  * (smart-trust, smart-base's chrome) are WHO's, and fhir-harness stays WHO-free
  * (`check:fhir-harness-exclusions`).
  */

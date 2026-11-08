@@ -14,7 +14,7 @@
  * the opinion, kept to rules a schema cannot state:
  *
  * - **which publication, which section** — every node's `section`
- *   (`<kind>#<section>`) names a section of a document kind some instance
+ *   (`<kind>#<section>`) names a section of a document kind some layer
  *   declares (`document-kind/1.0.0`, e.g. `smart-base/document-kinds/dak.json`),
  *   counting the sections a kind `extends`; and its `annexOf`, when it is a
  *   library entry (`<instance>/library/<slug>`), is an entry this checkout
@@ -30,24 +30,24 @@
  *   the mapping `dak-swimlanes.ts` reads ambiguous, and a lane would be linked
  *   to whichever entry it met first.
  *
- * - **references** — what the annexes name resolves in the SAME instance's
+ * - **references** — what the annexes name resolves in the SAME layer's
  *   artefact index (the directory it declares `fhir-artifact-index`): every
  *   data element id belongs to a CodeSystem the index lists (`IMMZ.C.DE.1` to
  *   `IMMZ.C`), and every annex record in the index's `annexes.json` names a
  *   file that exists and, for a dictionary, columns every sheet with rows
  *   has. Persona aliases are NOT resolved: the index carries no persona
  *   artefact to resolve them against, and the run says so rather than
- *   counting them as resolved. An instance that holds no `index.json` (an IG
+ *   counting them as resolved. A layer that holds no `index.json` (an IG
  *   repository commits none; fhir-harness builds it at publish, its #124)
  *   has its ids reported UNRESOLVED, said and not counted, rather than
  *   failed: there is nothing here to resolve them against, which is not
  *   the same as an id that resolves to nothing.
  * - **annex records** — the `annexes.json` of every `ig-annex` directory the
- *   same instance declares (fhir-harness's contract, `ig-annexes/v1`,
+ *   same layer declares (fhir-harness's contract, `ig-annexes/v1`,
  *   `{ $schema, annexes: [...] }`; an IG repository's web-annex directory
  *   nests inside one) is judged as an index's is.
  *
- * Every `web-annex` directory any instance in the checkout declares is read,
+ * Every `web-annex` directory any layer in the checkout declares is read,
  * through the declarations — never a hard-coded path.
  *
  *   bun run smart-base/scripts/check-web-annexes.ts
@@ -195,7 +195,7 @@ export function judgeAnnexRecords(
 
 /**
  * The data element ids of a dictionary, judged against the artefact indexes
- * its instance holds. With none held, nothing is a finding: the ids are
+ * its layer holds. With none held, nothing is a finding: the ids are
  * returned as `unresolved`, a count the run says instead of a pass.
  */
 export function dictionaryReferences(
@@ -268,7 +268,7 @@ export function judgeWebAnnexOf(
   return { findings, unverified };
 }
 
-/** The document kinds the checkout's instances declare, read from their `document-kinds` directories. */
+/** The document kinds the checkout's layers declare, read from their `document-kinds` directories. */
 function documentKindsIn(roots: ReadonlyArray<string>): KindSections[] {
   const out: KindSections[] = [];
   for (const inst of roots) {
@@ -293,7 +293,7 @@ function documentKindsIn(roots: ReadonlyArray<string>): KindSections[] {
   return out;
 }
 
-/** Whether `<instance>/library/<slug>` is an entry one of the named instance's library directories holds. */
+/** Whether `<instance>/library/<slug>` is an entry one of the named layer's library directories holds. */
 function libraryHeldIn(roots: ReadonlyArray<string>): (ref: string) => boolean {
   return (ref) => {
     const [name, , slug] = ref.split("/");
@@ -336,9 +336,9 @@ function main(): number {
   const roots = instanceRootsIn(repo);
   const sections = sectionRefs(documentKindsIn(roots));
   const libraryHeld = libraryHeldIn(roots);
-  /** Each web-annex directory's instance's artefact index directories. */
+  /** Each web-annex directory's layer's artefact index directories. */
   const indexesOf = new Map<string, string[]>();
-  /** Each web-annex directory's instance's `ig-annex` directories (fhir-harness), whose `annexes.json` names its files. */
+  /** Each web-annex directory's layer's `ig-annex` directories (fhir-harness), whose `annexes.json` names its files. */
   const annexDirsOf = new Map<string, string[]>();
   for (const inst of roots) {
     const indexes = directoriesForGraph(inst, "fhir-artifact-index");

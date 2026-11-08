@@ -2,7 +2,7 @@
 
 ## Covers
 
-The `l1-extraction` kind viewer, declared by the SMART Guidelines base layer (owner, 2026-10-16: the kind belongs to that layer), for every `l1-extraction` directory an instance in the checkout declares. Drawn by that layer's Tool `l1-extraction-pages` (`scripts/gen-l1-extraction-pages.ts` there): a hub at `<locale>/<smart-guidelines-base>/l1-extraction/` and one page per declaring instance under it. The route key is the one `index.json` records for this wireframe.
+The `l1-extraction` kind viewer, declared by the SMART Guidelines base layer (owner, 2026-10-16: the kind belongs to that layer), for every `l1-extraction` directory a layer in the checkout declares. Drawn by that layer's Tool `l1-extraction-pages` (`scripts/gen-l1-extraction-pages.ts` there): a hub at `<locale>/<smart-guidelines-base>/l1-extraction/` and one page per declaring layer under it. The route key is the one `index.json` records for this wireframe.
 
 ### How this was drawn
 
@@ -12,7 +12,7 @@ From the pages `gen-l1-extraction-pages --site` writes in a checkout of the inde
 
 - **Readers:** a guideline author or reviewer checking what an agent extracted from a WHO publication at L1, and what still needs a person.
 - **Tasks:**
-  - see which instances hold L1 extractions, and how much each holds
+  - see which layers hold L1 extractions, and how much each holds
   - read the L1 statements and where in the source each was read from
   - see which candidate sentences were excluded, and review them
   - reach each file at its pinned source
