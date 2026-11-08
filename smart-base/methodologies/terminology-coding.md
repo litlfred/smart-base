@@ -44,7 +44,7 @@ It joins the platform's generic ontology and glossary rules —
 [`ontologist`](../../folio-assistant-core/skills/library/cataloguing/ontologist.md),
 [`glossary-terms`](../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md),
 [`vocabulary-authority`](../../cat-harness/skills/kg/kg-core/vocabulary-authority.md),
-and [`code-lists`](../../cat-harness/skills/library/library-core/code-lists.md) — with the
+and [`code-lists`](../../cat-harness/library/skills/library-core/code-lists.md) — with the
 WHO Family of International Classifications (WHO-FIC) and SMART Guidelines DAK
 component conventions.
 
