@@ -1,4 +1,5 @@
 ---
+description: "A DRAFT proposal of six DTH governance and planning schemas, held for review by the architect group and the handbook owners. Not adopted."
 title: "DTH governance and planning schemas (S3 follow-up proposal)"
 kind: proposal
 issue: 242
@@ -15,8 +16,8 @@ summary: >-
 
 - **Date:** 2026-10-31
 - **Status:** Draft for architect-committee and handbook-owner review (`litlfred/smart-base#242`, `litlfred/dth-sfp#1` Step P6d, `litlfred/dth-phc#1` Step P4b)
-- **Schema module:** [`smart-base/schemas/dth-planning-schemas.ts`](../../smart-base/schemas/dth-planning-schemas.ts) (re-exported at [`schemas/dth-planning-schemas.ts`](../../schemas/dth-planning-schemas.ts))
-- **Verification suite:** [`smart-base/scripts/tests/dth-planning-schemas.test.ts`](../../smart-base/scripts/tests/dth-planning-schemas.test.ts)
+- **Schema module:** [`smart-base/schemas/dth-planning-schemas.ts`](../schemas/dth-planning-schemas.ts)
+- **Verification suite:** [`smart-base/scripts/tests/dth-planning-schemas.test.ts`](../scripts/tests/dth-planning-schemas.test.ts)
 
 ---
 
