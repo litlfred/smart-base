@@ -6,7 +6,7 @@
   "namespace": "https://smart.who.int/base",
   "source": {
     "repository": "litlfred/smart-base",
-    "commit": "3d867866d9fcf980a85a5eb7efa9955fc0b83642",
+    "commit": "417720453eb28a142a503cc96afb38efc6e42386",
     "paths": [
       "input/fsh/actors"
     ]
@@ -91,46 +91,6 @@
       }
     },
     {
-      "id": "DAK.Persona.System.ClientRegistry",
-      "title": "Client Registry / Master Patient Index",
-      "description": "A digital system that creates, maintains, and provides authoritative unique identifiers for individuals (persons) accessing health services, enabling cross-facility patient matching and de-duplication.",
-      "personaType": "system",
-      "source": {
-        "path": "input/fsh/actors/DAK.Persona.System.ClientRegistry.fsh",
-        "locator": "Instance: DAK.Persona.System.ClientRegistry"
-      }
-    },
-    {
-      "id": "DAK.Persona.System.EMR",
-      "title": "Electronic Medical Record (EMR) System",
-      "description": "A secure, digital system that holds information about people's health and clinical care managed by healthcare providers. Also referred to as an Electronic Health Record (EHR).",
-      "personaType": "system",
-      "source": {
-        "path": "input/fsh/actors/DAK.Persona.System.EMR.fsh",
-        "locator": "Instance: DAK.Persona.System.EMR"
-      }
-    },
-    {
-      "id": "DAK.Persona.System.HMIS",
-      "title": "Health Management Information System (HMIS)",
-      "description": "A digital system used to collect, process, report, and use aggregate health data for programme planning, monitoring, and evaluation at district and national levels.",
-      "personaType": "system",
-      "source": {
-        "path": "input/fsh/actors/DAK.Persona.System.HMIS.fsh",
-        "locator": "Instance: DAK.Persona.System.HMIS"
-      }
-    },
-    {
-      "id": "DAK.Persona.System.InteropPlatform",
-      "title": "Health Information Exchange / Interoperability Platform",
-      "description": "A middleware system or shared infrastructure that enables health data exchange between disparate health information systems using standard protocols and formats.",
-      "personaType": "system",
-      "source": {
-        "path": "input/fsh/actors/DAK.Persona.System.InteropPlatform.fsh",
-        "locator": "Instance: DAK.Persona.System.InteropPlatform"
-      }
-    },
-    {
       "id": "DAK.Persona.System.LIS",
       "title": "Laboratory Information System (LIS)",
       "description": "A digital system that manages the complete lifecycle of laboratory test orders, specimen tracking, result production, and result reporting to healthcare providers and persons.",
@@ -138,16 +98,6 @@
       "source": {
         "path": "input/fsh/actors/DAK.Persona.System.LIS.fsh",
         "locator": "Instance: DAK.Persona.System.LIS"
-      }
-    },
-    {
-      "id": "DAK.Persona.System.LMIS",
-      "title": "Logistics Management Information System (LMIS)",
-      "description": "A digital system that manages the health supply chain from quantification and forecasting through distribution, inventory management, and consumption tracking.",
-      "personaType": "system",
-      "source": {
-        "path": "input/fsh/actors/DAK.Persona.System.LMIS.fsh",
-        "locator": "Instance: DAK.Persona.System.LMIS"
       }
     },
     {
