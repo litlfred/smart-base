@@ -142,7 +142,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "fa5fb43f973a89581ca3f32145cd11c9137baa26",
+          "ref": "961b4d939d7d69874f44162d12407bd3f1d96c6b",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -154,9 +154,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "fa5fb43f973a89581ca3f32145cd11c9137baa26",
-              "evidence": "litlfred, 2026-11-07 ~18:45Z, card 'smart-base' in session_01VQDpPeA2N8L3orQCPPMAas: '1. Yes, prepare it' (re-pin smart-base to cat-harness 6eed239 and cat-harness-tools fa5fb43, pin-only draft, owner merges). Card 'Pin target' 'A. Never move back'."
+              "on": "2026-11-08",
+              "ref": "961b4d939d7d69874f44162d12407bd3f1d96c6b",
+              "evidence": "Owner litlfred, 2026-11-08: card Q-CIB-4 A (13:23Z, release-gated CI, full rollout in phases; phase 4 = the other layers) and Q-MM-1 A (\"non-content can merge/repin + 12hr\", window to 2026-11-08 19:00Z). Tools-only re-pin to cat-harness-tools 961b4d9 (#1722): a non-release PR runs the fast tier of layer-pr-checks; cat-harness#1158."
             }
           }
         }
