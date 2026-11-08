@@ -79,30 +79,30 @@ afterAll(() => {
 });
 
 describe("builders", () => {
-  test("construct a valid decision table and derive its layer", () => {
+  test("decisionTableBuilderDerivesL2", () => {
     const b = decisionTable({ label: "dt:anc-danger-signs", title: "ANC danger signs" });
     expect(b.kind).toBe("decision-table");
     expect(b.layer).toBe("L2");
   });
 
-  test("L3 kinds derive L3", () => {
+  test("l3KindsDeriveL3", () => {
     expect(valueSet({ label: "vs:danger-signs" }).layer).toBe("L3");
     expect(planDefinition({ label: "pd:anc-contact" }).layer).toBe("L3");
   });
 
-  test("layerForKind partitions every DAK kind", () => {
+  test("layerForKindPartitionsKinds", () => {
     for (const k of DAK_BLOCK_KINDS) {
       expect(["L2", "L3"]).toContain(layerForKind(k));
     }
   });
 
-  test("a wrong label prefix is rejected at construction", () => {
+  test("rejectsWrongLabelPrefix", () => {
     // The paper side enforces this via labelForKind; DAK must not be laxer.
     expect(() => decisionTable({ label: "def:not-a-decision-table" })).toThrow();
     expect(() => valueSet({ label: "dt:wrong-prefix" })).toThrow();
   });
 
-  test("editorial fields are the same fields a paper block uses", () => {
+  test("keepsEditorialFields", () => {
     const b = businessProcess({
       label: "bp:anc-registration",
       title: "ANC registration",
@@ -114,14 +114,14 @@ describe("builders", () => {
     expect(b.realises).toBe("dt:anc-danger-signs");
   });
 
-  test("an author-stated layer is not overwritten", () => {
+  test("keepsAuthorStatedLayer", () => {
     const b = decisionTable({ label: "dt:x", layer: "L3" });
     expect(b.layer).toBe("L3");
   });
 });
 
 describe("builder ↔ kind mapping", () => {
-  test("every DAK kind has a builder name that is a valid identifier", () => {
+  test("builderNamesAreIdentifiers", () => {
     for (const k of DAK_BLOCK_KINDS) {
       const builder = DAK_KIND_BUILDERS[k];
       expect(builder).toBeTruthy();
@@ -129,13 +129,13 @@ describe("builder ↔ kind mapping", () => {
     }
   });
 
-  test("builder names round-trip back to their kind, through the contribution", () => {
+  test("builderNamesRoundTripToKind", () => {
     for (const k of DAK_BLOCK_KINDS) {
       expect(kindForBuilder(DAK_KIND_BUILDERS[k], builders)).toBe(k);
     }
   });
 
-  test("core does not know a DAK builder without the contribution", () => {
+  test("coreUnawareOfDakBuilders", () => {
     // The point of bean 1335: core's built-in vocabulary is paper only.
     for (const k of DAK_BLOCK_KINDS) {
       if ((BLOCK_KINDS as readonly string[]).includes(DAK_KIND_BUILDERS[k])) continue;
@@ -143,22 +143,22 @@ describe("builder ↔ kind mapping", () => {
     }
   });
 
-  test("paper builders still map to themselves", () => {
+  test("paperBuildersMapToThemselves", () => {
     for (const k of BLOCK_KINDS) expect(kindForBuilder(k, builders)).toBe(k);
   });
 
-  test("builder names are unique across both adapters", () => {
+  test("builderNamesUnique", () => {
     const names = [...BLOCK_KINDS, ...Object.values(DAK_KIND_BUILDERS)];
     expect(new Set(names).size).toBe(names.length);
   });
 
-  test("an unknown builder maps to undefined", () => {
+  test("unknownBuilderMapsToUndefined", () => {
     expect(kindForBuilder("notABuilder", builders)).toBeUndefined();
   });
 });
 
 describe("label prefixes", () => {
-  test("DAK prefixes do not collide with paper or structural prefixes", () => {
+  test("dakPrefixesAvoidPaperPrefixes", () => {
     const paper = new Set([
       "def", "thm", "lem", "prop", "cor", "rem", "ex", "conj",
       "prf", "sim", "eq", "fig", "tbl", "sec", "chap", "app", "bib",
@@ -168,18 +168,18 @@ describe("label prefixes", () => {
     }
   });
 
-  test("DAK prefixes are unique among themselves", () => {
+  test("dakPrefixesUnique", () => {
     const v = Object.values(DAK_LABEL_PREFIXES);
     expect(new Set(v).size).toBe(v.length);
   });
 
-  test("core's two built-in prefix lists stay in sync", () => {
+  test("corePrefixListsInSync", () => {
     // KNOWN_LABEL_PREFIXES (validation) and KIND_PREFIXES (JSON-LD @id
     // minting) list the BUILT-IN prefixes; DAK's left both in bean 1335.
     expect(() => assertPrefixesInSync(KNOWN_LABEL_PREFIXES)).not.toThrow();
   });
 
-  test("every DAK prefix reaches core through the contribution, and none is built in", () => {
+  test("dakPrefixesOnlyContributed", () => {
     const contributed = registry.contributedLabelPrefixes();
     for (const k of DAK_BLOCK_KINDS) {
       expect(contributed).toContain(DAK_LABEL_PREFIXES[k]);
@@ -189,7 +189,7 @@ describe("label prefixes", () => {
 });
 
 describe("JSON-LD typing", () => {
-  test("every DAK kind has a folio type, which core reads from the contribution", () => {
+  test("dakKindsTypedThroughContribution", () => {
     for (const k of DAK_BLOCK_KINDS) {
       expect(DAK_KIND_TO_FOLIO_TYPE[k]).toBeTruthy();
       expect(typesForKind(k, registry).length).toBeGreaterThan(0);
@@ -198,19 +198,19 @@ describe("JSON-LD typing", () => {
     }
   });
 
-  test("a value-set block is typed folio:, not fhir:", () => {
+  test("valueSetTypedNotFhir", () => {
     // The block is the authored manifest; the FHIR ValueSet is what its .fsh
     // compiles to. Typing the manifest as a FHIR resource would invite a
     // consumer to read FHIR fields off it.
     expect(typesForKind("value-set", registry)).toEqual(["smart-base:ValueSet"]);
   });
 
-  test("DoCO co-typing stays sparing", () => {
+  test("docoCoTypingSparing", () => {
     expect(typesForKind("decision-table", registry)).toEqual(["smart-base:DecisionTable", "doco:Table"]);
     expect(typesForKind("persona", registry)).toEqual(["smart-base:Persona"]);
   });
 
-  test("paper typing is unchanged, with or without the registry", () => {
+  test("paperTypingUnchanged", () => {
     expect(typesForKind("theorem")).toEqual(["folio-assistant-sci:Theorem", "doco:Section"]);
     expect(typesForKind("theorem", registry)).toEqual(["folio-assistant-sci:Theorem", "doco:Section"]);
   });
@@ -234,39 +234,39 @@ export default decisionTable({ label: "dt:anc-danger-signs" });\n`,
     );
   });
 
-  test("a DAK manifest is discovered under its KIND, not its builder name", () => {
+  test("discoversDakManifestByKind", () => {
     const m = readBlockManifest(join(DIR, "ch01", "dt-anc-danger-signs.ts"), builders);
     expect(m).toEqual({ kind: "decision-table", label: "dt:anc-danger-signs" });
   });
 
-  test("a multi-word L3 kind too", () => {
+  test("discoversMultiWordL3Kind", () => {
     const m = readBlockManifest(join(DIR, "ch01", "vs-danger-signs.ts"), builders);
     expect(m?.kind).toBe("value-set");
   });
 
-  test("without the contribution, core does not discover a DAK manifest", () => {
+  test("noDiscoveryWithoutContribution", () => {
     expect(readBlockManifest(join(DIR, "ch01", "dt-anc-danger-signs.ts"))).toBeUndefined();
   });
 
-  test("paper manifests are unaffected, with or without the contribution", () => {
+  test("paperManifestsUnaffected", () => {
     const m = readBlockManifest(join(DIR, "ch01", "thm-main.ts"));
     expect(m).toEqual({ kind: "theorem", label: "thm:main" });
     expect(readBlockManifest(join(DIR, "ch01", "thm-main.ts"), builders)).toEqual(m);
   });
 
-  test("a discovered DAK kind resolves to the dak adapter, through the registry", () => {
+  test("discoveredKindResolvesToDakAdapter", () => {
     const m = readBlockManifest(join(DIR, "ch01", "dt-anc-danger-signs.ts"), builders)!;
     expect(adapterForKind(m.kind)).toBeUndefined();
     expect(composedKindOwner(m.kind, registry, adapterForKind)).toBe("dak");
   });
 
-  test("every DAK kind is owned by the dak adapter once registered", () => {
+  test("everyDakKindOwnedByDakAdapter", () => {
     for (const k of DAK_BLOCK_KINDS) expect(composedKindOwner(k, registry, adapterForKind)).toBe("dak");
   });
 });
 
 describe("the union stays partitioned", () => {
-  test("a DakBlock kind is never a paper BLOCK_KINDS member", () => {
+  test("dakBlockKindNotPaperKind", () => {
     const b: DakBlock = decisionTable({ label: "dt:x" });
     expect(BLOCK_KINDS as readonly string[]).not.toContain(b.kind);
   });
@@ -277,19 +277,19 @@ describe("WHO DAK component coverage", () => {
   // why older material — sgex's agent instructions among it — says "the 8 core
   // DAK components". Anything counting against an older source is off by one,
   // so the list is pinned here rather than recited from memory at each use.
-  test("there are nine components, ending with the one added later", () => {
+  test("componentCountEndsWithTestScenarios", () => {
     expect(DAK_COMPONENTS.length).toBe(10);
     expect(DAK_COMPONENTS[0]).toBe("health-interventions-and-recommendations");
     expect(DAK_COMPONENTS[9]).toBe("test-scenarios");
   });
 
-  test("every component is described", () => {
+  test("everyComponentDescribed", () => {
     for (const c of DAK_COMPONENTS) {
       expect(DAK_COMPONENT_DESCRIPTIONS[c]?.length ?? 0).toBeGreaterThan(20);
     }
   });
 
-  test("every DAK kind belongs to exactly one component", () => {
+  test("everyKindInExactlyOneComponent", () => {
     const seen = new Map<string, string[]>();
     for (const c of DAK_COMPONENTS) {
       for (const k of DAK_COMPONENT_KINDS[c]) {
@@ -302,18 +302,18 @@ describe("WHO DAK component coverage", () => {
     expect(doubled).toEqual([]);
   });
 
-  test("every component now names at least one kind", () => {
+  test("everyComponentNamesAKind", () => {
     const bare = DAK_COMPONENTS.filter((c) => DAK_COMPONENT_KINDS[c].length === 0);
     expect(bare).toEqual([]);
   });
 
-  test("no component is left without an L2 kind", () => {
+  test("noComponentWithoutL2Kind", () => {
     // Was ["health-interventions-and-recommendations", "test-scenarios"] until
     // both kinds landed. L2 is what a DAK *is*, so this closing is the point.
     expect(dakComponentsWithoutL2()).toEqual([]);
   });
 
-  test("test-scenarios is represented at both layers, and they are distinct", () => {
+  test("testScenariosAtBothLayers", () => {
     // The L2 scenario is the narrative a reviewer signs off; the L3 test-case
     // is a FHIR conformance artefact. Collapsing them would lose the review.
     expect(DAK_COMPONENT_KINDS["test-scenarios"]).toEqual(["test-scenario", "test-case"]);
@@ -321,7 +321,7 @@ describe("WHO DAK component coverage", () => {
     expect(layerForKind("test-case")).toBe("L3");
   });
 
-  test("the requirements component is one component and two kinds", () => {
+  test("requirementsComponentHasTwoKinds", () => {
     // Its WHO name is a conjunction; splitting the kinds is deliberate.
     expect(DAK_COMPONENT_KINDS["functional-and-non-functional-requirements"]).toEqual([
       "functional-requirement",
@@ -341,14 +341,14 @@ describe("the component list against WHO's own logical model", () => {
   );
   const available = existsSync(DAK_FSH);
 
-  test("smart-base availability is reported, not assumed", () => {
+  test("reportsDakFshAvailability", () => {
     if (!available) {
       console.warn(`  n/a: no DAK.fsh at ${DAK_FSH} — component fields unverified`);
     }
     expect(typeof available).toBe("boolean");
   });
 
-  test.skipIf(!available)("every component field exists in WHO's DAK.fsh", () => {
+  test.skipIf(!available)("componentFieldsExistInDakFsh", () => {
     const fsh = readFileSync(DAK_FSH, "utf-8");
     // Component lines look like: `* healthInterventions 0..* HealthInterventionsSource "…"`
     const declared = new Set(
@@ -362,14 +362,14 @@ describe("the component list against WHO's own logical model", () => {
     }
   });
 
-  test.skipIf(!available)("WHO declares no component this repo has not listed", () => {
+  test.skipIf(!available)("noUnlistedWhoComponent", () => {
     const fsh = readFileSync(DAK_FSH, "utf-8");
     const declared = [...fsh.matchAll(/^\* (\w+) 0\.\.\* \w+Source\b/gm)].map((m) => m[1]!);
     const known = new Set(Object.values(DAK_COMPONENT_FIELDS));
     expect(declared.filter((d) => !known.has(d))).toEqual([]);
   });
 
-  test.skipIf(!available)("every component's Source is the url / canonical / instance wrapper", () => {
+  test.skipIf(!available)("componentSourcesAreWrappers", () => {
     // DakComponentSourceSchema in ./dak claims this shape; checked here, not trusted.
     const sources = join(DAK_FSH, "..", "DAKComponentSources.fsh");
     expect(existsSync(sources)).toBe(true);
@@ -384,7 +384,7 @@ describe("the component list against WHO's own logical model", () => {
     }
   });
 
-  test.skipIf(!available)("scheduling logic is not YET a field of WHO's model", () => {
+  test.skipIf(!available)("schedulingLogicNotYetWhoField", () => {
     // WHO's model and the starter kit's table keep it inside decision support.
     // The owner counts it as its own component (2026-09-30), so it is listed and
     // marked unformalized; when DAK.fsh gains the field, this test fails and
@@ -394,19 +394,19 @@ describe("the component list against WHO's own logical model", () => {
 });
 
 describe("scheduling logic is its own component, and says it is unformalized", () => {
-  test("it owns the scheduling-logic kind, and decision support no longer does", () => {
+  test("schedulingLogicOwnsItsKind", () => {
     expect(DAK_COMPONENT_KINDS["scheduling-logic"]).toEqual(["scheduling-logic"]);
     expect(DAK_COMPONENT_KINDS["decision-support-logic"]).not.toContain("scheduling-logic");
   });
 
-  test("it is the one component named unformalized, and it sits seventh", () => {
+  test("schedulingLogicUnformalizedSeventh", () => {
     expect(DAK_UNFORMALIZED_COMPONENTS).toEqual(["scheduling-logic"]);
     expect(DAK_COMPONENTS.indexOf("scheduling-logic")).toBe(6);
   });
 });
 
 describe("the two kinds added from WHO's own logical models", () => {
-  test("a health intervention requires at least one reference", () => {
+  test("healthInterventionNeedsReference", () => {
     // HealthInterventions.fsh makes `reference` 1..*: an intervention with no
     // source recommendation is not one. Caught at construction, not at review.
     expect(() =>
@@ -414,7 +414,7 @@ describe("the two kinds added from WHO's own logical models", () => {
     ).toThrow();
   });
 
-  test("references carry Dublin Core, not bare strings", () => {
+  test("referencesCarryDublinCore", () => {
     const b = healthIntervention({
       label: "hi:dtp-booster",
       title: "DTP booster",
@@ -430,7 +430,7 @@ describe("the two kinds added from WHO's own logical models", () => {
     expect(b.references[0]!.source).toContain("iris.who.int");
   });
 
-  test("a Dublin Core reference must at least be nameable", () => {
+  test("dublinCoreReferenceNeedsTitle", () => {
     expect(() =>
       healthIntervention({
         label: "hi:x",
@@ -440,7 +440,7 @@ describe("the two kinds added from WHO's own logical models", () => {
     ).toThrow();
   });
 
-  test("both new kinds are L2 and carry their label prefix", () => {
+  test("newKindsAreL2WithPrefixes", () => {
     expect(layerForKind("health-intervention")).toBe("L2");
     expect(DAK_LABEL_PREFIXES["health-intervention"]).toBe("hi");
     expect(DAK_LABEL_PREFIXES["test-scenario"]).toBe("tscen");
@@ -448,7 +448,7 @@ describe("the two kinds added from WHO's own logical models", () => {
     expect(testScenario({ label: "tscen:immz-full-course", title: "Full course" }).layer).toBe("L2");
   });
 
-  test("each new kind maps to the WHO logical model it came from", () => {
+  test("newKindsMapToWhoModels", () => {
     expect(DAK_KIND_TO_WHO_MODEL["health-intervention"]).toBe(
       "http://smart.who.int/base/StructureDefinition/HealthInterventions",
     );
@@ -457,7 +457,7 @@ describe("the two kinds added from WHO's own logical models", () => {
     );
   });
 
-  test("no WHO model IRI is invented for a kind WHO does not model", () => {
+  test("noInventedWhoModelIri", () => {
     // scheduling-logic is folded into decision support in WHO's model, and the
     // L3 kinds are FHIR artefacts rather than DAK component models. A
     // fabricated IRI would be indistinguishable from a real one downstream.
@@ -471,7 +471,7 @@ describe("the two kinds added from WHO's own logical models", () => {
 
 // Moved from cat-harness/scripts/tests/adapter-scoping.test.ts (bean 1335).
 describe("DAK vocabulary tracks the repo's own L2/L3 schemas", () => {
-  test("carries the L2 DAK components", () => {
+  test("carriesL2Kinds", () => {
     for (const k of [
       "persona",
       "user-scenario",
@@ -487,7 +487,7 @@ describe("DAK vocabulary tracks the repo's own L2/L3 schemas", () => {
     }
   });
 
-  test("carries the L3 FHIR artefact types", () => {
+  test("carriesL3Kinds", () => {
     for (const k of [
       "logical-model",
       "profile",
@@ -504,7 +504,7 @@ describe("DAK vocabulary tracks the repo's own L2/L3 schemas", () => {
     }
   });
 
-  test("DAK kinds stay out of the paper union", () => {
+  test("dakKindsOutOfPaperUnion", () => {
     // They now have builders and Zod schemas (smart-base/schemas/dak-blocks.ts) and their
     // own exhaustiveness proof against DakBlock — but they must never enter
     // BLOCK_KINDS, whose proof is against the paper `Block` union and whose
@@ -517,7 +517,7 @@ describe("DAK vocabulary tracks the repo's own L2/L3 schemas", () => {
 
 // Moved from cat-harness/scripts/tests/content-profiles.test.ts (bean 1335).
 describe("profiles do not reach a DAK kind", () => {
-  test("a DAK kind is in no profile — a different adapter, not a narrower paper", () => {
+  test("dakKindInNoProfile", () => {
     for (const k of DAK_BLOCK_KINDS) {
       for (const p of CONTENT_PROFILES) expect(profileAcceptsKind(p, k)).toBe(false);
     }
@@ -527,11 +527,11 @@ describe("profiles do not reach a DAK kind", () => {
 describe("DAK kinds reach a folio only through its dependency tree (bean riit, step 3)", () => {
   // Owner, 2026-10-04: a folio sees the nodes of the instances it depends on
   // (option 1 of 3). folio-assistant-core's tree does not include smart-base.
-  test("a folio whose tree includes smart-base registers every DAK kind", () => {
+  test("smartBaseTreeRegistersDakKinds", () => {
     expect(registry.contributedKinds().filter((k) => k.adapter === "dak").length).toBe(DAK_BLOCK_KINDS.length);
   });
 
-  test("a folio whose tree does not include smart-base registers none", () => {
+  test("otherTreeRegistersNoDakKinds", () => {
     const other = loadContributionsSync(resolve(import.meta.dir, "..", "..", "folio-assistant-core"), new ContributionRegistry());
     expect(other.contributedKinds().filter((k) => k.adapter === "dak")).toEqual([]);
   });

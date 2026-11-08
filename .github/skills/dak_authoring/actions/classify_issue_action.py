@@ -126,10 +126,29 @@ def classify_by_keywords(title: str, body: str) -> list:
     return labels
 
 
+ALLOWED_LABELS = frozenset({
+    "content:L1",
+    "content:L2",
+    "content:L3",
+    "content:translation",
+})
+
+
+def validate_labels(labels: list) -> list:
+    """Refuse any label outside the fixed allowlist (scz-refuse-never-repair)."""
+    if not isinstance(labels, list):
+        raise ValueError(f"Expected list of labels, got {type(labels).__name__}")
+    invalid = [lbl for lbl in labels if not isinstance(lbl, str) or lbl not in ALLOWED_LABELS]
+    if invalid:
+        raise ValueError(f"Refused disallowed issue labels: {invalid}")
+    return labels
+
+
 def apply_labels(issue_number: int, labels: list) -> None:
     """Apply labels to issue via GitHub REST API using GITHUB_TOKEN."""
     import requests
 
+    validate_labels(labels)
     token = os.environ["GITHUB_TOKEN"]
     repo = os.environ["GITHUB_REPOSITORY"]
     if not labels:
@@ -148,7 +167,7 @@ def apply_labels(issue_number: int, labels: list) -> None:
 
 
 def main() -> None:
-    from common.prompt_loader import load_prompt
+    from common.prompt_loader import fence_untrusted, load_prompt
     from common.llm_utils import dak_completion
 
     issue_number = int(os.environ["ISSUE_NUMBER"])
@@ -157,17 +176,18 @@ def main() -> None:
     api_key = os.environ.get("DAK_LLM_API_KEY", "")
 
     if api_key:
-        # LLM path
+        # LLM path — fence untrusted issue fields before prompt interpolation
         prompt = load_prompt(
             "dak_authoring", "classify_issue",
-            issue_title=title, issue_body=body[:4000],
+            issue_title=fence_untrusted(title, f"issue #{issue_number} title", max_len=500),
+            issue_body=fence_untrusted(body, f"issue #{issue_number} body", max_len=4000),
         )
         result = dak_completion(
             prompt, structured_output=True,
             api_key=api_key,
             model=os.environ.get("DAK_LLM_MODEL", "gpt-4o-mini"),
         )
-        labels = result.get("labels", [])
+        labels = validate_labels(result.get("labels", []))
         print(f"LLM classification: {result.get('reasoning')}")
     else:
         # Keyword fallback — no LLM cost

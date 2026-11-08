@@ -18,6 +18,9 @@ lock=index.lock.json
 [ -f "$lock" ] || { echo "mount-platform: no $lock" >&2; exit 0; }
 ref=$(python3 -c "import json;print(next(m['ref'] for m in json.load(open('$lock'))['mounts'] if m['harness']=='cat-harness-tools'))") \
   || { echo "mount-platform: $lock pins no cat-harness-tools" >&2; exit 0; }
+# The ref names a directory that is removed below, so refuse anything that is
+# not a full commit SHA rather than build a path from it.
+[[ "$ref" =~ ^[0-9a-f]{40}$ ]] || { echo "mount-platform: cat-harness-tools ref in $lock is not a 40-hex commit SHA; refusing" >&2; exit 0; }
 M="${TMPDIR:-/tmp}/smart-base-mounter-$ref"
 if [ ! -f "$M/scripts/mount-from-lock.ts" ]; then
   rm -rf "$M" && git init -q "$M" \

@@ -104,3 +104,9 @@ package.json
 # instance. Never committed; the site is built from them.
 output-ast/
 smart-base/docs/_data/
+
+# The QA working copy (smart-base/smart-base.json `qa`, storage `cat/cat-harness/qa-reports`).
+# Derived verdicts live on the qa-reports store branch, keyed by commit; a
+# local run writes them here and nothing commits them (bean folio-assistant-7mwa;
+# as cat-harness#857 and folio-assistant-core#482 did).
+/smart-base/test/results/

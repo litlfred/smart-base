@@ -20,15 +20,15 @@ output: schemas/skills/l3-dependency-choice/output.schema.json
 > Adjudicated by the FHIR modeller and the terminologist.
 
 The L3 half of [`l2-dependency-choice`](l2-dependency-choice.md): the same
-decision row, the same reuse-first precedence, the same `decision-comparison`
-table and `DecisionRequest`. Only the candidates and the evidence differ.
+decision row, reuse-first precedence, `decision-comparison` table and
+`DecisionRequest`, with IGs as candidates and an IG index as evidence.
 
 ## Input and output
 
 The contract is [`input.schema.json`](../../../schemas/skills/l3-dependency-choice/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l3-dependency-choice/output.schema.json).
 
 - **In:** the `l1Kg` (stage 2), the `l2Assets` (every stage-4 [`l2-dak-authoring`](l2-dak-authoring.md) pass's `artifacts`), stage 3's `l2Dependencies`, and any candidate IGs already known.
-- **Out:** `l3Dependencies` (`level: L3`), rows of the same `dependencyRow` whose `components` name canonicals, and `indexes`, the [`ig-artifact-ingestion`](ig-artifact-ingestion.md) index each row was read from, with its `dakApi` state. Stage 6 (fhir-harness `l3-fhir-authoring`) reads the adjudicated rows as `sushi-config.yaml` dependencies.
+- **Out:** `l3Dependencies` (`level: L3`), rows of the same `dependencyRow` whose `components` name canonicals, and `indexes`, the [`ig-artifact-ingestion`](ig-artifact-ingestion.md) index each row was read from, with its `sidecarApi` state. Stage 6 (fhir-harness `l3-fhir-authoring`) reads the adjudicated rows as `sushi-config.yaml` dependencies.
 
 ## Steps
 
@@ -36,7 +36,7 @@ The contract is [`input.schema.json`](../../../schemas/skills/l3-dependency-choi
    chose to `reuse`, `adapt` or `extend`.
 2. **Index each one** with [`ig-artifact-ingestion`](ig-artifact-ingestion.md).
    The index is the evidence; an IG whose root was never read has
-   `dakApi: unknown`, which is not `absent`.
+   `sidecarApi: unknown`, which is not `absent`.
 3. **Match.** For each L2 asset and L1 node, find the profile, value set,
    CQL library or PlanDefinition in the index that already implements it.
    The matches are the row's `evidence`; what is taken is its `components`

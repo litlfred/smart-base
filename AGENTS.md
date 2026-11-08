@@ -5,8 +5,8 @@ ways. Most mistakes here come from treating one as the other.
 
 | | what | published by | previewed at |
 |---|---|---|---|
-| `input/`, `sushi-config.yaml` | the WHO SMART Base **FHIR IG** | the gh-pages ROOT: an agent, by the IG route every smart-* IG uses (`bun run cat-harness-tools/scripts/stage-local.ts --repo .`, from the cached AST; `index.config.json` `site`). The IG Publisher (`ghbuild.yml`) only previews, and never deploys over a folio root | `STAGING/<branch>/` (stage-local); Publisher output at `gh-pages/branches/<branch>/` (`/deploy`) |
-| `smart-base/` | the smart-base **harness instance**: skills, processes (BPMN), library, KG | folio-assistant's just-the-docs site, which **mounts** this directory | folio-assistant `STAGING/<slug>/` (`feature-staging`) |
+| `input/`, `sushi-config.yaml` | the WHO SMART Base **FHIR IG** | the gh-pages ROOT: an agent, by the IG route every smart-* IG uses (`bun run cat-harness-tools/scripts/stage-local.ts --repo .`, from the cached AST; `index.config.json` `site`). The IG Publisher (`ghbuild.yml`) only previews, and never deploys over a folio root | `branches/<branch>/` (stage-local); Publisher output at `gh-pages/branches/<branch>/` (`/deploy`) |
+| `smart-base/` | the smart-base **harness instance**: skills, processes (BPMN), library, KG | folio-assistant's just-the-docs site, which **mounts** this directory | folio-assistant `branches/<slug>/` (`feature-staging`) |
 
 ## The platform is mounted, not absent
 
@@ -31,12 +31,12 @@ mount it at a pinned commit.
    folio-assistant pull request that re-pins the `smart-base` mount to the
    branch's commit, recorded by `bun run cat mount:remote --staging` (basis
    `staging`, no consent needed). `feature-staging.yml` then publishes
-   `STAGING/<slug>/` and comments the links. `/deploy` builds the IG, which
+   `branches/<slug>/` and comments the links. `/deploy` builds the IG, which
    does not contain this content.
 2. **Processes live under `smart-base/processes/`**: the `.bpmn`, its
-   documentation, and its picture beside it
-   (`NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`,
-   which draws with the mounted bootstrap-tools). Do not copy a process
+   documentation, and its picture beside it (`bun run cat render:bpmn`,
+   cat-harness-tools' renderer, which draws every layer's diagrams beside
+   their source with the mounted bootstrap-tools). Do not copy a process
    or its picture into `input/`; the just-the-docs site draws every mounted
    process itself.
 3. **Reuse before adding.** A skill, schema, process or role the platform
@@ -47,7 +47,11 @@ mount it at a pinned commit.
    cache from npm and fhir-package-mirror at exact versions only. Never report
    "SUSHI cannot run here" before running the seeder, and never stand in
    another version for a pin; its `--missing-out` list is what the mirror
-   still needs.
+   still needs. WHO's own packages (`smart.who.int.*`, such as
+   `smart.who.int.base#1.0.0`) are on neither npm nor the mirror: WHO
+   publishes them in its site repository, so pass
+   `--site-repo smart.who.int.=WorldHealthOrganization/smart-html`, which
+   reads `<name>/<version>/package.tgz` there (for example `base/1.0.0/`).
 5. **This IG does not commit its artefact index.** `smart-base/fhir-artifact-index/`
    (`index.json`, `menu.json`, `releases.json`, `package.tgz`, `sidecars/`) is written at
    publish by fhir-harness's `ig-index:build` from the IG's AST and its

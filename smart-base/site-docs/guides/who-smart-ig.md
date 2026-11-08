@@ -52,6 +52,10 @@ locally you need:
 
 Run `bun run cat check-deps` and the agent's `check_dependencies` tool to confirm.
 
+These are the tools of the plain IG Publisher build. To render an IG
+**through the harness**, which builds the site from the Publisher's AST and
+pins its versions, see [Building and publishing the SMART Base IG](smart-base-build.html).
+
 ## The L3 pipeline
 {: #the-l3-pipeline data-fa-label="sec:guides-who-smart-ig-the-l3-pipeline" }
 
@@ -62,7 +66,7 @@ Run `bun run cat check-deps` and the agent's `check_dependencies` tool to confir
        alt="BPMN swimlane diagram: the FHIR modeller maps L2 to L3 and authors FSH, the build pipeline compiles with SUSHI and validates against profiles, a failed validation returns to FSH authoring, the QC reviewer's gates file findings as beans when they fail, and a clean run goes through the IG Publisher to a published IG site.">
 </div>
 
-[BPMN 2.0 source](https://github.com/litlfred/folio-assistant/blob/main/processes/l3-fhir-pipeline.bpmn) · [full-size SVG]({{ '/assets/img/workflows/l3-fhir-pipeline.svg' | relative_url }})
+[BPMN 2.0 source](https://github.com/litlfred/fhir-harness/blob/main/processes/content/l3-fhir-pipeline.bpmn) · [full-size SVG]({{ '/assets/img/workflows/l3-fhir-pipeline.svg' | relative_url }})
 {: .bpmn-source }
 
 | Step | Skill |
@@ -96,29 +100,27 @@ Run `bun run cat check-deps` and the agent's `check_dependencies` tool to confir
        alt="BPMN swimlane diagram: a source change restores the derived state; if the cache is usable the build computes the change's dependency cone, posts the cone report for the reviewer, checks out and compiles only the cone, validates it against the warm validator service, re-renders the cone's records, merges them with the restored ones, rebuilds the meta-index and assembles the site; a cache miss or a moved toolchain falls back to a full publisher build; QC gates run on the aggregate QA and file findings as beans; a PR branch deploys a preview and never seeds, while main or a release deploys the site and seeds the cache from the green build.">
 </div>
 
-[BPMN 2.0 source](https://github.com/litlfred/folio-assistant/blob/main/processes/ig-incremental-build.bpmn) · [full-size SVG]({{ '/assets/img/workflows/ig-incremental-build.svg' | relative_url }})
+[BPMN 2.0 source](https://github.com/litlfred/fhir-harness/blob/main/processes/content/ig-incremental-build.bpmn) · [full-size SVG]({{ '/assets/img/workflows/ig-incremental-build.svg' | relative_url }})
 {: .bpmn-source }
 
-Every trigger in a DAK repository — a push to a PR branch, `/validate`, `/deploy`, a
-push to `main`, a release — runs the same full IG Publisher build, and a one-line edit to
-one profile costs all of it. [Proposal: incremental IG build]({{ '/proposals/ig-incremental-build.html' | relative_url }})
-measures why that is avoidable: on the immunizations IG the median artefact has no
-dependents and the 90th percentile has six, so almost every edit invalidates a handful
-of resources and the index. [Its overview]({{ '/proposals/ig-incremental-build-overview.html' | relative_url }})
-lists the eleven changes and pins each to the stage of the review and publish pipeline
-where it runs.
+On the immunizations IG the median artefact has no dependents and the 90th
+percentile has six, so almost every edit invalidates a handful of resources and
+the index. The build therefore rebuilds only the change's dependency cone where
+it can.
 
-The process above is the L3 pipeline's build lane once the derived artefacts are cached
-by dependency cone. Restore first; compute the change's cone with
-`bun run content/pipeline/fsh-cone.ts <ig-root> --changed <files>`; compile and
-validate only the cone against the warm validator; re-render the cone's records;
-rebuild the meta-index; assemble the site. A cache miss or a moved toolchain falls back
-to today's full build, and only a green build of `main` or a release seeds the cache.
+The process above is the L3 pipeline's build lane with the derived artefacts
+cached by dependency cone. Restore the cache; compute the change's cone with
+`bun run fhir-harness/scripts/fsh-cone.ts <ig-root> --changed <files>`; compile
+and validate only the cone against the warm validator; re-render the cone's
+records; rebuild the meta-index; assemble the site. A cache miss or a moved
+toolchain falls back to a full build, and only a green build of `main` or a
+release seeds the cache. A release is always cut from a full build. The rules
+are fhir-harness's `ig-build-pipeline` skill.
 
 | Step | Implemented by |
 |------|----------------|
-| Restore and seed the derived state | `ig-cache.sh` (proposed; the `lake-cache.sh` contract) |
-| Compute the cone of the change | [`content/pipeline/fsh-cone.ts`](https://github.com/litlfred/folio-assistant/blob/main/content/pipeline/fsh-cone.ts) |
+| Restore and seed the derived state | `fhir-harness/scripts/ig-cache.sh` (`restore`, `verify`, `seed`) |
+| Compute the cone of the change | `fhir-harness/scripts/fsh-cone.ts` |
 | Validate the cone | [`fhir-validation`]({{ site.baseurl }}/reference/skills/fhir-validation.html) over the warm validator service (proposed MCP tools) |
 | Rebuild the meta-index, assemble the site | `ig_metaindex_rebuild` (proposed), [`ig-publication`]({{ site.baseurl }}/reference/skills/ig-publication.html) |
 | QC gates, deploy | [`quality-control`]({{ site.baseurl }}/reference/skills/quality-control.html), [`content-publish`]({{ site.baseurl }}/reference/skills/content-publish.html) |
@@ -148,3 +150,4 @@ to today's full build, and only a green build of `main` or a release seeds the c
 
 - [Content types — WHO SMART IGs]({{ '/smart-base/concepts/who-smart-content-types.html#who-smart-implementation-guides-l3' | relative_url }})
 - [Authoring a WHO SMART DAK (L2)](who-smart-dak.html) — the upstream L2 layer
+- [Building and publishing the SMART Base IG](smart-base-build.html) — the command-line render, the publishing pipeline and what is published

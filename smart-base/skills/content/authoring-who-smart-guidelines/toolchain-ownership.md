@@ -1,127 +1,84 @@
 ---
 name: toolchain-ownership
 description: >
-  Taking ownership of the WHO smart-base scripts in a litlfred fork, rewriting
-  them to the Skill I/O contract, and the one gate that governs when a script
-  may actually move. Read before touching, copying or rewriting any upstream
+  Taking ownership of the WHO smart-base scripts in litlfred, rewriting them
+  to the Skill I/O contract, and the one gate that governs when a script may
+  actually move. Read before touching, copying or rewriting any upstream
   smart-base script.
 ---
 
 # toolchain-ownership
 
-> Skill id: `toolchain-ownership` · Package: `authoring-who-smart-guidelines` ·
-> Beans `uhkv`, `wm63`
+> Skill id: `toolchain-ownership` · Package: `authoring-who-smart-guidelines`
 
-How the WHO SMART toolchain stops living in an IG and starts living in the
-harness — without becoming a fork nobody can merge back.
+How the WHO SMART toolchain moves out of an IG and into the harness without
+becoming a fork nobody can merge back. The goal is a
+`WorldHealthOrganization/smart-base` that is a conventional IG with no
+tooling.
 
-## The owner's instruction, verbatim
-
-2026-09-22:
-
-> take ownership of the scrips in litlfred/smart-base, rewrite as needed to fit
-> better, adhere to Skill i/o requirements, fit in tools, etc. only move scripts
-> when a proper tool /skill in pprocess
-
-and the goal it serves:
-
-> want to slowly get smart-base back to a more conventional IG state w/p tooling
-
-## The gate, and it is the whole skill
+## The gate
 
 > **A script moves only when a Tool node, a skill and a process step that binds
 > them all exist for it.**
 
-Three artefacts, all three, before a single line of Python relocates. Not two.
-The Tool node says what it consumes and produces; the skill says how and when a
-person or agent performs it; the process step is what actually *hands it out*.
+All three, before any Python relocates. The Tool node says what it consumes
+and produces; the skill says how and when a person or agent performs it; the
+process step is what hands it out. A Tool with no process step is
+unreachable: a script moved into that state leaves a place where a workflow
+runs it every build and arrives where nothing runs it.
 
-**Why all three, rather than the Tool node alone.** A Tool with no process step
-is unreachable — bean `y1w9` measured 113 skills bound to no role or process,
-so nothing hands them to an agent. Moving a script into that state does not
-migrate it; it hides it. The script would leave a place where a workflow runs
-it every build and arrive somewhere nothing runs it at all, and both repositories
-would look healthy.
+The gate does not limit declaring. Declaring runs ahead: `smart-base/tools/`
+carries Tool nodes for scripts that still execute upstream, which is the
+intended state for now — **declare here, execute upstream, until the
+execution moves too.**
 
-**What the gate is NOT.** It is not a bar on declaring. Declaring is free and
-should run ahead — `smart-base/tools/` already carries nine Tool nodes for
-scripts that still execute upstream, and that is the intended steady state for
-now: **declare here, execute upstream, until the execution moves too.**
+## Declaring is not vendoring
 
-## Declaring is not vendoring, and the older rule stands
+[`smart-base-tools`](smart-base-tools.md)'s rule *load it; never vendor it*
+stands: a copy of the Python would be a second, drifting toolchain. A Tool node
+is a declaration and duplicates no implementation.
 
-[`smart-base-tools`](smart-base-tools.md) says *load it; never vendor it* — a
-copy of the Python would be a second, drifting toolchain. **That rule is about
-copies of the code and nothing here weakens it.** A Tool node is a declaration;
-it duplicates no implementation.
-
-The migration this skill governs is the one case where code does eventually
-move, and the difference from vendoring is the difference between a **cutover**
-and a **copy**: after a move, exactly one repository runs that script. If both
-do, the move has not happened and a fork has.
+When code does move, it is a **cutover**, not a copy: afterwards exactly one
+repository runs that script. If both do, a fork has happened, not a move.
 
 ## Where ownership lives
 
-**`litlfred/folio-assistant`, in its `smart-base/` directory.** The owner,
-2026-09-22: *"make litlfred/folio-assitant/smart-base"*.
+**The `smart-base/` harness instance in `litlfred/smart-base`**, whose
+`smart-base/tools/` holds the Tool nodes. It is not a separate fork of the WHO
+IG.
 
-> **This corrects what this skill said one commit earlier.** It read
-> `litlfred/smart-base`, a separate fork, and recorded that no such repository
-> existed. The owner's answer was not "create it" — it was that the ownership
-> home is the `smart-base/` instance **already staged in this repository**.
->
-> Written down rather than quietly fixed, because the wrong reading is the
-> natural one: the earlier instruction said *"take ownership of the scrips in
-> litlfred/smart-base"*, and a fork is what that sounds like. An agent that
-> re-derives the fork reading will recreate the error.
-
-That puts the toolchain on the same path as every other `smart-*` asset here —
-the IRIS catalogue, the WHO SMART Trust and Immunizations IGs, `smart-base` — under the
-owner's standing ruling: *"want KG assets here, can break apart later."*
-
-**What already exists there:** `smart-base/tools/`, holding the Tool nodes.
-That is the destination, and it is why the nodes were written before any script
-moved.
-
-**Nothing at `WorldHealthOrganization/*` changes.** This is pre-work in
-`litlfred/*`, which is also why `dak.json` → `index.config.json`
-(`contentTypes.dak`) is ours alone until upstream follows.
+**Nothing at `WorldHealthOrganization/*` changes.** This is work in
+`litlfred/*`, which is also why the DAK declaration in `index.config.json`
+(`contentTypes.dak`) is ours until upstream adopts it.
 `WorldHealthOrganization/smart-base` is read-only from here and stays the
-executing home until the gate above is satisfied per script.
+executing home until the gate is satisfied per script.
 
-**One consequence worth stating.** Because the ownership home is a directory in
-this repository rather than a fork of the IG, a moved script arrives somewhere
-that is **not a FHIR IG** — it cannot be run by `ghbuild.yml`, and there is no
-`input/scripts/` for it to sit in. So a move is not a copy plus a delete: it is
-a rewrite to this repository's own invocation surface, which is the same work
-the Skill I/O requirements below describe. That is a feature of the destination,
-not an obstacle to it.
+A moved script arrives in a directory that is **not a FHIR IG**: `ghbuild.yml`
+cannot run it and there is no `input/scripts/` for it. So a move is a rewrite
+to the harness's own invocation surface, which is the Skill I/O work below.
 
-## What "adhere to Skill I/O requirements" means concretely
+## What "adhere to Skill I/O requirements" means
 
 A rewritten script must be describable by its Tool node without hedging:
 
 - **Declared inputs and outputs**, each with a type from the shared vocabulary
   — not "it reads the repository and writes some files".
 - **A determined empty is distinguishable from a failure.** The upstream
-  scripts mostly get this right already: they report `files_expected` against
-  `files_missing`, which is what makes "this DAK has no DMN" different from
-  "the DMN directory was not found". Do not lose it in a rewrite.
+  scripts report `files_expected` against `files_missing`, which separates
+  "this DAK has no DMN" from "the DMN directory was not found". Keep it.
 - **Exit status means something.** Several upstream steps warn and continue
   when their script is absent, so a missing capability reads as a clean run.
-  That is the `ci-health` rule — *could not check is never green* — and it is
-  the single most common thing to fix while rewriting.
+  The `ci-health` rule — *could not check is never green* — is the most
+  common thing to fix while rewriting.
 - **No hidden fetch.** Upstream scripts `curl` themselves from smart-base
-  `main` at build time, so a downstream build changes without its repository
-  changing. A rewritten script does not fetch itself.
+  `main` at build time. A rewritten script does not fetch itself.
 
 ## Rewrite in this order
 
-1. **Declare** the Tool node against the script as it is today. Declaring an
-   aspiration produces a node that describes nothing.
-2. **Write the skill**, and only then discover whether the capability is one
-   thing or two — `update_sushi_config.py` is four jobs in one script, and a
-   skill written honestly is where that becomes obvious.
+1. **Declare** the Tool node against the script as it is today, not as it
+   should become.
+2. **Write the skill**, which shows whether the capability is one thing or
+   several (`update_sushi_config.py` is four jobs in one script).
 3. **Bind it** in a process, in the lane whose role performs it.
 4. **Then** rewrite and move, with a cutover.
 
@@ -129,8 +86,8 @@ Steps 1–3 are reversible and cheap. Step 4 is neither.
 
 ## What is already declared
 
-`smart-base/tools/` — nine nodes, none moved. `fhir-harness/tools/` — the two
-`Library` strippers, which are not DAK-shaped and belong to the base layer; see
+`smart-base/tools/` declares the upstream DAK scripts beside the harness's own
+tools; count the directory rather than trusting a number. The two `Library`
+strippers (`strip-library-binaries`, `strip-library-content`) are declared in
+`fhir-harness/tools/`, because they are not DAK-shaped; see
 [`smart-stack-layering`](smart-stack-layering.md).
-
-The count is deliberately not repeated elsewhere. Count the directory.

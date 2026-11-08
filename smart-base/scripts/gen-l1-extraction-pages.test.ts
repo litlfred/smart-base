@@ -11,8 +11,8 @@
  * fixture, so the kind is known there as it is in a real checkout.
  *
  * Calibrated: making `readExtraction` return an empty extraction for a
- * missing directory fails the "unknown, not zero" test; dropping
- * `render_with_liquid: false` from `page` fails the Liquid test.
+ * missing directory fails `absentDirectoryIsUnknownNotZero`; dropping
+ * `render_with_liquid: false` from `page` fails `authoredTextEscapedNoLiquid`.
  *
  * @module smart-base/scripts/gen-l1-extraction-pages.test
  */
@@ -101,7 +101,7 @@ describe("gen-l1-extraction-pages --site", () => {
   const remote = join("en", "lib", "l1-extraction", "remote", "index.html");
   const read = (f: string): string => readFileSync(join(site, f), "utf8");
 
-  it("the Tool declares the kind it renders, the site flag, and no required input", async () => {
+  it("toolDeclaresKindSiteFlagNoRequired", async () => {
     const { tools } = await import("../tools/index.ts");
     const t = tools().find((x) => x.id === "l1-extraction-pages")!;
     expect(t.renders).toContain("l1-extraction");
@@ -110,14 +110,14 @@ describe("gen-l1-extraction-pages --site", () => {
     expect(t.io?.inputs?.filter((i) => i.required) ?? []).toEqual([]);
   });
 
-  it("writes the hub and one page per declaring instance at the declared route, and nothing else", () => {
+  it("writesHubAndInstancePagesOnly", () => {
     expect(first.stderr.toString()).not.toContain("error");
     expect(first.exitCode).toBe(0);
     expect(files()).toEqual([hub, lib, remote].sort());
     for (const f of files()) expect(read(f)).toContain("rendered-by: l1-extraction-pages");
   });
 
-  it("shows the statements, the candidates with counts and decisions, and the graphs", () => {
+  it("showsStatementsCandidatesGraphs", () => {
     const html = read(lib);
     expect(html).toContain("L1 statements (2)");
     expect(html).toContain("<code>R1</code>");
@@ -130,30 +130,30 @@ describe("gen-l1-extraction-pages --site", () => {
     expect(html).toContain("Inside the library entry <code>entry-1</code>");
   });
 
-  it("links a file to its published copy only where the site holds one", () => {
+  it("linksPublishedCopyOnlyWhereHeld", () => {
     const html = read(lib);
     expect(html).toContain('href="../../../../assets/library/jsonld/lib/entry-1/l1-extraction/l1.json">published</a>');
     expect(html).not.toContain("l1-extraction/recommendation-candidates.json\">published");
   });
 
-  it("a file that does not parse says so and is not counted", () => {
+  it("unparseableFileSaysNotRead", () => {
     expect(read(lib)).toContain("<strong>not read</strong>: does not parse");
   });
 
-  it("a declared directory not in the build is unknown, never zero", () => {
+  it("absentDirectoryIsUnknownNotZero", () => {
     expect(read(remote)).toContain("<strong>unknown</strong>, not none");
     expect(read(remote)).not.toMatch(/\b0 L1 statement/);
     expect(read(hub)).toContain("unknown — not in this build");
     expect(read(hub)).toContain("2 L1 statement(s), 3 candidate sentence(s), 2 user-scenario candidate(s)");
   });
 
-  it("authored text is escaped and never reaches Liquid", () => {
+  it("authoredTextEscapedNoLiquid", () => {
     const html = read(lib);
     expect(html).toContain("Use &lt;b&gt;bold&lt;/b&gt; never.");
     for (const f of files()) expect(read(f)).toMatch(/^---\n[\s\S]*?render_with_liquid: false[\s\S]*?\n---\n/);
   });
 
-  it("--check passes on what it wrote and fails on a changed or orphaned page", () => {
+  it("checkFailsOnChangedOrOrphanedPage", () => {
     expect(run("--check").exitCode).toBe(0);
     writeFileSync(join(site, lib), "changed");
     expect(run("--check").exitCode).toBe(1);
@@ -166,12 +166,12 @@ describe("gen-l1-extraction-pages --site", () => {
 });
 
 describe("readExtraction", () => {
-  it("is null for a directory not on disk", () => {
+  it("readExtractionNullWhenAbsent", () => {
     expect(readExtraction(join(tmpdir(), "smart-base-l1x-absent-does-not-exist"))).toBeNull();
   });
 
-  it("reads the committed handbook extraction: 22 statements and the candidate work list", () => {
-    const x = readExtraction(join(INSTANCE, "library", "9789240116191-eng", "l1-extraction"))!;
+  it("readsCommittedHandbookExtraction", () => {
+    const x = readExtraction(join(INSTANCE, "l1-extractions", "9789240116191-eng"))!;
     expect(x.statements.length).toBe(22);
     expect(x.candidates.length).toBe(1);
     expect(x.files.some((f) => f.error !== undefined)).toBe(false);
@@ -183,7 +183,7 @@ describe("smart-base declares the viewer it draws", () => {
     visualisers?: { id: string; renderedBy: string; coversKinds?: string[]; subgraphs?: string }[];
     builtAtPublish?: { path: string; writer: string[] }[];
   };
-  it("a visualiser rendered by l1-extraction-pages, per instance, whose pages are built at publish", () => {
+  it("declaresViewerBuiltAtPublish", () => {
     const v = decl.visualisers?.find((x) => x.renderedBy === "l1-extraction-pages");
     expect(v).toMatchObject({ id: "l1-extraction", coversKinds: ["l1-extraction"], subgraphs: "instance" });
     // Under docs/, which smart-base:pages replaces wholesale, so this writer runs after it.

@@ -49,13 +49,20 @@ import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, relative, resolve } from "node:path";
 
+import { requireHarnessRoot } from "../../cat-harness-tools/schemas/harness-root.ts";
+import { instanceNamespaceOf } from "../../cat-harness-tools/schemas/kg/namespaces.ts";
 import { DublinCoreRecordSchema, handleFromUrl, ownDeclaredDirectories, readStructure, STRUCTURE_FILENAME, type DublinCoreRecord } from "../platform/index.js";
 import { L1_LIBRARY_CONTEXT, L1_V3_ONTOLOGY_VERSION, publicationElementId, publicationId, sectionId, sha256, slug, type Identifier } from "./l1-kgid.ts";
 import { decideL1, type IntakeRecord, type L1Decision } from "./l1-membership.ts";
 
 export const L1_LIBRARY_FILENAME = "smart-kg-l1-library.jsonld";
 const SKILL = "smart-base/dak-l1-library";
-const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/0.1.0/ns#";
+/**
+ * cat-harness's namespace, `<iriBase>v<major>/ns/`, derived from its declaration's
+ * `iriBase` and `version` (bootstrap-tools `release-iri.ts`). Not a literal: a
+ * hand-written `0.1.0/ns/` went stale, and every IRI minted under it had to be rewritten by hand.
+ */
+export const CAT_HARNESS_NS = instanceNamespaceOf(JSON.parse(readFileSync(join(requireHarnessRoot(), "cat-harness.json"), "utf-8")));
 const DOCO_NS = "http://purl.org/spar/doco/";
 /** Element types L1 3.0 defines that the library does not extract yet — reported, never guessed. */
 export const NOT_EXTRACTED = ["table-row", "footnote", "chart", "image", "flowchart", "list"] as const;

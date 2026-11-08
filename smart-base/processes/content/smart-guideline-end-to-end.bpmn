@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  folio-assistant — a WHO SMART Guidelines use case, end to end: L1 knowledge
+  smart-base — a WHO SMART Guidelines use case, end to end: L1 knowledge
   graph, L2 DAK, L3 FHIR IG, L4 consuming application, new or adapted.
 
-  Source of truth: this file. Open it in bpmn.io, Camunda Modeler, or any other
-  BPMN 2.0 tool. The SVG under docs/assets/img/workflows/ is generated from it
-  by `bun run render:bpmn` — never hand-edit the SVG.
+  Source of truth: this file. The picture beside it (smart-guideline-end-to-end.svg) is drawn by
+  `bun run cat render:bpmn`;
+  never hand-edit it.
 
-  The <bootstrap.processes:skill> extension on an activity names the folio-assistant skill
+  The <bootstrap.processes:skill> extension on an activity names the skill
   that implements it.
 -->
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
                   xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
                   xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
                   xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
-                  xmlns:bootstrap.processes="https://litlfred.github.io/bootstrap/0.1.0/processes/ns#"
-                  xmlns:cat-harness.processes="https://litlfred.github.io/cat-harness/0.1.0/processes/ns#"
+                  xmlns:bootstrap.processes="https://litlfred.github.io/bootstrap/0.1.0/processes/ns/"
+                  xmlns:cat-harness.processes="https://litlfred.github.io/cat-harness/0.1.0/processes/ns/"
                   id="Definitions_SgEndToEnd"
                   targetNamespace="https://litlfred.github.io/folio-assistant/workflows"
                   exporter="folio-assistant" exporterVersion="1">
@@ -24,7 +24,7 @@
     <bpmn:participant id="Participant_SgEndToEnd" name="WHO SMART Guidelines — end to end, authoring or adaptation" processRef="Process_SgEndToEnd" />
   </bpmn:collaboration>
   <bpmn:process id="Process_SgEndToEnd" name="SMART Guideline end to end" isExecutable="false">
-    <bpmn:documentation>From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the L4 consuming application the requester describes. Adjudication follows every stage as QA, not as a gate (owner, 2026-10-14: "once agent produces L2 it can produce L3"), but the order is a rule (owner, 2026-10-15: "order strict, sign-off QA"): no L3 asset before the L1 extraction and L2 assets it derives from exist with their review requested (Gateway_L3Ready). Each stage forks into the next stage and its adjudication, and each adjudication has its own end event, so the instance completes only when all are recorded. Each stage runs one named skill with its own input and output contract, named in brackets on the task (l2-dak-authoring.bpmn for stage 4, dak-l3-ig.bpmn for stage 6), and each stage's output is the next stage's input; the smart-guideline-end-to-end skill is the orchestrator that says so, and who adjudicates each.</bpmn:documentation>
+    <bpmn:documentation>From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the L4 consuming application the requester describes. Adjudication follows every stage as QA, not as a gate, but the order is strict: no L3 asset before the L1 extraction and L2 assets it derives from exist with their review requested (Gateway_L3Ready). Each stage forks into the next stage and its adjudication, and each adjudication has its own end event, so the instance completes only when all are recorded. Each stage runs the skill named on its activity, with its own input and output contract (l2-dak-authoring.bpmn for stage 4, dak-l3-ig.bpmn for stage 6), and its output is the next stage's input. The smart-guideline-end-to-end skill orchestrates the stages and says who adjudicates each.</bpmn:documentation>
     <bpmn:extensionElements>
       <cat-harness.processes:policy enforcement="advisory" />
     </bpmn:extensionElements>
@@ -37,7 +37,7 @@
         <bpmn:flowNodeRef>Task_DescribeApp</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_Agent" name="Authoring agent">
-        <bpmn:documentation>Runs every authoring stage with the skill named on each activity. Goes straight on to the next stage after each one, once that stage's output exists and its review is requested: adjudication runs beside it, as QA, not as a gate (owner, 2026-10-14); the order is not optional (owner, 2026-10-15).</bpmn:documentation>
+        <bpmn:documentation>Runs every authoring stage with the skill named on each activity, and goes straight on once a stage's output exists and its review is requested. Adjudication runs beside it as QA; the order of stages is not optional.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="authoring-agent"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Task_IdentifyL1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Fork_L1</bpmn:flowNodeRef>
@@ -61,7 +61,7 @@
         <bpmn:flowNodeRef>EndEvent_AppBuilt</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_Adjudicators" name="Human adjudicators">
-        <bpmn:documentation>Clinical SME, l1-extraction-reviewer, programme manager, business analyst, FHIR modeller, terminologist: which one signs each stage is in the smart-guideline-end-to-end skill. Each adjudication calls cat-harness's generic review, Process_Review, on the staged preview (feature-staging, staging-review) and records a qa-review/v1 Decision (approve, request-changes, reject) with the adjudicator's role id. Each adjudication ends in its own end event, so the instance is complete only when every adjudication is recorded. A rejection files a bean against the stage and marks every downstream asset derived from the rejected item rejected-upstream; it does not stop the agent.</bpmn:documentation>
+        <bpmn:documentation>Clinical SME, l1-extraction-reviewer, programme manager, business analyst, FHIR modeller, terminologist; the smart-guideline-end-to-end skill says which signs each stage. Each adjudication calls cat-harness's generic review (Process_Review) on the staged preview (feature-staging, staging-review) and records a qa-review/v1 Decision (approve, request-changes, reject) with the adjudicator's role id. A rejection files a bean against the stage and marks every asset derived from the rejected item rejected-upstream; it does not stop the agent.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="reviewer"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Task_AdjL1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_AdjKg</bpmn:flowNodeRef>
@@ -83,7 +83,7 @@
       <bpmn:documentation>Someone needs a SMART Guideline, new or adapted, for a use case.</bpmn:documentation>
       <bpmn:outgoing>E01</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:userTask id="Task_DescribeUseCase" name="0 · Describe the use case&#10;[guideline-use-case]">
+    <bpmn:userTask id="Task_DescribeUseCase" name="0 · Describe the use case">
       <bpmn:documentation>Population, setting, jurisdiction, interventions in scope. The user's own words; the agent asks a numbered question if the request did not say.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="guideline-use-case" />
@@ -91,7 +91,7 @@
       <bpmn:incoming>E01</bpmn:incoming>
       <bpmn:outgoing>E02</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:task id="Task_IdentifyL1" name="1 · Identify L1 guidelines and recommendations&#10;[dak-l1-library]">
+    <bpmn:task id="Task_IdentifyL1" name="1 · Identify L1 guidelines and recommendations">
       <bpmn:documentation>Component 1 sources of any DAK already in scope first, then WHO IRIS and the jurisdiction's own guidelines. Each candidate marked in-library / in-KG / not yet.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="dak-l1-library" />
@@ -117,7 +117,7 @@
       <bpmn:outgoing>E06</bpmn:outgoing>
       <bpmn:outgoing>E07</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_IngestKg" name="2 · Ingest into the L1 KG&#10;[recommendation-extraction]">
+    <bpmn:task id="Task_IngestKg" name="2 · Ingest into the L1 KG">
       <bpmn:documentation>Per source not yet extracted: cat ingest into library/, the generic-document layer (l1-library), then the L1 layer (recommendations, remarks, practices, scenario candidates) into library/&lt;bib&gt;/l1-extraction/.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="recommendation-extraction" />
@@ -145,8 +145,8 @@
       <bpmn:incoming>E10</bpmn:incoming>
       <bpmn:outgoing>E11</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_DepsL2" name="3 · Choose L2 dependencies&#10;(WHO / jurisdiction DAKs)&#10;[l2-dependency-choice]">
-      <bpmn:documentation>From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason. Reuse first; prefer the jurisdiction's adaptation, recording the WHO original as its upstream. For each component kept, record its toolchain: how the candidate produces it (the tools graph, the candidate repository's own source spreadsheets and converters, WHO's DAK toolchain), which stage 4 then uses.</bpmn:documentation>
+    <bpmn:task id="Task_DepsL2" name="3 · Choose L2 dependencies&#10;(WHO / jurisdiction DAKs)">
+      <bpmn:documentation>From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason. Reuse first; prefer the jurisdiction's adaptation, recording the WHO original as its upstream. For each component kept, record how the candidate produces it (the tools graph, the candidate repository's source spreadsheets and converters, WHO's DAK toolchain); stage 4 uses that toolchain.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dependency-choice" />
         <bootstrap.processes:skill ref="smart-base-tools" />
@@ -169,7 +169,7 @@
       <bpmn:incoming>E13</bpmn:incoming>
       <bpmn:outgoing>E31</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:task id="Task_L2" name="4 · Create / adapt L2 DAK assets&#10;[l2-dak-authoring]">
+    <bpmn:task id="Task_L2" name="4 · Create / adapt L2 DAK assets">
       <bpmn:documentation>The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data elements. Its clinical validation is this stage's adjudication and does not hold up stage 5. The IG is built through fhir-harness's AST cache lifecycle (ig-ast-refresh.yml), with the DAK pre-processing as smart-base's pre-export overlay (dak-preprocessing, dak-pre-export.sh) and the DAK sidecars made from the AST (dak-postprocessing).</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l2-dak-authoring" />
@@ -189,7 +189,7 @@
       <bpmn:outgoing>E17</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:callActivity id="Task_AdjL2" name="Review each L2 asset&#10;(before / after if adapted)" calledElement="Process_Review">
-      <bpmn:documentation>One review item per created or changed asset, shown as its reviewer reads it (diagram, table, data-dictionary rows); each form's wireframe candidates are reviewed blind and one is chosen (Process_Adjudication, Process_OptionsAnalysis); an adapted asset as a diff against its pinned upstream. For each L2 component this is the review that forks inside its own edit-and-review subprocess (l2-component-edit-review.bpmn, called by every l2-dak-authoring.bpmn track), with the renderer, checker and reviewing role that skill tables.</bpmn:documentation>
+      <bpmn:documentation>One review item per created or changed asset, shown as its reviewer reads it (diagram, table, data-dictionary rows); an adapted asset as a diff against its pinned upstream. Each form's wireframe candidates are reviewed blind and one is chosen (Process_Adjudication, Process_OptionsAnalysis). For each L2 component this is the review that forks inside its edit-and-review subprocess (l2-component-edit-review.bpmn), with the renderer, checker and reviewing role that skill tables.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="content-review" />
         <bootstrap.processes:skill ref="staging-review" />
@@ -199,7 +199,7 @@
       <bpmn:incoming>E16</bpmn:incoming>
       <bpmn:outgoing>E32</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:task id="Task_DepsL3" name="5 · Choose L3 dependencies&#10;(WHO / jurisdiction IGs)&#10;[l3-dependency-choice]">
+    <bpmn:task id="Task_DepsL3" name="5 · Choose L3 dependencies&#10;(WHO / jurisdiction IGs)">
       <bpmn:documentation>Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG, and record per artefact type the candidate's toolchain (CQL refresh, test-case format, example generator), which stage 6 then uses.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l3-dependency-choice" />
@@ -224,8 +224,8 @@
       <bpmn:incoming>E19</bpmn:incoming>
       <bpmn:outgoing>E33</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:task id="Task_L3Ready" name="Check L3 readiness&#10;[l3-readiness]">
-      <bpmn:documentation>The order rule as a check with its own contract (owner, 2026-10-16: its own skill). Every source has its L1 extraction, every L2 asset names an L1 node, every L3 artefact about to be written names its L2 asset, and the review of each extraction and L2 asset has been requested. Returns ready and the findings, each with the stage that fixes it; Gateway_L3Ready decides on ready.</bpmn:documentation>
+    <bpmn:task id="Task_L3Ready" name="Check L3 readiness">
+      <bpmn:documentation>The order rule as a check with its own contract (skill l3-readiness). Every source has its L1 extraction, every L2 asset names an L1 node, every L3 artefact about to be written names its L2 asset, and the review of each extraction and L2 asset has been requested. Returns ready and the findings, each with the stage that fixes it.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l3-readiness" />
       </bpmn:extensionElements>
@@ -233,12 +233,12 @@
       <bpmn:outgoing>E38</bpmn:outgoing>
     </bpmn:task>
     <bpmn:exclusiveGateway id="Gateway_L3Ready" name="L1 extraction and L2 assets exist,&#10;review requested?">
-      <bpmn:documentation>The order rule (owner, 2026-10-15: "order strict, sign-off QA"), decided on Task_L3Ready's ready (skill l3-readiness). Yes only when every L3 asset about to be written has an L2 asset upstream, every L2 asset an L1 node, and the review of each has been requested (opened and staged, verdict not awaited). No goes back to stage 4; a missing L1 extraction is stage 4's input gap, filled from stage 2.</bpmn:documentation>
+      <bpmn:documentation>Decided on Task_L3Ready's ready: yes only when every L3 asset about to be written has an L2 asset upstream, every L2 asset an L1 node, and each review has been requested (opened and staged, verdict not awaited). No goes back to stage 4; a missing L1 extraction is stage 4's input gap, filled from stage 2.</bpmn:documentation>
       <bpmn:incoming>E38</bpmn:incoming>
       <bpmn:outgoing>E36</bpmn:outgoing>
       <bpmn:outgoing>E37</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_L3" name="6 · Produce L3 assets&#10;[l3-fhir-authoring]">
+    <bpmn:task id="Task_L3" name="6 · Produce L3 assets">
       <bpmn:documentation>The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build. Every L3 asset names the L2 asset it implements in wasDerivedFrom, with that edge's adjudication state. Each Questionnaire is derived from the chosen L2 wireframe of its form. Publication continues in that process and is not on the path to stage 8.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l3-fhir-authoring" />
@@ -266,7 +266,7 @@
       <bpmn:incoming>E22</bpmn:incoming>
       <bpmn:outgoing>E34</bpmn:outgoing>
     </bpmn:callActivity>
-    <bpmn:userTask id="Task_DescribeApp" name="7 · L4: describe the consuming application&#10;[l4-application-brief]">
+    <bpmn:userTask id="Task_DescribeApp" name="7 · L4: describe the consuming application">
       <bpmn:documentation>Who uses it, on what device, which L2 processes and L3 resources it covers, connectivity, the systems it talks to. The agent offers options drawn from the L2 personas and processes. This is the written intent wireframe-design-review starts from.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l4-application-brief" />
@@ -274,7 +274,7 @@
       <bpmn:incoming>E23</bpmn:incoming>
       <bpmn:outgoing>E24</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:task id="Task_WireframeApp" name="8a · L4: wireframe the application&#10;[wireframe-design-review]">
+    <bpmn:task id="Task_WireframeApp" name="8a · L4: wireframe the application">
       <bpmn:documentation>To-be mode, from the stage-7 intent: two or more candidates, web and mobile, with real content from the L2 personas and scenarios. The agent goes on with its recommended candidate; the requester may choose another during adjudication.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="wireframe-design-review" />
@@ -282,7 +282,7 @@
       <bpmn:incoming>E24</bpmn:incoming>
       <bpmn:outgoing>E25</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="Task_BuildApp" name="8b · L4: build the consuming application&#10;[l4-application-build]">
+    <bpmn:task id="Task_BuildApp" name="8b · L4: build the consuming application">
       <bpmn:documentation>Against the stage-6 IG build, with conformance tests from the IG's examples and test cases.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="l4-application-build" />

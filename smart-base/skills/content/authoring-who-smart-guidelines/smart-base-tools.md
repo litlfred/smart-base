@@ -6,33 +6,17 @@
 Run WHO's DAK toolchain from a `smart-base` checkout. **Load it; never vendor
 it.**
 
-> ## The direction of travel reversed on 2026-09-22 — and this rule did not
->
-> The owner: *"the skill/tools under smart-base should consolidate under the
-> `smart-base/tools/` directory under this repo"*, serving *"want to slowly get
-> smart-base back to a more conventional IG state w/o tooling"*. So
-> `WorldHealthOrganization/smart-base` is to stop being a toolchain host and
-> become an ordinary FHIR IG, with the capabilities moving here.
->
-> **That is not a licence to copy the Python in.** `smart-base/tools/` holds
-> **Tool nodes** — declarations of what each capability consumes, produces and
-> satisfies. Declaring that `dmn_questionnaire_generator.py` exists and turns
-> DMN into `Questionnaire` resources duplicates none of it, and is what lets a
-> BPMN activity bind the step at all.
->
-> **Declare here, execute upstream, until the execution moves too.** When it
-> does move, it moves as one migration with a cutover, not as a copy that
-> quietly becomes a fork — which is the failure this rule was written against
-> and is still the failure to avoid.
->
-> Eleven tools are declared. Two upstream scripts deliberately are **not**:
-> `strip_library_binaries.py` and `strip_library_content.py` are not DAK-shaped
-> and belong to `fhir-harness` — see
-> [`smart-stack-layering`](smart-stack-layering.md). The DAK repositories' own GitHub Actions invoke those scripts in place,
-so `WorldHealthOrganization/smart-base` stays their authoritative home — a copy
-here would be a second, drifting toolchain, which is the argument
-`docs/proposals/rag-document-ingestion.md` §2c makes about corpora, applied to
-code.
+`smart-base/tools/` holds **Tool nodes**: declarations of what each upstream
+capability consumes, produces and satisfies, so a BPMN activity can bind it.
+A Tool node duplicates no code. The Python stays in
+`WorldHealthOrganization/smart-base`, which the DAK repositories' GitHub
+Actions run in place; a copy here would be a second, drifting toolchain.
+**Declare here, execute upstream**, until the execution moves as one
+migration with a cutover ([`toolchain-ownership`](toolchain-ownership.md)).
+
+`strip_library_binaries.py` and `strip_library_content.py` are not declared
+here: they are not DAK-shaped and belong to `fhir-harness`
+([`smart-stack-layering`](smart-stack-layering.md)).
 
 ## Before you start
 
@@ -47,9 +31,8 @@ it never had.
 
 ## Transforms
 
-Both are the *render* direction — an authored source artefact producing a
-published representation, which is what §12.15 wants and what the extractors
-are the inverse of.
+Both render an authored source artefact into a published representation
+(the extractors go the other way).
 
 ```sh
 # BPMN → FHIR Shorthand
@@ -69,16 +52,14 @@ artefact at the path the transform names. Measured on `smart-dak-immz`: 8
 business processes → **313 files**, one process alone accounting for 157.
 
 **Paths collide across inputs.** Those 313 land at only 201 distinct paths,
-because shared actors and two near-duplicate copies of one process name the
-same outputs. The runner counts and names every collision on stderr rather than
-overwriting silently — 313 successes leaving 201 files is exactly the kind of
-quiet arithmetic that hides a problem. Decide deliberately whether a collision
-is a duplicate input to remove or two processes that legitimately contribute
-the same actor.
+because shared actors and near-duplicate processes name the same outputs. The
+runner counts and names every collision on stderr instead of overwriting
+silently. Decide for each whether it is a duplicate input to remove or two
+processes that legitimately contribute the same actor.
 
 ## What else is in there
 
-`smart-base` carries ~54 Python scripts (see the survey in the proposal §12.16):
+`smart-base` carries ~54 Python scripts:
 extractors (`dd_extractor`, `dt_extractor`, `req_extractor`, `extractpr`),
 generators (`generate_jsonld_vocabularies`, `generate_*_schemas`,
 `dmn_questionnaire_generator`), a translation subsystem, and IG build/CI
@@ -122,12 +103,10 @@ stage-5 dependency row of
 Only when all three come back empty is something new written, and then as a
 **Tool node** under [`tool-authoring`](../../../../cat-harness/skills/tools/folio-core/tool-authoring.md),
 with the search recorded in the dependency row (`toolchain: none`, and where
-it looked). A script written into the adaptation repository with no Tool node
-is the 2026-10-15 failure: the Uganda adaptation wrote its own YAML → DMN
-builder, CQL compile script and test runner while the upstream kept its
-decision tables in the DAK spreadsheet and had a converter, a CQL refresh and
-YAML test cases. None of those was a declared Tool, which is why a graph
-search alone would not have found them, and why step 2 is not optional.
+it looked). Never write a script into the adaptation repository without a Tool
+node. Step 2 is not optional: upstream converters, CQL refresh scripts and
+test formats are usually not declared Tools, so the graph search alone misses
+them.
 
 **There is no PDF renderer in smart-base.** Its only PDF dependency is
 `pdfplumber`, used to *read* PDFs when extracting personas.
@@ -135,15 +114,14 @@ search alone would not have found them, and why step 2 is not optional.
 ## What the generic authoring skills need to know here
 
 The platform's `bpmn-authoring`, `dmn-authoring` and `translation-manager`
-are generic and name no DAK (bean `lthi`, 2026-10-09: the references used to
-point up from them to this skill). What a DAK adds to each is said here:
+are generic and name no DAK. What a DAK adds to each:
 
 - **BPMN is a source artefact.** `bpmn2fsh` turns an authored business
   process into FHIR Shorthand, so names and ids chosen in the diagram appear
   in the generated FSH. Author it knowing it will be transformed. A changed
   diagram also changes its picture and its translation templates: re-render
-  it (`smart-base/scripts/render-processes.ts`) and run `bun run cat regen`
-  ([`prepare-merge`](../../../../cat-harness/skills/sdlc/sdlc-core/prepare-merge.md)),
+  it (`bun run cat render:bpmn`) and run `bun run cat regen`
+  ([`prepare-merge`](../../../../cat-harness/sdlc/skills/sdlc-core/prepare-merge.md)),
   which re-extracts the `.pot` files `translate-bpmn:check` gates on.
 - **DMN is a source artefact.** `dmn2html` renders decision tables for human
   review, and `dmn_questionnaire_generator` derives questionnaires from them;
@@ -152,5 +130,4 @@ point up from them to this skill). What a DAK adds to each is said here:
   `SGAuthoring.Persona.Translator`, with the skill requirements
   `SGAuthoring.Skills.TranslateContent` and
   `SGAuthoring.Skills.ReviewTranslations`. The translation subsystem is
-  invoked from a smart-base checkout, never copied — the same
-  *load it; never vendor it* rule as every tool here.
+  invoked from a smart-base checkout, never copied.
