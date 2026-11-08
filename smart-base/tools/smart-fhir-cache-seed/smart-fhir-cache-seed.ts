@@ -1,17 +1,12 @@
 import { defineTool, toolFactory } from "../../platform/index.js";
 import { smartSiteRepoArgs } from "../lib.ts";
 
-// ── The FHIR package-cache seeder, with WHO's publisher site ─────────
-//
-// fhir-harness's `fhir-cache-seed-npm` takes publisher-site rules as a
-// parameter and has none of its own. This is the same seeder invoked with
-// the rule smart-base owns — the seam the owner chose 2026-10-07.
 export default toolFactory((t) =>
   defineTool({
     id: "smart-fhir-cache-seed",
     title: "Seed the FHIR package cache, with WHO's published site as a source",
     description:
-      "Run fhir-harness's `fhir-cache-seed-npm` with smart-base's publisher-site rules (`SMART_PUBLISHER_SITE_REPOS`): `smart.who.int.*` packages are also read from WHO's published-site repository, each fetch verified against the tarball's own package.json. Every other source and check is the seeder's own.",
+      "Run fhir-harness's `fhir-cache-seed-npm` with smart-base's publisher-site rules (`SMART_PUBLISHER_SITE_REPOS`), so `smart.who.int.*` packages can also be read from WHO's published-site repository, each fetch verified against the tarball's own package.json. All other sources and checks are the seeder's.",
     install: { none: true },
     invoke: {
       shell: `bun run fhir-harness/scripts/fhir-cache-seed-npm.ts ${smartSiteRepoArgs().join(" ")} [--cache <dir>] [--sushi-config <file>] [--mirror <dir|git-url>] [--template-repo <name=owner/repo>] [--missing-out <file>] [--dry-run] [name#version ...]`,
@@ -28,7 +23,7 @@ export default toolFactory((t) =>
     },
     satisfies: ["ig-publisher-fork"],
     selection: {
-      when: "Seeding the cache for a WHO SMART IG where packages.fhir.org is unreachable, so `smart.who.int.*` dependencies can also come from WHO's published site.",
+      when: "Seeding the cache for a WHO SMART IG where packages.fhir.org is unreachable.",
       limits: "The site rule only adds a source; the seeder's trust checks, exact-version rule and missing list are unchanged.",
       cost: "As `fhir-cache-seed-npm`, plus one `git ls-remote` and one download per `smart.who.int.*` package.",
     },

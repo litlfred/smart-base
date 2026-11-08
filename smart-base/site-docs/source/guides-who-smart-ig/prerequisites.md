@@ -10,3 +10,7 @@ locally you need:
 | Jekyll | IG site rendering | `gem install jekyll bundler` |
 
 Run `bun run cat check-deps` and the agent's `check_dependencies` tool to confirm.
+
+These are the tools of the plain IG Publisher build. To render an IG
+**through the harness**, which builds the site from the Publisher's AST and
+pins its versions, see [Building and publishing the SMART Base IG](smart-base-build.html).

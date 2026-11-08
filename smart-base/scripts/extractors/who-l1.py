@@ -68,8 +68,12 @@ def detect(meta: dict[str, Any], sections) -> bool:
 def extract(sections, meta) -> list[dict[str, Any]]:
     cands: list[dict[str, Any]] = []
     rules = (
-        (RE_WHO_REC, "definition", "recommendation", "def:who"),
-        (RE_WHO_GPS, "proposition", "good-practice-statement", "prop:who"),
+        # Core's `recommendation` kind for both (skill `normative-statements`:
+        # "Do not use `definition`" — a math kind whose `lean` is required, and
+        # nothing proves a recommendation). They were `definition` and
+        # `proposition` until 2026-11-01.
+        (RE_WHO_REC, "recommendation", "recommendation", "rec:who"),
+        (RE_WHO_GPS, "recommendation", "good-practice-statement", "rec:who"),
         (RE_WHO_REMARK, "remark", "remark", "rem:who"),
         (RE_WHO_RESEARCH, "conjecture", "research-priority", "conj:who"),
     )
@@ -93,6 +97,7 @@ def extract(sections, meta) -> list[dict[str, Any]]:
                     "label_prefix": prefix,
                     "grade_nearby": bool(RE_GRADE.search(window)),
                     "strength": strength.group(1).lower() if strength else None,
+                    "strength_list": "grade-recommendation-strength" if strength else None,
                     "formalization_candidate": False,
                     "route_to": "l2-dak-authoring",
                 })

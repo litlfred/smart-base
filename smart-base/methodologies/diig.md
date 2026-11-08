@@ -24,13 +24,6 @@ applies-when: >
 
 # DIIG — the investment path from a health system bottleneck to a costed plan
 
-**Adopted whole, 2026-09-22, into `smart-base` rather than into the harness.**
-`methodology-adoption` §4 places a method by ownership: a domain-neutral method
-belongs to the harness, a domain method to the repository that owns the domain.
-DIIG is WHO digital-health implementation, so it lives beside the corpus it was
-read out of, and the directory lifts out with its declaration entry and nothing
-else moves.
-
 ## What it is, in one sentence
 
 A nine-chapter sequence taking a health programme from *we have a problem* to
@@ -51,8 +44,7 @@ each chapter's output is the next chapter's input.
 | 8 | Monitor the implementation and use data effectively | a logic model, an M&E plan, a culture of data use, adaptive management |
 | 9 | Value proposition and next steps | the case made to whoever pays |
 
-Chapters 4 and 8 close with a **progress check** — the Guide's own gate, not one
-added here.
+Chapters 4 and 8 close with a **progress check**, the Guide's own gate.
 
 ## It builds on CRDM, and this platform already carries CRDM
 
@@ -73,46 +65,37 @@ CRDM's three areas of concentration, verbatim from the same page:
 2. **Business process redesign**
 3. **Requirements definition**
 
-**This is a real join, not a resemblance.** `cat-harness/methodologies/crdm/`
-carries the CRDM adoption this platform already runs, including
-`crdm-needs.bpmn` and `crdm-requirements-definition.bpmn`, whose names are two
-of those three areas. So DIIG Chapter 3 and the platform's own requirements
-process descend from one published method, and an agent working a DIIG
-implementation is in a lane the harness can already execute.
+cat-harness runs CRDM (skills in `cat-harness/sdlc/skills/crdm/`, processes
+including `cat-harness/processes/process/crdm-needs.bpmn` and
+`crdm-requirements-definition.bpmn`), so DIIG Chapter 3 and the platform's
+requirements process descend from one published method.
 
-**What that join does NOT license.** DIIG *adapts* CRDM for health system
-challenges; it does not restate it. Where the two disagree, neither overrides
-the other and they are not merged — `methodology-adoption`'s first refusal is
-that a composite is a house method that cites nobody and inherits none of their
-authority while claiming all of it. Pick one per decision, name it, follow it.
+DIIG *adapts* CRDM for health system challenges; it does not restate it. Where
+the two disagree, neither overrides the other and they are not merged
+(`methodology-adoption`: never blend two methodologies). Pick one per
+decision, name it, follow it.
 
 ## Where this adoption stops
 
-**Stated, because a silent omission misrepresents the standard.**
-
-- **The annexes are named, not rendered.** DIIG ships fourteen worksheets and
-  templates — the planning and implementation charter, the persona worksheet,
+- **The annexes are named, not rendered.** DIIG's fourteen worksheets and
+  templates (the planning and implementation charter, the persona worksheet,
   the process matrix, the budget template, the logic model template, the
-  adaptive management checklist, and more. They are instruments a *programme*
-  fills in, not steps an agent performs, and reproducing them here would put a
-  second copy of a WHO worksheet in a platform repository. They are cited to
-  the ingested sections instead.
-- **The figures are largely not available.** DIIG's conceptual figures are
-  drawn in vector, and `pdf-images.py` recovers the raster layer, so Fig. 3.1
-  and its siblings were never extracted. Bean `m4xy` carries the finding. Where
-  this file describes a figure it is describing the *text around it*, and says
-  so.
+  adaptive management checklist, and more) are instruments a *programme* fills
+  in, not steps an agent performs. They are cited to the ingested sections.
+- **Figures are cited, not described.** The Guide's figures are in the
+  ingested entry as `figures/vfig-p<PDF page>.png` (Fig. 3.1 is `vfig-p043`;
+  Fig. 1.1.1 also as SVG, by `smart-base:diig-figure`); where this file
+  mentions a figure it quotes the text around it.
 - **Chapter 5's country-specific and intervention-specific considerations**
   (Annexes 5.3, 5.4) are a reference table of scale, not a method. Left in the
   library.
 
 ## Refusals
 
-`methodology-adoption`'s four refusals bind. Three are inherited unchanged; the
-third has a concrete, named target in this method and is the one a later agent
-will breach first.
+`methodology-adoption`'s refusals bind. The first has a concrete target in this
+method.
 
-**Never quantify a judgement to make it look measured — and here is where.**
+**Never quantify a judgement to make it look measured.**
 DIIG Table 3.3.1, *Formula for scoring and ranking bottlenecks*
 (`sections/page-050.md`, PDF page 50, printed page 38), scores each bottleneck
 on three criteria, each 1–3:
@@ -123,41 +106,29 @@ on three criteria, each 1–3:
 
 — and combines them into a **Score** and a **Prioritized Ranking**.
 
-**This platform adopts the three criteria and refuses the arithmetic.** The
-criteria are the method's real contribution: they name what makes a bottleneck
-worth attacking, and they are answerable. The total is not a measurement. Three
-ordinal judgements on incommensurable scales, summed with equal weight, produce
-a number whose precision is invented — and a ranked list reads as evidence in a
-way three stated judgements do not. So an agent applying DIIG Chapter 3 records
+**This platform adopts the three criteria and refuses the arithmetic.** Three
+ordinal judgements on incommensurable scales, summed with equal weight, give a
+number whose precision is invented. An agent applying DIIG Chapter 3 records
 each criterion's answer **and its reason**, and orders the bottlenecks by
 argument; it does not print a score.
 
-This is the same rule as never quoting a count from prose as though it were
-evidence, and DIIG itself is not harmed by it: the Guide's own text asks the
-three questions, and the table is how it suggests tallying them.
-
-**The summed score is on record as an alternative, not erased.** The DTH for
-health supply chain architecture repeats the tally in its Annex 3
-(`9789240101197-eng`, `sections/page-068.md`: *"Adding the scores yields the
-prioritized ranking."*). The owner ruled on 2026-10-03 (#1984) that where
-sources disagree, each version is kept as an alternative. So DIIG Table 3.3.1
-and SC Annex 3 are recorded beside this refusal on
-[`smart-base/findings/dth-terms.md`](../findings/dth-terms.md). The refusal
-still governs what an agent applying this method does. The page records that
-the sources do otherwise.
+The summed score is kept as an alternative: the DTH for health supply chain
+architecture repeats the tally in its Annex 3 (`9789240101197-eng`,
+`sections/page-068.md`: *"Adding the scores yields the prioritized
+ranking."*), and DIIG Table 3.3.1 and SC Annex 3 are both recorded beside this
+refusal in [`smart-base/findings/dth-terms.md`](../findings/dth-terms.md). The
+refusal still governs what an agent applying this method does.
 
 **Never let a rejected option go unrecorded.** DIIG Chapter 4 selects
 interventions against prioritized challenges. The interventions considered and
-not chosen are part of the output, with why — the same argument `scrapped` wins
-on for beans, since a deleted alternative leaves the next reader unable to tell
-a decision from an oversight.
+not chosen are part of the output, with why.
 
 **Never adopt a methodology by naming it.** A DIIG citation with no rendered
 step is an appeal to authority no reader can check.
 
-**Never blend DIIG with CRDM, MAPS or the M&E guide.** All four are in
-`smart-base/library/` and all four touch digital health implementation. They
-are parallel tracks selected by context, not a toolkit to assemble from.
+**Never blend DIIG with CRDM, MAPS or the M&E guide.** All touch digital
+health implementation; they are parallel tracks selected by context, not a
+toolkit to assemble from.
 
 ## Its neighbours in this library, and what each is for instead
 

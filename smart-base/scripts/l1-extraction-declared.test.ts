@@ -52,7 +52,7 @@ function leftInLibrary(): string[] {
 describe("l1-extraction is declared KG content", () => {
   const declared = decl.directories.filter((d) => d.graphTypologies.includes(KIND));
 
-  it("the typology node exists, is a sub-graph of library, and is derived", () => {
+  it("typologyNodeWithinLibraryDerived", () => {
     const node = JSON.parse(readFileSync(join(ROOT, "typologies", `${KIND}.json`), "utf-8"));
     expect(node.$schema).toBe("folio-graph-typology/v1");
     expect(node.kind).toBe(KIND);
@@ -63,26 +63,26 @@ describe("l1-extraction is declared KG content", () => {
     expect(typeof node.validatorNotApplicable).toBe("string");
   });
 
-  it("at least one entry holds extraction output (the test is not vacuous)", () => {
+  it("atLeastOneExtractionOnDisk", () => {
     expect(onDisk().length).toBeGreaterThan(0);
   });
 
-  it("every l1-extractions/<entry>/ on disk is declared with the l1-extraction typology", () => {
+  it("everyExtractionOnDiskDeclared", () => {
     expect(declared.map((d) => norm(d.path)).sort()).toEqual(onDisk());
   });
 
-  it("no extraction is left inside a library entry, where it reads as a second copy of the entry", () => {
+  it("noExtractionLeftInLibrary", () => {
     expect(leftInLibrary()).toEqual([]);
   });
 
-  it("each declaration sits in l1-extractions/ and names that typology alone", () => {
+  it("declarationsInExtractionsDirOnly", () => {
     for (const d of declared) {
       expect(norm(d.path).startsWith(`${EXTRACTIONS}/`)).toBe(true);
       expect(d.graphTypologies).toEqual([KIND]);
     }
   });
 
-  it("the declared L1 graph document is there to publish", () => {
+  it("declaredL1GraphDocumentExists", () => {
     for (const d of declared) {
       const graph = JSON.parse(readFileSync(join(ROOT, d.path, "l1.json"), "utf-8"));
       expect(typeof graph["@context"]).toBe("string");

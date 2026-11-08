@@ -4,15 +4,13 @@ The **WHO SMART Guidelines base layer** — the ingested WHO digital-health
 corpus, the methodologies read out of it, and the editorial voices derived
 from it.
 
-Staged as a top-level directory ahead of becoming its own repository, the same
-path the IRIS catalogue and the WHO SMART Trust and Immunizations IGs are on.
-
 **Contents**
 
 <!-- readme:toc:begin -->
 
 - [What this layer is for](#what-this-layer-is-for)
 - [What it is not](#what-it-is-not)
+- [Building and publishing the IG](#building-and-publishing-the-ig)
 - [Re-deriving an entry](#re-deriving-an-entry)
 - [Counts](#counts)
 
@@ -20,24 +18,36 @@ path the IRIS catalogue and the WHO SMART Trust and Immunizations IGs are on.
 
 ## What this layer is for
 
-WHO digital health guidance is spread across many publications that do not
-speak with one voice, and the **Digital Implementation Investment Guide**
-carries the process content the digital transformation handbooks build on.
-This layer is where those documents become something a tool can read: L1
-sections under `library/`, methodologies adopted from them, and voice profiles
-whose every rule cites the page it was read from.
+WHO digital health guidance is spread across many publications. This layer
+makes them machine-readable: L1 sections in a library, methodologies adopted
+from them (the **Digital Implementation Investment Guide** first), and voice
+profiles whose every rule cites the page it was read from.
 
 ## What it is not
 
 **It is not a copy of `WorldHealthOrganization/smart-base`.** That repository
-stays the authoritative home of the DAK toolchain — ~54 Python scripts whose
-callers are the DAK repositories' own GitHub Actions. This layer references it
-and never vendors it; `smart-base-tools` carries the wrapper and the argument.
+stays the home of the DAK toolchain (~54 Python scripts called by the DAK
+repositories' GitHub Actions). This layer references it and never vendors it;
+`smart-base-tools` carries the wrapper.
 
-**It holds no position on the IG pipeline layering.** Bean `nsbb` rules that a
-per-IG harness should not exist and that the DAK/IG pipeline belongs in an IG
-base. That restructure is `nsbb`'s; this layer is the harness it called for,
-holding KG assets.
+**It does not own the IG pipeline layering.** It holds knowledge-graph assets.
+
+## Building and publishing the IG
+
+The IG in this repository is rendered through the FHIR IG layer, with the
+DAK pre-processing and the DAK API sidecars added. From a checkout with its
+layers mounted:
+
+```bash
+bun run cat stage:local --repo . --dry-run   # render the site; push nothing
+```
+
+The full guide, with the plain IG Publisher build beside it, the workflows,
+the live addresses and the deployment options, is
+[Building and publishing the SMART Base IG](site-docs/source/guides-smart-base-build/)
+(published at
+<https://litlfred.github.io/folio-assistant/smart-base/guides/smart-base-build.html>).
+The site itself is <https://litlfred.github.io/smart-base/>.
 
 ## Re-deriving an entry
 
@@ -45,11 +55,9 @@ holding KG assets.
 bun run cat ingest uploads/FILE.pdf --library smart-base
 ```
 
-Nothing under `library/` is authored, so nothing under it is edited. A wrong
-section is a defect in the rung that read it or in the upstream document — see
-[`AGENTS.md`](AGENTS.md).
+Nothing under `library/` is edited. A wrong section is a defect in the rung
+that read it or in the upstream document — see [`AGENTS.md`](AGENTS.md).
 
 ## Counts
 
-Deliberately absent. A count written in prose is a claim that has already begun
-to drift; re-derive it from the directory rather than reading it here.
+Not given here: count the directory.

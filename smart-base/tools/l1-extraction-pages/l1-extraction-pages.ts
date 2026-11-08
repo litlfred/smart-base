@@ -1,18 +1,12 @@
 import { defineTool, toolFactory } from "../../platform/index.js";
 
-// ── The l1-extraction viewer ─────────────────────────────────────────
-//
-// smart-base owns the `l1-extraction` kind (owner, 2026-10-16:
-// "l1-extraction is part of smart-base"), so its viewer is drawn here: a hub
-// at the visualiser's route and one page per instance declaring a directory
-// of the kind (smart-base's handbook extraction, and the measles example of
-// the immunizations guideline layer above it). Implemented in `smart-base/scripts/gen-l1-extraction-pages.ts`.
+// smart-base owns the `l1-extraction` kind, so its viewer is drawn here.
 export default toolFactory((t) =>
   defineTool({
     id: "l1-extraction-pages",
-    title: "Write the L1 extraction viewer: a page per instance holding `l1-extraction` directories, and a hub",
+    title: "L1 extraction viewer: a hub and a page per instance with `l1-extraction` directories",
     description:
-      "For every visualiser an instance declares `renderedBy: l1-extraction-pages`, write the hub at `<locale>/<harness>/<id>/` and, with `subgraphs: \"instance\"`, one page per instance that declares an `l1-extraction` directory. Each shows what was extracted, read from the files by what they declare: the L1 statements (graph nodes carrying a `statement`, and an authored L1 source's `recommendations`), the candidate work list's counts, coverage and decisions, each graph document's nodes by type and edges by predicate (the L2 scenario candidates among them), the curation, mapping, vocabulary, exclusions and run context counted, and every file linked to its published copy (cat-harness's `library:viz`) when the site holds it and to its source at the pinned commit. A declared directory not on disk is reported UNKNOWN, never as zero.",
+      "For every visualiser an instance declares with `renderedBy: l1-extraction-pages`, write the hub at `<locale>/<harness>/<id>/` and, with `subgraphs: \"instance\"`, one page per instance that declares an `l1-extraction` directory. Each page shows, from what the files declare: the L1 statements (graph nodes with a `statement`, and an authored L1 source's `recommendations`); the candidate work list's counts, coverage and decisions; each graph document's nodes by type and edges by predicate (L2 scenario candidates included); counts of curation, mapping, vocabulary, exclusions and run context; and a link from every file to its published copy (cat-harness's `library:viz`), when the site has it, and to its source at the pinned commit. A declared directory not on disk is reported UNKNOWN, never zero.",
     install: { none: true },
     invoke: { shell: "bun run smart-base/scripts/gen-l1-extraction-pages.ts" },
     // What this Tool CAN draw. An instance declares that it DOES, in its own
@@ -20,7 +14,7 @@ export default toolFactory((t) =>
     renders: ["l1-extraction"],
     io: {
       inputs: [
-        { name: "site", schema: t("RepoPath"), required: false, arg: { flag: "--site" }, description: "A site being built: the pages go under it (`visualiser-writers.ts` in cat-harness-tools passes it). Absent, they go under the checkout's site directory." },
+        { name: "site", schema: t("RepoPath"), required: false, arg: { flag: "--site" }, description: "The site being built; pages go under it (cat-harness-tools' `visualiser-writers.ts` passes it). Default: the checkout's site directory." },
         { name: "root", schema: t("RepoPath"), required: false, arg: { flag: "--root" }, description: "The checkout whose declarations are read. Default: the checkout holding the working directory." },
         { name: "check", schema: t("Flag"), required: false, description: "Write nothing; exit 1 when a page is stale, missing or orphaned." },
       ],
@@ -32,7 +26,7 @@ export default toolFactory((t) =>
     satisfies: ["graph-rendering"],
     selection: {
       when: "Publishing a site that should show what each L1 extraction holds.",
-      limits: "Shows what the files hold; it validates nothing (`l1-recommendation-candidates` and `l1-recommendation-scenarios` do, on every write) and does not re-render the JSON-LD (the library viewer publishes it).",
+      limits: "Validates nothing (`l1-recommendation-candidates` and `l1-recommendation-scenarios` do, on every write) and does not re-render the JSON-LD (the library viewer publishes it).",
       cost: "Reads each file of each declared directory once.",
     },
     requires: { runtime: ["bun"], network: false },

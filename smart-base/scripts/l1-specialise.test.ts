@@ -1,11 +1,13 @@
 import { describe, expect, test } from "bun:test";
-import { mkdtempSync, writeFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
+import { requireHarnessRoot } from "../../cat-harness-tools/schemas/harness-root.ts";
+import { CAT_HARNESS_NS as KG_CAT_HARNESS_NS } from "../kg/src/l1-library.ts";
 import type { DublinCoreRecord } from "../platform/index.js";
 import { decideL1, LAYER_SCHEME, type IntakeRecord } from "./l1-membership.ts";
-import { identifiersOf, l1LibraryDocument, printedNumber, type Held, type Input } from "./l1-specialise.ts";
+import { CAT_HARNESS_NS, identifiersOf, l1LibraryDocument, printedNumber, type Held, type Input } from "./l1-specialise.ts";
 
 const dir = mkdtempSync(join(tmpdir(), "l1-specialise-"));
 writeFileSync(join(dir, "intake.json"), "{}");
@@ -61,7 +63,7 @@ describe("l1LibraryDocument", () => {
   const { doc, report } = l1LibraryDocument(input());
   const byType = (t: string) => doc.nodes.filter((n) => n.type === t);
 
-  test("publication IRI from the electronic ISBN; decided when declared", () => {
+  test("publicationIriFromElectronicIsbn", () => {
     expect(identifiersOf(record)[0]).toEqual({ type: "isbn", value: "9789240016514" });
     const [p] = byType("publication");
     expect(p!.id).toBe("https://smart.who.int/kg/l1/publication/isbn-9789240016514");
@@ -69,7 +71,7 @@ describe("l1LibraryDocument", () => {
     expect(p!.evidence).toMatchObject({ by: "ritikarawlani", at: "2026-10-07" });
   });
 
-  test("every L1 layout node specialises an absolute library IRI — upstream only", () => {
+  test("layoutNodesSpecialiseLibraryIris", () => {
     const spec = doc.edges.filter((e) => e.predicate === "specializationOf");
     expect(spec).toHaveLength(1 + 3 + 1);
     for (const e of spec) {
@@ -81,20 +83,31 @@ describe("l1LibraryDocument", () => {
     expect(doc.edges.some((e) => lib.has(e.source))).toBe(false);
   });
 
-  test("printed numbers are recovered, so an annex does not collide with a chapter", () => {
+  test("recoversPrintedNumbers", () => {
     expect(byType("publication-section").map((n) => n.id.split("/section/")[1])).toEqual(["Section-1", "1.1", "Annex-1"]);
     expect(printedNumber("3", "x", "Annex 3. y")).toBe("3");
   });
 
-  test("sections nest, and an element sits in the deepest section holding its page", () => {
+  test("sectionsNestElementInDeepestSection", () => {
     const contains = doc.edges.filter((e) => e.predicate === "contains").map((e) => [e.source.split("/").pop(), e.target.split("/").pop()]);
     expect(contains).toContainEqual(["Section-1", "1.1"]);
     expect(contains).toContainEqual(["Annex-1", "table-a1-1"]);
     expect(byType("publication-element")[0]!.properties).toMatchObject({ elementType: "table", label: "Table A1.1", pageRange: "11" });
   });
 
-  test("front matter is reported, not emitted", () => {
+  test("frontMatterReportedNotEmitted", () => {
     expect(report.some((r) => r.includes("front matter"))).toBe(true);
     expect(byType("publication-section").some((n) => n.label.includes("Front matter"))).toBe(false);
+  });
+
+  test("catHarnessClassesUnderDeclaredRelease", () => {
+    const decl = JSON.parse(readFileSync(join(requireHarnessRoot(), "cat-harness.json"), "utf-8")) as { iriBase: string; version: string };
+    const expected = `${decl.iriBase}v${decl.version.split(".")[0]}/ns/`;
+    expect(CAT_HARNESS_NS).toBe(expected);
+    const classes = byType("library-node").map((n) => String(n.properties.libraryClass)).filter((c) => c.startsWith(decl.iriBase));
+    expect(classes).toContain(`${expected}SourceDocument`);
+    expect(classes.every((c) => c.startsWith(expected))).toBe(true);
+    // The kg package builds without the mount, so it keeps a literal; this is its drift check.
+    expect(KG_CAT_HARNESS_NS).toBe(expected);
   });
 });

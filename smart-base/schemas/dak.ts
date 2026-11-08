@@ -65,8 +65,8 @@ import {
   DAK_UNFORMALIZED_COMPONENTS,
   type DakComponent,
 } from "./dak-kinds";
-import { kgNodeLabelShape, type KgNodeLabels } from "../platform/index.js";
-import { SMART_BASE_NS } from "../platform/index.js";
+import { kgNodeLabelShape, type KgNodeLabels } from "../platform/schema.js";
+import { SMART_BASE_NS } from "../platform/schema.js";
 
 /**
  * The `contentTypes` key of the root `index.config.json` whose presence

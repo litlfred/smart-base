@@ -1,14 +1,14 @@
 The FHIR IG Publisher and FHIR content in general are described on the
 [FHIR IG Publisher](https://litlfred.github.io/folio-assistant/fhir-harness/fhir/ig-publisher.html)
 and [FHIR content](https://litlfred.github.io/folio-assistant/fhir-harness/fhir/fhir-content.html)
-pages of the FHIR IG layer. This section holds what is specific to the WHO
-SMART Guidelines build.
+pages of the FHIR IG layer. This section covers what is specific to the WHO
+SMART Guidelines build. The commands, the publishing pipeline and the
+published assets are on
+[Building and publishing the SMART Base IG]({{ '/smart-base/guides/smart-base-build.html' | relative_url }}).
 
-**The Publisher is one step of many.** In the WHO SMART Guidelines build it
-runs between six pre-processing invocations and nine post-processing ones.
-Most of what a reader sees on a published SMART Guideline (the DAK API, the
-JSON Schemas, the JSON-LD vocabularies) is produced *after* the Publisher
-exits, by scripts, and is not the Publisher's work at all.
+**The Publisher is one step of many.** It runs between six pre-processing
+invocations and nine post-processing ones. The DAK API, the JSON Schemas and
+the JSON-LD vocabularies are produced *after* it exits, by scripts.
 
 **The version floats.** The WHO build downloads `publisher.jar` from the
 **latest** release on every run, so two builds of an unchanged commit can
@@ -18,8 +18,7 @@ differ, and nothing in the output says which version produced them.
 `hl7.terminology`, `hl7.fhir.uv.extensions.r4`, `hl7.fhir.uv.cql`,
 `hl7.fhir.uv.cpg`, `hl7.fhir.uv.crmi` and `hl7.fhir.uv.sdc`.
 
-The rules are skills, and where the two disagree the skill wins and this page
-is wrong:
+The rules are skills; where a skill and this page disagree, the skill wins:
 
 - **`l2-dak-authoring`**: authoring at L2, and deriving rather than retyping.
 - **`ig-artifact-ingestion`**: reading a *published* IG back as a knowledge
