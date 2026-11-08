@@ -21,19 +21,14 @@ uses-methodology:
 
 > Skill id: `recommendation-extraction` · Package: `authoring-who-smart-guidelines` ·
 > Follows [`dak-l1-library`](dak-l1-library.md), which builds the library and
-> the layout graph this extracts from. Bean `kvd2`.
+> the layout graph this extracts from.
 
-**A recommendation that does not say who does it, and during what, cannot be
-implemented.** Owner, 2026-10-10: *"as part of extracting a recommnedation the
-scenario (user story,role) get described … we need [a process] for a role …
-skill is to reuse existing vocabulary if possible … the process should be
-chosen from existint smart-immz processes if possivle. warn if not … reuse
-existing schema."*
-
-Every recommendation will end up in a SMART Guideline that is a **clinical**,
-**public-health** or **health-system-strengthening** guideline, and will feed
-the L2 assets derived from it. This skill records that, per recommendation,
-before any L2 asset is drawn.
+A recommendation that does not say who does it, and during what, cannot be
+implemented. This skill extracts each recommendation verbatim and records,
+per recommendation, the persona who acts on it, the business process they
+act in, and whether the guideline is **clinical**, **public-health** or
+**health-system-strengthening**, before any L2 asset is drawn. It reuses
+existing vocabulary and processes first, and warns when none fits.
 
 ## Input and output
 
@@ -42,70 +37,62 @@ The contract is [`input.schema.json`](../../../schemas/skills/recommendation-ext
 - **In:** `l1Sources`, [`dak-l1-library`](dak-l1-library.md)'s output, and the `targetGuide` whose personas and processes the scenarios reuse first.
 - **Out:** `l1Kg`: per included source, its `extractionPath` (`library/<bib>/l1-extraction/`), `sourceVersion`, the recommendation, remark, practice and scenario-candidate counts, the `coverage` and every `WARNING`. Stages 3 ([`l2-dependency-choice`](l2-dependency-choice.md)), 4 and 5 take it as their `l1Kg`.
 
-As stage 2 of [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), a
-source is **skipped only when it is already in a KG**: `library/<bib>/l1-extraction/`
-is there, declared, and at the same source version (`skipped: true` in the
-output). A library entry with no extraction still needs this half, after
-`bun run cat ingest` and [`dak-l1-library`](dak-l1-library.md)'s generic-document
-layer have put it in `library/`. Skipping is per source, not for the whole
-stage.
+As stage 2 of [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md),
+a source is **skipped only when it is already in a KG**: its extraction
+directory exists, is declared, and is at the same source version
+(`skipped: true`). A library entry with no extraction still needs it, after
+`bun run cat ingest` and [`dak-l1-library`](dak-l1-library.md)'s
+generic-document layer have put it in `library/`. Skipping is per source.
 
 ## The two halves
 
 | half | produces | layer | schema |
 |---|---|---|---|
-| extraction | `recommendation` and `remark` nodes, verbatim — or, for implementation guidance, `implementation-practice` nodes | L1 | L1 **3.0**, `smart-base/kg/src/l1.ts` in litlfred/smart-base (`KGRecommendation`); `implementation-practice` is the `l1-library` extension, `smart-base/kg/src/l1-library.ts` (`KGImplementationPractice`); not smart-kg 1.0 |
+| extraction | `recommendation` and `remark` nodes, verbatim — or, for implementation guidance, `implementation-practice` nodes | L1 | L1 **3.0**, `smart-base/kg/src/l1.ts` (`KGRecommendation`); `implementation-practice` is the `l1-library` extension, `smart-base/kg/src/l1-library.ts` (`KGImplementationPractice`); not smart-kg 1.0 |
 | scenario | one `user-scenario` candidate per recommendation, joined to `persona` and `business-process` | L2 | smart-kg `ontology/l2/l2.json`, unchanged; smart-base `UserScenario.fsh` |
 
-### Implementation guidance prints practices, not recommendations (owner ruling 1b, 2026-10-12)
+No L1 field carries the scenario: L1 holds what WHO says; who does it, and
+during which process, is adaptation, which is L2's.
 
-A guideline's recommendation is a GRC-approved normative statement. A
-publication whose `publicationType` is **`implementation-guidance`** (or
-**`methodology`**) "makes no recommendations of its own" (handbook for
-guideline development §1.9) — a "how to" document, such as a digital
-transformation handbook with its own "Best practices" lists. What it prints as
-normative is an **`implementation-practice`** node, a class of its own, never a
-`recommendation` with a new kind code: every `recommendation-kind` (including
-`good-practice-statement`) is a guideline's.
+### Implementation guidance prints practices, not recommendations
 
-- Record the type in the curation: `publication.publicationType`. With
+A recommendation is a GRC-approved normative statement made by a guideline.
+A publication whose `publicationType` is **`implementation-guidance`** or
+**`methodology`** (a "how to" document, such as a digital transformation
+handbook with its own "Best practices" lists) makes no recommendations of
+its own (handbook for guideline development §1.9). What it prints as
+normative is an **`implementation-practice`** node, never a `recommendation`
+with a new kind code.
+
+- Record the type in the curation as `publication.publicationType`. With
   `implementation-guidance` or `methodology`, every `as: recommendation`
   decision emits an `implementation-practice` node at
   `<publication>/implementation-practice/<key>`, and the graph names
   `l1-library.context.jsonld` so the validator scopes L1 + the extension.
-- The class lives in `smart-base/kg/src/l1-library.ts`, **not** `smart-base/kg/src/l1.ts`:
-  `l1.ts` stays the migrated L1 3.0 layer, unextended. (It is no longer held
-  equal to WHO smart-kg's `l1.json`: smart-kg is deprecated, owner 2026-10-16.)
-- It carries `identifier`, `statement` (verbatim) and `contentHash`; no `kind`,
-  `direction`, `strength` or certainty — nothing graded it. A `kind` on such a
-  decision is refused.
+- The class lives in `smart-base/kg/src/l1-library.ts`; `l1.ts` stays the
+  L1 3.0 layer, unextended.
+- It carries `identifier`, `statement` (verbatim) and `contentHash`; no
+  `kind`, `direction`, `strength` or certainty. A `kind` on such a decision
+  is refused.
 - **No remark.** L1 3.0's `remark` is minted under a recommendation, so a
-  `remark` decision in such a publication is refused: exclude the sentence,
-  make it its own practice, or wait until remark is licensed on a practice
-  upstream.
+  `remark` decision in such a publication is refused: exclude the sentence
+  or make it its own practice.
 - `smart-base/kg/src/validate.ts` refuses a `recommendation` defined in an
   implementation-guidance or methodology publication.
-- The output file is `l1.json`. It was `recommendations.l1.json` until the
-  owner ruled, 2026-10-12, *"Rename to l1.json"*: the graph holds
-  implementation-practice nodes as well as recommendations, so the old name
-  was inaccurate. No alias is kept; the scenario half and its run context pin
-  the graph by path and were regenerated against the new one.
-
-No new L1 field carries the scenario. L1 holds what WHO says; who does it, and
-during which process, is adaptation, and adaptation is L2's.
+- The output graph is `l1.json`.
 
 ## Part 1 — extraction (hybrid)
 
-**Candidates are mechanical, structure is an agent's, and the gates are
-mechanical again.**
+Candidates are mechanical, structure is the agent's, and the gates are
+mechanical.
 
 1. **Ingest the source** (see `dak-l1-library` steps 1–2):
-   `bun run ingest uploads/<doc_id>/<doc_id>.pdf --library <lib>`.
+   `bun run cat ingest uploads/<doc_id>/<doc_id>.pdf --library <lib>`.
 2. **Fast path — a guideline that prints labels.** When the source prints
    `Recommendation N:` labels,
    `bun run smart-base/scripts/extract-smart-kg-l1.ts --entry smart-base/library/<id>`
-   extracts them by label. It found **0** in the measles position paper, which
-   prints none; that is why the hybrid path exists. (It still writes L1 1.0.)
+   extracts them by label (it writes L1 1.0). A source with no labels, such
+   as the measles position paper, takes the hybrid path below.
 3. **List the normative sentences.** Run core's `l1-coverage` with an empty
    capture list; every sentence carrying a marker (`should`, `shall`, `must`,
    `recommend*`, `should not`, `may be given/administered/offered/…`) comes
@@ -117,16 +104,15 @@ mechanical again.**
    ```
 
    `--text` is body text only, page-tagged; strip references and running
-   headers first (`l1-coverage` says why).
-4. **Structure them.** An agent turns each candidate into an L1 3.0
+   headers first.
+4. **Structure them.** The agent turns each candidate into an L1 3.0
    `recommendation` (`identifier`, `statement`, `kind`, `population`,
-   `intervention`, `setting`, …) or a `remark` (`text`, `remarkType`) attached
-   by `hasRemark`. Rules:
-   - `statement` and `text` are **verbatim** — the printed words, line breaks
-     joined, nothing else changed. A paraphrase is a different
-     recommendation;
+   `intervention`, `setting`, …) or a `remark` (`text`, `remarkType`)
+   attached by `hasRemark`:
+   - `statement` and `text` are **verbatim**: the printed words, line breaks
+     joined, nothing else changed;
    - a sentence that is history, background or a manufacturer's statement is
-     not forced into a node; it is **proposed** for exclusion (step 5);
+     **proposed** for exclusion (step 5), not forced into a node;
    - GRADE strength and certainty are set only where the source prints them;
    - every node is `inferred`, with a note and evidence (page and quote).
 5. **Gate: 100 % accounted for.** Re-run with the captured statements and the
@@ -139,17 +125,16 @@ mechanical again.**
 
    Exit 0 only at 100 %. An exclusion counts only with `signedOffBy`: **an
    agent may propose one, only a person signs it**, and the reason is one of
-   the fixed five (`background-fact`, `manufacturer-statement`, `editorial`,
-   `research-question`, `duplicate-of:<id>`).
-6. **Gate: the graph's shape.** Validate the L1 3.0 document with the Zod port:
-   `npx tsx src/validate.ts <graph.json>` from `kg/` in a smart-base checkout
-   (what `--validate-zod` runs in the sibling scripts).
+   `background-fact`, `manufacturer-statement`, `editorial`,
+   `research-question` or `duplicate-of:<id>`.
+6. **Gate: the graph's shape.** Validate the L1 3.0 document with the Zod
+   port: `npx tsx src/validate.ts <graph.json>` from `smart-base/kg/`.
 
 ### Part 1 as a tool: `l1-recommendation-candidates`
 
-This mechanical step is its own named skill, [`recommendation-candidates`](recommendation-candidates.md), with its own contract; the Tool satisfies that skill, not this one.
-
-Steps 3–6 are one Tool node (`smart-base/tools/l1-recommendation-candidates/`), run twice around
+Steps 3–6 are the named skill
+[`recommendation-candidates`](recommendation-candidates.md), satisfied by
+the Tool `smart-base/tools/l1-recommendation-candidates/`, run twice around
 the agent's judgement:
 
 ```sh
@@ -161,10 +146,11 @@ bun run smart-base/scripts/l1-recommendation-candidates.ts --entry smart-base/li
   --curation <dir>/curation.yaml --out <dir> [--check]
 ```
 
-**The curation is the agent's step, and only the agent's.** The script hints
+**The curation is the agent's step.** The script hints
 (`licence-or-imprint`, `glossary-page`, `layout-fragment`) and proposes the
-publication's identity from the printed ISBN; it never decides. Per candidate
-location (`p<page>:s<n>`, `l1-coverage`'s own), the agent records one of:
+publication's identity from the printed ISBN; it never decides. Per
+candidate location (`p<page>:s<n>`, `l1-coverage`'s own), the agent records
+one of:
 
 | `as` | means | fields |
 |---|---|---|
@@ -174,63 +160,58 @@ location (`p<page>:s<n>`, `l1-coverage`'s own), the agent records one of:
 | `exclude` | a PROPOSED exclusion, one of the fixed reasons | `reason`; `signedOffBy` is a person's acting as `l1-extraction-reviewer`, never an agent's |
 
 Every decision carries a `basis`. A location may carry a list of
-`recommendation` decisions: the splitter reads a bulleted list as one sentence.
+`recommendation` decisions: the splitter reads a bulleted list as one
+sentence.
 
-It **refuses** a statement not printed in the entry (normalised), an override
-that neither contains nor is contained in its candidate, a location the entry
-does not hold, a reused key, and a remark of an undeclared key — then checks
-the graph with `smart-base/kg/src/validate.ts`. It writes `recommendation-candidates.json`
-(the work list), `l1.json`, `exclusions.proposed.json`,
-`extraction-warnings.md` and `run-context.json`.
+It **refuses** a statement not printed in the entry (normalised), an
+override that neither contains nor is contained in its candidate, a location
+the entry does not hold, a reused key, and a remark of an undeclared key,
+then checks the graph with `smart-base/kg/src/validate.ts`. It writes
+`recommendation-candidates.json` (the work list), `l1.json`,
+`exclusions.proposed.json`, `extraction-warnings.md` and `run-context.json`.
 
-**Who signs an exclusion (owner ruling 3b, 2026-10-12).** Each record in
-`exclusions.proposed.json` names the role that must sign it, as a role-graph
-`RoleRef` (`cat-harness/schemas/role-graph.ts`): `"signerRole": {"role":
-"l1-extraction-reviewer"}`. The role is declared in
-`smart-base/scenarios/roles.json` (title *L1 extraction reviewer*, a person,
-inheriting the harness's `reviewer`). The record stays unsigned — no
-`signedOffBy` — until a person acting in that role reads the sentence in place
-against the printed page and signs it in `Lane_ExtractionReviewer` of
-[`classify-and-code-content.bpmn`](../../../processes/content/classify-and-code-content.bpmn)
+**Who signs an exclusion.** Each record in `exclusions.proposed.json` names
+its signer as a role-graph `RoleRef`
+(`cat-harness-tools/schemas/process/role-graph.ts`):
+`"signerRole": {"role": "l1-extraction-reviewer"}`, declared in
+`smart-base/scenarios/roles.json` (a person, inheriting the harness's
+`reviewer`). It stays unsigned until a person in that role reads the
+sentence against the printed page and signs it in `Lane_ExtractionReviewer`
+of [`classify-and-code-content.bpmn`](../../../processes/content/classify-and-code-content.bpmn),
 following [`classify-and-code-content`](classify-and-code-content.md) and
-[`terminology-coding`](../../../methodologies/terminology-coding.md) (bean `4nfs`).
+[`terminology-coding`](../../../methodologies/terminology-coding.md).
 
 **Provenance.** Each run of either tool writes a cat-harness
-`folio-run-context/v1` (`schemas/run-context.ts`) as `run-context.json`
-beside its output — the platform commit, the mounts, the script and its hash,
-the inputs' hash basis — the same record `pdf-ocr.py` writes at ingest. The
-work list cites it by reference. `--check` ignores the context, as it ignores
-`generatedAt`: a context moves with every commit.
+`folio-run-context/v1` (`cat-harness-tools/schemas/sdlc/run-context.ts`) as
+`run-context.json` beside its output: the platform commit, the mounts, the
+script and its hash, and the inputs' hash basis, as `pdf-ocr.py` writes at
+ingest. The work list cites it by reference. `--check` ignores it, as it
+ignores `generatedAt`.
 
-**Declare every output directory, in the same commit.** An `--out` directory
-in or beside a library — `library/<entry>/l1-extraction/`, or a sibling such
-as `library/l1-recommendation-scenarios/` that Part 2 writes, or
-`l1-extractions/<entry>/` when the entry lives in another instance — is a directory
-of the instance's `<name>.json` with `"graphTypologies": ["l1-extraction"]`,
-one entry per directory, never a wildcard (smart-base's own
-`l1-extraction-9789240116191-eng` is the pattern). Undeclared,
-folio-assistant's `check:l1-complete` reads an `l1-extraction/` inside an
-entry as a stray child and a sibling directory as an entry with no
-`structure.json`; it fails the QA working copy, and with it every test
-shard, gate and the staging build that read the copy. That is what happened
-to the Uganda adaptation on 2026-10-15 (folio-assistant#2559, fixed by
-<https://github.com/litlfred/smart-immunizations-uganda/commit/6baddb4>).
-Never nest the output in a `library/<entry>/` folder when the entry itself
-lives in another instance's library: that folder reads as a second copy of
-the entry, and folio-assistant's library ingest refuses the duplicate slug
-(2026-10-30, when the handbook's sections moved to who-iris, who-iris#107).
-Hold it at `l1-extractions/<entry>/` instead. Before staging, run
-`bun run cat check:l1-complete` in a folio-assistant checkout that mounts the
-instance at the commit being staged; it must exit 0.
+**Declare every output directory, in the same commit.** Each `--out`
+directory in or beside a library (`library/<entry>/l1-extraction/`, a
+sibling such as `library/l1-recommendation-scenarios/` that Part 2 writes,
+or `l1-extractions/<entry>/`) is declared in the instance's `<name>.json`
+with `"graphTypologies": ["l1-extraction"]`, one entry per directory, never
+a wildcard (smart-base's `l1-extraction-9789240116191-eng` is the pattern).
+An undeclared one fails folio-assistant's `check:l1-complete`, and with it
+the QA working copy, every test shard and gate reading it, and the staging
+build. When the entry lives in another instance's library, hold the output
+at `l1-extractions/<entry>/`, never in a `library/<entry>/` folder: that
+reads as a duplicate of the entry, which the library ingest refuses. Before
+staging, run `bun run cat check:l1-complete` in a folio-assistant checkout
+that mounts the instance at the commit being staged; it must exit 0.
 
 ## Part 2 — the scenario
 
-Its mechanical step is the named skill [`recommendation-scenarios`](recommendation-scenarios.md) (Tool `l1-recommendation-scenarios`).
+Its mechanical step is the named skill
+[`recommendation-scenarios`](recommendation-scenarios.md) (Tool
+`l1-recommendation-scenarios`).
 
-### The shape (D3: L2 nodes, reused unchanged)
+### The shape: L2 nodes, reused unchanged
 
 Per recommendation, one `user-scenario` (smart-base `UserScenario`: `title`,
-`id`, `description`, `personas[]`) joined by the three edges smart-kg L2
+`id`, `description`, `personas[]`) joined by three edges smart-kg L2
 already licenses:
 
 ```
@@ -244,7 +225,7 @@ The `description` is a user story:
 > As a *&lt;persona&gt;*, during *&lt;process&gt;*, I *&lt;act&gt;* so that *&lt;outcome&gt;*.
 
 Each link records its **source**, as an intake `classifications` entry does
-(`cat-harness/schemas/intake.ts`):
+(`cat-harness-tools/schemas/library/intake.ts`):
 
 | source | meaning | smart-kg derivation |
 |---|---|---|
@@ -254,9 +235,9 @@ Each link records its **source**, as an intake `classifications` entry does
 
 and a **status**: `candidate` until a person reviews the entry.
 
-### Reuse first, stop at the first hit (D4)
+### Reuse first, stop at the first hit
 
-Persona, business-process, and guideline-domain coding apply the
+Persona, business-process and guideline-domain coding apply the
 [`terminology-coding`](../../../methodologies/terminology-coding.md) methodology
 (backed by [`classify-and-code-content`](classify-and-code-content.md), the
 [`terminology-lookup`](../../../tools/terminology-lookup/terminology-lookup.ts)
@@ -265,47 +246,45 @@ Tool, and [`glossary-terms`](../../../../folio-assistant-core/skills/library/cat
 | what | 1st | 2nd | otherwise |
 |---|---|---|---|
 | persona | the target guide's own personas | smart-base's generic `DAK.Persona.*` (`input/fsh/actors/`, ISCO / CDHI) | a glossary **candidate**, and a WARNING |
-| process | the target guide's own processes | a domain process catalogue — **none exists yet** (smart-base-clinical holds no processes; bean `2ipj`): report "catalogue absent" | `could-not-determine`, and a WARNING |
-| domain | `clinical` \| `public-health` \| `health-system-strengthening`, per scenario, with its source | | the SKOS scheme is bean `398x` |
+| process | the target guide's own processes | a domain process catalogue — none exists yet (smart-base-clinical holds no processes): report "catalogue absent" | `could-not-determine`, and a WARNING |
+| domain | `clinical` \| `public-health` \| `health-system-strengthening`, per scenario, with its source | | |
 
-**Never invent a process.** A process that is not in the guide is
-`could-not-determine`, and the warning says why — that warning is the evidence
-the guide (or a catalogue) is missing one, which is worth more than a
-plausible-sounding process nobody can find. Choose the persona who **acts** on
+**Never invent a process.** A process not in the guide is
+`could-not-determine`, and the warning says why: it is the evidence that the
+guide (or a catalogue) is missing one. Choose the persona who **acts** on
 the statement, not the one it is about: "Vaccine should be offered to
-travellers" is acted on by the health worker. A persona a guide's description
-does not cover (an immunization DAK's health worker treating measles) falls to
-the next rung rather than being stretched.
+travellers" is acted on by the health worker. A persona a guide's
+description does not cover (an immunization DAK's health worker treating
+measles) falls to the next rung rather than being stretched.
 
 Read the **statement**, not its section: "Countries should achieve ≥95 %
-coverage" sits under *WHO position* and is acted on through coverage analysis
-(IMMZ.I), while "MCVs should not be given to individuals with … severe
-immunosuppression" is a per-client check (IMMZ.D, IMMZ.D5). A national policy,
-schedule-design or programme decision is not a per-client process.
+coverage" sits under *WHO position* and is acted on through coverage
+analysis (IMMZ.I), while "MCVs should not be given to individuals with …
+severe immunosuppression" is a per-client check (IMMZ.D, IMMZ.D5). A
+national policy, schedule-design or programme decision is not a per-client
+process.
 
 ### Run it
 
-1. **The vocabulary.** For the target guide, read its two pages
-   (`business-processes.md`, `personas.md`) from a guide checkout into the
-   vocabulary JSON; for the generic rung, read smart-base's ActorDefinitions:
+1. **The vocabulary.** For the target guide, read its `business-processes.md`
+   and `personas.md` from a guide checkout; for the generic rung, read
+   smart-base's ActorDefinitions:
 
    ```sh
    bun run smart-base/scripts/l1-scenario-vocabulary.ts --guide <guide checkout> --out guide-vocabulary.json
    bun run smart-base/scripts/l1-scenario-vocabulary.ts --fsh-actors <smart-base checkout>/input/fsh/actors --out smart-base-generic-personas.json
    ```
 
-   Each file records the repository, the commit, and the file and line every
-   entry came from. The guide's name, namespace and repository are read from
-   the checkout itself — its `<name>.json` declaration and its
-   `sushi-config.yaml` `canonical` — so the script names no guide. Persona ids are `slug(title)` where the guide prints none
-   (what smart-kg `kgid.mjs` mints a persona IRI from); process ids are the
-   printed Process IDs.
+   Each file records the repository, the commit, and the file and line of
+   every entry. The guide's name, namespace and repository come from the
+   checkout's `<name>.json` and `sushi-config.yaml` `canonical`. Persona ids
+   are `slug(title)` where the guide prints none (as smart-kg `kgid.mjs`
+   mints a persona IRI); process ids are the printed Process IDs.
 2. **The mapping** (`l1-scenario-mapping/v1`, YAML), authored: per
    recommendation, its `personas` (an `id`, or a `candidate` term), its
    `process` (an `id`, or `could-not-determine`), `act`, `outcome` and
-   `domain`, **each with a `source` and a `basis`**. A basis quotes the
-   statement, the vocabulary row or the person's ruling. An unexplained link is
-   a guess.
+   `domain`, **each with a `source` and a `basis`** quoting the statement,
+   the vocabulary row or the person's ruling.
 3. **The candidates:**
 
    ```sh
@@ -316,8 +295,8 @@ schedule-design or programme decision is not a per-client process.
 
    It writes `scenario-candidates.l2.json` (an L2 graph document) and
    `scenario-warnings.md`, and **refuses**:
-   - an id the vocabulary does not hold — a typo is not a new process;
-   - a recommendation with no mapping entry — coverage is 100 %;
+   - an id the vocabulary does not hold;
+   - a recommendation with no mapping entry (coverage is 100 %);
    - a mapping entry for a recommendation the source does not hold;
    - a `declared` link that names nobody.
 4. **Tier 2.** `node tools/validate.mjs <l1-graph.json> scenario-candidates.l2.json`
@@ -333,81 +312,75 @@ WARNING process-not-determined <key>: no <guide> process (<ids>) realises this; 
 WARNING persona-glossary-candidate <key>: persona "<term>" is a glossary candidate — … <basis>
 ```
 
-A warning is not a refusal: the run succeeds, and the warning is the work
+A warning is not a refusal: the run succeeds, and the warnings are the work
 list for whoever owns the guide's processes or the glossary.
 
 ### Review and sign-off
 
-Everything this skill writes is a **candidate**. A person reviews an entry and
-records it in the mapping (`review: {by, at}`); the run then marks that entry's
-links `reviewed`. A person may also turn a link `declared` (with `by`). An
-agent never writes either. The coverage exclusions of Part 1 are signed by a
-person acting as `l1-extraction-reviewer`, and by no one else.
+Everything this skill writes is a **candidate**. A person reviews an entry
+and records it in the mapping (`review: {by, at}`); the run then marks that
+entry's links `reviewed`. A person may also turn a link `declared` (with
+`by`). An agent never writes either. Part 1's exclusions are signed only by
+a person acting as `l1-extraction-reviewer`.
 
 ## What smart-kg L2 could not hold
 
 `user-scenario` declares only `id`, `title`, `description`, `sourceKind`,
 `source` and `resolutionStatus`, and tier 2 refuses any other node property.
-So `domain`, each link's `linkSource` and the `reviewStatus` go on the edges'
-open `properties`; the act and outcome live only inside `description`. If they
-are to be queried as fields, smart-kg's `user-scenario` (or `UserScenario.fsh`)
-needs the properties.
+So `domain`, each link's `linkSource` and the `reviewStatus` go on the
+edges' open `properties`; the act and outcome live only inside
+`description`.
 
 ## What it feeds, later
 
-The scenarios are the hinge to L2. Each `realises` edge names the process —
-and so the **BPMN** whose lane is the persona — a scenario will be drawn in;
+The scenarios are the hinge to L2. Each `realises` edge names the process,
+and so the **BPMN** whose lane is the persona, a scenario will be drawn in;
 the recommendation's conditions become **DMN** rules (for measles, the
-IMMZ.D2.DT.Measles.* and IMMZ.D5 tables already exist); and the user story
-becomes a functional **requirement** (`functional-requirement fulfilledBy
-persona`). None of that is drawn here. `could-not-determine` scenarios are the
-ones with no process to draw into yet.
+IMMZ.D2.DT.Measles.* and IMMZ.D5 tables); and the user story becomes a
+functional **requirement** (`functional-requirement fulfilledBy persona`).
+None of that is drawn here. `could-not-determine` scenarios have no process
+to draw into yet.
 
 ## The worked examples
 
 **An ingested handbook, end to end.**
 `smart-base/l1-extractions/9789240116191-eng/` is the *Digital
-transformation handbook for health product catalogue* (WHO, 2025; its sections
-are in who-iris, `who-iris/library/9789240116191-eng/`) run through
-both tools: 48 normative sentences. The handbook is implementation guidance,
-so the agent's curation took **22 implementation practices** (not
-recommendations; ruling 1b) and proposed 30 exclusions (licence text, glossary
-definitions, background on SMART Guidelines, chapter checkpoints, and the
-definition of the data owner on page 26, which was a remark of NPC-R06 until
-ruling 1b made NPC-R06 a practice) — each naming `l1-extraction-reviewer` as
-its signer and none signed, so coverage reads 18/48 captured until a person
-signs them. The
-scenarios reuse the handbook's own roles (data owner, custodian, steward,
-project manager, solution architect: 18 links), one generic
-`DAK.Persona.DataManager`, and 3 glossary candidates (the national regulatory
-authority, twice, and the master data governance group). The handbook prints no
-business process with an id and no health-system catalogue exists (bean
-`2ipj`), so all 22 are `could-not-determine`: 26 warnings, one of them
-`practice-implementedBy-unlicensed` — smart-kg's L2 licenses `implementedBy`
-from a recommendation only, so from a practice it is a proposal for L2. That is the result,
-not a defect: it is the work list for the catalogue. The test
-`l1-recommendation-candidates.test.ts` keeps it current.
+transformation handbook for health product catalogue* (WHO, 2025; its
+sections are in `who-iris/library/9789240116191-eng/`) run through both
+tools: 48 normative sentences. It is implementation guidance, so the
+curation took **22 implementation practices** and proposed 30 exclusions
+(licence text, glossary definitions, background on SMART Guidelines,
+chapter checkpoints, and the definition of the data owner on page 26), each
+naming `l1-extraction-reviewer` as signer and none signed, so coverage reads
+18/48 until a person signs them. The scenarios reuse the handbook's own
+roles (data owner, custodian, steward, project manager, solution architect:
+18 links), one generic `DAK.Persona.DataManager`, and 3 glossary candidates
+(the national regulatory authority, twice, and the master data governance
+group). The handbook prints no business process with an id and no
+health-system catalogue exists, so all 22 are `could-not-determine`: 26
+warnings, one of them `practice-implementedBy-unlicensed` (smart-kg's L2
+licenses `implementedBy` from a recommendation only, so from a practice it
+is a proposal for L2). The test `l1-recommendation-candidates.test.ts`
+keeps it current.
 
-**An authored L1, scenario half only.**
-
-The 75 recommendations of the WHO measles position paper (WER 92(17), 2017),
-mapped against the immunization guide's own personas and processes, with the
-vocabulary, the mapping, the output and the warnings. It lives in that guide's
-library, which is its home, with the check that keeps it current (owner,
-2026-10-14). smart-base, which every guide builds on, holds no guide's example:
+**An authored L1, scenario half only.** The 75 recommendations of the WHO
+measles position paper (WER 92(17), 2017), mapped against the immunization
+guide's personas and processes, with the vocabulary, mapping, output and
+warnings, live in that guide's library with the check that keeps them
+current:
 <https://github.com/litlfred/smart-immunizations/tree/main/library/l1-recommendation-scenarios/measles>.
-The generic rung it was run with stays here, as
+smart-base holds no guide's example. The generic rung it was run with is
 `smart-base/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json`,
-because the handbook example above uses it too.
+shared with the handbook example.
 
-**An authored L1 from pictures.** When the source prints its recommendations
-only as images (a schedule poster, a slide deck), Part 1 finds nothing and the
-L1 is authored from the inspected image narratives and from transcriptions of
-the rendered page. Its check is the named step skill
-[`transcription-verbatim`](transcription-verbatim.md), which the Tool
-`l1-transcription-verbatim` satisfies: every
-statement verbatim in the narrative or transcription it names, every
-transcription word corroborated by the text layer unless listed under
-`inspectionOnly` with its basis. The Uganda schedule poster and UNEPI deck
+**An authored L1 from pictures.** When the source prints its
+recommendations only as images (a schedule poster, a slide deck), Part 1
+finds nothing and the L1 is authored from the inspected image narratives
+and transcriptions of the rendered page. Its check is the step skill
+[`transcription-verbatim`](transcription-verbatim.md) (Tool
+`l1-transcription-verbatim`): every statement verbatim in the narrative or
+transcription it names, every transcription word corroborated by the text
+layer unless listed under `inspectionOnly` with its basis. The Uganda
+schedule poster and UNEPI deck
 (<https://github.com/litlfred/smart-immunizations-uganda/tree/main/library/l1-recommendation-scenarios/uganda>)
 are the worked example.

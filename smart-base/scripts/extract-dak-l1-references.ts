@@ -82,11 +82,10 @@ import { readIgDakMetadata } from "./ig-dak-metadata.ts";
 import { isCurrent, readEntry, serialise, type LibraryEntry as BaseEntry } from "./extract-smart-kg-l1.ts";
 import { artifactId, citationId, dakNamespace, L1_LIBRARY_CONTEXT, L1_V3_ONTOLOGY_VERSION, publicationId, referenceEntryId, sha256 } from "./l1-kgid.ts";
 import { checkClassification, decideL1, LAYER_SCHEME, type IntakeClassification } from "./l1-membership.ts";
-import { dc, heldIntakes, identifiersOf, publicationProperties, type Held } from "./l1-specialise.ts";
+import { CAT_HARNESS_NS, dc, heldIntakes, identifiersOf, publicationProperties, type Held } from "./l1-specialise.ts";
 
 /** A library entry, with the checkout it is read from. */
 type LibraryEntry = BaseEntry & { repo: string };
-const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/0.1.0/ns#";
 
 /** Written beside the DAK's entry. Not `smart-kg-l1.json`: that name is the recommendation extractor's. */
 export const DAK_L1_FILENAME = "smart-kg-l1-dak-references.json";

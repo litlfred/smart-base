@@ -158,15 +158,19 @@ recommended for pregnant women to estimate gestational age.
 """
 
 EXPECT = {
-    "definition": 2,     # two RECOMMENDATIONs
-    "proposition": 1,    # good practice statement
+    "recommendation": 3,  # two RECOMMENDATIONs and the good practice statement (core kind)
     "remark": 1,
     "conjecture": 1,     # research priority
 }
 
 
 def check(res: dict, neg: dict, failures: list[str], how: str) -> None:
-    got = res["summary"]["by_kind"]
+    # The class's own candidates: an ASPECT mounted in this layer (the
+    # `requirements` aspect) adds its own, tagged with `aspect`.
+    got: dict[str, int] = {}
+    for c in res["candidates"]:
+        if not c.get("aspect"):
+            got[c["kind"]] = got.get(c["kind"], 0) + 1
     for kind, n in EXPECT.items():
         if got.get(kind, 0) != n:
             failures.append(f"[{how}] {kind}: expected {n}, got {got.get(kind, 0)}")

@@ -20,16 +20,11 @@ description: >
 > (`Process_L2ComponentEditReview`), called by every authoring track of
 > [`l2-dak-authoring.bpmn`](../../../processes/content/l2-dak-authoring.bpmn)
 
-Owner, 2026-10-14: *"make sure all L2 agent edit-human review process for DMN
-and BPMN, glossary/data dictionary, user stories and personas for the DAK are
-documented as part of subprocess and tools/skills where necessary."*
-
-**This skill adds one table and no mechanism.** Every step of the subprocess
-runs a skill that already exists. Review is cat-harness's `Process_Review`.
-The verdict is a `qa-review/v1` `QaReview`. The links follow `staging-review`'s
-deep-link rule, and the preview follows `before-after-preview`. What differs
-between components is only which renderer, checker, diff and reviewer a pass
-uses, and the table below records that.
+Every step of the subprocess runs an existing skill: review is cat-harness's
+`Process_Review`, the verdict a `qa-review/v1` `QaReview`, the links follow
+`staging-review`'s deep-link rule, and the preview follows
+`before-after-preview`. Components differ only in the checker, renderer, diff
+and reviewer, which the table below records.
 
 ## The shape: edit, check, render, then fork
 
@@ -41,13 +36,12 @@ edit ─► check ─► render + stage ─┬─► hand on (adjudication: pend
                                        reject           ─► reopen upstream, flag derived assets
 ```
 
-Adjudication is QA, not a gate (owner, 2026-10-14). The track that called the
-subprocess carries on as soon as the component is staged, and nothing waits for
-the verdict. But not waiting is not skipping: the call ends only when both
-branches have ended, and the DAK is not adjudicated until every component's
-verdict is recorded. These are rules 1 to 4 of
+Adjudication is QA, not a gate. The calling track carries on as soon as the
+component is staged; nothing waits for the verdict. The call still ends only
+when both branches have ended, and the DAK is not adjudicated until every
+component's verdict is recorded (rules 1 to 4 of
 [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), applied to one
-component.
+component).
 
 ## The inputs, per component
 
@@ -73,7 +67,7 @@ its own right.
 `Task_RequestReview` follows `staging-review`'s **deep-link rule**:
 
 - the request carries one deep link per changed page, to the anchor
-  (`…/STAGING/<slug>/<path>#<anchor>`), beside the same page on main as
+  (`…/branches/<slug>/<path>#<anchor>`), beside the same page on main as
   *before*;
 - the pages come from the change (`rendered-impact`), not from judgement;
 - if there is no preview yet, the request says so.
@@ -81,10 +75,9 @@ its own right.
 smart-base content reaches staging by a folio-assistant staging re-pin
 (`bun run cat mount:remote --staging`). It never goes through `/deploy`.
 
-**Where the request goes is a judgement, and more than one place may be
-right.** Ask where the person will look: this conversation, the issue the
-work came from, the pull request. Each place carries the same links. The
-question follows `interaction-modality`. A tagged PR comment becomes a todo
+**Send the request where the person will look**: this conversation, the
+issue the work came from, the pull request, or several of them, each with the
+same links. The question follows `interaction-modality`. A tagged PR comment becomes a todo
 (`review-comments`). Feedback on published content goes through
 `content-feedback`.
 
@@ -104,12 +97,11 @@ The agent never records a verdict.
 
 ## Tools that are still missing
 
-These are named so that nobody fills the gap with a description. Each belongs
-to the layer shown.
+Each belongs to the layer shown; do not fill the gap with a description.
 
 | gap | until it exists | layer |
 |---|---|---|
-| Rule-level DMN diff (rows and outputs added, removed or changed) | `visual-diff` of the two `dmn2html` tables | cat-harness-tools, with a `DiffRenderer` in cat-harness `schemas/diff-renderers.ts` |
-| DMN test-case runner for the full FEEL a DAK uses | test cases run by hand under `content-test`, and said to be | cat-harness-tools, by widening `decision-table.ts` (`artefact-reachability`) |
-| Structural BPMN diff (activities, lanes, flows) | `visual-diff` of the two `render:bpmn` pictures | cat-harness-tools; it is the "DAK structural diff" child bean that `diff-renderers.ts` names |
+| Rule-level DMN diff (rows and outputs added, removed or changed) | `visual-diff` of the two `dmn2html` tables | cat-harness-tools, with a `DiffRenderer` in `cat-harness-tools/schemas/ui/diff-renderers.ts` |
+| DMN test-case runner for the full FEEL a DAK uses | test cases run by hand under `content-test`, and said to be | cat-harness-tools, by widening `src/workflow/decision-table.ts` (`artefact-reachability`) |
+| Structural BPMN diff (activities, lanes, flows) | `visual-diff` of the two `render:bpmn` pictures | cat-harness-tools, as the "DAK structural diff" renderer `diff-renderers.ts` names |
 | L1 traceability check over **authored** personas, scenarios and requirements | the reviewer reads the `implementedBy` edges | smart-base, once an authored-L2 reader exists |

@@ -1,6 +1,6 @@
 /**
  * Helpers the Tool folders beside this file share. Not a Tool, and declares
- * none: a Tool is one folder, `<id>/<id>.ts` (bean `tdir`).
+ * none: a Tool is one folder, `<id>/<id>.ts`.
  *
  * @module smart-base/tools/lib
  */
@@ -11,10 +11,8 @@
  * `<rest-of-name>/<version>/package.tgz` is read.
  *
  * fhir-harness knows no publisher (ig-build-pipeline §"What this layer refuses
- * to know about"; owner ruling 2026-10-07: "parameterize it"), so its default
- * is empty and this WHO entry is passed in from here. Before #2436 it was a
- * literal inside the seeder (bean 3ka9); the repository and branch are the
- * ones that literal named, so WHO packages seed exactly as they did.
+ * to know about"), so its default is empty and this WHO entry is passed in
+ * from here.
  */
 export const SMART_PUBLISHER_SITE_REPOS: Readonly<Record<string, string>> = Object.freeze({
   "smart.who.int.": "WorldHealthOrganization/smart-html@main",

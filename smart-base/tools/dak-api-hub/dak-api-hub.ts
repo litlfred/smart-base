@@ -1,20 +1,11 @@
 import { defineTool, toolFactory } from "../../platform/index.js";
 
-// ── The DAK API surface ──────────────────────────────────────────────
-//
-// `dak-api-hub` is the WHO-shaped one. Three siblings that were here —
-// `logical-model-schemas`, `valueset-schemas`, `jsonld-vocabularies` —
-// are any IG's JSON surface and moved to `fhir-harness/tools/` (#1767,
-// stage B′), on the precedent the Library strippers set.
-
-
-
 export default toolFactory((t) =>
   defineTool({
     id: "dak-api-hub",
     title: "DAK API hub",
     description:
-      "Generate `dak-api.html` and the per-artefact `.openapi.json` / `.displays.json` sidecars — the hub a reader enters the DAK API through.",
+      "Generate `dak-api.html`, the DAK API's entry page, and the per-artefact `.openapi.json` / `.displays.json` sidecars.",
     install: { none: true },
     invoke: { shell: "python3 input/scripts/generate_dak_api_hub.py" },
     io: {
@@ -28,8 +19,8 @@ export default toolFactory((t) =>
     selection: {
       when: "The DAK API is to have a reader-facing entry point.",
       limits:
-        "`dak-api.html` links its schemas to a `schemas/` directory that the root enumeration schemas are NOT in — the documented discrepancy `qsf5` found. Do not resolve a sidecar by composing the hub's path; resolve it from the index.",
-      cost: "The largest script in the upstream set. It runs inside the publisher container against the full output.",
+        "`dak-api.html` links its schemas to a `schemas/` directory that does not hold the root enumeration schemas. Resolve a sidecar from the index, never by composing the hub's path.",
+      cost: "The largest upstream script; runs inside the publisher container against the full output.",
     },
     requires: { runtime: ["python3"], network: false },
   }),

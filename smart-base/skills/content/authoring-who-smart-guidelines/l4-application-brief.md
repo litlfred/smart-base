@@ -20,8 +20,8 @@ output: schemas/skills/l4-application-brief/output.schema.json
 > [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn),
 > in the requester's (`user`) lane.
 
-**The application is the requester's, not the agent's** — the same rule as
-stage 0 ([`guideline-use-case`](guideline-use-case.md)).
+**The application is the requester's, not the agent's**, as the use case
+is in stage 0 ([`guideline-use-case`](guideline-use-case.md)).
 
 ## Input and output
 

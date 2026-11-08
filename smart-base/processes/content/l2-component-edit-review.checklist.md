@@ -4,7 +4,7 @@
 
 > **Generated, and not the authority.** This is `smart-base/processes/content/l2-component-edit-review.bpmn` (process `Process_L2ComponentEditReview`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
 
-One pass over one L2 DAK component: the agent edits it, runs its checker, renders and stages it with a before/after, and hands it on; review forks off beside that hand-on and never holds it up, because adjudication is QA, not a gate.
+One pass over one L2 DAK component: the agent edits it, runs its checker, renders and stages it with a before/after, and hands it on; review forks off beside the hand-on and never holds it up (adjudication is QA, not a gate).
 
 ## Begin — Component pass called (`Start_ComponentPass`)
 
@@ -21,19 +21,19 @@ One pass over one L2 DAK component: the agent edits it, runs its checker, render
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `l2-component-edit-review`.
-- What: Create or change the component with the authoring skill the call names (l2-dak-authoring, bpmn-authoring, dmn-authoring or terminology-management), one component per pass.
+- What: Create or change the component with the authoring skill the call names, one component per pass.
 - Record it: `workflow_complete` with `node: "Task_Edit"`.
-- next: → `Task_Check` (Run the component's checker [content-validate · content-test])
+- next: → `Task_Check` (Run the component's checker)
 
-### 2. Run the component's checker [content-validate · content-test] (`Task_Check`)
+### 2. Run the component's checker (`Task_Check`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `content-validate`, `content-test`, `artefact-reachability`.
 - What: The mechanical checks for this component, before anyone is asked (skill l2-component-edit-review, column "checker"): BPMN imports in bpmn-js with no warnings and its lanes map to personas (dak-swimlanes.ts); DMN loads, its decisions are reachable (artefact-reachability, audit:reachability) and its t
 - Record it: `workflow_complete` with `node: "Task_Check"`.
-- next: → `Task_RenderStage` (Render, stage, before/after [before-after-preview · feature-staging])
+- next: → `Task_RenderStage` (Render, stage, before/after)
 
-### 3. Render, stage, before/after [before-after-preview · feature-staging] (`Task_RenderStage`)
+### 3. Render, stage, before/after (`Task_RenderStage`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `before-after-preview`, `feature-staging`.
@@ -54,7 +54,7 @@ One pass over one L2 DAK component: the agent edits it, runs its checker, render
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `staging-review`, `interaction-modality`.
-- What: Ask the person in the reviewing role, following staging-review's deep-link rule: one deep link per changed page and anchor on STAGING/<slug>/, each beside the same page on main as before (or "new page"), the pages taken from the change (rendered-impact) rather than chosen; no preview yet is said, no
+- What: Ask the person in the reviewing role, following staging-review's deep-link rule: one deep link per changed page and anchor on branches/<slug>/, each beside the same page on main (or "new page"), the pages taken from the change (rendered-impact); say so if there is no preview yet.
 - Record it: `workflow_complete` with `node: "Task_RequestReview"`.
 - next: → `Call_Review` (Review the staged component)
 
@@ -62,13 +62,13 @@ One pass over one L2 DAK component: the agent edits it, runs its checker, render
 
 - Who: the `Component reviewer (person)` lane (role `reviewer`).
 - Skill: `content-review`, `visual-diff`, `l2-component-edit-review`.
-- What: cat-harness's generic review, not a copy of it: classify what changed, review it, and record the decision as a qa-review/v1 QaReview whose subject is the component and whose Decision carries the reviewing role.
+- What: cat-harness's generic review, called: classify what changed, review it, and record a qa-review/v1 QaReview whose subject is the component and whose Decision carries the reviewing role.
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `Gateway_Verdict` (Verdict?)
 
 ### Decide — Verdict? (`Gateway_Verdict`)
 
-- The reviewer's recorded Decision outcome: approve ends the review; request-changes sends the component back to the edit, which re-stages it and asks again; reject means the component is wrong at the root (wrong source, wrong dependency) and reopens the stage that chose it.
+- approve ends the review; request-changes sends the component back to the edit, which re-stages it and asks again; reject means the component is wrong at the root (wrong source or dependency) and reopens the stage that chose it.
 - Call `workflow_complete` with `node: "Gateway_Verdict"` and `outcome` set to the label that holds:
   - «approve» → `End_Approved` (Component approved)
   - «request-changes» → `Gateway_Rework`
@@ -82,7 +82,7 @@ One pass over one L2 DAK component: the agent edits it, runs its checker, render
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
 - Skill: `todo-manager`, `l2-component-edit-review`.
-- What: File a bean against the stage that chose the rejected source or dependency (check for an existing bean first), and mark every asset derived from this component adjudication: rejected-upstream on its wasDerivedFrom edge.
+- What: File a bean against the stage that chose the rejected source or dependency (check for an existing one first), and mark every asset derived from this component adjudication: rejected-upstream on its wasDerivedFrom edge.
 - Record it: `workflow_complete` with `node: "Task_ReopenUpstream"`.
 - next: → `End_Reopened` (Upstream stage reopened)
 

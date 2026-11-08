@@ -6,261 +6,170 @@ graph-typologies:
 # ig-artifact-ingestion
 
 > Skill id: `ig-artifact-ingestion` · Package: `authoring-who-smart-guidelines` ·
-> Named by the `fhir-artifact-index` graph typology in
-> `cat-harness/schemas/cat-harness.ts`, which is the declaration that sends a
-> consumer here.
+> Covers fhir-harness's `fhir-artifact-index` graph typology (schema
+> `fhir-harness/schemas/fhir-artifact-index.ts`).
 
-Point at a published FHIR Implementation Guide, read what it actually
-published, and reconstruct its artefact index as a knowledge graph keyed by the
-IG's own canonical URLs — linking each artefact to its JSON, JSON Schema and
-JSON-LD representations.
+The artefact index of a FHIR Implementation Guide is a knowledge graph keyed
+by the IG's own canonical URLs, linking each artefact to its JSON, JSON Schema
+and JSON-LD representations. No IG publishes such an index itself, so it is
+always **assembled**, and it records what each part was built from. This
+skill says how an index is assembled in this harness; it does not judge
+whether an IG's content is correct (that is `fhir-validation`'s job).
 
-> **Sourcing.** The artefact set, the canonical URL scheme and `artifacts.html`
-> are the HL7 IG Publisher's; the DAK API layer is WHO SMART Guidelines'. This
-> skill states how an index is reconstructed **in this harness** and defers to
-> those for what an IG must contain. It is deliberately silent on whether an
-> IG's content is correct — that is `fhir-validation`'s lane, and an index that
-> started grading its subject would be doing two jobs badly.
+## Which IGs carry the IG API overlay
 
-## Which IGs this applies to
+Every IG gets an index; the JSON Schema and JSON-LD links come only from an
+**IG API** (WHO calls it the DAK API): the per-artefact sidecars and the
+enumeration schemas (`ValueSets.schema.json`, `LogicalModels.schema.json`)
+that [`dak-postprocessing`](dak-postprocessing.md) steps 3–6 produce. The
+index's `sidecarApi` says which:
 
-**Not all of them.** The test is whether the IG publishes a **DAK API**, and it
-is answered by one fact, not by the IG's name or its publisher:
+- `present` — sidecars were found and bound to artefacts;
+- `absent` — the source was read and held none;
+- `unknown` — nobody looked. **`unknown` is not a kind of `absent`**: only
+  `absent` is a reason to stop.
 
-> Are there **enumeration schemas** at the published root — files matching
-> `<Type>.schema.json`, such as `ValueSets.schema.json` or
-> `LogicalModels.schema.json`?
+An IG with no IG API is a thin index, not an error.
 
-If yes, `dakApi` is `present` and the overlay is ingested. If the root was read
-and held none, it is `absent`. If the root was never read, it is `unknown` —
-and **`unknown` is not a kind of `absent`**. "This IG publishes no DAK API" and
-"nobody looked" are different facts, and only the first is a reason to stop.
+## Where the index is built: at publish, from the AST
 
-An IG with no DAK API still indexes: the spine is the IG Publisher's own
-output, which every IG has. What it loses is the JSON Schema and JSON-LD links,
-which is the half worth having — so a no-DAK IG is a thin index, not an error.
+An IG instance does not commit its `fhir-artifact-index/`. fhir-harness's
+`ig-index:build` (`fhir-harness/scripts/build-ig-indexes.ts`) writes it at
+publish:
 
-## The index is RECONSTRUCTED, never downloaded
+| document | schema | built from |
+|---|---|---|
+| `index.json` | `folio-fhir-artifact-index/v2` | the IG's cached AST, by `ast-to-artifact-index.ts`; its manifest says `authority: "cache"` |
+| `menu.json` | `folio-ig-menu/v1` | the IG's own `sushi-config.yaml` `menu:`, at the commit the checkout's lock pins (`buildMenu`) |
+| `releases.json` | `ig-releases/v1` | the repository's GitHub releases, as pointers to their assets; a failed read writes no file, because no list is not an empty list |
+| `package.tgz` | — | the AST's resources, as `package/<Type>-<id>.json`, with a `package/package.json` from `sushi-config.yaml` |
+| `sidecars/` | — | the IG API sidecars a layer above writes (`ig-site:sidecars`), bound to the artefacts |
+| `contexts/` | — | each `.jsonld` under `input/images/` whose only key is `@context` |
 
-The finding that governs everything here, measured 2026-09-21 against
-the WHO SMART Trust IG v1.8.0:
+`ig-identity.json` (`folio-ig-identity/v1`: id, canonical, version,
+**status**, read from `sushi-config.yaml`) sits beside them when present. An
+IG with no identity file has no status this pipeline can state and draws no
+watermark; that is not "published".
 
-> **No IG publishes an artefact-index instance document.**
-
-`ValueSets.schema.json` and `LogicalModels.schema.json` sit at the published
-**root** — not under `schemas/`, contrary to how `dak-api.html` links them —
-and both are JSON *Schemas* describing the shape of an enumeration *response*.
-Each carries an `example` block that happens to hold the real list. There is no
-`ValueSets.json` to fetch.
-
-So every field in the resulting graph was **assembled**, and the index records
-in `provenance` which published file each part came out of. That is required,
-not optional: a reader who cannot tell which file a row came from cannot tell a
-transcription from an inference.
-
-## THREE DOCUMENT FAMILIES IN ONE DIRECTORY — because there are three SOURCES
-
-`fhir-artifact-index/` holds three kinds of document, and the reason is not
-convenience. **Each comes from a different source, so each carries its own
-provenance block.** An IG does not publish one thing about itself; it publishes
-one thing, keeps a second in its source config, and inherits a third from
-packages it merely depends on.
-
-| document | schema | source | what its provenance names |
-|---|---|---|---|
-| `index.json` | `folio-fhir-artifact-index/v2` | the IG's published **output** (a gh-pages tree) | `{kind: "gh-pages", of, readAt}` |
-| `menu.json` | `folio-ig-menu/v1` | the IG's own **`sushi-config.yaml`** | repository + **commit** + path |
-| `ig-identity.json` | `folio-ig-identity/v1` | the IG's own **`sushi-config.yaml`**: id, canonical, version, **status** | `readFrom` + `readAt` |
-| `chrome.json` | `folio-ig-chrome/v2` | the **`fhir.template` chain** its `ig.ini` names — keyed by the chain's top template, so it lives once, in smart-base's `themes/` beside the template's theme (plan Q4), and every IG wears it | one block **per layer**, each with its own commit |
-
-**Folding any two together would give one file two answers to "where did this
-come from".** That is the whole argument, and it is `0818`'s (the menu) and
-`ajx9`'s (the chrome) in one sentence.
+Each document has a **different source**, so each carries its own
+provenance. Folding two together would give one file two answers to "where
+did this come from".
 
 ### The menu is the IG's own ordering of itself
 
 `sushi-config.yaml`'s `menu:` is a nested **map**, and order is the file's
-order — alphabetising it would silently re-navigate somebody else's IG. It was
-NOT transcribed from a screenshot, and `schemas/ig-menu.ts` records why: a
-picture carries no hrefs, and a closed dropdown is indistinguishable from an
-empty one. Measured 2026-09-23: the twelve labels visible in that screenshot
-matched **0 of 674** artefact titles — the harvest kept the IG's artefacts and
-dropped both its navigation and the narrative pages it points at.
+order. Never sort it: that would re-navigate somebody else's IG. Read it from
+the source config, never from a screenshot: a picture carries no hrefs, and a
+closed dropdown looks like an empty one.
 
-### The chrome comes from a CHAIN, and only part of it is the IG's own
+### The chrome comes from a chain, and only part of it is the IG's own
 
-An IG declares its appearance in **no file it owns**. Measured 2026-09-23 for
-the WHO SMART Trust IG:
+An IG declares its appearance in **no file it owns**: it comes from the
+`fhir.template` chain its `ig.ini` names, for example
 
 ```
 local-template  →  who.template.root 0.5.0  →  fhir.base.template 1.0.0
 ```
 
-So `chrome.json` carries `layers` base-first, and every token records which
-package **won** it and what it **overrode**. That is not bookkeeping: it is the
-only way to answer *whose value is this?* Of the three things a reader
-recognises as "the WHO IG", **only two are WHO's** — `who.css` styles no
-`#publish-box` at all, so the yellow box is HL7's, inherited unchanged. The
-token comes out `from: "fhir.base.template"` with `overrides: []`, which is
-what proves it rather than asserting it.
+So the chrome (`folio-ig-chrome/v2`) is keyed by the chain's top template and
+lives once, in smart-base's `themes/chrome.json`, worn by every IG on that
+chain. It carries `layers` base-first, and every token records which package
+**won** it and what it **overrode**, which is how to answer *whose value is
+this?* For example `who.css` styles no `#publish-box`, so the yellow box is
+HL7's: the token comes out `from: "fhir.base.template"` with `overrides: []`.
 
 **An overlay is not a merge.** `--toc-box-border` is `1px solid navy` in HL7
-and `navy` in WHO — each right in its own layer, and together they make HL7's
-rule resolve to `border: navy`, which is invalid. Every individual layer
-parses, so a naive merge ships a broken rule **silently**.
+and `navy` in WHO — each right in its own layer, but together they make HL7's
+rule resolve to `border: navy`, which is invalid. Every layer parses on its
+own, so a naive merge ships a broken rule silently.
 
-### Upstream defects are RECORDED, never corrected
+### Upstream defects are recorded, never corrected
 
-A mirror that silently fixes its subject is not a mirror. Two kinds, both found
-2026-09-23 and both carried verbatim into our copy:
+The chrome mirrors its sources, defects included, and records whose each
+defect is:
 
-- **`shape`** — one token name carrying two different KINDS of value across
+- **`shape`** — one token name carrying different kinds of value across
   layers, as above.
-- **`malformed`** — a value that is not valid CSS on its own terms.
-  `--breadcrumb-text-color: ##555555` at `project.css:82`, a doubled `#` in
-  HL7's source.
+- **`malformed`** — a value that is not valid CSS on its own terms, such as
+  `--breadcrumb-text-color: ##555555` (a doubled `#` in HL7's
+  `project.css`).
 
-The second is in the skill because of how it presents downstream: it appears in
-our generated page as `##555555`, **looking exactly like a bug in the ingest
-that copied it**. It cost the author of that ingest about thirty seconds of
-believing they had written it, with the source open in the next terminal. A
-reader without the source open cannot tell at all. So the mirror carries the
-value and the record says whose defect it is.
+A carried defect shows up in generated pages looking exactly like an ingest
+bug, which is why the record names its owner. The detector matches one
+narrow pattern: a false positive would accuse someone else's stylesheet of a
+fault it does not have.
 
-The detector is deliberately **narrow** — one pattern. A false positive accuses
-somebody else's published stylesheet of a fault it does not have.
+`ingest:ig-chrome:check` compares the committed chrome with the template
+chain. CI cannot fetch the template repositories, so with no source it exits
+**2** (`could not determine`), never 0, and it is registered as a `report`,
+not a gate. Run it by hand after cloning the IG and its templates.
 
-### CI cannot obtain any of these inputs, and the checks say so
+## What the AST does not carry
 
-All three ingests read something outside this checkout, and the chrome needs
-**three** upstream checkouts rather than one. `worldhealthorganization.github.io`
-and `litlfred.github.io` both answer 403 CONNECT from this environment.
+- **Category.** The Publisher assigns editorial categories when it writes
+  `artifacts.html`, after the AST is taken. The index uses the Publisher's
+  default grouping by resource type and names every artefact where a
+  published grouping differs (`--keep-published-grouping` keeps the grouping
+  of a committed index still on disk).
+- **Where it is published.** A canonical URL is an identity, not an address.
+  The published base is the committed copy's `source.of` when that names a
+  published site, else the instance declaration's `iriBase`, else none, and
+  the run says which. Never derive either the published base or
+  `canonicalBase` from the other.
 
-So `ingest:ig-menu:check` and `ingest:ig-chrome:check` exit **2** with no
-source — `could not determine`, never the 0 a silent skip would give — and both
-are registered in `gates.ts` as `report` rather than as gates. What IS gated on
-every run, without the network: `smart-trust:pages:check` regenerates all 681
-pages from the committed data and compares byte for byte, and
-`check:kind-validators` parses each file against its schema.
-
-## Four partial views, and none of them is sufficient
-
-Measured on the WHO SMART Trust IG v1.8.0. The coverage gaps are the reason the pipeline
-merges rather than picking a winner:
-
-| file | entries | holds | misses |
-|---|---|---|---|
-| `canonicals.json` | 70 | canonical URL, version, name | the 604 Endpoints and Organizations |
-| `package.tgz` → `package/.index.json` | 674 | every artefact's type and id | titles, categories, canonicals |
-| `artifacts.html` | 676 links | the editorial **category** and human title | machine-readable anything |
-| `package.manifest.json` | 1 | package id, version, FHIR version, build date | — |
-
-`artifacts.html` is the **only** source of an artefact's category. Its per-row
-`title` attribute carries `ResourceType/id` verbatim, which is the index's own
-key format — so the category join is on an identifier the publisher wrote, not
-one the pipeline composed from a filename.
-
-**Read the source, not the page about the source.** `dak-api.html` is prose
-*about* what is published, and on the WHO SMART Trust IG it links the enumeration schemas
-to a `schemas/` directory they are not in. A pipeline written from the
-documentation would have found nothing at the paths it named.
-
-## Two traps
-
-**`openapi/openapi.json` is not the DAK API.** On the WHO SMART Trust IG that path holds
-the *DDCC Gateway* API — a domain API about certificate exchange that merely
-lives there. A pipeline that globs for `openapi` files a piece of subject
-matter as an artefact descriptor. The overlay is therefore keyed off **each
-artefact's own stem** (`schemas/<ResourceType>-<id>.openapi.json`), never off a
-directory scan.
-
-**`.index.json` is lossy.** Its Organization entries on the WHO SMART Trust IG carry a
-truncated `"type": "["`. Do not repair such a value and do not propagate it:
-`canonicals.json` is the spine for anything canonical, and for a resource that
-appears only in `.index.json` the field is simply absent. An absent field is a
-fact; a repaired one is a guess wearing a fact's clothes.
+AST-built artefacts are `materialized` with purpose `compiled`, and carry the
+gates of `folio-assistant-core/schemas/materialization.ts`. `sourceLoss` and
+`copyright` stay `unknown` until someone establishes them; a `permitted` there
+would claim "no restrictions known" without having looked.
 
 ## What is never invented
 
-`canonical` is **optional** on an artefact, and that is load-bearing. Examples
-and instance resources have no canonical URL and are the majority of a large IG
-— 604 of the WHO SMART Trust IG's 674. Minting one to fill the slot produces an identifier
-that resolves to nothing while looking authoritative, which is the failure the
-who-iris catalogue refused for `collection/hq-publications` and refuses here
-for the same reason.
+- **`canonical` is optional.** Examples and instance resources have no
+  canonical URL and are most of a large IG. Minting one produces an
+  identifier that resolves to nothing while looking authoritative.
+- **`category` absent never means "Other".** The IG's own artefact page has a
+  literal `Other` section; a second one would make the word mean two things.
+- **A lossy field is left absent, not repaired.** An absent field is a fact; a
+  repaired one is a guess.
 
-The same holds for `category`: absent means the IG published no artefact page,
-or listed no row for this artefact. It never means "Other" — the IG's own
-artefact page **has** a literal `Other` section, and coining a second one would
-make the word mean two things in one index.
+## When the source is a published site
 
-## Materialisation
+The schema also accepts an index read from a published IG (`source.kind`
+`gh-pages`, `output` or `url`), with `provenance` naming the published file
+each part came from. These are different evidence: `output/` is a **local
+build**, `gh-pages` is **what the world can see**; never label one as the
+other. A published IG offers four partial views, none sufficient alone:
 
-Default is **catalogue by reference**, following `who-iris`: the index records
-where each artefact is published and holds no bytes. `--materialize-dak` adds
-the DAK surface only — on the WHO SMART Trust IG, 332K across 71 files, against 7.1M for
-the full resource corpus.
+| file | holds | misses |
+|---|---|---|
+| `canonicals.json` | canonical URL, version, name | every artefact without a canonical |
+| `package.tgz` → `package/.index.json` | every artefact's type and id | titles, categories, canonicals |
+| `artifacts.html` | the editorial **category** and human title (per-row `title` is `ResourceType/id`) | anything machine-readable |
+| `package.manifest.json` | package id, version, FHIR version, build date | — |
 
-Materialised nodes take `purpose: "working"`, never `archival`: they are
-regenerable by re-running the ingest against the same source revision, so they
-carry none of archival's obligations. `--check` is what proves that claim,
-which is what makes the claim admissible.
+Traps:
 
-Each materialised node carries all five gates of
-`folio-assistant-core/schemas/materialization.ts`. Two of them —
-**`sourceLoss`** and **`copyright`** — are `unknown` for a WHO IG until somebody
-establishes otherwise, and leaving them `unknown` is correct rather than lazy:
-no statement has been made about how long a given version's Pages build stays
-reachable, and the IG's licensing has not been read. A `permitted` there would
-be the "no restrictions known in context" failure that `GateVerdict` is
-three-valued to prevent.
-
-## `gh-pages` and `output/` are not the same evidence
-
-Both are accepted (`--kind`), and the index records which was read. They are
-different claims: `output/` is a **local build** whose contents depend on who
-ran the publisher and when, while `gh-pages` is **what the world can see**. An
-index built from the first and labelled the second asserts public availability
-for artefacts that may never have been published.
-
-Prefer `gh-pages` for anything that will be cited. Use `output/` when checking
-an IG you are mid-way through authoring — and expect the index to change when
-it is actually published.
+- **Read the source, not the page about it.** `dak-api.html` links the
+  enumeration schemas under `schemas/`, but they sit at the published root.
+- **`openapi/openapi.json` is not the IG API.** On the WHO SMART Trust IG it
+  is the DDCC Gateway API, subject matter that lives there. Key the overlay
+  off each artefact's own stem (`<ResourceType>-<id>.openapi.json`), never a
+  directory scan.
+- **`.index.json` is lossy** (Organization entries can carry a truncated
+  `"type": "["`). `canonicals.json` is the spine for anything canonical; a
+  field seen only in `.index.json` stays absent.
 
 ## Running it
 
 ```sh
-bun run cat ingest:ig -- \
-  --source /path/to/gh-pages --kind gh-pages \
-  --id <ig> \
-  --base https://worldhealthorganization.github.io/<ig> \
-  --out <ig> --materialize-dak
+bun run cat ig-index:build -- [--only <instance>] [--work <dir>] [--plan]
 ```
 
-`--base` is the URL the artefacts are **published at**, and it is not the
-canonical base. The WHO SMART Trust IG publishes at `worldhealthorganization.github.io`
-and is canonical at `smart.who.int` — the index carries both, and composing
-either from the other is how a link that resolves for nobody gets written down.
-`canonicalBase` is read from the IG's own `ImplementationGuide` canonical, not
-derived from `--base`.
+`--plan` prints what would be built and touches nothing. Exit 0: every IG
+found was built; 1: one or more failed (each named); 2: usage.
 
-`bun run cat ingest:ig:check` re-runs the ingest and fails if the committed index
-differs. That is what makes this graph regenerable rather than a snapshot
-nobody can re-derive; `readAt` is excluded from the comparison because it moves
-every run by design.
-
-## Adding another IG
-
-1. Clone the IG's `gh-pages` (shallow, single branch — a published IG is large;
-   the WHO SMART Trust IG's is 342,656 files).
-2. Run the ingest with a new `--id` and `--out`.
-3. Give the new directory a declaration declaring one directory of kind
-   `fhir-artifact-index`, as an ingested IG's own `<name>.config.json` does. The
-   declaration is `<name>.config.json` since #695 — resolve it with
-   `declarationPathIn`, never by joining a filename.
-4. Add its `ingest:ig:check` invocation to the gate set, so the index cannot go
-   stale silently.
-
-Step 4 is the one that gets skipped. An index nothing re-derives is a snapshot,
-and a stale snapshot of someone else's corpus is worse than no index: it
-answers confidently and wrongly about artefacts that have since moved.
+An IG instance is found, with no declaration of its own, when it needs
+fhir-harness (directly or through a layer above), declares a `repository`,
+and that repository carries an AST branch family. An instance missing any of
+the three is skipped, and the run says which and why. To add an IG, give it
+those three; never commit or hand-edit the index it produces.

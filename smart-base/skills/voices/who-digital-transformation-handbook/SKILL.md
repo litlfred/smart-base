@@ -9,19 +9,16 @@ allowed-tools: Read Grep Glob
 
 The register of WHO's Digital Transformation Handbooks (DTHs): the guidance
 publications that take one area of a health system from paper to digital within
-the DIIG process. Derived rule by rule from the three DTHs and the draft DPI-H
-Reference Architecture ingested in `smart-base/library/`; every rule cites the
-section it was read from.
+the DIIG process. Every rule is read from, and cites, one of the three DTHs
+(ingested in who-iris's `library/`) or the draft DPI-H Reference Architecture
+(in smart-ra's).
 
 ## What this file is, against the rules beside it
 
-`voice.json` in this directory carries the RULES — each with the publication,
-section and verbatim quote it was read from. **This file does not restate
-them**: a rule written here as prose beside the same rule written there as data
-is one fact in two places, and the prose copy is the one carrying no citation.
-To know what the rules are, read `voice.json`, or run `bun run cat check:voices`.
-
-What this file is for is how to USE them.
+`voice.json` in this directory carries the RULES, each with the publication,
+section and verbatim quote it was read from. This file does not restate them;
+it says how to use them. To see the rules, read `voice.json` or run
+`bun run cat check:voices`.
 
 ## Why this voice exists beside `who-digital-health`
 
@@ -29,33 +26,31 @@ What this file is for is how to USE them.
 digital health intervention is, and how CDISAH names itself. This voice is the
 vocabulary of the **handbooks** that apply it to one area of a health system:
 the sequence a digitalisation goes through, the systems and data it builds, and
-the architecture it should sit in. They overlap on purpose, and where they
-would disagree the conflict is recorded rather than resolved here (below).
+the architecture it should sit in. Where the two would disagree, the conflict
+is recorded, not resolved (below).
 
-The `dth` document kind (added by #1830) is the
-STRUCTURE of a DTH; this voice is its LANGUAGE. A section can follow the kind
-and still read wrong.
+The `dth` document kind is the STRUCTURE of a DTH; this voice is its LANGUAGE.
+A section can follow the kind and still read wrong.
 
 ## Authoring
 
-**Read the `counterintuitive` rules before you draft.** Each carries a
-`commonError` naming the instinct it corrects, and those instincts are the
-ones most often wrong in practice. Read them in `voice.json` rather than from a
-summary here: a pair restated in this file would have no pattern behind it.
+**Read the `counterintuitive` rules in `voice.json` before you draft.** Each
+carries a `commonError` naming the instinct it corrects.
 
 ## Two rules rest on a DRAFT
 
 The DPI-H Reference Architecture in the library is **DRAFT V1.0, for public
-comment**. The two rules read from it say so in their description, and the
-draft is internally inconsistent in places (it expands DPI-H two ways). When
-the published edition is ingested, re-check those two rules against it before
-upholding a finding on them.
+comment**, and is internally inconsistent in places (it expands DPI-H two
+ways). The two rules read from it say so in their description. When the
+published edition is ingested, re-check them against it before upholding a
+finding on them.
 
 ## Review and QC
 
 **A finding against this voice is upheld by opening the cited section, never by
 trusting the rule's wording.** Every rule names `{ libraryId, sectionId, pages,
-quote }` and resolves into `smart-base/library/`, and `check:voices` refuses a
+quote }` and resolves into the cited instance's `library/`, and
+`check:voices` refuses a
 rule whose citation does not resolve.
 
 ## What this voice does not do
@@ -63,9 +58,8 @@ rule whose citation does not resolve.
 **It does not settle what to call the people a health system serves.** The
 primary health care DTH says *health service user*, the draft Reference
 Architecture says *client*, and `who-digital-health` upholds CDISAH's *Persons*.
-A rule for it was drafted and held back: one group under three labels across
-three WHO texts is the owner's call, not a voice's (bean `5blc`).
+There is no rule for it: one group under three labels across three WHO texts
+is the owner's call, not a voice's.
 
 **It does not police ordinary English.** Each terminology rule is scoped by its
-`context`; applying a handbook term outside the handbook's subject is how a
-controlled vocabulary becomes a shibboleth.
+`context`; do not apply a handbook term outside the handbook's subject.

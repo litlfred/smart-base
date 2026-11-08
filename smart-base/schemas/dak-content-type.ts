@@ -34,8 +34,8 @@
  * while our own is at least honest about who is speaking.
  */
 import { DAK_INDEX_SECTION, DAK_TYPE } from "./dak";
-import { defaultContentTypes, type ContentTypeRegistry } from "../platform/index.js";
-import { termIri } from "../platform/index.js";
+import { defaultContentTypes, type ContentTypeRegistry } from "../platform/schema.js";
+import { termIri } from "../platform/schema.js";
 
 /**
  * The `@type` a SUSHI project projects to.

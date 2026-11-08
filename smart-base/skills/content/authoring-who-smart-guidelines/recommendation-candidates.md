@@ -13,10 +13,10 @@ output: schemas/skills/recommendation-candidates/output.schema.json
 
 # recommendation-candidates
 
-Step 1 of [`recommendation-extraction`](recommendation-extraction.md), for one
-source at a time. That skill holds the judgement — what counts as a
-recommendation, and implementation guidance that prints practices rather than
-recommendations (its Part 1). This one is the mechanical step around it.
+Step 1 of [`recommendation-extraction`](recommendation-extraction.md), for
+one source at a time: the mechanical step around that skill's judgement (its
+Part 1: what counts as a recommendation, and implementation guidance that
+prints practices instead).
 
 ## Input and output
 

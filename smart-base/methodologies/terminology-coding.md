@@ -30,17 +30,17 @@ applies-when: >
   guideline domain, business process, or GRADE rating), or when deciding
   whether to reuse an existing term, fall back to a generic base concept, or
   propose a local glossary candidate. It does NOT grade evidence (that is
-  `grade`), does NOT model BPMN/DMN control flow (`crdm`), and does NOT plan
+  `grade`), does NOT model BPMN/DMN control flow (`bpmn-authoring`,
+  `dmn-authoring`), and does NOT plan
   programme investment (`diig`).
 ---
 
 # WHO SMART Guidelines Terminology Classification and Reuse-First Coding
 
-**Adopted into `smart-base` (bean `folio-assistant-4nfs`) as the methodological
-foundation for [`classify-and-code-content`](../skills/content/authoring-who-smart-guidelines/classify-and-code-content.md),
+**The method behind [`classify-and-code-content`](../skills/content/authoring-who-smart-guidelines/classify-and-code-content.md),
 [`recommendation-extraction`](../skills/content/authoring-who-smart-guidelines/recommendation-extraction.md),
 and [`recommendation-scenarios`](../skills/content/authoring-who-smart-guidelines/recommendation-scenarios.md).**
-It bridges the platform's generic ontology and glossary rules —
+It joins the platform's generic ontology and glossary rules —
 [`ontologist`](../../folio-assistant-core/skills/library/cataloguing/ontologist.md),
 [`glossary-terms`](../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md),
 [`vocabulary-authority`](../../cat-harness/skills/kg/kg-core/vocabulary-authority.md),
@@ -61,26 +61,24 @@ an arbitrary string or borrowing a code from an unrelated axis.
 | **Intervention (clinical, public-health or digital)** | L1 `recommendation.intervention`; L2 user scenarios (C3), business processes (C4), data dictionary (C5), indicators (C8) | **ICHI** (International Classification of Health Interventions) for clinical and public-health interventions; **CDISAH / CDHI v2.0** (`library/9789240081949-eng`, `input/fsh/codesystems/CDHIv2.fsh`, `CDSCv2.fsh`) and **CDHI v1.0** (`library/who-rhr-1806-eng`, `CDHIv1.fsh`) for digital health interventions and system categories; **WHO UHC Intervention Compendium** for service packages | `input/fsh/codesystems/CDHIv2.fsh`, `CDHIv1.fsh`, `CDSCv2.fsh`, `CDSCv1.fsh`; `KGTerminologySystem` (`#ICHI`, `#SNOMEDCT`, `#LOINC`) |
 | **Persona / actor / occupational role** | L2 generic personas (C2), user-scenario `involves` edges (C3), BPMN swimlanes (C4) | **ISCO-08** (ILO International Standard Classification of Occupations) and **CDISAH / CDHI health-workforce categories** | Target guide's `personas.md` (`l1-scenario-vocabulary/v1`), then `smart-base` generic personas (`input/fsh/actors/*.fsh`, `DAK.Persona.*`, `input/fsh/codesystems/ISCO08.fsh`), then local [`glossary-terms`](../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md) candidate |
 | **Medicine / vaccine / health product** | L1 `recommendation.intervention`; L2 data dictionary (C5), scheduling logic (C7), product catalogues (`library/9789240116191-eng`) | **WHO ATC** (Anatomical Therapeutic Chemical classification) and **ICD-11** medicaments/vaccines extension | `KGTerminologySystem` (`#ATC`, `http://www.whocc.no/atc`); product-catalogue attributes per `library/9789240116191-eng` |
-| **Guideline / scenario domain** | L1 intake classification; L2 user-scenario `domain` property | **SMART Guideline domain scheme** (`clinical` \| `public-health` \| `health-system-strengthening`) | `folio-assistant-core/glossary/guideline-domain.glossary.json` (`folio-glossary/v1`, SKOS `ConceptScheme` `guideline-domain`, bean `398x`) |
-| **Business process** | L2 business processes (C4); `business-process realises user-scenario` edge | Target SMART Guideline's **C4 business process catalogue** (`business-processes.md`); domain process catalogue where published (bean `2ipj`) | `l1-scenario-vocabulary/v1` `processes[]`; `could-not-determine` with a structured warning when absent |
+| **Guideline / scenario domain** | L1 intake classification; L2 user-scenario `domain` property | **SMART Guideline domain scheme** (`clinical` \| `public-health` \| `health-system-strengthening`) | `folio-assistant-core/glossary/guideline-domain.glossary.json` (`folio-glossary/v1`, SKOS `ConceptScheme` `guideline-domain`) |
+| **Business process** | L2 business processes (C4); `business-process realises user-scenario` edge | Target SMART Guideline's **C4 business process catalogue** (`business-processes.md`); domain process catalogue where published | `l1-scenario-vocabulary/v1` `processes[]`; `could-not-determine` with a structured warning when absent |
 | **Normative statement strength, direction & certainty** | L1 `recommendation` (`strength`, `direction`, `certaintyOfEvidence`); EtD frameworks | **GRADE** (Grading of Recommendations Assessment, Development and Evaluation) and **RFC 2119 / BCP 14** requirement levels | `smart-base/code-lists/grade-*.json` (`grade-recommendation-strength`, `grade-recommendation-direction`, `grade-certainty`, `grade-etd-criterion`, `grade-rating-down`, `grade-rating-up`) and `folio-assistant-core/code-lists/rfc2119-requirement-level.json` |
 
-## 2. The reuse-first precedence (`kvd2` decision D4)
+## 2. The reuse-first precedence
 
-When classifying and coding any slot, an agent or terminologist walks the
-**four-rung reuse-first ladder** and **stops at the first rung that yields an
-exact or well-scoped match**:
+An agent or terminologist coding any slot walks the **four-rung ladder** and
+**stops at the first rung that yields an exact or well-scoped match**:
 
 1. **Rung 1 — Target guide's own declared vocabulary (`exactMatch` in guide).**
-   Check the target guide's own personas (`personas.md`), business processes
-   (`business-processes.md`), data dictionary (C5), and local code lists first.
-   If the target guide already defines the persona, process, or code and its
-   scope covers the statement, reuse its identifier verbatim.
+   The target guide's own personas (`personas.md`), business processes
+   (`business-processes.md`), data dictionary (C5) and local code lists. If one
+   defines the concept and its scope covers the statement, reuse its
+   identifier verbatim.
 2. **Rung 2 — Layer base vocabulary (`smart-base` generic personas, FSH CodeSystems, and shared code lists).**
-   When the target guide does not declare the concept (or its description is
-   narrower than the statement's need — e.g. an immunization guide's health
-   worker cannot be stretched to cover inpatient clinical management), consult
-   `smart-base`'s shared vocabularies:
+   When the target guide does not declare the concept, or declares it more
+   narrowly than the statement needs (an immunization guide's health worker
+   cannot be stretched to cover inpatient clinical management):
    - `smart-base` generic personas (`DAK.Persona.*` in `input/fsh/actors/`,
      extracted in `smart-base-generic-personas.json`);
    - `smart-base` FSH CodeSystems (`ISCO08`, `CDHIv2`, `CDHIv1`, `CDSCv2`,
@@ -89,8 +87,8 @@ exact or well-scoped match**:
      `folio-assistant-core/code-lists/*.json`) and SKOS glossaries
      (`folio-assistant-core/glossary/guideline-domain.glossary.json`).
 3. **Rung 3 — External authoritative standard (`WHO-FIC` / `ILO` / `HL7` / `W3C`).**
-   When the concept is a standard clinical, occupational, or ontological term not
-   yet materialised in Rungs 1–2, resolve it against the external authority in
+   A standard clinical, occupational or ontological term not in Rungs 1–2 is
+   resolved against the external authority in
    [`vocabulary-authority`](../../cat-harness/skills/kg/kg-core/vocabulary-authority.md)
    and §1 above (`ICD-11`, `ICHI`, `CDHI`, `ISCO-08`, `ATC`, `SNOMED CT`,
    `LOINC`), recording the mapping predicate (`skos:exactMatch` or
@@ -101,18 +99,17 @@ exact or well-scoped match**:
      `<instance>/glossary/<scheme>.glossary.json` following
      [`glossary-terms`](../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md)
      with `status: "candidate"`, `source: "extracted"` (citing the `doc_id` and
-     `section` / quote), and emit a `WARNING persona-glossary-candidate` (or
-     term candidate warning). An agent may only write `status: "candidate"`;
-     promoting to `status: "authored"` requires human review in the
-     terminologist/ontologist lane.
+     `section` / quote), and emit `WARNING <slot>-glossary-candidate`. An agent
+     writes only `status: "candidate"`; promotion to `status: "authored"` is a
+     person's, in the terminologist/ontologist lane.
    - **For a business process:** **never invent a process.** Record
      `could-not-determine` with `WARNING process-not-determined` and the basis
      quoting the statement. That warning is the work list for the guide or
-     domain process catalogue (bean `2ipj`).
+     domain process catalogue.
 
 ## 3. Provenance and review status on every coding
 
-Every classification or coding link records two orthogonal facts:
+Every classification or coding link records two independent facts:
 
 1. **How the coding was obtained (`source`):**
    - `declared` — a person acting in an authorised role explicitly stated the
@@ -139,14 +136,14 @@ or `part-of`) or be **excluded** with one of the five closed reasons
 (`background-fact`, `manufacturer-statement`, `editorial`, `research-question`,
 `duplicate-of:<id>`).
 
-Per owner ruling 3b (2026-10-12), an agent may **propose** an exclusion in
-`exclusions.proposed.json` (`"signerRole": {"role": "l1-extraction-reviewer"}`),
-and **never signs it**. A person acting as `l1-extraction-reviewer` reviews each
-proposed exclusion in [`classify-and-code-content.bpmn`](../processes/content/classify-and-code-content.bpmn)
-by reading the candidate sentence in place on the printed page
-(`sections/page-NNN.md`), verifying that the sentence is genuinely non-normative
-under the stated reason, and either signing it (`signedOffBy`) or rejecting it
-back to the extraction curation so no guidance is silently dropped.
+An agent may **propose** an exclusion in `exclusions.proposed.json`
+(`"signerRole": {"role": "l1-extraction-reviewer"}`) and **never signs it**. A
+person acting as `l1-extraction-reviewer`, in
+[`classify-and-code-content.bpmn`](../processes/content/classify-and-code-content.bpmn),
+reads each candidate sentence in place on the printed page
+(`sections/page-NNN.md`), checks that it is non-normative under the stated
+reason, and either signs it (`signedOffBy`) or rejects it back to extraction
+curation, so no guidance is silently dropped.
 
 ## 5. Refusals
 

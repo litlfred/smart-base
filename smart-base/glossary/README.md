@@ -7,7 +7,7 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # glossary
 
-SMART Base's generated glossary (`glossary/generated/smart-base/`): candidate `folio-glossary/v1` schemes extracted from this layer's tools, skills, BPMN activities and schema fields by `glossary:page`. Moved here from `folio-assistant-core/glossary/generated/smart-base/` on the owner's 2026-10-20 ruling (bean rfev: "Move to smart-base") so core holds no base vocabulary.
+SMART Base's generated glossary (`glossary/generated/smart-base/`): candidate `folio-glossary/v1` schemes extracted from this layer's tools, skills, BPMN activities and schema fields by `glossary:page`.
 
 Part of [SMART Base](../README.md) 0.1.0, declared as `glossary`, holding `glossary`.
 

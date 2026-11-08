@@ -27,7 +27,10 @@
  *
  * - the L1 statements: every node of an L1 graph carrying a `statement`
  *   (recommendations, implementation practices), and every `recommendations`
- *   row of an authored L1 source YAML, with where each was read from;
+ *   row of an authored L1 source YAML, with where each was read from: a link
+ *   to the library entry's page and to the section, by core's
+ *   `publish-extracted-statements` rule (`resolveSource`), when the source
+ *   resolves, and the file's own note otherwise;
  * - the candidate work list (`l1-recommendation-candidates/v1`): its counts,
  *   its coverage and each candidate's decision;
  * - the curation, mapping, vocabulary, exclusions and run context, counted;
@@ -67,8 +70,10 @@ import {
   visualiserPageDir,
   visualiserRoute,
   withRenderedByFrontMatter,
+  resolveSource,
   type DeclaredVisualiser,
 } from "../platform/index.js";
+import { firstPage, isL1Source, libraryIdOfL1, parseLocation } from "./l1-statement-lists.ts";
 
 /** The Tool that draws these pages — the `renderedBy` a harness declares. */
 export const TOOL_ID = "l1-extraction-pages";
@@ -93,6 +98,8 @@ export interface Statement {
   type: string;
   text: string;
   where?: string;
+  /** The library entry and page it was read from, when the file says (`l1-statement-lists`). */
+  source?: { libraryId: string; page?: number };
 }
 
 /** A JSON-LD graph document (`@context`, `nodes`, `edges`). */
@@ -223,15 +230,18 @@ function readDoc(rel: string, doc: unknown, out: Extraction): Pick<FileRow, "wha
   if (Array.isArray(doc["recommendations"])) {
     const recs = doc["recommendations"].filter(isObj).filter((r) => str(r["statement"]) !== undefined);
     const title = isObj(doc["publication"]) ? str(doc["publication"]["title"]) : undefined;
+    const libraryId = libraryIdOfL1(doc);
     for (const r of recs) {
       const page = str(r["page"]);
       const section = str(r["section"]);
+      const first = firstPage(r["page"]);
       out.statements.push({
         file: rel,
         id: str(r["key"]) ?? "?",
         type: "recommendation",
         text: oneLine(str(r["statement"])!),
         ...(page || section ? { where: [section ? `§${section}` : undefined, page ? `p. ${page}` : undefined].filter(Boolean).join(", ") } : {}),
+        ...(libraryId ? { source: { libraryId, ...(first !== undefined ? { page: first } : {}) } } : {}),
       });
     }
     return { what: schema ?? "authored L1 source", holds: `${recs.length} recommendation(s)${title ? ` of ${title}` : ""}` };
@@ -368,6 +378,21 @@ export function sourceBase(checkoutRoot: string, subject: Pick<Subject, "name" |
   return `https://github.com/${repo}/blob/${sha}/${up ? `${up}/` : ""}`;
 }
 
+/** A scenario node's `evidence.location` (`<l1 yaml>#<KEY> (p<N>)`) → the L1 source's entry and the page. */
+function sourceOfLocation(instanceRoot: string, where: string | undefined): Statement["source"] {
+  const loc = where ? parseLocation(where) : undefined;
+  if (!loc) return undefined;
+  const abs = resolve(instanceRoot, loc.file);
+  if (!existsSync(abs)) return undefined;
+  try {
+    const doc = parseYaml(readFileSync(abs, "utf-8"));
+    const libraryId = isL1Source(doc) ? libraryIdOfL1(doc) : undefined;
+    return libraryId ? { libraryId, ...(loc.page !== undefined ? { page: loc.page } : {}) } : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 // ── rendering ──────────────────────────────────────────────────────────────
 
 const esc = (v: string): string => v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -419,12 +444,27 @@ interface Links {
   up: string;
   /** Site-relative path of the library viewer's entry page, when the site holds one. */
   entryPage(d: ExtractionDir): string | undefined;
+  /**
+   * Where a statement came from, as links: the library entry's page and the
+   * section's source, resolved by core's `statements:pages` rule. Undefined
+   * when the statement names no source, or it does not resolve.
+   */
+  statementSource?(s: Statement): { entry?: string; section?: string; label: string; libraryId: string } | undefined;
 }
 
 function fileLink(d: ExtractionDir, rel: string, links: Links): string {
   const pub = links.published(d, rel);
   const src = links.source(d, rel);
   return [pub ? `<a href="${esc(links.up + enc(pub))}">published</a>` : "", src ? `<a href="${esc(src)}">source</a>` : ""].filter(Boolean).join(" · ");
+}
+
+/** The "read from" cell: the entry and section as links when they resolve, else where the file says. */
+function readFrom(s: Statement, links: Links): string {
+  const r = links.statementSource?.(s);
+  if (!r) return s.where ? `<code>${esc(s.where)}</code>` : "";
+  const entry = r.entry ? `<a href="${esc(links.up + enc(r.entry))}">${esc(r.libraryId)}</a>` : `<code>${esc(r.libraryId)}</code>`;
+  const section = r.label ? (r.section ? `<a href="${esc(r.section)}">${esc(r.label)}</a>` : esc(r.label)) : "";
+  return section ? `${entry}: ${section}` : entry;
 }
 
 function directorySection(d: ExtractionDir, links: Links): string {
@@ -440,7 +480,7 @@ function directorySection(d: ExtractionDir, links: Links): string {
     ? `<h3>L1 statements (${x.statements.length})</h3>` +
       `<p class="l1x-sub">${tally(x.statements.map((s) => s.type)).map(([t, k]) => `${k} ${esc(t)}`).join(", ")}</p>` +
       `<table><thead><tr><th>id</th><th>type</th><th>statement</th><th>read from</th><th>file</th></tr></thead><tbody>${x.statements
-        .map((s) => `<tr><td><code>${esc(s.id)}</code></td><td>${esc(s.type)}</td><td>${esc(clip(s.text))}</td><td>${s.where ? `<code>${esc(s.where)}</code>` : ""}</td><td><code>${esc(s.file)}</code></td></tr>`)
+        .map((s) => `<tr><td><code>${esc(s.id)}</code></td><td>${esc(s.type)}</td><td>${esc(clip(s.text))}</td><td>${readFrom(s, links)}</td><td><code>${esc(s.file)}</code></td></tr>`)
         .join("")}</tbody></table>`
     : `<h3>L1 statements</h3><p>No file here carries an L1 statement.</p>`;
   const candidates = x.candidates
@@ -540,6 +580,23 @@ export function plannedPages(root: string, site: string): { pages: Map<string, s
           if (d.entry === undefined || libraryViewer === undefined) return undefined;
           const p = `${visualiserRoute(pageParts({ harness: libraryViewer.harness, visualiser: libraryViewer.id, subgraph: s.name }))}${encodeURIComponent(d.entry.id)}/`;
           return sitePageAt(site, p) ? p : undefined;
+        },
+        statementSource: (st) => {
+          const src = st.source ?? sourceOfLocation(s.instanceRoot, st.where);
+          if (!src) return undefined;
+          const r = resolveSource({ id: st.id, statement: st.text, source: src }, s.instanceRoot, root);
+          if (!r.ok) return undefined;
+          const entry =
+            libraryViewer === undefined
+              ? undefined
+              : `${visualiserRoute(pageParts({ harness: libraryViewer.harness, visualiser: libraryViewer.id, subgraph: s.name }))}${encodeURIComponent(src.libraryId)}/`;
+          const rel = r.source.sectionPath ? relative(s.instanceRoot, join(root, r.source.sectionPath)).split(sep).join("/") : undefined;
+          return {
+            libraryId: src.libraryId,
+            label: r.source.label,
+            ...(entry && sitePageAt(site, entry) ? { entry } : {}),
+            ...(rel && !rel.startsWith("..") && base !== undefined ? { section: `${base}${enc(rel)}` } : {}),
+          };
         },
       };
       pages.set(join(visualiserPageDir(site, parts), "index.html"), subjectPage(v, s, subjects, links));

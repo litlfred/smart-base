@@ -19,10 +19,9 @@ output: schemas/skills/guideline-use-case/output.schema.json
 > [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn),
 > in the requester's (`user`) lane.
 
-**The use case is the requester's, not the agent's.** Everything downstream —
-which L1 sources count, which DAKs and IGs are candidates, which application
-is built — is chosen against it, so a use case the agent made up would bias
-every later stage without anyone having decided it.
+**The use case is the requester's, not the agent's.** Every later stage
+(which L1 sources count, which DAKs and IGs are candidates, which application
+is built) is chosen against it.
 
 ## Input and output
 

@@ -15,12 +15,11 @@ uses-methodology:
 
 # recommendation-scenarios
 
-Step 2 of [`recommendation-extraction`](recommendation-extraction.md). That
-skill's Part 2 holds the judgement (the shape of a scenario and the
-reuse-first precedence for persona, business-process, and domain coding defined
-in the [`terminology-coding`](../../../methodologies/terminology-coding.md)
-methodology and [`classify-and-code-content`](classify-and-code-content.md));
-this one is the mechanical step that applies it.
+Step 2 of [`recommendation-extraction`](recommendation-extraction.md): the
+mechanical step that applies that skill's Part 2 (the shape of a scenario,
+and the reuse-first persona, business-process and domain coding of the
+[`terminology-coding`](../../../methodologies/terminology-coding.md)
+methodology and [`classify-and-code-content`](classify-and-code-content.md)).
 
 ## Input and output
 

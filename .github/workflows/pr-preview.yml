@@ -58,6 +58,10 @@ concurrency:
   group: pr-preview-${{ github.head_ref }}
   cancel-in-progress: true
 
+# Least privilege by default; deploy-preview grants itself what it needs.
+permissions:
+  contents: read
+
 jobs:
   # Gate job: pauses at the 'pr-preview' environment until a reviewer approves.
   # The 'environment' key is only valid in regular jobs (with runs-on), not in

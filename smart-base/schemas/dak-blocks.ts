@@ -41,8 +41,8 @@
  */
 
 import { z } from "zod";
-import type { BlockBase } from "../platform/index.js";
-import { BlockBaseSchema } from "../platform/index.js";
+import type { BlockBase } from "../platform/schema.js";
+import { BlockBaseSchema } from "../platform/schema.js";
 import {
   DAK_BLOCK_KINDS,
   DAK_COMPONENTS,

@@ -7,7 +7,7 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # smart-base-document-kinds
 
-WHO SMART document kinds: the DAK (a fixed structure, the ten components) and, to follow, L1 (semi-fixed) and the Digital Transformation Handbook (an L1 subtype).
+WHO SMART document kinds: the DAK (a fixed structure, the ten components), L1 and L1 guideline, the Digital Transformation Handbook (an L1 subtype) and the L2 DTH.
 
 Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-document-kinds`, holding `document-kinds`.
 
@@ -17,5 +17,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-document-kinds
 | [`dth.json`](dth.json) | Digital Transformation Handbook (DTH) |  |
 | [`l1-guideline.json`](l1-guideline.json) | WHO guideline (L1) |  |
 | [`l1.json`](l1.json) | L1 narrative publication |  |
+| [`l2-dth.json`](l2-dth.json) | L2 Digital Transformation Handbook (DTH) |  |
 
 <!-- kg:subgraph:end -->

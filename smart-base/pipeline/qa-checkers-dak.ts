@@ -56,7 +56,7 @@
  */
 
 import { existsSync, readFileSync } from "fs";
-import type { CheckerPaths, CheckerResult } from "../platform/index.js";
+import type { CheckerPaths, CheckerResult } from "../platform/schema.js";
 import "../schemas/dak-content-type";
 
 import { DAK_LABEL_PREFIXES, type DakBlockKind } from "../schemas/dak-kinds";

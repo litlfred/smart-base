@@ -43,19 +43,19 @@ const workbook = zip({
 });
 
 describe("dak-data-dictionary", () => {
-  test("unzip and readWorkbook read a workbook's sheets and cells", () => {
+  test("readsWorkbookSheetsAndCells", () => {
     expect([...unzip(workbook).keys()]).toContain("xl/workbook.xml");
     const s = readWorkbook(workbook);
     expect(s.map((x) => x.name)).toEqual(["READ ME", "IMMZ.C Client registration"]);
     expect(s[1]!.rows[1]).toEqual(["IMMZ.C4", "IMMZ.C.DE.1", "Unique identifier", "ID", "N/A"]);
   });
 
-  test("headerKey absorbs the template's drift: case, `*`, plural, a trailing parenthetical", () => {
+  test("headerKeyAbsorbsTemplateDrift", () => {
     expect(headerKey("Input options *")).toBe(headerKey("Input option"));
     expect(headerKey("Multiple choice type \n(if applicable)")).toBe("multiple choice type");
   });
 
-  test("the annex holds the data sheets only, rows with an id only, entities decoded", () => {
+  test("annexHoldsDataSheetsAndIdRows", () => {
     const a = dataDictionaryAnnex(workbook, "fixture.xlsx", { annexOf: "10665/380303", label: "Web Annex A", section: "dak#core-data-elements" });
     expect([a.annexOf, a.label, a.section, a.iris]).toEqual(["10665/380303", "Web Annex A", "dak#core-data-elements", undefined]);
     expect(a.$schema).toBe(ANNEX_SCHEMA);

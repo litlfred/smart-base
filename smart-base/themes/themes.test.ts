@@ -36,13 +36,13 @@ function customProperty(name: string): string | undefined {
 }
 
 describe("the vendored source is the one the theme claims", () => {
-  test("`who.css` is present and is the whole file, not a fragment", () => {
+  test("whoCssIsWholeFile", () => {
     // 705 lines when vendored. A truncated copy would still satisfy every
     // property assertion below while describing a stylesheet nobody shipped.
     expect(WHO_CSS.split("\n").length).toBeGreaterThan(700);
   });
 
-  test("the pinned shas are full 40-character commit ids", () => {
+  test("pinnedShasAreFullCommitIds", () => {
     // A short sha is ambiguous and a branch name is not a pin. `#current` is
     // what the upstream dependency says, and pinning is this file's answer to it.
     for (const [what, sha] of [
@@ -54,7 +54,7 @@ describe("the vendored source is the one the theme claims", () => {
     }
   });
 
-  test("the licence recorded is the one that permits vendoring", () => {
+  test("licencePermitsVendoring", () => {
     expect(UPSTREAM.template.licence).toBe("CC0-1.0");
   });
 });
@@ -62,15 +62,15 @@ describe("the vendored source is the one the theme claims", () => {
 describe("every palette role is re-read from the stylesheet", () => {
   const theme = whoSmartThemeById("who-smart-ig");
 
-  test("the theme resolves at all", () => {
+  test("themeResolves", () => {
     expect(theme?.id).toBe("who-smart-ig");
   });
 
-  test("`accent` is `--navbar-bg-color`", () => {
+  test("accentIsNavbarBgColor", () => {
     expect(theme?.palette.accent).toBe(customProperty("navbar-bg-color"));
   });
 
-  test("`surface` is what `body`'s background resolves to", () => {
+  test("surfaceIsBodyBackground", () => {
     // TWO steps, and the indirection is the point: `body` names a VARIABLE, so
     // the test follows the same path the browser does rather than asserting the
     // literal. A future edit pointing `body` at a different variable fails here.
@@ -78,7 +78,7 @@ describe("every palette role is re-read from the stylesheet", () => {
     expect(theme?.palette.surface).toBe(customProperty("toc-box-bg-color"));
   });
 
-  test("`ink` is `.container`'s colour, which OVERRIDES the base's #333333", () => {
+  test("inkIsContainerColour", () => {
     const declared = /\.container\s*\{[^}]*\bcolor:\s*(#[0-9a-fA-F]{3,6})/.exec(WHO_CSS)?.[1];
     expect(declared).toBeDefined();
     // `#000` and `#000000` are the same colour written two ways; the theme
@@ -93,7 +93,7 @@ describe("the three values NOT taken stay not-taken", () => {
   // adopts one fail, which is the same job `RECORDED_CONTRADICTIONS` does in
   // who-iris.
 
-  test("`#333` is still only dropdown-link text, so it is still not `ink`", () => {
+  test("hash333OnlyDropdownText", () => {
     // If a future upstream ever sets #333 on something body-like, this stops
     // being a coincidence of value and the docblock's reasoning needs rewriting.
     const uses = [...WHO_CSS.matchAll(/([^{}]+)\{[^}]*color:\s*#333\b[^}]*\}/g)].map((m) => m[1]!.trim());
@@ -106,14 +106,14 @@ describe("the three values NOT taken stay not-taken", () => {
     }
   });
 
-  test("`--toc-box-border` is still declared, and is still not `edge`", () => {
+  test("tocBoxBorderNotEdge", () => {
     // Present in the source, deliberately absent from the palette: it is one
     // component's border, and `edge` is documented as the generic rule.
     expect(customProperty("toc-box-border")).toBeDefined();
     expect(WHO_SMART_THEMES.map((t) => t.palette.edge)).not.toContain(customProperty("toc-box-border"));
   });
 
-  test("the top navbar is declared upstream and deliberately not reproduced", () => {
+  test("topNavbarNotReproduced", () => {
     // The owner's carve-out, asserted rather than left as prose: `who.css` is
     // full of `.navbar*` rules and this theme carries none of that layout.
     expect(WHO_CSS).toMatch(/\.navbar/);
@@ -129,13 +129,13 @@ describe("the three values NOT taken stay not-taken", () => {
 });
 
 describe("geometry is a column width, never a viewport", () => {
-  test("`laptop` takes the one max-width the stylesheet declares", () => {
+  test("laptopTakesDeclaredMaxWidth", () => {
     const capped = /@media\s*\(min-width:\s*2200px\)[^@]*max-width:\s*(\d+px)/.exec(WHO_CSS)?.[1];
     expect(capped).toBe("1980px");
     expect(whoSmartThemeById("who-smart-ig")?.layouts.laptop.minWidth).toBe(capped);
   });
 
-  test("`mobile` and `card` take the declared fluid width, not a guessed one", () => {
+  test("mobileAndCardTakeFluidWidth", () => {
     expect(WHO_CSS).toMatch(/\.container\s*\{[^}]*width:\s*100%/);
     const t = whoSmartThemeById("who-smart-ig");
     expect({ mobile: t?.layouts.mobile.minWidth, card: t?.layouts.card.minWidth }).toEqual({
@@ -144,7 +144,7 @@ describe("geometry is a column width, never a viewport", () => {
     });
   });
 
-  test("padding is the one value the container declares", () => {
+  test("paddingIsContainerValue", () => {
     expect(WHO_CSS).toMatch(/\.container\s*\{[^}]*padding:\s*0\s+20px/);
     const t = whoSmartThemeById("who-smart-ig");
     for (const layout of ["laptop", "mobile", "card"] as const) {
@@ -152,7 +152,7 @@ describe("geometry is a column width, never a viewport", () => {
     }
   });
 
-  test("`fontScale` is 1 everywhere because no per-breakpoint scale is declared", () => {
+  test("fontScaleIsOneEverywhere", () => {
     // A measurement, not a placeholder — see the module docs. If upstream ever
     // adds a responsive body scale, this should be revisited rather than kept.
     expect(WHO_CSS).not.toMatch(/@media[^@]*body\s*\{[^}]*font-size/);
@@ -179,7 +179,7 @@ describe("the platform can FIND this theme, not just resolve it", () => {
   // A theme nothing can find is the `1xhc` shape: a declaration that looks
   // done and is reached by nobody.
 
-  test("`instanceThemes` resolves it through the declaration, by name", async () => {
+  test("instanceThemesResolvesByName", async () => {
     const { instanceThemes } = await import("../platform/index.js");
     const found = instanceThemes(join(import.meta.dir, "..", ".."), THEME_INSTANCE);
     // The whole result on a miss, not a boolean: `no-themes-directory` and
@@ -189,7 +189,7 @@ describe("the platform can FIND this theme, not just resolve it", () => {
     expect(found.ok && found.themes.map((t) => t.id)).toContain("who-smart-ig");
   });
 
-  test("it is the instance's ONE webpage theme, so the generator has no choice to make", async () => {
+  test("isInstancesOneWebpageTheme", async () => {
     const { instanceWebpageThemes } = await import("../platform/index.js");
     const owned = instanceWebpageThemes(join(import.meta.dir, "..", ".."));
     expect(owned.filter((o) => o.instance === THEME_INSTANCE).map((o) => o.theme.id)).toEqual(["who-smart-ig"]);
