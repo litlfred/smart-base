@@ -103,7 +103,7 @@ jobs:
     # `<owner>/<repo>/.github/workflows/<file>@<ref>`: with `./` it found no
     # IG caller and refused to publish this repository's site (owner,
     # 2026-10-15: republish smart-base "via the same IG route as smart-hiv").
-    uses: litlfred/smart-base/.github/workflows/ghbuild.yml@main
+    uses: ./.github/workflows/ghbuild.yml
     with:
       # For pull_request_target events, check out the PR head commit so the
       # IG publisher builds the PR's content (not the base branch).

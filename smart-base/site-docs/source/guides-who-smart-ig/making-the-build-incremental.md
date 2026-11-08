@@ -1,23 +1,21 @@
-Every trigger in a DAK repository — a push to a PR branch, `/validate`, `/deploy`, a
-push to `main`, a release — runs the same full IG Publisher build, and a one-line edit to
-one profile costs all of it. [Proposal: incremental IG build]({{ '/proposals/ig-incremental-build.html' | relative_url }})
-measures why that is avoidable: on the immunizations IG the median artefact has no
-dependents and the 90th percentile has six, so almost every edit invalidates a handful
-of resources and the index. [Its overview]({{ '/proposals/ig-incremental-build-overview.html' | relative_url }})
-lists the eleven changes and pins each to the stage of the review and publish pipeline
-where it runs.
+On the immunizations IG the median artefact has no dependents and the 90th
+percentile has six, so almost every edit invalidates a handful of resources and
+the index. The build therefore rebuilds only the change's dependency cone where
+it can.
 
-The process above is the L3 pipeline's build lane once the derived artefacts are cached
-by dependency cone. Restore first; compute the change's cone with
-`bun run content/pipeline/fsh-cone.ts <ig-root> --changed <files>`; compile and
-validate only the cone against the warm validator; re-render the cone's records;
-rebuild the meta-index; assemble the site. A cache miss or a moved toolchain falls back
-to today's full build, and only a green build of `main` or a release seeds the cache.
+The process above is the L3 pipeline's build lane with the derived artefacts
+cached by dependency cone. Restore the cache; compute the change's cone with
+`bun run fhir-harness/scripts/fsh-cone.ts <ig-root> --changed <files>`; compile
+and validate only the cone against the warm validator; re-render the cone's
+records; rebuild the meta-index; assemble the site. A cache miss or a moved
+toolchain falls back to a full build, and only a green build of `main` or a
+release seeds the cache. A release is always cut from a full build. The rules
+are fhir-harness's `ig-build-pipeline` skill.
 
 | Step | Implemented by |
 |------|----------------|
-| Restore and seed the derived state | `ig-cache.sh` (proposed; the `lake-cache.sh` contract) |
-| Compute the cone of the change | [`content/pipeline/fsh-cone.ts`](https://github.com/litlfred/folio-assistant/blob/main/content/pipeline/fsh-cone.ts) |
+| Restore and seed the derived state | `fhir-harness/scripts/ig-cache.sh` (`restore`, `verify`, `seed`) |
+| Compute the cone of the change | `fhir-harness/scripts/fsh-cone.ts` |
 | Validate the cone | [`fhir-validation`]({{ site.baseurl }}/reference/skills/fhir-validation.html) over the warm validator service (proposed MCP tools) |
 | Rebuild the meta-index, assemble the site | `ig_metaindex_rebuild` (proposed), [`ig-publication`]({{ site.baseurl }}/reference/skills/ig-publication.html) |
 | QC gates, deploy | [`quality-control`]({{ site.baseurl }}/reference/skills/quality-control.html), [`content-publish`]({{ site.baseurl }}/reference/skills/content-publish.html) |

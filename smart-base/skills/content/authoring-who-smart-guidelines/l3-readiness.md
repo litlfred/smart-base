@@ -22,11 +22,9 @@ output: schemas/skills/l3-readiness/output.schema.json
 > [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn).
 > Run by the authoring agent; it records no verdict on any asset.
 
-This is the [order rule](smart-guideline-end-to-end.md#the-order-is-a-rule-l1-then-l2-then-l3-owner-2026-10-15)
-(owner, 2026-10-15: *"order strict, sign-off QA"*) as a check with its own
-contract. It is not a stage: it produces no asset, only the answer the
-gateway takes. The owner gave it a skill of its own on 2026-10-16, so that
-the check has named inputs and outputs like every stage around it.
+The [order rule](smart-guideline-end-to-end.md#the-order-is-a-rule-l1-then-l2-then-l3)
+as a check with its own contract. It is not a stage: it produces no asset,
+only the answer the gateway takes.
 
 ## Input and output
 
@@ -38,7 +36,8 @@ The contract is [`input.schema.json`](../../../schemas/skills/l3-readiness/input
 ## Steps
 
 1. **L1.** Every source the use case includes has an `l1Kg` extraction, at
-   `library/<bib>/l1-extraction/`. A source without one is
+   `library/<bib>/l1-extraction/` (or `l1-extractions/<bib>/` when the entry
+   lives in another instance's library). A source without one is
    `no-l1-extraction`, fixed by stage 2.
 2. **L2 on L1.** Every L2 asset names at least one L1 node in
    `wasDerivedFrom`. One that names none is `no-l1-upstream`, fixed by
@@ -50,10 +49,9 @@ The contract is [`input.schema.json`](../../../schemas/skills/l3-readiness/input
 4. **Review requested.** Every extraction and every L2 asset has a
    `reviews` entry: its review item opened and staged. One without is
    `review-not-requested`, fixed by the stage that made it. The verdict is
-   not awaited: adjudication is QA, not a gate.
+   not awaited.
 5. **Answer.** `ready` is true exactly when `findings` is empty. The
    gateway then takes «yes» to stage 6, or «no» back to stage 4 (which
    fills a missing extraction from stage 2).
 
-A green build and passing tests do not make a finding go away. An L3
-asset with no L2 upstream is a finding, not a shortcut.
+A green build and passing tests do not clear a finding.

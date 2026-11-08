@@ -21,7 +21,7 @@ const DECK = resolve(import.meta.dir, "../../cat-harness/docs/source/concepts-ha
 const read = (p: string) => readFileSync(p, "utf-8");
 
 describe("living deck slide 3: the DAK components", () => {
-  test("ten components, scheduling logic marked unformalized in WHO's model", () => {
+  test("tenComponentsSchedulingLogicUnformalized", () => {
     // The owner's count is 10 (2026-09-30). When WHO formalizes scheduling logic
     // it leaves the unformalized list, and slide 3's note must be revised.
     expect(DAK_COMPONENTS).toHaveLength(10);
@@ -29,7 +29,7 @@ describe("living deck slide 3: the DAK components", () => {
     expect(DAK_UNFORMALIZED_COMPONENTS).toEqual(["scheduling-logic"]);
   });
 
-  test("the squares figure has one card per component and is current", () => {
+  test("squaresFigureOneCardPerComponentCurrent", () => {
     expect(Object.keys(DAK_CARDS).sort()).toEqual([...DAK_COMPONENTS].sort());
     const svg = renderDakComponentsSvg();
     // One number badge per component, in vocabulary order.

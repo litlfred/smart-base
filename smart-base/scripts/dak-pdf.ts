@@ -43,9 +43,11 @@
  */
 
 import { existsSync, readdirSync, readFileSync, writeFileSync, statSync } from "fs";
-import { basename, join } from "path";
+import { basename, join, relative, resolve } from "path";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
+
+import { ownDeclaredDirectories } from "../platform/schema.js";
 
 interface Section {
   title: string;
@@ -184,7 +186,7 @@ export function assemble(root: string, diagrams: Diagram[] = []): Assembly {
   }
 
   // 2. Business processes. Listed, not drawn — see the module docstring.
-  const bpDir = join(root, "input", "business-processes");
+  const bpDir = businessProcessesDir(root);
   if (existsSync(bpDir)) {
     const files = readdirSync(bpDir).filter((f) => f.endsWith(".bpmn")).sort();
     if (files.length) {
@@ -213,7 +215,7 @@ export function assemble(root: string, diagrams: Diagram[] = []): Assembly {
       sections.push({
         title: "Business processes",
         html: parts.join("\n"),
-        source: "input/business-processes/",
+        source: `${relative(root, bpDir)}/`,
       });
     }
   }
@@ -240,6 +242,22 @@ export function assemble(root: string, diagrams: Diagram[] = []): Assembly {
   }
 
   return { title: dakTitle(root), sections, omissions, identity: dakIdentity(root) };
+}
+
+/**
+ * Where the DAK at `root` keeps its BPMN: the directory its declaration names
+ * for the `business-processes` graph, when it is an instance that declares one;
+ * otherwise the IG Publisher's own layout.
+ *
+ * A WHO DAK repository (`smart-dak-immz`) declares nothing, so the fallback is
+ * needed; an instance may keep its processes elsewhere, so it comes second.
+ */
+export function businessProcessesDir(root: string): string {
+  // declared-path-literal: the IG Publisher's layout, the fallback for a DAK
+  // repository that declares no business-processes graph; tried only after its
+  // declaration, and it names that repository's own input/, nobody else's
+  const declared = ownDeclaredDirectories(root, "business-processes")[0];
+  return declared !== undefined ? resolve(declared) : join(root, "input", "business-processes");
 }
 
 function findByExt(root: string, ext: string, depth = 4): string[] {
@@ -491,7 +509,7 @@ async function main(): Promise<number> {
   if (!argv.includes("--no-diagrams")) {
     try {
       const { renderBpmn } = await import("../../cat-harness-tools/scripts/bpmn-render.ts");
-      const bpDir = join(root, "input", "business-processes");
+      const bpDir = businessProcessesDir(root);
       const files = existsSync(bpDir)
         ? readdirSync(bpDir).filter((f) => f.endsWith(".bpmn")).map((f) => join(bpDir, f)).sort()
         : [];

@@ -44,10 +44,13 @@ permissions:
 
 jobs:
   refresh:
-    uses: litlfred/fhir-harness/.github/workflows/ig-ast-refresh.yml@main
+    uses: litlfred/fhir-harness/.github/workflows/ig-ast-refresh.yml@5e6f2972eefc01de60d0a455bb676ebeb7aeaf7a # index.lock.json
     with:
       # A push builds exactly the commit pushed; a dispatch, the ref it names.
       ref: ${{ inputs.ref || github.sha }}
       force: ${{ inputs.force == true }}
       # The overlay: WHO's DAK pre-processing, from this checkout.
       pre-export: bash smart-base/scripts/dak-pre-export.sh
+      # build.fhir.org lost who.template.root#current (404, 2026-11-01), so the
+      # template is seeded from its own repository at HEAD.
+      template-repos: who.template.root=WorldHealthOrganization/smart-ig-template

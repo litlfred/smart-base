@@ -75,7 +75,7 @@ function base(): ContentTypeRegistry {
 }
 
 describe("a repository is a SET of types, not a boolean", () => {
-  test("no known marker → empty, and that is not 'it is nothing'", () => {
+  test("noMarkerIsEmptySet", () => {
     // The distinction the boolean could not make: this registry found no
     // marker it knows. A consumer reading that as "not a folio" has confused
     // what was looked for with what is there.
@@ -84,7 +84,7 @@ describe("a repository is a SET of types, not a boolean", () => {
     expect(d.disagreements).toEqual([]);
   });
 
-  test("one marker → one membership, with a dereferenceable type", () => {
+  test("oneMarkerOneMembership", () => {
     const d = describeRepository(repo({ ["x.json"]: '{"name":"x"}' }), base());
     expect(d.types.map((t) => t.id)).toEqual(["harness"]);
     // The IRI is the whole point: the filename asserts membership, the type
@@ -93,7 +93,7 @@ describe("a repository is a SET of types, not a boolean", () => {
     expect(d.types[0]!.marker).toBe("x.json");
   });
 
-  test("TWO markers → two memberships — the case the boolean got wrong", () => {
+  test("twoMarkersTwoMemberships", () => {
     // `smart-base` is a DAK and a SUSHI project simultaneously. This is the
     // measured shape of the repository `79t3` cites, and the reason the answer
     // had to become a set.
@@ -107,7 +107,7 @@ describe("a repository is a SET of types, not a boolean", () => {
     ]);
   });
 
-  test("three at once, including ours", () => {
+  test("threeMarkersAtOnce", () => {
     const root = repo({
       ["x.json"]: '{"name":"x"}',
       "index.config.json": dakIndex('{"name":"x"}'),
@@ -118,7 +118,7 @@ describe("a repository is a SET of types, not a boolean", () => {
 });
 
 describe("a marker that is present and unreadable is its OWN state", () => {
-  test("unparseable → membership reported, `parsed: false`, no facts", () => {
+  test("unparseableMarkerParsedFalse", () => {
     // Not absent, and not a clean membership either. Dropping it would under-
     // report what the repository asserts; reporting it as parsed would hand a
     // consumer facts nothing backs. The third state says which.
@@ -133,7 +133,7 @@ describe("a marker that is present and unreadable is its OWN state", () => {
     });
   });
 
-  test("YAML marker → membership reported, parsed false, and that is deliberate", () => {
+  test("yamlMarkerParsedFalse", () => {
     // `sushi-config.yaml` is the assertion whether or not this module can read
     // it. Reporting the membership costs nothing and losing it would be a
     // silent under-count; the facts wait on a YAML parser, which is a separate
@@ -144,7 +144,7 @@ describe("a marker that is present and unreadable is its OWN state", () => {
     ]);
   });
 
-  test("a marker with no facts contributes none — absent is not 'agrees'", () => {
+  test("markerWithoutFactsContributesNone", () => {
     // `x.config.json`, not `x.json`. A body with no `name` is a CONFIG — the
     // declaration suffix became a bare `.json` on 2026-09-21 and a declaration
     // is recognised by its stem equalling its own `name`, which `{}` has not
@@ -157,7 +157,7 @@ describe("a marker that is present and unreadable is its OWN state", () => {
 });
 
 describe("two markers stating one fact differently are REPORTED, not resolved", () => {
-  test("a disagreement is found and both claims are kept", () => {
+  test("disagreementFoundBothClaimsKept", () => {
     // `79t3` question 2, and its own "Done when" already answered it:
     // "a disagreement between two markers REPORTED rather than silently
     // resolved". Ranking the markers would make a repository's truth depend on
@@ -175,7 +175,7 @@ describe("two markers stating one fact differently are REPORTED, not resolved", 
     });
   });
 
-  test("NOTHING is resolved — neither claim is dropped or preferred", () => {
+  test("nothingResolvedNeitherClaimDropped", () => {
     // Stated as its own assertion because "reports it" and "reports it and
     // also quietly picks one" look identical from a caller that only reads
     // `types`. Both claims survive in full.
@@ -188,7 +188,7 @@ describe("two markers stating one fact differently are REPORTED, not resolved", 
     expect(byId).toEqual({ harness: "http://one.example/", dak: "http://two.example/" });
   });
 
-  test("agreement is silence, not a finding", () => {
+  test("agreementIsSilence", () => {
     const root = repo({
       ["x.json"]: '{"name":"x","canonicalUrl":"http://same.example/"}',
       "index.config.json": dakIndex('{"name":"x","canonicalUrl":"http://same.example/"}'),
@@ -196,7 +196,7 @@ describe("two markers stating one fact differently are REPORTED, not resolved", 
     expect(describeRepository(root, base()).disagreements).toEqual([]);
   });
 
-  test("the DAK section spelling `canonical` is compared against `canonicalUrl`", () => {
+  test("comparesCanonicalWithCanonicalUrl", () => {
     // The two files beside each other in `smart-base` spell one fact two ways.
     // Reading only our spelling would make every such disagreement invisible,
     // which is the failure mode this whole section exists to prevent.
@@ -211,7 +211,7 @@ describe("two markers stating one fact differently are REPORTED, not resolved", 
 });
 
 describe("the registry refuses a conflicting redefinition and tolerates a diamond", () => {
-  test("re-registering the SAME definition is a no-op", () => {
+  test("reRegisteringSameIsNoOp", () => {
     const r = base();
     expect(() => registerBaseContentTypes(r)).not.toThrow();
     expect(() => registerDakContentTypes(r)).not.toThrow();
@@ -226,7 +226,7 @@ describe("the registry refuses a conflicting redefinition and tolerates a diamon
     expect(before.length).toBeGreaterThan(0); // not vacuous
   });
 
-  test("re-registering a DIFFERENT definition throws, naming the id", () => {
+  test("reRegisteringDifferentThrows", () => {
     const r = base();
     expect(() =>
       r.register("dak", { filename: "elsewhere.json", type: "http://x/", summary: "no" }),
@@ -266,7 +266,7 @@ describe("the set is closed under the dependency tree", () => {
     );
   }
 
-  test("a dependency's types are in the closure, ATTRIBUTED to it", () => {
+  test("closureAttributesDependencyTypes", () => {
     const dep = instance("dep", { "index.config.json": dakIndex('{"name":"who"}') });
     const root = instance("root", { ["mine.json"]: '{"name":"mine"}' });
     dependsOn(root, "who-adapter", dep);
@@ -281,7 +281,7 @@ describe("the set is closed under the dependency tree", () => {
     ]);
   });
 
-  test("`own` separates 'this repo IS a DAK' from 'something it depends on is'", () => {
+  test("ownSeparatesRootFromDependency", () => {
     // The distinction a flattened set destroys, and the case the bean cites:
     // a folio depending on a WHO adapter is not itself a DAK.
     const dep = instance("dep2", { "index.config.json": dakIndex('{"name":"who"}') });
@@ -293,7 +293,7 @@ describe("the set is closed under the dependency tree", () => {
     expect(c.types.some((t) => t.id === "dak" && t.own)).toBe(false);
   });
 
-  test("a type asserted by BOTH appears twice — not a duplicate to collapse", () => {
+  test("typeAssertedByBothAppearsTwice", () => {
     // Two repositories each making the claim is what the tree says. Merging
     // them would answer "is this tree a DAK" and lose "which of them is".
     const dep = instance("dep3", { "index.config.json": dakIndex('{"name":"who"}') });
@@ -307,7 +307,7 @@ describe("the set is closed under the dependency tree", () => {
     ]);
   });
 
-  test("no dependencies → the closure is just the root", () => {
+  test("noDependenciesClosureIsRoot", () => {
     const root = instance("solo", { ["mine.json"]: '{"name":"mine"}' });
     const c = describeRepositoryClosure(root, base());
     expect(c.types.map((t) => ({ id: t.id, by: t.by }))).toEqual([
@@ -315,7 +315,7 @@ describe("the set is closed under the dependency tree", () => {
     ]);
   });
 
-  test("two repos naming different canonicalUrls is NOT a disagreement", () => {
+  test("differentReposCanonicalsNotDisagreement", () => {
     // They are two repositories. Reporting it as a conflict would make every
     // non-trivial dependency tree look broken, which is the false positive
     // that gets a check switched off within a week.
@@ -326,7 +326,7 @@ describe("the set is closed under the dependency tree", () => {
     expect(describeRepositoryClosure(root, base()).disagreements).toEqual([]);
   });
 
-  test("...but a disagreement WITHIN one instance is reported, tagged with it", () => {
+  test("disagreementWithinInstanceReported", () => {
     const dep = instance("dep5", {
       // `name` is REQUIRED, and it is what makes this a declaration rather
       // than a file that happens to be called `harness.json`. The fixture got

@@ -14,7 +14,7 @@
   "@graph": [
     {
       "@id": "http://smart.who.int/kg/publication",
-      "subClassOf": "https://litlfred.github.io/cat-harness/0.1.0/ns#SourceDocument",
+      "subClassOf": "https://litlfred.github.io/cat-harness/v0/ns/SourceDocument",
       "comment": "The library's ingested source document; L1 adds publicationType, grcStatus, identifiers, reviewBy."
     },
     {
@@ -24,7 +24,7 @@
     },
     {
       "@id": "http://smart.who.int/kg/publication-element",
-      "subClassOf": "https://litlfred.github.io/cat-harness/0.1.0/ns#Block",
+      "subClassOf": "https://litlfred.github.io/cat-harness/v0/ns/Block",
       "comment": "A library block; L1 adds elementType, rowType, columns, columnMap and cells."
     },
     {

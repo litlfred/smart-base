@@ -51,15 +51,15 @@ const figure = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.
 </g></svg>`;
 
 describe("visio-svg-bpmn geometry", () => {
-  test("transforms compose, rotation included", () => {
+  test("transformsComposeWithRotation", () => {
     const m = parseTransform("translate(10,20) rotate(90,0,0)");
     expect(m.map((n) => Math.round(n))).toEqual([0, 1, -1, 0, 10, 20]);
   });
-  test("path points follow relative and absolute commands", () => {
+  test("pathPointsFollowCommands", () => {
     expect(pathPoints("m 0,595.28 v 21.26 h 180.71 v -29.92").map(([x, y]) => [Math.round(x), Math.round(y)])).toEqual([[0, 595], [0, 617], [181, 617], [181, 587]]);
     expect(pathPoints("M 0,20 20,0 40,20 Z")).toEqual([[0, 20], [20, 0], [40, 20], [0, 20]]);
   });
-  test("a persona becomes a computable name", () => {
+  test("personaBecomesPascalName", () => {
     expect(pascal("Health worker (HW)")).toBe("HealthWorker");
     expect(pascal("EPI Manager")).toBe("EPIManager");
   });
@@ -69,7 +69,7 @@ describe("visio-svg-bpmn reading a figure", () => {
   const fig = readFigure(figure);
   const byLabel = (l: string) => fig.nodes.find((n) => n.label === l);
 
-  test("title, lanes and node kinds come from the Visio masters and the BPMN stencil's properties", () => {
+  test("readsTitleLanesAndNodeKinds", () => {
     expect(fig.title).toBe("C. Client registration");
     expect(fig.lanes.map((l) => l.label)).toEqual(["Client", "Vaccination location Health worker"]);
     expect(byLabel("2.2. Match found?")?.kind).toBe("exclusiveGateway");
@@ -78,14 +78,14 @@ describe("visio-svg-bpmn reading a figure", () => {
     expect(byLabel("D. Administer vaccine")).toMatchObject({ kind: "intermediateThrowEvent", link: true });
   });
 
-  test("a box the flows cross is a group; a box they only meet is an expanded sub-process", () => {
+  test("crossedBoxIsGroupMetBoxIsSubProcess", () => {
     expect(fig.groups.map((g) => g.label)).toEqual(["2. Query client record"]);
     expect(byLabel("2. Query client record")).toBeUndefined();
     expect(byLabel("5. Validate client details")).toMatchObject({ kind: "subProcess", expanded: true });
     expect(byLabel("5.1. Review data")?.parent).toBe(byLabel("5. Validate client details")?.vid);
   });
 
-  test("each connector end belongs to the smallest node it touches", () => {
+  test("connectorEndsToSmallestNode", () => {
     const edge = (from: string, to: string) => fig.flows.find((f) => f.from === byLabel(from)?.vid && f.to === byLabel(to)?.vid);
     expect(edge("1. Arrive", "2.1. Gather details")).toBeDefined();
     expect(edge("2.2. Match found?", "5. Validate client details")?.label).toBe("Yes");
@@ -97,23 +97,23 @@ describe("visio-svg-bpmn reading a figure", () => {
 describe("visio-svg-bpmn writing BPMN", () => {
   const { xml, problems } = toBpmn(readFigure(figure), "IMMZ", "C", map, "Create and/or update the client's record");
 
-  test("each process carries the objective its page states", () => {
+  test("processCarriesPageObjective", () => {
     const page = ["####  B.  Plan  ", "Objective: Ensure supply", '<img src="b.svg" />', "####  C.  Register", '<img src="images/c.svg" />', "Objective: Create the record"].join("\n");
     expect([...objectivesFrom(page)]).toEqual([["b.svg", "Ensure supply"], ["c.svg", "Create the record"]]);
     expect(xml).toMatch(/<bpmn:process [^>]*>\s*<bpmn:documentation>Create and\/or update the client's record<\/bpmn:documentation>/);
   });
 
-  test("an undocumented process or lane is reported", () => {
+  test("reportsUndocumentedProcessOrLane", () => {
     const bare = toBpmn(readFigure(figure), "IMMZ", "C").problems;
     expect(bare).toContainEqual(expect.stringContaining("has no objective"));
     expect(bare).toContainEqual(expect.stringContaining("IMMZ.Lane.Client (Client) has no documentation"));
   });
 
-  test("an end that touches nothing is reported, never guessed", () => {
+  test("reportsDanglingConnectorEnd", () => {
     expect(problems).toEqual([expect.stringContaining("(No): its end touches no node")]);
   });
 
-  test("the BPMN imports cleanly and keeps lanes, nesting, groups and links", async () => {
+  test("bpmnImportsCleanlyKeepsStructure", async () => {
     const { rootElement, warnings } = await new BpmnModdle().fromXML(xml);
     expect(warnings).toEqual([]);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

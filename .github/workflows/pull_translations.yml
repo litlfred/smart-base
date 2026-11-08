@@ -102,7 +102,7 @@ jobs:
 
       - name: Install Python dependencies
         if: steps.dak_check.outputs.DAK_ENABLED == 'true'
-        run: pip install -r input/scripts/requirements.txt
+        run: pip install --require-hashes -r input/scripts/requirements.lock
 
       # ── All download logic is in the Python script ──────────────────────
       # User inputs are passed via environment variables, NEVER interpolated

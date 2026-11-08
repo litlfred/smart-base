@@ -18,7 +18,7 @@ import { describe, test, expect, beforeAll, afterAll } from "bun:test";
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from "fs";
 import { join } from "path";
 import { tmpdir } from "os";
-import { assemble, toHtml, dakIdentity } from "./dak-pdf.ts";
+import { assemble, businessProcessesDir, toHtml, dakIdentity } from "./dak-pdf.ts";
 
 const ROOT = mkdtempSync(join(tmpdir(), "dak-pdf-"));
 
@@ -42,11 +42,11 @@ afterAll(() => {
 });
 
 describe("assembly", () => {
-  test("takes its title from sushi-config, not the directory name", () => {
+  test("titleFromSushiConfig", () => {
     expect(assemble(ROOT).title).toBe("Test DAK");
   });
 
-  test("falls back to the directory when there is no config", () => {
+  test("titleFallsBackToDirectory", () => {
     const bare = mkdtempSync(join(tmpdir(), "bare-dak-"));
     mkdirSync(join(bare, "input", "pagecontent"), { recursive: true });
     writeFileSync(join(bare, "input", "pagecontent", "x.md"), "hi\n");
@@ -54,39 +54,58 @@ describe("assembly", () => {
     rmSync(bare, { recursive: true, force: true });
   });
 
-  test("renders markdown narrative to HTML", () => {
+  test("findsDeclaredBusinessProcesses", () => {
+    // An instance names its BPMN directory by graph typology; the IG
+    // Publisher's input/business-processes/ is the fallback for a DAK
+    // repository that declares nothing, never a path read past a declaration.
+    const inst = mkdtempSync(join(tmpdir(), "declared-dak-"));
+    const name = inst.split("/").pop()!;
+    mkdirSync(join(inst, "processes"), { recursive: true });
+    writeFileSync(join(inst, "processes", "P.bpmn"), "<definitions/>");
+    writeFileSync(
+      join(inst, `${name}.json`),
+      JSON.stringify({ name, directories: [{ id: "bp", path: "processes/", graphTypologies: ["business-processes"] }] }),
+    );
+    expect(businessProcessesDir(inst)).toBe(join(inst, "processes"));
+    expect(assemble(inst).sections.find((x) => x.title === "Business processes")?.source).toBe("processes/");
+    expect(businessProcessesDir(ROOT)).toBe(join(ROOT, "input", "business-processes"));
+    expect(assemble(ROOT).sections.find((x) => x.title === "Business processes")?.source).toBe("input/business-processes/");
+    rmSync(inst, { recursive: true, force: true });
+  });
+
+  test("rendersMarkdownNarrative", () => {
     const s = assemble(ROOT).sections.find((x) => x.title === "index")!;
     expect(s.html).toContain("<h1>Overview</h1>");
     expect(s.html).toContain("<em>narrative</em>");
   });
 
-  test("skips an empty page rather than emitting a blank section", () => {
+  test("skipsEmptyPage", () => {
     expect(assemble(ROOT).sections.map((s) => s.title)).not.toContain("empty");
   });
 
-  test("every section records where it came from", () => {
+  test("everySectionRecordsSource", () => {
     for (const s of assemble(ROOT).sections) expect(s.source.length).toBeGreaterThan(0);
   });
 });
 
 describe("omissions are declared, never silent", () => {
-  test("BPMN present but not drawn is reported", () => {
+  test("reportsUndrawnBpmn", () => {
     const o = assemble(ROOT).omissions.join(" | ");
     expect(o).toContain("BPMN");
     expect(o).toContain("not drawn");
   });
 
-  test("workbooks are reported with a count", () => {
+  test("reportsWorkbookCount", () => {
     expect(assemble(ROOT).omissions.join(" | ")).toMatch(/1 workbook\(s\) not rendered/);
   });
 
-  test("a DAK with no narrative says so rather than rendering nothing quietly", () => {
+  test("reportsMissingNarrative", () => {
     const empty = mkdtempSync(join(tmpdir(), "no-narrative-"));
     expect(assemble(empty).omissions.join(" ")).toContain("no input/pagecontent/");
     rmSync(empty, { recursive: true, force: true });
   });
 
-  test("the omissions reach the DOCUMENT, not just the run log", () => {
+  test("omissionsReachDocument", () => {
     // Whoever reads the PDF is the one who needs to know what is missing from
     // it, and they never see stdout.
     const html = toHtml(assemble(ROOT));
@@ -96,7 +115,7 @@ describe("omissions are declared, never silent", () => {
 });
 
 describe("html", () => {
-  test("carries a cover, a contents list and one anchor per section", () => {
+  test("htmlHasCoverTocAndAnchors", () => {
     const a = assemble(ROOT);
     const html = toHtml(a);
     expect(html).toContain('class="cover"');
@@ -104,7 +123,7 @@ describe("html", () => {
     for (let i = 0; i < a.sections.length; i++) expect(html).toContain(`id="s${i}"`);
   });
 
-  test("escapes titles rather than trusting the tree", () => {
+  test("escapesTitles", () => {
     const evil = mkdtempSync(join(tmpdir(), "evil-dak-"));
     mkdirSync(join(evil, "input", "pagecontent"), { recursive: true });
     writeFileSync(join(evil, "sushi-config.yaml"), 'title: "<script>x</script>"\n');
@@ -129,25 +148,25 @@ describe("DAK identity is declared, never inferred", () => {
     return d;
   }
 
-  test("a declared smart.who.int.base dependency makes it a DAK", () => {
+  test("baseDependencyMakesDak", () => {
     const d = withConfig("dependencies:\n  smart.who.int.base: current\n");
     expect(dakIdentity(d)).toEqual({ isDak: true, baseVersion: "current" });
     rmSync(d, { recursive: true, force: true });
   });
 
-  test("a pinned version is carried, not just the fact of the dependency", () => {
+  test("carriesPinnedBaseVersion", () => {
     const d = withConfig("dependencies:\n  smart.who.int.base: 0.2.0\n");
     expect(dakIdentity(d).baseVersion).toBe("0.2.0");
     rmSync(d, { recursive: true, force: true });
   });
 
-  test("SUSHI's object dependency form is read too", () => {
+  test("readsObjectDependencyForm", () => {
     const d = withConfig("dependencies:\n  smart.who.int.base:\n    version: 1.2.3\n");
     expect(dakIdentity(d)).toEqual({ isDak: true, baseVersion: "1.2.3" });
     rmSync(d, { recursive: true, force: true });
   });
 
-  test("other WHO-adjacent dependencies do not qualify a repository", () => {
+  test("otherDependenciesDoNotQualify", () => {
     const d = withConfig("dependencies:\n  hl7.fhir.uv.cpg: 2.0.0\n");
     const id = dakIdentity(d);
     expect(id.isDak).toBe(false);
@@ -155,7 +174,7 @@ describe("DAK identity is declared, never inferred", () => {
     rmSync(d, { recursive: true, force: true });
   });
 
-  test("looking like a DAK is not being one", () => {
+  test("lookalikeIsNotDak", () => {
     // input/business-processes/ and input/dictionary/ are exactly what a
     // structural heuristic would key on. The rule ignores them.
     const d = mkdtempSync(join(tmpdir(), "lookalike-"));
@@ -165,7 +184,7 @@ describe("DAK identity is declared, never inferred", () => {
     rmSync(d, { recursive: true, force: true });
   });
 
-  test("each way of not being a DAK gives its own reason", () => {
+  test("eachNonDakReasonDistinct", () => {
     const missing = mkdtempSync(join(tmpdir(), "nocfg-"));
     expect(dakIdentity(missing).reason).toContain("no sushi-config.yaml");
     rmSync(missing, { recursive: true, force: true });
@@ -179,7 +198,7 @@ describe("DAK identity is declared, never inferred", () => {
     rmSync(broken, { recursive: true, force: true });
   });
 
-  test("a non-DAK is rendered but says so on its cover", () => {
+  test("nonDakCoverSaysSo", () => {
     // Rendering it anyway is useful; letting the cover call it a Digital
     // Adaptation Kit on this tool's say-so is not.
     const html = toHtml(assemble(ROOT));
@@ -187,7 +206,7 @@ describe("DAK identity is declared, never inferred", () => {
     expect(html).not.toContain(">Digital Adaptation Kit");
   });
 
-  test("a real DAK's cover names the base version it pins", () => {
+  test("realDakCoverNamesBase", () => {
     const d = withConfig('title: "Real"\ndependencies:\n  smart.who.int.base: current\n');
     mkdirSync(join(d, "input", "pagecontent"), { recursive: true });
     writeFileSync(join(d, "input", "pagecontent", "a.md"), "hi\n");
@@ -198,7 +217,7 @@ describe("DAK identity is declared, never inferred", () => {
     rmSync(d, { recursive: true, force: true });
   });
 
-  test("the title comes from the IG's own title, not a nested one", () => {
+  test("titleFromTopLevelNotNested", () => {
     // Indentation alone kept the old /^title:/m from matching a nested title,
     // so this pins behaviour the parse now guarantees structurally rather than
     // a defect it repaired.

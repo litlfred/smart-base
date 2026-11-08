@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SGAuthoring.DAKLifecycle\n"
-"POT-Creation-Date: 2026-10-15T07:21:51.542Z\n"
+"POT-Creation-Date: 2026-11-04T12:13:58.099Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -17,6 +17,11 @@ msgstr ""
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:478
 #. Diagram label
 msgid "All issues resolved?"
+msgstr ""
+
+#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:141
+#. Diagram element documentation
+msgid "Also incorporates clinical feedback. Data-entry forms are drawn here as wireframes (wireframe-design-review), so the L3 Questionnaire is derived from a reviewed design."
 msgstr ""
 
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:658
@@ -189,6 +194,11 @@ msgstr ""
 msgid "Fix QA issues from review"
 msgstr ""
 
+#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:46
+#. Diagram element documentation
+msgid "Fixes the DAK's scope, team (RACI) and source documents once; its last task starts the sprint cycle the Business Analyst pool picks up. Nothing here is revisited per sprint."
+msgstr ""
+
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:207
 #. Diagram label
 msgid "For each business process"
@@ -211,7 +221,7 @@ msgstr ""
 
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:175
 #. Diagram label
-msgid "Identify health interventions and recommendations (Component 1)"
+msgid "Identify interventions and recommendations (Component 1)"
 msgstr ""
 
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:600
@@ -222,6 +232,11 @@ msgstr ""
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:256
 #. Diagram label
 msgid "Incorporate SME feedback into DAK components"
+msgstr ""
+
+#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:304
+#. Diagram element documentation
+msgid "Its feedback is QA on the sprint's output, not a gate: authoring continues during review."
 msgstr ""
 
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:378
@@ -379,6 +394,11 @@ msgstr ""
 msgid "Releases an approved IG: version, publication request, final build, tag, and the hand-over to smart.who.int."
 msgstr ""
 
+#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:699
+#. Diagram element documentation
+msgid "Releases an IG the QC reviewer approved, verifies the automated publication, then resets main to draft."
+msgstr ""
+
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:650
 #. Diagram label
 msgid "Report issues to author for resolution"
@@ -392,6 +412,11 @@ msgstr ""
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:782
 #. Diagram label
 msgid "Reset main branch to draft, update version"
+msgstr ""
+
+#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:585
+#. Diagram element documentation
+msgid "Returns issues to the FHIR modeller or approves the IG for the publication manager; also reviews the translations."
 msgstr ""
 
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:718
@@ -494,46 +519,6 @@ msgstr ""
 msgid "Test L3 functionality (StructureMaps, CQL, Measures)"
 msgstr ""
 
-#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:141
-#. Diagram element documentation
-msgid "The business analyst authors every L2 component, sprint by sprint, and is the one who incorporates clinical feedback. Data-entry forms are drawn here as wireframes (wireframe-design-review) so the L3 Questionnaire is derived from a reviewed design, not invented at L3."
-msgstr ""
-
-#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:304
-#. Diagram element documentation
-msgid "The clinical SME checks the business analyst's components against the L1 recommendations and field practice. Its feedback is QA on the sprint's output, not a gate: authoring continues while it is reviewed."
-msgstr ""
-
-#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:358
-#. Diagram element documentation
-msgid "The FHIR modeller turns the L2 DAK into L3 FHIR resources in the recommended order and rebuilds the IG until the publisher's QA issues are resolved, including those the QC reviewer sends back."
-msgstr ""
-
-#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:46
-#. Diagram element documentation
-msgid "The programme manager owns this pool end to end: it fixes the DAK's scope, team (RACI) and source documents once, and its last task starts the sprint cycle that the Business Analyst pool picks up. Nothing here is revisited per sprint."
-msgstr ""
-
-#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:699
-#. Diagram element documentation
-msgid "The publication manager releases an IG the QC reviewer approved: version number, publication request, final build, tag, verification, and the hand-over to smart.who.int, then resets main to draft."
-msgstr ""
-
-#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:585
-#. Diagram element documentation
-msgid "The QC reviewer judges the built IG against the QA report and the L1-L4 checklist. It either returns issues to the FHIR modeller or approves the IG for the publication manager, and it also reviews the translations."
-msgstr ""
-
-#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:521
-#. Diagram element documentation
-msgid "The terminologist works alongside L3 authoring: it reviews bindings and maps concepts to WHO Commons, ICD-11, SNOMED CT and LOINC, and returns its mappings to the FHIR modeller's pool."
-msgstr ""
-
-#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:813
-#. Diagram element documentation
-msgid "The translator works alongside quality control: it translates narrative, resource metadata and examples into the UN languages and submits them to the QC reviewer."
-msgstr ""
-
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:826
 #. Diagram label
 msgid "Translate narrative and resource metadata"
@@ -592,6 +577,21 @@ msgstr ""
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:382
 #. Diagram label
 msgid "Verify L2 input availability and consistency"
+msgstr ""
+
+#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:521
+#. Diagram element documentation
+msgid "Works alongside L3 authoring and returns its mappings to the FHIR modeller's pool."
+msgstr ""
+
+#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:813
+#. Diagram element documentation
+msgid "Works alongside quality control and submits translations to the QC reviewer."
+msgstr ""
+
+#: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:358
+#. Diagram element documentation
+msgid "Works in the recommended order and also fixes the QA issues the QC reviewer sends back."
 msgstr ""
 
 #: ../smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn:510

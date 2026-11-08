@@ -7,8 +7,8 @@ name: Site publish (by hand)
 # command, not a second recipe.
 #
 # Dispatch only. On the default branch it publishes the gh-pages root
-# (keeping STAGING/ and _render-log/); on any other branch, the preview at
-# STAGING/<branch>/. `plan` prints what would run and publishes nothing.
+# (keeping branches/ and _render-log/); on any other branch, the preview at
+# branches/<branch>/. `plan` prints what would run and publishes nothing.
 on:
   workflow_dispatch:
     inputs:

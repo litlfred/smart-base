@@ -16,16 +16,14 @@ description: >
 > al., *BMJ* 2016; WHO applies it through the *WHO Handbook for Guideline
 > Development*.
 
-`evidence-appraisal` is the procedure and deliberately names no system — which
-one applies is the folio's commitment. This is one system a WHO folio can
-declare. It applies to certainty of evidence for a **health recommendation**,
-over a body of evidence answering one PICO question — not to platform or
+`evidence-appraisal` is the procedure and names no system; the folio declares
+one. GRADE applies to certainty of evidence for a **health recommendation**,
+over the body of evidence answering one PICO question — not to platform or
 architecture decisions, which are `kepner-tregoe`, recorded per `madr`.
 
-**Every value below is a code, and the codes are nodes.** Each vocabulary is a
-`folio-code-list/v1` in this instance's `code-lists/`, with a definition and a
-source per code, published as SKOS beside the glossary. Record a code, never a
-paraphrase of one:
+**Every value below is a code.** Each vocabulary is a `folio-code-list/v1` in
+this instance's `code-lists/`, with a definition and source per code,
+published as SKOS beside the glossary. Record a code, never a paraphrase:
 
 | list | codes |
 |---|---|
@@ -36,19 +34,12 @@ paraphrase of one:
 | `grade-recommendation-direction` | `for` · `against` |
 | `grade-recommendation-strength` | `strong` · `conditional` |
 
-*Moved 2026-09-24 (bean `wg7r`) from `smart-kg/methodologies/grade.md`. The
-owner: "needs to be part of skill/SKOS etc. … dont want smart-kg here yet, that
-is its own repo already". The method is unchanged; its enumerations became code
-lists, so a recorded grade is a code with a definition rather than a string.*
-
 ## It has a slot waiting
 
-`processes/evidence-retrieval.bpmn` frames the question as PICO, retrieves
-candidates across three classes, and runs `Task_AppraiseGrade` — *"Certainty of
-evidence per the grading system the folio declares. The grade attaches to the
-BODY of evidence for one PICO question, not to an individual citation."* The
-slot stays pluggable, and that is the point: GRADE fills it when declared, and
-nothing in the diagram names it.
+folio-assistant-core's `processes/content/evidence-retrieval.bpmn` frames the
+question as PICO, retrieves candidates across three classes, and runs
+`Task_AppraiseGrade` — *"Certainty of evidence per the grading system the folio
+declares."* GRADE fills that slot when declared; the diagram does not name it.
 
 ## Certainty, in four levels
 
@@ -62,9 +53,8 @@ starts Low; then:
   confounding would have reduced an observed effect.
 
 **The grade attaches to the body of evidence per outcome, never to a citation.**
-A single paper does not have a GRADE. The BPMN task already encodes this by
-sitting after the join rather than inside the fan-out, and it is the distinction
-most often got wrong. Record every rating-down and rating-up with the code that
+A single paper does not have a GRADE; the BPMN task sits after the join, not
+inside the fan-out. Record every rating-down and rating-up with the code that
 moved it — a certainty with no reasons cannot be re-examined.
 
 ## Evidence-to-Decision: certainty is one criterion of several
@@ -74,27 +64,22 @@ clinical and public-health recommendations judges each criterion explicitly:
 problem priority · desirable effects · undesirable effects · certainty of
 evidence · values · balance of effects · resources required · certainty of the
 evidence of required resources · cost-effectiveness · equity · acceptability ·
-feasibility. (The file this replaced listed ten, omitting the two resource
-criteria; the code list follows Alonso-Coello et al. 2016.)
+feasibility (twelve, per Alonso-Coello et al. 2016).
 
 Then a recommendation carries a **direction** (for / against) and a **strength**
 (strong / conditional). **Strength is not certainty.** A strong recommendation
 can rest on low-certainty evidence when the balance of effects is decisive, and
 a conditional one can rest on high certainty when values differ across
-populations. Conflating the two is the most common misreading of GRADE, and the
-reason they are two code lists rather than one score.
+populations; hence two code lists, not one score.
 
 ## What this platform must not do with it
 
 - **No numeric aggregation of EtD criteria.** The framework judges each
-  criterion and argues the recommendation; it does not sum them. A weighted
-  total would be the MCDA failure this platform refuses elsewhere — a judgement
-  laundered into a measurement.
+  criterion and argues the recommendation; it does not sum them.
 - **`could not determine` is not `very-low`.** Absent evidence and
   low-certainty evidence are different findings with different actions.
-  `evidence-retrieval` models this with `EndEvent_GapRecorded` — *"Gap
-  recorded, no recommendation"* — a distinct terminal from an evidence-backed
-  one, and `evidence-appraisal` names it a third state.
+  `evidence-retrieval` ends such a case at `EndEvent_GapRecorded` (*"Gap
+  recorded, no recommendation"*); `evidence-appraisal` names it a third state.
 - **No empirical claim enters a formal proof.** A graded body of evidence
   supports a recommendation, never a theorem. In a paper folio the two live in
   different block kinds and must not be joined.
