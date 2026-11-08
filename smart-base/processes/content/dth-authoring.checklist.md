@@ -74,9 +74,17 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Skill: `l1-coverage`.
 - What: Each normative sentence is captured or excluded; exclusions are signed by a person, never by the agent that proposed them.
 - Record it: `workflow_complete` with `node: "Task_Coverage"`.
+- next: → `Call_PublishStatements` (Publish extracted statements)
+
+### 9. Publish extracted statements (`Call_PublishStatements`)
+
+- Who: the `Business analyst` lane (role `business-analyst`).
+- Skill: `publish-extracted-statements`.
+- What: Statements extracted from the L1 sources (recommendations, requirements, scenario candidates) are published as pages of the handbook and in the shared l1-extraction viewer, each linked to its library entry and section, once coverage has accounted for every normative sentence and before the library i
+- A subprocess (`Process_PublishExtractedStatements`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `M1` (Record milestone M1 · Library frozen)
 
-### 9. Record milestone M1 · Library frozen (`M1`)
+### 10. Record milestone M1 · Library frozen (`M1`)
 
 - Who: the `Librarian` lane (role `librarian`).
 - Skill: `todo-manager`.
@@ -84,7 +92,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "M1"`.
 - next: → `Task_Outline` (2 · Outline chapters against the dth kind)
 
-### 10. 2 · Outline chapters against the dth kind (`Task_Outline`)
+### 11. 2 · Outline chapters against the dth kind (`Task_Outline`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `document-structure`.
@@ -92,7 +100,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "Task_Outline"`.
 - next: → `Task_Intro` (Draft introduction, audience and DIIG alignment)
 
-### 11. Draft introduction, audience and DIIG alignment (`Task_Intro`)
+### 12. Draft introduction, audience and DIIG alignment (`Task_Intro`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `document-authoring`.
@@ -100,7 +108,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "Task_Intro"`.
 - next: → `Task_GlossaryCandidates` (Build glossary candidates from the TWG workbook)
 
-### 12. Build glossary candidates from the TWG workbook (`Task_GlossaryCandidates`)
+### 13. Build glossary candidates from the TWG workbook (`Task_GlossaryCandidates`)
 
 - Who: the `Terminologist` lane (role `terminologist`).
 - Skill: `terminology-management`.
@@ -108,7 +116,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "Task_GlossaryCandidates"`.
 - next: → `Task_Inventory` (List processes, roles, decisions and indicators to model)
 
-### 13. List processes, roles, decisions and indicators to model (`Task_Inventory`)
+### 14. List processes, roles, decisions and indicators to model (`Task_Inventory`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `content-plan`.
@@ -116,7 +124,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "Task_Inventory"`.
 - next: → `Task_OutlineReview` (TWG reviews the outline)
 
-### 14. TWG reviews the outline (`Task_OutlineReview`)
+### 15. TWG reviews the outline (`Task_OutlineReview`)
 
 - Who: the `TWG and contributors` lane (role `feedback-provider`).
 - Skill: `content-feedback`.
@@ -124,7 +132,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "Task_OutlineReview"`.
 - next: → `M2` (Record milestone M2 · Outline agreed)
 
-### 15. Record milestone M2 · Outline agreed (`M2`)
+### 16. Record milestone M2 · Outline agreed (`M2`)
 
 - Who: the `TWG and contributors` lane (role `feedback-provider`).
 - Skill: `todo-manager`.
@@ -142,7 +150,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Work every branch; none is optional. Branches: → `Call_Personas` (Personas and roles), → `Call_Scenarios` (User scenarios), → `Call_Bpmn` (Business processes · BPMN), → `Call_Dmn` (Decision tables · DMN), → `Call_Data` (Data elements, indicators, requirements), → `Call_Steps` (Planning steps per chapter), → `Call_Archimate` (Link to smart-ra ArchiMate), → `Call_Glossary` (Link glossary to smart-ra SKOS)
 - The engine passes through this gateway itself; there is nothing to record here.
 
-### 16. Personas and roles (`Call_Personas`)
+### 17. Personas and roles (`Call_Personas`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `l2-dak-authoring`, `l2-component-edit-review`.
@@ -150,7 +158,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `GW_DraftJoin`
 
-### 17. User scenarios (`Call_Scenarios`)
+### 18. User scenarios (`Call_Scenarios`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `l2-dak-authoring`, `l2-component-edit-review`.
@@ -158,7 +166,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `GW_DraftJoin`
 
-### 18. Business processes · BPMN (`Call_Bpmn`)
+### 19. Business processes · BPMN (`Call_Bpmn`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `bpmn-authoring`, `l2-component-edit-review`.
@@ -166,7 +174,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `GW_DraftJoin`
 
-### 19. Decision tables · DMN (`Call_Dmn`)
+### 20. Decision tables · DMN (`Call_Dmn`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `dmn-authoring`, `l2-component-edit-review`.
@@ -174,7 +182,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `GW_DraftJoin`
 
-### 20. Data elements, indicators, requirements (`Call_Data`)
+### 21. Data elements, indicators, requirements (`Call_Data`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `l2-dak-authoring`, `indicator-extraction`, `l2-component-edit-review`.
@@ -182,7 +190,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `GW_DraftJoin`
 
-### 21. Planning steps per chapter (`Call_Steps`)
+### 22. Planning steps per chapter (`Call_Steps`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `document-authoring`, `l2-component-edit-review`.
@@ -190,7 +198,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `GW_DraftJoin`
 
-### 22. Link to smart-ra ArchiMate (`Call_Archimate`)
+### 23. Link to smart-ra ArchiMate (`Call_Archimate`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `archimate-models`, `l2-component-edit-review`.
@@ -198,7 +206,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - A subprocess (`Process_L2ComponentEditReview`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
 - next: → `GW_DraftJoin`
 
-### 23. Link glossary to smart-ra SKOS (`Call_Glossary`)
+### 24. Link glossary to smart-ra SKOS (`Call_Glossary`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `terminology-management`, `l2-component-edit-review`.
@@ -216,7 +224,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Work every branch; none is optional. Branches: → `Task_Validate` (Validate the draft), → `Task_ArchReview` (Architect group and handbook owners review)
 - The engine passes through this gateway itself; there is nothing to record here.
 
-### 24. Validate the draft (`Task_Validate`)
+### 25. Validate the draft (`Task_Validate`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `content-validate`.
@@ -224,7 +232,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "Task_Validate"`.
 - next: → `GW_ReviewJoin`
 
-### 25. Architect group and handbook owners review (`Task_ArchReview`)
+### 26. Architect group and handbook owners review (`Task_ArchReview`)
 
 - Who: the `Architect group and handbook owners` lane (role `reviewer`).
 - Skill: `content-review`.
@@ -237,7 +245,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Continue only when every one of the 2 incoming branches is done; the engine passes through itself.
 - next: → `M3` (Record milestone M3 · Zero draft)
 
-### 26. Record milestone M3 · Zero draft (`M3`)
+### 27. Record milestone M3 · Zero draft (`M3`)
 
 - Who: the `Business analyst` lane (role `business-analyst`).
 - Skill: `todo-manager`.
@@ -245,7 +253,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "M3"`.
 - next: → `Task_Comments` (4 · Comment via contributor log sheet or GitHub pc:)
 
-### 27. 4 · Comment via contributor log sheet or GitHub pc: (`Task_Comments`)
+### 28. 4 · Comment via contributor log sheet or GitHub pc: (`Task_Comments`)
 
 - Who: the `TWG and contributors` lane (role `feedback-provider`).
 - Skill: `content-feedback`.
@@ -253,7 +261,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "Task_Comments"`.
 - next: → `Task_Import` (Import into review/wg-comment and form change sets)
 
-### 28. Import into review/wg-comment and form change sets (`Task_Import`)
+### 29. Import into review/wg-comment and form change sets (`Task_Import`)
 
 - Who: the `Editor` lane (role `editor`).
 - Skill: `public-comment`.
@@ -267,7 +275,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
   - «yes» → `M4` (Record milestone M4 · Working-group draft)
   - «no: revise» → `GW_DraftMerge`
 
-### 29. Record milestone M4 · Working-group draft (`M4`)
+### 30. Record milestone M4 · Working-group draft (`M4`)
 
 - Who: the `Editor` lane (role `editor`).
 - Skill: `todo-manager`.
@@ -275,7 +283,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "M4"`.
 - next: → `Task_OpenPublic` (5 · Open public comment)
 
-### 30. 5 · Open public comment (`Task_OpenPublic`)
+### 31. 5 · Open public comment (`Task_OpenPublic`)
 
 - Who: the `Editor` lane (role `editor`).
 - Skill: `public-comment`.
@@ -283,7 +291,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "Task_OpenPublic"`.
 - next: → `M5` (Record milestone M5 · Public draft released)
 
-### 31. Record milestone M5 · Public draft released (`M5`)
+### 32. Record milestone M5 · Public draft released (`M5`)
 
 - Who: the `Editor` lane (role `editor`).
 - Skill: `todo-manager`.
@@ -291,14 +299,14 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "M5"`.
 - next: → `Task_PublicComments` (Public comments)
 
-### 32. Public comments (`Task_PublicComments`)
+### 33. Public comments (`Task_PublicComments`)
 
 - Who: the `TWG and contributors` lane (role `feedback-provider`).
 - Skill: `content-feedback`.
 - Record it: `workflow_complete` with `node: "Task_PublicComments"`.
 - next: → `Task_Disposition` (Disposition comments and apply change sets)
 
-### 33. Disposition comments and apply change sets (`Task_Disposition`)
+### 34. Disposition comments and apply change sets (`Task_Disposition`)
 
 - Who: the `Editor` lane (role `editor`).
 - Skill: `public-comment`.
@@ -306,7 +314,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "Task_Disposition"`.
 - next: → `M6` (Record milestone M6 · Comments dispositioned)
 
-### 34. Record milestone M6 · Comments dispositioned (`M6`)
+### 35. Record milestone M6 · Comments dispositioned (`M6`)
 
 - Who: the `Editor` lane (role `editor`).
 - Skill: `todo-manager`.
@@ -314,7 +322,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "M6"`.
 - next: → `Task_Qa` (6 · Editorial, voice and translation QA)
 
-### 35. 6 · Editorial, voice and translation QA (`Task_Qa`)
+### 36. 6 · Editorial, voice and translation QA (`Task_Qa`)
 
 - Who: the `Editor` lane (role `editor`).
 - Skill: `quality-control`.
@@ -322,7 +330,7 @@ Produces a WHO Digital Transformation Handbook (DTH) from its sources to publica
 - Record it: `workflow_complete` with `node: "Task_Qa"`.
 - next: → `Task_Publish` (Publish the handbook)
 
-### 36. Publish the handbook (`Task_Publish`)
+### 37. Publish the handbook (`Task_Publish`)
 
 - Who: the `Publication manager` lane (role `publication-manager`).
 - Skill: `document-publishing`.

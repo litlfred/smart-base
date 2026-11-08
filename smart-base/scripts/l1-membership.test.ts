@@ -21,18 +21,18 @@ const DDCC = rec([["title", undefined, "Digital documentation of COVID-19 certif
 const intake = (classifications: IntakeRecord["classifications"]): IntakeRecord => ({ files: [], classifications });
 
 describe("inferL1", () => {
-  test("the owner's rulings of 2026-10-07 are what the rule infers", () => {
+  test("infersOwnerRulings", () => {
     expect(inferL1(LNOB)).toMatchObject({ member: true, properties: { publicationType: "implementation-guidance" } });
     expect(inferL1(DAK)?.member).toBe(false);
     expect(inferL1(DDCC)?.member).toBe(false);
   });
-  test("no signal is undetermined, not 'no'", () => {
+  test("noSignalIsUndetermined", () => {
     expect(inferL1(rec([["title", undefined, "Annual report 2023"]]))).toBeUndefined();
   });
 });
 
 describe("decideL1", () => {
-  test("declared beats context beats inferred, and disagreement is reported", () => {
+  test("declaredBeatsContextBeatsInferred", () => {
     const d = decideL1(
       intake([
         { scheme: LAYER_SCHEME, code: "l1", member: false, source: "declared", basis: "owner", by: "ritikarawlani", at: "2026-10-07" },
@@ -44,22 +44,22 @@ describe("decideL1", () => {
     expect(d.derivation).toBe("decided");
     expect(d.disagreements).toHaveLength(2);
   });
-  test("inferred alone decides, as inferred", () => {
+  test("inferredAloneDecides", () => {
     const d = decideL1(undefined, LNOB);
     expect(d).toMatchObject({ status: "member", derivation: "inferred", publicationType: "implementation-guidance", disagreements: [] });
   });
-  test("a deciding record without a type borrows an agreeing lower one's", () => {
+  test("decidingRecordBorrowsAgreeingType", () => {
     const d = decideL1(intake([{ scheme: LAYER_SCHEME, code: "l1", member: true, source: "declared", basis: "owner" }]), LNOB);
     expect(d.publicationType).toBe("implementation-guidance");
     expect(d.disagreements).toEqual([]);
   });
-  test("nothing recorded and nothing inferred is undetermined", () => {
+  test("nothingRecordedIsUndetermined", () => {
     expect(decideL1(undefined, undefined).status).toBe("undetermined");
   });
 });
 
 describe("checkClassification holds the platform schema's rules", () => {
-  test("a good record passes; each broken field is named", () => {
+  test("namesEachBrokenField", () => {
     expect(checkClassification({ scheme: LAYER_SCHEME, code: "l1", member: true, source: "context", basis: "b" })).toEqual([]);
     expect(checkClassification({ scheme: "", code: "l1", member: "yes", source: "guessed", basis: "b", at: "Oct", extra: 1 })).toEqual([
       "scheme: a non-empty string",
@@ -69,7 +69,7 @@ describe("checkClassification holds the platform schema's rules", () => {
       "extra: not a field",
     ]);
   });
-  test("decideL1 refuses an intake whose record breaks them", () => {
+  test("decideRefusesBrokenIntake", () => {
     expect(() => decideL1(intake([{ scheme: LAYER_SCHEME, code: "l1", member: true, source: "declared", basis: "" }]), undefined)).toThrow();
   });
 });

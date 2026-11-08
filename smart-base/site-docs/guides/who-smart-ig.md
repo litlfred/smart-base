@@ -52,6 +52,10 @@ locally you need:
 
 Run `bun run cat check-deps` and the agent's `check_dependencies` tool to confirm.
 
+These are the tools of the plain IG Publisher build. To render an IG
+**through the harness**, which builds the site from the Publisher's AST and
+pins its versions, see [Building and publishing the SMART Base IG](smart-base-build.html).
+
 ## The L3 pipeline
 {: #the-l3-pipeline data-fa-label="sec:guides-who-smart-ig-the-l3-pipeline" }
 
@@ -146,3 +150,4 @@ are fhir-harness's `ig-build-pipeline` skill.
 
 - [Content types — WHO SMART IGs]({{ '/smart-base/concepts/who-smart-content-types.html#who-smart-implementation-guides-l3' | relative_url }})
 - [Authoring a WHO SMART DAK (L2)](who-smart-dak.html) — the upstream L2 layer
+- [Building and publishing the SMART Base IG](smart-base-build.html) — the command-line render, the publishing pipeline and what is published

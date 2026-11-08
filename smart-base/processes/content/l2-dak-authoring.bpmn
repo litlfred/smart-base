@@ -3,7 +3,7 @@
   smart-base — authoring a WHO SMART Guidelines L2 Digital Adaptation Kit.
 
   Source of truth: this file. The picture beside it (l2-dak-authoring.svg) is drawn by
-  `NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`;
+  `bun run cat render:bpmn`;
   never hand-edit it.
 
   The <bootstrap.processes:skill> extension on an activity names the skill
@@ -47,6 +47,7 @@
         <bpmn:documentation>Builds the DAK's L1 library from Component 1 before the work plan is seeded, so every track starts with its guidance in the library and the L1 graph. Opens the parallel fork into six authoring tracks (five in this lane, terminology in its own) and re-enters it whenever clinical validation sends work back, so a fix revisits every entangled track, not only the one the SME flagged. Assembles and validates the DAK in parallel with clinical validation, and again after any rework.</bpmn:documentation>
         <bpmn:extensionElements><bootstrap.processes:role ref="business-analyst"/></bpmn:extensionElements>
         <bpmn:flowNodeRef>Task_L1Library</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Call_PublishStatements</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_AuthorMerge</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_AuthorFork</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Personas</bpmn:flowNodeRef>
@@ -91,8 +92,16 @@
         <bootstrap.processes:skill ref="dak-l1-library" />
       </bpmn:extensionElements>
       <bpmn:incoming>B02</bpmn:incoming>
-      <bpmn:outgoing>B22</bpmn:outgoing>
+      <bpmn:outgoing>B22a</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:callActivity id="Call_PublishStatements" name="Publish extracted&#10;statements" calledElement="Process_PublishExtractedStatements">
+      <bpmn:documentation>Statements extracted from the Component 1 sources are published as pages of the DAK and in the shared l1-extraction viewer, each linked to its library entry and section, before L2 authoring starts from them. The sub-process is core's, the same for every content type; smart-base supplies the collector (`l1-statement-lists`) and the DAK only the page look.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="publish-extracted-statements" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>B22a</bpmn:incoming>
+      <bpmn:outgoing>B22</bpmn:outgoing>
+    </bpmn:callActivity>
     <bpmn:task id="Task_SeedBeans" name="Seed the work plan">
       <bpmn:documentation>Turn the scope into child beans of the DAK's bean, one per DAK component: the DAK's work plan holds the work plan of each component. beans create is not idempotent: check for an existing bean before every create, or a re-run duplicates the plan.</bpmn:documentation>
       <bpmn:extensionElements>
@@ -245,7 +254,8 @@
     </bpmn:callActivity>
     <bpmn:sequenceFlow id="B01" sourceRef="StartEvent_Guideline" targetRef="Task_ScopeDak" />
     <bpmn:sequenceFlow id="B02" sourceRef="Task_ScopeDak" targetRef="Task_L1Library" />
-    <bpmn:sequenceFlow id="B22" sourceRef="Task_L1Library" targetRef="Call_BeanOpen" />
+    <bpmn:sequenceFlow id="B22a" sourceRef="Task_L1Library" targetRef="Call_PublishStatements" />
+    <bpmn:sequenceFlow id="B22" sourceRef="Call_PublishStatements" targetRef="Call_BeanOpen" />
     <bpmn:sequenceFlow id="B03" sourceRef="Task_SeedBeans" targetRef="Gateway_AuthorMerge" />
     <bpmn:sequenceFlow id="B04" sourceRef="Gateway_AuthorMerge" targetRef="Gateway_AuthorFork" />
     <bpmn:sequenceFlow id="B05" sourceRef="Gateway_AuthorFork" targetRef="Task_Personas" />
@@ -370,7 +380,19 @@
         <di:waypoint x="440" y="200" />
         <di:waypoint x="440" y="420" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="B22_di" bpmnElement="B22"><di:waypoint x="505" y="465"/><di:waypoint x="515" y="465"/><di:waypoint x="515" y="305"/><di:waypoint x="535" y="305"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="B22_di" bpmnElement="B22">
+        <di:waypoint x="505" y="600" />
+        <di:waypoint x="515" y="600" />
+        <di:waypoint x="515" y="305" />
+        <di:waypoint x="535" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Call_PublishStatements_di" bpmnElement="Call_PublishStatements">
+        <dc:Bounds x="375" y="540" width="130" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="B22a_di" bpmnElement="B22a">
+        <di:waypoint x="440" y="510" />
+        <di:waypoint x="440" y="540" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="B03_di" bpmnElement="B03">
         <di:waypoint x="945" y="305" />
         <di:waypoint x="1055" y="305" />

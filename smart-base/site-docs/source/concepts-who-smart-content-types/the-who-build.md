@@ -2,7 +2,9 @@ The FHIR IG Publisher and FHIR content in general are described on the
 [FHIR IG Publisher](https://litlfred.github.io/folio-assistant/fhir-harness/fhir/ig-publisher.html)
 and [FHIR content](https://litlfred.github.io/folio-assistant/fhir-harness/fhir/fhir-content.html)
 pages of the FHIR IG layer. This section covers what is specific to the WHO
-SMART Guidelines build.
+SMART Guidelines build. The commands, the publishing pipeline and the
+published assets are on
+[Building and publishing the SMART Base IG]({{ '/smart-base/guides/smart-base-build.html' | relative_url }}).
 
 **The Publisher is one step of many.** It runs between six pre-processing
 invocations and nine post-processing ones. The DAK API, the JSON Schemas and

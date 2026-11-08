@@ -4,7 +4,7 @@
   sources to publication, in seven stages with recorded milestones.
 
   Source of truth: this file. The picture beside it (dth-authoring.svg) is drawn by
-  `NODE_PATH=cat-harness-tools/node_modules bun run smart-base/scripts/render-processes.ts`;
+  `bun run cat render:bpmn`;
   never hand-edit it.
 
   The <bootstrap.processes:skill> extension on an activity names the skill that
@@ -67,6 +67,7 @@ Empirical content (figures, statistics, country examples) stays as cited narrati
         <bpmn:documentation>Drafts the outline and the structured content. Every structured track uses a smart-base DAK block kind and calls the shared edit-and-review subprocess.</bpmn:documentation>
         <bpmn:flowNodeRef>Task_Scaffold</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Outline</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Call_PublishStatements</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Intro</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_Inventory</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>GW_DraftMerge</bpmn:flowNodeRef>
@@ -186,13 +187,21 @@ Empirical content (figures, statistics, country examples) stays as cited narrati
       <bpmn:incoming>F08</bpmn:incoming>
       <bpmn:outgoing>F09</bpmn:outgoing>
     </bpmn:task>
+    <bpmn:callActivity id="Call_PublishStatements" name="Publish extracted&#10;statements" calledElement="Process_PublishExtractedStatements">
+      <bpmn:documentation>Statements extracted from the L1 sources (recommendations, requirements, scenario candidates) are published as pages of the handbook and in the shared l1-extraction viewer, each linked to its library entry and section, once coverage has accounted for every normative sentence and before the library is frozen. The sub-process is core's, the same for every content type; smart-base supplies the collector (`l1-statement-lists`) and the handbook only the page look.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <bootstrap.processes:skill ref="publish-extracted-statements" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>F09</bpmn:incoming>
+      <bpmn:outgoing>F09b</bpmn:outgoing>
+    </bpmn:callActivity>
     <bpmn:task id="M1" name="Record milestone&#10;M1 · Library frozen&#10;[todo-manager]">
       <bpmn:documentation>Milestone: every source in library/, coverage accounted. Recorded, not enforced.</bpmn:documentation>
       <bpmn:extensionElements>
         <bootstrap.processes:skill ref="todo-manager" />
         <cat-harness.processes:bean op="note"/>
       </bpmn:extensionElements>
-      <bpmn:incoming>F09</bpmn:incoming>
+      <bpmn:incoming>F09b</bpmn:incoming>
       <bpmn:outgoing>F10</bpmn:outgoing>
     </bpmn:task>
     <bpmn:task id="Task_Outline" name="2 · Outline chapters against the dth kind&#10;[document-structure]">
@@ -476,7 +485,8 @@ Empirical content (figures, statistics, country examples) stays as cited narrati
     <bpmn:sequenceFlow id="F06" sourceRef="M0" targetRef="Task_Ingest" />
     <bpmn:sequenceFlow id="F07" sourceRef="Task_Ingest" targetRef="Task_L1" />
     <bpmn:sequenceFlow id="F08" sourceRef="Task_L1" targetRef="Task_Coverage" />
-    <bpmn:sequenceFlow id="F09" sourceRef="Task_Coverage" targetRef="M1" />
+    <bpmn:sequenceFlow id="F09" sourceRef="Task_Coverage" targetRef="Call_PublishStatements" />
+    <bpmn:sequenceFlow id="F09b" sourceRef="Call_PublishStatements" targetRef="M1" />
     <bpmn:sequenceFlow id="F10" sourceRef="M1" targetRef="Task_Outline" />
     <bpmn:sequenceFlow id="F11" sourceRef="Task_Outline" targetRef="Task_Intro" />
     <bpmn:sequenceFlow id="F12" sourceRef="Task_Intro" targetRef="Task_GlossaryCandidates" />
@@ -744,9 +754,17 @@ Empirical content (figures, statistics, country examples) stays as cited narrati
         <di:waypoint x="1600" y="335" />
         <di:waypoint x="1615" y="335" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Call_PublishStatements_di" bpmnElement="Call_PublishStatements">
+        <dc:Bounds x="1615" y="418" width="170" height="90" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="F09b_di" bpmnElement="F09b">
+        <di:waypoint x="1785" y="450" />
+        <di:waypoint x="1900" y="450" />
+        <di:waypoint x="1900" y="367" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F09_di" bpmnElement="F09">
-        <di:waypoint x="1785" y="335" />
-        <di:waypoint x="1815" y="335" />
+        <di:waypoint x="1700" y="367" />
+        <di:waypoint x="1700" y="418" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="F10_di" bpmnElement="F10">
         <di:waypoint x="1985" y="335" />

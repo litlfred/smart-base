@@ -7,11 +7,35 @@
   "source": "Skills of smart-base",
   "terms": [
     {
+      "id": "activate-accepted-guidance",
+      "prefLabel": "activate-accepted-guidance",
+      "definition": "The point-of-care system carries out the health worker's decisions on decision-support guidance: each accepted action's request becomes active (intent plan or order) and joins the client's CarePlan; a declined action is not written. Input is the guidance and the decisions; output is the transaction Bundle saved.",
+      "notation": "activate-accepted-guidance",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/activate-accepted-guidance.md",
+      "status": "candidate"
+    },
+    {
+      "id": "apply-decision-support",
+      "prefLabel": "apply-decision-support",
+      "definition": "The point-of-care system applies a DAK decision table's PlanDefinition to one client ($apply) and gets the proposed actions back as a RequestGroup (R4; RequestOrchestration in R5), or as CDS Hooks cards when the guidance comes from a CDS service. Input is the PlanDefinition and the client; output is the proposal, every request in it still a proposal.",
+      "notation": "apply-decision-support",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/apply-decision-support.md",
+      "status": "candidate"
+    },
+    {
       "id": "classify-and-code-content",
       "prefLabel": "classify-and-code-content",
-      "definition": "Classify and code L1 narrative content (recommendations, implementation practices, remarks, and proposed coverage exclusions) and L2 DAK slots (personas, business processes, guideline domains, conditions, interventions, medicines, and GRADE ratings) using the `terminology-coding` methodology and the `terminology-lookup` Tool. Covers the authoring-agent's four-rung reuse-first lookup, the `l1-extraction-reviewer` lane for reading and signing proposed L1 coverage exclusions against the printed page (owner ruling 3b, 2026-10-12), and the `terminologist` / ontologist reviewer lane for adjudicating candidate codings and local glossary candidates.",
+      "definition": "Classify and code L1 narrative content (recommendations, implementation practices, remarks, and proposed coverage exclusions) and L2 DAK slots (personas, business processes, guideline domains, conditions, interventions, medicines, and GRADE ratings) using the `terminology-coding` methodology and the `terminology-lookup` Tool. Covers the authoring-agent's four-rung reuse-first lookup, the `l1-extraction-reviewer` lane that reads and signs proposed L1 coverage exclusions against the printed page, and the `terminologist` / ontologist lane that adjudicates candidate codings and local glossary candidates.",
       "notation": "classify-and-code-content",
       "source": "smart-base/skills/content/authoring-who-smart-guidelines/classify-and-code-content.md",
+      "status": "candidate"
+    },
+    {
+      "id": "complete-sdc-questionnaire",
+      "prefLabel": "complete-sdc-questionnaire",
+      "definition": "A health worker (or a client, on their own device) completes a FHIR R4 Questionnaire conforming to Structured Data Capture as their device renders it, and the result is a QuestionnaireResponse. Generic for any DAK form: a registration, a visit, a referral. Input is the Questionnaire as rendered, with any pre-populated answers; output is the completed QuestionnaireResponse.",
+      "notation": "complete-sdc-questionnaire",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/complete-sdc-questionnaire.md",
       "status": "candidate"
     },
     {
@@ -25,7 +49,7 @@
     {
       "id": "dak-postprocessing",
       "prefLabel": "dak-postprocessing",
-      "definition": "What the DAK post-processing phase accomplishes after the IG Publisher runs — the JSON/JSON-LD surface, the DAK API hub, and the metadata-to-Liquid bridge that is the seam the just-the-docs transition cuts at. Read before changing a post-processing step, and before assuming the Publisher produced something it did not.",
+      "definition": "What the DAK post-processing phase produces after the IG Publisher runs — the JSON/JSON-LD surface, the DAK API hub, and the metadata-to-Liquid bridge — and how an IG repository's own site gets the same sidecars from the cached AST (`ig-site:sidecars`). Read before changing a post-processing step, and before assuming the Publisher produced something it did not.",
       "notation": "dak-postprocessing",
       "source": "smart-base/skills/content/authoring-who-smart-guidelines/dak-postprocessing.md",
       "status": "candidate"
@@ -33,7 +57,7 @@
     {
       "id": "dak-preprocessing",
       "prefLabel": "dak-preprocessing",
-      "definition": "What the DAK pre-processing phase actually accomplishes, step by step, before the IG Publisher runs — and which of its steps exist only to satisfy the Publisher's own page index — and how it runs as the overlay on fhir-harness's AST cache refresh (`dak-pre-export.sh`). Read before changing a pre-processing step, before assuming one is needed, and before moving one to another layer.",
+      "definition": "What each DAK pre-processing step does before the IG Publisher runs, which steps exist only to feed the Publisher's page index, and how the phase runs as the overlay on fhir-harness's AST cache refresh (`dak-pre-export.sh`). Also which files in a DAK repository are authored and which are generated, and the SEMVER rule for DAK and IG versions. Read before changing, assuming or moving a pre-processing step.",
       "notation": "dak-preprocessing",
       "source": "smart-base/skills/content/authoring-who-smart-guidelines/dak-preprocessing.md",
       "status": "candidate"
@@ -52,6 +76,14 @@
       "definition": "Turn a WHO Digital Transformation Handbook that exists only as an L1 publication (ingested in who-iris) into an L2 DTH in its own repository that depends on smart-ra: write the handbook's workplan first (what goes in its repo, what goes in smart-ra, which BPMN, roles and DMN to model), then scaffold and seed it. Read before starting work on any dth-* handbook repo.",
       "notation": "dth-l1-to-l2-ingest",
       "source": "smart-base/skills/content/authoring-who-smart-guidelines/dth-l1-to-l2-ingest.md",
+      "status": "candidate"
+    },
+    {
+      "id": "extract-questionnaire-response",
+      "prefLabel": "extract-questionnaire-response",
+      "definition": "The point-of-care system turns a completed QuestionnaireResponse into the FHIR resources it stands for, by the extraction its SDC Questionnaire declares (StructureMap-based, definition-based or observation-based $extract), and saves them. Input is the response and its Questionnaire; output is a transaction Bundle. Generic for any DAK form.",
+      "notation": "extract-questionnaire-response",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/extract-questionnaire-response.md",
       "status": "candidate"
     },
     {
@@ -83,6 +115,14 @@
       "definition": "Extract the indicators an L1 source prints (indicator reference or metadata sheets: name, numerator, denominator, disaggregation, definition, data sources) as L1 `indicator` nodes with every printed field, then draft one L2 program indicator per indicator, derived from its L1 node. Read before adding a WHO handbook's or guideline's indicators to a DAK or a DTH, and whenever an L2 indicator has to trace to its source. Part of L1 → L2 extraction for every DAK and DTH, beside recommendation-extraction.",
       "notation": "indicator-extraction",
       "source": "smart-base/skills/content/authoring-who-smart-guidelines/indicator-extraction.md",
+      "status": "candidate"
+    },
+    {
+      "id": "inform-client",
+      "prefLabel": "inform-client",
+      "definition": "A health worker tells the client (or caregiver) what was decided and what happens next, in words and, where the DAK gives one, on a slip or card: a referral, a return date, a result. Input is what to tell and the client's language; output is that the client was told, and what they were handed. Generic for any DAK step that ends with the client being informed.",
+      "notation": "inform-client",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/inform-client.md",
       "status": "candidate"
     },
     {
@@ -174,6 +214,30 @@
       "status": "candidate"
     },
     {
+      "id": "record-decision-rationale",
+      "prefLabel": "record-decision-rationale",
+      "definition": "OPTIONAL and never blocking: a health worker who chooses to may note why they accepted or declined decision-support guidance, in one tap plus an optional coded or free-text reason. Input is the decision; output is one FHIR Provenance (or nothing, when skipped, which is the default). The care plan is updated whether or not this is ever done.",
+      "notation": "record-decision-rationale",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/record-decision-rationale.md",
+      "status": "candidate"
+    },
+    {
+      "id": "review-client-history",
+      "prefLabel": "review-client-history",
+      "definition": "A health worker reads the client's history as their device shows it (an International Patient Summary, imported records, or a paper card and what the client reports) and takes into account what bears on today's care, weighing each item by where it came from: verified, unverified or reported. Input is the records with their provenance; output is what the health worker relies on.",
+      "notation": "review-client-history",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/review-client-history.md",
+      "status": "candidate"
+    },
+    {
+      "id": "review-decision-support-guidance",
+      "prefLabel": "review-decision-support-guidance",
+      "definition": "A health worker sees the decision-support guidance for one client on their device (the proposed actions of a RequestGroup or CDS Hooks cards) and accepts or declines each action; modifies one only where the device offers it. Input is the guidance as rendered; output is the decision per action. At most one tap per action; nothing else is asked.",
+      "notation": "review-decision-support-guidance",
+      "source": "smart-base/skills/content/authoring-who-smart-guidelines/review-decision-support-guidance.md",
+      "status": "candidate"
+    },
+    {
       "id": "smart-base-tools",
       "prefLabel": "smart-base-tools",
       "notation": "smart-base-tools",
@@ -183,7 +247,7 @@
     {
       "id": "smart-guideline-create",
       "prefLabel": "smart-guideline-create",
-      "definition": "Somebody asked for a new WHO SMART Guideline (an IG built on smart-base, or a DAK that will feed one). Specialises fhir-ig-create: the same three facts, the same numbered question with the same default (stage it inside this repository first), and the same routes, plus what the owner ruled for SMART guidelines during the 2026-10 separation: every guideline repository instantiates smart-base identically, forks under litlfred come before any WHO repository, the identity comes from the declaration and never from the directory, and the WHO template's theme and chrome come from smart-base by `needs`, never copied. Use whenever a user asks to create, start or set up a SMART Guideline, a SMART IG, a WHO IG or a DAK.",
+      "definition": "Somebody asked for a new WHO SMART Guideline (an IG built on smart-base, or a DAK that will feed one). Specialises fhir-ig-create: the same three facts, the same numbered question with the same default (stage it inside this repository first), and the same routes, plus the SMART rules: every guideline repository instantiates smart-base identically, forks under litlfred come before any WHO repository, the identity comes from the declaration and never from the directory, and the WHO template's theme and chrome come from smart-base by `needs`, never copied. Use whenever a user asks to create, start or set up a SMART Guideline, a SMART IG, a WHO IG or a DAK.",
       "notation": "smart-guideline-create",
       "source": "smart-base/skills/content/authoring-who-smart-guidelines/smart-guideline-create.md",
       "status": "candidate"
@@ -191,7 +255,7 @@
     {
       "id": "smart-guideline-end-to-end",
       "prefLabel": "smart-guideline-end-to-end",
-      "definition": "The whole road from a use case to a running application on WHO SMART Guidelines, for a new guideline or a jurisdiction's adaptation, as an orchestrator of ten named stage skills, each with its own input and output contract: guideline-use-case, dak-l1-library, recommendation-extraction, l2-dependency-choice, l2-dak-authoring, l3-dependency-choice, l3-fhir-authoring, l4-application-brief, wireframe-design-review and l4-application-build. Each stage's output is the next stage's input. Human adjudication follows every stage, as QA and never as a gate: the agent goes on to the next stage while the last one is reviewed. The ORDER of the stages is a rule, though: no L3 asset before the L1 extraction and the L2 assets it derives from exist and their review has been requested. Read before starting any end-to-end authoring or adaptation, and to find which skill runs each stage. A request to adapt a WHO guideline, DAK or IG to a country or programme (\"adapt the immunization guidelines to Uganda using these schedules\") is this process, even when it reads like an IG or coding task.",
+      "definition": "The whole road from a use case to a running application on WHO SMART Guidelines, for a new guideline or a jurisdiction's adaptation, as an orchestrator of ten named stage skills, each with its own input and output contract: guideline-use-case, dak-l1-library, recommendation-extraction, l2-dependency-choice, l2-dak-authoring, l3-dependency-choice, l3-fhir-authoring, l4-application-brief, wireframe-design-review and l4-application-build. Each stage's output is the next stage's input. Human adjudication follows every stage as QA, not as a gate, but the order of the stages is a rule: no L3 asset before the L1 extraction and L2 assets it derives from exist with their review requested. Read before starting any end-to-end authoring or adaptation, and to find which skill runs each stage. A request to adapt a WHO guideline, DAK or IG to a country or programme (\"adapt the immunization guidelines to Uganda using these schedules\") is this process, even when it reads like an IG or coding task.",
       "notation": "smart-guideline-end-to-end",
       "source": "smart-base/skills/content/authoring-who-smart-guidelines/smart-guideline-end-to-end.md",
       "status": "candidate"
@@ -207,7 +271,7 @@
     {
       "id": "toolchain-ownership",
       "prefLabel": "toolchain-ownership",
-      "definition": "Taking ownership of the WHO smart-base scripts in a litlfred fork, rewriting them to the Skill I/O contract, and the one gate that governs when a script may actually move. Read before touching, copying or rewriting any upstream smart-base script.",
+      "definition": "Taking ownership of the WHO smart-base scripts in litlfred, rewriting them to the Skill I/O contract, and the one gate that governs when a script may actually move. Read before touching, copying or rewriting any upstream smart-base script.",
       "notation": "toolchain-ownership",
       "source": "smart-base/skills/content/authoring-who-smart-guidelines/toolchain-ownership.md",
       "status": "candidate"

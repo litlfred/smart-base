@@ -16,7 +16,7 @@ import { join } from "node:path";
 const PAGE = join(import.meta.dir, "../site-docs/source/concepts-who-smart-content-types");
 
 describe("living deck slide 1: the five SMART layers", () => {
-  test("the layers section lists all five layers", () => {
+  test("layersSectionListsFiveLayers", () => {
     const t = readFileSync(join(PAGE, "the-three-layers.md"), "utf-8");
     for (const l of ["**L1** Narrative", "**L2** Operational", "**L3** Machine readable", "L4 Executable", "L5 Dynamic"]) {
       expect(t).toContain(l);
