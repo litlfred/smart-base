@@ -53,4 +53,4 @@ jobs:
       pre-export: bash smart-base/scripts/dak-pre-export.sh
       # build.fhir.org lost who.template.root#current (404, 2026-11-01), so the
       # template is seeded from its own repository at HEAD.
-      template-repos: who.template.root=WorldHealthOrganization/smart-ig-template
+      template-repos: who.template.root=litlfred/smart-ig-template
