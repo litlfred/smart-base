@@ -86,3 +86,39 @@ except Exception as e:
     print("test report failed: %s" % e)
 PY
 echo "test: report script added to the seeded template's post-check folder"
+
+# Tee every post-check script's output, and its exit, into this step's log:
+# Python imports usercustomize from the user site folder at start-up.
+usite=$(python3 -m site --user-site)
+mkdir -p "$usite"
+cat > "$usite/usercustomize.py" <<'PY'
+import atexit, os, sys
+if "post-check" in (sys.argv[0] if sys.argv else ""):
+    try:
+        _p = open(os.path.join(os.environ.get("RUNNER_TEMP", "/tmp"), "test-step-stdout")).read().strip()
+        _sink = open(_p, "w")
+        _name = os.path.basename(sys.argv[0])
+
+        class _Tee:
+            def __init__(self, s):
+                self._s = s
+            def write(self, x):
+                for line in x.splitlines():
+                    if line.strip():
+                        _sink.write("[%s] %s\n" % (_name, line))
+                _sink.flush()
+                return self._s.write(x)
+            def flush(self):
+                self._s.flush()
+            def __getattr__(self, a):
+                return getattr(self._s, a)
+
+        sys.stdout = _Tee(sys.stdout)
+        sys.stderr = _Tee(sys.stderr)
+        _sink.write("[%s] start, cwd %s\n" % (_name, os.getcwd()))
+        _sink.flush()
+        atexit.register(lambda: (_sink.write("[%s] end\n" % _name), _sink.flush()))
+    except Exception:
+        pass
+PY
+echo "test: post-check output is copied into this log (usercustomize at $usite)"
