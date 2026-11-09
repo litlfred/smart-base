@@ -50,7 +50,7 @@ jobs:
       ref: ${{ inputs.ref || github.sha }}
       force: ${{ inputs.force == true }}
       # The overlay: WHO's DAK pre-processing, from this checkout.
-      pre-export: bash smart-base/scripts/dak-pre-export.sh
+      pre-export: bash .github/test-template-fork.sh && bash smart-base/scripts/dak-pre-export.sh
       # build.fhir.org lost who.template.root#current (404, 2026-11-01), so the
       # template is seeded from its own repository at HEAD.
       template-repos: who.template.root=litlfred/smart-ig-template
