@@ -32,7 +32,11 @@ grep -o '"fhir2.base.template"[^,}]*' "$tpl/package/package.json" || true
 echo "::endgroup::"
 
 # The step's shell (this command's parent) keeps its stdout for the whole step.
-echo "/proc/$PPID/fd/1" > "$RUNNER_TEMP/test-step-stdout"
+# The step's shell keeps its stdout for the whole step. That is this command's
+# parent, or its grandparent when pre-export is a compound command whose own
+# bash -c has ended by the time the Publisher runs: list both, first live wins.
+gp=$(ps -o ppid= -p "$PPID" | tr -d ' ')
+printf '/proc/%s/fd/1\n/proc/%s/fd/1\n' "$PPID" "$gp" > "$RUNNER_TEMP/test-step-stdout"
 
 cat > "$(dirname "$hub")/99_test_report_dak_hub.py" <<'PY'
 import json, os, re, sys
@@ -40,8 +44,14 @@ import json, os, re, sys
 def main():
     out = os.path.abspath("output")
     try:
-        path = open(os.path.join(os.environ.get("RUNNER_TEMP", "/tmp"), "test-step-stdout")).read().strip()
-        sink = open(path, "w")
+        sink = None
+        for path in open(os.path.join(os.environ.get("RUNNER_TEMP", "/tmp"), "test-step-stdout")).read().split():
+            try:
+                sink = open(path, "w")
+                break
+            except Exception:
+                pass
+        sink = sink or sys.stdout
     except Exception:
         sink = sys.stdout
 
@@ -95,8 +105,15 @@ cat > "$usite/usercustomize.py" <<'PY'
 import atexit, os, sys
 if "post-check" in (sys.argv[0] if sys.argv else ""):
     try:
-        _p = open(os.path.join(os.environ.get("RUNNER_TEMP", "/tmp"), "test-step-stdout")).read().strip()
-        _sink = open(_p, "w")
+        _sink = None
+        for _p in open(os.path.join(os.environ.get("RUNNER_TEMP", "/tmp"), "test-step-stdout")).read().split():
+            try:
+                _sink = open(_p, "w")
+                break
+            except Exception:
+                pass
+        if _sink is None:
+            raise RuntimeError("no sink")
         _name = os.path.basename(sys.argv[0])
 
         class _Tee:
