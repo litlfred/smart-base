@@ -142,7 +142,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "961b4d939d7d69874f44162d12407bd3f1d96c6b",
+          "ref": "21e99640407c925a6e1f68b5a4a908f5130e8b73",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -154,9 +154,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-08",
-              "ref": "961b4d939d7d69874f44162d12407bd3f1d96c6b",
-              "evidence": "Owner litlfred, 2026-11-08: card Q-CIB-4 A (13:23Z, release-gated CI, full rollout in phases; phase 4 = the other layers) and Q-MM-1 A (\"non-content can merge/repin + 12hr\", window to 2026-11-08 19:00Z). Tools-only re-pin to cat-harness-tools 961b4d9 (#1722): a non-release PR runs the fast tier of layer-pr-checks; cat-harness#1158."
+              "on": "2026-11-09",
+              "ref": "21e99640407c925a6e1f68b5a4a908f5130e8b73",
+              "evidence": "Owner litlfred, 2026-11-09: Process_BeanDrain R8-Lane-5 (fix smart-base#331 main-red). Tools-only re-pin to cat-harness-tools 21e9964 (includes #1727 8be6fbc: memoize per-instance directories and per-kind node schemas in kg-validate so kg-validate-nested-instances.test.ts finishes in ~2s instead of timing out at 120s)."
             }
           }
         }
