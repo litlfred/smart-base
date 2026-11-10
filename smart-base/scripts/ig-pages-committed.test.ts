@@ -52,10 +52,20 @@ describe("the committed pages: the banner's identity is the index's", () => {
   });
 
   // smart-base's docs build into its IG site too (bean `mftp`, "no drift").
-  // Its index holds no package, so it has no JSON view pages; its full pages
-  // are the IG API views, and the DAK schema's carries the banner.
+  // Since fhir-harness#328 (`a6655ad31fc8`), IG API view pages (`.schema.json`)
+  // are redirect stubs to `?view=schema` while the JSON view and profile JSON
+  // pages (`StructureDefinition-DAK.json.md`, `.profile.json.md`) remain full
+  // Markdown pages carrying the banner; fall back to `.schema.json.md` when run
+  // against an older fhir-harness pin.
   it("smartBaseBannerNamesItselfNoStatus", () => {
-    const b = banner(readFileSync(join(ROOT, "smart-base", "docs", "artifact", "StructureDefinition-DAK.schema.json.md"), "utf8"));
+    const dir = join(ROOT, "smart-base", "docs", "artifact");
+    const candidates = [
+      "StructureDefinition-DAK.json.md",
+      "StructureDefinition-DAK.profile.json.md",
+      "StructureDefinition-DAK.schema.json.md",
+    ].map((f) => join(dir, f));
+    const page = candidates.find((p) => existsSync(p)) ?? candidates[0]!;
+    const b = banner(readFileSync(page, "utf8"));
     expect(b).toContain(">smart.who.int.base</a>");
     expect(b).toContain("http://smart.who.int/base");
     expect(b).not.toContain("smart.who.int.trust");

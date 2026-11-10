@@ -11,7 +11,7 @@ Feature: The committed WHO IG pages and data
 
   @test:smart-base/scripts/ig-pages-committed.test.ts::the_committed_pages:_the_banner's_identity_is_the_index's::smartBaseBannerNamesItselfNoStatus
   Scenario: smart-base names itself and asserts no status borrowed from smart-trust
-    Given the banner of smart-base's committed docs/artifact/StructureDefinition-DAK.schema.json.md
+    Given the banner of smart-base's committed StructureDefinition-DAK view page in docs/artifact/
     Then it links ">smart.who.int.base</a>" and contains "http://smart.who.int/base"
     And it does not contain "smart.who.int.trust" or any "ig-status-" class
 
