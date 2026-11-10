@@ -142,7 +142,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "21e99640407c925a6e1f68b5a4a908f5130e8b73",
+          "ref": "002c324354fbb8527bc39a8e39e41796e70ad32d",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -154,9 +154,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-09",
-              "ref": "21e99640407c925a6e1f68b5a4a908f5130e8b73",
-              "evidence": "Owner litlfred, 2026-11-09: Process_BeanDrain R8-Lane-5 (fix smart-base#331 main-red). Tools-only re-pin to cat-harness-tools 21e9964 (includes #1727 8be6fbc: memoize per-instance directories and per-kind node schemas in kg-validate so kg-validate-nested-instances.test.ts finishes in ~2s instead of timing out at 120s)."
+              "on": "2026-11-10",
+              "ref": "002c324354fbb8527bc39a8e39e41796e70ad32d",
+              "evidence": "Owner litlfred, 2026-11-10 21:08:15Z, card Q-UMB-3 A (thread 'Make smart-html-jtd an umbrella node kind'): mark the portfolio PRs ready and merge in order, smart-base#340 after its tools update. Tools-only re-pin to cat-harness-tools 002c324 (includes #1804, the portfolio node kind guideline-portfolio extends)."
             }
           }
         }
