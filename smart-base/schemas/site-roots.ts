@@ -13,6 +13,7 @@
  * under litlfred; its pages are HARNESS_PAGES_ROOT.
  *
  * @module smart-base/schemas/site-roots
+ * @graphNode none — configuration constants (owner and site roots), not a schema
  */
 
 /** The GitHub owner of smart-base and its smart-* / dth-* layers. Change to the WHO org on migration. */
