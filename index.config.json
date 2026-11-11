@@ -1,6 +1,6 @@
 {
   "$schema": "folio-index-config/v1",
-  "instances": [
+  "layers": [
     {
       "name": "smart-base",
       "_comment": "This repository INSTANTIATES the smart-base harness, as litlfred/smart-trust's and litlfred/smart-immunizations' seeds do (folio-assistant beans rbz3 and n3ni). The owner's rule (litlfred/folio-assistant#1767, 2026-10-01): 'every repo gets same <stub=smart-base>.config.json and smart-base/ dir ... where all the dirs live'. Here the instance IS the harness: smart-base/ holds its declaration (smart-base/smart-base.json), schemas, skills, scripts, tools, processes, kinds, themes, translations, the artefact index and the library of WHO source publications, with their history carried from folio-assistant's smart-base/ (n3ni stage E; owner, 2026-10-06). The generated docs/ pages are not copied: they are rebuilt. The IG source stays where the IG Publisher expects it (input/, sushi-config.yaml). The site is agent-run (`site`, below) and published by the IG route every smart-* IG uses: `bun run cat-harness-tools/scripts/stage-local.ts --repo .` builds the folio site from the IG's cached AST with smart-base's own chrome (`site.landing`) and the mounted layers' ig-site steps (owner, 2026-10-15: 'Yes + retire old workflow'). The retired `.github/workflows/folio-site.yml` composed the IG inside the just-the-docs shell from the folio-assistant submodule; it is gone, and `ghbuild.yml` no longer deploys over a folio root.",
@@ -208,6 +208,11 @@
           }
         }
       }
+    }
+  ],
+  "harnesses": [
+    {
+      "name": "smart-base"
     }
   ],
   "site": {
