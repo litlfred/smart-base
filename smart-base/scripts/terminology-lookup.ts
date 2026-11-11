@@ -33,6 +33,7 @@ import { dirname, join, relative, resolve } from "node:path";
 import { ownDeclaredDirectories } from "../platform/index.js";
 import { slug } from "./l1-kgid.ts";
 import { VocabularySchema, type Vocabulary } from "./l1-scenario-vocabulary.ts";
+import { HARNESS_PAGES_ROOT, stagingSite } from "../schemas/site-roots.ts";
 
 export const SLOTS = [
   "condition",
@@ -153,7 +154,7 @@ export const AUTHORITY_SCHEMES: Record<TerminologySlot, AuthoritySchemeInfo> = {
   domain: {
     id: "guideline-domain",
     title: "WHO SMART Guideline Domain Scheme",
-    uri: "https://litlfred.github.io/folio-assistant-core/glossary/guideline-domain",
+    uri: `${HARNESS_PAGES_ROOT}/folio-assistant-core/glossary/guideline-domain`,
     localSources: [GUIDELINE_DOMAIN_SOURCE],
   },
   "business-process": {
@@ -165,19 +166,19 @@ export const AUTHORITY_SCHEMES: Record<TerminologySlot, AuthoritySchemeInfo> = {
   "recommendation-strength": {
     id: "grade-recommendation-strength",
     title: "GRADE Recommendation Strength",
-    uri: "https://litlfred.github.io/smart-base/code-lists/grade-recommendation-strength",
+    uri: `${stagingSite("smart-base")}code-lists/grade-recommendation-strength`,
     localSources: ["smart-base/code-lists/grade-recommendation-strength.json"],
   },
   "recommendation-direction": {
     id: "grade-recommendation-direction",
     title: "GRADE Recommendation Direction",
-    uri: "https://litlfred.github.io/smart-base/code-lists/grade-recommendation-direction",
+    uri: `${stagingSite("smart-base")}code-lists/grade-recommendation-direction`,
     localSources: ["smart-base/code-lists/grade-recommendation-direction.json"],
   },
   "evidence-certainty": {
     id: "grade-certainty",
     title: "GRADE Certainty of Evidence",
-    uri: "https://litlfred.github.io/smart-base/code-lists/grade-certainty",
+    uri: `${stagingSite("smart-base")}code-lists/grade-certainty`,
     localSources: ["smart-base/code-lists/grade-certainty.json"],
   },
 };
@@ -202,7 +203,7 @@ const BUILTIN_DOMAIN_TERMS: RawEntry[] = [
     altLabels: ["clinical guideline", "clinical health"],
     definition:
       "A guideline whose recommendations address the care of individual patients by health workers: assessment, diagnosis, treatment and management of a condition in a person.",
-    uri: "https://litlfred.github.io/folio-assistant-core/glossary/guideline-domain#clinical",
+    uri: `${HARNESS_PAGES_ROOT}/folio-assistant-core/glossary/guideline-domain#clinical`,
     sourcePath: GUIDELINE_DOMAIN_SOURCE,
   },
   {
@@ -213,7 +214,7 @@ const BUILTIN_DOMAIN_TERMS: RawEntry[] = [
     altLabels: ["public health guideline", "public-health"],
     definition:
       "A guideline whose recommendations address the health of populations rather than of an individual patient: prevention, health promotion, immunization and screening programmes, surveillance, and policy or environmental measures.",
-    uri: "https://litlfred.github.io/folio-assistant-core/glossary/guideline-domain#public-health",
+    uri: `${HARNESS_PAGES_ROOT}/folio-assistant-core/glossary/guideline-domain#public-health`,
     sourcePath: GUIDELINE_DOMAIN_SOURCE,
   },
   {
@@ -224,7 +225,7 @@ const BUILTIN_DOMAIN_TERMS: RawEntry[] = [
     altLabels: ["health systems strengthening", "HSS", "health-system-strengthening"],
     definition:
       "A guideline whose recommendations address how the health system itself is organised and resourced — service delivery, health workforce, health information systems, access to medical products, financing, and leadership and governance.",
-    uri: "https://litlfred.github.io/folio-assistant-core/glossary/guideline-domain#health-system-strengthening",
+    uri: `${HARNESS_PAGES_ROOT}/folio-assistant-core/glossary/guideline-domain#health-system-strengthening`,
     sourcePath: GUIDELINE_DOMAIN_SOURCE,
   },
 ];
@@ -472,7 +473,7 @@ function loadCodeListEntries(repoRoot: string): RawEntry[] {
           code: c.code,
           label: c.label,
           definition: c.definition,
-          uri: `https://litlfred.github.io/smart-base/code-lists/${raw.id}#${c.code}`,
+          uri: `${stagingSite("smart-base")}code-lists/${raw.id}#${c.code}`,
           sourcePath: rel,
         });
       }

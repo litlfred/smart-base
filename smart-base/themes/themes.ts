@@ -162,12 +162,13 @@ import {
   type ResolvedTheme,
   type Theme,
 } from "../platform/schema.js";
+import { smartRepository } from "../schemas/site-roots.ts";
 
 /** The layer these themes belong to. `themeKey` keys on it; ids are not unique across layers. */
 export const THEME_INSTANCE = "smart-base";
 
 /** The same layer as a REFERENCE names it — its planned `owner/repo` (bean `6rmv`). */
-export const THEME_REPOSITORY = "litlfred/smart-base";
+export const THEME_REPOSITORY = smartRepository("smart-base");
 
 /**
  * The upstream sources, pinned — what `themes.test.ts` re-reads.
