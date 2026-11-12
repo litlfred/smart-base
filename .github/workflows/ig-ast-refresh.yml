@@ -44,7 +44,7 @@ permissions:
 
 jobs:
   refresh:
-    uses: litlfred/fhir-harness/.github/workflows/ig-ast-refresh.yml@94b649add2d4202b6a3dbe6b6d14f4b7b28fbfa2 # index.lock.json
+    uses: litlfred/fhir-harness/.github/workflows/ig-ast-refresh.yml@9c39de71cdf7fcb173d73121f97ffddbe4f1973c # index.lock.json
     with:
       # A push builds exactly the commit pushed; a dispatch, the ref it names.
       ref: ${{ inputs.ref || github.sha }}
