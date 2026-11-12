@@ -86,7 +86,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "2d16e8697f2c07cf0dd28818f9b054bf9458f7a6",
+          "ref": "293a896c88e3a31407b03d44e728e769e8becbbf",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -102,8 +102,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-12",
-              "ref": "2d16e8697f2c07cf0dd28818f9b054bf9458f7a6",
-              "evidence": "litlfred, 2026-11-11 16:05:30Z, thread 'Merge manager' (cmsg_017WNUkNK8kdDziPK58Pv6G9A4gqquu7bha27LfmNqarmL): \"+12ht repin+merge window\"; re-pin every harness to its main HEAD under the owner's freshness rule (cat-harness-tools#1881)"
+              "ref": "293a896c88e3a31407b03d44e728e769e8becbbf",
+              "evidence": "litlfred, 2026-11-11 16:05:30Z, thread \"Merge manager\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4gqquu7bha27LfmNqarmL): \"+12ht repin+merge window\"; re-pin every harness to its main HEAD under the owner's freshness rule (cat-harness-tools#1881)"
             }
           }
         }
@@ -142,7 +142,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "d152164ce504cccb5567c4141a29be236c23f369",
+          "ref": "474b7100f08779632e3f6c7b77486bdba4e86d2c",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -155,8 +155,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-12",
-              "ref": "d152164ce504cccb5567c4141a29be236c23f369",
-              "evidence": "litlfred, 2026-11-11 16:05:30Z, thread 'Merge manager' (cmsg_017WNUkNK8kdDziPK58Pv6G9A4gqquu7bha27LfmNqarmL): \"+12ht repin+merge window\"; re-pin every harness to its main HEAD under the owner's freshness rule (cat-harness-tools#1881)"
+              "ref": "474b7100f08779632e3f6c7b77486bdba4e86d2c",
+              "evidence": "litlfred, 2026-11-11 16:05:30Z, thread \"Merge manager\" (cmsg_017WNUkNK8kdDziPK58Pv6G9A4gqquu7bha27LfmNqarmL): \"+12ht repin+merge window\"; re-pin every harness to its main HEAD under the owner's freshness rule (cat-harness-tools#1881)"
             }
           }
         }
