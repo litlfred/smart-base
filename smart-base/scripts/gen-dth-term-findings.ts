@@ -11,7 +11,7 @@
  *
  * Two inputs, neither restated in the other:
  *
- * - the candidate list (`cat-harness/docs/proposals/dth-candidates-2026-10-02.json`),
+ * - the candidate list (`smart-base/findings/dth-candidates-2026-10-02.json`, copied from cat-harness `docs/proposals/` at 2bae4d1e so this layer reads only its own tree),
  *   whose glossary entries carry every conflicting definition with its source,
  *   severity and difference — the 40 terms are READ from it, not copied;
  * - `smart-base/findings/dth-term-alternatives.json`, the authored part: the
