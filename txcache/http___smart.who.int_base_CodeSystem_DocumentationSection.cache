@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://smart.who.int/base/CodeSystem/DocumentationSection"
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "class" : "UNKNOWN",
+  "error" : "Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://smart.who.int/base/CodeSystem/DocumentationSection' could not be found, so the value set cannot be expanded"
+}
+-------------------------------------------------------------------------------------
