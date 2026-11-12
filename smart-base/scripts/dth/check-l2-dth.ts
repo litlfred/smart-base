@@ -58,6 +58,7 @@ import {
   checkDakCompanionPresent,
   checkDakDmnHasDecisionTable,
 } from "../../pipeline/qa-checkers-dak.ts";
+import { stagingSite } from "../../schemas/site-roots.ts";
 
 export const SKOS_MATCH_FIELDS = [
   "exactMatch",
@@ -211,7 +212,7 @@ export function checkBlockArchimateLinks(
     figures?: Array<{ figure: string; model: string; view: string }>;
   },
   archIndex: ArchimateModelIndex,
-  expectedBasePrefix = "https://litlfred.github.io/smart-ra/",
+  expectedBasePrefix = stagingSite("smart-ra"),
 ): { errors: string[]; linkCount: number; figureCount: number } {
   const errors: string[] = [];
   let linkCount = 0;
