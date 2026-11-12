@@ -39,6 +39,13 @@
               "on": "2026-11-12",
               "ref": "a2ef9efe9867cc0d556d7987d2eca4520435245b",
               "evidence": "litlfred 2026-11-12: re-pin smart-base#346 to current mains (moved during the re-pin). Owner merge window to ~21:05Z 2026-11-12 (Q-WIN-1 C); owner card Q-CONSENT-1 A, answered in coordinator session session_01EucfRpkvK7d4FJyuqypQzm."
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -76,6 +83,13 @@
               "on": "2026-11-12",
               "ref": "2868ff44a3a2d28fa7c88f40668986c01df90f0f",
               "evidence": "litlfred, 2026-11-11 16:05:30Z, thread 'Merge manager' (cmsg_017WNUkNK8kdDziPK58Pv6G9A4gqquu7bha27LfmNqarmL): \"+12ht repin+merge window\"; re-pin every harness to its main HEAD under the owner's freshness rule (cat-harness-tools#1881)"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -104,6 +118,13 @@
               "on": "2026-11-12",
               "ref": "7791054f95d0447a965fae4a2efbf92200cdf485",
               "evidence": "litlfred 2026-11-12: re-pin smart-base#346 to current mains (core 7791054, cat-harness ca74f11, cat-harness-tools 93bf7ae). Owner merge window extended to ~21:05Z 2026-11-12 (Q-WIN-1 C); owner card Q-CONSENT-1 A (agents may record re-pin consent in the owner's name), answered in coordinator session session_01EucfRpkvK7d4FJyuqypQzm."
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -132,6 +153,13 @@
               "on": "2026-11-12",
               "ref": "ca74f1170d90e0e387a65e496b774412c6122fb6",
               "evidence": "litlfred 2026-11-12: re-pin smart-base#346 to current mains (core 7791054, cat-harness ca74f11, cat-harness-tools 93bf7ae). Owner merge window extended to ~21:05Z 2026-11-12 (Q-WIN-1 C); owner card Q-CONSENT-1 A (agents may record re-pin consent in the owner's name), answered in coordinator session session_01EucfRpkvK7d4FJyuqypQzm."
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -157,6 +185,13 @@
               "on": "2026-11-12",
               "ref": "3c6a039ef0d1177e32bb0af03ce681d6dfbda5a8",
               "evidence": "litlfred 2026-11-12: re-pin smart-base#346 to current mains (moved during the re-pin). Owner merge window to ~21:05Z 2026-11-12 (Q-WIN-1 C); owner card Q-CONSENT-1 A, answered in coordinator session session_01EucfRpkvK7d4FJyuqypQzm."
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -179,6 +214,13 @@
               "on": "2026-11-12",
               "ref": "f5c124f1a8067ce16b42fd251380c6d67e426374",
               "evidence": "litlfred, 2026-11-11 16:05:30Z, thread 'Merge manager' (cmsg_017WNUkNK8kdDziPK58Pv6G9A4gqquu7bha27LfmNqarmL): \"+12ht repin+merge window\"; re-pin every harness to its main HEAD under the owner's freshness rule (cat-harness-tools#1881)"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -204,6 +246,13 @@
               "on": "2026-11-12",
               "ref": "b31c5346b0b2803354423511b6d18b599b7bdc41",
               "evidence": "litlfred, 2026-11-11 16:05:30Z, thread 'Merge manager' (cmsg_017WNUkNK8kdDziPK58Pv6G9A4gqquu7bha27LfmNqarmL): \"+12ht repin+merge window\"; re-pin every harness to its main HEAD under the owner's freshness rule (cat-harness-tools#1881)"
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
