@@ -6,8 +6,8 @@ description: >
   (R4; RequestOrchestration in R5), or as CDS Hooks cards when the guidance
   comes from a CDS service. Input is the PlanDefinition and the client;
   output is the proposal, every request in it still a proposal.
-input: schemas/skills/apply-decision-support/input.schema.json
-output: schemas/skills/apply-decision-support/output.schema.json
+input: L4/schemas/skills/apply-decision-support/input.schema.json
+output: L4/schemas/skills/apply-decision-support/output.schema.json
 ---
 
 # Apply decision support
@@ -32,8 +32,8 @@ the same proposal as cards whose suggestions carry the resources.
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/apply-decision-support/input.schema.json)
-and [`output.schema.json`](../../../schemas/skills/apply-decision-support/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/apply-decision-support/input.schema.json)
+and [`output.schema.json`](../../schemas/skills/apply-decision-support/output.schema.json).
 
 - **In:** the `planDefinition` canonical, the `subject`, and optionally the
   `encounter`, the `practitioner` and the `data` (a Bundle) to evaluate

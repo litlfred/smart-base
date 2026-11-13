@@ -79,9 +79,9 @@ import { dirname, join, relative, resolve } from "node:path";
 import { parse as parseYaml } from "yaml";
 import { z } from "zod";
 
-import { L1_NAMESPACE, slug } from "./l1-kgid.ts";
+import { L1_NAMESPACE, slug } from "../L1/scripts/l1-kgid.ts";
 import { VocabularySchema, type Vocabulary, type VocabPersona, type VocabProcess } from "./l1-scenario-vocabulary.ts";
-import { buildRunContext, writeRunContext } from "./l1-run-context.ts";
+import { buildRunContext, writeRunContext } from "../L1/scripts/l1-run-context.ts";
 import { kgClasses } from "./kg-classes.ts";
 
 export const MAPPING_SCHEMA_TAG = "l1-scenario-mapping/v1" as const;

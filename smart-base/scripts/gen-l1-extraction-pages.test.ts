@@ -102,9 +102,9 @@ describe("gen-l1-extraction-pages --site", () => {
   const read = (f: string): string => readFileSync(join(site, f), "utf8");
 
   it("toolDeclaresKindSiteFlagNoRequired", async () => {
-    // An L1 tool: it sits in the L1 subgraph's tools graph (smart-base/L1/graph.json), not in tools/.
+    // An always-on tool: it sits in the layer's own tools/, beside the l1-extraction visualiser it draws, not in the opt-in L1/tools/.
     const { toolsFromFolders } = await import("../platform/index.ts");
-    const t = toolsFromFolders(join(import.meta.dir, "..", "L1", "tools"), JSON.parse(readFileSync(join(import.meta.dir, "..", "smart-base.json"), "utf8")).canonicalUrl).find((x) => x.id === "l1-extraction-pages")!;
+    const t = toolsFromFolders(join(import.meta.dir, "..", "tools"), JSON.parse(readFileSync(join(import.meta.dir, "..", "smart-base.json"), "utf8")).canonicalUrl).find((x) => x.id === "l1-extraction-pages")!;
     expect(t.renders).toContain("l1-extraction");
     const a = t.io?.inputs?.find((i) => i.name === "site")?.arg;
     expect(a !== undefined && "flag" in a ? a.flag : undefined).toBe("--site");

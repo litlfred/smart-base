@@ -11,8 +11,8 @@ description: >
   does it and where. Covers the hybrid extraction (mechanical candidates, agent
   structuring, verbatim and 100 % coverage gates), the reuse-first precedence
   for personas and processes, the WARNING format, and sign-off.
-input: schemas/skills/recommendation-extraction/input.schema.json
-output: schemas/skills/recommendation-extraction/output.schema.json
+input: L1/schemas/skills/recommendation-extraction/input.schema.json
+output: L1/schemas/skills/recommendation-extraction/output.schema.json
 uses-methodology:
   - terminology-coding
 ---
@@ -32,7 +32,7 @@ existing vocabulary and processes first, and warns when none fits.
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/recommendation-extraction/input.schema.json) and [`output.schema.json`](../../../schemas/skills/recommendation-extraction/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/recommendation-extraction/input.schema.json) and [`output.schema.json`](../../schemas/skills/recommendation-extraction/output.schema.json).
 
 - **In:** `l1Sources`, [`dak-l1-library`](dak-l1-library.md)'s output, and the `targetGuide` whose personas and processes the scenarios reuse first.
 - **Out:** `l1Kg`: per included source, its `extractionPath` (`library/<bib>/l1-extraction/`), `sourceVersion`, the recommendation, remark, practice and scenario-candidate counts, the `coverage` and every `WARNING`. Stages 3 ([`l2-dependency-choice`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/l2-dependency-choice.md)), 4 and 5 take it as their `l1Kg`.
@@ -90,7 +90,7 @@ mechanical.
    `bun run cat ingest uploads/<doc_id>/<doc_id>.pdf --library <lib>`.
 2. **Fast path — a guideline that prints labels.** When the source prints
    `Recommendation N:` labels,
-   `bun run smart-base/scripts/extract-smart-kg-l1.ts --entry smart-base/library/<id>`
+   `bun run smart-base/L1/scripts/extract-smart-kg-l1.ts --entry smart-base/library/<id>`
    extracts them by label (it writes L1 1.0). A source with no labels, such
    as the measles position paper, takes the hybrid path below.
 3. **List the normative sentences.** Run core's `l1-coverage` with an empty
@@ -139,10 +139,10 @@ the agent's judgement:
 
 ```sh
 # 1. mechanical: the work list — every normative sentence, with hints; nothing decided
-bun run smart-base/scripts/l1-recommendation-candidates.ts --entry smart-base/library/<id> --out <dir>
+bun run smart-base/L1/scripts/l1-recommendation-candidates.ts --entry smart-base/library/<id> --out <dir>
 # 2. agent: write <dir>/curation.yaml (l1-recommendation-curation/v1), one decision per location
 # 3. mechanical: the gates, and the L1 3.0 graph
-bun run smart-base/scripts/l1-recommendation-candidates.ts --entry smart-base/library/<id> \
+bun run smart-base/L1/scripts/l1-recommendation-candidates.ts --entry smart-base/library/<id> \
   --curation <dir>/curation.yaml --out <dir> [--check]
 ```
 

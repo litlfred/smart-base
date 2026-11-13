@@ -8,8 +8,8 @@ description: >
   and unique keys. A step of recommendation-extraction, in place of
   recommendation-candidates when that step found no normative sentence; the
   `l1-transcription-verbatim` Tool satisfies it.
-input: schemas/skills/transcription-verbatim/input.schema.json
-output: schemas/skills/transcription-verbatim/output.schema.json
+input: L1/schemas/skills/transcription-verbatim/input.schema.json
+output: L1/schemas/skills/transcription-verbatim/output.schema.json
 ---
 
 # transcription-verbatim
@@ -25,8 +25,8 @@ pictures*).
 
 ## Input and output
 
-- Input: [`input.schema.json`](../../../schemas/skills/transcription-verbatim/input.schema.json)
-- Output: [`output.schema.json`](../../../schemas/skills/transcription-verbatim/output.schema.json)
+- Input: [`input.schema.json`](../../schemas/skills/transcription-verbatim/input.schema.json)
+- Output: [`output.schema.json`](../../schemas/skills/transcription-verbatim/output.schema.json)
 
 **In:** the directory of authored `*.l1.yaml`, each naming its library entry
 in `graph.source.entry`.
@@ -52,5 +52,5 @@ That the transcription reads the picture correctly is the reviewer's call
 `l1-transcription-verbatim` (`smart-base/L1/tools/l1-transcription-verbatim/l1-transcription-verbatim.ts`):
 
 ```sh
-bun run smart-base/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]
+bun run smart-base/L1/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]
 ```
