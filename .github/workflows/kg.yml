@@ -1,7 +1,8 @@
-# The knowledge-graph schema (smart-base/kg/): Zod source, generated FSH and JSON.
-# No smart-kg checkout: smart-kg is deprecated (owner, 2026-10-16) and src/l1.ts is the source of truth.
+# The knowledge-graph schema: one named subgraph per layer, smart-base/<Layer>/schemas/ (L1, L2, L2-bpmn, L2-dmn, L3).
+# The engine every layer uses is in the base layer, smart-base/L1/schemas/. Zod source, generated FSH and JSON.
+# No smart-kg checkout: smart-kg is deprecated (owner, 2026-10-16) and smart-base/<Layer>/schemas/<layer>.ts is the source of truth.
 #
-# smart-base/kg/src/*.ts is the source. The ontology JSON, the graph JSON Schema and the FSH logical models,
+# smart-base/<Layer>/schemas/*.ts is the source. The ontology JSON, the graph JSON Schema and the FSH logical models,
 # code systems and value sets under input/fsh/ are generated from it and committed, so a consumer
 # reads them without this toolchain -- and committed generated files go stale silently, which is
 # what `npm run check` catches. The IG build (ghbuild.yml) compiles the generated FSH like any other.
@@ -22,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: smart-base/kg
+        working-directory: smart-base/L1/schemas
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
@@ -30,7 +31,7 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-          cache-dependency-path: smart-base/kg/package-lock.json
+          cache-dependency-path: smart-base/L1/schemas/package-lock.json
 
       - run: npm ci
 

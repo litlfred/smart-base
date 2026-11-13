@@ -5,7 +5,7 @@
  * A copy, and a deliberate one: smart-kg's module lives in another repository,
  * and an L1 IRI that differs from the one smart-kg mints for the same guideline
  * makes two nodes of one. (This layer's Zod package holds a second port of the
- * same functions, `smart-base/kg/src/kgid.ts`.) So `l1-kgid.test.ts` pins
+ * same functions, `smart-base/L1/schemas/kgid.ts`.) So `l1-kgid.test.ts` pins
  * the outputs `kgid.mjs` gave. It no longer compares against a smart-kg
  * checkout: smart-kg is deprecated (owner, 2026-10-16).
  *

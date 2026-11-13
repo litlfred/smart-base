@@ -4,7 +4,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 
 import { requireHarnessRoot } from "../../cat-harness-tools/schemas/harness-root.ts";
-import { CAT_HARNESS_NS as KG_CAT_HARNESS_NS } from "../kg/src/l1-library.ts";
+import { CAT_HARNESS_NS as KG_CAT_HARNESS_NS } from "../L1/schemas/l1-library.ts";
 import type { DublinCoreRecord } from "../platform/index.js";
 import { decideL1, LAYER_SCHEME, type IntakeRecord } from "./l1-membership.ts";
 import { CAT_HARNESS_NS, identifiersOf, l1LibraryDocument, printedNumber, type Held, type Input } from "./l1-specialise.ts";

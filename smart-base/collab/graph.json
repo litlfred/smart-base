@@ -6,7 +6,7 @@
       "id": "collab-processes",
       "path": "processes/",
       "subgraph": true,
-      "description": "The processes that run on the work plan and the delivery process: the house processes under `content/`, as under `processes/`, and DIIG's `diig-investment-path.bpmn` (DIIG's nine chapters as a process, its two progress checks as gateways).",
+      "description": "The processes that run on the work plan and the delivery process: `smart-guideline-end-to-end` and `SGAuthoring.DAKLifecycle` under `content/`, and DIIG's `diig-investment-path.bpmn` (DIIG's nine chapters as a process, its two progress checks as gateways).",
       "graphTypologies": [
         "processes"
       ]
