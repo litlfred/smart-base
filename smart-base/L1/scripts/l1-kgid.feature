@@ -3,7 +3,7 @@ Feature: l1-kgid mints smart-kg's IRIs
   citations and DAK namespaces match the outputs recorded from WHO
   smart-kg's kgid.mjs.
 
-  @test:smart-base/scripts/l1-kgid.test.ts::l1-kgid_mints_smart-kg's_IRIs::publicationIriFromFirstIdentifier
+  @test:smart-base/L1/scripts/l1-kgid.test.ts::l1-kgid_mints_smart-kg's_IRIs::publicationIriFromFirstIdentifier
   Scenario: publication IRI from the first of isbn, iris-handle, doi, issn, url
     Given identifiers of a publication
     When an iris-handle and an isbn are both given
@@ -13,7 +13,7 @@ Feature: l1-kgid mints smart-kg's IRIs
     When no identifier is given
     Then minting the publication IRI throws
 
-  @test:smart-base/scripts/l1-kgid.test.ts::l1-kgid_mints_smart-kg's_IRIs::mintsSectionElementReferenceCitationIris
+  @test:smart-base/L1/scripts/l1-kgid.test.ts::l1-kgid_mints_smart-kg's_IRIs::mintsSectionElementReferenceCitationIris
   Scenario: section, element, reference, citation
     Given a publication IRI
     Then section "1.2" is "<pub>/section/1.2" and section "Annex 3" is "<pub>/section/Annex-3"

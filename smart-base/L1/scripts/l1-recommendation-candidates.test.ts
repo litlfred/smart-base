@@ -14,7 +14,7 @@ import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
-import { check } from "../L1/schemas/validate.ts";
+import { check } from "../schemas/validate.ts";
 import { CurationSchema, hintsFor, proposedIdentifiers, readEntry, RefusalError, run, type Curation } from "./l1-recommendation-candidates.ts";
 
 const page = (n: number, text: string) =>
@@ -158,8 +158,8 @@ describe("the worked example", () => {
     // extraction is smart-base's own and stays here.
     const X = "who-iris/library/9789240116191-eng";
     const E = "smart-base/l1-extractions/9789240116191-eng";
-    const r = spawnSync("bun", ["run", "smart-base/scripts/l1-recommendation-candidates.ts", "--entry", X, "--curation", `${E}/curation.yaml`, "--out", E, "--check"], {
-      cwd: join(import.meta.dir, "..", ".."),
+    const r = spawnSync("bun", ["run", "smart-base/L1/scripts/l1-recommendation-candidates.ts", "--entry", X, "--curation", `${E}/curation.yaml`, "--out", E, "--check"], {
+      cwd: join(import.meta.dir, "..", "..", ".."),
       encoding: "utf8",
     });
     expect(r.stderr + r.stdout).toMatch(/current — 48 candidates: 22 implementation practices/);
@@ -172,7 +172,7 @@ describe("the worked example", () => {
       "bun",
       ["run", "smart-base/scripts/l1-recommendation-scenarios.ts", "--l1", `${X}/l1.json`, "--vocabulary", `${X}/dth-npc-vocabulary.json`,
         "--generic", "smart-base/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json", "--mapping", `${X}/scenario-mapping.yaml`, "--out", `${X}/scenarios`, "--check"],
-      { cwd: join(import.meta.dir, "..", ".."), encoding: "utf8" },
+      { cwd: join(import.meta.dir, "..", "..", ".."), encoding: "utf8" },
     );
     expect(r.stderr + r.stdout).toMatch(/current — 22 scenario candidates, 26 warning/);
     expect(r.status).toBe(0);

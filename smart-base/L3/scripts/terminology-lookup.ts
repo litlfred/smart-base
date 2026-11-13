@@ -31,7 +31,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 
 import { dirname, join, relative, resolve } from "node:path";
 
 import { ownDeclaredDirectories } from "../../platform/index.js";
-import { slug } from "../../scripts/l1-kgid.ts";
+import { slug } from "../../L1/scripts/l1-kgid.ts";
 import { VocabularySchema, type Vocabulary } from "../../scripts/l1-scenario-vocabulary.ts";
 import { HARNESS_PAGES_ROOT, stagingSite } from "../../schemas/site-roots.ts";
 

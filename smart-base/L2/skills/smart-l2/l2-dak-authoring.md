@@ -8,8 +8,8 @@ description: >
   edited and then reviewed alongside through l2-component-edit-review. Stage 4
   of smart-guideline-end-to-end and the authoring steps of
   l2-dak-authoring.bpmn. Read before authoring or adapting any DAK component.
-input: schemas/skills/l2-dak-authoring/input.schema.json
-output: schemas/skills/l2-dak-authoring/output.schema.json
+input: L2/schemas/skills/l2-dak-authoring/input.schema.json
+output: L2/schemas/skills/l2-dak-authoring/output.schema.json
 ---
 
 # l2-dak-authoring
@@ -33,7 +33,7 @@ machine-*processable* Digital Adaptation Kit between a narrative guideline
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/l2-dak-authoring/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l2-dak-authoring/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/l2-dak-authoring/input.schema.json) and [`output.schema.json`](../../schemas/skills/l2-dak-authoring/output.schema.json).
 
 - **In:** `dakComponent` (required), `sourceGuideline` (required), `existingContent`, `sprintNumber`; as stage 4 of [`smart-guideline-end-to-end`](../../../skills/content/authoring-who-smart-guidelines/smart-guideline-end-to-end.md), also stage 2's `l1Kg` and stage 3's `l2Dependencies` ([`l2-dependency-choice`](l2-dependency-choice.md)'s output).
 - **Out:** `artifacts` (each an `l2Artifact`: `path`, `type`, `description`), `status`, `validationIssues`, `stagingLinks`. Stage 5 ([`l3-dependency-choice`](https://github.com/litlfred/smart-base/blob/main/smart-base/L3/skills/smart-l3/l3-dependency-choice.md)) takes the artifacts of every pass as its `l2Assets`.

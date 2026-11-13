@@ -6,8 +6,8 @@ description: >
   accepts or declines each action; modifies one only where the device offers
   it. Input is the guidance as rendered; output is the decision per action.
   At most one tap per action; nothing else is asked.
-input: schemas/skills/review-decision-support-guidance/input.schema.json
-output: schemas/skills/review-decision-support-guidance/output.schema.json
+input: L4/schemas/skills/review-decision-support-guidance/input.schema.json
+output: L4/schemas/skills/review-decision-support-guidance/output.schema.json
 ---
 
 # Review decision-support guidance
@@ -23,8 +23,8 @@ answer, not an exception.
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/review-decision-support-guidance/input.schema.json)
-and [`output.schema.json`](../../../schemas/skills/review-decision-support-guidance/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/review-decision-support-guidance/input.schema.json)
+and [`output.schema.json`](../../schemas/skills/review-decision-support-guidance/output.schema.json).
 
 - **In:** the `guidance`, as [`apply-decision-support`](apply-decision-support.md)
   returned it (a RequestGroup or RequestOrchestration, or CDS Hooks

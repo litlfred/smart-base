@@ -7,8 +7,8 @@ description: >
   then smart-base's generic personas, and never inventing a process. Step 2 of
   recommendation-extraction; the `l1-recommendation-scenarios` Tool satisfies
   it.
-input: schemas/skills/recommendation-scenarios/input.schema.json
-output: schemas/skills/recommendation-scenarios/output.schema.json
+input: L2/schemas/skills/recommendation-scenarios/input.schema.json
+output: L2/schemas/skills/recommendation-scenarios/output.schema.json
 uses-methodology:
   - terminology-coding
 ---
@@ -23,8 +23,8 @@ methodology and [`classify-and-code-content`](https://github.com/litlfred/smart-
 
 ## Input and output
 
-- Input: [`input.schema.json`](../../../schemas/skills/recommendation-scenarios/input.schema.json)
-- Output: [`output.schema.json`](../../../schemas/skills/recommendation-scenarios/output.schema.json)
+- Input: [`input.schema.json`](../../schemas/skills/recommendation-scenarios/input.schema.json)
+- Output: [`output.schema.json`](../../schemas/skills/recommendation-scenarios/output.schema.json)
 
 **In:** the L1 graph from [`recommendation-candidates`](https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/recommendation-candidates.md)
 (or an authored L1 YAML), the target guide's vocabulary, optionally the generic

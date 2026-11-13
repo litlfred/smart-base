@@ -7,7 +7,7 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # smart-base-scripts
 
-This layer's own scripts and their tests: document kinds, the DAK components figure, the DTH term findings, the smart-kg L1 extraction, the fhir-harness exclusions check, the L1 recommendation scenario candidates with the vocabulary reader they resolve against (fixtures and the measles run under `scripts/fixtures/`), and `dth-init.ts`, which writes a new DTH repository's wiring. Declared so a remote mount brings them.
+This layer's own scripts and their tests: document kinds, the DAK components figure, the DTH term findings, the `l1-extraction` viewer's pages (`gen-l1-extraction-pages.ts`) and the statement lists they read, the fhir-harness exclusions check, the L1 recommendation scenario candidates with the vocabulary reader they resolve against (fixtures and the measles run under `scripts/fixtures/`), and `dth-init.ts`, which writes a new DTH repository's wiring. The L1 extraction code (the smart-kg L1 extractor, the recommendation candidates, the L1 IRIs) is in the opt-in `L1/scripts/`. Declared so a remote mount brings them.
 
 Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, holding `code`.
 
@@ -34,12 +34,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`dth-init.feature`](dth-init.feature) | a file |  |
 | [`dth-init.test.ts`](dth-init.test.ts) | a file |  |
 | [`dth-init.ts`](dth-init.ts) | a file |  |
-| [`extract-dak-l1-references.feature`](extract-dak-l1-references.feature) | a file |  |
-| [`extract-dak-l1-references.test.ts`](extract-dak-l1-references.test.ts) | a file |  |
-| [`extract-dak-l1-references.ts`](extract-dak-l1-references.ts) | a file |  |
-| [`extract-smart-kg-l1.feature`](extract-smart-kg-l1.feature) | a file |  |
-| [`extract-smart-kg-l1.test.ts`](extract-smart-kg-l1.test.ts) | a file |  |
-| [`extract-smart-kg-l1.ts`](extract-smart-kg-l1.ts) | a file |  |
 | [`fhir-harness-exclusions.baseline.ts`](fhir-harness-exclusions.baseline.ts) | a file |  |
 | [`gen-dak-components-figure.feature`](gen-dak-components-figure.feature) | a file |  |
 | [`gen-dak-components-figure.test.ts`](gen-dak-components-figure.test.ts) | a file |  |
@@ -58,31 +52,13 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`kg-classes.ts`](kg-classes.ts) | a file |  |
 | [`l1-extraction-declared.feature`](l1-extraction-declared.feature) | a file |  |
 | [`l1-extraction-declared.test.ts`](l1-extraction-declared.test.ts) | a file |  |
-| [`l1-indicator-sheets.py`](l1-indicator-sheets.py) | a file |  |
-| [`l1-indicator-sheets.test.py`](l1-indicator-sheets.test.py) | a file |  |
-| [`l1-kgid.feature`](l1-kgid.feature) | a file |  |
-| [`l1-kgid.test.ts`](l1-kgid.test.ts) | a file |  |
-| [`l1-kgid.ts`](l1-kgid.ts) | a file |  |
-| [`l1-membership.feature`](l1-membership.feature) | a file |  |
-| [`l1-membership.test.ts`](l1-membership.test.ts) | a file |  |
-| [`l1-membership.ts`](l1-membership.ts) | a file |  |
-| [`l1-recommendation-candidates.feature`](l1-recommendation-candidates.feature) | a file |  |
-| [`l1-recommendation-candidates.test.ts`](l1-recommendation-candidates.test.ts) | a file |  |
-| [`l1-recommendation-candidates.ts`](l1-recommendation-candidates.ts) | a file |  |
 | [`l1-recommendation-scenarios.feature`](l1-recommendation-scenarios.feature) | a file |  |
 | [`l1-recommendation-scenarios.test.ts`](l1-recommendation-scenarios.test.ts) | a file |  |
 | [`l1-recommendation-scenarios.ts`](l1-recommendation-scenarios.ts) | a file |  |
-| [`l1-run-context.ts`](l1-run-context.ts) | a file |  |
 | [`l1-scenario-vocabulary.ts`](l1-scenario-vocabulary.ts) | a file |  |
-| [`l1-specialise.feature`](l1-specialise.feature) | a file |  |
-| [`l1-specialise.test.ts`](l1-specialise.test.ts) | a file |  |
-| [`l1-specialise.ts`](l1-specialise.ts) | a file |  |
 | [`l1-statement-lists.feature`](l1-statement-lists.feature) | a file |  |
 | [`l1-statement-lists.test.ts`](l1-statement-lists.test.ts) | a file |  |
 | [`l1-statement-lists.ts`](l1-statement-lists.ts) | a file |  |
-| [`l1-transcription-verbatim.feature`](l1-transcription-verbatim.feature) | a file |  |
-| [`l1-transcription-verbatim.test.ts`](l1-transcription-verbatim.test.ts) | a file |  |
-| [`l1-transcription-verbatim.ts`](l1-transcription-verbatim.ts) | a file |  |
 | [`l2-program-indicators.py`](l2-program-indicators.py) | a file |  |
 | [`smart-base-transform.py`](smart-base-transform.py) | a file |  |
 | [`smart-base-transform.test.py`](smart-base-transform.test.py) | a file |  |

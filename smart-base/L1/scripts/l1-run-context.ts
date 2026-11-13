@@ -14,14 +14,14 @@
  * HEAD), so the outputs a `--check` compares carry only the REFERENCE, and
  * `--check` ignores it — the same treatment `generatedAt` gets.
  *
- * @module smart-base/scripts/l1-run-context
+ * @module smart-base/L1/scripts/l1-run-context
  */
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 
-import { RUN_CONTEXT_SCHEMA_TAG, RunContextSchema, runContextRef, type RunContext, type RunContextRef } from "../../cat-harness-tools/schemas/sdlc/run-context.ts";
+import { RUN_CONTEXT_SCHEMA_TAG, RunContextSchema, runContextRef, type RunContext, type RunContextRef } from "../../../cat-harness-tools/schemas/sdlc/run-context.ts";
 
 export const RUN_CONTEXT_FILENAME = "run-context.json";
 

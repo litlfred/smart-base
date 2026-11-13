@@ -8,8 +8,8 @@ description: >
   is L1 (declared > context > inferred), extracting the Component 1 graph, the
   L1 graph of each L1 source as a specialisation of its library entry, and the
   layering rule: the library is upstream of L1.
-input: schemas/skills/dak-l1-library/input.schema.json
-output: schemas/skills/dak-l1-library/output.schema.json
+input: L1/schemas/skills/dak-l1-library/input.schema.json
+output: L1/schemas/skills/dak-l1-library/output.schema.json
 ---
 
 # dak-l1-library
@@ -27,7 +27,7 @@ recommendation does this decision rule implement?*
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/dak-l1-library/input.schema.json) and [`output.schema.json`](../../../schemas/skills/dak-l1-library/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/dak-l1-library/input.schema.json) and [`output.schema.json`](../../schemas/skills/dak-l1-library/output.schema.json).
 
 - **In:** where to look: the `useCase` (stage 1 of [`smart-guideline-end-to-end`](../../../skills/content/authoring-who-smart-guidelines/smart-guideline-end-to-end.md), [`guideline-use-case`](../../../skills/content/authoring-who-smart-guidelines/guideline-use-case.md)'s output), a `dak` whose Component 1 cites the sources (`l2-dak-authoring.bpmn`), or both; and whether to `ingest` what is not in `library/` yet.
 - **Out:** `l1Sources`: the candidates, Component 1 sources first, then WHO IRIS and the jurisdiction's own, each `in-library`, `in-kg` or `not-yet`, `included` or not with a one-sentence `reason`. Stage 2 ([`recommendation-extraction`](recommendation-extraction.md)) takes it as its `l1Sources`.
@@ -76,7 +76,7 @@ ingested individually and gets its own L1 graph.
    A WHO PDF with no outline goes to `pdf-structure`, which keeps its inferred
    contents only if they pass the trust tests, else falls back to pages.
 3. **Read Component 1**:
-   `bun run smart-base/scripts/extract-dak-l1-references.ts --entry library/<doc_id> --context-only`.
+   `bun run smart-base/L1/scripts/extract-dak-l1-references.ts --entry library/<doc_id> --context-only`.
    It lists §1.2's citations and the reference each printed number names,
    with its URL, and flags those that rest on the printed number alone. Those
    references are the fetch list.
@@ -96,7 +96,7 @@ ingested individually and gets its own L1 graph.
    Each held source's intake gets §1.2's `context` classification, matched by
    handle or by its record's `dc.identifier.uri`.
 6. **For each held source that is L1, run the L1 step**:
-   `bun run smart-base/scripts/l1-specialise.ts --entry library/<doc_id> --validate-zod <smart-base checkout>`.
+   `bun run smart-base/L1/scripts/l1-specialise.ts --entry library/<doc_id> --validate-zod <smart-base checkout>`.
    It writes `smart-kg-l1-library.jsonld` beside the entry. A source that is
    not L1 gets no L1 graph; its library entry is its only representation.
 7. **Check the edition.** A who.int page serves the CURRENT edition, which may
@@ -169,7 +169,7 @@ item. The PDFs are pinned by sha256 and not committed.
 - L1 3.0 and the `l1-library` layer: `smart-base/L1/schemas/` — Zod, from WHO
   smart-kg main `3f5e477`, generating the `KG*` logical models, code systems
   and value sets;
-- IRIs: `smart-base/scripts/l1-kgid.ts`, smart-kg's `kgid.mjs` as tested;
+- IRIs: `smart-base/L1/scripts/l1-kgid.ts`, smart-kg's `kgid.mjs` as tested;
 - the Dublin Core record: `folio-assistant-core/schemas/dublin-core.ts`;
 - the intake, its licence and its classifications:
   `cat-harness-tools/schemas/library/intake.ts`,
