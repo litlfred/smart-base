@@ -14,6 +14,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `tools`, holding `tools`.
 | file | what it is | used by |
 |---|---|---|
 | [`index.ts`](index.ts) | a file |  |
+| [`l1-extraction-pages/`](l1-extraction-pages/) | _nothing declares what this holds_ | |
 | [`lib.ts`](lib.ts) | a file |  |
 | [`smart-fhir-cache-seed/`](smart-fhir-cache-seed/) | _nothing declares what this holds_ | |
 
