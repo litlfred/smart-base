@@ -8,8 +8,8 @@ description: >
   adding a WHO handbook's or guideline's indicators to a DAK or a DTH, and
   whenever an L2 indicator has to trace to its source. Part of L1 → L2
   extraction for every DAK and DTH, beside recommendation-extraction.
-input: schemas/skills/indicator-extraction/input.schema.json
-output: schemas/skills/indicator-extraction/output.schema.json
+input: L1/schemas/skills/indicator-extraction/input.schema.json
+output: L1/schemas/skills/indicator-extraction/output.schema.json
 ---
 
 # indicator-extraction

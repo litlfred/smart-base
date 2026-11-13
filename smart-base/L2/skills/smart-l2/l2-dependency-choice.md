@@ -9,8 +9,8 @@ description: >
   Also defines the dependency decision row that stage 5
   (l3-dependency-choice) uses at L3. Read before choosing, or recording, a
   DAK dependency.
-input: schemas/skills/l2-dependency-choice/input.schema.json
-output: schemas/skills/l2-dependency-choice/output.schema.json
+input: L2/schemas/skills/l2-dependency-choice/input.schema.json
+output: L2/schemas/skills/l2-dependency-choice/output.schema.json
 ---
 
 # l2-dependency-choice
@@ -23,7 +23,7 @@ output: schemas/skills/l2-dependency-choice/output.schema.json
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/l2-dependency-choice/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l2-dependency-choice/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/l2-dependency-choice/input.schema.json) and [`output.schema.json`](../../schemas/skills/l2-dependency-choice/output.schema.json).
 
 - **In:** stage 2's `l1Kg` ([`recommendation-extraction`](https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/recommendation-extraction.md)'s output), and the candidate DAKs already known (`candidates`: `packageId`, `version`, `uri`, `publisher`).
 - **Out:** `l2Dependencies`: one `dependencyRow` per candidate, rejected ones included, the `gaps`, the `comparison` table and the `decisionRequest`. Stage 4 ([`l2-dak-authoring`](l2-dak-authoring.md)) takes it as its `l2Dependencies`.

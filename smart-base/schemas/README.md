@@ -7,7 +7,7 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # smart-base-schemas
 
-The dak vocabulary in code: `dak-blocks.ts` (the block builders `content-adapters/dak.json` names), `dak-kinds.ts` and `dak-jsonld.ts` (read off `block-kinds/`), `dak-content-type.ts`, `dak.ts`, and the l2-dak-authoring skill's input/output JSON Schemas. The mounted adapter and QA checkers name these modules. Also the `schemas` graph, declared so the schema reader never falls back to `<instance>/schemas/` by convention, which stops once any instance stacked on smart-base has a `schemas` directory.
+The dak vocabulary in code: `dak-blocks.ts` (the block builders `content-adapters/dak.json` names), `dak-kinds.ts` and `dak-jsonld.ts` (read off `block-kinds/`), `dak-content-type.ts`, `dak.ts`, and `skills/`: the input/output JSON Schemas of the two skills that span L1-L4 (guideline-use-case, smart-guideline-end-to-end). Every other skill's contracts sit in its subgraph, `L<n>/schemas/skills/` (bean folio-assistant-kjea). The mounted adapter and QA checkers name these modules. Also the `schemas` graph, declared so the schema reader never falls back to `<instance>/schemas/` by convention, which stops once any instance stacked on smart-base has a `schemas` directory.
 
 Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-schemas`, holding `code`, `schemas`.
 
