@@ -27,7 +27,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "091bd49ca6363135f6200cdfe05c1b791f731d04",
+          "ref": "e8aa29085804b3665d3597259a7fc3d9d1921447",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -36,8 +36,8 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-12",
-              "ref": "091bd49ca6363135f6200cdfe05c1b791f731d04",
+              "on": "2026-11-13",
+              "ref": "e8aa29085804b3665d3597259a7fc3d9d1921447",
               "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
               "standing": {
                 "follows": "main",
@@ -61,7 +61,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "60687101a7f707dbc491a2f1aaacb03e4387936b",
+          "ref": "e81b4f0947f232c7be330a3d652335ec43f9ca30",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -85,9 +85,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-12",
-              "ref": "60687101a7f707dbc491a2f1aaacb03e4387936b",
-              "evidence": "Owner litlfred, 2026-11-12: smart-ra#242 bottom-up re-pin (step c), Q-CONSENT-1 A, Q-WIN-1 C, Q-CASCADE-FREEZE B. smart-base: who-iris to main 60687101 (who-iris#254/#255) and folio-assistant-core to main b2cec25 (core T2b, #772); the standing re-pin skipped both because main-qa reads unknown.",
+              "on": "2026-11-13",
+              "ref": "e81b4f0947f232c7be330a3d652335ec43f9ca30",
+              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
               "standing": {
                 "follows": "main",
                 "consentAt": "2026-11-12",
@@ -110,7 +110,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "b2cec2562a7e3a5de3e8702813cf706537814996",
+          "ref": "81343d8694e77a0a822b63ff6c43057df47d36b3",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -125,9 +125,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-12",
-              "ref": "b2cec2562a7e3a5de3e8702813cf706537814996",
-              "evidence": "Owner litlfred, 2026-11-12: smart-ra#242 bottom-up re-pin (step c), Q-CONSENT-1 A, Q-WIN-1 C, Q-CASCADE-FREEZE B. smart-base: who-iris to main 60687101 (who-iris#254/#255) and folio-assistant-core to main b2cec25 (core T2b, #772); the standing re-pin skipped both because main-qa reads unknown.",
+              "on": "2026-11-13",
+              "ref": "81343d8694e77a0a822b63ff6c43057df47d36b3",
+              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
               "standing": {
                 "follows": "main",
                 "consentAt": "2026-11-12",
@@ -150,7 +150,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "edaa380219fbc4f949db2c1f2e08c9a45e6a26ad",
+          "ref": "25bea92cc44b43841d1514976379b55341876047",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -165,8 +165,8 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-12",
-              "ref": "edaa380219fbc4f949db2c1f2e08c9a45e6a26ad",
+              "on": "2026-11-13",
+              "ref": "25bea92cc44b43841d1514976379b55341876047",
               "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
               "standing": {
                 "follows": "main",
@@ -190,7 +190,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "49b2eb15b14b52ae19422876bcc825607ebe22f4",
+          "ref": "90ed85f81572c168fb5e49207c56ed5487adfaf3",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -202,8 +202,8 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-12",
-              "ref": "49b2eb15b14b52ae19422876bcc825607ebe22f4",
+              "on": "2026-11-13",
+              "ref": "90ed85f81572c168fb5e49207c56ed5487adfaf3",
               "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
               "standing": {
                 "follows": "main",
@@ -261,7 +261,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "bbdaffb757007bf0c4fe0ce4d21018491df308a9",
+          "ref": "0f88368db7560afac6d3e16fd905cbb974350f82",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -273,8 +273,8 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-12",
-              "ref": "bbdaffb757007bf0c4fe0ce4d21018491df308a9",
+              "on": "2026-11-13",
+              "ref": "0f88368db7560afac6d3e16fd905cbb974350f82",
               "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
               "standing": {
                 "follows": "main",
