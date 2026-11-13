@@ -300,7 +300,7 @@
       "graphTypologies": [
         "code"
       ],
-      "description": "This layer's own scripts and their tests: document kinds, the DAK components figure, the DTH term findings, the `l1-extraction` viewer's pages (`gen-l1-extraction-pages.ts`) and the statement lists they read, the fhir-harness exclusions check, the L1 recommendation scenario candidates with the vocabulary reader they resolve against (fixtures and the measles run under `scripts/fixtures/`), and `dth-init.ts`, which writes a new DTH repository's wiring. The L1 extraction code (the smart-kg L1 extractor, the recommendation candidates, the L1 IRIs) is in the opt-in `L1/scripts/`. Declared so a remote mount brings them."
+      "description": "This layer's own scripts and their tests: document kinds, the DAK components figure, the DTH term findings, the `l1-extraction` viewer's pages (`gen-l1-extraction-pages.ts`) and the statement lists they read, the fhir-harness exclusions check, the L1 recommendation scenario candidates with the vocabulary reader they resolve against (fixtures and the measles run under `scripts/fixtures/`), and `dth-init.ts`, which writes a new DTH repository's wiring. The L1 extraction code (the smart-kg L1 extractor, the recommendation candidates, the L1 IRIs) is in the opt-in `L1/scripts/`. The L2-only scripts (the data dictionary and its diff, the L2 DTH check) are in `L2/scripts/`. Declared so a remote mount brings them."
     },
     {
       "id": "smart-base-templates",
