@@ -7,7 +7,7 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # smart-base-scripts
 
-This layer's own scripts and their tests: document kinds, the DAK components figure, the DTH term findings, the `l1-extraction` viewer's pages (`gen-l1-extraction-pages.ts`) and the statement lists they read, the fhir-harness exclusions check, the L1 recommendation scenario candidates with the vocabulary reader they resolve against (fixtures and the measles run under `scripts/fixtures/`), and `dth-init.ts`, which writes a new DTH repository's wiring. The L1 extraction code (the smart-kg L1 extractor, the recommendation candidates, the L1 IRIs) is in the opt-in `L1/scripts/`. Declared so a remote mount brings them.
+This layer's own scripts and their tests: document kinds, the DAK components figure, the DTH term findings, the `l1-extraction` viewer's pages (`gen-l1-extraction-pages.ts`) and the statement lists they read, the fhir-harness exclusions check, the L1 recommendation scenario candidates with the vocabulary reader they resolve against (fixtures and the measles run under `scripts/fixtures/`), and `dth-init.ts`, which writes a new DTH repository's wiring. The L1 extraction code (the smart-kg L1 extractor, the recommendation candidates, the L1 IRIs) is in the opt-in `L1/scripts/`. The L2-only scripts (the data dictionary and its diff, the L2 DTH check) are in `L2/scripts/`. Declared so a remote mount brings them.
 
 Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, holding `code`.
 
@@ -22,12 +22,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`check-web-annexes.feature`](check-web-annexes.feature) | a file |  |
 | [`check-web-annexes.test.ts`](check-web-annexes.test.ts) | a file |  |
 | [`check-web-annexes.ts`](check-web-annexes.ts) | a file |  |
-| [`dak-data-dictionary-diff.feature`](dak-data-dictionary-diff.feature) | a file |  |
-| [`dak-data-dictionary-diff.test.ts`](dak-data-dictionary-diff.test.ts) | a file |  |
-| [`dak-data-dictionary-diff.ts`](dak-data-dictionary-diff.ts) | a file |  |
-| [`dak-data-dictionary.feature`](dak-data-dictionary.feature) | a file |  |
-| [`dak-data-dictionary.test.ts`](dak-data-dictionary.test.ts) | a file |  |
-| [`dak-data-dictionary.ts`](dak-data-dictionary.ts) | a file |  |
 | [`dak-pdf.feature`](dak-pdf.feature) | a file |  |
 | [`dak-pdf.test.ts`](dak-pdf.test.ts) | a file |  |
 | [`dak-pdf.ts`](dak-pdf.ts) | a file |  |
@@ -77,7 +71,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`terminology-lookup.ts`](terminology-lookup.ts) | a file |  |
 | [`who-smart-content-types.feature`](who-smart-content-types.feature) | a file |  |
 | [`who-smart-content-types.test.ts`](who-smart-content-types.test.ts) | a file |  |
-| [`dth/`](dth/) | _nothing declares what this holds_ | |
 | [`extractors/`](extractors/) | _nothing declares what this holds_ | |
 | [`fixtures/`](fixtures/) | _nothing declares what this holds_ | |
 | [`tests/`](tests/) | _nothing declares what this holds_ | |

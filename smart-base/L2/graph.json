@@ -43,6 +43,15 @@
       "graphTypologies": [
         "tools"
       ]
+    },
+    {
+      "id": "l2-scripts",
+      "path": "scripts/",
+      "subgraph": true,
+      "description": "The code behind L2's checks and tools, with their tests: the DAK data dictionary reader (workbook to a `dak-data-dictionary/v1` annex) and its term diff, and the L2 DTH check under `dth/`. Scripts that L1 code, an always-on piece or a platform layer also reaches stay in `../../scripts/` even when their subject is L2, because this subgraph is opt-in.",
+      "graphTypologies": [
+        "code"
+      ]
     }
   ]
 }

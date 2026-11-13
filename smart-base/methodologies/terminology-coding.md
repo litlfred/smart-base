@@ -39,7 +39,7 @@ applies-when: >
 
 **The method behind [`classify-and-code-content`](https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/classify-and-code-content.md),
 [`recommendation-extraction`](https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/recommendation-extraction.md),
-and [`recommendation-scenarios`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/recommendation-scenarios.md).**
+and [`recommendation-scenarios`](https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/recommendation-scenarios.md).**
 It joins the platform's generic ontology and glossary rules —
 [`ontologist`](../../folio-assistant-core/skills/library/cataloguing/ontologist.md),
 [`glossary-terms`](../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md),
