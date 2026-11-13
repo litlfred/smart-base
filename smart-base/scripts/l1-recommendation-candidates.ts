@@ -4,7 +4,7 @@
  * CANDIDATES, and — once an agent has curated them — an L1 3.0 graph of the
  * recommendations and remarks, gated verbatim and by coverage. Steps 3 to 6 of
  * the `recommendation-extraction` skill, made one tool; its Tool node is
- * `l1-recommendation-candidates` in `smart-base/tools/index.ts`.
+ * `l1-recommendation-candidates` in `smart-base/L1/tools/` (the L1 subgraph's tools graph).
  *
  * ## Hybrid, and where each half lives
  *

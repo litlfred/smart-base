@@ -11,6 +11,33 @@
         "schemas",
         "code"
       ]
+    },
+    {
+      "id": "L2-skills",
+      "path": "skills/",
+      "subgraph": true,
+      "description": "The skills that author L2, the Digital Adaptation Kit: L2 DAK authoring and component review, choosing DAK dependencies, DTH authoring and the L1-to-L2 ingest of a handbook, and joining recommendations to personas and processes. Package `smart-l2`.",
+      "graphTypologies": [
+        "skills"
+      ]
+    },
+    {
+      "id": "L2-processes",
+      "path": "processes/",
+      "subgraph": true,
+      "description": "The executable L2 processes: L2 DAK authoring, one component's edit and review, and DTH authoring.",
+      "graphTypologies": [
+        "processes"
+      ]
+    },
+    {
+      "id": "L2-tools",
+      "path": "tools/",
+      "subgraph": true,
+      "description": "The L2 tools: DAK extraction, the DAK config read from sushi-config, and recommendation scenarios (which join L1 recommendations to L2 personas and processes).",
+      "graphTypologies": [
+        "tools"
+      ]
     }
   ]
 }

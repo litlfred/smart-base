@@ -11,6 +11,15 @@
         "schemas",
         "code"
       ]
+    },
+    {
+      "id": "L2-dmn-tools",
+      "path": "tools/",
+      "subgraph": true,
+      "description": "The tools that read or write a DAK's DMN: DMN to HTML and DMN to Questionnaire.",
+      "graphTypologies": [
+        "tools"
+      ]
     }
   ]
 }

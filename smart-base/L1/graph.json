@@ -1,5 +1,5 @@
 {
-  "_comment": "The graphs inside smart-base's `L1` named subgraph, declared FROM WITHIN on the pattern of cat-harness's `library/graph.json` and `openapi/graph.json`: the `smart-base-L1` entry of `smart-base.json` names this directory, and this node names what it holds. Each entry is `subgraph: true`, a directory of the LAYER listed by `resolveDirectories` with `within: \"smart-base-L1\"`. Paths are relative to THIS directory. Owner, 2026-11-13: 'L1..L3 as named subgraphs', 'Capitalize L', and 'Organize tools, skills, processes the same way' (issue #359). Declare only what exists: tools/, skills/ and processes/ are added in the commits that fill them.",
+  "_comment": "The graphs inside smart-base's `L1` named subgraph, declared FROM WITHIN on the pattern of cat-harness's `library/graph.json` and `openapi/graph.json`: the `smart-base-L1` entry of `smart-base.json` names this directory, and this node names what it holds. Each entry is `subgraph: true`, a directory of the LAYER listed by `resolveDirectories` with `within: \"smart-base-L1\"`. Paths are relative to THIS directory. Owner, 2026-11-13: 'L1..L3 as named subgraphs', 'Capitalize L', and 'Organize tools, skills, processes the same way' (issue #359). Declare only what exists.",
   "name": "L1",
   "directories": [
     {
@@ -10,6 +10,33 @@
       "graphTypologies": [
         "schemas",
         "code"
+      ]
+    },
+    {
+      "id": "L1-skills",
+      "path": "skills/",
+      "subgraph": true,
+      "description": "The skills that turn a WHO publication into L1: building the DAK's L1 library, extracting recommendations, remarks and indicators verbatim, checking transcriptions made from pictures, GRADE, and classifying and coding L1 content. Package `smart-l1`.",
+      "graphTypologies": [
+        "skills"
+      ]
+    },
+    {
+      "id": "L1-processes",
+      "path": "processes/",
+      "subgraph": true,
+      "description": "The executable L1 processes: classifying and coding L1 content, with its checklist and picture.",
+      "graphTypologies": [
+        "processes"
+      ]
+    },
+    {
+      "id": "L1-tools",
+      "path": "tools/",
+      "subgraph": true,
+      "description": "The L1 tools: extraction pages, recommendation candidates, statement lists and verbatim-transcription checks.",
+      "graphTypologies": [
+        "tools"
       ]
     }
   ]

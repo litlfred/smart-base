@@ -11,7 +11,7 @@
       "prefLabel": "Update the care plan",
       "definition": "Make each accepted request active (intent plan or order) and reference it from the client's CarePlan, in one transaction; write nothing for a declined action.",
       "notation": "Task_Activate",
-      "source": "smart-base/processes/content/act-on-decision-support.bpmn#Task_Activate",
+      "source": "smart-base/L4/processes/act-on-decision-support.bpmn#Task_Activate",
       "status": "candidate"
     },
     {
@@ -19,7 +19,7 @@
       "prefLabel": "Apply the PlanDefinition",
       "definition": "PlanDefinition/$apply for this client (or a CDS Hooks call): every proposed request is a draft proposal, and nothing is written to the record.",
       "notation": "Task_Apply",
-      "source": "smart-base/processes/content/act-on-decision-support.bpmn#Task_Apply",
+      "source": "smart-base/L4/processes/act-on-decision-support.bpmn#Task_Apply",
       "status": "candidate"
     },
     {
@@ -27,7 +27,7 @@
       "prefLabel": "Note the reason (optional)",
       "definition": "Optional: pick a coded reason or type one, or neither; one FHIR Provenance records who decided what about which guidance, and why. Never required, never waited for.",
       "notation": "Task_Rationale",
-      "source": "smart-base/processes/content/act-on-decision-support.bpmn#Task_Rationale",
+      "source": "smart-base/L4/processes/act-on-decision-support.bpmn#Task_Rationale",
       "status": "candidate"
     },
     {
@@ -35,7 +35,7 @@
       "prefLabel": "Accept or decline the guidance",
       "definition": "See the proposed actions on the device and accept or decline each one, one tap each (\"accept all\" is one tap); modify one only where the device offers it. Nothing else is asked; an \"add a reason\" link is shown, never required.",
       "notation": "Task_Review",
-      "source": "smart-base/processes/content/act-on-decision-support.bpmn#Task_Review",
+      "source": "smart-base/L4/processes/act-on-decision-support.bpmn#Task_Review",
       "status": "candidate"
     },
     {
@@ -43,7 +43,7 @@
       "prefLabel": "Identify slots and proposed exclusions",
       "definition": "Enumerate the classifiable slots in the L1 statements or L2 component (condition, intervention, persona, medicine, domain, business-process, recommendation-strength, recommendation-direction, evidence-certainty) and any proposed L1 coverage exclusions in exclusions.proposed.json naming l1-extraction-reviewer as signerRole.",
       "notation": "Task_IdentifySlots",
-      "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_IdentifySlots",
+      "source": "smart-base/L1/processes/classify-and-code-content.bpmn#Task_IdentifySlots",
       "status": "candidate"
     },
     {
@@ -51,7 +51,7 @@
       "prefLabel": "Run reuse-first lookup and record candidates",
       "definition": "Run the terminology-lookup Tool down the four reuse-first rungs of the terminology-coding methodology: (1) target guide vocabulary, (2) smart-base generic personas, GRADE code lists and guideline-domain glossary, (3) external WHO-FIC/ILO standards (ICD-11, ICHI/CDHIv2, ISCO-08, ATC), (4) local glossary candidate (status: candidate, source: extracted), or could-not-determine for business-process with its WARNING line.",
       "notation": "Task_LookupAndCode",
-      "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_LookupAndCode",
+      "source": "smart-base/L1/processes/classify-and-code-content.bpmn#Task_LookupAndCode",
       "status": "candidate"
     },
     {
@@ -59,7 +59,7 @@
       "prefLabel": "Adjudicate slot codings and glossary candidates",
       "definition": "Review each slot's classification and code against the terminology-coding methodology: the authoritative scheme for the slot, the reuse-first rung, skos:exactMatch vs skos:closeMatch precision (ontologist), and any Rung 4 glossary candidates (promote valid ones from candidate to authored per glossary-terms, or replace them with an existing code).",
       "notation": "Task_ReviewCodings",
-      "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_ReviewCodings",
+      "source": "smart-base/L1/processes/classify-and-code-content.bpmn#Task_ReviewCodings",
       "status": "candidate"
     },
     {
@@ -67,7 +67,7 @@
       "prefLabel": "Check exclusions against page and sign",
       "definition": "Open library/<doc_id>/sections/page-NNN.md beside exclusions.proposed.json. Read each candidate sentence on the printed page, check that the proposed reason (background-fact, manufacturer-statement, editorial, research-question, duplicate-of) holds without dropping normative guidance, and sign the exclusion (signedOffBy) or reject it with a reason.",
       "notation": "Task_ReviewExclusions",
-      "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_ReviewExclusions",
+      "source": "smart-base/L1/processes/classify-and-code-content.bpmn#Task_ReviewExclusions",
       "status": "candidate"
     },
     {
@@ -75,7 +75,7 @@
       "prefLabel": "Stage codings, warnings and exclusions for review",
       "definition": "Write the candidate codings, provenance bases, warnings report and any unsigned exclusions.proposed.json entries, and request review with deep links to the staged pages and the printed page sections.",
       "notation": "Task_StageForReview",
-      "source": "smart-base/processes/content/classify-and-code-content.bpmn#Task_StageForReview",
+      "source": "smart-base/L1/processes/classify-and-code-content.bpmn#Task_StageForReview",
       "status": "candidate"
     },
     {
@@ -83,7 +83,7 @@
       "prefLabel": "L3 FHIR IG pipeline (fhir-harness)",
       "definition": "fhir-harness's l3-fhir-pipeline.bpmn, from its StartEvent_ModelReady with the mapping above as the source model: author FSH, SUSHI, validate, QC, IG Publisher, publish. Called, not copied, so a change to the generic pipeline reaches every IG built on it.",
       "notation": "CallActivity_L3Fhir",
-      "source": "smart-base/processes/content/dak-l3-ig.bpmn#CallActivity_L3Fhir",
+      "source": "smart-base/L3/processes/dak-l3-ig.bpmn#CallActivity_L3Fhir",
       "status": "candidate"
     },
     {
@@ -91,7 +91,7 @@
       "prefLabel": "Map L2 → L3",
       "definition": "Each data element becomes a profile, each value set a ValueSet, each decision a PlanDefinition / Library. The DAK's L2 content is l3-fhir-authoring's sourceModel; l2-dak-authoring, bound beside it, carries the WHO L2 → L3 ordering, which the generic skill does not name.",
       "notation": "Task_MapL2",
-      "source": "smart-base/processes/content/dak-l3-ig.bpmn#Task_MapL2",
+      "source": "smart-base/L3/processes/dak-l3-ig.bpmn#Task_MapL2",
       "status": "candidate"
     },
     {
@@ -187,7 +187,7 @@
       "prefLabel": "Link to smart-ra ArchiMate [archimate-models]",
       "definition": "Every block that names an architecture element links to its smart-ra element or view; new elements go to smart-ra, not the handbook. Placeholder: no platform subprocess; done by hand, as for dth-hrh. Calls Process_L2ComponentEditReview.",
       "notation": "Call_Archimate",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Archimate",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Call_Archimate",
       "status": "candidate"
     },
     {
@@ -195,7 +195,7 @@
       "prefLabel": "Business processes · BPMN [bpmn-authoring]",
       "definition": "One BPMN per business process; every lane bound to a persona or role id. Calls Process_L2ComponentEditReview.",
       "notation": "Call_Bpmn",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Bpmn",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Call_Bpmn",
       "status": "candidate"
     },
     {
@@ -203,7 +203,7 @@
       "prefLabel": "Data elements, indicators, requirements [l2-dak-authoring]",
       "definition": "data-element, indicator, functional and non-functional requirement blocks, with their fields as data rather than Markdown tables. Calls Process_L2ComponentEditReview.",
       "notation": "Call_Data",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Data",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Call_Data",
       "status": "candidate"
     },
     {
@@ -211,7 +211,7 @@
       "prefLabel": "Decision tables · DMN [dmn-authoring]",
       "definition": "Only rules the text states. A decision the text names without a rule is recorded as a decision point, not filled in. Calls Process_L2ComponentEditReview.",
       "notation": "Call_Dmn",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Dmn",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Call_Dmn",
       "status": "candidate"
     },
     {
@@ -219,7 +219,7 @@
       "prefLabel": "Link glossary to smart-ra SKOS [terminology-management]",
       "definition": "Each handbook term is exactMatch, closeMatch or narrower to a smart-ra concept; conflicts are raised as issues on smart-ra. Calls Process_L2ComponentEditReview.",
       "notation": "Call_Glossary",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Glossary",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Call_Glossary",
       "status": "candidate"
     },
     {
@@ -227,7 +227,7 @@
       "prefLabel": "Personas and roles [l2-dak-authoring]",
       "definition": "Persona and actor-definition blocks; organisational roles and governance bodies get their own kind once it exists. Calls Process_L2ComponentEditReview.",
       "notation": "Call_Personas",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Personas",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Call_Personas",
       "status": "candidate"
     },
     {
@@ -235,7 +235,7 @@
       "prefLabel": "User scenarios [l2-dak-authoring]",
       "definition": "User-scenario blocks naming their personas by id. Calls Process_L2ComponentEditReview.",
       "notation": "Call_Scenarios",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Scenarios",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Call_Scenarios",
       "status": "candidate"
     },
     {
@@ -243,7 +243,7 @@
       "prefLabel": "Planning steps per chapter [document-authoring]",
       "definition": "Each chapter's inputs, steps, resources, outputs, risks and mitigations as the shared step table. Calls Process_L2ComponentEditReview.",
       "notation": "Call_Steps",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Call_Steps",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Call_Steps",
       "status": "candidate"
     },
     {
@@ -251,7 +251,7 @@
       "prefLabel": "Record milestone M0 · Charter recorded [todo-manager]",
       "definition": "Milestone: repository, declaration, TWG, roles and RACI exist. Recorded, not enforced.",
       "notation": "M0",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#M0",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#M0",
       "status": "candidate"
     },
     {
@@ -259,7 +259,7 @@
       "prefLabel": "Record milestone M1 · Library frozen [todo-manager]",
       "definition": "Milestone: every source in library/, coverage accounted. Recorded, not enforced.",
       "notation": "M1",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#M1",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#M1",
       "status": "candidate"
     },
     {
@@ -267,7 +267,7 @@
       "prefLabel": "Record milestone M2 · Outline agreed [todo-manager]",
       "definition": "Milestone: the outline's round-1 comments are dispositioned. Recorded, not enforced.",
       "notation": "M2",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#M2",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#M2",
       "status": "candidate"
     },
     {
@@ -275,7 +275,7 @@
       "prefLabel": "Record milestone M3 · Zero draft [todo-manager]",
       "definition": "Milestone: every required section drafted and every structured block validates. Recorded, not enforced.",
       "notation": "M3",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#M3",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#M3",
       "status": "candidate"
     },
     {
@@ -283,7 +283,7 @@
       "prefLabel": "Record milestone M4 · Working-group draft [todo-manager]",
       "definition": "Milestone: all working-group comments dispositioned. Recorded, not enforced.",
       "notation": "M4",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#M4",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#M4",
       "status": "candidate"
     },
     {
@@ -291,7 +291,7 @@
       "prefLabel": "Record milestone M5 · Public draft released [todo-manager]",
       "definition": "Milestone: the public draft is out for comment.",
       "notation": "M5",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#M5",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#M5",
       "status": "candidate"
     },
     {
@@ -299,7 +299,7 @@
       "prefLabel": "Record milestone M6 · Comments dispositioned [todo-manager]",
       "definition": "Milestone: every public comment dispositioned.",
       "notation": "M6",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#M6",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#M6",
       "status": "candidate"
     },
     {
@@ -307,7 +307,7 @@
       "prefLabel": "Architect group and handbook owners review [content-review]",
       "definition": "Runs beside validation, as QA. New kinds and shared schemas are reviewed here before they are built.",
       "notation": "Task_ArchReview",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_ArchReview",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_ArchReview",
       "status": "candidate"
     },
     {
@@ -315,7 +315,7 @@
       "prefLabel": "4 · Comment via contributor log sheet or GitHub pc: [content-feedback]",
       "definition": "The contributor log (Google Sheet) and pc: lines on GitHub issues and PRs.",
       "notation": "Task_Comments",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Comments",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Comments",
       "status": "candidate"
     },
     {
@@ -323,7 +323,7 @@
       "prefLabel": "Account for every normative sentence [l1-coverage]",
       "definition": "Each normative sentence is captured or excluded; exclusions are signed by a person, never by the agent that proposed them.",
       "notation": "Task_Coverage",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Coverage",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Coverage",
       "status": "candidate"
     },
     {
@@ -331,7 +331,7 @@
       "prefLabel": "Disposition comments and apply change sets [public-comment]",
       "definition": "Changes to structured content go back through its kind's edit-and-review subprocess.",
       "notation": "Task_Disposition",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Disposition",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Disposition",
       "status": "candidate"
     },
     {
@@ -339,7 +339,7 @@
       "prefLabel": "Build glossary candidates from the TWG workbook [terminology-management]",
       "definition": "One SKOS candidate per (concept, source); only a person moves a term to authored.",
       "notation": "Task_GlossaryCandidates",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_GlossaryCandidates",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_GlossaryCandidates",
       "status": "candidate"
     },
     {
@@ -347,7 +347,7 @@
       "prefLabel": "Import into review/wg-comment and form change sets [public-comment]",
       "definition": "public-comment import --store review/wg-comment; change sets group comments that change the same text.",
       "notation": "Task_Import",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Import",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Import",
       "status": "candidate"
     },
     {
@@ -355,7 +355,7 @@
       "prefLabel": "1 · Ingest sources into library/ [library-ingestion]",
       "definition": "Every source as received, frozen: WHO publications through who-iris, the TWG outline and workbooks from uploads/.",
       "notation": "Task_Ingest",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Ingest",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Ingest",
       "status": "candidate"
     },
     {
@@ -363,7 +363,7 @@
       "prefLabel": "Draft introduction, audience and DIIG alignment [document-authoring]",
       "definition": "The three required opening sections of the dth kind: audience and how to use, DIIG and SMART alignment, health programme context.",
       "notation": "Task_Intro",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Intro",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Intro",
       "status": "candidate"
     },
     {
@@ -371,7 +371,7 @@
       "prefLabel": "List processes, roles, decisions and indicators to model [content-plan]",
       "definition": "The inventory that seeds the structured-drafting tracks: each business process becomes BPMN, each role a structured block, each stated decision rule a DMN table.",
       "notation": "Task_Inventory",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Inventory",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Inventory",
       "status": "candidate"
     },
     {
@@ -379,7 +379,7 @@
       "prefLabel": "Extract L1 from WHO publications [l1-document-ingestion]",
       "definition": "Sections, figures, tables and the L1 knowledge graph for each WHO publication the handbook draws on.",
       "notation": "Task_L1",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_L1",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_L1",
       "status": "candidate"
     },
     {
@@ -387,7 +387,7 @@
       "prefLabel": "5 · Open public comment [public-comment]",
       "definition": "A separate store, review/public-comment, and the public-comment review sheet.",
       "notation": "Task_OpenPublic",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_OpenPublic",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_OpenPublic",
       "status": "candidate"
     },
     {
@@ -395,7 +395,7 @@
       "prefLabel": "2 · Outline chapters against the dth kind [document-structure]",
       "definition": "Map the outline onto the dth document kind's sections and report every required section that is missing. dth-hrh's build_from_outline.py is the only instance; there is no general outline seed. Placeholder: no platform subprocess; done by hand, as for dth-hrh.",
       "notation": "Task_Outline",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Outline",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Outline",
       "status": "candidate"
     },
     {
@@ -403,21 +403,21 @@
       "prefLabel": "TWG reviews the outline [content-feedback]",
       "definition": "First contributor-feedback round, through the contributor log sheet and GitHub.",
       "notation": "Task_OutlineReview",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_OutlineReview",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_OutlineReview",
       "status": "candidate"
     },
     {
       "id": "process_dthauthoring.task_publiccomments",
       "prefLabel": "Public comments [content-feedback]",
       "notation": "Task_PublicComments",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_PublicComments",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_PublicComments",
       "status": "candidate"
     },
     {
       "id": "process_dthauthoring.task_publish",
       "prefLabel": "Publish the handbook [document-publishing]",
       "notation": "Task_Publish",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Publish",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Publish",
       "status": "candidate"
     },
     {
@@ -425,7 +425,7 @@
       "prefLabel": "6 · Editorial, voice and translation QA [quality-control]",
       "definition": "The DTH voice (smart-base skills/voices/who-digital-transformation-handbook), figures and translations.",
       "notation": "Task_Qa",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Qa",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Qa",
       "status": "candidate"
     },
     {
@@ -433,7 +433,7 @@
       "prefLabel": "Create the DTH repository from the DTH layout [document-structure]",
       "definition": "Run `bun run smart-base/scripts/dth-init.ts` with --pins-from an existing DTH's index.config.json. It writes the instance declaration (folio, glossary, uploads, beans and todos branches), index.config.json (mounting who-iris, smart-base, the platform layers and smart-ra), package.json scripts for the shared checks, the review sheet sync (--sheet) and the files from templates/dth/ (AGENTS.md, session-start hook, PR checks workflow).",
       "notation": "Task_Scaffold",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Scaffold",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Scaffold",
       "status": "candidate"
     },
     {
@@ -441,7 +441,7 @@
       "prefLabel": "0 · Scope the DTH and place it in the DIIG [content-plan]",
       "definition": "Name the health-system area, the audience and the DIIG phase the handbook supports, citing the one DIIG phase figure (DIIG section 1.1, Figure 1.1.1). Decide which DTHs and which smart-ra content it builds on.",
       "notation": "Task_Scope",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Scope",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Scope",
       "status": "candidate"
     },
     {
@@ -449,7 +449,7 @@
       "prefLabel": "Seed the work plan [todo-manager]",
       "definition": "One bean per stage and per drafting track, children of the handbook's epic.",
       "notation": "Task_SeedBeans",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_SeedBeans",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_SeedBeans",
       "status": "candidate"
     },
     {
@@ -457,7 +457,7 @@
       "prefLabel": "Form the TWG; record roles and RACI [content-plan]",
       "definition": "Record who is involved and in which role. Roles are named by id, never free text, so they can bind BPMN lanes later. There is no RACI kind; the RACI is a table block.",
       "notation": "Task_Team",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Team",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Team",
       "status": "candidate"
     },
     {
@@ -465,7 +465,7 @@
       "prefLabel": "Validate the draft [content-validate]",
       "definition": "Every structured block validates against its kind; required dth sections present; no unlinked architecture names; no empirical claims in formal content.",
       "notation": "Task_Validate",
-      "source": "smart-base/processes/content/dth-authoring.bpmn#Task_Validate",
+      "source": "smart-base/L2/processes/dth-authoring.bpmn#Task_Validate",
       "status": "candidate"
     },
     {
@@ -473,7 +473,7 @@
       "prefLabel": "Review the staged component",
       "definition": "cat-harness's generic review, called: classify what changed, review it, and record a qa-review/v1 QaReview whose subject is the component and whose Decision carries the reviewing role. The reviewer reads the staged page and the before/after; for a figure or table, the visual-diff picture and its changed-pixel count; for a form, the wireframe (wireframe-design-review; at L3 its Questionnaire follows fhir-questionnaire-wireframe). What to judge per component is in the skill's column \"the reviewer judges\".",
       "notation": "Call_Review",
-      "source": "smart-base/processes/content/l2-component-edit-review.bpmn#Call_Review",
+      "source": "smart-base/L2/processes/l2-component-edit-review.bpmn#Call_Review",
       "status": "candidate"
     },
     {
@@ -481,7 +481,7 @@
       "prefLabel": "Run the component's checker",
       "definition": "The mechanical checks for this component, before anyone is asked (skill l2-component-edit-review, column \"checker\"): BPMN imports in bpmn-js with no warnings and its lanes map to personas (dak-swimlanes.ts); DMN loads, its decisions are reachable (artefact-reachability, audit:reachability) and its test cases run (content-test); the data dictionary web annex's ids are unique and its references and terminology bindings resolve (check-web-annexes.ts); personas, scenarios and requirements each trace to an L1 recommendation (recommendation-extraction's implementedBy edges). Findings go with the review request; a failing check does not stop the hand-on.",
       "notation": "Task_Check",
-      "source": "smart-base/processes/content/l2-component-edit-review.bpmn#Task_Check",
+      "source": "smart-base/L2/processes/l2-component-edit-review.bpmn#Task_Check",
       "status": "candidate"
     },
     {
@@ -489,7 +489,7 @@
       "prefLabel": "Edit the component",
       "definition": "Create or change the component with the authoring skill the call names, one component per pass. On rework, apply the review's findings; a fix written in an AuditNote is applied as given. An adapted component is edited against its pinned upstream, so the before side of the diff is that upstream, not an empty file.",
       "notation": "Task_Edit",
-      "source": "smart-base/processes/content/l2-component-edit-review.bpmn#Task_Edit",
+      "source": "smart-base/L2/processes/l2-component-edit-review.bpmn#Task_Edit",
       "status": "candidate"
     },
     {
@@ -497,7 +497,7 @@
       "prefLabel": "Render, stage, before/after",
       "definition": "Render the component the way its reviewer reads it (column \"renderer and diff\"): the BPMN diagram (render:bpmn) with a visual-diff picture; the DMN decision table (smart-base-transform.py dmn2html) with each rule's L1 citation; the data dictionary's term diff (dak-data-dictionary-diff.ts) and the chosen wireframe of each form; personas, scenarios and requirements as a prose diff. Commit to the feature branch so it is staged as branches/<slug>/ on the platform's just-the-docs site (for smart-base, a folio-assistant staging re-pin, never the IG's /deploy), and make the before/after preview here so it exists when review starts.",
       "notation": "Task_RenderStage",
-      "source": "smart-base/processes/content/l2-component-edit-review.bpmn#Task_RenderStage",
+      "source": "smart-base/L2/processes/l2-component-edit-review.bpmn#Task_RenderStage",
       "status": "candidate"
     },
     {
@@ -505,7 +505,7 @@
       "prefLabel": "Reopen upstream, flag derived assets",
       "definition": "File a bean against the stage that chose the rejected source or dependency (check for an existing one first), and mark every asset derived from this component adjudication: rejected-upstream on its wasDerivedFrom edge. Nothing is deleted: the re-derivation may come out the same.",
       "notation": "Task_ReopenUpstream",
-      "source": "smart-base/processes/content/l2-component-edit-review.bpmn#Task_ReopenUpstream",
+      "source": "smart-base/L2/processes/l2-component-edit-review.bpmn#Task_ReopenUpstream",
       "status": "candidate"
     },
     {
@@ -513,7 +513,7 @@
       "prefLabel": "Ask for review with staging deep links",
       "definition": "Ask the person in the reviewing role, following staging-review's deep-link rule: one deep link per changed page and anchor on branches/<slug>/, each beside the same page on main (or \"new page\"), the pages taken from the change (rendered-impact); say so if there is no preview yet. Lead with what changed in prose, then the links, the before/after and the checker's findings; put the question in interaction-modality's form. Post it where the work is discussed (this conversation, the originating GitHub issue, the pull request), with the same links in each. A comment tagged on the PR becomes a review-comment todo (review-comments).",
       "notation": "Task_RequestReview",
-      "source": "smart-base/processes/content/l2-component-edit-review.bpmn#Task_RequestReview",
+      "source": "smart-base/L2/processes/l2-component-edit-review.bpmn#Task_RequestReview",
       "status": "candidate"
     },
     {
@@ -521,7 +521,7 @@
       "prefLabel": "Close the bean",
       "definition": "Process_BeanClose: end the bean in a state that says why: complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back. Placed straight before the end so the engine's resolve sees nothing left but the archive step.",
       "notation": "Call_BeanClose",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Call_BeanClose",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Call_BeanClose",
       "status": "candidate"
     },
     {
@@ -529,7 +529,7 @@
       "prefLabel": "Close the bean",
       "definition": "Process_BeanClose: end the bean in a state that says why: complete and archive it, scrap it with its reasons and archive it, or record the blocker and hand it back. Placed straight before the end so the engine's resolve sees nothing left but the archive step.",
       "notation": "Call_BeanClose_2",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Call_BeanClose_2",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Call_BeanClose_2",
       "status": "candidate"
     },
     {
@@ -537,7 +537,7 @@
       "prefLabel": "Open the bean",
       "definition": "Process_BeanOpen: check before creating, find out whose the bean is, and claim it, or leave it alone when it is someone else's. The gateway after it reads which end it reached.",
       "notation": "Call_BeanOpen",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Call_BeanOpen",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Call_BeanOpen",
       "status": "candidate"
     },
     {
@@ -545,7 +545,7 @@
       "prefLabel": "Assemble and validate the DAK",
       "definition": "Assemble the validated components and run content validation: schemas, cross-component consistency and terminology bindings. The smart-base extractors read the authored artefacts; with SMART_BASE_HOME unset they report skip, never a clean run.",
       "notation": "Task_AssembleDak",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_AssembleDak",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_AssembleDak",
       "status": "candidate"
     },
     {
@@ -553,7 +553,7 @@
       "prefLabel": "Business processes · BPMN 2.0",
       "definition": "Author the DAK's L2 business processes as BPMN 2.0 with Diagram Interchange: a .bpmn with no x/y on its shapes renders blank. Stay at L2, reviewable by a clinician, not FHIR. Calls Process_L2ComponentEditReview with the BPMN inputs of the skill l2-component-edit-review (checker: bpmn-js import with no warnings, dak-swimlanes.ts, artefact-reachability; renderer: render:bpmn with a visual-diff before/after; reviewer: clinical SME).",
       "notation": "Task_Bpmn",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_Bpmn",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_Bpmn",
       "status": "candidate"
     },
     {
@@ -561,7 +561,7 @@
       "prefLabel": "Data dictionary and core data elements",
       "definition": "Author the data dictionary and core data elements: structured but not FHIR, reviewable by a clinician, so L3 can be derived from them rather than written twice. Calls Process_L2ComponentEditReview with the glossary inputs of the skill l2-component-edit-review (checker: check-web-annexes.ts on the data dictionary web annex; renderer: the term diff from dak-data-dictionary-diff.ts and each form's chosen wireframe; reviewer: clinical SME, terminologist for codes).",
       "notation": "Task_DataDict",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_DataDict",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_DataDict",
       "status": "candidate"
     },
     {
@@ -569,7 +569,7 @@
       "prefLabel": "Decision logic · DMN tables",
       "definition": "Author the decision and scheduling logic as DMN tables within the FEEL subset the interpreter implements (any, literals, comparisons, one-of); ranges, not() and function calls are refused at load. Calls Process_L2ComponentEditReview with the DMN inputs of the skill l2-component-edit-review (checker: load, reachability, test cases; renderer: dmn2html table before/after, each rule beside its L1 citation; reviewer: clinical SME).",
       "notation": "Task_Dmn",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_Dmn",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_Dmn",
       "status": "candidate"
     },
     {
@@ -577,7 +577,7 @@
       "prefLabel": "Indicators and requirements",
       "definition": "Author the indicators and the functional and non-functional requirements. These are the DAK's requirements, not skills/requirements/*.json (this harness's own conformance obligations). Calls Process_L2ComponentEditReview with the indicators-and-requirements inputs of the skill l2-component-edit-review (checker: each names the persona and process it serves and traces to L1; renderer: prose diff; reviewer: business analyst with the programme manager).",
       "notation": "Task_Indicators",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_Indicators",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_Indicators",
       "status": "candidate"
     },
     {
@@ -585,7 +585,7 @@
       "prefLabel": "Build the L1 library from Component 1",
       "definition": "Ingest the DAK into the library; it is L2, so it gets no L1 graph. Read Component 1 §1.2 for its sources (extract-dak-l1-references.ts --context-only), fetch each L1 source (fetch-dspace-item.ts for an IRIS handle, fetch-who-publication.ts for a who.int item page) and ingest it. Record on its intake whether each is L1 (declared > context > inferred; --record-context writes §1.2's context). For each L1 source, run l1-specialise.ts: its publication, sections and elements as specialisations of its library nodes, since the library is upstream of L1. Validate with the smart-base Zod validator. Citation fidelity (does each citation name the source it resolves to) and a cited edition older than the one fetched are left to a person, never passed automatically.",
       "notation": "Task_L1Library",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_L1Library",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_L1Library",
       "status": "candidate"
     },
     {
@@ -593,7 +593,7 @@
       "prefLabel": "Personas and scenarios",
       "definition": "Author the DAK's personas and the user scenarios they appear in. Calls Process_L2ComponentEditReview with the personas-and-scenarios inputs of the skill l2-component-edit-review (checker: dak-swimlanes.ts and traceability to L1 recommendations; renderer: the persona card and a prose diff; reviewer: clinical SME). These are the DAK's own actors, not this harness's scenarios/roles.json; do not conflate the two.",
       "notation": "Task_Personas",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_Personas",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_Personas",
       "status": "candidate"
     },
     {
@@ -601,7 +601,7 @@
       "prefLabel": "Scope the DAK",
       "definition": "Enumerate the processes, decisions and data elements the guideline implies; identify the actors.",
       "notation": "Task_ScopeDak",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_ScopeDak",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_ScopeDak",
       "status": "candidate"
     },
     {
@@ -609,7 +609,7 @@
       "prefLabel": "Seed the work plan",
       "definition": "Turn the scope into child beans of the DAK's bean, one per DAK component: the DAK's work plan holds the work plan of each component. beans create is not idempotent: check for an existing bean before every create, or a re-run duplicates the plan.",
       "notation": "Task_SeedBeans",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_SeedBeans",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_SeedBeans",
       "status": "candidate"
     },
     {
@@ -617,7 +617,7 @@
       "prefLabel": "Clinical validation",
       "definition": "Ground truth: does the DAK say what the guideline says? The whole-DAK reading across components: whether personas, processes, decisions, data elements and indicators tell one consistent story. Per-component reviews already happened inside each track (Process_L2ComponentEditReview) and are not repeated.",
       "notation": "Task_SmeValidate",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_SmeValidate",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_SmeValidate",
       "status": "candidate"
     },
     {
@@ -625,7 +625,7 @@
       "prefLabel": "Terminology bindings",
       "definition": "ICD-11, SNOMED CT and LOINC bindings, governed separately from the artefacts that cite them. Calls Process_L2ComponentEditReview with the terminology inputs of the skill l2-component-edit-review (checker: bindings resolve and unmappedConcepts is reported; renderer: the term diff on the code columns; reviewer: a terminologist other than the one who bound it).",
       "notation": "Task_Terminology",
-      "source": "smart-base/processes/content/l2-dak-authoring.bpmn#Task_Terminology",
+      "source": "smart-base/L2/processes/l2-dak-authoring.bpmn#Task_Terminology",
       "status": "candidate"
     },
     {
@@ -1060,7 +1060,7 @@
       "prefLabel": "Complete the form",
       "definition": "Complete the SDC Questionnaire as the device renders it: confirm or correct each pre-populated answer, answer every enabled required item within its constraints, and submit. The result is a completed QuestionnaireResponse.",
       "notation": "Task_Complete",
-      "source": "smart-base/processes/content/questionnaire-data-capture.bpmn#Task_Complete",
+      "source": "smart-base/L4/processes/questionnaire-data-capture.bpmn#Task_Complete",
       "status": "candidate"
     },
     {
@@ -1068,7 +1068,7 @@
       "prefLabel": "Extract and save the resources",
       "definition": "Run SDC $extract by the method the Questionnaire declares and save the resulting transaction Bundle whole, queued when offline.",
       "notation": "Task_Extract",
-      "source": "smart-base/processes/content/questionnaire-data-capture.bpmn#Task_Extract",
+      "source": "smart-base/L4/processes/questionnaire-data-capture.bpmn#Task_Extract",
       "status": "candidate"
     },
     {

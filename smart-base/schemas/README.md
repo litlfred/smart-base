@@ -13,20 +13,28 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-schemas`, hold
 
 | file | what it is | used by |
 |---|---|---|
+| [`content-types-stack.feature`](content-types-stack.feature) | a file |  |
 | [`content-types-stack.test.ts`](content-types-stack.test.ts) | a file |  |
+| [`dak-annexes.feature`](dak-annexes.feature) | a file |  |
 | [`dak-annexes.test.ts`](dak-annexes.test.ts) | a file |  |
 | [`dak-annexes.ts`](dak-annexes.ts) | a file |  |
+| [`dak-block-fields.test.ts`](dak-block-fields.test.ts) | a file |  |
+| [`dak-blocks.feature`](dak-blocks.feature) | a file |  |
 | [`dak-blocks.test.ts`](dak-blocks.test.ts) | a file |  |
 | [`dak-blocks.ts`](dak-blocks.ts) | a file |  |
 | [`dak-content-type.ts`](dak-content-type.ts) | a file |  |
 | [`dak-jsonld.ts`](dak-jsonld.ts) | a file |  |
 | [`dak-kinds.ts`](dak-kinds.ts) | a file |  |
+| [`dak.feature`](dak.feature) | a file |  |
 | [`dak.test.ts`](dak.test.ts) | a file |  |
 | [`dak.ts`](dak.ts) | a file |  |
+| [`dth-step-table.feature`](dth-step-table.feature) | a file |  |
 | [`dth-step-table.test.ts`](dth-step-table.test.ts) | a file |  |
 | [`dth-step-table.ts`](dth-step-table.ts) | a file |  |
+| [`guideline-portfolio.feature`](guideline-portfolio.feature) | a file |  |
 | [`guideline-portfolio.test.ts`](guideline-portfolio.test.ts) | a file |  |
 | [`guideline-portfolio.ts`](guideline-portfolio.ts) | a file |  |
+| [`site-roots.ts`](site-roots.ts) | a file |  |
 | [`skills/`](skills/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

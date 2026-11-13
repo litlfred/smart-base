@@ -11,6 +11,33 @@
         "schemas",
         "code"
       ]
+    },
+    {
+      "id": "L3-skills",
+      "path": "skills/",
+      "subgraph": true,
+      "description": "The skills that produce L3, the FHIR IG: DAK pre- and post-processing around the IG Publisher, IG artefact ingestion, choosing IG dependencies, and the L3 readiness check. Package `smart-l3`.",
+      "graphTypologies": [
+        "skills"
+      ]
+    },
+    {
+      "id": "L3-processes",
+      "path": "processes/",
+      "subgraph": true,
+      "description": "The executable L3 process: building the DAK's L3 IG.",
+      "graphTypologies": [
+        "processes"
+      ]
+    },
+    {
+      "id": "L3-tools",
+      "path": "tools/",
+      "subgraph": true,
+      "description": "The L3 tools: the DAK API hub, the IG's Liquid variables and terminology lookup.",
+      "graphTypologies": [
+        "tools"
+      ]
     }
   ]
 }
