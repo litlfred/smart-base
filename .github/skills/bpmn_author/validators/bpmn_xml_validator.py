@@ -8,7 +8,14 @@ namespaces (no Zeebe/Camunda extensions), and follows basic structural rules.
 from typing import List
 from lxml import etree
 
-from common.safe_xml import safe_xml_parser
+import sys
+from pathlib import Path
+
+# safe_xml has one copy, the IG build's in input/scripts/.
+_INPUT_SCRIPTS = str(Path(__file__).resolve().parents[4] / "input" / "scripts")
+if _INPUT_SCRIPTS not in sys.path:
+    sys.path.insert(0, _INPUT_SCRIPTS)
+from safe_xml import safe_xml_parser  # noqa: E402
 from common.ig_errors import Issue, error, warning, info
 
 BPMN_NS = "http://www.omg.org/spec/BPMN/20100524/MODEL"
