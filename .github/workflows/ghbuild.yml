@@ -963,7 +963,7 @@ jobs:
           if git fetch -q --depth=1 --filter=blob:none origin gh-pages 2>/dev/null \
              && { git cat-file -e FETCH_HEAD:folio-build.json 2>/dev/null || git cat-file -e FETCH_HEAD:_main-site.json 2>/dev/null; }; then
             echo "FOLIO_ROOT=true" >> "$GITHUB_ENV"
-            echo "::notice::The gh-pages root is a folio site (folio-build.json / _main-site.json): this build deploys to branches/${BRANCH_DIR}/ only, without single-commit; the root is published by stage-local.ts."
+            echo "::notice::The gh-pages root is a folio site (folio-build.json / _main-site.json): this build deploys to branches/${BRANCH_DIR}/ only, without single-commit; the root is published by site-publish.yml."
           else
             echo "FOLIO_ROOT=false" >> "$GITHUB_ENV"
             echo "The gh-pages root is not a folio site: deploying as before."
