@@ -100,7 +100,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "856c458eca57c4e72be3346b3402daf755d7990f",
+          "ref": "88d2589b98ae644111f955894e6daec8304a4f69",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -116,8 +116,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "856c458eca57c4e72be3346b3402daf755d7990f",
-              "evidence": "Owner litlfred, 2026-11-13: 'fix the red CI on the layer mains' / 'y' (merge cat-harness-tools#2006, smart-base#362, fhir-harness#402). Re-pin every layer to current main so smart-base's site publish runs the self-hosted publisher detection."
+              "ref": "88d2589b98ae644111f955894e6daec8304a4f69",
+              "evidence": "owner (litlfred) cards in merge-manager session session_01EucfRpkvK7d4FJyuqypQzm, 2026-11-13: Q-ORDER A (who-iris, smart-base, smart-ra re-pin in parallel after the core re-pin, folio-assistant-core#780 merged 88d2589b); cascade card A ~12:05Z (each downstream re-pin to main, merged when green)"
             },
             "standing": {
               "follows": "main",
@@ -170,7 +170,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "31e8a3edb90f97938bfacbce02357904ee0a7c4a",
+          "ref": "4ac36f3f401b2f404f434e440c77d20290b46b3b",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -183,8 +183,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "31e8a3edb90f97938bfacbce02357904ee0a7c4a",
-              "evidence": "Owner litlfred, 2026-11-13: 'fix the red CI on the layer mains' / 'y' (merge cat-harness-tools#2006, smart-base#362, fhir-harness#402). Re-pin every layer to current main so smart-base's site publish runs the self-hosted publisher detection."
+              "ref": "4ac36f3f401b2f404f434e440c77d20290b46b3b",
+              "evidence": "owner (litlfred) cards in merge-manager session session_01EucfRpkvK7d4FJyuqypQzm, 2026-11-13: Q-ORDER A (who-iris, smart-base, smart-ra re-pin in parallel after the core re-pin, folio-assistant-core#780 merged 88d2589b); cascade card A ~12:05Z (each downstream re-pin to main, merged when green)"
             },
             "standing": {
               "follows": "main",
