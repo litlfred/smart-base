@@ -6,19 +6,18 @@ build step and no container calls these scripts. Do not add to it.
 
 | Directory | What it holds | Expected to move under |
 |---|---|---|
-| `bpmn_author/` | BPMN XML and swimlane validators, the BPMN authoring action and its prompts | bean folio-assistant-tgaj (BPMN validation into the KG) |
-| `bpmn_import/` | the swimlane ↔ ActorDefinition validator and its prompt | bean folio-assistant-tgaj |
-| `bpmn_layout/` | `bpmn_to_svg.py`, `validate_swimlanes.py` | bean folio-assistant-tgaj |
 | `dak_authoring/` | the issue classifier and L2 authoring actions and their prompts | bean folio-assistant-14un |
 | `ig_publisher/` | the IG Publisher build, validate and error-interpretation actions | bean folio-assistant-14un |
-| `common/` | shared helpers (`ig_errors`, `fsh_utils`, `llm_utils`, `prompt_loader`, `ig_publisher_iface`) and shared prompts | with whichever of the above still uses them |
+| `common/` | shared helpers (`ig_errors`, `llm_utils`, `prompt_loader`, `ig_publisher_iface`) and shared prompts | with whichever of the above still uses them |
 
 Notes for anyone running a script by hand before it moves:
 
 - The scripts import each other from this directory, so run them with
   `.github/skills/` on `PYTHONPATH`.
-- The validators parse XML with `input/scripts/safe_xml.py`, the IG build's
-  copy; there is no second copy here.
+- BPMN XML, swimlane structure and lane → `ActorDefinition` validation moved to
+  `smart-base/L2-bpmn/tools/dak-swimlanes/dak-swimlanes.ts` (bean
+  folio-assistant-tgaj), replacing `bpmn_author/`, `bpmn_import/`,
+  `bpmn_layout/` and `common/fsh_utils.py`.
 - ELM extraction is not here: fhir-harness owns the ELM strippers, and
   `ghbuild.yml` runs `input/scripts/strip_library_binaries.py`.
 - The LLM steps read `DAK_LLM_API_KEY` and `DAK_LLM_MODEL` (see

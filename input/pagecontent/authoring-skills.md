@@ -111,7 +111,7 @@ Each persona has a defined package of skills. The full set of skills for each pe
 
 #### BPMN Swimlane Validation
 
-As part of the BPMN authoring and review process, every innermost swimlane in a BPMN diagram **SHALL** correspond to an ActorDefinition resource. The swimlane-to-ActorDefinition check (`validate_swimlanes`, in this repository's `bpmn_layout` scripts) checks this automatically; it will move into the smart-base knowledge graph under bean folio-assistant-tgaj.
+As part of the BPMN authoring and review process, every innermost swimlane in a BPMN diagram **SHALL** correspond to an ActorDefinition resource. The `dak-swimlanes` tool (`smart-base/L2-bpmn/tools/dak-swimlanes/dak-swimlanes.ts`) checks BPMN 2.0 XML structure, swimlane structure, and swimlane-to-ActorDefinition resolution automatically.
 
 When a swimlane has no matching ActorDefinition, the author must resolve by:
 1. **Referencing** an ActorDefinition from a dependency IG

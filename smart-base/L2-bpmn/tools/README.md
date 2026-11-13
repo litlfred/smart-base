@@ -7,13 +7,14 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # l2-bpmn-tools
 
-The tools that read or write a DAK's BPMN: BPMN to FSH.
+The tools that read, validate or write a DAK's BPMN: BPMN to FSH, L2-BPMN knowledge-graph extraction, and BPMN XML / swimlane / ActorDefinition validation (`dak-swimlanes`).
 
 Part of [SMART Base](../../README.md) 0.1.0, declared as `l2-bpmn-tools`, holding `tools`.
 
 | file | what it is | used by |
 |---|---|---|
 | [`bpmn-to-fsh/`](bpmn-to-fsh/) | _nothing declares what this holds_ | |
+| [`dak-swimlanes/`](dak-swimlanes/) | _nothing declares what this holds_ | |
 | [`kg-extract-bpmn/`](kg-extract-bpmn/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

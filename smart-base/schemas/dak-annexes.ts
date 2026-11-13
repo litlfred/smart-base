@@ -10,7 +10,7 @@
  *   (`scripts/dak-data-dictionary.ts`).
  * - `dak-swimlanes/v1`: the declared mapping from a DAK's generic personas to
  *   the swimlanes of its business-process figures
- *   (`scripts/dak-swimlanes.ts`).
+ *   (`L2-bpmn/tools/dak-swimlanes/dak-swimlanes.ts`).
  *
  * Declared here so the files are judged, not only typed: until 2026-10-11
  * each format was a TypeScript type and a `$schema` string, and

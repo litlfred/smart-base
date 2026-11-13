@@ -44,7 +44,7 @@ import { basename, join } from "node:path";
 
 import { DOMParser } from "@xmldom/xmldom";
 
-import { kramdownId, processesFrom, resolveLane, type SwimlaneMap } from "./dak-swimlanes.ts";
+import { kramdownId, processesFrom, resolveLane, type SwimlaneMap } from "../L2-bpmn/tools/dak-swimlanes/dak-swimlanes.ts";
 
 const SVG_NS = "http://www.w3.org/2000/svg";
 const V_NS = "http://schemas.microsoft.com/visio/2003/SVGExtensions/";

@@ -496,6 +496,11 @@
         "script": "check:dak-annexes",
         "kind": "covered-by",
         "reason": "covered-by `check:web-annexes`, which `code-quality-gates.yml` runs: this is the same script under an older name, kept as an alias for callers that still use it. Running both would judge the same annexes twice."
+      },
+      {
+        "script": "check:dak-swimlanes",
+        "kind": "covered-by",
+        "reason": "covered-by `layer-pr-checks.yml` (`run-gates.py` runs every `check:*` script declared in `smart-base/package.json` `checkoutScripts` on every PR and push in `smart-base` and every content repository that mounts it) and by `smart-base/L2-bpmn/tools/dak-swimlanes/dak-swimlanes.test.ts` in the index checkout's `bun test` gate."
       }
     ]
   },

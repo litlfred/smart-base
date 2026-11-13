@@ -31,6 +31,14 @@
       "status": "candidate"
     },
     {
+      "id": "dak-swimlanes",
+      "prefLabel": "BPMN XML, swimlane structure, ActorDefinition resolution, and persona crosswalk",
+      "definition": "Validate BPMN 2.0 XML structure (`BPMN-XML-001`..`005`, including forbidden vendor namespaces), swimlane structure (`SWIM-001`..`004`), and lane/participant → `ActorDefinition` / role resolution (`ACTOR-001`..`002`) across declared `processes` / `business-processes` directories (`input/bpmn/` fallback), or cross-reference a DAK's personas page and Visio business-process figures through a `dak-swimlanes/v1` declaration.",
+      "notation": "dak-swimlanes",
+      "source": "smart-base/L2-bpmn/tools/dak-swimlanes/dak-swimlanes.ts#dak-swimlanes",
+      "status": "candidate"
+    },
+    {
       "id": "dmn-to-html",
       "prefLabel": "DMN → HTML",
       "definition": "Render each DMN decision table to an HTML fragment for a page, via `dmn2html.xslt` and `dmn.css`.",

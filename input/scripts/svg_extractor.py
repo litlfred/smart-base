@@ -54,15 +54,15 @@ class svg_extractor(extractor):
 
     def find_files(self) -> List[str]:
         """
-        Find all SVG files in the business processes directory.
+        Find all SVG files in the BPMN directory.
         
-        Searches for files with .svg extension in the input/business-processes/
-        directory.
+        Searches for files with .svg extension in the input/bpmn/
+        directory (matching installer.py's process_Path).
         
         Returns:
             List of SVG file paths to process
         """
-        return glob.glob("input/business-processes/*svg")
+        return glob.glob("input/bpmn/*svg")
         
 
     def extract_file(self) -> bool:

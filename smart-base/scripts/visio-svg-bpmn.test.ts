@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { BpmnModdle } from "bpmn-moddle";
 
-import type { SwimlaneMap } from "./dak-swimlanes";
+import type { SwimlaneMap } from "../L2-bpmn/tools/dak-swimlanes/dak-swimlanes";
 import { objectivesFrom, parseTransform, pascal, pathPoints, readFigure, toBpmn } from "./visio-svg-bpmn";
 
 const map: SwimlaneMap = {

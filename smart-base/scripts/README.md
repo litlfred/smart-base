@@ -32,9 +32,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`dak-pdf.test.ts`](dak-pdf.test.ts) | a file |  |
 | [`dak-pdf.ts`](dak-pdf.ts) | a file |  |
 | [`dak-pre-export.sh`](dak-pre-export.sh) | a file |  |
-| [`dak-swimlanes.feature`](dak-swimlanes.feature) | a file |  |
-| [`dak-swimlanes.test.ts`](dak-swimlanes.test.ts) | a file |  |
-| [`dak-swimlanes.ts`](dak-swimlanes.ts) | a file |  |
 | [`dth-init.feature`](dth-init.feature) | a file |  |
 | [`dth-init.test.ts`](dth-init.test.ts) | a file |  |
 | [`dth-init.ts`](dth-init.ts) | a file |  |

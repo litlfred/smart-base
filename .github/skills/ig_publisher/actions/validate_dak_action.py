@@ -18,9 +18,6 @@ if str(_SKILLS_ROOT) not in sys.path:
     sys.path.insert(0, str(_SKILLS_ROOT))
 
 from common.ig_errors import Issue, error, warning, info, format_issues, has_errors
-from bpmn_author.validators.bpmn_xml_validator import validate_bpmn_xml
-from bpmn_author.validators.swimlane_validator import validate_swimlanes
-from bpmn_import.validators.swimlane_actor_validator import validate_swimlane_actors
 
 
 def validate_structure(ig_root: str) -> list:
@@ -35,15 +32,8 @@ def validate_structure(ig_root: str) -> list:
     if not (root / "ig.ini").is_file():
         issues.append(warning("DAK-002", "ig.ini not found"))
 
-    # Validate BPMN files
-    bpmn_files = glob.glob(str(root / "input" / "business-processes" / "*.bpmn"))
-    for bpmn_path in bpmn_files:
-        content = Path(bpmn_path).read_text(encoding="utf-8")
-        fname = os.path.basename(bpmn_path)
-        issues.extend(validate_bpmn_xml(content, filename=fname))
-        issues.extend(validate_swimlanes(content, filename=fname))
-        issues.extend(validate_swimlane_actors(content, ig_root=ig_root, filename=fname))
-
+    # BPMN XML, swimlane structure and lane -> ActorDefinition validation runs
+    # via `smart-base/L2-bpmn/tools/dak-swimlanes/dak-swimlanes.ts` (`check:dak-swimlanes`).
     return issues
 
 
