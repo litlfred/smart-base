@@ -1,0 +1,21 @@
+{
+  "$schema": "ig-ast-history/v1",
+  "repository": "litlfred/smart-base",
+  "versions": [
+    {
+      "commit": "a30ffc53edf0d78098ec02713aa93044737d7a86",
+      "date": "2026-11-13T15:19:03Z",
+      "src": "5b702b9cf"
+    },
+    {
+      "commit": "928247b9c457864a6f8ff5de11b1cb00ef100b4b",
+      "date": "2026-11-13T12:15:48Z",
+      "src": "b18ec33a0"
+    },
+    {
+      "commit": "29be21d2ab2f46cf16759cb04128b5a4e7f8dbcd",
+      "date": "2026-11-12T11:06:46Z",
+      "src": "419a8743e"
+    }
+  ]
+}

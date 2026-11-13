@@ -18,7 +18,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 21,
-      "summary": null,
+      "summary": {
+        "text": "Front cover and title page of 'Monitoring and Evaluating Digital Health Interventions: A practical guide to conducting research and assessment', co-published with the Johns Hopkins University Global mHealth Initiative.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "1 Monitoring and Evaluating Digital Health Interventions A practical guide to conducting research and assessment Global mHealth Initiative JOHNS HOPKINS UNIVERSITY",
       "extractCut": false
@@ -33,14 +36,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 525,
-      "summary": null,
+      "summary": {
+        "text": "Copyright and publication page for 'Monitoring and evaluating digital health interventions: a practical guide to conducting research and assessment' (WHO, 2016, ISBN 978-92-4-151176-6), detailing CC BY-NC-SA 3.0 IGO licensing terms, suggested citation, Cataloguing-in-Publication data, third-party material policies, general disclaimers, and design and photography credits.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "suggested citation",
+          "term": "creative commons",
           "heading": false
         },
         {
-          "term": "creative commons",
+          "term": "suggested citation",
           "heading": false
         },
         {
@@ -48,7 +54,7 @@
           "heading": false
         },
         {
-          "term": "material",
+          "term": "health organization",
           "heading": false
         },
         {
@@ -56,15 +62,15 @@
           "heading": false
         },
         {
-          "term": "igo",
+          "term": "world health",
           "heading": false
         },
         {
-          "term": "cip",
+          "term": "practical guide",
           "heading": false
         },
         {
-          "term": "work",
+          "term": "evaluating digital",
           "heading": false
         }
       ],
@@ -81,8 +87,15 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 2194,
-      "summary": null,
+      "summary": {
+        "text": "Table of contents listing front matter (Acknowledgements, Acronyms and abbreviations, Preface, Executive summary, Introduction), Chapters 1 through 6 and their subsections (covering M&E overview, claims and frameworks, monitoring, evaluation, data quality assessment, and the mERA reporting checklist), and Annex I (Glossary).",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "digital health",
+          "heading": false
+        },
         {
           "term": "quality assessment",
           "heading": false
@@ -92,19 +105,15 @@
           "heading": false
         },
         {
+          "term": "data quality",
+          "heading": false
+        },
+        {
+          "term": "health interventions",
+          "heading": false
+        },
+        {
           "term": "chapter",
-          "heading": false
-        },
-        {
-          "term": "stage",
-          "heading": false
-        },
-        {
-          "term": "evaluation",
-          "heading": false
-        },
-        {
-          "term": "setting",
           "heading": false
         },
         {
@@ -125,22 +134,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 487,
-      "summary": null,
+      "summary": {
+        "text": "Acknowledgements page crediting authors and contributors from the WHO Department of Reproductive Health and Research (RHR), Johns Hopkins University Global mHealth Initiative (JHU-GmI), Duke University, United Nations Foundation (UNF), African Centre for eHealth Excellence, implementing partner organizations, the Innovation Working Group (IWG) Catalytic mHealth Grant Mechanism, Green Ink, and Norad.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "rhr department",
-          "heading": false
-        },
         {
           "term": "jhsph",
           "heading": false
         },
         {
-          "term": "grant mechanism",
-          "heading": false
-        },
-        {
-          "term": "mhealth grant",
+          "term": "rhr department",
           "heading": false
         },
         {
@@ -148,15 +152,23 @@
           "heading": false
         },
         {
+          "term": "mhealth grant",
+          "heading": false
+        },
+        {
           "term": "unf",
           "heading": false
         },
         {
-          "term": "johns hopkins",
+          "term": "grant mechanism",
           "heading": false
         },
         {
           "term": "jhu-gmi",
+          "heading": false
+        },
+        {
+          "term": "johns hopkins",
           "heading": false
         }
       ],
@@ -173,7 +185,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 184,
-      "summary": null,
+      "summary": {
+        "text": "First page of the Acronyms and abbreviations list (ANC through KEMRI), defining clinical, economic evaluation, health information system, and organizational abbreviations used throughout the Guide.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "johns hopkins",
@@ -184,7 +199,11 @@
           "heading": false
         },
         {
-          "term": "analysis",
+          "term": "health information",
+          "heading": false
+        },
+        {
+          "term": "information system",
           "heading": false
         },
         {
@@ -192,19 +211,15 @@
           "heading": false
         },
         {
-          "term": "international",
-          "heading": false
-        },
-        {
-          "term": "research",
-          "heading": false
-        },
-        {
           "term": "ehealth",
           "heading": false
         },
         {
-          "term": "human",
+          "term": "analysis",
+          "heading": false
+        },
+        {
+          "term": "research",
           "heading": false
         }
       ],
@@ -221,18 +236,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 252,
-      "summary": null,
+      "summary": {
+        "text": "Second page of the Acronyms and abbreviations list (M&E through WHO), defining monitoring and evaluation, digital health, maternal and child health, study reporting, and agency abbreviations.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "united nations",
           "heading": false
         },
         {
-          "term": "fund",
+          "term": "mhealth",
           "heading": false
         },
         {
-          "term": "newborn",
+          "term": "mobile",
           "heading": false
         },
         {
@@ -240,15 +258,15 @@
           "heading": false
         },
         {
-          "term": "reproductive",
+          "term": "newborn",
+          "heading": false
+        },
+        {
+          "term": "fund",
           "heading": false
         },
         {
           "term": "agency",
-          "heading": false
-        },
-        {
-          "term": "mhealth",
           "heading": false
         },
         {
@@ -269,14 +287,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 420,
-      "summary": null,
+      "summary": {
+        "text": "Preface situating the Guide within five years of collaborative learning across 26 mHealth projects supported by WHO RHR, UNF, Norad, and JHU-GmI, and outlining its pragmatic focus on monitoring deployment fidelity and evaluating outputs, health outcomes, and cost-effectiveness.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "five years",
-          "heading": false
-        },
-        {
-          "term": "united nations",
+          "term": "digital health",
           "heading": false
         },
         {
@@ -284,15 +301,11 @@
           "heading": false
         },
         {
-          "term": "learn",
+          "term": "united nations",
           "heading": false
         },
         {
-          "term": "assistance",
-          "heading": false
-        },
-        {
-          "term": "implementers",
+          "term": "five years",
           "heading": false
         },
         {
@@ -300,7 +313,15 @@
           "heading": false
         },
         {
-          "term": "methods",
+          "term": "learn",
+          "heading": false
+        },
+        {
+          "term": "implementers",
+          "heading": false
+        },
+        {
+          "term": "intervention",
           "heading": false
         }
       ],
@@ -317,22 +338,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 290,
-      "summary": null,
+      "summary": {
+        "text": "Executive summary explaining how monitoring and evaluation (M&E) needs evolve across digital health intervention maturity stages—from technical functionality and feasibility to usability, effectiveness, attributable impact, and value for money—and outlining the Guide's progression from value claims and indicators to data quality assessment and reporting.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "health interventions",
+          "heading": false
+        },
+        {
           "term": "reader",
-          "heading": false
-        },
-        {
-          "term": "value",
-          "heading": false
-        },
-        {
-          "term": "basic",
-          "heading": false
-        },
-        {
-          "term": "intervention",
           "heading": false
         },
         {
@@ -340,15 +360,19 @@
           "heading": false
         },
         {
-          "term": "impact",
+          "term": "basic",
           "heading": false
         },
         {
-          "term": "efforts",
+          "term": "value",
           "heading": false
         },
         {
-          "term": "questions",
+          "term": "monitoring",
+          "heading": false
+        },
+        {
+          "term": "through",
           "heading": false
         }
       ],
@@ -365,14 +389,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 451,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to the Guide and Figure 1 ('The Guide Roadmap: six steps for the M&E of digital health interventions'), summarizing the contents of Chapters 1 through 6 across maturity stages, claims and frameworks, technical and process monitoring, qualitative/quantitative/economic evaluation designs, data quality assessment, and the mERA checklist.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "readers",
+          "term": "chapter",
           "heading": false
         },
         {
-          "term": "chapter",
+          "term": "readers",
           "heading": false
         },
         {
@@ -380,23 +407,23 @@
           "heading": false
         },
         {
+          "term": "data sources",
+          "heading": false
+        },
+        {
           "term": "mera",
           "heading": false
         },
         {
-          "term": "findings",
+          "term": "digital health",
           "heading": false
         },
         {
-          "term": "quantitative",
+          "term": "health interventions",
           "heading": false
         },
         {
-          "term": "indicators",
-          "heading": false
-        },
-        {
-          "term": "designs",
+          "term": "fidelity",
           "heading": false
         }
       ],
@@ -413,8 +440,19 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 352,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the Introduction distinguishing implementation monitoring (fidelity, quality, and coverage) from programme evaluation (attributing outputs, outcomes, and economic value), identifying the intended audience of implementers, researchers, and policy-makers, and defining the key term 'Digital health'.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
+          "heading": false
+        },
         {
           "term": "intended",
           "heading": false
@@ -424,27 +462,19 @@
           "heading": false
         },
         {
-          "term": "intervention",
-          "heading": false
-        },
-        {
           "term": "activities",
           "heading": false
         },
         {
-          "term": "impact",
+          "term": "mhealth",
+          "heading": false
+        },
+        {
+          "term": "guide",
           "heading": false
         },
         {
           "term": "technologies",
-          "heading": false
-        },
-        {
-          "term": "objectives",
-          "heading": false
-        },
-        {
-          "term": "monitor",
           "heading": false
         }
       ],
@@ -461,7 +491,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 8,
-      "summary": null,
+      "summary": {
+        "text": "Section divider title page for Chapter 1: Overview of monitoring and evaluation.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "1 Chapter 1: Overview of monitoring and evaluation",
       "extractCut": false
@@ -476,7 +509,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 540,
-      "summary": null,
+      "summary": {
+        "text": "Opening of Chapter 1 introducing the intervention maturity life-cycle schematic (Figure 1.1), which illustrates how concurrent monitoring activities (functionality, stability, quality, fidelity) and evaluation activities (usability, feasibility, efficacy, effectiveness, implementation research, and economic/financial evaluation) evolve from prototype to national implementation.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "maturity life-cycle",
@@ -491,7 +527,15 @@
           "heading": false
         },
         {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
           "term": "concurrent monitoring",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
@@ -499,15 +543,7 @@
           "heading": false
         },
         {
-          "term": "economic financial",
-          "heading": false
-        },
-        {
-          "term": "prototype",
-          "heading": false
-        },
-        {
-          "term": "attempt",
+          "term": "health system",
           "heading": false
         }
       ],
@@ -524,7 +560,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 541,
-      "summary": null,
+      "summary": {
+        "text": "Part 1a ('Defining goals for monitoring and evaluation'), defining process monitoring in digital health, explaining how inquiry graduates across the six stages of intervention maturity from device factors to user interaction and health system scale-up, and listing core monitoring questions on specifications, stability, consistency, site variation, and deployment benchmarks.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "monitoring activities",
@@ -535,7 +574,11 @@
           "heading": false
         },
         {
-          "term": "stage",
+          "term": "implementation fidelity",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
@@ -543,19 +586,15 @@
           "heading": false
         },
         {
-          "term": "questions",
-          "heading": false
-        },
-        {
-          "term": "measure",
-          "heading": false
-        },
-        {
-          "term": "deployments",
+          "term": "stage",
           "heading": false
         },
         {
           "term": "intervention",
+          "heading": false
+        },
+        {
+          "term": "deployments",
           "heading": false
         }
       ],
@@ -572,10 +611,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 448,
-      "summary": null,
+      "summary": {
+        "text": "Box 1.1 mapping the six stages of the intervention maturity life-cycle (pre-prototype/prototype, pilot, demonstration, scale-up, and integration/sustainability) against monitoring goals, evaluation stages, user scale (10–100 to 100 000+), and measurement targets, followed by the definition of evaluation and the challenge of attributing extrinsic changes to the digital health intervention.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "learning curve",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
@@ -583,15 +633,7 @@
           "heading": false
         },
         {
-          "term": "attributable",
-          "heading": false
-        },
-        {
-          "term": "changes",
-          "heading": false
-        },
-        {
-          "term": "begins",
+          "term": "health system",
           "heading": false
         },
         {
@@ -599,11 +641,11 @@
           "heading": false
         },
         {
-          "term": "prototype",
+          "term": "changes",
           "heading": false
         },
         {
-          "term": "interaction",
+          "term": "prototype",
           "heading": false
         }
       ],
@@ -620,7 +662,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 540,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Part 1a listing illustrative evaluation questions for measuring attribution across usability, efficacy, effectiveness, and cost, explaining how monitoring and evaluation complement each other, and defining the key terms 'Benchmark', 'Evaluation', and 'Process monitoring'.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "intervention changed",
@@ -631,7 +676,15 @@
           "heading": false
         },
         {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
           "term": "changed processes",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
@@ -639,19 +692,11 @@
           "heading": false
         },
         {
-          "term": "research setting",
+          "term": "health system",
           "heading": false
         },
         {
-          "term": "guideline adherence",
-          "heading": false
-        },
-        {
-          "term": "asks",
-          "heading": false
-        },
-        {
-          "term": "worker performance",
+          "term": "process monitoring",
           "heading": false
         }
       ],
@@ -668,7 +713,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 191,
-      "summary": null,
+      "summary": {
+        "text": "Concluding paragraph of Part 1a explaining how poor implementation and weak process monitoring can confound evaluation results—illustrated by unreceived SMS reminders due to connectivity issues being mistaken for intervention ineffectiveness.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "text messages",
@@ -679,7 +727,7 @@
           "heading": false
         },
         {
-          "term": "conclusion",
+          "term": "reminders",
           "heading": false
         },
         {
@@ -700,12 +748,11 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 404,
-      "summary": null,
+      "summary": {
+        "text": "Part 1b ('Developing an M&E plan for your digital health intervention'), presenting the seven-step M&E pathway (Figure 1.2), defining the key term 'Claim', and detailing Step 1 on classifying the stage of maturity and corresponding stage of evaluation.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "stage",
-          "heading": false
-        },
         {
           "term": "evaluation activities",
           "heading": false
@@ -715,15 +762,19 @@
           "heading": false
         },
         {
+          "term": "evaluating digital",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
           "term": "step",
           "heading": false
         },
         {
-          "term": "carry out",
-          "heading": false
-        },
-        {
-          "term": "corresponds",
+          "term": "stage",
           "heading": false
         },
         {
@@ -731,7 +782,7 @@
           "heading": false
         },
         {
-          "term": "continuum",
+          "term": "carry out",
           "heading": false
         }
       ],
@@ -748,10 +799,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 618,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Step 1 on formulating appropriate claims (distinguishing optimization of a validated health intervention from novel digital health interventions, summarized in Box 1.2), followed by Step 2 ('Develop an underlying framework') and Step 3 ('Identify evidence needs and evaluation objectives' using SMART criteria).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "appropriate claims",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
@@ -763,23 +825,15 @@
           "heading": false
         },
         {
-          "term": "evaluated",
-          "heading": false
-        },
-        {
           "term": "objectives",
           "heading": false
         },
         {
-          "term": "stage",
+          "term": "systems improve",
           "heading": false
         },
         {
-          "term": "measurable",
-          "heading": false
-        },
-        {
-          "term": "intervention",
+          "term": "project",
           "heading": false
         }
       ],
@@ -796,26 +850,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 543,
-      "summary": null,
+      "summary": {
+        "text": "Box 1.3 listing the six steps for defining SMART M&E objectives, and Table 1.1 ('Linking stages of maturity with evaluation methods and claims') mapping Early (pre-prototype, prototype, pilot), Mid (demonstration), and Advanced (scale-up, integrated and sustained programme) maturity stages to evaluation stages and technology, intervention, and health claims.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
         {
           "term": "cost-effective improving",
           "heading": false
         },
         {
-          "term": "quality cost-effective",
-          "heading": false
-        },
-        {
-          "term": "stage",
-          "heading": false
-        },
-        {
-          "term": "bringing",
-          "heading": false
-        },
-        {
-          "term": "circumstances",
+          "term": "health outcomes",
           "heading": false
         },
         {
@@ -823,11 +876,15 @@
           "heading": false
         },
         {
-          "term": "non-research",
+          "term": "stage",
           "heading": false
         },
         {
-          "term": "feasibility",
+          "term": "health system",
+          "heading": false
+        },
+        {
+          "term": "quality cost-effective",
           "heading": false
         }
       ],
@@ -844,7 +901,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 541,
-      "summary": null,
+      "summary": {
+        "text": "Steps 4, 5, and 6 of the M&E planning pathway: finalizing an appropriate study design, deciding between internal and external evaluators (illustrated in Figure 1.3 across inputs, processes, outputs, outcomes, and impact), and weighing prospective versus retrospective evaluation timing.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "internal evaluations",
@@ -852,14 +912,6 @@
         },
         {
           "term": "evaluation activities",
-          "heading": false
-        },
-        {
-          "term": "carried out",
-          "heading": false
-        },
-        {
-          "term": "study design",
           "heading": false
         },
         {
@@ -871,11 +923,19 @@
           "heading": false
         },
         {
-          "term": "prospective",
+          "term": "study design",
           "heading": false
         },
         {
-          "term": "timing",
+          "term": "carried out",
+          "heading": false
+        },
+        {
+          "term": "project",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
           "heading": false
         }
       ],
@@ -892,14 +952,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 614,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Step 6 on quantifying time and financial, human, and physical resources (Box 1.4, noting the 10% budget benchmark), followed by Step 7 ('Develop an M&E implementation plan') detailing required components: activities and sub-activities, responsible persons, timelines, and budgets.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "evaluation activities",
           "heading": false
         },
         {
-          "term": "carried out",
+          "term": "implementation plan",
           "heading": false
         },
         {
@@ -907,7 +970,7 @@
           "heading": false
         },
         {
-          "term": "activity",
+          "term": "health intervention",
           "heading": false
         },
         {
@@ -915,15 +978,15 @@
           "heading": false
         },
         {
+          "term": "carried out",
+          "heading": false
+        },
+        {
           "term": "pregnancy outcomes",
           "heading": false
         },
         {
-          "term": "timeline",
-          "heading": false
-        },
-        {
-          "term": "dates",
+          "term": "digital health",
           "heading": false
         }
       ],
@@ -940,10 +1003,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 489,
-      "summary": null,
+      "summary": {
+        "text": "Table 1.2 providing an illustrative format for an M&E implementation plan (monitoring antenatal care coverage and pregnancy outcomes via SOP development and staff training), followed by the Chapter 1 reference list (citations 1–9).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "accessed march",
+          "term": "february xxx",
           "heading": false
         },
         {
@@ -955,11 +1021,11 @@
           "heading": false
         },
         {
-          "term": "donor budget",
+          "term": "accessed march",
           "heading": false
         },
         {
-          "term": "sop",
+          "term": "donor budget",
           "heading": false
         },
         {
@@ -967,11 +1033,11 @@
           "heading": false
         },
         {
-          "term": "activity",
+          "term": "field guide",
           "heading": false
         },
         {
-          "term": "red",
+          "term": "sop",
           "heading": false
         }
       ],
@@ -988,7 +1054,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 10,
-      "summary": null,
+      "summary": {
+        "text": "Section divider title page for Chapter 2: Setting the stage for monitoring and evaluation.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "13 Chapter 2: Setting the stage for monitoring and evaluation",
       "extractCut": false
@@ -1003,18 +1072,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 617,
-      "summary": null,
+      "summary": {
+        "text": "Opening of Chapter 2 outlining the three core M&E questions (goal, process organization, and measurement) and introducing Part 2a ('Articulating claims'), which defines 'Claim' and 'Value proposition' and explains how value propositions communicate end-user benefits relative to a comparator.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "value propositions",
-          "heading": false
-        },
-        {
-          "term": "implicit comparator",
-          "heading": false
-        },
-        {
-          "term": "statement describing",
           "heading": false
         },
         {
@@ -1022,19 +1086,27 @@
           "heading": false
         },
         {
-          "term": "anticipated benefits",
+          "term": "statement describing",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "implicit comparator",
+          "heading": false
+        },
+        {
+          "term": "alternative digital",
+          "heading": false
+        },
+        {
+          "term": "digital product",
           "heading": false
         },
         {
           "term": "project goals",
-          "heading": false
-        },
-        {
-          "term": "claims",
-          "heading": false
-        },
-        {
-          "term": "alternative",
           "heading": false
         }
       ],
@@ -1051,30 +1123,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 662,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Part 2a explaining how a claims-based approach aligns M&E objectives with stakeholder expectations, streamlines measurement, and guides indicator selection, illustrated by Box 2.1 (comparing a claim, evaluation objective, hypothesis, and indicator for SMS measles vaccination reminders) and introducing the two pathways for digital health claims.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "aged months",
-          "heading": false
-        },
-        {
-          "term": "measles vaccine",
-          "heading": false
-        },
-        {
-          "term": "children aged",
-          "heading": false
-        },
-        {
           "term": "articulating claims",
-          "heading": false
-        },
-        {
-          "term": "claim statements",
-          "heading": false
-        },
-        {
-          "term": "vaccine coverage",
           "heading": false
         },
         {
@@ -1082,7 +1137,27 @@
           "heading": false
         },
         {
-          "term": "whose mothers",
+          "term": "claim statements",
+          "heading": false
+        },
+        {
+          "term": "measles vaccine",
+          "heading": false
+        },
+        {
+          "term": "text message",
+          "heading": false
+        },
+        {
+          "term": "vaccine coverage",
+          "heading": false
+        },
+        {
+          "term": "upcoming vaccinations",
+          "heading": false
+        },
+        {
+          "term": "claims-based approach",
           "heading": false
         }
       ],
@@ -1099,14 +1174,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 534,
-      "summary": null,
+      "summary": {
+        "text": "Figure 2.1 and accompanying guidance distinguishing Pathway 1 (evaluating the added benefit of a digital health system in optimizing delivery of an already validated health intervention, focusing on process and coverage outcomes) from Pathway 2 (evaluating whether a novel digital health intervention directly and independently improves health outcomes).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "pathway question",
           "heading": false
         },
         {
-          "term": "childhood vaccines",
+          "term": "health intervention",
           "heading": false
         },
         {
@@ -1114,23 +1192,23 @@
           "heading": false
         },
         {
+          "term": "digital health",
+          "heading": false
+        },
+        {
           "term": "following pathway",
           "heading": false
         },
         {
-          "term": "added benefit",
+          "term": "validated health",
           "heading": false
         },
         {
-          "term": "electronic decision",
+          "term": "childhood vaccines",
           "heading": false
         },
         {
-          "term": "evidence base",
-          "heading": false
-        },
-        {
-          "term": "health-care providers",
+          "term": "health impact",
           "heading": false
         }
       ],
@@ -1147,14 +1225,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 406,
-      "summary": null,
+      "summary": {
+        "text": "Section on linking digital health claims with the Sustainable Development Goals (SDGs) and universal health coverage (UHC), featuring Table 2.1 which maps UHC determinant layers (accountability, supply of commodities/human resources/facilities, demand/contact/continuous coverage, quality/effective coverage, and cost/financial coverage) to digital health strategies and illustrative claims.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "determinant layers",
-          "heading": false
-        },
-        {
-          "term": "claim statements",
           "heading": false
         },
         {
@@ -1162,23 +1239,27 @@
           "heading": false
         },
         {
-          "term": "uhc",
+          "term": "claim statements",
+          "heading": false
+        },
+        {
+          "term": "health coverage",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "universal health",
           "heading": false
         },
         {
           "term": "sustainable development",
-          "heading": false
-        },
-        {
-          "term": "coverage",
-          "heading": false
-        },
-        {
-          "term": "development goals",
-          "heading": false
-        },
-        {
-          "term": "telemedicine",
           "heading": false
         }
       ],
@@ -1195,7 +1276,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 402,
-      "summary": null,
+      "summary": {
+        "text": "Overview of the five steps in a claims-based approach (Figure 2.2) and detailed guidance on Step i ('Map stakeholders'), explaining how to identify and prioritize decision-makers, project staff, end-users, and scientific or scale-up partners.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "claims-based approach",
@@ -1206,7 +1290,11 @@
           "heading": false
         },
         {
-          "term": "latter",
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
           "heading": false
         },
         {
@@ -1214,19 +1302,15 @@
           "heading": false
         },
         {
-          "term": "exercise",
-          "heading": false
-        },
-        {
           "term": "chapter",
           "heading": false
         },
         {
-          "term": "projects",
+          "term": "project",
           "heading": false
         },
         {
-          "term": "scale-up",
+          "term": "exercise",
           "heading": false
         }
       ],
@@ -1243,7 +1327,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 482,
-      "summary": null,
+      "summary": {
+        "text": "Steps ii through v of the claims-based approach: clarifying stakeholder expectations (with sample stakeholder interview questions in Box 2.2), articulating specific and measurable top claims per stakeholder, measuring claims through M&E and process documentation, and updating claims to match observed evidence.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "claim statements",
@@ -1258,6 +1345,14 @@
           "heading": false
         },
         {
+          "term": "stakeholder",
+          "heading": false
+        },
+        {
+          "term": "articulated",
+          "heading": false
+        },
+        {
           "term": "assumption",
           "heading": false
         },
@@ -1266,15 +1361,7 @@
           "heading": false
         },
         {
-          "term": "expect",
-          "heading": false
-        },
-        {
           "term": "top",
-          "heading": false
-        },
-        {
-          "term": "stakeholder",
           "heading": false
         }
       ],
@@ -1291,7 +1378,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 536,
-      "summary": null,
+      "summary": {
+        "text": "First part of Table 2.2 ('Illustrative categories of digital health stakeholders and claims'), mapping government entities (e.g. ministries of health), private sector organizations/mobile network operators, donors, technical agencies (e.g. WHO), beneficiaries/clients, and NGOs to their roles, relevant claim categories, and example claim statements.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "illustrative claim",
@@ -1302,7 +1392,7 @@
           "heading": false
         },
         {
-          "term": "infant morbidity",
+          "term": "digital health",
           "heading": false
         },
         {
@@ -1310,7 +1400,7 @@
           "heading": false
         },
         {
-          "term": "providing maternal",
+          "term": "health system",
           "heading": false
         },
         {
@@ -1318,11 +1408,11 @@
           "heading": false
         },
         {
-          "term": "collection platform",
+          "term": "community health",
           "heading": false
         },
         {
-          "term": "operator",
+          "term": "health workers",
           "heading": false
         }
       ],
@@ -1339,18 +1429,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 255,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Table 2.2 covering the digital health community (including technical working groups) and the scientific community, detailing their roles as peers and future adopters along with relevant claim categories and illustrative claim statements.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "illustrative claim",
-          "heading": false
-        },
-        {
-          "term": "infant morbidity",
-          "heading": false
-        },
-        {
-          "term": "rmncah impact",
           "heading": false
         },
         {
@@ -1358,11 +1443,11 @@
           "heading": false
         },
         {
-          "term": "diabetes",
+          "term": "rmncah impact",
           "heading": false
         },
         {
-          "term": "peers",
+          "term": "infant morbidity",
           "heading": false
         },
         {
@@ -1370,7 +1455,15 @@
           "heading": false
         },
         {
-          "term": "maternal",
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "peers",
+          "heading": false
+        },
+        {
+          "term": "diabetes",
           "heading": false
         }
       ],
@@ -1387,14 +1480,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 515,
-      "summary": null,
+      "summary": {
+        "text": "Part 2b ('Developing an M&E framework'), introducing the role of frameworks in conceptualizing project goals, activities, and outcomes, and defining the key terms 'Conceptual framework', 'Results framework', 'Logical framework/logic model', 'Theory of change', 'Inputs', 'Processes', and 'Outputs'.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "conceptual frameworks",
-          "heading": false
-        },
-        {
-          "term": "logical framework",
           "heading": false
         },
         {
@@ -1402,11 +1494,19 @@
           "heading": false
         },
         {
-          "term": "causal",
+          "term": "logical framework",
           "heading": false
         },
         {
-          "term": "theoretical",
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "causal",
           "heading": false
         },
         {
@@ -1414,11 +1514,7 @@
           "heading": false
         },
         {
-          "term": "clarify",
-          "heading": false
-        },
-        {
-          "term": "anticipated",
+          "term": "theoretical",
           "heading": false
         }
       ],
@@ -1435,18 +1531,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 419,
-      "summary": null,
+      "summary": {
+        "text": "Guidance on constructing a conceptual framework (illustrated in Figure 2.4 connecting intervention X through intermediate factors A, B, and C to anticipated goal Z), definitions of 'Outcomes' and 'Impact', and a pointer to K4Health framework toolkits (Figure 2.3).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "anticipated goal",
-          "heading": false
-        },
-        {
-          "term": "desired goal",
-          "heading": false
-        },
-        {
           "term": "conceptual framework",
+          "heading": false
+        },
+        {
+          "term": "anticipated goal",
           "heading": false
         },
         {
@@ -1454,7 +1549,7 @@
           "heading": false
         },
         {
-          "term": "factor",
+          "term": "desired goal",
           "heading": false
         },
         {
@@ -1462,11 +1557,15 @@
           "heading": false
         },
         {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
           "term": "successful achievement",
           "heading": false
         },
         {
-          "term": "arrows",
+          "term": "factor",
           "heading": false
         }
       ],
@@ -1483,18 +1582,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 652,
-      "summary": null,
+      "summary": {
+        "text": "Table 2.3 comparing the description and purpose of conceptual frameworks, results frameworks, theories of change, and logical frameworks, followed by detailed guidance and the first three steps for building a results framework.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "causal relationships",
-          "heading": false
-        },
-        {
-          "term": "incremental achievement",
-          "heading": false
-        },
-        {
-          "term": "linear relationships",
           "heading": false
         },
         {
@@ -1502,11 +1596,19 @@
           "heading": false
         },
         {
-          "term": "higher-level objectives",
+          "term": "desired change",
           "heading": false
         },
         {
-          "term": "desired change",
+          "term": "linear relationships",
+          "heading": false
+        },
+        {
+          "term": "incremental achievement",
+          "heading": false
+        },
+        {
+          "term": "higher-level objectives",
           "heading": false
         },
         {
@@ -1514,7 +1616,7 @@
           "heading": false
         },
         {
-          "term": "influence programme",
+          "term": "programme goals",
           "heading": false
         }
       ],
@@ -1531,7 +1633,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 474,
-      "summary": null,
+      "summary": {
+        "text": "Steps 4–6 for creating a results framework and Box 2.3/Figure 2.5 describing the Mobile Technology for Community Health (MOTECH) initiative in Ghana (comprising the Mobile Midwife voice messaging service and the nurse-facing Client Data Application) and its five immediate results.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "motech server",
@@ -1542,19 +1647,11 @@
           "heading": false
         },
         {
-          "term": "improved maternal",
+          "term": "client data",
           "heading": false
         },
         {
-          "term": "ghana",
-          "heading": false
-        },
-        {
-          "term": "grameen foundation",
-          "heading": false
-        },
-        {
-          "term": "lower-level",
+          "term": "ghana health",
           "heading": false
         },
         {
@@ -1562,7 +1659,15 @@
           "heading": false
         },
         {
-          "term": "client",
+          "term": "grameen foundation",
+          "heading": false
+        },
+        {
+          "term": "data application",
+          "heading": false
+        },
+        {
+          "term": "improved maternal",
           "heading": false
         }
       ],
@@ -1579,14 +1684,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 461,
-      "summary": null,
+      "summary": {
+        "text": "Figure 2.6 presenting the illustrative results framework for MOTECH in Ghana, linking the overall project goal ('Improve maternal and child health') to five immediate results (IR1–IR5), lower-level results (LLR2a–b, LLR4a–b), and specific quantitative indicators.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "registered infants",
+          "term": "registered pregnant",
           "heading": false
         },
         {
-          "term": "registered pregnant",
+          "term": "motech training",
+          "heading": false
+        },
+        {
+          "term": "registered infants",
           "heading": false
         },
         {
@@ -1598,7 +1710,7 @@
           "heading": false
         },
         {
-          "term": "motech training",
+          "term": "improve maternal",
           "heading": false
         },
         {
@@ -1606,11 +1718,7 @@
           "heading": false
         },
         {
-          "term": "least doses",
-          "heading": false
-        },
-        {
-          "term": "improve maternal",
+          "term": "list benefits",
           "heading": false
         }
       ],
@@ -1627,7 +1735,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 741,
-      "summary": null,
+      "summary": {
+        "text": "Detailed explanation of logical frameworks (logic models) in digital health M&E, defining and distinguishing technology, programmatic, and policy inputs; implementation and supervision processes; technological and service delivery outputs; health system, provider, and client outcomes; and medium- to long-term health and financial impacts.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "logical framework",
@@ -1638,7 +1749,7 @@
           "heading": false
         },
         {
-          "term": "service responsiveness",
+          "term": "technology inputs",
           "heading": false
         },
         {
@@ -1646,19 +1757,19 @@
           "heading": false
         },
         {
+          "term": "service responsiveness",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
           "term": "training courses",
           "heading": false
         },
         {
-          "term": "technology inputs",
-          "heading": false
-        },
-        {
-          "term": "activities undertaken",
-          "heading": false
-        },
-        {
-          "term": "productive",
+          "term": "digital health",
           "heading": false
         }
       ],
@@ -1675,14 +1786,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 500,
-      "summary": null,
+      "summary": {
+        "text": "Figure 2.7 presenting an illustrative logic model for the MomConnect maternal health SMS initiative in South Africa, mapping partnerships, health promotion messaging, facility/community, technology, and funding inputs and processes to outputs, outcomes, and mortality reduction impacts.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "desk services",
           "heading": false
         },
         {
-          "term": "pregnant women",
+          "term": "health promotion",
           "heading": false
         },
         {
@@ -1690,23 +1804,23 @@
           "heading": false
         },
         {
-          "term": "improved",
+          "term": "child health",
           "heading": false
         },
         {
-          "term": "antenatal care",
-          "heading": false
-        },
-        {
-          "term": "reduction",
-          "heading": false
-        },
-        {
-          "term": "promotional",
+          "term": "digital health",
           "heading": false
         },
         {
           "term": "anc",
+          "heading": false
+        },
+        {
+          "term": "mobile tools",
+          "heading": false
+        },
+        {
+          "term": "pregnant women",
           "heading": false
         }
       ],
@@ -1723,14 +1837,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 425,
-      "summary": null,
+      "summary": {
+        "text": "Box 2.4 and Figure 2.8 describing how South Africa's MomConnect initiative registers pregnant women via USSD at clinics to deliver stage-based maternal and infant health SMS messages, followed by an introduction to Theory of Change models and the six core questions required to test them.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "south africa",
-          "heading": false
-        },
-        {
-          "term": "momconnect",
           "heading": false
         },
         {
@@ -1738,7 +1851,11 @@
           "heading": false
         },
         {
-          "term": "registered",
+          "term": "momconnect",
+          "heading": false
+        },
+        {
+          "term": "baby health",
           "heading": false
         },
         {
@@ -1746,15 +1863,15 @@
           "heading": false
         },
         {
-          "term": "baby",
+          "term": "registered",
+          "heading": false
+        },
+        {
+          "term": "theory",
           "heading": false
         },
         {
           "term": "pregnancy",
-          "heading": false
-        },
-        {
-          "term": "receives",
           "heading": false
         }
       ],
@@ -1771,7 +1888,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 176,
-      "summary": null,
+      "summary": {
+        "text": "Minimum required components of a Theory of Change (context, causal pathway of outcomes/preconditions, intervention sequence, assumptions, and diagram/narrative summary) and a Further Reading box citing foundational references on conceptual frameworks, results frameworks, and theories of change.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "evaluation tips",
@@ -1786,11 +1906,11 @@
           "heading": false
         },
         {
-          "term": "educ",
+          "term": "change",
           "heading": false
         },
         {
-          "term": "theory",
+          "term": "earp",
           "heading": false
         }
       ],
@@ -1807,18 +1927,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 491,
-      "summary": null,
+      "summary": {
+        "text": "Part 2c ('Setting the stage: selecting indicators for digital health interventions'), defining the key terms 'Functionality', 'Indicator', 'Usability', and 'Users', introducing qualitative and quantitative indicators (recommending 10–15 per programmatic area), and presenting the Specific and Measurable components of the SMART criteria.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "qualitative factor",
-          "heading": false
-        },
         {
           "term": "measure achievement",
           "heading": false
         },
         {
+          "term": "digital health",
+          "heading": false
+        },
+        {
           "term": "development actor",
+          "heading": false
+        },
+        {
+          "term": "qualitative factor",
           "heading": false
         },
         {
@@ -1830,15 +1957,11 @@
           "heading": false
         },
         {
+          "term": "health interventions",
+          "heading": false
+        },
+        {
           "term": "indicators",
-          "heading": false
-        },
-        {
-          "term": "specified",
-          "heading": false
-        },
-        {
-          "term": "quantitative",
           "heading": false
         }
       ],
@@ -1855,14 +1978,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 658,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Part 2c completing the SMART indicator criteria (Attainable, Relevant, Time-bound), explaining how indicator selection shifts along a 'barometer' (Figure 2.9) between process indicators (for interventions of known efficacy) and outcome indicators (where an evidence base is absent), and introducing the four-part indicator classification framework.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "outcome indicators",
-          "heading": false
-        },
-        {
-          "term": "process indicators",
+          "term": "health indicators",
           "heading": false
         },
         {
@@ -1870,19 +1992,23 @@
           "heading": false
         },
         {
+          "term": "process indicators",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "outcome indicators",
+          "heading": false
+        },
+        {
+          "term": "evaluating digital",
+          "heading": false
+        },
+        {
           "term": "evidence base",
-          "heading": false
-        },
-        {
-          "term": "attainable",
-          "heading": false
-        },
-        {
-          "term": "selection",
-          "heading": false
-        },
-        {
-          "term": "kinds",
           "heading": false
         },
         {
@@ -1903,14 +2029,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 481,
-      "summary": null,
+      "summary": {
+        "text": "Figure 2.10 ('Categorization of digital health indicators') organizing indicators around four sequential questions—Does the technology work? How do people interact with the technology? How does the technology improve the process? How do improvements in service delivery affect health?—accompanied by Box 2.6 on the PRISM framework and an introduction to Functionality indicators.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "organizational factors",
+          "term": "technology work",
           "heading": false
         },
         {
-          "term": "prism",
+          "term": "technology improve",
+          "heading": false
+        },
+        {
+          "term": "organizational factors",
           "heading": false
         },
         {
@@ -1918,11 +2051,7 @@
           "heading": false
         },
         {
-          "term": "technical factors",
-          "heading": false
-        },
-        {
-          "term": "delivery affect",
+          "term": "prism",
           "heading": false
         },
         {
@@ -1930,11 +2059,11 @@
           "heading": false
         },
         {
-          "term": "technology work",
+          "term": "health intervention",
           "heading": false
         },
         {
-          "term": "technology improve",
+          "term": "affect health",
           "heading": false
         }
       ],
@@ -1951,10 +2080,29 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 590,
-      "summary": null,
+      "summary": {
+        "text": "Discussion of technical factors and qualitative software quality assessments (including ISO/IEC 25000:2014 SQuaRE criteria), alongside Table 2.4 listing sample functionality indicators across technical factors (connectivity, power, skilled local staff, maintenance, functionality) and organizational factors (staff training hours).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "technical factors",
+          "heading": false
+        },
+        {
+          "term": "software quality",
+          "heading": false
+        },
+        {
+          "term": "local technical",
+          "heading": false
+        },
+        {
+          "term": "technology attended",
+          "heading": false
+        },
+        {
+          "term": "mobile phone",
           "heading": false
         },
         {
@@ -1966,23 +2114,7 @@
           "heading": false
         },
         {
-          "term": "technology attended",
-          "heading": false
-        },
-        {
-          "term": "target population",
-          "heading": false
-        },
-        {
-          "term": "sample domains",
-          "heading": false
-        },
-        {
-          "term": "software quality",
-          "heading": false
-        },
-        {
-          "term": "industry standards",
+          "term": "technical support",
           "heading": false
         }
       ],
@@ -1999,10 +2131,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 682,
-      "summary": null,
+      "summary": {
+        "text": "Discussion of organizational factors and primary/secondary data sources for functionality indicators, followed by the 'Usability – How do people interact with the technology?' section covering functional and service output indicators, behavioural factors, and core questions on user coverage, user response, and user adoption.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "organizational factors",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
@@ -2010,7 +2149,15 @@
           "heading": false
         },
         {
-          "term": "target population",
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "health system",
+          "heading": false
+        },
+        {
+          "term": "data sources",
           "heading": false
         },
         {
@@ -2018,19 +2165,7 @@
           "heading": false
         },
         {
-          "term": "indicators",
-          "heading": false
-        },
-        {
-          "term": "received through",
-          "heading": false
-        },
-        {
-          "term": "change communication",
-          "heading": false
-        },
-        {
-          "term": "quantity",
+          "term": "target population",
           "heading": false
         }
       ],
@@ -2047,10 +2182,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 450,
-      "summary": null,
+      "summary": {
+        "text": "Table 2.5 listing sample usability indicators across user coverage, user response, and user adoption, followed by discussion of back-end digital data sources and user surveys, and Figure 2.11 illustrating the iterative spiral feedback loop between technology performance and user interaction.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "feedback loop",
+          "heading": false
+        },
+        {
+          "term": "intended users",
+          "heading": false
+        },
+        {
+          "term": "iterative process",
           "heading": false
         },
         {
@@ -2062,23 +2208,15 @@
           "heading": false
         },
         {
-          "term": "iterative process",
+          "term": "digital health",
           "heading": false
         },
         {
-          "term": "intended users",
+          "term": "technology development",
           "heading": false
         },
         {
-          "term": "people interact",
-          "heading": false
-        },
-        {
-          "term": "development process",
-          "heading": false
-        },
-        {
-          "term": "satisfaction",
+          "term": "health system",
           "heading": false
         }
       ],
@@ -2095,18 +2233,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 474,
-      "summary": null,
+      "summary": {
+        "text": "Section on 'Process improvement – How does the technology improve service delivery?', introducing Figure 2.12 on addressing cost, efficiency, quality, and utilization constraints across health system, provider, and client levels, and defining client-level indicators.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
+          "heading": false
+        },
         {
           "term": "service delivery",
           "heading": false
         },
         {
-          "term": "client-level",
-          "heading": false
-        },
-        {
-          "term": "behaviour change",
+          "term": "health system",
           "heading": false
         },
         {
@@ -2114,19 +2259,15 @@
           "heading": false
         },
         {
-          "term": "indicators",
-          "heading": false
-        },
-        {
-          "term": "utilization",
-          "heading": false
-        },
-        {
           "term": "client",
           "heading": false
         },
         {
-          "term": "provider",
+          "term": "behaviour change",
+          "heading": false
+        },
+        {
+          "term": "client-level",
           "heading": false
         }
       ],
@@ -2143,7 +2284,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 607,
-      "summary": null,
+      "summary": {
+        "text": "Case study and monthly monitoring chart (Figure 2.13) for FHI 360's Mobile for Reproductive Health (m4RH) SMS programme in Kenya and Tanzania, followed by definitions of provider-level and health-system-level indicators (aligned with the six WHO health system building blocks) and client/system cost constraint considerations.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "provider-level indicators",
@@ -2154,11 +2298,11 @@
           "heading": false
         },
         {
-          "term": "unique clients",
+          "term": "digital health",
           "heading": false
         },
         {
-          "term": "back-end",
+          "term": "health intervention",
           "heading": false
         },
         {
@@ -2166,15 +2310,15 @@
           "heading": false
         },
         {
-          "term": "oct",
+          "term": "back-end",
           "heading": false
         },
         {
-          "term": "contacted",
+          "term": "unique clients",
           "heading": false
         },
         {
-          "term": "feb",
+          "term": "dec",
           "heading": false
         }
       ],
@@ -2191,10 +2335,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 599,
-      "summary": null,
+      "summary": {
+        "text": "Tables 2.6 and 2.7 (beginning) of Chapter 2 Part 2c, listing client-level indicators across efficiency, quality, utilization, and costs (with explanatory footnotes on averted incidences, contact modes, adequacy definitions, and out-of-pocket cost savings) and provider-level efficiency and quality indicators for measuring how digital health technology improves the implementation process.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "reference period",
+          "term": "target clients",
           "heading": false
         },
         {
@@ -2202,19 +2349,15 @@
           "heading": false
         },
         {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
           "term": "qualified health-care",
           "heading": false
         },
         {
-          "term": "target clients",
-          "heading": false
-        },
-        {
-          "term": "minutes",
-          "heading": false
-        },
-        {
-          "term": "observed",
+          "term": "reference period",
           "heading": false
         },
         {
@@ -2222,7 +2365,11 @@
           "heading": false
         },
         {
-          "term": "relation",
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "health metric",
           "heading": false
         }
       ],
@@ -2239,10 +2386,33 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 621,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Table 2.7 (provider-level utilization and cost indicators and footnotes) and Table 2.8 of Chapter 2 Part 2c, detailing health-system-level efficiency, quality, utilization, and cost indicators for assessing how digital health technology improves implementation processes across facilities and target populations.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "reference periodb",
+          "heading": false
+        },
+        {
+          "term": "periodb change",
+          "heading": false
+        },
+        {
           "term": "reference period",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "intervention targeted",
           "heading": false
         },
         {
@@ -2250,27 +2420,7 @@
           "heading": false
         },
         {
-          "term": "insert name",
-          "heading": false
-        },
-        {
-          "term": "out-of-pocket payments",
-          "heading": false
-        },
-        {
-          "term": "phone call",
-          "heading": false
-        },
-        {
-          "term": "workers observed",
-          "heading": false
-        },
-        {
           "term": "seeking intervention",
-          "heading": false
-        },
-        {
-          "term": "intervention targeted",
           "heading": false
         }
       ],
@@ -2287,14 +2437,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 761,
-      "summary": null,
+      "summary": {
+        "text": "Constraint and measurement considerations in Chapter 2 Part 2c for health-system-level cost savings (monetizing staff and client time gains and operational efficiencies) and for collecting and interpreting technical efficiency, quality of care (structure, process, and outcome dimensions), and service utilization/coverage indicators across client, provider, and health system levels.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "efficiency indicators",
-          "heading": false
-        },
-        {
-          "term": "provider level",
           "heading": false
         },
         {
@@ -2302,23 +2451,27 @@
           "heading": false
         },
         {
-          "term": "operational efficiency",
-          "heading": false
-        },
-        {
-          "term": "costs averted",
-          "heading": false
-        },
-        {
-          "term": "additional surveys",
-          "heading": false
-        },
-        {
           "term": "client level",
           "heading": false
         },
         {
-          "term": "health-care facility",
+          "term": "back-end data",
+          "heading": false
+        },
+        {
+          "term": "provider level",
+          "heading": false
+        },
+        {
+          "term": "operational efficiency",
+          "heading": false
+        },
+        {
+          "term": "utilization data",
+          "heading": false
+        },
+        {
+          "term": "data collected",
           "heading": false
         }
       ],
@@ -2335,7 +2488,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 410,
-      "summary": null,
+      "summary": {
+        "text": "Guidance on evaluating health outcomes (Question 4 of the M&E framework: 'How do improvements in service delivery affect health outcomes?'), explaining when evaluation can focus on process and early outcome indicators rather than established downstream health impacts, alongside a 'Further Reading' box of standardized RMNCAH indicator repositories (Every Woman Every Child, CORE Group, and DHS).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "indicators compendium",
@@ -2346,7 +2502,15 @@
           "heading": false
         },
         {
+          "term": "digital health",
+          "heading": false
+        },
+        {
           "term": "indicator databases",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
           "heading": false
         },
         {
@@ -2358,15 +2522,7 @@
           "heading": false
         },
         {
-          "term": "vaccination",
-          "heading": false
-        },
-        {
-          "term": "maternal",
-          "heading": false
-        },
-        {
-          "term": "child",
+          "term": "monitoring framework",
           "heading": false
         }
       ],
@@ -2383,10 +2539,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 208,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the Chapter 2 Part 2c 'Further Reading' box listing standardized indicator repositories and guides for HIV programmes (UNAIDS, MEASURE DHS), malaria programmes (DHS Malaria Indicator Survey, President's Malaria Initiative), health service delivery and quality of care (WHO, MEASURE Evaluation SPA), and cross-cutting MEASURE Evaluation indicator summaries.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "hiv aids",
+          "term": "delivery indicators",
           "heading": false
         },
         {
@@ -2394,7 +2553,7 @@
           "heading": false
         },
         {
-          "term": "delivery indicators",
+          "term": "hiv aids",
           "heading": false
         },
         {
@@ -2402,15 +2561,15 @@
           "heading": false
         },
         {
+          "term": "service delivery",
+          "heading": false
+        },
+        {
           "term": "service provision",
           "heading": false
         },
         {
-          "term": "involvement",
-          "heading": false
-        },
-        {
-          "term": "programmes guide",
+          "term": "health service",
           "heading": false
         }
       ],
@@ -2427,7 +2586,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 410,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 References list (citations 1–17), covering value proposition and business model design resources (MaRS), CommCare, evaluation design and mHealth UHC frameworks (Habicht et al., Mehl & Labrique), stakeholder engagement methodologies (Bryson et al., Gable & Shireman), M&E frameworks and Theory of Change guides (UN Women, USAID, World Bank, DFID, MLE, WHO, K4Health, Earp & Ennett), and the MOTECH Ghana case study.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "mars discovery",
@@ -2438,11 +2600,11 @@
           "heading": false
         },
         {
-          "term": "discovery district",
+          "term": "evaluation tips",
           "heading": false
         },
         {
-          "term": "evaluation tips",
+          "term": "discovery district",
           "heading": false
         },
         {
@@ -2450,15 +2612,15 @@
           "heading": false
         },
         {
-          "term": "doi",
-          "heading": false
-        },
-        {
           "term": "website",
           "heading": false
         },
         {
-          "term": "toronto",
+          "term": "doi",
+          "heading": false
+        },
+        {
+          "term": "international development",
           "heading": false
         }
       ],
@@ -2475,7 +2637,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 454,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of the Chapter 2 References list (citations 18–35), covering the GSMA mHealth impact model, South Africa's MomConnect, Malawi SC4CCM, ISO/IEC 25000 SQuaRE software quality standards, MEASURE Evaluation and PRISM/ePRISM frameworks, Boehm's spiral model, mHealth evidence and pilot studies (Labrique et al., FHI 360 m4RH, A.T. Kearney), WHO health system building blocks, technical efficiency (Palmer & Torgerson), and quality of care (Donabedian).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "accessed april",
@@ -2486,15 +2651,19 @@
           "heading": false
         },
         {
-          "term": "chapel hill",
-          "heading": false
-        },
-        {
           "term": "software engineering",
           "heading": false
         },
         {
+          "term": "chapel hill",
+          "heading": false
+        },
+        {
           "term": "prism framework",
+          "heading": false
+        },
+        {
+          "term": "software product",
           "heading": false
         },
         {
@@ -2503,10 +2672,6 @@
         },
         {
           "term": "measure evaluation",
-          "heading": false
-        },
-        {
-          "term": "software product",
           "heading": false
         }
       ],
@@ -2523,7 +2688,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 56,
-      "summary": null,
+      "summary": {
+        "text": "Title page for Chapter 3: 'Monitoring digital health interventions'.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "46 M O N I T O R I N G A N D E V A L U A T I N G D I G I T A L H E A L T H I N T E R V E N T I O N S Chapter 3: Monitoring digital health interventions",
       "extractCut": false
@@ -2538,30 +2706,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 631,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to Chapter 3 on process monitoring of digital health interventions, featuring the 'How will this chapter help me?' overview box, Key Terms definitions ('Process monitoring', 'Monitoring burden', and 'Users'), and an overview of how the four monitoring components (functionality, stability, fidelity, and quality) evolve across intervention maturity stages.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "process monitoring",
           "heading": false
         },
         {
-          "term": "half",
+          "term": "digital health",
           "heading": false
         },
         {
-          "term": "failure",
-          "heading": false
-        },
-        {
-          "term": "threaten",
-          "heading": false
-        },
-        {
-          "term": "shifts",
-          "heading": false
-        },
-        {
-          "term": "major",
+          "term": "health interventions",
           "heading": false
         },
         {
@@ -2569,7 +2728,19 @@
           "heading": false
         },
         {
-          "term": "literature",
+          "term": "threaten",
+          "heading": false
+        },
+        {
+          "term": "chapter",
+          "heading": false
+        },
+        {
+          "term": "failure",
+          "heading": false
+        },
+        {
+          "term": "shifts",
           "heading": false
         }
       ],
@@ -2586,14 +2757,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 465,
-      "summary": null,
+      "summary": {
+        "text": "Box 3.1 defining the four major components of digital health monitoring (Functionality, Stability, Fidelity, and Quality) with their guiding questions, Figure 3.1 illustrating concurrent monitoring and evaluation components across the intervention maturity life-cycle from prototype to national implementation, and the start of guidance on identifying target inputs by distinguishing primary and secondary users.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "answers",
+          "term": "intervention maturity",
           "heading": false
         },
         {
-          "term": "intervention maturity",
+          "term": "health system",
           "heading": false
         },
         {
@@ -2601,15 +2775,7 @@
           "heading": false
         },
         {
-          "term": "viewed",
-          "heading": false
-        },
-        {
-          "term": "question",
-          "heading": false
-        },
-        {
-          "term": "prototype",
+          "term": "digital health",
           "heading": false
         },
         {
@@ -2617,7 +2783,15 @@
           "heading": false
         },
         {
-          "term": "intended",
+          "term": "conformance",
+          "heading": false
+        },
+        {
+          "term": "answers",
+          "heading": false
+        },
+        {
+          "term": "fidelity",
           "heading": false
         }
       ],
@@ -2634,7 +2808,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 591,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Chapter 3 guidance on identifying target monitoring inputs versus outputs and outcomes, including Box 3.2 contrasting primary users (who enter data or use clinical algorithms) with secondary users (who receive SMS reminders or educational calls) and emphasizing the quality of technical, training, and behaviour change inputs.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "sms messages",
@@ -2645,7 +2822,19 @@
           "heading": false
         },
         {
+          "term": "non-digital health",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
           "term": "primary users",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
           "heading": false
         },
         {
@@ -2653,19 +2842,7 @@
           "heading": false
         },
         {
-          "term": "user-linked",
-          "heading": false
-        },
-        {
-          "term": "high-quality",
-          "heading": false
-        },
-        {
-          "term": "non-digital",
-          "heading": false
-        },
-        {
-          "term": "remind",
+          "term": "health system",
           "heading": false
         }
       ],
@@ -2682,18 +2859,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 359,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3, Part 3a ('Identifying stages of intervention maturity'), explaining how resource allocation and monitoring priorities shift from technical functionality and stability in early maturity stages to workforce standardization, fidelity, and quality in middle and late stages, illustrated by Figure 3.2 ('Relative monitoring burden by component across intervention maturity stages').",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "middle stage",
-          "heading": false
-        },
-        {
-          "term": "higher burden",
-          "heading": false
-        },
-        {
           "term": "intervention maturity",
+          "heading": false
+        },
+        {
+          "term": "middle stage",
           "heading": false
         },
         {
@@ -2705,7 +2881,11 @@
           "heading": false
         },
         {
-          "term": "figure",
+          "term": "higher burden",
+          "heading": false
+        },
+        {
+          "term": "functionality",
           "heading": false
         },
         {
@@ -2713,7 +2893,7 @@
           "heading": false
         },
         {
-          "term": "significant",
+          "term": "fidelity",
           "heading": false
         }
       ],
@@ -2730,26 +2910,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 623,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3, Part 3b ('Tools for monitoring'), presenting Box 3.3 ('Raw materials checklist') and describing how human-centered design (HCD), software requirements specifications (SRS), use case narratives, and wireframes support system development and process monitoring.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "srs",
-          "heading": false
-        },
-        {
-          "term": "raw materials",
-          "heading": false
-        },
-        {
-          "term": "wireframes",
-          "heading": false
-        },
-        {
-          "term": "human-centered design",
-          "heading": false
-        },
-        {
-          "term": "user-centred design",
           "heading": false
         },
         {
@@ -2757,7 +2924,23 @@
           "heading": false
         },
         {
-          "term": "quality assurance",
+          "term": "human-centered design",
+          "heading": false
+        },
+        {
+          "term": "wireframes",
+          "heading": false
+        },
+        {
+          "term": "user-centred design",
+          "heading": false
+        },
+        {
+          "term": "software requirements",
+          "heading": false
+        },
+        {
+          "term": "raw materials",
           "heading": false
         },
         {
@@ -2778,14 +2961,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 499,
-      "summary": null,
+      "summary": {
+        "text": "Description of quality assurance (QA) test cases in Chapter 3 Part 3b and Figure 3.3 ('Illustrative examples of business process flows and SRS', adapted from PATH's Better Immunization Data Initiative), showing a patient immunization record query workflow and SRS requirement items (10.5–10.20) for evaluating and merging duplicate vaccination events.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "duplicate events",
-          "heading": false
-        },
-        {
-          "term": "vaccine event",
           "heading": false
         },
         {
@@ -2793,11 +2975,15 @@
           "heading": false
         },
         {
+          "term": "vaccine event",
+          "heading": false
+        },
+        {
           "term": "update vaccine",
           "heading": false
         },
         {
-          "term": "test cases",
+          "term": "allow user",
           "heading": false
         },
         {
@@ -2805,7 +2991,7 @@
           "heading": false
         },
         {
-          "term": "allow user",
+          "term": "test cases",
           "heading": false
         },
         {
@@ -2826,8 +3012,15 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 638,
-      "summary": null,
+      "summary": {
+        "text": "Completion of Chapter 3 Part 3b covering back-end data structures and metadata (timestamps, GPS, non-events), codebooks (data dictionaries), indicators lists, and real-time data dashboards, illustrated by Figure 3.4 ('cStock's monitoring dashboard').",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "data points",
+          "heading": false
+        },
         {
           "term": "indicators list",
           "heading": false
@@ -2841,7 +3034,7 @@
           "heading": false
         },
         {
-          "term": "pieces",
+          "term": "back-end",
           "heading": false
         },
         {
@@ -2849,15 +3042,11 @@
           "heading": false
         },
         {
-          "term": "back-end",
+          "term": "cstock",
           "heading": false
         },
         {
           "term": "technologists",
-          "heading": false
-        },
-        {
-          "term": "cstock",
           "heading": false
         }
       ],
@@ -2874,16 +3063,11 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 468,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to Chapter 3, Part 3c ('Digital health process monitoring components') and Table 3.1 ('Summary of process monitoring components'), comparing Functionality, Stability, Fidelity, and Quality across monitoring timing, guiding questions, potential measures, technical/user/implementation categories, and monitoring burden by maturity stage.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "mid",
-          "heading": false
-        },
-        {
-          "term": "late",
-          "heading": false
-        },
         {
           "term": "user interaction",
           "heading": false
@@ -2893,7 +3077,19 @@
           "heading": false
         },
         {
+          "term": "mid",
+          "heading": false
+        },
+        {
           "term": "maturity stage",
+          "heading": false
+        },
+        {
+          "term": "monitoring components",
+          "heading": false
+        },
+        {
+          "term": "process monitoring",
           "heading": false
         },
         {
@@ -2901,11 +3097,7 @@
           "heading": false
         },
         {
-          "term": "schedules",
-          "heading": false
-        },
-        {
-          "term": "monitoring components",
+          "term": "late",
           "heading": false
         }
       ],
@@ -2922,14 +3114,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 719,
-      "summary": null,
+      "summary": {
+        "text": "Detailed guidance on monitoring Functionality in Chapter 3 Part 3c, covering what to monitor (skip patterns, validation checks, form schedules, UI, data exports, dashboards), how to monitor using QA test cases (illustrated in Table 3.2 with pass/fail scenarios for client registration and Polio-1 vaccination scheduling), who will monitor, and when to monitor.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "polio vaccine",
-          "heading": false
-        },
-        {
-          "term": "polio date",
           "heading": false
         },
         {
@@ -2937,19 +3128,23 @@
           "heading": false
         },
         {
-          "term": "vaccine displays",
-          "heading": false
-        },
-        {
-          "term": "date weeks",
-          "heading": false
-        },
-        {
-          "term": "test cases",
+          "term": "polio date",
           "heading": false
         },
         {
           "term": "skip patterns",
+          "heading": false
+        },
+        {
+          "term": "woman registration",
+          "heading": false
+        },
+        {
+          "term": "vaccine displays",
+          "heading": false
+        },
+        {
+          "term": "functionality monitoring",
           "heading": false
         },
         {
@@ -2970,14 +3165,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 392,
-      "summary": null,
+      "summary": {
+        "text": "Completion of the Functionality monitoring section in Chapter 3 Part 3c—explaining how to use pre- and post-launch testing findings to resolve bugs and document service disruptions for evaluation, and how functionality monitoring differs across maturity stages—accompanied by Figure 3.5 highlighting stages 2 and 3 (prototype/pilot and demonstration).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "continued functionality",
+          "term": "functionality monitoring",
           "heading": false
         },
         {
-          "term": "functionality monitoring",
+          "term": "continued functionality",
           "heading": false
         },
         {
@@ -2985,11 +3183,11 @@
           "heading": false
         },
         {
-          "term": "demonstration",
+          "term": "maturity",
           "heading": false
         },
         {
-          "term": "families",
+          "term": "intervention services",
           "heading": false
         },
         {
@@ -3001,7 +3199,7 @@
           "heading": false
         },
         {
-          "term": "maturity",
+          "term": "demonstration",
           "heading": false
         }
       ],
@@ -3018,10 +3216,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 777,
-      "summary": null,
+      "summary": {
+        "text": "Detailed guidance on monitoring Stability in Chapter 3 Part 3c, covering what to monitor (server outages, SMS failure rates, application crashes, peak load responsiveness), how to monitor via server logs and automated alerts, who will monitor, when to monitor, how to use downtime findings, and how to automate stability monitoring across maturity stages.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "stability monitoring",
+          "heading": false
+        },
+        {
+          "term": "system stability",
           "heading": false
         },
         {
@@ -3029,19 +3234,15 @@
           "heading": false
         },
         {
-          "term": "failure rate",
-          "heading": false
-        },
-        {
           "term": "later stages",
           "heading": false
         },
         {
-          "term": "instability",
+          "term": "functionality monitoring",
           "heading": false
         },
         {
-          "term": "outages",
+          "term": "automated systems",
           "heading": false
         },
         {
@@ -3049,7 +3250,7 @@
           "heading": false
         },
         {
-          "term": "functionality monitoring",
+          "term": "failure rate",
           "heading": false
         }
       ],
@@ -3066,18 +3267,29 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 633,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of Stability monitoring during scale-up and introduction to monitoring Fidelity in Chapter 3 Part 3c, dividing fidelity monitoring into three broad categories—(a) technical fidelity (uptime, SMS failure rates, form transmission, completion times), (b) external barriers (power banks, app updates, device loss/damage, data/SMS credits), and (c) user compliance.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "system stability",
+          "heading": false
+        },
+        {
+          "term": "system users",
+          "heading": false
+        },
         {
           "term": "intervention delivery",
           "heading": false
         },
         {
-          "term": "charged",
+          "term": "health system",
           "heading": false
         },
         {
-          "term": "stability",
+          "term": "digital health",
           "heading": false
         },
         {
@@ -3085,19 +3297,11 @@
           "heading": false
         },
         {
-          "term": "continued",
-          "heading": false
-        },
-        {
-          "term": "duration",
-          "heading": false
-        },
-        {
           "term": "fidelity",
           "heading": false
         },
         {
-          "term": "average",
+          "term": "functionality",
           "heading": false
         }
       ],
@@ -3114,7 +3318,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 769,
-      "summary": null,
+      "summary": {
+        "text": "Completion of the Fidelity monitoring section in Chapter 3 Part 3c, detailing user adherence indicators (form submission frequency, post-training app operation, clinical protocol compliance), automated server alerts and targeted retraining ('How to monitor'), supervisory and project manager roles ('Who will monitor'), continuous timing ('When to monitor'), corrective actions ('How to use monitoring findings'), and dashboard automation at scale ('How to monitor differently by maturity stage').",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "user fidelity",
@@ -3129,6 +3336,10 @@
           "heading": false
         },
         {
+          "term": "health users",
+          "heading": false
+        },
+        {
           "term": "trigger notifications",
           "heading": false
         },
@@ -3137,15 +3348,11 @@
           "heading": false
         },
         {
-          "term": "retraining",
-          "heading": false
-        },
-        {
-          "term": "weaknesses",
-          "heading": false
-        },
-        {
           "term": "intervention content",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         }
       ],
@@ -3162,7 +3369,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 692,
-      "summary": null,
+      "summary": {
+        "text": "Start of the Quality monitoring section in Chapter 3 Part 3c, distinguishing (a) user capabilities (technical literacy, data entry accuracy, service consistency, timestamp/GPS regularities) and (b) intervention content quality (alignment with evidence-based guidelines and local context), and describing pre-launch trainee competency checklists and post-launch outlier tracking.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "intervention content",
@@ -3173,27 +3383,27 @@
           "heading": false
         },
         {
+          "term": "health workers",
+          "heading": false
+        },
+        {
+          "term": "trainee",
+          "heading": false
+        },
+        {
           "term": "quality monitoring",
           "heading": false
         },
         {
-          "term": "accuracy",
+          "term": "health system",
           "heading": false
         },
         {
-          "term": "launch",
+          "term": "data accuracy",
           "heading": false
         },
         {
-          "term": "functionalities",
-          "heading": false
-        },
-        {
-          "term": "workers",
-          "heading": false
-        },
-        {
-          "term": "indicators",
+          "term": "digital health",
           "heading": false
         }
       ],
@@ -3210,7 +3420,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 610,
-      "summary": null,
+      "summary": {
+        "text": "Completion of the Quality monitoring section in Chapter 3 Part 3c—covering formative testing of intervention messaging, who monitors user competency and content quality, when to monitor, using findings for real-time retraining and content refinement, and scaling quality monitoring across maturity stages—alongside Figure 3.6 ('Quality control checks on user ability to operate digital health system' from KEMRI's TextIT project).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "content quality",
@@ -3221,11 +3434,15 @@
           "heading": false
         },
         {
-          "term": "trainers",
+          "term": "monitoring user",
           "heading": false
         },
         {
-          "term": "monitoring user",
+          "term": "project managers",
+          "heading": false
+        },
+        {
+          "term": "trainers",
           "heading": false
         },
         {
@@ -3237,11 +3454,7 @@
           "heading": false
         },
         {
-          "term": "project managers",
-          "heading": false
-        },
-        {
-          "term": "adjustments",
+          "term": "intervention",
           "heading": false
         }
       ],
@@ -3258,7 +3471,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 708,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of maturity-stage considerations for Quality monitoring and start of an applied Chapter 3 case example of a pilot infant immunization SMS reminder and vaccinator registration system, illustrating (a) primary (health worker) versus secondary (family) user interactions, (b) maturity-stage priorities, and (c) pre-launch functionality QA test cases.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "sms messages",
@@ -3266,10 +3482,6 @@
         },
         {
           "term": "worker interface",
-          "heading": false
-        },
-        {
-          "term": "families",
           "heading": false
         },
         {
@@ -3281,15 +3493,19 @@
           "heading": false
         },
         {
-          "term": "versus secondary",
-          "heading": false
-        },
-        {
-          "term": "phone numbers",
+          "term": "health worker",
           "heading": false
         },
         {
           "term": "intervention content",
+          "heading": false
+        },
+        {
+          "term": "health system",
+          "heading": false
+        },
+        {
+          "term": "phone numbers",
           "heading": false
         }
       ],
@@ -3306,14 +3522,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 566,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of the Chapter 3 infant immunization SMS pilot example—illustrating pre-launch and ongoing stability monitoring for server downtime, SMS failure rates, and high-volume campaign loads—followed by the first part of the Chapter 3 References list (citations 1–6).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "accessed april",
-          "heading": false
-        },
-        {
-          "term": "stability issues",
           "heading": false
         },
         {
@@ -3321,11 +3536,7 @@
           "heading": false
         },
         {
-          "term": "doi",
-          "heading": false
-        },
-        {
-          "term": "jama",
+          "term": "stability issues",
           "heading": false
         },
         {
@@ -3333,11 +3544,19 @@
           "heading": false
         },
         {
-          "term": "iso",
+          "term": "downtime",
           "heading": false
         },
         {
-          "term": "downtime",
+          "term": "server",
+          "heading": false
+        },
+        {
+          "term": "doi",
+          "heading": false
+        },
+        {
+          "term": "iso",
           "heading": false
         }
       ],
@@ -3354,18 +3573,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 212,
-      "summary": null,
+      "summary": {
+        "text": "Continuation and conclusion of the Chapter 3 References list (citations 7–19 across pages 73–74), covering formative mHealth messaging (Maar et al.), K4Health glossary, user-centered design (McCurdie et al., IDEO), PATH logistics and BID Initiative requirements, IEEE SRS templates (Wiegers), usability.gov use cases and wireframing, PMNCH ICT workbook, JSI cStock, frontline worker mHealth adoption (Kaphle et al.), and SMS tone testing (Pollard et al.).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "mhealth uhealth",
           "heading": false
         },
         {
-          "term": "accessed april",
+          "term": "jmir mhealth",
           "heading": false
         },
         {
-          "term": "jmir mhealth",
+          "term": "accessed april",
           "heading": false
         },
         {
@@ -3394,7 +3616,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 7,
-      "summary": null,
+      "summary": {
+        "text": "Title page for Chapter 4: 'Evaluating digital health interventions'.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "65 Chapter 4: Evaluating digital health interventions",
       "extractCut": false
@@ -3409,7 +3634,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 400,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to Chapter 4 on evaluating digital health interventions, including the 'How will this chapter help me?' overview box, the Key Term definition of 'Evaluation', and definitions of the five evaluation stages aligned with intervention maturity: Feasibility, Usability, Efficacy, Effectiveness, and Implementation research.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "intervention achieves",
@@ -3420,27 +3648,27 @@
           "heading": false
         },
         {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
           "term": "evaluation activities",
           "heading": false
         },
         {
-          "term": "right",
-          "heading": false
-        },
-        {
-          "term": "assess",
-          "heading": false
-        },
-        {
-          "term": "intended",
-          "heading": false
-        },
-        {
-          "term": "stages",
+          "term": "health system",
           "heading": false
         },
         {
           "term": "chapter",
+          "heading": false
+        },
+        {
+          "term": "stages",
           "heading": false
         }
       ],
@@ -3457,7 +3685,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 535,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 4, Part 4a ('Key concepts for conducting digital health evaluations'), contrasting efficacy ('Can it work?' under ideal controlled conditions) with effectiveness ('Does it work?' in real-world settings across outputs, outcomes, and impact in Box 4.1) and defining implementation research and hybrid effectiveness–implementation approaches.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "versus effectiveness",
@@ -3468,27 +3699,27 @@
           "heading": false
         },
         {
+          "term": "implementation research",
+          "heading": false
+        },
+        {
           "term": "real-world setting",
           "heading": false
         },
         {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "health systems",
+          "heading": false
+        },
+        {
           "term": "asks",
-          "heading": false
-        },
-        {
-          "term": "ideal",
-          "heading": false
-        },
-        {
-          "term": "occurs",
-          "heading": false
-        },
-        {
-          "term": "ask",
-          "heading": false
-        },
-        {
-          "term": "conditions",
           "heading": false
         }
       ],
@@ -3505,18 +3736,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 517,
-      "summary": null,
+      "summary": {
+        "text": "Box 4.2 outlining Curran et al.'s Type 1, Type 2, and Type 3 hybrid effectiveness–implementation trial designs, an introduction to formative versus summative evaluations, and a Key Terms glossary defining 'Implementation research', 'Formative evaluations', 'Summative evaluations', 'Experimental studies', 'Randomized controlled trial (RCT)', 'Observational studies', and 'Hierarchy of study designs'.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "summative evaluations",
-          "heading": false
-        },
-        {
-          "term": "type tests",
-          "heading": false
-        },
-        {
-          "term": "study designs",
           "heading": false
         },
         {
@@ -3524,11 +3750,15 @@
           "heading": false
         },
         {
-          "term": "randomized controlled",
+          "term": "study designs",
           "heading": false
         },
         {
-          "term": "studies",
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "implementation research",
           "heading": false
         },
         {
@@ -3536,7 +3766,11 @@
           "heading": false
         },
         {
-          "term": "hybrid",
+          "term": "type tests",
+          "heading": false
+        },
+        {
+          "term": "key outcomes",
           "heading": false
         }
       ],
@@ -3553,7 +3787,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 571,
-      "summary": null,
+      "summary": {
+        "text": "Overview of formative evaluations (needs assessments and process/implementation evaluations) and summative evaluations (outcome and impact evaluations), accompanied by Table 4.1 ('Formative versus summative evaluations') comparing objectives and illustrative questions across needs assessment, process evaluation, implementation evaluation, performance/outcome evaluation, impact evaluation, economic evaluation, secondary analysis, and meta-analysis.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "summative evaluations",
@@ -3564,15 +3801,11 @@
           "heading": false
         },
         {
-          "term": "impact evaluations",
-          "heading": false
-        },
-        {
           "term": "process evaluations",
           "heading": false
         },
         {
-          "term": "intermediate changes",
+          "term": "impact evaluations",
           "heading": false
         },
         {
@@ -3584,7 +3817,11 @@
           "heading": false
         },
         {
-          "term": "disease risk",
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "key outcomes",
           "heading": false
         }
       ],
@@ -3601,14 +3838,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 577,
-      "summary": null,
+      "summary": {
+        "text": "Table 4.2 ('Types of study designs') in Chapter 4 Part 4a, comparing descriptions, advantages, and limitations across Analytic Experimental designs (individually and cluster randomized controlled trials, quasi-experimental studies), Analytic Observational designs (cohort, cross-sectional, case–control), and Descriptive designs (surveillance, cross-sectional surveys, ecological correlational studies, case reports, and case-series reports).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "less expensive",
+          "term": "spur subsequent",
           "heading": false
         },
         {
-          "term": "spur subsequent",
+          "term": "random assignment",
+          "heading": false
+        },
+        {
+          "term": "less expensive",
           "heading": false
         },
         {
@@ -3620,11 +3864,7 @@
           "heading": false
         },
         {
-          "term": "random assignment",
-          "heading": false
-        },
-        {
-          "term": "sample size",
+          "term": "time point",
           "heading": false
         },
         {
@@ -3632,7 +3872,7 @@
           "heading": false
         },
         {
-          "term": "medical literature",
+          "term": "single time",
           "heading": false
         }
       ],
@@ -3649,7 +3889,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 606,
-      "summary": null,
+      "summary": {
+        "text": "Discussion of descriptive and analytic study designs in Chapter 4 Part 4a, including Table 4.3 ('Qualitative research – study designs' covering case study, grounded theory, phenomenology, ethnography, and historical designs) and an explanation of experimental studies and randomized controlled trials (individual and cluster randomization).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "descriptive studies",
@@ -3672,15 +3915,15 @@
           "heading": false
         },
         {
-          "term": "control group",
-          "heading": false
-        },
-        {
           "term": "rct",
           "heading": false
         },
         {
-          "term": "concerned",
+          "term": "control group",
+          "heading": false
+        },
+        {
+          "term": "phenomena",
           "heading": false
         }
       ],
@@ -3697,22 +3940,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 142,
-      "summary": null,
+      "summary": {
+        "text": "Figure 4.1 ('Classes of descriptive and analytic study design', adapted from Brown & Lilford, 2006 and Grimes & Schulz, 2002), providing a taxonomy tree of descriptive studies (surveillance, ecological correlational, cross-sectional, case/case-series, and qualitative designs) and analytic studies (experimental RCTs and quasi-experimental designs, and observational cohort, cross-sectional, and case–control designs).",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "regression",
-          "heading": false
-        },
         {
           "term": "pretest",
           "heading": false
         },
         {
-          "term": "randomized",
+          "term": "regression",
           "heading": false
         },
         {
           "term": "analytic",
+          "heading": false
+        },
+        {
+          "term": "descriptive",
           "heading": false
         }
       ],
@@ -3729,12 +3975,11 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 345,
-      "summary": null,
+      "summary": {
+        "text": "Table 4.4 ('Hierarchy of evidence by stage of evaluation'), ranking study designs by confidence in the strength of evidence (Excellent, Good, Fair, Poor) across Feasibility/Usability, Efficacy, Effectiveness, and Implementation Science stages, alongside Figure 4.2 illustrating a stepped-wedge study design across participant clusters and time periods.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "studies interrupted",
-          "heading": false
-        },
         {
           "term": "studies case-series",
           "heading": false
@@ -3744,23 +3989,27 @@
           "heading": false
         },
         {
-          "term": "cross-sectional studies",
-          "heading": false
-        },
-        {
           "term": "ecological studies",
           "heading": false
         },
         {
-          "term": "studies cohort",
+          "term": "editorials expert",
+          "heading": false
+        },
+        {
+          "term": "opinion editorials",
+          "heading": false
+        },
+        {
+          "term": "studies interrupted",
+          "heading": false
+        },
+        {
+          "term": "case-series report",
           "heading": false
         },
         {
           "term": "descriptive studies",
-          "heading": false
-        },
-        {
-          "term": "studies surveillance",
           "heading": false
         }
       ],
@@ -3777,8 +4026,15 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 765,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Chapter 4 Part 4a discussing complex RCT designs (stepped-wedge advantages, contamination risks, and analytical complexity), quasi-experimental designs, observational study types (cohort, case–control, cross-sectional), hierarchies of study designs, and the start of 'Linking inferences with study designs and methods'.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "study designs",
+          "heading": false
+        },
         {
           "term": "cross-sectional studies",
           "heading": false
@@ -3788,15 +4044,15 @@
           "heading": false
         },
         {
-          "term": "cohort studies",
-          "heading": false
-        },
-        {
-          "term": "study designs",
-          "heading": false
-        },
-        {
           "term": "stepped wedge",
+          "heading": false
+        },
+        {
+          "term": "quasi experimental",
+          "heading": false
+        },
+        {
+          "term": "cohort studies",
           "heading": false
         },
         {
@@ -3804,11 +4060,7 @@
           "heading": false
         },
         {
-          "term": "study period",
-          "heading": false
-        },
-        {
-          "term": "quasi experimental",
+          "term": "random assignment",
           "heading": false
         }
       ],
@@ -3825,7 +4077,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 471,
-      "summary": null,
+      "summary": {
+        "text": "Guidance in Chapter 4 Part 4a on linking research questions and study designs to strength of inference, featuring Figure 4.3 ('Types of inference/study design': Descriptive, Exploratory, Analytic, Explanatory, and Predictive) and defining Habicht et al.'s three analytic inference levels: adequacy, plausibility, and probability.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "analytic studies",
@@ -3836,11 +4091,11 @@
           "heading": false
         },
         {
-          "term": "research methods",
+          "term": "inference",
           "heading": false
         },
         {
-          "term": "inference",
+          "term": "research methods",
           "heading": false
         },
         {
@@ -3848,7 +4103,7 @@
           "heading": false
         },
         {
-          "term": "predictive",
+          "term": "research questions",
           "heading": false
         },
         {
@@ -3856,7 +4111,7 @@
           "heading": false
         },
         {
-          "term": "research questions",
+          "term": "explanatory",
           "heading": false
         }
       ],
@@ -3873,14 +4128,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 394,
-      "summary": null,
+      "summary": {
+        "text": "Table 4.5 ('Linking inferences with study designs and methods', first part), mapping Descriptive, Exploratory, and Analytic (Adequacy, Plausibility, and Probability) inference types to their descriptions, research questions, limitations, study designs, and qualitative, quantitative, and mixed research methods.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "cross-sectional surveys",
+          "term": "surveys ecological",
           "heading": false
         },
         {
-          "term": "surveys ecological",
+          "term": "cross-sectional surveys",
           "heading": false
         },
         {
@@ -3888,11 +4146,15 @@
           "heading": false
         },
         {
+          "term": "longitudinal surveys",
+          "heading": false
+        },
+        {
           "term": "ecological studies",
           "heading": false
         },
         {
-          "term": "longitudinal surveys",
+          "term": "case-series reports",
           "heading": false
         },
         {
@@ -3900,11 +4162,7 @@
           "heading": false
         },
         {
-          "term": "experimental studies",
-          "heading": false
-        },
-        {
-          "term": "observational studies",
+          "term": "quasi experimental",
           "heading": false
         }
       ],
@@ -3921,14 +4179,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 291,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of Table 4.5 covering Explanatory and Predictive study inferences (descriptions, research questions, limitations, study designs, and quantitative/qualitative/mixed methods such as agent-based and econometric modelling, scenario-building, and Delphi techniques) and summary guidance on selecting analytic and explanatory inferences for digital health evaluations.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "qualitative methods",
-          "heading": false
-        },
-        {
-          "term": "explanatory",
           "heading": false
         },
         {
@@ -3940,19 +4197,23 @@
           "heading": false
         },
         {
+          "term": "explanatory",
+          "heading": false
+        },
+        {
           "term": "inferences",
           "heading": false
         },
         {
-          "term": "predictive",
-          "heading": false
-        },
-        {
-          "term": "modelling",
+          "term": "secondary data",
           "heading": false
         },
         {
           "term": "quantitative",
+          "heading": false
+        },
+        {
+          "term": "modelling",
           "heading": false
         }
       ],
@@ -3969,14 +4230,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 511,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to Chapter 4, Part 4b ('Evaluation methods'), summarizing qualitative, quantitative, mixed-methods, and financial/economic evaluation approaches, with a 'Further Reading' box (WHO evaluation practice handbook and World Bank Impact evaluation in practice), a Key Terms box (FGDs, IDIs, structured observations, and participatory action research), and the start of the Qualitative methods section.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "qualitative methods",
+          "term": "qualitative research",
           "heading": false
         },
         {
-          "term": "qualitative research",
+          "term": "qualitative methods",
           "heading": false
         },
         {
@@ -3996,11 +4260,11 @@
           "heading": false
         },
         {
-          "term": "opinions",
+          "term": "impact evaluation",
           "heading": false
         },
         {
-          "term": "mixed-methods",
+          "term": "opinions",
           "heading": false
         }
       ],
@@ -4017,7 +4281,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 594,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Qualitative methods in Chapter 4 Part 4b, contrasting open-ended qualitative guides with closed-ended quantitative questionnaires and detailing structured observations—including vaccination clinic and CHW shadowing examples and step-by-step procedures before, during, and after observation.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "conducting observation",
@@ -4032,15 +4299,15 @@
           "heading": false
         },
         {
-          "term": "qualitative methods",
-          "heading": false
-        },
-        {
           "term": "objective notes",
           "heading": false
         },
         {
           "term": "research question",
+          "heading": false
+        },
+        {
+          "term": "qualitative methods",
           "heading": false
         },
         {
@@ -4065,18 +4332,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 684,
-      "summary": null,
+      "summary": {
+        "text": "Advantages and disadvantages of structured observations (including Box 4.3 comparing subjective versus objective note-taking at a vaccination clinic) and detailed guidance on conducting in-depth interviews (IDIs), covering use cases with policy experts and patients on sensitive topics, persona development, interview guides, audio recording, and field notes.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "shorthand notes",
           "heading": false
         },
         {
-          "term": "during observation",
+          "term": "idis",
           "heading": false
         },
         {
-          "term": "idis",
+          "term": "during observation",
           "heading": false
         },
         {
@@ -4088,15 +4358,15 @@
           "heading": false
         },
         {
+          "term": "fgds",
+          "heading": false
+        },
+        {
           "term": "subjective",
           "heading": false
         },
         {
           "term": "vaccination clinic",
-          "heading": false
-        },
-        {
-          "term": "fgds",
           "heading": false
         }
       ],
@@ -4113,12 +4383,11 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 610,
-      "summary": null,
+      "summary": {
+        "text": "Strengths and limitations of IDIs, detailed guidance on conducting focus group discussions (FGDs)—including group composition, moderator and note-taker roles, and Box 4.4 ('Example FGD questions for community health workers using a digital health system')—and the start of sampling strategies for qualitative methods (purposive and snowball sampling).",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "adolescent girls",
-          "heading": false
-        },
         {
           "term": "fgds",
           "heading": false
@@ -4132,11 +4401,7 @@
           "heading": false
         },
         {
-          "term": "participants",
-          "heading": false
-        },
-        {
-          "term": "group discussions",
+          "term": "adolescent girls",
           "heading": false
         },
         {
@@ -4144,7 +4409,15 @@
           "heading": false
         },
         {
-          "term": "pregnant women",
+          "term": "group discussions",
+          "heading": false
+        },
+        {
+          "term": "moderator",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         }
       ],
@@ -4161,7 +4434,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 717,
-      "summary": null,
+      "summary": {
+        "text": "Completion of qualitative research methods in Chapter 4 Part 4b—covering purposive and snowball sampling, transcription and field notes, CAQDAS tools (Atlas.ti, QSR-Nvivo, MAXQDA, HyperRESEARCH), and deductive versus inductive analysis—followed by the introduction to Quantitative methods and single-question Polls (via SMS, IVR, USSD, or web).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "purposive sampling",
@@ -4176,7 +4452,7 @@
           "heading": false
         },
         {
-          "term": "quantitative methods",
+          "term": "polls",
           "heading": false
         },
         {
@@ -4184,7 +4460,7 @@
           "heading": false
         },
         {
-          "term": "polls",
+          "term": "quantitative methods",
           "heading": false
         },
         {
@@ -4192,7 +4468,7 @@
           "heading": false
         },
         {
-          "term": "research question",
+          "term": "qualitative data",
           "heading": false
         }
       ],
@@ -4209,7 +4485,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 596,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of Polls and detailed guidance on Surveys in Chapter 4 Part 4b, listing the seven steps for planning and conducting a survey and presenting Table 4.6 ('Reasons for conducting surveys with community-based clients and health-care providers').",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "conducting surveys",
@@ -4220,7 +4499,11 @@
           "heading": false
         },
         {
-          "term": "community-based clients",
+          "term": "collect data",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
@@ -4228,19 +4511,15 @@
           "heading": false
         },
         {
+          "term": "community-based clients",
+          "heading": false
+        },
+        {
           "term": "polls",
           "heading": false
         },
         {
-          "term": "assess satisfaction",
-          "heading": false
-        },
-        {
-          "term": "text message",
-          "heading": false
-        },
-        {
-          "term": "bednet",
+          "term": "health intervention",
           "heading": false
         }
       ],
@@ -4257,7 +4536,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 483,
-      "summary": null,
+      "summary": {
+        "text": "Survey administration modes, sample size considerations, and start of sampling for survey data collection in Chapter 4 Part 4b, featuring Box 4.5 ('Examples of digital data collection platforms that can be deployed on mobile devices': CommCare, Magpi, Medic Mobile, ONA, OpenDataKit, RapidPro, and TextIT) and Box 4.6 ('Factors influencing sample size').",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "probability sampling",
@@ -4276,15 +4558,15 @@
           "heading": false
         },
         {
-          "term": "factors influencing",
-          "heading": false
-        },
-        {
           "term": "collection platforms",
           "heading": false
         },
         {
-          "term": "surveys",
+          "term": "survey data",
+          "heading": false
+        },
+        {
+          "term": "factors influencing",
           "heading": false
         },
         {
@@ -4305,7 +4587,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 547,
-      "summary": null,
+      "summary": {
+        "text": "Classification of probability sampling methods (simple random, systematic random, stratified random, cluster random, and multi-stage sampling) and non-probability sampling methods (convenience, purposive, and snowball sampling), overview of quantitative data analysis and statistical software (Excel, STATA, SAS, SPSS), and the first part of Table 4.7 comparing qualitative and quantitative approaches.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "random sampling",
@@ -4328,15 +4613,15 @@
           "heading": false
         },
         {
-          "term": "systematic random",
-          "heading": false
-        },
-        {
           "term": "selected clusters",
           "heading": false
         },
         {
-          "term": "quantitative",
+          "term": "systematic random",
+          "heading": false
+        },
+        {
+          "term": "quantitative data",
           "heading": false
         }
       ],
@@ -4353,14 +4638,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 568,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of Table 4.7 ('A comparison of qualitative and quantitative approaches' across data types, analysis purposes, sample sizes, and sampling techniques) and detailed guidance on Mixed-methods approaches in Chapter 4 Part 4b, including digital health examples, triangulation advantages, design challenges, and Box 4.7 ('Checklist for the reporting of mixed-methods studies').",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "mixed-methods approaches",
-          "heading": false
-        },
-        {
-          "term": "mixed-methods studies",
           "heading": false
         },
         {
@@ -4368,7 +4652,19 @@
           "heading": false
         },
         {
+          "term": "mixed-methods studies",
+          "heading": false
+        },
+        {
           "term": "sampling approaches",
+          "heading": false
+        },
+        {
+          "term": "quantitative data",
+          "heading": false
+        },
+        {
+          "term": "numeric data",
           "heading": false
         },
         {
@@ -4376,15 +4672,7 @@
           "heading": false
         },
         {
-          "term": "sample size",
-          "heading": false
-        },
-        {
-          "term": "quantitative",
-          "heading": false
-        },
-        {
-          "term": "qualitative",
+          "term": "data collection",
           "heading": false
         }
       ],
@@ -4401,14 +4689,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 674,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to economic and financial evaluations in Chapter 4 Part 4b, distinguishing financial evaluations (budget impact analysis and sustainable financing plans) from economic evaluations (cost–effectiveness analysis [CEA], cost–utility analysis [CUA] using QALYs and DALYs, cost–benefit analysis [CBA] using willingness-to-pay techniques, cost–consequence analysis [CCA], and cost-minimization analysis [CMA]).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "economic evaluations",
-          "heading": false
-        },
-        {
-          "term": "monetary values",
           "heading": false
         },
         {
@@ -4416,11 +4703,7 @@
           "heading": false
         },
         {
-          "term": "market values",
-          "heading": false
-        },
-        {
-          "term": "utility analysis",
+          "term": "monetary values",
           "heading": false
         },
         {
@@ -4428,11 +4711,19 @@
           "heading": false
         },
         {
-          "term": "dalys",
+          "term": "utility analysis",
           "heading": false
         },
         {
-          "term": "qalys",
+          "term": "cost effectiveness",
+          "heading": false
+        },
+        {
+          "term": "cba",
+          "heading": false
+        },
+        {
+          "term": "market values",
           "heading": false
         }
       ],
@@ -4449,18 +4740,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 498,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of the cost–benefit analysis (CBA) discussion (including the eHealth Impact [eHI] methodology) and Table 4.8 ('Types of economic evaluation for digital health'), comparing CEA, CUA, CBA, CCA, and CMA across definition, costs, consequences, and illustrative digital health evaluation questions.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "monetary units",
-          "heading": false
-        },
-        {
-          "term": "natural units",
-          "heading": false
-        },
-        {
-          "term": "lives saved",
           "heading": false
         },
         {
@@ -4468,7 +4754,19 @@
           "heading": false
         },
         {
-          "term": "healthy years",
+          "term": "natural units",
+          "heading": false
+        },
+        {
+          "term": "sending messages",
+          "heading": false
+        },
+        {
+          "term": "sms reminders",
+          "heading": false
+        },
+        {
+          "term": "lives saved",
           "heading": false
         },
         {
@@ -4477,10 +4775,6 @@
         },
         {
           "term": "life years",
-          "heading": false
-        },
-        {
-          "term": "sending messages",
           "heading": false
         }
       ],
@@ -4497,14 +4791,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 635,
-      "summary": null,
+      "summary": {
+        "text": "Start of Chapter 4 Part 4c ('Which evaluation activities are right for you?'), covering maturity-guided evaluation selection, predictive modelling at scale (such as the OneHealth tool), Table 4.9 ('Linking stages of maturity with evaluation methods and claims' across Early, Mid, and Advanced stages), formative versus summative evaluations, and defining study inferences.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "evaluation activities",
           "heading": false
         },
         {
-          "term": "external entity",
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
@@ -4512,23 +4813,19 @@
           "heading": false
         },
         {
+          "term": "external entity",
+          "heading": false
+        },
+        {
           "term": "inferences",
           "heading": false
         },
         {
-          "term": "stage",
+          "term": "health system",
           "heading": false
         },
         {
-          "term": "sustained programme",
-          "heading": false
-        },
-        {
-          "term": "formative",
-          "heading": false
-        },
-        {
-          "term": "summative",
+          "term": "technical stability",
           "heading": false
         }
       ],
@@ -4545,10 +4842,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 580,
-      "summary": null,
+      "summary": {
+        "text": "Guidance in Chapter 4 Part 4c on prioritizing research inferences (adequacy, plausibility, and probability), selecting study designs (RCTs, quasi-experimental, observational, and effectiveness–implementation hybrid designs), choosing evaluation methods, and the first part of Table 4.10 ('Illustrative evaluation activities by type and stage of evaluation') covering formative needs assessment, process evaluation, and implementation monitoring for feasibility/usability, efficacy, and effectiveness stages.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "system-generated monitoring",
+          "heading": false
+        },
+        {
           "term": "mixed methods",
+          "heading": false
+        },
+        {
+          "term": "qualitative data",
           "heading": false
         },
         {
@@ -4556,11 +4864,7 @@
           "heading": false
         },
         {
-          "term": "system-generated monitoring",
-          "heading": false
-        },
-        {
-          "term": "quantitative",
+          "term": "idis",
           "heading": false
         },
         {
@@ -4568,15 +4872,11 @@
           "heading": false
         },
         {
-          "term": "idis",
-          "heading": false
-        },
-        {
-          "term": "qualitative",
-          "heading": false
-        },
-        {
           "term": "fgds",
+          "heading": false
+        },
+        {
+          "term": "quantitative",
           "heading": false
         }
       ],
@@ -4593,14 +4893,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 312,
-      "summary": null,
+      "summary": {
+        "text": "Continuation and conclusion of Table 4.10 ('Illustrative evaluation activities by type and stage of evaluation'), covering formative evaluation activities for implementation science and summative evaluation activities (outcome evaluation, impact evaluation, economic evaluation, and financial evaluation) across feasibility/usability, efficacy, effectiveness, and implementation science stages.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "verbal autopsies",
+          "heading": false
+        },
         {
           "term": "mixed methods",
           "heading": false
         },
         {
-          "term": "longitudinal surveys",
+          "term": "qualitative data",
+          "heading": false
+        },
+        {
+          "term": "idis",
           "heading": false
         },
         {
@@ -4612,19 +4923,11 @@
           "heading": false
         },
         {
-          "term": "quantitative",
-          "heading": false
-        },
-        {
-          "term": "idis",
+          "term": "coverage surveys",
           "heading": false
         },
         {
           "term": "fgds",
-          "heading": false
-        },
-        {
-          "term": "qualitative",
           "heading": false
         }
       ],
@@ -4641,18 +4944,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 427,
-      "summary": null,
+      "summary": {
+        "text": "First page of the Further Reading ('Relevant resources for evaluation') list for Chapter 4, citing methodological references for study designs (stepped-wedge and quasi-experimental designs), qualitative methods, quantitative survey methods, and mixed-methods integration.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "qualitative methods",
-          "heading": false
-        },
         {
           "term": "accessed april",
           "heading": false
         },
         {
-          "term": "mixed methods",
+          "term": "qualitative methods",
           "heading": false
         },
         {
@@ -4660,11 +4962,11 @@
           "heading": false
         },
         {
-          "term": "quantitative methods",
+          "term": "mixed methods",
           "heading": false
         },
         {
-          "term": "study designs",
+          "term": "quantitative methods",
           "heading": false
         },
         {
@@ -4672,7 +4974,11 @@
           "heading": false
         },
         {
-          "term": "doi",
+          "term": "study designs",
+          "heading": false
+        },
+        {
+          "term": "nurs",
           "heading": false
         }
       ],
@@ -4689,7 +4995,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 477,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of the Chapter 4 Further Reading list (mixed methods and participatory action research [PAR]) and the first part of the Chapter 4 References list (items 1–15).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "participatory research",
@@ -4704,11 +5013,11 @@
           "heading": false
         },
         {
-          "term": "oxford university",
+          "term": "accessed april",
           "heading": false
         },
         {
-          "term": "accessed april",
+          "term": "oxford university",
           "heading": false
         },
         {
@@ -4716,11 +5025,11 @@
           "heading": false
         },
         {
-          "term": "agyepong",
+          "term": "implementation research",
           "heading": false
         },
         {
-          "term": "med",
+          "term": "agyepong",
           "heading": false
         }
       ],
@@ -4737,7 +5046,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 488,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the Chapter 4 References list (items 16–34), covering qualitative, quantitative, observational, quasi-experimental, implementation research, and community-based participatory research methodologies.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "qualitative research",
@@ -4748,11 +5060,15 @@
           "heading": false
         },
         {
+          "term": "research methods",
+          "heading": false
+        },
+        {
           "term": "qualitative versus",
           "heading": false
         },
         {
-          "term": "research methods",
+          "term": "research design",
           "heading": false
         },
         {
@@ -4761,10 +5077,6 @@
         },
         {
           "term": "johns hopkins",
-          "heading": false
-        },
-        {
-          "term": "research design",
           "heading": false
         },
         {
@@ -4785,18 +5097,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 454,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of the Chapter 4 References list (items 35–53), covering participatory action research, qualitative data analysis, questionnaire design, sample size calculation, health policy and systems research, budget impact analysis, economic evaluation (CEA, CUA, CBA, eHealth Impact), and the WHO OneHealth Tool.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "green book",
-          "heading": false
-        },
         {
           "term": "community nurs",
           "heading": false
         },
         {
-          "term": "united kingdom",
+          "term": "green book",
           "heading": false
         },
         {
@@ -4804,19 +5115,23 @@
           "heading": false
         },
         {
-          "term": "impact analysis",
-          "heading": false
-        },
-        {
           "term": "budget impact",
           "heading": false
         },
         {
-          "term": "treasury",
+          "term": "united kingdom",
+          "heading": false
+        },
+        {
+          "term": "impact analysis",
           "heading": false
         },
         {
           "term": "dent",
+          "heading": false
+        },
+        {
+          "term": "treasury",
           "heading": false
         }
       ],
@@ -4833,7 +5148,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 59,
-      "summary": null,
+      "summary": {
+        "text": "Section divider title page for Chapter 5: 'Assessing data sources and quality for M&E'.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "96 M O N I T O R I N G A N D E V A L U A T I N G D I G I T A L H E A L T H I N T E R V E N T I O N S Chapter 5: Assessing data sources and quality for M&E",
       "extractCut": false
@@ -4848,14 +5166,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 361,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 5 opening overview ('How will this chapter help me?' and 'Why assess your digital data?'), introducing data quality assessment to align intervention data streams with programme claims, map health-system data flows, and strengthen data collection, storage, analytics, management, and use.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "claims",
+          "term": "data collection",
           "heading": false
         },
         {
-          "term": "right",
+          "term": "data quality",
+          "heading": false
+        },
+        {
+          "term": "digital data",
+          "heading": false
+        },
+        {
+          "term": "claims",
           "heading": false
         },
         {
@@ -4863,23 +5192,15 @@
           "heading": false
         },
         {
-          "term": "assessing",
+          "term": "right",
           "heading": false
         },
         {
-          "term": "collection",
+          "term": "steps",
           "heading": false
         },
         {
-          "term": "quality",
-          "heading": false
-        },
-        {
-          "term": "intended",
-          "heading": false
-        },
-        {
-          "term": "ability",
+          "term": "goals",
           "heading": false
         }
       ],
@@ -4896,7 +5217,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 466,
-      "summary": null,
+      "summary": {
+        "text": "Start of Chapter 5 Part 5a ('Introducing the data quality assessment approach and how to do it'), outlining the three assessment steps (Step 1: alignment of available data with programme claims; Step 2: data source mapping; Step 3: data management protocol and data quality adapted from the PRISM Framework), Key Terms (Claim and Indicator), and Figure 5.1 ('Key components of the three steps of data quality assessment').",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "intervention claims",
@@ -4907,27 +5231,27 @@
           "heading": false
         },
         {
-          "term": "quality assessment",
+          "term": "data sources",
           "heading": false
         },
         {
-          "term": "illustration",
+          "term": "data quality",
           "heading": false
         },
         {
-          "term": "step",
+          "term": "data collection",
+          "heading": false
+        },
+        {
+          "term": "available data",
+          "heading": false
+        },
+        {
+          "term": "data management",
           "heading": false
         },
         {
           "term": "key components",
-          "heading": false
-        },
-        {
-          "term": "sources",
-          "heading": false
-        },
-        {
-          "term": "summary",
           "heading": false
         }
       ],
@@ -4944,8 +5268,19 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 312,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of Chapter 5 Part 5a, providing practical guidance on conducting the three-hour data quality assessment internally with an M&E lead or externally with a consultant, engaging stakeholders across Steps 2 and 3, acting on summary recommendations, and repeating assessments annually.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "data processes",
+          "heading": false
+        },
+        {
+          "term": "data quality",
+          "heading": false
+        },
         {
           "term": "quality assessment",
           "heading": false
@@ -4955,11 +5290,7 @@
           "heading": false
         },
         {
-          "term": "expertise",
-          "heading": false
-        },
-        {
-          "term": "discuss",
+          "term": "intervention",
           "heading": false
         },
         {
@@ -4967,15 +5298,11 @@
           "heading": false
         },
         {
-          "term": "benefit",
+          "term": "expertise",
           "heading": false
         },
         {
-          "term": "leadership",
-          "heading": false
-        },
-        {
-          "term": "intervention",
+          "term": "discuss",
           "heading": false
         }
       ],
@@ -4992,7 +5319,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 423,
-      "summary": null,
+      "summary": {
+        "text": "Start of Chapter 5 Part 5b ('Data quality assessment worksheet and instructions'), presenting the printable worksheet header, Step 1 ('Assessment of alignment of available data with programme claims'), Step 1.i ('Identification of the intervention's claims' worksheet table), and the start of Step 1.ii ('Indicators' instructions for numerators, denominators, time frames, and WHO/UN standard indicator alignment).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "intervention claims",
@@ -5003,15 +5333,19 @@
           "heading": false
         },
         {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
           "term": "please refer",
           "heading": false
         },
         {
-          "term": "instructions",
+          "term": "anc",
           "heading": false
         },
         {
-          "term": "numerator",
+          "term": "digital health",
           "heading": false
         },
         {
@@ -5019,11 +5353,7 @@
           "heading": false
         },
         {
-          "term": "indicators",
-          "heading": false
-        },
-        {
-          "term": "anc",
+          "term": "instructions",
           "heading": false
         }
       ],
@@ -5040,38 +5370,41 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 579,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Chapter 5 Part 5b Step 1.ii ('Indicators' worksheet table for claims, numerators, denominators, and time frames) and instructions for Step 1.iii ('Data sources'), covering system-generated/metadata versus survey data, paper versus digital formats, collection frequency, comparison groups, and indicator mapping.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "system-generated data",
+          "heading": false
+        },
+        {
+          "term": "data source",
+          "heading": false
+        },
+        {
+          "term": "data refers",
+          "heading": false
+        },
+        {
+          "term": "digital data",
+          "heading": false
+        },
+        {
+          "term": "survey data",
+          "heading": false
+        },
         {
           "term": "time frame",
           "heading": false
         },
         {
-          "term": "comparison group",
+          "term": "digital format",
           "heading": false
         },
         {
-          "term": "system-generated",
-          "heading": false
-        },
-        {
-          "term": "magnitude",
-          "heading": false
-        },
-        {
-          "term": "indicate",
-          "heading": false
-        },
-        {
-          "term": "collected",
-          "heading": false
-        },
-        {
-          "term": "routine operations",
-          "heading": false
-        },
-        {
-          "term": "denominator",
+          "term": "datum",
           "heading": false
         }
       ],
@@ -5088,8 +5421,19 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 294,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Chapter 5 Part 5b, presenting the Step 1.iii data sources worksheet table (with illustrative examples for a women's household survey and district health-care facility records) and Step 1.iv ('Alignment of indicators with data sources' instructions and summary table checking numerator and denominator availability per claim).",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "survey data",
+          "heading": false
+        },
+        {
+          "term": "data available",
+          "heading": false
+        },
         {
           "term": "claims",
           "heading": false
@@ -5099,23 +5443,15 @@
           "heading": false
         },
         {
-          "term": "numerator",
-          "heading": false
-        },
-        {
-          "term": "survey",
-          "heading": false
-        },
-        {
-          "term": "denominator",
-          "heading": false
-        },
-        {
           "term": "indicators",
           "heading": false
         },
         {
-          "term": "iii",
+          "term": "numerator",
+          "heading": false
+        },
+        {
+          "term": "denominator",
           "heading": false
         }
       ],
@@ -5132,14 +5468,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 539,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Chapter 5 Part 5b, covering 'Summary of recommendations – Step 1' (actions when sufficient data are or are not available to support claims) and instructions for Step 2 ('Data mapping': Step 2.i on understanding data collection, collation, analysis, and decision-making use, and Step 2.ii on charting stakeholder data flows across health system levels).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "chart relevant",
           "heading": false
         },
         {
-          "term": "generate recommendations",
+          "term": "data collection",
           "heading": false
         },
         {
@@ -5147,23 +5486,23 @@
           "heading": false
         },
         {
+          "term": "sufficient data",
+          "heading": false
+        },
+        {
+          "term": "generate recommendations",
+          "heading": false
+        },
+        {
           "term": "health-care facilities",
           "heading": false
         },
         {
-          "term": "deficiencies",
+          "term": "step",
           "heading": false
         },
         {
           "term": "illustrate",
-          "heading": false
-        },
-        {
-          "term": "column",
-          "heading": false
-        },
-        {
-          "term": "row",
           "heading": false
         }
       ],
@@ -5180,10 +5519,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 285,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Chapter 5 Part 5b Step 2, presenting the stakeholder data flow mapping grid (across Research worker, Client-generated, Front-line health worker, Private clinic, NGO, Government facility, District, Regional, and National levels for Data collection, Compilation, Storage, Analysis, Reporting, and Use) and 'Summary of recommendations – Step 2' guiding questions.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "disaggregation",
+          "term": "data collection",
+          "heading": false
+        },
+        {
+          "term": "health system",
           "heading": false
         },
         {
@@ -5195,19 +5541,15 @@
           "heading": false
         },
         {
-          "term": "frequency",
-          "heading": false
-        },
-        {
-          "term": "recommended",
-          "heading": false
-        },
-        {
-          "term": "recommendations",
+          "term": "map",
           "heading": false
         },
         {
           "term": "changes",
+          "heading": false
+        },
+        {
+          "term": "disaggregation",
           "heading": false
         }
       ],
@@ -5224,10 +5566,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 533,
-      "summary": null,
+      "summary": {
+        "text": "Start of Chapter 5 Part 5b Step 3 ('Assessment of data management protocols and data quality' checklist), covering Step 3.i Data collection (Item 1: Data elements and identifiers; Item 2: Data collection using paper forms), Step 3.ii Data storage (Item 3: Data transmission; Item 4: Data security), and the first part of Step 3.iii Data analytics and dashboards (Item 5: Data dashboard items 5.1–5.5).",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "data dashboard",
+          "heading": false
+        },
+        {
+          "term": "data elements",
+          "heading": false
+        },
+        {
           "term": "paper forms",
+          "heading": false
+        },
+        {
+          "term": "data collection",
           "heading": false
         },
         {
@@ -5235,7 +5592,7 @@
           "heading": false
         },
         {
-          "term": "identifier",
+          "term": "item",
           "heading": false
         },
         {
@@ -5243,19 +5600,7 @@
           "heading": false
         },
         {
-          "term": "item",
-          "heading": false
-        },
-        {
-          "term": "elements",
-          "heading": false
-        },
-        {
-          "term": "step",
-          "heading": false
-        },
-        {
-          "term": "missing",
+          "term": "identifier",
           "heading": false
         }
       ],
@@ -5272,14 +5617,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 476,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the Chapter 5 Part 5b Step 3 checklist, completing Step 3.iii Data analytics and dashboards (items 5.6–5.8 on data entry/access frequency and visual outputs), Step 3.iv Data management (Item 6: Staff training; Item 7: Supervision; Item 8: Data documentation), and Step 3.v Data use (Item 9: Regularity of meetings and review of meeting records).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "staff members",
+          "term": "data collection",
           "heading": false
         },
         {
-          "term": "uncertain",
+          "term": "staff members",
           "heading": false
         },
         {
@@ -5295,15 +5643,15 @@
           "heading": false
         },
         {
-          "term": "assigned",
+          "term": "schedule",
           "heading": false
         },
         {
-          "term": "months",
+          "term": "documented",
           "heading": false
         },
         {
-          "term": "collection",
+          "term": "documentation",
           "heading": false
         }
       ],
@@ -5320,10 +5668,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 480,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of Chapter 5 Part 5b ('Summary of recommendations – Step 3'), providing review questions for the M&E team to formulate recommendations across Step 3.i Data collection, Step 3.ii Data storage, Step 3.iii Data analytics/dashboards, Step 3.iv Data management, and Step 3.v Data use.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "paper forms",
+          "term": "data elements",
+          "heading": false
+        },
+        {
+          "term": "data security",
           "heading": false
         },
         {
@@ -5331,27 +5686,23 @@
           "heading": false
         },
         {
+          "term": "data quality",
+          "heading": false
+        },
+        {
+          "term": "data management",
+          "heading": false
+        },
+        {
+          "term": "data collection",
+          "heading": false
+        },
+        {
+          "term": "paper forms",
+          "heading": false
+        },
+        {
           "term": "step",
-          "heading": false
-        },
-        {
-          "term": "checks",
-          "heading": false
-        },
-        {
-          "term": "adequate",
-          "heading": false
-        },
-        {
-          "term": "elements",
-          "heading": false
-        },
-        {
-          "term": "dashboard",
-          "heading": false
-        },
-        {
-          "term": "recommendations",
           "heading": false
         }
       ],
@@ -5368,8 +5719,15 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 441,
-      "summary": null,
+      "summary": {
+        "text": "Start of Chapter 5 Part 5c ('Sample application of data quality assessment'), illustrating Step 1 ('Alignment of available data with programme claims') using the Kenya Medical Research Institute (KEMRI) 'Texting to improve testing' (TextIT) PMTCT/EMTCT retention project, including Step 1.i programme claims and Step 1.ii indicators (numerators N1–N4 and denominators D1–D4).",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "intervention arm",
+          "heading": false
+        },
         {
           "term": "control arm",
           "heading": false
@@ -5379,11 +5737,7 @@
           "heading": false
         },
         {
-          "term": "intervention arm",
-          "heading": false
-        },
-        {
-          "term": "weeks postpartum",
+          "term": "dec",
           "heading": false
         },
         {
@@ -5395,11 +5749,11 @@
           "heading": false
         },
         {
-          "term": "live infants",
+          "term": "weeks postpartum",
           "heading": false
         },
         {
-          "term": "viral testing",
+          "term": "health-care facilities",
           "heading": false
         }
       ],
@@ -5416,10 +5770,29 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 259,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the KEMRI TextIT sample application in Chapter 5 Part 5c, showing completed tables for Step 1.iii ('Data sources': baseline, postpartum-1 mother, and postpartum-2 baby surveys), Step 1.iv ('Alignment of indicators with data sources'), and Step 2.1 ('Current data map' across Mentor mother, KEMRI study team, International donors, and Kenya MOH/NASCOP).",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "baby booklet",
+          "heading": false
+        },
+        {
+          "term": "system-generated data",
+          "heading": false
+        },
+        {
           "term": "mother baby",
+          "heading": false
+        },
+        {
+          "term": "once woman",
+          "heading": false
+        },
+        {
+          "term": "paper digital",
           "heading": false
         },
         {
@@ -5432,22 +5805,6 @@
         },
         {
           "term": "abstracted",
-          "heading": false
-        },
-        {
-          "term": "once woman",
-          "heading": false
-        },
-        {
-          "term": "system-generated",
-          "heading": false
-        },
-        {
-          "term": "odk",
-          "heading": false
-        },
-        {
-          "term": "hei",
           "heading": false
         }
       ],
@@ -5464,7 +5821,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 277,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of Chapter 5 Part 5c and Chapter 5, presenting Step 2.2 ('Map with additional opportunities for data use' adding feedback reporting and care-improvement use for mentor mothers), Further Reading links (K4Health DDIU Information Use Mapping and MEASURE Evaluation PRISM framework tools), and Chapter 5 References (items 1–3).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "accessed march",
@@ -5472,6 +5832,14 @@
         },
         {
           "term": "odk",
+          "heading": false
+        },
+        {
+          "term": "data demand",
+          "heading": false
+        },
+        {
+          "term": "measure evaluation",
           "heading": false
         },
         {
@@ -5483,19 +5851,11 @@
           "heading": false
         },
         {
-          "term": "sti",
+          "term": "moh",
           "heading": false
         },
         {
-          "term": "measure evaluation",
-          "heading": false
-        },
-        {
-          "term": "international development",
-          "heading": false
-        },
-        {
-          "term": "usaid",
+          "term": "mapping",
           "heading": false
         }
       ],
@@ -5512,7 +5872,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 71,
-      "summary": null,
+      "summary": {
+        "text": "Section divider title page for Chapter 6: 'Reporting your findings: the mHealth Evidence Reporting and Assessment (mERA) checklist', with a footnote attributing the checklist to the WHO mHealth Technical Evidence Review Group (mTERG) and Agarwal et al. (2016).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "mera",
@@ -5523,7 +5886,7 @@
           "heading": false
         },
         {
-          "term": "recruited",
+          "term": "assembled",
           "heading": false
         }
       ],
@@ -5540,10 +5903,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 448,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 6 opening overview introducing the purpose and target audiences (manuscript authors, peer-reviewers, and journal editors) of the mHealth Evidence Reporting and Assessment (mERA) checklist, together with the 'How will this section help me?' summary box.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "research findings",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
@@ -5551,11 +5921,7 @@
           "heading": false
         },
         {
-          "term": "encourage",
-          "heading": false
-        },
-        {
-          "term": "studies",
+          "term": "health interventions",
           "heading": false
         },
         {
@@ -5567,11 +5933,11 @@
           "heading": false
         },
         {
-          "term": "journal",
+          "term": "transparent",
           "heading": false
         },
         {
-          "term": "transparent",
+          "term": "encourage",
           "heading": false
         }
       ],
@@ -5588,18 +5954,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 748,
-      "summary": null,
+      "summary": {
+        "text": "Start of Chapter 6 Part 6a ('How to use mERA'), explaining how the 16 core mERA items complement study-design-specific reporting guidelines (CONSORT, STROBE) and the 29 general methodological criteria in Part 6b, followed by the first part of Table 6.1 ('Core mERA criteria', items 1–10: Infrastructure through Adoption inputs/Programme entry).",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "mera criteria",
-          "heading": false
-        },
         {
           "term": "core mera",
           "heading": false
         },
         {
-          "term": "observational studies",
+          "term": "mera criteria",
           "heading": false
         },
         {
@@ -5607,19 +5972,23 @@
           "heading": false
         },
         {
-          "term": "study design",
+          "term": "user feedback",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "intervention among",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
           "term": "checklists",
-          "heading": false
-        },
-        {
-          "term": "criterion",
-          "heading": false
-        },
-        {
-          "term": "user feedback",
           "heading": false
         }
       ],
@@ -5636,14 +6005,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 687,
-      "summary": null,
+      "summary": {
+        "text": "Completion of Table 6.1 ('Core mERA criteria', items 11–16: Limitations for delivery at scale, Contextual adaptability, Replicability, Data security, Compliance with national guidelines or regulatory statutes, and Fidelity of the intervention) and detailed explanations with published reporting examples for Item 1 (Infrastructure) and Item 2 (Technology platform).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "support replicability",
-          "heading": false
-        },
-        {
-          "term": "authors work",
           "heading": false
         },
         {
@@ -5651,23 +6019,27 @@
           "heading": false
         },
         {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "authors work",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
           "term": "coverage rate",
           "heading": false
         },
         {
-          "term": "code",
+          "term": "data security",
           "heading": false
         },
         {
           "term": "replicate",
-          "heading": false
-        },
-        {
-          "term": "explanation",
-          "heading": false
-        },
-        {
-          "term": "modifications",
           "heading": false
         }
       ],
@@ -5684,18 +6056,33 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 606,
-      "summary": null,
+      "summary": {
+        "text": "Detailed explanations and published reporting examples in Chapter 6 Part 6a for mERA core criteria Item 3 (Interoperability/HIS context), Item 4 (Intervention delivery), and Item 5 (Intervention content).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "text message",
           "heading": false
         },
         {
-          "term": "explanation",
+          "term": "health intervention",
           "heading": false
         },
         {
-          "term": "duration",
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "content",
+          "heading": false
+        },
+        {
+          "term": "health information",
+          "heading": false
+        },
+        {
+          "term": "explanation",
           "heading": false
         },
         {
@@ -5704,18 +6091,6 @@
         },
         {
           "term": "item",
-          "heading": false
-        },
-        {
-          "term": "content",
-          "heading": false
-        },
-        {
-          "term": "intervention",
-          "heading": false
-        },
-        {
-          "term": "day",
           "heading": false
         }
       ],
@@ -5732,14 +6107,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 636,
-      "summary": null,
+      "summary": {
+        "text": "Detailed explanations and published reporting examples in Chapter 6 Part 6a for mERA core criteria Item 6 (Usability/content testing), Item 7 (User feedback), and Item 8 (Access of individual participants).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "user feedback",
-          "heading": false
-        },
-        {
-          "term": "weight loss",
           "heading": false
         },
         {
@@ -5747,23 +6121,27 @@
           "heading": false
         },
         {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
           "term": "intervention among",
           "heading": false
         },
         {
-          "term": "among certain",
+          "term": "digital health",
           "heading": false
         },
         {
-          "term": "subgroups",
+          "term": "health system",
           "heading": false
         },
         {
-          "term": "likelihood",
+          "term": "weight loss",
           "heading": false
         },
         {
-          "term": "explanation",
+          "term": "mobile phone",
           "heading": false
         }
       ],
@@ -5780,7 +6158,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 656,
-      "summary": null,
+      "summary": {
+        "text": "Detailed explanations and published reporting examples in Chapter 6 Part 6a for mERA core criteria Item 9 (Cost assessment, referencing the CHEERS statement), Item 10 (Adoption inputs/programme entry), and Item 11 (Limitations for delivery at scale).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "competency assessment",
@@ -5795,23 +6176,23 @@
           "heading": false
         },
         {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "health workers",
+          "heading": false
+        },
+        {
           "term": "pilot studies",
           "heading": false
         },
         {
-          "term": "authors",
+          "term": "item",
           "heading": false
         },
         {
-          "term": "explanation",
-          "heading": false
-        },
-        {
-          "term": "length",
-          "heading": false
-        },
-        {
-          "term": "average",
+          "term": "assessment tools",
           "heading": false
         }
       ],
@@ -5828,14 +6209,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 411,
-      "summary": null,
+      "summary": {
+        "text": "Detailed explanations and published reporting examples in Chapter 6 Part 6a for mERA core criteria Item 12 (Contextual adaptability) and Item 13 (Replicability, illustrated by Figure 6.1 showing mobile phone screenshots of the CommCare-based Mobilize application).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "contextual adaptability",
-          "heading": false
-        },
-        {
-          "term": "replicability",
           "heading": false
         },
         {
@@ -5843,15 +6223,19 @@
           "heading": false
         },
         {
-          "term": "mobilize",
-          "heading": false
-        },
-        {
           "term": "phone based",
           "heading": false
         },
         {
-          "term": "authors",
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "replicability",
+          "heading": false
+        },
+        {
+          "term": "digital health",
           "heading": false
         },
         {
@@ -5859,7 +6243,7 @@
           "heading": false
         },
         {
-          "term": "explanation",
+          "term": "mobilize",
           "heading": false
         }
       ],
@@ -5876,26 +6260,33 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 650,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of Chapter 6 Part 6a, presenting detailed explanations and published reporting examples for mERA core criteria Item 14 (Data security), Item 15 (Compliance with national guidelines or regulatory statutes, including HIPAA and medical device oversight), and Item 16 (Fidelity of the intervention).",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "data security",
+          "heading": false
+        },
+        {
+          "term": "transferred data",
+          "heading": false
+        },
+        {
+          "term": "governing data",
+          "heading": false
+        },
+        {
+          "term": "eager",
+          "heading": false
+        },
         {
           "term": "times day",
           "heading": false
         },
         {
-          "term": "explanation",
-          "heading": false
-        },
-        {
-          "term": "confidentiality",
-          "heading": false
-        },
-        {
-          "term": "transferred",
-          "heading": false
-        },
-        {
-          "term": "encrypted",
+          "term": "health information",
           "heading": false
         },
         {
@@ -5903,11 +6294,7 @@
           "heading": false
         },
         {
-          "term": "national guidelines",
-          "heading": false
-        },
-        {
-          "term": "security",
+          "term": "explanation",
           "heading": false
         }
       ],
@@ -5924,14 +6311,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 598,
-      "summary": null,
+      "summary": {
+        "text": "Start of Chapter 6 Part 6b ('Methodological criteria') and Table 6.2 ('mERA Methodological criteria'), covering Section A ('Essential criteria for all studies') Introduction items 1–3 (Rationale/scientific background, Objectives/hypotheses, Logic model/theoretical framework) and Methods items 4–8 (Study design, Outcomes, Data collection methods, Participant eligibility, and Participant recruitment).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "methodological criteria",
+          "term": "undergone circumcision",
           "heading": false
         },
         {
-          "term": "undergone circumcision",
+          "term": "methodological criteria",
           "heading": false
         },
         {
@@ -5947,15 +6337,15 @@
           "heading": false
         },
         {
+          "term": "logic model",
+          "heading": false
+        },
+        {
+          "term": "mobile phones",
+          "heading": false
+        },
+        {
           "term": "secondary outcome",
-          "heading": false
-        },
-        {
-          "term": "theoretical framework",
-          "heading": false
-        },
-        {
-          "term": "outcome measures",
           "heading": false
         }
       ],
@@ -5972,7 +6362,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 689,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Table 6.2 ('mERA Methodological criteria') Section A in Chapter 6 Part 6b, covering Methods items 9–13 (Bias, Sampling, Setting and locations, Comparator, and Data sources/measurement), Results items 14–16 (Enrolment, Description of study population, and Reporting on outcomes), and Discussion item 17 (Summary of evidence).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "ocp continuation",
@@ -5983,19 +6376,19 @@
           "heading": false
         },
         {
-          "term": "six districts",
-          "heading": false
-        },
-        {
-          "term": "bias",
-          "heading": false
-        },
-        {
           "term": "please note",
           "heading": false
         },
         {
-          "term": "north",
+          "term": "six districts",
+          "heading": false
+        },
+        {
+          "term": "mobile phone",
+          "heading": false
+        },
+        {
+          "term": "geographic area",
           "heading": false
         },
         {
@@ -6003,7 +6396,7 @@
           "heading": false
         },
         {
-          "term": "geographic area",
+          "term": "data sources",
           "heading": false
         }
       ],
@@ -6020,10 +6413,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 561,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of Table 6.2 ('mERA Methodological criteria') in Chapter 6 Part 6b, completing Section A Discussion items 18–20 (Limitations, Generalizability/external validity, Conclusions/interpretation) and Conflicts items 21–23 (Funding, Ethical considerations, Competing interests), and presenting Section B ('Essential criteria by type of study') B.1 Quantitative study items 1–3 (Confounding, Statistical methods, Missing data) and B.2 Qualitative criteria item 1 (Analytical methods).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "analytical methods",
+          "heading": false
+        },
+        {
+          "term": "missing data",
           "heading": false
         },
         {
@@ -6031,19 +6431,7 @@
           "heading": false
         },
         {
-          "term": "missing",
-          "heading": false
-        },
-        {
           "term": "themes",
-          "heading": false
-        },
-        {
-          "term": "continuation",
-          "heading": false
-        },
-        {
-          "term": "contraceptive",
           "heading": false
         },
         {
@@ -6051,7 +6439,15 @@
           "heading": false
         },
         {
-          "term": "ethical",
+          "term": "variables",
+          "heading": false
+        },
+        {
+          "term": "discusses",
+          "heading": false
+        },
+        {
+          "term": "contraceptive",
           "heading": false
         }
       ],
@@ -6068,22 +6464,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 625,
-      "summary": null,
+      "summary": {
+        "text": "Completion of Table 6.2 ('mERA Methodological criteria') Section B.2 Qualitative criteria items 2–3 (Data validation and Reflexivity of account provided) and the first part of the Chapter 6 References list (items 1–11).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "accessed april",
-          "heading": false
-        },
-        {
-          "term": "young people",
-          "heading": false
-        },
-        {
-          "term": "controlled trial",
-          "heading": false
-        },
-        {
-          "term": "randomized controlled",
           "heading": false
         },
         {
@@ -6099,7 +6486,19 @@
           "heading": false
         },
         {
-          "term": "respondent",
+          "term": "gente",
+          "heading": false
+        },
+        {
+          "term": "randomized controlled",
+          "heading": false
+        },
+        {
+          "term": "controlled trial",
+          "heading": false
+        },
+        {
+          "term": "mobile health",
           "heading": false
         }
       ],
@@ -6116,22 +6515,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 584,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the Chapter 6 References list (items 12–27), citing the CHEERS statement and empirical mHealth evaluation studies used as reporting examples across the mERA checklist.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "antiretroviral therapy",
-          "heading": false
-        },
-        {
-          "term": "bmc med",
-          "heading": false
-        },
-        {
-          "term": "controlled trial",
-          "heading": false
-        },
-        {
-          "term": "randomized controlled",
+          "term": "mobile phones",
           "heading": false
         },
         {
@@ -6147,7 +6537,19 @@
           "heading": false
         },
         {
-          "term": "obstet",
+          "term": "bmc med",
+          "heading": false
+        },
+        {
+          "term": "randomized controlled",
+          "heading": false
+        },
+        {
+          "term": "controlled trial",
+          "heading": false
+        },
+        {
+          "term": "workers adherence",
           "heading": false
         }
       ],
@@ -6164,14 +6566,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 390,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of the Chapter 6 References list (items 28–37), citing empirical mHealth studies and foundational reporting guidelines (TREND, STROBE, STARD, CONSORT 2010, COREQ, and SQUIRE).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "bmc med",
-          "heading": false
-        },
-        {
-          "term": "observational studies",
           "heading": false
         },
         {
@@ -6179,23 +6580,27 @@
           "heading": false
         },
         {
+          "term": "observational studies",
+          "heading": false
+        },
+        {
+          "term": "altman",
+          "heading": false
+        },
+        {
+          "term": "health care",
+          "heading": false
+        },
+        {
           "term": "qual",
           "heading": false
         },
         {
-          "term": "randomised",
+          "term": "public health",
           "heading": false
         },
         {
           "term": "statement",
-          "heading": false
-        },
-        {
-          "term": "trial",
-          "heading": false
-        },
-        {
-          "term": "int",
           "heading": false
         }
       ],
@@ -6212,8 +6617,19 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 613,
-      "summary": null,
+      "summary": {
+        "text": "First page of Annex I: Glossary, defining key monitoring, evaluation, and digital health terms from 'Analytic study' through 'Focus group discussions (FGDs)' (including Benchmark, Claim, Codebook, Conceptual framework, Descriptive study, Digital health, Digital health intervention, Effectiveness, Efficacy, Evaluation, Experimental studies, Feasibility, and Fidelity).",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
         {
           "term": "experimental studies",
           "heading": false
@@ -6223,15 +6639,7 @@
           "heading": false
         },
         {
-          "term": "theoretical",
-          "heading": false
-        },
-        {
-          "term": "analytic",
-          "heading": false
-        },
-        {
-          "term": "fgds",
+          "term": "health system",
           "heading": false
         },
         {
@@ -6239,11 +6647,11 @@
           "heading": false
         },
         {
-          "term": "intervention",
+          "term": "fgds",
           "heading": false
         },
         {
-          "term": "descriptive",
+          "term": "analytic",
           "heading": false
         }
       ],
@@ -6260,10 +6668,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 551,
-      "summary": null,
+      "summary": {
+        "text": "Second page of Annex I: Glossary, defining key terms from 'Formative evaluation' through 'Observation' (including Functionality, Hierarchy of study designs, Human-centered design, Impact, Impact evaluations, Implementation research, In-depth interviews [IDIs], Indicator, Inputs, Logical framework, Mobile health [mHealth], Monitoring, Monitoring burden, and Non-probability sampling).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "study designs",
+          "term": "health intervention",
           "heading": false
         },
         {
@@ -6271,7 +6682,11 @@
           "heading": false
         },
         {
-          "term": "sampling",
+          "term": "implementation research",
+          "heading": false
+        },
+        {
+          "term": "study designs",
           "heading": false
         },
         {
@@ -6279,19 +6694,15 @@
           "heading": false
         },
         {
-          "term": "achievement",
+          "term": "digital health",
           "heading": false
         },
         {
-          "term": "attention",
+          "term": "inputs",
           "heading": false
         },
         {
-          "term": "monitored",
-          "heading": false
-        },
-        {
-          "term": "amount",
+          "term": "sampling",
           "heading": false
         }
       ],
@@ -6308,18 +6719,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 665,
-      "summary": null,
+      "summary": {
+        "text": "Third page of Annex I: Glossary, defining key terms from 'Observational studies' through 'Stability' (including Outcomes, Outputs, Participatory action research [PAR], Performance, Pilot, Probability sampling, Processes, Process monitoring, Quality, Quality assurance [QA] test cases, Randomized controlled trial [RCT], Results framework, and Software requirements specification [SRS]).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "test cases",
+          "term": "health intervention",
           "heading": false
         },
         {
-          "term": "srs",
+          "term": "digital health",
           "heading": false
         },
         {
-          "term": "sampling",
+          "term": "system functions",
           "heading": false
         },
         {
@@ -6327,7 +6741,7 @@
           "heading": false
         },
         {
-          "term": "probability",
+          "term": "srs",
           "heading": false
         },
         {
@@ -6335,11 +6749,11 @@
           "heading": false
         },
         {
-          "term": "intervention",
+          "term": "conformance",
           "heading": false
         },
         {
-          "term": "studies",
+          "term": "test cases",
           "heading": false
         }
       ],
@@ -6356,10 +6770,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 461,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of Annex I: Glossary definitions ('Stakeholders', 'Summative evaluation', 'Theory of change', 'Usability', 'Use cases', 'Users', 'Value proposition', and 'Wireframes') and the first part of the Annex I References list (items 1–9).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "qualitative versus",
+          "term": "quantitative research",
           "heading": false
         },
         {
@@ -6367,7 +6784,7 @@
           "heading": false
         },
         {
-          "term": "quantitative research",
+          "term": "qualitative versus",
           "heading": false
         },
         {
@@ -6375,11 +6792,11 @@
           "heading": false
         },
         {
-          "term": "specified",
+          "term": "anticipated",
           "heading": false
         },
         {
-          "term": "anticipated",
+          "term": "specified",
           "heading": false
         },
         {
@@ -6387,7 +6804,7 @@
           "heading": false
         },
         {
-          "term": "women",
+          "term": "theory",
           "heading": false
         }
       ],
@@ -6404,7 +6821,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 507,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the Annex I: Glossary References list (items 10–28), citing qualitative, quantitative, evaluation, software quality (ISO 25000), and implementation research sources.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "qualitative research",
@@ -6415,15 +6835,11 @@
           "heading": false
         },
         {
+          "term": "implementation research",
+          "heading": false
+        },
+        {
           "term": "accessed",
-          "heading": false
-        },
-        {
-          "term": "adam",
-          "heading": false
-        },
-        {
-          "term": "duke",
           "heading": false
         },
         {
@@ -6435,7 +6851,11 @@
           "heading": false
         },
         {
-          "term": "dent",
+          "term": "world health",
+          "heading": false
+        },
+        {
+          "term": "toolkits",
           "heading": false
         }
       ],
@@ -6452,22 +6872,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 169,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of the Annex I: Glossary References list (items 29–35), citing USAID results framework guidance, stakeholder evaluation, Theory of Change, ISO 25000 usability, usability.gov use cases and wireframing, and MaRS value proposition resources.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "accessed april",
-          "heading": false
-        },
-        {
-          "term": "states department",
-          "heading": false
-        },
-        {
-          "term": "united states",
-          "heading": false
-        },
-        {
-          "term": "mars",
           "heading": false
         },
         {
@@ -6475,7 +6886,19 @@
           "heading": false
         },
         {
+          "term": "united states",
+          "heading": false
+        },
+        {
+          "term": "states department",
+          "heading": false
+        },
+        {
           "term": "website",
+          "heading": false
+        },
+        {
+          "term": "usability",
           "heading": false
         }
       ],
@@ -6492,7 +6915,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 5,
-      "summary": null,
+      "summary": {
+        "text": "Blank end-matter page (no text on page 142 of the PDF).",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "_(no text on this page)_",
       "extractCut": false
@@ -6507,7 +6933,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 5,
-      "summary": null,
+      "summary": {
+        "text": "Blank inside back cover page (no text on page 143 of the PDF).",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "_(no text on this page)_",
       "extractCut": false
@@ -6522,18 +6951,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 79,
-      "summary": null,
+      "summary": {
+        "text": "Back cover page providing contact details for the WHO Department of Reproductive Health and Research in Geneva, Switzerland.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "reproductivehealth",
           "heading": false
         },
         {
-          "term": "int",
+          "term": "fax",
           "heading": false
         },
         {
-          "term": "fax",
+          "term": "int",
           "heading": false
         }
       ],
@@ -6546,15 +6978,35 @@
   "pagesCovered": 144,
   "keywords": [
     {
+      "term": "digital intervention",
+      "heading": false
+    },
+    {
+      "term": "health intervention",
+      "heading": false
+    },
+    {
+      "term": "intervention data",
+      "heading": false
+    },
+    {
       "term": "intervention project",
       "heading": false
     },
     {
-      "term": "intervention effectiveness",
+      "term": "digital system",
       "heading": false
     },
     {
-      "term": "intervention stage",
+      "term": "intervention implementation",
+      "heading": false
+    },
+    {
+      "term": "monitoring digital",
+      "heading": false
+    },
+    {
+      "term": "health evaluation",
       "heading": false
     },
     {
@@ -6562,41 +7014,21 @@
       "heading": false
     },
     {
-      "term": "programme intervention",
-      "heading": false
-    },
-    {
-      "term": "intervention impact",
-      "heading": false
-    },
-    {
       "term": "intervention activities",
       "heading": false
     },
     {
-      "term": "intervention delivery",
+      "term": "intervention effectiveness",
       "heading": false
     },
     {
-      "term": "intervention objectives",
-      "heading": false
-    },
-    {
-      "term": "intervention maturity",
-      "heading": false
-    },
-    {
-      "term": "intervention during",
-      "heading": false
-    },
-    {
-      "term": "intervention content",
+      "term": "programme intervention",
       "heading": false
     }
   ],
   "links": {
-    "repo": "litlfred/smart-base",
+    "repo": "litlfred/who-iris",
     "branch": "main",
-    "dir": "smart-base/library/9789241511766-eng"
+    "dir": "library/9789241511766-eng"
   }
 }

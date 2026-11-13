@@ -2,12 +2,17 @@
   "$schema": "folio-site-build/v1",
   "instance": "smart-base",
   "platform": {
-    "commit": "71b289f79238493762d7e70376c8f5f07a38043c"
+    "commit": "31e8a3edb90f97938bfacbce02357904ee0a7c4a"
   },
   "source": {
     "repo": "litlfred/smart-base",
     "ref": "main",
-    "commit": "50f373bbdade5b04d594f9d209f3814ed4425506"
+    "commit": "d16af04f1944af6eb4fff25ee888f49f062c760b"
   },
-  "builtAt": "2026-10-16T11:59:46.337Z"
+  "builtAt": "2026-11-13T17:13:15.980Z",
+  "ast": {
+    "commit": "5b702b9cfd89c3edfc4e4306bf31e2415a89294e",
+    "verdict": "valid",
+    "kind": "full"
+  }
 }

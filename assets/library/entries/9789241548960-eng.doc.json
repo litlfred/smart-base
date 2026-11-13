@@ -2881,19 +2881,15 @@
       },
       "keywords": [
         {
-          "term": "social determinants",
+          "term": "guideline development",
+          "heading": true
+        },
+        {
+          "term": "advice guideline",
           "heading": false
         },
         {
-          "term": "additional chapters",
-          "heading": false
-        },
-        {
-          "term": "human rights",
-          "heading": false
-        },
-        {
-          "term": "planning proposal",
+          "term": "grc secretariat",
           "heading": false
         },
         {
@@ -2901,15 +2897,19 @@
           "heading": false
         },
         {
-          "term": "peer review",
+          "term": "guideline review",
           "heading": false
         },
         {
-          "term": "managing conflicts",
+          "term": "planning proposal",
           "heading": false
         },
         {
-          "term": "incorporating equity",
+          "term": "handbook",
+          "heading": true
+        },
+        {
+          "term": "social determinants",
           "heading": false
         }
       ],
@@ -2947,19 +2947,19 @@
       },
       "keywords": [
         {
+          "term": "guideline",
+          "heading": true
+        },
+        {
           "term": "public health",
           "heading": false
         },
         {
-          "term": "user",
+          "term": "tells",
           "heading": false
         },
         {
           "term": "measures",
-          "heading": false
-        },
-        {
-          "term": "offers",
           "heading": false
         }
       ],
@@ -2986,11 +2986,11 @@
           "heading": false
         },
         {
-          "term": "public health",
+          "term": "uncovering",
           "heading": false
         },
         {
-          "term": "happens",
+          "term": "public health",
           "heading": false
         }
       ],
@@ -3013,15 +3013,15 @@
       },
       "keywords": [
         {
-          "term": "lie",
+          "term": "gpw",
           "heading": false
         },
         {
-          "term": "authority",
+          "term": "standard-setting",
           "heading": false
         },
         {
-          "term": "fundamental",
+          "term": "twelfth",
           "heading": false
         }
       ],
@@ -3044,11 +3044,7 @@
       },
       "keywords": [
         {
-          "term": "guidelines",
-          "heading": false
-        },
-        {
-          "term": "stakeholders",
+          "term": "guideline development",
           "heading": false
         },
         {
@@ -3056,7 +3052,11 @@
           "heading": false
         },
         {
-          "term": "developing",
+          "term": "recommendations",
+          "heading": false
+        },
+        {
+          "term": "stakeholders",
           "heading": false
         },
         {
@@ -3064,7 +3064,7 @@
           "heading": false
         },
         {
-          "term": "health",
+          "term": "developing",
           "heading": false
         }
       ],
@@ -3087,16 +3087,16 @@
       },
       "keywords": [
         {
-          "term": "procedural",
+          "term": "guideline",
           "heading": false
         },
         {
-          "term": "instruction",
+          "term": "implementable",
           "heading": false
         },
         {
-          "term": "stepwise",
-          "heading": false
+          "term": "handbook",
+          "heading": true
         }
       ],
       "extract": "This handbook presents the important principles of guideline development and provides stepwise instruction on the technical and procedural aspects of developing a WHO guideline. It aims to steer readers through the process to ensure that the resulting guideline is credible; the recommendations accurately reflect the balance of potential benefits and harms; the guideline meets WHO’s publication standards in terms of",
@@ -3118,16 +3118,16 @@
       },
       "keywords": [
         {
+          "term": "wishing",
+          "heading": false
+        },
+        {
+          "term": "guideline",
+          "heading": false
+        },
+        {
           "term": "intended",
           "heading": true
-        },
-        {
-          "term": "members",
-          "heading": false
-        },
-        {
-          "term": "department",
-          "heading": false
         }
       ],
       "extract": "This handbook is intended for: ■■ any WHO department, programme or staff member wishing to produce a guideline; ■■ members of a WHO guideline steering group; ■■ members of a WHO guideline development group (GDG); ■■ members of a WHO guideline external review group; and ■■ anyone interested in understanding how WHO develops guidelines.",
@@ -3167,23 +3167,7 @@
       },
       "keywords": [
         {
-          "term": "contain existing",
-          "heading": false
-        },
-        {
-          "term": "types",
-          "heading": true
-        },
-        {
-          "term": "existing recommendations",
-          "heading": false
-        },
-        {
-          "term": "external organization",
-          "heading": false
-        },
-        {
-          "term": "technical unit",
+          "term": "guideline steering",
           "heading": false
         },
         {
@@ -3191,11 +3175,27 @@
           "heading": false
         },
         {
-          "term": "technical staff",
+          "term": "contain existing",
           "heading": false
         },
         {
-          "term": "planning proposal",
+          "term": "guideline development",
+          "heading": false
+        },
+        {
+          "term": "existing recommendations",
+          "heading": false
+        },
+        {
+          "term": "final guideline",
+          "heading": false
+        },
+        {
+          "term": "guideline document",
+          "heading": false
+        },
+        {
+          "term": "external organization",
           "heading": false
         }
       ],
@@ -3226,18 +3226,6 @@
           "heading": false
         },
         {
-          "term": "surveillance",
-          "heading": false
-        },
-        {
-          "term": "diagnosis",
-          "heading": false
-        },
-        {
-          "term": "condition",
-          "heading": false
-        },
-        {
           "term": "scope",
           "heading": false
         },
@@ -3246,7 +3234,19 @@
           "heading": false
         },
         {
-          "term": "treatment",
+          "term": "condition",
+          "heading": false
+        },
+        {
+          "term": "area",
+          "heading": false
+        },
+        {
+          "term": "surveillance",
+          "heading": false
+        },
+        {
+          "term": "focus",
           "heading": false
         }
       ],
@@ -3277,11 +3277,11 @@
           "heading": false
         },
         {
-          "term": "updating process",
+          "term": "grc",
           "heading": false
         },
         {
-          "term": "compilation",
+          "term": "updating process",
           "heading": false
         },
         {
@@ -3289,11 +3289,11 @@
           "heading": false
         },
         {
-          "term": "times",
+          "term": "compilation",
           "heading": false
         },
         {
-          "term": "grc",
+          "term": "approved",
           "heading": false
         }
       ],
@@ -3320,15 +3320,15 @@
           "heading": true
         },
         {
+          "term": "complies",
+          "heading": false
+        },
+        {
           "term": "anticipated",
           "heading": false
         },
         {
           "term": "condition",
-          "heading": false
-        },
-        {
-          "term": "affecting",
           "heading": false
         },
         {
@@ -3355,11 +3355,7 @@
       },
       "keywords": [
         {
-          "term": "response",
-          "heading": true
-        },
-        {
-          "term": "rapid response",
+          "term": "advice guidelines",
           "heading": false
         },
         {
@@ -3367,23 +3363,27 @@
           "heading": false
         },
         {
-          "term": "expert opinion",
+          "term": "guideline stages",
           "heading": false
-        },
-        {
-          "term": "guidelines",
-          "heading": true
         },
         {
           "term": "emergency",
           "heading": true
         },
         {
-          "term": "health emergencies",
+          "term": "rapid response",
           "heading": false
         },
         {
-          "term": "issue recommendations",
+          "term": "final guideline",
+          "heading": false
+        },
+        {
+          "term": "guideline development",
+          "heading": false
+        },
+        {
+          "term": "standard guideline",
           "heading": false
         }
       ],
@@ -3429,7 +3429,7 @@
           "heading": true
         },
         {
-          "term": "procedures",
+          "term": "grc",
           "heading": false
         },
         {
@@ -3437,11 +3437,11 @@
           "heading": true
         },
         {
-          "term": "planning",
+          "term": "procedures",
           "heading": false
         },
         {
-          "term": "grc",
+          "term": "recommendations",
           "heading": false
         }
       ],
@@ -3464,11 +3464,7 @@
       },
       "keywords": [
         {
-          "term": "applicability",
-          "heading": false
-        },
-        {
-          "term": "evaluate",
+          "term": "adopts",
           "heading": false
         },
         {
@@ -3476,7 +3472,7 @@
           "heading": true
         },
         {
-          "term": "rationale",
+          "term": "applicability",
           "heading": false
         },
         {
@@ -3484,7 +3480,11 @@
           "heading": true
         },
         {
-          "term": "meet",
+          "term": "rationale",
+          "heading": false
+        },
+        {
+          "term": "evaluate",
           "heading": false
         }
       ],
@@ -3511,11 +3511,11 @@
           "heading": true
         },
         {
-          "term": "adapted",
+          "term": "grc",
           "heading": false
         },
         {
-          "term": "adaptations",
+          "term": "adapted",
           "heading": false
         }
       ],
@@ -3546,15 +3546,15 @@
           "heading": true
         },
         {
+          "term": "grc",
+          "heading": false
+        },
+        {
+          "term": "grc-approved",
+          "heading": false
+        },
+        {
           "term": "submitted",
-          "heading": false
-        },
-        {
-          "term": "advocating",
-          "heading": false
-        },
-        {
-          "term": "pharmaceuticals",
           "heading": false
         }
       ],
@@ -3577,11 +3577,11 @@
       },
       "keywords": [
         {
-          "term": "composed",
+          "term": "grc",
           "heading": false
         },
         {
-          "term": "representatives",
+          "term": "composed",
           "heading": false
         },
         {
@@ -3612,6 +3612,18 @@
           "heading": true
         },
         {
+          "term": "final guideline",
+          "heading": false
+        },
+        {
+          "term": "guideline development",
+          "heading": false
+        },
+        {
+          "term": "guideline document",
+          "heading": false
+        },
+        {
           "term": "development process",
           "heading": false
         },
@@ -3625,18 +3637,6 @@
         },
         {
           "term": "meets",
-          "heading": false
-        },
-        {
-          "term": "processes",
-          "heading": false
-        },
-        {
-          "term": "stage",
-          "heading": false
-        },
-        {
-          "term": "standards",
           "heading": false
         }
       ],
@@ -3663,11 +3663,11 @@
           "heading": true
         },
         {
-          "term": "technical support",
+          "term": "guideline development",
           "heading": false
         },
         {
-          "term": "assurance",
+          "term": "technical support",
           "heading": false
         },
         {
@@ -3694,11 +3694,15 @@
       },
       "keywords": [
         {
+          "term": "emanual viii",
+          "heading": false
+        },
+        {
           "term": "accessed november",
           "heading": false
         },
         {
-          "term": "emanual viii",
+          "term": "intranet site",
           "heading": false
         },
         {
@@ -3710,7 +3714,7 @@
           "heading": false
         },
         {
-          "term": "intranet site",
+          "term": "health organization",
           "heading": false
         },
         {
@@ -3718,11 +3722,7 @@
           "heading": false
         },
         {
-          "term": "health organization",
-          "heading": false
-        },
-        {
-          "term": "geneva",
+          "term": "guideline development",
           "heading": false
         }
       ],
@@ -3745,11 +3745,11 @@
       },
       "keywords": [
         {
-          "term": "priorities",
-          "heading": false
+          "term": "guideline",
+          "heading": true
         },
         {
-          "term": "asking",
+          "term": "priority-setting",
           "heading": false
         },
         {
@@ -3816,11 +3816,11 @@
           "heading": true
         },
         {
-          "term": "departments",
+          "term": "grc",
           "heading": false
         },
         {
-          "term": "existing",
+          "term": "departments",
           "heading": false
         }
       ],
@@ -3861,15 +3861,15 @@
       },
       "keywords": [
         {
-          "term": "poor",
+          "term": "guideline",
+          "heading": true
+        },
+        {
+          "term": "aiming",
           "heading": false
         },
         {
-          "term": "feel",
-          "heading": false
-        },
-        {
-          "term": "users",
+          "term": "resolving",
           "heading": false
         }
       ],
@@ -3896,12 +3896,12 @@
           "heading": true
         },
         {
-          "term": "govern",
+          "term": "hope",
           "heading": false
         },
         {
-          "term": "indicators",
-          "heading": false
+          "term": "guideline",
+          "heading": true
         }
       ],
       "extract": "What health indicators or other measures do you hope to improve? What test or approach do you wish to evaluate and provide guidance on? Clear, achievable objectives will govern and facilitate the development of your guideline. Chapter 2 Planning guidelines 17",
@@ -3931,7 +3931,7 @@
           "heading": true
         },
         {
-          "term": "clinicians",
+          "term": "straightforward",
           "heading": false
         }
       ],
@@ -3990,7 +3990,7 @@
       },
       "keywords": [
         {
-          "term": "emerge",
+          "term": "guideline development",
           "heading": false
         },
         {
@@ -3998,7 +3998,7 @@
           "heading": false
         },
         {
-          "term": "narrow",
+          "term": "novo",
           "heading": false
         }
       ],
@@ -4021,16 +4021,16 @@
       },
       "keywords": [
         {
-          "term": "advice",
+          "term": "guideline",
           "heading": true
         },
         {
-          "term": "reduced",
+          "term": "guideline development",
           "heading": false
         },
         {
-          "term": "compressed",
-          "heading": false
+          "term": "advice",
+          "heading": true
         }
       ],
       "extract": "advice? If so, the guideline development process and methods may differ from those used for standard guidelines. Under a compressed timeline, the scope of a guideline may have to be greatly reduced. In addition, rapid review and guideline development processes and methods can result in an end product with a high risk of bias. WHO staff must balance this risk with the demand to produce recommendations rapidly (see",
@@ -4101,16 +4101,16 @@
       },
       "keywords": [
         {
-          "term": "place",
-          "heading": true
-        },
-        {
           "term": "recommendations",
           "heading": true
         },
         {
           "term": "crafted",
           "heading": false
+        },
+        {
+          "term": "place",
+          "heading": true
         }
       ],
       "extract": "recommendations in place? Who is likely to implement the recommendations? What level of guidance is needed and in what format? What infrastructure and services are needed for implementation? Is access to the service an important consideration? These issues should be considered from the start, as they affect who should be involved, what resources are required and how the recommendations are crafted and presented.",
@@ -4203,11 +4203,11 @@
           "heading": true
         },
         {
-          "term": "translating",
-          "heading": false
+          "term": "guideline",
+          "heading": true
         },
         {
-          "term": "synthesizing",
+          "term": "guideline development",
           "heading": false
         }
       ],
@@ -4238,7 +4238,7 @@
           "heading": false
         },
         {
-          "term": "users",
+          "term": "guideline",
           "heading": false
         }
       ],
@@ -4261,15 +4261,15 @@
       },
       "keywords": [
         {
-          "term": "hours",
-          "heading": false
-        },
-        {
-          "term": "resources",
+          "term": "guideline",
           "heading": true
         },
         {
-          "term": "costs",
+          "term": "dedication",
+          "heading": false
+        },
+        {
+          "term": "convene",
           "heading": false
         }
       ],
@@ -4296,11 +4296,11 @@
           "heading": false
         },
         {
-          "term": "charts",
+          "term": "wall",
           "heading": false
         },
         {
-          "term": "accompanied",
+          "term": "conform",
           "heading": false
         }
       ],
@@ -4345,19 +4345,19 @@
           "heading": true
         },
         {
+          "term": "guideline",
+          "heading": true
+        },
+        {
           "term": "manageable",
           "heading": false
         },
         {
-          "term": "establish",
+          "term": "scope",
           "heading": false
         },
         {
           "term": "end-user",
-          "heading": false
-        },
-        {
-          "term": "allocated",
           "heading": false
         }
       ],
@@ -4380,7 +4380,15 @@
       },
       "keywords": [
         {
-          "term": "priority topics",
+          "term": "guideline",
+          "heading": true
+        },
+        {
+          "term": "scope",
+          "heading": true
+        },
+        {
+          "term": "guideline development",
           "heading": false
         },
         {
@@ -4392,11 +4400,7 @@
           "heading": false
         },
         {
-          "term": "human rights",
-          "heading": false
-        },
-        {
-          "term": "controversy",
+          "term": "priority topics",
           "heading": false
         },
         {
@@ -4404,11 +4408,7 @@
           "heading": false
         },
         {
-          "term": "try",
-          "heading": false
-        },
-        {
-          "term": "search",
+          "term": "systematic reviews",
           "heading": false
         }
       ],
@@ -4435,11 +4435,11 @@
           "heading": false
         },
         {
-          "term": "incorporated",
+          "term": "reminded",
           "heading": false
         },
         {
-          "term": "textbook",
+          "term": "reconsider",
           "heading": false
         }
       ],
@@ -4466,23 +4466,15 @@
           "heading": false
         },
         {
+          "term": "final guideline",
+          "heading": false
+        },
+        {
           "term": "review group",
           "heading": false
         },
         {
-          "term": "responsible technical",
-          "heading": false
-        },
-        {
-          "term": "oversee",
-          "heading": false
-        },
-        {
-          "term": "technical unit",
-          "heading": false
-        },
-        {
-          "term": "regional offices",
+          "term": "guideline development",
           "heading": false
         },
         {
@@ -4490,7 +4482,15 @@
           "heading": false
         },
         {
-          "term": "external review",
+          "term": "responsible technical",
+          "heading": false
+        },
+        {
+          "term": "regional offices",
+          "heading": false
+        },
+        {
+          "term": "technical unit",
           "heading": false
         }
       ],
@@ -4521,15 +4521,15 @@
           "heading": false
         },
         {
-          "term": "task",
-          "heading": false
+          "term": "guideline",
+          "heading": true
         },
         {
           "term": "key questions",
           "heading": false
         },
         {
-          "term": "enough",
+          "term": "gdg",
           "heading": false
         }
       ],
@@ -4552,27 +4552,27 @@
       },
       "keywords": [
         {
-          "term": "role",
+          "term": "guideline",
           "heading": true
-        },
-        {
-          "term": "input",
-          "heading": false
         },
         {
           "term": "gdg",
           "heading": false
         },
         {
-          "term": "members",
-          "heading": false
-        },
-        {
-          "term": "benefits",
-          "heading": false
-        },
-        {
           "term": "harms",
+          "heading": false
+        },
+        {
+          "term": "input",
+          "heading": false
+        },
+        {
+          "term": "development",
+          "heading": true
+        },
+        {
+          "term": "evidence",
           "heading": false
         }
       ],
@@ -4595,11 +4595,15 @@
       },
       "keywords": [
         {
-          "term": "service users",
+          "term": "guideline development",
+          "heading": true
+        },
+        {
+          "term": "guideline methodologist",
           "heading": false
         },
         {
-          "term": "technical experts",
+          "term": "gdg member",
           "heading": false
         },
         {
@@ -4607,7 +4611,7 @@
           "heading": false
         },
         {
-          "term": "human rights",
+          "term": "technical experts",
           "heading": false
         },
         {
@@ -4619,11 +4623,7 @@
           "heading": false
         },
         {
-          "term": "gdg member",
-          "heading": false
-        },
-        {
-          "term": "economic data",
+          "term": "expertise",
           "heading": false
         }
       ],
@@ -4658,23 +4658,23 @@
           "heading": false
         },
         {
-          "term": "key questions",
+          "term": "final guideline",
           "heading": false
         },
         {
-          "term": "stages",
+          "term": "guideline scope",
           "heading": false
         },
         {
-          "term": "missing",
-          "heading": false
-        },
-        {
-          "term": "stakeholders",
+          "term": "guideline development",
           "heading": false
         },
         {
           "term": "gdg",
+          "heading": false
+        },
+        {
+          "term": "key questions",
           "heading": false
         }
       ],
@@ -4705,19 +4705,15 @@
           "heading": true
         },
         {
-          "term": "group established",
-          "heading": false
-        },
-        {
-          "term": "essential expertise",
-          "heading": false
-        },
-        {
-          "term": "main functions",
-          "heading": false
-        },
-        {
           "term": "steering group",
+          "heading": false
+        },
+        {
+          "term": "guideline topic",
+          "heading": false
+        },
+        {
+          "term": "guideline development",
           "heading": false
         },
         {
@@ -4725,7 +4721,11 @@
           "heading": false
         },
         {
-          "term": "primary responsibilities",
+          "term": "essential expertise",
+          "heading": false
+        },
+        {
+          "term": "gdg meeting",
           "heading": false
         }
       ],
@@ -4770,15 +4770,15 @@
           "heading": true
         },
         {
-          "term": "complements",
+          "term": "guideline",
+          "heading": true
+        },
+        {
+          "term": "gdg",
           "heading": false
         },
         {
           "term": "expert",
-          "heading": false
-        },
-        {
-          "term": "helping",
           "heading": false
         }
       ],
@@ -4805,11 +4805,11 @@
           "heading": true
         },
         {
-          "term": "additional",
-          "heading": true
+          "term": "gdg",
+          "heading": false
         },
         {
-          "term": "contract",
+          "term": "economics",
           "heading": false
         }
       ],
@@ -4836,11 +4836,11 @@
           "heading": true
         },
         {
-          "term": "advocacy",
+          "term": "invited",
           "heading": false
         },
         {
-          "term": "audiences",
+          "term": "chair",
           "heading": false
         }
       ],
@@ -4867,11 +4867,11 @@
           "heading": true
         },
         {
-          "term": "coherence",
+          "term": "well-documented",
           "heading": false
         },
         {
-          "term": "respon",
+          "term": "gdg",
           "heading": false
         }
       ],
@@ -4898,19 +4898,19 @@
           "heading": true
         },
         {
+          "term": "guideline",
+          "heading": true
+        },
+        {
           "term": "united nations",
           "heading": false
         },
         {
-          "term": "governmental",
+          "term": "guideline development",
           "heading": false
         },
         {
-          "term": "appraisal",
-          "heading": false
-        },
-        {
-          "term": "centers",
+          "term": "gdg",
           "heading": false
         }
       ],
@@ -4949,8 +4949,8 @@
           "heading": false
         },
         {
-          "term": "managing",
-          "heading": true
+          "term": "guideline development",
+          "heading": false
         }
       ],
       "extract": "Chapter 6 and the website of the Office of Compliance, Risk Management and Ethics (8) explain the steps followed to identify, manage and report conflicts of interest involving GDG members and commissioned experts. Declara- Chapter 3 Contributors and their role in guideline development 35 tions of interests (DOI) are collected and reviewed before making appointments to the GDG. Any subsequent changes in GDG members’",
@@ -4980,7 +4980,7 @@
           "heading": true
         },
         {
-          "term": "opinions",
+          "term": "gdg members",
           "heading": false
         }
       ],
@@ -5007,16 +5007,16 @@
           "heading": true
         },
         {
-          "term": "achieved",
+          "term": "gdg",
           "heading": false
         },
         {
-          "term": "plan",
+          "term": "formulated",
           "heading": false
         },
         {
-          "term": "decision-making",
-          "heading": true
+          "term": "delineating",
+          "heading": false
         }
       ],
       "extract": "The steering group must formulate a plan delineating how decisions will be made by the GDG. This plan must be formulated and agreed upon by the group’s chair and vice-chair before the first GDG meeting. It should be presented to GDG members at the beginning of this first meeting, with the opportunity for questions and discussion. GDGs sponsored by WHO should generally make their recommendations through consensus,",
@@ -5042,11 +5042,11 @@
           "heading": true
         },
         {
-          "term": "face-to-face",
+          "term": "gdg",
           "heading": false
         },
         {
-          "term": "outputs",
+          "term": "face-to-face",
           "heading": false
         }
       ],
@@ -5077,7 +5077,7 @@
           "heading": false
         },
         {
-          "term": "outputs",
+          "term": "deliberation",
           "heading": false
         }
       ],
@@ -5108,7 +5108,7 @@
           "heading": false
         },
         {
-          "term": "allow",
+          "term": "ahead",
           "heading": false
         }
       ],
@@ -5131,15 +5131,7 @@
       },
       "keywords": [
         {
-          "term": "meeting",
-          "heading": true
-        },
-        {
           "term": "gdg meeting",
-          "heading": false
-        },
-        {
-          "term": "meeting report",
           "heading": false
         },
         {
@@ -5147,11 +5139,19 @@
           "heading": false
         },
         {
+          "term": "meeting report",
+          "heading": false
+        },
+        {
           "term": "gdg members",
           "heading": false
         },
         {
-          "term": "key questions",
+          "term": "steering group",
+          "heading": false
+        },
+        {
+          "term": "guideline document",
           "heading": false
         }
       ],
@@ -5196,6 +5196,14 @@
           "heading": false
         },
         {
+          "term": "intranet site",
+          "heading": false
+        },
+        {
+          "term": "campbell collaboration",
+          "heading": false
+        },
+        {
           "term": "cochrane collaboration",
           "heading": false
         },
@@ -5204,19 +5212,11 @@
           "heading": false
         },
         {
-          "term": "campbell collaboration",
-          "heading": false
-        },
-        {
-          "term": "intranet site",
-          "heading": false
-        },
-        {
           "term": "national institute",
           "heading": false
         },
         {
-          "term": "world health",
+          "term": "health organization",
           "heading": false
         }
       ],
@@ -5243,11 +5243,11 @@
           "heading": true
         },
         {
-          "term": "completion",
-          "heading": false
+          "term": "guideline",
+          "heading": true
         },
         {
-          "term": "plus",
+          "term": "guideline development",
           "heading": false
         }
       ],
@@ -5274,11 +5274,7 @@
           "heading": true
         },
         {
-          "term": "ensure",
-          "heading": false
-        },
-        {
-          "term": "across",
+          "term": "guideline development",
           "heading": false
         },
         {
@@ -5286,11 +5282,15 @@
           "heading": false
         },
         {
-          "term": "appropriate",
+          "term": "ensure",
           "heading": false
         },
         {
-          "term": "guidelines",
+          "term": "process",
+          "heading": false
+        },
+        {
+          "term": "across",
           "heading": false
         }
       ],
@@ -5321,7 +5321,7 @@
           "heading": false
         },
         {
-          "term": "development process",
+          "term": "final guideline",
           "heading": false
         },
         {
@@ -5329,7 +5329,7 @@
           "heading": false
         },
         {
-          "term": "planned",
+          "term": "development process",
           "heading": false
         },
         {
@@ -5378,12 +5378,12 @@
           "heading": true
         },
         {
-          "term": "preparing",
-          "heading": true
-        },
-        {
           "term": "input",
           "heading": false
+        },
+        {
+          "term": "preparing",
+          "heading": true
         },
         {
           "term": "key questions",
@@ -5425,11 +5425,11 @@
           "heading": false
         },
         {
-          "term": "service users",
+          "term": "guideline development",
           "heading": false
         },
         {
-          "term": "instructions",
+          "term": "intranet site",
           "heading": false
         },
         {
@@ -5437,7 +5437,7 @@
           "heading": false
         },
         {
-          "term": "intranet site",
+          "term": "technical officer",
           "heading": false
         }
       ],
@@ -5460,11 +5460,11 @@
       },
       "keywords": [
         {
-          "term": "major changes",
+          "term": "planning proposal",
           "heading": true
         },
         {
-          "term": "planning proposal",
+          "term": "major changes",
           "heading": true
         },
         {
@@ -5472,23 +5472,23 @@
           "heading": false
         },
         {
+          "term": "grc",
+          "heading": true
+        },
+        {
           "term": "minor changes",
           "heading": false
         },
         {
-          "term": "categories listed",
+          "term": "guideline methodologist",
           "heading": false
-        },
-        {
-          "term": "grc",
-          "heading": true
         },
         {
           "term": "scope",
           "heading": true
         },
         {
-          "term": "key question",
+          "term": "categories listed",
           "heading": false
         }
       ],
@@ -5515,11 +5515,11 @@
           "heading": true
         },
         {
-          "term": "effect",
-          "heading": true
+          "term": "grc",
+          "heading": false
         },
         {
-          "term": "period",
+          "term": "final guideline",
           "heading": false
         }
       ],
@@ -5593,11 +5593,11 @@
       },
       "keywords": [
         {
-          "term": "deliver",
+          "term": "twelfth",
           "heading": false
         },
         {
-          "term": "enables",
+          "term": "commitments",
           "heading": false
         },
         {
@@ -5632,19 +5632,11 @@
           "heading": false
         },
         {
-          "term": "social determinants",
-          "heading": false
-        },
-        {
           "term": "attainable standard",
           "heading": false
         },
         {
-          "term": "records",
-          "heading": false
-        },
-        {
-          "term": "measures",
+          "term": "social determinants",
           "heading": false
         },
         {
@@ -5652,7 +5644,15 @@
           "heading": false
         },
         {
-          "term": "equity",
+          "term": "enjoyment",
+          "heading": false
+        },
+        {
+          "term": "entitlements",
+          "heading": false
+        },
+        {
+          "term": "freedoms",
           "heading": false
         }
       ],
@@ -5701,11 +5701,7 @@
           "heading": true
         },
         {
-          "term": "health services",
-          "heading": false
-        },
-        {
-          "term": "address gender",
+          "term": "guideline developers",
           "heading": false
         },
         {
@@ -5713,15 +5709,19 @@
           "heading": false
         },
         {
+          "term": "address gender",
+          "heading": false
+        },
+        {
           "term": "differential exposure",
           "heading": false
         },
         {
-          "term": "human rights",
+          "term": "guideline development",
           "heading": false
         },
         {
-          "term": "normative work",
+          "term": "health services",
           "heading": false
         }
       ],
@@ -5775,15 +5775,15 @@
       },
       "keywords": [
         {
+          "term": "guideline development",
+          "heading": true
+        },
+        {
           "term": "determinants",
           "heading": true
         },
         {
-          "term": "step",
-          "heading": true
-        },
-        {
-          "term": "social",
+          "term": "gender",
           "heading": true
         }
       ],
@@ -5810,11 +5810,23 @@
           "heading": false
         },
         {
+          "term": "human rights",
+          "heading": false
+        },
+        {
           "term": "social position",
           "heading": false
         },
         {
-          "term": "human rights",
+          "term": "guideline development",
+          "heading": false
+        },
+        {
+          "term": "final guideline",
+          "heading": false
+        },
+        {
+          "term": "stratifiers",
           "heading": false
         },
         {
@@ -5822,19 +5834,7 @@
           "heading": false
         },
         {
-          "term": "equity",
-          "heading": false
-        },
-        {
           "term": "key questions",
-          "heading": false
-        },
-        {
-          "term": "groups involved",
-          "heading": false
-        },
-        {
-          "term": "stratifiers",
           "heading": false
         }
       ],
@@ -5857,15 +5857,11 @@
       },
       "keywords": [
         {
-          "term": "differential effect",
-          "heading": false
-        },
-        {
           "term": "social determinants",
           "heading": false
         },
         {
-          "term": "human rights",
+          "term": "differential effect",
           "heading": false
         },
         {
@@ -5873,11 +5869,15 @@
           "heading": false
         },
         {
-          "term": "equity",
+          "term": "systematic reviews",
           "heading": false
         },
         {
-          "term": "systematic review",
+          "term": "human rights",
+          "heading": false
+        },
+        {
+          "term": "equity",
           "heading": false
         },
         {
@@ -5885,7 +5885,7 @@
           "heading": false
         },
         {
-          "term": "gender",
+          "term": "evidence",
           "heading": false
         }
       ],
@@ -5912,15 +5912,15 @@
           "heading": true
         },
         {
-          "term": "chosen",
+          "term": "non-stigmatizing",
           "heading": false
         },
         {
-          "term": "ends",
+          "term": "guideline",
           "heading": false
         },
         {
-          "term": "illustration",
+          "term": "photographs",
           "heading": false
         }
       ],
@@ -5951,15 +5951,11 @@
           "heading": false
         },
         {
-          "term": "human rights",
-          "heading": false
-        },
-        {
           "term": "gender equality",
           "heading": false
         },
         {
-          "term": "world health",
+          "term": "human rights",
           "heading": false
         },
         {
@@ -5967,11 +5963,15 @@
           "heading": false
         },
         {
-          "term": "social determinants",
+          "term": "world health",
           "heading": false
         },
         {
           "term": "petticrew",
+          "heading": false
+        },
+        {
+          "term": "tugwell",
           "heading": false
         }
       ],
@@ -5998,6 +5998,10 @@
           "heading": true
         },
         {
+          "term": "interest",
+          "heading": true
+        },
+        {
           "term": "secondary interests",
           "heading": false
         },
@@ -6006,7 +6010,7 @@
           "heading": false
         },
         {
-          "term": "desire",
+          "term": "guideline development",
           "heading": false
         },
         {
@@ -6014,11 +6018,7 @@
           "heading": false
         },
         {
-          "term": "perceived",
-          "heading": false
-        },
-        {
-          "term": "real",
+          "term": "phrase",
           "heading": false
         },
         {
@@ -6053,16 +6053,16 @@
           "heading": false
         },
         {
-          "term": "measured",
-          "heading": false
-        },
-        {
           "term": "nonfinancial",
           "heading": false
         },
         {
           "term": "conflicts",
           "heading": true
+        },
+        {
+          "term": "prestige",
+          "heading": false
         }
       ],
       "extract": "Conflicts of interest are of two basic types: financial and nonfinancial. Both are relevant to guideline development. Financial interests can be directly measured in monetary units, such as for stocks or patents owned, money received for commissioned work, or an honorarium for a speaking engagement. Nonfinancial interests, on the other hand, cannot readily be measured in monetary units and are less tangible and thus",
@@ -6084,11 +6084,11 @@
       },
       "keywords": [
         {
-          "term": "declaration",
+          "term": "interests",
           "heading": true
         },
         {
-          "term": "interests",
+          "term": "declaration",
           "heading": true
         },
         {
@@ -6119,16 +6119,16 @@
           "heading": true
         },
         {
+          "term": "guideline",
+          "heading": true
+        },
+        {
           "term": "conflicts",
           "heading": false
         },
         {
-          "term": "reasoned",
-          "heading": false
-        },
-        {
-          "term": "sponsors",
-          "heading": false
+          "term": "development",
+          "heading": true
         }
       ],
       "extract": "development at WHO? Certain data point to an association between the secondary interests of authors and funders and study outcomes (4), and between conflicts of interest and the conclusions drawn from systematic reviews (5). Data on the effects of industry relationships and the intellectual interests of guideline sponsors and authors are confined to case studies (6). Conflicts of interest can introduce bias into",
@@ -6154,12 +6154,12 @@
           "heading": true
         },
         {
-          "term": "policies",
+          "term": "interest",
           "heading": true
         },
         {
-          "term": "interest",
-          "heading": true
+          "term": "guideline development",
+          "heading": false
         }
       ],
       "extract": "Guideline developers at WHO must be familiar with WHO’s policies on obtaining declarations of interests and assessing and managing conflicts of interest. An overview of the process for identifying, managing and reporting such conflicts during guideline development at WHO is presented in Box 6.1, with further details provided below. Various websites provide additional information about WHO policies and procedures",
@@ -6193,15 +6193,7 @@
           "heading": true
         },
         {
-          "term": "individual capacity",
-          "heading": false
-        },
-        {
-          "term": "management plan",
-          "heading": false
-        },
-        {
-          "term": "yes",
+          "term": "steering group",
           "heading": false
         },
         {
@@ -6209,7 +6201,15 @@
           "heading": false
         },
         {
-          "term": "processes outlined",
+          "term": "guideline development",
+          "heading": false
+        },
+        {
+          "term": "gdg meetings",
+          "heading": false
+        },
+        {
+          "term": "cre",
           "heading": false
         }
       ],
@@ -6232,11 +6232,15 @@
       },
       "keywords": [
         {
-          "term": "financial interests",
-          "heading": false
+          "term": "interests",
+          "heading": true
         },
         {
           "term": "nonfinancial interests",
+          "heading": false
+        },
+        {
+          "term": "financial interests",
           "heading": false
         },
         {
@@ -6244,11 +6248,11 @@
           "heading": true
         },
         {
-          "term": "support",
+          "term": "guideline development",
           "heading": false
         },
         {
-          "term": "prior",
+          "term": "mon",
           "heading": false
         },
         {
@@ -6257,10 +6261,6 @@
         },
         {
           "term": "personal",
-          "heading": false
-        },
-        {
-          "term": "credible",
           "heading": false
         }
       ],
@@ -6291,7 +6291,7 @@
           "heading": false
         },
         {
-          "term": "collecting",
+          "term": "declarations",
           "heading": true
         },
         {
@@ -6318,7 +6318,7 @@
       },
       "keywords": [
         {
-          "term": "financial cois",
+          "term": "nonfinancial cois",
           "heading": false
         },
         {
@@ -6326,12 +6326,16 @@
           "heading": false
         },
         {
-          "term": "nonfinancial cois",
+          "term": "financial cois",
           "heading": false
         },
         {
           "term": "manage cois",
           "heading": false
+        },
+        {
+          "term": "interests",
+          "heading": true
         },
         {
           "term": "secondary interest",
@@ -6342,11 +6346,7 @@
           "heading": false
         },
         {
-          "term": "primary interest",
-          "heading": false
-        },
-        {
-          "term": "commercial entities",
+          "term": "coi",
           "heading": false
         }
       ],
@@ -6369,15 +6369,15 @@
       },
       "keywords": [
         {
-          "term": "management strategy",
-          "heading": false
-        },
-        {
           "term": "interest",
           "heading": true
         },
         {
           "term": "conflict",
+          "heading": false
+        },
+        {
+          "term": "management strategy",
           "heading": false
         }
       ],
@@ -6400,8 +6400,8 @@
       },
       "keywords": [
         {
-          "term": "multiple companies",
-          "heading": false
+          "term": "guideline development",
+          "heading": true
         },
         {
           "term": "conflicted individual",
@@ -6412,7 +6412,7 @@
           "heading": false
         },
         {
-          "term": "participation",
+          "term": "multiple companies",
           "heading": false
         },
         {
@@ -6420,15 +6420,15 @@
           "heading": false
         },
         {
-          "term": "funding",
+          "term": "conflicts",
           "heading": false
         },
         {
-          "term": "threshold",
+          "term": "contractor",
           "heading": false
         },
         {
-          "term": "product",
+          "term": "participation",
           "heading": false
         }
       ],
@@ -6459,19 +6459,19 @@
           "heading": false
         },
         {
-          "term": "industry",
-          "heading": false
-        },
-        {
-          "term": "representative",
-          "heading": false
-        },
-        {
           "term": "interests",
           "heading": false
         },
         {
-          "term": "comment",
+          "term": "declarations",
+          "heading": false
+        },
+        {
+          "term": "industry",
+          "heading": false
+        },
+        {
+          "term": "guideline",
           "heading": false
         }
       ],
@@ -6498,11 +6498,11 @@
           "heading": true
         },
         {
-          "term": "level",
+          "term": "interest",
           "heading": true
         },
         {
-          "term": "interest",
+          "term": "level",
           "heading": true
         },
         {
@@ -6529,16 +6529,24 @@
       },
       "keywords": [
         {
-          "term": "intellectual conflicts",
-          "heading": false
+          "term": "conflicts",
+          "heading": true
         },
         {
-          "term": "financial conflicts",
+          "term": "guideline development",
+          "heading": true
+        },
+        {
+          "term": "intellectual conflicts",
           "heading": false
         },
         {
           "term": "interest",
           "heading": true
+        },
+        {
+          "term": "financial conflicts",
+          "heading": false
         },
         {
           "term": "gdg members",
@@ -6549,15 +6557,7 @@
           "heading": false
         },
         {
-          "term": "constituting",
-          "heading": true
-        },
-        {
           "term": "vice-chair",
-          "heading": false
-        },
-        {
-          "term": "chair",
           "heading": false
         }
       ],
@@ -6580,6 +6580,10 @@
       },
       "keywords": [
         {
+          "term": "guideline development",
+          "heading": true
+        },
+        {
           "term": "conflicts",
           "heading": true
         },
@@ -6588,7 +6592,11 @@
           "heading": true
         },
         {
-          "term": "products related",
+          "term": "gdg members",
+          "heading": false
+        },
+        {
+          "term": "guideline document",
           "heading": false
         },
         {
@@ -6596,19 +6604,11 @@
           "heading": false
         },
         {
-          "term": "gdg members",
-          "heading": false
-        },
-        {
           "term": "technical officer",
           "heading": false
         },
         {
-          "term": "antiviral",
-          "heading": false
-        },
-        {
-          "term": "consultant",
+          "term": "products related",
           "heading": false
         }
       ],
@@ -6631,23 +6631,23 @@
       },
       "keywords": [
         {
-          "term": "private sector",
-          "heading": false
-        },
-        {
           "term": "sector entities",
           "heading": false
         },
         {
-          "term": "commercial",
+          "term": "commercial enterprises",
           "heading": false
         },
         {
-          "term": "funding",
-          "heading": true
+          "term": "private sector",
+          "heading": false
         },
         {
-          "term": "length",
+          "term": "arm length",
+          "heading": false
+        },
+        {
+          "term": "state-owned",
           "heading": false
         }
       ],
@@ -6670,23 +6670,11 @@
       },
       "keywords": [
         {
-          "term": "accessed november",
-          "heading": false
-        },
-        {
           "term": "emanual viii",
           "heading": false
         },
         {
-          "term": "products viii",
-          "heading": false
-        },
-        {
-          "term": "viii information",
-          "heading": false
-        },
-        {
-          "term": "clinical practice",
+          "term": "accessed november",
           "heading": false
         },
         {
@@ -6694,11 +6682,23 @@
           "heading": false
         },
         {
-          "term": "national academies",
+          "term": "pmid",
+          "heading": false
+        },
+        {
+          "term": "products viii",
           "heading": false
         },
         {
           "term": "academies press",
+          "heading": false
+        },
+        {
+          "term": "viii information",
+          "heading": false
+        },
+        {
+          "term": "national academies",
           "heading": false
         }
       ],
@@ -6743,15 +6743,7 @@
           "heading": true
         },
         {
-          "term": "virus infection",
-          "heading": false
-        },
-        {
           "term": "papilloma virus",
-          "heading": false
-        },
-        {
-          "term": "cervical cancer",
           "heading": false
         },
         {
@@ -6759,15 +6751,23 @@
           "heading": false
         },
         {
-          "term": "prevalence",
+          "term": "cervical cancer",
           "heading": false
         },
         {
-          "term": "answers",
+          "term": "virus infection",
           "heading": false
         },
         {
           "term": "pertain",
+          "heading": false
+        },
+        {
+          "term": "foreground",
+          "heading": false
+        },
+        {
+          "term": "prevalence",
           "heading": false
         }
       ],
@@ -6794,19 +6794,19 @@
           "heading": true
         },
         {
-          "term": "vaccination",
+          "term": "revolve",
+          "heading": false
+        },
+        {
+          "term": "pertain",
+          "heading": false
+        },
+        {
+          "term": "papilloma",
           "heading": false
         },
         {
           "term": "focuses",
-          "heading": false
-        },
-        {
-          "term": "cost",
-          "heading": false
-        },
-        {
-          "term": "effectiveness",
           "heading": false
         }
       ],
@@ -6882,11 +6882,11 @@
           "heading": true
         },
         {
-          "term": "timing",
+          "term": "wrapping",
           "heading": false
         },
         {
-          "term": "wrapping",
+          "term": "simplicity",
           "heading": false
         }
       ],
@@ -6913,19 +6913,15 @@
           "heading": true
         },
         {
-          "term": "risk factor",
-          "heading": false
-        },
-        {
           "term": "intervention",
           "heading": true
         },
         {
-          "term": "baseline risk",
+          "term": "risk factor",
           "heading": false
         },
         {
-          "term": "health-care system",
+          "term": "baseline risk",
           "heading": false
         },
         {
@@ -6933,11 +6929,15 @@
           "heading": false
         },
         {
-          "term": "evaluated",
+          "term": "health-care system",
           "heading": false
         },
         {
-          "term": "communities",
+          "term": "subpopulations",
+          "heading": false
+        },
+        {
+          "term": "social",
           "heading": false
         }
       ],
@@ -6982,10 +6982,6 @@
           "heading": false
         },
         {
-          "term": "health sector",
-          "heading": false
-        },
-        {
           "term": "comparators",
           "heading": false
         },
@@ -6994,15 +6990,19 @@
           "heading": false
         },
         {
+          "term": "health sector",
+          "heading": false
+        },
+        {
           "term": "exposure",
           "heading": false
         },
         {
-          "term": "outcomes",
+          "term": "guideline",
           "heading": false
         },
         {
-          "term": "different",
+          "term": "outcomes",
           "heading": false
         }
       ],
@@ -7025,11 +7025,19 @@
       },
       "keywords": [
         {
+          "term": "pico format",
+          "heading": true
+        },
+        {
           "term": "key questions",
           "heading": true
         },
         {
           "term": "breast cancer",
+          "heading": false
+        },
+        {
+          "term": "multi-drug-resistant tuberculosis",
           "heading": false
         },
         {
@@ -7041,19 +7049,11 @@
           "heading": false
         },
         {
-          "term": "pico format",
-          "heading": true
-        },
-        {
-          "term": "life years",
-          "heading": false
-        },
-        {
           "term": "year period",
           "heading": false
         },
         {
-          "term": "multi-drug-resistant tuberculosis",
+          "term": "years gained",
           "heading": false
         }
       ],
@@ -7076,7 +7076,7 @@
       },
       "keywords": [
         {
-          "term": "cost effectiveness",
+          "term": "intervention harms",
           "heading": false
         },
         {
@@ -7084,27 +7084,27 @@
           "heading": false
         },
         {
+          "term": "certain disease",
+          "heading": false
+        },
+        {
           "term": "ebola treatment",
           "heading": false
         },
         {
-          "term": "certain treatment",
+          "term": "outcomes matter",
           "heading": false
         },
         {
-          "term": "among patients",
+          "term": "cost effectiveness",
           "heading": false
         },
         {
-          "term": "intervention harms",
+          "term": "individuals affected",
           "heading": false
         },
         {
           "term": "among individuals",
-          "heading": false
-        },
-        {
-          "term": "certain disease",
           "heading": false
         }
       ],
@@ -7139,15 +7139,11 @@
           "heading": false
         },
         {
-          "term": "type diabetes",
-          "heading": false
-        },
-        {
-          "term": "housing allowance",
-          "heading": false
-        },
-        {
           "term": "pico question",
+          "heading": false
+        },
+        {
+          "term": "type diabetes",
           "heading": false
         },
         {
@@ -7155,7 +7151,11 @@
           "heading": false
         },
         {
-          "term": "financial incentives",
+          "term": "housing allowance",
+          "heading": false
+        },
+        {
+          "term": "pico format",
           "heading": false
         }
       ],
@@ -7186,7 +7186,7 @@
           "heading": true
         },
         {
-          "term": "workload",
+          "term": "wrapping",
           "heading": false
         }
       ],
@@ -7213,31 +7213,31 @@
           "heading": true
         },
         {
-          "term": "rating",
-          "heading": true
-        },
-        {
           "term": "selecting",
           "heading": true
         },
         {
-          "term": "critical",
-          "heading": false
-        },
-        {
-          "term": "rates",
-          "heading": false
-        },
-        {
-          "term": "rank",
-          "heading": false
+          "term": "rating",
+          "heading": true
         },
         {
           "term": "unimportant",
           "heading": false
         },
         {
-          "term": "perspective",
+          "term": "steering group",
+          "heading": false
+        },
+        {
+          "term": "guideline development",
+          "heading": false
+        },
+        {
+          "term": "ranked",
+          "heading": false
+        },
+        {
+          "term": "rank",
           "heading": false
         }
       ],
@@ -7268,7 +7268,7 @@
           "heading": false
         },
         {
-          "term": "determinant",
+          "term": "controversy",
           "heading": false
         }
       ],
@@ -7327,16 +7327,16 @@
       },
       "keywords": [
         {
-          "term": "outcomes",
-          "heading": true
-        },
-        {
           "term": "list",
           "heading": true
         },
         {
-          "term": "add",
-          "heading": false
+          "term": "outcomes",
+          "heading": true
+        },
+        {
+          "term": "relevant",
+          "heading": true
         }
       ],
       "extract": "The steering group should list relevant outcomes, including both the potential benefits and harms of the intervention or exposure. The GDG then reviews this list and may add additional outcomes considered important.",
@@ -7370,12 +7370,12 @@
           "heading": false
         },
         {
-          "term": "revise",
-          "heading": true
-        },
-        {
           "term": "foreground",
           "heading": false
+        },
+        {
+          "term": "review",
+          "heading": true
         }
       ],
       "extract": "The list of questions and outcomes of interest should be sent by the steering group to the GDG and possibly to other stakeholders for review and comment. WHO handbook for guideline development 90 Fig. 7.2. Prioritizing key questions and outcomes Generate an initial list of questions, both background and foreground Draft the key (foreground) questions in PICO format (require a systematic review) List all relevant",
@@ -7401,11 +7401,11 @@
           "heading": false
         },
         {
-          "term": "determining",
+          "term": "ranks",
           "heading": false
         },
         {
-          "term": "background",
+          "term": "methodologist",
           "heading": false
         }
       ],
@@ -7476,23 +7476,23 @@
           "heading": false
         },
         {
-          "term": "health outcomes",
-          "heading": false
-        },
-        {
-          "term": "death",
-          "heading": false
-        },
-        {
-          "term": "components",
-          "heading": false
-        },
-        {
           "term": "steering group",
           "heading": false
         },
         {
-          "term": "relationship",
+          "term": "health outcomes",
+          "heading": false
+        },
+        {
+          "term": "guideline development",
+          "heading": false
+        },
+        {
+          "term": "systematic review",
+          "heading": false
+        },
+        {
+          "term": "review team",
           "heading": false
         }
       ],
@@ -7519,19 +7519,15 @@
           "heading": false
         },
         {
-          "term": "clinical excellence",
-          "heading": false
-        },
-        {
-          "term": "national institute",
-          "heading": false
-        },
-        {
           "term": "pmid",
           "heading": false
         },
         {
-          "term": "doi",
+          "term": "clinical excellence",
+          "heading": false
+        },
+        {
+          "term": "helfand",
           "heading": false
         },
         {
@@ -7539,7 +7535,11 @@
           "heading": false
         },
         {
-          "term": "helfand",
+          "term": "vist",
+          "heading": false
+        },
+        {
+          "term": "doi",
           "heading": false
         }
       ],
@@ -7574,15 +7574,15 @@
           "heading": false
         },
         {
-          "term": "studies",
-          "heading": false
-        },
-        {
-          "term": "characteristics",
+          "term": "explicit",
           "heading": false
         },
         {
           "term": "conclusions",
+          "heading": false
+        },
+        {
+          "term": "characteristics",
           "heading": false
         }
       ],
@@ -7613,8 +7613,8 @@
           "heading": false
         },
         {
-          "term": "meta-analysis",
-          "heading": false
+          "term": "synthesis",
+          "heading": true
         }
       ],
       "extract": "93 WHO handbook for guideline development 94 and low-quality systematic reviews should not inform WHO guidelines and WHO staff must be able to recognize these and understand their limitations. A systematic review is different from a meta-analysis. The latter term refers to the quantitative synthesis (pooling) of an outcome across comparable studies to achieve a pooled estimate of effect (see Section 8.3.5). A",
@@ -7640,12 +7640,12 @@
           "heading": true
         },
         {
-          "term": "existing",
-          "heading": true
+          "term": "guideline development",
+          "heading": false
         },
         {
-          "term": "step",
-          "heading": false
+          "term": "existing",
+          "heading": true
         }
       ],
       "extract": "After scoping the proposed guideline (see Chapter 2) and crafting the key questions (see Chapter 7), the next step in guideline development is to identify one or more systematic reviews to address each key question. Existing systematic reviews will inform the guideline development process, whether or not a new systematic review or an update of an existing review will be required.",
@@ -7667,15 +7667,15 @@
       },
       "keywords": [
         {
-          "term": "existing reviews",
-          "heading": true
-        },
-        {
           "term": "systematic reviews",
           "heading": true
         },
         {
-          "term": "cochrane collaboration",
+          "term": "existing reviews",
+          "heading": true
+        },
+        {
+          "term": "search filters",
           "heading": false
         },
         {
@@ -7683,7 +7683,7 @@
           "heading": false
         },
         {
-          "term": "search filters",
+          "term": "cochrane collaboration",
           "heading": false
         },
         {
@@ -7722,11 +7722,11 @@
           "heading": true
         },
         {
-          "term": "expensive",
+          "term": "time-consuming",
           "heading": false
         },
         {
-          "term": "time-consuming",
+          "term": "reviews",
           "heading": false
         }
       ],
@@ -7749,11 +7749,11 @@
       },
       "keywords": [
         {
-          "term": "existing systematic",
+          "term": "systematic reviews",
           "heading": true
         },
         {
-          "term": "systematic reviews",
+          "term": "existing systematic",
           "heading": true
         },
         {
@@ -7761,16 +7761,12 @@
           "heading": true
         },
         {
-          "term": "relevance",
-          "heading": true
-        },
-        {
           "term": "key question",
           "heading": false
         },
         {
-          "term": "yes",
-          "heading": false
+          "term": "relevance",
+          "heading": true
         },
         {
           "term": "checklists",
@@ -7778,6 +7774,10 @@
         },
         {
           "term": "items",
+          "heading": false
+        },
+        {
+          "term": "yes",
           "heading": false
         }
       ],
@@ -7831,18 +7831,6 @@
       },
       "keywords": [
         {
-          "term": "criteria",
-          "heading": true
-        },
-        {
-          "term": "eligibility criteria",
-          "heading": false
-        },
-        {
-          "term": "exclusion criteria",
-          "heading": false
-        },
-        {
           "term": "key questions",
           "heading": true
         },
@@ -7851,11 +7839,23 @@
           "heading": false
         },
         {
+          "term": "criteria",
+          "heading": true
+        },
+        {
+          "term": "exclusion criteria",
+          "heading": false
+        },
+        {
+          "term": "eligibility criteria",
+          "heading": false
+        },
+        {
           "term": "systematic review",
           "heading": false
         },
         {
-          "term": "studies",
+          "term": "inclusion",
           "heading": false
         }
       ],
@@ -7878,15 +7878,23 @@
       },
       "keywords": [
         {
-          "term": "search",
-          "heading": true
-        },
-        {
           "term": "bibliographic databases",
           "heading": false
         },
         {
+          "term": "search",
+          "heading": true
+        },
+        {
           "term": "database searching",
+          "heading": false
+        },
+        {
+          "term": "sensitive search",
+          "heading": false
+        },
+        {
+          "term": "search strategy",
           "heading": false
         },
         {
@@ -7898,15 +7906,7 @@
           "heading": false
         },
         {
-          "term": "search strategy",
-          "heading": false
-        },
-        {
-          "term": "sensitive search",
-          "heading": false
-        },
-        {
-          "term": "middle-income countries",
+          "term": "grey literature",
           "heading": false
         }
       ],
@@ -7929,23 +7929,15 @@
       },
       "keywords": [
         {
-          "term": "studies",
-          "heading": true
-        },
-        {
           "term": "full text",
           "heading": false
         },
         {
+          "term": "studies",
+          "heading": true
+        },
+        {
           "term": "retrieved",
-          "heading": false
-        },
-        {
-          "term": "diagram",
-          "heading": false
-        },
-        {
-          "term": "flow",
           "heading": false
         },
         {
@@ -7953,7 +7945,15 @@
           "heading": false
         },
         {
-          "term": "stage",
+          "term": "titles",
+          "heading": false
+        },
+        {
+          "term": "abstracts",
+          "heading": false
+        },
+        {
+          "term": "diagram",
           "heading": false
         }
       ],
@@ -8019,6 +8019,10 @@
           "heading": false
         },
         {
+          "term": "systematic review",
+          "heading": false
+        },
+        {
           "term": "meta-analysis",
           "heading": false
         },
@@ -8027,7 +8031,11 @@
           "heading": false
         },
         {
-          "term": "systematic review",
+          "term": "synthesis",
+          "heading": false
+        },
+        {
+          "term": "synthesized",
           "heading": false
         },
         {
@@ -8035,15 +8043,7 @@
           "heading": false
         },
         {
-          "term": "estimates",
-          "heading": false
-        },
-        {
-          "term": "synthesis",
-          "heading": false
-        },
-        {
-          "term": "synthesized",
+          "term": "evidence",
           "heading": false
         }
       ],
@@ -8070,12 +8070,12 @@
           "heading": true
         },
         {
-          "term": "purposes",
-          "heading": false
+          "term": "systematic",
+          "heading": true
         },
         {
-          "term": "know",
-          "heading": false
+          "term": "review",
+          "heading": true
         }
       ],
       "extract": "Systematic reviews conducted in developing WHO guidelines should be reported in a standard format using the PRISMA reporting guidelines (20). For some purposes, the methods and results section of the review may be all that WHO will require; for other purposes it may require a full report with detailed introduction and discussion sections. GRADE evidence profiles should generally be part of the final report of the",
@@ -8144,16 +8144,16 @@
           "heading": true
         },
         {
-          "term": "cost",
+          "term": "mechanistic",
+          "heading": false
+        },
+        {
+          "term": "toxic",
           "heading": false
         },
         {
           "term": "types",
           "heading": true
-        },
-        {
-          "term": "entails",
-          "heading": false
         }
       ],
       "extract": "Many other types and sources of data may be relevant to WHO guidelines. For example, for questions about substances that are potentially toxic to humans or the environment, mechanistic and animal studies may be relevant. Questions about cost and measures of economic efficiency, such as cost– effectiveness, may require information on prices from manufacturers or data from programme evaluations, or may involve",
@@ -8175,19 +8175,19 @@
       },
       "keywords": [
         {
-          "term": "updating",
-          "heading": true
-        },
-        {
           "term": "existing systematic",
           "heading": true
         },
         {
-          "term": "original authors",
-          "heading": false
+          "term": "updating",
+          "heading": true
         },
         {
           "term": "systematic review",
+          "heading": false
+        },
+        {
+          "term": "original authors",
           "heading": false
         },
         {
@@ -8195,11 +8195,11 @@
           "heading": false
         },
         {
-          "term": "estimate",
+          "term": "chapter",
           "heading": false
         },
         {
-          "term": "current",
+          "term": "synthesis",
           "heading": false
         }
       ],
@@ -8234,23 +8234,23 @@
           "heading": false
         },
         {
-          "term": "supplier",
-          "heading": false
-        },
-        {
           "term": "expertise",
           "heading": false
         },
         {
-          "term": "commission",
-          "heading": true
-        },
-        {
-          "term": "days",
+          "term": "scan",
           "heading": false
         },
         {
-          "term": "teams",
+          "term": "commissioned",
+          "heading": false
+        },
+        {
+          "term": "suppliers",
+          "heading": false
+        },
+        {
+          "term": "proposals",
           "heading": false
         }
       ],
@@ -8277,11 +8277,11 @@
           "heading": true
         },
         {
-          "term": "cochrane",
+          "term": "reviews",
           "heading": false
         },
         {
-          "term": "supplier",
+          "term": "cochrane",
           "heading": false
         }
       ],
@@ -8343,27 +8343,27 @@
           "heading": false
         },
         {
-          "term": "campbell collaboration",
-          "heading": false
-        },
-        {
           "term": "cochrane handbook",
           "heading": false
         },
         {
-          "term": "grade working",
+          "term": "systematic reviews",
           "heading": false
         },
         {
-          "term": "plos med",
+          "term": "grc intranet",
           "heading": false
         },
         {
-          "term": "website",
+          "term": "campbell collaboration",
           "heading": false
         },
         {
-          "term": "assessment tool",
+          "term": "retrieving systematic",
+          "heading": false
+        },
+        {
+          "term": "intranet site",
           "heading": false
         }
       ],
@@ -8404,11 +8404,11 @@
       },
       "keywords": [
         {
-          "term": "quality",
+          "term": "evidence",
           "heading": true
         },
         {
-          "term": "evidence",
+          "term": "quality",
           "heading": true
         },
         {
@@ -8443,7 +8443,7 @@
           "heading": true
         },
         {
-          "term": "summary",
+          "term": "footnotes",
           "heading": false
         }
       ],
@@ -8466,11 +8466,19 @@
       },
       "keywords": [
         {
+          "term": "cryotherapy",
+          "heading": false
+        },
+        {
           "term": "observational studies",
           "heading": false
         },
         {
-          "term": "risk reduction",
+          "term": "intraepithelial neoplasia",
+          "heading": false
+        },
+        {
+          "term": "cervical intraepithelial",
           "heading": false
         },
         {
@@ -8478,23 +8486,15 @@
           "heading": false
         },
         {
-          "term": "serious",
+          "term": "cin",
+          "heading": false
+        },
+        {
+          "term": "risk reduction",
           "heading": false
         },
         {
           "term": "evidence profile",
-          "heading": false
-        },
-        {
-          "term": "randomized trials",
-          "heading": false
-        },
-        {
-          "term": "fewer",
-          "heading": false
-        },
-        {
-          "term": "cervical",
           "heading": false
         }
       ],
@@ -8521,16 +8521,16 @@
           "heading": true
         },
         {
-          "term": "quality",
-          "heading": true
-        },
-        {
           "term": "gdg members",
           "heading": false
         },
         {
           "term": "staff",
           "heading": true
+        },
+        {
+          "term": "grade",
+          "heading": false
         }
       ],
       "extract": "of the evidence? WHO staff responsible for developing guidelines need to understand the basic concepts governing the assessment of the quality of the evidence − and how to apply them in GRADE evidence profiles − to supervise commissioned work and advise GDG members. WHO staff who perform systematic reviews in house must have an in-depth knowledge of GRADE. GDG members should be briefed on how to assess the quality",
@@ -8552,7 +8552,11 @@
       },
       "keywords": [
         {
-          "term": "studies",
+          "term": "nonrandomized trials",
+          "heading": false
+        },
+        {
+          "term": "evidence",
           "heading": true
         },
         {
@@ -8564,20 +8568,16 @@
           "heading": false
         },
         {
-          "term": "nonrandomized trials",
+          "term": "guideline developers",
           "heading": false
+        },
+        {
+          "term": "body",
+          "heading": true
         },
         {
           "term": "quality",
           "heading": true
-        },
-        {
-          "term": "evidence",
-          "heading": true
-        },
-        {
-          "term": "rcts",
-          "heading": false
         },
         {
           "term": "key question",
@@ -8603,23 +8603,23 @@
       },
       "keywords": [
         {
-          "term": "effect estimate",
-          "heading": false
-        },
-        {
-          "term": "true effect",
-          "heading": false
-        },
-        {
           "term": "rated down",
           "heading": false
         },
         {
-          "term": "confidence intervals",
+          "term": "evidence",
+          "heading": true
+        },
+        {
+          "term": "effect estimate",
           "heading": false
         },
         {
-          "term": "study limitations",
+          "term": "outcome",
+          "heading": true
+        },
+        {
+          "term": "confidence intervals",
           "heading": false
         },
         {
@@ -8627,11 +8627,11 @@
           "heading": false
         },
         {
-          "term": "sample size",
+          "term": "publication bias",
           "heading": false
         },
         {
-          "term": "quality",
+          "term": "body",
           "heading": true
         }
       ],
@@ -8658,6 +8658,10 @@
           "heading": true
         },
         {
+          "term": "evidence",
+          "heading": true
+        },
+        {
           "term": "plausible bias",
           "heading": false
         },
@@ -8666,7 +8670,7 @@
           "heading": false
         },
         {
-          "term": "dose response",
+          "term": "observational study",
           "heading": false
         },
         {
@@ -8674,15 +8678,11 @@
           "heading": true
         },
         {
-          "term": "observational study",
-          "heading": false
-        },
-        {
           "term": "greater confidence",
           "heading": false
         },
         {
-          "term": "confidence interval",
+          "term": "upgrade",
           "heading": false
         }
       ],
@@ -8709,7 +8709,19 @@
           "heading": true
         },
         {
+          "term": "evidence",
+          "heading": true
+        },
+        {
           "term": "critical outcomes",
+          "heading": false
+        },
+        {
+          "term": "evidence across",
+          "heading": false
+        },
+        {
+          "term": "turns out",
           "heading": false
         },
         {
@@ -8721,19 +8733,7 @@
           "heading": false
         },
         {
-          "term": "evidence across",
-          "heading": false
-        },
-        {
           "term": "effect estimates",
-          "heading": false
-        },
-        {
-          "term": "lowest",
-          "heading": false
-        },
-        {
-          "term": "key question",
           "heading": false
         }
       ],
@@ -8772,12 +8772,12 @@
           "heading": true
         },
         {
-          "term": "assessing",
+          "term": "grc",
           "heading": false
         },
         {
-          "term": "applied",
-          "heading": false
+          "term": "situations",
+          "heading": true
         }
       ],
       "extract": "Confusion and concerns exist as to whether GRADE is applicable to all situations in which a GDG issues a recommendation regarding an intervention. The strength of the GRADE approach rests on the use of a structured framework for the assessment of the quality of the evidence and on the requirements that processes be explicit and judgements transparent. GRADE has been applied to a wide range of interventions in",
@@ -8803,19 +8803,11 @@
           "heading": false
         },
         {
-          "term": "grade working",
-          "heading": false
-        },
-        {
           "term": "accessed november",
           "heading": false
         },
         {
-          "term": "brozek",
-          "heading": false
-        },
-        {
-          "term": "working group",
+          "term": "grade working",
           "heading": false
         },
         {
@@ -8824,6 +8816,14 @@
         },
         {
           "term": "oxman",
+          "heading": false
+        },
+        {
+          "term": "pmid",
+          "heading": false
+        },
+        {
+          "term": "brozek",
           "heading": false
         },
         {
@@ -8850,20 +8850,20 @@
       },
       "keywords": [
         {
-          "term": "four main",
-          "heading": false
-        },
-        {
           "term": "main factors",
           "heading": false
         },
         {
-          "term": "direction",
+          "term": "four main",
+          "heading": false
+        },
+        {
+          "term": "strength",
           "heading": true
         },
         {
-          "term": "public health",
-          "heading": false
+          "term": "direction",
+          "heading": true
         }
       ],
       "extract": "of recommendations Four main factors determine the direction and strength of a recommendation in public health (1–5): ■■ the confidence in the estimates of effect of the evaluated evidence (i.e. the quality of the evidence) (see Chapter 9); ■■ values and preferences related to the outcomes of an intervention or exposure; ■■ the balance of benefits and harms; and ■■ resource implications. In addition to these four",
@@ -8885,15 +8885,15 @@
       },
       "keywords": [
         {
-          "term": "factor",
+          "term": "recommendation",
+          "heading": false
+        },
+        {
+          "term": "strength",
           "heading": false
         },
         {
           "term": "direction",
-          "heading": false
-        },
-        {
-          "term": "recommendation",
           "heading": false
         }
       ],
@@ -8938,15 +8938,11 @@
           "heading": false
         },
         {
-          "term": "greater",
-          "heading": false
-        },
-        {
           "term": "likelihood",
           "heading": false
         },
         {
-          "term": "resource implications",
+          "term": "greater",
           "heading": false
         },
         {
@@ -8954,7 +8950,7 @@
           "heading": true
         },
         {
-          "term": "importance",
+          "term": "resource implications",
           "heading": false
         },
         {
@@ -8963,6 +8959,10 @@
         },
         {
           "term": "human rights",
+          "heading": false
+        },
+        {
+          "term": "importance",
           "heading": false
         }
       ],
@@ -8985,11 +8985,23 @@
       },
       "keywords": [
         {
+          "term": "conditional recommendation",
+          "heading": false
+        },
+        {
           "term": "people affected",
           "heading": false
         },
         {
-          "term": "conditional recommendation",
+          "term": "evidence",
+          "heading": true
+        },
+        {
+          "term": "gdg members",
+          "heading": false
+        },
+        {
+          "term": "preferences",
           "heading": false
         },
         {
@@ -8999,18 +9011,6 @@
         {
           "term": "across populations",
           "heading": false
-        },
-        {
-          "term": "preferences",
-          "heading": false
-        },
-        {
-          "term": "primary data",
-          "heading": false
-        },
-        {
-          "term": "moving",
-          "heading": true
         },
         {
           "term": "values",
@@ -9036,11 +9036,11 @@
       },
       "keywords": [
         {
-          "term": "benefits",
+          "term": "harms",
           "heading": true
         },
         {
-          "term": "harms",
+          "term": "benefits",
           "heading": true
         },
         {
@@ -9071,15 +9071,15 @@
           "heading": true
         },
         {
-          "term": "costs",
+          "term": "disadvantageous",
+          "heading": false
+        },
+        {
+          "term": "omit",
           "heading": false
         },
         {
           "term": "advantageous",
-          "heading": false
-        },
-        {
-          "term": "disadvantageous",
           "heading": false
         }
       ],
@@ -9106,11 +9106,11 @@
           "heading": true
         },
         {
-          "term": "prevalence",
+          "term": "gdgs",
           "heading": false
         },
         {
-          "term": "incidence",
+          "term": "prioritize",
           "heading": false
         }
       ],
@@ -9133,15 +9133,15 @@
       },
       "keywords": [
         {
+          "term": "equity",
+          "heading": true
+        },
+        {
           "term": "increase equity",
           "heading": false
         },
         {
-          "term": "greater",
-          "heading": false
-        },
-        {
-          "term": "reduce",
+          "term": "gdgs",
           "heading": false
         }
       ],
@@ -9168,15 +9168,15 @@
           "heading": true
         },
         {
-          "term": "costs",
+          "term": "siderations",
           "heading": false
         },
         {
-          "term": "benefits",
+          "term": "judicial",
           "heading": false
         },
         {
-          "term": "lower",
+          "term": "revolve",
           "heading": false
         }
       ],
@@ -9203,7 +9203,7 @@
           "heading": true
         },
         {
-          "term": "programmatic",
+          "term": "lesser",
           "heading": false
         },
         {
@@ -9238,7 +9238,7 @@
           "heading": true
         },
         {
-          "term": "judgements",
+          "term": "gdg",
           "heading": false
         }
       ],
@@ -9261,12 +9261,12 @@
       },
       "keywords": [
         {
-          "term": "undesirable consequences",
-          "heading": false
-        },
-        {
           "term": "recommendation",
           "heading": true
+        },
+        {
+          "term": "undesirable consequences",
+          "heading": false
         },
         {
           "term": "strength",
@@ -9296,11 +9296,11 @@
           "heading": true
         },
         {
-          "term": "communicate",
+          "term": "cautious",
           "heading": false
         },
         {
-          "term": "uncommon",
+          "term": "gdgs",
           "heading": false
         }
       ],
@@ -9327,16 +9327,16 @@
           "heading": true
         },
         {
+          "term": "decision aides",
+          "heading": false
+        },
+        {
           "term": "decisions consistent",
           "heading": false
         },
         {
           "term": "weak",
           "heading": true
-        },
-        {
-          "term": "course",
-          "heading": false
         },
         {
           "term": "preferences",
@@ -9366,15 +9366,15 @@
       },
       "keywords": [
         {
+          "term": "justifications",
+          "heading": false
+        },
+        {
           "term": "depict",
           "heading": false
         },
         {
           "term": "evidence-to-recommendation",
-          "heading": false
-        },
-        {
-          "term": "subgroups",
           "heading": false
         }
       ],
@@ -9405,12 +9405,12 @@
           "heading": false
         },
         {
-          "term": "drafted",
+          "term": "gdg",
           "heading": false
         },
         {
-          "term": "gdg",
-          "heading": false
+          "term": "recommendations",
+          "heading": true
         }
       ],
       "extract": "Draft recommendations can be prepared either by the steering group before the GDG meets to formulate recommendations, or during the meeting by the GDG itself. Under the leadership of the chair, the GDG reviews and discusses the GRADE evidence profiles presented by a representative of the systematic review team. In addition, the GDG considers other relevant criteria and evidence as discussed above. If the steering",
@@ -9432,7 +9432,19 @@
       },
       "keywords": [
         {
-          "term": "against",
+          "term": "recommendations",
+          "heading": true
+        },
+        {
+          "term": "phrases",
+          "heading": false
+        },
+        {
+          "term": "systematic review",
+          "heading": false
+        },
+        {
+          "term": "contain",
           "heading": false
         },
         {
@@ -9440,23 +9452,11 @@
           "heading": false
         },
         {
-          "term": "recommendation",
-          "heading": false
-        },
-        {
-          "term": "phrases",
-          "heading": false
-        },
-        {
           "term": "conditional",
           "heading": false
         },
         {
-          "term": "strong",
-          "heading": false
-        },
-        {
-          "term": "systematic review",
+          "term": "intervention",
           "heading": false
         }
       ],
@@ -9479,23 +9479,23 @@
       },
       "keywords": [
         {
-          "term": "rare",
-          "heading": false
-        },
-        {
           "term": "recommendation",
           "heading": false
         },
         {
-          "term": "lack",
+          "term": "rare",
           "heading": false
         },
         {
-          "term": "compilation",
+          "term": "dearth",
           "heading": false
         },
         {
-          "term": "accompanying",
+          "term": "evidence",
+          "heading": false
+        },
+        {
+          "term": "situations",
           "heading": false
         }
       ],
@@ -9522,12 +9522,12 @@
           "heading": true
         },
         {
-          "term": "gaps",
-          "heading": false
-        },
-        {
           "term": "research",
           "heading": true
+        },
+        {
+          "term": "gaps",
+          "heading": false
         }
       ],
       "extract": "When gaps in the evidence are such that significant uncertainty exists with respect to the balance of an intervention’s benefits and harms, such knowledge gaps should be described and questions and methods for addressing the gaps should be suggested. The research agenda can be prioritized, if appropriate. This section of the guideline document will inform future recommendations and guidelines. In formulating",
@@ -9549,15 +9549,11 @@
       },
       "keywords": [
         {
-          "term": "rapid response",
+          "term": "copd guideline",
           "heading": false
         },
         {
-          "term": "oxman",
-          "heading": false
-        },
-        {
-          "term": "grade working",
+          "term": "ats ers",
           "heading": false
         },
         {
@@ -9565,7 +9561,15 @@
           "heading": false
         },
         {
-          "term": "doi",
+          "term": "guideline development",
+          "heading": false
+        },
+        {
+          "term": "response guideline",
+          "heading": false
+        },
+        {
+          "term": "oxman",
           "heading": false
         },
         {
@@ -9573,11 +9577,7 @@
           "heading": false
         },
         {
-          "term": "guyatt",
-          "heading": false
-        },
-        {
-          "term": "public health",
+          "term": "grade working",
           "heading": false
         }
       ],
@@ -9600,16 +9600,16 @@
       },
       "keywords": [
         {
-          "term": "modifications",
-          "heading": false
+          "term": "guideline",
+          "heading": true
         },
         {
           "term": "advice",
           "heading": true
         },
         {
-          "term": "leadership",
-          "heading": false
+          "term": "rapid",
+          "heading": true
         }
       ],
       "extract": "In response to a public health emergency, WHO must provide global leadership and timely guidance in the form of an evidence-informed guideline produced within one to three months. The steering group for such a rapid advice guideline must follow all of the basic steps for guideline development as described in this handbook, but with modifications to meet the accelerated timeline.",
@@ -9639,11 +9639,7 @@
           "heading": false
         },
         {
-          "term": "decision-makers",
-          "heading": false
-        },
-        {
-          "term": "limiting",
+          "term": "efficiencies",
           "heading": false
         },
         {
@@ -9651,15 +9647,19 @@
           "heading": false
         },
         {
-          "term": "public health",
-          "heading": false
-        },
-        {
           "term": "evidence",
           "heading": false
         },
         {
-          "term": "inform",
+          "term": "limiting",
+          "heading": false
+        },
+        {
+          "term": "decision-makers",
+          "heading": false
+        },
+        {
+          "term": "public health",
           "heading": false
         }
       ],
@@ -9717,15 +9717,15 @@
       },
       "keywords": [
         {
+          "term": "advice guideline",
+          "heading": true
+        },
+        {
           "term": "rapid advice",
           "heading": true
         },
         {
           "term": "health emergency",
-          "heading": false
-        },
-        {
-          "term": "public health",
           "heading": false
         }
       ],
@@ -9799,11 +9799,11 @@
           "heading": true
         },
         {
-          "term": "strain",
+          "term": "compounded",
           "heading": false
         },
         {
-          "term": "armed",
+          "term": "earthquake",
           "heading": false
         }
       ],
@@ -9830,11 +9830,11 @@
           "heading": true
         },
         {
-          "term": "addressed",
-          "heading": true
+          "term": "players",
+          "heading": false
         },
         {
-          "term": "different",
+          "term": "advice",
           "heading": false
         }
       ],
@@ -9865,7 +9865,7 @@
           "heading": true
         },
         {
-          "term": "months",
+          "term": "prone",
           "heading": false
         }
       ],
@@ -9892,19 +9892,19 @@
           "heading": true
         },
         {
-          "term": "advice guidelines",
-          "heading": false
+          "term": "advice guideline",
+          "heading": true
         },
         {
-          "term": "implementing",
-          "heading": false
-        },
-        {
-          "term": "disseminating",
+          "term": "above-mentioned",
           "heading": false
         },
         {
           "term": "manageable",
+          "heading": false
+        },
+        {
+          "term": "embarking",
           "heading": false
         }
       ],
@@ -9931,11 +9931,11 @@
           "heading": true
         },
         {
-          "term": "developing rapid",
-          "heading": false
+          "term": "advice guideline",
+          "heading": true
         },
         {
-          "term": "steps",
+          "term": "developing rapid",
           "heading": false
         }
       ],
@@ -9958,16 +9958,16 @@
       },
       "keywords": [
         {
+          "term": "grc",
+          "heading": true
+        },
+        {
           "term": "secretariat",
           "heading": true
         },
         {
-          "term": "rapid advice",
+          "term": "advice guideline",
           "heading": false
-        },
-        {
-          "term": "grc",
-          "heading": true
         }
       ],
       "extract": "It is particularly important for the responsible technical officer of a rapid advice guideline to contact the GRC Secretariat early in the guideline development process. The GRC and the Secretariat will provide guidance as to whether a rapid advice guideline is appropriate in the situation at hand. In addition, the Secretariat can assist in developing the planning proposal and identifying a review team and a",
@@ -9989,15 +9989,15 @@
       },
       "keywords": [
         {
+          "term": "guideline development",
+          "heading": true
+        },
+        {
+          "term": "advice guideline",
+          "heading": false
+        },
+        {
           "term": "rapid advice",
-          "heading": false
-        },
-        {
-          "term": "technical unit",
-          "heading": false
-        },
-        {
-          "term": "accelerated process",
           "heading": false
         },
         {
@@ -10005,19 +10005,19 @@
           "heading": false
         },
         {
-          "term": "advice guidelines",
+          "term": "standard guideline",
           "heading": false
         },
         {
-          "term": "peer review",
+          "term": "accelerated process",
           "heading": false
         },
         {
-          "term": "external peer",
+          "term": "final guideline",
           "heading": false
         },
         {
-          "term": "key questions",
+          "term": "guideline document",
           "heading": false
         }
       ],
@@ -10040,6 +10040,10 @@
       },
       "keywords": [
         {
+          "term": "advice guideline",
+          "heading": true
+        },
+        {
           "term": "rapid advice",
           "heading": true
         },
@@ -10052,20 +10056,16 @@
           "heading": false
         },
         {
-          "term": "key",
+          "term": "questions",
           "heading": true
         },
         {
-          "term": "questions",
+          "term": "key",
           "heading": true
         },
         {
           "term": "scope",
           "heading": true
-        },
-        {
-          "term": "search",
-          "heading": false
         }
       ],
       "extract": "questions Once the need for a rapid advice guideline has been established and at least the core members of the steering group have been identified, work should begin on defining the scope of the guideline and on developing the key questions in PICO format. A rapid advice guideline will most likely provide recommendations on the benefits and harms of interventions: it is less likely to deal with matters concerning",
@@ -10099,20 +10099,20 @@
           "heading": false
         },
         {
-          "term": "review process",
-          "heading": false
-        },
-        {
           "term": "advice guidelines",
           "heading": false
         },
         {
-          "term": "prepare",
-          "heading": true
+          "term": "review process",
+          "heading": false
         },
         {
           "term": "systematic review",
           "heading": false
+        },
+        {
+          "term": "grc",
+          "heading": true
         }
       ],
       "extract": "Like standard guidelines, rapid advice guidelines require that a planning proposal be submitted to the GRC for review and disposition. The content, level of detail and format are the same as those outlined in Chapter 4. Although the planning proposal takes time to prepare, it is nonetheless essential for the development of a rapid advice guideline, since it serves as a point of reference for the steering group, the",
@@ -10142,11 +10142,11 @@
           "heading": false
         },
         {
-          "term": "iterative",
-          "heading": false
+          "term": "systematic",
+          "heading": true
         },
         {
-          "term": "searching",
+          "term": "iterative",
           "heading": false
         }
       ],
@@ -10169,7 +10169,7 @@
       },
       "keywords": [
         {
-          "term": "types",
+          "term": "reviews",
           "heading": true
         },
         {
@@ -10177,11 +10177,11 @@
           "heading": true
         },
         {
-          "term": "reviews",
-          "heading": true
+          "term": "rapid advice",
+          "heading": false
         },
         {
-          "term": "rapid advice",
+          "term": "systematic reviews",
           "heading": false
         }
       ],
@@ -10223,19 +10223,19 @@
           "heading": false
         },
         {
-          "term": "sources",
-          "heading": true
+          "term": "systematic reviews",
+          "heading": false
         },
         {
           "term": "rapid review",
           "heading": false
         },
         {
-          "term": "systematic reviews",
-          "heading": false
+          "term": "evidence",
+          "heading": true
         },
         {
-          "term": "evidence",
+          "term": "sources",
           "heading": true
         }
       ],
@@ -10266,15 +10266,15 @@
           "heading": false
         },
         {
+          "term": "systematic review",
+          "heading": false
+        },
+        {
           "term": "maximize",
           "heading": false
         },
         {
           "term": "recall",
-          "heading": false
-        },
-        {
-          "term": "systematic review",
           "heading": false
         },
         {
@@ -10340,11 +10340,15 @@
           "heading": true
         },
         {
+          "term": "rapid review",
+          "heading": false
+        },
+        {
           "term": "search strategies",
           "heading": false
         },
         {
-          "term": "rapid review",
+          "term": "review team",
           "heading": false
         },
         {
@@ -10353,10 +10357,6 @@
         },
         {
           "term": "review report",
-          "heading": false
-        },
-        {
-          "term": "review team",
           "heading": false
         }
       ],
@@ -10387,27 +10387,27 @@
           "heading": false
         },
         {
-          "term": "available through",
-          "heading": false
+          "term": "relevant",
+          "heading": true
         },
         {
           "term": "restrictions",
           "heading": false
         },
         {
-          "term": "relevant",
-          "heading": true
-        },
-        {
           "term": "dates",
           "heading": false
         },
         {
-          "term": "language",
+          "term": "available through",
           "heading": false
         },
         {
-          "term": "workers",
+          "term": "search",
+          "heading": false
+        },
+        {
+          "term": "language",
           "heading": false
         }
       ],
@@ -10430,6 +10430,14 @@
       },
       "keywords": [
         {
+          "term": "systematic review",
+          "heading": false
+        },
+        {
+          "term": "standard systematic",
+          "heading": false
+        },
+        {
           "term": "screening",
           "heading": true
         },
@@ -10438,15 +10446,7 @@
           "heading": false
         },
         {
-          "term": "standard systematic",
-          "heading": false
-        },
-        {
-          "term": "selection",
-          "heading": true
-        },
-        {
-          "term": "systematic review",
+          "term": "titles",
           "heading": false
         }
       ],
@@ -10504,11 +10504,11 @@
           "heading": false
         },
         {
-          "term": "compatible",
+          "term": "loans",
           "heading": false
         },
         {
-          "term": "delays",
+          "term": "concluding",
           "heading": false
         }
       ],
@@ -10539,7 +10539,7 @@
           "heading": true
         },
         {
-          "term": "extracted",
+          "term": "pilot-tested",
           "heading": false
         }
       ],
@@ -10562,7 +10562,7 @@
       },
       "keywords": [
         {
-          "term": "data analysis",
+          "term": "evidence synthesis",
           "heading": false
         },
         {
@@ -10570,11 +10570,7 @@
           "heading": false
         },
         {
-          "term": "study",
-          "heading": true
-        },
-        {
-          "term": "evidence synthesis",
+          "term": "review team",
           "heading": false
         },
         {
@@ -10582,15 +10578,19 @@
           "heading": true
         },
         {
-          "term": "review team",
+          "term": "favouring",
           "heading": false
         },
         {
-          "term": "assess",
+          "term": "data analysis",
+          "heading": false
+        },
+        {
+          "term": "study",
           "heading": true
         },
         {
-          "term": "risk",
+          "term": "assess",
           "heading": true
         }
       ],
@@ -10621,27 +10621,27 @@
           "heading": false
         },
         {
-          "term": "narrative summary",
-          "heading": false
-        },
-        {
           "term": "grade",
           "heading": true
         },
         {
-          "term": "equivalent methodological",
+          "term": "narrative summary",
           "heading": false
         },
         {
-          "term": "quality",
+          "term": "identiﬁed",
+          "heading": false
+        },
+        {
+          "term": "srs",
+          "heading": false
+        },
+        {
+          "term": "evidence",
           "heading": true
         },
         {
-          "term": "summary plus",
-          "heading": false
-        },
-        {
-          "term": "overlap among",
+          "term": "equivalent methodological",
           "heading": false
         }
       ],
@@ -10684,7 +10684,7 @@
           "heading": false
         },
         {
-          "term": "description",
+          "term": "brief",
           "heading": false
         },
         {
@@ -10692,7 +10692,7 @@
           "heading": false
         },
         {
-          "term": "box",
+          "term": "description",
           "heading": false
         }
       ],
@@ -10730,6 +10730,10 @@
       },
       "keywords": [
         {
+          "term": "guideline development",
+          "heading": true
+        },
+        {
           "term": "in-person meeting",
           "heading": false
         },
@@ -10738,15 +10742,11 @@
           "heading": false
         },
         {
-          "term": "inclusion criteria",
-          "heading": false
-        },
-        {
           "term": "review process",
           "heading": false
         },
         {
-          "term": "administrative",
+          "term": "inclusion criteria",
           "heading": false
         },
         {
@@ -10754,11 +10754,11 @@
           "heading": false
         },
         {
-          "term": "limitations",
+          "term": "list",
           "heading": false
         },
         {
-          "term": "list",
+          "term": "administrative",
           "heading": false
         }
       ],
@@ -10785,8 +10785,8 @@
           "heading": false
         },
         {
-          "term": "collect",
-          "heading": false
+          "term": "recommendations",
+          "heading": true
         },
         {
           "term": "gloves",
@@ -10812,16 +10812,16 @@
       },
       "keywords": [
         {
+          "term": "guideline",
+          "heading": true
+        },
+        {
           "term": "draft",
           "heading": true
         },
         {
-          "term": "she",
+          "term": "writer",
           "heading": false
-        },
-        {
-          "term": "document",
-          "heading": true
         }
       ],
       "extract": "The process and resources needed to draft the final rapid advice guideline document are essentially the same as for standard guidelines. The writer should be identified early and in most situations this will be the responsible technical officer or other member(s) of the steering group. If an external contractor is used, he or she should be identified near the beginning of the guideline development process and they",
@@ -10851,19 +10851,19 @@
           "heading": false
         },
         {
-          "term": "external",
-          "heading": true
-        },
-        {
           "term": "advice guidelines",
           "heading": false
         },
         {
-          "term": "key individuals",
-          "heading": false
+          "term": "external",
+          "heading": true
         },
         {
           "term": "health emergency",
+          "heading": false
+        },
+        {
+          "term": "key individuals",
           "heading": false
         }
       ],
@@ -10890,15 +10890,15 @@
           "heading": true
         },
         {
-          "term": "implementation",
-          "heading": true
-        },
-        {
-          "term": "decision-makers",
+          "term": "stemming",
           "heading": false
         },
         {
-          "term": "subnational",
+          "term": "evidence",
+          "heading": false
+        },
+        {
+          "term": "modify",
           "heading": false
         }
       ],
@@ -10921,15 +10921,15 @@
       },
       "keywords": [
         {
-          "term": "preparing",
+          "term": "circulation",
           "heading": false
         },
         {
-          "term": "electronic",
+          "term": "guideline",
           "heading": false
         },
         {
-          "term": "means",
+          "term": "chapter",
           "heading": false
         }
       ],
@@ -10952,7 +10952,19 @@
       },
       "keywords": [
         {
+          "term": "advice guideline",
+          "heading": false
+        },
+        {
           "term": "rapid advice",
+          "heading": false
+        },
+        {
+          "term": "standard guideline",
+          "heading": false
+        },
+        {
+          "term": "guideline document",
           "heading": false
         },
         {
@@ -10960,11 +10972,7 @@
           "heading": false
         },
         {
-          "term": "pandemic",
-          "heading": false
-        },
-        {
-          "term": "decide",
+          "term": "systematic reviews",
           "heading": false
         },
         {
@@ -10972,15 +10980,7 @@
           "heading": false
         },
         {
-          "term": "systematic reviews",
-          "heading": false
-        },
-        {
-          "term": "revised",
-          "heading": false
-        },
-        {
-          "term": "date",
+          "term": "pandemic",
           "heading": false
         }
       ],
@@ -11003,11 +11003,11 @@
       },
       "keywords": [
         {
-          "term": "rapid advice",
+          "term": "advice guideline",
           "heading": true
         },
         {
-          "term": "advice guidelines",
+          "term": "rapid advice",
           "heading": true
         },
         {
@@ -11015,15 +11015,15 @@
           "heading": false
         },
         {
-          "term": "processes",
-          "heading": true
-        },
-        {
-          "term": "health emergency",
+          "term": "grc",
           "heading": false
         },
         {
-          "term": "public health",
+          "term": "final guideline",
+          "heading": false
+        },
+        {
+          "term": "health emergency",
           "heading": false
         }
       ],
@@ -11046,11 +11046,19 @@
       },
       "keywords": [
         {
+          "term": "advice guideline",
+          "heading": false
+        },
+        {
+          "term": "guideline development",
+          "heading": false
+        },
+        {
           "term": "rapid advice",
           "heading": false
         },
         {
-          "term": "processes",
+          "term": "standard guideline",
           "heading": false
         },
         {
@@ -11062,19 +11070,11 @@
           "heading": false
         },
         {
-          "term": "principles",
+          "term": "processes",
           "heading": false
         },
         {
           "term": "emergency",
-          "heading": false
-        },
-        {
-          "term": "required",
-          "heading": false
-        },
-        {
-          "term": "standard",
           "heading": false
         }
       ],
@@ -11105,11 +11105,15 @@
           "heading": false
         },
         {
-          "term": "health technology",
+          "term": "systematic reviews",
           "heading": false
         },
         {
-          "term": "world health",
+          "term": "pmid",
+          "heading": false
+        },
+        {
+          "term": "erf",
           "heading": false
         },
         {
@@ -11117,15 +11121,11 @@
           "heading": false
         },
         {
-          "term": "int",
+          "term": "world health",
           "heading": false
         },
         {
-          "term": "systematic reviews",
-          "heading": false
-        },
-        {
-          "term": "pmid",
+          "term": "doi",
           "heading": false
         }
       ],
@@ -11170,7 +11170,15 @@
           "heading": false
         },
         {
+          "term": "guideline",
+          "heading": true
+        },
+        {
           "term": "peer review",
+          "heading": false
+        },
+        {
+          "term": "draft guideline",
           "heading": false
         },
         {
@@ -11186,15 +11194,7 @@
           "heading": false
         },
         {
-          "term": "regional offices",
-          "heading": false
-        },
-        {
           "term": "review group",
-          "heading": false
-        },
-        {
-          "term": "comments",
           "heading": false
         }
       ],
@@ -11225,11 +11225,11 @@
           "heading": false
         },
         {
-          "term": "look",
+          "term": "turn-around",
           "heading": false
         },
         {
-          "term": "turn-around",
+          "term": "draft",
           "heading": false
         }
       ],
@@ -11270,11 +11270,15 @@
       },
       "keywords": [
         {
+          "term": "writer",
+          "heading": false
+        },
+        {
           "term": "writing",
           "heading": true
         },
         {
-          "term": "writer",
+          "term": "guideline development",
           "heading": false
         },
         {
@@ -11282,15 +11286,11 @@
           "heading": false
         },
         {
+          "term": "calculate",
+          "heading": false
+        },
+        {
           "term": "minimum",
-          "heading": false
-        },
-        {
-          "term": "person",
-          "heading": false
-        },
-        {
-          "term": "time",
           "heading": false
         }
       ],
@@ -11344,7 +11344,7 @@
       },
       "keywords": [
         {
-          "term": "pay",
+          "term": "booked",
           "heading": false
         },
         {
@@ -11352,7 +11352,7 @@
           "heading": false
         },
         {
-          "term": "maintains",
+          "term": "proofreader",
           "heading": false
         }
       ],
@@ -11429,10 +11429,6 @@
           "heading": false
         },
         {
-          "term": "checked",
-          "heading": false
-        },
-        {
           "term": "layout",
           "heading": false
         },
@@ -11441,7 +11437,11 @@
           "heading": false
         },
         {
-          "term": "again",
+          "term": "checked",
+          "heading": false
+        },
+        {
+          "term": "clearance",
           "heading": false
         }
       ],
@@ -11464,15 +11464,15 @@
       },
       "keywords": [
         {
+          "term": "mandatory free",
+          "heading": false
+        },
+        {
           "term": "free distribution",
           "heading": false
         },
         {
-          "term": "schools",
-          "heading": false
-        },
-        {
-          "term": "consult",
+          "term": "priced",
           "heading": false
         },
         {
@@ -11499,11 +11499,11 @@
       },
       "keywords": [
         {
-          "term": "web",
+          "term": "typesetter",
           "heading": false
         },
         {
-          "term": "html",
+          "term": "designer",
           "heading": false
         },
         {
@@ -11565,15 +11565,15 @@
           "heading": true
         },
         {
-          "term": "costs",
-          "heading": false
-        },
-        {
           "term": "languages",
           "heading": false
         },
         {
-          "term": "suppliers",
+          "term": "forget",
+          "heading": false
+        },
+        {
+          "term": "arabic",
           "heading": false
         }
       ],
@@ -11604,7 +11604,7 @@
           "heading": false
         },
         {
-          "term": "awareness",
+          "term": "guideline",
           "heading": false
         }
       ],
@@ -11631,11 +11631,11 @@
           "heading": true
         },
         {
-          "term": "charts",
+          "term": "announcement",
           "heading": false
         },
         {
-          "term": "conference",
+          "term": "succinct",
           "heading": false
         }
       ],
@@ -11673,15 +11673,15 @@
       },
       "keywords": [
         {
-          "term": "date",
-          "heading": true
-        },
-        {
           "term": "review-by",
           "heading": true
         },
         {
-          "term": "remain",
+          "term": "date",
+          "heading": true
+        },
+        {
+          "term": "rule",
           "heading": false
         }
       ],
@@ -11704,16 +11704,16 @@
       },
       "keywords": [
         {
+          "term": "recommendations",
+          "heading": true
+        },
+        {
           "term": "updating",
           "heading": true
         },
         {
-          "term": "outlined",
+          "term": "grc",
           "heading": false
-        },
-        {
-          "term": "recommendations",
-          "heading": true
         }
       ],
       "extract": "All WHO recommendations that are not based on the processes and standards outlined in this handbook (particularly those published before the GRC was established in 2007 and those not considering equity, human rights and gender) should be updated to meet current WHO guideline standards. Updating guidelines is challenging if evidence has to be retrieved to support a large number of existing recommendations. In this",
@@ -11735,11 +11735,11 @@
       },
       "keywords": [
         {
-          "term": "date",
+          "term": "review-by",
           "heading": true
         },
         {
-          "term": "review-by",
+          "term": "date",
           "heading": true
         },
         {
@@ -11766,15 +11766,11 @@
       },
       "keywords": [
         {
-          "term": "changing",
-          "heading": false
-        },
-        {
           "term": "recommendations",
           "heading": true
         },
         {
-          "term": "update",
+          "term": "announcements",
           "heading": false
         },
         {
@@ -11782,7 +11778,11 @@
           "heading": true
         },
         {
-          "term": "advisable",
+          "term": "grc",
+          "heading": false
+        },
+        {
+          "term": "review-by",
           "heading": false
         }
       ],
@@ -11817,11 +11817,11 @@
           "heading": false
         },
         {
-          "term": "agree",
+          "term": "systematic reviews",
           "heading": false
         },
         {
-          "term": "med",
+          "term": "moher",
           "heading": false
         }
       ],
@@ -11844,23 +11844,23 @@
       },
       "keywords": [
         {
-          "term": "implementation",
-          "heading": true
-        },
-        {
           "term": "adaptation",
           "heading": true
         },
         {
-          "term": "evaluation",
-          "heading": true
-        },
-        {
-          "term": "tools",
+          "term": "guideline adaptation",
           "heading": false
         },
         {
-          "term": "subnational",
+          "term": "guideline development",
+          "heading": false
+        },
+        {
+          "term": "implementation",
+          "heading": true
+        },
+        {
+          "term": "steering group",
           "heading": false
         },
         {
@@ -11868,11 +11868,11 @@
           "heading": false
         },
         {
-          "term": "steering group",
-          "heading": false
+          "term": "evaluation",
+          "heading": true
         },
         {
-          "term": "models",
+          "term": "recommendations",
           "heading": false
         }
       ],
@@ -11903,12 +11903,12 @@
           "heading": true
         },
         {
-          "term": "changes",
+          "term": "guideline",
           "heading": false
         },
         {
-          "term": "monitoring",
-          "heading": true
+          "term": "changes",
+          "heading": false
         },
         {
           "term": "adaptation",
@@ -11934,15 +11934,15 @@
       },
       "keywords": [
         {
-          "term": "adaptation",
+          "term": "adapte",
           "heading": false
         },
         {
-          "term": "public health",
+          "term": "vaughan",
           "heading": false
         },
         {
-          "term": "childhood",
+          "term": "habicht",
           "heading": false
         }
       ],
@@ -11988,52 +11988,52 @@
   "withheld": false,
   "keywords": [
     {
-      "term": "evidence review",
+      "term": "guideline review",
+      "heading": true
+    },
+    {
+      "term": "guideline development",
+      "heading": true
+    },
+    {
+      "term": "guideline steering",
       "heading": false
     },
     {
-      "term": "systematic review",
+      "term": "guideline process",
       "heading": true
     },
     {
-      "term": "guidelines review",
+      "term": "advice guideline",
       "heading": true
     },
     {
-      "term": "review group",
+      "term": "guideline scope",
       "heading": true
     },
     {
-      "term": "quality evidence",
+      "term": "guideline methods",
       "heading": true
     },
     {
-      "term": "rapid review",
-      "heading": true
-    },
-    {
-      "term": "development group",
-      "heading": true
-    },
-    {
-      "term": "grc review",
+      "term": "final guideline",
       "heading": false
     },
     {
-      "term": "review process",
-      "heading": true
-    },
-    {
-      "term": "grade evidence",
-      "heading": true
-    },
-    {
-      "term": "health guidelines",
-      "heading": true
-    },
-    {
-      "term": "relevant evidence",
+      "term": "guideline topic",
       "heading": false
+    },
+    {
+      "term": "guideline planning",
+      "heading": true
+    },
+    {
+      "term": "standard guideline",
+      "heading": false
+    },
+    {
+      "term": "developing guideline",
+      "heading": true
     }
   ],
   "pageLabels": [

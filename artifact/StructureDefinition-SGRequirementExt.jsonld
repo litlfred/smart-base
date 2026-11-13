@@ -6,7 +6,7 @@
     "prov": "http://www.w3.org/ns/prov#"
   },
   "$schema": "folio-ig-artifact-jsonld/v1",
-  "@id": "StructureDefinition-SGRequirementExt.jsonld",
+  "@id": "StructureDefinition-SGRequirementExt",
   "@type": "fhir:StructureDefinition",
   "dcterms:identifier": "StructureDefinition/SGRequirementExt",
   "schema:name": "SGRequirementExt",
@@ -22,16 +22,24 @@
     {
       "@type": "schema:MediaObject",
       "schema:contentUrl": {
-        "@id": "../ast-data/resources/StructureDefinition/SGRequirementExt--0b7e9bac.json"
+        "@id": "../StructureDefinition-SGRequirementExt.json"
       },
       "schema:encodingFormat": "application/fhir+json",
       "dcterms:source": "local"
+    },
+    {
+      "@type": "schema:MediaObject",
+      "schema:contentUrl": {
+        "@id": "https://raw.githubusercontent.com/litlfred/smart-base/a30ffc53edf0d78098ec02713aa93044737d7a86/resources/StructureDefinition/SGRequirementExt.json"
+      },
+      "schema:encodingFormat": "application/fhir+json",
+      "dcterms:source": "mirror"
     }
   ],
   "prov:wasGeneratedBy": {
     "@type": "prov:Activity",
     "schema:instrument": "ig-publisher 3.0.0 / core 7.0.1",
-    "prov:used": "2a80d31ddda913c7919fe74b33d43762cf02928b"
+    "prov:used": "5b702b9cfd89c3edfc4e4306bf31e2415a89294e"
   },
   "dcterms:isPartOf": {
     "@type": "fhir:ImplementationGuide",

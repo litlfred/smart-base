@@ -6,12 +6,12 @@
     "prov": "http://www.w3.org/ns/prov#"
   },
   "$schema": "folio-ig-artifact-jsonld/v1",
-  "@id": "CodeSystem-KGL1LibraryClasses.jsonld",
+  "@id": "CodeSystem-KGL1LibraryClasses",
   "@type": "fhir:CodeSystem",
   "dcterms:identifier": "CodeSystem/KGL1LibraryClasses",
   "schema:name": "KGL1LibraryClasses",
   "dcterms:title": "Knowledge graph L1Library: classes",
-  "dcterms:description": "The classes of the L1Library layer of the SMART Guidelines knowledge graph. A node's `type` is one of these. Source: smart-base/kg/src/l1-library.ts (migrated from smart-kg ontology/l1-library/l1-library.json).",
+  "dcterms:description": "The classes of the L1Library layer of the SMART Guidelines knowledge graph. A node's `type` is one of these. Source: smart-base/L1/schemas/l1-library.ts (migrated from smart-kg ontology/l1-library/l1-library.json).",
   "schema:version": "0.3.0",
   "dcterms:type": "Terminology: Code Systems",
   "schema:sameAs": {
@@ -22,16 +22,24 @@
     {
       "@type": "schema:MediaObject",
       "schema:contentUrl": {
-        "@id": "../ast-data/resources/CodeSystem/KGL1LibraryClasses--1c5ff050.json"
+        "@id": "../CodeSystem-KGL1LibraryClasses.json"
       },
       "schema:encodingFormat": "application/fhir+json",
       "dcterms:source": "local"
+    },
+    {
+      "@type": "schema:MediaObject",
+      "schema:contentUrl": {
+        "@id": "https://raw.githubusercontent.com/litlfred/smart-base/a30ffc53edf0d78098ec02713aa93044737d7a86/resources/CodeSystem/KGL1LibraryClasses.json"
+      },
+      "schema:encodingFormat": "application/fhir+json",
+      "dcterms:source": "mirror"
     }
   ],
   "prov:wasGeneratedBy": {
     "@type": "prov:Activity",
     "schema:instrument": "ig-publisher 3.0.0 / core 7.0.1",
-    "prov:used": "2a80d31ddda913c7919fe74b33d43762cf02928b"
+    "prov:used": "5b702b9cfd89c3edfc4e4306bf31e2415a89294e"
   },
   "dcterms:isPartOf": {
     "@type": "fhir:ImplementationGuide",

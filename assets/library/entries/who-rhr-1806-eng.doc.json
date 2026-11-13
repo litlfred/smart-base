@@ -18,10 +18,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 1010,
-      "summary": null,
+      "summary": {
+        "text": "Introduces the WHO Classification of Digital Health Interventions v1.0 as a shared taxonomy anchored on discrete digital health functionalities, and presents the full visual overview of interventions grouped across four primary user categories: 1.0 Clients, 2.0 Healthcare Providers, 3.0 Health System Managers, and 4.0 Data Services.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "healthcare provider",
+          "term": "manage client",
           "heading": false
         },
         {
@@ -29,7 +32,7 @@
           "heading": false
         },
         {
-          "term": "manage client",
+          "term": "healthcare provider",
           "heading": false
         },
         {
@@ -37,7 +40,7 @@
           "heading": false
         },
         {
-          "term": "transmit routine",
+          "term": "client health",
           "heading": false
         },
         {
@@ -45,11 +48,11 @@
           "heading": false
         },
         {
-          "term": "event alerts",
+          "term": "verify client",
           "heading": false
         },
         {
-          "term": "death event",
+          "term": "transmit routine",
           "heading": false
         }
       ],
@@ -66,10 +69,33 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 408,
-      "summary": null,
+      "summary": {
+        "text": "Explains why the classification was created (four primary use cases bridging public health and technical communities where frameworks like COBIT, HL7, and ISO are too specialized) and how Digital Health Interventions (DHIs) link to Health System Challenges (HSCs), System Categories (such as LMIS and EMR), synonyms, and programmatic examples.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "digital health",
+          "heading": false
+        },
+        {
           "term": "classification scheme",
+          "heading": false
+        },
+        {
+          "term": "system categories",
+          "heading": false
+        },
+        {
+          "term": "health intervention",
+          "heading": false
+        },
+        {
+          "term": "system challenges",
+          "heading": false
+        },
+        {
+          "term": "identified health",
           "heading": false
         },
         {
@@ -78,26 +104,6 @@
         },
         {
           "term": "hsc",
-          "heading": false
-        },
-        {
-          "term": "fit",
-          "heading": false
-        },
-        {
-          "term": "lmis",
-          "heading": false
-        },
-        {
-          "term": "articulate",
-          "heading": false
-        },
-        {
-          "term": "dhis",
-          "heading": false
-        },
-        {
-          "term": "categories",
           "heading": false
         }
       ],
@@ -114,10 +120,29 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 341,
-      "summary": null,
+      "summary": {
+        "text": "Presents Figure 1 illustrating linkages across Health System Challenges, Digital Health Interventions, and System Categories, and outlines how the classification was developed from mTERG and Labrique et al. categorizations, technical consultations, public feedback, and desk reviews, as well as how WHO will periodically update and version it.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "health commodities",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "health system",
+          "heading": false
+        },
+        {
           "term": "healthcare provider",
+          "heading": false
+        },
+        {
+          "term": "health interventions",
           "heading": false
         },
         {
@@ -130,22 +155,6 @@
         },
         {
           "term": "medical record",
-          "heading": false
-        },
-        {
-          "term": "dhi",
-          "heading": false
-        },
-        {
-          "term": "commodities",
-          "heading": false
-        },
-        {
-          "term": "classification",
-          "heading": false
-        },
-        {
-          "term": "evolve",
           "heading": false
         }
       ],
@@ -162,18 +171,29 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 242,
-      "summary": null,
+      "summary": {
+        "text": "Presents the taxonomy of Health System Challenges organized across eight overarching domains: 1 Information (1.1–1.7), 2 Availability (2.1–2.4), 3 Quality (3.1–3.7), 4 Acceptability (4.1–4.2), 5 Utilization (5.1–5.4), 6 Efficiency (6.1–6.5), 7 Cost (7.1–7.4), and 8 Accountability (8.1–8.6).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "insufficient",
           "heading": false
         },
         {
-          "term": "inadequate",
+          "term": "health commodities",
           "heading": false
         },
         {
           "term": "lack",
+          "heading": false
+        },
+        {
+          "term": "health worker",
+          "heading": false
+        },
+        {
+          "term": "inadequate",
           "heading": false
         },
         {
@@ -185,16 +205,8 @@
           "heading": false
         },
         {
-          "term": "commodities",
-          "heading": false
-        },
-        {
           "term": "utilization",
           "heading": false
-        },
-        {
-          "term": "page",
-          "heading": true
         }
       ],
       "extract": "page 4 3.2.1 Manage inventory and distribution of health commodities 1 Information 3 Quality 6 Efficiency 7 Cost 8 Accountability 2 Availability 4 Acceptability 5 Utilization 1.1 Lack of population denominator 1.2 Delayed reporting of events 1.3 Lack of quality/ reliable data 1.4 Communication roadblocks 1.5 Lack of access to information or data 1.6 Insufficient utilization of data and information 1.7 Lack of unique",
@@ -210,10 +222,29 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 272,
-      "summary": null,
+      "summary": {
+        "text": "Lists the 25 ICT System Categories (A through Y, adapted in part from ISO/TR 14639-2:2014)—ranging from census and CRVS systems to EMRs, HMIS, LMIS, shared health records, and telemedicine—followed by five foundational references for the overview section.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "accessed march",
+          "heading": false
+        },
+        {
+          "term": "information system",
+          "heading": false
+        },
+        {
+          "term": "health record",
+          "heading": false
+        },
+        {
+          "term": "management information",
+          "heading": false
+        },
+        {
+          "term": "health organization",
           "heading": false
         },
         {
@@ -221,27 +252,11 @@
           "heading": false
         },
         {
+          "term": "world health",
+          "heading": false
+        },
+        {
           "term": "international standards",
-          "heading": false
-        },
-        {
-          "term": "iso",
-          "heading": false
-        },
-        {
-          "term": "record",
-          "heading": false
-        },
-        {
-          "term": "geneva",
-          "heading": false
-        },
-        {
-          "term": "page",
-          "heading": true
-        },
-        {
-          "term": "client",
           "heading": false
         }
       ],
@@ -258,7 +273,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 175,
-      "summary": null,
+      "summary": {
+        "text": "Summarizes the taxonomy tree for Group 1.0 (Clients) across seven categories: targeted client communication (1.1.1–1.1.4), untargeted client communication (1.2.1–1.2.2), client-to-client communication (1.3.1), personal health tracking (1.4.1–1.4.3), citizen-based reporting (1.5.1–1.5.2), on-demand information services (1.6.1), and client financial transactions (1.7.1–1.7.3).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "transmit untargeted",
@@ -273,15 +291,15 @@
           "heading": false
         },
         {
+          "term": "untargeted health",
+          "heading": false
+        },
+        {
           "term": "event alerts",
           "heading": false
         },
         {
-          "term": "undefined",
-          "heading": false
-        },
-        {
-          "term": "manage",
+          "term": "health information",
           "heading": false
         }
       ],
@@ -298,7 +316,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 289,
-      "summary": null,
+      "summary": {
+        "text": "Summarizes the taxonomy tree for Group 2.0 (Healthcare Providers) across ten categories: client identification and registration (2.1), client health records (2.2), healthcare provider decision support (2.3), telemedicine (2.4), healthcare provider communication (2.5), referral coordination (2.6), health worker activity planning and scheduling (2.7), healthcare provider training (2.8), prescription and medication management (2.9), and laboratory and diagnostics imaging management (2.10).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "healthcare provider",
@@ -309,11 +330,11 @@
           "heading": false
         },
         {
-          "term": "manage referrals",
+          "term": "client health",
           "heading": false
         },
         {
-          "term": "clinical records",
+          "term": "manage referrals",
           "heading": false
         },
         {
@@ -321,15 +342,15 @@
           "heading": false
         },
         {
-          "term": "diagnostic",
+          "term": "clinical records",
           "heading": false
         },
         {
-          "term": "prescription",
+          "term": "health status",
           "heading": false
         },
         {
-          "term": "orders",
+          "term": "track",
           "heading": false
         }
       ],
@@ -346,7 +367,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 205,
-      "summary": null,
+      "summary": {
+        "text": "Summarizes the taxonomy tree for Group 3.0 (Health System Managers) across seven categories: human resource management (3.1.1–3.1.4), supply chain management (3.2.1–3.2.6), public health event notification (3.3.1), civil registration and vital statistics (3.4.1–3.4.6), health financing (3.5.1–3.5.6), equipment and asset management (3.6.1–3.6.2), and facility management (3.7.1–3.7.2).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "death event",
@@ -361,23 +385,23 @@
           "heading": false
         },
         {
-          "term": "commodities",
+          "term": "health commodities",
           "heading": false
         },
         {
-          "term": "notify",
+          "term": "list health",
           "heading": false
         },
         {
-          "term": "certify",
-          "heading": false
-        },
-        {
-          "term": "register",
+          "term": "health facilities",
           "heading": false
         },
         {
           "term": "manage",
+          "heading": false
+        },
+        {
+          "term": "register",
           "heading": false
         }
       ],
@@ -394,22 +418,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 114,
-      "summary": null,
+      "summary": {
+        "text": "Summarizes the taxonomy tree for Group 4.0 (Data Services) across four categories: data collection, management, and use (4.1.1–4.1.4), data coding (4.2.1–4.2.3), location mapping (4.3.1–4.3.4), and data exchange and interoperability (4.4.1).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "map location",
           "heading": false
         },
         {
-          "term": "merge",
+          "term": "data exchange",
           "heading": false
         },
         {
-          "term": "de-duplicate",
+          "term": "data collection",
           "heading": false
         },
         {
-          "term": "parse",
+          "term": "curate",
           "heading": false
         }
       ],
@@ -426,22 +453,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 759,
-      "summary": null,
+      "summary": {
+        "text": "Details definitions, synonyms, and illustrative project examples for Client interventions under 1.1 Targeted client communication (1.1.1–1.1.4), 1.2 Untargeted client communication (1.2.1–1.2.2), and 1.3 Client-to-client communication (1.3.1).",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "transmit untargeted",
-          "heading": false
-        },
         {
           "term": "client communication",
           "heading": false
         },
         {
-          "term": "messaging campaign",
-          "heading": false
-        },
-        {
-          "term": "mass messaging",
+          "term": "transmit untargeted",
           "heading": false
         },
         {
@@ -453,11 +475,19 @@
           "heading": false
         },
         {
-          "term": "peer group",
+          "term": "messaging campaign",
           "heading": false
         },
         {
-          "term": "undefined target",
+          "term": "untargeted health",
+          "heading": false
+        },
+        {
+          "term": "event alerts",
+          "heading": false
+        },
+        {
+          "term": "event notification",
           "heading": false
         }
       ],
@@ -474,8 +504,19 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 861,
-      "summary": null,
+      "summary": {
+        "text": "Details definitions, synonyms, and illustrative project examples for Client interventions under 1.4 Personal health tracking (1.4.1–1.4.3), 1.5 Citizen-based reporting (1.5.1–1.5.2), 1.6 On-demand information services to clients (1.6.1), and 1.7 Client financial transactions (1.7.1–1.7.3).",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "client health",
+          "heading": false
+        },
+        {
+          "term": "client personal",
+          "heading": false
+        },
         {
           "term": "cash transfers",
           "heading": false
@@ -485,27 +526,19 @@
           "heading": false
         },
         {
+          "term": "health smartcard",
+          "heading": false
+        },
+        {
           "term": "weighing card",
           "heading": false
         },
         {
-          "term": "client personal",
+          "term": "health record",
           "heading": false
         },
         {
-          "term": "wearables",
-          "heading": false
-        },
-        {
-          "term": "financial transactions",
-          "heading": false
-        },
-        {
-          "term": "airtel",
-          "heading": false
-        },
-        {
-          "term": "nets",
+          "term": "health services",
           "heading": false
         }
       ],
@@ -522,18 +555,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 1029,
-      "summary": null,
+      "summary": {
+        "text": "Details definitions, synonyms, and illustrative project examples for Healthcare Provider interventions under 2.1 Client identification and registration (2.1.1–2.1.2), 2.2 Client health records (2.2.1–2.2.4), and 2.3 Healthcare provider decision support (2.3.1–2.3.3).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "catholic relief",
-          "heading": false
-        },
-        {
-          "term": "job aid",
-          "heading": false
-        },
-        {
-          "term": "register children",
+          "term": "manage client",
           "heading": false
         },
         {
@@ -541,19 +569,27 @@
           "heading": false
         },
         {
-          "term": "clinical algorithms",
+          "term": "client health",
           "heading": false
         },
         {
-          "term": "clinical records",
-          "heading": false
-        },
-        {
-          "term": "manage client",
+          "term": "health record",
           "heading": false
         },
         {
           "term": "medical record",
+          "heading": false
+        },
+        {
+          "term": "job aid",
+          "heading": false
+        },
+        {
+          "term": "commcare mobile",
+          "heading": false
+        },
+        {
+          "term": "register children",
           "heading": false
         }
       ],
@@ -570,14 +606,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 1091,
-      "summary": null,
+      "summary": {
+        "text": "Details definitions, synonyms, and illustrative project examples for Healthcare Provider interventions under 2.4 Telemedicine (2.4.1–2.4.4), 2.5 Healthcare provider communication (2.5.1–2.5.5), and 2.6 Referral coordination (2.6.1–2.6.3).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "healthcare provider",
-          "heading": false
-        },
-        {
-          "term": "oral cancer",
           "heading": false
         },
         {
@@ -589,19 +624,23 @@
           "heading": false
         },
         {
-          "term": "chat feature",
+          "term": "health enablement",
           "heading": false
         },
         {
-          "term": "emergency response",
+          "term": "client health",
           "heading": false
         },
         {
-          "term": "africa teledermatology",
+          "term": "text messaging",
           "heading": false
         },
         {
-          "term": "group chat",
+          "term": "communication system",
+          "heading": false
+        },
+        {
+          "term": "mobile phone-based",
           "heading": false
         }
       ],
@@ -618,14 +657,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 877,
-      "summary": null,
+      "summary": {
+        "text": "Details definitions, synonyms, and illustrative project examples for Healthcare Provider interventions under 2.7 Scheduling and activity planning (2.7.1–2.7.2), 2.8 Healthcare provider training (2.8.1–2.8.2), 2.9 Prescription and medication management (2.9.1–2.9.3), and 2.10 Laboratory and diagnostics imaging management (2.10.1–2.10.4).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "prescription orders",
-          "heading": false
-        },
-        {
-          "term": "diagnostic orders",
           "heading": false
         },
         {
@@ -633,15 +671,19 @@
           "heading": false
         },
         {
-          "term": "blood donations",
+          "term": "diagnostic orders",
           "heading": false
         },
         {
-          "term": "adverse drug",
+          "term": "mobile phone",
           "heading": false
         },
         {
-          "term": "drug reactions",
+          "term": "automated scheduling",
+          "heading": false
+        },
+        {
+          "term": "provider training",
           "heading": false
         },
         {
@@ -649,7 +691,7 @@
           "heading": false
         },
         {
-          "term": "automated scheduling",
+          "term": "delivery app",
           "heading": false
         }
       ],
@@ -666,26 +708,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 933,
-      "summary": null,
+      "summary": {
+        "text": "Details definitions, synonyms, and illustrative project examples for Health System Manager interventions under 3.1 Human resource management (3.1.1–3.1.4), 3.2 Supply chain management (3.2.1–3.2.6), and 3.3 Public health event notification (3.3.1).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "commodities logistics",
-          "heading": false
-        },
-        {
-          "term": "drug authenticity",
-          "heading": false
-        },
-        {
-          "term": "stock levels",
-          "heading": false
-        },
-        {
-          "term": "msos ebola",
-          "heading": false
-        },
-        {
-          "term": "registration certification",
           "heading": false
         },
         {
@@ -693,11 +722,27 @@
           "heading": false
         },
         {
-          "term": "medical commodities",
+          "term": "stock levels",
           "heading": false
         },
         {
-          "term": "healthcare provider",
+          "term": "health commodities",
+          "heading": false
+        },
+        {
+          "term": "msos ebola",
+          "heading": false
+        },
+        {
+          "term": "drug authenticity",
+          "heading": false
+        },
+        {
+          "term": "registration certification",
+          "heading": false
+        },
+        {
+          "term": "medical commodities",
           "heading": false
         }
       ],
@@ -714,22 +759,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 974,
-      "summary": null,
+      "summary": {
+        "text": "Details definitions, synonyms, and illustrative project examples for Health System Manager interventions under 3.4 Civil Registration and Vital Statistics (3.4.1–3.4.6), 3.5 Health financing (3.5.1–3.5.6), 3.6 Equipment and asset management (3.6.1–3.6.2), and 3.7 Facility management (3.7.1–3.7.2).",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "death event",
-          "heading": false
-        },
         {
           "term": "birth registration",
           "heading": false
         },
         {
-          "term": "death surveillance",
-          "heading": false
-        },
-        {
-          "term": "notify death",
+          "term": "death event",
           "heading": false
         },
         {
@@ -737,15 +777,23 @@
           "heading": false
         },
         {
+          "term": "notify death",
+          "heading": false
+        },
+        {
           "term": "mobile birth",
           "heading": false
         },
         {
-          "term": "issue birth",
+          "term": "civil registration",
           "heading": false
         },
         {
-          "term": "accredited drug",
+          "term": "registration initiative",
+          "heading": false
+        },
+        {
+          "term": "physical assets",
           "heading": false
         }
       ],
@@ -762,14 +810,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 834,
-      "summary": null,
+      "summary": {
+        "text": "Details definitions, synonyms, and illustrative project examples for Data Services interventions under 4.1 Data collection, management, and use (4.1.1–4.1.4), 4.2 Data coding (4.2.1–4.2.3), 4.3 Location mapping (4.3.1–4.3.4), and 4.4 Data exchange and interoperability (4.4.1).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "map location",
+          "term": "gps mapping",
           "heading": false
         },
         {
-          "term": "gps mapping",
+          "term": "map location",
           "heading": false
         },
         {
@@ -781,19 +832,19 @@
           "heading": false
         },
         {
-          "term": "displayed",
+          "term": "data collection",
           "heading": false
         },
         {
-          "term": "odk",
+          "term": "data exchange",
           "heading": false
         },
         {
-          "term": "team leaders",
+          "term": "data warehouse",
           "heading": false
         },
         {
-          "term": "spray",
+          "term": "data services",
           "heading": false
         }
       ],
@@ -810,7 +861,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 562,
-      "summary": null,
+      "summary": {
+        "text": "Lists bibliographic references 1 through 25 supporting the definitions and illustrative project examples of digital health interventions across the classification.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "accessed november",
@@ -821,11 +875,19 @@
           "heading": false
         },
         {
-          "term": "international conference",
+          "term": "international telecommunication",
           "heading": false
         },
         {
-          "term": "international telecommunication",
+          "term": "health organization",
+          "heading": false
+        },
+        {
+          "term": "national ehealth",
+          "heading": false
+        },
+        {
+          "term": "international conference",
           "heading": false
         },
         {
@@ -833,15 +895,7 @@
           "heading": false
         },
         {
-          "term": "jmir public",
-          "heading": false
-        },
-        {
-          "term": "medopad",
-          "heading": false
-        },
-        {
-          "term": "national ehealth",
+          "term": "world health",
           "heading": false
         }
       ],
@@ -858,10 +912,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 352,
-      "summary": null,
+      "summary": {
+        "text": "Concludes the numbered reference list with citations 26 through 39 covering pharmaceutical import tracking, birth and death registration, verbal autopsy, mobile health wallets, e-claims, facility registries, labour monitoring, terminology management, and vaccination tracking.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "accessed november",
+          "heading": false
+        },
+        {
+          "term": "salaam",
           "heading": false
         },
         {
@@ -873,23 +934,19 @@
           "heading": false
         },
         {
-          "term": "nairobi",
+          "term": "dar",
           "heading": false
         },
         {
-          "term": "labour",
+          "term": "health organization",
+          "heading": false
+        },
+        {
+          "term": "world health",
           "heading": false
         },
         {
           "term": "website",
-          "heading": false
-        },
-        {
-          "term": "kenya",
-          "heading": false
-        },
-        {
-          "term": "html",
           "heading": false
         }
       ],
@@ -906,7 +963,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 416,
-      "summary": null,
+      "summary": {
+        "text": "Provides contact information, WHO coordination and contributor acknowledgements, document reference number (WHO/RHR/18.06), Creative Commons CC BY-NC-SA 3.0 IGO licensing terms, suggested citation, and standard WHO disclaimers.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "tigest tamrat",
@@ -917,7 +977,15 @@
           "heading": false
         },
         {
-          "term": "consultant",
+          "term": "health organization",
+          "heading": false
+        },
+        {
+          "term": "world health",
+          "heading": false
+        },
+        {
+          "term": "path",
           "heading": false
         },
         {
@@ -925,19 +993,11 @@
           "heading": false
         },
         {
-          "term": "rhr",
-          "heading": false
-        },
-        {
           "term": "derek",
           "heading": false
         },
         {
-          "term": "usaid",
-          "heading": false
-        },
-        {
-          "term": "michael",
+          "term": "consultant",
           "heading": false
         }
       ],
@@ -950,11 +1010,15 @@
   "pagesCovered": 20,
   "keywords": [
     {
+      "term": "client health",
+      "heading": false
+    },
+    {
       "term": "manage client",
       "heading": false
     },
     {
-      "term": "healthcare provider",
+      "term": "transmit health",
       "heading": false
     },
     {
@@ -966,41 +1030,37 @@
       "heading": false
     },
     {
-      "term": "client insurance",
+      "term": "digital health",
       "heading": false
     },
     {
-      "term": "transmit diagnostic",
+      "term": "health system",
       "heading": false
     },
     {
-      "term": "untargeted client",
+      "term": "health management",
       "heading": false
     },
     {
-      "term": "client medication",
+      "term": "health information",
       "heading": false
     },
     {
-      "term": "client unstructured",
+      "term": "mobile health",
       "heading": false
     },
     {
-      "term": "client identification",
+      "term": "health data",
       "heading": false
     },
     {
-      "term": "remote client",
-      "heading": false
-    },
-    {
-      "term": "client personal",
+      "term": "health event",
       "heading": false
     }
   ],
   "links": {
-    "repo": "litlfred/smart-base",
+    "repo": "litlfred/who-iris",
     "branch": "main",
-    "dir": "smart-base/library/who-rhr-1806-eng"
+    "dir": "library/who-rhr-1806-eng"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "$schema": "fhir-artifact-index-ref/v1",
+  "index": "https://raw.githubusercontent.com/litlfred/smart-base/a30ffc53edf0d78098ec02713aa93044737d7a86/fhir-artifact-index/index.json",
+  "base": "https://raw.githubusercontent.com/litlfred/smart-base/a30ffc53edf0d78098ec02713aa93044737d7a86/",
+  "repository": "litlfred/smart-base",
+  "commit": "a30ffc53edf0d78098ec02713aa93044737d7a86"
+}

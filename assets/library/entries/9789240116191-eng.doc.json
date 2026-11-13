@@ -1,7 +1,7 @@
 {
   "$schema": "folio-library-document/v1",
   "id": "9789240116191-eng",
-  "title": "9789240116191-eng",
+  "title": "Digital transformation handbook for health product catalogue",
   "variant": "pdf",
   "pages": null,
   "tocSource": "none",
@@ -18,7 +18,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 7,
-      "summary": null,
+      "summary": {
+        "text": "Front cover displaying the publication title, Digital transformation handbook for health product catalogue.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "Digital transformation handbook for health product catalogue",
       "extractCut": false
@@ -33,7 +36,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 7,
-      "summary": null,
+      "summary": {
+        "text": "Half-title page displaying the publication title, Digital transformation handbook for health product catalogue.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "Digital transformation handbook for health product catalogue",
       "extractCut": false
@@ -48,12 +54,11 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 490,
-      "summary": null,
+      "summary": {
+        "text": "Publication colophon and copyright page for Digital transformation handbook for health product catalogue (WHO, 2025; ISBN 978-92-4-011619-1 electronic, 978-92-4-011620-7 print), detailing CC BY-NC-SA 3.0 IGO licensing terms, suggested citation, third-party material obligations, general disclaimers, and design credits.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "suggested citation",
-          "heading": false
-        },
         {
           "term": "creative commons",
           "heading": false
@@ -63,23 +68,27 @@
           "heading": false
         },
         {
+          "term": "suggested citation",
+          "heading": false
+        },
+        {
+          "term": "transformation handbook",
+          "heading": false
+        },
+        {
           "term": "licence",
           "heading": false
         },
         {
-          "term": "material",
+          "term": "digital transformation",
           "heading": false
         },
         {
-          "term": "igo",
+          "term": "health organization",
           "heading": false
         },
         {
-          "term": "cip",
-          "heading": false
-        },
-        {
-          "term": "work",
+          "term": "world health",
           "heading": false
         }
       ],
@@ -96,18 +105,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 92,
-      "summary": null,
+      "summary": {
+        "text": "Table of contents listing front matter (Acknowledgements, Abbreviations, Glossary), the Introduction, eight numbered chapters covering regulatory policies, data management and governance, technology deployment, change management, capacity building, the WHO-hosted PCMT, global data sharing, and country implementation experiences, followed by References and Annexes.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "product master",
           "heading": false
         },
         {
-          "term": "sharing",
+          "term": "master data",
           "heading": false
         },
         {
-          "term": "hosted",
+          "term": "instituting",
           "heading": false
         }
       ],
@@ -124,14 +136,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 394,
-      "summary": null,
+      "summary": {
+        "text": "Acknowledgements crediting lead authors Carl Leitner, Swaroop Jayaprakash (WHO Department of Digital Health and Innovations), and Ramy Guirguis (USAID), along with an alphabetical list of external reviewers across governments, multilateral agencies, standards bodies, and implementing partners, declaration-of-interest clearance, and USAID funding attribution prior to 20 January 2025.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "usaid ghsc-psm",
-          "heading": false
-        },
-        {
-          "term": "usa",
           "heading": false
         },
         {
@@ -143,19 +154,23 @@
           "heading": false
         },
         {
-          "term": "united states",
-          "heading": false
-        },
-        {
-          "term": "switzerland",
-          "heading": false
-        },
-        {
-          "term": "sweden",
+          "term": "usa",
           "heading": false
         },
         {
           "term": "umc",
+          "heading": false
+        },
+        {
+          "term": "united states",
+          "heading": false
+        },
+        {
+          "term": "jayaprakash",
+          "heading": false
+        },
+        {
+          "term": "swaroop",
           "heading": false
         }
       ],
@@ -172,7 +187,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 145,
-      "summary": null,
+      "summary": {
+        "text": "First half of the abbreviations list (AEFI through OpenHIE), defining acronyms used across the handbook including AIDC, ATC, DAK, DHSC, DIIG, eLMIS, FHIR, GDSN, GTIN, HL7, ICD-11, ICHI, IDMP, INN, NAFDAC, NPC, and NRA.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "medicinal products",
@@ -183,11 +201,7 @@
           "heading": false
         },
         {
-          "term": "food",
-          "heading": false
-        },
-        {
-          "term": "abbreviations",
+          "term": "digital health",
           "heading": false
         },
         {
@@ -195,11 +209,15 @@
           "heading": false
         },
         {
+          "term": "food",
+          "heading": false
+        },
+        {
           "term": "authority",
           "heading": false
         },
         {
-          "term": "global",
+          "term": "abbreviations",
           "heading": false
         }
       ],
@@ -216,7 +234,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 109,
-      "summary": null,
+      "summary": {
+        "text": "Second half of the abbreviations list (PCMT through ZAMRA), defining acronyms including PCMT, RFP, RFQ, RMS, SCISMM, SMART, SOP, SWG, TOR, TSS, UAT, UMC, USAID GHSC-PSM, WHODrug, WMS, ZAMMSA, and ZAMRA.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "zambia medicines",
@@ -231,11 +252,11 @@
           "heading": false
         },
         {
-          "term": "zammsa",
+          "term": "whodrug",
           "heading": false
         },
         {
-          "term": "quote",
+          "term": "zammsa",
           "heading": false
         }
       ],
@@ -252,12 +273,11 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 468,
-      "summary": null,
+      "summary": {
+        "text": "First page of the glossary defining foundational terms used in the handbook: data element, digitization, digitalization, digital transformation, end user, features, functional requirements, generic product or product information, interoperability, non-functional requirements, open source, open standards, and organogram.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "generic product",
-          "heading": false
-        },
         {
           "term": "product master",
           "heading": false
@@ -267,7 +287,19 @@
           "heading": false
         },
         {
-          "term": "source code",
+          "term": "generic product",
+          "heading": false
+        },
+        {
+          "term": "digital transformation",
+          "heading": false
+        },
+        {
+          "term": "product information",
+          "heading": false
+        },
+        {
+          "term": "master data",
           "heading": false
         },
         {
@@ -275,15 +307,7 @@
           "heading": false
         },
         {
-          "term": "management solution",
-          "heading": false
-        },
-        {
-          "term": "step towards",
-          "heading": false
-        },
-        {
-          "term": "digitization",
+          "term": "digital system",
           "heading": false
         }
       ],
@@ -300,7 +324,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 151,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of the glossary defining registry, WHO SMART Guidelines, trade item, and user acceptance testing (UAT).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "smart guidelines",
@@ -311,7 +338,19 @@
           "heading": false
         },
         {
+          "term": "digital",
+          "heading": false
+        },
+        {
           "term": "products",
+          "heading": false
+        },
+        {
+          "term": "health",
+          "heading": false
+        },
+        {
+          "term": "data",
           "heading": false
         }
       ],
@@ -328,14 +367,33 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 270,
-      "summary": null,
+      "summary": {
+        "text": "Opening of the Introduction explaining why standardized product identification is needed across health supply chain partners and defining product master data versus instance-specific transactional data, illustrated by Figure 1 grouping product master data into general, classification, pharmaceutical, and logistical information.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "product master",
           "heading": false
         },
         {
+          "term": "product information",
+          "heading": false
+        },
+        {
+          "term": "health product",
+          "heading": false
+        },
+        {
           "term": "product characteristics",
+          "heading": false
+        },
+        {
+          "term": "master data",
+          "heading": false
+        },
+        {
+          "term": "standardized data",
           "heading": false
         },
         {
@@ -344,22 +402,6 @@
         },
         {
           "term": "chain partners",
-          "heading": false
-        },
-        {
-          "term": "standardized",
-          "heading": false
-        },
-        {
-          "term": "dosage",
-          "heading": false
-        },
-        {
-          "term": "strength",
-          "heading": false
-        },
-        {
-          "term": "pharmaceutical",
           "heading": false
         }
       ],
@@ -376,10 +418,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 176,
-      "summary": null,
+      "summary": {
+        "text": "Explanation and diagram (Figure 2) showing how standardized product master data acts as a common language linking supply chain partners (manufacturers, procurers, ministries of health, donors, shippers, regulators, warehouses, health facilities, and patients) with end-to-end supply chain processes from forecasting and procurement to dispensing and recalls.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "product master",
+          "heading": false
+        },
+        {
+          "term": "master data",
           "heading": false
         },
         {
@@ -391,15 +440,19 @@
           "heading": false
         },
         {
-          "term": "central",
-          "heading": false
-        },
-        {
           "term": "inventory",
           "heading": false
         },
         {
           "term": "processes",
+          "heading": false
+        },
+        {
+          "term": "central",
+          "heading": false
+        },
+        {
+          "term": "information",
           "heading": false
         }
       ],
@@ -416,12 +469,11 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 277,
-      "summary": null,
+      "summary": {
+        "text": "Discussion and diagram (Figure 3) illustrating how inconsistent product codes across manufacturers, central warehouses, health facilities, and community health workers fragment supply chain visibility, and introducing how this handbook complements the WHO Digital Implementation Investment Guide (DIIG) to support product recalls, falsified-product detection, pharmacovigilance, and AEFI monitoring.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "product code",
-          "heading": false
-        },
         {
           "term": "product master",
           "heading": false
@@ -431,23 +483,27 @@
           "heading": false
         },
         {
+          "term": "product code",
+          "heading": false
+        },
+        {
           "term": "inconsistent product",
           "heading": false
         },
         {
-          "term": "diig",
+          "term": "master data",
           "heading": false
         },
         {
-          "term": "chain",
+          "term": "product information",
           "heading": false
         },
         {
-          "term": "investment guide",
+          "term": "data management",
           "heading": false
         },
         {
-          "term": "warehouse",
+          "term": "health products",
           "heading": false
         }
       ],
@@ -464,38 +520,41 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 490,
-      "summary": null,
+      "summary": {
+        "text": "Figure 4 adapted from the 2020 WHO Digital Implementation Investment Guide (DIIG), mapping the seven phases of planning and implementing a digital health enterprise—from assessing the current state and defining the future state to architecture planning, health content requirements, M&E, and scaling—alongside associated steps and reference toolkits, positioning this product catalogue handbook in Phase 4.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "health implementations",
+          "heading": false
+        },
+        {
+          "term": "digital interventions",
+          "heading": false
+        },
         {
           "term": "implementations identify",
           "heading": false
         },
         {
-          "term": "phase",
+          "term": "national digital",
           "heading": false
         },
         {
-          "term": "future state",
+          "term": "health investment",
           "heading": false
         },
         {
-          "term": "current state",
-          "heading": false
-        },
-        {
-          "term": "identify validated",
-          "heading": false
-        },
-        {
-          "term": "itu",
+          "term": "health content",
           "heading": false
         },
         {
           "term": "chain architecture",
-          "heading": false
-        },
-        {
-          "term": "investment guide",
           "heading": false
         }
       ],
@@ -512,14 +571,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 347,
-      "summary": null,
+      "summary": {
+        "text": "Overview of the WHO SMART Guidelines initiative and its five knowledge layers (L1 Narrative, L2 Operational DAKs, L3 Machine-Readable, L4 Executable, and L5 Dynamic), accompanied by Figure 5 illustrating how global knowledge layers translate into localized country adaptations and digital implementations.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "digital adaptation",
+          "heading": false
+        },
+        {
+          "term": "adaptation kits",
+          "heading": false
+        },
         {
           "term": "smart guidelines",
           "heading": false
         },
         {
-          "term": "adaptation kits",
+          "term": "interoperable digital",
           "heading": false
         },
         {
@@ -531,19 +601,11 @@
           "heading": false
         },
         {
-          "term": "localised",
+          "term": "digital health",
           "heading": false
         },
         {
-          "term": "executable",
-          "heading": false
-        },
-        {
-          "term": "dynamic",
-          "heading": false
-        },
-        {
-          "term": "optimised",
+          "term": "digital systems",
           "heading": false
         }
       ],
@@ -560,14 +622,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 347,
-      "summary": null,
+      "summary": {
+        "text": "Explanation of how clinical workflows in WHO SMART Guidelines intersect with supply chain product master data, illustrated by Figure 6 showing an Antenatal Care (ANC) clinical workflow with supply chain touchpoints highlighted across lab tests, diagnosis and treatment, nutrition supplementation, immunizations, and deworming/malaria prophylaxis.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "symptoms counselling",
+          "term": "diet counselling",
           "heading": false
         },
         {
-          "term": "diet counselling",
+          "term": "symptoms counselling",
           "heading": false
         },
         {
@@ -587,11 +652,11 @@
           "heading": false
         },
         {
-          "term": "physiological symptoms",
+          "term": "woman profile",
           "heading": false
         },
         {
-          "term": "check symptoms",
+          "term": "in-facility management",
           "heading": false
         }
       ],
@@ -608,7 +673,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 245,
-      "summary": null,
+      "summary": {
+        "text": "Overview of Digital Health Supply Chain (DHSC) architectural components and Figure 7, situating the foundational product registry alongside facility and supplier registries, interoperability layer services, data services, and health supply chain information systems, while noting that medical devices are reserved for future dedicated guidance.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "supplier registry",
@@ -619,11 +687,11 @@
           "heading": false
         },
         {
-          "term": "facility registry",
+          "term": "architectural components",
           "heading": false
         },
         {
-          "term": "architectural components",
+          "term": "facility registry",
           "heading": false
         },
         {
@@ -631,15 +699,15 @@
           "heading": false
         },
         {
-          "term": "medical devices",
+          "term": "chain information",
           "heading": false
         },
         {
-          "term": "foundational",
+          "term": "digital health",
           "heading": false
         },
         {
-          "term": "dhsc",
+          "term": "information systems",
           "heading": false
         }
       ],
@@ -656,10 +724,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 397,
-      "summary": null,
+      "summary": {
+        "text": "Summary of the handbook's seven operational chapters and explanation of its collaborative development methodology involving stakeholder consultations in Ethiopia, Malawi, Nigeria, Rwanda, and Zambia, monthly reviews by the DHSC Small Working Group (DHSC SWG), and alignment with the Principles for Digital Development, DIIG, WHO/ITU eHealth Strategy Toolkit, SCISMM, and OpenHIE.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc swg",
+          "heading": false
+        },
+        {
+          "term": "product master",
+          "heading": false
+        },
+        {
+          "term": "master data",
           "heading": false
         },
         {
@@ -667,7 +746,11 @@
           "heading": false
         },
         {
-          "term": "product master",
+          "term": "data standardization",
+          "heading": false
+        },
+        {
+          "term": "data management",
           "heading": false
         },
         {
@@ -676,18 +759,6 @@
         },
         {
           "term": "chapter",
-          "heading": false
-        },
-        {
-          "term": "standardization",
-          "heading": false
-        },
-        {
-          "term": "experiences",
-          "heading": false
-        },
-        {
-          "term": "handbook",
           "heading": false
         }
       ],
@@ -704,26 +775,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 309,
-      "summary": null,
+      "summary": {
+        "text": "First part of the target users table mapping Chapters 1 through 4 (regulatory policies, data management and governance, technology deployment, and change management) to illustrative target organizations, user teams and roles, and chapter purposes.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "nra central",
-          "heading": false
-        },
         {
           "term": "leaders regulatory",
           "heading": false
         },
         {
-          "term": "regulatory staff",
+          "term": "nra central",
           "heading": false
         },
         {
-          "term": "operational leaders",
-          "heading": false
-        },
-        {
-          "term": "partners senior",
+          "term": "health nra",
           "heading": false
         },
         {
@@ -731,11 +797,19 @@
           "heading": false
         },
         {
+          "term": "master data",
+          "heading": false
+        },
+        {
+          "term": "regulatory staff",
+          "heading": false
+        },
+        {
           "term": "regulatory policies",
           "heading": false
         },
         {
-          "term": "senior management",
+          "term": "enterprise architects",
           "heading": false
         }
       ],
@@ -752,7 +826,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 294,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the target users table covering Chapters 5 through 7 (capacity building, leveraging the WHO-hosted PCMT, and sharing product master data as a global good), followed by a summary of key scenarios in which countries and organizations should use this handbook.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "leaders chief",
@@ -763,7 +840,19 @@
           "heading": false
         },
         {
-          "term": "nra",
+          "term": "health nra",
+          "heading": false
+        },
+        {
+          "term": "master data",
+          "heading": false
+        },
+        {
+          "term": "chief digital",
+          "heading": false
+        },
+        {
+          "term": "officers data",
           "heading": false
         },
         {
@@ -771,19 +860,7 @@
           "heading": false
         },
         {
-          "term": "officers",
-          "heading": false
-        },
-        {
           "term": "illustrative target",
-          "heading": false
-        },
-        {
-          "term": "pcmt",
-          "heading": false
-        },
-        {
-          "term": "chain",
           "heading": false
         }
       ],
@@ -800,7 +877,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 21,
-      "summary": null,
+      "summary": {
+        "text": "Section divider page for Chapter 01: Establishing regulatory policies to promote product master data standardization.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "01 Establishing regulatory policies to promote product master data standardization Establishing regulatory policies to promote product master data standardization \b 11",
       "extractCut": false
@@ -815,7 +895,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 312,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to Chapter 1 on the role of Ministries of Health and National Regulatory Authorities in mandating standardized product master data from manufacturers and distributors, together with Step 1 (Identify necessary regulatory policies and legislations) detailing inputs, actions, resources, outputs, and risk mitigations such as developing a RACI matrix.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "regulatory policies",
@@ -826,11 +909,15 @@
           "heading": false
         },
         {
-          "term": "legislations",
+          "term": "master data",
           "heading": false
         },
         {
           "term": "regulatory authority",
+          "heading": false
+        },
+        {
+          "term": "legislations",
           "heading": false
         },
         {
@@ -842,11 +929,7 @@
           "heading": false
         },
         {
-          "term": "current regulations",
-          "heading": false
-        },
-        {
-          "term": "distributors",
+          "term": "data standardization",
           "heading": false
         }
       ],
@@ -863,14 +946,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 301,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 1 Steps 2 and 3 covering the development of regulatory policies and master data guidelines with phased compliance timelines (Step 2) and multi-stakeholder review and approval led by the NRA (Step 3), along with mitigations for lengthy drafting processes and resource constraints.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "regulatory policies",
+          "heading": false
+        },
         {
           "term": "legislations",
           "heading": false
         },
         {
-          "term": "regulatory policies",
+          "term": "master data",
+          "heading": false
+        },
+        {
+          "term": "existing policies",
           "heading": false
         },
         {
@@ -882,19 +976,11 @@
           "heading": false
         },
         {
-          "term": "existing policies",
+          "term": "data standardization",
           "heading": false
         },
         {
           "term": "distributors",
-          "heading": false
-        },
-        {
-          "term": "master",
-          "heading": false
-        },
-        {
-          "term": "manufacturers",
           "heading": false
         }
       ],
@@ -911,18 +997,29 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 203,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 1 Step 4 covering the publication and enforcement of approved regulatory policies to promote product master data standardization, mitigations for poor manufacturer adherence (phased rollouts, clear transition timelines, training webinars, and standards networks), and the Chapter 1 end-of-chapter checkpoint.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "regulatory policies",
-          "heading": false
-        },
         {
           "term": "product master",
           "heading": false
         },
         {
+          "term": "master data",
+          "heading": false
+        },
+        {
+          "term": "regulatory policies",
+          "heading": false
+        },
+        {
           "term": "legislations",
+          "heading": false
+        },
+        {
+          "term": "data standardization",
           "heading": false
         },
         {
@@ -931,14 +1028,6 @@
         },
         {
           "term": "publish",
-          "heading": false
-        },
-        {
-          "term": "manufacturers",
-          "heading": false
-        },
-        {
-          "term": "compliance",
           "heading": false
         }
       ],
@@ -955,7 +1044,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 15,
-      "summary": null,
+      "summary": {
+        "text": "Section divider page for Chapter 02: Instituting data management and governance policies.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "02 Instituting data management and governance policies Instituting data management and governance policies \b 15",
       "extractCut": false
@@ -970,10 +1062,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 286,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to Chapter 2 on maintaining data integrity, security, and quality, together with Step 1 (Define product master data management procedures) detailing inputs, steps for reviewing coding schemes and harmonization needs, reference templates, and outputs including master data governance policies and governance group terms of reference.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "product master",
+          "heading": false
+        },
+        {
+          "term": "master data",
           "heading": false
         },
         {
@@ -981,27 +1080,23 @@
           "heading": false
         },
         {
+          "term": "data harmonization",
+          "heading": false
+        },
+        {
+          "term": "data management",
+          "heading": false
+        },
+        {
           "term": "management procedures",
           "heading": false
         },
         {
-          "term": "governance policies",
+          "term": "data governance",
           "heading": false
         },
         {
-          "term": "harmonization",
-          "heading": false
-        },
-        {
-          "term": "tor",
-          "heading": false
-        },
-        {
-          "term": "integrity",
-          "heading": false
-        },
-        {
-          "term": "maintained",
+          "term": "management policies",
           "heading": false
         }
       ],
@@ -1018,38 +1113,41 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 413,
-      "summary": null,
+      "summary": {
+        "text": "Detailed breakdown of the core elements required in product master data management procedures, including the data governance framework and specific responsibilities of the data owner, data custodian, and data steward, as well as data quality management, security and privacy, integration and interoperability, lifecycle management, change management, and monitoring.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "product master",
           "heading": false
         },
         {
-          "term": "owner",
+          "term": "master data",
           "heading": false
         },
         {
-          "term": "governance policies",
+          "term": "data owner",
           "heading": false
         },
         {
-          "term": "access controls",
+          "term": "data custodian",
           "heading": false
         },
         {
-          "term": "custodian",
+          "term": "data governance",
           "heading": false
         },
         {
-          "term": "ensures",
+          "term": "data management",
           "heading": false
         },
         {
-          "term": "steward",
+          "term": "data quality",
           "heading": false
         },
         {
-          "term": "rules",
+          "term": "data remains",
           "heading": false
         }
       ],
@@ -1066,7 +1164,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 293,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 Step 2 (Define coding scheme, data definitions and structures to organize and maintain product master data), covering data harmonization across all stakeholders, mapping national product identifiers to HL7 FHIR, ISO IDMP, and GS1 GTIN standards, and mitigating fragmentation across disparate health, insurance, regulatory, and supply chain coding schemes.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "coding scheme",
@@ -1077,27 +1178,27 @@
           "heading": false
         },
         {
+          "term": "master data",
+          "heading": false
+        },
+        {
+          "term": "data structures",
+          "heading": false
+        },
+        {
+          "term": "data harmonization",
+          "heading": false
+        },
+        {
           "term": "harmonization activities",
           "heading": false
         },
         {
-          "term": "master",
+          "term": "data definitions",
           "heading": false
         },
         {
-          "term": "structures",
-          "heading": false
-        },
-        {
-          "term": "management procedures",
-          "heading": false
-        },
-        {
-          "term": "governance policies",
-          "heading": false
-        },
-        {
-          "term": "definitions",
+          "term": "data management",
           "heading": false
         }
       ],
@@ -1114,10 +1215,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 426,
-      "summary": null,
+      "summary": {
+        "text": "Explanation and diagram (Figure 8) of the three-tier hierarchy linking strategic product classifications (such as ATC/DDD and ICD), tactical generic product definitions (identified by brand-agnostic national product codes for forecasting and quantification), operational trade items (brand- and pack-specific units identified by GTINs), and regulated trade items.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "trade items",
+          "term": "trade item",
           "heading": false
         },
         {
@@ -1125,15 +1229,7 @@
           "heading": false
         },
         {
-          "term": "unit inner",
-          "heading": false
-        },
-        {
-          "term": "inner pack",
-          "heading": false
-        },
-        {
-          "term": "manufacturing ltd",
+          "term": "product classifications",
           "heading": false
         },
         {
@@ -1141,7 +1237,15 @@
           "heading": false
         },
         {
-          "term": "product classifications",
+          "term": "inner pack",
+          "heading": false
+        },
+        {
+          "term": "unit inner",
+          "heading": false
+        },
+        {
+          "term": "manufacturing ltd",
           "heading": false
         },
         {
@@ -1162,18 +1266,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 376,
-      "summary": null,
+      "summary": {
+        "text": "Figure 9 illustrating the data model relationships and attributes across Generic Product, Trade Item, and Regulated Trade Item using HL7 FHIR resources, accompanied by best practices for sequential non-significant generic product codes, linked product attributes, uniform code lengths, and multi-level packaging hierarchy mappings.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "generic product",
+          "heading": false
+        },
         {
           "term": "regulated trade",
           "heading": false
         },
         {
-          "term": "trade items",
+          "term": "trade item",
           "heading": false
         },
         {
-          "term": "generic product",
+          "term": "product codes",
           "heading": false
         },
         {
@@ -1181,19 +1292,15 @@
           "heading": false
         },
         {
-          "term": "product code",
-          "heading": false
-        },
-        {
           "term": "item identifier",
           "heading": false
         },
         {
-          "term": "brand items",
+          "term": "product characteristics",
           "heading": false
         },
         {
-          "term": "generic national",
+          "term": "brand items",
           "heading": false
         }
       ],
@@ -1210,14 +1317,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 199,
-      "summary": null,
+      "summary": {
+        "text": "Overview of the UMC-maintained WHODrug Global dictionary as a free international reference linking local medicinal product identifiers to ATC and ISO IDMP identifiers, alongside Figure 10 (GS1 primary, secondary, and tertiary product packaging hierarchy) and Figure 11 (example of case and pack variations for Paracetamol 500 mg tablets across two manufacturers).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "medicinal product",
           "heading": false
         },
         {
-          "term": "whodrug",
+          "term": "whodrug data",
           "heading": false
         },
         {
@@ -1229,15 +1339,15 @@
           "heading": false
         },
         {
-          "term": "dictionary",
+          "term": "data dictionary",
+          "heading": false
+        },
+        {
+          "term": "product information",
           "heading": false
         },
         {
           "term": "mfr",
-          "heading": false
-        },
-        {
-          "term": "tertiary",
           "heading": false
         }
       ],
@@ -1254,7 +1364,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 225,
-      "summary": null,
+      "summary": {
+        "text": "Figure 12 demonstrating how a generic product maps to manufacturer-specific trade items across pallet, case, and inner-pack packaging levels using the HL7 FHIR InventoryItem resource, followed by Chapter 2 Step 3 on defining data use policies and secure data sharing mechanisms between master data sources and consumers.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "characteristic association",
@@ -1269,7 +1382,7 @@
           "heading": false
         },
         {
-          "term": "association quantity",
+          "term": "master data",
           "heading": false
         },
         {
@@ -1277,15 +1390,15 @@
           "heading": false
         },
         {
+          "term": "data sharing",
+          "heading": false
+        },
+        {
+          "term": "association quantity",
+          "heading": false
+        },
+        {
           "term": "mfr",
-          "heading": false
-        },
-        {
-          "term": "sharing mechanisms",
-          "heading": false
-        },
-        {
-          "term": "generic product",
           "heading": false
         }
       ],
@@ -1302,10 +1415,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 262,
-      "summary": null,
+      "summary": {
+        "text": "Risk mitigation guidance for Chapter 2 Step 3 on categorizing data attributes by sensitivity level to control access, followed by Step 4 (Institutionalise product master data governance policies and procedures) covering the establishment of a multi-stakeholder master data governance group and operational integration across supply chain systems.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "master data",
+          "heading": false
+        },
+        {
           "term": "product master",
+          "heading": false
+        },
+        {
+          "term": "data governance",
           "heading": false
         },
         {
@@ -1321,19 +1445,11 @@
           "heading": false
         },
         {
-          "term": "sensitivity",
+          "term": "data structures",
           "heading": false
         },
         {
-          "term": "management procedures",
-          "heading": false
-        },
-        {
-          "term": "concerns",
-          "heading": false
-        },
-        {
-          "term": "structures",
+          "term": "data attributes",
           "heading": false
         }
       ],
@@ -1350,7 +1466,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 341,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 Step 5 on defining short-, medium-, and long-term strategies to source standardized product master data (such as interim collection from packaging and procurement agencies while transitioning to formal regulatory registration submissions), risk mitigations for limited manufacturer capacity, and the Chapter 2 end-of-chapter checkpoint.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "sourcing master",
@@ -1361,7 +1480,7 @@
           "heading": false
         },
         {
-          "term": "standardized master",
+          "term": "master data",
           "heading": false
         },
         {
@@ -1369,19 +1488,19 @@
           "heading": false
         },
         {
-          "term": "coding schemes",
+          "term": "standardized master",
           "heading": false
         },
         {
-          "term": "long-term strategies",
+          "term": "data sharing",
           "heading": false
         },
         {
-          "term": "governance policies",
+          "term": "data attributes",
           "heading": false
         },
         {
-          "term": "define short",
+          "term": "data coding",
           "heading": false
         }
       ],
@@ -1398,7 +1517,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 18,
-      "summary": null,
+      "summary": {
+        "text": "Section divider page for Chapter 03: Deploying appropriate technology to manage product master data.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "03 Deploying appropriate technology to manage product master data Deploying appropriate technology to manage product master data\b 25",
       "extractCut": false
@@ -1413,18 +1535,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 235,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to Chapter 3 on selecting and deploying a National Product Catalogue (NPC) software tool, together with Step 1 (Define system requirements for the NPC tool) referencing Target Software Standards v2, ISO IDMP, and HL7 FHIR implementation guides to produce approved functional and non-functional requirements.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "npc tool",
-          "heading": false
-        },
         {
           "term": "product master",
           "heading": false
         },
         {
-          "term": "coding schemes",
+          "term": "npc tool",
+          "heading": false
+        },
+        {
+          "term": "master data",
           "heading": false
         },
         {
@@ -1432,19 +1557,19 @@
           "heading": false
         },
         {
+          "term": "coding schemes",
+          "heading": false
+        },
+        {
+          "term": "system requirements",
+          "heading": false
+        },
+        {
           "term": "technology tool",
           "heading": false
         },
         {
-          "term": "management procedures",
-          "heading": false
-        },
-        {
-          "term": "non-functional",
-          "heading": false
-        },
-        {
-          "term": "appropriate technology",
+          "term": "data sharing",
           "heading": false
         }
       ],
@@ -1461,14 +1586,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 213,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3 Steps 2 and 3 covering market research, assessment of existing ERP and open-source tools (including PCMT and the WHO-hosted PCMT instance), RFQ/RFP selection processes (Step 2), and preparation of a detailed NPC implementation and systems integration project plan (Step 3).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "npc",
-          "heading": false
-        },
-        {
-          "term": "appropriate tool",
+          "term": "npc implementation",
           "heading": false
         },
         {
@@ -1476,15 +1600,19 @@
           "heading": false
         },
         {
+          "term": "appropriate tool",
+          "heading": false
+        },
+        {
           "term": "technology options",
           "heading": false
         },
         {
-          "term": "approved functional",
+          "term": "non-functional system",
           "heading": false
         },
         {
-          "term": "outputs approved",
+          "term": "approved functional",
           "heading": false
         },
         {
@@ -1505,10 +1633,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 278,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3 Step 4 covering the design, configuration, system and integration testing, UAT, infrastructure provisioning, and deployment of the NPC tool, along with risk mitigations for limited local technical capacity and the Chapter 3 end-of-chapter checkpoint.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "npc tool",
+          "heading": false
+        },
+        {
+          "term": "npc system",
           "heading": false
         },
         {
@@ -1516,27 +1651,23 @@
           "heading": false
         },
         {
+          "term": "non-functional system",
+          "heading": false
+        },
+        {
+          "term": "master data",
+          "heading": false
+        },
+        {
+          "term": "system requirements",
+          "heading": false
+        },
+        {
           "term": "approved functional",
           "heading": false
         },
         {
-          "term": "non-functional",
-          "heading": false
-        },
-        {
           "term": "configurations",
-          "heading": false
-        },
-        {
-          "term": "deploy",
-          "heading": false
-        },
-        {
-          "term": "testing",
-          "heading": false
-        },
-        {
-          "term": "required",
           "heading": false
         }
       ],
@@ -1553,7 +1684,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 19,
-      "summary": null,
+      "summary": {
+        "text": "Section divider page for Chapter 04: Managing change to institutionalize standardized product master data.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "04 Managing change to institutionalize standardized product master data Managing change to institutionalize standardized product master data \b 29",
       "extractCut": false
@@ -1568,7 +1702,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 380,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to Chapter 4 on organizational and technical change management, Step 1 (Develop a change management plan to institutionalise use of NPC) covering process, system, data model, and event-driven exchange updates, and best practices for using a transitional local Country Trade Item Identifier when manufacturer GTINs are not yet available.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "standardized master",
@@ -1579,7 +1716,7 @@
           "heading": false
         },
         {
-          "term": "local identifier",
+          "term": "master data",
           "heading": false
         },
         {
@@ -1587,15 +1724,15 @@
           "heading": false
         },
         {
-          "term": "trade item",
-          "heading": false
-        },
-        {
           "term": "change management",
           "heading": false
         },
         {
-          "term": "institutionalize",
+          "term": "trade item",
+          "heading": false
+        },
+        {
+          "term": "local identifier",
           "heading": false
         },
         {
@@ -1616,10 +1753,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 317,
-      "summary": null,
+      "summary": {
+        "text": "Figure 13 illustrating how a National Product Code for Lamivudine 50 mg tablets links both GTIN-assigned trade items and locally identified trade items across packaging hierarchies, followed by Chapter 4 Step 2 on defining, validating, and approving product master data management SOPs and a continuous user training and advocacy plan.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "product master",
+          "heading": false
+        },
+        {
           "term": "child gtin",
+          "heading": false
+        },
+        {
+          "term": "master data",
           "heading": false
         },
         {
@@ -1627,7 +1775,7 @@
           "heading": false
         },
         {
-          "term": "product master",
+          "term": "standardized product",
           "heading": false
         },
         {
@@ -1635,19 +1783,11 @@
           "heading": false
         },
         {
-          "term": "standardized product",
-          "heading": false
-        },
-        {
-          "term": "item identifier",
-          "heading": false
-        },
-        {
           "term": "country trade",
           "heading": false
         },
         {
-          "term": "quantity",
+          "term": "item identifier",
           "heading": false
         }
       ],
@@ -1664,7 +1804,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 123,
-      "summary": null,
+      "summary": {
+        "text": "Risk mitigation table for Chapter 4 addressing stakeholder challenges in supplying standardized data attributes (by starting with a minimum attribute set) and managing packaging hierarchy quantity conversions in PCMT, followed by the Chapter 4 end-of-chapter checkpoint.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "packaging hierarchies",
@@ -1675,15 +1818,15 @@
           "heading": false
         },
         {
+          "term": "master data",
+          "heading": false
+        },
+        {
           "term": "standardized product",
           "heading": false
         },
         {
-          "term": "attributes",
-          "heading": false
-        },
-        {
-          "term": "quantity",
+          "term": "data attributes",
           "heading": false
         }
       ],
@@ -1700,7 +1843,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 14,
-      "summary": null,
+      "summary": {
+        "text": "Section divider page for Chapter 05: Building capacity to sustainably manage NPC.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "05 Building capacity to sustainably manage NPC Building capacity to sustainably manage NPC\b 33",
       "extractCut": false
@@ -1715,18 +1861,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 275,
-      "summary": null,
+      "summary": {
+        "text": "Introduction to Chapter 5 on human resource capacity for operating and sustaining an NPC, together with Step 1 (Identify human resource capacity needs to support NPC) covering role identification (such as Catalogue Manager and NPC System Administrator), job descriptions, and human resource management plans addressing turnover, cross-skilling, and knowledge management.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "product master",
           "heading": false
         },
         {
-          "term": "catalogue manager",
-          "heading": false
-        },
-        {
-          "term": "human resource",
+          "term": "master data",
           "heading": false
         },
         {
@@ -1738,15 +1883,19 @@
           "heading": false
         },
         {
-          "term": "resource management",
-          "heading": false
-        },
-        {
-          "term": "job descriptions",
+          "term": "human resource",
           "heading": false
         },
         {
           "term": "management processes",
+          "heading": false
+        },
+        {
+          "term": "catalogue manager",
+          "heading": false
+        },
+        {
+          "term": "job descriptions",
           "heading": false
         }
       ],
@@ -1763,10 +1912,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 306,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 5 Steps 2 and 3 covering budgeting, recruitment, and onboarding of personnel into NPC roles (Step 2) and developing an organogram, knowledge management plan, and local vendor/partner engagement strategy (Step 3), followed by the Chapter 5 end-of-chapter checkpoint.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "product master",
+          "heading": false
+        },
+        {
+          "term": "master data",
           "heading": false
         },
         {
@@ -1774,15 +1930,11 @@
           "heading": false
         },
         {
-          "term": "identified roles",
-          "heading": false
-        },
-        {
-          "term": "job descriptions",
-          "heading": false
-        },
-        {
           "term": "necessary roles",
+          "heading": false
+        },
+        {
+          "term": "identified roles",
           "heading": false
         },
         {
@@ -1790,11 +1942,11 @@
           "heading": false
         },
         {
-          "term": "human resource",
+          "term": "job descriptions",
           "heading": false
         },
         {
-          "term": "sufficient funding",
+          "term": "resource management",
           "heading": false
         }
       ],
@@ -1811,7 +1963,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 10,
-      "summary": null,
+      "summary": {
+        "text": "Section divider page for Chapter 06: Leveraging the WHO-hosted PCMT.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "06 Leveraging the WHO-hosted PCMT 36\b Leveraging the WHO-hosted PCMT",
       "extractCut": false
@@ -1826,7 +1981,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 194,
-      "summary": null,
+      "summary": {
+        "text": "Overview of the WHO-hosted Product Catalogue Management Tool (PCMT), scheduled for availability in 2026 as an initial or ongoing hosted option for countries, accompanied by Figure 14 illustrating how country catalogues derive common global product and trade item data from the WHO Global Catalogue while maintaining country-specific identifiers and registration numbers.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "who-hosted pcmt",
@@ -1841,19 +1999,19 @@
           "heading": false
         },
         {
-          "term": "country identifiers",
-          "heading": false
-        },
-        {
           "term": "product master",
           "heading": false
         },
         {
-          "term": "registration number",
+          "term": "country identifiers",
           "heading": false
         },
         {
-          "term": "leverage",
+          "term": "product information",
+          "heading": false
+        },
+        {
+          "term": "health product",
           "heading": false
         }
       ],
@@ -1870,7 +2028,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 300,
-      "summary": null,
+      "summary": {
+        "text": "Detailed explanation of the multi-tenant catalogue setup and permission model in the WHO-hosted PCMT, illustrating how User Groups (such as WHOGroup, CAGroup, and CBGroup) and reserved Catalogue Categories isolate view, edit, and approval rights while supporting cross-catalogue associations and manual or automated product copy rules.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "country catalogue",
@@ -1885,11 +2046,11 @@
           "heading": false
         },
         {
-          "term": "edit",
+          "term": "permissions",
           "heading": false
         },
         {
-          "term": "permissions",
+          "term": "edit",
           "heading": false
         },
         {
@@ -1897,11 +2058,11 @@
           "heading": false
         },
         {
-          "term": "view",
+          "term": "pcmt",
           "heading": false
         },
         {
-          "term": "pcmt",
+          "term": "category",
           "heading": false
         }
       ],
@@ -1918,7 +2079,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 19,
-      "summary": null,
+      "summary": {
+        "text": "Section divider page for Chapter 07: Sharing product master data as a global good.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "07 Sharing product master data as a global good Sharing product master data as a global good \b 39",
       "extractCut": false
@@ -1933,14 +2097,33 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 244,
-      "summary": null,
+      "summary": {
+        "text": "Explanation of the benefits of sharing national health product master data with the WHO Global Product Catalogue as a global good—including access to accurate information, standardization, reduced redundancy, crisis management during emergencies, equitable access, and capacity building for low- and middle-income countries.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "product master",
           "heading": false
         },
         {
+          "term": "master data",
+          "heading": false
+        },
+        {
           "term": "global repository",
+          "heading": false
+        },
+        {
+          "term": "sharing data",
+          "heading": false
+        },
+        {
+          "term": "health product",
+          "heading": false
+        },
+        {
+          "term": "pcmt",
           "heading": false
         },
         {
@@ -1949,22 +2132,6 @@
         },
         {
           "term": "catalogue",
-          "heading": false
-        },
-        {
-          "term": "sharing",
-          "heading": false
-        },
-        {
-          "term": "pcmt",
-          "heading": false
-        },
-        {
-          "term": "standardization",
-          "heading": false
-        },
-        {
-          "term": "countries",
           "heading": false
         }
       ],
@@ -1981,26 +2148,29 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 128,
-      "summary": null,
+      "summary": {
+        "text": "Figure 15 illustrating the bidirectional conceptual model in which both countries using the WHO-hosted PCMT and countries operating external in-country NPC tools contribute product master data to and derive common product records from the WHO Global Catalogue.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "catalogue country",
-          "heading": false
-        },
         {
           "term": "product master",
           "heading": false
         },
         {
+          "term": "catalogue country",
+          "heading": false
+        },
+        {
+          "term": "master data",
+          "heading": false
+        },
+        {
+          "term": "product information",
+          "heading": false
+        },
+        {
           "term": "country identifiers",
-          "heading": false
-        },
-        {
-          "term": "registration number",
-          "heading": false
-        },
-        {
-          "term": "shelf",
           "heading": false
         }
       ],
@@ -2017,7 +2187,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 8,
-      "summary": null,
+      "summary": {
+        "text": "Section divider page for Chapter 08: Sharing implementation experiences.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "08 Sharing implementation experiences 42\b Sharing implementation experiences",
       "extractCut": false
@@ -2032,8 +2205,15 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 480,
-      "summary": null,
+      "summary": {
+        "text": "Implementation experience matrix for Rwanda summarizing status, processes, challenges, approaches adopted, and lessons learned across Regulatory, Data (7,134 products uploaded and 2,611 mapped to GTINs), Technology (open-source PCMT integrated via an OpenHIM health information exchange mediator), People (Rwanda FDA catalogue manager), and Change Management.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "product master",
+          "heading": false
+        },
         {
           "term": "product packaging",
           "heading": false
@@ -2047,15 +2227,11 @@
           "heading": false
         },
         {
-          "term": "product master",
-          "heading": false
-        },
-        {
           "term": "npc",
           "heading": false
         },
         {
-          "term": "trade item",
+          "term": "master data",
           "heading": false
         },
         {
@@ -2063,7 +2239,7 @@
           "heading": false
         },
         {
-          "term": "rwanda",
+          "term": "data sharing",
           "heading": false
         }
       ],
@@ -2080,8 +2256,19 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 418,
-      "summary": null,
+      "summary": {
+        "text": "Implementation experience matrix for Zambia summarizing status, processes, challenges, approaches adopted, and lessons learned across Regulatory (2023 ZAMRA traceability guidelines), Data (7,414 harmonized pharmaceutical products and 551 GTINs), Technology (PCMT integrated with GDSN, ZAMMSA WMS Expert, eLMIS, and mobile barcode scanning), People, and Change Management.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "catalog managers",
+          "heading": false
+        },
+        {
+          "term": "catalog management",
+          "heading": false
+        },
         {
           "term": "scan serial",
           "heading": false
@@ -2091,19 +2278,11 @@
           "heading": false
         },
         {
-          "term": "catalog managers",
-          "heading": false
-        },
-        {
           "term": "wms expert",
           "heading": false
         },
         {
-          "term": "catalog management",
-          "heading": false
-        },
-        {
-          "term": "scanning",
+          "term": "app deployed",
           "heading": false
         },
         {
@@ -2111,7 +2290,7 @@
           "heading": false
         },
         {
-          "term": "placed responsible",
+          "term": "scanning",
           "heading": false
         }
       ],
@@ -2128,7 +2307,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 592,
-      "summary": null,
+      "summary": {
+        "text": "Implementation experience matrix for Nigeria summarizing status, processes, challenges, approaches adopted, and lessons learned across Regulatory (NAFDAC traceability and master data guidelines), Data (6,517 products in NPC with 794 mapped to GTINs), Technology (PCMT populated from NAFDAC, GDSN, and GS1 Nigeria One Source), People, and Change Management.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "gtins issued",
@@ -2136,10 +2318,6 @@
         },
         {
           "term": "integrate npc",
-          "heading": false
-        },
-        {
-          "term": "nafdac",
           "heading": false
         },
         {
@@ -2151,11 +2329,15 @@
           "heading": false
         },
         {
-          "term": "packaging hierarchies",
+          "term": "master data",
           "heading": false
         },
         {
-          "term": "nigeria",
+          "term": "nafdac",
+          "heading": false
+        },
+        {
+          "term": "packaging hierarchies",
           "heading": false
         },
         {
@@ -2176,7 +2358,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 288,
-      "summary": null,
+      "summary": {
+        "text": "Numbered list of 17 references cited in the handbook, covering definitions of digitization, digitalization, and digital transformation, WHO SMART Guidelines, open-source software and open standards, GS1 GTIN trade items, user acceptance testing, the WHO Digital transformation handbook for health supply chain architecture, and the Principles for Digital Development.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "accessed january",
@@ -2191,11 +2376,11 @@
           "heading": false
         },
         {
-          "term": "com library",
+          "term": "digital transformation",
           "heading": false
         },
         {
-          "term": "resources white-papers",
+          "term": "com library",
           "heading": false
         },
         {
@@ -2203,11 +2388,11 @@
           "heading": false
         },
         {
-          "term": "manufacturing",
+          "term": "digitization",
           "heading": false
         },
         {
-          "term": "https",
+          "term": "library resources",
           "heading": false
         }
       ],
@@ -2224,10 +2409,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 211,
-      "summary": null,
+      "summary": {
+        "text": "Annex 1 summarizing the nine Principles for Digital Development (Understand the existing ecosystem; Share, reuse, and improve; Design with people; Design for inclusion; Build for sustainability; Establish people-first data practices; Create open and transparent practices; Anticipate and mitigate harms; and Use evidence to improve outcomes).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "people-first",
+          "term": "people-first data",
+          "heading": false
+        },
+        {
+          "term": "data practices",
+          "heading": false
+        },
+        {
+          "term": "digital development",
           "heading": false
         },
         {
@@ -2235,15 +2431,7 @@
           "heading": false
         },
         {
-          "term": "harm",
-          "heading": false
-        },
-        {
           "term": "mitigate",
-          "heading": false
-        },
-        {
-          "term": "works",
           "heading": false
         },
         {
@@ -2251,7 +2439,7 @@
           "heading": false
         },
         {
-          "term": "practices",
+          "term": "works",
           "heading": false
         }
       ],
@@ -2268,10 +2456,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 354,
-      "summary": null,
+      "summary": {
+        "text": "Opening of Annex 2 (Additional roles for NPC implementation), presenting a resource matrix of required phases (deployment vs. operation), position types, skill sets, and responsibilities for Leadership roles: Project Manager and Solution Architect.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "contracted temporary",
+          "term": "business requirements",
           "heading": false
         },
         {
@@ -2279,15 +2470,15 @@
           "heading": false
         },
         {
+          "term": "contracted temporary",
+          "heading": false
+        },
+        {
           "term": "technology solutions",
           "heading": false
         },
         {
-          "term": "team members",
-          "heading": false
-        },
-        {
-          "term": "business requirements",
+          "term": "project management",
           "heading": false
         },
         {
@@ -2295,11 +2486,11 @@
           "heading": false
         },
         {
-          "term": "additional roles",
+          "term": "project objectives",
           "heading": false
         },
         {
-          "term": "project management",
+          "term": "npc implementation",
           "heading": false
         }
       ],
@@ -2316,18 +2507,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 372,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the Annex 2 NPC implementation resource matrix detailing required phases, position types, skill sets, and responsibilities for Technical roles: Business Analyst, Developer/Programmer, and Integration Specialist.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "temporary knowledge",
-          "heading": false
-        },
-        {
-          "term": "problem-solving skills",
-          "heading": false
-        },
-        {
-          "term": "interpersonal skills",
+          "term": "business requirements",
           "heading": false
         },
         {
@@ -2335,19 +2521,27 @@
           "heading": false
         },
         {
-          "term": "prepare test",
+          "term": "problem-solving skills",
           "heading": false
         },
         {
-          "term": "business requirements",
-          "heading": false
-        },
-        {
-          "term": "test cases",
+          "term": "temporary knowledge",
           "heading": false
         },
         {
           "term": "technical teams",
+          "heading": false
+        },
+        {
+          "term": "interpersonal skills",
+          "heading": false
+        },
+        {
+          "term": "training teams",
+          "heading": false
+        },
+        {
+          "term": "software programs",
           "heading": false
         }
       ],
@@ -2364,7 +2558,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 256,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the Annex 2 NPC implementation resource matrix detailing required phases, permanent position types, skill sets, and responsibilities for Technical roles: Database Administrator and Infrastructure Specialist.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "database tools",
@@ -2383,7 +2580,7 @@
           "heading": false
         },
         {
-          "term": "recovery",
+          "term": "data modelling",
           "heading": false
         },
         {
@@ -2391,11 +2588,11 @@
           "heading": false
         },
         {
-          "term": "permanent",
+          "term": "recovery",
           "heading": false
         },
         {
-          "term": "familiarity",
+          "term": "proficiency",
           "heading": false
         }
       ],
@@ -2412,18 +2609,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 421,
-      "summary": null,
+      "summary": {
+        "text": "Continuation of the Annex 2 NPC implementation resource matrix detailing required phases, position types, skill sets, and responsibilities for QA/Test Manager (Leadership), Test Analyst (Technical), and System Administrator (Technical).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "testing experience",
-          "heading": false
-        },
-        {
-          "term": "test scenarios",
-          "heading": false
-        },
-        {
-          "term": "troubleshooting test",
           "heading": false
         },
         {
@@ -2431,7 +2623,7 @@
           "heading": false
         },
         {
-          "term": "issues experience",
+          "term": "troubleshooting test",
           "heading": false
         },
         {
@@ -2439,11 +2631,19 @@
           "heading": false
         },
         {
-          "term": "test cases",
+          "term": "integration testing",
           "heading": false
         },
         {
-          "term": "integration testing",
+          "term": "test scenarios",
+          "heading": false
+        },
+        {
+          "term": "temporary knowledge",
+          "heading": false
+        },
+        {
+          "term": "manage testing",
           "heading": false
         }
       ],
@@ -2460,14 +2660,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 354,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of the Annex 2 NPC implementation resource matrix detailing operational responsibilities and skill sets for System Administrator, Support Engineer, and Superuser/Trainer roles.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "hot fixes",
+          "term": "software tools",
           "heading": false
         },
         {
-          "term": "software tools",
+          "term": "hot fixes",
           "heading": false
         },
         {
@@ -2479,7 +2682,7 @@
           "heading": false
         },
         {
-          "term": "experience",
+          "term": "ensure uptime",
           "heading": false
         },
         {
@@ -2487,11 +2690,11 @@
           "heading": false
         },
         {
-          "term": "ensure uptime",
+          "term": "troubleshoot",
           "heading": false
         },
         {
-          "term": "version updates",
+          "term": "master data",
           "heading": false
         }
       ],
@@ -2508,7 +2711,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 11,
-      "summary": null,
+      "summary": {
+        "text": "Back cover displaying the World Health Organization headquarters postal address in Geneva, Switzerland, and website URL (who.int).",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "World Health Organization 20 Avenue Appia 1211 Geneva 27 Switzerland who.int",
       "extractCut": false
@@ -2523,7 +2729,7 @@
       "heading": false
     },
     {
-      "term": "standardized master",
+      "term": "master data",
       "heading": false
     },
     {
@@ -2531,7 +2737,7 @@
       "heading": false
     },
     {
-      "term": "product catalogue",
+      "term": "standardized master",
       "heading": false
     },
     {
@@ -2539,11 +2745,15 @@
       "heading": false
     },
     {
-      "term": "structures master",
+      "term": "outputs master",
       "heading": false
     },
     {
-      "term": "outputs master",
+      "term": "npc data",
+      "heading": false
+    },
+    {
+      "term": "structures master",
       "heading": false
     },
     {
@@ -2551,25 +2761,21 @@
       "heading": false
     },
     {
-      "term": "sharing product",
-      "heading": false
-    },
-    {
       "term": "source master",
       "heading": false
     },
     {
-      "term": "manage product",
+      "term": "health product",
       "heading": false
     },
     {
-      "term": "product packaging",
+      "term": "maintain master",
       "heading": false
     }
   ],
   "links": {
-    "repo": "litlfred/smart-base",
+    "repo": "litlfred/who-iris",
     "branch": "main",
-    "dir": "smart-base/library/9789240116191-eng"
+    "dir": "library/9789240116191-eng"
   }
 }

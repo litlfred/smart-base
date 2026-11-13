@@ -1,7 +1,7 @@
 {
   "$schema": "folio-library-document/v1",
   "id": "9789240101197-eng",
-  "title": "9789240101197-eng",
+  "title": "Digital transformation handbook for health supply chain architecture",
   "variant": "pdf",
   "pages": null,
   "tocSource": "none",
@@ -18,7 +18,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 8,
-      "summary": null,
+      "summary": {
+        "text": "Front cover displaying the publication title, Digital transformation handbook for health supply chain architecture.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "Digital transformation handbook for health supply chain architecture",
       "extractCut": false
@@ -33,7 +36,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 5,
-      "summary": null,
+      "summary": {
+        "text": "Blank inside front cover page with no text.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "_(no text on this page)_",
       "extractCut": false
@@ -48,7 +54,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 8,
-      "summary": null,
+      "summary": {
+        "text": "Half-title page displaying the publication title, Digital transformation handbook for health supply chain architecture.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "Digital transformation handbook for health supply chain architecture",
       "extractCut": false
@@ -63,14 +72,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 494,
-      "summary": null,
+      "summary": {
+        "text": "Front matter colophon for Digital transformation handbook for health supply chain architecture (SMART Guidelines collection, WHO 2024), listing ISBNs 978-92-4-010119-7 (electronic) and 978-92-4-010120-3 (print), CC BY-NC-SA 3.0 IGO licensing terms, suggested citation, Cataloguing-in-Publication data, sales and rights details, third-party material obligations, and general WHO disclaimers.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "creative commons",
+          "heading": false
+        },
         {
           "term": "suggested citation",
           "heading": false
         },
         {
-          "term": "creative commons",
+          "term": "transformation handbook",
           "heading": false
         },
         {
@@ -78,23 +94,19 @@
           "heading": false
         },
         {
+          "term": "digital transformation",
+          "heading": false
+        },
+        {
+          "term": "chain architecture",
+          "heading": false
+        },
+        {
           "term": "smart guidelines",
           "heading": false
         },
         {
-          "term": "material",
-          "heading": false
-        },
-        {
-          "term": "igo",
-          "heading": false
-        },
-        {
-          "term": "cip",
-          "heading": false
-        },
-        {
-          "term": "work",
+          "term": "world health",
           "heading": false
         }
       ],
@@ -111,14 +123,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 286,
-      "summary": null,
+      "summary": {
+        "text": "Table of contents (page iii) listing front matter (Acknowledgements, Abbreviations and acronyms, Glossary), Introduction, Chapters 1 through 5 (Defining a holistic DHSC strategy, Defining the DHSC architecture, Planning for scalable implementation and sustainable operations, Using the DHSC to implement traceability, and Country examples for Ethiopia, Malawi, and Rwanda), References, and Annexes 1 through 7.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "dhsc initiative",
+          "term": "dhsc architecture",
           "heading": false
         },
         {
-          "term": "dhsc architecture",
+          "term": "dhsc initiative",
           "heading": false
         },
         {
@@ -130,19 +145,19 @@
           "heading": false
         },
         {
-          "term": "strategic goals",
-          "heading": false
-        },
-        {
-          "term": "annex",
-          "heading": false
-        },
-        {
           "term": "traceability",
           "heading": false
         },
         {
+          "term": "strategic goals",
+          "heading": false
+        },
+        {
           "term": "template",
+          "heading": false
+        },
+        {
+          "term": "current state",
           "heading": false
         }
       ],
@@ -159,14 +174,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 383,
-      "summary": null,
+      "summary": {
+        "text": "Acknowledgements (page iv) crediting authors Carl Leitner and Swaroop Jayaprakash (WHO DHI) and Ramy Guirguis (USAID), listing external reviewers across WHO, GS1, Palladium, GIZ, ministries of health, USAID, PATH, Vital Wave, Global Fund, Gavi, VillageReach, UNICEF, PAHO, DAI, Bill & Melinda Gates Foundation, and i+solutions, noting Declaration of Interests review, and acknowledging USAID funding.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "usaid ghsc-psm",
-          "heading": false
-        },
-        {
-          "term": "usa",
           "heading": false
         },
         {
@@ -182,7 +196,7 @@
           "heading": false
         },
         {
-          "term": "south africa",
+          "term": "usa",
           "heading": false
         },
         {
@@ -190,7 +204,11 @@
           "heading": false
         },
         {
-          "term": "switzerland",
+          "term": "palladium",
+          "heading": false
+        },
+        {
+          "term": "south africa",
           "heading": false
         }
       ],
@@ -207,26 +225,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 163,
-      "summary": null,
+      "summary": {
+        "text": "Abbreviations and acronyms list (page v) defining 30 terms from DH&I WG (Digital Health and Interoperability Working Group) and DHSC (digital health supply chain) through TOGAF, TSS, TWG, USAID, WHO, and WMS (warehouse management system).",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "chain information",
+          "heading": false
+        },
+        {
+          "term": "information system",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
           "term": "working group",
-          "heading": false
-        },
-        {
-          "term": "chain",
-          "heading": false
-        },
-        {
-          "term": "request",
-          "heading": false
-        },
-        {
-          "term": "international",
-          "heading": false
-        },
-        {
-          "term": "open",
           "heading": false
         },
         {
@@ -234,11 +251,15 @@
           "heading": false
         },
         {
-          "term": "global",
+          "term": "request",
           "heading": false
         },
         {
-          "term": "technical",
+          "term": "open",
+          "heading": false
+        },
+        {
+          "term": "technology",
           "heading": false
         }
       ],
@@ -255,22 +276,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 544,
-      "summary": null,
+      "summary": {
+        "text": "Glossary (page vi, first part) defining 14 key terms from deployment, digital health, digital health supply chain intervention, digital transformation, digitalization, and digitization through enterprise architecture, features, functional requirements, functions, health supply chain information system, interoperability, nonfunctional requirements, and open-source software.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "digital transformation",
+          "heading": false
+        },
+        {
           "term": "open-source software",
-          "heading": false
-        },
-        {
-          "term": "source code",
-          "heading": false
-        },
-        {
-          "term": "warehouse management",
-          "heading": false
-        },
-        {
-          "term": "order management",
           "heading": false
         },
         {
@@ -278,15 +294,23 @@
           "heading": false
         },
         {
+          "term": "digital system",
+          "heading": false
+        },
+        {
+          "term": "digital technologies",
+          "heading": false
+        },
+        {
           "term": "business process",
           "heading": false
         },
         {
-          "term": "digitization",
+          "term": "warehouse management",
           "heading": false
         },
         {
-          "term": "digitalization",
+          "term": "digital health",
           "heading": false
         }
       ],
@@ -303,7 +327,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 389,
-      "summary": null,
+      "summary": {
+        "text": "Glossary (page vii, conclusion) defining open standards, order management, order management system, organogram, registry, SMART Guidelines, stakeholder, systems architecture, total cost of ownership, traceability, use case, and warehouse management system.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "requisition orders",
@@ -322,19 +349,19 @@
           "heading": false
         },
         {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "management system",
+          "heading": false
+        },
+        {
           "term": "customer",
           "heading": false
         },
         {
           "term": "software tool",
-          "heading": false
-        },
-        {
-          "term": "supports",
-          "heading": false
-        },
-        {
-          "term": "entry",
           "heading": false
         }
       ],
@@ -351,7 +378,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 5,
-      "summary": null,
+      "summary": {
+        "text": "Blank separator page (page viii) preceding the Introduction.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "_(no text on this page)_",
       "extractCut": false
@@ -366,10 +396,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 198,
-      "summary": null,
+      "summary": {
+        "text": "Opening of the Introduction (page 1) explaining how health supply chain processes (forecasting and planning, sourcing, procurement, order management, warehouse management, and dispensing) intersect with community and facility health processes, alongside Fig. 1 illustrating public health supply chain partners and processes centred on individuals.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "chain processes",
+          "heading": false
+        },
+        {
+          "term": "health products",
           "heading": false
         },
         {
@@ -381,15 +418,11 @@
           "heading": false
         },
         {
-          "term": "manufacturers",
+          "term": "public health",
           "heading": false
         },
         {
-          "term": "forecasting",
-          "heading": false
-        },
-        {
-          "term": "transportation",
+          "term": "health care",
           "heading": false
         },
         {
@@ -410,10 +443,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 467,
-      "summary": null,
+      "summary": {
+        "text": "Introduction (page 2) presenting Fig. 2 on information flow across supply chain processes, outlining key challenges of manual data entry and siloed systems (stockouts, lack of real-time visibility, administrative burdens, and limited stakeholder collaboration), and defining digital health and the digital health supply chain (DHSC) in alignment with WHO's Global Strategy on Digital Health 2020–2025 and the Classification of Digital Interventions, Services and Applications in Health (Category 3.2).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "chain processes",
+          "heading": false
+        },
+        {
+          "term": "digital transformation",
+          "heading": false
+        },
+        {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "digital technologies",
           "heading": false
         },
         {
@@ -425,23 +473,11 @@
           "heading": false
         },
         {
-          "term": "stockouts",
+          "term": "health management",
           "heading": false
         },
         {
-          "term": "manual",
-          "heading": false
-        },
-        {
-          "term": "refers",
-          "heading": false
-        },
-        {
-          "term": "errors",
-          "heading": false
-        },
-        {
-          "term": "flow",
+          "term": "health products",
           "heading": false
         }
       ],
@@ -458,10 +494,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 359,
-      "summary": null,
+      "summary": {
+        "text": "Introduction section 'What this handbook covers' (page 3) describing the handbook's scope, prerequisites (prior supply chain process and maturity assessments and supply chain design), five applicable country scenarios, and Fig. 3 illustrating the digital health supply chain ecosystem from transactional systems to collaborative processes and end-to-end visibility.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "digital transformation",
+          "heading": false
+        },
+        {
           "term": "chain",
+          "heading": false
+        },
+        {
+          "term": "information systems",
           "heading": false
         },
         {
@@ -469,19 +516,7 @@
           "heading": false
         },
         {
-          "term": "seeking",
-          "heading": false
-        },
-        {
-          "term": "initiatives",
-          "heading": false
-        },
-        {
           "term": "handbook",
-          "heading": false
-        },
-        {
-          "term": "logistics",
           "heading": false
         },
         {
@@ -489,7 +524,11 @@
           "heading": false
         },
         {
-          "term": "strategy",
+          "term": "seeking",
+          "heading": false
+        },
+        {
+          "term": "architecture",
           "heading": false
         }
       ],
@@ -506,18 +545,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 310,
-      "summary": null,
+      "summary": {
+        "text": "Introduction section 'How to use this handbook' (page 4) summarizing the five chapters, recommending familiarity with DIIG, SCISMM, OpenHIE, and TOGAF before use, and presenting Fig. 4 on the stepwise approach across Chapters 1 to 4.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc architecture",
           "heading": false
         },
         {
-          "term": "strategic goals",
+          "term": "defining holistic",
           "heading": false
         },
         {
-          "term": "defining holistic",
+          "term": "strategic goals",
           "heading": false
         },
         {
@@ -529,11 +571,11 @@
           "heading": false
         },
         {
-          "term": "hsciss",
+          "term": "traceability",
           "heading": false
         },
         {
-          "term": "scalable",
+          "term": "hsciss",
           "heading": false
         },
         {
@@ -554,10 +596,33 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 579,
-      "summary": null,
+      "summary": {
+        "text": "Introduction section 'Alignment with the DIIG' (page 5) explaining how this handbook complements the WHO Digital Implementation Investment Guide (DIIG) and presenting Fig. 5 mapping the seven DIIG phases, steps, and complementary WHO, ITU, UNICEF, World Bank, Digital Square, OpenHIE, and TOGAF resources.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "implementing digital",
+          "heading": false
+        },
+        {
+          "term": "health implementations",
+          "heading": false
+        },
+        {
+          "term": "digital interventions",
+          "heading": false
+        },
+        {
           "term": "handbook complements",
+          "heading": false
+        },
+        {
+          "term": "national digital",
           "heading": false
         },
         {
@@ -565,27 +630,7 @@
           "heading": false
         },
         {
-          "term": "phase",
-          "heading": false
-        },
-        {
-          "term": "future state",
-          "heading": false
-        },
-        {
-          "term": "current state",
-          "heading": false
-        },
-        {
-          "term": "identify validated",
-          "heading": false
-        },
-        {
-          "term": "itu",
-          "heading": false
-        },
-        {
-          "term": "diig",
+          "term": "health investment",
           "heading": false
         }
       ],
@@ -602,14 +647,25 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 346,
-      "summary": null,
+      "summary": {
+        "text": "Introduction section 'Alignment with WHO's SMART Guidelines' (page 6) outlining the five progressive SMART Guidelines knowledge layers (L1 Narrative, L2 Operational, L3 Machine-readable, L4 Executable, and L5 Dynamic) and presenting Fig. 6 on the WHO SMART Guidelines approach and country localization.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "digital adaptation",
+          "heading": false
+        },
+        {
+          "term": "machine readable",
+          "heading": false
+        },
         {
           "term": "smart guidelines",
           "heading": false
         },
         {
-          "term": "machine readable",
+          "term": "adaptation kits",
           "heading": false
         },
         {
@@ -621,19 +677,11 @@
           "heading": false
         },
         {
-          "term": "adaptation kits",
+          "term": "digital health",
           "heading": false
         },
         {
           "term": "knowledge layers",
-          "heading": false
-        },
-        {
-          "term": "executable",
-          "heading": false
-        },
-        {
-          "term": "dynamic",
           "heading": false
         }
       ],
@@ -650,14 +698,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 415,
-      "summary": null,
+      "summary": {
+        "text": "Introduction (page 7) explaining how this handbook aligns with the L1 Narrative layer of the SMART Guidelines, presenting Fig. 7 (sample antenatal care workflow from the WHO ANC Digital Adaptation Kit with supply chain intersections highlighted), and beginning 'How this handbook was developed' with in-country and virtual consultations in Ethiopia, Malawi, and Rwanda.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "symptoms counselling",
+          "term": "diet counselling",
           "heading": false
         },
         {
-          "term": "diet counselling",
+          "term": "symptoms counselling",
           "heading": false
         },
         {
@@ -677,7 +728,7 @@
           "heading": false
         },
         {
-          "term": "physiological symptoms",
+          "term": "woman profile",
           "heading": false
         },
         {
@@ -698,10 +749,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 597,
-      "summary": null,
+      "summary": {
+        "text": "Conclusion of the Introduction (page 8) detailing the DH&I WG small working group consultations and desk reviews (Australia, Malawi, Rwanda, SCISMM, TSS, DIIG, WHO-ITU eHealth Strategy Toolkit, OpenHIE), and presenting 'Who this handbook is for' with Table 1 summarizing target organizations, user roles, and purposes for Chapters 1–4.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "desk reviews",
+          "term": "dhsc architecture",
           "heading": false
         },
         {
@@ -709,15 +763,7 @@
           "heading": false
         },
         {
-          "term": "dhsc architecture",
-          "heading": false
-        },
-        {
-          "term": "chain digitalization",
-          "heading": false
-        },
-        {
-          "term": "central warehouse",
+          "term": "chief digital",
           "heading": false
         },
         {
@@ -725,11 +771,19 @@
           "heading": false
         },
         {
-          "term": "operational leaders",
+          "term": "chain digitalization",
           "heading": false
         },
         {
-          "term": "chief",
+          "term": "digital officers",
+          "heading": false
+        },
+        {
+          "term": "digital transformation",
+          "heading": false
+        },
+        {
+          "term": "central warehouse",
           "heading": false
         }
       ],
@@ -746,7 +800,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 175,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 1 title and overview page ('Defining a holistic DHSC strategy', page 9) outlining the four chapter steps (identify and engage stakeholders, analyse current state of HSCISs, define vision and strategic goals and objectives, define strategic roadmap and performance indicators), six guiding principles informed by the Principles for Digital Development, and expected chapter outputs.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc strategic",
@@ -786,7 +843,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 431,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 1 opening section 'Why is a strategy necessary?' (page 10) explaining how a holistic DHSC strategy aligns with national health, medicines and health product, health supply chain, digital/IT, digital health (eHealth), and pharmaceutical traceability strategies, accompanied by Fig. 8 on the alignment of national strategies.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc strategy",
@@ -801,23 +861,23 @@
           "heading": false
         },
         {
+          "term": "digital transformation",
+          "heading": false
+        },
+        {
+          "term": "health strategy",
+          "heading": false
+        },
+        {
+          "term": "national digital",
+          "heading": false
+        },
+        {
+          "term": "health product",
+          "heading": false
+        },
+        {
           "term": "vision",
-          "heading": false
-        },
-        {
-          "term": "digitalize",
-          "heading": false
-        },
-        {
-          "term": "complements",
-          "heading": false
-        },
-        {
-          "term": "medicines",
-          "heading": false
-        },
-        {
-          "term": "initiatives",
           "heading": false
         }
       ],
@@ -834,18 +894,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 423,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 1 (page 11) detailing the risks of forgoing a guiding DHSC vision and strategy (fragmented implementations, non-interoperable data formats, inconsistent product nomenclature across systems as shown in Fig. 9, reduced visibility, non-scalable systems, and duplicative processes) and introducing the four steps for developing a DHSC strategy.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "product code",
-          "heading": false
-        },
         {
           "term": "product nomenclature",
           "heading": false
         },
         {
-          "term": "downstream facilities",
+          "term": "product code",
           "heading": false
         },
         {
@@ -857,7 +916,11 @@
           "heading": false
         },
         {
-          "term": "electronic logistics",
+          "term": "chain systems",
+          "heading": false
+        },
+        {
+          "term": "downstream facilities",
           "heading": false
         },
         {
@@ -865,7 +928,7 @@
           "heading": false
         },
         {
-          "term": "wms",
+          "term": "electronic logistics",
           "heading": false
         }
       ],
@@ -882,7 +945,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 450,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 1, Step 1 ('Identify and engage all relevant stakeholders', page 12), specifying inputs, four tasks (identifying focal points, engaging managerial and technical staff, defining a stakeholder matrix, and establishing a TWG and steering committee), outputs, best practices (senior MOH champions and DHSC task force within an existing digital health TWG), and potential risks with mitigation strategies.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "steering committee",
@@ -893,11 +959,7 @@
           "heading": false
         },
         {
-          "term": "task force",
-          "heading": false
-        },
-        {
-          "term": "stakeholder organizations",
+          "term": "dhsc implementation",
           "heading": false
         },
         {
@@ -905,15 +967,19 @@
           "heading": false
         },
         {
-          "term": "initial meetings",
-          "heading": false
-        },
-        {
-          "term": "dhsc",
+          "term": "stakeholder organizations",
           "heading": false
         },
         {
           "term": "regulatory authority",
+          "heading": false
+        },
+        {
+          "term": "relevant stakeholders",
+          "heading": false
+        },
+        {
+          "term": "digital transformation",
           "heading": false
         }
       ],
@@ -930,14 +996,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 430,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 1, Step 2 ('Analyse the current state of HSCISs', page 13), detailing inputs, tasks (identifying end-to-end supply chain challenges and prioritizing them across defined timeframes), output (health supply chain digital transformation priorities), resources (NSCA Toolkit, Annexes 3 and 4), best practice, and mitigation strategies for misaligned technical/political priorities and missing assessment inputs.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "political priorities",
-          "heading": false
-        },
-        {
-          "term": "political leaders",
           "heading": false
         },
         {
@@ -945,11 +1010,11 @@
           "heading": false
         },
         {
-          "term": "nsca toolkit",
+          "term": "chain challenges",
           "heading": false
         },
         {
-          "term": "technical priorities",
+          "term": "nsca toolkit",
           "heading": false
         },
         {
@@ -961,7 +1026,11 @@
           "heading": false
         },
         {
-          "term": "chain challenges",
+          "term": "political leaders",
+          "heading": false
+        },
+        {
+          "term": "technical priorities",
           "heading": false
         }
       ],
@@ -978,7 +1047,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 358,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 1, Step 3 ('Define the DHSC vision and strategic goals and objectives', page 14), outlining inputs (national strategies and transformation priorities), four tasks (identifying solutions, defining realistic strategic goals, defining SMART strategic objectives, and formulating an overarching DHSC vision), outputs, best practices (including human-centred design visioning workshops), and mitigation strategies for decision-making delays.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc strategic",
@@ -986,10 +1058,6 @@
         },
         {
           "term": "dhsc vision",
-          "heading": false
-        },
-        {
-          "term": "reasonable timeframe",
           "heading": false
         },
         {
@@ -1001,15 +1069,19 @@
           "heading": false
         },
         {
+          "term": "reasonable timeframe",
+          "heading": false
+        },
+        {
+          "term": "digital transformation",
+          "heading": false
+        },
+        {
           "term": "strategy national",
           "heading": false
         },
         {
-          "term": "workshop",
-          "heading": false
-        },
-        {
-          "term": "decision-makers",
+          "term": "health strategy",
           "heading": false
         }
       ],
@@ -1026,14 +1098,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 283,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 1, Step 4 ('Define a strategic roadmap and performance indicators', page 15), specifying inputs, tasks (defining a high-level timeline roadmap and performance indicators for all strategic objectives), outputs, best practice on capturing baseline performance, and mitigation strategies for staffing shortages, funding gaps, and timeline misalignments.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "dhsc strategic",
+          "heading": false
+        },
         {
           "term": "strategic roadmap",
           "heading": false
         },
         {
-          "term": "dhsc strategic",
+          "term": "define strategic",
           "heading": false
         },
         {
@@ -1042,10 +1121,6 @@
         },
         {
           "term": "strategic objectives",
-          "heading": false
-        },
-        {
-          "term": "define strategic",
           "heading": false
         },
         {
@@ -1074,7 +1149,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 194,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 1 Progress check (page 16) presenting Fig. 10 ('Example of outputs from this chapter'), which illustrates a sample DHSC vision, three strategic goals, six quantifiable strategic objectives, and a four-year strategic roadmap from central warehouse digitalization to national batch traceability.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc strategic",
@@ -1093,7 +1171,7 @@
           "heading": false
         },
         {
-          "term": "year",
+          "term": "strategic goals",
           "heading": false
         },
         {
@@ -1101,11 +1179,11 @@
           "heading": false
         },
         {
-          "term": "strategic goals",
+          "term": "automate",
           "heading": false
         },
         {
-          "term": "automate",
+          "term": "year",
           "heading": false
         }
       ],
@@ -1122,10 +1200,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 252,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 title and overview page ('Defining the DHSC architecture', page 17) outlining the three chapter steps (assess current state of HSCISs, define a target architecture, identify implementation activities and map them to strategic goals), eight guiding principles, and four expected chapter outputs.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc architecture",
+          "heading": false
+        },
+        {
+          "term": "implementation activities",
           "heading": false
         },
         {
@@ -1141,19 +1226,15 @@
           "heading": false
         },
         {
-          "term": "step",
-          "heading": false
-        },
-        {
-          "term": "principles",
-          "heading": false
-        },
-        {
           "term": "traceability",
           "heading": false
         },
         {
           "term": "defining",
+          "heading": false
+        },
+        {
+          "term": "step",
           "heading": false
         }
       ],
@@ -1170,7 +1251,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 607,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 opening sections 'Is a DHSC architecture necessary?' and 'What are the risks of forgoing a DHSC architecture?' (page 18), explaining how national and subnational architectural components enable system-driven transactions, end-to-end visibility, and product traceability, and listing the risks of siloed, non-standardized, and fragmented applications.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc architecture",
@@ -1181,11 +1265,11 @@
           "heading": false
         },
         {
-          "term": "quality assured",
+          "term": "chain leaders",
           "heading": false
         },
         {
-          "term": "chain leaders",
+          "term": "health products",
           "heading": false
         },
         {
@@ -1197,11 +1281,11 @@
           "heading": false
         },
         {
-          "term": "quality issues",
+          "term": "digital transformation",
           "heading": false
         },
         {
-          "term": "lack",
+          "term": "quality assured",
           "heading": false
         }
       ],
@@ -1218,18 +1302,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 128,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 19) listing the three steps to define an overarching DHSC architecture and presenting Fig. 11 ('Health supply chain end-to-end visibility and traceability'), which maps global, national, and country-level visibility and track-and-trace across manufacturing, procurement, customs, central/regional warehousing, and health facility dispensing.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "end-to-end visibility",
           "heading": false
         },
         {
-          "term": "central warehouse",
+          "term": "dhsc architecture",
           "heading": false
         },
         {
-          "term": "dhsc architecture",
+          "term": "central warehouse",
           "heading": false
         },
         {
@@ -1254,22 +1341,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 351,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2, Step 1 ('Assess the current state of HSCISs', page 20), detailing inputs (NSCA and SCISMM outcomes, strategic goals, digital health strategy, infrastructure and master data landscape), tasks (mapping existing HSCISs, conducting SCISMM assessment, and analysing HSCIS gaps), outputs, resources (Annex 5 and SCISMM), and risks with mitigation strategies.",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "conduct scismm",
-          "heading": false
-        },
         {
           "term": "scismm assessment",
           "heading": false
         },
         {
-          "term": "hscis gaps",
+          "term": "conduct scismm",
           "heading": false
         },
         {
-          "term": "current state",
+          "term": "hscis gaps",
           "heading": false
         },
         {
@@ -1281,11 +1367,15 @@
           "heading": false
         },
         {
-          "term": "strategic goals",
+          "term": "current state",
           "heading": false
         },
         {
-          "term": "utilization",
+          "term": "master data",
+          "heading": false
+        },
+        {
+          "term": "strategic goals",
           "heading": false
         }
       ],
@@ -1302,10 +1392,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 313,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 21) explaining how SCISMM informs architecture selection and presenting Fig. 12 ('SCISMM maturity levels for HSCISs'), which details the five maturity levels from Level 1 Reporting Based (Manual) and Level 2 Transactional (Siloed) through Level 3 Advanced Digitalization (Integrated), Level 4 End to End Visibility (Exchanged), and Level 5 Digital Ecosystem (Collaborated).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "scismm maturity",
+          "heading": false
+        },
+        {
+          "term": "chain functions",
+          "heading": false
+        },
+        {
+          "term": "chain systems",
           "heading": false
         },
         {
@@ -1313,7 +1414,7 @@
           "heading": false
         },
         {
-          "term": "chain functions",
+          "term": "systems integrated",
           "heading": false
         },
         {
@@ -1326,14 +1427,6 @@
         },
         {
           "term": "current maturity",
-          "heading": false
-        },
-        {
-          "term": "real time",
-          "heading": false
-        },
-        {
-          "term": "dhsc architecture",
           "heading": false
         }
       ],
@@ -1350,7 +1443,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 482,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2, Step 2 ('Define a target DHSC architecture', page 22), specifying inputs, tasks (mapping current-state HSCISs, identifying gaps, and defining future-state architecture), outputs, resources (SCISMM, TSS v2, Chapter 5), risks and mitigations, a best practice on capturing last-mile actual consumption (dispensing, expiries, wastage, shrinkage, and batch/serial details), and an introduction to the DHSC architecture framework.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc architecture",
@@ -1361,11 +1457,11 @@
           "heading": false
         },
         {
-          "term": "actual consumption",
+          "term": "current-state architecture",
           "heading": false
         },
         {
-          "term": "current-state architecture",
+          "term": "inventory shrinkage",
           "heading": false
         },
         {
@@ -1377,11 +1473,11 @@
           "heading": false
         },
         {
-          "term": "wastages",
+          "term": "actual consumption",
           "heading": false
         },
         {
-          "term": "future state",
+          "term": "digital transformation",
           "heading": false
         }
       ],
@@ -1398,14 +1494,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 327,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 23) presenting Fig. 13 ('DIIG digital health enterprise architecture framework'), which illustrates point-of-service applications, the interoperability layer, digital health platform shared services (registries and terminology services) and business domain services (LMIS, shared health record, HMIS), data sources, data services, and external systems.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "mgmt info",
-          "heading": false
-        },
-        {
-          "term": "point-of service",
           "heading": false
         },
         {
@@ -1413,23 +1508,27 @@
           "heading": false
         },
         {
+          "term": "health info",
+          "heading": false
+        },
+        {
+          "term": "info system",
+          "heading": false
+        },
+        {
           "term": "functional software",
           "heading": false
         },
         {
-          "term": "registry",
+          "term": "nondigital data",
           "heading": false
         },
         {
-          "term": "shared services",
+          "term": "health enterprise",
           "heading": false
         },
         {
-          "term": "nondigital",
-          "heading": false
-        },
-        {
-          "term": "programme area",
+          "term": "digital health",
           "heading": false
         }
       ],
@@ -1446,10 +1545,29 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 219,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 24) presenting Fig. 14 ('DHSC architecture framework'), depicting health supply chain information systems (forecasting and planning, procurement, supplier/contract management, order management, warehouse management, transportation, cold chain, dispensing), the interoperability layer, shared foundational registries (product, supplier, facility), data services (analytics and traceability), external systems, and digital ecosystems.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc enterprise",
+          "heading": false
+        },
+        {
+          "term": "data repositories",
+          "heading": false
+        },
+        {
+          "term": "chain",
+          "heading": false
+        },
+        {
+          "term": "traceability",
+          "heading": false
+        },
+        {
+          "term": "capabilities",
           "heading": false
         },
         {
@@ -1461,23 +1579,7 @@
           "heading": false
         },
         {
-          "term": "chain",
-          "heading": false
-        },
-        {
-          "term": "repositories",
-          "heading": false
-        },
-        {
-          "term": "traceability",
-          "heading": false
-        },
-        {
-          "term": "warehouse",
-          "heading": false
-        },
-        {
-          "term": "capabilities",
+          "term": "systems",
           "heading": false
         }
       ],
@@ -1494,14 +1596,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 681,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 25) describing five core components of the DHSC architecture framework (foundational components, interoperability layer, HSCISs, data services, and external systems)—Page 25 continues onto page 26 with digital ecosystems and introduces illustrative architectural approaches and governance options.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "interoperability layer",
           "heading": false
         },
         {
-          "term": "chain processes",
+          "term": "chain data",
+          "heading": false
+        },
+        {
+          "term": "digital ecosystems",
           "heading": false
         },
         {
@@ -1509,23 +1618,19 @@
           "heading": false
         },
         {
-          "term": "maturity levels",
+          "term": "chain processes",
           "heading": false
         },
         {
-          "term": "chain design",
+          "term": "digital maturity",
           "heading": false
         },
         {
-          "term": "warehouse management",
+          "term": "transactional data",
           "heading": false
         },
         {
-          "term": "governance options",
-          "heading": false
-        },
-        {
-          "term": "ecosystems",
+          "term": "master data",
           "heading": false
         }
       ],
@@ -1542,7 +1647,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 150,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 26) describing the maturity-based architectural approach for moving from SCISMM Level 3 (point-to-point integration) to Level 4 (end-to-end integration and visibility via an interoperability layer and foundational registries), illustrated in Fig. 15.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "maturity-based architecture",
@@ -1550,14 +1658,6 @@
         },
         {
           "term": "foundational components",
-          "heading": false
-        },
-        {
-          "term": "supplier",
-          "heading": false
-        },
-        {
-          "term": "registry",
           "heading": false
         },
         {
@@ -1569,7 +1669,15 @@
           "heading": false
         },
         {
-          "term": "moving",
+          "term": "supplier",
+          "heading": false
+        },
+        {
+          "term": "registry",
+          "heading": false
+        },
+        {
+          "term": "warehouse",
           "heading": false
         }
       ],
@@ -1586,34 +1694,37 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 228,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 27) describing the maturity-based architectural approach for moving from SCISMM Level 4 (exchanged architecture) to Level 5 (collaborative ecosystem interoperating with regulatory, finance/insurance, HMIS, quality, manufacturer, and global donor platforms such as GFPVAN), illustrated in Fig. 16.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "maturity-based architecture",
           "heading": false
         },
         {
-          "term": "supplier",
+          "term": "manufacturer systems",
+          "heading": false
+        },
+        {
+          "term": "regulatory systems",
+          "heading": false
+        },
+        {
+          "term": "digital ecosystems",
+          "heading": false
+        },
+        {
+          "term": "external systems",
+          "heading": false
+        },
+        {
+          "term": "information systems",
           "heading": false
         },
         {
           "term": "global platforms",
-          "heading": false
-        },
-        {
-          "term": "registry",
-          "heading": false
-        },
-        {
-          "term": "scismm",
-          "heading": false
-        },
-        {
-          "term": "ecosystems",
-          "heading": false
-        },
-        {
-          "term": "manufacturer",
           "heading": false
         },
         {
@@ -1634,7 +1745,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 203,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 28) presenting the supply-chain-design architectural approach for centralized management at SCISMM Level 5 (Fig. 17), where all health supply chain services across central, district, and service delivery point facilities are centrally managed (suited to push replenishment).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "chain design",
@@ -1645,19 +1759,19 @@
           "heading": false
         },
         {
-          "term": "supplier",
-          "heading": false
-        },
-        {
           "term": "architecture based",
           "heading": false
         },
         {
-          "term": "registry",
+          "term": "supplier",
           "heading": false
         },
         {
           "term": "fig",
+          "heading": false
+        },
+        {
+          "term": "registry",
           "heading": false
         },
         {
@@ -1682,14 +1796,29 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 226,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 29) presenting the supply-chain-design architectural approach for decentralized management Option A (Fig. 18), where national-level functions (forecasting, procurement, supplier/contract management, central warehousing, transportation, cold chain) and facility-level functions (order management, inventory management, cold chain, dispensing) are managed separately to support pull replenishment.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "chain management",
+          "heading": false
+        },
         {
           "term": "cold chain",
           "heading": false
         },
         {
+          "term": "chain design",
+          "heading": false
+        },
+        {
           "term": "decentralized management",
+          "heading": false
+        },
+        {
+          "term": "contract management",
           "heading": false
         },
         {
@@ -1702,18 +1831,6 @@
         },
         {
           "term": "facility level",
-          "heading": false
-        },
-        {
-          "term": "supplier",
-          "heading": false
-        },
-        {
-          "term": "chain design",
-          "heading": false
-        },
-        {
-          "term": "contract management",
           "heading": false
         }
       ],
@@ -1730,14 +1847,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 331,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 30) presenting decentralized management Option B (Fig. 19), in which district-level organizations maintain separate procurement systems to source outside central warehouses, and introducing how cross-enterprise analytics services enable end-to-end supply chain visibility.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "cold chain",
+          "term": "chain management",
           "heading": false
         },
         {
-          "term": "decentralized management",
+          "term": "cold chain",
           "heading": false
         },
         {
@@ -1745,7 +1865,11 @@
           "heading": false
         },
         {
-          "term": "supplier",
+          "term": "decentralized management",
+          "heading": false
+        },
+        {
+          "term": "architecture based",
           "heading": false
         },
         {
@@ -1758,10 +1882,6 @@
         },
         {
           "term": "end-to-end",
-          "heading": false
-        },
-        {
-          "term": "registry",
           "heading": false
         }
       ],
@@ -1778,7 +1898,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 193,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 (page 31) presenting Fig. 20 ('Benefits of cross-enterprise analytics services'), showing how transactional data from across supply chain processes feed a data warehouse and supply chain reports via the interoperability layer to answer eight operational questions on stock optimization, forecast accuracy, on-time delivery, wastage, expiry risk, stockouts, and supplier performance.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "central warehouse",
@@ -1793,15 +1916,15 @@
           "heading": false
         },
         {
-          "term": "consumption",
-          "heading": false
-        },
-        {
           "term": "inventory",
           "heading": false
         },
         {
-          "term": "demand",
+          "term": "consumption",
+          "heading": false
+        },
+        {
+          "term": "chain",
           "heading": false
         }
       ],
@@ -1818,7 +1941,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 159,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2, Step 3 ('Identify implementation activities and map them to strategic goals', page 32), detailing inputs (current state of HSCISs, future-state DHSC architecture, strategic goals), tasks (prioritizing DHSC interventions, defining implementation activities, developing a high-level roadmap), outputs, and risk mitigation for misaligned activities.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc strategic",
@@ -1833,15 +1959,15 @@
           "heading": false
         },
         {
+          "term": "implementation activities",
+          "heading": false
+        },
+        {
           "term": "high-level roadmap",
           "heading": false
         },
         {
-          "term": "activities",
-          "heading": false
-        },
-        {
-          "term": "mapped",
+          "term": "architecture",
           "heading": false
         }
       ],
@@ -1858,22 +1984,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 348,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 2 Progress check (page 33) presenting Fig. 21 ('Example of outputs from this chapter'), linking the DHSC vision, strategic goals, strategic objectives, and strategic roadmap to the Year 1–2 target architecture, Year 3–4 maturity progression, specific implementation roadmap activities (WMS enhancement, WMS–NPC integration, barcode scanning, interoperability mediator, data warehouse), and tracked DHSC outcomes.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "interop mediator",
-          "heading": false
-        },
-        {
-          "term": "batch traceability",
-          "heading": false
-        },
-        {
-          "term": "central warehouse",
-          "heading": false
-        },
-        {
-          "term": "year",
           "heading": false
         },
         {
@@ -1881,11 +1998,23 @@
           "heading": false
         },
         {
-          "term": "wms",
+          "term": "batch traceability",
           "heading": false
         },
         {
-          "term": "strategic goals",
+          "term": "data warehouse",
+          "heading": false
+        },
+        {
+          "term": "central warehouse",
+          "heading": false
+        },
+        {
+          "term": "target architecture",
+          "heading": false
+        },
+        {
+          "term": "wms",
           "heading": false
         },
         {
@@ -1906,8 +2035,15 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 192,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3 title and overview page ('Planning for scalable implementation and sustainable operations', page 34) outlining the four chapter steps (plan implementation, develop operational plan, develop budget, and implement each intervention), four guiding principles, and six expected chapter outputs.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "scalable implementation",
+          "heading": false
+        },
         {
           "term": "sustainable operations",
           "heading": false
@@ -1921,7 +2057,7 @@
           "heading": false
         },
         {
-          "term": "scalable",
+          "term": "traceability",
           "heading": false
         },
         {
@@ -1929,11 +2065,7 @@
           "heading": false
         },
         {
-          "term": "plans",
-          "heading": false
-        },
-        {
-          "term": "traceability",
+          "term": "architecture",
           "heading": false
         }
       ],
@@ -1950,18 +2082,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 203,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3 opening (page 35) introducing the seven foundational building blocks of digital health and DHSC implementation adapted from the WHO-ITU National eHealth Strategy Toolkit (Fig. 22: leadership and governance, strategy and investment, services and applications, legislation/policy/compliance, workforce, standards and interoperability, and infrastructure) and defining health supply chain governance.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "dhsc implementation",
+          "heading": false
+        },
         {
           "term": "building blocks",
           "heading": false
         },
         {
-          "term": "who-itu",
-          "heading": false
-        },
-        {
-          "term": "strategy toolkit",
+          "term": "scalable implementation",
           "heading": false
         },
         {
@@ -1969,15 +2104,15 @@
           "heading": false
         },
         {
+          "term": "strategy toolkit",
+          "heading": false
+        },
+        {
           "term": "strategic goals",
           "heading": false
         },
         {
-          "term": "sustainable operations",
-          "heading": false
-        },
-        {
-          "term": "dhsc",
+          "term": "who-itu",
           "heading": false
         }
       ],
@@ -1994,14 +2129,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 810,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3 (page 36) presenting Table 2 ('Illustrative implementation considerations for the DHSC'), which maps current-state diagnostic questions and required capabilities across the enabling environment (leadership and governance, strategy and investment, legislation/policy/compliance, workforce, standards and interoperability) and the ICT environment (services and applications, infrastructure).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "dhsc strategy",
+          "term": "dhsc architecture",
           "heading": false
         },
         {
-          "term": "dhsc architecture",
+          "term": "dhsc strategy",
           "heading": false
         },
         {
@@ -2009,15 +2147,15 @@
           "heading": false
         },
         {
-          "term": "senior leadership",
-          "heading": false
-        },
-        {
           "term": "interoperability mediator",
           "heading": false
         },
         {
-          "term": "necessary skill",
+          "term": "budgeted plan",
+          "heading": false
+        },
+        {
+          "term": "senior leadership",
           "heading": false
         },
         {
@@ -2025,7 +2163,7 @@
           "heading": false
         },
         {
-          "term": "chain partners",
+          "term": "interoperability framework",
           "heading": false
         }
       ],
@@ -2042,14 +2180,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 273,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3, Step 1 ('Plan the implementation of each DHSC intervention', page 37), specifying inputs, tasks, outputs, and required contents for the project charter, the project management plan (including RACI matrix, phased budget, communication plan, risk register, change control, and rollout plan), and the project performance monitoring and analysis framework.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "project charter",
-          "heading": false
-        },
-        {
-          "term": "steering committee",
           "heading": false
         },
         {
@@ -2061,19 +2198,23 @@
           "heading": false
         },
         {
+          "term": "dhsc implementation",
+          "heading": false
+        },
+        {
           "term": "management plan",
           "heading": false
         },
         {
-          "term": "risk register",
+          "term": "steering committee",
           "heading": false
         },
         {
-          "term": "analysis framework",
+          "term": "implementation activities",
           "heading": false
         },
         {
-          "term": "twg",
+          "term": "schedule",
           "heading": false
         }
       ],
@@ -2090,14 +2231,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 270,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3, Step 2 ('Develop an operational plan for each DHSC intervention', page 38), detailing inputs, tasks, outputs, and the required elements of the operations and sustainability plan (system ownership, maintenance resources, recurring knowledge management, recurring costs, backups and redundancy, change governance, and financial strategy) and operational performance monitoring framework.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc stakeholder",
-          "heading": false
-        },
-        {
-          "term": "operational costs",
           "heading": false
         },
         {
@@ -2105,7 +2245,11 @@
           "heading": false
         },
         {
-          "term": "backup power",
+          "term": "stakeholder matrix",
+          "heading": false
+        },
+        {
+          "term": "operational costs",
           "heading": false
         },
         {
@@ -2113,11 +2257,11 @@
           "heading": false
         },
         {
-          "term": "stakeholder matrix",
+          "term": "sustainability plan",
           "heading": false
         },
         {
-          "term": "sustainability plan",
+          "term": "backup power",
           "heading": false
         },
         {
@@ -2138,14 +2282,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 249,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3, Step 3 ('Develop a budget for each DHSC intervention', page 39), presenting Fig. 23 on the cost components of total cost of ownership across ongoing, implementation, scaling, and operational phases, together with inputs, five budgeting tasks over a 5–10 year lifecycle, and outputs.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "budget matrix",
           "heading": false
         },
         {
-          "term": "total cost",
+          "term": "dhsc intervention",
           "heading": false
         },
         {
@@ -2153,7 +2300,7 @@
           "heading": false
         },
         {
-          "term": "dhsc intervention",
+          "term": "total cost",
           "heading": false
         },
         {
@@ -2169,7 +2316,7 @@
           "heading": false
         },
         {
-          "term": "request",
+          "term": "ownership",
           "heading": false
         }
       ],
@@ -2186,10 +2333,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 473,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3 (page 40) presenting Table 3 ('Illustrative cost drivers of DHSC implementation'), categorizing cost drivers across ongoing costs (management, governance, overhead), upfront implementation costs (sourcing, software, hardware and infrastructure, design and development, integration and interoperability, testing and training, deployment), upfront scaling costs, and operations costs (software, maintenance, ongoing training, monitoring and evaluation).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "end users",
+          "heading": false
+        },
+        {
+          "term": "testing users",
           "heading": false
         },
         {
@@ -2201,15 +2355,7 @@
           "heading": false
         },
         {
-          "term": "amount",
-          "heading": false
-        },
-        {
-          "term": "retention policies",
-          "heading": false
-        },
-        {
-          "term": "testing users",
+          "term": "internet connectivity",
           "heading": false
         },
         {
@@ -2217,7 +2363,11 @@
           "heading": false
         },
         {
-          "term": "internet connectivity",
+          "term": "retention policies",
+          "heading": false
+        },
+        {
+          "term": "approvals",
           "heading": false
         }
       ],
@@ -2234,18 +2384,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 530,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3, Step 4 ('Implement each DHSC intervention', page 41), specifying inputs, eight implementation tasks (requirements definition, vendor sourcing via RFPs/RFQs, solution and integration design, development/configuration, interoperability integration, system/integration/UAT testing, training, and rollout), outputs, and mitigation strategies for cost underestimation, human resource constraints, training gaps, infrastructure deficits, and inconsistent supply chain processes.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "dhsc intervention",
-          "heading": false
-        },
-        {
-          "term": "roll out",
-          "heading": false
-        },
-        {
-          "term": "nonfunctional requirements",
           "heading": false
         },
         {
@@ -2253,7 +2398,15 @@
           "heading": false
         },
         {
+          "term": "nonfunctional requirements",
+          "heading": false
+        },
+        {
           "term": "chain facilities",
+          "heading": false
+        },
+        {
+          "term": "roll out",
           "heading": false
         },
         {
@@ -2261,7 +2414,7 @@
           "heading": false
         },
         {
-          "term": "funding sources",
+          "term": "integration specifications",
           "heading": false
         },
         {
@@ -2282,14 +2435,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 228,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 3 conclusion and Progress check (page 42) listing additional implementation risks and mitigations (tool saturation, political election cycle budget dependence, and budget rigidity) and summarizing the six outputs produced by Chapter 3.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "buffer",
+          "term": "scaling back",
           "heading": false
         },
         {
-          "term": "scaling back",
+          "term": "dhsc",
+          "heading": false
+        },
+        {
+          "term": "buffer",
           "heading": false
         },
         {
@@ -2297,7 +2457,11 @@
           "heading": false
         },
         {
-          "term": "dhsc",
+          "term": "operations",
+          "heading": false
+        },
+        {
+          "term": "changes",
           "heading": false
         },
         {
@@ -2306,14 +2470,6 @@
         },
         {
           "term": "initiatives",
-          "heading": false
-        },
-        {
-          "term": "changes",
-          "heading": false
-        },
-        {
-          "term": "due",
           "heading": false
         }
       ],
@@ -2330,7 +2486,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 49,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 4 title page ('Using the DHSC to implement traceability', page 43) situating Chapter 4 within the handbook's four-chapter progression.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "implement traceability",
@@ -2341,7 +2500,7 @@
           "heading": false
         },
         {
-          "term": "holistic",
+          "term": "defining",
           "heading": false
         }
       ],
@@ -2358,14 +2517,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 545,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 4 opening (page 44) defining health product traceability (referencing GS1, WHO Policy Paper on Traceability of Medical Products, and ICMRA guidance), explaining its importance for patient safety, falsified medicine prevention, and batch recalls, and comparing the centralized, semi-centralized, and distributed traceability models.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "traceability models",
           "heading": false
         },
         {
-          "term": "centralized model",
+          "term": "traceability systems",
+          "heading": false
+        },
+        {
+          "term": "traceability data",
           "heading": false
         },
         {
@@ -2373,7 +2539,11 @@
           "heading": false
         },
         {
-          "term": "patient safety",
+          "term": "centralized model",
+          "heading": false
+        },
+        {
+          "term": "health products",
           "heading": false
         },
         {
@@ -2381,15 +2551,7 @@
           "heading": false
         },
         {
-          "term": "global standards",
-          "heading": false
-        },
-        {
           "term": "across multiple",
-          "heading": false
-        },
-        {
-          "term": "ensure patient",
           "heading": false
         }
       ],
@@ -2406,10 +2568,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 426,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 4 (page 45) detailing the five essential technology components for a centralized traceability model (foundational registries and global barcode identifiers, database/repository, interoperability layer, HSCISs, and traceability/analytical components) and presenting Fig. 24 on achieving track, trace, and verification capabilities through DHSC architecture components.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "central warehouse",
+          "term": "transactional data",
+          "heading": false
+        },
+        {
+          "term": "aggregated data",
+          "heading": false
+        },
+        {
+          "term": "master data",
           "heading": false
         },
         {
@@ -2417,15 +2590,11 @@
           "heading": false
         },
         {
-          "term": "trace",
+          "term": "central warehouse",
           "heading": false
         },
         {
-          "term": "verification",
-          "heading": false
-        },
-        {
-          "term": "regulator",
+          "term": "disparate systems",
           "heading": false
         },
         {
@@ -2433,11 +2602,7 @@
           "heading": false
         },
         {
-          "term": "batch",
-          "heading": false
-        },
-        {
-          "term": "disparate",
+          "term": "verification",
           "heading": false
         }
       ],
@@ -2454,14 +2619,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 401,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 4 conclusion (page 46) discussing four key implementation factors for traceability (reusing existing technology assets, technology-independent standards-based data design, stakeholder chain-of-custody master data quality, and upstream manufacturer marking and data transfer) and presenting Fig. 25 ('Illustrative example of a traceability service interface').",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "traceability service",
+          "term": "traceability data",
           "heading": false
         },
         {
-          "term": "apr",
+          "term": "traceability service",
           "heading": false
         },
         {
@@ -2469,11 +2637,11 @@
           "heading": false
         },
         {
-          "term": "ship",
+          "term": "apr",
           "heading": false
         },
         {
-          "term": "event",
+          "term": "master data",
           "heading": false
         },
         {
@@ -2481,11 +2649,11 @@
           "heading": false
         },
         {
-          "term": "service interface",
+          "term": "event",
           "heading": false
         },
         {
-          "term": "serial",
+          "term": "service interface",
           "heading": false
         }
       ],
@@ -2502,7 +2670,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 16,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 5 title page ('Country examples', page 47) introducing the three country case studies: Ethiopia, Malawi, and Rwanda.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "COUNTRY EXAMPLES INTRODUCTION IMPLEMENTATION TRACEABILITY ANNEXES STRATEGY ARCHITECTURE Chapter Country examples 5 Ethiopia Malawi Rwanda 47",
       "extractCut": false
@@ -2517,14 +2688,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 432,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 5 section 'Ethiopia's DHSC initiative' (page 48) summarizing the status (Information Revolution Roadmap 2016, eHealth Architecture 2018, strategy 2020, blueprint 2021, Digital Ethiopia 2025), process, current state as of March 2024, future ERP and master data state, key insights, and Ethiopia's 2023 public health supply chain structure (1 central warehouse, 19 branch warehouses, 383 hospitals, 3826 health centres, 17 569 health posts).",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "ethiopia",
-          "heading": false
-        },
-        {
-          "term": "moh leadership",
+          "term": "chain systems",
           "heading": false
         },
         {
@@ -2532,15 +2702,19 @@
           "heading": false
         },
         {
+          "term": "moh leadership",
+          "heading": false
+        },
+        {
+          "term": "ethiopia",
+          "heading": false
+        },
+        {
+          "term": "functional health",
+          "heading": false
+        },
+        {
           "term": "twgs",
-          "heading": false
-        },
-        {
-          "term": "digitization",
-          "heading": false
-        },
-        {
-          "term": "chain",
           "heading": false
         },
         {
@@ -2548,7 +2722,7 @@
           "heading": false
         },
         {
-          "term": "issued",
+          "term": "key stakeholders",
           "heading": false
         }
       ],
@@ -2565,18 +2739,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 223,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 5 (page 49) presenting Fig. 26 ('Current-state supply chain systems in Ethiopia' as of March 2024) and Fig. 27 ('Future-state supply chain systems in Ethiopia'), mapping national and facility HSCISs (VITAS, eLMIS, FANOS, DAGU, mBrana, eAPTs, eRIS, ERP), shared registries (master health facility registry, NPC), OpenHIM interoperability layer, data services, and external systems (eCustom, eTrade, GFPVAN).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "erp",
-          "heading": false
-        },
-        {
-          "term": "ecustom",
-          "heading": false
-        },
-        {
-          "term": "product catalog",
           "heading": false
         },
         {
@@ -2584,11 +2753,15 @@
           "heading": false
         },
         {
-          "term": "facility registry",
+          "term": "chain systems",
           "heading": false
         },
         {
-          "term": "etrade",
+          "term": "product catalog",
+          "heading": false
+        },
+        {
+          "term": "info systems",
           "heading": false
         },
         {
@@ -2596,7 +2769,11 @@
           "heading": false
         },
         {
-          "term": "elmis",
+          "term": "ecustom",
+          "heading": false
+        },
+        {
+          "term": "digital ecosystems",
           "heading": false
         }
       ],
@@ -2613,10 +2790,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 414,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 5 section 'Malawi's DHSC initiative' (page 50) detailing the development and September 2022 approval of Malawi's Supply Chain Systems Architecture (SCSA) under MOH HTSS leadership with USAID GHSC-PSM support, SCISMM assessment, current and future states, six implementation insights, and Malawi's public health supply chain structure (1 central warehouse, 3 regional warehouses, 720 health facilities).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "scsa",
+          "heading": false
+        },
+        {
+          "term": "chain systems",
           "heading": false
         },
         {
@@ -2624,27 +2808,23 @@
           "heading": false
         },
         {
-          "term": "workshop",
+          "term": "dhsc",
           "heading": false
         },
         {
-          "term": "division",
+          "term": "architecture",
           "heading": false
         },
         {
-          "term": "malawi",
-          "heading": false
-        },
-        {
-          "term": "ensured",
-          "heading": false
-        },
-        {
-          "term": "september",
+          "term": "scismm",
           "heading": false
         },
         {
           "term": "depicted",
+          "heading": false
+        },
+        {
+          "term": "workshop",
           "heading": false
         }
       ],
@@ -2661,22 +2841,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 212,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 5 (page 51) presenting Fig. 28 ('Current-state supply chain systems in Malawi' as of December 2023) and Fig. 29 ('Future-state supply chain systems in Malawi'), mapping QAT, QuanTB, Navision, e-GP, OpenLMIS, cStock, eHIN, NPC, DHIS2, EMR, and OpenHIM across the DHSC enterprise framework.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "facility registry",
-          "heading": false
-        },
-        {
-          "term": "navision",
-          "heading": false
-        },
-        {
-          "term": "product catalog",
-          "heading": false
-        },
-        {
-          "term": "openlmis",
+          "term": "chain systems",
           "heading": false
         },
         {
@@ -2684,15 +2855,27 @@
           "heading": false
         },
         {
-          "term": "ehin",
+          "term": "product catalog",
           "heading": false
         },
         {
-          "term": "e-gp",
+          "term": "info systems",
           "heading": false
         },
         {
-          "term": "qat",
+          "term": "navision",
+          "heading": false
+        },
+        {
+          "term": "digital ecosystems",
+          "heading": false
+        },
+        {
+          "term": "facility registry",
+          "heading": false
+        },
+        {
+          "term": "chain information",
           "heading": false
         }
       ],
@@ -2709,22 +2892,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 138,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 5 (page 52) presenting Fig. 30 ('Visualization of future-state architecture from Malawi's SCSA'), illustrating how National Supply Chain Information Systems (QAT, QuanTB, e-GP, Navision), Facilities' Supply Chain Information Systems (OpenLMIS, cStock, eHIN), foundational registries (NPC, DHIS2, e-GP), regulatory systems, and analytics/traceability services connect through the OpenHIM interoperability layer.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "e-gp",
-          "heading": false
-        },
-        {
-          "term": "supplier",
-          "heading": false
-        },
-        {
-          "term": "openlmis",
-          "heading": false
-        },
-        {
-          "term": "malawi",
           "heading": false
         },
         {
@@ -2732,7 +2906,19 @@
           "heading": false
         },
         {
-          "term": "registry",
+          "term": "chain information",
+          "heading": false
+        },
+        {
+          "term": "master health",
+          "heading": false
+        },
+        {
+          "term": "openlmis",
+          "heading": false
+        },
+        {
+          "term": "supplier",
           "heading": false
         }
       ],
@@ -2749,8 +2935,15 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 357,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 5 section 'Rwanda's DHSC initiative' (page 53) describing Rwanda's 2022 Digital Supply Chain (DSC) Strategy and Architecture led by the MOH Chief Digital Office with USAID GHSC-PSM support and informed by a February 2022 SCISMM assessment, current and future states, five key insights, and Rwanda's public health supply chain structure (1 central warehouse, 30 branch warehouses, 47 hospitals, 546 health centres).",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "dsc strategy",
+          "heading": false
+        },
         {
           "term": "rwanda",
           "heading": false
@@ -2760,27 +2953,23 @@
           "heading": false
         },
         {
-          "term": "february",
-          "heading": false
-        },
-        {
           "term": "hsciss",
           "heading": false
         },
         {
-          "term": "usaid",
+          "term": "digital health",
+          "heading": false
+        },
+        {
+          "term": "architecture",
+          "heading": false
+        },
+        {
+          "term": "dhsc",
           "heading": false
         },
         {
           "term": "moh",
-          "heading": false
-        },
-        {
-          "term": "digitalization",
-          "heading": false
-        },
-        {
-          "term": "incorporated",
           "heading": false
         }
       ],
@@ -2797,18 +2986,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 203,
-      "summary": null,
+      "summary": {
+        "text": "Chapter 5 (page 54) presenting Fig. 31 ('Current-state supply chain systems in Rwanda' as of February 2022) and Fig. 32 ('Future-state supply chain systems in Rwanda'), showing the transition from SAGE and eLMIS to a unified ERP, QAT, EMR, NPC, master facility and supplier registries, and OpenHIM interoperability layer.",
+        "status": "draft"
+      },
       "keywords": [
         {
+          "term": "chain systems",
+          "heading": false
+        },
+        {
           "term": "erp",
-          "heading": false
-        },
-        {
-          "term": "facility registry",
-          "heading": false
-        },
-        {
-          "term": "product catalog",
           "heading": false
         },
         {
@@ -2816,19 +3004,23 @@
           "heading": false
         },
         {
-          "term": "emr",
+          "term": "product catalog",
           "heading": false
         },
         {
-          "term": "qat",
+          "term": "digital ecosystems",
           "heading": false
         },
         {
-          "term": "supplier",
+          "term": "info systems",
           "heading": false
         },
         {
-          "term": "sage",
+          "term": "health mgmt",
+          "heading": false
+        },
+        {
+          "term": "inventory management",
           "heading": false
         }
       ],
@@ -2845,14 +3037,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 445,
-      "summary": null,
+      "summary": {
+        "text": "References section (page 55) listing 26 numbered bibliographic citations (accessed 15 October 2024), including the WHO DIIG, Digital Square DH&I WG and SCISMM, WHO SMART Guidelines, WHO Policy Paper on Traceability of Medical Products, Global Strategy on Digital Health 2020–2025, OpenHIE, TOGAF, WHO-ITU National eHealth Strategy Toolkit, ANC DAK, USAID NSCA Toolkit, IHE Pharmacy white paper, WHO MAPS Toolkit, GS1, and ICMRA guidance.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "website",
+          "term": "digital transformation",
           "heading": false
         },
         {
-          "term": "international telecommunication",
+          "term": "digital square",
           "heading": false
         },
         {
@@ -2860,15 +3055,11 @@
           "heading": false
         },
         {
-          "term": "technical denominators",
+          "term": "digital health",
           "heading": false
         },
         {
-          "term": "telecommunication union",
-          "heading": false
-        },
-        {
-          "term": "gartner",
+          "term": "website",
           "heading": false
         },
         {
@@ -2876,7 +3067,11 @@
           "heading": false
         },
         {
-          "term": "smart guidelines",
+          "term": "digital age",
+          "heading": false
+        },
+        {
+          "term": "health organization",
           "heading": false
         }
       ],
@@ -2893,10 +3088,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 221,
-      "summary": null,
+      "summary": {
+        "text": "Annex 1 ('Principles for digital development', page 56) summarizing the nine Principles for Digital Development adapted from the Digital Impact Alliance: understand the existing ecosystem, share/reuse/improve, design with people, design for inclusion, build for sustainability, establish people-first data practices, create open and transparent practices, anticipate and mitigate harms, and use evidence to improve outcomes.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "people-first",
+          "term": "people-first data",
+          "heading": false
+        },
+        {
+          "term": "digital development",
+          "heading": false
+        },
+        {
+          "term": "data practices",
           "heading": false
         },
         {
@@ -2904,15 +3110,7 @@
           "heading": false
         },
         {
-          "term": "harm",
-          "heading": false
-        },
-        {
           "term": "mitigate",
-          "heading": false
-        },
-        {
-          "term": "works",
           "heading": false
         },
         {
@@ -2920,11 +3118,11 @@
           "heading": false
         },
         {
-          "term": "practices",
+          "term": "works",
           "heading": false
         },
         {
-          "term": "people",
+          "term": "harm",
           "heading": false
         }
       ],
@@ -2941,10 +3139,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 96,
-      "summary": null,
+      "summary": {
+        "text": "Annex 2 ('Steering committee example structure', page 57) presenting an organizational diagram of a DHSC steering committee chaired by the MOH with a secretariat, stakeholder members (IT authority, funders, central warehouse, implementing partners, regulatory authority, private sector, academia), and a technical working group covering data, process, technology, and risk governance topics.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "steering committee",
+          "heading": false
+        },
+        {
+          "term": "chairperson",
           "heading": false
         },
         {
@@ -2952,15 +3157,11 @@
           "heading": false
         },
         {
-          "term": "risk",
+          "term": "audits",
           "heading": false
         },
         {
-          "term": "formulation",
-          "heading": false
-        },
-        {
-          "term": "secretariat",
+          "term": "regulatory",
           "heading": false
         }
       ],
@@ -2977,10 +3178,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 191,
-      "summary": null,
+      "summary": {
+        "text": "Annex 3 ('Template for prioritizing DHSC challenges to address', page 58) providing a scoring table adapted from the WHO DIIG that ranks supply chain bottlenecks (Low=1, Medium=2, High=3) across process impact, likelihood of overcoming the bottleneck, and stakeholder importance, illustrated with three worked examples.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "prioritized ranking",
+          "heading": false
+        },
+        {
+          "term": "bottleneck",
           "heading": false
         },
         {
@@ -2992,15 +3200,11 @@
           "heading": false
         },
         {
-          "term": "bottleneck",
-          "heading": false
-        },
-        {
-          "term": "some",
-          "heading": false
-        },
-        {
           "term": "chain",
+          "heading": false
+        },
+        {
+          "term": "architecture",
           "heading": false
         }
       ],
@@ -3017,8 +3221,23 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 204,
-      "summary": null,
+      "summary": {
+        "text": "Annex 4 ('Illustrative template that maps today's challenges to future outcomes', page 59) mapping six current supply chain challenges (unavailability of consumption data, monthly stock expiries/wastage, duplicative data entry by health workers, long procurement lead times, frequent stockouts, and lack of trust in medicines) to future DHSC outcomes across supply chain actors.",
+        "status": "draft"
+      },
       "keywords": [
+        {
+          "term": "duplicative data",
+          "heading": false
+        },
+        {
+          "term": "chain systems",
+          "heading": false
+        },
+        {
+          "term": "consumption data",
+          "heading": false
+        },
         {
           "term": "wastages",
           "heading": false
@@ -3028,19 +3247,7 @@
           "heading": false
         },
         {
-          "term": "affects",
-          "heading": false
-        },
-        {
-          "term": "duplicative",
-          "heading": false
-        },
-        {
           "term": "stockouts",
-          "heading": false
-        },
-        {
-          "term": "today",
           "heading": false
         },
         {
@@ -3048,7 +3255,7 @@
           "heading": false
         },
         {
-          "term": "availability",
+          "term": "today",
           "heading": false
         }
       ],
@@ -3065,14 +3272,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 108,
-      "summary": null,
+      "summary": {
+        "text": "Annex 5 ('Template for listing health supply chain information systems', page 60) presenting a matrix template mapping supply chain functions (forecasting and planning, procurement, supplier/contract management, order management, warehouse management, transportation, dispensing, analytics, track and trace, cold chain, foundational components, regulatory) against actors (MOH, regulatory authority, central/branch warehouses, service delivery points, CHWs, individuals) by deployment status.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "npc mobile",
-          "heading": false
-        },
-        {
-          "term": "openlmis",
           "heading": false
         },
         {
@@ -3080,11 +3286,15 @@
           "heading": false
         },
         {
-          "term": "openclinic",
+          "term": "openlmis",
           "heading": false
         },
         {
           "term": "warehouse",
+          "heading": false
+        },
+        {
+          "term": "openclinic",
           "heading": false
         }
       ],
@@ -3101,14 +3311,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 109,
-      "summary": null,
+      "summary": {
+        "text": "Annex 6 ('Risk register template', page 61) presenting a tabular risk register template with columns for risk ID, title, IF-THEN description, priority, impact, probability, status, mitigation steps, owner, and raised/reviewed/closed dates, illustrated with an example on inadequate user training.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "mitigation steps",
-          "heading": false
-        },
-        {
-          "term": "audience",
           "heading": false
         },
         {
@@ -3116,7 +3325,11 @@
           "heading": false
         },
         {
-          "term": "raised",
+          "term": "template",
+          "heading": false
+        },
+        {
+          "term": "prob",
           "heading": false
         }
       ],
@@ -3133,14 +3346,17 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 468,
-      "summary": null,
+      "summary": {
+        "text": "Annex 7 ('Resource matrix for DHSC implementation', page 62, part 1) citing three People that Deliver (PtD) human-resource frameworks and detailing deployment/operation phases, position types, skill sets, and responsibilities for Leadership and Technical management roles: CTO/CIO/CDO, IT manager, and project manager.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "interpersonal skills",
+          "term": "leadership skills",
           "heading": false
         },
         {
-          "term": "leadership skills",
+          "term": "interpersonal skills",
           "heading": false
         },
         {
@@ -3148,7 +3364,11 @@
           "heading": false
         },
         {
-          "term": "officer chief",
+          "term": "senior leadership",
+          "heading": false
+        },
+        {
+          "term": "technology skills",
           "heading": false
         },
         {
@@ -3156,15 +3376,11 @@
           "heading": false
         },
         {
-          "term": "senior leadership",
-          "heading": false
-        },
-        {
           "term": "development skills",
           "heading": false
         },
         {
-          "term": "technology skills",
+          "term": "officer chief",
           "heading": false
         }
       ],
@@ -3181,18 +3397,13 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 427,
-      "summary": null,
+      "summary": {
+        "text": "Annex 7 ('Resource matrix for DHSC implementation', page 63, part 2) detailing required phases, position types (contracted/temporary), skill sets, and responsibilities for three Technical roles: solution architect, business analyst, and developer/programmer.",
+        "status": "draft"
+      },
       "keywords": [
         {
-          "term": "problem-solving skills",
-          "heading": false
-        },
-        {
-          "term": "interpersonal skills",
-          "heading": false
-        },
-        {
-          "term": "contracted temporary",
+          "term": "business requirements",
           "heading": false
         },
         {
@@ -3200,11 +3411,11 @@
           "heading": false
         },
         {
-          "term": "business requirements",
+          "term": "problem-solving skills",
           "heading": false
         },
         {
-          "term": "prepare test",
+          "term": "understand business",
           "heading": false
         },
         {
@@ -3212,7 +3423,15 @@
           "heading": false
         },
         {
-          "term": "test cases",
+          "term": "contracted temporary",
+          "heading": false
+        },
+        {
+          "term": "interpersonal skills",
+          "heading": false
+        },
+        {
+          "term": "software programs",
           "heading": false
         }
       ],
@@ -3229,7 +3448,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 393,
-      "summary": null,
+      "summary": {
+        "text": "Annex 7 ('Resource matrix for DHSC implementation', page 64, part 3) detailing required phases, position types, skill sets, and responsibilities for three Technical roles: integration specialist (contracted/temporary), database administrator (permanent), and infrastructure specialist (permanent).",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "database tools",
@@ -3244,11 +3466,15 @@
           "heading": false
         },
         {
-          "term": "experience",
+          "term": "tuning",
           "heading": false
         },
         {
-          "term": "tuning",
+          "term": "data modelling",
+          "heading": false
+        },
+        {
+          "term": "backup",
           "heading": false
         },
         {
@@ -3256,11 +3482,7 @@
           "heading": false
         },
         {
-          "term": "knowledge",
-          "heading": false
-        },
-        {
-          "term": "load",
+          "term": "recovery",
           "heading": false
         }
       ],
@@ -3277,26 +3499,21 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 468,
-      "summary": null,
+      "summary": {
+        "text": "Annex 7 ('Resource matrix for DHSC implementation', page 65, part 4) detailing required phases, position types, skill sets, and responsibilities for three Technical roles: QA/test manager (contracted/temporary), test analyst (contracted/temporary), and system administrator (permanent).",
+        "status": "draft"
+      },
       "keywords": [
-        {
-          "term": "acceptance testing",
-          "heading": false
-        },
-        {
-          "term": "test scenarios",
-          "heading": false
-        },
-        {
-          "term": "troubleshooting test",
-          "heading": false
-        },
         {
           "term": "testing tools",
           "heading": false
         },
         {
-          "term": "testing large-scale",
+          "term": "acceptance testing",
+          "heading": false
+        },
+        {
+          "term": "user acceptance",
           "heading": false
         },
         {
@@ -3304,11 +3521,19 @@
           "heading": false
         },
         {
+          "term": "troubleshooting test",
+          "heading": false
+        },
+        {
           "term": "manage testing",
           "heading": false
         },
         {
-          "term": "test cases",
+          "term": "test scenarios",
+          "heading": false
+        },
+        {
+          "term": "testing large-scale",
           "heading": false
         }
       ],
@@ -3325,7 +3550,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 261,
-      "summary": null,
+      "summary": {
+        "text": "Annex 7 ('Resource matrix for DHSC implementation', page 66, conclusion) detailing required phases, position types, skill sets, and responsibilities for support engineer and superuser/trainer roles, followed by three numbered People that Deliver (PtD) references.",
+        "status": "draft"
+      },
       "keywords": [
         {
           "term": "chain software",
@@ -3348,15 +3576,15 @@
           "heading": false
         },
         {
+          "term": "troubleshoot",
+          "heading": false
+        },
+        {
           "term": "fixes",
           "heading": false
         },
         {
-          "term": "permanent",
-          "heading": false
-        },
-        {
-          "term": "applying",
+          "term": "setup",
           "heading": false
         }
       ],
@@ -3373,7 +3601,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 5,
-      "summary": null,
+      "summary": {
+        "text": "Blank inside back cover page with no text.",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "_(no text on this page)_",
       "extractCut": false
@@ -3388,7 +3619,10 @@
       "labelStart": null,
       "labelEnd": null,
       "words": 11,
-      "summary": null,
+      "summary": {
+        "text": "Back cover displaying World Health Organization contact address in Geneva, Switzerland, email (smart@who.int), and website (who.int).",
+        "status": "draft"
+      },
       "keywords": [],
       "extract": "World Health Organization 20 Avenue Appia CH-1211 Geneva Switzerland smart@who.int who.int",
       "extractCut": false
@@ -3407,11 +3641,19 @@
       "heading": false
     },
     {
+      "term": "chain digital",
+      "heading": false
+    },
+    {
       "term": "dhsc strategy",
       "heading": false
     },
     {
-      "term": "traceability strategy",
+      "term": "dhsc systems",
+      "heading": false
+    },
+    {
+      "term": "dhsc implementation",
       "heading": false
     },
     {
@@ -3419,37 +3661,29 @@
       "heading": false
     },
     {
+      "term": "chain data",
+      "heading": false
+    },
+    {
+      "term": "traceability strategy",
+      "heading": false
+    },
+    {
+      "term": "health architecture",
+      "heading": false
+    },
+    {
       "term": "dhsc strategic",
-      "heading": false
-    },
-    {
-      "term": "dhsc vision",
-      "heading": false
-    },
-    {
-      "term": "holistic dhsc",
-      "heading": false
-    },
-    {
-      "term": "dhsc goals",
-      "heading": false
-    },
-    {
-      "term": "dhsc enterprise",
       "heading": false
     },
     {
       "term": "chain software",
       "heading": false
-    },
-    {
-      "term": "define dhsc",
-      "heading": false
     }
   ],
   "links": {
-    "repo": "litlfred/smart-base",
+    "repo": "litlfred/who-iris",
     "branch": "main",
-    "dir": "smart-base/library/9789240101197-eng"
+    "dir": "library/9789240101197-eng"
   }
 }

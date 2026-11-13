@@ -22,7 +22,7 @@
   }
   // pdf.js dispatches this on PARENT.document when the frame is same-origin
   // with its host page, and on its own document otherwise — measured at
-  // v6.4.299, `webViewerLoad`. An embed on this site is exactly the
+  // v6.4.299 and v6.5.438, `webViewerLoad`. An embed on this site is exactly the
   // same-origin case, so listening on `document` alone never fires.
   var done = false;
   function onLoaded(e) {
@@ -38,7 +38,7 @@
       if (!href) { refuse("This viewer opens only documents this site publishes. Refused: " + src); return; }
       // pdf.js shows NOTHING on screen when the fetch fails: "0 of 0" and a
       // console line (v6.4.299). A 403 from a CDN read as an empty viewer
-      // (owner, 2026-10-15, who-iris). Say it, with the document's address.
+      // (owner, 2026-10-15, on the IRIS replica). Say it, with the document's address.
       var opened = app.open({ url: href });
       if (opened && typeof opened.catch === "function") {
         opened.catch(function (err) {
