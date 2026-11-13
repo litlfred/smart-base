@@ -7,7 +7,7 @@
     "versions"
   ],
   "provisionalUntil": "a full IG Publisher run",
-  "generatedAt": "2026-11-12T11:06:23.958520462Z",
+  "generatedAt": "2026-11-13T12:15:27.555632282Z",
   "ig": {
     "root": ".",
     "version": "4.0.1"
@@ -17,17 +17,17 @@
   },
   "inputs": {
     "toolchain": "ig-publisher 3.0.0 / core 7.0.1",
-    "sourceRevision": "419a8743eddc988fc079f54be3f371219b69d808",
-    "inputDigest": "cde45bfe72dcc3b4a4a8bb9303ba44e5eb40350248e78907261889d520c534bc"
+    "sourceRevision": "b18ec33a012dede86c5ef4ce54a9d1377acc20a0",
+    "inputDigest": "a87dd668d1af0471bf3be16b4d9cfbaaafc3f1cf096cfac55e1b8337978f504c"
   },
   "inputsNotAtRevision": {
-    "count": 43,
+    "count": 62,
     "sample": [
       "input/pagecontent/StructureDefinition-FHIRSchemaBase.md",
-      "input/pagecontent/StructureDefinition-KGImplementationPractice.md",
-      "input/pagecontent/StructureDefinition-KGPublication.md",
-      "input/pagecontent/ValueSet-CDHIv1.1.md",
-      "input/pagecontent/ValueSet-CDHIv1.2.md"
+      "input/pagecontent/StructureDefinition-KGBpmnDefinitions.md",
+      "input/pagecontent/StructureDefinition-KGDak.md",
+      "input/pagecontent/StructureDefinition-KGDmnDefinitions.md",
+      "input/pagecontent/StructureDefinition-KGImplementationPractice.md"
     ]
   },
   "packages": [
@@ -451,6 +451,17 @@
         ]
       },
       {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGArtifactKindVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGArtifactKind|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGArtifactKind"
+        ]
+      },
+      {
         "valueSet": "http://smart.who.int/base/ValueSet/KGCertaintyVS|0.3.0",
         "builtFrom": {
           "used-codesystem": [
@@ -484,6 +495,17 @@
         ]
       },
       {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGConformanceExpectationVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGConformanceExpectation|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGConformanceExpectation"
+        ]
+      },
+      {
         "valueSet": "http://smart.who.int/base/ValueSet/KGDerivationVS|0.3.0",
         "builtFrom": {
           "used-codesystem": [
@@ -492,6 +514,17 @@
         },
         "codeSystems": [
           "http://smart.who.int/base/CodeSystem/KGDerivation"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGDmnEntryKindVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGDmnEntryKind|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGDmnEntryKind"
         ]
       },
       {
@@ -514,6 +547,17 @@
         },
         "codeSystems": [
           "http://smart.who.int/base/CodeSystem/KGEvidenceType"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGGatewayDirectionVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGGatewayDirection|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGGatewayDirection"
         ]
       },
       {
@@ -594,6 +638,94 @@
         ]
       },
       {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGL2BPMNClassesVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGL2BPMNPredicatesVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGL2ClassesVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGL2Classes|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGL2Classes"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGL2DMNClassesVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGL2DMNClasses|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGL2DMNClasses"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGL2DMNPredicatesVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGL2DMNPredicates|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGL2DMNPredicates"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGL2PredicatesVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGL2Predicates|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGL2Predicates"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGL3ClassesVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGL3Classes|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGL3Classes"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGL3PredicatesVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGL3Predicates|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGL3Predicates"
+        ]
+      },
+      {
         "valueSet": "http://smart.who.int/base/ValueSet/KGOutcomeImportanceVS|0.3.0",
         "builtFrom": {
           "used-codesystem": [
@@ -602,6 +734,17 @@
         },
         "codeSystems": [
           "http://smart.who.int/base/CodeSystem/KGOutcomeImportance"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGPublicationStatusVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGPublicationStatus|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGPublicationStatus"
         ]
       },
       {
@@ -693,6 +836,17 @@
         ]
       },
       {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGStructureDefinitionKindVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind"
+        ]
+      },
+      {
         "valueSet": "http://smart.who.int/base/ValueSet/KGTerminologySystemVS|0.3.0",
         "builtFrom": {
           "used-codesystem": [
@@ -701,6 +855,17 @@
         },
         "codeSystems": [
           "http://smart.who.int/base/CodeSystem/KGTerminologySystem"
+        ]
+      },
+      {
+        "valueSet": "http://smart.who.int/base/ValueSet/KGVerificationMethodVS|0.3.0",
+        "builtFrom": {
+          "used-codesystem": [
+            "http://smart.who.int/base/CodeSystem/KGVerificationMethod|0.3.0"
+          ]
+        },
+        "codeSystems": [
+          "http://smart.who.int/base/CodeSystem/KGVerificationMethod"
         ]
       },
       {
@@ -752,7 +917,7 @@
       "resourceType": "ActorDefinition",
       "id": "DAK.Persona.CommunityHealthWorker",
       "name": null,
-      "file": "resources/ActorDefinition/DAK.Persona.CommunityHealthWorker--6f5a26f8.json",
+      "file": "resources/ActorDefinition/DAK.Persona.CommunityHealthWorker.json",
       "source": "fsh-generated/resources/ActorDefinition-DAK.Persona.CommunityHealthWorker.json"
     },
     {
@@ -762,7 +927,7 @@
       "resourceType": "ActorDefinition",
       "id": "DAK.Persona.DataManager",
       "name": null,
-      "file": "resources/ActorDefinition/DAK.Persona.DataManager--575132d2.json",
+      "file": "resources/ActorDefinition/DAK.Persona.DataManager.json",
       "source": "fsh-generated/resources/ActorDefinition-DAK.Persona.DataManager.json"
     },
     {
@@ -772,7 +937,7 @@
       "resourceType": "ActorDefinition",
       "id": "DAK.Persona.HealthSystemManager",
       "name": null,
-      "file": "resources/ActorDefinition/DAK.Persona.HealthSystemManager--282b1dbd.json",
+      "file": "resources/ActorDefinition/DAK.Persona.HealthSystemManager.json",
       "source": "fsh-generated/resources/ActorDefinition-DAK.Persona.HealthSystemManager.json"
     },
     {
@@ -782,7 +947,7 @@
       "resourceType": "ActorDefinition",
       "id": "DAK.Persona.HealthcareProvider",
       "name": null,
-      "file": "resources/ActorDefinition/DAK.Persona.HealthcareProvider--09b5d4b8.json",
+      "file": "resources/ActorDefinition/DAK.Persona.HealthcareProvider.json",
       "source": "fsh-generated/resources/ActorDefinition-DAK.Persona.HealthcareProvider.json"
     },
     {
@@ -792,7 +957,7 @@
       "resourceType": "ActorDefinition",
       "id": "DAK.Persona.Person",
       "name": null,
-      "file": "resources/ActorDefinition/DAK.Persona.Person--236b2ffe.json",
+      "file": "resources/ActorDefinition/DAK.Persona.Person.json",
       "source": "fsh-generated/resources/ActorDefinition-DAK.Persona.Person.json"
     },
     {
@@ -802,7 +967,7 @@
       "resourceType": "ActorDefinition",
       "id": "DAK.Persona.System.LIS",
       "name": null,
-      "file": "resources/ActorDefinition/DAK.Persona.System.LIS--f1068d1a.json",
+      "file": "resources/ActorDefinition/DAK.Persona.System.LIS.json",
       "source": "fsh-generated/resources/ActorDefinition-DAK.Persona.System.LIS.json"
     },
     {
@@ -812,7 +977,7 @@
       "resourceType": "ActorDefinition",
       "id": "DAK.Persona.System.SurveillanceSystem",
       "name": null,
-      "file": "resources/ActorDefinition/DAK.Persona.System.SurveillanceSystem--b0f7598f.json",
+      "file": "resources/ActorDefinition/DAK.Persona.System.SurveillanceSystem.json",
       "source": "fsh-generated/resources/ActorDefinition-DAK.Persona.System.SurveillanceSystem.json"
     },
     {
@@ -822,7 +987,7 @@
       "resourceType": "ActorDefinition",
       "id": "SGAuthoring.Persona.BusinessAnalyst",
       "name": null,
-      "file": "resources/ActorDefinition/SGAuthoring.Persona.BusinessAnalyst--7978941a.json",
+      "file": "resources/ActorDefinition/SGAuthoring.Persona.BusinessAnalyst.json",
       "source": "fsh-generated/resources/ActorDefinition-SGAuthoring.Persona.BusinessAnalyst.json"
     },
     {
@@ -832,7 +997,7 @@
       "resourceType": "ActorDefinition",
       "id": "SGAuthoring.Persona.ClinicalSME",
       "name": null,
-      "file": "resources/ActorDefinition/SGAuthoring.Persona.ClinicalSME--cec0393b.json",
+      "file": "resources/ActorDefinition/SGAuthoring.Persona.ClinicalSME.json",
       "source": "fsh-generated/resources/ActorDefinition-SGAuthoring.Persona.ClinicalSME.json"
     },
     {
@@ -842,7 +1007,7 @@
       "resourceType": "ActorDefinition",
       "id": "SGAuthoring.Persona.ContentReviewer",
       "name": null,
-      "file": "resources/ActorDefinition/SGAuthoring.Persona.ContentReviewer--179ab3f8.json",
+      "file": "resources/ActorDefinition/SGAuthoring.Persona.ContentReviewer.json",
       "source": "fsh-generated/resources/ActorDefinition-SGAuthoring.Persona.ContentReviewer.json"
     },
     {
@@ -852,7 +1017,7 @@
       "resourceType": "ActorDefinition",
       "id": "SGAuthoring.Persona.FHIRModeller",
       "name": null,
-      "file": "resources/ActorDefinition/SGAuthoring.Persona.FHIRModeller--a1a36204.json",
+      "file": "resources/ActorDefinition/SGAuthoring.Persona.FHIRModeller.json",
       "source": "fsh-generated/resources/ActorDefinition-SGAuthoring.Persona.FHIRModeller.json"
     },
     {
@@ -862,7 +1027,7 @@
       "resourceType": "ActorDefinition",
       "id": "SGAuthoring.Persona.ProgrammeManager",
       "name": null,
-      "file": "resources/ActorDefinition/SGAuthoring.Persona.ProgrammeManager--c892e950.json",
+      "file": "resources/ActorDefinition/SGAuthoring.Persona.ProgrammeManager.json",
       "source": "fsh-generated/resources/ActorDefinition-SGAuthoring.Persona.ProgrammeManager.json"
     },
     {
@@ -872,7 +1037,7 @@
       "resourceType": "ActorDefinition",
       "id": "SGAuthoring.Persona.PublicationManager",
       "name": null,
-      "file": "resources/ActorDefinition/SGAuthoring.Persona.PublicationManager--225fd2aa.json",
+      "file": "resources/ActorDefinition/SGAuthoring.Persona.PublicationManager.json",
       "source": "fsh-generated/resources/ActorDefinition-SGAuthoring.Persona.PublicationManager.json"
     },
     {
@@ -882,7 +1047,7 @@
       "resourceType": "ActorDefinition",
       "id": "SGAuthoring.Persona.QCReviewer",
       "name": null,
-      "file": "resources/ActorDefinition/SGAuthoring.Persona.QCReviewer--2bd29440.json",
+      "file": "resources/ActorDefinition/SGAuthoring.Persona.QCReviewer.json",
       "source": "fsh-generated/resources/ActorDefinition-SGAuthoring.Persona.QCReviewer.json"
     },
     {
@@ -892,7 +1057,7 @@
       "resourceType": "ActorDefinition",
       "id": "SGAuthoring.Persona.TechnicalOfficer",
       "name": null,
-      "file": "resources/ActorDefinition/SGAuthoring.Persona.TechnicalOfficer--a109f958.json",
+      "file": "resources/ActorDefinition/SGAuthoring.Persona.TechnicalOfficer.json",
       "source": "fsh-generated/resources/ActorDefinition-SGAuthoring.Persona.TechnicalOfficer.json"
     },
     {
@@ -902,7 +1067,7 @@
       "resourceType": "ActorDefinition",
       "id": "SGAuthoring.Persona.Terminologist",
       "name": null,
-      "file": "resources/ActorDefinition/SGAuthoring.Persona.Terminologist--1386dd66.json",
+      "file": "resources/ActorDefinition/SGAuthoring.Persona.Terminologist.json",
       "source": "fsh-generated/resources/ActorDefinition-SGAuthoring.Persona.Terminologist.json"
     },
     {
@@ -912,7 +1077,7 @@
       "resourceType": "ActorDefinition",
       "id": "SGAuthoring.Persona.Translator",
       "name": null,
-      "file": "resources/ActorDefinition/SGAuthoring.Persona.Translator--bcac16b4.json",
+      "file": "resources/ActorDefinition/SGAuthoring.Persona.Translator.json",
       "source": "fsh-generated/resources/ActorDefinition-SGAuthoring.Persona.Translator.json"
     },
     {
@@ -922,7 +1087,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorActorDefinitions",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorActorDefinitions--856361bd.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorActorDefinitions.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorActorDefinitions.json"
     },
     {
@@ -932,7 +1097,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorBusinessProcesses",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorBusinessProcesses--efd6c49e.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorBusinessProcesses.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorBusinessProcesses.json"
     },
     {
@@ -942,7 +1107,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorCQL",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorCQL--824b5042.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorCQL.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorCQL.json"
     },
     {
@@ -952,7 +1117,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorCodeSystems",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorCodeSystems--8f1f9420.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorCodeSystems.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorCodeSystems.json"
     },
     {
@@ -962,7 +1127,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorConceptMaps",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorConceptMaps--84f59f96.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorConceptMaps.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorConceptMaps.json"
     },
     {
@@ -972,7 +1137,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorDataDictionary",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorDataDictionary--941f19f2.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorDataDictionary.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorDataDictionary.json"
     },
     {
@@ -982,7 +1147,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorDecisionLogic",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorDecisionLogic--0fb196b2.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorDecisionLogic.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorDecisionLogic.json"
     },
     {
@@ -992,7 +1157,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorExampleScenarios",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorExampleScenarios--501f0e14.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorExampleScenarios.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorExampleScenarios.json"
     },
     {
@@ -1002,7 +1167,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorFHIRProfiles",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorFHIRProfiles--e1882def.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorFHIRProfiles.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorFHIRProfiles.json"
     },
     {
@@ -1012,7 +1177,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorFHIRRequirements",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorFHIRRequirements--6a6eba60.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorFHIRRequirements.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorFHIRRequirements.json"
     },
     {
@@ -1022,7 +1187,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorFunctionalRequirements",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorFunctionalRequirements--b2eaaf6b.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorFunctionalRequirements.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorFunctionalRequirements.json"
     },
     {
@@ -1032,7 +1197,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorIndicators",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorIndicators--f8f4e928.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorIndicators.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorIndicators.json"
     },
     {
@@ -1042,7 +1207,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorLogicalModels",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorLogicalModels--7c6d533c.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorLogicalModels.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorLogicalModels.json"
     },
     {
@@ -1052,7 +1217,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorMeasures",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorMeasures--1060b91f.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorMeasures.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorMeasures.json"
     },
     {
@@ -1062,7 +1227,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorPersonas",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorPersonas--b49c57a8.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorPersonas.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorPersonas.json"
     },
     {
@@ -1072,7 +1237,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorPlanDefinitions",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorPlanDefinitions--7d4d3a2e.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorPlanDefinitions.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorPlanDefinitions.json"
     },
     {
@@ -1082,7 +1247,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorQuestionnaires",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorQuestionnaires--29a0dbc0.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorQuestionnaires.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorQuestionnaires.json"
     },
     {
@@ -1092,7 +1257,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorSchedulingLogic",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorSchedulingLogic--60092875.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorSchedulingLogic.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorSchedulingLogic.json"
     },
     {
@@ -1102,7 +1267,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorStructureMaps",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorStructureMaps--e1a23a48.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorStructureMaps.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorStructureMaps.json"
     },
     {
@@ -1112,7 +1277,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorTestCases",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorTestCases--18a3d429.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorTestCases.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorTestCases.json"
     },
     {
@@ -1122,7 +1287,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorUserScenarios",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorUserScenarios--d8b168c8.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorUserScenarios.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorUserScenarios.json"
     },
     {
@@ -1132,7 +1297,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.AuthorValueSets",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.AuthorValueSets--4e96d4c5.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.AuthorValueSets.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.AuthorValueSets.json"
     },
     {
@@ -1142,7 +1307,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.BuildIG",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.BuildIG--79608b3d.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.BuildIG.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.BuildIG.json"
     },
     {
@@ -1152,7 +1317,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ConfigureIG",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ConfigureIG--97a7b874.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ConfigureIG.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ConfigureIG.json"
     },
     {
@@ -1162,7 +1327,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.InterpretClinicalRecommendations",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.InterpretClinicalRecommendations--3c131885.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.InterpretClinicalRecommendations.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.InterpretClinicalRecommendations.json"
     },
     {
@@ -1172,7 +1337,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ManageGovernance",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ManageGovernance--83385f6b.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ManageGovernance.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ManageGovernance.json"
     },
     {
@@ -1182,7 +1347,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ManageReleases",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ManageReleases--99cf699e.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ManageReleases.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ManageReleases.json"
     },
     {
@@ -1192,7 +1357,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ManageStakeholders",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ManageStakeholders--bc8d462d.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ManageStakeholders.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ManageStakeholders.json"
     },
     {
@@ -1202,7 +1367,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.MapConcepts",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.MapConcepts--4cc8a7b6.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.MapConcepts.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.MapConcepts.json"
     },
     {
@@ -1212,7 +1377,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.PlanIterations",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.PlanIterations--fba81e45.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.PlanIterations.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.PlanIterations.json"
     },
     {
@@ -1222,7 +1387,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ReviewAndApproveContent",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ReviewAndApproveContent--3c6d53e8.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ReviewAndApproveContent.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ReviewAndApproveContent.json"
     },
     {
@@ -1232,7 +1397,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ReviewChecklist",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ReviewChecklist--59a4ffc8.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ReviewChecklist.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ReviewChecklist.json"
     },
     {
@@ -1242,7 +1407,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ReviewL1Guidelines",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ReviewL1Guidelines--2537c077.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ReviewL1Guidelines.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ReviewL1Guidelines.json"
     },
     {
@@ -1252,7 +1417,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ReviewTerminology",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ReviewTerminology--f0e39156.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ReviewTerminology.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ReviewTerminology.json"
     },
     {
@@ -1262,7 +1427,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ReviewTranslations",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ReviewTranslations--59c94422.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ReviewTranslations.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ReviewTranslations.json"
     },
     {
@@ -1272,7 +1437,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.RunQAChecks",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.RunQAChecks--bbc1bf47.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.RunQAChecks.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.RunQAChecks.json"
     },
     {
@@ -1282,7 +1447,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ScopeDAK",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ScopeDAK--0d723f5f.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ScopeDAK.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ScopeDAK.json"
     },
     {
@@ -1292,7 +1457,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.TranslateContent",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.TranslateContent--563d91fd.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.TranslateContent.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.TranslateContent.json"
     },
     {
@@ -1302,7 +1467,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ValidateArtifactConformance",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ValidateArtifactConformance--c18e8e14.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ValidateArtifactConformance.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ValidateArtifactConformance.json"
     },
     {
@@ -1312,7 +1477,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ValidateDAKContent",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ValidateDAKContent--730e2300.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ValidateDAKContent.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ValidateDAKContent.json"
     },
     {
@@ -1322,7 +1487,7 @@
       "resourceType": "Requirements",
       "id": "SGAuthoring.Skills.ValidateL3Functionality",
       "name": null,
-      "file": "resources/Requirements/SGAuthoring.Skills.ValidateL3Functionality--62cb634a.json",
+      "file": "resources/Requirements/SGAuthoring.Skills.ValidateL3Functionality.json",
       "source": "fsh-generated/resources/Requirements-SGAuthoring.Skills.ValidateL3Functionality.json"
     },
     {
@@ -1332,7 +1497,7 @@
       "resourceType": "ActivityDefinition",
       "id": "SGDecisionTableGuidance",
       "name": "SGDecisionTableGuidance",
-      "file": "resources/ActivityDefinition/SGDecisionTableGuidance--f819bbbd.json",
+      "file": "resources/ActivityDefinition/SGDecisionTableGuidance.json",
       "source": "fsh-generated/resources/ActivityDefinition-SGDecisionTableGuidance.json"
     },
     {
@@ -1342,7 +1507,7 @@
       "resourceType": "CodeSystem",
       "id": "CDHIv1",
       "name": "CDHIv1",
-      "file": "resources/CodeSystem/CDHIv1--924b3316.json",
+      "file": "resources/CodeSystem/CDHIv1.json",
       "source": "fsh-generated/resources/CodeSystem-CDHIv1.json"
     },
     {
@@ -1352,7 +1517,7 @@
       "resourceType": "CodeSystem",
       "id": "CDHIv2",
       "name": "CDHIv2",
-      "file": "resources/CodeSystem/CDHIv2--e7c9a5ff.json",
+      "file": "resources/CodeSystem/CDHIv2.json",
       "source": "fsh-generated/resources/CodeSystem-CDHIv2.json"
     },
     {
@@ -1362,7 +1527,7 @@
       "resourceType": "CodeSystem",
       "id": "CDSCv1",
       "name": "CDSCv1",
-      "file": "resources/CodeSystem/CDSCv1--25774519.json",
+      "file": "resources/CodeSystem/CDSCv1.json",
       "source": "fsh-generated/resources/CodeSystem-CDSCv1.json"
     },
     {
@@ -1372,7 +1537,7 @@
       "resourceType": "CodeSystem",
       "id": "CDSCv2",
       "name": "CDSCv2",
-      "file": "resources/CodeSystem/CDSCv2--1b802f7f.json",
+      "file": "resources/CodeSystem/CDSCv2.json",
       "source": "fsh-generated/resources/CodeSystem-CDSCv2.json"
     },
     {
@@ -1382,7 +1547,7 @@
       "resourceType": "CodeSystem",
       "id": "CoreDataElementType",
       "name": "CoreDataElementType",
-      "file": "resources/CodeSystem/CoreDataElementType--f9c1d459.json",
+      "file": "resources/CodeSystem/CoreDataElementType.json",
       "source": "fsh-generated/resources/CodeSystem-CoreDataElementType.json"
     },
     {
@@ -1392,7 +1557,7 @@
       "resourceType": "CodeSystem",
       "id": "DecisionTableActions",
       "name": "DecisionTableActions",
-      "file": "resources/CodeSystem/DecisionTableActions--4a761303.json",
+      "file": "resources/CodeSystem/DecisionTableActions.json",
       "source": "fsh-generated/resources/CodeSystem-DecisionTableActions.json"
     },
     {
@@ -1402,8 +1567,18 @@
       "resourceType": "CodeSystem",
       "id": "DocumentationSections",
       "name": "DocumentationSections",
-      "file": "resources/CodeSystem/DocumentationSections--c2c83d66.json",
+      "file": "resources/CodeSystem/DocumentationSections.json",
       "source": "fsh-generated/resources/CodeSystem-DocumentationSections.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGArtifactKind|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGArtifactKind",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGArtifactKind",
+      "name": "KGArtifactKind",
+      "file": "resources/CodeSystem/KGArtifactKind.json",
+      "source": "fsh-generated/resources/CodeSystem-KGArtifactKind.json"
     },
     {
       "key": "http://smart.who.int/base/CodeSystem/KGCertainty|0.3.0",
@@ -1412,7 +1587,7 @@
       "resourceType": "CodeSystem",
       "id": "KGCertainty",
       "name": "KGCertainty",
-      "file": "resources/CodeSystem/KGCertainty--3b7634b6.json",
+      "file": "resources/CodeSystem/KGCertainty.json",
       "source": "fsh-generated/resources/CodeSystem-KGCertainty.json"
     },
     {
@@ -1422,7 +1597,7 @@
       "resourceType": "CodeSystem",
       "id": "KGChangeStatus",
       "name": "KGChangeStatus",
-      "file": "resources/CodeSystem/KGChangeStatus--ab9a5b69.json",
+      "file": "resources/CodeSystem/KGChangeStatus.json",
       "source": "fsh-generated/resources/CodeSystem-KGChangeStatus.json"
     },
     {
@@ -1432,8 +1607,18 @@
       "resourceType": "CodeSystem",
       "id": "KGCitationKind",
       "name": "KGCitationKind",
-      "file": "resources/CodeSystem/KGCitationKind--b3ca1a6f.json",
+      "file": "resources/CodeSystem/KGCitationKind.json",
       "source": "fsh-generated/resources/CodeSystem-KGCitationKind.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGConformanceExpectation|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGConformanceExpectation",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGConformanceExpectation",
+      "name": "KGConformanceExpectation",
+      "file": "resources/CodeSystem/KGConformanceExpectation.json",
+      "source": "fsh-generated/resources/CodeSystem-KGConformanceExpectation.json"
     },
     {
       "key": "http://smart.who.int/base/CodeSystem/KGDerivation|0.3.0",
@@ -1442,8 +1627,18 @@
       "resourceType": "CodeSystem",
       "id": "KGDerivation",
       "name": "KGDerivation",
-      "file": "resources/CodeSystem/KGDerivation--abdf7b50.json",
+      "file": "resources/CodeSystem/KGDerivation.json",
       "source": "fsh-generated/resources/CodeSystem-KGDerivation.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGDmnEntryKind|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGDmnEntryKind",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGDmnEntryKind",
+      "name": "KGDmnEntryKind",
+      "file": "resources/CodeSystem/KGDmnEntryKind.json",
+      "source": "fsh-generated/resources/CodeSystem-KGDmnEntryKind.json"
     },
     {
       "key": "http://smart.who.int/base/CodeSystem/KGElementType|0.3.0",
@@ -1452,7 +1647,7 @@
       "resourceType": "CodeSystem",
       "id": "KGElementType",
       "name": "KGElementType",
-      "file": "resources/CodeSystem/KGElementType--71627277.json",
+      "file": "resources/CodeSystem/KGElementType.json",
       "source": "fsh-generated/resources/CodeSystem-KGElementType.json"
     },
     {
@@ -1462,8 +1657,18 @@
       "resourceType": "CodeSystem",
       "id": "KGEvidenceType",
       "name": "KGEvidenceType",
-      "file": "resources/CodeSystem/KGEvidenceType--7fcbe292.json",
+      "file": "resources/CodeSystem/KGEvidenceType.json",
       "source": "fsh-generated/resources/CodeSystem-KGEvidenceType.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGGatewayDirection|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGGatewayDirection",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGGatewayDirection",
+      "name": "KGGatewayDirection",
+      "file": "resources/CodeSystem/KGGatewayDirection.json",
+      "source": "fsh-generated/resources/CodeSystem-KGGatewayDirection.json"
     },
     {
       "key": "http://smart.who.int/base/CodeSystem/KGGrcStatus|0.3.0",
@@ -1472,7 +1677,7 @@
       "resourceType": "CodeSystem",
       "id": "KGGrcStatus",
       "name": "KGGrcStatus",
-      "file": "resources/CodeSystem/KGGrcStatus--cc4d759b.json",
+      "file": "resources/CodeSystem/KGGrcStatus.json",
       "source": "fsh-generated/resources/CodeSystem-KGGrcStatus.json"
     },
     {
@@ -1482,7 +1687,7 @@
       "resourceType": "CodeSystem",
       "id": "KGIdentifierType",
       "name": "KGIdentifierType",
-      "file": "resources/CodeSystem/KGIdentifierType--d829e049.json",
+      "file": "resources/CodeSystem/KGIdentifierType.json",
       "source": "fsh-generated/resources/CodeSystem-KGIdentifierType.json"
     },
     {
@@ -1492,7 +1697,7 @@
       "resourceType": "CodeSystem",
       "id": "KGInterventionType",
       "name": "KGInterventionType",
-      "file": "resources/CodeSystem/KGInterventionType--9e42a505.json",
+      "file": "resources/CodeSystem/KGInterventionType.json",
       "source": "fsh-generated/resources/CodeSystem-KGInterventionType.json"
     },
     {
@@ -1502,7 +1707,7 @@
       "resourceType": "CodeSystem",
       "id": "KGL1Classes",
       "name": "KGL1Classes",
-      "file": "resources/CodeSystem/KGL1Classes--95a82588.json",
+      "file": "resources/CodeSystem/KGL1Classes.json",
       "source": "fsh-generated/resources/CodeSystem-KGL1Classes.json"
     },
     {
@@ -1512,7 +1717,7 @@
       "resourceType": "CodeSystem",
       "id": "KGL1LibraryClasses",
       "name": "KGL1LibraryClasses",
-      "file": "resources/CodeSystem/KGL1LibraryClasses--1c5ff050.json",
+      "file": "resources/CodeSystem/KGL1LibraryClasses.json",
       "source": "fsh-generated/resources/CodeSystem-KGL1LibraryClasses.json"
     },
     {
@@ -1522,7 +1727,7 @@
       "resourceType": "CodeSystem",
       "id": "KGL1LibraryPredicates",
       "name": "KGL1LibraryPredicates",
-      "file": "resources/CodeSystem/KGL1LibraryPredicates--744c10e7.json",
+      "file": "resources/CodeSystem/KGL1LibraryPredicates.json",
       "source": "fsh-generated/resources/CodeSystem-KGL1LibraryPredicates.json"
     },
     {
@@ -1532,8 +1737,88 @@
       "resourceType": "CodeSystem",
       "id": "KGL1Predicates",
       "name": "KGL1Predicates",
-      "file": "resources/CodeSystem/KGL1Predicates--a87c244b.json",
+      "file": "resources/CodeSystem/KGL1Predicates.json",
       "source": "fsh-generated/resources/CodeSystem-KGL1Predicates.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGL2BPMNClasses",
+      "name": "KGL2BPMNClasses",
+      "file": "resources/CodeSystem/KGL2BPMNClasses.json",
+      "source": "fsh-generated/resources/CodeSystem-KGL2BPMNClasses.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGL2BPMNPredicates",
+      "name": "KGL2BPMNPredicates",
+      "file": "resources/CodeSystem/KGL2BPMNPredicates.json",
+      "source": "fsh-generated/resources/CodeSystem-KGL2BPMNPredicates.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGL2Classes|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGL2Classes",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGL2Classes",
+      "name": "KGL2Classes",
+      "file": "resources/CodeSystem/KGL2Classes.json",
+      "source": "fsh-generated/resources/CodeSystem-KGL2Classes.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGL2DMNClasses|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGL2DMNClasses",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGL2DMNClasses",
+      "name": "KGL2DMNClasses",
+      "file": "resources/CodeSystem/KGL2DMNClasses.json",
+      "source": "fsh-generated/resources/CodeSystem-KGL2DMNClasses.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGL2DMNPredicates|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGL2DMNPredicates",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGL2DMNPredicates",
+      "name": "KGL2DMNPredicates",
+      "file": "resources/CodeSystem/KGL2DMNPredicates.json",
+      "source": "fsh-generated/resources/CodeSystem-KGL2DMNPredicates.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGL2Predicates|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGL2Predicates",
+      "name": "KGL2Predicates",
+      "file": "resources/CodeSystem/KGL2Predicates.json",
+      "source": "fsh-generated/resources/CodeSystem-KGL2Predicates.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGL3Classes|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGL3Classes",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGL3Classes",
+      "name": "KGL3Classes",
+      "file": "resources/CodeSystem/KGL3Classes.json",
+      "source": "fsh-generated/resources/CodeSystem-KGL3Classes.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGL3Predicates|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGL3Predicates",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGL3Predicates",
+      "name": "KGL3Predicates",
+      "file": "resources/CodeSystem/KGL3Predicates.json",
+      "source": "fsh-generated/resources/CodeSystem-KGL3Predicates.json"
     },
     {
       "key": "http://smart.who.int/base/CodeSystem/KGOutcomeImportance|0.3.0",
@@ -1542,8 +1827,18 @@
       "resourceType": "CodeSystem",
       "id": "KGOutcomeImportance",
       "name": "KGOutcomeImportance",
-      "file": "resources/CodeSystem/KGOutcomeImportance--428d97e5.json",
+      "file": "resources/CodeSystem/KGOutcomeImportance.json",
       "source": "fsh-generated/resources/CodeSystem-KGOutcomeImportance.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGPublicationStatus|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGPublicationStatus",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGPublicationStatus",
+      "name": "KGPublicationStatus",
+      "file": "resources/CodeSystem/KGPublicationStatus.json",
+      "source": "fsh-generated/resources/CodeSystem-KGPublicationStatus.json"
     },
     {
       "key": "http://smart.who.int/base/CodeSystem/KGPublicationType|0.3.0",
@@ -1552,7 +1847,7 @@
       "resourceType": "CodeSystem",
       "id": "KGPublicationType",
       "name": "KGPublicationType",
-      "file": "resources/CodeSystem/KGPublicationType--42672003.json",
+      "file": "resources/CodeSystem/KGPublicationType.json",
       "source": "fsh-generated/resources/CodeSystem-KGPublicationType.json"
     },
     {
@@ -1562,7 +1857,7 @@
       "resourceType": "CodeSystem",
       "id": "KGRecommendationDirection",
       "name": "KGRecommendationDirection",
-      "file": "resources/CodeSystem/KGRecommendationDirection--70a87be0.json",
+      "file": "resources/CodeSystem/KGRecommendationDirection.json",
       "source": "fsh-generated/resources/CodeSystem-KGRecommendationDirection.json"
     },
     {
@@ -1572,7 +1867,7 @@
       "resourceType": "CodeSystem",
       "id": "KGRecommendationKind",
       "name": "KGRecommendationKind",
-      "file": "resources/CodeSystem/KGRecommendationKind--e0fd4646.json",
+      "file": "resources/CodeSystem/KGRecommendationKind.json",
       "source": "fsh-generated/resources/CodeSystem-KGRecommendationKind.json"
     },
     {
@@ -1582,7 +1877,7 @@
       "resourceType": "CodeSystem",
       "id": "KGRecommendationStatus",
       "name": "KGRecommendationStatus",
-      "file": "resources/CodeSystem/KGRecommendationStatus--bd28b405.json",
+      "file": "resources/CodeSystem/KGRecommendationStatus.json",
       "source": "fsh-generated/resources/CodeSystem-KGRecommendationStatus.json"
     },
     {
@@ -1592,7 +1887,7 @@
       "resourceType": "CodeSystem",
       "id": "KGRecommendationStrength",
       "name": "KGRecommendationStrength",
-      "file": "resources/CodeSystem/KGRecommendationStrength--7da9e50f.json",
+      "file": "resources/CodeSystem/KGRecommendationStrength.json",
       "source": "fsh-generated/resources/CodeSystem-KGRecommendationStrength.json"
     },
     {
@@ -1602,7 +1897,7 @@
       "resourceType": "CodeSystem",
       "id": "KGRemarkType",
       "name": "KGRemarkType",
-      "file": "resources/CodeSystem/KGRemarkType--0505584c.json",
+      "file": "resources/CodeSystem/KGRemarkType.json",
       "source": "fsh-generated/resources/CodeSystem-KGRemarkType.json"
     },
     {
@@ -1612,7 +1907,7 @@
       "resourceType": "CodeSystem",
       "id": "KGResolutionStatus",
       "name": "KGResolutionStatus",
-      "file": "resources/CodeSystem/KGResolutionStatus--1970a841.json",
+      "file": "resources/CodeSystem/KGResolutionStatus.json",
       "source": "fsh-generated/resources/CodeSystem-KGResolutionStatus.json"
     },
     {
@@ -1622,8 +1917,18 @@
       "resourceType": "CodeSystem",
       "id": "KGRowType",
       "name": "KGRowType",
-      "file": "resources/CodeSystem/KGRowType--ea1d26b2.json",
+      "file": "resources/CodeSystem/KGRowType.json",
       "source": "fsh-generated/resources/CodeSystem-KGRowType.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGStructureDefinitionKind",
+      "name": "KGStructureDefinitionKind",
+      "file": "resources/CodeSystem/KGStructureDefinitionKind.json",
+      "source": "fsh-generated/resources/CodeSystem-KGStructureDefinitionKind.json"
     },
     {
       "key": "http://smart.who.int/base/CodeSystem/KGTerminologySystem|0.3.0",
@@ -1632,8 +1937,18 @@
       "resourceType": "CodeSystem",
       "id": "KGTerminologySystem",
       "name": "KGTerminologySystem",
-      "file": "resources/CodeSystem/KGTerminologySystem--af78caea.json",
+      "file": "resources/CodeSystem/KGTerminologySystem.json",
       "source": "fsh-generated/resources/CodeSystem-KGTerminologySystem.json"
+    },
+    {
+      "key": "http://smart.who.int/base/CodeSystem/KGVerificationMethod|0.3.0",
+      "canonical": "http://smart.who.int/base/CodeSystem/KGVerificationMethod",
+      "version": "0.3.0",
+      "resourceType": "CodeSystem",
+      "id": "KGVerificationMethod",
+      "name": "KGVerificationMethod",
+      "file": "resources/CodeSystem/KGVerificationMethod.json",
+      "source": "fsh-generated/resources/CodeSystem-KGVerificationMethod.json"
     },
     {
       "key": "http://smart.who.int/base/CodeSystem/SGAuthoringPersonaTypes|0.3.0",
@@ -1642,7 +1957,7 @@
       "resourceType": "CodeSystem",
       "id": "SGAuthoringPersonaTypes",
       "name": "SGAuthoringPersonaTypes",
-      "file": "resources/CodeSystem/SGAuthoringPersonaTypes--de6e4850.json",
+      "file": "resources/CodeSystem/SGAuthoringPersonaTypes.json",
       "source": "fsh-generated/resources/CodeSystem-SGAuthoringPersonaTypes.json"
     },
     {
@@ -1652,7 +1967,7 @@
       "resourceType": "CodeSystem",
       "id": "SGAuthoringSkills",
       "name": "SGAuthoringSkills",
-      "file": "resources/CodeSystem/SGAuthoringSkills--ce59a8d5.json",
+      "file": "resources/CodeSystem/SGAuthoringSkills.json",
       "source": "fsh-generated/resources/CodeSystem-SGAuthoringSkills.json"
     },
     {
@@ -1662,7 +1977,7 @@
       "resourceType": "CodeSystem",
       "id": "SGPersonaTypes",
       "name": "SGPersonaTypes",
-      "file": "resources/CodeSystem/SGPersonaTypes--3cc3aca5.json",
+      "file": "resources/CodeSystem/SGPersonaTypes.json",
       "source": "fsh-generated/resources/CodeSystem-SGPersonaTypes.json"
     },
     {
@@ -1672,7 +1987,7 @@
       "resourceType": "CodeSystem",
       "id": "SGTasks",
       "name": "SGTasks",
-      "file": "resources/CodeSystem/SGTasks--99b57b86.json",
+      "file": "resources/CodeSystem/SGTasks.json",
       "source": "fsh-generated/resources/CodeSystem-SGTasks.json"
     },
     {
@@ -1682,7 +1997,7 @@
       "resourceType": "ConceptMap",
       "id": "CDHIv1Hierarchy",
       "name": "CDHIv1Hierarchy",
-      "file": "resources/ConceptMap/CDHIv1Hierarchy--af6b834f.json",
+      "file": "resources/ConceptMap/CDHIv1Hierarchy.json",
       "source": "fsh-generated/resources/ConceptMap-CDHIv1Hierarchy.json"
     },
     {
@@ -1692,7 +2007,7 @@
       "resourceType": "ConceptMap",
       "id": "CDHIv1toCDHIv2",
       "name": "CDHIv1toCDHIv2",
-      "file": "resources/ConceptMap/CDHIv1toCDHIv2--7c48bdb4.json",
+      "file": "resources/ConceptMap/CDHIv1toCDHIv2.json",
       "source": "fsh-generated/resources/ConceptMap-CDHIv1toCDHIv2.json"
     },
     {
@@ -1702,7 +2017,7 @@
       "resourceType": "ConceptMap",
       "id": "CDHIv2Hierarchy",
       "name": "CDHIv2Hierarchy",
-      "file": "resources/ConceptMap/CDHIv2Hierarchy--95a35278.json",
+      "file": "resources/ConceptMap/CDHIv2Hierarchy.json",
       "source": "fsh-generated/resources/ConceptMap-CDHIv2Hierarchy.json"
     },
     {
@@ -1712,7 +2027,7 @@
       "resourceType": "ConceptMap",
       "id": "CDSCv1toCDSCv2",
       "name": "CDSCv1toCDSCv2",
-      "file": "resources/ConceptMap/CDSCv1toCDSCv2--6d454b59.json",
+      "file": "resources/ConceptMap/CDSCv1toCDSCv2.json",
       "source": "fsh-generated/resources/ConceptMap-CDSCv1toCDSCv2.json"
     },
     {
@@ -1722,7 +2037,7 @@
       "resourceType": "ImplementationGuide",
       "id": "smart.who.int.base",
       "name": "Base",
-      "file": "resources/ImplementationGuide/smart.who.int.base--5a285041.json",
+      "file": "resources/ImplementationGuide/smart.who.int.base.json",
       "source": "fsh-generated/resources/ImplementationGuide-smart.who.int.base.json"
     },
     {
@@ -1732,7 +2047,7 @@
       "resourceType": "Questionnaire",
       "id": "DAK.DT.IMMZ.D2.DT.BCGQuestionnaire",
       "name": "DAK.DT.IMMZ.D2.DT.BCGQuestionnaire",
-      "file": "resources/Questionnaire/DAK.DT.IMMZ.D2.DT.BCGQuestionnaire--7b657aed.json",
+      "file": "resources/Questionnaire/DAK.DT.IMMZ.D2.DT.BCGQuestionnaire.json",
       "source": "fsh-generated/resources/Questionnaire-DAK.DT.IMMZ.D2.DT.BCGQuestionnaire.json"
     },
     {
@@ -1742,7 +2057,7 @@
       "resourceType": "StructureDefinition",
       "id": "BusinessProcessWorkflowSource",
       "name": "BusinessProcessWorkflowSource",
-      "file": "resources/StructureDefinition/BusinessProcessWorkflowSource--c08ee1b4.json",
+      "file": "resources/StructureDefinition/BusinessProcessWorkflowSource.json",
       "source": "fsh-generated/resources/StructureDefinition-BusinessProcessWorkflowSource.json"
     },
     {
@@ -1752,7 +2067,7 @@
       "resourceType": "StructureDefinition",
       "id": "BusinessProcessWorkflow",
       "name": "BusinessProcessWorkflow",
-      "file": "resources/StructureDefinition/BusinessProcessWorkflow--ca13e208.json",
+      "file": "resources/StructureDefinition/BusinessProcessWorkflow.json",
       "source": "fsh-generated/resources/StructureDefinition-BusinessProcessWorkflow.json"
     },
     {
@@ -1762,7 +2077,7 @@
       "resourceType": "StructureDefinition",
       "id": "CoreDataElementSource",
       "name": "CoreDataElementSource",
-      "file": "resources/StructureDefinition/CoreDataElementSource--67be8a5e.json",
+      "file": "resources/StructureDefinition/CoreDataElementSource.json",
       "source": "fsh-generated/resources/StructureDefinition-CoreDataElementSource.json"
     },
     {
@@ -1772,7 +2087,7 @@
       "resourceType": "StructureDefinition",
       "id": "CoreDataElement",
       "name": "CoreDataElement",
-      "file": "resources/StructureDefinition/CoreDataElement--dea299e0.json",
+      "file": "resources/StructureDefinition/CoreDataElement.json",
       "source": "fsh-generated/resources/StructureDefinition-CoreDataElement.json"
     },
     {
@@ -1782,7 +2097,7 @@
       "resourceType": "StructureDefinition",
       "id": "DAK",
       "name": "DAK",
-      "file": "resources/StructureDefinition/DAK--08a5c5ca.json",
+      "file": "resources/StructureDefinition/DAK.json",
       "source": "fsh-generated/resources/StructureDefinition-DAK.json"
     },
     {
@@ -1792,7 +2107,7 @@
       "resourceType": "StructureDefinition",
       "id": "DecisionSupportLogicSource",
       "name": "DecisionSupportLogicSource",
-      "file": "resources/StructureDefinition/DecisionSupportLogicSource--b42ed2f5.json",
+      "file": "resources/StructureDefinition/DecisionSupportLogicSource.json",
       "source": "fsh-generated/resources/StructureDefinition-DecisionSupportLogicSource.json"
     },
     {
@@ -1802,7 +2117,7 @@
       "resourceType": "StructureDefinition",
       "id": "DecisionSupportLogic",
       "name": "DecisionSupportLogic",
-      "file": "resources/StructureDefinition/DecisionSupportLogic--b1773c2c.json",
+      "file": "resources/StructureDefinition/DecisionSupportLogic.json",
       "source": "fsh-generated/resources/StructureDefinition-DecisionSupportLogic.json"
     },
     {
@@ -1812,7 +2127,7 @@
       "resourceType": "StructureDefinition",
       "id": "DublinCore",
       "name": "DublinCore",
-      "file": "resources/StructureDefinition/DublinCore--1e726772.json",
+      "file": "resources/StructureDefinition/DublinCore.json",
       "source": "fsh-generated/resources/StructureDefinition-DublinCore.json"
     },
     {
@@ -1822,7 +2137,7 @@
       "resourceType": "StructureDefinition",
       "id": "FHIRSchemaBase",
       "name": "FHIRSchemaBase",
-      "file": "resources/StructureDefinition/FHIRSchemaBase--3585e333.json",
+      "file": "resources/StructureDefinition/FHIRSchemaBase.json",
       "source": "fsh-generated/resources/StructureDefinition-FHIRSchemaBase.json"
     },
     {
@@ -1832,7 +2147,7 @@
       "resourceType": "StructureDefinition",
       "id": "FunctionalRequirement",
       "name": "FunctionalRequirement",
-      "file": "resources/StructureDefinition/FunctionalRequirement--94f4e173.json",
+      "file": "resources/StructureDefinition/FunctionalRequirement.json",
       "source": "fsh-generated/resources/StructureDefinition-FunctionalRequirement.json"
     },
     {
@@ -1842,7 +2157,7 @@
       "resourceType": "StructureDefinition",
       "id": "GenericPersonaSource",
       "name": "GenericPersonaSource",
-      "file": "resources/StructureDefinition/GenericPersonaSource--4bf0e898.json",
+      "file": "resources/StructureDefinition/GenericPersonaSource.json",
       "source": "fsh-generated/resources/StructureDefinition-GenericPersonaSource.json"
     },
     {
@@ -1852,7 +2167,7 @@
       "resourceType": "StructureDefinition",
       "id": "GenericPersona",
       "name": "GenericPersona",
-      "file": "resources/StructureDefinition/GenericPersona--24597987.json",
+      "file": "resources/StructureDefinition/GenericPersona.json",
       "source": "fsh-generated/resources/StructureDefinition-GenericPersona.json"
     },
     {
@@ -1862,7 +2177,7 @@
       "resourceType": "StructureDefinition",
       "id": "HealthInterventionsSource",
       "name": "HealthInterventionsSource",
-      "file": "resources/StructureDefinition/HealthInterventionsSource--c1f01d29.json",
+      "file": "resources/StructureDefinition/HealthInterventionsSource.json",
       "source": "fsh-generated/resources/StructureDefinition-HealthInterventionsSource.json"
     },
     {
@@ -1872,8 +2187,98 @@
       "resourceType": "StructureDefinition",
       "id": "HealthInterventions",
       "name": "HealthInterventions",
-      "file": "resources/StructureDefinition/HealthInterventions--4547e17d.json",
+      "file": "resources/StructureDefinition/HealthInterventions.json",
       "source": "fsh-generated/resources/StructureDefinition-HealthInterventions.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGActivityDefinition|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGActivityDefinition",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGActivityDefinition",
+      "name": "KGActivityDefinition",
+      "file": "resources/StructureDefinition/KGActivityDefinition.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGActivityDefinition.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGActorDefinition|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGActorDefinition",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGActorDefinition",
+      "name": "KGActorDefinition",
+      "file": "resources/StructureDefinition/KGActorDefinition.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGActorDefinition.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGBpmnDefinitions|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGBpmnDefinitions",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGBpmnDefinitions",
+      "name": "KGBpmnDefinitions",
+      "file": "resources/StructureDefinition/KGBpmnDefinitions.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGBpmnDefinitions.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGBpmnEvent|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGBpmnEvent",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGBpmnEvent",
+      "name": "KGBpmnEvent",
+      "file": "resources/StructureDefinition/KGBpmnEvent.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGBpmnEvent.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGBpmnGateway|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGBpmnGateway",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGBpmnGateway",
+      "name": "KGBpmnGateway",
+      "file": "resources/StructureDefinition/KGBpmnGateway.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGBpmnGateway.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGBpmnParticipant|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGBpmnParticipant",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGBpmnParticipant",
+      "name": "KGBpmnParticipant",
+      "file": "resources/StructureDefinition/KGBpmnParticipant.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGBpmnParticipant.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGBpmnProcess|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGBpmnProcess",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGBpmnProcess",
+      "name": "KGBpmnProcess",
+      "file": "resources/StructureDefinition/KGBpmnProcess.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGBpmnProcess.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGBpmnTask|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGBpmnTask",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGBpmnTask",
+      "name": "KGBpmnTask",
+      "file": "resources/StructureDefinition/KGBpmnTask.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGBpmnTask.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGBusinessProcess|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGBusinessProcess",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGBusinessProcess",
+      "name": "KGBusinessProcess",
+      "file": "resources/StructureDefinition/KGBusinessProcess.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGBusinessProcess.json"
     },
     {
       "key": "http://smart.who.int/base/StructureDefinition/KGCitation|0.3.0",
@@ -1882,8 +2287,138 @@
       "resourceType": "StructureDefinition",
       "id": "KGCitation",
       "name": "KGCitation",
-      "file": "resources/StructureDefinition/KGCitation--08de1ef8.json",
+      "file": "resources/StructureDefinition/KGCitation.json",
       "source": "fsh-generated/resources/StructureDefinition-KGCitation.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGCodeSystem|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGCodeSystem",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGCodeSystem",
+      "name": "KGCodeSystem",
+      "file": "resources/StructureDefinition/KGCodeSystem.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGCodeSystem.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGConceptMap|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGConceptMap",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGConceptMap",
+      "name": "KGConceptMap",
+      "file": "resources/StructureDefinition/KGConceptMap.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGConceptMap.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGCqlLibrary|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGCqlLibrary",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGCqlLibrary",
+      "name": "KGCqlLibrary",
+      "file": "resources/StructureDefinition/KGCqlLibrary.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGCqlLibrary.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGDakTask|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGDakTask",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGDakTask",
+      "name": "KGDakTask",
+      "file": "resources/StructureDefinition/KGDakTask.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGDakTask.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGDak|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGDak",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGDak",
+      "name": "KGDak",
+      "file": "resources/StructureDefinition/KGDak.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGDak.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGDataElement|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGDataElement",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGDataElement",
+      "name": "KGDataElement",
+      "file": "resources/StructureDefinition/KGDataElement.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGDataElement.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGDecisionSupportLogic|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGDecisionSupportLogic",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGDecisionSupportLogic",
+      "name": "KGDecisionSupportLogic",
+      "file": "resources/StructureDefinition/KGDecisionSupportLogic.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGDecisionSupportLogic.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGDmnDecisionTable|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGDmnDecisionTable",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGDmnDecisionTable",
+      "name": "KGDmnDecisionTable",
+      "file": "resources/StructureDefinition/KGDmnDecisionTable.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGDmnDecisionTable.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGDmnDecision|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGDmnDecision",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGDmnDecision",
+      "name": "KGDmnDecision",
+      "file": "resources/StructureDefinition/KGDmnDecision.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGDmnDecision.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGDmnDefinitions|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGDmnDefinitions",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGDmnDefinitions",
+      "name": "KGDmnDefinitions",
+      "file": "resources/StructureDefinition/KGDmnDefinitions.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGDmnDefinitions.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGDmnInputClause|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGDmnInputClause",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGDmnInputClause",
+      "name": "KGDmnInputClause",
+      "file": "resources/StructureDefinition/KGDmnInputClause.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGDmnInputClause.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGDmnOutputClause|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGDmnOutputClause",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGDmnOutputClause",
+      "name": "KGDmnOutputClause",
+      "file": "resources/StructureDefinition/KGDmnOutputClause.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGDmnOutputClause.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGDmnRule|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGDmnRule",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGDmnRule",
+      "name": "KGDmnRule",
+      "file": "resources/StructureDefinition/KGDmnRule.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGDmnRule.json"
     },
     {
       "key": "http://smart.who.int/base/StructureDefinition/KGEdge|0.3.0",
@@ -1892,7 +2427,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGEdge",
       "name": "KGEdge",
-      "file": "resources/StructureDefinition/KGEdge--b9980d9c.json",
+      "file": "resources/StructureDefinition/KGEdge.json",
       "source": "fsh-generated/resources/StructureDefinition-KGEdge.json"
     },
     {
@@ -1902,7 +2437,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGEvidenceLocation",
       "name": "KGEvidenceLocation",
-      "file": "resources/StructureDefinition/KGEvidenceLocation--f0bfbf9e.json",
+      "file": "resources/StructureDefinition/KGEvidenceLocation.json",
       "source": "fsh-generated/resources/StructureDefinition-KGEvidenceLocation.json"
     },
     {
@@ -1912,8 +2447,28 @@
       "resourceType": "StructureDefinition",
       "id": "KGEvidence",
       "name": "KGEvidence",
-      "file": "resources/StructureDefinition/KGEvidence--374247ed.json",
+      "file": "resources/StructureDefinition/KGEvidence.json",
       "source": "fsh-generated/resources/StructureDefinition-KGEvidence.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGExternalArtifact|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGExternalArtifact",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGExternalArtifact",
+      "name": "KGExternalArtifact",
+      "file": "resources/StructureDefinition/KGExternalArtifact.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGExternalArtifact.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGFunctionalRequirement|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGFunctionalRequirement",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGFunctionalRequirement",
+      "name": "KGFunctionalRequirement",
+      "file": "resources/StructureDefinition/KGFunctionalRequirement.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGFunctionalRequirement.json"
     },
     {
       "key": "http://smart.who.int/base/StructureDefinition/KGGraphDocument|0.3.0",
@@ -1922,7 +2477,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGGraphDocument",
       "name": "KGGraphDocument",
-      "file": "resources/StructureDefinition/KGGraphDocument--9c8307ed.json",
+      "file": "resources/StructureDefinition/KGGraphDocument.json",
       "source": "fsh-generated/resources/StructureDefinition-KGGraphDocument.json"
     },
     {
@@ -1932,7 +2487,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGHealthIntervention",
       "name": "KGHealthIntervention",
-      "file": "resources/StructureDefinition/KGHealthIntervention--38b8a669.json",
+      "file": "resources/StructureDefinition/KGHealthIntervention.json",
       "source": "fsh-generated/resources/StructureDefinition-KGHealthIntervention.json"
     },
     {
@@ -1942,7 +2497,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGImplementationPractice",
       "name": "KGImplementationPractice",
-      "file": "resources/StructureDefinition/KGImplementationPractice--d1e2666f.json",
+      "file": "resources/StructureDefinition/KGImplementationPractice.json",
       "source": "fsh-generated/resources/StructureDefinition-KGImplementationPractice.json"
     },
     {
@@ -1952,7 +2507,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGIndicator",
       "name": "KGIndicator",
-      "file": "resources/StructureDefinition/KGIndicator--de16d76b.json",
+      "file": "resources/StructureDefinition/KGIndicator.json",
       "source": "fsh-generated/resources/StructureDefinition-KGIndicator.json"
     },
     {
@@ -1962,7 +2517,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGKeyQuestion",
       "name": "KGKeyQuestion",
-      "file": "resources/StructureDefinition/KGKeyQuestion--a207e0b6.json",
+      "file": "resources/StructureDefinition/KGKeyQuestion.json",
       "source": "fsh-generated/resources/StructureDefinition-KGKeyQuestion.json"
     },
     {
@@ -1972,8 +2527,28 @@
       "resourceType": "StructureDefinition",
       "id": "KGLibraryNode",
       "name": "KGLibraryNode",
-      "file": "resources/StructureDefinition/KGLibraryNode--d9f8b8bf.json",
+      "file": "resources/StructureDefinition/KGLibraryNode.json",
       "source": "fsh-generated/resources/StructureDefinition-KGLibraryNode.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGLibrary|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGLibrary",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGLibrary",
+      "name": "KGLibrary",
+      "file": "resources/StructureDefinition/KGLibrary.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGLibrary.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGMeasure|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGMeasure",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGMeasure",
+      "name": "KGMeasure",
+      "file": "resources/StructureDefinition/KGMeasure.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGMeasure.json"
     },
     {
       "key": "http://smart.who.int/base/StructureDefinition/KGNode|0.3.0",
@@ -1982,8 +2557,18 @@
       "resourceType": "StructureDefinition",
       "id": "KGNode",
       "name": "KGNode",
-      "file": "resources/StructureDefinition/KGNode--85c67d08.json",
+      "file": "resources/StructureDefinition/KGNode.json",
       "source": "fsh-generated/resources/StructureDefinition-KGNode.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGNonFunctionalRequirement|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGNonFunctionalRequirement",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGNonFunctionalRequirement",
+      "name": "KGNonFunctionalRequirement",
+      "file": "resources/StructureDefinition/KGNonFunctionalRequirement.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGNonFunctionalRequirement.json"
     },
     {
       "key": "http://smart.who.int/base/StructureDefinition/KGOutcome|0.3.0",
@@ -1992,8 +2577,48 @@
       "resourceType": "StructureDefinition",
       "id": "KGOutcome",
       "name": "KGOutcome",
-      "file": "resources/StructureDefinition/KGOutcome--d80f96e7.json",
+      "file": "resources/StructureDefinition/KGOutcome.json",
       "source": "fsh-generated/resources/StructureDefinition-KGOutcome.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGPersona|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGPersona",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGPersona",
+      "name": "KGPersona",
+      "file": "resources/StructureDefinition/KGPersona.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGPersona.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGPlanDefinition|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGPlanDefinition",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGPlanDefinition",
+      "name": "KGPlanDefinition",
+      "file": "resources/StructureDefinition/KGPlanDefinition.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGPlanDefinition.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGProfile|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGProfile",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGProfile",
+      "name": "KGProfile",
+      "file": "resources/StructureDefinition/KGProfile.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGProfile.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGProgramIndicator|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGProgramIndicator",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGProgramIndicator",
+      "name": "KGProgramIndicator",
+      "file": "resources/StructureDefinition/KGProgramIndicator.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGProgramIndicator.json"
     },
     {
       "key": "http://smart.who.int/base/StructureDefinition/KGProvenanceSource|0.3.0",
@@ -2002,7 +2627,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGProvenanceSource",
       "name": "KGProvenanceSource",
-      "file": "resources/StructureDefinition/KGProvenanceSource--90457342.json",
+      "file": "resources/StructureDefinition/KGProvenanceSource.json",
       "source": "fsh-generated/resources/StructureDefinition-KGProvenanceSource.json"
     },
     {
@@ -2012,7 +2637,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGPublicationElement",
       "name": "KGPublicationElement",
-      "file": "resources/StructureDefinition/KGPublicationElement--bebaec7e.json",
+      "file": "resources/StructureDefinition/KGPublicationElement.json",
       "source": "fsh-generated/resources/StructureDefinition-KGPublicationElement.json"
     },
     {
@@ -2022,7 +2647,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGPublicationSection",
       "name": "KGPublicationSection",
-      "file": "resources/StructureDefinition/KGPublicationSection--6200f4cb.json",
+      "file": "resources/StructureDefinition/KGPublicationSection.json",
       "source": "fsh-generated/resources/StructureDefinition-KGPublicationSection.json"
     },
     {
@@ -2032,8 +2657,18 @@
       "resourceType": "StructureDefinition",
       "id": "KGPublication",
       "name": "KGPublication",
-      "file": "resources/StructureDefinition/KGPublication--2b10cd47.json",
+      "file": "resources/StructureDefinition/KGPublication.json",
       "source": "fsh-generated/resources/StructureDefinition-KGPublication.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGQuestionnaire|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGQuestionnaire",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGQuestionnaire",
+      "name": "KGQuestionnaire",
+      "file": "resources/StructureDefinition/KGQuestionnaire.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGQuestionnaire.json"
     },
     {
       "key": "http://smart.who.int/base/StructureDefinition/KGRecommendation|0.3.0",
@@ -2042,7 +2677,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGRecommendation",
       "name": "KGRecommendation",
-      "file": "resources/StructureDefinition/KGRecommendation--3c591ebe.json",
+      "file": "resources/StructureDefinition/KGRecommendation.json",
       "source": "fsh-generated/resources/StructureDefinition-KGRecommendation.json"
     },
     {
@@ -2052,7 +2687,7 @@
       "resourceType": "StructureDefinition",
       "id": "KGReferenceEntry",
       "name": "KGReferenceEntry",
-      "file": "resources/StructureDefinition/KGReferenceEntry--36574bd0.json",
+      "file": "resources/StructureDefinition/KGReferenceEntry.json",
       "source": "fsh-generated/resources/StructureDefinition-KGReferenceEntry.json"
     },
     {
@@ -2062,8 +2697,58 @@
       "resourceType": "StructureDefinition",
       "id": "KGRemark",
       "name": "KGRemark",
-      "file": "resources/StructureDefinition/KGRemark--f1e1b6a7.json",
+      "file": "resources/StructureDefinition/KGRemark.json",
       "source": "fsh-generated/resources/StructureDefinition-KGRemark.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGRequirementStatement|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGRequirementStatement",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGRequirementStatement",
+      "name": "KGRequirementStatement",
+      "file": "resources/StructureDefinition/KGRequirementStatement.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGRequirementStatement.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGRequirements|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGRequirements",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGRequirements",
+      "name": "KGRequirements",
+      "file": "resources/StructureDefinition/KGRequirements.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGRequirements.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGSchedulingLogic|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGSchedulingLogic",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGSchedulingLogic",
+      "name": "KGSchedulingLogic",
+      "file": "resources/StructureDefinition/KGSchedulingLogic.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGSchedulingLogic.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGStructureDefinition|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGStructureDefinition",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGStructureDefinition",
+      "name": "KGStructureDefinition",
+      "file": "resources/StructureDefinition/KGStructureDefinition.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGStructureDefinition.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGStructureMap|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGStructureMap",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGStructureMap",
+      "name": "KGStructureMap",
+      "file": "resources/StructureDefinition/KGStructureMap.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGStructureMap.json"
     },
     {
       "key": "http://smart.who.int/base/StructureDefinition/KGTerminologyCode|0.3.0",
@@ -2072,8 +2757,38 @@
       "resourceType": "StructureDefinition",
       "id": "KGTerminologyCode",
       "name": "KGTerminologyCode",
-      "file": "resources/StructureDefinition/KGTerminologyCode--2787af21.json",
+      "file": "resources/StructureDefinition/KGTerminologyCode.json",
       "source": "fsh-generated/resources/StructureDefinition-KGTerminologyCode.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGTestScenario|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGTestScenario",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGTestScenario",
+      "name": "KGTestScenario",
+      "file": "resources/StructureDefinition/KGTestScenario.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGTestScenario.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGUserScenario|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGUserScenario",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGUserScenario",
+      "name": "KGUserScenario",
+      "file": "resources/StructureDefinition/KGUserScenario.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGUserScenario.json"
+    },
+    {
+      "key": "http://smart.who.int/base/StructureDefinition/KGValueSet|0.3.0",
+      "canonical": "http://smart.who.int/base/StructureDefinition/KGValueSet",
+      "version": "0.3.0",
+      "resourceType": "StructureDefinition",
+      "id": "KGValueSet",
+      "name": "KGValueSet",
+      "file": "resources/StructureDefinition/KGValueSet.json",
+      "source": "fsh-generated/resources/StructureDefinition-KGValueSet.json"
     },
     {
       "key": "http://smart.who.int/base/StructureDefinition/LinkIdExt|0.3.0",
@@ -2082,7 +2797,7 @@
       "resourceType": "StructureDefinition",
       "id": "LinkIdExt",
       "name": "LinkIdExt",
-      "file": "resources/StructureDefinition/LinkIdExt--86ecd4dd.json",
+      "file": "resources/StructureDefinition/LinkIdExt.json",
       "source": "fsh-generated/resources/StructureDefinition-LinkIdExt.json"
     },
     {
@@ -2092,7 +2807,7 @@
       "resourceType": "StructureDefinition",
       "id": "Markdown",
       "name": "Markdown",
-      "file": "resources/StructureDefinition/Markdown--1df56007.json",
+      "file": "resources/StructureDefinition/Markdown.json",
       "source": "fsh-generated/resources/StructureDefinition-Markdown.json"
     },
     {
@@ -2102,7 +2817,7 @@
       "resourceType": "StructureDefinition",
       "id": "NonFunctionalRequirement",
       "name": "NonFunctionalRequirement",
-      "file": "resources/StructureDefinition/NonFunctionalRequirement--9fd3e8fb.json",
+      "file": "resources/StructureDefinition/NonFunctionalRequirement.json",
       "source": "fsh-generated/resources/StructureDefinition-NonFunctionalRequirement.json"
     },
     {
@@ -2112,7 +2827,7 @@
       "resourceType": "StructureDefinition",
       "id": "Persona",
       "name": "Persona",
-      "file": "resources/StructureDefinition/Persona--7d620552.json",
+      "file": "resources/StructureDefinition/Persona.json",
       "source": "fsh-generated/resources/StructureDefinition-Persona.json"
     },
     {
@@ -2122,7 +2837,7 @@
       "resourceType": "StructureDefinition",
       "id": "ProgramIndicatorSource",
       "name": "ProgramIndicatorSource",
-      "file": "resources/StructureDefinition/ProgramIndicatorSource--388604f3.json",
+      "file": "resources/StructureDefinition/ProgramIndicatorSource.json",
       "source": "fsh-generated/resources/StructureDefinition-ProgramIndicatorSource.json"
     },
     {
@@ -2132,7 +2847,7 @@
       "resourceType": "StructureDefinition",
       "id": "ProgramIndicator",
       "name": "ProgramIndicator",
-      "file": "resources/StructureDefinition/ProgramIndicator--f5fdb9ac.json",
+      "file": "resources/StructureDefinition/ProgramIndicator.json",
       "source": "fsh-generated/resources/StructureDefinition-ProgramIndicator.json"
     },
     {
@@ -2142,7 +2857,7 @@
       "resourceType": "StructureDefinition",
       "id": "RequirementsSource",
       "name": "RequirementsSource",
-      "file": "resources/StructureDefinition/RequirementsSource--34ad5ee9.json",
+      "file": "resources/StructureDefinition/RequirementsSource.json",
       "source": "fsh-generated/resources/StructureDefinition-RequirementsSource.json"
     },
     {
@@ -2152,7 +2867,7 @@
       "resourceType": "StructureDefinition",
       "id": "Requirements",
       "name": "Requirements",
-      "file": "resources/StructureDefinition/Requirements--2d7fa3e9.json",
+      "file": "resources/StructureDefinition/Requirements.json",
       "source": "fsh-generated/resources/StructureDefinition-Requirements.json"
     },
     {
@@ -2162,7 +2877,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGActivityDefinition",
       "name": "SGActivityDefinition",
-      "file": "resources/StructureDefinition/SGActivityDefinition--3cf795fc.json",
+      "file": "resources/StructureDefinition/SGActivityDefinition.json",
       "source": "fsh-generated/resources/StructureDefinition-SGActivityDefinition.json"
     },
     {
@@ -2172,7 +2887,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGActorExt",
       "name": "SGActorExt",
-      "file": "resources/StructureDefinition/SGActorExt--b654d2b2.json",
+      "file": "resources/StructureDefinition/SGActorExt.json",
       "source": "fsh-generated/resources/StructureDefinition-SGActorExt.json"
     },
     {
@@ -2182,7 +2897,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGActor",
       "name": "SGActor",
-      "file": "resources/StructureDefinition/SGActor--7423ac0d.json",
+      "file": "resources/StructureDefinition/SGActor.json",
       "source": "input/resources/StructureDefinition-SGActor.json"
     },
     {
@@ -2192,7 +2907,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGBusinessProcess",
       "name": "SGBusinessProcess",
-      "file": "resources/StructureDefinition/SGBusinessProcess--24fbd8ac.json",
+      "file": "resources/StructureDefinition/SGBusinessProcess.json",
       "source": "fsh-generated/resources/StructureDefinition-SGBusinessProcess.json"
     },
     {
@@ -2202,7 +2917,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGCodeSystem",
       "name": "SGCodeSystem",
-      "file": "resources/StructureDefinition/SGCodeSystem--4b00fa53.json",
+      "file": "resources/StructureDefinition/SGCodeSystem.json",
       "source": "fsh-generated/resources/StructureDefinition-SGCodeSystem.json"
     },
     {
@@ -2212,7 +2927,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGCommunicationRequest",
       "name": "SGCommunicationRequest",
-      "file": "resources/StructureDefinition/SGCommunicationRequest--1ad05291.json",
+      "file": "resources/StructureDefinition/SGCommunicationRequest.json",
       "source": "fsh-generated/resources/StructureDefinition-SGCommunicationRequest.json"
     },
     {
@@ -2222,7 +2937,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGConceptMap",
       "name": "SGConceptMap",
-      "file": "resources/StructureDefinition/SGConceptMap--84c6fc83.json",
+      "file": "resources/StructureDefinition/SGConceptMap.json",
       "source": "fsh-generated/resources/StructureDefinition-SGConceptMap.json"
     },
     {
@@ -2232,7 +2947,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGDecisionTable",
       "name": "SGDecisionTable",
-      "file": "resources/StructureDefinition/SGDecisionTable--17481c94.json",
+      "file": "resources/StructureDefinition/SGDecisionTable.json",
       "source": "fsh-generated/resources/StructureDefinition-SGDecisionTable.json"
     },
     {
@@ -2242,7 +2957,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGDocumentation",
       "name": "SGDocumentation",
-      "file": "resources/StructureDefinition/SGDocumentation--257a4d1d.json",
+      "file": "resources/StructureDefinition/SGDocumentation.json",
       "source": "fsh-generated/resources/StructureDefinition-SGDocumentation.json"
     },
     {
@@ -2252,7 +2967,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGGraphDefinition",
       "name": "SGGraphDefinition",
-      "file": "resources/StructureDefinition/SGGraphDefinition--3d18c9a4.json",
+      "file": "resources/StructureDefinition/SGGraphDefinition.json",
       "source": "input/resources/StructureDefinition-SGGraphDefinition.json"
     },
     {
@@ -2262,7 +2977,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGGroupDefinition",
       "name": "SGGroupDefinition",
-      "file": "resources/StructureDefinition/SGGroupDefinition--36371c2e.json",
+      "file": "resources/StructureDefinition/SGGroupDefinition.json",
       "source": "input/profiles/StructureDefinition-SGGroupDefinition.json"
     },
     {
@@ -2272,7 +2987,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGImplementationGuide",
       "name": "SGImplementationGuide",
-      "file": "resources/StructureDefinition/SGImplementationGuide--733bdc04.json",
+      "file": "resources/StructureDefinition/SGImplementationGuide.json",
       "source": "fsh-generated/resources/StructureDefinition-SGImplementationGuide.json"
     },
     {
@@ -2282,7 +2997,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGLibrary",
       "name": "SGLibrary",
-      "file": "resources/StructureDefinition/SGLibrary--c7638477.json",
+      "file": "resources/StructureDefinition/SGLibrary.json",
       "source": "fsh-generated/resources/StructureDefinition-SGLibrary.json"
     },
     {
@@ -2292,7 +3007,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGLogicalModel",
       "name": "SGLogicalModel",
-      "file": "resources/StructureDefinition/SGLogicalModel--a00da664.json",
+      "file": "resources/StructureDefinition/SGLogicalModel.json",
       "source": "fsh-generated/resources/StructureDefinition-SGLogicalModel.json"
     },
     {
@@ -2302,7 +3017,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGMarkdown",
       "name": "SGMarkdown",
-      "file": "resources/StructureDefinition/SGMarkdown--701a79b8.json",
+      "file": "resources/StructureDefinition/SGMarkdown.json",
       "source": "fsh-generated/resources/StructureDefinition-SGMarkdown.json"
     },
     {
@@ -2312,7 +3027,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGMeasure",
       "name": "SGMeasure",
-      "file": "resources/StructureDefinition/SGMeasure--8f089c1d.json",
+      "file": "resources/StructureDefinition/SGMeasure.json",
       "source": "fsh-generated/resources/StructureDefinition-SGMeasure.json"
     },
     {
@@ -2322,7 +3037,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGPlanDefinition",
       "name": "SGPlanDefinition",
-      "file": "resources/StructureDefinition/SGPlanDefinition--50c3e57a.json",
+      "file": "resources/StructureDefinition/SGPlanDefinition.json",
       "source": "fsh-generated/resources/StructureDefinition-SGPlanDefinition.json"
     },
     {
@@ -2332,7 +3047,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGQuestionnaire",
       "name": "SGQuestionnaire",
-      "file": "resources/StructureDefinition/SGQuestionnaire--186f67c9.json",
+      "file": "resources/StructureDefinition/SGQuestionnaire.json",
       "source": "fsh-generated/resources/StructureDefinition-SGQuestionnaire.json"
     },
     {
@@ -2342,7 +3057,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGRequirementExt",
       "name": "SGRequirementExt",
-      "file": "resources/StructureDefinition/SGRequirementExt--0b7e9bac.json",
+      "file": "resources/StructureDefinition/SGRequirementExt.json",
       "source": "fsh-generated/resources/StructureDefinition-SGRequirementExt.json"
     },
     {
@@ -2352,7 +3067,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGRequirements",
       "name": "SGRequirements",
-      "file": "resources/StructureDefinition/SGRequirements--837d6fda.json",
+      "file": "resources/StructureDefinition/SGRequirements.json",
       "source": "input/resources/StructureDefinition-SGRequirements.json"
     },
     {
@@ -2362,7 +3077,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGString",
       "name": "SGString",
-      "file": "resources/StructureDefinition/SGString--4a8415f9.json",
+      "file": "resources/StructureDefinition/SGString.json",
       "source": "fsh-generated/resources/StructureDefinition-SGString.json"
     },
     {
@@ -2372,7 +3087,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGStructureDefinition",
       "name": "SGStructureDefinition",
-      "file": "resources/StructureDefinition/SGStructureDefinition--000fadb8.json",
+      "file": "resources/StructureDefinition/SGStructureDefinition.json",
       "source": "fsh-generated/resources/StructureDefinition-SGStructureDefinition.json"
     },
     {
@@ -2382,7 +3097,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGStructureMap",
       "name": "SGStructureMap",
-      "file": "resources/StructureDefinition/SGStructureMap--809a3f3f.json",
+      "file": "resources/StructureDefinition/SGStructureMap.json",
       "source": "fsh-generated/resources/StructureDefinition-SGStructureMap.json"
     },
     {
@@ -2392,7 +3107,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGTask",
       "name": "SGTask",
-      "file": "resources/StructureDefinition/SGTask--aef37b14.json",
+      "file": "resources/StructureDefinition/SGTask.json",
       "source": "fsh-generated/resources/StructureDefinition-SGTask.json"
     },
     {
@@ -2402,7 +3117,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGTransaction",
       "name": "SGTransaction",
-      "file": "resources/StructureDefinition/SGTransaction--f9ad4305.json",
+      "file": "resources/StructureDefinition/SGTransaction.json",
       "source": "input/resources/StructureDefinition-SGTransaction.json"
     },
     {
@@ -2412,7 +3127,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGUserStory",
       "name": "SGUserStory",
-      "file": "resources/StructureDefinition/SGUserStory--d4604f0d.json",
+      "file": "resources/StructureDefinition/SGUserStory.json",
       "source": "fsh-generated/resources/StructureDefinition-SGUserStory.json"
     },
     {
@@ -2422,7 +3137,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGValueSet",
       "name": "SGValueSet",
-      "file": "resources/StructureDefinition/SGValueSet--8334cbab.json",
+      "file": "resources/StructureDefinition/SGValueSet.json",
       "source": "fsh-generated/resources/StructureDefinition-SGValueSet.json"
     },
     {
@@ -2432,7 +3147,7 @@
       "resourceType": "StructureDefinition",
       "id": "SGcode",
       "name": "SGcode",
-      "file": "resources/StructureDefinition/SGcode--8cc97905.json",
+      "file": "resources/StructureDefinition/SGcode.json",
       "source": "input/resources/StructureDefinition-SGCode.json"
     },
     {
@@ -2442,7 +3157,7 @@
       "resourceType": "StructureDefinition",
       "id": "Satisfies",
       "name": "Satisfies",
-      "file": "resources/StructureDefinition/Satisfies--8898e449.json",
+      "file": "resources/StructureDefinition/Satisfies.json",
       "source": "fsh-generated/resources/StructureDefinition-Satisfies.json"
     },
     {
@@ -2452,7 +3167,7 @@
       "resourceType": "StructureDefinition",
       "id": "SushiConfigLogicalModel",
       "name": "SushiConfigLogicalModel",
-      "file": "resources/StructureDefinition/SushiConfigLogicalModel--52beb91f.json",
+      "file": "resources/StructureDefinition/SushiConfigLogicalModel.json",
       "source": "fsh-generated/resources/StructureDefinition-SushiConfigLogicalModel.json"
     },
     {
@@ -2462,7 +3177,7 @@
       "resourceType": "StructureDefinition",
       "id": "TestScenarioSource",
       "name": "TestScenarioSource",
-      "file": "resources/StructureDefinition/TestScenarioSource--b3d6d012.json",
+      "file": "resources/StructureDefinition/TestScenarioSource.json",
       "source": "fsh-generated/resources/StructureDefinition-TestScenarioSource.json"
     },
     {
@@ -2472,7 +3187,7 @@
       "resourceType": "StructureDefinition",
       "id": "TestScenario",
       "name": "TestScenario",
-      "file": "resources/StructureDefinition/TestScenario--ca9b3f70.json",
+      "file": "resources/StructureDefinition/TestScenario.json",
       "source": "fsh-generated/resources/StructureDefinition-TestScenario.json"
     },
     {
@@ -2482,7 +3197,7 @@
       "resourceType": "StructureDefinition",
       "id": "UserScenarioSource",
       "name": "UserScenarioSource",
-      "file": "resources/StructureDefinition/UserScenarioSource--80497d31.json",
+      "file": "resources/StructureDefinition/UserScenarioSource.json",
       "source": "fsh-generated/resources/StructureDefinition-UserScenarioSource.json"
     },
     {
@@ -2492,7 +3207,7 @@
       "resourceType": "StructureDefinition",
       "id": "UserScenario",
       "name": "UserScenario",
-      "file": "resources/StructureDefinition/UserScenario--7849bb21.json",
+      "file": "resources/StructureDefinition/UserScenario.json",
       "source": "fsh-generated/resources/StructureDefinition-UserScenario.json"
     },
     {
@@ -2502,7 +3217,7 @@
       "resourceType": "ValueSet",
       "id": "CDHIv1.1",
       "name": "CDHIv1.1",
-      "file": "resources/ValueSet/CDHIv1.1--fd3a2519.json",
+      "file": "resources/ValueSet/CDHIv1.1.json",
       "source": "fsh-generated/resources/ValueSet-CDHIv1.1.json"
     },
     {
@@ -2512,7 +3227,7 @@
       "resourceType": "ValueSet",
       "id": "CDHIv1.2",
       "name": "CDHIv1.2",
-      "file": "resources/ValueSet/CDHIv1.2--50a3d412.json",
+      "file": "resources/ValueSet/CDHIv1.2.json",
       "source": "fsh-generated/resources/ValueSet-CDHIv1.2.json"
     },
     {
@@ -2522,7 +3237,7 @@
       "resourceType": "ValueSet",
       "id": "CDHIv1.3",
       "name": "CDHIv1.3",
-      "file": "resources/ValueSet/CDHIv1.3--81a6b913.json",
+      "file": "resources/ValueSet/CDHIv1.3.json",
       "source": "fsh-generated/resources/ValueSet-CDHIv1.3.json"
     },
     {
@@ -2532,7 +3247,7 @@
       "resourceType": "ValueSet",
       "id": "CDHIv1.4",
       "name": "CDHIv1.4",
-      "file": "resources/ValueSet/CDHIv1.4--ef2f2989.json",
+      "file": "resources/ValueSet/CDHIv1.4.json",
       "source": "fsh-generated/resources/ValueSet-CDHIv1.4.json"
     },
     {
@@ -2542,7 +3257,7 @@
       "resourceType": "ValueSet",
       "id": "CDHIv1",
       "name": "CDHIv1",
-      "file": "resources/ValueSet/CDHIv1--97c5b84a.json",
+      "file": "resources/ValueSet/CDHIv1.json",
       "source": "fsh-generated/resources/ValueSet-CDHIv1.json"
     },
     {
@@ -2552,7 +3267,7 @@
       "resourceType": "ValueSet",
       "id": "CDHIv2.1",
       "name": "CDHIv2.1",
-      "file": "resources/ValueSet/CDHIv2.1--75826595.json",
+      "file": "resources/ValueSet/CDHIv2.1.json",
       "source": "fsh-generated/resources/ValueSet-CDHIv2.1.json"
     },
     {
@@ -2562,7 +3277,7 @@
       "resourceType": "ValueSet",
       "id": "CDHIv2.2",
       "name": "CDHIv2.2",
-      "file": "resources/ValueSet/CDHIv2.2--d8991a72.json",
+      "file": "resources/ValueSet/CDHIv2.2.json",
       "source": "fsh-generated/resources/ValueSet-CDHIv2.2.json"
     },
     {
@@ -2572,7 +3287,7 @@
       "resourceType": "ValueSet",
       "id": "CDHIv2.3",
       "name": "CDHIv2.3",
-      "file": "resources/ValueSet/CDHIv2.3--5331678f.json",
+      "file": "resources/ValueSet/CDHIv2.3.json",
       "source": "fsh-generated/resources/ValueSet-CDHIv2.3.json"
     },
     {
@@ -2582,7 +3297,7 @@
       "resourceType": "ValueSet",
       "id": "CDHIv2.4",
       "name": "CDHIv2.4",
-      "file": "resources/ValueSet/CDHIv2.4--eb029128.json",
+      "file": "resources/ValueSet/CDHIv2.4.json",
       "source": "fsh-generated/resources/ValueSet-CDHIv2.4.json"
     },
     {
@@ -2592,7 +3307,7 @@
       "resourceType": "ValueSet",
       "id": "CDHIv2",
       "name": "CDHIv2",
-      "file": "resources/ValueSet/CDHIv2--2598ba44.json",
+      "file": "resources/ValueSet/CDHIv2.json",
       "source": "fsh-generated/resources/ValueSet-CDHIv2.json"
     },
     {
@@ -2602,7 +3317,7 @@
       "resourceType": "ValueSet",
       "id": "CDSCv1",
       "name": "CDSCv1",
-      "file": "resources/ValueSet/CDSCv1--05ce9f70.json",
+      "file": "resources/ValueSet/CDSCv1.json",
       "source": "fsh-generated/resources/ValueSet-CDSCv1.json"
     },
     {
@@ -2612,7 +3327,7 @@
       "resourceType": "ValueSet",
       "id": "CDSCv2.A",
       "name": "CDSCv2.A",
-      "file": "resources/ValueSet/CDSCv2.A--ce7a7941.json",
+      "file": "resources/ValueSet/CDSCv2.A.json",
       "source": "fsh-generated/resources/ValueSet-CDSCv2.A.json"
     },
     {
@@ -2622,7 +3337,7 @@
       "resourceType": "ValueSet",
       "id": "CDSCv2.B",
       "name": "CDSCv2.B",
-      "file": "resources/ValueSet/CDSCv2.B--a9de74c5.json",
+      "file": "resources/ValueSet/CDSCv2.B.json",
       "source": "fsh-generated/resources/ValueSet-CDSCv2.B.json"
     },
     {
@@ -2632,7 +3347,7 @@
       "resourceType": "ValueSet",
       "id": "CDSCv2.C",
       "name": "CDSCv2.C",
-      "file": "resources/ValueSet/CDSCv2.C--356f5eff.json",
+      "file": "resources/ValueSet/CDSCv2.C.json",
       "source": "fsh-generated/resources/ValueSet-CDSCv2.C.json"
     },
     {
@@ -2642,7 +3357,7 @@
       "resourceType": "ValueSet",
       "id": "CDSCv2.D",
       "name": "CDSCv2.D",
-      "file": "resources/ValueSet/CDSCv2.D--d8340927.json",
+      "file": "resources/ValueSet/CDSCv2.D.json",
       "source": "fsh-generated/resources/ValueSet-CDSCv2.D.json"
     },
     {
@@ -2652,7 +3367,7 @@
       "resourceType": "ValueSet",
       "id": "CDSCv2.E",
       "name": "CDSCv2.E",
-      "file": "resources/ValueSet/CDSCv2.E--3c7e24ae.json",
+      "file": "resources/ValueSet/CDSCv2.E.json",
       "source": "fsh-generated/resources/ValueSet-CDSCv2.E.json"
     },
     {
@@ -2662,7 +3377,7 @@
       "resourceType": "ValueSet",
       "id": "CDSCv2",
       "name": "CDSCv2",
-      "file": "resources/ValueSet/CDSCv2--f0ec0582.json",
+      "file": "resources/ValueSet/CDSCv2.json",
       "source": "fsh-generated/resources/ValueSet-CDSCv2.json"
     },
     {
@@ -2672,7 +3387,7 @@
       "resourceType": "ValueSet",
       "id": "CoreDataElementTypeVS",
       "name": "CoreDataElementTypeVS",
-      "file": "resources/ValueSet/CoreDataElementTypeVS--c10f67e1.json",
+      "file": "resources/ValueSet/CoreDataElementTypeVS.json",
       "source": "fsh-generated/resources/ValueSet-CoreDataElementTypeVS.json"
     },
     {
@@ -2682,7 +3397,7 @@
       "resourceType": "ValueSet",
       "id": "DecisionTableActions",
       "name": "DecisionTableActions",
-      "file": "resources/ValueSet/DecisionTableActions--1197cbc9.json",
+      "file": "resources/ValueSet/DecisionTableActions.json",
       "source": "fsh-generated/resources/ValueSet-DecisionTableActions.json"
     },
     {
@@ -2692,7 +3407,7 @@
       "resourceType": "ValueSet",
       "id": "DocumentationSection",
       "name": "DocumentationSection",
-      "file": "resources/ValueSet/DocumentationSection--6b50d0f3.json",
+      "file": "resources/ValueSet/DocumentationSection.json",
       "source": "fsh-generated/resources/ValueSet-DocumentationSection.json"
     },
     {
@@ -2702,8 +3417,18 @@
       "resourceType": "ValueSet",
       "id": "ISCO08ValueSet",
       "name": "ISCO08ValueSet",
-      "file": "resources/ValueSet/ISCO08ValueSet--d277ea6c.json",
+      "file": "resources/ValueSet/ISCO08ValueSet.json",
       "source": "fsh-generated/resources/ValueSet-ISCO08ValueSet.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGArtifactKindVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGArtifactKindVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGArtifactKindVS",
+      "name": "KGArtifactKindVS",
+      "file": "resources/ValueSet/KGArtifactKindVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGArtifactKindVS.json"
     },
     {
       "key": "http://smart.who.int/base/ValueSet/KGCertaintyVS|0.3.0",
@@ -2712,7 +3437,7 @@
       "resourceType": "ValueSet",
       "id": "KGCertaintyVS",
       "name": "KGCertaintyVS",
-      "file": "resources/ValueSet/KGCertaintyVS--e4c8ce79.json",
+      "file": "resources/ValueSet/KGCertaintyVS.json",
       "source": "fsh-generated/resources/ValueSet-KGCertaintyVS.json"
     },
     {
@@ -2722,7 +3447,7 @@
       "resourceType": "ValueSet",
       "id": "KGChangeStatusVS",
       "name": "KGChangeStatusVS",
-      "file": "resources/ValueSet/KGChangeStatusVS--c12dd449.json",
+      "file": "resources/ValueSet/KGChangeStatusVS.json",
       "source": "fsh-generated/resources/ValueSet-KGChangeStatusVS.json"
     },
     {
@@ -2732,8 +3457,18 @@
       "resourceType": "ValueSet",
       "id": "KGCitationKindVS",
       "name": "KGCitationKindVS",
-      "file": "resources/ValueSet/KGCitationKindVS--9d1c3cd4.json",
+      "file": "resources/ValueSet/KGCitationKindVS.json",
       "source": "fsh-generated/resources/ValueSet-KGCitationKindVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGConformanceExpectationVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGConformanceExpectationVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGConformanceExpectationVS",
+      "name": "KGConformanceExpectationVS",
+      "file": "resources/ValueSet/KGConformanceExpectationVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGConformanceExpectationVS.json"
     },
     {
       "key": "http://smart.who.int/base/ValueSet/KGDerivationVS|0.3.0",
@@ -2742,8 +3477,18 @@
       "resourceType": "ValueSet",
       "id": "KGDerivationVS",
       "name": "KGDerivationVS",
-      "file": "resources/ValueSet/KGDerivationVS--4eb83067.json",
+      "file": "resources/ValueSet/KGDerivationVS.json",
       "source": "fsh-generated/resources/ValueSet-KGDerivationVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGDmnEntryKindVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGDmnEntryKindVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGDmnEntryKindVS",
+      "name": "KGDmnEntryKindVS",
+      "file": "resources/ValueSet/KGDmnEntryKindVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGDmnEntryKindVS.json"
     },
     {
       "key": "http://smart.who.int/base/ValueSet/KGElementTypeVS|0.3.0",
@@ -2752,7 +3497,7 @@
       "resourceType": "ValueSet",
       "id": "KGElementTypeVS",
       "name": "KGElementTypeVS",
-      "file": "resources/ValueSet/KGElementTypeVS--fe7d397e.json",
+      "file": "resources/ValueSet/KGElementTypeVS.json",
       "source": "fsh-generated/resources/ValueSet-KGElementTypeVS.json"
     },
     {
@@ -2762,8 +3507,18 @@
       "resourceType": "ValueSet",
       "id": "KGEvidenceTypeVS",
       "name": "KGEvidenceTypeVS",
-      "file": "resources/ValueSet/KGEvidenceTypeVS--de76efb6.json",
+      "file": "resources/ValueSet/KGEvidenceTypeVS.json",
       "source": "fsh-generated/resources/ValueSet-KGEvidenceTypeVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGGatewayDirectionVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGGatewayDirectionVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGGatewayDirectionVS",
+      "name": "KGGatewayDirectionVS",
+      "file": "resources/ValueSet/KGGatewayDirectionVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGGatewayDirectionVS.json"
     },
     {
       "key": "http://smart.who.int/base/ValueSet/KGGrcStatusVS|0.3.0",
@@ -2772,7 +3527,7 @@
       "resourceType": "ValueSet",
       "id": "KGGrcStatusVS",
       "name": "KGGrcStatusVS",
-      "file": "resources/ValueSet/KGGrcStatusVS--296e534c.json",
+      "file": "resources/ValueSet/KGGrcStatusVS.json",
       "source": "fsh-generated/resources/ValueSet-KGGrcStatusVS.json"
     },
     {
@@ -2782,7 +3537,7 @@
       "resourceType": "ValueSet",
       "id": "KGIdentifierTypeVS",
       "name": "KGIdentifierTypeVS",
-      "file": "resources/ValueSet/KGIdentifierTypeVS--4e9d4b84.json",
+      "file": "resources/ValueSet/KGIdentifierTypeVS.json",
       "source": "fsh-generated/resources/ValueSet-KGIdentifierTypeVS.json"
     },
     {
@@ -2792,7 +3547,7 @@
       "resourceType": "ValueSet",
       "id": "KGInterventionTypeVS",
       "name": "KGInterventionTypeVS",
-      "file": "resources/ValueSet/KGInterventionTypeVS--5ea41937.json",
+      "file": "resources/ValueSet/KGInterventionTypeVS.json",
       "source": "fsh-generated/resources/ValueSet-KGInterventionTypeVS.json"
     },
     {
@@ -2802,7 +3557,7 @@
       "resourceType": "ValueSet",
       "id": "KGL1ClassesVS",
       "name": "KGL1ClassesVS",
-      "file": "resources/ValueSet/KGL1ClassesVS--838fb448.json",
+      "file": "resources/ValueSet/KGL1ClassesVS.json",
       "source": "fsh-generated/resources/ValueSet-KGL1ClassesVS.json"
     },
     {
@@ -2812,7 +3567,7 @@
       "resourceType": "ValueSet",
       "id": "KGL1LibraryClassesVS",
       "name": "KGL1LibraryClassesVS",
-      "file": "resources/ValueSet/KGL1LibraryClassesVS--a1260897.json",
+      "file": "resources/ValueSet/KGL1LibraryClassesVS.json",
       "source": "fsh-generated/resources/ValueSet-KGL1LibraryClassesVS.json"
     },
     {
@@ -2822,7 +3577,7 @@
       "resourceType": "ValueSet",
       "id": "KGL1LibraryPredicatesVS",
       "name": "KGL1LibraryPredicatesVS",
-      "file": "resources/ValueSet/KGL1LibraryPredicatesVS--806aa230.json",
+      "file": "resources/ValueSet/KGL1LibraryPredicatesVS.json",
       "source": "fsh-generated/resources/ValueSet-KGL1LibraryPredicatesVS.json"
     },
     {
@@ -2832,8 +3587,88 @@
       "resourceType": "ValueSet",
       "id": "KGL1PredicatesVS",
       "name": "KGL1PredicatesVS",
-      "file": "resources/ValueSet/KGL1PredicatesVS--b39f37ad.json",
+      "file": "resources/ValueSet/KGL1PredicatesVS.json",
       "source": "fsh-generated/resources/ValueSet-KGL1PredicatesVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGL2BPMNClassesVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGL2BPMNClassesVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGL2BPMNClassesVS",
+      "name": "KGL2BPMNClassesVS",
+      "file": "resources/ValueSet/KGL2BPMNClassesVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGL2BPMNClassesVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGL2BPMNPredicatesVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGL2BPMNPredicatesVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGL2BPMNPredicatesVS",
+      "name": "KGL2BPMNPredicatesVS",
+      "file": "resources/ValueSet/KGL2BPMNPredicatesVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGL2BPMNPredicatesVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGL2ClassesVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGL2ClassesVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGL2ClassesVS",
+      "name": "KGL2ClassesVS",
+      "file": "resources/ValueSet/KGL2ClassesVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGL2ClassesVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGL2DMNClassesVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGL2DMNClassesVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGL2DMNClassesVS",
+      "name": "KGL2DMNClassesVS",
+      "file": "resources/ValueSet/KGL2DMNClassesVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGL2DMNClassesVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGL2DMNPredicatesVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGL2DMNPredicatesVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGL2DMNPredicatesVS",
+      "name": "KGL2DMNPredicatesVS",
+      "file": "resources/ValueSet/KGL2DMNPredicatesVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGL2DMNPredicatesVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGL2PredicatesVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGL2PredicatesVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGL2PredicatesVS",
+      "name": "KGL2PredicatesVS",
+      "file": "resources/ValueSet/KGL2PredicatesVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGL2PredicatesVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGL3ClassesVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGL3ClassesVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGL3ClassesVS",
+      "name": "KGL3ClassesVS",
+      "file": "resources/ValueSet/KGL3ClassesVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGL3ClassesVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGL3PredicatesVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGL3PredicatesVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGL3PredicatesVS",
+      "name": "KGL3PredicatesVS",
+      "file": "resources/ValueSet/KGL3PredicatesVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGL3PredicatesVS.json"
     },
     {
       "key": "http://smart.who.int/base/ValueSet/KGOutcomeImportanceVS|0.3.0",
@@ -2842,8 +3677,18 @@
       "resourceType": "ValueSet",
       "id": "KGOutcomeImportanceVS",
       "name": "KGOutcomeImportanceVS",
-      "file": "resources/ValueSet/KGOutcomeImportanceVS--04213440.json",
+      "file": "resources/ValueSet/KGOutcomeImportanceVS.json",
       "source": "fsh-generated/resources/ValueSet-KGOutcomeImportanceVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGPublicationStatusVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGPublicationStatusVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGPublicationStatusVS",
+      "name": "KGPublicationStatusVS",
+      "file": "resources/ValueSet/KGPublicationStatusVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGPublicationStatusVS.json"
     },
     {
       "key": "http://smart.who.int/base/ValueSet/KGPublicationTypeVS|0.3.0",
@@ -2852,7 +3697,7 @@
       "resourceType": "ValueSet",
       "id": "KGPublicationTypeVS",
       "name": "KGPublicationTypeVS",
-      "file": "resources/ValueSet/KGPublicationTypeVS--b2ac44e1.json",
+      "file": "resources/ValueSet/KGPublicationTypeVS.json",
       "source": "fsh-generated/resources/ValueSet-KGPublicationTypeVS.json"
     },
     {
@@ -2862,7 +3707,7 @@
       "resourceType": "ValueSet",
       "id": "KGRecommendationDirectionVS",
       "name": "KGRecommendationDirectionVS",
-      "file": "resources/ValueSet/KGRecommendationDirectionVS--bc54bf44.json",
+      "file": "resources/ValueSet/KGRecommendationDirectionVS.json",
       "source": "fsh-generated/resources/ValueSet-KGRecommendationDirectionVS.json"
     },
     {
@@ -2872,7 +3717,7 @@
       "resourceType": "ValueSet",
       "id": "KGRecommendationKindVS",
       "name": "KGRecommendationKindVS",
-      "file": "resources/ValueSet/KGRecommendationKindVS--c6311e68.json",
+      "file": "resources/ValueSet/KGRecommendationKindVS.json",
       "source": "fsh-generated/resources/ValueSet-KGRecommendationKindVS.json"
     },
     {
@@ -2882,7 +3727,7 @@
       "resourceType": "ValueSet",
       "id": "KGRecommendationStatusVS",
       "name": "KGRecommendationStatusVS",
-      "file": "resources/ValueSet/KGRecommendationStatusVS--8d31819f.json",
+      "file": "resources/ValueSet/KGRecommendationStatusVS.json",
       "source": "fsh-generated/resources/ValueSet-KGRecommendationStatusVS.json"
     },
     {
@@ -2892,7 +3737,7 @@
       "resourceType": "ValueSet",
       "id": "KGRecommendationStrengthVS",
       "name": "KGRecommendationStrengthVS",
-      "file": "resources/ValueSet/KGRecommendationStrengthVS--28bd744a.json",
+      "file": "resources/ValueSet/KGRecommendationStrengthVS.json",
       "source": "fsh-generated/resources/ValueSet-KGRecommendationStrengthVS.json"
     },
     {
@@ -2902,7 +3747,7 @@
       "resourceType": "ValueSet",
       "id": "KGRemarkTypeVS",
       "name": "KGRemarkTypeVS",
-      "file": "resources/ValueSet/KGRemarkTypeVS--307c7065.json",
+      "file": "resources/ValueSet/KGRemarkTypeVS.json",
       "source": "fsh-generated/resources/ValueSet-KGRemarkTypeVS.json"
     },
     {
@@ -2912,7 +3757,7 @@
       "resourceType": "ValueSet",
       "id": "KGResolutionStatusVS",
       "name": "KGResolutionStatusVS",
-      "file": "resources/ValueSet/KGResolutionStatusVS--53054e75.json",
+      "file": "resources/ValueSet/KGResolutionStatusVS.json",
       "source": "fsh-generated/resources/ValueSet-KGResolutionStatusVS.json"
     },
     {
@@ -2922,8 +3767,18 @@
       "resourceType": "ValueSet",
       "id": "KGRowTypeVS",
       "name": "KGRowTypeVS",
-      "file": "resources/ValueSet/KGRowTypeVS--5aa260b3.json",
+      "file": "resources/ValueSet/KGRowTypeVS.json",
       "source": "fsh-generated/resources/ValueSet-KGRowTypeVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGStructureDefinitionKindVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGStructureDefinitionKindVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGStructureDefinitionKindVS",
+      "name": "KGStructureDefinitionKindVS",
+      "file": "resources/ValueSet/KGStructureDefinitionKindVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGStructureDefinitionKindVS.json"
     },
     {
       "key": "http://smart.who.int/base/ValueSet/KGTerminologySystemVS|0.3.0",
@@ -2932,8 +3787,18 @@
       "resourceType": "ValueSet",
       "id": "KGTerminologySystemVS",
       "name": "KGTerminologySystemVS",
-      "file": "resources/ValueSet/KGTerminologySystemVS--04544af9.json",
+      "file": "resources/ValueSet/KGTerminologySystemVS.json",
       "source": "fsh-generated/resources/ValueSet-KGTerminologySystemVS.json"
+    },
+    {
+      "key": "http://smart.who.int/base/ValueSet/KGVerificationMethodVS|0.3.0",
+      "canonical": "http://smart.who.int/base/ValueSet/KGVerificationMethodVS",
+      "version": "0.3.0",
+      "resourceType": "ValueSet",
+      "id": "KGVerificationMethodVS",
+      "name": "KGVerificationMethodVS",
+      "file": "resources/ValueSet/KGVerificationMethodVS.json",
+      "source": "fsh-generated/resources/ValueSet-KGVerificationMethodVS.json"
     },
     {
       "key": "http://smart.who.int/base/ValueSet/SGAuthoringPersonaTypesVS|0.3.0",
@@ -2942,7 +3807,7 @@
       "resourceType": "ValueSet",
       "id": "SGAuthoringPersonaTypesVS",
       "name": "SGAuthoringPersonaTypesVS",
-      "file": "resources/ValueSet/SGAuthoringPersonaTypesVS--b3589e61.json",
+      "file": "resources/ValueSet/SGAuthoringPersonaTypesVS.json",
       "source": "fsh-generated/resources/ValueSet-SGAuthoringPersonaTypesVS.json"
     },
     {
@@ -2952,7 +3817,7 @@
       "resourceType": "ValueSet",
       "id": "SGAuthoringSkillsVS",
       "name": "SGAuthoringSkillsVS",
-      "file": "resources/ValueSet/SGAuthoringSkillsVS--25d145f9.json",
+      "file": "resources/ValueSet/SGAuthoringSkillsVS.json",
       "source": "fsh-generated/resources/ValueSet-SGAuthoringSkillsVS.json"
     },
     {
@@ -2962,7 +3827,7 @@
       "resourceType": "ValueSet",
       "id": "SGPersonaTypesVS",
       "name": "SGPersonaTypesVS",
-      "file": "resources/ValueSet/SGPersonaTypesVS--05732248.json",
+      "file": "resources/ValueSet/SGPersonaTypesVS.json",
       "source": "fsh-generated/resources/ValueSet-SGPersonaTypesVS.json"
     },
     {
@@ -2972,12 +3837,12 @@
       "resourceType": "CodeSystem",
       "id": "ISCO08",
       "name": "ISCO08",
-      "file": "resources/CodeSystem/ISCO08--e3a9ca69.json",
+      "file": "resources/CodeSystem/ISCO08.json",
       "source": "fsh-generated/resources/CodeSystem-ISCO08.json"
     }
   ],
   "preExport": {
     "command": "bash smart-base/scripts/dak-pre-export.sh",
-    "preparedInputDigest": "07e1ef3a515948cab066050d9fa081a4282b9be8dbd7265fafadf1ca535018fa"
+    "preparedInputDigest": "ae91f7138a7880e17109ad14efb6ee9bec4121317f489789cf384bb8188a2061"
   }
 }

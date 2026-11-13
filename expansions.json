@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "21896b83-fb5b-4135-9b18-f3056fcc2e7f",
+  "id" : "ac7cac04-c856-411c-a492-cc09cf2b6db1",
   "meta" : {
-    "lastUpdated" : "2026-11-12T11:01:25.974+00:00"
+    "lastUpdated" : "2026-11-13T12:09:30.553+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,10 +19,10 @@
       "title" : "Digital Health Interventions for Clients",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:d447cf1d-aea1-4b50-8607-169a20bd170c",
-        "timestamp" : "2026-11-12T11:04:30+00:00",
+        "identifier" : "urn:uuid:8347ba55-1553-4430-a809-e15c41bd7d3a",
+        "timestamp" : "2026-11-13T12:13:25+00:00",
         "total" : 24,
         "offset" : 0,
         "parameter" : [{
@@ -182,10 +182,10 @@
       "title" : "Digital Health Interventions for Health Workers",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:f6855d37-0e54-4d66-8e3d-67d63ee60d83",
-        "timestamp" : "2026-11-12T11:04:30+00:00",
+        "identifier" : "urn:uuid:ff8223d5-a9eb-422c-a524-52ecdb09ba62",
+        "timestamp" : "2026-11-13T12:13:25+00:00",
         "total" : 43,
         "offset" : 0,
         "parameter" : [{
@@ -440,10 +440,10 @@
       "title" : "Digital Health Interventions for Health System Managers",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:92ff53e4-9ea3-432e-bbff-1ee28bd9108a",
-        "timestamp" : "2026-11-12T11:04:30+00:00",
+        "identifier" : "urn:uuid:f15483fe-84e4-4a2c-ae94-010ff03f5e03",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 35,
         "offset" : 0,
         "parameter" : [{
@@ -658,10 +658,10 @@
       "title" : "Digital Health Interventions: Data Services",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:a17c3812-5291-454d-882b-cc9f52c3b713",
-        "timestamp" : "2026-11-12T11:04:30+00:00",
+        "identifier" : "urn:uuid:ec507a90-dff6-40f4-bea2-4d97eae0b2c2",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 17,
         "offset" : 0,
         "parameter" : [{
@@ -786,10 +786,10 @@
       "title" : "Classification of Digital Health Interventions v1",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:1d740fb6-70a5-4911-85aa-c8d8732699d1",
-        "timestamp" : "2026-11-12T11:04:30+00:00",
+        "identifier" : "urn:uuid:a281230d-3560-44c7-a15e-36a7b7f9eba3",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 119,
         "offset" : 0,
         "parameter" : [{
@@ -1424,10 +1424,10 @@
       "title" : "Digital Health Interventions for Persons",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:3754fb22-adce-4955-96a0-4823bed4156d",
-        "timestamp" : "2026-11-12T11:04:30+00:00",
+        "identifier" : "urn:uuid:474e5aaa-c1d1-43c6-ae05-e3439d66df47",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 28,
         "offset" : 0,
         "parameter" : [{
@@ -1607,10 +1607,10 @@
       "title" : "Digital Health Interventions for Healthcare Providers",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:4a148909-bdaa-424d-b59c-3ecfa3575048",
-        "timestamp" : "2026-11-12T11:04:30+00:00",
+        "identifier" : "urn:uuid:1c8312a9-f51f-4e01-8782-51604a81cc3e",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 47,
         "offset" : 0,
         "parameter" : [{
@@ -1885,10 +1885,10 @@
       "title" : "Digital Health Interventions for Health Management and Support Personnel",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:94b48da3-bb9b-4710-a496-5f1c587caac7",
-        "timestamp" : "2026-11-12T11:04:30+00:00",
+        "identifier" : "urn:uuid:4bffb6db-27a0-4b68-9279-c5bbbaa6daec",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 38,
         "offset" : 0,
         "parameter" : [{
@@ -2118,10 +2118,10 @@
       "title" : "Digital Health Interventions: Data Services",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:1af7b64b-dda9-4114-8237-60d8ac204bab",
-        "timestamp" : "2026-11-12T11:04:30+00:00",
+        "identifier" : "urn:uuid:5e85bd0d-de8a-43a5-8e29-1c6586a6125b",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 25,
         "offset" : 0,
         "parameter" : [{
@@ -2286,10 +2286,10 @@
       "title" : "Classification of Digital Health Interventions v2",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:e6cb32ac-7a9a-474f-99b0-573afec238be",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:8a03cdb6-ce56-437d-9638-d733beca75eb",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 138,
         "offset" : 0,
         "parameter" : [{
@@ -3019,10 +3019,10 @@
       "title" : "Health System Challenges",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:ce6f5b19-3c06-4786-9c5e-deb3e8ba2cce",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:5018eae5-a121-46a3-8414-7f87f084fcea",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 25,
         "offset" : 0,
         "parameter" : [{
@@ -3187,10 +3187,10 @@
       "title" : "Services and Application Types: Point of Service",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:57cef63c-c48b-443b-93cb-793c58b03802",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:2ed391dc-bc82-4325-a089-a7f07f6b9fd2",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 10,
         "offset" : 0,
         "parameter" : [{
@@ -3280,10 +3280,10 @@
       "title" : "Services and Application Types: Health System/Provider Administration",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:ef623870-65ef-477d-8562-5287b1b46bdd",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:70547d08-da6f-4f92-a9d9-39ed2ace03b1",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 9,
         "offset" : 0,
         "parameter" : [{
@@ -3368,10 +3368,10 @@
       "title" : "Services and Application Types: Registries and Directories",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:e7ebe33b-46b4-40cb-bef0-977fbe84ea09",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:6f12269c-6de6-4e6a-bd11-a8dd915cbdfa",
+        "timestamp" : "2026-11-13T12:13:26+00:00",
         "total" : 12,
         "offset" : 0,
         "parameter" : [{
@@ -3471,10 +3471,10 @@
       "title" : "Services and Application Types: Data Management Services",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:54510b5d-96eb-459d-95dc-34c87f578f1e",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:765878c8-cd1d-4683-b7ec-3ca6dd3caa87",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
         "total" : 9,
         "offset" : 0,
         "parameter" : [{
@@ -3559,10 +3559,10 @@
       "title" : "Services and Application Types: Surveillance and Response",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:cf646e9a-4728-4ccf-aced-ae3509e6e0ee",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:47e8a489-6bc3-4a04-80a5-5d26992c6f38",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -3617,10 +3617,10 @@
       "title" : "Services and Application Types",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:02b7bbe0-2066-4765-a5eb-bc79444e1615",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:d6776310-1c68-4c22-806b-9c64ceffd372",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
         "total" : 43,
         "offset" : 0,
         "parameter" : [{
@@ -3875,10 +3875,10 @@
       "title" : "Core Data Element Type Value Set",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:058bb20b-79ba-44fe-a9a9-a44ee6358208",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:7c59f39a-f5c1-4e5c-ba1a-ca9e0be347e6",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -3938,10 +3938,10 @@
       "title" : "Smart Guidelines Decision Table Actions",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:50aba0f8-947e-47e6-ad85-f81c1a3810c0",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:960b363a-482f-4988-97bb-5c147a2867d8",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -3996,10 +3996,10 @@
       "title" : "ISCO-08 Value Set",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:06fa79ff-d6e6-43b6-b93a-101768f73040",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:6f962482-6681-4681-b44f-e0201e596af3",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
         "total" : 182,
         "offset" : 0,
         "parameter" : [{
@@ -4936,6 +4936,79 @@
     }
   },
   {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGArtifactKindVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGArtifactKind.html\">codesystem Knowledge graph L2: artifact kind v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGArtifactKind|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGArtifactKind-dmn\"> </a><code>http://smart.who.int/base/CodeSystem/KGArtifactKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGArtifactKind.html#KGArtifactKind-dmn\">dmn</a></td><td>Dmn</td><td>A DMN decision table.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;dmn&quot;, &quot;display&quot;: &quot;Dmn&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;dmn&quot;/&gt;&lt;display value=&quot;Dmn&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGArtifactKind-bpmn\"> </a><code>http://smart.who.int/base/CodeSystem/KGArtifactKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGArtifactKind.html#KGArtifactKind-bpmn\">bpmn</a></td><td>Bpmn</td><td>A BPMN process.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;bpmn&quot;, &quot;display&quot;: &quot;Bpmn&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;bpmn&quot;/&gt;&lt;display value=&quot;Bpmn&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGArtifactKind-fhir-resource\"> </a><code>http://smart.who.int/base/CodeSystem/KGArtifactKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGArtifactKind.html#KGArtifactKind-fhir-resource\">fhir-resource</a></td><td>Fhir resource</td><td>A FHIR resource, addressed by canonical URL.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;fhir-resource&quot;, &quot;display&quot;: &quot;Fhir resource&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;fhir-resource&quot;/&gt;&lt;display value=&quot;Fhir resource&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGArtifactKind-spreadsheet\"> </a><code>http://smart.who.int/base/CodeSystem/KGArtifactKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGArtifactKind.html#KGArtifactKind-spreadsheet\">spreadsheet</a></td><td>Spreadsheet</td><td>A workbook, such as the decision-support logic or indicators workbook.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;spreadsheet&quot;, &quot;display&quot;: &quot;Spreadsheet&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;spreadsheet&quot;/&gt;&lt;display value=&quot;Spreadsheet&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGArtifactKind-feature-file\"> </a><code>http://smart.who.int/base/CodeSystem/KGArtifactKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGArtifactKind.html#KGArtifactKind-feature-file\">feature-file</a></td><td>Feature file</td><td>A Gherkin feature file.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;feature-file&quot;, &quot;display&quot;: &quot;Feature file&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;feature-file&quot;/&gt;&lt;display value=&quot;Feature file&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGArtifactKind-document\"> </a><code>http://smart.who.int/base/CodeSystem/KGArtifactKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGArtifactKind.html#KGArtifactKind-document\">document</a></td><td>Document</td><td>Any other document.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;document&quot;, &quot;display&quot;: &quot;Document&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGArtifactKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;document&quot;/&gt;&lt;display value=&quot;Document&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGArtifactKindVS",
+      "version" : "0.3.0",
+      "name" : "KGArtifactKindVS",
+      "title" : "Knowledge graph L2: artifact kind",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:a0500479-2c24-4e1f-95e4-a6e88011aa0d",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
+        "total" : 6,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGArtifactKind|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGArtifactKind",
+          "code" : "dmn",
+          "display" : "Dmn"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGArtifactKind",
+          "code" : "bpmn",
+          "display" : "Bpmn"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGArtifactKind",
+          "code" : "fhir-resource",
+          "display" : "Fhir resource"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGArtifactKind",
+          "code" : "spreadsheet",
+          "display" : "Spreadsheet"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGArtifactKind",
+          "code" : "feature-file",
+          "display" : "Feature file"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGArtifactKind",
+          "code" : "document",
+          "display" : "Document"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://smart.who.int/base/ValueSet/KGCertaintyVS",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -4949,10 +5022,10 @@
       "title" : "Knowledge graph L1: certainty",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:907b0852-021c-437a-b3d3-7ee61727aa4f",
-        "timestamp" : "2026-11-12T11:04:31+00:00",
+        "identifier" : "urn:uuid:1c3582f5-9d64-4030-acc1-72d29d7f9866",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -5012,10 +5085,10 @@
       "title" : "Knowledge graph L1: change status",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:17e41583-5557-469d-a8ba-c6730070f3b1",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:d34f6e0e-32dc-4226-a25f-4dc1246da9b0",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -5070,10 +5143,10 @@
       "title" : "Knowledge graph L1: citation kind",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:4700da07-d7d6-46a6-88f5-dc126f4e2d5e",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:2620cb20-6c7e-4e01-8050-61d3efbee221",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -5110,6 +5183,69 @@
     }
   },
   {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGConformanceExpectationVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGConformanceExpectation.html\">codesystem Knowledge graph L2: conformance expectation v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGConformanceExpectation|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGConformanceExpectation-SHALL\"> </a><code>http://smart.who.int/base/CodeSystem/KGConformanceExpectation</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGConformanceExpectation.html#KGConformanceExpectation-SHALL\">SHALL</a></td><td>SHALL</td><td>Support for the specified capability is required to be considered conformant.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGConformanceExpectation&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;SHALL&quot;, &quot;display&quot;: &quot;SHALL&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGConformanceExpectation&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;SHALL&quot;/&gt;&lt;display value=&quot;SHALL&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGConformanceExpectation-SHOULD\"> </a><code>http://smart.who.int/base/CodeSystem/KGConformanceExpectation</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGConformanceExpectation.html#KGConformanceExpectation-SHOULD\">SHOULD</a></td><td>SHOULD</td><td>Support for the specified capability is strongly encouraged.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGConformanceExpectation&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;SHOULD&quot;, &quot;display&quot;: &quot;SHOULD&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGConformanceExpectation&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;SHOULD&quot;/&gt;&lt;display value=&quot;SHOULD&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGConformanceExpectation-MAY\"> </a><code>http://smart.who.int/base/CodeSystem/KGConformanceExpectation</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGConformanceExpectation.html#KGConformanceExpectation-MAY\">MAY</a></td><td>MAY</td><td>Support for the specified capability is not necessary to be considered conformant.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGConformanceExpectation&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;MAY&quot;, &quot;display&quot;: &quot;MAY&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGConformanceExpectation&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;MAY&quot;/&gt;&lt;display value=&quot;MAY&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGConformanceExpectation-SHOULD-NOT\"> </a><code>http://smart.who.int/base/CodeSystem/KGConformanceExpectation</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGConformanceExpectation.html#KGConformanceExpectation-SHOULD-NOT\">SHOULD-NOT</a></td><td>SHOULD NOT</td><td>Support for the specified capability is strongly discouraged.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGConformanceExpectation&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;SHOULD-NOT&quot;, &quot;display&quot;: &quot;SHOULD NOT&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGConformanceExpectation&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;SHOULD-NOT&quot;/&gt;&lt;display value=&quot;SHOULD NOT&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGConformanceExpectationVS",
+      "version" : "0.3.0",
+      "name" : "KGConformanceExpectationVS",
+      "title" : "Knowledge graph L2: conformance expectation",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:9e05d992-42e4-4192-93c7-6a6b318c4c17",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGConformanceExpectation|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGConformanceExpectation",
+          "code" : "SHALL",
+          "display" : "SHALL"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGConformanceExpectation",
+          "code" : "SHOULD",
+          "display" : "SHOULD"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGConformanceExpectation",
+          "code" : "MAY",
+          "display" : "MAY"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGConformanceExpectation",
+          "code" : "SHOULD-NOT",
+          "display" : "SHOULD NOT"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://smart.who.int/base/ValueSet/KGDerivationVS",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -5123,10 +5259,10 @@
       "title" : "Knowledge graph: derivation",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:2e47bba1-e516-402f-82ae-323ed1704b44",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:7e2bfef9-c516-40bd-82ca-dca03d878a54",
+        "timestamp" : "2026-11-13T12:13:27+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -5168,6 +5304,59 @@
     }
   },
   {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGDmnEntryKindVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGDmnEntryKind.html\">codesystem Knowledge graph L2-DMN: dmn entry kind v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGDmnEntryKind|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGDmnEntryKind-outputEntry\"> </a><code>http://smart.who.int/base/CodeSystem/KGDmnEntryKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGDmnEntryKind.html#KGDmnEntryKind-outputEntry\">outputEntry</a></td><td>OutputEntry</td><td>The column's cells are the rule's outputEntry elements.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGDmnEntryKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;outputEntry&quot;, &quot;display&quot;: &quot;OutputEntry&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGDmnEntryKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;outputEntry&quot;/&gt;&lt;display value=&quot;OutputEntry&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGDmnEntryKind-annotationEntry\"> </a><code>http://smart.who.int/base/CodeSystem/KGDmnEntryKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGDmnEntryKind.html#KGDmnEntryKind-annotationEntry\">annotationEntry</a></td><td>AnnotationEntry</td><td>The column's cells are the rule's annotationEntry elements.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGDmnEntryKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;annotationEntry&quot;, &quot;display&quot;: &quot;AnnotationEntry&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGDmnEntryKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;annotationEntry&quot;/&gt;&lt;display value=&quot;AnnotationEntry&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGDmnEntryKindVS",
+      "version" : "0.3.0",
+      "name" : "KGDmnEntryKindVS",
+      "title" : "Knowledge graph L2-DMN: dmn entry kind",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:7932b904-2db1-4bfa-80e0-dac3a8097b0b",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGDmnEntryKind|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGDmnEntryKind",
+          "code" : "outputEntry",
+          "display" : "OutputEntry"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGDmnEntryKind",
+          "code" : "annotationEntry",
+          "display" : "AnnotationEntry"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://smart.who.int/base/ValueSet/KGElementTypeVS",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -5181,10 +5370,10 @@
       "title" : "Knowledge graph L1: element type",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:d51f9232-8acf-4fbd-8ea9-e0afc0f3a1a8",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:bc420b5d-ff9c-446e-a25a-70076dbf18c3",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
         "total" : 9,
         "offset" : 0,
         "parameter" : [{
@@ -5269,10 +5458,10 @@
       "title" : "Knowledge graph L1: evidence type",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:940487f8-7d29-4b5e-a198-5289c1fb42bc",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:d4bc40f1-aba2-4d1b-b6e8-7647afd61bbf",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -5319,6 +5508,69 @@
     }
   },
   {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGGatewayDirectionVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGGatewayDirection.html\">codesystem Knowledge graph L2-BPMN: gateway direction v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGGatewayDirection|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGGatewayDirection-Unspecified\"> </a><code>http://smart.who.int/base/CodeSystem/KGGatewayDirection</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGGatewayDirection.html#KGGatewayDirection-Unspecified\">Unspecified</a></td><td>Unspecified</td><td>No constraint on incoming and outgoing flows.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGGatewayDirection&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;Unspecified&quot;, &quot;display&quot;: &quot;Unspecified&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGGatewayDirection&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;Unspecified&quot;/&gt;&lt;display value=&quot;Unspecified&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGGatewayDirection-Converging\"> </a><code>http://smart.who.int/base/CodeSystem/KGGatewayDirection</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGGatewayDirection.html#KGGatewayDirection-Converging\">Converging</a></td><td>Converging</td><td>Many incoming flows, at most one outgoing.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGGatewayDirection&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;Converging&quot;, &quot;display&quot;: &quot;Converging&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGGatewayDirection&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;Converging&quot;/&gt;&lt;display value=&quot;Converging&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGGatewayDirection-Diverging\"> </a><code>http://smart.who.int/base/CodeSystem/KGGatewayDirection</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGGatewayDirection.html#KGGatewayDirection-Diverging\">Diverging</a></td><td>Diverging</td><td>At most one incoming flow, many outgoing.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGGatewayDirection&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;Diverging&quot;, &quot;display&quot;: &quot;Diverging&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGGatewayDirection&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;Diverging&quot;/&gt;&lt;display value=&quot;Diverging&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGGatewayDirection-Mixed\"> </a><code>http://smart.who.int/base/CodeSystem/KGGatewayDirection</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGGatewayDirection.html#KGGatewayDirection-Mixed\">Mixed</a></td><td>Mixed</td><td>Many incoming and many outgoing flows.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGGatewayDirection&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;Mixed&quot;, &quot;display&quot;: &quot;Mixed&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGGatewayDirection&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;Mixed&quot;/&gt;&lt;display value=&quot;Mixed&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGGatewayDirectionVS",
+      "version" : "0.3.0",
+      "name" : "KGGatewayDirectionVS",
+      "title" : "Knowledge graph L2-BPMN: gateway direction",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:b023237b-d192-49f3-8f52-409164ccd20c",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGGatewayDirection|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGGatewayDirection",
+          "code" : "Unspecified",
+          "display" : "Unspecified"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGGatewayDirection",
+          "code" : "Converging",
+          "display" : "Converging"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGGatewayDirection",
+          "code" : "Diverging",
+          "display" : "Diverging"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGGatewayDirection",
+          "code" : "Mixed",
+          "display" : "Mixed"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://smart.who.int/base/ValueSet/KGGrcStatusVS",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -5332,10 +5584,10 @@
       "title" : "Knowledge graph L1: grc status",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:212a4030-cb6c-4eea-9b2a-fb4ddfba0897",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:a3e878b4-6b8d-425c-acfe-6ce65ab664fa",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -5390,10 +5642,10 @@
       "title" : "Knowledge graph L1: identifier type",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:b1e07159-f619-49ec-9ac3-cdb35e13a598",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:ebf948bf-001e-41e9-b24b-87438858f17b",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -5463,10 +5715,10 @@
       "title" : "Knowledge graph L1: intervention type",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:242005c5-5b68-4efd-89d8-3977b251fa10",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:da137824-fa60-41d8-99b6-4ac2deee9f8c",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
         "total" : 10,
         "offset" : 0,
         "parameter" : [{
@@ -5556,10 +5808,10 @@
       "title" : "Knowledge graph L1: classes",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:050d313e-a0bb-4816-a572-17b16d6f48e0",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:8db6b107-81c5-43bc-a8ae-005a06c8982b",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
         "total" : 13,
         "offset" : 0,
         "parameter" : [{
@@ -5664,10 +5916,10 @@
       "title" : "Knowledge graph L1Library: classes",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:1abf4278-1e3b-4b7e-850e-9743543829f7",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:6b6ea0f7-213f-42ae-8f4e-780e1c85feb9",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -5717,10 +5969,10 @@
       "title" : "Knowledge graph L1Library: predicates",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:b94d6d86-acd1-479e-9746-c52951ed06c4",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:70115938-3838-4467-ba51-c27d420baaf7",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -5765,10 +6017,10 @@
       "title" : "Knowledge graph L1: predicates",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:d829fc71-67ac-41d4-b678-8a7f1eb96f5c",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:99eef703-dc7f-4464-a72c-f9eec09c37e2",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
         "total" : 21,
         "offset" : 0,
         "parameter" : [{
@@ -5900,6 +6152,660 @@
     }
   },
   {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGL2BPMNClassesVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGL2BPMNClasses.html\">codesystem Knowledge graph L2BPMN: classes v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGL2BPMNClasses|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2BPMNClasses-bpmn-definitions\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2BPMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2BPMNClasses.html#KGL2BPMNClasses-bpmn-definitions\">bpmn-definitions</a></td><td>BPMN File</td><td>One BPMN file as a unit -- the `bpmn:definitions` root. Shares its IRI with the l1:external-artifact for the same file, so the component that points at it and the subgraph that opens it name one resource.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;bpmn-definitions&quot;, &quot;display&quot;: &quot;BPMN File&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;bpmn-definitions&quot;/&gt;&lt;display value=&quot;BPMN File&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2BPMNClasses-bpmn-process\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2BPMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2BPMNClasses.html#KGL2BPMNClasses-bpmn-process\">bpmn-process</a></td><td>BPMN Process</td><td>One `bpmn:process`. Present as a node because a participant references it by processRef, and without it the pool-to-element attribution has nothing to travel through.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;bpmn-process&quot;, &quot;display&quot;: &quot;BPMN Process&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;bpmn-process&quot;/&gt;&lt;display value=&quot;BPMN Process&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2BPMNClasses-bpmn-participant\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2BPMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2BPMNClasses.html#KGL2BPMNClasses-bpmn-participant\">bpmn-participant</a></td><td>BPMN Participant</td><td>A pool: a role that owns part of the collaboration. The lifecycle BPMN has 8 and declares no laneSet at all, so the pool is the only unit of role assignment present and its @name is the sole link to a persona.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;bpmn-participant&quot;, &quot;display&quot;: &quot;BPMN Participant&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;bpmn-participant&quot;/&gt;&lt;display value=&quot;BPMN Participant&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2BPMNClasses-bpmn-task\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2BPMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2BPMNClasses.html#KGL2BPMNClasses-bpmn-task\">bpmn-task</a></td><td>BPMN Task</td><td>A task or sub-process. It is what a DMN usingTask href points at, what sequence flows connect, and what a DAK-level task entry describes. Sub-processes carry isSubProcess rather than getting a class of their own -- the lifecycle BPMN has exactly one.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;bpmn-task&quot;, &quot;display&quot;: &quot;BPMN Task&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;bpmn-task&quot;/&gt;&lt;display value=&quot;BPMN Task&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2BPMNClasses-bpmn-gateway\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2BPMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2BPMNClasses.html#KGL2BPMNClasses-bpmn-gateway\">bpmn-gateway</a></td><td>BPMN Gateway</td><td>A branch or merge. Included for connectivity rather than for a cross-model edge: a flow through a gateway with no node would point at nothing, and every reachability question over the process would break at the first decision point.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;bpmn-gateway&quot;, &quot;display&quot;: &quot;BPMN Gateway&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;bpmn-gateway&quot;/&gt;&lt;display value=&quot;BPMN Gateway&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2BPMNClasses-bpmn-event\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2BPMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2BPMNClasses.html#KGL2BPMNClasses-bpmn-event\">bpmn-event</a></td><td>BPMN Event</td><td>A start or end event. Same connectivity argument as gateway, plus one of its own: entry and exit points are what make 'is this task reachable' and 'does this path terminate' answerable at all.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;bpmn-event&quot;, &quot;display&quot;: &quot;BPMN Event&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2BPMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;bpmn-event&quot;/&gt;&lt;display value=&quot;BPMN Event&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGL2BPMNClassesVS",
+      "version" : "0.3.0",
+      "name" : "KGL2BPMNClassesVS",
+      "title" : "Knowledge graph L2BPMN: classes",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:f4b4bf22-3426-433c-a48e-e4c3b05a98a9",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
+        "total" : 6,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses",
+          "code" : "bpmn-definitions",
+          "display" : "BPMN File"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses",
+          "code" : "bpmn-process",
+          "display" : "BPMN Process"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses",
+          "code" : "bpmn-participant",
+          "display" : "BPMN Participant"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses",
+          "code" : "bpmn-task",
+          "display" : "BPMN Task"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses",
+          "code" : "bpmn-gateway",
+          "display" : "BPMN Gateway"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2BPMNClasses",
+          "code" : "bpmn-event",
+          "display" : "BPMN Event"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGL2BPMNPredicatesVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGL2BPMNPredicates.html\">codesystem Knowledge graph L2BPMN: predicates v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates-flowsTo\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2BPMNPredicates.html#KGL2BPMNPredicates-flowsTo\">flowsTo</a></td><td>flowsTo</td><td>A sequence flow, within one process. The qualifier carries the flow's name where it has one -- 6 of 70 in the lifecycle BPMN, all gateway branches such as &quot;Yes - approved&quot;. No flow in that file carries a conditionExpression, so the label is the whole of the branch condition and nothing more is claimed. `openQualifier` says the value is free text authored in the diagram, not a term from a vocabulary, so an unseen label is not a finding.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;flowsTo&quot;, &quot;display&quot;: &quot;flowsTo&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;flowsTo&quot;/&gt;&lt;display value=&quot;flowsTo&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates-messageTo\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2BPMNPredicates.html#KGL2BPMNPredicates-messageTo\">messageTo</a></td><td>messageTo</td><td>A message flow, which by definition crosses participants. Kept distinct from flowsTo because a handoff between two roles is what governance and country adaptation look for, and burying 10 of them among 70 intra-process flows loses them.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;messageTo&quot;, &quot;display&quot;: &quot;messageTo&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;messageTo&quot;/&gt;&lt;display value=&quot;messageTo&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates-performedBy\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2BPMNPredicates.html#KGL2BPMNPredicates-performedBy\">performedBy</a></td><td>performedBy</td><td>A participant pool is performed by a persona. STRING EQUALITY between the pool's @name and an ActorDefinition's title, across two file formats with no shared identifier. Compare l2:fulfilledBy, where a requirement names a persona by Canonical() and resolves without guessing -- the mechanism exists; BPMN does not use it. Every instance carries a resolutionStatus.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;performedBy&quot;, &quot;display&quot;: &quot;performedBy&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;performedBy&quot;/&gt;&lt;display value=&quot;performedBy&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGL2BPMNPredicatesVS",
+      "version" : "0.3.0",
+      "name" : "KGL2BPMNPredicatesVS",
+      "title" : "Knowledge graph L2BPMN: predicates",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:167fa44e-a98e-4a12-9fad-cb62f8e94676",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates",
+          "code" : "flowsTo",
+          "display" : "flowsTo"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates",
+          "code" : "messageTo",
+          "display" : "messageTo"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2BPMNPredicates",
+          "code" : "performedBy",
+          "display" : "performedBy"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGL2ClassesVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGL2Classes.html\">codesystem Knowledge graph L2: classes v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGL2Classes|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 14 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-dak\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-dak\">dak</a></td><td>Digital Adaptation Kit</td><td>The kit itself. Properties are exactly the metadata fields DAK.fsh declares and dak.json carries -- no more, so that a dak node can be produced from a real file without anything being invented.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;dak&quot;, &quot;display&quot;: &quot;Digital Adaptation Kit&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;dak&quot;/&gt;&lt;display value=&quot;Digital Adaptation Kit&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-persona\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-persona\">persona</a></td><td>Generic Persona</td><td>DAK component 2. Grounded in GenericPersona.fsh -- title, id, description, otherNames, iscoCode bound to ISCO08ValueSet -- and in the 22 committed ActorDefinition instances that carry name, title, type and description. The two disagree about where ISCO lives, which the properties record rather than smooth over.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;persona&quot;, &quot;display&quot;: &quot;Generic Persona&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;persona&quot;/&gt;&lt;display value=&quot;Generic Persona&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-user-scenario\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-user-scenario\">user-scenario</a></td><td>User Scenario</td><td>DAK component 3. A narrative describing how personas interact. Carries `personas 0..* id`, which is the only structured link between the narrative layer and the personas it names.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;user-scenario&quot;, &quot;display&quot;: &quot;User Scenario&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;user-scenario&quot;/&gt;&lt;display value=&quot;User Scenario&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-business-process\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-business-process\">business-process</a></td><td>Business Process Workflow</td><td>DAK component 4. NOT the BPMN file -- the component that points at one. `source 1..1 uri` is that pointer, and the BPMN's interior is the l2-bpmn subgraph, reached through the external-artifact this sourcedFrom targets.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;business-process&quot;, &quot;display&quot;: &quot;Business Process Workflow&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;business-process&quot;/&gt;&lt;display value=&quot;Business Process Workflow&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-dak-task\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-dak-task\">dak-task</a></td><td>Task Entry</td><td>One entry of BusinessProcessWorkflow's `task 0..*` backbone: identifier, name, description. A node rather than a property because the same task is also drawn in the BPMN file, and the two lists have to be joinable to be checkable against each other.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;dak-task&quot;, &quot;display&quot;: &quot;Task Entry&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;dak-task&quot;/&gt;&lt;display value=&quot;Task Entry&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-data-element\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-data-element\">data-element</a></td><td>Core Data Element</td><td>DAK component 5. CoreDataElement.fsh calls itself &quot;the ONE EXCEPTION to allowing FHIR R4 models into the DAK LMs&quot;: `type` is one of valueset | codesystem | conceptmap | logicalmodel and `canonical 1..1 uri` points at it. The canonical is recorded; nothing inside it is copied, because FHIR is its own query layer.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;data-element&quot;, &quot;display&quot;: &quot;Core Data Element&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;data-element&quot;/&gt;&lt;display value=&quot;Core Data Element&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-decision-support-logic\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-decision-support-logic\">decision-support-logic</a></td><td>Decision-Support Logic</td><td>DAK component 6. The whole model is an id, an optional description and `source 1..1 uri` to a DMN file. Nothing about the decision itself -- which is the gap the l2-dmn subgraph fills.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;decision-support-logic&quot;, &quot;display&quot;: &quot;Decision-Support Logic&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;decision-support-logic&quot;/&gt;&lt;display value=&quot;Decision-Support Logic&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-scheduling-logic\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-scheduling-logic\">scheduling-logic</a></td><td>Scheduling Logic</td><td>When an intervention is due, as a DAK component. NOT declared by DAK.fsh -- it is added here because the published SOP lists Scheduling Logic as an active L2 input (spreadsheets under input/scheduling-logic), WHO's ArchiMate model declares it a BusinessObject realised by PlanDefinition, and L1's schedules needed an L2 component to reach (since L1 3.0, a recommendation's timing slot). Note that the SOP's own L3 row for scheduling is present but HTML-commented-out and there is no l3_schedulinglogic.md page, so WHO has drafted the mapping and not activated it; the L3 edge is licensed here as a deliberate departure, recorded rather than hidden.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;scheduling-logic&quot;, &quot;display&quot;: &quot;Scheduling Logic&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;scheduling-logic&quot;/&gt;&lt;display value=&quot;Scheduling Logic&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-program-indicator\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-program-indicator\">program-indicator</a></td><td>Program Indicator</td><td>DAK component 7. Named program-indicator and not `indicator` because L1 already declares an `indicator` -- one normatively defined in a publication. They are different things: this is the DAK's operational measure, and `derivedFrom` is how it points at the normative one. Collapsing them would silently merge a WHO definition with a country's implementation of it.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;program-indicator&quot;, &quot;display&quot;: &quot;Program Indicator&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;program-indicator&quot;/&gt;&lt;display value=&quot;Program Indicator&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-functional-requirement\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-functional-requirement\">functional-requirement</a></td><td>Functional Requirement</td><td>DAK component 8, first half. The as-a/I-want/so-that shape: `activity`, `capability[x]`, `benefit[x]`, and `actor 0..* Reference(SGActor)`. The 41 committed instances use the R5 SGRequirements profile rather than this logical model, so a real instance carries `statement` entries and a userstory extension; both shapes are accommodated and `profile` records which was read.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;functional-requirement&quot;, &quot;display&quot;: &quot;Functional Requirement&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;functional-requirement&quot;/&gt;&lt;display value=&quot;Functional Requirement&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-non-functional-requirement\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-non-functional-requirement\">non-functional-requirement</a></td><td>Non-Functional Requirement</td><td>DAK component 8, second half. `requirement 1..1 markdown`, an optional category and classification codings. Kept separate from the functional half because the fields genuinely differ -- a non-functional requirement has no actor and no benefit.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;non-functional-requirement&quot;, &quot;display&quot;: &quot;Non-Functional Requirement&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;non-functional-requirement&quot;/&gt;&lt;display value=&quot;Non-Functional Requirement&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-requirement-statement\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-requirement-statement\">requirement-statement</a></td><td>Requirement Statement</td><td>One numbered, labelled statement inside a requirement, with a conformance verb. A node rather than a property because conformance is queried across a whole DAK -- 'every SHALL in this kit, and what fulfils it' is the question requirements exist to answer. It also carries its own success criteria, so 'what would show this SHALL is met' is answerable per statement rather than per requirement.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;requirement-statement&quot;, &quot;display&quot;: &quot;Requirement Statement&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;requirement-statement&quot;/&gt;&lt;display value=&quot;Requirement Statement&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-test-scenario\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-test-scenario\">test-scenario</a></td><td>Test Scenario</td><td>DAK component 9. `feature 1..1 uri` to a Gherkin feature file, plus an optional description. The feature file's interior is not modelled: no DAK in this estate ships one yet, so a subgraph for it would have no instance to check it against.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;test-scenario&quot;, &quot;display&quot;: &quot;Test Scenario&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;test-scenario&quot;/&gt;&lt;display value=&quot;Test Scenario&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Classes-external-artifact\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Classes.html#KGL2Classes-external-artifact\">external-artifact</a></td><td>External artefact</td><td>A DAK file addressed by canonical URL: a BPMN process, a DMN decision table, a FHIR resource, a workbook. Deliberately opaque: it carries an IRI and a kind, and nothing about its interior. The L2-BPMN, L2-DMN and L3 classes that describe a file's interior elaborate this class at the same IRI. Moved here from L1 in 3.0 unchanged: a DAK file is the DAK's material, not WHO content.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;external-artifact&quot;, &quot;display&quot;: &quot;External artefact&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;external-artifact&quot;/&gt;&lt;display value=&quot;External artefact&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGL2ClassesVS",
+      "version" : "0.3.0",
+      "name" : "KGL2ClassesVS",
+      "title" : "Knowledge graph L2: classes",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:dbaea4f0-9c5c-4582-b5bb-8e1097923093",
+        "timestamp" : "2026-11-13T12:13:28+00:00",
+        "total" : 14,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGL2Classes|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "dak",
+          "display" : "Digital Adaptation Kit"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "persona",
+          "display" : "Generic Persona"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "user-scenario",
+          "display" : "User Scenario"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "business-process",
+          "display" : "Business Process Workflow"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "dak-task",
+          "display" : "Task Entry"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "data-element",
+          "display" : "Core Data Element"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "decision-support-logic",
+          "display" : "Decision-Support Logic"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "scheduling-logic",
+          "display" : "Scheduling Logic"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "program-indicator",
+          "display" : "Program Indicator"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "functional-requirement",
+          "display" : "Functional Requirement"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "non-functional-requirement",
+          "display" : "Non-Functional Requirement"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "requirement-statement",
+          "display" : "Requirement Statement"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "test-scenario",
+          "display" : "Test Scenario"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Classes",
+          "code" : "external-artifact",
+          "display" : "External artefact"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGL2DMNClassesVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGL2DMNClasses.html\">codesystem Knowledge graph L2DMN: classes v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGL2DMNClasses|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 6 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2DMNClasses-dmn-definitions\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2DMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2DMNClasses.html#KGL2DMNClasses-dmn-definitions\">dmn-definitions</a></td><td>DMN File</td><td>One DMN file as a unit -- the `dmn:definitions` root. Shares its IRI with the l1:external-artifact for the same file, so the l2:decision-support-logic component that points at it and this subgraph name one resource.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;dmn-definitions&quot;, &quot;display&quot;: &quot;DMN File&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;dmn-definitions&quot;/&gt;&lt;display value=&quot;DMN File&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2DMNClasses-dmn-decision\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2DMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2DMNClasses.html#KGL2DMNClasses-dmn-decision\">dmn-decision</a></td><td>DMN Decision</td><td>A `dmn:decision` -- the question being answered, and the node that carries the link back to the BPMN task invoking it. A file may hold several; the BCG file holds one.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;dmn-decision&quot;, &quot;display&quot;: &quot;DMN Decision&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;dmn-decision&quot;/&gt;&lt;display value=&quot;DMN Decision&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2DMNClasses-dmn-decision-table\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2DMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2DMNClasses.html#KGL2DMNClasses-dmn-decision-table\">dmn-decision-table</a></td><td>DMN Decision Table</td><td>The table realising a decision. Separate from dmn-decision because DMN permits other expression kinds -- a literal expression, an invocation -- and collapsing the two would make the graph unable to say which was used.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;dmn-decision-table&quot;, &quot;display&quot;: &quot;DMN Decision Table&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;dmn-decision-table&quot;/&gt;&lt;display value=&quot;DMN Decision Table&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2DMNClasses-dmn-input-clause\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2DMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2DMNClasses.html#KGL2DMNClasses-dmn-input-clause\">dmn-input-clause</a></td><td>DMN Input Clause</td><td>An input column. Its expression text is where data element names are embedded, which is the only reason this is a node rather than a property of the table.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;dmn-input-clause&quot;, &quot;display&quot;: &quot;DMN Input Clause&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;dmn-input-clause&quot;/&gt;&lt;display value=&quot;DMN Input Clause&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2DMNClasses-dmn-output-clause\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2DMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2DMNClasses.html#KGL2DMNClasses-dmn-output-clause\">dmn-output-clause</a></td><td>DMN Output Clause</td><td>An output column. The BCG table's four are Care Plan, Guidance displayed to health worker, Annotations and Reference(s). These are column DEFINITIONS in a decision table, not clinical records: no edge from this class reaches an execution artefact, and none may.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;dmn-output-clause&quot;, &quot;display&quot;: &quot;DMN Output Clause&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;dmn-output-clause&quot;/&gt;&lt;display value=&quot;DMN Output Clause&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2DMNClasses-dmn-rule\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2DMNClasses</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2DMNClasses.html#KGL2DMNClasses-dmn-rule\">dmn-rule</a></td><td>DMN Rule</td><td>One row. Its input and output cells are carried as properties, not nodes: 250 of them in the BCG table alone, none the target of a cross-model edge. What the rule needs a node for is its citation edge into L1.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;dmn-rule&quot;, &quot;display&quot;: &quot;DMN Rule&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2DMNClasses&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;dmn-rule&quot;/&gt;&lt;display value=&quot;DMN Rule&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGL2DMNClassesVS",
+      "version" : "0.3.0",
+      "name" : "KGL2DMNClassesVS",
+      "title" : "Knowledge graph L2DMN: classes",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:9b74a756-ed98-4b2c-9e0e-50ea6bab5e37",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
+        "total" : 6,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGL2DMNClasses|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2DMNClasses",
+          "code" : "dmn-definitions",
+          "display" : "DMN File"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2DMNClasses",
+          "code" : "dmn-decision",
+          "display" : "DMN Decision"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2DMNClasses",
+          "code" : "dmn-decision-table",
+          "display" : "DMN Decision Table"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2DMNClasses",
+          "code" : "dmn-input-clause",
+          "display" : "DMN Input Clause"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2DMNClasses",
+          "code" : "dmn-output-clause",
+          "display" : "DMN Output Clause"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2DMNClasses",
+          "code" : "dmn-rule",
+          "display" : "DMN Rule"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGL2DMNPredicatesVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGL2DMNPredicates.html\">codesystem Knowledge graph L2DMN: predicates v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGL2DMNPredicates|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2DMNPredicates-invokedBy\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2DMNPredicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2DMNPredicates.html#KGL2DMNPredicates-invokedBy\">invokedBy</a></td><td>invokedBy</td><td>A decision is invoked by a business-rule task. Read from dmn:usingTask/@href, whose fragment is the URL-encoded task NAME rather than its id -- so it resolves only while that prose stays byte-identical in the BPMN, punctuation and the en dash in &quot;Calmette-Guerin&quot; included. Carries a resolutionStatus; the target is a bpmn-task when the BPMN is present and an opaque l1:external-artifact when it is not.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2DMNPredicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;invokedBy&quot;, &quot;display&quot;: &quot;invokedBy&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2DMNPredicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;invokedBy&quot;/&gt;&lt;display value=&quot;invokedBy&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2DMNPredicates-reads\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2DMNPredicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2DMNPredicates.html#KGL2DMNPredicates-reads\">reads</a></td><td>reads</td><td>An input clause reads a data element. Recovered heuristically from free text, so every instance carries the extraction rule that produced it and a resolutionStatus. The target is an l2:data-element -- the DAK component -- so a recovered name and a declared dictionary entry are the same class and can meet when a dictionary exists.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2DMNPredicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;reads&quot;, &quot;display&quot;: &quot;reads&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2DMNPredicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;reads&quot;/&gt;&lt;display value=&quot;reads&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2DMNPredicates-citesSource\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2DMNPredicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2DMNPredicates.html#KGL2DMNPredicates-citesSource\">citesSource</a></td><td>citesSource</td><td>A decision rule cites an L1 source. The target is an l1:citation minted from the same string by the citation extractor, so the DMN subgraph and the L1 graph join without either knowing the other exists. Grounded but sparse: 1 of 25 BCG rules. The sparseness is the finding -- a rule with no citesSource edge is a rule with no stated source.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2DMNPredicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;citesSource&quot;, &quot;display&quot;: &quot;citesSource&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2DMNPredicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;citesSource&quot;/&gt;&lt;display value=&quot;citesSource&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGL2DMNPredicatesVS",
+      "version" : "0.3.0",
+      "name" : "KGL2DMNPredicatesVS",
+      "title" : "Knowledge graph L2DMN: predicates",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:d9e921bb-5f41-4a77-96f7-127e782c4352",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGL2DMNPredicates|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2DMNPredicates",
+          "code" : "invokedBy",
+          "display" : "invokedBy"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2DMNPredicates",
+          "code" : "reads",
+          "display" : "reads"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2DMNPredicates",
+          "code" : "citesSource",
+          "display" : "citesSource"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGL2PredicatesVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGL2Predicates.html\">codesystem Knowledge graph L2: predicates v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGL2Predicates|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 13 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-hasComponent\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-hasComponent\">hasComponent</a></td><td>hasComponent</td><td>A DAK contains one of its nine components. The qualifier carries the component name from DAK.fsh, so `dak hasComponent persona` and `dak hasComponent program-indicator` stay distinguishable when a query walks the kit.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;hasComponent&quot;, &quot;display&quot;: &quot;hasComponent&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;hasComponent&quot;/&gt;&lt;display value=&quot;hasComponent&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-sourcedFrom\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-sourcedFrom\">sourcedFrom</a></td><td>sourcedFrom</td><td>A component points at the file that defines it. TWO TARGETS ARE LICENSED, and which one an instance uses says how much is known about the file. Where a subgraph models that file type, the target is the file itself -- `business-process sourcedFrom bpmn-definitions`, licensed in l2-bpmn -- and the graph walks straight on into the file's contents. Where none does (a Gherkin feature, a FHIR canonical, or a BPMN this graph simply does not hold), the target is an l1:external-artifact carrying a URI and nothing else. Prefer the first: routing through external-artifact when the file IS modelled adds a hop through a node that, at instance level, is the same node.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;sourcedFrom&quot;, &quot;display&quot;: &quot;sourcedFrom&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;sourcedFrom&quot;/&gt;&lt;display value=&quot;sourcedFrom&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-realises\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-realises\">realises</a></td><td>realises</td><td>A business process realises a user scenario. From `scenario 0..* id` on BusinessProcessWorkflow -- a bare id string, so an instance carries a resolutionStatus.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;realises&quot;, &quot;display&quot;: &quot;realises&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;realises&quot;/&gt;&lt;display value=&quot;realises&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-involves\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-involves\">involves</a></td><td>involves</td><td>A user scenario involves a persona. From `personas 0..* id` on UserScenario -- again bare ids, again a resolutionStatus.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;involves&quot;, &quot;display&quot;: &quot;involves&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;involves&quot;/&gt;&lt;display value=&quot;involves&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-fulfilledBy\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-fulfilledBy\">fulfilledBy</a></td><td>fulfilledBy</td><td>A functional requirement is fulfilled by a persona. THE ONE JOIN IN THIS LAYER THAT IS NOT STRING MATCHING: the committed instances write `actor[+] = Canonical(SGAuthoring.Persona.BusinessAnalyst)`, a canonical reference that resolves without guessing. It is the counter-example that shows the other joins are a choice, not a necessity.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;fulfilledBy&quot;, &quot;display&quot;: &quot;fulfilledBy&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;fulfilledBy&quot;/&gt;&lt;display value=&quot;fulfilledBy&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-hasStatement\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-hasStatement\">hasStatement</a></td><td>hasStatement</td><td>A requirement carries numbered, labelled statements with a conformance verb. 170 of them exist today.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;hasStatement&quot;, &quot;display&quot;: &quot;hasStatement&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;hasStatement&quot;/&gt;&lt;display value=&quot;hasStatement&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-listsTask\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-listsTask\">listsTask</a></td><td>listsTask</td><td>BusinessProcessWorkflow declares `task 0..*` with identifier, name and description -- the same tasks the BPMN file draws. Two representations of one list, joined by identifier, which is why dak-task exists as a node rather than a property.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;listsTask&quot;, &quot;display&quot;: &quot;listsTask&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;listsTask&quot;/&gt;&lt;display value=&quot;listsTask&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-references\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-references\">references</a></td><td>references</td><td>A program indicator names the health interventions that give it context. From `references 0..* id` on ProgramIndicator -- bare id strings again, so an instance carries a resolutionStatus. Distinct from derivedFrom: referencing an intervention for context is not the same claim as restating a normative indicator.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;references&quot;, &quot;display&quot;: &quot;references&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;references&quot;/&gt;&lt;display value=&quot;references&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-describes\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-describes\">describes</a></td><td>describes</td><td>A DAK-level task entry describes an element of a BPMN file. Declared here and licensed in l2-bpmn, where the target class lives.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;describes&quot;, &quot;display&quot;: &quot;describes&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;describes&quot;/&gt;&lt;display value=&quot;describes&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-implementedBy\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-implementedBy\">implementedBy</a></td><td>implementedBy</td><td>Reused from l1, and licensed here for the L1-&gt;L2 hop that L1 could not declare itself: l1 cannot name an l2 class without a circular import, but l2 imports l1 and sees both ends. A recommendation is implemented by the DAK component that realises it. Always `inferred`, never `derived` -- deciding that a process realises a recommendation is adaptation, the judgement a DAK exists to record, and it carries a resolutionStatus like every other cross-artefact claim. Note health-intervention has NO implementedBy edge: the published SOP gives Health Interventions an L3 row of `n/a / n/a / n/a` and calls L1 recommendations inputs rather than outputs, so the trace runs through processes, decisions and indicators instead.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;implementedBy&quot;, &quot;display&quot;: &quot;implementedBy&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;implementedBy&quot;/&gt;&lt;display value=&quot;implementedBy&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-derivedFrom\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-derivedFrom\">derivedFrom</a></td><td>derivedFrom</td><td>This normative content restates or operationalises that recommendation.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;derivedFrom&quot;, &quot;display&quot;: &quot;derivedFrom&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;derivedFrom&quot;/&gt;&lt;display value=&quot;derivedFrom&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-appearsIn\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-appearsIn\">appearsIn</a></td><td>appearsIn</td><td>A citation string appears in an L2 or L3 artefact at a stated location.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;appearsIn&quot;, &quot;display&quot;: &quot;appearsIn&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;appearsIn&quot;/&gt;&lt;display value=&quot;appearsIn&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL2Predicates-verifiedBy\"> </a><code>http://smart.who.int/base/CodeSystem/KGL2Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL2Predicates.html#KGL2Predicates-verifiedBy\">verifiedBy</a></td><td>verifiedBy</td><td>A requirement statement is verified by a test scenario. The statement is the granularity at which conformance is asserted, so it is also the granularity at which a test is claimed to check it. The edge records the claim that a scenario exists for the statement; whether the scenario actually exercises each success criterion is a review question, recorded per criterion by `verification` on successCriteria, not by this edge.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;verifiedBy&quot;, &quot;display&quot;: &quot;verifiedBy&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL2Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;verifiedBy&quot;/&gt;&lt;display value=&quot;verifiedBy&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGL2PredicatesVS",
+      "version" : "0.3.0",
+      "name" : "KGL2PredicatesVS",
+      "title" : "Knowledge graph L2: predicates",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:76785c60-c38c-4085-bfb8-c359ed3e5fb1",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
+        "total" : 13,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGL2Predicates|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "hasComponent",
+          "display" : "hasComponent"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "sourcedFrom",
+          "display" : "sourcedFrom"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "realises",
+          "display" : "realises"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "involves",
+          "display" : "involves"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "fulfilledBy",
+          "display" : "fulfilledBy"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "hasStatement",
+          "display" : "hasStatement"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "listsTask",
+          "display" : "listsTask"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "references",
+          "display" : "references"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "describes",
+          "display" : "describes"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "implementedBy",
+          "display" : "implementedBy"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "derivedFrom",
+          "display" : "derivedFrom"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "appearsIn",
+          "display" : "appearsIn"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL2Predicates",
+          "code" : "verifiedBy",
+          "display" : "verifiedBy"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGL3ClassesVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGL3Classes.html\">codesystem Knowledge graph L3: classes v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGL3Classes|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 14 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-plan-definition\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-plan-definition\">plan-definition</a></td><td>Plan Definition</td><td>A FHIR PlanDefinition. The published mapping gives it two sources -- Processes and Decision Tables -- so a PlanDefinition alone does not say which it came from; the implementedBy edge does. 138 in the immunizations IG, all declaring cpg-recommendationdefinition, all decision tables. Shares its IRI with the l1:external-artifact for the same canonical.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;plan-definition&quot;, &quot;display&quot;: &quot;Plan Definition&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;plan-definition&quot;/&gt;&lt;display value=&quot;Plan Definition&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-activity-definition\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-activity-definition\">activity-definition</a></td><td>Activity Definition</td><td>A FHIR ActivityDefinition -- the concrete act a plan's action invokes. Reached from a PlanDefinition action's `definitionCanonical`, which is a real reference rather than a convention. 3 in the immunizations IG: two cpg-immunizationactivity, one cpg-communicationactivity.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;activity-definition&quot;, &quot;display&quot;: &quot;Activity Definition&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;activity-definition&quot;/&gt;&lt;display value=&quot;Activity Definition&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-library\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-library\">library</a></td><td>Library</td><td>A FHIR Library -- the resource that carries CQL. Indexed by canonical and status only. Its CONTENTS are deliberately out of scope: a future l3-cql subgraph will elaborate this same IRI, exactly as l2-bpmn elaborates a BPMN file. 279 in the immunizations IG, joined to their PlanDefinition by the `{id}Logic` suffix.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;library&quot;, &quot;display&quot;: &quot;Library&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;library&quot;/&gt;&lt;display value=&quot;Library&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-cql-library\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-cql-library\">cql-library</a></td><td>CQL File</td><td>A .cql file on disk, as opposed to the FHIR Library resource that wraps it. A node so that the mapping table's four CQL rows -- CQL Concepts and CQL Data Elements under Elements, CQL under Decision Tables, CQL IndicatorLogic under Indicators -- do not dead-end. It carries a name, a path and a hash and NOTHING about the logic: no expressions, no comment tags, no data requirements. 279 in the immunizations IG. The l3-cql subgraph is where that content belongs, and it is not built yet.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;cql-library&quot;, &quot;display&quot;: &quot;CQL File&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;cql-library&quot;/&gt;&lt;display value=&quot;CQL File&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-measure\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-measure\">measure</a></td><td>Measure</td><td>A FHIR Measure -- an indicator made computable. 41 in the immunizations IG, all declaring proportion-measure-cqfm; the SOP makes the profile depend on scoring type, which is why the profile is read rather than assumed. Joined to its L2 indicator by id convention (IMMZ.IND.08 -&gt; IMMZIND08).</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;measure&quot;, &quot;display&quot;: &quot;Measure&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;measure&quot;/&gt;&lt;display value=&quot;Measure&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-questionnaire\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-questionnaire\">questionnaire</a></td><td>Questionnaire</td><td>A FHIR Questionnaire -- a data-collection form over a logical model. 10 in the immunizations IG. Its `sdc-questionnaire-targetStructureMap` extension names the StructureMap that extracts it, which is a real canonical reference. The SOP states no linkId convention and none exists in the estate, so no edge is licensed on linkId.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;questionnaire&quot;, &quot;display&quot;: &quot;Questionnaire&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;questionnaire&quot;/&gt;&lt;display value=&quot;Questionnaire&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-structure-map\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-structure-map\">structure-map</a></td><td>Structure Map</td><td>A FHIR StructureMap. The SOP requires them in threes -- QuestionnaireResponse to logical model, logical model to resource, and a grouping map -- so a count that is not a multiple of three is worth a look. 16 .fml files in the immunizations IG.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;structure-map&quot;, &quot;display&quot;: &quot;Structure Map&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;structure-map&quot;/&gt;&lt;display value=&quot;Structure Map&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-structure-definition\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-structure-definition\">structure-definition</a></td><td>Logical Model</td><td>A StructureDefinition with kind `logical` -- one data dictionary tab as a data structure. Distinct from `profile`, which constrains a FHIR resource: WHO's ArchiMate model has Logical Model realising Data Object while Profile realises Data Element, and the two are not interchangeable. 15 in the immunizations IG.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;structure-definition&quot;, &quot;display&quot;: &quot;Logical Model&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;structure-definition&quot;/&gt;&lt;display value=&quot;Logical Model&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-profile\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-profile\">profile</a></td><td>Profile</td><td>A StructureDefinition constraining a FHIR resource. Separate from structure-definition for the reason above. 5 in the immunizations IG. Its internals -- differentials, element definitions, bindings -- are the clearest case of what this layer refuses to re-represent.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;profile&quot;, &quot;display&quot;: &quot;Profile&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;profile&quot;/&gt;&lt;display value=&quot;Profile&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-value-set\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-value-set\">value-set</a></td><td>Value Set</td><td>A FHIR ValueSet. 192 in the immunizations IG -- the most numerous artefact of all. Indexed by canonical; its expansion, its compose rules and the codes it contains are terminology, which docs/SCOPE.md keeps at arm's length as firmly here as at L1.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;value-set&quot;, &quot;display&quot;: &quot;Value Set&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;value-set&quot;/&gt;&lt;display value=&quot;Value Set&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-code-system\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-code-system\">code-system</a></td><td>Code System</td><td>A FHIR CodeSystem. The SOP says each guideline defines one guideline-level code system holding a concept for every data dictionary element -- which is what makes `code[WHO] = IMMZ.DE9` on a logical model element resolvable. 6 in the immunizations IG. The codes themselves are not copied here.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;code-system&quot;, &quot;display&quot;: &quot;Code System&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;code-system&quot;/&gt;&lt;display value=&quot;Code System&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-concept-map\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-concept-map\">concept-map</a></td><td>Concept Map</td><td>A FHIR ConceptMap -- one per target code system in the dictionary's terminology mappings. 8 in the immunizations IG. Records that a mapping exists; the mappings themselves belong to terminology.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;concept-map&quot;, &quot;display&quot;: &quot;Concept Map&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;concept-map&quot;/&gt;&lt;display value=&quot;Concept Map&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-actor-definition\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-actor-definition\">actor-definition</a></td><td>Actor Definition</td><td>A FHIR ActorDefinition -- an L2 persona made a FHIR resource. ZERO in the immunizations IG and 22 in smart-base, which is itself worth a coverage query. The SOP names no profile for it and says one is not currently possible because SUSHI cannot profile an R5 resource in an R4 IG, and it tells authors not to assign an identifier -- so expect a bare resource and do not infer more.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;actor-definition&quot;, &quot;display&quot;: &quot;Actor Definition&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;actor-definition&quot;/&gt;&lt;display value=&quot;Actor Definition&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Classes-requirements\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Classes</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Classes.html#KGL3Classes-requirements\">requirements</a></td><td>Requirements</td><td>A FHIR Requirements resource. The ONE place the published SOP names an SG profile -- SGRequirements -- and the grain is one resource per business process holding many statements, not one per requirement. ZERO in the immunizations IG and 41 in smart-base.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;requirements&quot;, &quot;display&quot;: &quot;Requirements&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Classes&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;requirements&quot;/&gt;&lt;display value=&quot;Requirements&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGL3ClassesVS",
+      "version" : "0.3.0",
+      "name" : "KGL3ClassesVS",
+      "title" : "Knowledge graph L3: classes",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:0e618ecc-c368-493d-8794-510b6d25eddc",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
+        "total" : 14,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGL3Classes|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "plan-definition",
+          "display" : "Plan Definition"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "activity-definition",
+          "display" : "Activity Definition"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "library",
+          "display" : "Library"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "cql-library",
+          "display" : "CQL File"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "measure",
+          "display" : "Measure"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "questionnaire",
+          "display" : "Questionnaire"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "structure-map",
+          "display" : "Structure Map"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "structure-definition",
+          "display" : "Logical Model"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "profile",
+          "display" : "Profile"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "value-set",
+          "display" : "Value Set"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "code-system",
+          "display" : "Code System"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "concept-map",
+          "display" : "Concept Map"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "actor-definition",
+          "display" : "Actor Definition"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Classes",
+          "code" : "requirements",
+          "display" : "Requirements"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGL3PredicatesVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGL3Predicates.html\">codesystem Knowledge graph L3: predicates v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGL3Predicates|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 3 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Predicates-implementedBy\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Predicates.html#KGL3Predicates-implementedBy\">implementedBy</a></td><td>implementedBy</td><td>An L2 component is implemented by a FHIR artefact. Reused from l1 and licensed here per (component, resource) pair transcribed from the published mapping table. ALWAYS `inferred`, never `derived`: with no back-pointer extension in the estate, the join is a naming convention or a canonical reference, and every instance records which rule matched and a resolutionStatus. The optional `targetPath` property on an instance names the element reached (e.g. `PlanDefinition.action[2]`) so traceability can be element-level without this layer modelling FHIR internals as nodes.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;implementedBy&quot;, &quot;display&quot;: &quot;implementedBy&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;implementedBy&quot;/&gt;&lt;display value=&quot;implementedBy&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Predicates-citesSource\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Predicates.html#KGL3Predicates-citesSource\">citesSource</a></td><td>citesSource</td><td>A FHIR artefact cites an L1 source through `relatedArtifact[type = #citation]`. The target is an l1:citation minted from the same string by tools/extract-citations.mjs, so L3 and L1 join without either extractor knowing about the other -- the same mechanism l2-dmn uses from a decision rule.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;citesSource&quot;, &quot;display&quot;: &quot;citesSource&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;citesSource&quot;/&gt;&lt;display value=&quot;citesSource&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGL3Predicates-uses\"> </a><code>http://smart.who.int/base/CodeSystem/KGL3Predicates</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGL3Predicates.html#KGL3Predicates-uses\">uses</a></td><td>uses</td><td>One FHIR artefact references another by canonical: a PlanDefinition its Library, an action its ActivityDefinition, a Questionnaire its StructureMap, a Measure its Library. These are real canonical references rather than conventions, so unlike implementedBy they are `derived` when read straight from the field.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGL3Predicates&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;uses&quot;, &quot;display&quot;: &quot;uses&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGL3Predicates&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;uses&quot;/&gt;&lt;display value=&quot;uses&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGL3PredicatesVS",
+      "version" : "0.3.0",
+      "name" : "KGL3PredicatesVS",
+      "title" : "Knowledge graph L3: predicates",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:41a6f815-7390-44c8-ab4f-888cb1e56a25",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGL3Predicates|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Predicates",
+          "code" : "implementedBy",
+          "display" : "implementedBy"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Predicates",
+          "code" : "citesSource",
+          "display" : "citesSource"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGL3Predicates",
+          "code" : "uses",
+          "display" : "uses"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://smart.who.int/base/ValueSet/KGOutcomeImportanceVS",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -5913,10 +6819,10 @@
       "title" : "Knowledge graph L1: outcome importance",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:b9a21fff-29df-4f5f-a4d8-ddb2f8c56c3b",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:887203a4-1a0d-4734-b51a-f4a21c895a52",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -5953,6 +6859,69 @@
     }
   },
   {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGPublicationStatusVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGPublicationStatus.html\">codesystem Knowledge graph L2: publication status v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGPublicationStatus|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGPublicationStatus-draft\"> </a><code>http://smart.who.int/base/CodeSystem/KGPublicationStatus</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGPublicationStatus.html#KGPublicationStatus-draft\">draft</a></td><td>Draft</td><td>This resource is still under development and is not yet considered to be ready for normal use.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGPublicationStatus&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;draft&quot;, &quot;display&quot;: &quot;Draft&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGPublicationStatus&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;draft&quot;/&gt;&lt;display value=&quot;Draft&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGPublicationStatus-active\"> </a><code>http://smart.who.int/base/CodeSystem/KGPublicationStatus</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGPublicationStatus.html#KGPublicationStatus-active\">active</a></td><td>Active</td><td>This resource is ready for normal use.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGPublicationStatus&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;active&quot;, &quot;display&quot;: &quot;Active&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGPublicationStatus&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;active&quot;/&gt;&lt;display value=&quot;Active&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGPublicationStatus-retired\"> </a><code>http://smart.who.int/base/CodeSystem/KGPublicationStatus</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGPublicationStatus.html#KGPublicationStatus-retired\">retired</a></td><td>Retired</td><td>This resource has been withdrawn or superseded and should no longer be used.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGPublicationStatus&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;retired&quot;, &quot;display&quot;: &quot;Retired&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGPublicationStatus&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;retired&quot;/&gt;&lt;display value=&quot;Retired&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGPublicationStatus-unknown\"> </a><code>http://smart.who.int/base/CodeSystem/KGPublicationStatus</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGPublicationStatus.html#KGPublicationStatus-unknown\">unknown</a></td><td>Unknown</td><td>The authoring system does not know which of the status values currently applies for this resource.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGPublicationStatus&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;unknown&quot;, &quot;display&quot;: &quot;Unknown&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGPublicationStatus&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;unknown&quot;/&gt;&lt;display value=&quot;Unknown&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGPublicationStatusVS",
+      "version" : "0.3.0",
+      "name" : "KGPublicationStatusVS",
+      "title" : "Knowledge graph L2: publication status",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:a0177104-a8ea-4099-aed8-fd6cc61b3431",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGPublicationStatus|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGPublicationStatus",
+          "code" : "draft",
+          "display" : "Draft"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGPublicationStatus",
+          "code" : "active",
+          "display" : "Active"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGPublicationStatus",
+          "code" : "retired",
+          "display" : "Retired"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGPublicationStatus",
+          "code" : "unknown",
+          "display" : "Unknown"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://smart.who.int/base/ValueSet/KGPublicationTypeVS",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -5966,10 +6935,10 @@
       "title" : "Knowledge graph L1: publication type",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:581d1041-8e6f-4f49-be73-e60f20d25dab",
-        "timestamp" : "2026-11-12T11:04:32+00:00",
+        "identifier" : "urn:uuid:cc48d1a9-5304-440f-ae91-fb44f19fb14c",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
         "total" : 14,
         "offset" : 0,
         "parameter" : [{
@@ -6079,10 +7048,10 @@
       "title" : "Knowledge graph L1: recommendation direction",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:c5e663b9-c1cc-4197-ba84-7e0ed45bdd8e",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:69eddcc0-1e15-4e6b-aa84-e3eb0c2144ce",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -6132,10 +7101,10 @@
       "title" : "Knowledge graph L1: recommendation kind",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:f99d6385-6997-44c8-b8fe-c99777ea0a72",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:da9b7509-47c3-46ed-8182-203e4ebd49d0",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -6200,10 +7169,10 @@
       "title" : "Knowledge graph L1: recommendation status",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:03ed6e8f-d21e-40e5-aa13-8581af2420f5",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:438fd8a2-736f-46ea-acd9-a79a435eeed1",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -6263,10 +7232,10 @@
       "title" : "Knowledge graph L1: recommendation strength",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:883c44f0-ba64-4c73-9769-15a09261405a",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:774e5188-43e3-49d7-8050-f6495b75e7fc",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -6316,10 +7285,10 @@
       "title" : "Knowledge graph L1: remark type",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:f8e52b26-eda3-48af-8eee-42c789a5cf34",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:a6e27e55-6bb1-4b3d-a472-7bd2dab113f6",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
         "total" : 7,
         "offset" : 0,
         "parameter" : [{
@@ -6394,10 +7363,10 @@
       "title" : "Knowledge graph L1: resolution status",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:eb89e8c0-341e-4d92-97e6-b47d047a99df",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:ae15b84f-b86d-4cdc-9498-4c9ad0e637d7",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -6452,10 +7421,10 @@
       "title" : "Knowledge graph L1: row type",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:4383c89f-622c-4769-baa8-b90ff4b0be94",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:94d8902d-d7f9-4e5a-9856-62a3388e8585",
+        "timestamp" : "2026-11-13T12:13:29+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -6502,6 +7471,69 @@
     }
   },
   {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGStructureDefinitionKindVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGStructureDefinitionKind.html\">codesystem Knowledge graph L3: structure definition kind v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind-primitive-type\"> </a><code>http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGStructureDefinitionKind.html#KGStructureDefinitionKind-primitive-type\">primitive-type</a></td><td>Primitive type</td><td>A primitive type.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;primitive-type&quot;, &quot;display&quot;: &quot;Primitive type&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;primitive-type&quot;/&gt;&lt;display value=&quot;Primitive type&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind-complex-type\"> </a><code>http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGStructureDefinitionKind.html#KGStructureDefinitionKind-complex-type\">complex-type</a></td><td>Complex type</td><td>A complex data type.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;complex-type&quot;, &quot;display&quot;: &quot;Complex type&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;complex-type&quot;/&gt;&lt;display value=&quot;Complex type&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind-resource\"> </a><code>http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGStructureDefinitionKind.html#KGStructureDefinitionKind-resource\">resource</a></td><td>Resource</td><td>A resource.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;resource&quot;, &quot;display&quot;: &quot;Resource&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;resource&quot;/&gt;&lt;display value=&quot;Resource&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind-logical\"> </a><code>http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGStructureDefinitionKind.html#KGStructureDefinitionKind-logical\">logical</a></td><td>Logical</td><td>A logical model.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;logical&quot;, &quot;display&quot;: &quot;Logical&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;logical&quot;/&gt;&lt;display value=&quot;Logical&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGStructureDefinitionKindVS",
+      "version" : "0.3.0",
+      "name" : "KGStructureDefinitionKindVS",
+      "title" : "Knowledge graph L3: structure definition kind",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:326322b3-5964-4653-9b12-2f41df8a8635",
+        "timestamp" : "2026-11-13T12:13:30+00:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind",
+          "code" : "primitive-type",
+          "display" : "Primitive type"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind",
+          "code" : "complex-type",
+          "display" : "Complex type"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind",
+          "code" : "resource",
+          "display" : "Resource"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGStructureDefinitionKind",
+          "code" : "logical",
+          "display" : "Logical"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://smart.who.int/base/ValueSet/KGTerminologySystemVS",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -6515,10 +7547,10 @@
       "title" : "Knowledge graph L1: terminology system",
       "status" : "active",
       "experimental" : false,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:64252776-7a88-483b-82aa-1267ec0ecbe5",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:38974547-b1e6-4558-a3e6-92920c3908d2",
+        "timestamp" : "2026-11-13T12:13:30+00:00",
         "total" : 8,
         "offset" : 0,
         "parameter" : [{
@@ -6585,6 +7617,69 @@
     }
   },
   {
+    "fullUrl" : "http://smart.who.int/base/ValueSet/KGVerificationMethodVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-KGVerificationMethod.html\">codesystem Knowledge graph L2: verification method v0.3.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://smart.who.int/base/CodeSystem/KGVerificationMethod|0.3.0\" title=\"Click to Copy URL\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGVerificationMethod-test\"> </a><code>http://smart.who.int/base/CodeSystem/KGVerificationMethod</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGVerificationMethod.html#KGVerificationMethod-test\">test</a></td><td>Test</td><td>Verified by executing a test.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGVerificationMethod&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;test&quot;, &quot;display&quot;: &quot;Test&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGVerificationMethod&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;test&quot;/&gt;&lt;display value=&quot;Test&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGVerificationMethod-inspection\"> </a><code>http://smart.who.int/base/CodeSystem/KGVerificationMethod</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGVerificationMethod.html#KGVerificationMethod-inspection\">inspection</a></td><td>Inspection</td><td>Verified by examining the artefact.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGVerificationMethod&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;inspection&quot;, &quot;display&quot;: &quot;Inspection&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGVerificationMethod&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;inspection&quot;/&gt;&lt;display value=&quot;Inspection&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGVerificationMethod-review\"> </a><code>http://smart.who.int/base/CodeSystem/KGVerificationMethod</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGVerificationMethod.html#KGVerificationMethod-review\">review</a></td><td>Review</td><td>Verified by a person's review.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGVerificationMethod&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;review&quot;, &quot;display&quot;: &quot;Review&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGVerificationMethod&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;review&quot;/&gt;&lt;display value=&quot;Review&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr><tr><td><a name=\"x-http://smart.who.int/base/CodeSystem/KGVerificationMethod-analysis\"> </a><code>http://smart.who.int/base/CodeSystem/KGVerificationMethod</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-KGVerificationMethod.html#KGVerificationMethod-analysis\">analysis</a></td><td>Analysis</td><td>Verified by analysis or calculation.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://smart.who.int/base/CodeSystem/KGVerificationMethod&quot;, &quot;version&quot;: &quot;0.3.0&quot;, &quot;code&quot;: &quot;analysis&quot;, &quot;display&quot;: &quot;Analysis&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://smart.who.int/base/CodeSystem/KGVerificationMethod&quot;/&gt;&lt;version value=&quot;0.3.0&quot;/&gt;&lt;code value=&quot;analysis&quot;/&gt;&lt;display value=&quot;Analysis&quot;/&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\" aria-label=\"copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "http://smart.who.int/base/ValueSet/KGVerificationMethodVS",
+      "version" : "0.3.0",
+      "name" : "KGVerificationMethodVS",
+      "title" : "Knowledge graph L2: verification method",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2026-11-13T12:09:30+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:b43960e8-00a8-4f28-b581-02102025be4f",
+        "timestamp" : "2026-11-13T12:13:30+00:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://smart.who.int/base/CodeSystem/KGVerificationMethod|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://smart.who.int/base/CodeSystem/KGVerificationMethod",
+          "code" : "test",
+          "display" : "Test"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGVerificationMethod",
+          "code" : "inspection",
+          "display" : "Inspection"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGVerificationMethod",
+          "code" : "review",
+          "display" : "Review"
+        },
+        {
+          "system" : "http://smart.who.int/base/CodeSystem/KGVerificationMethod",
+          "code" : "analysis",
+          "display" : "Analysis"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://smart.who.int/base/ValueSet/SGAuthoringPersonaTypesVS",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -6598,10 +7693,10 @@
       "title" : "SMART Guidelines Authoring Persona Types ValueSet",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:67ab6f2f-eb4b-4ebd-9467-c858a9a55e40",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:91bb0104-b180-4934-8ac7-660509cddff8",
+        "timestamp" : "2026-11-13T12:13:30+00:00",
         "total" : 10,
         "offset" : 0,
         "parameter" : [{
@@ -6691,10 +7786,10 @@
       "title" : "SMART Guidelines Authoring Skills ValueSet",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:e36f31f6-5d0c-49d8-b065-bfc6213fc770",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:c4ed6c5e-b2a4-4fc4-8d98-0fcc0a7fa96b",
+        "timestamp" : "2026-11-13T12:13:30+00:00",
         "total" : 42,
         "offset" : 0,
         "parameter" : [{
@@ -6944,10 +8039,10 @@
       "title" : "Smart Guidelines Persona Types Value Set",
       "status" : "active",
       "experimental" : true,
-      "date" : "2026-11-12T11:01:25+00:00",
+      "date" : "2026-11-13T12:09:30+00:00",
       "expansion" : {
-        "identifier" : "urn:uuid:1ea29366-0953-4c83-8ede-70155801c4d7",
-        "timestamp" : "2026-11-12T11:04:33+00:00",
+        "identifier" : "urn:uuid:fa64c6e3-7fed-434f-952b-41fafe1b5f54",
+        "timestamp" : "2026-11-13T12:13:30+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{

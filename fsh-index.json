@@ -208,6 +208,14 @@
     "endLine": 561
   },
   {
+    "outputFile": "CodeSystem-KGArtifactKind.json",
+    "fshName": "KGArtifactKind",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGArtifactKind.fsh",
+    "startLine": 2,
+    "endLine": 16
+  },
+  {
     "outputFile": "CodeSystem-KGCertainty.json",
     "fshName": "KGCertainty",
     "fshType": "CodeSystem",
@@ -232,12 +240,28 @@
     "endLine": 12
   },
   {
+    "outputFile": "CodeSystem-KGConformanceExpectation.json",
+    "fshName": "KGConformanceExpectation",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGConformanceExpectation.fsh",
+    "startLine": 2,
+    "endLine": 14
+  },
+  {
     "outputFile": "CodeSystem-KGDerivation.json",
     "fshName": "KGDerivation",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/KGDerivation.fsh",
     "startLine": 2,
     "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-KGDmnEntryKind.json",
+    "fshName": "KGDmnEntryKind",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGDmnEntryKind.fsh",
+    "startLine": 2,
+    "endLine": 12
   },
   {
     "outputFile": "CodeSystem-KGElementType.json",
@@ -252,6 +276,14 @@
     "fshName": "KGEvidenceType",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/KGEvidenceType.fsh",
+    "startLine": 2,
+    "endLine": 14
+  },
+  {
+    "outputFile": "CodeSystem-KGGatewayDirection.json",
+    "fshName": "KGGatewayDirection",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGGatewayDirection.fsh",
     "startLine": 2,
     "endLine": 14
   },
@@ -312,12 +344,84 @@
     "endLine": 31
   },
   {
+    "outputFile": "CodeSystem-KGL2BPMNClasses.json",
+    "fshName": "KGL2BPMNClasses",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL2BPMNClasses.fsh",
+    "startLine": 2,
+    "endLine": 16
+  },
+  {
+    "outputFile": "CodeSystem-KGL2BPMNPredicates.json",
+    "fshName": "KGL2BPMNPredicates",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL2BPMNPredicates.fsh",
+    "startLine": 2,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-KGL2Classes.json",
+    "fshName": "KGL2Classes",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL2Classes.fsh",
+    "startLine": 2,
+    "endLine": 24
+  },
+  {
+    "outputFile": "CodeSystem-KGL2DMNClasses.json",
+    "fshName": "KGL2DMNClasses",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL2DMNClasses.fsh",
+    "startLine": 2,
+    "endLine": 16
+  },
+  {
+    "outputFile": "CodeSystem-KGL2DMNPredicates.json",
+    "fshName": "KGL2DMNPredicates",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL2DMNPredicates.fsh",
+    "startLine": 2,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-KGL2Predicates.json",
+    "fshName": "KGL2Predicates",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL2Predicates.fsh",
+    "startLine": 2,
+    "endLine": 23
+  },
+  {
+    "outputFile": "CodeSystem-KGL3Classes.json",
+    "fshName": "KGL3Classes",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL3Classes.fsh",
+    "startLine": 2,
+    "endLine": 24
+  },
+  {
+    "outputFile": "CodeSystem-KGL3Predicates.json",
+    "fshName": "KGL3Predicates",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGL3Predicates.fsh",
+    "startLine": 2,
+    "endLine": 13
+  },
+  {
     "outputFile": "CodeSystem-KGOutcomeImportance.json",
     "fshName": "KGOutcomeImportance",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/KGOutcomeImportance.fsh",
     "startLine": 2,
     "endLine": 12
+  },
+  {
+    "outputFile": "CodeSystem-KGPublicationStatus.json",
+    "fshName": "KGPublicationStatus",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGPublicationStatus.fsh",
+    "startLine": 2,
+    "endLine": 14
   },
   {
     "outputFile": "CodeSystem-KGPublicationType.json",
@@ -384,12 +488,28 @@
     "endLine": 14
   },
   {
+    "outputFile": "CodeSystem-KGStructureDefinitionKind.json",
+    "fshName": "KGStructureDefinitionKind",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGStructureDefinitionKind.fsh",
+    "startLine": 2,
+    "endLine": 14
+  },
+  {
     "outputFile": "CodeSystem-KGTerminologySystem.json",
     "fshName": "KGTerminologySystem",
     "fshType": "CodeSystem",
     "fshFile": "codesystems/KGTerminologySystem.fsh",
     "startLine": 2,
     "endLine": 18
+  },
+  {
+    "outputFile": "CodeSystem-KGVerificationMethod.json",
+    "fshName": "KGVerificationMethod",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/KGVerificationMethod.fsh",
+    "startLine": 2,
+    "endLine": 14
   },
   {
     "outputFile": "CodeSystem-SGAuthoringPersonaTypes.json",
@@ -904,12 +1024,188 @@
     "endLine": 17
   },
   {
+    "outputFile": "StructureDefinition-KGActivityDefinition.json",
+    "fshName": "KGActivityDefinition",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 21,
+    "endLine": 38
+  },
+  {
+    "outputFile": "StructureDefinition-KGActorDefinition.json",
+    "fshName": "KGActorDefinition",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 230,
+    "endLine": 248
+  },
+  {
+    "outputFile": "StructureDefinition-KGBpmnDefinitions.json",
+    "fshName": "KGBpmnDefinitions",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2BPMN.fsh",
+    "startLine": 2,
+    "endLine": 13
+  },
+  {
+    "outputFile": "StructureDefinition-KGBpmnEvent.json",
+    "fshName": "KGBpmnEvent",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2BPMN.fsh",
+    "startLine": 59,
+    "endLine": 67
+  },
+  {
+    "outputFile": "StructureDefinition-KGBpmnGateway.json",
+    "fshName": "KGBpmnGateway",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2BPMN.fsh",
+    "startLine": 47,
+    "endLine": 57
+  },
+  {
+    "outputFile": "StructureDefinition-KGBpmnParticipant.json",
+    "fshName": "KGBpmnParticipant",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2BPMN.fsh",
+    "startLine": 25,
+    "endLine": 33
+  },
+  {
+    "outputFile": "StructureDefinition-KGBpmnProcess.json",
+    "fshName": "KGBpmnProcess",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2BPMN.fsh",
+    "startLine": 15,
+    "endLine": 23
+  },
+  {
+    "outputFile": "StructureDefinition-KGBpmnTask.json",
+    "fshName": "KGBpmnTask",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2BPMN.fsh",
+    "startLine": 35,
+    "endLine": 45
+  },
+  {
+    "outputFile": "StructureDefinition-KGBusinessProcess.json",
+    "fshName": "KGBusinessProcess",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 55,
+    "endLine": 67
+  },
+  {
     "outputFile": "StructureDefinition-KGCitation.json",
     "fshName": "KGCitation",
     "fshType": "Logical",
     "fshFile": "models/KGL1.fsh",
     "startLine": 179,
     "endLine": 190
+  },
+  {
+    "outputFile": "StructureDefinition-KGCodeSystem.json",
+    "fshName": "KGCodeSystem",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 190,
+    "endLine": 207
+  },
+  {
+    "outputFile": "StructureDefinition-KGConceptMap.json",
+    "fshName": "KGConceptMap",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 209,
+    "endLine": 228
+  },
+  {
+    "outputFile": "StructureDefinition-KGCqlLibrary.json",
+    "fshName": "KGCqlLibrary",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 60,
+    "endLine": 70
+  },
+  {
+    "outputFile": "StructureDefinition-KGDak.json",
+    "fshName": "KGDak",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 2,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-KGDakTask.json",
+    "fshName": "KGDakTask",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 69,
+    "endLine": 77
+  },
+  {
+    "outputFile": "StructureDefinition-KGDataElement.json",
+    "fshName": "KGDataElement",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 79,
+    "endLine": 94
+  },
+  {
+    "outputFile": "StructureDefinition-KGDecisionSupportLogic.json",
+    "fshName": "KGDecisionSupportLogic",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 96,
+    "endLine": 107
+  },
+  {
+    "outputFile": "StructureDefinition-KGDmnDecision.json",
+    "fshName": "KGDmnDecision",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2DMN.fsh",
+    "startLine": 14,
+    "endLine": 23
+  },
+  {
+    "outputFile": "StructureDefinition-KGDmnDecisionTable.json",
+    "fshName": "KGDmnDecisionTable",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2DMN.fsh",
+    "startLine": 25,
+    "endLine": 33
+  },
+  {
+    "outputFile": "StructureDefinition-KGDmnDefinitions.json",
+    "fshName": "KGDmnDefinitions",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2DMN.fsh",
+    "startLine": 2,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-KGDmnInputClause.json",
+    "fshName": "KGDmnInputClause",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2DMN.fsh",
+    "startLine": 35,
+    "endLine": 45
+  },
+  {
+    "outputFile": "StructureDefinition-KGDmnOutputClause.json",
+    "fshName": "KGDmnOutputClause",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2DMN.fsh",
+    "startLine": 47,
+    "endLine": 59
+  },
+  {
+    "outputFile": "StructureDefinition-KGDmnRule.json",
+    "fshName": "KGDmnRule",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2DMN.fsh",
+    "startLine": 61,
+    "endLine": 80
   },
   {
     "outputFile": "StructureDefinition-KGEdge.json",
@@ -934,6 +1230,22 @@
     "fshFile": "models/KGL1.fsh",
     "startLine": 212,
     "endLine": 222
+  },
+  {
+    "outputFile": "StructureDefinition-KGExternalArtifact.json",
+    "fshName": "KGExternalArtifact",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 208,
+    "endLine": 217
+  },
+  {
+    "outputFile": "StructureDefinition-KGFunctionalRequirement.json",
+    "fshName": "KGFunctionalRequirement",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 140,
+    "endLine": 157
   },
   {
     "outputFile": "StructureDefinition-KGGraphDocument.json",
@@ -976,12 +1288,28 @@
     "endLine": 111
   },
   {
+    "outputFile": "StructureDefinition-KGLibrary.json",
+    "fshName": "KGLibrary",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 40,
+    "endLine": 58
+  },
+  {
     "outputFile": "StructureDefinition-KGLibraryNode.json",
     "fshName": "KGLibraryNode",
     "fshType": "Logical",
     "fshFile": "models/KGL1Library.fsh",
     "startLine": 12,
     "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-KGMeasure.json",
+    "fshName": "KGMeasure",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 72,
+    "endLine": 90
   },
   {
     "outputFile": "StructureDefinition-KGNode.json",
@@ -992,12 +1320,52 @@
     "endLine": 253
   },
   {
+    "outputFile": "StructureDefinition-KGNonFunctionalRequirement.json",
+    "fshName": "KGNonFunctionalRequirement",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 159,
+    "endLine": 175
+  },
+  {
     "outputFile": "StructureDefinition-KGOutcome.json",
     "fshName": "KGOutcome",
     "fshType": "Logical",
     "fshFile": "models/KGL1.fsh",
     "startLine": 113,
     "endLine": 123
+  },
+  {
+    "outputFile": "StructureDefinition-KGPersona.json",
+    "fshName": "KGPersona",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 23,
+    "endLine": 39
+  },
+  {
+    "outputFile": "StructureDefinition-KGPlanDefinition.json",
+    "fshName": "KGPlanDefinition",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 2,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-KGProfile.json",
+    "fshName": "KGProfile",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 151,
+    "endLine": 169
+  },
+  {
+    "outputFile": "StructureDefinition-KGProgramIndicator.json",
+    "fshName": "KGProgramIndicator",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 122,
+    "endLine": 138
   },
   {
     "outputFile": "StructureDefinition-KGProvenanceSource.json",
@@ -1032,6 +1400,14 @@
     "endLine": 33
   },
   {
+    "outputFile": "StructureDefinition-KGQuestionnaire.json",
+    "fshName": "KGQuestionnaire",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 92,
+    "endLine": 109
+  },
+  {
     "outputFile": "StructureDefinition-KGRecommendation.json",
     "fshName": "KGRecommendation",
     "fshType": "Logical",
@@ -1056,12 +1432,76 @@
     "endLine": 97
   },
   {
+    "outputFile": "StructureDefinition-KGRequirementStatement.json",
+    "fshName": "KGRequirementStatement",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 177,
+    "endLine": 192
+  },
+  {
+    "outputFile": "StructureDefinition-KGRequirements.json",
+    "fshName": "KGRequirements",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 250,
+    "endLine": 268
+  },
+  {
+    "outputFile": "StructureDefinition-KGSchedulingLogic.json",
+    "fshName": "KGSchedulingLogic",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 109,
+    "endLine": 120
+  },
+  {
+    "outputFile": "StructureDefinition-KGStructureDefinition.json",
+    "fshName": "KGStructureDefinition",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 130,
+    "endLine": 149
+  },
+  {
+    "outputFile": "StructureDefinition-KGStructureMap.json",
+    "fshName": "KGStructureMap",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 111,
+    "endLine": 128
+  },
+  {
     "outputFile": "StructureDefinition-KGTerminologyCode.json",
     "fshName": "KGTerminologyCode",
     "fshType": "Logical",
     "fshFile": "models/KGL1.fsh",
     "startLine": 204,
     "endLine": 210
+  },
+  {
+    "outputFile": "StructureDefinition-KGTestScenario.json",
+    "fshName": "KGTestScenario",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 194,
+    "endLine": 206
+  },
+  {
+    "outputFile": "StructureDefinition-KGUserScenario.json",
+    "fshName": "KGUserScenario",
+    "fshType": "Logical",
+    "fshFile": "models/KGL2.fsh",
+    "startLine": 41,
+    "endLine": 53
+  },
+  {
+    "outputFile": "StructureDefinition-KGValueSet.json",
+    "fshName": "KGValueSet",
+    "fshType": "Logical",
+    "fshFile": "models/KGL3.fsh",
+    "startLine": 171,
+    "endLine": 188
   },
   {
     "outputFile": "StructureDefinition-LinkIdExt.json",
@@ -1520,6 +1960,14 @@
     "endLine": 7
   },
   {
+    "outputFile": "ValueSet-KGArtifactKindVS.json",
+    "fshName": "KGArtifactKindVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGArtifactKindVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
     "outputFile": "ValueSet-KGCertaintyVS.json",
     "fshName": "KGCertaintyVS",
     "fshType": "ValueSet",
@@ -1544,10 +1992,26 @@
     "endLine": 9
   },
   {
+    "outputFile": "ValueSet-KGConformanceExpectationVS.json",
+    "fshName": "KGConformanceExpectationVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGConformanceExpectationVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
     "outputFile": "ValueSet-KGDerivationVS.json",
     "fshName": "KGDerivationVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/KGDerivationVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGDmnEntryKindVS.json",
+    "fshName": "KGDmnEntryKindVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGDmnEntryKindVS.fsh",
     "startLine": 2,
     "endLine": 9
   },
@@ -1564,6 +2028,14 @@
     "fshName": "KGEvidenceTypeVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/KGEvidenceTypeVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGGatewayDirectionVS.json",
+    "fshName": "KGGatewayDirectionVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGGatewayDirectionVS.fsh",
     "startLine": 2,
     "endLine": 9
   },
@@ -1624,10 +2096,82 @@
     "endLine": 9
   },
   {
+    "outputFile": "ValueSet-KGL2BPMNClassesVS.json",
+    "fshName": "KGL2BPMNClassesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL2BPMNClassesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL2BPMNPredicatesVS.json",
+    "fshName": "KGL2BPMNPredicatesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL2BPMNPredicatesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL2ClassesVS.json",
+    "fshName": "KGL2ClassesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL2ClassesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL2DMNClassesVS.json",
+    "fshName": "KGL2DMNClassesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL2DMNClassesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL2DMNPredicatesVS.json",
+    "fshName": "KGL2DMNPredicatesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL2DMNPredicatesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL2PredicatesVS.json",
+    "fshName": "KGL2PredicatesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL2PredicatesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL3ClassesVS.json",
+    "fshName": "KGL3ClassesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL3ClassesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGL3PredicatesVS.json",
+    "fshName": "KGL3PredicatesVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGL3PredicatesVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
     "outputFile": "ValueSet-KGOutcomeImportanceVS.json",
     "fshName": "KGOutcomeImportanceVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/KGOutcomeImportanceVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGPublicationStatusVS.json",
+    "fshName": "KGPublicationStatusVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGPublicationStatusVS.fsh",
     "startLine": 2,
     "endLine": 9
   },
@@ -1696,10 +2240,26 @@
     "endLine": 9
   },
   {
+    "outputFile": "ValueSet-KGStructureDefinitionKindVS.json",
+    "fshName": "KGStructureDefinitionKindVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGStructureDefinitionKindVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
     "outputFile": "ValueSet-KGTerminologySystemVS.json",
     "fshName": "KGTerminologySystemVS",
     "fshType": "ValueSet",
     "fshFile": "valuesets/KGTerminologySystemVS.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-KGVerificationMethodVS.json",
+    "fshName": "KGVerificationMethodVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/KGVerificationMethodVS.fsh",
     "startLine": 2,
     "endLine": 9
   },
