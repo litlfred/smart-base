@@ -63,3 +63,15 @@ export const contentText = (node: { properties?: Record<string, unknown> }, fiel
 };
 
 export const contentHash = (text: string): string => sha256(Buffer.from(text, "utf8"));
+
+// ---- L1 content IRIs (smart-kg kgid.mjs, the half the extractor tests need) -------------------
+/** By published number; a recommendation with none is content-addressed by its statement. */
+export const recommendationId = (pub: string, number: string | null | undefined, statement?: string): string =>
+  `${pub}/recommendation/${number ? num(number) : "h-" + shortHash(norm(statement))}`;
+export const subRecommendationId = (parent: string, letter: string): string => `${parent}/${num(letter)}`;
+export const remarkId = (rec: string, ordinal: number | string): string => `${rec}/remark/${ordinal}`;
+export const keyQuestionId = (pub: string, number: string): string => `${pub}/key-question/${num(number)}`;
+export const outcomeId = (pub: string, name: string): string => `${pub}/outcome/${slug(name)}`;
+export const evidenceId = (pub: string, keyQuestion: string, outcomeName: string): string =>
+  `${pub}/evidence/${num(keyQuestion)}/${slug(outcomeName)}`;
+export const indicatorId = (pub: string, refNo: string): string => `${pub}/indicator/${num(refNo)}`;
