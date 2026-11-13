@@ -87,6 +87,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`l1-specialise.feature`](l1-specialise.feature) | a file |  |
 | [`l1-specialise.test.ts`](l1-specialise.test.ts) | a file |  |
 | [`l1-specialise.ts`](l1-specialise.ts) | a file |  |
+| [`l1-statement-lists.feature`](l1-statement-lists.feature) | a file |  |
 | [`l1-statement-lists.test.ts`](l1-statement-lists.test.ts) | a file |  |
 | [`l1-statement-lists.ts`](l1-statement-lists.ts) | a file |  |
 | [`l1-transcription-verbatim.feature`](l1-transcription-verbatim.feature) | a file |  |
