@@ -27,11 +27,11 @@ workflow needs a smart-kg checkout.
 | `graph.ts` | a graph document's form (tier 1) | source |
 | `validate.ts` | tier 1 + tier 2: a port of smart-kg `validate.mjs` 3.0, plus a check on typed values | source |
 | `kgid.ts` | L1 IRIs and content hashes: a port of `tools/kgid.mjs` | source |
-| `generated/l1/l1.json` | L1 3.0 in smart-kg's format | generated |
-| `generated/l1/l1-library.json`, `l1-library.jsonld` | the extension layer, and its `rdfs:subClassOf` statements | generated |
-| `generated/l1/recommendation-graph.schema.json` | the document JSON Schema | generated |
-| `generated/l1/l1.context.jsonld` | the L1 JSON-LD context, built the way smart-kg built it | generated |
-| `generated/l1/l1-library.context.jsonld` | the context an `l1-library` graph names (`src/context.ts`) | generated |
+| `generated/l1.json` | L1 3.0 in smart-kg's format | generated |
+| `generated/l1-library.json`, `l1-library.jsonld` | the extension layer, and its `rdfs:subClassOf` statements | generated |
+| `generated/recommendation-graph.schema.json` | the document JSON Schema | generated |
+| `generated/l1.context.jsonld` | the L1 JSON-LD context, built the way smart-kg built it | generated |
+| `generated/l1-library.context.jsonld` | the context an `l1-library` graph names (`context.ts`) | generated |
 | `loader.ts` | a jsonld.js document loader serving both contexts offline | source |
 | `../../input/fsh/models/KGL1.fsh`, `KGL1Library.fsh` | logical models | generated |
 | `../../input/fsh/codesystems/KG*.fsh`, `../../input/fsh/valuesets/KG*VS.fsh` | one CodeSystem + ValueSet per value set | generated |
@@ -72,11 +72,11 @@ layer stays as migrated and the extension stays separable. A document using it n
 
 A graph names its context by URL (`http://smart.who.int/kg/<layer>.context.jsonld`).
 That URL is the layer's identity, and it is never fetched at run time:
-`src/loader.ts` maps each URL to the context generated here.
+`loader.ts` maps each URL to the context generated here.
 
 ```ts
 import jsonld from "jsonld";
-import { documentLoader } from "./src/loader.ts";
+import { documentLoader } from "./loader.ts";
 const nquads = await jsonld.toRDF(graph, { format: "application/n-quads", documentLoader });
 ```
 
