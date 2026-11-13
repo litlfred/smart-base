@@ -7,8 +7,8 @@ description: >
   then smart-base's generic personas, and never inventing a process. Step 2 of
   recommendation-extraction; the `l1-recommendation-scenarios` Tool satisfies
   it.
-input: L2/schemas/skills/recommendation-scenarios/input.schema.json
-output: L2/schemas/skills/recommendation-scenarios/output.schema.json
+input: L1/schemas/skills/recommendation-scenarios/input.schema.json
+output: L1/schemas/skills/recommendation-scenarios/output.schema.json
 uses-methodology:
   - terminology-coding
 ---

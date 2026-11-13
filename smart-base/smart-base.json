@@ -231,6 +231,9 @@
       "id": "smart-base-L2",
       "path": "L2/",
       "optIn": true,
+      "requires": [
+        "smart-base.smart-base-L1"
+      ],
       "title": "L2 — what a DAK declares",
       "graphTypologies": [
         "cat-harness"
@@ -261,6 +264,9 @@
       "id": "smart-base-L3",
       "path": "L3/",
       "optIn": true,
+      "requires": [
+        "smart-base.smart-base-L2"
+      ],
       "title": "L3 — the FHIR artefacts",
       "graphTypologies": [
         "cat-harness"
