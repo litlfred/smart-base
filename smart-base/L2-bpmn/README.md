@@ -15,6 +15,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-L2-bpmn`, hold
 |---|---|---|
 | [`graph.json`](graph.json) | data |  |
 | [`schemas/`](schemas/README.md) | described in its own README | |
+| [`scripts/`](scripts/README.md) | described in its own README | |
 | [`tools/`](tools/README.md) | described in its own README | |
 
 <!-- kg:subgraph:end -->

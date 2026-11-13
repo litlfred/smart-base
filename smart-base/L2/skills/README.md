@@ -13,6 +13,7 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `l2-skills`, holding `s
 
 | file | what it is | used by |
 |---|---|---|
+| [`skill-definitions/`](skill-definitions/) | _nothing declares what this holds_ | |
 | [`smart-l2/`](smart-l2/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

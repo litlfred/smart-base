@@ -10,6 +10,6 @@
   ],
   "routingPatterns": ["L2", "DAK", "business process", "data dictionary", "decision logic", "indicator"],
   "tags": ["smart-guidelines", "l2", "dak", "authoring"],
-  "package": "authoring-who-smart-guidelines",
+  "package": "smart-l2",
   "lifecycleStages": ["author", "validate"]
 }
