@@ -7,11 +7,13 @@ Skills are organized by domain and assigned to [authoring personas](authoring-pe
 #### Skill Inventory
 
 ##### Content Review Skills
+
 | Skill | Description | Personas |
 |-------|-------------|----------|
 | [Can review and approve content](Requirements-SGAuthoring.Skills.ReviewAndApproveContent.html) | Review and formally approve content at decision gates | Content Reviewer |
 
 ##### Project Management Skills
+
 | Skill | Description | Personas |
 |-------|-------------|----------|
 | [Can scope DAK](Requirements-SGAuthoring.Skills.ScopeDAK.html) | Define DAK scope, source documents, and development process | Programme Manager |
@@ -19,12 +21,14 @@ Skills are organized by domain and assigned to [authoring personas](authoring-pe
 | [Can plan iterations](Requirements-SGAuthoring.Skills.PlanIterations.html) | Plan sprints, maintain backlog, facilitate retrospectives | Programme Manager |
 
 ##### L1 Review Skills
+
 | Skill | Description | Personas |
 |-------|-------------|----------|
 | [Can review L1 guidelines](Requirements-SGAuthoring.Skills.ReviewL1Guidelines.html) | Review WHO L1 guidelines for accuracy and completeness | Technical Officer, Clinical SME, Business Analyst, QC Reviewer |
 | [Can interpret clinical recommendations](Requirements-SGAuthoring.Skills.InterpretClinicalRecommendations.html) | Interpret clinical recommendations with domain expertise | Clinical SME, Technical Officer |
 
 ##### L2 DAK Authoring Skills
+
 | Skill | Description | Personas |
 |-------|-------------|----------|
 | [Can author personas](Requirements-SGAuthoring.Skills.AuthorPersonas.html) | Define generic personas from guidelines and ground-truthing | Business Analyst, Clinical SME |
@@ -38,6 +42,7 @@ Skills are organized by domain and assigned to [authoring personas](authoring-pe
 | [Can validate DAK content](Requirements-SGAuthoring.Skills.ValidateDAKContent.html) | Review DAK for L1 accuracy and cross-component consistency | Technical Officer, Clinical SME, Business Analyst, QC Reviewer |
 
 ##### L3 FHIR Authoring Skills
+
 | Skill | Description | Personas |
 |-------|-------------|----------|
 | [Can author logical models](Requirements-SGAuthoring.Skills.AuthorLogicalModels.html) | Create FHIR logical models from L2 data dictionaries | FHIR Modeller |
@@ -53,6 +58,7 @@ Skills are organized by domain and assigned to [authoring personas](authoring-pe
 | [Can author test cases](Requirements-SGAuthoring.Skills.AuthorTestCases.html) | Create TestPlan, TestScript, and example instances | FHIR Modeller |
 
 ##### Terminology Skills
+
 | Skill | Description | Personas |
 |-------|-------------|----------|
 | [Can review terminology](Requirements-SGAuthoring.Skills.ReviewTerminology.html) | Review terminology bindings, code systems, and value sets | Terminologist, QC Reviewer |
@@ -62,6 +68,7 @@ Skills are organized by domain and assigned to [authoring personas](authoring-pe
 | [Can author concept maps](Requirements-SGAuthoring.Skills.AuthorConceptMaps.html) | Create FHIR ConceptMap resources | Terminologist, FHIR Modeller |
 
 ##### Quality Control Skills
+
 | Skill | Description | Personas |
 |-------|-------------|----------|
 | [Can run QA checks](Requirements-SGAuthoring.Skills.RunQAChecks.html) | Run and interpret IG Publisher QA reports | QC Reviewer, FHIR Modeller, Publication Manager, Terminologist |
@@ -70,6 +77,7 @@ Skills are organized by domain and assigned to [authoring personas](authoring-pe
 | [Can validate L3 functionality](Requirements-SGAuthoring.Skills.ValidateL3Functionality.html) | Test StructureMaps, CQL, and Measures | QC Reviewer |
 
 ##### Publication Skills
+
 | Skill | Description | Personas |
 |-------|-------------|----------|
 | [Can configure IG](Requirements-SGAuthoring.Skills.ConfigureIG.html) | Set up IG repository and sushi-config | Publication Manager, FHIR Modeller |
@@ -78,6 +86,7 @@ Skills are organized by domain and assigned to [authoring personas](authoring-pe
 | [Can manage governance](Requirements-SGAuthoring.Skills.ManageGovernance.html) | Manage cross-IG shared artifacts and governance | Publication Manager, Terminologist |
 
 ##### Translation Skills
+
 | Skill | Description | Personas |
 |-------|-------------|----------|
 | [Can translate content](Requirements-SGAuthoring.Skills.TranslateContent.html) | Translate IG content across UN languages | Translator |
