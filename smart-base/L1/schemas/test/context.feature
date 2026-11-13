@@ -2,10 +2,10 @@ Feature: The knowledge graph's JSON-LD contexts
   The generated L1 and l1-library contexts, served offline by the document
   loader, turn an l1-library graph into RDF.
 
-  @test:smart-base/L1/schemas/test/context.test.ts::loaderServesBothContextsOnly
-  Scenario: the loader serves both contexts and refuses any other URL
+  @test:smart-base/L1/schemas/test/context.test.ts::loaderServesEveryHeldLayersContextOnly
+  Scenario: the loader serves every held layer's context and refuses any other URL
     Given the document loader's contexts
-    Then they are exactly the l1 and l1-library context URLs
+    Then they are exactly the l1, l1-library, l2, l2-bpmn, l2-dmn and l3 context URLs
     And loading "https://example.org/other.context.jsonld" is rejected
 
   @test:smart-base/L1/schemas/test/context.test.ts::propertyNameIsOneTermAcrossClasses
