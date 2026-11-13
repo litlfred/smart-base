@@ -3,6 +3,9 @@
   "name": "@litlfred/smart-base-site",
   "private": true,
   "type": "module",
+  "scripts": {
+    "cat": "bun .github/cat.ts"
+  },
   "_workspaces_comment": "The mounted code layers that carry a package.json, as workspaces; bootstrap declares no dependencies, so it is not listed. smart-base/ is not a workspace: its scripts reach zod and @litlfred/bootstrap-tools through the ONE root node_modules that bunfig.toml's hoisted linker lays out.",
   "workspaces": [
     "bootstrap-tools",

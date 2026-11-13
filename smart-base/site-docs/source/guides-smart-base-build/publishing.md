@@ -1,3 +1,7 @@
+**To release**, the owner tags the version in `sushi-config.yaml` as
+`v<version>` on `main` and pushes the tag. The steps are the FHIR IG
+layer's [Releasing](https://litlfred.github.io/folio-assistant/fhir-harness/fhir/publishing.html#releasing).
+
 **A merged pull request publishes the site.** A push to `main` that changes
 `input/`, `sushi-config.yaml` or `ig.ini` refreshes the AST, and every push to
 `main` republishes the site. The publish waits for that commit's AST refresh
@@ -12,7 +16,8 @@ Actions tab.
 | [`standing-repin.yml`](https://github.com/litlfred/smart-base/blob/main/.github/workflows/standing-repin.yml) | when an upstream layer merges, and by hand: opens one PR that moves the pins a standing consent covers |
 | [`pr-preview.yml`](https://github.com/litlfred/smart-base/blob/main/.github/workflows/pr-preview.yml) | a pull request preview, deployed after a collaborator approves it in the `pr-preview` environment |
 | [`ghbuild.yml`](https://github.com/litlfred/smart-base/blob/main/.github/workflows/ghbuild.yml) | the plain WHO build (above) |
-| [`release.yml`](https://github.com/litlfred/smart-base/blob/main/.github/workflows/release.yml) | checks `publication-request.json` for a release |
+| [`ig-release.yml`](https://github.com/litlfred/smart-base/blob/main/.github/workflows/ig-release.yml) | on a `v*` tag, and by hand for an existing tag: a full build of the tag with the DAK pre-processing, then a GitHub **draft** release with `package.tgz` (and its R4/R4B variants), `ast-data.zip` and `SHA256SUMS`. The owner publishes the draft |
+| [`release.yml`](https://github.com/litlfred/smart-base/blob/main/.github/workflows/release.yml) | by hand, after the draft is published: checks `publication-request.json` and calls WHO's publication workflow |
 
 The `gh-pages` root publish also keeps `v0/`, `ns/`, `0.1.0/` and
 `sitepreview/` (`site.build.keep` in `index.config.json`): the JSON-LD
