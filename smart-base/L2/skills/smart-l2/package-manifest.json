@@ -1,14 +1,13 @@
 {
   "name": "smart-l2",
   "version": "0.1.0",
-  "description": "The skills that author L2, the Digital Adaptation Kit: L2 DAK authoring and component review, choosing DAK dependencies, DTH authoring and the L1-to-L2 ingest of a handbook, and joining recommendations to personas and processes. Split out of `authoring-who-smart-guidelines` by layer (issue #359); the stack-wide skills (the end-to-end process, creating a guideline, the stack's layering, toolchain ownership, the smart-base tools) stay there.",
+  "description": "The skills that author L2, the Digital Adaptation Kit: L2 DAK authoring and component review, choosing DAK dependencies and DTH authoring and the L1-to-L2 ingest of a handbook. Split out of `authoring-who-smart-guidelines` by layer (issue #359); the stack-wide skills (the end-to-end process, creating a guideline, the stack's layering, toolchain ownership, the smart-base tools) stay there.",
   "skills": [
     "dth-authoring",
     "dth-l1-to-l2-ingest",
     "l2-component-edit-review",
     "l2-dak-authoring",
-    "l2-dependency-choice",
-    "recommendation-scenarios"
+    "l2-dependency-choice"
   ],
   "docker": {
     "baseImage": "ubuntu:24.04",

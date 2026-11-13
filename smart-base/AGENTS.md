@@ -85,7 +85,7 @@ _35 skills in 5 directories, generated from each skill's front matter. `bun run 
 | [`smart-stack-layering`](skills/content/authoring-who-smart-guidelines/smart-stack-layering.md) | Which layer a WHO SMART asset, rule, script or page belongs to — fhir-harness, smart-base (with its L1 and DAK document kinds) or smart-ig — and the one question that settles it. |
 | [`toolchain-ownership`](skills/content/authoring-who-smart-guidelines/toolchain-ownership.md) | Taking ownership of the WHO smart-base scripts in litlfred, rewriting them to the Skill I/O contract, and the one gate that governs when a script may actually move. |
 
-**`L1/skills/smart-l1/`** (7) (opt-in `smart-base.smart-base-L1`)
+**`L1/skills/smart-l1/`** (8) (opt-in `smart-base.smart-base-L1`)
 
 | Skill | What it is for |
 |---|---|
@@ -95,9 +95,10 @@ _35 skills in 5 directories, generated from each skill's front matter. `bun run 
 | `indicator-extraction` | Extract the indicators an L1 source prints (indicator reference or metadata sheets: name, numerator, denominator, disaggregation, definition, data sources) as L1 `indicator` nodes with every printed… |
 | `recommendation-candidates` | Turn one ingested L1 source into L1 3.0 recommendation nodes: list every normative sentence as a candidate, let the agent decide each in a curation file, then refuse a non-verbatim statement or… |
 | `recommendation-extraction` | Extract the recommendations of an L1 source as L1 3.0 recommendation and remark nodes, then describe each one's scenario: the persona (role) who acts on it, the business process they act in, and the… |
+| `recommendation-scenarios` | Join each L1 recommendation to who acts on it and during which business process: one smart-kg L2 user-scenario candidate per recommendation, from the agent's mapping, reusing the target guide's… |
 | `transcription-verbatim` | Check L1 authored from pictures (a schedule poster, a slide deck: a source with no usable text layer) against the image narratives and transcriptions it names: every statement verbatim in one of… |
 
-**`L2/skills/smart-l2/`** (6) (opt-in `smart-base.smart-base-L2`)
+**`L2/skills/smart-l2/`** (5) (opt-in `smart-base.smart-base-L2`)
 
 | Skill | What it is for |
 |---|---|
@@ -106,7 +107,6 @@ _35 skills in 5 directories, generated from each skill's front matter. `bun run 
 | `l2-component-edit-review` | How one L2 DAK component is edited by the agent and reviewed by a person: personas and user scenarios, BPMN business processes, DMN decision and scheduling logic, core data elements and glossary… |
 | `l2-dak-authoring` | Author the L2 layer of a WHO SMART Guideline — the Digital Adaptation Kit between the narrative L1 guideline and the L3 FHIR artefacts — one DAK component per pass (personas, user scenarios,… |
 | `l2-dependency-choice` | Stage 3 of smart-guideline-end-to-end: choose which existing DAKs (WHO's, or a jurisdiction's adaptation) the guideline builds on. |
-| `recommendation-scenarios` | Join each L1 recommendation to who acts on it and during which business process: one smart-kg L2 user-scenario candidate per recommendation, from the agent's mapping, reusing the target guide's… |
 
 **`L3/skills/smart-l3/`** (5) (opt-in `smart-base.smart-base-L3`)
 
