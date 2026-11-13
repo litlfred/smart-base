@@ -27,7 +27,7 @@ and `Call_Data` in [`dth-authoring`](../../../processes/content/dth-authoring.bp
 
 | layer | what | kind / model | written by |
 |---|---|---|---|
-| L1 | the indicator **as the source prints it**, verbatim | `indicator` block (folio type `smart-base:Indicator`; KG L1 `indicator`, `kg/src/l1.ts`) | `scripts/l1-indicator-sheets.py` → `candidates.json` → `gen-library-jsonld` |
+| L1 | the indicator **as the source prints it**, verbatim | `indicator` block (folio type `smart-base:Indicator`; KG L1 `indicator`, `L1/schemas/l1.ts`) | `scripts/l1-indicator-sheets.py` → `candidates.json` → `gen-library-jsonld` |
 | L2 | the DAK's or DTH's **own** operational measure, a draft that points back | `program-indicator` (sgkg-l2), logical model `ProgramIndicator` | `scripts/l2-program-indicators.py` |
 
 sgkg-l2 keeps them apart: merging them would merge a WHO definition with a

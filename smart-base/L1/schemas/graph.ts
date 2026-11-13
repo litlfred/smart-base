@@ -3,7 +3,7 @@
  *
  * Migrated from smart-kg `shapes/recommendation-graph.schema.json`. That file
  * was hand-written JSON Schema; this is the Zod it is now generated FROM
- * (`generated/l1/recommendation-graph.schema.json`), so the shape a TypeScript
+ * (`generated/recommendation-graph.schema.json`), so the shape a TypeScript
  * caller parses with and the shape a JSON Schema validator checks are one
  * declaration rather than two that can drift.
  *

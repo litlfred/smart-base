@@ -4,8 +4,8 @@
  * A graph names its context by URL (`http://smart.who.int/kg/<layer>.context.jsonld`),
  * which is its layer's identity and what `validate.ts` reads the layer from.
  * The URL is not something to fetch at run time: this maps each URL to the
- * context generated from the Zod source (`src/context.ts`, committed under
- * `generated/l1/`), so a processor expands a graph with no network.
+ * context generated from the Zod source (`context.ts`, committed under
+ * `generated/`), so a processor expands a graph with no network.
  *
  *   import jsonld from "jsonld";
  *   await jsonld.toRDF(doc, { format: "application/n-quads", documentLoader });
@@ -16,7 +16,7 @@ import { fileURLToPath } from "node:url";
 
 import { contextUrl } from "./context.ts";
 
-const GENERATED = join(dirname(fileURLToPath(import.meta.url)), "..", "generated", "l1");
+const GENERATED = join(dirname(fileURLToPath(import.meta.url)), "generated");
 
 /** Every context this package holds, by the URL a document names. */
 export const CONTEXTS: Readonly<Record<string, string>> = {

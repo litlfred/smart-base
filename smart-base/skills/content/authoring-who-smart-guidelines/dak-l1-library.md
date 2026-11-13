@@ -40,7 +40,7 @@ L1 document's publication, sections and elements are **specialisations**
 (`prov:specializationOf`) of its library entry, sections and blocks, and L1
 inherits whatever sectioning the ingest produced: an outline, inferred
 contents, or pages. The schema is smart-base's `l1-library` layer
-(`smart-base/kg/src/l1-library.ts`), which imports smart-kg L1 3.0 unchanged.
+(`smart-base/L1/schemas/l1-library.ts`), which imports smart-kg L1 3.0 unchanged.
 
 ## L1 or not — three sources, one precedence
 
@@ -120,7 +120,7 @@ publication with no ISBN or handle is identified by its page URL.
 
 **It is JSON-LD that survives as RDF.** Its `@context` is
 `http://smart.who.int/kg/l1-library.context.jsonld`, the layer's identity,
-never fetched at run time. `smart-base/kg/` generates that context from the
+never fetched at run time. `smart-base/L1/schemas/` generates that context from the
 same Zod source as the FHIR models and serves it through `src/loader.ts`;
 expand a graph with jsonld.js and that `documentLoader`. smart-kg's own L1
 context would drop every node class and property name and any predicate it
@@ -166,7 +166,7 @@ item. The PDFs are pinned by sha256 and not committed.
 
 ## Schemas this rests on
 
-- L1 3.0 and the `l1-library` layer: `smart-base/kg/` — Zod, from WHO
+- L1 3.0 and the `l1-library` layer: `smart-base/L1/schemas/` — Zod, from WHO
   smart-kg main `3f5e477`, generating the `KG*` logical models, code systems
   and value sets;
 - IRIs: `smart-base/scripts/l1-kgid.ts`, smart-kg's `kgid.mjs` as tested;

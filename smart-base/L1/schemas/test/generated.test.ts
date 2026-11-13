@@ -11,10 +11,10 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { test } from "node:test";
 
-import { REPO, artefacts, orphans } from "../src/emit.ts";
-import { L1, MIGRATED_FROM } from "../src/l1.ts";
-import { L1_LIBRARY } from "../src/l1-library.ts";
-import { OntologyLayerSchema, toOntologyJson } from "../src/ontology.ts";
+import { REPO, artefacts, orphans } from "../emit.ts";
+import { L1, MIGRATED_FROM } from "../l1.ts";
+import { L1_LIBRARY } from "../l1-library.ts";
+import { OntologyLayerSchema, toOntologyJson } from "../ontology.ts";
 
 test("migrationRecordsSourceCommit", () => {
   assert.match(MIGRATED_FROM.commit, /^[0-9a-f]{40}$/);
@@ -41,14 +41,14 @@ const stale = (paths: (p: string) => boolean) =>
     .map((a) => a.path);
 
 test("packageGeneratedFilesCurrent", () => {
-  assert.deepEqual(stale((p) => !p.startsWith("input/")), [], "run `npm run build` in smart-base/kg/");
+  assert.deepEqual(stale((p) => !p.startsWith("input/")), [], "run `npm run build` in smart-base/L1/schemas/");
 });
 
 test(
   "generatedFshCurrentNoneOrphaned",
   { skip: IG_FSH ? false : "no input/fsh/ here (an index mounts the package, not the IG): NOT checked (n/a, not a pass)" },
   () => {
-    assert.deepEqual(stale((p) => p.startsWith("input/")), [], "run `npm run build` in smart-base/kg/");
+    assert.deepEqual(stale((p) => p.startsWith("input/")), [], "run `npm run build` in smart-base/L1/schemas/");
     assert.deepEqual(orphans(new Set(artefacts().map((a) => a.path))), []);
   },
 );
@@ -64,7 +64,7 @@ test("publicationAndTerminologyCodeReuseParents", () => {
 });
 
 test("specialisationEmittedAsLinkedData", () => {
-  const ld = JSON.parse(readFileSync(join(REPO, "smart-base/kg/generated/l1/l1-library.jsonld"), "utf8"));
+  const ld = JSON.parse(readFileSync(join(REPO, "smart-base/L1/schemas/generated/l1-library.jsonld"), "utf8"));
   const sub = Object.fromEntries(ld["@graph"].map((n: { "@id": string; subClassOf: unknown }) => [n["@id"], n.subClassOf]));
   assert.equal(sub["http://smart.who.int/kg/publication"], "https://litlfred.github.io/cat-harness/v0/ns/SourceDocument");
   assert.equal(sub["http://smart.who.int/kg/publication-section"], "http://purl.org/spar/doco/Section");

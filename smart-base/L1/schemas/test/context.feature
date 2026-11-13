@@ -2,18 +2,18 @@ Feature: The knowledge graph's JSON-LD contexts
   The generated L1 and l1-library contexts, served offline by the document
   loader, turn an l1-library graph into RDF.
 
-  @test:smart-base/kg/test/context.test.ts::loaderServesBothContextsOnly
+  @test:smart-base/L1/schemas/test/context.test.ts::loaderServesBothContextsOnly
   Scenario: the loader serves both contexts and refuses any other URL
     Given the document loader's contexts
     Then they are exactly the l1 and l1-library context URLs
     And loading "https://example.org/other.context.jsonld" is rejected
 
-  @test:smart-base/kg/test/context.test.ts::propertyNameIsOneTermAcrossClasses
+  @test:smart-base/L1/schemas/test/context.test.ts::propertyNameIsOneTermAcrossClasses
   Scenario: a property name is one term across classes, or the build refuses
     When the extension context is built from the l1-library and L1 layers
     Then it does not throw
 
-  @test:smart-base/kg/test/context.test.ts::l1LibraryGraphSurvivesAsRdf
+  @test:smart-base/L1/schemas/test/context.test.ts::l1LibraryGraphSurvivesAsRdf
   Scenario: an l1-library graph survives as RDF: classes, named properties, Dublin Core, PROV
     Given an l1-library document with a publication, one section and a library node, a specializationOf edge and a contains edge
     When it is converted to N-Quads with the offline loader

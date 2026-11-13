@@ -8,7 +8,7 @@
  * commit 3f5e477b9628fa818e71a2b2298371196c5af97c (main). Every note, value set, predicate, edge, grounding
  * and omission is carried verbatim; what is NEW is each property's type, Zod
  * schema and FHIR mapping. `npm run build` regenerates
- * `generated/l1/l1.json` (smart-kg's format) and the FSH under `input/fsh/`.
+ * `generated/l1.json` (smart-kg's format) and the FSH under `input/fsh/`.
  * This file is the source of truth: smart-kg is deprecated (owner,
  * 2026-10-16) and the JSON is no longer held equal to its file.
  *

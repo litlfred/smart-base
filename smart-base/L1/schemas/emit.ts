@@ -2,12 +2,12 @@
  * Write every artefact generated from the Zod source, or with `--check`, fail
  * when any committed copy differs from what would be written.
  *
- *   smart-base/kg/generated/l1/l1.json                          L1 3.0, smart-kg format, JSON-equal to WHO's but for `_generated`
- *   smart-base/kg/generated/l1/l1-library.json                  the extension layer (imports l1), smart-kg format
- *   smart-base/kg/generated/l1/l1-library.jsonld                the specialisation: rdfs:subClassOf from L1 layout classes to the library's
- *   smart-base/kg/generated/l1/recommendation-graph.schema.json the document JSON Schema
- *   smart-base/kg/generated/l1/l1.context.jsonld                smart-kg's L1 context, JSON-equal to WHO's
- *   smart-base/kg/generated/l1/l1-library.context.jsonld        the context an l1-library document names (src/context.ts)
+ *   smart-base/L1/schemas/generated/l1.json                          L1 3.0, smart-kg format, JSON-equal to WHO's but for `_generated`
+ *   smart-base/L1/schemas/generated/l1-library.json                  the extension layer (imports l1), smart-kg format
+ *   smart-base/L1/schemas/generated/l1-library.jsonld                the specialisation: rdfs:subClassOf from L1 layout classes to the library's
+ *   smart-base/L1/schemas/generated/recommendation-graph.schema.json the document JSON Schema
+ *   smart-base/L1/schemas/generated/l1.context.jsonld                smart-kg's L1 context, JSON-equal to WHO's
+ *   smart-base/L1/schemas/generated/l1-library.context.jsonld        the context an l1-library document names (context.ts)
  *   input/fsh/models/KGL1.fsh, KGL1Library.fsh       logical models (the IG's, at the repository root)
  *   input/fsh/codesystems/KG*.fsh, valuesets/KG*VS.fsh
  *
@@ -15,8 +15,8 @@
  * removed upstream — is deleted, and only if it carries this generator's
  * banner: a hand-written KG*.fsh is never touched. `--check` reports it.
  *
- *   npx tsx src/emit.ts           write
- *   npx tsx src/emit.ts --check   exit 1 and name each stale or orphaned file
+ *   npx tsx emit.ts               write
+ *   npx tsx emit.ts     --check   exit 1 and name each stale or orphaned file
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -31,7 +31,7 @@ import { DOCO_NS, ELEMENT_TYPE_CLASS, L1_LIBRARY, LAYERING_RULE, SPECIALISES } f
 import { toOntologyJson } from "./ontology.ts";
 import { SHAPE_ID, SHAPE_TITLE } from "./shape-text.ts";
 
-/** smart-base repository root: this file is `smart-base/kg/src/emit.ts`, three levels down. */
+/** smart-base repository root: this file is `smart-base/L1/schemas/emit.ts`, three levels down. */
 export const REPO = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
 
 export function graphJsonSchema(): Record<string, unknown> {
@@ -70,20 +70,20 @@ export function specialisationJsonLd(): Record<string, unknown> {
  * file is about L1's CONTENT (authored, not extracted); this key is about the
  * FILE (written from `l1.ts`, not edited by hand).
  */
-export const GENERATED_NOTE = "smart-base/kg/src/emit.ts (npm run build in smart-base/kg/) — do not hand-edit; edit src/";
+export const GENERATED_NOTE = "smart-base/L1/schemas/emit.ts (npm run build in smart-base/L1/schemas/) — do not hand-edit; edit the layer source in smart-base/<Layer>/schemas/";
 
 export function artefacts(): { path: string; text: string }[] {
   const json = (v: unknown) => `${JSON.stringify(v, null, 2)}\n`;
   const declared = (v: object) => json({ _generated: GENERATED_NOTE, ...v });
   return [
-    { path: "smart-base/kg/generated/l1/l1.json", text: declared(toOntologyJson(L1)) },
-    { path: "smart-base/kg/generated/l1/l1-library.json", text: declared(toOntologyJson(L1_LIBRARY)) },
-    { path: "smart-base/kg/generated/l1/l1-library.jsonld", text: json(specialisationJsonLd()) },
-    { path: "smart-base/kg/generated/l1/recommendation-graph.schema.json", text: json(graphJsonSchema()) },
-    { path: "smart-base/kg/generated/l1/l1.context.jsonld", text: json(baseContext([L1])) },
-    { path: "smart-base/kg/generated/l1/l1-library.context.jsonld", text: json(extensionContext([L1_LIBRARY, L1])) },
-    ...fshFiles(L1, "smart-base/kg/src/l1.ts (L1 3.0)"),
-    ...fshFiles(L1_LIBRARY, "smart-base/kg/src/l1-library.ts (the library extension)"),
+    { path: "smart-base/L1/schemas/generated/l1.json", text: declared(toOntologyJson(L1)) },
+    { path: "smart-base/L1/schemas/generated/l1-library.json", text: declared(toOntologyJson(L1_LIBRARY)) },
+    { path: "smart-base/L1/schemas/generated/l1-library.jsonld", text: json(specialisationJsonLd()) },
+    { path: "smart-base/L1/schemas/generated/recommendation-graph.schema.json", text: json(graphJsonSchema()) },
+    { path: "smart-base/L1/schemas/generated/l1.context.jsonld", text: json(baseContext([L1])) },
+    { path: "smart-base/L1/schemas/generated/l1-library.context.jsonld", text: json(extensionContext([L1_LIBRARY, L1])) },
+    ...fshFiles(L1, "smart-base/L1/schemas/l1.ts (L1 3.0)"),
+    ...fshFiles(L1_LIBRARY, "smart-base/L1/schemas/l1-library.ts (the library extension)"),
   ];
 }
 
@@ -128,7 +128,7 @@ function main(argv: string[]): number {
   }
   if (check) {
     if (stale.length) {
-      console.error(`${stale.length} generated file(s) are stale — run \`npm run build\` in smart-base/kg/:`);
+      console.error(`${stale.length} generated file(s) are stale — run \`npm run build\` in smart-base/L1/schemas/:`);
       for (const s of stale) console.error(`  ${s}`);
       return 1;
     }

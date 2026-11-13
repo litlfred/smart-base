@@ -1,4 +1,6 @@
-# smart-base/kg — the SMART Guidelines knowledge-graph schema (L1 3.0)
+# smart-base/L1/schemas — knowledge-graph layer L1 (3.0) and the schema engine
+
+`L1/` is a named subgraph of smart-base, declared from within by `../graph.json`. The layers above it are its siblings, `../../L2/`, `../../L2-bpmn/`, `../../L2-dmn/` and `../../L3/`. Each imports this package's engine from `../../L1/schemas/`; nothing here imports from them.
 
 The L1 layer of the SMART Guidelines knowledge graph as **Zod**, with the FHIR
 artefacts generated from it:
@@ -12,7 +14,7 @@ Migrated from [WorldHealthOrganization/smart-kg](https://github.com/WorldHealthO
 carried verbatim. What's new is a **type** for every property: smart-kg names
 its properties and binds some to value sets, but doesn't type the rest.
 
-**smart-kg is deprecated (owner, 2026-10-16).** `src/l1.ts` is the source of
+**smart-kg is deprecated (owner, 2026-10-16).** `l1.ts` is the source of
 truth; nothing here is held equal to smart-kg's files any more, and no test or
 workflow needs a smart-kg checkout.
 
@@ -20,17 +22,17 @@ workflow needs a smart-kg checkout.
 
 | file | what | generated? |
 |---|---|---|
-| `src/l1.ts` | L1 3.0: 13 classes with typed properties, 18 value sets, 21 predicates, 68 licensed edges | source (migrated) |
-| `src/l1-library.ts` | the **library extension**: the layering rule, the specialisation of L1's layout classes, the upstream `library-node` class, and `implementation-practice` (owner ruling 1b, 2026-10-12) | source |
-| `src/graph.ts` | a graph document's form (tier 1) | source |
-| `src/validate.ts` | tier 1 + tier 2: a port of smart-kg `validate.mjs` 3.0, plus a check on typed values | source |
-| `src/kgid.ts` | L1 IRIs and content hashes: a port of `tools/kgid.mjs` | source |
+| `l1.ts` | L1 3.0: 13 classes with typed properties, 18 value sets, 21 predicates, 68 licensed edges | source (migrated) |
+| `l1-library.ts` | the **library extension**: the layering rule, the specialisation of L1's layout classes, the upstream `library-node` class, and `implementation-practice` (owner ruling 1b, 2026-10-12) | source |
+| `graph.ts` | a graph document's form (tier 1) | source |
+| `validate.ts` | tier 1 + tier 2: a port of smart-kg `validate.mjs` 3.0, plus a check on typed values | source |
+| `kgid.ts` | L1 IRIs and content hashes: a port of `tools/kgid.mjs` | source |
 | `generated/l1/l1.json` | L1 3.0 in smart-kg's format | generated |
 | `generated/l1/l1-library.json`, `l1-library.jsonld` | the extension layer, and its `rdfs:subClassOf` statements | generated |
 | `generated/l1/recommendation-graph.schema.json` | the document JSON Schema | generated |
 | `generated/l1/l1.context.jsonld` | the L1 JSON-LD context, built the way smart-kg built it | generated |
 | `generated/l1/l1-library.context.jsonld` | the context an `l1-library` graph names (`src/context.ts`) | generated |
-| `src/loader.ts` | a jsonld.js document loader serving both contexts offline | source |
+| `loader.ts` | a jsonld.js document loader serving both contexts offline | source |
 | `../../input/fsh/models/KGL1.fsh`, `KGL1Library.fsh` | logical models | generated |
 | `../../input/fsh/codesystems/KG*.fsh`, `../../input/fsh/valuesets/KG*VS.fsh` | one CodeSystem + ValueSet per value set | generated |
 
@@ -109,7 +111,7 @@ three are kept in the extension's context, not in the L1 one.
 ## Commands
 
 ```sh
-cd smart-base/kg && npm ci
+cd smart-base/L1/schemas && npm ci
 npm run build                            # regenerate everything; removes orphaned generated FSH
 npm run check                            # fail if any generated file is stale or orphaned
 npm test                                 # layers, generated files, contexts, RDF
@@ -118,7 +120,6 @@ npm run validate -- path/to/graph.json   # check a graph document
 
 ## Known limits
 
-- L1 only. smart-kg's L2, L2-BPMN, L2-DMN and L3 layers were not migrated.
 - smart-base's `generate_logical_model_schemas.py` flattens a BackboneElement's
   children into top-level properties (`identifiers.value` appears as `value`).
   That's an existing behaviour of the generator: `DAK.publisher` is nested the

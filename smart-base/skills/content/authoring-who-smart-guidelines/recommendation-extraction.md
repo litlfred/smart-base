@@ -48,7 +48,7 @@ generic-document layer have put it in `library/`. Skipping is per source.
 
 | half | produces | layer | schema |
 |---|---|---|---|
-| extraction | `recommendation` and `remark` nodes, verbatim — or, for implementation guidance, `implementation-practice` nodes | L1 | L1 **3.0**, `smart-base/kg/src/l1.ts` (`KGRecommendation`); `implementation-practice` is the `l1-library` extension, `smart-base/kg/src/l1-library.ts` (`KGImplementationPractice`); not smart-kg 1.0 |
+| extraction | `recommendation` and `remark` nodes, verbatim — or, for implementation guidance, `implementation-practice` nodes | L1 | L1 **3.0**, `smart-base/L1/schemas/l1.ts` (`KGRecommendation`); `implementation-practice` is the `l1-library` extension, `smart-base/L1/schemas/l1-library.ts` (`KGImplementationPractice`); not smart-kg 1.0 |
 | scenario | one `user-scenario` candidate per recommendation, joined to `persona` and `business-process` | L2 | smart-kg `ontology/l2/l2.json`, unchanged; smart-base `UserScenario.fsh` |
 
 No L1 field carries the scenario: L1 holds what WHO says; who does it, and
@@ -69,7 +69,7 @@ with a new kind code.
   decision emits an `implementation-practice` node at
   `<publication>/implementation-practice/<key>`, and the graph names
   `l1-library.context.jsonld` so the validator scopes L1 + the extension.
-- The class lives in `smart-base/kg/src/l1-library.ts`; `l1.ts` stays the
+- The class lives in `smart-base/L1/schemas/l1-library.ts`; `l1.ts` stays the
   L1 3.0 layer, unextended.
 - It carries `identifier`, `statement` (verbatim) and `contentHash`; no
   `kind`, `direction`, `strength` or certainty. A `kind` on such a decision
@@ -77,7 +77,7 @@ with a new kind code.
 - **No remark.** L1 3.0's `remark` is minted under a recommendation, so a
   `remark` decision in such a publication is refused: exclude the sentence
   or make it its own practice.
-- `smart-base/kg/src/validate.ts` refuses a `recommendation` defined in an
+- `smart-base/L1/schemas/validate.ts` refuses a `recommendation` defined in an
   implementation-guidance or methodology publication.
 - The output graph is `l1.json`.
 
@@ -128,7 +128,7 @@ mechanical.
    `background-fact`, `manufacturer-statement`, `editorial`,
    `research-question` or `duplicate-of:<id>`.
 6. **Gate: the graph's shape.** Validate the L1 3.0 document with the Zod
-   port: `npx tsx src/validate.ts <graph.json>` from `smart-base/kg/`.
+   port: `npx tsx validate.ts <graph.json>` from `smart-base/L1/schemas/`.
 
 ### Part 1 as a tool: `l1-recommendation-candidates`
 
@@ -166,7 +166,7 @@ sentence.
 It **refuses** a statement not printed in the entry (normalised), an
 override that neither contains nor is contained in its candidate, a location
 the entry does not hold, a reused key, and a remark of an undeclared key,
-then checks the graph with `smart-base/kg/src/validate.ts`. It writes
+then checks the graph with `smart-base/L1/schemas/validate.ts`. It writes
 `recommendation-candidates.json` (the work list), `l1.json`,
 `exclusions.proposed.json`, `extraction-warnings.md` and `run-context.json`.
 

@@ -34,7 +34,7 @@ The contract is [`input.schema.json`](../../../schemas/skills/l2-dependency-choi
 |---|---|---|
 | `packageId`, `version`, `uri` | cat-harness `DependsOnRecord` (`cat-harness-tools/schemas/kg/depends-on.ts`), the same three fields as FHIR `ImplementationGuide.dependsOn` | the candidate DAK (or, at stage 5, IG). A candidate missing one of the three is a `DependsOnGap`, listed in `gaps`, not a row |
 | `publisher`, `upstream` | — | WHO, or the adapting jurisdiction; for an adaptation, the WHO original it adapts |
-| `evidence` | smart-base KG `evidence` (`smart-base/kg/src/graph.ts`) | the L1 KG nodes (and, at L3, the L2 assets) that point at it |
+| `evidence` | smart-base KG `evidence` (`smart-base/L1/schemas/graph.ts`) | the L1 KG nodes (and, at L3, the L2 assets) that point at it |
 | `decision` | this skill | `reuse` (unchanged) · `adapt` (fork and change) · `extend` (depend and add) · `reject` |
 | `reason` | this skill | one sentence; required for `reject` |
 | `components` | — | what is taken, piece by piece: DAK components here, profiles, value sets and libraries at L3 |

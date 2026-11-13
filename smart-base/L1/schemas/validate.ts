@@ -13,7 +13,7 @@
  * Those findings carry the prefix `property value`, so a reader can tell the
  * new ones from the ported ones.
  *
- *   npx tsx src/validate.ts path/to/graph.json [more.json ...]
+ *   npx tsx validate.ts path/to/graph.json [more.json ...]
  */
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";

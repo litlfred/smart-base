@@ -9,10 +9,10 @@ import { test } from "node:test";
 
 import jsonld from "jsonld";
 
-import { contextUrl, extensionContext } from "../src/context.ts";
-import { L1 } from "../src/l1.ts";
-import { L1_LIBRARY } from "../src/l1-library.ts";
-import { CONTEXTS, documentLoader } from "../src/loader.ts";
+import { contextUrl, extensionContext } from "../context.ts";
+import { L1 } from "../l1.ts";
+import { L1_LIBRARY } from "../l1-library.ts";
+import { CONTEXTS, documentLoader } from "../loader.ts";
 
 test("loaderServesBothContextsOnly", async () => {
   assert.deepEqual(Object.keys(CONTEXTS).sort(), [contextUrl("l1"), contextUrl("l1-library")].sort());

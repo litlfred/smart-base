@@ -50,7 +50,7 @@ stage n (agent) ──┬──► stage n+1 (agent)          keeps going
    adjudication is recorded.** Not waiting is not skipping.
 2. **An asset built on unadjudicated input says so.** Each derived KG node
    names its inputs in `wasDerivedFrom` (hash-pinned;
-   `smart-base/kg/src/graph.ts`); the edge's open `properties` carry
+   `smart-base/L1/schemas/graph.ts`); the edge's open `properties` carry
    `adjudication: pending` until the input's review closes.
 3. **A rejection reopens the stage, and the flag spreads downstream.** A
    `request-changes` or `reject` decision files a bean against the stage.
