@@ -27,7 +27,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "e8aa29085804b3665d3597259a7fc3d9d1921447",
+          "ref": "5627fcb1f3f8e40824ecfd370dae4a23af1b8839",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -37,13 +37,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "e8aa29085804b3665d3597259a7fc3d9d1921447",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "ref": "5627fcb1f3f8e40824ecfd370dae4a23af1b8839",
+              "evidence": "Owner litlfred, 2026-11-13: 'fix the red CI on the layer mains' / 'y' (merge cat-harness-tools#2006, smart-base#362, fhir-harness#402). Re-pin every layer to current main so smart-base's site publish runs the self-hosted publisher detection."
             },
             "standing": {
               "follows": "main",
@@ -61,7 +56,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "e81b4f0947f232c7be330a3d652335ec43f9ca30",
+          "ref": "cf722fb3f8623aa92872129a1788aa992a887e3f",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -86,13 +81,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "e81b4f0947f232c7be330a3d652335ec43f9ca30",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "ref": "cf722fb3f8623aa92872129a1788aa992a887e3f",
+              "evidence": "Owner litlfred, 2026-11-13: 'fix the red CI on the layer mains' / 'y' (merge cat-harness-tools#2006, smart-base#362, fhir-harness#402). Re-pin every layer to current main so smart-base's site publish runs the self-hosted publisher detection."
             },
             "standing": {
               "follows": "main",
@@ -110,7 +100,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "81343d8694e77a0a822b63ff6c43057df47d36b3",
+          "ref": "856c458eca57c4e72be3346b3402daf755d7990f",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -126,13 +116,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "81343d8694e77a0a822b63ff6c43057df47d36b3",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "ref": "856c458eca57c4e72be3346b3402daf755d7990f",
+              "evidence": "Owner litlfred, 2026-11-13: 'fix the red CI on the layer mains' / 'y' (merge cat-harness-tools#2006, smart-base#362, fhir-harness#402). Re-pin every layer to current main so smart-base's site publish runs the self-hosted publisher detection."
             },
             "standing": {
               "follows": "main",
@@ -150,7 +135,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "25bea92cc44b43841d1514976379b55341876047",
+          "ref": "026a6d919add39221387dd0fba0faccf998be9ac",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -166,13 +151,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "25bea92cc44b43841d1514976379b55341876047",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "ref": "026a6d919add39221387dd0fba0faccf998be9ac",
+              "evidence": "Owner litlfred, 2026-11-13: 'fix the red CI on the layer mains' / 'y' (merge cat-harness-tools#2006, smart-base#362, fhir-harness#402). Re-pin every layer to current main so smart-base's site publish runs the self-hosted publisher detection."
             },
             "standing": {
               "follows": "main",
@@ -190,7 +170,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "90ed85f81572c168fb5e49207c56ed5487adfaf3",
+          "ref": "31e8a3edb90f97938bfacbce02357904ee0a7c4a",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -203,13 +183,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "90ed85f81572c168fb5e49207c56ed5487adfaf3",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "ref": "31e8a3edb90f97938bfacbce02357904ee0a7c4a",
+              "evidence": "Owner litlfred, 2026-11-13: 'fix the red CI on the layer mains' / 'y' (merge cat-harness-tools#2006, smart-base#362, fhir-harness#402). Re-pin every layer to current main so smart-base's site publish runs the self-hosted publisher detection."
             },
             "standing": {
               "follows": "main",
