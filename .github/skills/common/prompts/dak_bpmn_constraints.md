@@ -16,4 +16,4 @@ When authoring or editing BPMN for a WHO Digital Adaptation Kit (DAK):
 
 4. **No duplicate IDs** — all `id` attributes across the BPMN document must be unique.
 
-5. **File location:** BPMN files are stored in `input/business-processes/*.bpmn`.
+5. **File location:** BPMN files are stored in `input/bpmn/*.bpmn`.

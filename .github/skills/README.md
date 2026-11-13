@@ -27,9 +27,7 @@ bootstrap, who-iris) takes it too.
 
 | Directory | What it holds | Expected to move under |
 |---|---|---|
-| `bpmn_author/` | BPMN XML and swimlane validators, the BPMN authoring action and its prompts | bean folio-assistant-tgaj (BPMN validation into the KG) |
-| `bpmn_import/` | the swimlane ↔ ActorDefinition validator and its prompt | bean folio-assistant-tgaj |
-| `bpmn_layout/` | `bpmn_to_svg.py`, `validate_swimlanes.py` | bean folio-assistant-tgaj |
+| `bpmn_import/` | the import-error interpretation prompt (its validator is gone, see below) | bean folio-assistant-14un, with the other prompts |
 | `dak_authoring/` | the issue classifier and L2 authoring actions and their prompts | bean folio-assistant-14un |
 | `ig_publisher/` | the IG Publisher build, validate and error-interpretation actions | bean folio-assistant-14un |
 | `common/` | shared helpers (`ig_errors`, `fsh_utils`, `llm_utils`, `prompt_loader`, `ig_publisher_iface`) and shared prompts | with whichever of the above still uses them |
@@ -38,8 +36,9 @@ Notes for anyone running a script by hand before it moves:
 
 - The scripts import each other from this directory, so run them with
   `.github/skills/` on `PYTHONPATH`.
-- The validators parse XML with `input/scripts/safe_xml.py`, the IG build's
-  copy; there is no second copy here.
+- BPMN is checked by smart-base's `bpmn-validate` Tool
+  (`smart-base/L2-bpmn/tools/bpmn-validate/`), which `validate_dak_action.py`
+  runs; there is no Python BPMN validator here.
 - ELM extraction is not here: fhir-harness owns the ELM strippers, and
   `ghbuild.yml` runs `input/scripts/strip_library_binaries.py`.
 - The LLM steps read `DAK_LLM_API_KEY` and `DAK_LLM_MODEL` (see
@@ -52,3 +51,14 @@ every `skills.yaml`, the label definitions, the `l1_review`, `l3_review` and
 `translation` placeholders, `bpmn_import/actions/`, the ELM strip action,
 the duplicate `safe_xml.py`, and the label and `/validate` workflows, none of
 which could fire.
+
+Removed by bean folio-assistant-tgaj (epic folio-assistant-95e7): the four
+overlapping BPMN validators (`bpmn_author/validators/`,
+`bpmn_import/validators/`, `bpmn_layout/validate_swimlanes.py`) and the rest
+of `bpmn_author/`, replaced by the one Tool `bpmn-validate` in smart-base's
+`L2-bpmn` sub-graph, which pull-request CI runs on every changed `.bpmn`
+(`.github/workflows/bpmn-validate.yml`). `bpmn_layout/bpmn_to_svg.py`, the
+Graphviz auto-layout that writes Diagram Interchange into a BPMN that has
+none, moved to `smart-base/L2-bpmn/tools/bpmn-graphviz-layout/`:
+cat-harness-tools' `render:bpmn` draws the DI a file already carries and does
+not lay one out.
