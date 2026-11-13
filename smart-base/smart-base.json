@@ -19,12 +19,12 @@
   },
   "_avatar_comment": "WHO blue (tone 199, measured from #0093D5), shared with `who-iris` on purpose: both are the same organisation's material, so the navbar shows them as a family. The registry requires distinct glyphs, not distinct tones: the glyph says which instance, the tone says whose. No emblem: an organisation's published colour with a neutral glyph does not invent its identity. The glyph is a broad base with three narrowing courses above it, the layer the stack rests on: `fhir-harness` sits under smart-base and `smart-ig` and the IGs that need it are built on top.",
   "enableSubgraphs": [
-    "smart-base.smart-base-L1",
-    "smart-base.smart-base-L2",
-    "smart-base.smart-base-L2-bpmn",
-    "smart-base.smart-base-L2-dmn",
-    "smart-base.smart-base-L3",
-    "smart-base.smart-base-L4"
+    "smart-base.smart-base-l1",
+    "smart-base.smart-base-l2",
+    "smart-base.smart-base-l2-bpmn",
+    "smart-base.smart-base-l2-dmn",
+    "smart-base.smart-base-l3",
+    "smart-base.smart-base-l4"
   ],
   "directories": [
     {
@@ -216,64 +216,64 @@
       ]
     },
     {
-      "id": "smart-base-L1",
+      "id": "smart-base-l1",
       "path": "L1/",
       "optIn": true,
       "title": "L1 — what a WHO publication says",
       "graphTypologies": [
         "cat-harness"
       ],
-      "description": "Knowledge-graph layer L1 as a NAMED SUBGRAPH of this layer (owner, 2026-11-13: 'L1..L3 as named subgraphs', after smart-kg's deprecation, issue #359). OPT-IN like cat-harness's `sdlc/`, so that each layer's `tools/` is a tools graph of its own: off in a downstream layer unless it lists `smart-base.smart-base-L1` in its `enableSubgraphs`; this layer enables all six. `L1/graph.json` names what it holds FROM WITHIN: `schemas/` (L1 3.0 and the `l1-library` extension as Zod, the engine every layer uses, and their generated JSON and contexts), and the L1 `skills/`, `processes/` and `tools/`. The layers above, `L2/`, `L2-bpmn/`, `L2-dmn/`, `L3/` and `L4/`, are its siblings and import from it; nothing in L1 imports from them."
+      "description": "Knowledge-graph layer L1 as a NAMED SUBGRAPH of this layer (owner, 2026-11-13: 'L1..L3 as named subgraphs', after smart-kg's deprecation, issue #359). OPT-IN like cat-harness's `sdlc/`, so that each layer's `tools/` is a tools graph of its own: off in a downstream layer unless it lists `smart-base.smart-base-l1` in its `enableSubgraphs`; this layer enables all six. `L1/graph.json` names what it holds FROM WITHIN: `schemas/` (L1 3.0 and the `l1-library` extension as Zod, the engine every layer uses, and their generated JSON and contexts), and the L1 `skills/`, `processes/` and `tools/`. The layers above, `L2/`, `L2-bpmn/`, `L2-dmn/`, `L3/` and `L4/`, are its siblings and import from it; nothing in L1 imports from them."
     },
     {
-      "id": "smart-base-L2",
+      "id": "smart-base-l2",
       "path": "L2/",
       "optIn": true,
       "title": "L2 — what a DAK declares",
       "graphTypologies": [
         "cat-harness"
       ],
-      "description": "Knowledge-graph layer L2 as a NAMED SUBGRAPH of this layer, OPT-IN like `L1/` (a downstream layer lists `smart-base.smart-base-L2` in its `enableSubgraphs`), beside `L1/` (owner, 2026-11-13: 'L1..L3 as named subgraphs', issue #359). `L2/graph.json` names what it holds FROM WITHIN: its `schemas/` and, as they move in, its tools, skills and processes. It imports only from the layers below it."
+      "description": "Knowledge-graph layer L2 as a NAMED SUBGRAPH of this layer, OPT-IN like `L1/` (a downstream layer lists `smart-base.smart-base-l2` in its `enableSubgraphs`), beside `L1/` (owner, 2026-11-13: 'L1..L3 as named subgraphs', issue #359). `L2/graph.json` names what it holds FROM WITHIN: its `schemas/` and, as they move in, its tools, skills and processes. It imports only from the layers below it."
     },
     {
-      "id": "smart-base-L2-bpmn",
+      "id": "smart-base-l2-bpmn",
       "path": "L2-bpmn/",
       "optIn": true,
       "title": "L2-BPMN — inside a BPMN file",
       "graphTypologies": [
         "cat-harness"
       ],
-      "description": "Knowledge-graph layer L2-bpmn as a NAMED SUBGRAPH of this layer, OPT-IN like `L1/` (a downstream layer lists `smart-base.smart-base-L2-bpmn` in its `enableSubgraphs`), beside `L1/` (owner, 2026-11-13: 'L1..L3 as named subgraphs', issue #359). `L2-bpmn/graph.json` names what it holds FROM WITHIN: its `schemas/` and, as they move in, its tools, skills and processes. It imports only from the layers below it."
+      "description": "Knowledge-graph layer L2-bpmn as a NAMED SUBGRAPH of this layer, OPT-IN like `L1/` (a downstream layer lists `smart-base.smart-base-l2-bpmn` in its `enableSubgraphs`), beside `L1/` (owner, 2026-11-13: 'L1..L3 as named subgraphs', issue #359). `L2-bpmn/graph.json` names what it holds FROM WITHIN: its `schemas/` and, as they move in, its tools, skills and processes. It imports only from the layers below it."
     },
     {
-      "id": "smart-base-L2-dmn",
+      "id": "smart-base-l2-dmn",
       "path": "L2-dmn/",
       "optIn": true,
       "title": "L2-DMN — inside a DMN file",
       "graphTypologies": [
         "cat-harness"
       ],
-      "description": "Knowledge-graph layer L2-dmn as a NAMED SUBGRAPH of this layer, OPT-IN like `L1/` (a downstream layer lists `smart-base.smart-base-L2-dmn` in its `enableSubgraphs`), beside `L1/` (owner, 2026-11-13: 'L1..L3 as named subgraphs', issue #359). `L2-dmn/graph.json` names what it holds FROM WITHIN: its `schemas/` and, as they move in, its tools, skills and processes. It imports only from the layers below it."
+      "description": "Knowledge-graph layer L2-dmn as a NAMED SUBGRAPH of this layer, OPT-IN like `L1/` (a downstream layer lists `smart-base.smart-base-l2-dmn` in its `enableSubgraphs`), beside `L1/` (owner, 2026-11-13: 'L1..L3 as named subgraphs', issue #359). `L2-dmn/graph.json` names what it holds FROM WITHIN: its `schemas/` and, as they move in, its tools, skills and processes. It imports only from the layers below it."
     },
     {
-      "id": "smart-base-L3",
+      "id": "smart-base-l3",
       "path": "L3/",
       "optIn": true,
       "title": "L3 — the FHIR artefacts",
       "graphTypologies": [
         "cat-harness"
       ],
-      "description": "Knowledge-graph layer L3 as a NAMED SUBGRAPH of this layer, OPT-IN like `L1/` (a downstream layer lists `smart-base.smart-base-L3` in its `enableSubgraphs`), beside `L1/` (owner, 2026-11-13: 'L1..L3 as named subgraphs', issue #359). `L3/graph.json` names what it holds FROM WITHIN: its `schemas/` and, as they move in, its tools, skills and processes. It imports only from the layers below it."
+      "description": "Knowledge-graph layer L3 as a NAMED SUBGRAPH of this layer, OPT-IN like `L1/` (a downstream layer lists `smart-base.smart-base-l3` in its `enableSubgraphs`), beside `L1/` (owner, 2026-11-13: 'L1..L3 as named subgraphs', issue #359). `L3/graph.json` names what it holds FROM WITHIN: its `schemas/` and, as they move in, its tools, skills and processes. It imports only from the layers below it."
     },
     {
-      "id": "smart-base-L4",
+      "id": "smart-base-l4",
       "path": "L4/",
       "optIn": true,
       "title": "L4 — the application",
       "graphTypologies": [
         "cat-harness"
       ],
-      "description": "The L4 work as a NAMED SUBGRAPH, OPT-IN like `L1/`..`L3/` (a downstream layer lists `smart-base.smart-base-L4` in its `enableSubgraphs`), beside them (owner, 2026-11-13: an L4 subgraph for the point-of-care and application skills, processes and tools): what a running application does with a DAK at the point of care, and briefing, building and running one. `L4/graph.json` names what it holds FROM WITHIN: `skills/`, `processes/` and `tools/`. No `schemas/`: the knowledge graph has no L4 layer."
+      "description": "The L4 work as a NAMED SUBGRAPH, OPT-IN like `L1/`..`L3/` (a downstream layer lists `smart-base.smart-base-l4` in its `enableSubgraphs`), beside them (owner, 2026-11-13: an L4 subgraph for the point-of-care and application skills, processes and tools): what a running application does with a DAK at the point of care, and briefing, building and running one. `L4/graph.json` names what it holds FROM WITHIN: `skills/`, `processes/` and `tools/`. No `schemas/`: the knowledge graph has no L4 layer."
     },
     {
       "id": "smart-base-schemas",

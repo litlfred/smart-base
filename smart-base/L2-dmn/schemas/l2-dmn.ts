@@ -132,7 +132,7 @@ export const L2_DMN: LayerSpec = {
       properties: {
         id: p.string("Id", "The identifier the source declares (an FSH instance id, a BPMN or DMN element id)."),
         label: p.string("Label", "The label, as declared."),
-        expression: p.string("Expression", "The input expression (FEEL or the DAK's convention)."),
+        expression: p.string("Expression", "The input expression, in FEEL or the DAK's convention."),
         typeRef: p.string("Type ref", "The input's typeRef."),
         ordinal: p.unsignedInt("Ordinal", "Position, counted from 0, in the order the source lists it."),
       },
