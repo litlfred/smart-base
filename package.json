@@ -3,6 +3,10 @@
   "name": "@litlfred/smart-base-site",
   "private": true,
   "type": "module",
+  "scripts": {
+    "cat": "bun .github/cat.ts"
+  },
+  "_scripts_comment": "`cat` is the root bootstrap cat-harness-tools' instantiate-harness writes into every downstream root (templates/root-bootstrap/): `bun run cat <script>` mounts the layers from index.lock.json when they are missing or the lock moved (.github/mount-from-lock.sh), then hands over to cat-harness-tools/scripts/run-script.ts. Added 2026-11-13: without it `bun run cat ...`, which AGENTS.md and the platform's skills tell an agent to run, failed in this checkout with \"cat: No such file or directory\".",
   "_workspaces_comment": "The mounted code layers that carry a package.json, as workspaces; bootstrap declares no dependencies, so it is not listed. smart-base/ is not a workspace: its scripts reach zod and @litlfred/bootstrap-tools through the ONE root node_modules that bunfig.toml's hoisted linker lays out.",
   "workspaces": [
     "bootstrap-tools",
