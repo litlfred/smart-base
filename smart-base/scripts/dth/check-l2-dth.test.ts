@@ -1,5 +1,5 @@
 /**
- * Unit tests for the L2 DTH cross-instance glossary validator, ArchiMate-link
+ * Unit tests for the L2 DTH cross-layer glossary validator, ArchiMate-link
  * QA check, persona linkage QA check, DMN decision-table source-passage QA check,
  * and L1 coverage for anchored BPMN tasks and DMN tables (`smart-base#242`).
  */
@@ -19,7 +19,7 @@ import {
 function makeFixtureFolio(mutate?: (root: string) => void): string {
   const root = mkdtempSync(join(tmpdir(), "l2-dth-test-"));
 
-  // 1. Self instance declaration (dth-sfp)
+  // 1. Self layer declaration (dth-sfp)
   writeFileSync(
     join(root, "dth-sfp.json"),
     JSON.stringify({
@@ -101,7 +101,7 @@ function makeFixtureFolio(mutate?: (root: string) => void): string {
     }),
   );
 
-  // 4. Self glossary with cross-instance links to dpi-h-ra and dth-sc
+  // 4. Self glossary with cross-layer links to dpi-h-ra and dth-sc
   mkdirSync(join(root, "glossary"), { recursive: true });
   writeFileSync(
     join(root, "glossary", "dth-sfp.glossary.json"),

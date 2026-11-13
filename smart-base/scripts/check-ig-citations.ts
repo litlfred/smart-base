@@ -29,8 +29,13 @@
  *
  * ## What it reports
  *
- * - **dangling citation** — a link to `#ref-<key>` whose key is no entry, or
- *   that does not link the bibliography page (`…/bibliography/#ref-<key>`).
+ * - **dangling citation** — a link to an entry's own page
+ *   (`…/bibliography/<sub-graph>/<key>/`, folio-assistant-core#678) that no
+ *   entry of the IG's bibliography has.
+ * - **anchor citation** — a link to `#ref-<key>`. A bibliography entry is a
+ *   KG node with its own slash address; the `#ref-` anchors are gone (owner,
+ *   2026-11-08: "clean break old IRIs"), so such a link is rewritten to the
+ *   entry's page.
  * - **page reference list** — a list written on the page between
  *   `references:begin` / `references:end`. The IG is one document with one
  *   bibliography page, the KG one; a page cites an entry there instead.
@@ -50,7 +55,7 @@
  * advisories and the gate passes, so a re-pin never turns an untouched site
  * red. Once the IG declares a bibliography, every finding fails the gate.
  *
- * An IG with no references section and no `#ref-` citation is reported as
+ * An IG with no references section and no citation is reported as
  * having nothing to judge, and passes.
  *
  *   bun run smart-base/scripts/check-ig-citations.ts [--root <dir>] [--with <layer dir>]... [--json]
@@ -65,6 +70,8 @@ import { join, relative, resolve } from "node:path";
 
 export interface Bibliography {
   keys: Set<string>;
+  /** Each entry's own page under the bibliography route: `<sub-graph>/<segment>`. */
+  pages: Set<string>;
   urls: Set<string>;
   /** ISBNs and IRIS handles (`10665/N`) of catalogue records: a link that carries one names that record. */
   ids: Set<string>;
@@ -75,7 +82,7 @@ export interface Bibliography {
 export interface Finding {
   file: string;
   line: number;
-  rule: "dangling-citation" | "hand-written-reference" | "unlisted-link" | "page-reference-list";
+  rule: "dangling-citation" | "anchor-citation" | "hand-written-reference" | "unlisted-link" | "page-reference-list";
   detail: string;
 }
 
@@ -88,10 +95,13 @@ export function normUrl(u: string): string {
 }
 
 const anchorKey = (key: string) => key.replace(/[^A-Za-z0-9_-]/g, "-");
+/** The path segment of an entry's own page: folio-assistant-core `referenceSegment`. */
+export const pageSegment = (key: string) => key.replace(/[^A-Za-z0-9._-]/g, "-").replace(/^\.+/, "");
 
-function addEntry(b: Bibliography, key: string, urls: unknown[]): void {
+function addEntry(b: Bibliography, key: string, urls: unknown[], subgraph?: string): void {
   b.keys.add(key);
   b.keys.add(anchorKey(key));
+  if (subgraph) b.pages.add(`${subgraph}/${pageSegment(key)}`);
   for (const u of urls) {
     if (typeof u !== "string" || !u) continue;
     for (const isbn of u.match(/\b97[89]\d{10}\b/g) ?? []) b.ids.add(isbn);
@@ -113,16 +123,16 @@ function dcIdentifiers(r: Record<string, unknown>): unknown[] {
 }
 
 /**
- * The IG's own bibliography: the instance declared at `root` (and, for a run
+ * The IG's own bibliography: the layer declared at `root` (and, for a run
  * with no checkout of its own, the declarations in `extra`). Only the own
- * instance counts: the IG is one document, and its bibliography page lists
+ * layer counts: the IG is one document, and its bibliography page lists
  * what the document cites (owner, 2026-11-02: "each document should have a
  * bibliography page which includes referenced content in the document").
  * A work a dependency already holds (a who-iris catalogue record) gets an
  * entry of the IG's own when the IG cites it.
  */
 export function readBibliography(root: string, extra: string[] = []): Bibliography {
-  const b: Bibliography = { keys: new Set(), urls: new Set(), ids: new Set(), dirs: [] };
+  const b: Bibliography = { keys: new Set(), pages: new Set(), urls: new Set(), ids: new Set(), dirs: [] };
   for (const base of [root, ...extra]) readDeclared(base, root, b);
   return b;
 }
@@ -144,12 +154,12 @@ function readDeclared(base: string, root: string, b: Bibliography): void {
       // Library entries are bibliography entries, but declaring a library is not
       // adopting the KG bibliography: many IGs hold sources they never cite.
       if (t.includes("references") || t.includes("catalogue")) b.dirs.push(relative(root, dir) || ".");
-      if (t.includes("library")) readLibrary(dir, b);
+      if (t.includes("library")) readLibrary(dir, b, d.id);
       if (t.includes("references")) {
         for (const g of readdirSync(dir).filter((g) => g.endsWith(".json"))) {
           try {
             const e = JSON.parse(readFileSync(join(dir, g), "utf-8"));
-            addEntry(b, e.id ?? g.replace(/\.json$/, ""), [e.URL, e.DOI, ...(Array.isArray(e.links) ? e.links.map((l: { url?: string }) => l?.url) : [])]);
+            addEntry(b, e.id ?? g.replace(/\.json$/, ""), [e.URL, e.DOI, ...(Array.isArray(e.links) ? e.links.map((l: { url?: string }) => l?.url) : [])], d.id);
           } catch {
             /* not a node: check:kind-validators reports it */
           }
@@ -161,7 +171,7 @@ function readDeclared(base: string, root: string, b: Bibliography): void {
         for (const g of readdirSync(rec).filter((g) => g.endsWith(".dc.json"))) {
           try {
             const r = JSON.parse(readFileSync(join(rec, g), "utf-8"));
-            addEntry(b, g.replace(/\.dc\.json$/, ""), dcIdentifiers(r));
+            addEntry(b, g.replace(/\.dc\.json$/, ""), dcIdentifiers(r), d.id);
           } catch {
             /* reported by the catalogue's own gate */
           }
@@ -172,7 +182,7 @@ function readDeclared(base: string, root: string, b: Bibliography): void {
 }
 
 /** One library entry: a directory holding `manifest.jsonld`, flat or filed in one concern group. */
-function readLibrary(dir: string, b: Bibliography): void {
+function readLibrary(dir: string, b: Bibliography, subgraph?: string): void {
   const entry = (slug: string, at: string): boolean => {
     const m = join(at, "manifest.jsonld");
     if (!existsSync(m)) return false;
@@ -182,7 +192,7 @@ function readLibrary(dir: string, b: Bibliography): void {
     } catch {
       /* the library's own gates report it */
     }
-    addEntry(b, slug, [man.sourceUrl, man.meta?.doi, slug]);
+    addEntry(b, slug, [man.sourceUrl, man.meta?.doi, slug], subgraph);
     return true;
   };
   for (const g of readdirSync(dir).sort()) {
@@ -204,6 +214,9 @@ export function knownUrl(b: Bibliography, u: string): boolean {
 const HEADING = /^(#{1,6})\s+(.*?)\s*#*\s*$/;
 const REF_HEADING = /^(\d+(\.\d+)*\.?\s+)?(references|bibliography|sources|further reading|works cited|literature)\s*:?$/i;
 const CITE = /href="([^"#]*)#ref-([A-Za-z0-9._:+-]+)"|\]\(([^)\s#]*)#ref-([A-Za-z0-9._:+-]+)\)/g;
+/** A link to an entry's own page: `…/bibliography/<sub-graph>/<segment>/`. */
+const CITE_PAGE = /href="[^"#]*?bibliography\/([^"\/#]+)\/([^"\/#]+)\/"|\]\([^)\s#]*?bibliography\/([^)\/\s#]+)\/([^)\/\s#]+)\/\)/g;
+const CITES = /#ref-|bibliography\/[^\s"()\/#]+\/[^\s"()\/#]+\//;
 const LINK = /href="(https?:\/\/[^"]+)"|\]\((https?:\/\/[^)\s]+)\)|<(https?:\/\/[^>\s]+)>/g;
 /** An HTML comment's end: `-->`, or `--!>`, which browsers also accept. */
 const COMMENT_END = /--!?>/;
@@ -260,17 +273,25 @@ export function judgePage(file: string, src: string, b: Bibliography): Finding[]
       else if (!wholePage && refLevel > 0 && level <= refLevel) refLevel = -1;
     }
     for (const m of line.matchAll(CITE)) {
-      const target = m[1] ?? m[3] ?? "";
       const k = m[2] ?? m[4]!;
-      if (!b.keys.has(k)) out.push({ file, line: i + 1, rule: "dangling-citation", detail: `#ref-${k} is no entry of the KG bibliography` });
-      else if (!/bibliography\/?$/.test(target)) out.push({ file, line: i + 1, rule: "dangling-citation", detail: `#ref-${k} links ${target || "this page"}, not the bibliography page that holds the entry` });
+      const page = [...b.pages].find((p) => p.endsWith(`/${pageSegment(k)}`));
+      out.push({
+        file,
+        line: i + 1,
+        rule: "anchor-citation",
+        detail: page ? `#ref-${k} is an anchor; link the entry's own page, bibliography/${page}/` : `#ref-${k} is an anchor, and no entry of the KG bibliography has that key`,
+      });
+    }
+    for (const m of line.matchAll(CITE_PAGE)) {
+      const at = `${m[1] ?? m[3]}/${m[2] ?? m[4]}`;
+      if (!b.pages.has(at)) out.push({ file, line: i + 1, rule: "dangling-citation", detail: `bibliography/${at}/ is no entry of the KG bibliography` });
     }
     if (refLevel < 0 || h) continue;
     const links = [...line.matchAll(LINK)].map((m) => m[1] ?? m[2] ?? m[3]!);
     for (const u of links) {
       if (!knownUrl(b, u)) out.push({ file, line: i + 1, rule: "unlisted-link", detail: `${u} is no entry's URL in the KG bibliography` });
     }
-    if (ITEM.test(line) && !/#ref-/.test(line) && links.length === 0) {
+    if (ITEM.test(line) && !CITES.test(line) && links.length === 0) {
       const text = stripTags(line).replace(/^[-*+]\s+|^\d+[.)]\s+/, "").replace(/\*\*/g, "").trim();
       // A group label ("Implementation tools:") introduces entries; it is not one.
       if (text.length > 3 && !/:$/.test(text)) out.push({ file, line: i + 1, rule: "hand-written-reference", detail: `"${text.slice(0, 90)}${text.length > 90 ? "…" : ""}" is written by hand, not from the KG bibliography` });

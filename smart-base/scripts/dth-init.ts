@@ -10,7 +10,7 @@
  * Every DTH so far (dth-hrh, dth-sc, dth-pc, dth-phc, dth-sfp) copied this
  * wiring from dth-hrh by hand and then drifted. This writes it once:
  *
- * - `<name>.json`, the instance declaration (folio, glossary, uploads, and
+ * - `<name>.json`, the layer declaration (folio, glossary, uploads, and
  *   the beans and todos branches), with `needs`;
  * - `<name>.config.json`, the document adapter and site build;
  * - `index.config.json`, the mounts: who-iris, smart-base, the platform
@@ -40,6 +40,7 @@
  */
 import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join, relative } from "node:path";
+import { stagingSite } from "../schemas/site-roots.ts";
 
 export const TEMPLATE_DIR = join(import.meta.dir, "..", "templates", "dth");
 
@@ -100,8 +101,8 @@ export function plan(o: DthInitOptions): Planned[] {
       name: o.name,
       title: o.title,
       version: "0.1.0",
-      iriBase: `https://litlfred.github.io/${o.name}/`,
-      // declared-path-literal: these ARE the new instance's declarations; no
+      iriBase: stagingSite(o.name),
+      // declared-path-literal: these ARE the new layer's declarations; no
       // declaration exists yet to read them from.
       directories: [
         {
@@ -169,7 +170,7 @@ export function plan(o: DthInitOptions): Planned[] {
     }),
   });
 
-  // The mounts: every remote instance of the pins, none of their local ones.
+  // The mounts: every remote layer of the pins, none of their local ones.
   const remotes = o.pins.filter((i) => i.source?.remote);
   out.push({
     path: "index.config.json",

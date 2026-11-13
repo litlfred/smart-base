@@ -25,6 +25,8 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-schemas`, hold
 | [`dak.ts`](dak.ts) | a file |  |
 | [`dth-step-table.test.ts`](dth-step-table.test.ts) | a file |  |
 | [`dth-step-table.ts`](dth-step-table.ts) | a file |  |
+| [`guideline-portfolio.test.ts`](guideline-portfolio.test.ts) | a file |  |
+| [`guideline-portfolio.ts`](guideline-portfolio.ts) | a file |  |
 | [`skills/`](skills/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

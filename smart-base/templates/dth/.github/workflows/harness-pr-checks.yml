@@ -10,7 +10,7 @@
 #
 # This repository is its own index (index.config.json, index.lock.json), so
 # the reusable workflow runs in `index` mode: the PR's merge commit is the
-# root, mounted from this repository's own lock, and the own instance is the
+# root, mounted from this repository's own lock, and the own layer is the
 # one declared at the root (`{{name}}.json`). Its gates and those of its whole
 # dependency harness (smart-base and below) are run on base and head, failing
 # only on what this PR newly breaks. `index-ref` is not used in index mode:

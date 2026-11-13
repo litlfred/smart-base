@@ -146,8 +146,23 @@ export interface DublinCoreRef {
   language?: string;
 }
 
-/** L2 — a generic persona the guideline is written for. */
-export interface PersonaBlock extends DakBlockBase { kind: "persona" }
+/**
+ * L2 — a generic persona the guideline is written for.
+ *
+ * Fields from WHO's `GenericPersona.fsh` and `Persona.fsh` (smart-base#245).
+ * All optional, so a block written before they existed still builds; a
+ * persona that states them carries them as data rather than as a Markdown
+ * table a reader has to parse back out.
+ */
+export interface PersonaBlock extends DakBlockBase {
+  kind: "persona";
+  /** `Persona.type`, from `SGPersonaTypesVS`: key, related, system or hardware. */
+  personaType?: "key" | "related" | "system" | "hardware";
+  /** `GenericPersona.otherNames`: other names or examples. */
+  otherNames?: string[];
+  /** `GenericPersona.iscoCode`: ISCO-08 occupation codes (one to four digits). */
+  iscoCodes?: string[];
+}
 /**
  * L2 — a user scenario / narrative walkthrough.
  *
@@ -173,20 +188,100 @@ export interface UserScenarioBlock extends DakBlockBase {
    */
   personas: string[];
 }
-/** L2 — a business process, authored as BPMN 2.0 in the `.bpmn` companion. */
-export interface BusinessProcessBlock extends DakBlockBase { kind: "business-process" }
-/** L2 — one core data element of the data dictionary. */
-export interface DataElementBlock extends DakBlockBase { kind: "data-element" }
+/**
+ * L2 — a business process, authored as BPMN 2.0 in the `.bpmn` companion.
+ *
+ * Fields from WHO's `BusinessProcessWorkflow.fsh` (smart-base#245). Its
+ * `source` is the `.bpmn` companion, so it is not repeated here.
+ */
+export interface BusinessProcessBlock extends DakBlockBase {
+  kind: "business-process";
+  /** `objectives`: what the workflow is for. */
+  objectives?: string;
+  /** `scenario`: labels of the user-scenario blocks this workflow serves. */
+  scenarios?: string[];
+  /** `task`: the workflow's tasks, each with an identifier, name and description. */
+  tasks?: BusinessProcessTask[];
+}
+
+/** One task of a business process, as `BusinessProcessWorkflow.task` declares it. */
+export interface BusinessProcessTask {
+  identifier: string;
+  name: string;
+  description: string;
+}
+/**
+ * L2 — one core data element of the data dictionary.
+ *
+ * Fields from WHO's `CoreDataElement.fsh` (smart-base#245): what kind of
+ * terminology or model artefact the element is, and its canonical IRI.
+ */
+export interface DataElementBlock extends DakBlockBase {
+  kind: "data-element";
+  /** `CoreDataElement.type`, from `CoreDataElementTypeVS`. */
+  cdeType?: "valueset" | "codesystem" | "conceptmap" | "logicalmodel";
+  /** `CoreDataElement.canonical`: the canonical IRI of that artefact. */
+  canonical?: string;
+}
 /** L2 — decision-support logic, authored as DMN in the `.dmn` companion. */
 export interface DecisionTableBlock extends DakBlockBase { kind: "decision-table" }
 /** L2 — scheduling logic (periodic or event-driven timing rules). */
 export interface SchedulingLogicBlock extends DakBlockBase { kind: "scheduling-logic" }
-/** L2 — a programme indicator. */
-export interface IndicatorBlock extends DakBlockBase { kind: "indicator" }
-/** L2 — a functional requirement. */
-export interface FunctionalRequirementBlock extends DakBlockBase { kind: "functional-requirement" }
-/** L2 — a non-functional requirement. */
-export interface NonFunctionalRequirementBlock extends DakBlockBase { kind: "non-functional-requirement" }
+/**
+ * L2 — a programme indicator.
+ *
+ * Fields from WHO's `ProgramIndicator.fsh` (smart-base#245). WHO makes
+ * definition, numerator, denominator and disaggregation 1..1; they are
+ * optional here so an indicator can be named before it is defined.
+ */
+export interface IndicatorBlock extends DakBlockBase {
+  kind: "indicator";
+  /** `ProgramIndicator.id`. */
+  indicatorId?: string;
+  definition?: string;
+  numerator?: string;
+  denominator?: string;
+  disaggregation?: string;
+  /** `references`: labels of the health-intervention blocks giving context. */
+  references?: string[];
+}
+/**
+ * L2 — a functional requirement.
+ *
+ * Fields from WHO's `FunctionalRequirement.fsh` (smart-base#245): the
+ * "as a (actor), I want (capability), so that (benefit)" shape.
+ */
+export interface FunctionalRequirementBlock extends DakBlockBase {
+  kind: "functional-requirement";
+  /** `FunctionalRequirement.id`, the requirement's own code (e.g. FR-LC-01). */
+  requirementId?: string;
+  /** `activity`: the activity being performed. */
+  activity?: string;
+  /** `actor`: labels of the persona blocks that fulfil it. */
+  actors?: string[];
+  /** `capability`: "I want". */
+  capability?: string;
+  /** `benefit`: "so that". */
+  benefit?: string;
+  /** `classification`: codes classifying the requirement. */
+  classification?: string[];
+}
+/**
+ * L2 — a non-functional requirement.
+ *
+ * Fields from WHO's `NonFunctionalRequirement.fsh` (smart-base#245).
+ */
+export interface NonFunctionalRequirementBlock extends DakBlockBase {
+  kind: "non-functional-requirement";
+  /** `NonFunctionalRequirement.id`. */
+  requirementId?: string;
+  /** `requirement`: the requirement itself. */
+  requirement?: string;
+  /** `category`: its category (availability, security, …). */
+  category?: string;
+  /** `classification`: codes classifying the requirement. */
+  classification?: string[];
+}
 
 /** L3 — a DAK logical model. */
 export interface LogicalModelBlock extends DakBlockBase { kind: "logical-model" }
@@ -278,12 +373,57 @@ const DublinCoreRefSchema = z.object({
 /**
  * Per-kind additions to the shared shape.
  *
- * Only `health-intervention` has one today: `HealthInterventions.fsh` makes
- * `reference` `1..*`, so a block with an empty `references` array is invalid at
- * construction rather than at review. Kept as a table so a second kind with
- * required fields does not require reworking `dakSchema`.
+ * `health-intervention` and `user-scenario` have REQUIRED fields
+ * (`HealthInterventions.fsh` makes `reference` `1..*`; a scenario needs a
+ * persona). The others carry WHO's logical-model fields as optional ones
+ * (smart-base#245).
  */
+const nonEmpty = z.string().min(1);
+const labels = z.array(nonEmpty);
+
 const DAK_SCHEMA_EXTENSIONS: Partial<Record<DakBlockKind, z.ZodRawShape>> = {
+  /*
+   * The fields below are WHO's own DAK logical models (`input/fsh/models/`),
+   * smart-base#245. Optional, so blocks written before them still build, and
+   * declared here because Zod strips what it does not know (bean `zdrf`): a
+   * field the interface accepts but the schema omits would vanish silently.
+   */
+  persona: {
+    personaType: z.enum(["key", "related", "system", "hardware"]).optional(),
+    otherNames: labels.optional(),
+    iscoCodes: z.array(z.string().regex(/^[0-9]{1,4}$/, "an ISCO-08 code is one to four digits")).optional(),
+  },
+  "business-process": {
+    objectives: nonEmpty.optional(),
+    scenarios: labels.optional(),
+    tasks: z.array(z.object({ identifier: nonEmpty, name: nonEmpty, description: nonEmpty })).optional(),
+  },
+  "data-element": {
+    cdeType: z.enum(["valueset", "codesystem", "conceptmap", "logicalmodel"]).optional(),
+    canonical: nonEmpty.optional(),
+  },
+  indicator: {
+    indicatorId: nonEmpty.optional(),
+    definition: nonEmpty.optional(),
+    numerator: nonEmpty.optional(),
+    denominator: nonEmpty.optional(),
+    disaggregation: nonEmpty.optional(),
+    references: labels.optional(),
+  },
+  "functional-requirement": {
+    requirementId: nonEmpty.optional(),
+    activity: nonEmpty.optional(),
+    actors: labels.optional(),
+    capability: nonEmpty.optional(),
+    benefit: nonEmpty.optional(),
+    classification: labels.optional(),
+  },
+  "non-functional-requirement": {
+    requirementId: nonEmpty.optional(),
+    requirement: nonEmpty.optional(),
+    category: nonEmpty.optional(),
+    classification: labels.optional(),
+  },
   "health-intervention": {
     references: z.array(DublinCoreRefSchema).min(1, {
       message: "A health intervention needs at least one reference (WHO models it 1..*)",

@@ -1,11 +1,11 @@
 #!/usr/bin/env bun
 /**
- * The `l1-extraction` viewer: one page per instance that declares an
+ * The `l1-extraction` viewer: one page per layer that declares an
  * `l1-extraction` directory, showing what was extracted, and a hub at the
  * visualiser's route.
  *
  * @module smart-base/scripts/gen-l1-extraction-pages
- * @covers l1-extraction — every directory of that kind any instance in the checkout declares
+ * @covers l1-extraction — every directory of that kind any layer in the checkout declares
  *
  * ## Where the pages go, and who says so
  *
@@ -13,7 +13,7 @@
  * smart-base"*), so `smart-base.json` declares the visualiser
  * (`renderedBy: l1-extraction-pages`, `subgraphs: "instance"`), and the route
  * is `visualiserRoute` of it: `<locale>/smart-base/<id>/` for the hub and
- * `…/<instance>/` per instance. With `--site <dir>` (a site being built,
+ * `…/<instance>/` per layer. With `--site <dir>` (a site being built,
  * `visualiser-writers.ts` in cat-harness-tools) the pages go under that site;
  * without it, under the checkout's site directory. The route belongs to this
  * writer alone, so a run replaces it wholesale.
@@ -289,7 +289,7 @@ export interface ExtractionDir {
   extraction: Extraction | null;
 }
 
-/** One instance holding `l1-extraction` directories: a page's subject. */
+/** One layer holding `l1-extraction` directories: a page's subject. */
 export interface Subject {
   name: string;
   instanceRoot: string;
@@ -305,7 +305,7 @@ interface DirLike {
   graphTypologies?: readonly string[];
 }
 
-/** An instance's declaration read raw: a page must not fail on a field a newer schema refuses. */
+/** A layer's declaration read raw: a page must not fail on a field a newer schema refuses. */
 function rawDeclaration(instanceRoot: string): Obj | undefined {
   try {
     const p = declarationPathIn(instanceRoot);
@@ -315,7 +315,7 @@ function rawDeclaration(instanceRoot: string): Obj | undefined {
   }
 }
 
-/** The library entry a directory sits inside, from the instance's own `library` declaration. */
+/** The library entry a directory sits inside, from the layer's own `library` declaration. */
 function entryOf(instanceRoot: string, dirPath: string): ExtractionDir["entry"] {
   const dirs = rawDeclaration(instanceRoot)?.["directories"];
   const libs = (Array.isArray(dirs) ? dirs.filter(isObj) : [])
@@ -330,7 +330,7 @@ function entryOf(instanceRoot: string, dirPath: string): ExtractionDir["entry"] 
   return undefined;
 }
 
-/** The instances holding a directory of `kinds`, one subject each, sorted by name. */
+/** The layers holding a directory of `kinds`, one subject each, sorted by name. */
 export function subjectsOf(dirs: readonly DirLike[], kinds: readonly string[]): Subject[] {
   const out = new Map<string, Subject>();
   for (const d of dirs) {
@@ -347,8 +347,8 @@ export function subjectsOf(dirs: readonly DirLike[], kinds: readonly string[]): 
 }
 
 /**
- * Where an instance's files open on GitHub: at the commit the checkout's lock
- * pins it (`index.lock.json`), or — the checkout's own instance — at the
+ * Where a layer's files open on GitHub: at the commit the checkout's lock
+ * pins it (`index.lock.json`), or — the checkout's own layer — at the
  * checkout's HEAD. `undefined` when neither can be said, and the files are
  * then listed without a source link.
  */
@@ -363,7 +363,7 @@ export function sourceBase(checkoutRoot: string, subject: Pick<Subject, "name" |
       return `https://github.com/${inst["repository"]}/blob/${inst["sha"]}/${up ? `${up}/` : ""}`;
     }
   } catch {
-    // no lock: the checkout's own instance, below
+    // no lock: the checkout's own layer, below
   }
   const repo = rawDeclaration(subject.instanceRoot)?.["repository"];
   const git = (...a: string[]): string | undefined => {
@@ -517,7 +517,7 @@ function directorySection(d: ExtractionDir, links: Links): string {
   return `${head}${statements}${candidates}${graphs}${files}`;
 }
 
-/** `<route>/<instance>/`: one instance's L1 extractions. */
+/** `<route>/<instance>/`: one layer's L1 extractions. */
 export function subjectPage(v: Pick<DeclaredVisualiser, "id" | "title">, s: Subject, all: readonly Subject[], links: Links): string {
   const title = `${v.title ?? "L1 extraction"} — ${s.name}`;
   const others = all.map((o) => (o.name === s.name ? `<li><strong>${esc(o.name)}</strong></li>` : `<li><a href="../${esc(o.name)}/">${esc(o.name)}</a></li>`)).join("");
@@ -528,7 +528,7 @@ export function subjectPage(v: Pick<DeclaredVisualiser, "id" | "title">, s: Subj
   );
 }
 
-/** `<route>/`: every instance holding an `l1-extraction` directory. */
+/** `<route>/`: every layer holding an `l1-extraction` directory. */
 export function hubPage(v: Pick<DeclaredVisualiser, "id" | "title">, all: readonly Subject[]): string {
   const title = v.title ?? "L1 extraction";
   const rows = all

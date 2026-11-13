@@ -44,7 +44,7 @@ Ask it as one more numbered question, only when the request did not say:
 
 An L1 or DAK start is a document kind inside smart-base, authored with
 [`l2-dak-authoring`](l2-dak-authoring.md) or as an L1 document, not a new
-instance. Only the IG (option 1) goes through the routes below.
+layer. Only the IG (option 1) goes through the routes below.
 
 ### 2. The declaration `needs` the IG-publication layer, not fhir-harness
 
@@ -52,7 +52,7 @@ Where `fhir-ig-create` writes `needs: ["fhir-harness"]`, a SMART guideline
 needs the layer every ingested guideline already needs: copy the `needs` of
 an existing staged guideline's declaration rather than typing a name. That
 layer brings smart-base, and through it the WHO template's theme and chrome.
-**Never copy a theme or a `chrome.json` into the new instance**: chrome is
+**Never copy a theme or a `chrome.json` into the new layer**: chrome is
 keyed to the template, not to one guideline.
 
 ### 3. The layout is the same in every repository
@@ -62,7 +62,7 @@ Every guideline repository instantiates smart-base **the same way**.
 | at the repository root | under `smart-base/` |
 |---|---|
 | the IG source as WHO publishes it (`sushi-config.yaml`, `input/`), unchanged | this guideline's data: its declaration, artefact index, menu, generated pages, QA results |
-| `index.config.json`, whose `smart-base` entry carries the instance's config inline (there is no `smart-base.config.json`) | |
+| `index.config.json`, whose `smart-base` entry carries the layer's config inline (there is no `smart-base.config.json`) | |
 
 So while the guideline is staged in place (route `in-repo`), its directory is
 already that `smart-base/` data directory, under whatever path `livesAt`
@@ -82,7 +82,7 @@ same one, with the same default ("not yet").
 ### 5. Pages are generated with the WHO labels passed in
 
 The page generator is fhir-harness's and knows nothing of WHO; the WHO names
-are configuration. Model the new instance's `<name>:pages` script on
+are configuration. Model the new layer's `<name>:pages` script on
 `smart-base:pages` in `smart-base/package.json`: `--publish-note`,
 `--sidecar-label "DAK API"`, `--label` and `--chrome-owner smart-base`.
 
@@ -96,11 +96,11 @@ content, copied from an existing guideline repository
 
 | file | what it does |
 |---|---|
-| `AGENTS.md`, declared in `<name>.json` as the asset `agent-instructions` (role `agent-instructions`), with `README.md` as `instance-readme` | names [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md) as the entry point for any authoring or adaptation work, and nothing else. `CLAUDE.md` is the pointer stub `init-folio` writes (`@AGENTS.md`; in an index checkout whose root declares no instance, `bun run cat index:render` writes it); never put guidance in it ([`placement`](../../../../cat-harness/skills/kg/kg-core/placement.md), *The agent-file stub*) |
+| `AGENTS.md`, declared in `<name>.json` as the asset `agent-instructions` (role `agent-instructions`), with `README.md` as `instance-readme` | names [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md) as the entry point for any authoring or adaptation work, and nothing else. `CLAUDE.md` is the pointer stub `init-folio` writes (`@AGENTS.md`; in an index checkout whose root declares no layer, `bun run cat index:render` writes it); never put guidance in it ([`placement`](../../../../cat-harness/skills/kg/kg-core/placement.md), *The agent-file stub*) |
 | `.claude/settings.json` + `.claude/mount-platform.sh` | the SessionStart hook that mounts the platform, so the skills and processes are on disk in every session |
 | `index.config.json` | the mount of smart-base (and through it the platform), as in every guideline repository (§3) |
 | its site, its checks, its `.gitignore` mount block, and an IG's site templates | what [`sub-kg-lifecycle`](https://github.com/litlfred/cat-harness/blob/main/skills/kg/graph-management/sub-kg-lifecycle.md) stage 10 (*its site*, *its checks*, `.gitignore`) and [`fhir-ig-create`](https://github.com/litlfred/fhir-harness/blob/main/skills/fhir-ig-base/fhir-ig-create.md) `new-repo` step 5 list, copied from the guideline repository named above |
-| `<name>.json` | the instance declaration: its `assets` (above), `library/` as `library`, and one `l1-extraction` entry per extraction directory as each is created ([`recommendation-extraction`](recommendation-extraction.md), *Declare every output directory*) — an undeclared one fails folio-assistant's `check:l1-complete` and with it the staging build |
+| `<name>.json` | the layer declaration: its `assets` (above), `library/` as `library`, and one `l1-extraction` entry per extraction directory as each is created ([`recommendation-extraction`](recommendation-extraction.md), *Declare every output directory*) — an undeclared one fails folio-assistant's `check:l1-complete` and with it the staging build |
 
 An existing repository that lacks any of these gets them copied first, in
 their own commit.
@@ -114,8 +114,8 @@ and apply to a SMART guideline unchanged.
 
 ## Anti-patterns
 
-1. **A per-guideline harness.** smart-base is the harness; a guideline is an
-   instance of it ([`smart-stack-layering`](smart-stack-layering.md)
+1. **A per-guideline harness.** smart-base is the harness; a guideline is a
+   layer on it ([`smart-stack-layering`](smart-stack-layering.md)
    §"Two consequences").
 2. **Creating under `WorldHealthOrganization/` first.** The forks are the
    staging ground (§4).

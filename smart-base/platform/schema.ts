@@ -1,7 +1,7 @@
 /**
  * The platform symbols of the files the platform itself loads by glob.
  *
- * The platform reads three of this instance's paths without being asked:
+ * The platform reads three of this layer's paths without being asked:
  * `cat-harness-tools/schemas/ui/theme-by-ref.ts` imports `themes/themes.ts`,
  * `schemas/kg/kind-validator.ts` imports `schemas/**`, and
  * `schemas/kg/harness-config.ts` imports `pipeline/qa-checkers-*.ts`. Each
