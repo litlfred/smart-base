@@ -3,7 +3,7 @@
   "name": "L4",
   "directories": [
     {
-      "id": "L4-skills",
+      "id": "l4-skills",
       "path": "skills/",
       "subgraph": true,
       "description": "The L4 skills: the point-of-care work a DAK's roles carry (reviewing a client's history and the decision-support guidance, completing an SDC questionnaire and extracting it, applying decision support and activating accepted guidance, informing the client, recording a rationale), and briefing, building and running an L4 application. Package `smart-l4`.",
@@ -12,7 +12,7 @@
       ]
     },
     {
-      "id": "L4-processes",
+      "id": "l4-processes",
       "path": "processes/",
       "subgraph": true,
       "description": "The executable L4 processes: questionnaire data capture and acting on decision support.",
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "id": "L4-tools",
+      "id": "l4-tools",
       "path": "tools/",
       "subgraph": true,
       "description": "The L4 tools: the immunization schedule app, run locally.",

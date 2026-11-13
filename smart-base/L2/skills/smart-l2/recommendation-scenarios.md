@@ -15,18 +15,18 @@ uses-methodology:
 
 # recommendation-scenarios
 
-Step 2 of [`recommendation-extraction`](../../../L1/skills/smart-l1/recommendation-extraction.md): the
+Step 2 of [`recommendation-extraction`](https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/recommendation-extraction.md): the
 mechanical step that applies that skill's Part 2 (the shape of a scenario,
 and the reuse-first persona, business-process and domain coding of the
 [`terminology-coding`](../../../methodologies/terminology-coding.md)
-methodology and [`classify-and-code-content`](../../../L1/skills/smart-l1/classify-and-code-content.md)).
+methodology and [`classify-and-code-content`](https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/classify-and-code-content.md)).
 
 ## Input and output
 
 - Input: [`input.schema.json`](../../../schemas/skills/recommendation-scenarios/input.schema.json)
 - Output: [`output.schema.json`](../../../schemas/skills/recommendation-scenarios/output.schema.json)
 
-**In:** the L1 graph from [`recommendation-candidates`](../../../L1/skills/smart-l1/recommendation-candidates.md)
+**In:** the L1 graph from [`recommendation-candidates`](https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/recommendation-candidates.md)
 (or an authored L1 YAML), the target guide's vocabulary, optionally the generic
 personas, and the agent's mapping.
 **Out:** `scenario-candidates.l2.json`, one candidate per recommendation, with

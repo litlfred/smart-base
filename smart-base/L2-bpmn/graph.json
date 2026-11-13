@@ -3,7 +3,7 @@
   "name": "L2-bpmn",
   "directories": [
     {
-      "id": "L2-bpmn-schemas",
+      "id": "l2-bpmn-schemas",
       "path": "schemas/",
       "subgraph": true,
       "description": "Knowledge-graph layer L2-BPMN, version 3.0: the interior of a DAK's BPMN files in OMG's vocabulary (definitions, process, participant, task, gateway, event), elaborating L2's external artefact at the same IRI. Imports L2. `l2-bpmn.ts` is the layer as migrated from WHO smart-kg 3f5e477, typed; `index.ts` exports it to the engine in `../../L1/schemas/`, and `generated/` holds the ontology JSON and the JSON-LD context. The FSH goes to the IG's `input/fsh/`.",
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "id": "L2-bpmn-tools",
+      "id": "l2-bpmn-tools",
       "path": "tools/",
       "subgraph": true,
       "description": "The tools that read or write a DAK's BPMN: BPMN to FSH.",

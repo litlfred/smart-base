@@ -50,10 +50,10 @@ cross-model edge everyone wants **already exists in the artefact** — it just h
 | Path | Contents |
 |---|---|
 | [`smart-base/L1/schemas/`](../) | **L1** — WHO publications and their layout, recommendations, key questions, outcomes, evidence, interventions, indicators, citations. 13 classes, 68 edges, 18 value sets |
-| [`smart-base/L2/schemas/`](../../../L2/schemas/) | **DAK components** — nine, plus scheduling, and the DAK files they point at. 14 classes, 44 edges. Imports L1 |
-| [`smart-base/L2-bpmn/schemas/`](../../../L2-bpmn/schemas/) | **BPMN interiors.** 6 classes, 20 edges. Imports L2 |
-| [`smart-base/L2-dmn/schemas/`](../../../L2-dmn/schemas/) | **DMN interiors.** 6 classes, 10 edges. Imports L2-BPMN |
-| [`smart-base/L3/schemas/`](../../../L3/schemas/) | **FHIR index.** 14 classes, 39 edges. Imports L2-DMN |
+| [`smart-base/L2/schemas/`](https://github.com/litlfred/smart-base/tree/main/smart-base/L2/schemas) | **DAK components** — nine, plus scheduling, and the DAK files they point at. 14 classes, 44 edges. Imports L1 |
+| [`smart-base/L2-bpmn/schemas/`](https://github.com/litlfred/smart-base/tree/main/smart-base/L2-bpmn/schemas) | **BPMN interiors.** 6 classes, 20 edges. Imports L2 |
+| [`smart-base/L2-dmn/schemas/`](https://github.com/litlfred/smart-base/tree/main/smart-base/L2-dmn/schemas) | **DMN interiors.** 6 classes, 10 edges. Imports L2-BPMN |
+| [`smart-base/L3/schemas/`](https://github.com/litlfred/smart-base/tree/main/smart-base/L3/schemas) | **FHIR index.** 14 classes, 39 edges. Imports L2-DMN |
 | `smart-base/L1/schemas/generated/all.cypher` · `all.ttl` | Every layer, in dependency order / merged |
 | [`smart-base/L1/schemas/docs/ONTOLOGY.md`](ONTOLOGY.md) | The layout, and how to load it |
 | [`smart-base/L1/schemas/docs/VISUALIZING.md`](VISUALIZING.md) | Reading the model in Neo4j and Protégé |

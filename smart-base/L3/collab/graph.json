@@ -3,7 +3,7 @@
   "name": "L3-collab",
   "directories": [
     {
-      "id": "L3-collab-processes",
+      "id": "l3-collab-processes",
       "path": "processes/",
       "subgraph": true,
       "description": "The executable L3 process: building the DAK's L3 IG.",

@@ -14,7 +14,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-L3`, holding `
 | file | what it is | used by |
 |---|---|---|
 | [`graph.json`](graph.json) | data |  |
-| `collab/` | the opt-in collaborative-development group of L3 (`smart-base.L3-collab`); its processes are described in its own README | |
+| [`collab/`](collab/README.md) | The collaborative-development group of L3, OPT-IN inside the opt-in `L3/` and requiring `cat-harness.sdlc`, `L3/` itself and the level below it, whose skills its processes call (owner, 2026-11-13: L2/L3 own collab): the L3 processes that run on the work plan and the delivery process. Only this group requires sdlc; L3's schemas, skills and tools do not. A layer switches it on with `smart-base.L3-collab` in its `enableSubgraphs`. | |
 | [`schemas/`](schemas/README.md) | described in its own README | |
 | [`skills/`](skills/README.md) | described in its own README | |
 | [`tools/`](tools/README.md) | described in its own README | |

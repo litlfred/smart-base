@@ -40,7 +40,7 @@ Description: "An input column. Its expression text is where data element names a
 * ^publisher = "World Health Organization (WHO)"
 * id 0..1 string "Id" "The identifier the source declares (an FSH instance id, a BPMN or DMN element id)."
 * label 0..1 string "Label" "The label, as declared."
-* expression 0..1 string "Expression" "The input expression (FEEL or the DAK's convention)."
+* expression 0..1 string "Expression" "The input expression, in FEEL or the DAK's convention."
 * typeRef 0..1 string "Type ref" "The input's typeRef."
 * ordinal 0..1 unsignedInt "Ordinal" "Position, counted from 0, in the order the source lists it."
 

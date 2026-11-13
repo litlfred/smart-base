@@ -21,7 +21,7 @@ output: schemas/skills/classify-and-code-content/output.schema.json
 > Skill id: `classify-and-code-content` · Package: `authoring-who-smart-guidelines` ·
 > Methodology: [`terminology-coding`](../../../methodologies/terminology-coding.md) ·
 > Process: [`classify-and-code-content.bpmn`](../../processes/classify-and-code-content.bpmn) (`Process_ClassifyAndCodeContent`) ·
-> Tool: [`terminology-lookup`](../../../L3/tools/terminology-lookup/terminology-lookup.ts)
+> Tool: [`terminology-lookup`](https://github.com/litlfred/smart-base/blob/main/smart-base/L3/tools/terminology-lookup/terminology-lookup.ts)
 
 **An agent proposes classifications, codes and coverage exclusions; a person in
 the named reviewer lane judges and signs them.** The process has three lanes:

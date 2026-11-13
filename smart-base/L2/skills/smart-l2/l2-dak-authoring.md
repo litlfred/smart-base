@@ -36,7 +36,7 @@ machine-*processable* Digital Adaptation Kit between a narrative guideline
 The contract is [`input.schema.json`](../../../schemas/skills/l2-dak-authoring/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l2-dak-authoring/output.schema.json).
 
 - **In:** `dakComponent` (required), `sourceGuideline` (required), `existingContent`, `sprintNumber`; as stage 4 of [`smart-guideline-end-to-end`](../../../skills/content/authoring-who-smart-guidelines/smart-guideline-end-to-end.md), also stage 2's `l1Kg` and stage 3's `l2Dependencies` ([`l2-dependency-choice`](l2-dependency-choice.md)'s output).
-- **Out:** `artifacts` (each an `l2Artifact`: `path`, `type`, `description`), `status`, `validationIssues`, `stagingLinks`. Stage 5 ([`l3-dependency-choice`](../../../L3/skills/smart-l3/l3-dependency-choice.md)) takes the artifacts of every pass as its `l2Assets`.
+- **Out:** `artifacts` (each an `l2Artifact`: `path`, `type`, `description`), `status`, `validationIssues`, `stagingLinks`. Stage 5 ([`l3-dependency-choice`](https://github.com/litlfred/smart-base/blob/main/smart-base/L3/skills/smart-l3/l3-dependency-choice.md)) takes the artifacts of every pass as its `l2Assets`.
 
 `dakComponent` is the unit of work: author one component per pass, and finish
 it before starting the next.
@@ -56,7 +56,7 @@ can be stated as a data element, decision rule or indicator belongs here.
 |---|---|---|
 | Personas and scenarios | the actors and the user journeys they appear in | The DAK's own personas, **not** this harness's `scenarios/roles.json`. |
 | Data dictionary and core data elements | the data dictionary | Data-dictionary authoring is part of this skill (`dakComponent: data-dictionary`). |
-| Indicators and requirements | indicators, functional and non-functional requirements | The DAK's requirements, not the harness's `skills/requirements/*.json`. Indicators a source prints come in through [`indicator-extraction`](../../../L1/skills/smart-l1/indicator-extraction.md): L1 nodes, then L2 program-indicator drafts that point back. |
+| Indicators and requirements | indicators, functional and non-functional requirements | The DAK's requirements, not the harness's `skills/requirements/*.json`. Indicators a source prints come in through [`indicator-extraction`](https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/indicator-extraction.md): L1 nodes, then L2 program-indicator drafts that point back. |
 
 Business processes and decision logic are the sibling skills `bpmn-authoring`
 and `dmn-authoring`; terminology binding is `terminology-management`.
