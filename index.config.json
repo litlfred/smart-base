@@ -100,7 +100,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "64297b5618938effefd1d699fe5a338efe24935a",
+          "ref": "856c458eca57c4e72be3346b3402daf755d7990f",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -116,7 +116,7 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "64297b5618938effefd1d699fe5a338efe24935a",
+              "ref": "856c458eca57c4e72be3346b3402daf755d7990f",
               "evidence": "Owner litlfred, 2026-11-13: 'fix the red CI on the layer mains' / 'y' (merge cat-harness-tools#2006, smart-base#362, fhir-harness#402). Re-pin every layer to current main so smart-base's site publish runs the self-hosted publisher detection."
             },
             "standing": {
@@ -170,7 +170,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "b7b26f606a5f9e7448f4309a276331363f51e277",
+          "ref": "31e8a3edb90f97938bfacbce02357904ee0a7c4a",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -183,7 +183,7 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-13",
-              "ref": "b7b26f606a5f9e7448f4309a276331363f51e277",
+              "ref": "31e8a3edb90f97938bfacbce02357904ee0a7c4a",
               "evidence": "Owner litlfred, 2026-11-13: 'fix the red CI on the layer mains' / 'y' (merge cat-harness-tools#2006, smart-base#362, fhir-harness#402). Re-pin every layer to current main so smart-base's site publish runs the self-hosted publisher detection."
             },
             "standing": {
