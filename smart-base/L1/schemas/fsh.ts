@@ -74,7 +74,7 @@ function valueSet(l: CodeList): string {
 
 /** The layer's own vocabularies: its class ids and its predicates. */
 export function layerCodeLists(l: LayerSpec): CodeList[] {
-  const tag = pascal(l.layer).toUpperCase().replace("LIBRARY", "Library");
+  const tag = pascal(l.layer).toUpperCase().replace(/-/g, "").replace("LIBRARY", "Library");
   return [
     {
       name: `KG${tag}Classes`,
@@ -127,7 +127,7 @@ function classModel(c: ClassSpec, layer: LayerSpec): string {
 }
 
 function envelopeModels(l: LayerSpec): string {
-  const tag = pascal(l.layer).toUpperCase();
+  const tag = pascal(l.layer).toUpperCase().replace(/-/g, "");
   return `Logical: KGEvidenceLocation
 Title: "Knowledge graph: evidence location"
 Description: "Where a node or edge came from in its source. Required on anything not mechanically derived."
@@ -228,6 +228,6 @@ export function fshFiles(layer: LayerSpec, source: string): FshFile[] {
     files.push({ path: `input/fsh/valuesets/${l.name}VS.fsh`, text: `${banner}\n${valueSet(l)}\n` });
   }
   const models = [...layer.classes.map((c) => classModel(c, layer)), ...(base ? [envelopeModels(layer)] : [])].join("\n\n");
-  files.push({ path: `input/fsh/models/KG${pascal(layer.layer).toUpperCase().replace("LIBRARY", "Library")}.fsh`, text: `${banner}\n${models}\n` });
+  files.push({ path: `input/fsh/models/KG${pascal(layer.layer).toUpperCase().replace(/-/g, "").replace("LIBRARY", "Library")}.fsh`, text: `${banner}\n${models}\n` });
   return files;
 }

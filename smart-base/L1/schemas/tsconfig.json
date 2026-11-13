@@ -13,6 +13,10 @@
   },
   "include": [
     "*.ts",
-    "test"
+    "test",
+    "../../L2/schemas",
+    "../../L2-bpmn/schemas",
+    "../../L2-dmn/schemas",
+    "../../L3/schemas"
   ]
 }

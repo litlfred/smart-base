@@ -139,3 +139,51 @@ export function extensionContext(scope: LayerSpec[]): Record<string, unknown> {
     },
   };
 }
+
+/** Dublin Core names a property maps to `dcterms:` under, wherever it appears. */
+export const DUBLIN_CORE = ["title", "creator", "publisher", "issued", "modified", "language", "rights", "description", "identifier", "source"] as const;
+
+/**
+ * The context an L2, L2-BPMN, L2-DMN or L3 document names. These layers have
+ * properties named like document terms (`type` on a data element, `source`
+ * on nearly every class), so `properties` cannot be `@nest` as it is for
+ * `l1-library`: under `@nest` those names would become the node's class and an
+ * edge's subject, and jsonld.js ignores a scoped context on a `@nest` term.
+ * Instead `properties` is a node with its own scoped context (the form
+ * litlfred/smart-kg#2 measured): every property is named, `@vocab` gives the
+ * rest their ontology IRI, Dublin Core names go to `dcterms:`, a name shared
+ * with a document term keeps its own meaning, and a `uri` property is an IRI.
+ * The cost is one blank-node hop: `node sgkg:properties _:p . _:p dcterms:title "…"`.
+ */
+export function scopedContext(scope: LayerSpec[]): Record<string, unknown> {
+  const base = baseContext(scope)["@context"] as Record<string, unknown>;
+  const ns = base.sgkg as string;
+  const inner: Record<string, unknown> = { "@vocab": ns };
+  const iriTyped = new Map<string, boolean>();
+  for (const l of scope) {
+    for (const c of l.classes) {
+      for (const [name, p] of Object.entries(c.properties)) {
+        const isIri = p.fhir === "uri";
+        // One name, one meaning: a name that is an IRI in one class and a literal in another is refused.
+        if (iriTyped.has(name) && iriTyped.get(name) !== isIri) throw new Error(`property "${name}" is uri-typed in one class and not in another`);
+        iriTyped.set(name, isIri);
+      }
+    }
+  }
+  for (const [name, isIri] of [...iriTyped].sort(([a], [b]) => a.localeCompare(b))) {
+    const id = (DUBLIN_CORE as readonly string[]).includes(name) ? `dcterms:${name}` : `sgkg:${name}`;
+    const clashes = name in base;
+    if (isIri) inner[name] = { "@id": id, "@type": "@id" };
+    else if (clashes || id.startsWith("dcterms:")) inner[name] = id;
+  }
+  const predicates: Record<string, { "@id": string }> = {};
+  for (const l of scope) for (const p of l.predicates) predicates[p.predicate] = { "@id": p.iri };
+  return {
+    "@context": {
+      ...base,
+      "@vocab": ns,
+      properties: { "@id": "sgkg:properties", "@context": inner },
+      ...predicates,
+    },
+  };
+}

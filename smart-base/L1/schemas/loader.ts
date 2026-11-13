@@ -15,14 +15,14 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { contextUrl } from "./context.ts";
+import { HELD, LAYER_ROOT } from "./layers.ts";
 
 const GENERATED = join(dirname(fileURLToPath(import.meta.url)), "generated");
 
-/** Every context this package holds, by the URL a document names. */
-export const CONTEXTS: Readonly<Record<string, string>> = {
-  [contextUrl("l1")]: join(GENERATED, "l1.context.jsonld"),
-  [contextUrl("l1-library")]: join(GENERATED, "l1-library.context.jsonld"),
-};
+/** Every context smart-base holds, by the URL a document names: one per held layer, beside its source. */
+export const CONTEXTS: Readonly<Record<string, string>> = Object.fromEntries(
+  HELD.map((h) => [contextUrl(h.key), h.key.startsWith("l1") ? join(GENERATED, `${h.key}.context.jsonld`) : join(LAYER_ROOT, "..", h.dir, "generated", `${h.key}.context.jsonld`)]),
+);
 
 /**
  * A jsonld.js document loader that serves only the contexts above and refuses

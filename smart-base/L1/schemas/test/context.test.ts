@@ -14,8 +14,8 @@ import { L1 } from "../l1.ts";
 import { L1_LIBRARY } from "../l1-library.ts";
 import { CONTEXTS, documentLoader } from "../loader.ts";
 
-test("loaderServesBothContextsOnly", async () => {
-  assert.deepEqual(Object.keys(CONTEXTS).sort(), [contextUrl("l1"), contextUrl("l1-library")].sort());
+test("loaderServesEveryHeldLayersContextOnly", async () => {
+  assert.deepEqual(Object.keys(CONTEXTS).sort(), ["l1", "l1-library", "l2", "l2-bpmn", "l2-dmn", "l3"].map(contextUrl).sort());
   await assert.rejects(documentLoader("https://example.org/other.context.jsonld"));
 });
 

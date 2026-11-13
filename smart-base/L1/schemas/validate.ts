@@ -20,8 +20,7 @@ import { fileURLToPath } from "node:url";
 
 import { GraphDocumentSchema, type GraphDocument } from "./graph.ts";
 import { contentHash, contentText, norm } from "./kgid.ts";
-import { L1 } from "./l1.ts";
-import { L1_LIBRARY } from "./l1-library.ts";
+import { LAYERS } from "./layers.ts";
 import { bindingOf, propertiesSchemaFor, type ClassSpec, type EdgeRule, type LayerSpec, type Predicate, type ValueSet } from "./ontology.ts";
 
 export interface Verdict {
@@ -30,8 +29,8 @@ export interface Verdict {
   metrics: Record<string, unknown>;
 }
 
-/** The layers this package holds, by name. */
-export const LAYERS: Readonly<Record<string, LayerSpec>> = { l1: L1, "l1-library": L1_LIBRARY };
+/** The layers smart-base holds, by name: found from the named subgraphs' declarations (layers.ts). */
+export { LAYERS };
 
 /** Which layer a document names through its @context — smart-kg's rule. */
 export function layerOf(doc: { "@context"?: unknown }): string {

@@ -99,12 +99,20 @@ export const EdgeRuleSchema = z
 export const GroundingSchema = z.object({ what: z.string(), where: z.string(), detail: z.string() }).strict();
 export const OmissionSchema = z.object({ what: z.string(), why: z.string() }).strict();
 
+/**
+ * What kind of thing a class is, per layer: L1's Source, Concept and Reference;
+ * L2's Kit, Component and Element; L2-BPMN's and L2-DMN's Artefact and
+ * Structure; L3's Conformance and Knowledge (smart-kg 3.0).
+ */
+export const CLASS_KINDS = ["Source", "Concept", "Reference", "Kit", "Component", "Element", "Artefact", "Structure", "Conformance", "Knowledge"] as const;
+export const ClassKindSchema = z.enum(CLASS_KINDS);
+
 /** A class as the ontology JSON states it: properties by NAME. */
 export const OntologyClassSchema = z
   .object({
     id: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/),
     name: z.string().min(1),
-    kind: z.enum(["Source", "Concept", "Reference"]),
+    kind: ClassKindSchema,
     iri: z.string().url(),
     note: z.string().min(1),
     properties: z.array(z.string()),
@@ -126,6 +134,7 @@ export const OntologyLayerSchema = z
     instanceNamespace: z.string().url().optional(),
     source: z.string(),
     note: z.string(),
+    profileNote: z.string().optional(),
     imports: z.array(z.string()).optional(),
     groundedIn: z.array(GroundingSchema),
     valueSets: z.array(ValueSetSchema).optional(),
@@ -175,7 +184,7 @@ export type Omission = z.infer<typeof OmissionSchema>;
 export interface ClassSpec {
   id: string;
   name: string;
-  kind: "Source" | "Concept" | "Reference";
+  kind: (typeof CLASS_KINDS)[number];
   iri: string;
   note: string;
   /** Insertion order is the order smart-kg lists them in, and is kept. */
@@ -185,6 +194,8 @@ export interface ClassSpec {
   minDerivation?: "derived" | "inferred" | "decided";
   propertyNote?: string;
   contentFields?: string[];
+  /** The class of a lower layer this one describes the interior of, at the same IRI (smart-kg `elaborates`). */
+  elaborates?: string;
   parent?: ParentModel;
   /** An existing smart-base model this class corresponds to without deriving from it, and why not. */
   correspondsTo?: { name: string; why: string };
@@ -198,6 +209,8 @@ export interface LayerSpec {
   instanceNamespace?: string;
   source: string;
   note: string;
+  /** L3's note on profiles (smart-kg l3.json `profileNote`). */
+  profileNote?: string;
   imports?: string[];
   groundedIn: Grounding[];
   valueSets: ValueSet[];
@@ -225,6 +238,7 @@ export function toOntologyJson(l: LayerSpec): OntologyLayer {
     ...(l.instanceNamespace ? { instanceNamespace: l.instanceNamespace } : {}),
     source: l.source,
     note: l.note,
+    ...(l.profileNote ? { profileNote: l.profileNote } : {}),
     ...(l.imports ? { imports: l.imports } : {}),
     groundedIn: l.groundedIn,
     valueSets: l.valueSets,
