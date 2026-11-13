@@ -65,20 +65,20 @@
  * `l1-specialise.ts` describes it ({@link publicationProperties}), so the two
  * documents name one publication with one node.
  *
- *   bun run smart-base/scripts/extract-dak-l1-references.ts --entry <DAK library entry> [--uploads <dir>]
+ *   bun run smart-base/L1/scripts/extract-dak-l1-references.ts --entry <DAK library entry> [--uploads <dir>]
  *     [--record-context] [--check] [--validate-zod <smart-base checkout>]
  *
  * Exit: 0 written / current, 1 stale or invalid, 2 usage or unreadable entry.
  *
- * @module smart-base/scripts/extract-dak-l1-references
+ * @module smart-base/L1/scripts/extract-dak-l1-references
  * @covers library
  */
 import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 
-import { handleFromUrl, readStructure } from "../platform/index.js";
-import { readIgDakMetadata } from "./ig-dak-metadata.ts";
+import { handleFromUrl, readStructure } from "../../platform/index.js";
+import { readIgDakMetadata } from "../../scripts/ig-dak-metadata.ts";
 import { isCurrent, readEntry, serialise, type LibraryEntry as BaseEntry } from "./extract-smart-kg-l1.ts";
 import { artifactId, citationId, dakNamespace, L1_LIBRARY_CONTEXT, L1_V3_ONTOLOGY_VERSION, publicationId, referenceEntryId, sha256 } from "./l1-kgid.ts";
 import { checkClassification, decideL1, LAYER_SCHEME, type IntakeClassification } from "./l1-membership.ts";
@@ -413,7 +413,7 @@ export const contextClassification = (n: number, heading: string): IntakeClassif
   code: "l1",
   member: true,
   source: "context",
-  basis: `cited as reference ${n} in DAK Component 1 ${heading.replace(/\s+/g, " ")} — the WHO guidelines and guidance the DAK draws on (smart-base/scripts/extract-dak-l1-references.ts)`,
+  basis: `cited as reference ${n} in DAK Component 1 ${heading.replace(/\s+/g, " ")} — the WHO guidelines and guidance the DAK draws on (smart-base/L1/scripts/extract-dak-l1-references.ts)`,
 });
 
 export function dakL1Document(

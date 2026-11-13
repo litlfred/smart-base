@@ -54,7 +54,7 @@ export const LAYERING_RULE =
 /**
  * cat-harness's namespace: its release IRI, `<iriBase>v<major>/ns/` from `cat-harness.json`.
  * A literal because this package builds without the mounted platform (`kg.yml`); the
- * bun test `scripts/l1-specialise.test.ts` fails when it drifts from the declaration.
+ * bun test `L1/scripts/l1-specialise.test.ts` fails when it drifts from the declaration.
  */
 export const CAT_HARNESS_NS = "https://litlfred.github.io/cat-harness/v0/ns/";
 export const DOCO_NS = "http://purl.org/spar/doco/";

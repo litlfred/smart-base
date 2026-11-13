@@ -25,7 +25,7 @@ import {
   type L1Document,
   type LibraryEntry,
 } from "./extract-smart-kg-l1.ts";
-import { kgClasses } from "./kg-classes.ts";
+import { kgClasses } from "../../scripts/kg-classes.ts";
 
 const SCRIPT = join(import.meta.dir, "extract-smart-kg-l1.ts");
 const AT = "2026-10-02T00:00:00Z";

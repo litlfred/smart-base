@@ -43,5 +43,5 @@ every node `inferred`), the proposed exclusions and the warnings.
 `l1-recommendation-candidates` (`smart-base/L1/tools/l1-recommendation-candidates/l1-recommendation-candidates.ts`):
 
 ```sh
-bun run smart-base/scripts/l1-recommendation-candidates.ts --entry <library entry> [--curation <curation.yaml>] --out <dir> [--check]
+bun run smart-base/L1/scripts/l1-recommendation-candidates.ts --entry <library entry> [--curation <curation.yaml>] --out <dir> [--check]
 ```

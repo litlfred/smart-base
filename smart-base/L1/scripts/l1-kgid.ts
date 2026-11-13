@@ -13,7 +13,7 @@
  * built from what WHO prints (ISBN, printed number), so two extractions of one
  * guideline yield the same nodes.
  *
- * @module smart-base/scripts/l1-kgid
+ * @module smart-base/L1/scripts/l1-kgid
  */
 import { createHash } from "node:crypto";
 
