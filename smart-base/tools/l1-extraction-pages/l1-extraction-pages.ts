@@ -1,4 +1,4 @@
-import { defineTool, toolFactory } from "../../../platform/index.js";
+import { defineTool, toolFactory } from "../../platform/index.js";
 
 // smart-base owns the `l1-extraction` kind, so its viewer is drawn here.
 export default toolFactory((t) =>
