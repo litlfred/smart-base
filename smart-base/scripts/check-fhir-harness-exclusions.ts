@@ -90,8 +90,8 @@ export interface Rule {
 }
 
 const STEP_TABLES = [
-  "smart-base/skills/content/authoring-who-smart-guidelines/dak-preprocessing.md",
-  "smart-base/skills/content/authoring-who-smart-guidelines/dak-postprocessing.md",
+  "smart-base/L3/skills/smart-l3/dak-preprocessing.md",
+  "smart-base/L3/skills/smart-l3/dak-postprocessing.md",
 ];
 
 /** Script names from the step tables (`| n | \`x.py\` ...`), minus {@link MOVED_DOWN}. */
