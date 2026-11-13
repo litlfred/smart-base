@@ -1,8 +1,8 @@
-<!-- GENERATED from smart-base/processes/content/smart-guideline-end-to-end.bpmn by cat-harness-tools/scripts/bpmn-checklist.ts. Do not edit: change the diagram and regenerate (bun run cat bpmn:checklist). -->
+<!-- GENERATED from smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn by cat-harness-tools/scripts/bpmn-checklist.ts. Do not edit: change the diagram and regenerate (bun run cat bpmn:checklist). -->
 
 # Checklist — SMART Guideline end to end
 
-> **Generated, and not the authority.** This is `smart-base/processes/content/smart-guideline-end-to-end.bpmn` (process `Process_SgEndToEnd`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
+> **Generated, and not the authority.** This is `smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn` (process `Process_SgEndToEnd`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
 
 From a use case to a consuming application: identify the L1 guidelines, ingest them into an L1 knowledge graph, choose the L2 DAKs to build on, create or adapt the L2 assets, choose the L3 IGs to build on, produce the L3 assets, then build the L4 consuming application the requester describes.
 

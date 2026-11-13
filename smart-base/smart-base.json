@@ -24,7 +24,10 @@
     "smart-base.smart-base-L2-bpmn",
     "smart-base.smart-base-L2-dmn",
     "smart-base.smart-base-L3",
-    "smart-base.smart-base-L4"
+    "smart-base.smart-base-L4",
+    "smart-base.collab",
+    "smart-base.L2-collab",
+    "smart-base.L3-collab"
   ],
   "directories": [
     {
@@ -93,20 +96,19 @@
       ]
     },
     {
-      "id": "processes",
-      "path": "methodologies/processes/",
-      "description": "The executable half of this layer's methodologies: `diig-investment-path.bpmn` renders DIIG's nine chapters as a process with its two progress checks as gateways. Declared separately from `methodologies/` because a directory entry names one graph typology: the prose says what the method is, the diagram how it runs.",
+      "id": "collab",
+      "path": "collab/",
+      "optIn": true,
+      "requires": [
+        "cat-harness.sdlc",
+        "smart-base.smart-base-L1",
+        "smart-base.smart-base-L2",
+        "smart-base.smart-base-L3",
+        "smart-base.smart-base-L4"
+      ],
+      "description": "The collaborative-development sub-graph — a NAMED SUB-GRAPH of this layer, OPT-IN: off in every layer, this one included, unless that layer lists `smart-base.collab` in its own `enableSubgraphs` (owner, 2026-11-13, check:optin-refs follow-up). It holds the processes that run on cat-harness's work plan and delivery process — they claim and close a bean, keep the work plan, or stage, preview and release a change: `smart-guideline-end-to-end`, `SGAuthoring.DAKLifecycle`, and DIIG's `diig-investment-path`. The L2 and L3 processes of the same kind are in each level's own opt-in collab group, `L2/collab/` and `L3/collab/` (`smart-base.L2-collab`, `smart-base.L3-collab`; owner, 2026-11-13: L2/L3 own collab). It `requires` `cat-harness.sdlc`, which requires `cat-harness.work-plan`, and the four knowledge-graph levels `smart-base-L1`..`smart-base-L4` whose skills its end-to-end process calls (owner, 2026-11-13), so switching it on switches all of them on. The graph inside it is declared FROM WITHIN, in `collab/graph.json`.",
       "graphTypologies": [
-        "processes"
-      ]
-    },
-    {
-      "id": "smart-base-house-processes",
-      "path": "processes/",
-      "dependents": "skip",
-      "description": "The BPMN this layer owns as house processes, under `content/` (as against `methodologies/processes/`, which holds methodologies adopted from the corpus): `l2-dak-authoring.bpmn`, whose tracks each call `l2-component-edit-review.bpmn` (the agent edits, checks, renders and stages one component while a person in its reviewing role reviews it alongside, never as a gate); `smart-guideline-end-to-end.bpmn`, use case to consuming application through the L1 KG, L2 and L3, with adjudication as QA rather than a gate, calling `l2-dak-authoring.bpmn` and `dak-l3-ig.bpmn` for its L2 and L3 stages; `dth-authoring.bpmn`, a Digital Transformation Handbook from sources to publication in seven stages, each ending in a milestone recorded on the work plan; `SGAuthoring.DAKLifecycle.bpmn`; `classify-and-code-content.bpmn`; and two point-of-care processes any DAK calls by call activity, `questionnaire-data-capture.bpmn` (a health worker completes an SDC form, the system extracts its resources) and `act-on-decision-support.bpmn` (the system applies a PlanDefinition, the health worker accepts or declines, may note why on a branch nothing waits for, and the care plan is updated). Skill refs this layer does not own resolve down through `fhir-harness`. cat-harness-tools' `render:bpmn` draws each beside its source (bean folio-assistant-akiq); folio-assistant's just-the-docs site, which mounts this directory, shows them.",
-      "graphTypologies": [
-        "processes"
+        "cat-harness"
       ]
     },
     {
@@ -476,7 +478,7 @@
       ],
       "rtlSupported": true,
       "bpmnDiagrams": [
-        "processes/content/draft-to-publication.bpmn",
+        "draft-to-publication.bpmn",
         "processes/library/translation-workflow.bpmn",
         "processes/library/human-translation-workflow.bpmn"
       ],

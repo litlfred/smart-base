@@ -22,12 +22,17 @@
       ]
     },
     {
-      "id": "l3-processes",
-      "path": "processes/",
-      "subgraph": true,
-      "description": "The executable L3 process: building the DAK's L3 IG.",
+      "id": "L3-collab",
+      "path": "collab/",
+      "optIn": true,
+      "requires": [
+        "cat-harness.sdlc",
+        "smart-base.smart-base-L3",
+        "smart-base.smart-base-L2"
+      ],
+      "description": "The collaborative-development group of L3, OPT-IN inside the opt-in `L3/` and requiring `cat-harness.sdlc`, `L3/` itself and the level below it, whose skills its processes call (owner, 2026-11-13: L2/L3 own collab): the L3 processes that run on the work plan and the delivery process. Only this group requires sdlc; L3's schemas, skills and tools do not. A layer switches it on with `smart-base.L3-collab` in its `enableSubgraphs`.",
       "graphTypologies": [
-        "processes"
+        "cat-harness"
       ]
     },
     {

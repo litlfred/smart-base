@@ -20,8 +20,8 @@ output: schemas/skills/indicator-extraction/output.schema.json
 > one takes a source's recommendations, this one its indicators.
 
 It is a step of L1 → L2 extraction for a DAK or DTH, bound to
-`Task_Indicators` in [`l2-dak-authoring`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/processes/l2-dak-authoring.bpmn)
-and `Call_Data` in [`dth-authoring`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/processes/dth-authoring.bpmn).
+`Task_Indicators` in [`l2-dak-authoring`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/collab/processes/l2-dak-authoring.bpmn)
+and `Call_Data` in [`dth-authoring`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/collab/processes/dth-authoring.bpmn).
 
 ## Two layers, kept apart
 

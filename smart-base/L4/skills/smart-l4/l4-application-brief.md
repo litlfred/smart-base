@@ -17,7 +17,7 @@ output: schemas/skills/l4-application-brief/output.schema.json
 > Skill id: `l4-application-brief` · Package: `authoring-who-smart-guidelines` ·
 > Stage 7 of [`smart-guideline-end-to-end`](../../../skills/content/authoring-who-smart-guidelines/smart-guideline-end-to-end.md),
 > task `Task_DescribeApp` of
-> [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn),
+> `smart-guideline-end-to-end.bpmn` (opt-in `smart-base.collab`),
 > in the requester's (`user`) lane.
 
 **The application is the requester's, not the agent's**, as the use case

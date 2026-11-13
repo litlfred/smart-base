@@ -1,8 +1,8 @@
-<!-- GENERATED from smart-base/L2/processes/l2-component-edit-review.bpmn by cat-harness-tools/scripts/bpmn-checklist.ts. Do not edit: change the diagram and regenerate (bun run cat bpmn:checklist). -->
+<!-- GENERATED from smart-base/L2/collab/processes/l2-component-edit-review.bpmn by cat-harness-tools/scripts/bpmn-checklist.ts. Do not edit: change the diagram and regenerate (bun run cat bpmn:checklist). -->
 
 # Checklist — L2 component edit and review
 
-> **Generated, and not the authority.** This is `smart-base/L2/processes/l2-component-edit-review.bpmn` (process `Process_L2ComponentEditReview`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
+> **Generated, and not the authority.** This is `smart-base/L2/collab/processes/l2-component-edit-review.bpmn` (process `Process_L2ComponentEditReview`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
 
 One pass over one L2 DAK component: the agent edits it, runs its checker, renders and stages it with a before/after, and hands it on; review forks off beside the hand-on and never holds it up (adjudication is QA, not a gate).
 

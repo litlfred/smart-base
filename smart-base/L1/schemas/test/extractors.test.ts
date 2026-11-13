@@ -30,7 +30,7 @@ import { check } from "../validate.ts";
 const IG = join(LAYER_ROOT, "..");
 const BCG = join(IG, "input/dmn/DAK.DT.IMMZ.D2.DT.BCG.dmn");
 const FSH = join(IG, "input/fsh");
-const BPMN = join(IG, "smart-base/processes/content/SGAuthoring.DAKLifecycle.bpmn");
+const BPMN = join(IG, "smart-base/collab/processes/content/SGAuthoring.DAKLifecycle.bpmn");
 
 type AnyNode = { id: string; type: string; properties?: Record<string, unknown> };
 const externalOf = (...docs: { nodes: AnyNode[] }[]): Map<string, AnyNode> => {
