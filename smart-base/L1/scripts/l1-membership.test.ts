@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 
-import type { DublinCoreRecord } from "../platform/index.js";
+import type { DublinCoreRecord } from "../../platform/index.js";
 import { checkClassification, decideL1, inferL1, LAYER_SCHEME, type IntakeRecord } from "./l1-membership.ts";
 
 const rec = (fields: [string, string | undefined, string][]): DublinCoreRecord => ({

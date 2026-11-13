@@ -7,7 +7,7 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # L1 — what a WHO publication says
 
-Knowledge-graph layer L1 as a NAMED SUBGRAPH of this layer (owner, 2026-11-13: 'L1..L3 as named subgraphs', after smart-kg's deprecation, issue #359). OPT-IN like cat-harness's `sdlc/`, so that each layer's `tools/` is a tools graph of its own: off in a downstream layer unless it lists `smart-base.smart-base-L1` in its `enableSubgraphs`; this layer enables all six. `L1/graph.json` names what it holds FROM WITHIN: `schemas/` (L1 3.0 and the `l1-library` extension as Zod, the engine every layer uses, and their generated JSON and contexts), and the L1 `skills/`, `processes/` and `tools/`. The layers above, `L2/`, `L2-bpmn/`, `L2-dmn/`, `L3/` and `L4/`, are its siblings and import from it; nothing in L1 imports from them.
+Knowledge-graph layer L1 as a NAMED SUBGRAPH of this layer (owner, 2026-11-13: 'L1..L3 as named subgraphs', after smart-kg's deprecation, issue #359). OPT-IN like cat-harness's `sdlc/`, so that each layer's `tools/` is a tools graph of its own: off in a downstream layer unless it lists `smart-base.smart-base-L1` in its `enableSubgraphs`; this layer enables all six. `L1/graph.json` names what it holds FROM WITHIN: `schemas/` (L1 3.0 and the `l1-library` extension as Zod, the engine every layer uses, and their generated JSON and contexts), and the L1 `skills/`, `processes/`, `tools/` and the `scripts/` those tools run. The layers above, `L2/`, `L2-bpmn/`, `L2-dmn/`, `L3/` and `L4/`, are its siblings and import from it; nothing in L1 imports from them.
 
 Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-L1`, holding `cat-harness`.
 
@@ -16,6 +16,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-L1`, holding `
 | [`graph.json`](graph.json) | data |  |
 | [`processes/`](processes/README.md) | described in its own README | |
 | [`schemas/`](schemas/README.md) | described in its own README | |
+| [`scripts/`](scripts/) | _nothing declares what this holds_ | |
 | [`skills/`](skills/README.md) | described in its own README | |
 | [`tools/`](tools/README.md) | described in its own README | |
 

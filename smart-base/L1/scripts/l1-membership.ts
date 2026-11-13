@@ -19,9 +19,9 @@
  * The scheme, its codes and the inference rule are the content type's, so they
  * live here and not in the platform's intake schema.
  *
- * @module smart-base/scripts/l1-membership
+ * @module smart-base/L1/scripts/l1-membership
  */
-import type { DublinCoreRecord } from "../platform/index.js";
+import type { DublinCoreRecord } from "../../platform/index.js";
 
 /**
  * An intake classification, as `cat-harness/schemas/intake.ts`
@@ -97,7 +97,7 @@ export function inferL1(rec: DublinCoreRecord): IntakeClassification | undefined
     member,
     ...(publicationType ? { properties: { publicationType } } : {}),
     source: "inferred",
-    basis: `smart-base/scripts/l1-membership.ts inferL1: ${basis}`,
+    basis: `smart-base/L1/scripts/l1-membership.ts inferL1: ${basis}`,
   });
   if (/smart guidelines/i.test(series)) return mk(false, `dc.relation.ispartofseries = '${series}': a SMART Guidelines digital adaptation kit, an L2 artefact`);
   if (/\btechnical specifications?\b/i.test(title)) return mk(false, `dc.title says 'technical specification': a data and interoperability specification, not guideline content`);

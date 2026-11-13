@@ -52,5 +52,5 @@ That the transcription reads the picture correctly is the reviewer's call
 `l1-transcription-verbatim` (`smart-base/L1/tools/l1-transcription-verbatim/l1-transcription-verbatim.ts`):
 
 ```sh
-bun run smart-base/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]
+bun run smart-base/L1/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]
 ```

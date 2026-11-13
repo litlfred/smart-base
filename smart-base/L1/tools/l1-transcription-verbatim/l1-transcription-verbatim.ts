@@ -7,7 +7,7 @@ export default toolFactory((t) =>
     description:
       "Check authored L1 (`*.l1.yaml`, the measles pattern) for a source with no usable text layer: each statement must be verbatim in the image narrative (`images.json`) or the `transcription` block it names; every transcription word (digits aside) must be corroborated by the entry's text layer unless listed under `inspectionOnly`; keys must be unique.",
     install: { none: true },
-    invoke: { shell: "bun run smart-base/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]" },
+    invoke: { shell: "bun run smart-base/L1/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]" },
     io: {
       inputs: [
         { name: "dir", schema: t("RepoPath"), required: true, description: "The directory of authored `*.l1.yaml`; each names its library entry in `graph.source.entry`." },

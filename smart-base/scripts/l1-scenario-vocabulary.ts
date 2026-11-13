@@ -49,7 +49,7 @@ import { basename, join, relative, resolve } from "node:path";
 import { z } from "zod";
 
 import { readIgDakMetadata } from "./ig-dak-metadata.ts";
-import { dakNamespace, slug } from "./l1-kgid.ts";
+import { dakNamespace, slug } from "../L1/scripts/l1-kgid.ts";
 
 export const VOCABULARY_SCHEMA_TAG = "l1-scenario-vocabulary/v1" as const;
 
