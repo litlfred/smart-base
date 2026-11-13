@@ -207,7 +207,7 @@ that mounts the layer at the commit being staged; it must exit 0.
 ## Part 2 — the scenario
 
 Its mechanical step is the named skill
-[`recommendation-scenarios`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/recommendation-scenarios.md) (Tool
+[`recommendation-scenarios`](https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/recommendation-scenarios.md) (Tool
 `l1-recommendation-scenarios`).
 
 ### The shape: L2 nodes, reused unchanged
