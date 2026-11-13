@@ -7,13 +7,12 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # l1-tools
 
-The L1 tools: extraction pages, recommendation candidates, statement lists and verbatim-transcription checks.
+The L1 tools: recommendation candidates, statement lists and verbatim-transcription checks. The `l1-extraction` viewer's Tool, `l1-extraction-pages`, is in the layer's always-on `tools/`, beside the visualiser it draws: a layer that does not enable this sub-graph still declares that visualiser.
 
 Part of [SMART Base](../../README.md) 0.1.0, declared as `l1-tools`, holding `tools`.
 
 | file | what it is | used by |
 |---|---|---|
-| [`l1-extraction-pages/`](l1-extraction-pages/) | _nothing declares what this holds_ | |
 | [`l1-recommendation-candidates/`](l1-recommendation-candidates/) | _nothing declares what this holds_ | |
 | [`l1-statement-lists/`](l1-statement-lists/) | _nothing declares what this holds_ | |
 | [`l1-transcription-verbatim/`](l1-transcription-verbatim/) | _nothing declares what this holds_ | |

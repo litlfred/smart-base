@@ -34,7 +34,7 @@
       "id": "l1-tools",
       "path": "tools/",
       "subgraph": true,
-      "description": "The L1 tools: extraction pages, recommendation candidates, statement lists and verbatim-transcription checks.",
+      "description": "The L1 tools: recommendation candidates, statement lists and verbatim-transcription checks. The `l1-extraction` viewer's Tool, `l1-extraction-pages`, is in the layer's always-on `tools/`, beside the visualiser it draws: a layer that does not enable this sub-graph still declares that visualiser.",
       "graphTypologies": [
         "tools"
       ]

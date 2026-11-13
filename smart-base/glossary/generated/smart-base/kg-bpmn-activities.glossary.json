@@ -231,6 +231,14 @@
       "status": "candidate"
     },
     {
+      "id": "process_dthauthoring.call_publishstatements",
+      "prefLabel": "Publish extracted statements",
+      "definition": "Statements extracted from the L1 sources (recommendations, requirements, scenario candidates) are published as pages of the handbook and in the shared l1-extraction viewer, each linked to its library entry and section, once coverage has accounted for every normative sentence and before the library is frozen. The sub-process is core's, the same for every content type; smart-base supplies the collector (`l1-statement-lists`) and the handbook only the page look.",
+      "notation": "Call_PublishStatements",
+      "source": "smart-base/L2/collab/processes/dth-authoring.bpmn#Call_PublishStatements",
+      "status": "candidate"
+    },
+    {
       "id": "process_dthauthoring.call_scenarios",
       "prefLabel": "User scenarios [l2-dak-authoring]",
       "definition": "User-scenario blocks naming their personas by id. Calls Process_L2ComponentEditReview.",
@@ -538,6 +546,14 @@
       "definition": "Process_BeanOpen: check before creating, find out whose the bean is, and claim it, or leave it alone when it is someone else's. The gateway after it reads which end it reached.",
       "notation": "Call_BeanOpen",
       "source": "smart-base/L2/collab/processes/l2-dak-authoring.bpmn#Call_BeanOpen",
+      "status": "candidate"
+    },
+    {
+      "id": "process_l2dak.call_publishstatements",
+      "prefLabel": "Publish extracted statements",
+      "definition": "Statements extracted from the Component 1 sources are published as pages of the DAK and in the shared l1-extraction viewer, each linked to its library entry and section, before L2 authoring starts from them. The sub-process is core's, the same for every content type; smart-base supplies the collector (`l1-statement-lists`) and the DAK only the page look.",
+      "notation": "Call_PublishStatements",
+      "source": "smart-base/L2/collab/processes/l2-dak-authoring.bpmn#Call_PublishStatements",
       "status": "candidate"
     },
     {
