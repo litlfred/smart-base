@@ -121,6 +121,20 @@ export function countByType(nodes: { type: string }[]): Record<string, number> {
 
 // ---- XML, read with regular expressions as smart-kg reads it ---------------------------------------
 
+/**
+ * An element's text with its markup removed. Applied until nothing changes, because one pass of a
+ * tag pattern can leave a tag behind (`<<b>b>` loses `<b>` and leaves `<b>`); the entities are
+ * decoded after, never before, so an escaped `&lt;b&gt;` in the text stays text.
+ */
+export function stripTags(s: string): string {
+  let out = s;
+  for (let prev = ""; prev !== out; ) {
+    prev = out;
+    out = out.replace(/<[^<>]*>/g, "");
+  }
+  return out;
+}
+
 /** The five predefined XML entities. */
 export const xmlDecode = (s: unknown): string =>
   String(s).replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&");

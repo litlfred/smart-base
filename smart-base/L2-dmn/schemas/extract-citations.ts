@@ -26,7 +26,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { basename } from "node:path";
 
-import { argOf, edgeBuilder, graphDocument, isMain, nodeBuilder, xmlDecode as dec, type GraphDocument, type GraphEdge, type GraphNode } from "../../L1/schemas/extract-doc.ts";
+import { argOf, edgeBuilder, graphDocument, isMain, nodeBuilder, stripTags, xmlDecode as dec, type GraphDocument, type GraphEdge, type GraphNode } from "../../L1/schemas/extract-doc.ts";
 import { L2 } from "../../L2/schemas/l2.ts";
 import { artifactId, citationId, dakNamespace, sha256 } from "../../L2/schemas/kgid-l2.ts";
 
@@ -84,7 +84,7 @@ export function extract(xml: string, path: string): { doc: GraphDocument; stats:
   for (const [, , body] of xml.matchAll(/<dmn:rule id="([^"]+)">([\s\S]*?)<\/dmn:rule>/g)) {
     cov.rules++;
     const annotations = [...body!.matchAll(/<dmn:annotationEntry>([\s\S]*?)<\/dmn:annotationEntry>/g)].map(
-      (m) => text(m[1]!, "text") ?? dec(m[1]!.replace(/<[^>]+>/g, "").trim()),
+      (m) => text(m[1]!, "text") ?? dec(stripTags(m[1]!).trim()),
     );
     if (annotations.length === 0) cov.noAnnotations++;
     if (refAnnotationIndex < 0 || annotations.length <= refAnnotationIndex) {
