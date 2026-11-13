@@ -128,7 +128,7 @@ Relevant skill schemas:
        alt="BPMN swimlane diagram of the L3 pipeline: map L2 to L3, author FSH, SUSHI compile, validate against profiles with a loop back to FSH on failure, QC gates that file findings as beans, IG Publisher build, and publication of the IG site.">
 </div>
 
-[BPMN 2.0 source](https://github.com/litlfred/fhir-harness/blob/main/processes/content/l3-fhir-pipeline.bpmn) · [full-size SVG]({{ '/assets/img/workflows/l3-fhir-pipeline.svg' | relative_url }})
+[BPMN 2.0 source](https://github.com/litlfred/fhir-harness/blob/main/collab/processes/content/l3-fhir-pipeline.bpmn) · [full-size SVG]({{ '/assets/img/workflows/l3-fhir-pipeline.svg' | relative_url }})
 {: .bpmn-source }
 
 ---

@@ -40,13 +40,13 @@
         "title": "WHO SMART Implementation Guides (L3)",
         "asset": {
           "kind": "bpmn",
-          "source": "../fhir-harness/processes/content/l3-fhir-pipeline.bpmn",
+          "source": "../fhir-harness/collab/processes/content/l3-fhir-pipeline.bpmn",
           "rendered": "../assets/img/workflows/l3-fhir-pipeline.svg",
           "alt": "BPMN swimlane diagram of the L3 pipeline: map L2 to L3, author FSH, SUSHI compile, validate against profiles with a loop back to FSH on failure, QC gates that file findings as beans, IG Publisher build, and publication of the IG site.",
           "sourceLinks": [
             {
               "text": "BPMN 2.0 source",
-              "href": "https://github.com/litlfred/fhir-harness/blob/main/processes/content/l3-fhir-pipeline.bpmn"
+              "href": "https://github.com/litlfred/fhir-harness/blob/main/collab/processes/content/l3-fhir-pipeline.bpmn"
             },
             {
               "text": "full-size SVG",
