@@ -6,8 +6,8 @@ description: >
   referral, a return date, a result. Input is what to tell and the client's
   language; output is that the client was told, and what they were handed.
   Generic for any DAK step that ends with the client being informed.
-input: schemas/skills/inform-client/input.schema.json
-output: schemas/skills/inform-client/output.schema.json
+input: L4/schemas/skills/inform-client/input.schema.json
+output: L4/schemas/skills/inform-client/output.schema.json
 ---
 
 # Inform the client
@@ -18,8 +18,8 @@ output: schemas/skills/inform-client/output.schema.json
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/inform-client/input.schema.json)
-and [`output.schema.json`](../../../schemas/skills/inform-client/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/inform-client/input.schema.json)
+and [`output.schema.json`](../../schemas/skills/inform-client/output.schema.json).
 
 - **In:** the `about` (a referral, a return visit, a result, a decision),
   the `facts` to convey, the `language` the client understands, and any

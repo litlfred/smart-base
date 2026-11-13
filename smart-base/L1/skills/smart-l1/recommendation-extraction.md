@@ -11,8 +11,8 @@ description: >
   does it and where. Covers the hybrid extraction (mechanical candidates, agent
   structuring, verbatim and 100 % coverage gates), the reuse-first precedence
   for personas and processes, the WARNING format, and sign-off.
-input: schemas/skills/recommendation-extraction/input.schema.json
-output: schemas/skills/recommendation-extraction/output.schema.json
+input: L1/schemas/skills/recommendation-extraction/input.schema.json
+output: L1/schemas/skills/recommendation-extraction/output.schema.json
 uses-methodology:
   - terminology-coding
 ---
@@ -32,7 +32,7 @@ existing vocabulary and processes first, and warns when none fits.
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/recommendation-extraction/input.schema.json) and [`output.schema.json`](../../../schemas/skills/recommendation-extraction/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/recommendation-extraction/input.schema.json) and [`output.schema.json`](../../schemas/skills/recommendation-extraction/output.schema.json).
 
 - **In:** `l1Sources`, [`dak-l1-library`](dak-l1-library.md)'s output, and the `targetGuide` whose personas and processes the scenarios reuse first.
 - **Out:** `l1Kg`: per included source, its `extractionPath` (`library/<bib>/l1-extraction/`), `sourceVersion`, the recommendation, remark, practice and scenario-candidate counts, the `coverage` and every `WARNING`. Stages 3 ([`l2-dependency-choice`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/l2-dependency-choice.md)), 4 and 5 take it as their `l1Kg`.
