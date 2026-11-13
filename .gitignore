@@ -88,6 +88,8 @@ package.json
 # smart-base/L1/schemas/ is a package: its manifest and lockfile are what `npm ci` in kg.yml installs from
 !smart-base/L1/schemas/package.json
 !smart-base/L1/schemas/package-lock.json
+# The root's: the mounted layers as workspaces, so they resolve each other by package name (site-publish)
+!/package.json
 
 # BEGIN index mounts (generated from index.config.json — do not edit)
 /fhir-harness/
