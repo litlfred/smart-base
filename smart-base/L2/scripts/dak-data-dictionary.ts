@@ -28,7 +28,7 @@
  * repository, and adding one for read-only cell text is not worth it (the
  * same call `cat-harness-tools/scripts/tabular-records.py` made).
  *
- *   bun run smart-base/scripts/dak-data-dictionary.ts --xlsx <workbook> --out <annex.json> \
+ *   bun run smart-base/L2/scripts/dak-data-dictionary.ts --xlsx <workbook> --out <annex.json> \
  *     --annex-of <instance/library/slug | 10665/n> --label "Web Annex A" --section dak#core-data-elements \
  *     [--iris 10665/n] [--source <label>]
  *
@@ -36,7 +36,7 @@
  * WHO gave the annex a record of its own) are said, never guessed: the
  * workbook does not carry them.
  *
- * @module smart-base/scripts/dak-data-dictionary
+ * @module smart-base/L2/scripts/dak-data-dictionary
  */
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
@@ -48,7 +48,7 @@ import {
   DakDataDictionaryAnnexSchema,
   type DakAnnexSheet,
   type DakDataDictionaryAnnex,
-} from "../schemas/dak-annexes.ts";
+} from "../../schemas/dak-annexes.ts";
 
 /** What the web annex says about itself (`WebAnnexOfShape`). */
 export interface WebAnnexOf {

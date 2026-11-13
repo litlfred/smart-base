@@ -3,7 +3,7 @@ import { mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
-import { DAK_DATA_DICTIONARY_SCHEMA, type DakDataDictionaryAnnex } from "../schemas/dak-annexes";
+import { DAK_DATA_DICTIONARY_SCHEMA, type DakDataDictionaryAnnex } from "../../schemas/dak-annexes";
 import { diffDataDictionary, isEmpty, renderMarkdown, termsOf } from "./dak-data-dictionary-diff";
 
 const COLS = [

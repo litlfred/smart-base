@@ -29,16 +29,16 @@
  * in either input is refused here (exit 2), not diffed, because "which row
  * is IMMZ.C.DE.1" would have two answers.
  *
- *   bun run smart-base/scripts/dak-data-dictionary-diff.ts <before.json> <after.json> [--json]
+ *   bun run smart-base/L2/scripts/dak-data-dictionary-diff.ts <before.json> <after.json> [--json]
  *
  * Exit: 0 no term changed · 1 terms changed (the diff is printed) · 2 an
  * input is unreadable or ambiguous.
  *
- * @module smart-base/scripts/dak-data-dictionary-diff
+ * @module smart-base/L2/scripts/dak-data-dictionary-diff
  */
 import { readFileSync } from "node:fs";
 
-import { DakDataDictionaryAnnexSchema, type DakDataDictionaryAnnex } from "../schemas/dak-annexes.ts";
+import { DakDataDictionaryAnnexSchema, type DakDataDictionaryAnnex } from "../../schemas/dak-annexes.ts";
 
 export interface CellChange {
   column: string;
