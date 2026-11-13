@@ -15,6 +15,7 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `L2-tools`, holding `to
 |---|---|---|
 | [`dak-config-from-sushi/`](dak-config-from-sushi/) | _nothing declares what this holds_ | |
 | [`extract-dak/`](extract-dak/) | _nothing declares what this holds_ | |
+| [`kg-extract-dak/`](kg-extract-dak/) | _nothing declares what this holds_ | |
 | [`l1-recommendation-scenarios/`](l1-recommendation-scenarios/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

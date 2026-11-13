@@ -14,5 +14,6 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `L2-bpmn-tools`, holdin
 | file | what it is | used by |
 |---|---|---|
 | [`bpmn-to-fsh/`](bpmn-to-fsh/) | _nothing declares what this holds_ | |
+| [`kg-extract-bpmn/`](kg-extract-bpmn/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

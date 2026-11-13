@@ -13,6 +13,8 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `L2-dmn-schemas`, holdi
 
 | file | what it is | used by |
 |---|---|---|
+| [`extract-citations.ts`](extract-citations.ts) | a file |  |
+| [`extract-dmn.ts`](extract-dmn.ts) | a file |  |
 | [`index.ts`](index.ts) | a file |  |
 | [`l2-dmn.ts`](l2-dmn.ts) | a file |  |
 | [`generated/`](generated/) | _nothing declares what this holds_ | |

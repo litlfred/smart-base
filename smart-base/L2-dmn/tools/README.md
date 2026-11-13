@@ -15,5 +15,7 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `L2-dmn-tools`, holding
 |---|---|---|
 | [`dmn-to-html/`](dmn-to-html/) | _nothing declares what this holds_ | |
 | [`dmn-to-questionnaire/`](dmn-to-questionnaire/) | _nothing declares what this holds_ | |
+| [`kg-extract-citations/`](kg-extract-citations/) | _nothing declares what this holds_ | |
+| [`kg-extract-dmn/`](kg-extract-dmn/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

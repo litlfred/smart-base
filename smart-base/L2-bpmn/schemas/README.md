@@ -13,6 +13,7 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `L2-bpmn-schemas`, hold
 
 | file | what it is | used by |
 |---|---|---|
+| [`extract-bpmn.ts`](extract-bpmn.ts) | a file |  |
 | [`index.ts`](index.ts) | a file |  |
 | [`l2-bpmn.ts`](l2-bpmn.ts) | a file |  |
 | [`generated/`](generated/) | _nothing declares what this holds_ | |

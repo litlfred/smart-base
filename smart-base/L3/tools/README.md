@@ -14,6 +14,7 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `L3-tools`, holding `to
 | file | what it is | used by |
 |---|---|---|
 | [`dak-api-hub/`](dak-api-hub/) | _nothing declares what this holds_ | |
+| [`kg-extract-l3/`](kg-extract-l3/) | _nothing declares what this holds_ | |
 | [`smart-liquid-variables/`](smart-liquid-variables/) | _nothing declares what this holds_ | |
 | [`terminology-lookup/`](terminology-lookup/) | _nothing declares what this holds_ | |
 

@@ -13,6 +13,7 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `L3-schemas`, holding `
 
 | file | what it is | used by |
 |---|---|---|
+| [`extract-l3.ts`](extract-l3.ts) | a file |  |
 | [`index.ts`](index.ts) | a file |  |
 | [`l3.ts`](l3.ts) | a file |  |
 | [`generated/`](generated/) | _nothing declares what this holds_ | |
