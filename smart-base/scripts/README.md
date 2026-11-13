@@ -16,9 +16,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`check-fhir-harness-exclusions.feature`](check-fhir-harness-exclusions.feature) | a file |  |
 | [`check-fhir-harness-exclusions.test.ts`](check-fhir-harness-exclusions.test.ts) | a file |  |
 | [`check-fhir-harness-exclusions.ts`](check-fhir-harness-exclusions.ts) | a file |  |
-| [`check-ig-citations.feature`](check-ig-citations.feature) | a file |  |
-| [`check-ig-citations.test.ts`](check-ig-citations.test.ts) | a file |  |
-| [`check-ig-citations.ts`](check-ig-citations.ts) | a file |  |
 | [`check-web-annexes.feature`](check-web-annexes.feature) | a file |  |
 | [`check-web-annexes.test.ts`](check-web-annexes.test.ts) | a file |  |
 | [`check-web-annexes.ts`](check-web-annexes.ts) | a file |  |
@@ -31,7 +28,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`dak-pdf.feature`](dak-pdf.feature) | a file |  |
 | [`dak-pdf.test.ts`](dak-pdf.test.ts) | a file |  |
 | [`dak-pdf.ts`](dak-pdf.ts) | a file |  |
-| [`dak-pre-export.sh`](dak-pre-export.sh) | a file |  |
 | [`dak-swimlanes.feature`](dak-swimlanes.feature) | a file |  |
 | [`dak-swimlanes.test.ts`](dak-swimlanes.test.ts) | a file |  |
 | [`dak-swimlanes.ts`](dak-swimlanes.ts) | a file |  |
@@ -57,14 +53,8 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`gen-l1-extraction-pages.feature`](gen-l1-extraction-pages.feature) | a file |  |
 | [`gen-l1-extraction-pages.test.ts`](gen-l1-extraction-pages.test.ts) | a file |  |
 | [`gen-l1-extraction-pages.ts`](gen-l1-extraction-pages.ts) | a file |  |
-| [`ig-dak-metadata.feature`](ig-dak-metadata.feature) | a file |  |
-| [`ig-dak-metadata.test.ts`](ig-dak-metadata.test.ts) | a file |  |
-| [`ig-dak-metadata.ts`](ig-dak-metadata.ts) | a file |  |
 | [`ig-pages-committed.feature`](ig-pages-committed.feature) | a file |  |
 | [`ig-pages-committed.test.ts`](ig-pages-committed.test.ts) | a file |  |
-| [`ig-site-sidecars.feature`](ig-site-sidecars.feature) | a file |  |
-| [`ig-site-sidecars.test.ts`](ig-site-sidecars.test.ts) | a file |  |
-| [`ig-site-sidecars.ts`](ig-site-sidecars.ts) | a file |  |
 | [`kg-classes.ts`](kg-classes.ts) | a file |  |
 | [`l1-extraction-declared.feature`](l1-extraction-declared.feature) | a file |  |
 | [`l1-extraction-declared.test.ts`](l1-extraction-declared.test.ts) | a file |  |
@@ -96,9 +86,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`l2-program-indicators.py`](l2-program-indicators.py) | a file |  |
 | [`smart-base-transform.py`](smart-base-transform.py) | a file |  |
 | [`smart-base-transform.test.py`](smart-base-transform.test.py) | a file |  |
-| [`terminology-lookup.feature`](terminology-lookup.feature) | a file |  |
-| [`terminology-lookup.test.ts`](terminology-lookup.test.ts) | a file |  |
-| [`terminology-lookup.ts`](terminology-lookup.ts) | a file |  |
 | [`visio-svg-bpmn.feature`](visio-svg-bpmn.feature) | a file |  |
 | [`visio-svg-bpmn.test.ts`](visio-svg-bpmn.test.ts) | a file |  |
 | [`visio-svg-bpmn.ts`](visio-svg-bpmn.ts) | a file |  |

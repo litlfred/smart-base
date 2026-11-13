@@ -123,13 +123,13 @@ writer of that branch is fhir-harness's reusable `ig-ast-refresh.yml` (skill
 not run this phase, so smart-base supplies it as an **overlay**; fhir-harness
 never names it.
 
-- **The command** is [`smart-base/scripts/dak-pre-export.sh`](../../../scripts/dak-pre-export.sh)
+- **The command** is [`smart-base/L3/scripts/dak-pre-export.sh`](../../scripts/dak-pre-export.sh)
   (`bun run cat smart-base:dak-pre-export`). It runs steps 1, 2, 4, 5 and 6,
   in that order, from this checkout's own `input/scripts/`. It does not
   repeat step 3. Steps 4–6 run only when the IG declares `contentTypes.dak`.
   Any failure fails the run.
 - **The caller** is smart-base's `.github/workflows/ig-ast-refresh.yml`:
-  fhir-harness's template plus `pre-export: bash smart-base/scripts/dak-pre-export.sh`.
+  fhir-harness's template plus `pre-export: bash smart-base/L3/scripts/dak-pre-export.sh`.
   It runs by hand, and on every push to `main` that changes
   `sushi-config.yaml`, `ig.ini` or `input/**`.
 - **What the cache records.** This phase rewrites the IG's inputs

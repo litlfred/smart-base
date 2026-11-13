@@ -4,7 +4,7 @@
  * checkout script `ig-site:sidecars`. It writes the IG's DAK API sidecars from
  * the cached AST and hands them to fhir-harness, which binds and serves them.
  *
- *   bun run smart-base/scripts/ig-site-sidecars.ts [--ig <checkout>] [--work <dir>]
+ *   bun run smart-base/L3/scripts/ig-site-sidecars.ts [--ig <checkout>] [--work <dir>]
  *
  * ## Why it is here
  *
@@ -45,7 +45,7 @@
  * `<work>` is the site build's work directory, `SITE_WORK` when the build runs
  * the step.
  *
- * @module smart-base/scripts/ig-site-sidecars
+ * @module smart-base/L3/scripts/ig-site-sidecars
  */
 import { spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
@@ -87,7 +87,7 @@ export function igSiteSidecars(o: { ig: string; work: string; log?: (s: string) 
   mkdirSync(sidecars, { recursive: true });
   const site = join(dir, IG_API_SITE);
   const d = descriptorFor(ig);
-  const gen = join(import.meta.dir, "..", "..", "fhir-harness", "scripts", "ig-api-gen.ts");
+  const gen = join(import.meta.dir, "..", "..", "..", "fhir-harness", "scripts", "ig-api-gen.ts");
   if (!existsSync(gen)) throw new Error(`${gen}: fhir-harness is not mounted beside this layer, so the IG API cannot be generated`);
   const r = spawnSync("bun", ["run", gen, "--ast", ast, "--out", sidecars, "--site", site, "--label", d.label ?? "IG API", "--vocab-base", DAK_VOCAB_BASE], { cwd: ig, stdio: ["ignore", "inherit", "inherit"] });
   if (r.status !== 0) throw new Error(`ig-api-gen.ts exited ${r.status}: the IG's sidecars were not written`);

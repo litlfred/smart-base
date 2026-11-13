@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 
 import { lookupTerminology } from "./terminology-lookup.ts";
 
-const REPO_ROOT = resolve(import.meta.dir, "..", "..");
+const REPO_ROOT = resolve(import.meta.dir, "..", "..", "..");
 const DTH_VOCAB = "smart-base/l1-extractions/9789240116191-eng/dth-npc-vocabulary.json";
 
 describe("terminology-lookup (bean folio-assistant-4nfs)", () => {

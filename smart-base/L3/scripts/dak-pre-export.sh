@@ -27,7 +27,7 @@
 # committed: fhir-harness records the AST against the CLEAN checkout's inputs
 # and puts the tree back after the export.
 #
-#   bash smart-base/scripts/dak-pre-export.sh [<ig root>]   (default: .)
+#   bash smart-base/L3/scripts/dak-pre-export.sh [<ig root>]   (default: .)
 set -euo pipefail
 
 cd "${1:-.}"

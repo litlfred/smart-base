@@ -95,7 +95,7 @@ No IG publishes an artefact-index instance: an enumeration schema is a
 An IG repository whose `index.config.json` names smart-base as its site's
 landing declares no steps of its own. The site route (cat-harness-tools
 `stage-local.ts`) runs the landing layer's `ig-site:sidecars`, which is
-[`ig-site-sidecars.ts`](../../../scripts/ig-site-sidecars.ts):
+[`ig-site-sidecars.ts`](../../scripts/ig-site-sidecars.ts):
 
 - It runs fhir-harness's `ig-api-gen.ts`, the generic port of steps 3–6's
   generators, over the cached AST. This layer passes only the label and its
@@ -107,7 +107,7 @@ landing declares no steps of its own. The site route (cat-harness-tools
   already holds.
 - `$SITE_WORK/ig-api/ig-api.json` says `{"label": "DAK API"}` when the IG
   declares a DAK (`index.config.json` `contentTypes.dak`, or a legacy
-  `dak.json`; `scripts/ig-dak-metadata.ts`). Otherwise fhir-harness's default
+  `dak.json`; `L3/scripts/ig-dak-metadata.ts`). Otherwise fhir-harness's default
   label, "IG API", stands.
 
 fhir-harness binds and serves the sidecars (`ig-repo-site.ts`, fhir-harness

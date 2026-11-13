@@ -58,11 +58,11 @@
  * An IG with no references section and no citation is reported as
  * having nothing to judge, and passes.
  *
- *   bun run smart-base/scripts/check-ig-citations.ts [--root <dir>] [--with <layer dir>]... [--json]
+ *   bun run smart-base/L3/scripts/check-ig-citations.ts [--root <dir>] [--with <layer dir>]... [--json]
  *
  * Exit: 0 every reference is in the bibliography, 1 a finding.
  *
- * @module smart-base/scripts/check-ig-citations
+ * @module smart-base/L3/scripts/check-ig-citations
  * @covers references, catalogue, library
  */
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";

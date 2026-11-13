@@ -28,7 +28,7 @@ describe("ig-site:sidecars, smart-base's step in an IG repository's site", () =>
   });
 
   // fhir-harness beside this layer, as a checkout mounts them; skipped (and said) where it is not mounted.
-  const fhirHarness = join(import.meta.dir, "..", "..", "fhir-harness", "scripts", "ig-repo-site.ts");
+  const fhirHarness = join(import.meta.dir, "..", "..", "..", "fhir-harness", "scripts", "ig-repo-site.ts");
   test.skipIf(!existsSync(fhirHarness))("handshakeNamesMatchFhirHarness", () => {
     // Read, not imported: the test pins the two copies of the handshake's names
     // together without running fhir-harness's code.

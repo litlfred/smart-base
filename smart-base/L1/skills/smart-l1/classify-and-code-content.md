@@ -45,7 +45,7 @@ provenance (`declared`, `context`, `inferred`) and `status: "candidate"`, and
 stage the codings and any proposed exclusions for review:
 
 ```sh
-bun run smart-base/scripts/terminology-lookup.ts \
+bun run smart-base/L3/scripts/terminology-lookup.ts \
   --slot <condition|intervention|persona|medicine|domain|business-process|recommendation-strength|recommendation-direction|evidence-certainty> \
   --query <term-or-code> \
   [--vocabulary <guide-vocabulary.json>] \

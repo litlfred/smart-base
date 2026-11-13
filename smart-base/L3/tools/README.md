@@ -7,7 +7,7 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # l3-tools
 
-The L3 tools: the DAK API hub, the IG's Liquid variables and terminology lookup.
+The L3 tools: the DAK API hub, the L3 FHIR KG extractor, the IG's Liquid variables, the WHO publisher-site FHIR cache seeder and terminology lookup.
 
 Part of [SMART Base](../../README.md) 0.1.0, declared as `l3-tools`, holding `tools`.
 
@@ -15,6 +15,7 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `l3-tools`, holding `to
 |---|---|---|
 | [`dak-api-hub/`](dak-api-hub/) | _nothing declares what this holds_ | |
 | [`kg-extract-l3/`](kg-extract-l3/) | _nothing declares what this holds_ | |
+| [`smart-fhir-cache-seed/`](smart-fhir-cache-seed/) | _nothing declares what this holds_ | |
 | [`smart-liquid-variables/`](smart-liquid-variables/) | _nothing declares what this holds_ | |
 | [`terminology-lookup/`](terminology-lookup/) | _nothing declares what this holds_ | |
 

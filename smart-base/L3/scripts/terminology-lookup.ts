@@ -19,21 +19,21 @@
  *      `source: "extracted"`) or `could-not-determine` for `business-process`,
  *      with its greppable `WARNING` line.
  *
- *   bun run smart-base/scripts/terminology-lookup.ts \
+ *   bun run smart-base/L3/scripts/terminology-lookup.ts \
  *     --slot <slot> --query <query> \
  *     [--vocabulary <guide.json>] [--generic <generic.json>] \
  *     [--scheme <scheme>] [--out <out.json>]
  *
- * @module smart-base/scripts/terminology-lookup
+ * @module smart-base/L3/scripts/terminology-lookup
  * @covers code-list, scenarios, l1-extraction
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 
-import { ownDeclaredDirectories } from "../platform/index.js";
-import { slug } from "./l1-kgid.ts";
-import { VocabularySchema, type Vocabulary } from "./l1-scenario-vocabulary.ts";
-import { HARNESS_PAGES_ROOT, stagingSite } from "../schemas/site-roots.ts";
+import { ownDeclaredDirectories } from "../../platform/index.js";
+import { slug } from "../../scripts/l1-kgid.ts";
+import { VocabularySchema, type Vocabulary } from "../../scripts/l1-scenario-vocabulary.ts";
+import { HARNESS_PAGES_ROOT, stagingSite } from "../../schemas/site-roots.ts";
 
 export const SLOTS = [
   "condition",
@@ -106,7 +106,7 @@ export interface LookupOptions {
   repoRoot?: string;
 }
 
-const HERE = resolve(import.meta.dir, "..");
+const HERE = resolve(import.meta.dir, "../..");
 // declared-path-literal: a provenance label shown beside each guideline-domain match, naming the scheme's home in folio-assistant-core; this script never reads it from disk
 const GUIDELINE_DOMAIN_SOURCE = "folio-assistant-core/glossary/guideline-domain.glossary.json";
 
@@ -681,7 +681,7 @@ function parseArgs(argv: readonly string[]): LookupOptions & { outPath?: string 
   const query = get("--query");
   if (!slot || !SLOTS.includes(slot) || !query) {
     console.error(
-      `Usage: bun run smart-base/scripts/terminology-lookup.ts --slot <${SLOTS.join("|")}> --query <query> [--vocabulary <guide.json>] [--generic <generic.json>] [--scheme <scheme>] [--out <out.json>]`,
+      `Usage: bun run smart-base/L3/scripts/terminology-lookup.ts --slot <${SLOTS.join("|")}> --query <query> [--vocabulary <guide.json>] [--generic <generic.json>] [--scheme <scheme>] [--out <out.json>]`,
     );
     process.exit(2);
   }

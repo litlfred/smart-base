@@ -16,6 +16,5 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `tools`, holding `tools`.
 | [`index.ts`](index.ts) | a file |  |
 | [`lib.ts`](lib.ts) | a file |  |
 | [`l1-extraction-pages/`](l1-extraction-pages/) | _nothing declares what this holds_ | |
-| [`smart-fhir-cache-seed/`](smart-fhir-cache-seed/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

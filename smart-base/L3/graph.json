@@ -39,9 +39,18 @@
       "id": "l3-tools",
       "path": "tools/",
       "subgraph": true,
-      "description": "The L3 tools: the DAK API hub, the IG's Liquid variables and terminology lookup.",
+      "description": "The L3 tools: the DAK API hub, the L3 FHIR KG extractor, the IG's Liquid variables, the WHO publisher-site FHIR cache seeder and terminology lookup.",
       "graphTypologies": [
         "tools"
+      ]
+    },
+    {
+      "id": "l3-scripts",
+      "path": "scripts/",
+      "subgraph": true,
+      "description": "The L3 scripts, validators and QA checks: reuse-first terminology and code-list lookup (`terminology-lookup.ts`), the IG DAK API sidecar generator (`ig-site-sidecars.ts`) and DAK metadata reader (`ig-dak-metadata.ts`), the IG bibliography citation checker (`check-ig-citations.ts`), and the DAK pre-export overlay (`dak-pre-export.sh`).",
+      "graphTypologies": [
+        "code"
       ]
     }
   ]

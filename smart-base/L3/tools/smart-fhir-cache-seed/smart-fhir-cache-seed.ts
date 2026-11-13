@@ -1,5 +1,5 @@
-import { defineTool, toolFactory } from "../../platform/index.js";
-import { smartSiteRepoArgs } from "../lib.ts";
+import { defineTool, toolFactory } from "../../../platform/index.js";
+import { smartSiteRepoArgs } from "../../../tools/lib.ts";
 
 export default toolFactory((t) =>
   defineTool({

@@ -1,7 +1,7 @@
 /**
  * Read an IG checkout's DAK metadata, wherever that IG keeps it.
  *
- * @module scripts/ig-dak-metadata
+ * @module L3/scripts/ig-dak-metadata
  *
  * Since 2026-10-24 a DAK declares itself in the `dak` section of
  * `contentTypes` in its root `index.config.json` (bean `cz17`;

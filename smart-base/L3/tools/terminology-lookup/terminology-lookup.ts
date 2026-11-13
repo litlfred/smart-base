@@ -9,7 +9,7 @@ export default toolFactory((t) =>
     install: { none: true },
     invoke: {
       shell:
-        "bun run smart-base/scripts/terminology-lookup.ts --slot <slot> --query <query> [--vocabulary <guide.json>] [--generic <generic.json>] [--scheme <scheme>] [--out <out.json>]",
+        "bun run smart-base/L3/scripts/terminology-lookup.ts --slot <slot> --query <query> [--vocabulary <guide.json>] [--generic <generic.json>] [--scheme <scheme>] [--out <out.json>]",
     },
     io: {
       inputs: [

@@ -48,7 +48,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, join, relative, resolve } from "node:path";
 import { z } from "zod";
 
-import { readIgDakMetadata } from "./ig-dak-metadata.ts";
+import { readIgDakMetadata } from "../L3/scripts/ig-dak-metadata.ts";
 import { dakNamespace, slug } from "./l1-kgid.ts";
 
 export const VOCABULARY_SCHEMA_TAG = "l1-scenario-vocabulary/v1" as const;
