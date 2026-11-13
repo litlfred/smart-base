@@ -13,7 +13,6 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `l1-tools`, holding `to
 
 | file | what it is | used by |
 |---|---|---|
-| [`l1-extraction-pages/`](l1-extraction-pages/) | _nothing declares what this holds_ | |
 | [`l1-recommendation-candidates/`](l1-recommendation-candidates/) | _nothing declares what this holds_ | |
 | [`l1-statement-lists/`](l1-statement-lists/) | _nothing declares what this holds_ | |
 | [`l1-transcription-verbatim/`](l1-transcription-verbatim/) | _nothing declares what this holds_ | |
