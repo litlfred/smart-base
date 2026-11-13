@@ -41,7 +41,7 @@ failure. Exit 0 clean, 1 findings, 2 nothing to check (which is not a pass).
 2. Run the Tool. A finding (a statement not verbatim, a transcription word
    the text layer does not corroborate and `inspectionOnly` does not list, a
    duplicate key) goes back to step 1.
-3. Hand the result to [`recommendation-scenarios`](../../../L2/skills/smart-l2/recommendation-scenarios.md),
+3. Hand the result to [`recommendation-scenarios`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/recommendation-scenarios.md),
    which reads an authored L1 YAML as its `l1`.
 
 That the transcription reads the picture correctly is the reviewer's call

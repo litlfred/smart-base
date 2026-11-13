@@ -35,7 +35,7 @@ existing vocabulary and processes first, and warns when none fits.
 The contract is [`input.schema.json`](../../../schemas/skills/recommendation-extraction/input.schema.json) and [`output.schema.json`](../../../schemas/skills/recommendation-extraction/output.schema.json).
 
 - **In:** `l1Sources`, [`dak-l1-library`](dak-l1-library.md)'s output, and the `targetGuide` whose personas and processes the scenarios reuse first.
-- **Out:** `l1Kg`: per included source, its `extractionPath` (`library/<bib>/l1-extraction/`), `sourceVersion`, the recommendation, remark, practice and scenario-candidate counts, the `coverage` and every `WARNING`. Stages 3 ([`l2-dependency-choice`](../../../L2/skills/smart-l2/l2-dependency-choice.md)), 4 and 5 take it as their `l1Kg`.
+- **Out:** `l1Kg`: per included source, its `extractionPath` (`library/<bib>/l1-extraction/`), `sourceVersion`, the recommendation, remark, practice and scenario-candidate counts, the `coverage` and every `WARNING`. Stages 3 ([`l2-dependency-choice`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/l2-dependency-choice.md)), 4 and 5 take it as their `l1Kg`.
 
 As stage 2 of [`smart-guideline-end-to-end`](../../../skills/content/authoring-who-smart-guidelines/smart-guideline-end-to-end.md),
 a source is **skipped only when it is already in a KG**: its extraction
@@ -205,7 +205,7 @@ that mounts the layer at the commit being staged; it must exit 0.
 ## Part 2 — the scenario
 
 Its mechanical step is the named skill
-[`recommendation-scenarios`](../../../L2/skills/smart-l2/recommendation-scenarios.md) (Tool
+[`recommendation-scenarios`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/recommendation-scenarios.md) (Tool
 `l1-recommendation-scenarios`).
 
 ### The shape: L2 nodes, reused unchanged
@@ -240,7 +240,7 @@ and a **status**: `candidate` until a person reviews the entry.
 Persona, business-process and guideline-domain coding apply the
 [`terminology-coding`](../../../methodologies/terminology-coding.md) methodology
 (backed by [`classify-and-code-content`](classify-and-code-content.md), the
-[`terminology-lookup`](../../../L3/tools/terminology-lookup/terminology-lookup.ts)
+[`terminology-lookup`](https://github.com/litlfred/smart-base/blob/main/smart-base/L3/tools/terminology-lookup/terminology-lookup.ts)
 Tool, and [`glossary-terms`](../../../../folio-assistant-core/skills/library/cataloguing/glossary-terms.md)):
 
 | what | 1st | 2nd | otherwise |
