@@ -7,8 +7,8 @@ description: >
   graph, coverage and proposed exclusions. Step 1 of recommendation-extraction,
   run once per included source; the `l1-recommendation-candidates` Tool
   satisfies it.
-input: schemas/skills/recommendation-candidates/input.schema.json
-output: schemas/skills/recommendation-candidates/output.schema.json
+input: L1/schemas/skills/recommendation-candidates/input.schema.json
+output: L1/schemas/skills/recommendation-candidates/output.schema.json
 ---
 <!-- installed by cat-harness-tools/scripts/install-skills.ts; edit the source, not this copy -->
 <!-- source: L1/skills/smart-l1/recommendation-candidates.md -->
@@ -22,8 +22,8 @@ prints practices instead).
 
 ## Input and output
 
-- Input: [`input.schema.json`](../../../schemas/skills/recommendation-candidates/input.schema.json)
-- Output: [`output.schema.json`](../../../schemas/skills/recommendation-candidates/output.schema.json)
+- Input: [`input.schema.json`](../../schemas/skills/recommendation-candidates/input.schema.json)
+- Output: [`output.schema.json`](../../schemas/skills/recommendation-candidates/output.schema.json)
 
 **In:** an ingested `library/<id>/` entry and, on the second pass, the agent's
 `l1-recommendation-curation/v1`.
@@ -45,5 +45,5 @@ every node `inferred`), the proposed exclusions and the warnings.
 `l1-recommendation-candidates` (`smart-base/L1/tools/l1-recommendation-candidates/l1-recommendation-candidates.ts`):
 
 ```sh
-bun run smart-base/scripts/l1-recommendation-candidates.ts --entry <library entry> [--curation <curation.yaml>] --out <dir> [--check]
+bun run smart-base/L1/scripts/l1-recommendation-candidates.ts --entry <library entry> [--curation <curation.yaml>] --out <dir> [--check]
 ```

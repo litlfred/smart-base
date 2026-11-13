@@ -8,8 +8,8 @@ description: >
   adding a WHO handbook's or guideline's indicators to a DAK or a DTH, and
   whenever an L2 indicator has to trace to its source. Part of L1 → L2
   extraction for every DAK and DTH, beside recommendation-extraction.
-input: schemas/skills/indicator-extraction/input.schema.json
-output: schemas/skills/indicator-extraction/output.schema.json
+input: L1/schemas/skills/indicator-extraction/input.schema.json
+output: L1/schemas/skills/indicator-extraction/output.schema.json
 ---
 <!-- installed by cat-harness-tools/scripts/install-skills.ts; edit the source, not this copy -->
 <!-- source: L1/skills/smart-l1/indicator-extraction.md -->
@@ -29,7 +29,7 @@ and `Call_Data` in [`dth-authoring`](https://github.com/litlfred/smart-base/blob
 
 | layer | what | kind / model | written by |
 |---|---|---|---|
-| L1 | the indicator **as the source prints it**, verbatim | `indicator` block (folio type `smart-base:Indicator`; KG L1 `indicator`, `L1/schemas/l1.ts`) | `scripts/l1-indicator-sheets.py` → `candidates.json` → `gen-library-jsonld` |
+| L1 | the indicator **as the source prints it**, verbatim | `indicator` block (folio type `smart-base:Indicator`; KG L1 `indicator`, `L1/schemas/l1.ts`) | `L1/scripts/l1-indicator-sheets.py` → `candidates.json` → `gen-library-jsonld` |
 | L2 | the DAK's or DTH's **own** operational measure, a draft that points back | `program-indicator` (sgkg-l2), logical model `ProgramIndicator` | `scripts/l2-program-indicators.py` |
 
 sgkg-l2 keeps them apart: merging them would merge a WHO definition with a
@@ -70,9 +70,9 @@ its L1 node, and the L2 author adopts, edits or drops it.
 2. **L1 candidates.** From the library repository root:
 
    ```sh
-   python3 smart-base/scripts/l1-indicator-sheets.py --entry library/<doc-id> \
+   python3 smart-base/L1/scripts/l1-indicator-sheets.py --entry library/<doc-id> \
      --pdf uploads/<doc-id>/<doc-id>.pdf --pages <first>-<last> --json   # look first
-   python3 smart-base/scripts/l1-indicator-sheets.py --entry library/<doc-id> \
+   python3 smart-base/L1/scripts/l1-indicator-sheets.py --entry library/<doc-id> \
      --pdf uploads/<doc-id>/<doc-id>.pdf --pages <first>-<last> --write
    ```
 

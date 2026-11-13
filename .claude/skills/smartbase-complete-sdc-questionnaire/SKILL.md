@@ -7,8 +7,8 @@ description: >
   registration, a visit, a referral. Input is the Questionnaire as rendered,
   with any pre-populated answers; output is the completed
   QuestionnaireResponse.
-input: schemas/skills/complete-sdc-questionnaire/input.schema.json
-output: schemas/skills/complete-sdc-questionnaire/output.schema.json
+input: L4/schemas/skills/complete-sdc-questionnaire/input.schema.json
+output: L4/schemas/skills/complete-sdc-questionnaire/output.schema.json
 ---
 <!-- installed by cat-harness-tools/scripts/install-skills.ts; edit the source, not this copy -->
 <!-- source: L4/skills/smart-l4/complete-sdc-questionnaire.md -->
@@ -34,8 +34,8 @@ is not cannot be completed by this skill.
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/complete-sdc-questionnaire/input.schema.json)
-and [`output.schema.json`](../../../schemas/skills/complete-sdc-questionnaire/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/complete-sdc-questionnaire/input.schema.json)
+and [`output.schema.json`](../../schemas/skills/complete-sdc-questionnaire/output.schema.json).
 
 - **In:** the `questionnaire` (a FHIR R4 Questionnaire resource), how it is
   `renderedOn` (form factor, language, whether offline), and, when the form

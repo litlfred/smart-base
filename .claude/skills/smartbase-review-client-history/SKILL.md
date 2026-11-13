@@ -7,8 +7,8 @@ description: >
   weighing each item by where it came from: verified, unverified or reported.
   Input is the records with their provenance; output is what the health
   worker relies on.
-input: schemas/skills/review-client-history/input.schema.json
-output: schemas/skills/review-client-history/output.schema.json
+input: L4/schemas/skills/review-client-history/input.schema.json
+output: L4/schemas/skills/review-client-history/output.schema.json
 ---
 <!-- installed by cat-harness-tools/scripts/install-skills.ts; edit the source, not this copy -->
 <!-- source: L4/skills/smart-l4/review-client-history.md -->
@@ -22,8 +22,8 @@ output: schemas/skills/review-client-history/output.schema.json
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/review-client-history/input.schema.json)
-and [`output.schema.json`](../../../schemas/skills/review-client-history/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/review-client-history/input.schema.json)
+and [`output.schema.json`](../../schemas/skills/review-client-history/output.schema.json).
 
 - **In:** the `records` shown, each a FHIR resource (or a summary of a paper
   record), with its `provenance`: `verified` (a signature or a trusted

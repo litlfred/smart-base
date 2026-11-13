@@ -6,8 +6,8 @@ description: >
   declares (StructureMap-based, definition-based or observation-based
   $extract), and saves them. Input is the response and its Questionnaire;
   output is a transaction Bundle. Generic for any DAK form.
-input: schemas/skills/extract-questionnaire-response/input.schema.json
-output: schemas/skills/extract-questionnaire-response/output.schema.json
+input: L4/schemas/skills/extract-questionnaire-response/input.schema.json
+output: L4/schemas/skills/extract-questionnaire-response/output.schema.json
 ---
 <!-- installed by cat-harness-tools/scripts/install-skills.ts; edit the source, not this copy -->
 <!-- source: L4/skills/smart-l4/extract-questionnaire-response.md -->
@@ -35,8 +35,8 @@ methods applies is declared by the Questionnaire, never chosen here:
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/extract-questionnaire-response/input.schema.json)
-and [`output.schema.json`](../../../schemas/skills/extract-questionnaire-response/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/extract-questionnaire-response/input.schema.json)
+and [`output.schema.json`](../../schemas/skills/extract-questionnaire-response/output.schema.json).
 
 - **In:** the completed `questionnaireResponse` and the `questionnaire` it
   answers.
