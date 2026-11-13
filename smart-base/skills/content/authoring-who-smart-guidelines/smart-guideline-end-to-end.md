@@ -22,7 +22,7 @@ output: schemas/skills/smart-guideline-end-to-end/output.schema.json
 # smart-guideline-end-to-end
 
 > Skill id: `smart-guideline-end-to-end` · Package: `authoring-who-smart-guidelines` ·
-> Process: [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn)
+> Process: `smart-guideline-end-to-end.bpmn` (opt-in `smart-base.collab`)
 
 This skill holds the order of the stages, the hand-off between them and the
 adjudication rule. What a stage does is in its own skill; if a stage needs
@@ -85,7 +85,7 @@ QA-not-a-gate is about verdicts. It never licenses skipping a stage.
 A new repository carries a pointer to this skill and a platform mount
 ([`smart-guideline-create`](smart-guideline-create.md) §6).
 
-In [`l2-dak-authoring.bpmn`](../../../processes/content/l2-dak-authoring.bpmn)
+In `l2-dak-authoring.bpmn` (opt-in `smart-base.collab`)
 the **Clinically accurate?** decision runs beside assembly: a parallel fork
 after the authoring join starts clinical validation and assembly together.
 `changes needed` sends the work round again, re-assembling the DAK;
@@ -103,9 +103,9 @@ skills are called through the mapping in their row.
 | 1 | Identify L1 guidelines and recommendations | [`dak-l1-library`](dak-l1-library.md) | `useCase` | `l1Sources`: each candidate in-library / in-kg / not-yet, included or not, and why | Clinical SME |
 | 2 | Ingest into an L1 KG the sources not yet in one | [`recommendation-extraction`](recommendation-extraction.md) (after `bun run cat ingest` and `dak-l1-library`'s generic-document layer for a source not in `library/`) | `l1Sources` | `l1Kg`: per source, `library/<bib>/l1-extraction/`, coverage, every `WARNING` | `l1-extraction-reviewer` (exclusions, coverage), Clinical SME (recommendations) |
 | 3 | Choose L2 dependencies (WHO / jurisdiction DAKs) | [`l2-dependency-choice`](l2-dependency-choice.md), with [`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK* for how each candidate produces each component | `l1Kg` | `l2Dependencies`: one decision row per candidate DAK, and per component the `toolchain` stage 4 will use | Programme manager + Business analyst |
-| 4 | Create or adapt the L2 DAK assets | [`l2-dak-authoring`](l2-dak-authoring.md), once per component, with the stage-3 `toolchain` ([`smart-base-tools`](smart-base-tools.md)), in the steps of [`l2-dak-authoring.bpmn`](../../../processes/content/l2-dak-authoring.bpmn), each an edit-then-review call into [`l2-component-edit-review.bpmn`](../../../processes/content/l2-component-edit-review.bpmn); pre/post-processing by [`dak-preprocessing`](dak-preprocessing.md) / [`dak-postprocessing`](dak-postprocessing.md) as smart-base's overlay on fhir-harness's AST cache refresh | `dakComponent`, `sourceGuideline`, `l1Kg`, `l2Dependencies` | `artifacts` of every pass, which are `l2Assets` | per asset, see [Per-asset review](#per-asset-review) |
+| 4 | Create or adapt the L2 DAK assets | [`l2-dak-authoring`](l2-dak-authoring.md), once per component, with the stage-3 `toolchain` ([`smart-base-tools`](smart-base-tools.md)), in the steps of `l2-dak-authoring.bpmn` (opt-in `smart-base.collab`), each an edit-then-review call into `l2-component-edit-review.bpmn` (opt-in `smart-base.collab`); pre/post-processing by [`dak-preprocessing`](dak-preprocessing.md) / [`dak-postprocessing`](dak-postprocessing.md) as smart-base's overlay on fhir-harness's AST cache refresh | `dakComponent`, `sourceGuideline`, `l1Kg`, `l2Dependencies` | `artifacts` of every pass, which are `l2Assets` | per asset, see [Per-asset review](#per-asset-review) |
 | 5 | Choose L3 dependencies (WHO / jurisdiction IGs) | [`l3-dependency-choice`](l3-dependency-choice.md), indexing with [`ig-artifact-ingestion`](ig-artifact-ingestion.md), with [`smart-base-tools`](smart-base-tools.md) §*Adapting a DAK* for how each candidate builds and tests its CQL and examples | `l1Kg`, `l2Assets`, `l2Dependencies` | `l3Dependencies`, and per artefact type the `toolchain` stage 6 will use, and the IG `indexes` | FHIR modeller + Terminologist |
-| 6 | Produce the L3 assets, only once `Gateway_L3Ready` says yes on [`l3-readiness`](l3-readiness.md) ([the order rule](#the-order-is-a-rule-l1-then-l2-then-l3)) | fhir-harness `l3-fhir-authoring` with `l2-dak-authoring` and the stage-5 `toolchain`, in [`dak-l3-ig.bpmn`](../../../processes/content/dak-l3-ig.bpmn), up to a clean IG build | per artifact: `artifactType`, `sourceModel` = an `l2Assets` path; the adjudicated `l3Dependencies` rows become `sushi-config.yaml` dependencies | `fshFiles`, `sushiResult`, `generatedResources`, read as `ig` with its `igRoot` | per asset, see [Per-asset review](#per-asset-review) |
+| 6 | Produce the L3 assets, only once `Gateway_L3Ready` says yes on [`l3-readiness`](l3-readiness.md) ([the order rule](#the-order-is-a-rule-l1-then-l2-then-l3)) | fhir-harness `l3-fhir-authoring` with `l2-dak-authoring` and the stage-5 `toolchain`, in `dak-l3-ig.bpmn` (opt-in `smart-base.collab`), up to a clean IG build | per artifact: `artifactType`, `sourceModel` = an `l2Assets` path; the adjudicated `l3Dependencies` rows become `sushi-config.yaml` dependencies | `fshFiles`, `sushiResult`, `generatedResources`, read as `ig` with its `igRoot` | per asset, see [Per-asset review](#per-asset-review) |
 | 7 | L4: describe the consuming application | [`l4-application-brief`](l4-application-brief.md) | `useCase`, `l2Assets`, `ig` | `applicationBrief`, and the `wireframeRequest` | (the requester *is* the source) |
 | 8a | L4: wireframe the application | cat-harness `wireframe-design-review`, design use | `wireframeRequest`, unchanged | the candidates and the choice, read as `wireframes` | Business analyst + Clinical SME, with the requester choosing |
 | 8b | L4: build the consuming application | [`l4-application-build`](l4-application-build.md) | `applicationBrief`, `ig`, `wireframes` | `application`, with its conformance and scenario tests | Business analyst + Clinical SME (does it do what the L2 says?), FHIR modeller (does it conform to L3?) |
@@ -146,7 +146,7 @@ staged inside the current one first (`in-repo`, a staged sub-KG, the
 Every asset a stage **creates or changes** gets its own review item; one
 reused unchanged gets none. The review item shows the asset on the staged
 preview the way its reviewer reads it, not as source. At L2 it is a run of
-[`l2-component-edit-review.bpmn`](../../../processes/content/l2-component-edit-review.bpmn),
+`l2-component-edit-review.bpmn` (opt-in `smart-base.collab`),
 whose [skill](l2-component-edit-review.md) gives each row's checker,
 renderer and reviewer:
 

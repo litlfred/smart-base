@@ -16,7 +16,7 @@ output: schemas/skills/guideline-use-case/output.schema.json
 > Skill id: `guideline-use-case` · Package: `authoring-who-smart-guidelines` ·
 > Stage 0 of [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md),
 > task `Task_DescribeUseCase` of
-> [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn),
+> `smart-guideline-end-to-end.bpmn` (opt-in `smart-base.collab`),
 > in the requester's (`user`) lane.
 
 **The use case is the requester's, not the agent's.** Every later stage

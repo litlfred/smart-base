@@ -12,8 +12,8 @@ description: >
 # dth-authoring
 
 > Skill id: `dth-authoring` · Package: `authoring-who-smart-guidelines` ·
-> Process: [`dth-authoring.bpmn`](../../../processes/content/dth-authoring.bpmn)
-> (generated walk: [`dth-authoring.checklist.md`](../../../processes/content/dth-authoring.checklist.md)).
+> Process: `dth-authoring.bpmn` (opt-in `smart-base.collab`)
+> (generated walk: `dth-authoring.checklist.md` (opt-in `smart-base.collab`)).
 > Pilot: `litlfred/dth-hrh`.
 
 **The diagram is the authority for the steps.** This file holds only the rules

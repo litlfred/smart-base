@@ -1,8 +1,8 @@
-<!-- GENERATED from smart-base/methodologies/processes/diig-investment-path.bpmn by cat-harness-tools/scripts/bpmn-checklist.ts. Do not edit: change the diagram and regenerate (bun run cat bpmn:checklist). -->
+<!-- GENERATED from smart-base/collab/processes/diig-investment-path.bpmn by cat-harness-tools/scripts/bpmn-checklist.ts. Do not edit: change the diagram and regenerate (bun run cat bpmn:checklist). -->
 
 # Checklist — DIIG — from a health system bottleneck to a costed implementation plan
 
-> **Generated, and not the authority.** This is `smart-base/methodologies/processes/diig-investment-path.bpmn` (process `Process_DIIG`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
+> **Generated, and not the authority.** This is `smart-base/collab/processes/diig-investment-path.bpmn` (process `Process_DIIG`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
 
 The nine-chapter sequence of the WHO/ITU Digital Implementation Investment Guide, as the Guide numbers it.
 

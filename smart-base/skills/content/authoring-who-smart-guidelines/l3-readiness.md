@@ -19,7 +19,7 @@ output: schemas/skills/l3-readiness/output.schema.json
 > The check before `Gateway_L3Ready` of
 > [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md), task
 > `Task_L3Ready` of
-> [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn).
+> `smart-guideline-end-to-end.bpmn` (opt-in `smart-base.collab`).
 > Run by the authoring agent; it records no verdict on any asset.
 
 The [order rule](smart-guideline-end-to-end.md#the-order-is-a-rule-l1-then-l2-then-l3)

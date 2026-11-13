@@ -18,7 +18,7 @@ output: schemas/skills/l2-dak-authoring/output.schema.json
 > Named by `l2-dak-authoring.bpmn` steps **Personas and scenarios**,
 > **Data dictionary and core data elements**, **Indicators and requirements**,
 > all in the `Business analyst` lane and each a call into
-> [`l2-component-edit-review.bpmn`](../../../processes/content/l2-component-edit-review.bpmn),
+> `l2-component-edit-review.bpmn` (opt-in `smart-base.collab`),
 > and by `dak-l3-ig.bpmn` step **Map L2 → L3**, beside `l3-fhir-authoring`.
 
 Author the **L2** layer of a WHO SMART Guideline: the human-readable,

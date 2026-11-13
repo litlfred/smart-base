@@ -18,7 +18,7 @@ output: schemas/skills/l2-dependency-choice/output.schema.json
 > Skill id: `l2-dependency-choice` · Package: `authoring-who-smart-guidelines` ·
 > Stage 3 of [`smart-guideline-end-to-end`](smart-guideline-end-to-end.md),
 > task `Task_DepsL2` of
-> [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn).
+> `smart-guideline-end-to-end.bpmn` (opt-in `smart-base.collab`).
 > Adjudicated by the programme manager and the business analyst.
 
 ## Input and output

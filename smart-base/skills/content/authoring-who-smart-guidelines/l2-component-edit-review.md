@@ -16,9 +16,9 @@ description: >
 # l2-component-edit-review
 
 > Skill id: `l2-component-edit-review` · Package: `authoring-who-smart-guidelines` ·
-> Process: [`l2-component-edit-review.bpmn`](../../../processes/content/l2-component-edit-review.bpmn)
+> Process: `l2-component-edit-review.bpmn` (opt-in `smart-base.collab`)
 > (`Process_L2ComponentEditReview`), called by every authoring track of
-> [`l2-dak-authoring.bpmn`](../../../processes/content/l2-dak-authoring.bpmn)
+> `l2-dak-authoring.bpmn` (opt-in `smart-base.collab`)
 
 Every step of the subprocess runs an existing skill: review is cat-harness's
 `Process_Review`, the verdict a `qa-review/v1` `QaReview`, the links follow

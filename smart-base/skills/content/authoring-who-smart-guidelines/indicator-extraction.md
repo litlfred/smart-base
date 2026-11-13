@@ -20,8 +20,8 @@ output: schemas/skills/indicator-extraction/output.schema.json
 > one takes a source's recommendations, this one its indicators.
 
 It is a step of L1 → L2 extraction for a DAK or DTH, bound to
-`Task_Indicators` in [`l2-dak-authoring`](../../../processes/content/l2-dak-authoring.bpmn)
-and `Call_Data` in [`dth-authoring`](../../../processes/content/dth-authoring.bpmn).
+`Task_Indicators` in `l2-dak-authoring` (opt-in `smart-base.collab`)
+and `Call_Data` in `dth-authoring` (opt-in `smart-base.collab`).
 
 ## Two layers, kept apart
 

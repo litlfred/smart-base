@@ -1,8 +1,8 @@
-<!-- GENERATED from smart-base/processes/content/dth-authoring.bpmn by cat-harness-tools/scripts/bpmn-checklist.ts. Do not edit: change the diagram and regenerate (bun run cat bpmn:checklist). -->
+<!-- GENERATED from smart-base/collab/processes/content/dth-authoring.bpmn by cat-harness-tools/scripts/bpmn-checklist.ts. Do not edit: change the diagram and regenerate (bun run cat bpmn:checklist). -->
 
 # Checklist — DTH authoring
 
-> **Generated, and not the authority.** This is `smart-base/processes/content/dth-authoring.bpmn` (process `Process_DthAuthoring`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
+> **Generated, and not the authority.** This is `smart-base/collab/processes/content/dth-authoring.bpmn` (process `Process_DthAuthoring`) walked as a state machine. The diagram and the workflow engine decide; this list only reads them. Follow the `next:` line of each step rather than the order on the page, and record each step with the call it names, so the engine's committed state — not this list — says which edge was taken.
 
 Produces a WHO Digital Transformation Handbook (DTH) from its sources to publication, in seven stages that each end in a recorded milestone: initiate (M0 charter), ingest sources into the library (M1 library frozen), outline and scope (M2 outline agreed), structured drafting (M3 zero draft), working
 
