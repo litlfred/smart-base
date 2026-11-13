@@ -3,7 +3,7 @@
  * (`litlfred/dth-sfp#1` Step P6d, `litlfred/dth-phc#1` Step P4b, and
  * `litlfred/smart-base#242`).
  *
- * Exercises all six schemas against realistic fixtures from:
+ * Exercises all five schemas against realistic fixtures from:
  * - `dth-sfp` (`9789240120747-eng`, Substandard and falsified medical products)
  * - `dth-phc` (`9789240093362-eng`, Primary health care / PCPOSS)
  * - `dth-pc` (`9789240116191-eng`, National product catalogue)
@@ -12,20 +12,14 @@
  */
 
 import { describe, expect, test } from "bun:test";
-import { existsSync, readdirSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
 
 import {
   BARRIER_SOLUTION_MAP_SCHEMA_TAG,
   BarrierSolutionMapSchema,
   DTH_PLANNING_SCHEMA_TAGS,
-  DTH_PRODUCES_DAK_KINDS,
   DthPlanningArtefactSchema,
   GOVERNANCE_ROLE_SCHEMA_TAG,
   GovernanceRoleSchema,
-  IMPLEMENTATION_STEP_LIST_SCHEMA_TAG,
-  ImplementationStepListSchema,
   RACI_MATRIX_SCHEMA_TAG,
   RaciMatrixSchema,
   RISK_REGISTER_SCHEMA_TAG,
@@ -33,11 +27,6 @@ import {
   STAKEHOLDER_ANALYSIS_SCHEMA_TAG,
   StakeholderAnalysisSchema,
 } from "../../schemas/dth-planning-schemas.ts";
-
-const THIS_DIR = dirname(fileURLToPath(import.meta.url));
-const BLOCK_KINDS_DIR = existsSync(resolve(THIS_DIR, "..", "..", "block-kinds"))
-  ? resolve(THIS_DIR, "..", "..", "block-kinds")
-  : resolve(THIS_DIR, "..", "..", "smart-base", "block-kinds");
 
 describe("1. GovernanceRoleSchema (dth-governance-role/v1)", () => {
   test("accepts SFP §2.3 Steering Committee and NMRA Regulator fixtures (9789240120747-eng)", () => {
@@ -265,49 +254,42 @@ describe("2. RaciMatrixSchema (dth-raci-matrix/v1)", () => {
 });
 
 describe("3. RiskRegisterSchema (dth-risk-register/v1)", () => {
-  test("accepts populated PC Ch 2 risk & mitigation table (9789240116191-eng) and SFP Annex 7 template (9789240120747-eng)", () => {
-    const pcRiskRegister = RiskRegisterSchema.parse({
-      id: "PC-RISK-REG-CH02",
-      title: "National Product Catalogue Governance and Data Stewardship Risk Register",
+  test("accepts a populated PHC Ch 1 register (9789240093362-eng) and SFP Annex 7 template (9789240120747-eng)", () => {
+    const phcRiskRegister = RiskRegisterSchema.parse({
+      id: "PHC-RISK-REG-CH01",
+      title: "PCPOSS governance and data stewardship risk register",
       mode: "populated",
       entries: [
         {
-          riskId: "PC-RISK-02-01",
+          id: "PHC-RISK-01-01",
           category: "Governance",
-          riskDescription:
-            "Unclear ownership of product master data attributes across NMRA, central medical store, and logistics programmes leads to conflicting identifiers.",
+          risk:
+            "Unclear ownership of PCPOSS master data across the ministry, district health offices and vertical programmes leads to conflicting identifiers.",
           likelihood: "high",
           impact: "high",
           priority: "critical",
           mitigation:
-            "Establish an inter-agency data governance charter with a single authoritative steward per attribute domain before system configuration.",
-          ownerRoleIri: "urn:who:smart-ra:role:nmra",
-          stepRef: "PC-STEP-02-01",
+            "Establish an inter-agency data governance charter with a single authoritative steward per data domain before system configuration.",
+          ownerRoleId: "actor:moh-digital-health-unit",
+          stepIds: ["PHC-CH01-STEP-02"],
         },
         {
-          riskId: "PC-RISK-02-02",
+          id: "PHC-RISK-01-02",
           category: "Technical interoperability",
-          riskDescription:
-            "Downstream supply-chain and EHR systems fail to adopt GS1/FHIR catalogue standards.",
+          risk: "Existing HMIS and EHR systems fail to adopt the agreed FHIR and terminology standards.",
           likelihood: "medium",
           impact: "high",
           priority: "high",
           mitigation:
-            "Mandate FHIR terminology and product catalogue profiles in national interoperability specifications and procurement RFPs.",
-          ownerRoleIri: "urn:who:dth-pc:persona:data-steward",
-          stepRef: "PC-STEP-02-03",
+            "Mandate FHIR profiles and terminology bindings in national interoperability specifications and procurement RFPs.",
+          ownerRoleId: "pers:data-steward",
         },
       ],
-      sourceRef: {
-        libraryId: "9789240116191-eng",
-        sectionId: "sec-010",
-        pages: "19-24",
-        tableOrAnnex: "Ch 2 Risk Table",
-      },
+      sourceRef: "9789240093362-eng#Ch1",
     });
 
-    expect(pcRiskRegister.$schema).toBe(RISK_REGISTER_SCHEMA_TAG);
-    expect(pcRiskRegister.entries).toHaveLength(2);
+    expect(phcRiskRegister.$schema).toBe(RISK_REGISTER_SCHEMA_TAG);
+    expect(phcRiskRegister.entries).toHaveLength(2);
 
     const sfpAnnex7Template = RiskRegisterSchema.parse({
       id: "SFP-RISK-ANNEX-07",
@@ -335,6 +317,28 @@ describe("3. RiskRegisterSchema (dth-risk-register/v1)", () => {
         sourceRef: "9789240116191-eng#Ch2",
       }).success,
     ).toBe(false);
+  });
+
+  test("a register row is a DthRiskMitigationRowSchema row: owner is a structured role id", () => {
+    const row = {
+      id: "R-1",
+      category: "Governance",
+      risk: "No steward",
+      mitigation: "Name one",
+      ownerRoleId: "Ministry of Health, somebody",
+    };
+    expect(
+      RiskRegisterSchema.safeParse({ id: "X", title: "X", mode: "populated", entries: [row], sourceRef: "x" }).success,
+    ).toBe(false);
+    expect(
+      RiskRegisterSchema.safeParse({
+        id: "X",
+        title: "X",
+        mode: "populated",
+        entries: [{ ...row, ownerRoleId: "actor:moh" }],
+        sourceRef: "x",
+      }).success,
+    ).toBe(true);
   });
 });
 
@@ -437,151 +441,18 @@ describe("5. StakeholderAnalysisSchema (dth-stakeholder-analysis/v1)", () => {
   });
 });
 
-describe("6. ImplementationStepListSchema (dth-implementation-steps/v1)", () => {
-  test("accepts SFP Tables 14/17 (9789240120747-eng) and PHC Ch 3 DAK-method step list (9789240093362-eng)", () => {
-    const phcCh3Steps = ImplementationStepListSchema.parse({
-      id: "PHC-STEPS-CH03",
-      title: "Chapter 3: Determining user requirements for a person-centred point-of-service system (PCPOSS)",
-      diigPhase: "Phase 5: Determine requirements",
-      steps: [
-        {
-          stepNumber: 1,
-          stepId: "PHC-CH03-STEP-01",
-          title: "Identify end-user personas and their roles",
-          description:
-            "Conduct contextual interviews and facility observations to catalogue all clinical, community, and administrative personas interacting with the PCPOSS.",
-          leadRoleIri: "urn:who:dth-phc:persona:PHC-R-04",
-          participatingRoleIris: [
-            "urn:who:dth-phc:persona:PHC-R-01",
-            "urn:who:dth-phc:persona:PHC-R-02",
-          ],
-          inputs: ["National PHC service package", "Health workforce role descriptions"],
-          toolsOrResources: ["Annex 4: Persona worksheet"],
-          outputs: ["Validated PCPOSS persona catalogue"],
-          producesDakKind: "persona",
-        },
-        {
-          stepNumber: 2,
-          stepId: "PHC-CH03-STEP-02",
-          title: "Map current and target business process workflows",
-          description:
-            "Document end-to-end care workflows with role-bound swimlanes, entry/exit criteria, and handoffs across care settings.",
-          leadRoleIri: "urn:who:dth-phc:persona:PHC-R-04",
-          participatingRoleIris: [
-            "urn:who:dth-phc:persona:PHC-R-01",
-            "urn:who:dth-phc:persona:PHC-R-05",
-          ],
-          inputs: ["Validated PCPOSS persona catalogue", "Clinical guidelines"],
-          toolsOrResources: ["Annex 6: Business process workflow worksheet", "BPMN 2.0 modelling conventions"],
-          outputs: ["BPMN 2.0 business process diagrams"],
-          producesDakKind: "business-process",
-        },
-        {
-          stepNumber: 3,
-          stepId: "PHC-CH03-STEP-03",
-          title: "Define core data elements and decision-support logic",
-          description:
-            "Specify minimum data elements, terminology bindings, and clinical decision-support tables required at each workflow task.",
-          leadRoleIri: "urn:who:dth-phc:persona:PHC-R-05",
-          participatingRoleIris: ["urn:who:dth-phc:persona:PHC-R-01"],
-          inputs: ["BPMN 2.0 business process diagrams", "WHO SMART Guidelines DAKs"],
-          toolsOrResources: ["Annex 7: Data dictionary worksheet", "Annex 9: Decision-support worksheet"],
-          outputs: ["PCPOSS data dictionary", "DMN 1.5 decision tables"],
-          producesDakKind: "decision-table",
-        },
-      ],
-      sourceRef: {
-        libraryId: "9789240093362-eng",
-        sectionId: "sec-012",
-        pages: "27-48",
-        tableOrAnnex: "Chapter 3 opener panel & steps",
-      },
-    });
-
-    expect(phcCh3Steps.$schema).toBe(IMPLEMENTATION_STEP_LIST_SCHEMA_TAG);
-    expect(phcCh3Steps.steps).toHaveLength(3);
-    expect(phcCh3Steps.steps[0]!.producesDakKind).toBe("persona");
-
-    const sfpTable14Steps = ImplementationStepListSchema.parse({
-      id: "SFP-STEPS-TBL-14",
-      title: "Table 14: Key steps for planning implementation of an SF medical products reporting system",
-      diigPhase: "Phase 7: Plan implementation",
-      steps: [
-        {
-          stepNumber: 1,
-          stepId: "SFP-STEP-14-01",
-          title: "Develop phased rollout and change-management plan",
-          description:
-            "Sequence national deployment across pilot regions, NMRA headquarters, and customs checkpoints with clear milestones.",
-          leadRoleIri: "urn:who:smart-ra:role:nmra",
-          participatingRoleIris: ["urn:who:dth-sfp:governance:SFP-GOV-01"],
-          inputs: ["Approved functional and non-functional requirements (Tables 12–13)"],
-          toolsOrResources: ["Annex 4: RACI matrix", "Annex 7: Risk register"],
-          outputs: ["Costed implementation workplan"],
-          riskRefs: ["SFP-RISK-01"],
-        },
-      ],
-      sourceRef: {
-        libraryId: "9789240120747-eng",
-        sectionId: "sec-016",
-        pages: "36-38",
-        tableOrAnnex: "Table 14",
-      },
-    });
-
-    expect(sfpTable14Steps.steps).toHaveLength(1);
-  });
-
-  test("rejects duplicate or out-of-order stepNumber values", () => {
-    expect(
-      ImplementationStepListSchema.safeParse({
-        id: "BAD-STEP-ORDER",
-        title: "Out of order steps",
-        steps: [
-          {
-            stepNumber: 2,
-            title: "Step 2 first",
-            description: "Second step placed first",
-          },
-          {
-            stepNumber: 1,
-            title: "Step 1 second",
-            description: "First step placed second",
-          },
-        ],
-        sourceRef: "9789240120747-eng#Table-14",
-      }).success,
-    ).toBe(false);
-  });
-
-  test("DTH_PRODUCES_DAK_KINDS matches the 21 canonical DAK block-kinds in smart-base/block-kinds/", () => {
-    const onDiskKinds = readdirSync(BLOCK_KINDS_DIR)
-      .filter((f) => f.endsWith(".json"))
-      .map((f) => f.replace(/\.json$/, ""))
-      .sort();
-    expect([...DTH_PRODUCES_DAK_KINDS].sort() as string[]).toEqual(onDiskKinds);
-  });
-});
-
 describe("DthPlanningArtefactSchema union", () => {
-  test("lists all 6 schema tags and parses each through the union", () => {
-    expect(DTH_PLANNING_SCHEMA_TAGS).toHaveLength(6);
-    const sampleStepList = {
-      $schema: IMPLEMENTATION_STEP_LIST_SCHEMA_TAG,
-      id: "SFP-STEPS-TBL-17",
-      title: "Table 17: Steps for developing an M&E plan",
-      diigPhase: "Phase 6: Monitor, evaluate and improve",
-      steps: [
-        {
-          stepNumber: 1,
-          title: "Select core M&E indicators",
-          description: "Define input, process, output, and outcome indicators for SF reporting (Table 18).",
-          producesDakKind: "indicator" as const,
-        },
-      ],
-      sourceRef: "9789240120747-eng#Table-17",
-    };
-    const parsed = DthPlanningArtefactSchema.parse(sampleStepList);
-    expect(parsed.$schema).toBe("dth-implementation-steps/v1");
+  test("lists the 5 schema tags and parses a register through the union", () => {
+    expect(DTH_PLANNING_SCHEMA_TAGS).toHaveLength(5);
+    expect(DTH_PLANNING_SCHEMA_TAGS as readonly string[]).not.toContain("dth-implementation-steps/v1");
+    const parsed = DthPlanningArtefactSchema.parse({
+      $schema: RISK_REGISTER_SCHEMA_TAG,
+      id: "SFP-RISK-ANNEX-07",
+      title: "Annex 7 template",
+      mode: "template",
+      entries: [],
+      sourceRef: "9789240120747-eng#Annex-7",
+    });
+    expect(parsed.$schema).toBe(RISK_REGISTER_SCHEMA_TAG);
   });
 });

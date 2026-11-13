@@ -3,7 +3,7 @@
  * schemas (`litlfred/dth-sfp#1` Step P6d, `litlfred/dth-phc#1` Step P4b, and
  * `litlfred/smart-base#242`).
  *
- * ## Why these six schemas exist
+ * ## Why these five schemas exist
  *
  * Across the five WHO Digital Transformation Handbooks — `dth-hrh`
  * (`9789240095687-eng`), `dth-phc` (`9789240093362-eng`), `dth-sc`
@@ -13,9 +13,12 @@
  * functional/non-functional requirements, and indicators map directly onto the
  * existing WHO SMART Guidelines DAK block kinds in `smart-base/block-kinds/`.
  *
- * However, six recurring governance, stakeholder, barrier-mapping, and
- * implementation-planning table structures appear across the DTH corpus and
- * have no fitting DAK logical model:
+ * However, five recurring governance, stakeholder, barrier-mapping, and
+ * risk table structures appear across the DTH corpus and have no fitting DAK
+ * logical model. Stepwise planning tables (INPUTS | STEPS | RESOURCES |
+ * OUTPUTS | RISKS | MITIGATION) are NOT redefined here: they are
+ * `DthStepTableSchema` in `./dth-step-table.ts` (smart-base#258), and the risk
+ * register below reuses its `DthRiskMitigationRowSchema` row:
  *
  * 1. {@link GovernanceRoleSchema} (`dth-governance-role/v1`) — Organisational
  *    governance bodies and leadership roles (steering committee, technical
@@ -26,9 +29,12 @@
  *    `R | A | C | I` codes, distinguishing populated matrices (requiring at
  *    least one `"A"` per activity) from blank worksheet templates. Covers SFP
  *    Annex 4, PHC Annex 2, and HRH Ch 3.
- * 3. {@link RiskRegisterSchema} (`dth-risk-register/v1`) — Risk and mitigation
- *    registers supporting both populated risk tables and blank annex templates.
- *    Covers SFP Annex 7, PC Ch 1–5 risk tables, and PHC Ch 1–5.
+ * 3. {@link RiskRegisterSchema} (`dth-risk-register/v1`) — Standalone risk and
+ *    mitigation registers (populated or blank annex templates) whose rows are
+ *    `DthRiskMitigationRowSchema` rows extended with category and ratings, so
+ *    a register row and a step table's RISKS row are the same thing. Covers
+ *    SFP Annex 7 and PHC Ch 1–5 registers; PC's inline step risks stay in
+ *    `DthStepTableSchema`.
  * 4. {@link BarrierSolutionMapSchema} (`dth-barrier-map/v1`) — Mappings from
  *    system/reporting barriers to affected roles, candidate digital/policy
  *    solutions, functional requirements, and ArchiMate Motivation assessments.
@@ -37,20 +43,16 @@
  *    Stakeholder analysis tables linking multi-sectoral stakeholders to their
  *    system role, interest/influence, engagement mechanism, and `smart-ra`
  *    ArchiMate stakeholder/role IRIs. Covers SFP Table 2 and PHC Ch 1 Table 2.
- * 6. {@link ImplementationStepListSchema} (`dth-implementation-steps/v1`) —
- *    Sequenced implementation and M&E planning step tables (unified with
- *    `dth-hrh` planning steps and PHC phase opener panels) with role-bound
- *    inputs, tools/resources, outputs, and optional `producesDakKind` pointers.
- *    Covers SFP Tables 14, 15, 17, PHC Ch 1–6 phase panels, and SC Ch 1–3.
  *
  * See the companion architect-committee proposal at
- * `docs/proposals/dth-planning-schemas-2026-10-31.md`.
+ * `smart-base/findings/dth-planning-schemas-proposal-2026-10-31.md`.
  *
  * @module smart-base/schemas/dth-planning-schemas
  * @graphNode schema
  */
 
 import { z } from "zod";
+import { DthRiskMitigationRowSchema } from "./dth-step-table.ts";
 
 // ── Shared Citation & IRI Helpers ────────────────────────────────────────────
 
@@ -309,27 +311,20 @@ export type RiskPriority = (typeof RISK_PRIORITIES)[number];
 export const RiskPrioritySchema = z.enum(RISK_PRIORITIES);
 
 /**
- * Single risk and mitigation row in a {@link RiskRegisterSchema}.
+ * Single risk and mitigation row in a {@link RiskRegisterSchema}: a
+ * `DthRiskMitigationRowSchema` row (`id`, `risk`, `mitigation`,
+ * `ownerRoleId`, `stepIds` into a `DthStepTableSchema`) extended with the
+ * register-only columns.
  */
-export const RiskEntrySchema = z.object({
-  /** Stable identifier for the risk entry (e.g. `"PC-RISK-01"` or `"SFP-RISK-01"`). */
-  riskId: z.string().min(1),
-  /** Risk category or domain (e.g. `"Governance"`, `"Technical"`, `"Operational"`, `"Data privacy"`). */
+export const RiskEntrySchema = DthRiskMitigationRowSchema.extend({
+  /** Risk category or domain (e.g. `"Governance"`, `"Technical"`, `"Data privacy"`). */
   category: z.string().min(1),
-  /** Description of the risk event and its impact on the digital transformation effort. */
-  riskDescription: z.string().min(1),
-  /** Qualitative likelihood rating (`"low" | "medium" | "high"`), optional when unstated in L1. */
+  /** Qualitative likelihood rating, optional when unstated in L1. */
   likelihood: RiskLevelSchema.optional(),
-  /** Qualitative impact rating (`"low" | "medium" | "high"`), optional when unstated in L1. */
+  /** Qualitative impact rating, optional when unstated in L1. */
   impact: RiskLevelSchema.optional(),
-  /** Qualitative overall priority rating (`"low" | "medium" | "high" | "critical"`). */
+  /** Qualitative overall priority rating. */
   priority: RiskPrioritySchema.optional(),
-  /** Recommended mitigation strategy or control action. */
-  mitigation: z.string().min(1),
-  /** Optional persona or governance-role IRI responsible for owning/monitoring this risk. */
-  ownerRoleIri: RoleOrElementIriSchema.optional(),
-  /** Optional reference to an implementation step ID (`ImplementationStep.stepId` or step number). */
-  stepRef: z.string().min(1).optional(),
   /** Optional row-level L1 handbook citation. */
   sourceRef: DthSourceRefSchema.optional(),
 });
@@ -340,13 +335,11 @@ export type RiskEntry = z.infer<typeof RiskEntrySchema>;
  * Risk and mitigation register (`dth-risk-register/v1`).
  *
  * Supports both `"populated"` registers (such as the chapter risk/mitigation
- * tables in `dth-pc` Ch 1–5 and `dth-phc` Ch 1–5, where at least one risk row
- * is required) and `"template"` registers (such as `dth-sfp` Annex 7's blank
+ * registers in `dth-phc` Ch 1–5, where at least one risk row is required) and `"template"` registers (such as `dth-sfp` Annex 7's blank
  * risk register worksheet).
  *
  * Covers:
  * - `dth-sfp` (`9789240120747-eng`) Annex 7 risk register template
- * - `dth-pc` (`9789240116191-eng`) Ch 1–5 step risk & mitigation tables
  * - `dth-phc` (`9789240093362-eng`) Ch 1–5 planning risk callouts and Annex worksheets
  */
 export const RiskRegisterSchema = z
@@ -497,148 +490,21 @@ export const StakeholderAnalysisSchema = z.object({
 export type StakeholderAnalysis = z.infer<typeof StakeholderAnalysisSchema>;
 export type StakeholderAnalysisInput = z.input<typeof StakeholderAnalysisSchema>;
 
-// ── 6. ImplementationStepListSchema (dth-implementation-steps/v1) ────────────
+// ── Union of the 5 DTH Planning Schemas ────────────────────────
 
-/** Schema tag for {@link ImplementationStepListSchema}. */
-export const IMPLEMENTATION_STEP_LIST_SCHEMA_TAG = "dth-implementation-steps/v1" as const;
-
-/**
- * Canonical DAK block kinds in `smart-base/block-kinds/` that an
- * implementation/formalization step can produce as an output (for example,
- * PHC Ch 3 steps producing `persona`, `user-scenario`, `business-process`,
- * `data-element`, `decision-table`, `scheduling-logic`, `indicator`,
- * `functional-requirement`, and `non-functional-requirement`).
- */
-export const DTH_PRODUCES_DAK_KINDS = [
-  "actor-definition",
-  "business-process",
-  "cql-library",
-  "data-element",
-  "decision-table",
-  "functional-requirement",
-  "health-intervention",
-  "indicator",
-  "logical-model",
-  "measure",
-  "non-functional-requirement",
-  "persona",
-  "plan-definition",
-  "profile",
-  "questionnaire",
-  "scheduling-logic",
-  "structure-map",
-  "test-case",
-  "test-scenario",
-  "user-scenario",
-  "value-set",
-] as const;
-
-export type DthProducesDakKind = (typeof DTH_PRODUCES_DAK_KINDS)[number];
-
-export const DthProducesDakKindSchema = z.enum(DTH_PRODUCES_DAK_KINDS);
-
-/**
- * Single sequenced step in an {@link ImplementationStepListSchema}.
- */
-export const ImplementationStepSchema = z.object({
-  /** 1-based sequence number of the step within the list. */
-  stepNumber: z.number().int().positive(),
-  /** Optional stable step identifier (e.g. `"SFP-STEP-05-01"` or `"PHC-CH03-STEP-01"`). */
-  stepId: z.string().min(1).optional(),
-  /** Short imperative title of the step. */
-  title: z.string().min(1),
-  /** Narrative description of what the step entails. */
-  description: z.string().min(1),
-  /** Optional persona or governance-role IRI leading this step. */
-  leadRoleIri: RoleOrElementIriSchema.optional(),
-  /** Persona or governance-role IRIs participating in this step ("Who should be involved"). */
-  participatingRoleIris: z.array(RoleOrElementIriSchema).default([]),
-  /** Prerequisite inputs or documents consumed by this step ("Inputs"). */
-  inputs: z.array(z.string().min(1)).default([]),
-  /** Tools, templates, standards, or resources used during this step ("Tools / Resources"). */
-  toolsOrResources: z.array(z.string().min(1)).default([]),
-  /** Deliverables or artefacts produced by this step ("Outputs"). */
-  outputs: z.array(z.string().min(1)).default([]),
-  /** Optional DAK block kind produced by this step (e.g. `"persona"`, `"business-process"`). */
-  producesDakKind: DthProducesDakKindSchema.optional(),
-  /** Optional references to risk IDs (`RiskEntry.riskId`) associated with this step. */
-  riskRefs: z.array(z.string().min(1)).optional(),
-  /** Optional step-level L1 handbook citation. */
-  sourceRef: DthSourceRefSchema.optional(),
-});
-
-export type ImplementationStep = z.infer<typeof ImplementationStepSchema>;
-
-/**
- * Sequenced implementation or M&E planning step list (`dth-implementation-steps/v1`).
- *
- * Unifies the step-table structures across the five WHO DTH handbooks
- * (`smart-base#242` item 2):
- * - `dth-sfp` (`9789240120747-eng`) Tables 14, 15, and 17 (implementation and
- *   M&E planning steps)
- * - `dth-phc` (`9789240093362-eng`) Ch 1–6 "Who should be involved / Inputs /
- *   Outputs" phase panels and Ch 3 DAK-method steps
- * - `dth-pc` (`9789240116191-eng`) Ch 1–5 INPUTS / STEPS / RESOURCES / OUTPUTS
- *   tables
- * - `dth-sc` (`9789240089600-eng`) Ch 1–3 implementation step tables
- * - `dth-hrh` (`9789240095687-eng`) planning step tables
- */
-export const ImplementationStepListSchema = z
-  .object({
-    $schema: z
-      .literal(IMPLEMENTATION_STEP_LIST_SCHEMA_TAG)
-      .default(IMPLEMENTATION_STEP_LIST_SCHEMA_TAG),
-    /** Stable identifier for the step list (e.g. `"SFP-STEPS-TBL-14"`). */
-    id: z.string().min(1),
-    /** Human-readable title of the step list or phase panel. */
-    title: z.string().min(1),
-    /** Optional DIIG phase alignment (e.g. `"Phase 5: Determine requirements"` or `"Phase 7: Plan implementation"`). */
-    diigPhase: z.string().min(1).optional(),
-    /** Ordered sequence of implementation or M&E planning steps. */
-    steps: z.array(ImplementationStepSchema).min(1),
-    /** L1 handbook citation for the step list. */
-    sourceRef: DthSourceRefSchema,
-  })
-  .superRefine((list, ctx) => {
-    const seen = new Set<number>();
-    list.steps.forEach((step, idx) => {
-      if (seen.has(step.stepNumber)) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          path: ["steps", idx, "stepNumber"],
-          message: `Duplicate stepNumber ${step.stepNumber} in ImplementationStepList "${list.id}"`,
-        });
-      }
-      seen.add(step.stepNumber);
-      if (idx > 0 && step.stepNumber <= list.steps[idx - 1]!.stepNumber) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          path: ["steps", idx, "stepNumber"],
-          message: `steps[] in ImplementationStepList "${list.id}" must be ordered by strictly increasing stepNumber (${step.stepNumber} after ${list.steps[idx - 1]!.stepNumber})`,
-        });
-      }
-    });
-  });
-
-export type ImplementationStepList = z.infer<typeof ImplementationStepListSchema>;
-export type ImplementationStepListInput = z.input<typeof ImplementationStepListSchema>;
-
-// ── Discriminated Union of All 6 DTH Planning Schemas ────────────────────────
-
-/** All six DTH governance and planning `$schema` tags. */
+/** All five DTH governance and planning `$schema` tags. */
 export const DTH_PLANNING_SCHEMA_TAGS = [
   GOVERNANCE_ROLE_SCHEMA_TAG,
   RACI_MATRIX_SCHEMA_TAG,
   RISK_REGISTER_SCHEMA_TAG,
   BARRIER_SOLUTION_MAP_SCHEMA_TAG,
   STAKEHOLDER_ANALYSIS_SCHEMA_TAG,
-  IMPLEMENTATION_STEP_LIST_SCHEMA_TAG,
 ] as const;
 
 export type DthPlanningSchemaTag = (typeof DTH_PLANNING_SCHEMA_TAGS)[number];
 
 /**
- * Union of all six proposed DTH governance and planning artefacts.
+ * Union of all five proposed DTH governance and planning artefacts.
  */
 export const DthPlanningArtefactSchema = z.union([
   GovernanceRoleSchema,
@@ -646,7 +512,6 @@ export const DthPlanningArtefactSchema = z.union([
   RiskRegisterSchema,
   BarrierSolutionMapSchema,
   StakeholderAnalysisSchema,
-  ImplementationStepListSchema,
 ]);
 
 export type DthPlanningArtefact = z.infer<typeof DthPlanningArtefactSchema>;
