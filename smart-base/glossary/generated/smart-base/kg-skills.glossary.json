@@ -210,7 +210,7 @@
       "prefLabel": "recommendation-scenarios",
       "definition": "Join each L1 recommendation to who acts on it and during which business process: one smart-kg L2 user-scenario candidate per recommendation, from the agent's mapping, reusing the target guide's personas and processes first, then smart-base's generic personas, and never inventing a process. Step 2 of recommendation-extraction; the `l1-recommendation-scenarios` Tool satisfies it.",
       "notation": "recommendation-scenarios",
-      "source": "smart-base/L2/skills/smart-l2/recommendation-scenarios.md",
+      "source": "smart-base/L1/skills/smart-l1/recommendation-scenarios.md",
       "status": "candidate"
     },
     {
