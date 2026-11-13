@@ -478,7 +478,7 @@
       ],
       "rtlSupported": true,
       "bpmnDiagrams": [
-        "processes/content/draft-to-publication.bpmn",
+        "collab/processes/content/draft-to-publication.bpmn",
         "processes/library/translation-workflow.bpmn",
         "processes/library/human-translation-workflow.bpmn"
       ],
