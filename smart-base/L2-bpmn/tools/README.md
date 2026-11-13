@@ -7,13 +7,15 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # l2-bpmn-tools
 
-The tools that read or write a DAK's BPMN: BPMN to FSH.
+The tools that read, check or write a DAK's BPMN: BPMN to FSH, BPMN to the L2-BPMN knowledge graph, `bpmn-validate` (structure, vendor namespaces, and each lane bound to an ActorDefinition by its FSH Instance id), and `bpmn-graphviz-layout` (Diagram Interchange for a BPMN that has none).
 
 Part of [SMART Base](../../README.md) 0.1.0, declared as `l2-bpmn-tools`, holding `tools`.
 
 | file | what it is | used by |
 |---|---|---|
+| [`bpmn-graphviz-layout/`](bpmn-graphviz-layout/) | _nothing declares what this holds_ | |
 | [`bpmn-to-fsh/`](bpmn-to-fsh/) | _nothing declares what this holds_ | |
+| [`bpmn-validate/`](bpmn-validate/) | _nothing declares what this holds_ | |
 | [`kg-extract-bpmn/`](kg-extract-bpmn/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

@@ -7,7 +7,7 @@ subgraph clusters per participant swimlane, renders it to SVG, and injects
 the resulting coordinates back into the BPMN as <bpmndi:BPMNDiagram> elements.
 
 Usage:
-    python bpmn_to_svg.py INPUT.bpmn [--svg OUTPUT.svg] [--bpmn OUTPUT.bpmn]
+    python3 smart-base/L2-bpmn/tools/bpmn-graphviz-layout/bpmn_to_svg.py INPUT.bpmn [--svg OUTPUT.svg] [--bpmn OUTPUT.bpmn]
 
 Requires: graphviz (dot), python3-lxml or xml.etree.ElementTree
 """
