@@ -18,5 +18,6 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `l2-schemas`, holding `
 | [`kgid-l2.ts`](kgid-l2.ts) | a file |  |
 | [`l2.ts`](l2.ts) | a file |  |
 | [`generated/`](generated/) | _nothing declares what this holds_ | |
+| [`skills/`](skills/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

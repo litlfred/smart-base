@@ -20,14 +20,14 @@
  *   - keys are unique.
  * The entry is `graph.source.entry`, relative to `--root` (default: the working directory).
  *
- * Usage: bun run smart-base/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]
+ * Usage: bun run smart-base/L1/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]
  * Exit 0 when everything holds; 1 with one FINDING line each otherwise; 2 when --dir holds no file.
  */
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { parse as parseYaml } from "yaml";
 
-import { narrativeFor } from "../../cat-harness-tools/schemas/content/narrative.js";
+import { narrativeFor } from "../../../cat-harness-tools/schemas/content/narrative.js";
 
 export function norm(s: string): string {
   let t = s.normalize("NFKC");

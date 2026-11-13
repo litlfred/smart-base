@@ -7,7 +7,7 @@ the idempotent merge into candidates.json.
 Validation against a real source is the NHWA handbook run recorded in the
 `indicator-extraction` skill; this is a logic test.
 
-Run: python3 smart-base/scripts/l1-indicator-sheets.test.py
+Run: python3 smart-base/L1/scripts/l1-indicator-sheets.test.py
 """
 
 from __future__ import annotations

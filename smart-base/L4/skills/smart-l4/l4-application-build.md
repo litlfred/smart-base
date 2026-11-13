@@ -6,8 +6,8 @@ description: >
   brief and the chosen stage-8a wireframes, with conformance tests from the
   IG's examples and test cases and a walk through each L2 user scenario it
   serves. Read before building an L4 application on a guideline.
-input: schemas/skills/l4-application-build/input.schema.json
-output: schemas/skills/l4-application-build/output.schema.json
+input: L4/schemas/skills/l4-application-build/input.schema.json
+output: L4/schemas/skills/l4-application-build/output.schema.json
 ---
 
 # l4-application-build
@@ -21,7 +21,7 @@ output: schemas/skills/l4-application-build/output.schema.json
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/l4-application-build/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l4-application-build/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/l4-application-build/input.schema.json) and [`output.schema.json`](../../schemas/skills/l4-application-build/output.schema.json).
 
 - **In:** the `applicationBrief` (stage 7, [`l4-application-brief`](l4-application-brief.md)), the stage-6 `ig` build, and the stage-8a `wireframes` (cat-harness `wireframe-design-review`'s output: `topic`, `assetDir`, `candidates` with their `outcome`).
 - **Out:** the `application`: where it is, how to `run` it, its staging `url`, the IG it was built `against`, and its `tests`, each `conformance` (an IG example or test case) or `scenario` (an L2 user scenario), with `pass`, `fail` or `not-run`.

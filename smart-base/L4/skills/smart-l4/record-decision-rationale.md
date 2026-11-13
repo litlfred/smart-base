@@ -6,8 +6,8 @@ description: >
   optional coded or free-text reason. Input is the decision; output is one
   FHIR Provenance (or nothing, when skipped, which is the default). The care
   plan is updated whether or not this is ever done.
-input: schemas/skills/record-decision-rationale/input.schema.json
-output: schemas/skills/record-decision-rationale/output.schema.json
+input: L4/schemas/skills/record-decision-rationale/input.schema.json
+output: L4/schemas/skills/record-decision-rationale/output.schema.json
 ---
 
 # Record a decision rationale (optional)
@@ -30,8 +30,8 @@ for a different, blocking step, and should draw one.
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/record-decision-rationale/input.schema.json)
-and [`output.schema.json`](../../../schemas/skills/record-decision-rationale/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/record-decision-rationale/input.schema.json)
+and [`output.schema.json`](../../schemas/skills/record-decision-rationale/output.schema.json).
 
 - **In:** the `decision` (one action's outcome, from
   [`review-decision-support-guidance`](review-decision-support-guidance.md)),

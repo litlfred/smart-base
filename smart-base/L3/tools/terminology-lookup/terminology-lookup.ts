@@ -56,7 +56,7 @@ export default toolFactory((t) =>
         {
           name: "result",
           schema: t("RepoPath"),
-          description: "Result JSON conforming to `schemas/skills/classify-and-code-content/output.schema.json`.",
+          description: "Result JSON conforming to `L1/schemas/skills/classify-and-code-content/output.schema.json`.",
         },
       ],
     },

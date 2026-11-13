@@ -17,5 +17,6 @@ Part of [SMART Base](../../README.md) 0.1.0, declared as `l3-schemas`, holding `
 | [`index.ts`](index.ts) | a file |  |
 | [`l3.ts`](l3.ts) | a file |  |
 | [`generated/`](generated/) | _nothing declares what this holds_ | |
+| [`skills/`](skills/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

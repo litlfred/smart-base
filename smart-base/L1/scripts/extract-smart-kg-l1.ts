@@ -63,22 +63,22 @@
  * Every class emitted must be in smart-base's KG class lists ({@link kgClasses});
  * the CLI refuses to write otherwise. The lists hold class ids only.
  *
- *   bun run smart-base/scripts/extract-smart-kg-l1.ts --entry smart-base/library/<id>
- *   bun run smart-base/scripts/extract-smart-kg-l1.ts --check [--entry <dir>]
- *   bun run smart-base/scripts/extract-smart-kg-l1.ts --all    # rewrite every entry --check examines
+ *   bun run smart-base/L1/scripts/extract-smart-kg-l1.ts --entry smart-base/library/<id>
+ *   bun run smart-base/L1/scripts/extract-smart-kg-l1.ts --check [--entry <dir>]
+ *   bun run smart-base/L1/scripts/extract-smart-kg-l1.ts --all    # rewrite every entry --check examines
  *
- * @module smart-base/scripts/extract-smart-kg-l1
+ * @module smart-base/L1/scripts/extract-smart-kg-l1
  * @covers library
  */
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join, relative, resolve } from "node:path";
 
-import { directoriesForGraph, repoRootFor } from "../platform/index.js";
-import { pagesOf, readStructure, STRUCTURE_FILENAME, type BaseSection, type BaseStructure } from "../platform/index.js";
-import { kgClasses } from "./kg-classes.ts";
+import { directoriesForGraph, repoRootFor } from "../../platform/index.js";
+import { pagesOf, readStructure, STRUCTURE_FILENAME, type BaseSection, type BaseStructure } from "../../platform/index.js";
+import { kgClasses } from "../../scripts/kg-classes.ts";
 
-const HERE = resolve(import.meta.dir, "..");
+const HERE = resolve(import.meta.dir, "..", "..");
 const REPO = repoRootFor(HERE);
 
 /** The file written beside each entry; why `.json` is in the module comment. */
