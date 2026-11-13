@@ -1,0 +1,72 @@
+{
+  "$schema": "kg-qa/v1",
+  "subject": {
+    "kind": "role",
+    "id": "point-of-care-system",
+    "path": "scenarios/roles.json"
+  },
+  "source_hash": "sha256:a70331721037eace92def8ef52f1e198d52140834768ccfc853dde2ff64c74a1",
+  "criteria": {
+    "role-skills-resolve": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "extract-questionnaire-response",
+          "detail": "role \"point-of-care-system\" carries skill \"extract-questionnaire-response\", which resolves to no skill in this instance or anything it `needs`."
+        },
+        {
+          "where": "apply-decision-support",
+          "detail": "role \"point-of-care-system\" carries skill \"apply-decision-support\", which resolves to no skill in this instance or anything it `needs`."
+        },
+        {
+          "where": "activate-accepted-guidance",
+          "detail": "role \"point-of-care-system\" carries skill \"activate-accepted-guidance\", which resolves to no skill in this instance or anything it `needs`."
+        }
+      ]
+    },
+    "role-inherits-resolves": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-binds-a-lane": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "point-of-care-system",
+          "detail": "role \"point-of-care-system\" is named by no lane's partitionElementRef (or legacy <bootstrap.processes:role ref>) in any diagram — nothing can enter it. Either a lane lost its binding, or the role is dead."
+        }
+      ]
+    },
+    "mechanical-role-untested": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "point-of-care-system",
+          "detail": "role \"point-of-care-system\" is played only by system actors, and none of its 3 skill(s) (activate-accepted-guidance, apply-decision-support, extract-questionnaire-response) names a test in `tested-by:`."
+        }
+      ]
+    },
+    "role-has-persona": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-has-story": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-has-actor": {
+      "result": "pass",
+      "findings": []
+    },
+    "actor-kind-fits-role": {
+      "result": "pass",
+      "findings": []
+    }
+  },
+  "totals": {
+    "pass": 2,
+    "fail": 3,
+    "n/a": 3,
+    "unknown": 0
+  }
+}

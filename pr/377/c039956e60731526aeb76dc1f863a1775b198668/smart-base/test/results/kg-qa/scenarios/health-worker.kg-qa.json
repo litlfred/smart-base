@@ -1,0 +1,80 @@
+{
+  "$schema": "kg-qa/v1",
+  "subject": {
+    "kind": "role",
+    "id": "health-worker",
+    "path": "scenarios/roles.json"
+  },
+  "source_hash": "sha256:a70331721037eace92def8ef52f1e198d52140834768ccfc853dde2ff64c74a1",
+  "criteria": {
+    "role-skills-resolve": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "complete-sdc-questionnaire",
+          "detail": "role \"health-worker\" carries skill \"complete-sdc-questionnaire\", which resolves to no skill in this instance or anything it `needs`."
+        },
+        {
+          "where": "review-decision-support-guidance",
+          "detail": "role \"health-worker\" carries skill \"review-decision-support-guidance\", which resolves to no skill in this instance or anything it `needs`."
+        },
+        {
+          "where": "record-decision-rationale",
+          "detail": "role \"health-worker\" carries skill \"record-decision-rationale\", which resolves to no skill in this instance or anything it `needs`."
+        },
+        {
+          "where": "inform-client",
+          "detail": "role \"health-worker\" carries skill \"inform-client\", which resolves to no skill in this instance or anything it `needs`."
+        },
+        {
+          "where": "review-client-history",
+          "detail": "role \"health-worker\" carries skill \"review-client-history\", which resolves to no skill in this instance or anything it `needs`."
+        }
+      ]
+    },
+    "role-inherits-resolves": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-binds-a-lane": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "health-worker",
+          "detail": "role \"health-worker\" is named by no lane's partitionElementRef (or legacy <bootstrap.processes:role ref>) in any diagram — nothing can enter it. Either a lane lost its binding, or the role is dead."
+        }
+      ]
+    },
+    "mechanical-role-untested": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-has-persona": {
+      "result": "pass",
+      "findings": []
+    },
+    "role-has-story": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "health-worker",
+          "detail": "no user story in scenarios/stories.json is told as role \"health-worker\" — nothing says what this reader came to do."
+        }
+      ]
+    },
+    "role-has-actor": {
+      "result": "pass",
+      "findings": []
+    },
+    "actor-kind-fits-role": {
+      "result": "pass",
+      "findings": []
+    }
+  },
+  "totals": {
+    "pass": 3,
+    "fail": 3,
+    "n/a": 2,
+    "unknown": 0
+  }
+}
