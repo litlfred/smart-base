@@ -1,5 +1,5 @@
 /**
- * A folio that depends on smart-base, for tests that hold this instance's
+ * A folio that depends on smart-base, for tests that hold this layer's
  * contributions (DAK block kinds, DAK QA checkers) against the dependency walk
  * that delivers them.
  *
@@ -28,7 +28,7 @@ import { join, resolve } from "node:path";
 
 import { ContributionRegistry, loadContributionsSync, writeInstanceConfig } from "../../platform/index.js";
 
-/** This instance's root: `smart-base/`. */
+/** This layer's root: `smart-base/`. */
 export const SMART_BASE_ROOT = resolve(import.meta.dir, "../..");
 
 let cached: string | undefined;

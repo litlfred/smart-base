@@ -53,16 +53,16 @@ CC BY 3.0 IGO), which presents the same five as "knowledge layers (L1–L5)".
 consume what L1–L3 publish, but they are not authored as FHIR content, so
 nothing in this platform validates them as content.
 
-**They are layers, not stages.** All three are live at once: an L2 decision
+**They are knowledge layers, not stages.** All three are live at once: an L2 decision
 table and the L3 `PlanDefinition` derived from it are both published and both
 can change. Treating L2 as scaffolding that L3 replaces lets the two drift
-apart unnoticed. An instance may also hold any one of the three without the
-others: an L1 corpus with no DAK, or an IG with no L1.
+apart unnoticed. A repository layer may also hold any one of the three
+knowledge layers without the others: an L1 corpus with no DAK, or an IG with no L1.
 
-**The SMART layers are not the platform's layers.** `cat-harness`, the content
+**The SMART knowledge layers are not the platform's layers.** `cat-harness`, the content
 core and the science layer are layers of *this software*; each depends on the
-one before and inherits its skills and directories. L1–L5 are layers of
-*guideline knowledge*. A WHO folio holds L1–L3 *content*; the platform layers
+one before and inherits its skills and directories. L1–L5 are *knowledge
+layers*, layers of guideline knowledge. A WHO folio holds L1–L3 *content*; the platform layers
 author and check it, and none of them is "the L2 layer". The deck that sets
 the two side by side is `cat-harness/library/content/kg-folio-asst-2026-09-30`
 (slide 1).

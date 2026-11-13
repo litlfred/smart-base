@@ -2,7 +2,7 @@
  * `gen-l1-extraction-pages.ts`: the `l1-extraction` viewer's pages, written
  * into a site.
  *
- * A scratch checkout of two instances. `lib` declares the visualiser and a
+ * A scratch checkout of two layers. `lib` declares the visualiser and a
  * library entry with an `l1-extraction/` holding one of each document the
  * page reads: an L1 graph, a candidate work list, an L2 scenario graph, a
  * curation, and a file that does not parse. `remote` declares an
@@ -92,7 +92,7 @@ describe("gen-l1-extraction-pages --site", () => {
   afterAll(() => [checkout, site].forEach((d) => rmSync(d, { recursive: true, force: true })));
   const run = (...args: string[]) => Bun.spawnSync(["bun", "run", SCRIPT, "--root", checkout, "--site", site, ...args], { cwd: CHECKOUT });
   // The library publisher's copy of one file, as cat-harness's `library:viz` lays it down.
-  write(join(site, "assets", "library", "jsonld", "lib", "entry-1", "l1-extraction", "l1.json"), "{}");
+  write(join(site, "assets", "library", "jsonld", "lib", "source", "entry-1", "l1-extraction", "l1.json"), "{}");
   const first = run();
   const files = (): string[] =>
     (readdirSync(site, { recursive: true }) as string[]).filter((f) => f.startsWith("en") && statSync(join(site, f)).isFile()).sort();
@@ -132,7 +132,7 @@ describe("gen-l1-extraction-pages --site", () => {
 
   it("linksPublishedCopyOnlyWhereHeld", () => {
     const html = read(lib);
-    expect(html).toContain('href="../../../../assets/library/jsonld/lib/entry-1/l1-extraction/l1.json">published</a>');
+    expect(html).toContain('href="../../../../assets/library/jsonld/lib/source/entry-1/l1-extraction/l1.json">published</a>');
     expect(html).not.toContain("l1-extraction/recommendation-candidates.json\">published");
   });
 

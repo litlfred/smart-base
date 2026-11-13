@@ -2,7 +2,7 @@
  * smart-base supplies the `smart.who.int.` publisher-site rule to fhir-harness's
  * `fhir-cache-seed-npm`, whose own default is empty (owner ruling 2026-10-07).
  *
- * The seeder itself is not imported: a staged instance reaches the platform
+ * The seeder itself is not imported: a staged layer reaches the platform
  * only through `platform/index.ts`. How `--site-repo PREFIX=OWNER/REPO[@BRANCH]`
  * parses is fhir-harness's own test; this one checks what smart-base passes.
  */

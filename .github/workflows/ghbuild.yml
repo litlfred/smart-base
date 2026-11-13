@@ -91,6 +91,11 @@ on:
 # typically needed because they are triggered manually and intentionally.
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+env:
+  # The GitHub owner of smart-base (smart-base/schemas/site-roots.ts SMART_OWNER).
+  # Change both together when smart-base moves to the WHO org.
+  SMART_OWNER: litlfred
+
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -145,10 +150,10 @@ jobs:
             exit 1
           fi
 
-          # Pin downloads to an immutable 40-hex commit SHA in litlfred/smart-base,
+          # Pin downloads to an immutable 40-hex commit SHA in ${SMART_OWNER}/smart-base,
           # never a moving branch of another organisation (bean folio-assistant-vl71).
           SCRIPTS_BASE_COMMIT="49178a48d460bb53acf6e90d8c0aee3f0146d8f7"
-          SCRIPTS_BASE_URL="https://raw.githubusercontent.com/litlfred/smart-base/${SCRIPTS_BASE_COMMIT}"
+          SCRIPTS_BASE_URL="https://raw.githubusercontent.com/${SMART_OWNER}/smart-base/${SCRIPTS_BASE_COMMIT}"
 
           printf 'SCRIPTS_REF=%s\n' "$SCRIPTS_REF"
           printf 'SCRIPTS_REF=%s\n' "$SCRIPTS_REF" >> "$GITHUB_ENV"
@@ -166,7 +171,7 @@ jobs:
         env:
           GH_REPOSITORY: ${{ github.repository }}
         run: |
-          SMART_BASE_REPO="litlfred/smart-base"
+          SMART_BASE_REPO="${SMART_OWNER}/smart-base"
           if [[ "$GH_REPOSITORY" == "$SMART_BASE_REPO" ]]; then
             if [[ "$SCRIPTS_REF" == "main" ]]; then
               echo "Using input/scripts/ from this checkout"

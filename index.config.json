@@ -1,6 +1,6 @@
 {
   "$schema": "folio-index-config/v1",
-  "instances": [
+  "layers": [
     {
       "name": "smart-base",
       "_comment": "This repository INSTANTIATES the smart-base harness, as litlfred/smart-trust's and litlfred/smart-immunizations' seeds do (folio-assistant beans rbz3 and n3ni). The owner's rule (litlfred/folio-assistant#1767, 2026-10-01): 'every repo gets same <stub=smart-base>.config.json and smart-base/ dir ... where all the dirs live'. Here the instance IS the harness: smart-base/ holds its declaration (smart-base/smart-base.json), schemas, skills, scripts, tools, processes, kinds, themes, translations, the artefact index and the library of WHO source publications, with their history carried from folio-assistant's smart-base/ (n3ni stage E; owner, 2026-10-06). The generated docs/ pages are not copied: they are rebuilt. The IG source stays where the IG Publisher expects it (input/, sushi-config.yaml). The site is agent-run (`site`, below) and published by the IG route every smart-* IG uses: `bun run cat-harness-tools/scripts/stage-local.ts --repo .` builds the folio site from the IG's cached AST with smart-base's own chrome (`site.landing`) and the mounted layers' ig-site steps (owner, 2026-10-15: 'Yes + retire old workflow'). The retired `.github/workflows/folio-site.yml` composed the IG inside the just-the-docs shell from the folio-assistant submodule; it is gone, and `ghbuild.yml` no longer deploys over a folio root.",
@@ -27,7 +27,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "5e6f2972eefc01de60d0a455bb676ebeb7aeaf7a",
+          "ref": "091bd49ca6363135f6200cdfe05c1b791f731d04",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -36,9 +36,21 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "5e6f2972eefc01de60d0a455bb676ebeb7aeaf7a",
-              "evidence": "litlfred, 2026-11-07, Claude Code session session_01VQDpPeA2N8L3orQCPPMAas: 'align pins' (2026-11-06), decision card 'Re-pin merges' '1. Merge when green (Recommended)', and 'repin + merge open 12 hrs' (2026-11-07 05:27Z). Wave 3: each lower layer at the commit who-iris pins, so the locks agree; cat-harness-tools kept at 64f0aa0 (not moved back past #1579, which this instance needs); bean cat-tools-sm8r."
+              "on": "2026-11-12",
+              "ref": "091bd49ca6363135f6200cdfe05c1b791f731d04",
+              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
+              "standing": {
+                "follows": "main",
+                "consentAt": "2026-11-12",
+                "require": "green"
+              }
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -49,7 +61,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "33ebe87f691e9a72e308bec8390e2882b5b7ff73",
+          "ref": "60687101a7f707dbc491a2f1aaacb03e4387936b",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -73,9 +85,21 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "33ebe87f691e9a72e308bec8390e2882b5b7ff73",
-              "evidence": "litlfred, 2026-11-07, via the merge manager (session_01VQDpPffYARDQ8juksAZScf): card 'Pin target' 'A. Never move back', and 'repin + merge open 12 hrs'; earlier in this session: 'align pins'. who-iris at who-iris#191's merge commit, each lower layer at the commit who-iris pins; bean cat-tools-sm8r."
+              "on": "2026-11-12",
+              "ref": "60687101a7f707dbc491a2f1aaacb03e4387936b",
+              "evidence": "Owner litlfred, 2026-11-12: smart-ra#242 bottom-up re-pin (step c), Q-CONSENT-1 A, Q-WIN-1 C, Q-CASCADE-FREEZE B. smart-base: who-iris to main 60687101 (who-iris#254/#255) and folio-assistant-core to main b2cec25 (core T2b, #772); the standing re-pin skipped both because main-qa reads unknown.",
+              "standing": {
+                "follows": "main",
+                "consentAt": "2026-11-12",
+                "require": "green"
+              }
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -86,7 +110,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "6086f86b80d5d3cde4f98fd95a15e47641d6ce0f",
+          "ref": "b2cec2562a7e3a5de3e8702813cf706537814996",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -101,9 +125,21 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "6086f86b80d5d3cde4f98fd95a15e47641d6ce0f",
-              "evidence": "litlfred, 2026-11-07, via the merge manager (session_01VQDpPffYARDQ8juksAZScf): card 'Pin target' 'A. Never move back', and 'repin + merge open 12 hrs'; earlier in this session: 'align pins'. who-iris at who-iris#191's merge commit, each lower layer at the commit who-iris pins; bean cat-tools-sm8r."
+              "on": "2026-11-12",
+              "ref": "b2cec2562a7e3a5de3e8702813cf706537814996",
+              "evidence": "Owner litlfred, 2026-11-12: smart-ra#242 bottom-up re-pin (step c), Q-CONSENT-1 A, Q-WIN-1 C, Q-CASCADE-FREEZE B. smart-base: who-iris to main 60687101 (who-iris#254/#255) and folio-assistant-core to main b2cec25 (core T2b, #772); the standing re-pin skipped both because main-qa reads unknown.",
+              "standing": {
+                "follows": "main",
+                "consentAt": "2026-11-12",
+                "require": "green"
+              }
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -114,7 +150,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "6eed239af4a5a97ba8307cb0ef72a8c899f8eeb4",
+          "ref": "edaa380219fbc4f949db2c1f2e08c9a45e6a26ad",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -129,9 +165,21 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "6eed239af4a5a97ba8307cb0ef72a8c899f8eeb4",
-              "evidence": "litlfred, 2026-11-07 ~18:45Z, card 'smart-base' in session_01VQDpPeA2N8L3orQCPPMAas: '1. Yes, prepare it' (re-pin smart-base to cat-harness 6eed239 and cat-harness-tools fa5fb43, pin-only draft, owner merges). Card 'Pin target' 'A. Never move back'."
+              "on": "2026-11-12",
+              "ref": "edaa380219fbc4f949db2c1f2e08c9a45e6a26ad",
+              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
+              "standing": {
+                "follows": "main",
+                "consentAt": "2026-11-12",
+                "require": "green"
+              }
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -142,7 +190,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "fa5fb43f973a89581ca3f32145cd11c9137baa26",
+          "ref": "49b2eb15b14b52ae19422876bcc825607ebe22f4",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -154,9 +202,21 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "fa5fb43f973a89581ca3f32145cd11c9137baa26",
-              "evidence": "litlfred, 2026-11-07 ~18:45Z, card 'smart-base' in session_01VQDpPeA2N8L3orQCPPMAas: '1. Yes, prepare it' (re-pin smart-base to cat-harness 6eed239 and cat-harness-tools fa5fb43, pin-only draft, owner merges). Card 'Pin target' 'A. Never move back'."
+              "on": "2026-11-12",
+              "ref": "49b2eb15b14b52ae19422876bcc825607ebe22f4",
+              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
+              "standing": {
+                "follows": "main",
+                "consentAt": "2026-11-12",
+                "require": "green"
+              }
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -167,7 +227,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
+          "ref": "17204fe9ed49e87b165bf0a8b626b6c69329a2a6",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -176,9 +236,21 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-04",
-              "ref": "12fa6d57dfad06ae73e234f116145dfc8d77ad50",
-              "evidence": "this session's user, 2026-11-04: \"merge repin window open 4 hrs\", then \"Try again\" (https://claude.ai/code/session_01EucfRmwUEL1hMiu6mZ8v5z)"
+              "on": "2026-11-12",
+              "ref": "17204fe9ed49e87b165bf0a8b626b6c69329a2a6",
+              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
+              "standing": {
+                "follows": "main",
+                "consentAt": "2026-11-12",
+                "require": "green"
+              }
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
@@ -189,7 +261,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "1dc08c906f3a9377534b753fed493b811e040ad7",
+          "ref": "bbdaffb757007bf0c4fe0ce4d21018491df308a9",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -201,18 +273,38 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-07",
-              "ref": "1dc08c906f3a9377534b753fed493b811e040ad7",
-              "evidence": "litlfred, 2026-11-07, via the merge manager (session_01VQDpPffYARDQ8juksAZScf): card 'Pin target' 'A. Never move back', and 'repin + merge open 12 hrs'; earlier in this session: 'align pins'. who-iris at who-iris#191's merge commit, each lower layer at the commit who-iris pins; bean cat-tools-sm8r."
+              "on": "2026-11-12",
+              "ref": "bbdaffb757007bf0c4fe0ce4d21018491df308a9",
+              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
+              "standing": {
+                "follows": "main",
+                "consentAt": "2026-11-12",
+                "require": "green"
+              }
+            },
+            "standing": {
+              "follows": "main",
+              "consentBy": "litlfred",
+              "consentAt": "2026-11-12",
+              "require": "green",
+              "evidence": "litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm."
             }
           }
         }
       }
     }
   ],
+  "harnesses": [
+    {
+      "name": "smart-base"
+    }
+  ],
   "site": {
     "landing": "smart-base",
-    "agentRun": true
+    "agentRun": true,
+    "publishAfter": [
+      "ig-ast-refresh.yml"
+    ]
   },
   "contentTypes": {
     "dak": {
@@ -250,7 +342,8 @@
         "input/archimate/",
         "input/dmn/",
         "input/ignoreWarnings.txt",
-        "fsh-generated/"
+        "fsh-generated/",
+        "qa/ig-content-qa.json"
       ]
     }
   }

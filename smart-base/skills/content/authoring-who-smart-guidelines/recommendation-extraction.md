@@ -191,16 +191,16 @@ ignores `generatedAt`.
 **Declare every output directory, in the same commit.** Each `--out`
 directory in or beside a library (`library/<entry>/l1-extraction/`, a
 sibling such as `library/l1-recommendation-scenarios/` that Part 2 writes,
-or `l1-extractions/<entry>/`) is declared in the instance's `<name>.json`
+or `l1-extractions/<entry>/`) is declared in the layer's `<name>.json`
 with `"graphTypologies": ["l1-extraction"]`, one entry per directory, never
 a wildcard (smart-base's `l1-extraction-9789240116191-eng` is the pattern).
 An undeclared one fails folio-assistant's `check:l1-complete`, and with it
 the QA working copy, every test shard and gate reading it, and the staging
-build. When the entry lives in another instance's library, hold the output
+build. When the entry lives in another layer's library, hold the output
 at `l1-extractions/<entry>/`, never in a `library/<entry>/` folder: that
 reads as a duplicate of the entry, which the library ingest refuses. Before
 staging, run `bun run cat check:l1-complete` in a folio-assistant checkout
-that mounts the instance at the commit being staged; it must exit 0.
+that mounts the layer at the commit being staged; it must exit 0.
 
 ## Part 2 — the scenario
 

@@ -47,7 +47,7 @@ import sys
 import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-LAYER_ROOT = os.path.dirname(os.path.dirname(HERE))   # the smart-base instance
+LAYER_ROOT = os.path.dirname(os.path.dirname(HERE))   # the smart-base layer
 REPO_ROOT = os.path.dirname(LAYER_ROOT)
 
 _spec = importlib.util.spec_from_file_location("who_l1_extractor", os.path.join(HERE, "who-l1.py"))

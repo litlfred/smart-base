@@ -14,10 +14,10 @@
  *
  * `who-iris/themes/themes.ts` settled it: *"A palette read off a WHO style
  * guide is subject matter"*, and the root `AGENTS.md` draws that line. So a WHO
- * palette belongs to the WHO instance and still resolves through the platform's
+ * palette belongs to the WHO layer and still resolves through the platform's
  * `resolveTheme`. This file is that precedent applied a second time.
  *
- * **Which WHO instance:** smart-base, the harness every smart-* IG
+ * **Which WHO layer:** smart-base, the harness every smart-* IG
  * instantiates. It was first written under the WHO SMART Trust IG's `themes/`, the IG it was
  * measured beside; stage D of the smart-* separation (#1767, bean `kg83`) moved
  * it here because the theme is the TEMPLATE's, and every IG wears it.
@@ -125,9 +125,9 @@
  * Measured 2026-09-30, and stated here rather than discovered by someone
  * loading the page and seeing no difference.
  *
- * `cat-harness/scripts/gen-themes-css.ts` emits instance-declared **sticky**
+ * `cat-harness/scripts/gen-themes-css.ts` emits layer-declared **sticky**
  * themes (`instanceStickyThemes`, bean `v8n5`) and nothing else. A
- * `kind: "webpage"` theme declared by an instance has **no consumer** in the
+ * `kind: "webpage"` theme declared by a layer has **no consumer** in the
  * build today. `who-iris` gets away with it because its own page GENERATOR
  * reads `iris-web` and writes literal colours into finished HTML — and that
  * path is unavailable here on purpose: `smart-trust-docs` is `composed: true`,
@@ -140,10 +140,10 @@
  * a consumer can find. **It does not change how the page looks.** Wiring it
  * needs one of:
  *
- *   1. `gen-themes-css` learning to emit instance WEBPAGE themes, scoped to
- *      that instance's page prefix, with the composed pages carrying the scope.
+ *   1. `gen-themes-css` learning to emit layer WEBPAGE themes, scoped to
+ *      that layer's page prefix, with the composed pages carrying the scope.
  *   2. `fhir-harness/scripts/gen-ig-pages.ts` (was `gen-smart-trust-pages.ts`) emitting the theme's `themeCssVars` into a
- *      per-instance stylesheet the composed pages include.
+ *      per-layer stylesheet the composed pages include.
  *
  * (1) is platform code and would serve every future ingested IG; (2) is local
  * and serves one. That is a boundary decision rather than a coding one, so it
@@ -162,12 +162,13 @@ import {
   type ResolvedTheme,
   type Theme,
 } from "../platform/schema.js";
+import { smartRepository } from "../schemas/site-roots.ts";
 
-/** The instance these themes belong to. `themeKey` keys on it; ids are not unique across instances. */
+/** The layer these themes belong to. `themeKey` keys on it; ids are not unique across layers. */
 export const THEME_INSTANCE = "smart-base";
 
-/** The same instance as a REFERENCE names it — its planned `owner/repo` (bean `6rmv`). */
-export const THEME_REPOSITORY = "litlfred/smart-base";
+/** The same layer as a REFERENCE names it — its planned `owner/repo` (bean `6rmv`). */
+export const THEME_REPOSITORY = smartRepository("smart-base");
 
 /**
  * The upstream sources, pinned — what `themes.test.ts` re-reads.
@@ -228,7 +229,7 @@ const WHO_SMART_IG = {
   },
 } as const;
 
-/** Every theme this instance declares. */
+/** Every theme this layer declares. */
 const DECLARED: readonly Theme[] = [WHO_SMART_IG];
 
 function ownParent(ref: { instance?: string; themeId: string }): { instance: string; theme: Theme } | undefined {

@@ -226,7 +226,7 @@ describe("registration", () => {
     for (const def of QA_CRITERIA_REGISTRY.filter((d) => d.domain === "dak")) {
       expect(criterionAdapters(def)).toEqual(["dak"]);
       expect(def.automated).toBe(true);
-      // The rule is core's; the checker is this instance's (bean 1335).
+      // The rule is core's; the checker is this layer's (bean 1335).
       expect(def.checker_contributed).toBe(true);
       const entry = registry.qaCheckerEntry(def.id);
       expect(entry?.label).toBe("smart-base/pipeline/qa-checkers-dak.ts");

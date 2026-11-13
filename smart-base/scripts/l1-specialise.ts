@@ -122,7 +122,7 @@ export interface Held {
  *
  * The declared directory when the checkout declares one; otherwise the
  * conventional `uploads/` at its root — an undeclared repository (a DAK's IG
- * repository, before it is an instance) "falls back to today's conventions"
+ * repository, before it is a layer) "falls back to today's conventions"
  * (AGENTS.md). `uploadsDir` overrides both.
  */
 export function heldIntakes(repo: string, uploadsDir?: string): Held[] {

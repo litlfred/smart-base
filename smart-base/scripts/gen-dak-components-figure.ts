@@ -23,7 +23,7 @@
  * its cards. The SVG it writes stays where it was — in cat-harness's docs
  * site, because the page that shows it (the harnessed-KG overview, slide 3)
  * is cat-harness's. smart-base needs cat-harness, so writing into that
- * instance's declared site is the allowed direction; moving the page is a
+ * layer's declared site is the allowed direction; moving the page is a
  * separate decision this move did not take.
  *
  * @module smart-base/scripts/gen-dak-components-figure
@@ -172,7 +172,7 @@ export function renderDakComponentsSvg(): string {
   return out.join("\n");
 }
 
-/** cat-harness's instance root — the site the figure is published in. */
+/** cat-harness's layer root — the site the figure is published in. */
 const H = resolve(import.meta.dir, "..", "..", "cat-harness");
 export const DAK_FIGURE_PATH = join(H, siteDirFor(H), "assets/img/dak-components.svg");
 

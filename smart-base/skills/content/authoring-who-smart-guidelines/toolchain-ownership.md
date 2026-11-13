@@ -43,7 +43,7 @@ repository runs that script. If both do, a fork has happened, not a move.
 
 ## Where ownership lives
 
-**The `smart-base/` harness instance in `litlfred/smart-base`**, whose
+**The `smart-base/` harness layer in `litlfred/smart-base`**, whose
 `smart-base/tools/` holds the Tool nodes. It is not a separate fork of the WHO
 IG.
 

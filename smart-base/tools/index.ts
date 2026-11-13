@@ -41,7 +41,7 @@ import { fileURLToPath } from "node:url";
 
 import { declarationPathIn, toolsFromFolders, type ToolDefinition } from "../platform/index.js";
 
-/** The INSTANCE root — `<repo>/smart-base`, where `smart-base.json` lives. */
+/** The LAYER root — `<repo>/smart-base`, where `smart-base.json` lives. */
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
 function decl(): { canonicalUrl?: string } {

@@ -3,7 +3,7 @@
  * produce: what a reader of `/smart-base/` and `/smart-trust/` is served.
  *
  * These assertions lived in fhir-harness's own tests until #1963. They are
- * facts about WHO instances, and fhir-harness refuses to know about WHO
+ * facts about WHO layers, and fhir-harness refuses to know about WHO
  * (`fhir-harness/skills/fhir-ig-base/ig-build-pipeline.md`), so they moved
  * here unchanged. The generic behaviour behind them is still tested in
  * fhir-harness, over a non-WHO IG.
@@ -52,10 +52,20 @@ describe("the committed pages: the banner's identity is the index's", () => {
   });
 
   // smart-base's docs build into its IG site too (bean `mftp`, "no drift").
-  // Its index holds no package, so it has no JSON view pages; its full pages
-  // are the IG API views, and the DAK schema's carries the banner.
+  // Since fhir-harness#328 (`a6655ad31fc8`), IG API view pages (`.schema.json`)
+  // are redirect stubs to `?view=schema` while the JSON view and profile JSON
+  // pages (`StructureDefinition-DAK.json.md`, `.profile.json.md`) remain full
+  // Markdown pages carrying the banner; fall back to `.schema.json.md` when run
+  // against an older fhir-harness pin.
   it("smartBaseBannerNamesItselfNoStatus", () => {
-    const b = banner(readFileSync(join(ROOT, "smart-base", "docs", "artifact", "StructureDefinition-DAK.schema.json.md"), "utf8"));
+    const dir = join(ROOT, "smart-base", "docs", "artifact");
+    const candidates = [
+      "StructureDefinition-DAK.json.md",
+      "StructureDefinition-DAK.profile.json.md",
+      "StructureDefinition-DAK.schema.json.md",
+    ].map((f) => join(dir, f));
+    const page = candidates.find((p) => existsSync(p)) ?? candidates[0]!;
+    const b = banner(readFileSync(page, "utf8"));
     expect(b).toContain(">smart.who.int.base</a>");
     expect(b).toContain("http://smart.who.int/base");
     expect(b).not.toContain("smart.who.int.trust");
@@ -70,7 +80,7 @@ describe("the committed pages: the landing page", () => {
   // front matter either: `artifacts.html` is a finished thin page that
   // `build-ig-site` draws from the index NODE and that carries `rendered-by`
   // itself, so what each commits for the index is that node, naming its own
-  // IG; the visualiser is declared in the instance's `visualisers` (owner
+  // IG; the visualiser is declared in the layer's `visualisers` (owner
   // 2026-10-09).
   const indexNode = (instance: string) =>
     JSON.parse(readFileSync(join(ROOT, instance, "docs", "artifact", "index.jsonld"), "utf8")) as Record<string, unknown>;

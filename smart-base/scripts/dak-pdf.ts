@@ -246,11 +246,11 @@ export function assemble(root: string, diagrams: Diagram[] = []): Assembly {
 
 /**
  * Where the DAK at `root` keeps its BPMN: the directory its declaration names
- * for the `business-processes` graph, when it is an instance that declares one;
+ * for the `business-processes` graph, when it is a layer that declares one;
  * otherwise the IG Publisher's own layout.
  *
  * A WHO DAK repository (`smart-dak-immz`) declares nothing, so the fallback is
- * needed; an instance may keep its processes elsewhere, so it comes second.
+ * needed; a layer may keep its processes elsewhere, so it comes second.
  */
 export function businessProcessesDir(root: string): string {
   // declared-path-literal: the IG Publisher's layout, the fallback for a DAK

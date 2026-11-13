@@ -1,7 +1,7 @@
 ---
 name: voice-who-digital-transformation-handbook
 description: >
-  Write and review digital transformation handbook prose in the DTHs' own register — 9 rules, each citing the handbook section it was read from.
+  Write and review digital transformation handbook prose in the DTHs' own register — 10 rules, each citing the handbook section it was read from.
 allowed-tools: Read Grep Glob
 ---
 
@@ -49,7 +49,7 @@ finding on them.
 
 **A finding against this voice is upheld by opening the cited section, never by
 trusting the rule's wording.** Every rule names `{ libraryId, sectionId, pages,
-quote }` and resolves into the cited instance's `library/`, and
+quote }` and resolves into the cited layer's `library/`, and
 `check:voices` refuses a
 rule whose citation does not resolve.
 

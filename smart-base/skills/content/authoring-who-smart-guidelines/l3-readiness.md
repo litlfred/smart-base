@@ -37,7 +37,7 @@ The contract is [`input.schema.json`](../../../schemas/skills/l3-readiness/input
 
 1. **L1.** Every source the use case includes has an `l1Kg` extraction, at
    `library/<bib>/l1-extraction/` (or `l1-extractions/<bib>/` when the entry
-   lives in another instance's library). A source without one is
+   lives in another layer's library). A source without one is
    `no-l1-extraction`, fixed by stage 2.
 2. **L2 on L1.** Every L2 asset names at least one L1 node in
    `wasDerivedFrom`. One that names none is `no-l1-upstream`, fixed by

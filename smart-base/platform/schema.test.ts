@@ -3,7 +3,7 @@
  * light seam they use stays light.
  *
  * The platform imports `themes/themes.ts`, `schemas/**` and
- * `pipeline/qa-checkers-*.ts` from every instance, so whatever those files
+ * `pipeline/qa-checkers-*.ts` from every layer, so whatever those files
  * load sits in the closure of every check that loads a theme, a kind or the
  * QA checkers. Through `index.ts` that was fhir-harness's IG-site and AST
  * readers, which left `skill:register:check` and `kg:audit:check`
@@ -55,7 +55,7 @@ function closureOf(entry: string): string[] {
   return [...seen].map((f) => relative(CHECKOUT, f)).sort();
 }
 
-/** The instance's files the platform loads by glob (tests are never loaded). */
+/** The layer's files the platform loads by glob (tests are never loaded). */
 function globbedByPlatform(): string[] {
   const out: string[] = [join(INSTANCE, "themes", "themes.ts")];
   const walk = (dir: string) => {
