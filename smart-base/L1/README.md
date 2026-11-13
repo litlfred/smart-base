@@ -16,7 +16,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-L1`, holding `
 | [`graph.json`](graph.json) | data |  |
 | [`processes/`](processes/README.md) | described in its own README | |
 | [`schemas/`](schemas/README.md) | described in its own README | |
-| [`scripts/`](scripts/) | _nothing declares what this holds_ | |
+| [`scripts/`](scripts/README.md) | described in its own README | |
 | [`skills/`](skills/README.md) | described in its own README | |
 | [`tools/`](tools/README.md) | described in its own README | |
 
