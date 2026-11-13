@@ -49,7 +49,7 @@
           },
           "expression": {
             "type": "string",
-            "description": "The input expression (FEEL or the DAK's convention)."
+            "description": "The input expression, in FEEL or the DAK's convention."
           },
           "typeRef": {
             "type": "string",
