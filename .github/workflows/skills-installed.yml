@@ -14,6 +14,13 @@
 # folio-assistant index, so the host directories at this repository's root
 # are not there to check.
 #
+# A re-pin alone does not run the check (owner, 2026-11-13: "A. Skip
+# lock-only, merge"): when every changed file is index.lock.json,
+# index.config.json, or a workflow whose only changed lines are
+# `uses: litlfred/...@<sha>` pins, the job is skipped, so the standing re-pin
+# stays green. The next PR that touches smart-base/ or a host directory runs the
+# check against the re-pinned layers, and regenerating is done there.
+#
 # `bun run cat` mounts the layers from index.lock.json and installs the root's
 # dependencies first (`.github/cat.ts`), then runs the script from the root.
 name: Installed skills
@@ -43,11 +50,39 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: Is this a re-pin only?
+        id: scope
+        env:
+          BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          set -eu
+          if [ -z "${BASE:-}" ] || ! git cat-file -e "$BASE^{commit}" 2>/dev/null || [ "$BASE" = 0000000000000000000000000000000000000000 ]; then
+            echo "repin_only=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          only=true
+          while IFS= read -r f; do
+            case "$f" in
+              index.lock.json|index.config.json) ;;
+              .github/workflows/*.yml|.github/workflows/*.yaml)
+                # Every changed line must be a `uses: litlfred/...@<40-hex sha>` pin.
+                if git diff -U0 "$BASE" HEAD -- "$f" | grep -E '^[-+]' | grep -vE '^(\+\+\+|---) ' \
+                     | grep -vqE '^[-+][[:space:]]*(- )?uses: litlfred/[^@]+@[0-9a-f]{40}([[:space:]]+#.*)?$'; then
+                  only=false
+                fi ;;
+              *) only=false ;;
+            esac
+          done < <(git diff --name-only "$BASE" HEAD)
+          echo "repin_only=$only" >> "$GITHUB_OUTPUT"
+          if [ "$only" = true ]; then echo "::notice::Re-pin only (lock, config and workflow pins); the installed-skills check is skipped."; fi
       - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        if: steps.scope.outputs.repin_only != 'true'
         with:
           bun-version: 1.4.4
       - name: Copilot's skills (.github/skills) are current
+        if: steps.scope.outputs.repin_only != 'true'
         run: bun run cat skills:install --root smart-base --into . --host copilot --check
       - name: Claude Code's skills (.claude/skills) are current
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && steps.scope.outputs.repin_only != 'true' }}
         run: bun run cat skills:install --root smart-base --into . --host claude --check
