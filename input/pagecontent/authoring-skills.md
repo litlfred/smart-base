@@ -111,9 +111,9 @@ Each persona has a defined package of skills. The full set of skills for each pe
 
 #### BPMN Swimlane Validation
 
-As part of the BPMN authoring and review process, every innermost swimlane in a BPMN diagram **SHALL** correspond to an ActorDefinition resource. The swimlane-to-ActorDefinition check (`validate_swimlanes`, in this repository's `bpmn_layout` scripts) checks this automatically; it will move into the smart-base knowledge graph under bean folio-assistant-tgaj.
+As part of the BPMN authoring and review process, every innermost swimlane in a BPMN diagram **SHALL** correspond to an ActorDefinition resource. A lane names its ActorDefinition by id: its `partitionElementRef` (a top-level `<bpmn:resource>` whose `id` is the ActorDefinition's FSH `Instance:` id), or else its own `id`. A lane is never matched by its display name or by a file name. The [`bpmn-validate`](https://litlfred.github.io/folio-assistant/smart-base/L2-bpmn/tools/) tool in the smart-base knowledge graph checks this, together with the diagram's structure and the absence of Camunda or Zeebe extensions, on every pull request that changes a `.bpmn`.
 
 When a swimlane has no matching ActorDefinition, the author must resolve by:
 1. **Referencing** an ActorDefinition from a dependency IG
 2. **Creating** a new ActorDefinition in this IG
-3. **Correcting** a typo in the swimlane name
+3. **Correcting** the lane's binding (its `partitionElementRef` or id)

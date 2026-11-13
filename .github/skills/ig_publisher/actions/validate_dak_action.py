@@ -8,8 +8,9 @@ Environment variables:
     DAK_IG_ROOT   — IG root directory (default: current directory)
 """
 
-import glob
+import json
 import os
+import subprocess
 import sys
 from pathlib import Path
 
@@ -18,9 +19,27 @@ if str(_SKILLS_ROOT) not in sys.path:
     sys.path.insert(0, str(_SKILLS_ROOT))
 
 from common.ig_errors import Issue, error, warning, info, format_issues, has_errors
-from bpmn_author.validators.bpmn_xml_validator import validate_bpmn_xml
-from bpmn_author.validators.swimlane_validator import validate_swimlanes
-from bpmn_import.validators.swimlane_actor_validator import validate_swimlane_actors
+
+# The BPMN check is the smart-base Tool `bpmn-validate` (bean
+# folio-assistant-tgaj), which replaced the Python BPMN validators.
+_BPMN_VALIDATE = Path(__file__).resolve().parents[4] / "smart-base" / "L2-bpmn" / "tools" / "bpmn-validate" / "validate.ts"
+_LEVEL = {"error": error, "warning": warning, "info": info}
+
+
+def validate_bpmn(ig_root: str) -> list:
+    """Run `bpmn-validate` over the IG's declared process directories and return its findings as issues."""
+    try:
+        p = subprocess.run(["bun", "run", str(_BPMN_VALIDATE), "--root", ig_root, "--json"],
+                           capture_output=True, text=True, timeout=300)
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        return [warning("DAK-003", f"bpmn-validate could not run: {exc}")]
+    if p.returncode == 2:
+        return [info("DAK-004", "no BPMN under the declared process directories")]
+    try:
+        report = json.loads(p.stdout)
+    except json.JSONDecodeError:
+        return [warning("DAK-003", f"bpmn-validate printed no report: {p.stderr.strip()[:500]}")]
+    return [_LEVEL[f["severity"]](f["code"], f["message"], file=f["file"]) for f in report["findings"]]
 
 
 def validate_structure(ig_root: str) -> list:
@@ -35,14 +54,8 @@ def validate_structure(ig_root: str) -> list:
     if not (root / "ig.ini").is_file():
         issues.append(warning("DAK-002", "ig.ini not found"))
 
-    # Validate BPMN files
-    bpmn_files = glob.glob(str(root / "input" / "business-processes" / "*.bpmn"))
-    for bpmn_path in bpmn_files:
-        content = Path(bpmn_path).read_text(encoding="utf-8")
-        fname = os.path.basename(bpmn_path)
-        issues.extend(validate_bpmn_xml(content, filename=fname))
-        issues.extend(validate_swimlanes(content, filename=fname))
-        issues.extend(validate_swimlane_actors(content, ig_root=ig_root, filename=fname))
+    # Validate BPMN files (input/bpmn/ and smart-base/**/processes/)
+    issues.extend(validate_bpmn(ig_root))
 
     return issues
 

@@ -8,9 +8,9 @@ Prompts are stored as Markdown files with ``{variable}`` placeholders.
 Usage:
     from common.prompt_loader import load_prompt
 
-    prompt = load_prompt("bpmn_author", "create_or_edit_bpmn",
-                         bpmn_xml="<definitions ...>",
-                         user_request="Add a pharmacy lane")
+    prompt = load_prompt("dak_authoring", "l2_authoring",
+                         issue_title="Add a pharmacy lane",
+                         issue_body="...")
 """
 
 import os
@@ -54,7 +54,7 @@ def load_prompt(skill_name: str, prompt_name: str, **variables: Any) -> str:
         .github/skills/common/prompts/<prompt_name>.md
 
     Args:
-        skill_name: Skill directory name (e.g. ``"bpmn_author"``).
+        skill_name: Skill directory name (e.g. ``"dak_authoring"``).
         prompt_name: Prompt file stem (without ``.md``).
         **variables: Substitution values for ``{key}`` placeholders.
 
