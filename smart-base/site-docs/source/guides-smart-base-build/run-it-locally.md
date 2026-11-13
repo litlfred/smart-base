@@ -1,6 +1,7 @@
-From a checkout of `litlfred/smart-base`, mount the layers that
-`index.lock.json` pins (the commands are on the FHIR IG layer's page,
-§"What you need installed"), then:
+From a checkout of `litlfred/smart-base`. On a fresh clone the first
+`bun run cat …` mounts the layers `index.lock.json` pins, then runs the
+command (`"cat": "bun .github/cat.ts"`); after a re-pin,
+`bash .github/mount-from-lock.sh` remounts them.
 
 ```bash
 # See what would be built and where
