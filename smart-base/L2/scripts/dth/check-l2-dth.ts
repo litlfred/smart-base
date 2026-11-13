@@ -33,32 +33,32 @@
  *    `l1-coverage`.
  *
  * Usage:
- *   bun run smart-base/scripts/dth/check-l2-dth.ts [--root <dir>] [--instance <file.json>] [--folio <folio/slug>]
+ *   bun run smart-base/L2/scripts/dth/check-l2-dth.ts [--root <dir>] [--instance <file.json>] [--folio <folio/slug>]
  *
- * @module smart-base/scripts/dth/check-l2-dth
+ * @module smart-base/L2/scripts/dth/check-l2-dth
  */
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
-import { readArchimate } from "../../../cat-harness-tools/archimate/schemas/archimate.ts";
+import { readArchimate } from "../../../../cat-harness-tools/archimate/schemas/archimate.ts";
 import {
   loadDecisionTable,
   unreadableExpressions,
-} from "../../../cat-harness-tools/src/workflow/decision-table.ts";
-import { GlossarySchema } from "../../../folio-assistant-core/schemas/glossary.ts";
-import { instanceNs } from "../../../folio-assistant-core/scripts/glossary-page.ts";
+} from "../../../../cat-harness-tools/src/workflow/decision-table.ts";
+import { GlossarySchema } from "../../../../folio-assistant-core/schemas/glossary.ts";
+import { instanceNs } from "../../../../folio-assistant-core/scripts/glossary-page.ts";
 import {
   coverage,
   type Captured,
   type Exclusion,
   type Page,
   type Report,
-} from "../../../folio-assistant-core/scripts/l1-coverage.ts";
+} from "../../../../folio-assistant-core/scripts/l1-coverage.ts";
 import {
   checkDakBpmnHasProcess,
   checkDakCompanionPresent,
   checkDakDmnHasDecisionTable,
-} from "../../pipeline/qa-checkers-dak.ts";
-import { stagingSite } from "../../schemas/site-roots.ts";
+} from "../../../pipeline/qa-checkers-dak.ts";
+import { stagingSite } from "../../../schemas/site-roots.ts";
 
 export const SKOS_MATCH_FIELDS = [
   "exactMatch",

@@ -7,7 +7,7 @@ export default toolFactory((t) =>
     description:
       "From an agent's `l1-scenario-mapping/v1`, write one smart-kg L2 `user-scenario` candidate per L1 recommendation, joined to a `persona` and a `business-process` by smart-kg L2's existing edges. Reuses the guide's own personas and processes, then smart-base's generic `DAK.Persona.*`; otherwise a glossary candidate or `could-not-determine`, each with a WARNING. Never invents a process.",
     install: { none: true },
-    invoke: { shell: "bun run smart-base/scripts/l1-recommendation-scenarios.ts --l1 <l1.json|yaml> --vocabulary <guide.json> [--generic <generic.json>] --mapping <mapping.yaml> --out <dir> [--check]" },
+    invoke: { shell: "bun run smart-base/L2/scripts/l1-recommendation-scenarios.ts --l1 <l1.json|yaml> --vocabulary <guide.json> [--generic <generic.json>] --mapping <mapping.yaml> --out <dir> [--check]" },
     io: {
       inputs: [
         { name: "l1", schema: t("RepoPath"), required: true, description: "The recommendations: `l1-recommendation-candidates`' L1 3.0 graph, or an authored L1 YAML." },

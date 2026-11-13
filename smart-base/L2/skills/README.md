@@ -7,12 +7,13 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # l2-skills
 
-The skills that author L2, the Digital Adaptation Kit: L2 DAK authoring and component review, choosing DAK dependencies, DTH authoring and the L1-to-L2 ingest of a handbook, and joining recommendations to personas and processes. Package `smart-l2`.
+The skills that author L2, the Digital Adaptation Kit: L2 DAK authoring (`skill-definitions/l2-dak-authoring.json`) and component review, choosing DAK dependencies, DTH authoring and the L1-to-L2 ingest of a handbook, and joining recommendations to personas and processes. Package `smart-l2`.
 
 Part of [SMART Base](../../README.md) 0.1.0, declared as `l2-skills`, holding `skills`.
 
 | file | what it is | used by |
 |---|---|---|
+| [`skill-definitions/`](skill-definitions/) | _nothing declares what this holds_ | |
 | [`smart-l2/`](smart-l2/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

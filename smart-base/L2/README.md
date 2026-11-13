@@ -7,7 +7,7 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # L2 — what a DAK declares
 
-Knowledge-graph layer L2 as a NAMED SUBGRAPH of this layer, OPT-IN like `L1/` (a downstream layer lists `smart-base.smart-base-L2` in its `enableSubgraphs`), beside `L1/` (owner, 2026-11-13: 'L1..L3 as named subgraphs', issue #359). `L2/graph.json` names what it holds FROM WITHIN: its `schemas/` and, as they move in, its tools, skills and processes. It imports only from the layers below it.
+Knowledge-graph layer L2 as a NAMED SUBGRAPH of this layer, OPT-IN like `L1/` (a downstream layer lists `smart-base.smart-base-L2` in its `enableSubgraphs`), beside `L1/` (owner, 2026-11-13: 'L1..L3 as named subgraphs', issue #359). `L2/graph.json` names what it holds FROM WITHIN: `schemas/`, and the L2 `skills/`, `collab/`, `tools/` and `scripts/`. It imports only from the layers below it.
 
 Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-L2`, holding `cat-harness`.
 
@@ -16,6 +16,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-L2`, holding `
 | [`graph.json`](graph.json) | data |  |
 | [`collab/`](collab/README.md) | The collaborative-development group of L2, OPT-IN inside the opt-in `L2/` and requiring `cat-harness.sdlc`, `L2/` itself and the level below it, whose skills its processes call (owner, 2026-11-13: L2/L3 own collab): the L2 processes that run on the work plan and the delivery process. Only this group requires sdlc; L2's schemas, skills and tools do not. A layer switches it on with `smart-base.L2-collab` in its `enableSubgraphs`. | |
 | [`schemas/`](schemas/README.md) | described in its own README | |
+| [`scripts/`](scripts/README.md) | described in its own README | |
 | [`skills/`](skills/README.md) | described in its own README | |
 | [`tools/`](tools/README.md) | described in its own README | |
 

@@ -8,16 +8,16 @@
  * this test reads it there — the allowed direction, since smart-base needs
  * cat-harness.
  *
- * @module smart-base/scripts/gen-dak-components-figure.test
+ * @module smart-base/L2/scripts/gen-dak-components-figure.test
  */
 import { describe, expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 
-import { DAK_COMPONENTS, DAK_UNFORMALIZED_COMPONENTS } from "../schemas/dak-kinds.ts";
+import { DAK_COMPONENTS, DAK_UNFORMALIZED_COMPONENTS } from "../../schemas/dak-kinds.ts";
 import { DAK_CARDS, DAK_FIGURE_PATH, renderDakComponentsSvg } from "./gen-dak-components-figure.ts";
 
-const DECK = resolve(import.meta.dir, "../../cat-harness/docs/source/concepts-harnessed-kg-overview");
+const DECK = resolve(import.meta.dir, "../../../cat-harness/docs/source/concepts-harnessed-kg-overview");
 const read = (p: string) => readFileSync(p, "utf-8");
 
 describe("living deck slide 3: the DAK components", () => {
@@ -35,7 +35,7 @@ describe("living deck slide 3: the DAK components", () => {
     // One number badge per component, in vocabulary order.
     for (let i = 1; i <= DAK_COMPONENTS.length; i++) expect(svg).toContain(`>${i}</text>`);
     expect(svg).toContain("Not yet its own DAK model field");
-    expect(read(DAK_FIGURE_PATH), "run smart-base/scripts/gen-dak-components-figure.ts").toBe(svg);
+    expect(read(DAK_FIGURE_PATH), "run smart-base/L2/scripts/gen-dak-components-figure.ts").toBe(svg);
     // Through `relative_url`: the deck's page publishes under `docs/cat-harness/` (bean `kc7k`).
     expect(read(join(DECK, "slide-03.md"))).toContain("]({{ '/assets/img/dak-components.svg' | relative_url }})");
   });

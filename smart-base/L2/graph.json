@@ -16,7 +16,7 @@
       "id": "l2-skills",
       "path": "skills/",
       "subgraph": true,
-      "description": "The skills that author L2, the Digital Adaptation Kit: L2 DAK authoring and component review, choosing DAK dependencies, DTH authoring and the L1-to-L2 ingest of a handbook, and joining recommendations to personas and processes. Package `smart-l2`.",
+      "description": "The skills that author L2, the Digital Adaptation Kit: L2 DAK authoring (`skill-definitions/l2-dak-authoring.json`) and component review, choosing DAK dependencies, DTH authoring and the L1-to-L2 ingest of a handbook, and joining recommendations to personas and processes. Package `smart-l2`.",
       "graphTypologies": [
         "skills"
       ]
@@ -42,6 +42,15 @@
       "description": "The L2 tools: DAK extraction, the DAK config read from sushi-config, and recommendation scenarios (which join L1 recommendations to L2 personas and processes).",
       "graphTypologies": [
         "tools"
+      ]
+    },
+    {
+      "id": "l2-scripts",
+      "path": "scripts/",
+      "subgraph": true,
+      "description": "The scripts that L2's tools and skills run, with their tests and fixtures: the L1 recommendation scenario candidates (`l1-recommendation-scenarios.ts`) and the vocabulary reader they resolve against (`l1-scenario-vocabulary.ts`, with smart-base's generic personas under `fixtures/`), the L2 DTH validator (`dth/check-l2-dth.ts`), the L2 programme indicators drafter (`l2-program-indicators.py`), the DAK data-dictionary annex writer and term diff (`dak-data-dictionary.ts`, `dak-data-dictionary-diff.ts`), and the DAK components figure generator (`gen-dak-components-figure.ts`).",
+      "graphTypologies": [
+        "code"
       ]
     }
   ]

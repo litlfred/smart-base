@@ -38,5 +38,5 @@ until a person reviews it.
 `l1-recommendation-scenarios` (`smart-base/L2/tools/l1-recommendation-scenarios/l1-recommendation-scenarios.ts`):
 
 ```sh
-bun run smart-base/scripts/l1-recommendation-scenarios.ts --l1 <l1.json|yaml> --vocabulary <guide.json> [--generic <generic.json>] --mapping <mapping.yaml> --out <dir> [--check]
+bun run smart-base/L2/scripts/l1-recommendation-scenarios.ts --l1 <l1.json|yaml> --vocabulary <guide.json> [--generic <generic.json>] --mapping <mapping.yaml> --out <dir> [--check]
 ```

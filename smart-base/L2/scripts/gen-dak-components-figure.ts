@@ -13,8 +13,8 @@
  * slide's "testing: test data and test harness" beside the overview table's
  * row. Colours follow the slide's palette, with one new pair for the tenth.
  *
- *   bun run smart-base/scripts/gen-dak-components-figure.ts           # write
- *   bun run smart-base/scripts/gen-dak-components-figure.ts --check   # verify
+ *   bun run smart-base/L2/scripts/gen-dak-components-figure.ts           # write
+ *   bun run smart-base/L2/scripts/gen-dak-components-figure.ts --check   # verify
  *
  * ## Why it is smart-base's, and why it still writes into cat-harness's site
  *
@@ -26,13 +26,13 @@
  * layer's declared site is the allowed direction; moving the page is a
  * separate decision this move did not take.
  *
- * @module smart-base/scripts/gen-dak-components-figure
+ * @module smart-base/L2/scripts/gen-dak-components-figure
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 
-import { DAK_COMPONENTS, DAK_UNFORMALIZED_COMPONENTS, type DakComponent } from "../schemas/dak-kinds.ts";
-import { siteDirFor } from "../platform/index.js";
+import { DAK_COMPONENTS, DAK_UNFORMALIZED_COMPONENTS, type DakComponent } from "../../schemas/dak-kinds.ts";
+import { siteDirFor } from "../../platform/index.js";
 
 interface Card {
   title: string;
@@ -173,7 +173,7 @@ export function renderDakComponentsSvg(): string {
 }
 
 /** cat-harness's layer root — the site the figure is published in. */
-const H = resolve(import.meta.dir, "..", "..", "cat-harness");
+const H = resolve(import.meta.dir, "..", "..", "..", "cat-harness");
 export const DAK_FIGURE_PATH = join(H, siteDirFor(H), "assets/img/dak-components.svg");
 
 if (import.meta.main) {
@@ -182,7 +182,7 @@ if (import.meta.main) {
   if (process.argv.includes("--check")) {
     const cur = existsSync(DAK_FIGURE_PATH) ? readFileSync(DAK_FIGURE_PATH, "utf-8") : "";
     if (cur !== svg) {
-      console.error(`✗ ${rel} is stale — run \`bun run smart-base/scripts/gen-dak-components-figure.ts\``);
+      console.error(`✗ ${rel} is stale — run \`bun run smart-base/L2/scripts/gen-dak-components-figure.ts\``);
       process.exit(1);
     }
     console.log(`✓ ${rel} is current (${DAK_COMPONENTS.length} components)`);

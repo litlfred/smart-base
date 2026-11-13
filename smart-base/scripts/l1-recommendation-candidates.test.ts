@@ -170,8 +170,8 @@ describe("the worked example", () => {
     const X = "smart-base/l1-extractions/9789240116191-eng";
     const r = spawnSync(
       "bun",
-      ["run", "smart-base/scripts/l1-recommendation-scenarios.ts", "--l1", `${X}/l1.json`, "--vocabulary", `${X}/dth-npc-vocabulary.json`,
-        "--generic", "smart-base/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json", "--mapping", `${X}/scenario-mapping.yaml`, "--out", `${X}/scenarios`, "--check"],
+      ["run", "smart-base/L2/scripts/l1-recommendation-scenarios.ts", "--l1", `${X}/l1.json`, "--vocabulary", `${X}/dth-npc-vocabulary.json`,
+        "--generic", "smart-base/L2/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json", "--mapping", `${X}/scenario-mapping.yaml`, "--out", `${X}/scenarios`, "--check"],
       { cwd: join(import.meta.dir, "..", ".."), encoding: "utf8" },
     );
     expect(r.stderr + r.stdout).toMatch(/current — 22 scenario candidates, 26 warning/);

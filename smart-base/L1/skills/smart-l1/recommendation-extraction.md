@@ -271,8 +271,8 @@ process.
    smart-base's ActorDefinitions:
 
    ```sh
-   bun run smart-base/scripts/l1-scenario-vocabulary.ts --guide <guide checkout> --out guide-vocabulary.json
-   bun run smart-base/scripts/l1-scenario-vocabulary.ts --fsh-actors <smart-base checkout>/input/fsh/actors --out smart-base-generic-personas.json
+   bun run smart-base/L2/scripts/l1-scenario-vocabulary.ts --guide <guide checkout> --out guide-vocabulary.json
+   bun run smart-base/L2/scripts/l1-scenario-vocabulary.ts --fsh-actors <smart-base checkout>/input/fsh/actors --out smart-base-generic-personas.json
    ```
 
    Each file records the repository, the commit, and the file and line of
@@ -288,7 +288,7 @@ process.
 3. **The candidates:**
 
    ```sh
-   bun run smart-base/scripts/l1-recommendation-scenarios.ts \
+   bun run smart-base/L2/scripts/l1-recommendation-scenarios.ts \
      --l1 <recommendations.yaml | l1-graph.json> --vocabulary guide-vocabulary.json \
      --generic smart-base-generic-personas.json --mapping mapping.yaml --out <dir> [--check]
    ```
@@ -370,7 +370,7 @@ warnings, live in that guide's library with the check that keeps them
 current:
 <https://github.com/litlfred/smart-immunizations/tree/main/library/l1-recommendation-scenarios/measles>.
 smart-base holds no guide's example. The generic rung it was run with is
-`smart-base/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json`,
+`smart-base/L2/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json`,
 shared with the handbook example.
 
 **An authored L1 from pictures.** When the source prints its

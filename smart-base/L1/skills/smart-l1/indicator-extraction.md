@@ -28,7 +28,7 @@ and `Call_Data` in [`dth-authoring`](https://github.com/litlfred/smart-base/blob
 | layer | what | kind / model | written by |
 |---|---|---|---|
 | L1 | the indicator **as the source prints it**, verbatim | `indicator` block (folio type `smart-base:Indicator`; KG L1 `indicator`, `L1/schemas/l1.ts`) | `scripts/l1-indicator-sheets.py` → `candidates.json` → `gen-library-jsonld` |
-| L2 | the DAK's or DTH's **own** operational measure, a draft that points back | `program-indicator` (sgkg-l2), logical model `ProgramIndicator` | `scripts/l2-program-indicators.py` |
+| L2 | the DAK's or DTH's **own** operational measure, a draft that points back | `program-indicator` (sgkg-l2), logical model `ProgramIndicator` | `L2/scripts/l2-program-indicators.py` |
 
 sgkg-l2 keeps them apart: merging them would merge a WHO definition with a
 country's implementation of it. The L2 record is a draft with `derivedFrom`
@@ -86,7 +86,7 @@ its L1 node, and the L2 author adopts, edits or drops it.
 4. **L2 drafts.**
 
    ```sh
-   python3 smart-base/scripts/l2-program-indicators.py --entry library/<doc-id> \
+   python3 smart-base/L2/scripts/l2-program-indicators.py --entry library/<doc-id> \
      --prefix <PREFIX> --out <where the L2 author will review them>
    ```
 

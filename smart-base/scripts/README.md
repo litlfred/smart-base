@@ -7,7 +7,7 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # smart-base-scripts
 
-This layer's own scripts and their tests: document kinds, the DAK components figure, the DTH term findings, the smart-kg L1 extraction, the fhir-harness exclusions check, the L1 recommendation scenario candidates with the vocabulary reader they resolve against (fixtures and the measles run under `scripts/fixtures/`), and `dth-init.ts`, which writes a new DTH repository's wiring. Declared so a remote mount brings them.
+This layer's own scripts and their tests: document kinds, the DTH term findings, the smart-kg L1 extraction, the fhir-harness exclusions check, and `dth-init.ts`, which writes a new DTH repository's wiring. Declared so a remote mount brings them.
 
 Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, holding `code`.
 
@@ -22,12 +22,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`check-web-annexes.feature`](check-web-annexes.feature) | a file |  |
 | [`check-web-annexes.test.ts`](check-web-annexes.test.ts) | a file |  |
 | [`check-web-annexes.ts`](check-web-annexes.ts) | a file |  |
-| [`dak-data-dictionary-diff.feature`](dak-data-dictionary-diff.feature) | a file |  |
-| [`dak-data-dictionary-diff.test.ts`](dak-data-dictionary-diff.test.ts) | a file |  |
-| [`dak-data-dictionary-diff.ts`](dak-data-dictionary-diff.ts) | a file |  |
-| [`dak-data-dictionary.feature`](dak-data-dictionary.feature) | a file |  |
-| [`dak-data-dictionary.test.ts`](dak-data-dictionary.test.ts) | a file |  |
-| [`dak-data-dictionary.ts`](dak-data-dictionary.ts) | a file |  |
 | [`dak-pdf.feature`](dak-pdf.feature) | a file |  |
 | [`dak-pdf.test.ts`](dak-pdf.test.ts) | a file |  |
 | [`dak-pdf.ts`](dak-pdf.ts) | a file |  |
@@ -45,9 +39,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`extract-smart-kg-l1.test.ts`](extract-smart-kg-l1.test.ts) | a file |  |
 | [`extract-smart-kg-l1.ts`](extract-smart-kg-l1.ts) | a file |  |
 | [`fhir-harness-exclusions.baseline.ts`](fhir-harness-exclusions.baseline.ts) | a file |  |
-| [`gen-dak-components-figure.feature`](gen-dak-components-figure.feature) | a file |  |
-| [`gen-dak-components-figure.test.ts`](gen-dak-components-figure.test.ts) | a file |  |
-| [`gen-dak-components-figure.ts`](gen-dak-components-figure.ts) | a file |  |
 | [`gen-document-kinds.feature`](gen-document-kinds.feature) | a file |  |
 | [`gen-document-kinds.test.ts`](gen-document-kinds.test.ts) | a file |  |
 | [`gen-document-kinds.ts`](gen-document-kinds.ts) | a file |  |
@@ -79,11 +70,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`l1-recommendation-candidates.feature`](l1-recommendation-candidates.feature) | a file |  |
 | [`l1-recommendation-candidates.test.ts`](l1-recommendation-candidates.test.ts) | a file |  |
 | [`l1-recommendation-candidates.ts`](l1-recommendation-candidates.ts) | a file |  |
-| [`l1-recommendation-scenarios.feature`](l1-recommendation-scenarios.feature) | a file |  |
-| [`l1-recommendation-scenarios.test.ts`](l1-recommendation-scenarios.test.ts) | a file |  |
-| [`l1-recommendation-scenarios.ts`](l1-recommendation-scenarios.ts) | a file |  |
 | [`l1-run-context.ts`](l1-run-context.ts) | a file |  |
-| [`l1-scenario-vocabulary.ts`](l1-scenario-vocabulary.ts) | a file |  |
 | [`l1-specialise.feature`](l1-specialise.feature) | a file |  |
 | [`l1-specialise.test.ts`](l1-specialise.test.ts) | a file |  |
 | [`l1-specialise.ts`](l1-specialise.ts) | a file |  |
@@ -93,7 +80,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`l1-transcription-verbatim.feature`](l1-transcription-verbatim.feature) | a file |  |
 | [`l1-transcription-verbatim.test.ts`](l1-transcription-verbatim.test.ts) | a file |  |
 | [`l1-transcription-verbatim.ts`](l1-transcription-verbatim.ts) | a file |  |
-| [`l2-program-indicators.py`](l2-program-indicators.py) | a file |  |
 | [`smart-base-transform.py`](smart-base-transform.py) | a file |  |
 | [`smart-base-transform.test.py`](smart-base-transform.test.py) | a file |  |
 | [`terminology-lookup.feature`](terminology-lookup.feature) | a file |  |
@@ -104,9 +90,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`visio-svg-bpmn.ts`](visio-svg-bpmn.ts) | a file |  |
 | [`who-smart-content-types.feature`](who-smart-content-types.feature) | a file |  |
 | [`who-smart-content-types.test.ts`](who-smart-content-types.test.ts) | a file |  |
-| [`dth/`](dth/) | _nothing declares what this holds_ | |
 | [`extractors/`](extractors/) | _nothing declares what this holds_ | |
-| [`fixtures/`](fixtures/) | _nothing declares what this holds_ | |
 | [`tests/`](tests/) | _nothing declares what this holds_ | |
 
 <!-- kg:subgraph:end -->

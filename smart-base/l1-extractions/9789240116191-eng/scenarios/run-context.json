@@ -1,66 +1,66 @@
 {
   "$schema": "folio-run-context/v1",
   "platform": {
-    "commit": "95485e317787e4b16f5dec9973337e36b7310a3e"
+    "commit": "92f38818a317850936ac6c3839f20729f563eb5f"
   },
   "mounts": {
     "state": "locked",
     "lock": {
       "file": "index.lock.json",
-      "sha256": "5df4e875f81d5c332de698be80ca24317b5f93bb8a3b1de41488384f06ebc38a"
+      "sha256": "01910b9b839fb5ba83038ebf19eff2221befa56ab0b0c911e20b71bd79b17980"
     },
     "instances": [
       {
         "instance": "bootstrap",
         "repository": "litlfred/bootstrap",
-        "sha": "3ce2b5d641779ca78432971abb919e6e3afdc60a"
+        "sha": "17204fe9ed49e87b165bf0a8b626b6c69329a2a6"
       },
       {
         "instance": "bootstrap-tools",
         "repository": "litlfred/bootstrap-tools",
-        "sha": "fdceeca33492a0bc434edc1f80c95895180ee587"
+        "sha": "814ad01035431dc322d08b6726824fc9c233d5a1"
       },
       {
         "instance": "cat-harness",
         "repository": "litlfred/cat-harness",
-        "sha": "ad64a09a7f060cf350b8b4ed7c4d163435120c30"
+        "sha": "21c29a7e3a2192baa47ee957430b8d4d76e6f7a9"
       },
       {
         "instance": "cat-harness-tools",
         "repository": "litlfred/cat-harness-tools",
-        "sha": "eaf4e03d99fcea9915afdb091fdf98a56ecf27b9"
+        "sha": "c55f2f2b1755e2e7ec12fcaa56f72dfcc5d65283"
       },
       {
         "instance": "fhir-harness",
         "repository": "litlfred/fhir-harness",
-        "sha": "5545d6b5f803f9b4e38b9d0d55f38da82e2f8c93"
+        "sha": "c25c0d92363c8d5c84334335de4636777f6b9d39"
       },
       {
         "instance": "folio-assistant-core",
         "repository": "litlfred/folio-assistant-core",
-        "sha": "be4e571d8dad29db098542ede6d0979c24c0ea13"
+        "sha": "ef03802d63519a11b1fa59cc3c192f4152494f47"
       },
       {
         "instance": "who-iris",
         "repository": "litlfred/who-iris",
-        "sha": "04472dc8c3a66dfef6377c45a8b24a23acf88350"
+        "sha": "00200f9832645a0d942c19e12593d751bfbede6e"
       }
     ]
   },
   "releases": [],
   "invoker": {
     "kind": "system",
-    "id": "smart-base/scripts/l1-recommendation-scenarios.ts",
-    "script_hash": "1ea18b967ad06613e73f3795692247927c31bb8bcdea879b07a930fee7213010"
+    "id": "smart-base/L2/scripts/l1-recommendation-scenarios.ts",
+    "script_hash": "6ca51e1c7eeb24522c6359e08beb2bc94e86419f8c908a49a11e0fd6d1a52ac4"
   },
   "inputs": [
     {
-      "hash": "e90292cfc75d",
+      "hash": "2ebf981a92fd",
       "inputs": [
+        "smart-base/L2/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json",
         "smart-base/l1-extractions/9789240116191-eng/dth-npc-vocabulary.json",
         "smart-base/l1-extractions/9789240116191-eng/l1.json",
-        "smart-base/l1-extractions/9789240116191-eng/scenario-mapping.yaml",
-        "smart-base/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json"
+        "smart-base/l1-extractions/9789240116191-eng/scenario-mapping.yaml"
       ]
     }
   ]

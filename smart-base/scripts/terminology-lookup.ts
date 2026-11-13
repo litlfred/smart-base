@@ -32,7 +32,7 @@ import { dirname, join, relative, resolve } from "node:path";
 
 import { ownDeclaredDirectories } from "../platform/index.js";
 import { slug } from "./l1-kgid.ts";
-import { VocabularySchema, type Vocabulary } from "./l1-scenario-vocabulary.ts";
+import { VocabularySchema, type Vocabulary } from "../L2/scripts/l1-scenario-vocabulary.ts";
 import { HARNESS_PAGES_ROOT, stagingSite } from "../schemas/site-roots.ts";
 
 export const SLOTS = [
@@ -112,6 +112,7 @@ const GUIDELINE_DOMAIN_SOURCE = "folio-assistant-core/glossary/guideline-domain.
 
 const DEFAULT_GENERIC_PERSONAS = join(
   HERE,
+  "L2",
   "scripts",
   "fixtures",
   "l1-recommendation-scenarios",
@@ -141,7 +142,7 @@ export const AUTHORITY_SCHEMES: Record<TerminologySlot, AuthoritySchemeInfo> = {
     title: "ILO International Standard Classification of Occupations (ISCO-08) & WHO SMART Generic Personas",
     uri: "http://www.ilo.org/public/english/bureau/stat/isco/isco08/",
     localSources: [
-      "smart-base/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json",
+      "smart-base/L2/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json",
       "input/fsh/codesystems/ISCO08.fsh",
     ],
   },

@@ -3,7 +3,7 @@
   "id": "https://smart.who.int/dth-health-product-catalogue/graph/l1-scenarios/dth-npc-9789240116191",
   "type": "Entity",
   "ontologyVersion": "1.0",
-  "generatedAt": "2026-11-08T09:37:25Z",
+  "generatedAt": "2026-11-13T21:54:54Z",
   "wasDerivedFrom": [
     {
       "path": "smart-base/l1-extractions/9789240116191-eng/l1.json",
@@ -16,8 +16,8 @@
       "note": "The personas and processes of dth-health-product-catalogue, read at litlfred/smart-base@7cb286a2e88007f6ba20d8bc659cc8c481d316c6."
     },
     {
-      "path": "smart-base/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json",
-      "sha256": "fa33902453047ae0f8f913a05bf5e6b3000a5084c553975923003c0f3267c4e5",
+      "path": "smart-base/L2/scripts/fixtures/l1-recommendation-scenarios/smart-base-generic-personas.json",
+      "sha256": "925baac3e0815d1628bdbbdfb375038b26aa748bd8fcaccb3281f2bc116a69ad",
       "note": "smart-base's generic personas, read at litlfred/smart-base@417720453eb28a142a503cc96afb38efc6e42386."
     },
     {

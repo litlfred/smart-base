@@ -37,7 +37,7 @@ import {
   type DocumentKindCoverage,
 } from "../platform/index.js";
 import { directoriesForGraph, instanceDirectoryForGraph, instanceRootsIn, isBuiltAtPublish, readDeclaration, repoRootFor } from "../platform/index.js";
-import { DAK_CARDS } from "./gen-dak-components-figure.ts";
+import { DAK_CARDS } from "../L2/scripts/gen-dak-components-figure.ts";
 import { kgClasses } from "./kg-classes.ts";
 
 const OUT = resolve(import.meta.dir, "..", "document-kinds");
