@@ -66,7 +66,14 @@ export const kramdownId = (t: string) => t.trim().toLowerCase().replace(/[^a-z0-
 /** A persona's anchor on the personas page. */
 export const personaAnchor = (p: string) => `persona-${kramdownId(p.replace(/\([^)]*\)/g, "")).replace(/-+$/, "")}`;
 
-const decode = (s: string) => s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+const HTML_ENTITIES: Readonly<Record<string, string>> = {
+  "&amp;": "&",
+  "&lt;": "<",
+  "&gt;": ">",
+  "&quot;": '"',
+  "&#39;": "'",
+};
+const decode = (s: string) => s.replace(/&(?:amp|lt|gt|quot|#39);/g, (m) => HTML_ENTITIES[m] ?? m);
 
 export function personasFrom(md: string): string[] {
   return [...md.matchAll(/<tr>\s*<td>([^<]*)<\/td>/g)].map((m) => decode(m[1]!).replace(/\s+/g, " ").trim()).filter(Boolean);
