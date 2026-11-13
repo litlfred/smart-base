@@ -7,8 +7,8 @@ description: >
   L2 assets against the index, and returns one decision row per IG naming the
   profiles, value sets and libraries reused, derived from or not used. Read
   before choosing, or recording, an IG dependency.
-input: schemas/skills/l3-dependency-choice/input.schema.json
-output: schemas/skills/l3-dependency-choice/output.schema.json
+input: L3/schemas/skills/l3-dependency-choice/input.schema.json
+output: L3/schemas/skills/l3-dependency-choice/output.schema.json
 ---
 
 # l3-dependency-choice
@@ -25,7 +25,7 @@ decision row, reuse-first precedence, `decision-comparison` table and
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/l3-dependency-choice/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l3-dependency-choice/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/l3-dependency-choice/input.schema.json) and [`output.schema.json`](../../schemas/skills/l3-dependency-choice/output.schema.json).
 
 - **In:** the `l1Kg` (stage 2), the `l2Assets` (every stage-4 [`l2-dak-authoring`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/l2-dak-authoring.md) pass's `artifacts`), stage 3's `l2Dependencies`, and any candidate IGs already known.
 - **Out:** `l3Dependencies` (`level: L3`), rows of the same `dependencyRow` whose `components` name canonicals, and `indexes`, the [`ig-artifact-ingestion`](ig-artifact-ingestion.md) index each row was read from, with its `sidecarApi` state. Stage 6 (fhir-harness `l3-fhir-authoring`) reads the adjudicated rows as `sushi-config.yaml` dependencies.

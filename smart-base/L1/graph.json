@@ -38,6 +38,15 @@
       "graphTypologies": [
         "tools"
       ]
+    },
+    {
+      "id": "l1-scripts",
+      "path": "scripts/",
+      "subgraph": true,
+      "description": "The code the L1 tools and skills run, with its tests (`*.test.ts`, `*.test.py`) and Gherkin (`*.feature`) beside it: the recommendation candidates and their run context (`l1-recommendation-candidates.ts`, `l1-run-context.ts`), the verbatim-transcription check (`l1-transcription-verbatim.ts`), the smart-kg recommendation extractor (`extract-smart-kg-l1.ts`), a DAK's Component 1 references (`extract-dak-l1-references.ts`), the `l1-library` specialisation and its L1-membership decision (`l1-specialise.ts`, `l1-membership.ts`), smart-kg's IRIs (`l1-kgid.ts`), and the indicator-sheet reader (`l1-indicator-sheets.py`). What the always-on `l1-extraction` viewer runs stays in the layer's always-on `scripts/`: `gen-l1-extraction-pages.ts` and the `l1-statement-lists.ts` it imports, because a layer that does not enable this sub-graph is not given this directory; and the `who-l1` candidate extractor stays in `scripts/extractors/`, the one place cat-harness-tools' `extract-candidates.py` looks for a layer's extractors.",
+      "graphTypologies": [
+        "code"
+      ]
     }
   ]
 }

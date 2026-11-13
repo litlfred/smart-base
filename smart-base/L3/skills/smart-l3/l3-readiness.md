@@ -9,8 +9,8 @@ description: >
   requested. Returns the answer, every finding with the stage that fixes it,
   and what was checked. Read before writing any FSH, CQL or other L3 file for
   a guideline or an adaptation.
-input: schemas/skills/l3-readiness/input.schema.json
-output: schemas/skills/l3-readiness/output.schema.json
+input: L3/schemas/skills/l3-readiness/input.schema.json
+output: L3/schemas/skills/l3-readiness/output.schema.json
 ---
 
 # l3-readiness
@@ -28,7 +28,7 @@ only the answer the gateway takes.
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/l3-readiness/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l3-readiness/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/l3-readiness/input.schema.json) and [`output.schema.json`](../../schemas/skills/l3-readiness/output.schema.json).
 
 - **In:** the `l1Kg` (stage 2), the `l2Assets` (every stage-4 [`l2-dak-authoring`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/l2-dak-authoring.md) pass's `artifacts`), the `reviews` requested so far, one per extraction or L2 asset, and `l3Planned`, the L3 artefacts stage 6 is about to write, each with its `sourceModel`.
 - **Out:** `ready`, which is the gateway's outcome; `findings`, each naming the asset, the problem and the stage that fixes it; `checked`, every asset looked at, so that no findings is a determined empty and not a skipped check.
