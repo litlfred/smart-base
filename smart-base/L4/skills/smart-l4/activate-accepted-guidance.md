@@ -6,8 +6,8 @@ description: >
   (intent plan or order) and joins the client's CarePlan; a declined action
   is not written. Input is the guidance and the decisions; output is the
   transaction Bundle saved.
-input: schemas/skills/activate-accepted-guidance/input.schema.json
-output: schemas/skills/activate-accepted-guidance/output.schema.json
+input: L4/schemas/skills/activate-accepted-guidance/input.schema.json
+output: L4/schemas/skills/activate-accepted-guidance/output.schema.json
 ---
 
 # Activate accepted guidance
@@ -22,8 +22,8 @@ worker accepted, exactly as accepted.
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/activate-accepted-guidance/input.schema.json)
-and [`output.schema.json`](../../../schemas/skills/activate-accepted-guidance/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/activate-accepted-guidance/input.schema.json)
+and [`output.schema.json`](../../schemas/skills/activate-accepted-guidance/output.schema.json).
 
 - **In:** the `guidance` ([`apply-decision-support`](apply-decision-support.md))
   and the `decisions` ([`review-decision-support-guidance`](review-decision-support-guidance.md)).

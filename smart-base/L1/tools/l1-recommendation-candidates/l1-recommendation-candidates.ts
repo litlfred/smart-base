@@ -12,7 +12,7 @@ export default toolFactory((t) =>
     description:
       "Find every normative sentence of an ingested `library/` entry (folio-assistant-core's `l1-coverage` markers), flag uncertain readings, and propose the publication's identity. Given an agent's `l1-recommendation-curation/v1`, refuse a non-verbatim statement or an unknown location, and write the recommendations and remarks as an L1 3.0 graph (checked with `L1/schemas/validate.ts`) with coverage and proposed, unsigned exclusions.",
     install: { none: true },
-    invoke: { shell: "bun run smart-base/scripts/l1-recommendation-candidates.ts --entry <library entry> [--curation <curation.yaml>] --out <dir> [--check]" },
+    invoke: { shell: "bun run smart-base/L1/scripts/l1-recommendation-candidates.ts --entry <library entry> [--curation <curation.yaml>] --out <dir> [--check]" },
     io: {
       inputs: [
         { name: "entry", schema: t("RepoPath"), required: true, description: "An ingested `library/<id>/` with page-tagged `sections/*.md` and `structure.json`." },

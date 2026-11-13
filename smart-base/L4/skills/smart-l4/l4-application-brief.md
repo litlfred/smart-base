@@ -8,8 +8,8 @@ description: >
   from. The agent offers options drawn from the L2 personas and processes,
   and never invents the application. Read before wireframing or building an
   L4 application on a guideline.
-input: schemas/skills/l4-application-brief/input.schema.json
-output: schemas/skills/l4-application-brief/output.schema.json
+input: L4/schemas/skills/l4-application-brief/input.schema.json
+output: L4/schemas/skills/l4-application-brief/output.schema.json
 ---
 
 # l4-application-brief
@@ -25,7 +25,7 @@ is in stage 0 ([`guideline-use-case`](../../../skills/content/authoring-who-smar
 
 ## Input and output
 
-The contract is [`input.schema.json`](../../../schemas/skills/l4-application-brief/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l4-application-brief/output.schema.json).
+The contract is [`input.schema.json`](../../schemas/skills/l4-application-brief/input.schema.json) and [`output.schema.json`](../../schemas/skills/l4-application-brief/output.schema.json).
 
 - **In:** what the requester said (`request`), the `useCase`, the stage-4 `l2Assets` the options are drawn from, and the stage-6 `ig` build.
 - **Out:** the `applicationBrief` (`topic`, `kind`, `users`, `devices`, `l2Processes`, `l3Resources`, `operations`, `connectivity`, `systems`); and the `wireframeRequest`, which is cat-harness `wireframe-design-review`'s input for design use, so stage 8a is called with it unchanged.

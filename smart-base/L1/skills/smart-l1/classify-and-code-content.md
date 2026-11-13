@@ -12,8 +12,8 @@ description: >
   local glossary candidates.
 uses-methodology:
   - terminology-coding
-input: schemas/skills/classify-and-code-content/input.schema.json
-output: schemas/skills/classify-and-code-content/output.schema.json
+input: L1/schemas/skills/classify-and-code-content/input.schema.json
+output: L1/schemas/skills/classify-and-code-content/output.schema.json
 ---
 
 # classify-and-code-content
@@ -35,8 +35,8 @@ the named reviewer lane judges and signs them.** The process has three lanes:
 
 ## Input and output
 
-- Input contract: [`input.schema.json`](../../../schemas/skills/classify-and-code-content/input.schema.json)
-- Output contract: [`output.schema.json`](../../../schemas/skills/classify-and-code-content/output.schema.json)
+- Input contract: [`input.schema.json`](../../schemas/skills/classify-and-code-content/input.schema.json)
+- Output contract: [`output.schema.json`](../../schemas/skills/classify-and-code-content/output.schema.json)
 
 ## Step 1 — Agent: classify and code slots with `terminology-lookup`
 

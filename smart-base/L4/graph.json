@@ -3,6 +3,15 @@
   "name": "L4",
   "directories": [
     {
+      "id": "l4-schemas",
+      "path": "schemas/",
+      "subgraph": true,
+      "description": "The L4 skills' input and output contracts, `skills/<skill>/{input,output}.schema.json`, beside the skills that name them (bean folio-assistant-kjea). Each skill's `input:`/`output:` front matter is the binding; the published IRI is keyed by skill, so moving here from the root `schemas/skills/` kept every address.",
+      "graphTypologies": [
+        "schemas"
+      ]
+    },
+    {
       "id": "l4-skills",
       "path": "skills/",
       "subgraph": true,
