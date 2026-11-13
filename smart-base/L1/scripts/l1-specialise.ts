@@ -38,20 +38,20 @@
  * record. A document that is not L1 gets no graph and the run says why; an
  * undetermined one gets no graph and the run says what to record.
  *
- *   bun run smart-base/scripts/l1-specialise.ts --entry <library entry> [--uploads <dir>] [--check] [--validate-zod <smart-base checkout>]
+ *   bun run smart-base/L1/scripts/l1-specialise.ts --entry <library entry> [--uploads <dir>] [--check] [--validate-zod <smart-base checkout>]
  *
  * Exit: 0 written, current, or not L1; 1 stale or invalid; 2 usage, unreadable, or undetermined.
  *
- * @module smart-base/scripts/l1-specialise
+ * @module smart-base/L1/scripts/l1-specialise
  * @covers library
  */
 import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, relative, resolve } from "node:path";
 
-import { requireHarnessRoot } from "../../cat-harness-tools/schemas/harness-root.ts";
-import { instanceNamespaceOf } from "../../cat-harness-tools/schemas/kg/namespaces.ts";
-import { DublinCoreRecordSchema, handleFromUrl, ownDeclaredDirectories, readStructure, STRUCTURE_FILENAME, type DublinCoreRecord } from "../platform/index.js";
+import { requireHarnessRoot } from "../../../cat-harness-tools/schemas/harness-root.ts";
+import { instanceNamespaceOf } from "../../../cat-harness-tools/schemas/kg/namespaces.ts";
+import { DublinCoreRecordSchema, handleFromUrl, ownDeclaredDirectories, readStructure, STRUCTURE_FILENAME, type DublinCoreRecord } from "../../platform/index.js";
 import { L1_LIBRARY_CONTEXT, L1_V3_ONTOLOGY_VERSION, publicationElementId, publicationId, sectionId, sha256, slug, type Identifier } from "./l1-kgid.ts";
 import { decideL1, type IntakeRecord, type L1Decision } from "./l1-membership.ts";
 
