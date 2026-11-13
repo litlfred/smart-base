@@ -69,9 +69,6 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-scripts`, hold
 | [`terminology-lookup.feature`](terminology-lookup.feature) | a file |  |
 | [`terminology-lookup.test.ts`](terminology-lookup.test.ts) | a file |  |
 | [`terminology-lookup.ts`](terminology-lookup.ts) | a file |  |
-| [`visio-svg-bpmn.feature`](visio-svg-bpmn.feature) | a file |  |
-| [`visio-svg-bpmn.test.ts`](visio-svg-bpmn.test.ts) | a file |  |
-| [`visio-svg-bpmn.ts`](visio-svg-bpmn.ts) | a file |  |
 | [`who-smart-content-types.feature`](who-smart-content-types.feature) | a file |  |
 | [`who-smart-content-types.test.ts`](who-smart-content-types.test.ts) | a file |  |
 | [`extractors/`](extractors/) | _nothing declares what this holds_ | |

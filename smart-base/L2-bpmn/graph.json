@@ -20,6 +20,15 @@
       "graphTypologies": [
         "tools"
       ]
+    },
+    {
+      "id": "l2-bpmn-scripts",
+      "path": "scripts/",
+      "subgraph": true,
+      "description": "The code that writes a DAK's BPMN, with its tests: `visio-svg-bpmn.ts`, which turns a DAK's Visio business-process figures (SVG) into BPMN with one lane per persona. Scripts that L1 code, an always-on piece or a platform layer also reaches stay in `../../scripts/`, because this subgraph is opt-in.",
+      "graphTypologies": [
+        "code"
+      ]
     }
   ]
 }
