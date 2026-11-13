@@ -15,7 +15,7 @@ output: L4/schemas/skills/l4-application-build/output.schema.json
 > Skill id: `l4-application-build` · Package: `authoring-who-smart-guidelines` ·
 > Stage 8b of [`smart-guideline-end-to-end`](../../../skills/content/authoring-who-smart-guidelines/smart-guideline-end-to-end.md),
 > task `Task_BuildApp` of
-> [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn).
+> `smart-guideline-end-to-end.bpmn` (opt-in `smart-base.collab`).
 > Adjudicated by the business analyst and the clinical SME (does it do what
 > the L2 says?) and the FHIR modeller (does it conform to L3?).
 

@@ -29,6 +29,7 @@
     "smart-base:dak-pre-export": "bash smart-base/scripts/dak-pre-export.sh",
     "check:web-annexes": "bun run smart-base/scripts/check-web-annexes.ts",
     "check:ig-citations": "bun run smart-base/scripts/check-ig-citations.ts",
+    "check:test-gherkin:smart-base": "bun run cat-harness-tools/scripts/check-test-gherkin.ts --root . --under smart-base",
     "check:dak-annexes": "bun run smart-base/scripts/check-web-annexes.ts",
     "smart-base:terminology-lookup": "bun run smart-base/scripts/terminology-lookup.ts"
   }

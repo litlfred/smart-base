@@ -22,12 +22,17 @@
       ]
     },
     {
-      "id": "l2-processes",
-      "path": "processes/",
-      "subgraph": true,
-      "description": "The executable L2 processes: L2 DAK authoring, one component's edit and review, and DTH authoring.",
+      "id": "L2-collab",
+      "path": "collab/",
+      "optIn": true,
+      "requires": [
+        "cat-harness.sdlc",
+        "smart-base.smart-base-L2",
+        "smart-base.smart-base-L1"
+      ],
+      "description": "The collaborative-development group of L2, OPT-IN inside the opt-in `L2/` and requiring `cat-harness.sdlc`, `L2/` itself and the level below it, whose skills its processes call (owner, 2026-11-13: L2/L3 own collab): the L2 processes that run on the work plan and the delivery process. Only this group requires sdlc; L2's schemas, skills and tools do not. A layer switches it on with `smart-base.L2-collab` in its `enableSubgraphs`.",
       "graphTypologies": [
-        "processes"
+        "cat-harness"
       ]
     },
     {

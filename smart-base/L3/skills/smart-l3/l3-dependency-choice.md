@@ -16,7 +16,7 @@ output: L3/schemas/skills/l3-dependency-choice/output.schema.json
 > Skill id: `l3-dependency-choice` · Package: `authoring-who-smart-guidelines` ·
 > Stage 5 of [`smart-guideline-end-to-end`](../../../skills/content/authoring-who-smart-guidelines/smart-guideline-end-to-end.md),
 > task `Task_DepsL3` of
-> [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn).
+> `smart-guideline-end-to-end.bpmn` (opt-in `smart-base.collab`).
 > Adjudicated by the FHIR modeller and the terminologist.
 
 The L3 half of [`l2-dependency-choice`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/l2-dependency-choice.md): the same

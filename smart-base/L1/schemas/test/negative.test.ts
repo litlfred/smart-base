@@ -546,8 +546,10 @@ const cases: Case[] = [
   ["the L3 index conforms, and cites L1 across documents", L3, null, null],
 ];
 
+// Looped-test convention `id[${key}]` (owner, 2026-11-06): a fixed id, so one Scenario's
+// `@test:` tag names every case; the case's own name is the key.
 for (const [name, base, mutate, expect] of cases) {
-  test(name, () => {
+  test(`negativeCase[${name}]`, () => {
     const d = clone(base);
     if (mutate) mutate(d);
     assert.equal(layerOf(d), layerOf(base));

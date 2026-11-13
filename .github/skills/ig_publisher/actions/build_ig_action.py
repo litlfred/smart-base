@@ -1,9 +1,9 @@
 """
 IG Publisher build action — runs the full IG Publisher build.
 
-After a successful build, automatically runs ELM binary extraction
-to replace large base64-encoded ELM payloads in Library resources
-with standalone files and interactive viewers.
+ELM binary extraction is not run here: fhir-harness owns the ELM
+strippers (scripts/library-strip/), and ghbuild.yml runs
+input/scripts/strip_library_binaries.py after the IG Publisher.
 
 Environment variables:
     GITHUB_TOKEN  — GitHub API token
@@ -22,19 +22,6 @@ if str(_SKILLS_ROOT) not in sys.path:
 from common.ig_publisher_iface import run_ig_publisher
 
 
-def _run_post_build(ig_root: str) -> None:
-    """Run post-build processing steps."""
-    from ig_publisher.actions.strip_elm_action import main as strip_elm
-
-    print("\n📦 Post-build: extracting ELM binary data...")
-    try:
-        strip_elm()
-    except SystemExit:
-        # strip_elm calls sys.exit(1) on missing output dir — not fatal
-        # since the build itself succeeded.
-        pass
-
-
 def main() -> None:
     ig_root = os.environ.get("DAK_IG_ROOT", ".")
     tx_server = os.environ.get("DAK_TX_SERVER", "")
@@ -51,9 +38,6 @@ def main() -> None:
         sys.exit(1)
 
     print("✅ IG Publisher build completed successfully.")
-
-    # Post-build: extract ELM binaries from Library resources.
-    _run_post_build(ig_root)
 
 
 if __name__ == "__main__":

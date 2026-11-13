@@ -18,6 +18,7 @@ Part of [SMART Base](../README.md) 0.1.0, declared as `smart-base-schemas`, hold
 | [`dak-annexes.feature`](dak-annexes.feature) | a file |  |
 | [`dak-annexes.test.ts`](dak-annexes.test.ts) | a file |  |
 | [`dak-annexes.ts`](dak-annexes.ts) | a file |  |
+| [`dak-block-fields.feature`](dak-block-fields.feature) | a file |  |
 | [`dak-block-fields.test.ts`](dak-block-fields.test.ts) | a file |  |
 | [`dak-blocks.feature`](dak-blocks.feature) | a file |  |
 | [`dak-blocks.test.ts`](dak-blocks.test.ts) | a file |  |

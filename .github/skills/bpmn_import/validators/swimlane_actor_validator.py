@@ -9,7 +9,14 @@ import os
 from typing import List
 from lxml import etree
 
-from common.safe_xml import safe_xml_parser
+import sys
+from pathlib import Path
+
+# safe_xml has one copy, the IG build's in input/scripts/.
+_INPUT_SCRIPTS = str(Path(__file__).resolve().parents[4] / "input" / "scripts")
+if _INPUT_SCRIPTS not in sys.path:
+    sys.path.insert(0, _INPUT_SCRIPTS)
+from safe_xml import safe_xml_parser  # noqa: E402
 from common.ig_errors import Issue, error, warning, info
 from common.fsh_utils import instance_exists
 
