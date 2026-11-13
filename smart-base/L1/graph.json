@@ -1,5 +1,5 @@
 {
-  "_comment": "The graphs inside smart-base's `L1` named subgraph, declared FROM WITHIN on the pattern of cat-harness's `library/graph.json` and `openapi/graph.json`: the `smart-base-l1` entry of `smart-base.json` names this directory, and this node names what it holds. Each entry is `subgraph: true`, a directory of the LAYER listed by `resolveDirectories` with `within: \"smart-base-l1\"`. Paths are relative to THIS directory. Owner, 2026-11-13: 'L1..L3 as named subgraphs', 'Capitalize L', and 'Organize tools, skills, processes the same way' (issue #359). Declare only what exists.",
+  "_comment": "The graphs inside smart-base's `L1` named subgraph, declared FROM WITHIN on the pattern of cat-harness's `library/graph.json` and `openapi/graph.json`: the `smart-base-L1` entry of `smart-base.json` names this directory, and this node names what it holds. Each entry is `subgraph: true`, a directory of the LAYER listed by `resolveDirectories` with `within: \"smart-base-L1\"`. Paths are relative to THIS directory. Owner, 2026-11-13: 'L1..L3 as named subgraphs', 'Capitalize L', and 'Organize tools, skills, processes the same way' (issue #359). Declare only what exists.",
   "name": "L1",
   "directories": [
     {

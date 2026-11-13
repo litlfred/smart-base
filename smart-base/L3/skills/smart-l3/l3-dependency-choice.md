@@ -19,7 +19,7 @@ output: schemas/skills/l3-dependency-choice/output.schema.json
 > [`smart-guideline-end-to-end.bpmn`](../../../processes/content/smart-guideline-end-to-end.bpmn).
 > Adjudicated by the FHIR modeller and the terminologist.
 
-The L3 half of [`l2-dependency-choice`](../../../L2/skills/smart-l2/l2-dependency-choice.md): the same
+The L3 half of [`l2-dependency-choice`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/l2-dependency-choice.md): the same
 decision row, reuse-first precedence, `decision-comparison` table and
 `DecisionRequest`, with IGs as candidates and an IG index as evidence.
 
@@ -27,7 +27,7 @@ decision row, reuse-first precedence, `decision-comparison` table and
 
 The contract is [`input.schema.json`](../../../schemas/skills/l3-dependency-choice/input.schema.json) and [`output.schema.json`](../../../schemas/skills/l3-dependency-choice/output.schema.json).
 
-- **In:** the `l1Kg` (stage 2), the `l2Assets` (every stage-4 [`l2-dak-authoring`](../../../L2/skills/smart-l2/l2-dak-authoring.md) pass's `artifacts`), stage 3's `l2Dependencies`, and any candidate IGs already known.
+- **In:** the `l1Kg` (stage 2), the `l2Assets` (every stage-4 [`l2-dak-authoring`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/l2-dak-authoring.md) pass's `artifacts`), stage 3's `l2Dependencies`, and any candidate IGs already known.
 - **Out:** `l3Dependencies` (`level: L3`), rows of the same `dependencyRow` whose `components` name canonicals, and `indexes`, the [`ig-artifact-ingestion`](ig-artifact-ingestion.md) index each row was read from, with its `sidecarApi` state. Stage 6 (fhir-harness `l3-fhir-authoring`) reads the adjudicated rows as `sushi-config.yaml` dependencies.
 
 ## Steps
@@ -45,4 +45,4 @@ The contract is [`input.schema.json`](../../../schemas/skills/l3-dependency-choi
    how the candidate builds and tests its CQL and examples, found by the
    search in [`smart-base-tools`](../../../skills/content/authoring-who-smart-guidelines/smart-base-tools.md) §*Adapting a DAK*.
 4. **Decide, table, ask and go on**, exactly as
-   [`l2-dependency-choice`](../../../L2/skills/smart-l2/l2-dependency-choice.md) steps 2–4.
+   [`l2-dependency-choice`](https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/l2-dependency-choice.md) steps 2–4.
