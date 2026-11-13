@@ -28,6 +28,7 @@ import { fshFiles, GENERATED_BANNER } from "./fsh.ts";
 import { GraphDocumentSchema } from "./graph.ts";
 import { L1 } from "./l1.ts";
 import { DOCO_NS, ELEMENT_TYPE_CLASS, L1_LIBRARY, LAYERING_RULE, SPECIALISES } from "./l1-library.ts";
+import { allCypher, allTurtle, buildCypher, buildTurtle } from "./exports.ts";
 import { HELD, scopeList } from "./layers.ts";
 import { toOntologyJson, type LayerSpec } from "./ontology.ts";
 import { SHAPE_ID, SHAPE_TITLE } from "./shape-text.ts";
@@ -104,6 +105,23 @@ export function classCodeList(key: string, spec: LayerSpec, file: string): Recor
   };
 }
 
+/** `<layer>.ttl` and `<layer>.cypher` beside each layer's JSON; `all.ttl` and `all.cypher` here, in L1. */
+export function exportArtefacts(): { path: string; text: string }[] {
+  const layers = HELD.filter((h) => h.key !== "l1-library");
+  const per = layers.map((h) => {
+    const x = { own: h.spec, scope: scopeList(h.key) };
+    return { key: h.key, dir: h.dir, ttl: buildTurtle(x), cypher: buildCypher(x) };
+  });
+  return [
+    ...per.flatMap((l) => [
+      { path: `${l.dir}/generated/${l.key}.ttl`, text: l.ttl },
+      { path: `${l.dir}/generated/${l.key}.cypher`, text: l.cypher },
+    ]),
+    { path: "smart-base/L1/schemas/generated/all.ttl", text: allTurtle(per.map((l) => ({ key: l.key, text: l.ttl }))) },
+    { path: "smart-base/L1/schemas/generated/all.cypher", text: allCypher(per.map((l) => ({ key: l.key, text: l.cypher }))) },
+  ];
+}
+
 export function artefacts(): { path: string; text: string }[] {
   const json = (v: unknown) => `${JSON.stringify(v, null, 2)}\n`;
   const declared = (v: object) => json({ _generated: GENERATED_NOTE, ...v });
@@ -116,6 +134,8 @@ export function artefacts(): { path: string; text: string }[] {
     { path: "smart-base/L1/schemas/generated/l1-library.context.jsonld", text: json(extensionContext([L1_LIBRARY, L1])) },
     ...fshFiles(L1, "smart-base/L1/schemas/l1.ts (L1 3.0)"),
     ...fshFiles(L1_LIBRARY, "smart-base/L1/schemas/l1-library.ts (the library extension)"),
+    // Turtle and Cypher of each layer's type graph (smart-kg build-exports), and every layer merged.
+    ...exportArtefacts(),
     // The class lists document kinds check `modelledBy` against, one per layer (not the l1-library extension).
     ...HELD.filter((h) => h.key !== "l1-library").map((h) => ({ path: `smart-base/code-lists/sgkg-${h.key}-classes.json`, text: json(classCodeList(h.key, h.spec, h.file)) })),
     // The layers above L1, each in its own named subgraph (L2/, L2-bpmn/, L2-dmn/, L3/), found from their declarations.
