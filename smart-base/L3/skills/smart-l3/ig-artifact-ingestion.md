@@ -46,10 +46,11 @@ publish:
 | `sidecars/` | — | the IG API sidecars a layer above writes (`ig-site:sidecars`), bound to the artefacts |
 | `contexts/` | — | each `.jsonld` under `input/images/` whose only key is `@context` |
 
-`ig-identity.json` (`folio-ig-identity/v1`: id, canonical, version,
-**status**, read from `sushi-config.yaml`) sits beside them when present. An
-IG with no identity file has no status this pipeline can state and draws no
-watermark; that is not "published".
+The IG's **status** sits in `index.json` beside its version, from its own
+ImplementationGuide. An index that records none has no status this pipeline
+can state and draws no watermark; that is not "published". (A separate
+`ig-identity.json` once held it and drifted from the IG's sushi-config; it was
+excised on 2026-11-14.)
 
 Each document has a **different source**, so each carries its own
 provenance. Folding two together would give one file two answers to "where

@@ -116,10 +116,6 @@ export {
   typesForKind,
 } from "../../cat-harness-tools/schemas/kg/jsonld.js";
 export {
-  IgIdentitySchema,
-  readIgIdentity,
-} from "../../fhir-harness/schemas/ig-identity.js";
-export {
   igSiteData,
 } from "../../fhir-harness/scripts/ig-site-data.js";
 export {
