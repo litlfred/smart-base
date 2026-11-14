@@ -31,6 +31,7 @@ export {
   repoRootFor,
 } from "../../cat-harness-tools/schemas/kg/cat-harness.js";
 export { isBuiltAtPublish } from "../../cat-harness-tools/schemas/kg/built-at-publish.js";
+export { overlayPath } from "../../cat-harness-tools/scripts/lib/layer-output.js";
 export {
   ContentTypeConflictError,
   describeRepository,
