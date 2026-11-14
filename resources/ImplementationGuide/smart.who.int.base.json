@@ -14,7 +14,7 @@
   "title" : "SMART Base",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-11-13T23:03:49+00:00",
+  "date" : "2026-11-14T07:16:22+00:00",
   "publisher" : "WHO",
   "contact" : [{
     "name" : "WHO",
@@ -2558,7 +2558,7 @@
         "reference" : "CodeSystem/KGArtifactKind"
       },
       "name" : "Knowledge graph L2: artifact kind",
-      "description" : "What kind of file an external artefact is. Moved with the class from L1, where it was free text. Source: smart-kg ontology/l2/l2.json valueSets \"artifact-kind\"; Files observed in smart-base and smart-immunizations.",
+      "description" : "What kind of file an external artefact is. Moved with the class from L1, where it was free text. Source: smart-kg ontology/l2/l2.json valueSets \"artifact-kind\"; Files observed in smart-base and in WHO's immunizations DAK (canonical http://smart.who.int/immunizations).",
       "exampleBoolean" : false
     },
     {
