@@ -78,7 +78,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 
 import { handleFromUrl, readStructure } from "../../platform/index.js";
-import { readIgDakMetadata } from "../../L3/scripts/ig-dak-metadata.ts";
+import { readIgDakMetadata } from "../../scripts/l1-scenario-vocabulary.ts";
 import { isCurrent, readEntry, serialise, type LibraryEntry as BaseEntry } from "./extract-smart-kg-l1.ts";
 import { artifactId, citationId, dakNamespace, L1_LIBRARY_CONTEXT, L1_V3_ONTOLOGY_VERSION, publicationId, referenceEntryId, sha256 } from "./l1-kgid.ts";
 import { checkClassification, decideL1, LAYER_SCHEME, type IntakeClassification } from "./l1-membership.ts";

@@ -48,8 +48,56 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, join, relative, resolve } from "node:path";
 import { z } from "zod";
 
-import { readIgDakMetadata } from "../L3/scripts/ig-dak-metadata.ts";
-import { dakNamespace, slug } from "../L1/scripts/l1-kgid.ts";
+const isObject = (v: unknown): v is Record<string, unknown> =>
+  v !== null && typeof v === "object" && !Array.isArray(v);
+
+/**
+ * Read an IG checkout's DAK metadata (`index.config.json#contentTypes.dak`
+ * first, falling back to legacy `dak.json`). Kept in always-on `scripts/` so
+ * `l1-scenario-vocabulary.ts` and `L1/scripts/extract-dak-l1-references.ts`
+ * never import into the opt-in `L3/` subgraph.
+ */
+export function readIgDakMetadata(igRoot: string): { data: Record<string, unknown>; from: string } | undefined {
+  const index = join(igRoot, "index.config.json");
+  if (existsSync(index)) {
+    const raw = JSON.parse(readFileSync(index, "utf-8")) as unknown;
+    const section = isObject(raw) && isObject(raw.contentTypes) ? raw.contentTypes.dak : undefined;
+    if (section !== undefined) {
+      if (!isObject(section)) throw new Error(`${index}: contentTypes.dak must be an object`);
+      return { data: section, from: "index.config.json#contentTypes.dak" };
+    }
+  }
+  const legacy = join(igRoot, "dak.json");
+  if (existsSync(legacy)) {
+    const raw = JSON.parse(readFileSync(legacy, "utf-8")) as unknown;
+    if (!isObject(raw)) throw new Error(`${legacy} must be a JSON object`);
+    return { data: raw, from: "dak.json" };
+  }
+  return undefined;
+}
+
+/**
+ * Kept in the always-on `scripts/` (and re-exported by `L1/scripts/l1-kgid.ts`)
+ * so `l1-scenario-vocabulary.ts`, `l1-recommendation-scenarios.ts` and
+ * `terminology-lookup.ts` never import into the opt-in `L1/` subgraph, which is
+ * omitted when a downstream mounts `smart-base` without `smart-base.smart-base-L1`.
+ */
+export const slug = (s: unknown): string =>
+  String(s)
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+/** The DAK namespace a file belongs to: trailing format segment dropped, smart.who.int on https. */
+export const dakNamespace = (raw: unknown): string =>
+  String(raw ?? "urn:unknown")
+    .replace(/\/$/, "")
+    .replace(/\/(bpmn|dmn|cql|fsh)$/i, "")
+    .replace(/^http:\/\/(smart\.who\.int\b)/, "https://$1");
+
+export const L1_NAMESPACE = "https://smart.who.int/kg/l1";
 
 export const VOCABULARY_SCHEMA_TAG = "l1-scenario-vocabulary/v1" as const;
 
