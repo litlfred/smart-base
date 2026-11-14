@@ -38,3 +38,20 @@ Feature: L1 statement lists
     When its lists are built
     Then there are no problems
     And the lists are "src.recommendations.json" and "<directory>-scenario-candidates.scenarios.json"
+
+  @test:smart-base/scripts/l1-statement-lists.test.ts::list_names::name_a_candidates/<source>/_graph_after_its_source,_and_a_<x>/candidates/_graph_after_<x>
+  Scenario: a scenario list is named after its source or its parent directory
+    When the list name of uganda/candidates/unepi-deck/scenario-candidates.l2.json is asked for
+    Then it is unepi-deck
+    When the list name of measles/candidates/scenario-candidates.l2.json is asked for
+    Then it is measles-scenario-candidates
+    When the list name of x/graph.l2.json is asked for
+    Then it is graph
+
+  @test:smart-base/scripts/l1-statement-lists.test.ts::list_names::keep_two_sources'_scenario_lists_apart_(the_Uganda_layout),_and_refuse_a_name_two_inputs_share
+  Scenario: two sources' scenario lists are kept apart, and a shared name is refused
+    Given L1 files poster.l1.yaml and deck.l1.yaml, each with a candidates/<source>/scenario-candidates.l2.json
+    When the statement lists are built
+    Then there are no problems, and poster.scenarios.json and deck.scenarios.json each cite their own library source
+    When a second graph under more/candidates/deck/ would also be named deck.scenarios.json
+    Then a problem naming deck.scenarios.json is reported, instead of the first list being overwritten
