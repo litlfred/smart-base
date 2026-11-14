@@ -16,29 +16,15 @@
  * @module smart-base/L1/scripts/l1-kgid
  */
 import { createHash } from "node:crypto";
+import { dakNamespace, L1_NAMESPACE, slug } from "../../scripts/l1-scenario-vocabulary.ts";
 
 export const sha256 = (b: string | Buffer): string => createHash("sha256").update(b).digest("hex");
 export const shortHash = (s: string): string => sha256(Buffer.from(s)).slice(0, 12);
 
-export const slug = (s: unknown): string =>
-  String(s)
-    .normalize("NFKD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-
-/** The DAK namespace a file belongs to: trailing format segment dropped, smart.who.int on https. */
-export const dakNamespace = (raw: unknown): string =>
-  String(raw ?? "urn:unknown")
-    .replace(/\/$/, "")
-    .replace(/\/(bpmn|dmn|cql|fsh)$/i, "")
-    .replace(/^http:\/\/(smart\.who\.int\b)/, "https://$1");
+export { dakNamespace, L1_NAMESPACE, slug };
 
 /** A file a DAK ships. */
 export const artifactId = (ns: string, fileId: string): string => `${ns}/artifact/${fileId}`;
-
-export const L1_NAMESPACE = "https://smart.who.int/kg/l1";
 
 const IRI_IDENTIFIERS = ["isbn", "iris-handle", "doi", "issn", "url"] as const;
 

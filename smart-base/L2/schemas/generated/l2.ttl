@@ -106,7 +106,7 @@ sgkg:ExternalArtefact a owl:Class ;
 
 <http://smart.who.int/kg/valueset/artifact-kind> a skos:ConceptScheme ;
   skos:notation "artifact-kind" ;
-  skos:note "source: Files observed in smart-base and smart-immunizations" ;
+  skos:note "source: Files observed in smart-base and https://github.com/WorldHealthOrganization/smart-immunizations" ;
   skos:note "bound to: external-artifact.targetKind" ;
   rdfs:comment "What kind of file an external artefact is. Moved with the class from L1, where it was free text." .
 <http://smart.who.int/kg/valueset/artifact-kind#dmn> a skos:Concept ; skos:inScheme <http://smart.who.int/kg/valueset/artifact-kind> ; skos:notation "dmn" ; skos:definition "A DMN decision table." .

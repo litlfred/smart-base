@@ -12,6 +12,8 @@
   "_title_comment": "The HUMAN display name, for the LHS navbar's harness tabs. `name` stays the machine identifier that filenames, `needs` edges and `declaredBy` resolve against; `title` is what a reader sees and nothing resolves against it. Bean `t3n8`.",
   "title": "SMART Base",
   "description": "The WHO SMART Guidelines base layer — the ingested WHO digital-health corpus, the methodologies read out of it, and the editorial voices derived from it.",
+  "_skillPrefix_comment": "Skills from this layer install as smartbase-<name> (cat-harness-tools' install-skills, bean x4mt; owner ruling 2026-10-11: each harness has its own prefix, e.g. cat, fa). Without one, `install-skills --root smart-base` skipped every smart-base skill and installed only cat- and fa- ones (bean folio-assistant-dtda). Lowercase letters and digits only: the schema refuses a hyphen.",
+  "skillPrefix": "smartbase",
   "avatar": {
     "glyph": "M3 18h18M6 14h12M9 10h6M11 6h2",
     "tone": 199,

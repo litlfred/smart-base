@@ -28,7 +28,7 @@ permissions:
 
 jobs:
   release:
-    uses: litlfred/fhir-harness/.github/workflows/ig-release.yml@5627fcb1f3f8e40824ecfd370dae4a23af1b8839 # index.lock.json
+    uses: litlfred/fhir-harness/.github/workflows/ig-release.yml@9c04b6fa237c2ab5f6217ffcb42c760f3783b2f3 # index.lock.json
     with:
       tag: ${{ inputs.tag || github.ref_name }}
       # The same overlay and template as ig-ast-refresh.yml: a release is a
