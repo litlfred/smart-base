@@ -28,7 +28,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/fhir-harness",
-          "ref": "c25c0d92363c8d5c84334335de4636777f6b9d39",
+          "ref": "9c04b6fa237c2ab5f6217ffcb42c760f3783b2f3",
           "overrides": {
             "fhir-harness": {
               "whole": true
@@ -37,14 +37,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-13",
-              "ref": "c25c0d92363c8d5c84334335de4636777f6b9d39",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "on": "2026-11-14",
+              "ref": "9c04b6fa237c2ab5f6217ffcb42c760f3783b2f3",
+              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
             },
             "standing": {
               "follows": "main",
@@ -62,7 +57,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/who-iris",
-          "ref": "00200f9832645a0d942c19e12593d751bfbede6e",
+          "ref": "3be9ddb3a2ffb9ddafd4aaabe32829469a82416f",
           "overrides": {
             "who-iris": {
               "whole": true
@@ -86,14 +81,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-13",
-              "ref": "00200f9832645a0d942c19e12593d751bfbede6e",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "on": "2026-11-14",
+              "ref": "3be9ddb3a2ffb9ddafd4aaabe32829469a82416f",
+              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
             },
             "standing": {
               "follows": "main",
@@ -111,7 +101,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "ef03802d63519a11b1fa59cc3c192f4152494f47",
+          "ref": "9d2388dba8d4fe4727b40067470fa5c543c7166c",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -126,14 +116,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-13",
-              "ref": "ef03802d63519a11b1fa59cc3c192f4152494f47",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "on": "2026-11-14",
+              "ref": "9d2388dba8d4fe4727b40067470fa5c543c7166c",
+              "evidence": "owner litlfred, 2026-11-14 ~05:50Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'A. Renew 6h + re-pin' (every layer at main); merge-guard caller needs tools >= #2118"
             },
             "standing": {
               "follows": "main",
@@ -151,7 +136,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "21c29a7e3a2192baa47ee957430b8d4d76e6f7a9",
+          "ref": "18370a525f163e994ef8823d0266e47df8bc0a1e",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -166,14 +151,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-13",
-              "ref": "21c29a7e3a2192baa47ee957430b8d4d76e6f7a9",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "on": "2026-11-14",
+              "ref": "18370a525f163e994ef8823d0266e47df8bc0a1e",
+              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
             },
             "standing": {
               "follows": "main",
@@ -191,7 +171,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "c55f2f2b1755e2e7ec12fcaa56f72dfcc5d65283",
+          "ref": "b31b1104cdfa9c352f7e7f515f8367d6afef0f2e",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -203,14 +183,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-13",
-              "ref": "c55f2f2b1755e2e7ec12fcaa56f72dfcc5d65283",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "on": "2026-11-14",
+              "ref": "b31b1104cdfa9c352f7e7f515f8367d6afef0f2e",
+              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
             },
             "standing": {
               "follows": "main",
@@ -262,7 +237,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap-tools",
-          "ref": "814ad01035431dc322d08b6726824fc9c233d5a1",
+          "ref": "b653e0577a1649969319196ec738353fe2068793",
           "overrides": {
             "bootstrap-tools": {
               "whole": true
@@ -274,14 +249,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-13",
-              "ref": "814ad01035431dc322d08b6726824fc9c233d5a1",
-              "evidence": "standing consent by litlfred given 2026-11-12: follow `main` (green commits only) — litlfred, 2026-11-12: Q-BIBNAV-2 B (standing re-pin so platform fixes reach the site by themselves) and Q-CONSENT-1 A; owner chose 'Keep, add standing now' for smart-base#354. Written by the coordinator session https://claude.ai/code/session_01EucfRpkvK7d4FJyuqypQzm.",
-              "standing": {
-                "follows": "main",
-                "consentAt": "2026-11-12",
-                "require": "green"
-              }
+              "on": "2026-11-14",
+              "ref": "b653e0577a1649969319196ec738353fe2068793",
+              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
             },
             "standing": {
               "follows": "main",
