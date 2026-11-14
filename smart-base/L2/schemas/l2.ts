@@ -24,7 +24,7 @@ export const L2_VALUE_SETS: ValueSet[] = [
   {
     "id": "artifact-kind",
     "note": "What kind of file an external artefact is. Moved with the class from L1, where it was free text.",
-    "source": "Files observed in smart-base and https://github.com/WorldHealthOrganization/smart-immunizations",
+    "source": "Files observed in smart-base and in WHO's immunizations DAK (canonical http://smart.who.int/immunizations)",
     "codes": [
       {
         "code": "dmn",
