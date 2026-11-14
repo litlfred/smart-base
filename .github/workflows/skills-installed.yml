@@ -7,7 +7,7 @@
 # either tree differs from what an install would write: a skill source edited
 # without regenerating, a re-pin that changes a mounted layer's skills, or a
 # hand edit to a generated copy. Regenerate with the same command without
-# `--check` (see `.github/skills/README.md`).
+# `--check` (see `input/scripts/ig_skills/README.md`).
 #
 # Not a gate in cat-harness-tools' layer-pr-checks.yml: that workflow judges
 # this repository in layer mode, with only `smart-base/` mounted into the
