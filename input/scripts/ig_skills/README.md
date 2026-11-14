@@ -4,26 +4,18 @@ What is left here is pending migration into the smart-base knowledge graph
 (`smart-base/`), and nothing in this repository runs it: no workflow, no
 build step and no container calls these scripts. Do not add to it.
 
-**Two things share this directory.** Every `<prefix>-<name>/` directory here
-(`cat-`, `fa-`, `smartbase-`) is GENERATED: it is GitHub Copilot's copy of a
-harness skill, written by cat-harness-tools' `install-skills.ts --host copilot`
-from the skill's source in its layer, and carries the "installed by" marker.
-`.claude/skills/` holds the same set for Claude Code (`--host claude`). Never
-edit a generated copy: edit the source the `<!-- source: -->` line names, then
-regenerate from the repository root with
+These four directories used to sit in `.github/skills/`, beside the
+generated Copilot skills. They moved here because `skills-installed.yml`'s
+`--check` fails on any file in a host skills directory that the installer did
+not write (bean folio-assistant-dtda). `.github/skills/` and `.claude/skills/`
+now hold only generated `<prefix>-<name>/` copies of harness skills: never edit
+one, edit the source its `<!-- source: -->` line names, then regenerate from
+the repository root with
 
 ```sh
-bun run cat-harness-tools/scripts/install-skills.ts --root smart-base --into . --host copilot
-bun run cat-harness-tools/scripts/install-skills.ts --root smart-base --into . --host claude
+bun run cat skills:install --root smart-base --into . --host copilot
+bun run cat skills:install --root smart-base --into . --host claude
 ```
-
-`skills-installed.yml` runs both with `--check` on every pull request. The
-re-run removes only directories that carry the marker, so the hand-written
-directories below (underscored names, no `SKILL.md`) are never touched, and
-no generated name can collide with them. smart-base's own skills take the
-`smartbase` prefix its declaration (`smart-base/smart-base.json`
-`skillPrefix`) gives; a mounted layer that declares none (fhir-harness,
-bootstrap, who-iris) takes it too.
 
 | Directory | What it holds | Expected to move under |
 |---|---|---|
@@ -35,7 +27,7 @@ bootstrap, who-iris) takes it too.
 Notes for anyone running a script by hand before it moves:
 
 - The scripts import each other from this directory, so run them with
-  `.github/skills/` on `PYTHONPATH`.
+  `input/scripts/ig_skills/` on `PYTHONPATH`.
 - BPMN is checked by smart-base's `bpmn-validate` Tool
   (`smart-base/L2-bpmn/tools/bpmn-validate/`), which `validate_dak_action.py`
   runs; there is no Python BPMN validator here.
