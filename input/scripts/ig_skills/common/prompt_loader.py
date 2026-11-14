@@ -47,11 +47,11 @@ def load_prompt(skill_name: str, prompt_name: str, **variables: Any) -> str:
 
     The file is resolved as::
 
-        .github/skills/<skill_name>/prompts/<prompt_name>.md
+        input/scripts/ig_skills/<skill_name>/prompts/<prompt_name>.md
 
     Falls back to::
 
-        .github/skills/common/prompts/<prompt_name>.md
+        input/scripts/ig_skills/common/prompts/<prompt_name>.md
 
     Args:
         skill_name: Skill directory name (e.g. ``"dak_authoring"``).
