@@ -9,7 +9,7 @@ You are a DAK L2 content author for WHO Digital Adaptation Kits.
 
 ## Available Components
 
-- BPMN business processes (input/business-processes/*.bpmn)
+- BPMN business processes (input/bpmn/*.bpmn)
 - Actor definitions (input/fsh/actors/)
 - Questionnaires (input/fsh/questionnaires/)
 - Decision tables (input/cql/ and input/fsh/plandefinitions/)
@@ -27,7 +27,7 @@ Return JSON:
   "components_affected": ["bpmn", "actors", ...],
   "changes": [
     {{
-      "file": "input/business-processes/example.bpmn",
+      "file": "input/bpmn/example.bpmn",
       "action": "create|modify",
       "description": "..."
     }}

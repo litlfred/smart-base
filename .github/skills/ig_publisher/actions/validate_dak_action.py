@@ -17,6 +17,7 @@ _SKILLS_ROOT = Path(__file__).resolve().parent.parent.parent
 if str(_SKILLS_ROOT) not in sys.path:
     sys.path.insert(0, str(_SKILLS_ROOT))
 
+from common.fsh_utils import bpmn_files as find_bpmn_files
 from common.ig_errors import Issue, error, warning, info, format_issues, has_errors
 from bpmn_author.validators.bpmn_xml_validator import validate_bpmn_xml
 from bpmn_author.validators.swimlane_validator import validate_swimlanes
@@ -36,7 +37,7 @@ def validate_structure(ig_root: str) -> list:
         issues.append(warning("DAK-002", "ig.ini not found"))
 
     # Validate BPMN files
-    bpmn_files = glob.glob(str(root / "input" / "business-processes" / "*.bpmn"))
+    bpmn_files = [str(p) for p in find_bpmn_files(str(root))]
     for bpmn_path in bpmn_files:
         content = Path(bpmn_path).read_text(encoding="utf-8")
         fname = os.path.basename(bpmn_path)

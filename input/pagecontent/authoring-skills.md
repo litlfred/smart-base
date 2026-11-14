@@ -102,7 +102,7 @@ Each persona has a defined package of skills. The full set of skills for each pe
 
 #### BPMN Swimlane Validation
 
-As part of the BPMN authoring and review process, every innermost swimlane in a BPMN diagram **SHALL** correspond to an ActorDefinition resource. The [`bpmn_layout` skill](.github/skills/bpmn_layout/skills.yaml) includes a `validate-swimlanes` command that checks this automatically.
+As part of the BPMN authoring and review process, every innermost swimlane in a BPMN diagram **SHALL** correspond to an ActorDefinition resource. A lane maps to the ActorDefinition `DAK.<lane id>` (an FSH `Instance: DAK.<lane id>` with `InstanceOf: ActorDefinition` under `input/fsh/`), the resource `bpmn2fhirfsh.xsl` links the lane to; the BPMN swimlane check in this repository verifies it for every file in `input/bpmn/`.
 
 When a swimlane has no matching ActorDefinition, the author must resolve by:
 1. **Referencing** an ActorDefinition from a dependency IG

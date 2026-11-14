@@ -2,7 +2,9 @@
 Swimlane → ActorDefinition validator.
 
 Checks that every innermost ``<lane id="X">`` in BPMN files has a
-corresponding ``input/fsh/actors/ActorDefinition-DAK.X.fsh`` file.
+corresponding ActorDefinition: an FSH ``Instance: DAK.X`` with
+``InstanceOf: ActorDefinition`` anywhere under ``input/fsh/`` (the resource
+``bpmn2fhirfsh.xsl`` links the lane to), whatever the file is called.
 """
 
 import os
@@ -13,6 +15,9 @@ from common.ig_errors import Issue, error, warning, info
 from common.fsh_utils import instance_exists
 
 BPMN_NS = "http://www.omg.org/spec/BPMN/20100524/MODEL"
+
+# BPMN comes from contributors: never resolve external entities or fetch DTDs.
+_SAFE_PARSER = etree.XMLParser(resolve_entities=False, no_network=True, load_dtd=False)
 
 
 def _is_innermost_lane(lane: etree._Element) -> bool:
@@ -39,7 +44,7 @@ def validate_swimlane_actors(
     issues: List[Issue] = []
 
     try:
-        tree = etree.fromstring(bpmn_content.encode("utf-8"))
+        tree = etree.fromstring(bpmn_content.encode("utf-8"), parser=_SAFE_PARSER)
     except etree.XMLSyntaxError as exc:
         issues.append(error("ACTOR-001", f"Cannot parse BPMN XML: {exc}", file=filename))
         return issues
@@ -62,12 +67,13 @@ def validate_swimlane_actors(
         if not instance_exists(ig_root, lane_id):
             issues.append(error(
                 "ACTOR-003",
-                f"No ActorDefinition FSH file for lane '{lane_id}' "
-                f"(expected: input/fsh/actors/ActorDefinition-DAK.{lane_id}.fsh)",
+                f"No ActorDefinition for lane '{lane_id}' "
+                f"(expected an FSH 'Instance: DAK.{lane_id}' with "
+                f"'InstanceOf: ActorDefinition' under input/fsh/)",
                 file=filename,
             ))
 
     if not issues:
-        issues.append(info("ACTOR-000", "All lanes map to ActorDefinition files", file=filename))
+        issues.append(info("ACTOR-000", "All lanes map to ActorDefinitions", file=filename))
 
     return issues

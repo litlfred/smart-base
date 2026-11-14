@@ -17,7 +17,7 @@ Review the DAK repository structure for completeness and correctness.
 ## Instructions
 
 Check:
-1. Required directories exist (input/fsh/, input/business-processes/, etc.)
+1. Required directories exist (input/fsh/, input/bpmn/, etc.)
 2. sushi-config.yaml is present and valid
 3. All referenced profiles and extensions exist
 4. No broken cross-references between BPMN lanes and ActorDefinition files

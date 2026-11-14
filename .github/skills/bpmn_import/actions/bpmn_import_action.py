@@ -17,16 +17,17 @@ _SKILLS_ROOT = Path(__file__).resolve().parent.parent.parent
 if str(_SKILLS_ROOT) not in sys.path:
     sys.path.insert(0, str(_SKILLS_ROOT))
 
+from common.fsh_utils import bpmn_files as find_bpmn_files
 from common.ig_errors import format_issues, has_errors
 from bpmn_import.validators.swimlane_actor_validator import validate_swimlane_actors
 
 
 def main() -> None:
     ig_root = os.environ.get("DAK_IG_ROOT", ".")
-    bpmn_files = glob.glob(os.path.join(ig_root, "input", "business-processes", "*.bpmn"))
+    bpmn_files = [str(p) for p in find_bpmn_files(ig_root)]
 
     if not bpmn_files:
-        print("ℹ️  No BPMN files found in input/business-processes/")
+        print("ℹ️  No BPMN files found in input/bpmn/")
         sys.exit(0)
 
     all_issues = []
