@@ -257,7 +257,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 9,
-      "blocks": 14,
+      "blocks": 19,
       "images": 17,
       "ocrPages": 0,
       "hasOcr": false,
@@ -268,7 +268,7 @@
       "pageEnd": 40,
       "words": 11262,
       "chars": 76246,
-      "bytes": 530318,
+      "bytes": 558546,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-102762/README.md",
@@ -297,7 +297,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-102762/"
+      "view": "/en/cat-harness/library/who-iris/10665-102762/",
+      "lang": "en"
     },
     {
       "id": "10665-107919",
@@ -354,7 +355,8 @@
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-107919/"
+      "view": "/en/cat-harness/library/who-iris/10665-107919/",
+      "lang": "en"
     },
     {
       "id": "10665-111245",
@@ -416,7 +418,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-111245/"
+      "view": "/en/cat-harness/library/who-iris/10665-111245/",
+      "lang": "ru"
     },
     {
       "id": "10665-117378",
@@ -478,7 +481,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-117378/"
+      "view": "/en/cat-harness/library/who-iris/10665-117378/",
+      "lang": "fr"
     },
     {
       "id": "10665-145614",
@@ -540,7 +544,8 @@
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-145614/"
+      "view": "/en/cat-harness/library/who-iris/10665-145614/",
+      "lang": "es"
     },
     {
       "id": "10665-162250",
@@ -602,7 +607,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-162250/"
+      "view": "/en/cat-harness/library/who-iris/10665-162250/",
+      "lang": "en"
     },
     {
       "id": "10665-172045",
@@ -664,7 +670,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-172045/"
+      "view": "/en/cat-harness/library/who-iris/10665-172045/",
+      "lang": "en"
     },
     {
       "id": "10665-172302",
@@ -726,7 +733,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-172302/"
+      "view": "/en/cat-harness/library/who-iris/10665-172302/",
+      "lang": "en"
     },
     {
       "id": "10665-174143",
@@ -788,7 +796,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-174143/"
+      "view": "/en/cat-harness/library/who-iris/10665-174143/",
+      "lang": "ru"
     },
     {
       "id": "10665-174300",
@@ -850,7 +859,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-174300/"
+      "view": "/en/cat-harness/library/who-iris/10665-174300/",
+      "lang": "ru"
     },
     {
       "id": "10665-174553",
@@ -912,7 +922,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-174553/"
+      "view": "/en/cat-harness/library/who-iris/10665-174553/",
+      "lang": "fr"
     },
     {
       "id": "10665-179526",
@@ -974,7 +985,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-179526/"
+      "view": "/en/cat-harness/library/who-iris/10665-179526/",
+      "lang": "fr"
     },
     {
       "id": "10665-192500",
@@ -1007,7 +1019,7 @@
       "pageEnd": 40,
       "words": 17889,
       "chars": 104463,
-      "bytes": 515365,
+      "bytes": 791642,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-192500/README.md",
@@ -1026,17 +1038,18 @@
       ],
       "summaries": {
         "prose": 40,
-        "summarised": 0,
-        "backlog": 40,
-        "draft": 0,
+        "summarised": 40,
+        "backlog": 0,
+        "draft": 40,
         "confirmed": 0,
         "stale": 0,
         "rejected": 0,
-        "notSummarised": 40,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-192500/"
+      "view": "/en/cat-harness/library/who-iris/10665-192500/",
+      "lang": "ar"
     },
     {
       "id": "10665-195658",
@@ -1098,7 +1111,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-195658/"
+      "view": "/en/cat-harness/library/who-iris/10665-195658/",
+      "lang": "zh"
     },
     {
       "id": "10665-196326",
@@ -1120,7 +1134,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 45,
-      "blocks": 56,
+      "blocks": 57,
       "images": 12,
       "ocrPages": 0,
       "hasOcr": false,
@@ -1131,7 +1145,7 @@
       "pageEnd": 276,
       "words": 94633,
       "chars": 643352,
-      "bytes": 1843752,
+      "bytes": 1849695,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-196326/README.md",
@@ -1155,7 +1169,11 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-196326/"
+      "view": "/en/cat-harness/library/who-iris/10665-196326/",
+      "lang": "en",
+      "titles": {
+        "zh": "Ethics in epidemics, emergencies and disasters: research, surveillance and patient care: training manual (中文)"
+      }
     },
     {
       "id": "10665-196326-chi",
@@ -1206,7 +1224,11 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-196326-chi/"
+      "view": "/en/cat-harness/library/who-iris/10665-196326-chi/",
+      "lang": "zh",
+      "titles": {
+        "en": "Ethics in epidemics, emergencies and disasters: research, surveillance and patient care: training manual"
+      }
     },
     {
       "id": "10665-198389",
@@ -1268,7 +1290,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-198389/"
+      "view": "/en/cat-harness/library/who-iris/10665-198389/",
+      "lang": "zh"
     },
     {
       "id": "10665-202203",
@@ -1301,7 +1324,7 @@
       "pageEnd": 8,
       "words": 2454,
       "chars": 19619,
-      "bytes": 1099736,
+      "bytes": 1110800,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-202203/README.md",
@@ -1320,17 +1343,18 @@
       ],
       "summaries": {
         "prose": 1,
-        "summarised": 0,
-        "backlog": 1,
-        "draft": 0,
+        "summarised": 1,
+        "backlog": 0,
+        "draft": 1,
         "confirmed": 0,
         "stale": 0,
         "rejected": 0,
-        "notSummarised": 1,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-202203/"
+      "view": "/en/cat-harness/library/who-iris/10665-202203/",
+      "lang": "ru"
     },
     {
       "id": "10665-20231",
@@ -1392,7 +1416,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-20231/"
+      "view": "/en/cat-harness/library/who-iris/10665-20231/",
+      "lang": "en"
     },
     {
       "id": "10665-205022",
@@ -1454,7 +1479,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-205022/"
+      "view": "/en/cat-harness/library/who-iris/10665-205022/",
+      "lang": "en"
     },
     {
       "id": "10665-205344",
@@ -1516,7 +1542,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-205344/"
+      "view": "/en/cat-harness/library/who-iris/10665-205344/",
+      "lang": "en"
     },
     {
       "id": "10665-207050",
@@ -1578,7 +1605,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-207050/"
+      "view": "/en/cat-harness/library/who-iris/10665-207050/",
+      "lang": "en"
     },
     {
       "id": "10665-208888",
@@ -1640,7 +1668,8 @@
         "unreadable": 0,
         "empty": 3
       },
-      "view": "/en/cat-harness/library/who-iris/10665-208888/"
+      "view": "/en/cat-harness/library/who-iris/10665-208888/",
+      "lang": "fr"
     },
     {
       "id": "10665-209008",
@@ -2446,7 +2475,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-22470/"
+      "view": "/en/cat-harness/library/who-iris/10665-22470/",
+      "lang": "es"
     },
     {
       "id": "10665-230330",
@@ -2541,7 +2571,7 @@
       "pageEnd": 5,
       "words": 4743,
       "chars": 30786,
-      "bytes": 119933,
+      "bytes": 161244,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-231031/README.md",
@@ -2560,13 +2590,13 @@
       ],
       "summaries": {
         "prose": 5,
-        "summarised": 0,
-        "backlog": 5,
-        "draft": 0,
+        "summarised": 5,
+        "backlog": 0,
+        "draft": 5,
         "confirmed": 0,
         "stale": 0,
         "rejected": 0,
-        "notSummarised": 5,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
@@ -2632,7 +2662,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-232378/"
+      "view": "/en/cat-harness/library/who-iris/10665-232378/",
+      "lang": "ar"
     },
     {
       "id": "10665-239877",
@@ -2756,7 +2787,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-24399/"
+      "view": "/en/cat-harness/library/who-iris/10665-24399/",
+      "lang": "fr"
     },
     {
       "id": "10665-249126",
@@ -2818,7 +2850,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-249126/"
+      "view": "/en/cat-harness/library/who-iris/10665-249126/",
+      "lang": "fr"
     },
     {
       "id": "10665-249154",
@@ -2840,7 +2873,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 33,
-      "blocks": 46,
+      "blocks": 55,
       "images": 13,
       "ocrPages": 0,
       "hasOcr": false,
@@ -2851,7 +2884,7 @@
       "pageEnd": 52,
       "words": 16756,
       "chars": 115728,
-      "bytes": 1421670,
+      "bytes": 1467234,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-249154/README.md",
@@ -2880,7 +2913,8 @@
         "unreadable": 0,
         "empty": 3
       },
-      "view": "/en/cat-harness/library/who-iris/10665-249154/"
+      "view": "/en/cat-harness/library/who-iris/10665-249154/",
+      "lang": "en"
     },
     {
       "id": "10665-249224",
@@ -2942,7 +2976,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-249224/"
+      "view": "/en/cat-harness/library/who-iris/10665-249224/",
+      "lang": "fr"
     },
     {
       "id": "10665-252004",
@@ -3004,7 +3039,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-252004/"
+      "view": "/en/cat-harness/library/who-iris/10665-252004/",
+      "lang": "fr"
     },
     {
       "id": "10665-253894",
@@ -3066,7 +3102,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-253894/"
+      "view": "/en/cat-harness/library/who-iris/10665-253894/",
+      "lang": "ru"
     },
     {
       "id": "10665-255866",
@@ -3123,7 +3160,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-255866/"
+      "view": "/en/cat-harness/library/who-iris/10665-255866/",
+      "lang": "en"
     },
     {
       "id": "10665-258516",
@@ -3145,7 +3183,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 15,
-      "blocks": 16,
+      "blocks": 17,
       "images": 13,
       "ocrPages": 0,
       "hasOcr": false,
@@ -3156,7 +3194,7 @@
       "pageEnd": 24,
       "words": 14407,
       "chars": 64311,
-      "bytes": 381272,
+      "bytes": 386187,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-258516/README.md",
@@ -3180,7 +3218,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-258516/"
+      "view": "/en/cat-harness/library/who-iris/10665-258516/",
+      "lang": "en"
     },
     {
       "id": "10665-258517",
@@ -3237,7 +3276,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-258517/"
+      "view": "/en/cat-harness/library/who-iris/10665-258517/",
+      "lang": "en"
     },
     {
       "id": "10665-259268",
@@ -3270,7 +3310,7 @@
       "pageEnd": 36,
       "words": 10639,
       "chars": 75806,
-      "bytes": 738484,
+      "bytes": 881037,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-259268/README.md",
@@ -3289,17 +3329,18 @@
       ],
       "summaries": {
         "prose": 25,
-        "summarised": 0,
-        "backlog": 25,
-        "draft": 0,
+        "summarised": 25,
+        "backlog": 0,
+        "draft": 25,
         "confirmed": 0,
         "stale": 0,
         "rejected": 0,
-        "notSummarised": 25,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-259268/"
+      "view": "/en/cat-harness/library/who-iris/10665-259268/",
+      "lang": "en"
     },
     {
       "id": "10665-25966",
@@ -3361,7 +3402,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-25966/"
+      "view": "/en/cat-harness/library/who-iris/10665-25966/",
+      "lang": "ru"
     },
     {
       "id": "10665-261545",
@@ -3383,7 +3425,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 9,
-      "blocks": 9,
+      "blocks": 13,
       "images": 9,
       "ocrPages": 0,
       "hasOcr": false,
@@ -3394,7 +3436,7 @@
       "pageEnd": 9,
       "words": 5257,
       "chars": 29638,
-      "bytes": 215758,
+      "bytes": 234323,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-261545/README.md",
@@ -3423,7 +3465,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-261545/"
+      "view": "/en/cat-harness/library/who-iris/10665-261545/",
+      "lang": "en"
     },
     {
       "id": "10665-264857",
@@ -3456,7 +3499,7 @@
       "pageEnd": 8,
       "words": 4604,
       "chars": 29517,
-      "bytes": 165825,
+      "bytes": 191557,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-264857/README.md",
@@ -3475,17 +3518,18 @@
       ],
       "summaries": {
         "prose": 8,
-        "summarised": 2,
-        "backlog": 6,
-        "draft": 2,
+        "summarised": 8,
+        "backlog": 0,
+        "draft": 8,
         "confirmed": 0,
-        "stale": 1,
+        "stale": 0,
         "rejected": 0,
-        "notSummarised": 5,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-264857/"
+      "view": "/en/cat-harness/library/who-iris/10665-264857/",
+      "lang": "fr"
     },
     {
       "id": "10665-266214",
@@ -3547,7 +3591,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-266214/"
+      "view": "/en/cat-harness/library/who-iris/10665-266214/",
+      "lang": "fr"
     },
     {
       "id": "10665-266751",
@@ -3609,7 +3654,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-266751/"
+      "view": "/en/cat-harness/library/who-iris/10665-266751/",
+      "lang": "fr"
     },
     {
       "id": "10665-266967",
@@ -3671,7 +3717,8 @@
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-266967/"
+      "view": "/en/cat-harness/library/who-iris/10665-266967/",
+      "lang": "en"
     },
     {
       "id": "10665-268219",
@@ -3693,7 +3740,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 2,
-      "blocks": 2,
+      "blocks": 4,
       "images": 0,
       "ocrPages": 0,
       "hasOcr": false,
@@ -3704,7 +3751,7 @@
       "pageEnd": 2,
       "words": 1271,
       "chars": 8629,
-      "bytes": 81762,
+      "bytes": 92372,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-268219/README.md",
@@ -3733,7 +3780,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-268219/"
+      "view": "/en/cat-harness/library/who-iris/10665-268219/",
+      "lang": "en"
     },
     {
       "id": "10665-270157",
@@ -3795,7 +3843,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-270157/"
+      "view": "/en/cat-harness/library/who-iris/10665-270157/",
+      "lang": "en"
     },
     {
       "id": "10665-270347",
@@ -3828,7 +3877,7 @@
       "pageEnd": 8,
       "words": 6722,
       "chars": 44216,
-      "bytes": 261742,
+      "bytes": 268949,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-270347/README.md",
@@ -3847,17 +3896,18 @@
       ],
       "summaries": {
         "prose": 8,
-        "summarised": 7,
-        "backlog": 1,
-        "draft": 7,
+        "summarised": 8,
+        "backlog": 0,
+        "draft": 8,
         "confirmed": 0,
-        "stale": 1,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-270347/"
+      "view": "/en/cat-harness/library/who-iris/10665-270347/",
+      "lang": "en"
     },
     {
       "id": "10665-271946",
@@ -3879,7 +3929,7 @@
       "doi": "10.2471/BLT.15.162933",
       "documentClass": "",
       "sections": 3,
-      "blocks": 3,
+      "blocks": 5,
       "images": 0,
       "ocrPages": 0,
       "hasOcr": false,
@@ -3890,7 +3940,7 @@
       "pageEnd": 8,
       "words": 7178,
       "chars": 50354,
-      "bytes": 158841,
+      "bytes": 169505,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-271946/README.md",
@@ -3919,7 +3969,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-271946/"
+      "view": "/en/cat-harness/library/who-iris/10665-271946/",
+      "lang": "en"
     },
     {
       "id": "10665-273155",
@@ -3981,7 +4032,12 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-273155/"
+      "view": "/en/cat-harness/library/who-iris/10665-273155/",
+      "lang": "en",
+      "titles": {
+        "fr": "Le diagnostic du VIH et l’utilisation des ARV chez le nourrisson exposé au virus : mise à jour programmatique",
+        "pt": "HIV diagnosis and ARV use in HIV-exposed infants: a programmatic update (Português)"
+      }
     },
     {
       "id": "10665-273155-por",
@@ -4032,7 +4088,12 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-273155-por/"
+      "view": "/en/cat-harness/library/who-iris/10665-273155-por/",
+      "lang": "pt",
+      "titles": {
+        "en": "HIV diagnosis and ARV use in HIV-exposed infants: a programmatic update",
+        "fr": "Le diagnostic du VIH et l’utilisation des ARV chez le nourrisson exposé au virus : mise à jour programmatique"
+      }
     },
     {
       "id": "10665-274277",
@@ -4054,7 +4115,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 17,
-      "blocks": 19,
+      "blocks": 23,
       "images": 2,
       "ocrPages": 0,
       "hasOcr": false,
@@ -4065,7 +4126,7 @@
       "pageEnd": 56,
       "words": 22358,
       "chars": 155972,
-      "bytes": 578740,
+      "bytes": 597995,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-274277/README.md",
@@ -4089,7 +4150,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-274277/"
+      "view": "/en/cat-harness/library/who-iris/10665-274277/",
+      "lang": "en"
     },
     {
       "id": "10665-279505",
@@ -4151,7 +4213,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-279505/"
+      "view": "/en/cat-harness/library/who-iris/10665-279505/",
+      "lang": "en",
+      "titles": {
+        "fr": "Santé numérique",
+        "es": "Salud digital",
+        "ru": "Цифровое здравоохранение",
+        "zh": "数字卫生保健",
+        "ar": "الصحــة الـرقمية"
+      }
     },
     {
       "id": "10665-279506",
@@ -4213,7 +4283,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-279506/"
+      "view": "/en/cat-harness/library/who-iris/10665-279506/",
+      "lang": "es",
+      "titles": {
+        "en": "Digital health",
+        "fr": "Santé numérique",
+        "ru": "Цифровое здравоохранение",
+        "zh": "数字卫生保健",
+        "ar": "الصحــة الـرقمية"
+      }
     },
     {
       "id": "10665-279507",
@@ -4275,7 +4353,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-279507/"
+      "view": "/en/cat-harness/library/who-iris/10665-279507/",
+      "lang": "fr",
+      "titles": {
+        "en": "Digital health",
+        "es": "Salud digital",
+        "ru": "Цифровое здравоохранение",
+        "zh": "数字卫生保健",
+        "ar": "الصحــة الـرقمية"
+      }
     },
     {
       "id": "10665-279508",
@@ -4337,7 +4423,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-279508/"
+      "view": "/en/cat-harness/library/who-iris/10665-279508/",
+      "lang": "ru",
+      "titles": {
+        "en": "Digital health",
+        "fr": "Santé numérique",
+        "es": "Salud digital",
+        "zh": "数字卫生保健",
+        "ar": "الصحــة الـرقمية"
+      }
     },
     {
       "id": "10665-279509",
@@ -4399,7 +4493,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-279509/"
+      "view": "/en/cat-harness/library/who-iris/10665-279509/",
+      "lang": "zh",
+      "titles": {
+        "en": "Digital health",
+        "fr": "Santé numérique",
+        "es": "Salud digital",
+        "ru": "Цифровое здравоохранение",
+        "ar": "الصحــة الـرقمية"
+      }
     },
     {
       "id": "10665-279510",
@@ -4461,7 +4563,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-279510/"
+      "view": "/en/cat-harness/library/who-iris/10665-279510/",
+      "lang": "ar",
+      "titles": {
+        "en": "Digital health",
+        "fr": "Santé numérique",
+        "es": "Salud digital",
+        "ru": "Цифровое здравоохранение",
+        "zh": "数字卫生保健"
+      }
     },
     {
       "id": "10665-311941",
@@ -4483,7 +4593,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 52,
-      "blocks": 55,
+      "blocks": 56,
       "images": 4,
       "ocrPages": 0,
       "hasOcr": false,
@@ -4494,7 +4604,7 @@
       "pageEnd": 150,
       "words": 48175,
       "chars": 345095,
-      "bytes": 2466328,
+      "bytes": 2519586,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-311941/README.md",
@@ -4513,17 +4623,22 @@
       ],
       "summaries": {
         "prose": 51,
-        "summarised": 45,
-        "backlog": 6,
-        "draft": 45,
+        "summarised": 51,
+        "backlog": 0,
+        "draft": 51,
         "confirmed": 0,
-        "stale": 3,
+        "stale": 0,
         "rejected": 0,
-        "notSummarised": 3,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-311941/"
+      "view": "/en/cat-harness/library/who-iris/10665-311941/",
+      "lang": "en",
+      "titles": {
+        "fr": "Lignes directrices de l'OMS : recommandations sur les interventions numériques pour le renforcement des systèmes de santé",
+        "es": "Directriz de la OMS: recomendaciones sobre intervenciones digitales para fortalecer los sistemas de salud"
+      }
     },
     {
       "id": "10665-324745",
@@ -4545,7 +4660,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 56,
-      "blocks": 66,
+      "blocks": 68,
       "images": 127,
       "ocrPages": 0,
       "hasOcr": false,
@@ -4556,7 +4671,7 @@
       "pageEnd": 56,
       "words": 34310,
       "chars": 183332,
-      "bytes": 3871472,
+      "bytes": 3881218,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-324745/README.md",
@@ -4580,7 +4695,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-324745/"
+      "view": "/en/cat-harness/library/who-iris/10665-324745/",
+      "lang": "en"
     },
     {
       "id": "10665-325892",
@@ -4602,7 +4718,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 17,
-      "blocks": 22,
+      "blocks": 26,
       "images": 13,
       "ocrPages": 0,
       "hasOcr": false,
@@ -4613,7 +4729,7 @@
       "pageEnd": 16,
       "words": 5789,
       "chars": 38562,
-      "bytes": 1141785,
+      "bytes": 1159915,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-325892/README.md",
@@ -4637,7 +4753,8 @@
         "unreadable": 0,
         "empty": 3
       },
-      "view": "/en/cat-harness/library/who-iris/10665-325892/"
+      "view": "/en/cat-harness/library/who-iris/10665-325892/",
+      "lang": "en"
     },
     {
       "id": "10665-3278",
@@ -4699,7 +4816,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-3278/"
+      "view": "/en/cat-harness/library/who-iris/10665-3278/",
+      "lang": "fr"
     },
     {
       "id": "10665-327942",
@@ -4761,7 +4879,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-327942/"
+      "view": "/en/cat-harness/library/who-iris/10665-327942/",
+      "lang": "en"
     },
     {
       "id": "10665-329296",
@@ -4794,7 +4913,7 @@
       "pageEnd": 24,
       "words": 12619,
       "chars": 81456,
-      "bytes": 847454,
+      "bytes": 1046549,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-329296/README.md",
@@ -4813,17 +4932,22 @@
       ],
       "summaries": {
         "prose": 39,
-        "summarised": 4,
-        "backlog": 35,
-        "draft": 4,
+        "summarised": 39,
+        "backlog": 0,
+        "draft": 39,
         "confirmed": 0,
-        "stale": 1,
+        "stale": 0,
         "rejected": 0,
-        "notSummarised": 34,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 5
       },
-      "view": "/en/cat-harness/library/who-iris/10665-329296/"
+      "view": "/en/cat-harness/library/who-iris/10665-329296/",
+      "lang": "fr",
+      "titles": {
+        "en": "HIV diagnosis and ARV use in HIV-exposed infants: a programmatic update",
+        "pt": "HIV diagnosis and ARV use in HIV-exposed infants: a programmatic update (Português)"
+      }
     },
     {
       "id": "10665-329964",
@@ -4880,7 +5004,14 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-329964/"
+      "view": "/en/cat-harness/library/who-iris/10665-329964/",
+      "lang": "en",
+      "titles": {
+        "fr": "L’OMS recommande que des approches de dépistage du VIH qui s’appuient sur les réseaux sociaux soient offertes aux populations clés, dans le cadre d’un dispositif de services aux partenaires",
+        "es": "La OMS recomienda la adopción de enfoques basados en las redes de contactos para la realización de pruebas del VIH en los grupos de población clave, en el marco de un conjunto de servicios para las parejas: sinopsis de políticas",
+        "ru": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief (Русский)",
+        "zh": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief (中文)"
+      }
     },
     {
       "id": "10665-329964-chi",
@@ -4931,7 +5062,14 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-329964-chi/"
+      "view": "/en/cat-harness/library/who-iris/10665-329964-chi/",
+      "lang": "zh",
+      "titles": {
+        "en": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief",
+        "fr": "L’OMS recommande que des approches de dépistage du VIH qui s’appuient sur les réseaux sociaux soient offertes aux populations clés, dans le cadre d’un dispositif de services aux partenaires",
+        "es": "La OMS recomienda la adopción de enfoques basados en las redes de contactos para la realización de pruebas del VIH en los grupos de población clave, en el marco de un conjunto de servicios para las parejas: sinopsis de políticas",
+        "ru": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief (Русский)"
+      }
     },
     {
       "id": "10665-329964-rus",
@@ -4982,7 +5120,14 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-329964-rus/"
+      "view": "/en/cat-harness/library/who-iris/10665-329964-rus/",
+      "lang": "ru",
+      "titles": {
+        "en": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief",
+        "fr": "L’OMS recommande que des approches de dépistage du VIH qui s’appuient sur les réseaux sociaux soient offertes aux populations clés, dans le cadre d’un dispositif de services aux partenaires",
+        "es": "La OMS recomienda la adopción de enfoques basados en las redes de contactos para la realización de pruebas del VIH en los grupos de población clave, en el marco de un conjunto de servicios para las parejas: sinopsis de políticas",
+        "zh": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief (中文)"
+      }
     },
     {
       "id": "10665-331170",
@@ -5004,7 +5149,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 16,
-      "blocks": 16,
+      "blocks": 19,
       "images": 5,
       "ocrPages": 0,
       "hasOcr": false,
@@ -5015,7 +5160,7 @@
       "pageEnd": 56,
       "words": 26060,
       "chars": 174248,
-      "bytes": 487497,
+      "bytes": 505172,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-331170/README.md",
@@ -5044,7 +5189,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-331170/"
+      "view": "/en/cat-harness/library/who-iris/10665-331170/",
+      "lang": "en"
     },
     {
       "id": "10665-331525",
@@ -5066,7 +5212,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 20,
-      "blocks": 29,
+      "blocks": 38,
       "images": 24,
       "ocrPages": 0,
       "hasOcr": false,
@@ -5077,7 +5223,7 @@
       "pageEnd": 140,
       "words": 54223,
       "chars": 362943,
-      "bytes": 1449953,
+      "bytes": 1497666,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-331525/README.md",
@@ -5106,7 +5252,11 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-331525/"
+      "view": "/en/cat-harness/library/who-iris/10665-331525/",
+      "lang": "en",
+      "titles": {
+        "ru": "WHO operational handbook on tuberculosis: module 1: prevention: tuberculosis preventive treatment (Русский)"
+      }
     },
     {
       "id": "10665-331525-rus",
@@ -5140,24 +5290,28 @@
       "pageEnd": 168,
       "words": 57593,
       "chars": 453302,
-      "bytes": 1370014,
+      "bytes": 2267148,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-331525-rus/README.md",
       "referencedBy": [],
       "summaries": {
         "prose": 168,
-        "summarised": 0,
-        "backlog": 168,
-        "draft": 0,
+        "summarised": 168,
+        "backlog": 0,
+        "draft": 168,
         "confirmed": 0,
         "stale": 0,
         "rejected": 0,
-        "notSummarised": 168,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-331525-rus/"
+      "view": "/en/cat-harness/library/who-iris/10665-331525-rus/",
+      "lang": "ru",
+      "titles": {
+        "en": "WHO operational handbook on tuberculosis: module 1: prevention: tuberculosis preventive treatment"
+      }
     },
     {
       "id": "10665-331629",
@@ -5214,7 +5368,14 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-331629/"
+      "view": "/en/cat-harness/library/who-iris/10665-331629/",
+      "lang": "fr",
+      "titles": {
+        "en": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief",
+        "es": "La OMS recomienda la adopción de enfoques basados en las redes de contactos para la realización de pruebas del VIH en los grupos de población clave, en el marco de un conjunto de servicios para las parejas: sinopsis de políticas",
+        "ru": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief (Русский)",
+        "zh": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief (中文)"
+      }
     },
     {
       "id": "10665-332907",
@@ -5236,7 +5397,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 30,
-      "blocks": 37,
+      "blocks": 41,
       "images": 10,
       "ocrPages": 0,
       "hasOcr": false,
@@ -5247,7 +5408,7 @@
       "pageEnd": 32,
       "words": 10688,
       "chars": 68059,
-      "bytes": 800936,
+      "bytes": 820013,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-332907/README.md",
@@ -5271,7 +5432,8 @@
         "unreadable": 0,
         "empty": 5
       },
-      "view": "/en/cat-harness/library/who-iris/10665-332907/"
+      "view": "/en/cat-harness/library/who-iris/10665-332907/",
+      "lang": "en"
     },
     {
       "id": "10665-338849",
@@ -5333,7 +5495,8 @@
         "unreadable": 0,
         "empty": 3
       },
-      "view": "/en/cat-harness/library/who-iris/10665-338849/"
+      "view": "/en/cat-harness/library/who-iris/10665-338849/",
+      "lang": "es"
     },
     {
       "id": "10665-339745",
@@ -5355,7 +5518,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 9,
-      "blocks": 22,
+      "blocks": 38,
       "images": 23,
       "ocrPages": 0,
       "hasOcr": false,
@@ -5366,7 +5529,7 @@
       "pageEnd": 98,
       "words": 28975,
       "chars": 200678,
-      "bytes": 1549275,
+      "bytes": 1632402,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-339745/README.md",
@@ -5395,7 +5558,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-339745/"
+      "view": "/en/cat-harness/library/who-iris/10665-339745/",
+      "lang": "en"
     },
     {
       "id": "10665-340190",
@@ -5417,7 +5581,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 37,
-      "blocks": 38,
+      "blocks": 43,
       "images": 1,
       "ocrPages": 0,
       "hasOcr": false,
@@ -5428,7 +5592,7 @@
       "pageEnd": 84,
       "words": 35351,
       "chars": 245766,
-      "bytes": 787112,
+      "bytes": 812148,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-340190/README.md",
@@ -5457,7 +5621,8 @@
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-340190/"
+      "view": "/en/cat-harness/library/who-iris/10665-340190/",
+      "lang": "en"
     },
     {
       "id": "10665-340255",
@@ -5479,7 +5644,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 38,
-      "blocks": 39,
+      "blocks": 47,
       "images": 5,
       "ocrPages": 0,
       "hasOcr": false,
@@ -5490,7 +5655,7 @@
       "pageEnd": 68,
       "words": 26153,
       "chars": 177661,
-      "bytes": 723014,
+      "bytes": 769471,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-340255/README.md",
@@ -5519,7 +5684,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-340255/"
+      "view": "/en/cat-harness/library/who-iris/10665-340255/",
+      "lang": "en"
     },
     {
       "id": "10665-341918",
@@ -5576,7 +5742,14 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-341918/"
+      "view": "/en/cat-harness/library/who-iris/10665-341918/",
+      "lang": "es",
+      "titles": {
+        "en": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief",
+        "fr": "L’OMS recommande que des approches de dépistage du VIH qui s’appuient sur les réseaux sociaux soient offertes aux populations clés, dans le cadre d’un dispositif de services aux partenaires",
+        "ru": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief (Русский)",
+        "zh": "WHO recommends social network-based HIV testing approaches for key populations as part of partner services package: policy brief (中文)"
+      }
     },
     {
       "id": "10665-341997",
@@ -5598,7 +5771,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 21,
-      "blocks": 32,
+      "blocks": 48,
       "images": 14,
       "ocrPages": 0,
       "hasOcr": false,
@@ -5609,7 +5782,7 @@
       "pageEnd": 144,
       "words": 47409,
       "chars": 307939,
-      "bytes": 1481612,
+      "bytes": 1666906,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-341997/README.md",
@@ -5628,17 +5801,18 @@
       ],
       "summaries": {
         "prose": 21,
-        "summarised": 7,
-        "backlog": 14,
-        "draft": 7,
+        "summarised": 21,
+        "backlog": 0,
+        "draft": 21,
         "confirmed": 0,
-        "stale": 1,
+        "stale": 0,
         "rejected": 0,
-        "notSummarised": 13,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-341997/"
+      "view": "/en/cat-harness/library/who-iris/10665-341997/",
+      "lang": "en"
     },
     {
       "id": "10665-342236",
@@ -5671,7 +5845,7 @@
       "pageEnd": 29,
       "words": 8924,
       "chars": 58480,
-      "bytes": 2102958,
+      "bytes": 2179659,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-342236/README.md",
@@ -5685,17 +5859,18 @@
       ],
       "summaries": {
         "prose": 19,
-        "summarised": 7,
-        "backlog": 12,
-        "draft": 7,
+        "summarised": 19,
+        "backlog": 0,
+        "draft": 19,
         "confirmed": 0,
-        "stale": 9,
+        "stale": 0,
         "rejected": 0,
-        "notSummarised": 3,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-342236/"
+      "view": "/en/cat-harness/library/who-iris/10665-342236/",
+      "lang": "en"
     },
     {
       "id": "10665-342365",
@@ -5717,7 +5892,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 54,
-      "blocks": 56,
+      "blocks": 58,
       "images": 3,
       "ocrPages": 0,
       "hasOcr": false,
@@ -5728,7 +5903,7 @@
       "pageEnd": 115,
       "words": 32534,
       "chars": 225423,
-      "bytes": 698464,
+      "bytes": 707658,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-342365/README.md",
@@ -5757,7 +5932,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-342365/"
+      "view": "/en/cat-harness/library/who-iris/10665-342365/",
+      "lang": "en"
     },
     {
       "id": "10665-342490",
@@ -5819,7 +5995,8 @@
         "unreadable": 0,
         "empty": 3
       },
-      "view": "/en/cat-harness/library/who-iris/10665-342490/"
+      "view": "/en/cat-harness/library/who-iris/10665-342490/",
+      "lang": "en"
     },
     {
       "id": "10665-344249",
@@ -5881,7 +6058,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-344249/"
+      "view": "/en/cat-harness/library/who-iris/10665-344249/",
+      "lang": "en",
+      "titles": {
+        "fr": "Stratégie mondiale pour la santé numérique 2020-2025",
+        "es": "Estrategia mundial sobre salud digital 2020–2025",
+        "ru": "Global strategy on digital health 2020-2025 (Русский)",
+        "zh": "Global strategy on digital health 2020-2025 (中文)",
+        "ar": "Global strategy on digital health 2020-2025 (العربية)"
+      }
     },
     {
       "id": "10665-344249-ara",
@@ -5932,7 +6117,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-344249-ara/"
+      "view": "/en/cat-harness/library/who-iris/10665-344249-ara/",
+      "lang": "ar",
+      "titles": {
+        "en": "Global strategy on digital health 2020-2025",
+        "fr": "Stratégie mondiale pour la santé numérique 2020-2025",
+        "es": "Estrategia mundial sobre salud digital 2020–2025",
+        "ru": "Global strategy on digital health 2020-2025 (Русский)",
+        "zh": "Global strategy on digital health 2020-2025 (中文)"
+      }
     },
     {
       "id": "10665-344249-chi",
@@ -5983,7 +6176,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-344249-chi/"
+      "view": "/en/cat-harness/library/who-iris/10665-344249-chi/",
+      "lang": "zh",
+      "titles": {
+        "en": "Global strategy on digital health 2020-2025",
+        "fr": "Stratégie mondiale pour la santé numérique 2020-2025",
+        "es": "Estrategia mundial sobre salud digital 2020–2025",
+        "ru": "Global strategy on digital health 2020-2025 (Русский)",
+        "ar": "Global strategy on digital health 2020-2025 (العربية)"
+      }
     },
     {
       "id": "10665-344249-rus",
@@ -6034,7 +6235,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-344249-rus/"
+      "view": "/en/cat-harness/library/who-iris/10665-344249-rus/",
+      "lang": "ru",
+      "titles": {
+        "en": "Global strategy on digital health 2020-2025",
+        "fr": "Stratégie mondiale pour la santé numérique 2020-2025",
+        "es": "Estrategia mundial sobre salud digital 2020–2025",
+        "zh": "Global strategy on digital health 2020-2025 (中文)",
+        "ar": "Global strategy on digital health 2020-2025 (العربية)"
+      }
     },
     {
       "id": "10665-344250",
@@ -6096,7 +6305,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-344250/"
+      "view": "/en/cat-harness/library/who-iris/10665-344250/",
+      "lang": "fr",
+      "titles": {
+        "en": "Global strategy on digital health 2020-2025",
+        "es": "Estrategia mundial sobre salud digital 2020–2025",
+        "ru": "Global strategy on digital health 2020-2025 (Русский)",
+        "zh": "Global strategy on digital health 2020-2025 (中文)",
+        "ar": "Global strategy on digital health 2020-2025 (العربية)"
+      }
     },
     {
       "id": "10665-344251",
@@ -6158,7 +6375,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-344251/"
+      "view": "/en/cat-harness/library/who-iris/10665-344251/",
+      "lang": "es",
+      "titles": {
+        "en": "Global strategy on digital health 2020-2025",
+        "fr": "Stratégie mondiale pour la santé numérique 2020-2025",
+        "ru": "Global strategy on digital health 2020-2025 (Русский)",
+        "zh": "Global strategy on digital health 2020-2025 (中文)",
+        "ar": "Global strategy on digital health 2020-2025 (العربية)"
+      }
     },
     {
       "id": "10665-346431",
@@ -6220,7 +6445,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-346431/"
+      "view": "/en/cat-harness/library/who-iris/10665-346431/",
+      "lang": "en"
     },
     {
       "id": "10665-347190",
@@ -6282,7 +6508,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-347190/"
+      "view": "/en/cat-harness/library/who-iris/10665-347190/",
+      "lang": "en"
     },
     {
       "id": "10665-349550",
@@ -6304,7 +6531,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 86,
-      "blocks": 86,
+      "blocks": 93,
       "images": 1,
       "ocrPages": 0,
       "hasOcr": false,
@@ -6315,7 +6542,7 @@
       "pageEnd": 86,
       "words": 31917,
       "chars": 220725,
-      "bytes": 1237345,
+      "bytes": 1270692,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-349550/README.md",
@@ -6344,7 +6571,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-349550/"
+      "view": "/en/cat-harness/library/who-iris/10665-349550/",
+      "lang": "en"
     },
     {
       "id": "10665-349570",
@@ -6406,7 +6634,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-349570/"
+      "view": "/en/cat-harness/library/who-iris/10665-349570/",
+      "lang": "en"
     },
     {
       "id": "10665-349683",
@@ -6468,7 +6697,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-349683/"
+      "view": "/en/cat-harness/library/who-iris/10665-349683/",
+      "lang": "en"
     },
     {
       "id": "10665-350214",
@@ -6490,7 +6720,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 77,
-      "blocks": 86,
+      "blocks": 90,
       "images": 12,
       "ocrPages": 0,
       "hasOcr": false,
@@ -6501,7 +6731,7 @@
       "pageEnd": 34,
       "words": 13498,
       "chars": 94857,
-      "bytes": 2306888,
+      "bytes": 2327278,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-350214/README.md",
@@ -6525,7 +6755,8 @@
         "unreadable": 0,
         "empty": 10
       },
-      "view": "/en/cat-harness/library/who-iris/10665-350214/"
+      "view": "/en/cat-harness/library/who-iris/10665-350214/",
+      "lang": "en"
     },
     {
       "id": "10665-350543",
@@ -6582,7 +6813,8 @@
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-350543/"
+      "view": "/en/cat-harness/library/who-iris/10665-350543/",
+      "lang": "ru"
     },
     {
       "id": "10665-351406",
@@ -6604,7 +6836,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 11,
-      "blocks": 14,
+      "blocks": 23,
       "images": 23,
       "ocrPages": 0,
       "hasOcr": false,
@@ -6615,7 +6847,7 @@
       "pageEnd": 40,
       "words": 14436,
       "chars": 104862,
-      "bytes": 1129355,
+      "bytes": 1175936,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-351406/README.md",
@@ -6644,7 +6876,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-351406/"
+      "view": "/en/cat-harness/library/who-iris/10665-351406/",
+      "lang": "en"
     },
     {
       "id": "10665-352522",
@@ -6666,7 +6899,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 34,
-      "blocks": 34,
+      "blocks": 42,
       "images": 1,
       "ocrPages": 0,
       "hasOcr": false,
@@ -6677,7 +6910,7 @@
       "pageEnd": 128,
       "words": 53656,
       "chars": 374321,
-      "bytes": 1008796,
+      "bytes": 1053549,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-352522/README.md",
@@ -6706,7 +6939,8 @@
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-352522/"
+      "view": "/en/cat-harness/library/who-iris/10665-352522/",
+      "lang": "en"
     },
     {
       "id": "10665-352523",
@@ -6728,7 +6962,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 54,
-      "blocks": 58,
+      "blocks": 95,
       "images": 28,
       "ocrPages": 0,
       "hasOcr": false,
@@ -6739,7 +6973,7 @@
       "pageEnd": 264,
       "words": 104062,
       "chars": 704641,
-      "bytes": 2957421,
+      "bytes": 3127970,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-352523/README.md",
@@ -6768,7 +7002,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-352523/"
+      "view": "/en/cat-harness/library/who-iris/10665-352523/",
+      "lang": "en"
     },
     {
       "id": "10665-353150",
@@ -6801,7 +7036,7 @@
       "pageEnd": 182,
       "words": 85249,
       "chars": 567267,
-      "bytes": 1609554,
+      "bytes": 2045670,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-353150/README.md",
@@ -6820,17 +7055,22 @@
       ],
       "summaries": {
         "prose": 64,
-        "summarised": 0,
-        "backlog": 64,
-        "draft": 0,
+        "summarised": 64,
+        "backlog": 0,
+        "draft": 64,
         "confirmed": 0,
         "stale": 0,
         "rejected": 0,
-        "notSummarised": 64,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-353150/"
+      "view": "/en/cat-harness/library/who-iris/10665-353150/",
+      "lang": "fr",
+      "titles": {
+        "en": "Digital implementation investment guide (DIIG): integrating digital interventions into health programmes",
+        "es": "Guía para la inversión en la implementación digital (DIIG): incorporación de intervenciones digitales en los programas de salud"
+      }
     },
     {
       "id": "10665-353151",
@@ -6863,7 +7103,7 @@
       "pageEnd": 182,
       "words": 82660,
       "chars": 541249,
-      "bytes": 1092364,
+      "bytes": 1649207,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-353151/README.md",
@@ -6882,17 +7122,22 @@
       ],
       "summaries": {
         "prose": 81,
-        "summarised": 0,
-        "backlog": 81,
-        "draft": 0,
+        "summarised": 81,
+        "backlog": 0,
+        "draft": 81,
         "confirmed": 0,
         "stale": 0,
         "rejected": 0,
-        "notSummarised": 81,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-353151/"
+      "view": "/en/cat-harness/library/who-iris/10665-353151/",
+      "lang": "es",
+      "titles": {
+        "en": "Digital implementation investment guide (DIIG): integrating digital interventions into health programmes",
+        "fr": "Guide d’investissement pour la mise en oeuvre numérique (DIIG) : intégrer les interventions numériques dans les programmes de santé"
+      }
     },
     {
       "id": "10665-354214",
@@ -6954,7 +7199,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-354214/"
+      "view": "/en/cat-harness/library/who-iris/10665-354214/",
+      "lang": "ru"
     },
     {
       "id": "10665-354399",
@@ -6987,7 +7233,7 @@
       "pageEnd": 163,
       "words": 61659,
       "chars": 413909,
-      "bytes": 1328422,
+      "bytes": 1412327,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-354399/README.md",
@@ -7006,17 +7252,22 @@
       ],
       "summaries": {
         "prose": 50,
-        "summarised": 41,
-        "backlog": 9,
-        "draft": 41,
+        "summarised": 50,
+        "backlog": 0,
+        "draft": 50,
         "confirmed": 0,
-        "stale": 4,
+        "stale": 0,
         "rejected": 0,
-        "notSummarised": 5,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-354399/"
+      "view": "/en/cat-harness/library/who-iris/10665-354399/",
+      "lang": "es",
+      "titles": {
+        "en": "WHO guideline: recommendations on digital interventions for health system strengthening",
+        "fr": "Lignes directrices de l'OMS : recommandations sur les interventions numériques pour le renforcement des systèmes de santé"
+      }
     },
     {
       "id": "10665-354400",
@@ -7078,7 +7329,12 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-354400/"
+      "view": "/en/cat-harness/library/who-iris/10665-354400/",
+      "lang": "fr",
+      "titles": {
+        "en": "WHO guideline: recommendations on digital interventions for health system strengthening",
+        "es": "Directriz de la OMS: recomendaciones sobre intervenciones digitales para fortalecer los sistemas de salud"
+      }
     },
     {
       "id": "10665-357088",
@@ -7140,7 +7396,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-357088/"
+      "view": "/en/cat-harness/library/who-iris/10665-357088/",
+      "lang": "en"
     },
     {
       "id": "10665-360601",
@@ -7162,7 +7419,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 77,
-      "blocks": 88,
+      "blocks": 91,
       "images": 12,
       "ocrPages": 0,
       "hasOcr": false,
@@ -7173,7 +7430,7 @@
       "pageEnd": 144,
       "words": 72233,
       "chars": 492389,
-      "bytes": 2198889,
+      "bytes": 2212119,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-360601/README.md",
@@ -7202,7 +7459,8 @@
         "unreadable": 0,
         "empty": 6
       },
-      "view": "/en/cat-harness/library/who-iris/10665-360601/"
+      "view": "/en/cat-harness/library/who-iris/10665-360601/",
+      "lang": "en"
     },
     {
       "id": "10665-360861",
@@ -7224,7 +7482,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 35,
-      "blocks": 45,
+      "blocks": 50,
       "images": 10,
       "ocrPages": 0,
       "hasOcr": false,
@@ -7235,7 +7493,7 @@
       "pageEnd": 46,
       "words": 21416,
       "chars": 150516,
-      "bytes": 1720203,
+      "bytes": 1744058,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-360861/README.md",
@@ -7264,7 +7522,8 @@
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-360861/"
+      "view": "/en/cat-harness/library/who-iris/10665-360861/",
+      "lang": "en"
     },
     {
       "id": "10665-360869",
@@ -7326,7 +7585,8 @@
         "unreadable": 0,
         "empty": 4
       },
-      "view": "/en/cat-harness/library/who-iris/10665-360869/"
+      "view": "/en/cat-harness/library/who-iris/10665-360869/",
+      "lang": "en"
     },
     {
       "id": "10665-360948",
@@ -7348,7 +7608,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 196,
-      "blocks": 198,
+      "blocks": 200,
       "images": 1837,
       "ocrPages": 0,
       "hasOcr": false,
@@ -7359,7 +7619,7 @@
       "pageEnd": 424,
       "words": 152477,
       "chars": 1046985,
-      "bytes": 13259378,
+      "bytes": 13268879,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-360948/README.md",
@@ -7388,7 +7648,8 @@
         "unreadable": 0,
         "empty": 16
       },
-      "view": "/en/cat-harness/library/who-iris/10665-360948/"
+      "view": "/en/cat-harness/library/who-iris/10665-360948/",
+      "lang": "en"
     },
     {
       "id": "10665-362227",
@@ -7445,7 +7706,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-362227/"
+      "view": "/en/cat-harness/library/who-iris/10665-362227/",
+      "lang": "en"
     },
     {
       "id": "10665-365881",
@@ -7502,7 +7764,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-365881/"
+      "view": "/en/cat-harness/library/who-iris/10665-365881/",
+      "lang": "en"
     },
     {
       "id": "10665-369381",
@@ -7564,7 +7827,8 @@
         "unreadable": 0,
         "empty": 9
       },
-      "view": "/en/cat-harness/library/who-iris/10665-369381/"
+      "view": "/en/cat-harness/library/who-iris/10665-369381/",
+      "lang": "en"
     },
     {
       "id": "10665-371662",
@@ -7626,7 +7890,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-371662/"
+      "view": "/en/cat-harness/library/who-iris/10665-371662/",
+      "lang": "en"
     },
     {
       "id": "10665-372197",
@@ -7683,7 +7948,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-372197/"
+      "view": "/en/cat-harness/library/who-iris/10665-372197/",
+      "lang": "en"
     },
     {
       "id": "10665-374940",
@@ -7745,7 +8011,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-374940/"
+      "view": "/en/cat-harness/library/who-iris/10665-374940/",
+      "lang": "ru"
     },
     {
       "id": "10665-378873",
@@ -7807,7 +8074,13 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-378873/"
+      "view": "/en/cat-harness/library/who-iris/10665-378873/",
+      "lang": "fr",
+      "titles": {
+        "en": "Classification of digital interventions, services and applications in health: a shared language to describe the uses of digital technology for health",
+        "es": "Clasificación de intervenciones, servicios y aplicaciones digitales en salud: un lenguaje compartido para describir los usos de la tecnología digital para la salud",
+        "ar": "تصنيف التدخلات والخدمات والتطبيقات الرقمية في مجال الصحة: لغة مشتركة لوصف استخدامات التكنولوجيا الرقمية من أجل الصحة"
+      }
     },
     {
       "id": "10665-379033",
@@ -7869,7 +8142,13 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-379033/"
+      "view": "/en/cat-harness/library/who-iris/10665-379033/",
+      "lang": "es",
+      "titles": {
+        "en": "Classification of digital interventions, services and applications in health: a shared language to describe the uses of digital technology for health",
+        "fr": "Classification des interventions, des services et des applications numériques dans le domaine de la santé : un langage commun pour décrire les diverses utilisations de la technologie numérique dans le domaine de la santé",
+        "ar": "تصنيف التدخلات والخدمات والتطبيقات الرقمية في مجال الصحة: لغة مشتركة لوصف استخدامات التكنولوجيا الرقمية من أجل الصحة"
+      }
     },
     {
       "id": "10665-37905",
@@ -7964,7 +8243,7 @@
       "pageEnd": 64,
       "words": 19253,
       "chars": 128739,
-      "bytes": 928488,
+      "bytes": 953444,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-379160/README.md",
@@ -7983,17 +8262,23 @@
       ],
       "summaries": {
         "prose": 64,
-        "summarised": 58,
-        "backlog": 6,
-        "draft": 58,
+        "summarised": 64,
+        "backlog": 0,
+        "draft": 64,
         "confirmed": 0,
-        "stale": 6,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-379160/"
+      "view": "/en/cat-harness/library/who-iris/10665-379160/",
+      "lang": "ar",
+      "titles": {
+        "en": "Classification of digital interventions, services and applications in health: a shared language to describe the uses of digital technology for health",
+        "fr": "Classification des interventions, des services et des applications numériques dans le domaine de la santé : un langage commun pour décrire les diverses utilisations de la technologie numérique dans le domaine de la santé",
+        "es": "Clasificación de intervenciones, servicios y aplicaciones digitales en salud: un lenguaje compartido para describir los usos de la tecnología digital para la salud"
+      }
     },
     {
       "id": "10665-381036",
@@ -8055,7 +8340,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-381036/"
+      "view": "/en/cat-harness/library/who-iris/10665-381036/",
+      "lang": "en"
     },
     {
       "id": "10665-385346",
@@ -8088,7 +8374,7 @@
       "pageEnd": 12,
       "words": 6821,
       "chars": 45017,
-      "bytes": 346292,
+      "bytes": 354755,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-385346/README.md",
@@ -8107,17 +8393,18 @@
       ],
       "summaries": {
         "prose": 12,
-        "summarised": 11,
-        "backlog": 1,
-        "draft": 11,
+        "summarised": 12,
+        "backlog": 0,
+        "draft": 12,
         "confirmed": 0,
-        "stale": 1,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-385346/"
+      "view": "/en/cat-harness/library/who-iris/10665-385346/",
+      "lang": "en"
     },
     {
       "id": "10665-385385",
@@ -8139,7 +8426,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 12,
-      "blocks": 31,
+      "blocks": 42,
       "images": 326,
       "ocrPages": 0,
       "hasOcr": false,
@@ -8150,7 +8437,7 @@
       "pageEnd": 96,
       "words": 41546,
       "chars": 282275,
-      "bytes": 7095836,
+      "bytes": 7249376,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-385385/README.md",
@@ -8164,17 +8451,18 @@
       ],
       "summaries": {
         "prose": 12,
-        "summarised": 0,
-        "backlog": 12,
-        "draft": 0,
+        "summarised": 12,
+        "backlog": 0,
+        "draft": 12,
         "confirmed": 0,
         "stale": 0,
         "rejected": 0,
-        "notSummarised": 12,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-385385/"
+      "view": "/en/cat-harness/library/who-iris/10665-385385/",
+      "lang": "en"
     },
     {
       "id": "10665-387553",
@@ -8236,7 +8524,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-387553/"
+      "view": "/en/cat-harness/library/who-iris/10665-387553/",
+      "lang": "fr"
     },
     {
       "id": "10665-42458",
@@ -8258,7 +8547,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 26,
-      "blocks": 26,
+      "blocks": 28,
       "images": 0,
       "ocrPages": 0,
       "hasOcr": false,
@@ -8269,7 +8558,7 @@
       "pageEnd": 52,
       "words": 14373,
       "chars": 95444,
-      "bytes": 300358,
+      "bytes": 310562,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-42458/README.md",
@@ -8293,7 +8582,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-42458/"
+      "view": "/en/cat-harness/library/who-iris/10665-42458/",
+      "lang": "en"
     },
     {
       "id": "10665-42988",
@@ -8373,7 +8663,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 14,
-      "blocks": 14,
+      "blocks": 18,
       "images": 6,
       "ocrPages": 0,
       "hasOcr": false,
@@ -8384,7 +8674,7 @@
       "pageEnd": 52,
       "words": 11224,
       "chars": 96029,
-      "bytes": 335013,
+      "bytes": 352961,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-43699/README.md",
@@ -8413,7 +8703,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-43699/"
+      "view": "/en/cat-harness/library/who-iris/10665-43699/",
+      "lang": "en"
     },
     {
       "id": "10665-44118",
@@ -8446,7 +8737,7 @@
       "pageEnd": 212,
       "words": 101039,
       "chars": 676366,
-      "bytes": 1944774,
+      "bytes": 2553958,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-44118/README.md",
@@ -8460,17 +8751,23 @@
       ],
       "summaries": {
         "prose": 81,
-        "summarised": 0,
-        "backlog": 81,
-        "draft": 0,
+        "summarised": 81,
+        "backlog": 0,
+        "draft": 81,
         "confirmed": 0,
         "stale": 0,
         "rejected": 0,
-        "notSummarised": 81,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44118/"
+      "view": "/en/cat-harness/library/who-iris/10665-44118/",
+      "lang": "en",
+      "titles": {
+        "ru": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al] (Русский)",
+        "zh": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al] (中文)",
+        "ar": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al] (العربية)"
+      }
     },
     {
       "id": "10665-44118-ara",
@@ -8504,24 +8801,30 @@
       "pageEnd": 211,
       "words": 98030,
       "chars": 593692,
-      "bytes": 4028649,
+      "bytes": 4047564,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-44118-ara/README.md",
       "referencedBy": [],
       "summaries": {
         "prose": 211,
-        "summarised": 205,
-        "backlog": 6,
-        "draft": 205,
+        "summarised": 211,
+        "backlog": 0,
+        "draft": 211,
         "confirmed": 0,
-        "stale": 6,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44118-ara/"
+      "view": "/en/cat-harness/library/who-iris/10665-44118-ara/",
+      "lang": "ar",
+      "titles": {
+        "en": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al]",
+        "ru": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al] (Русский)",
+        "zh": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al] (中文)"
+      }
     },
     {
       "id": "10665-44118-chi",
@@ -8572,7 +8875,13 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44118-chi/"
+      "view": "/en/cat-harness/library/who-iris/10665-44118-chi/",
+      "lang": "zh",
+      "titles": {
+        "en": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al]",
+        "ru": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al] (Русский)",
+        "ar": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al] (العربية)"
+      }
     },
     {
       "id": "10665-44118-rus",
@@ -8623,7 +8932,13 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44118-rus/"
+      "view": "/en/cat-harness/library/who-iris/10665-44118-rus/",
+      "lang": "ru",
+      "titles": {
+        "en": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al]",
+        "zh": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al] (中文)",
+        "ar": "Casebook on ethical issues in international health research / edited by Richard Cash [... et al] (العربية)"
+      }
     },
     {
       "id": "10665-44759",
@@ -8645,7 +8960,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 43,
-      "blocks": 43,
+      "blocks": 56,
       "images": 2,
       "ocrPages": 0,
       "hasOcr": false,
@@ -8656,7 +8971,7 @@
       "pageEnd": 70,
       "words": 24928,
       "chars": 173877,
-      "bytes": 686926,
+      "bytes": 772860,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-44759/README.md",
@@ -8685,7 +9000,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44759/"
+      "view": "/en/cat-harness/library/who-iris/10665-44759/",
+      "lang": "en"
     },
     {
       "id": "10665-44796",
@@ -8718,7 +9034,7 @@
       "pageEnd": 68,
       "words": 16876,
       "chars": 119032,
-      "bytes": 567342,
+      "bytes": 583801,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-44796/README.md",
@@ -8737,17 +9053,25 @@
       ],
       "summaries": {
         "prose": 39,
-        "summarised": 37,
-        "backlog": 2,
-        "draft": 37,
+        "summarised": 39,
+        "backlog": 0,
+        "draft": 39,
         "confirmed": 0,
-        "stale": 1,
+        "stale": 0,
         "rejected": 0,
-        "notSummarised": 1,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44796/"
+      "view": "/en/cat-harness/library/who-iris/10665-44796/",
+      "lang": "en",
+      "titles": {
+        "fr": "Cadre de préparation en cas de grippe pandémique pour l'échange des virus grippaux et l'accès aux vaccins et autres avantages",
+        "es": "Preparación para una gripe pandémica:  marco para el intercambio de virus gripales y el acceso a las vacunas y otros beneficios",
+        "ru": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (Русский)",
+        "zh": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (中文)",
+        "ar": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (العربية)"
+      }
     },
     {
       "id": "10665-44796-ara",
@@ -8781,24 +9105,32 @@
       "pageEnd": 68,
       "words": 16038,
       "chars": 101415,
-      "bytes": 499623,
+      "bytes": 508008,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-44796-ara/README.md",
       "referencedBy": [],
       "summaries": {
         "prose": 31,
-        "summarised": 30,
-        "backlog": 1,
-        "draft": 30,
+        "summarised": 31,
+        "backlog": 0,
+        "draft": 31,
         "confirmed": 0,
-        "stale": 1,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44796-ara/"
+      "view": "/en/cat-harness/library/who-iris/10665-44796-ara/",
+      "lang": "ar",
+      "titles": {
+        "en": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits",
+        "fr": "Cadre de préparation en cas de grippe pandémique pour l'échange des virus grippaux et l'accès aux vaccins et autres avantages",
+        "es": "Preparación para una gripe pandémica:  marco para el intercambio de virus gripales y el acceso a las vacunas y otros beneficios",
+        "ru": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (Русский)",
+        "zh": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (中文)"
+      }
     },
     {
       "id": "10665-44796-chi",
@@ -8849,7 +9181,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44796-chi/"
+      "view": "/en/cat-harness/library/who-iris/10665-44796-chi/",
+      "lang": "zh",
+      "titles": {
+        "en": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits",
+        "fr": "Cadre de préparation en cas de grippe pandémique pour l'échange des virus grippaux et l'accès aux vaccins et autres avantages",
+        "es": "Preparación para una gripe pandémica:  marco para el intercambio de virus gripales y el acceso a las vacunas y otros beneficios",
+        "ru": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (Русский)",
+        "ar": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (العربية)"
+      }
     },
     {
       "id": "10665-44796-rus",
@@ -8900,7 +9240,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44796-rus/"
+      "view": "/en/cat-harness/library/who-iris/10665-44796-rus/",
+      "lang": "ru",
+      "titles": {
+        "en": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits",
+        "fr": "Cadre de préparation en cas de grippe pandémique pour l'échange des virus grippaux et l'accès aux vaccins et autres avantages",
+        "es": "Preparación para una gripe pandémica:  marco para el intercambio de virus gripales y el acceso a las vacunas y otros beneficios",
+        "zh": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (中文)",
+        "ar": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (العربية)"
+      }
     },
     {
       "id": "10665-44853",
@@ -8962,7 +9310,15 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44853/"
+      "view": "/en/cat-harness/library/who-iris/10665-44853/",
+      "lang": "fr",
+      "titles": {
+        "en": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits",
+        "es": "Preparación para una gripe pandémica:  marco para el intercambio de virus gripales y el acceso a las vacunas y otros beneficios",
+        "ru": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (Русский)",
+        "zh": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (中文)",
+        "ar": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (العربية)"
+      }
     },
     {
       "id": "10665-44867",
@@ -9025,7 +9381,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-44867/"
+      "view": "/en/cat-harness/library/who-iris/10665-44867/",
+      "lang": "es",
+      "titles": {
+        "en": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits",
+        "fr": "Cadre de préparation en cas de grippe pandémique pour l'échange des virus grippaux et l'accès aux vaccins et autres avantages",
+        "ru": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (Русский)",
+        "zh": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (中文)",
+        "ar": "Pandemic influenza preparedness framework for the sharing of influenza viruses and access to vaccines and other benefits (العربية)"
+      }
     },
     {
       "id": "10665-47547",
@@ -9087,7 +9451,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-47547/"
+      "view": "/en/cat-harness/library/who-iris/10665-47547/",
+      "lang": "en"
     },
     {
       "id": "10665-58534",
@@ -9211,7 +9576,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-59577/"
+      "view": "/en/cat-harness/library/who-iris/10665-59577/",
+      "lang": "en"
     },
     {
       "id": "10665-66977",
@@ -9273,7 +9639,15 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-66977/"
+      "view": "/en/cat-harness/library/who-iris/10665-66977/",
+      "lang": "en",
+      "titles": {
+        "fr": "Vaccination contre l' hépatite B : introduire le vaccin contre l' hépatite B dans les services nationaux de vaccination",
+        "es": "Inmunización contra la Hepatitis B : introducción de la vacuna contra la hepatitis B en los servicios nacionales de inmunización",
+        "ru": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (Русский)",
+        "zh": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (中文)",
+        "ar": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (العربية)"
+      }
     },
     {
       "id": "10665-66977-ara",
@@ -9324,7 +9698,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-66977-ara/"
+      "view": "/en/cat-harness/library/who-iris/10665-66977-ara/",
+      "lang": "ar",
+      "titles": {
+        "en": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services",
+        "fr": "Vaccination contre l' hépatite B : introduire le vaccin contre l' hépatite B dans les services nationaux de vaccination",
+        "es": "Inmunización contra la Hepatitis B : introducción de la vacuna contra la hepatitis B en los servicios nacionales de inmunización",
+        "ru": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (Русский)",
+        "zh": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (中文)"
+      }
     },
     {
       "id": "10665-66977-chi",
@@ -9358,24 +9740,32 @@
       "pageEnd": 4,
       "words": 608,
       "chars": 5631,
-      "bytes": 72398,
+      "bytes": 83320,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-66977-chi/README.md",
       "referencedBy": [],
       "summaries": {
         "prose": 3,
-        "summarised": 2,
-        "backlog": 1,
-        "draft": 2,
+        "summarised": 3,
+        "backlog": 0,
+        "draft": 3,
         "confirmed": 0,
-        "stale": 1,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-66977-chi/"
+      "view": "/en/cat-harness/library/who-iris/10665-66977-chi/",
+      "lang": "zh",
+      "titles": {
+        "en": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services",
+        "fr": "Vaccination contre l' hépatite B : introduire le vaccin contre l' hépatite B dans les services nationaux de vaccination",
+        "es": "Inmunización contra la Hepatitis B : introducción de la vacuna contra la hepatitis B en los servicios nacionales de inmunización",
+        "ru": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (Русский)",
+        "ar": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (العربية)"
+      }
     },
     {
       "id": "10665-66977-rus",
@@ -9426,7 +9816,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-66977-rus/"
+      "view": "/en/cat-harness/library/who-iris/10665-66977-rus/",
+      "lang": "ru",
+      "titles": {
+        "en": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services",
+        "fr": "Vaccination contre l' hépatite B : introduire le vaccin contre l' hépatite B dans les services nationaux de vaccination",
+        "es": "Inmunización contra la Hepatitis B : introducción de la vacuna contra la hepatitis B en los servicios nacionales de inmunización",
+        "zh": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (中文)",
+        "ar": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (العربية)"
+      }
     },
     {
       "id": "10665-67132",
@@ -9488,7 +9886,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-67132/"
+      "view": "/en/cat-harness/library/who-iris/10665-67132/",
+      "lang": "en"
     },
     {
       "id": "10665-67211",
@@ -9550,7 +9949,15 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-67211/"
+      "view": "/en/cat-harness/library/who-iris/10665-67211/",
+      "lang": "fr",
+      "titles": {
+        "en": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services",
+        "es": "Inmunización contra la Hepatitis B : introducción de la vacuna contra la hepatitis B en los servicios nacionales de inmunización",
+        "ru": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (Русский)",
+        "zh": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (中文)",
+        "ar": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (العربية)"
+      }
     },
     {
       "id": "10665-67212",
@@ -9612,7 +10019,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-67212/"
+      "view": "/en/cat-harness/library/who-iris/10665-67212/",
+      "lang": "es",
+      "titles": {
+        "en": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services",
+        "fr": "Vaccination contre l' hépatite B : introduire le vaccin contre l' hépatite B dans les services nationaux de vaccination",
+        "ru": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (Русский)",
+        "zh": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (中文)",
+        "ar": "Hepatitis B immunization : introducing hepatitis B vaccine into national immunization services (العربية)"
+      }
     },
     {
       "id": "10665-67344",
@@ -9736,7 +10151,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-67518/"
+      "view": "/en/cat-harness/library/who-iris/10665-67518/",
+      "lang": "fr"
     },
     {
       "id": "10665-67839",
@@ -9798,7 +10214,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-67839/"
+      "view": "/en/cat-harness/library/who-iris/10665-67839/",
+      "lang": "en"
     },
     {
       "id": "10665-68008",
@@ -9944,7 +10361,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 16,
-      "blocks": 16,
+      "blocks": 21,
       "images": 0,
       "ocrPages": 0,
       "hasOcr": false,
@@ -9955,7 +10372,7 @@
       "pageEnd": 74,
       "words": 17519,
       "chars": 110273,
-      "bytes": 727074,
+      "bytes": 750360,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-69034/README.md",
@@ -9984,7 +10401,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-69034/"
+      "view": "/en/cat-harness/library/who-iris/10665-69034/",
+      "lang": "en"
     },
     {
       "id": "10665-69096",
@@ -10006,7 +10424,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 29,
-      "blocks": 29,
+      "blocks": 32,
       "images": 0,
       "ocrPages": 0,
       "hasOcr": false,
@@ -10017,7 +10435,7 @@
       "pageEnd": 23,
       "words": 7608,
       "chars": 52884,
-      "bytes": 264481,
+      "bytes": 277365,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-69096/README.md",
@@ -10046,7 +10464,8 @@
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-69096/"
+      "view": "/en/cat-harness/library/who-iris/10665-69096/",
+      "lang": "en"
     },
     {
       "id": "10665-69384",
@@ -10079,7 +10498,7 @@
       "pageEnd": 27,
       "words": 8094,
       "chars": 53942,
-      "bytes": 367831,
+      "bytes": 400399,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-69384/README.md",
@@ -10098,17 +10517,25 @@
       ],
       "summaries": {
         "prose": 20,
-        "summarised": 15,
-        "backlog": 5,
-        "draft": 15,
+        "summarised": 20,
+        "backlog": 0,
+        "draft": 20,
         "confirmed": 0,
-        "stale": 4,
+        "stale": 0,
         "rejected": 0,
-        "notSummarised": 1,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-69384/"
+      "view": "/en/cat-harness/library/who-iris/10665-69384/",
+      "lang": "en",
+      "titles": {
+        "fr": "Phase préparatoire à l' instauration de la vaccination anti-papillomavirus : directives stratégiques à l' intention des pays",
+        "es": "Preparación de las introducción de las vacunas contra el virus del papiloma humano : orientaciones normativas y programáticas para los países",
+        "ru": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (Русский)",
+        "zh": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (中文)",
+        "ar": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (العربية)"
+      }
     },
     {
       "id": "10665-69384-ara",
@@ -10142,24 +10569,32 @@
       "pageEnd": 28,
       "words": 9103,
       "chars": 58259,
-      "bytes": 413036,
+      "bytes": 430669,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-69384-ara/README.md",
       "referencedBy": [],
       "summaries": {
         "prose": 28,
-        "summarised": 24,
-        "backlog": 4,
-        "draft": 24,
+        "summarised": 28,
+        "backlog": 0,
+        "draft": 28,
         "confirmed": 0,
-        "stale": 4,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-69384-ara/"
+      "view": "/en/cat-harness/library/who-iris/10665-69384-ara/",
+      "lang": "ar",
+      "titles": {
+        "en": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries",
+        "fr": "Phase préparatoire à l' instauration de la vaccination anti-papillomavirus : directives stratégiques à l' intention des pays",
+        "es": "Preparación de las introducción de las vacunas contra el virus del papiloma humano : orientaciones normativas y programáticas para los países",
+        "ru": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (Русский)",
+        "zh": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (中文)"
+      }
     },
     {
       "id": "10665-69384-chi",
@@ -10210,7 +10645,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-69384-chi/"
+      "view": "/en/cat-harness/library/who-iris/10665-69384-chi/",
+      "lang": "zh",
+      "titles": {
+        "en": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries",
+        "fr": "Phase préparatoire à l' instauration de la vaccination anti-papillomavirus : directives stratégiques à l' intention des pays",
+        "es": "Preparación de las introducción de las vacunas contra el virus del papiloma humano : orientaciones normativas y programáticas para los países",
+        "ru": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (Русский)",
+        "ar": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (العربية)"
+      }
     },
     {
       "id": "10665-69384-rus",
@@ -10261,7 +10704,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-69384-rus/"
+      "view": "/en/cat-harness/library/who-iris/10665-69384-rus/",
+      "lang": "ru",
+      "titles": {
+        "en": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries",
+        "fr": "Phase préparatoire à l' instauration de la vaccination anti-papillomavirus : directives stratégiques à l' intention des pays",
+        "es": "Preparación de las introducción de las vacunas contra el virus del papiloma humano : orientaciones normativas y programáticas para los países",
+        "zh": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (中文)",
+        "ar": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (العربية)"
+      }
     },
     {
       "id": "10665-69653",
@@ -10323,7 +10774,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-69653/"
+      "view": "/en/cat-harness/library/who-iris/10665-69653/",
+      "lang": "fr",
+      "titles": {
+        "en": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries",
+        "es": "Preparación de las introducción de las vacunas contra el virus del papiloma humano : orientaciones normativas y programáticas para los países",
+        "ru": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (Русский)",
+        "zh": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (中文)",
+        "ar": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (العربية)"
+      }
     },
     {
       "id": "10665-69654",
@@ -10385,7 +10844,15 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-69654/"
+      "view": "/en/cat-harness/library/who-iris/10665-69654/",
+      "lang": "es",
+      "titles": {
+        "en": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries",
+        "fr": "Phase préparatoire à l' instauration de la vaccination anti-papillomavirus : directives stratégiques à l' intention des pays",
+        "ru": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (Русский)",
+        "zh": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (中文)",
+        "ar": "Preparing for the introduction of HPV vaccines : policy and programme guidance for countries (العربية)"
+      }
     },
     {
       "id": "10665-72254",
@@ -10447,7 +10914,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-72254/"
+      "view": "/en/cat-harness/library/who-iris/10665-72254/",
+      "lang": "fr"
     },
     {
       "id": "10665-72461",
@@ -10510,7 +10978,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-72461/"
+      "view": "/en/cat-harness/library/who-iris/10665-72461/",
+      "lang": "fr"
     },
     {
       "id": "10665-75211",
@@ -10532,7 +11001,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 97,
-      "blocks": 97,
+      "blocks": 124,
       "images": 34,
       "ocrPages": 225,
       "hasOcr": true,
@@ -10543,7 +11012,7 @@
       "pageEnd": 223,
       "words": 69925,
       "chars": 490184,
-      "bytes": 5309674,
+      "bytes": 6002540,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-75211/README.md",
@@ -10562,17 +11031,23 @@
       ],
       "summaries": {
         "prose": 97,
-        "summarised": 5,
-        "backlog": 92,
-        "draft": 5,
+        "summarised": 97,
+        "backlog": 0,
+        "draft": 97,
         "confirmed": 0,
-        "stale": 1,
+        "stale": 0,
         "rejected": 0,
-        "notSummarised": 91,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-75211/"
+      "view": "/en/cat-harness/library/who-iris/10665-75211/",
+      "lang": "en",
+      "titles": {
+        "ru": "National eHealth strategy toolkit (Русский)",
+        "ar": "National eHealth strategy toolkit (العربية)",
+        "pt": "National eHealth strategy toolkit (Português)"
+      }
     },
     {
       "id": "10665-75211-ara",
@@ -10606,24 +11081,30 @@
       "pageEnd": 223,
       "words": 67062,
       "chars": 425620,
-      "bytes": 3230137,
+      "bytes": 3258389,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-75211-ara/README.md",
       "referencedBy": [],
       "summaries": {
         "prose": 223,
-        "summarised": 215,
-        "backlog": 8,
-        "draft": 215,
+        "summarised": 223,
+        "backlog": 0,
+        "draft": 223,
         "confirmed": 0,
-        "stale": 8,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-75211-ara/"
+      "view": "/en/cat-harness/library/who-iris/10665-75211-ara/",
+      "lang": "ar",
+      "titles": {
+        "en": "National eHealth strategy toolkit",
+        "ru": "National eHealth strategy toolkit (Русский)",
+        "pt": "National eHealth strategy toolkit (Português)"
+      }
     },
     {
       "id": "10665-75211-por",
@@ -10657,24 +11138,30 @@
       "pageEnd": 220,
       "words": 84711,
       "chars": 557569,
-      "bytes": 4267262,
+      "bytes": 4328065,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-75211-por/README.md",
       "referencedBy": [],
       "summaries": {
         "prose": 63,
-        "summarised": 57,
-        "backlog": 6,
-        "draft": 57,
+        "summarised": 63,
+        "backlog": 0,
+        "draft": 63,
         "confirmed": 0,
-        "stale": 6,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-75211-por/"
+      "view": "/en/cat-harness/library/who-iris/10665-75211-por/",
+      "lang": "pt",
+      "titles": {
+        "en": "National eHealth strategy toolkit",
+        "ru": "National eHealth strategy toolkit (Русский)",
+        "ar": "National eHealth strategy toolkit (العربية)"
+      }
     },
     {
       "id": "10665-75211-rus",
@@ -10708,24 +11195,30 @@
       "pageEnd": 226,
       "words": 75283,
       "chars": 643803,
-      "bytes": 4209981,
+      "bytes": 4241780,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-75211-rus/README.md",
       "referencedBy": [],
       "summaries": {
         "prose": 226,
-        "summarised": 221,
-        "backlog": 5,
-        "draft": 221,
+        "summarised": 226,
+        "backlog": 0,
+        "draft": 226,
         "confirmed": 0,
-        "stale": 5,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-75211-rus/"
+      "view": "/en/cat-harness/library/who-iris/10665-75211-rus/",
+      "lang": "ru",
+      "titles": {
+        "en": "National eHealth strategy toolkit",
+        "ar": "National eHealth strategy toolkit (العربية)",
+        "pt": "National eHealth strategy toolkit (Português)"
+      }
     },
     {
       "id": "10665-77764",
@@ -10787,7 +11280,12 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-77764/"
+      "view": "/en/cat-harness/library/who-iris/10665-77764/",
+      "lang": "en",
+      "titles": {
+        "ru": "WHO recommendations: optimizing health worker roles to improve access to key maternal and newborn health interventions through task shifting (Русский)",
+        "zh": "WHO recommendations: optimizing health worker roles to improve access to key maternal and newborn health interventions through task shifting (中文)"
+      }
     },
     {
       "id": "10665-77764-chi",
@@ -10838,7 +11336,12 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-77764-chi/"
+      "view": "/en/cat-harness/library/who-iris/10665-77764-chi/",
+      "lang": "zh",
+      "titles": {
+        "en": "WHO recommendations: optimizing health worker roles to improve access to key maternal and newborn health interventions through task shifting",
+        "ru": "WHO recommendations: optimizing health worker roles to improve access to key maternal and newborn health interventions through task shifting (Русский)"
+      }
     },
     {
       "id": "10665-77764-rus",
@@ -10889,7 +11392,12 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-77764-rus/"
+      "view": "/en/cat-harness/library/who-iris/10665-77764-rus/",
+      "lang": "ru",
+      "titles": {
+        "en": "WHO recommendations: optimizing health worker roles to improve access to key maternal and newborn health interventions through task shifting",
+        "zh": "WHO recommendations: optimizing health worker roles to improve access to key maternal and newborn health interventions through task shifting (中文)"
+      }
     },
     {
       "id": "10665-81619",
@@ -10951,7 +11459,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-81619/"
+      "view": "/en/cat-harness/library/who-iris/10665-81619/",
+      "lang": "ru"
     },
     {
       "id": "10665-83077",
@@ -11013,7 +11522,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-83077/"
+      "view": "/en/cat-harness/library/who-iris/10665-83077/",
+      "lang": "zh"
     },
     {
       "id": "10665-83270",
@@ -11046,7 +11556,7 @@
       "pageEnd": 8,
       "words": 3717,
       "chars": 24236,
-      "bytes": 107971,
+      "bytes": 162385,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-83270/README.md",
@@ -11065,17 +11575,18 @@
       ],
       "summaries": {
         "prose": 8,
-        "summarised": 0,
-        "backlog": 8,
-        "draft": 0,
+        "summarised": 8,
+        "backlog": 0,
+        "draft": 8,
         "confirmed": 0,
         "stale": 0,
         "rejected": 0,
-        "notSummarised": 8,
+        "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-83270/"
+      "view": "/en/cat-harness/library/who-iris/10665-83270/",
+      "lang": "fr"
     },
     {
       "id": "10665-90448",
@@ -11137,7 +11648,8 @@
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-90448/"
+      "view": "/en/cat-harness/library/who-iris/10665-90448/",
+      "lang": "en"
     },
     {
       "id": "10665-92871",
@@ -11200,7 +11712,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-92871/"
+      "view": "/en/cat-harness/library/who-iris/10665-92871/",
+      "lang": "en"
     },
     {
       "id": "10665-94830",
@@ -11222,7 +11735,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 43,
-      "blocks": 44,
+      "blocks": 45,
       "images": 1,
       "ocrPages": 0,
       "hasOcr": false,
@@ -11233,7 +11746,7 @@
       "pageEnd": 60,
       "words": 18590,
       "chars": 126727,
-      "bytes": 482478,
+      "bytes": 521991,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-94830/README.md",
@@ -11252,17 +11765,21 @@
       ],
       "summaries": {
         "prose": 42,
-        "summarised": 38,
-        "backlog": 4,
-        "draft": 38,
+        "summarised": 42,
+        "backlog": 0,
+        "draft": 42,
         "confirmed": 0,
-        "stale": 4,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/10665-94830/"
+      "view": "/en/cat-harness/library/who-iris/10665-94830/",
+      "lang": "en",
+      "titles": {
+        "fa": "WHO guidelines for screening and treatment of precancerous lesions for cervical cancer prevention (فارسی)"
+      }
     },
     {
       "id": "10665-94830-per",
@@ -11296,24 +11813,28 @@
       "pageEnd": 68,
       "words": 20868,
       "chars": 118303,
-      "bytes": 1485632,
+      "bytes": 1908669,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-94830-per/README.md",
       "referencedBy": [],
       "summaries": {
         "prose": 68,
-        "summarised": 0,
-        "backlog": 68,
-        "draft": 0,
+        "summarised": 68,
+        "backlog": 0,
+        "draft": 68,
         "confirmed": 0,
-        "stale": 68,
+        "stale": 0,
         "rejected": 0,
         "notSummarised": 0,
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/10665-94830-per/"
+      "view": "/en/cat-harness/library/who-iris/10665-94830-per/",
+      "lang": "fa",
+      "titles": {
+        "en": "WHO guidelines for screening and treatment of precancerous lesions for cervical cancer prevention"
+      }
     },
     {
       "id": "10665-97885",
@@ -11335,7 +11856,7 @@
       "doi": "",
       "documentClass": "",
       "sections": 26,
-      "blocks": 26,
+      "blocks": 31,
       "images": 3,
       "ocrPages": 0,
       "hasOcr": false,
@@ -11346,7 +11867,7 @@
       "pageEnd": 44,
       "words": 14288,
       "chars": 99855,
-      "bytes": 451847,
+      "bytes": 475984,
       "upload": "absent",
       "uploadInstance": "",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/10665-97885/README.md",
@@ -11375,7 +11896,8 @@
         "unreadable": 0,
         "empty": 2
       },
-      "view": "/en/cat-harness/library/who-iris/10665-97885/"
+      "view": "/en/cat-harness/library/who-iris/10665-97885/",
+      "lang": "en"
     },
     {
       "id": "9789240010567-eng",
@@ -11444,7 +11966,12 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/9789240010567-eng/"
+      "view": "/en/cat-harness/library/who-iris/9789240010567-eng/",
+      "lang": "en",
+      "titles": {
+        "fr": "Guide d’investissement pour la mise en oeuvre numérique (DIIG) : intégrer les interventions numériques dans les programmes de santé",
+        "es": "Guía para la inversión en la implementación digital (DIIG): incorporación de intervenciones digitales en los programas de salud"
+      }
     },
     {
       "id": "9789240016514-eng",
@@ -11477,7 +12004,7 @@
       "pageEnd": 53,
       "words": 18813,
       "chars": 135641,
-      "bytes": 2343489,
+      "bytes": 2343459,
       "upload": "match",
       "uploadInstance": "who-iris",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/9789240016514-eng/README.md",
@@ -11501,7 +12028,8 @@
         "unreadable": 0,
         "empty": 1
       },
-      "view": "/en/cat-harness/library/who-iris/9789240016514-eng/"
+      "view": "/en/cat-harness/library/who-iris/9789240016514-eng/",
+      "lang": "en"
     },
     {
       "id": "9789240081291-eng",
@@ -11534,7 +12062,7 @@
       "pageEnd": 132,
       "words": 31920,
       "chars": 228065,
-      "bytes": 3263382,
+      "bytes": 3258980,
       "upload": "match",
       "uploadInstance": "who-iris",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/9789240081291-eng/README.md",
@@ -11564,7 +12092,8 @@
         "empty": 2
       },
       "view": "/en/cat-harness/library/who-iris/9789240081291-eng/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "9789240081949-eng",
@@ -11627,7 +12156,13 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/9789240081949-eng/"
+      "view": "/en/cat-harness/library/who-iris/9789240081949-eng/",
+      "lang": "en",
+      "titles": {
+        "fr": "Classification des interventions, des services et des applications numériques dans le domaine de la santé : un langage commun pour décrire les diverses utilisations de la technologie numérique dans le domaine de la santé",
+        "es": "Clasificación de intervenciones, servicios y aplicaciones digitales en salud: un lenguaje compartido para describir los usos de la tecnología digital para la salud",
+        "ar": "تصنيف التدخلات والخدمات والتطبيقات الرقمية في مجال الصحة: لغة مشتركة لوصف استخدامات التكنولوجيا الرقمية من أجل الصحة"
+      }
     },
     {
       "id": "9789240093362-eng",
@@ -11661,7 +12196,7 @@
       "pageEnd": 98,
       "words": 46319,
       "chars": 305214,
-      "bytes": 4973850,
+      "bytes": 4973811,
       "upload": "match",
       "uploadInstance": "who-iris",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/9789240093362-eng/README.md",
@@ -11709,7 +12244,8 @@
         "empty": 0
       },
       "view": "/en/cat-harness/library/who-iris/9789240093362-eng/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "9789240099456-eng",
@@ -11771,7 +12307,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/9789240099456-eng/"
+      "view": "/en/cat-harness/library/who-iris/9789240099456-eng/",
+      "lang": "en"
     },
     {
       "id": "9789240101197-eng",
@@ -11852,7 +12389,8 @@
         "empty": 0
       },
       "view": "/en/cat-harness/library/who-iris/9789240101197-eng/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "9789240116191-eng",
@@ -11933,7 +12471,8 @@
         "empty": 0
       },
       "view": "/en/cat-harness/library/who-iris/9789240116191-eng/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "9789240120747-eng",
@@ -11966,7 +12505,7 @@
       "pageEnd": 72,
       "words": 24033,
       "chars": 165418,
-      "bytes": 1891812,
+      "bytes": 1891770,
       "upload": "match",
       "uploadInstance": "who-iris",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/9789240120747-eng/README.md",
@@ -12008,7 +12547,8 @@
         "empty": 0
       },
       "view": "/en/cat-harness/library/who-iris/9789240120747-eng/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "9789240122925-eng",
@@ -12071,7 +12611,8 @@
         "empty": 0
       },
       "view": "/en/cat-harness/library/who-iris/9789240122925-eng/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "9789241509510-eng",
@@ -12128,7 +12669,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/9789241509510-eng/"
+      "view": "/en/cat-harness/library/who-iris/9789241509510-eng/",
+      "lang": "en"
     },
     {
       "id": "9789241511766-eng",
@@ -12185,7 +12727,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/9789241511766-eng/"
+      "view": "/en/cat-harness/library/who-iris/9789241511766-eng/",
+      "lang": "en"
     },
     {
       "id": "9789241513111-eng",
@@ -12248,7 +12791,8 @@
         "empty": 1
       },
       "view": "/en/cat-harness/library/who-iris/9789241513111-eng/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "9789241514446-eng",
@@ -12311,7 +12855,8 @@
         "empty": 0
       },
       "view": "/en/cat-harness/library/who-iris/9789241514446-eng/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "9789241548960-eng",
@@ -12407,7 +12952,7 @@
       "pageEnd": 78,
       "words": 14228,
       "chars": 105678,
-      "bytes": 2171559,
+      "bytes": 2166662,
       "upload": "match",
       "uploadInstance": "who-iris",
       "readme": "https://github.com/litlfred/who-iris/blob/main/library/9789241549226-eng/README.md",
@@ -12487,7 +13032,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/9789241549912-eng/"
+      "view": "/en/cat-harness/library/who-iris/9789241549912-eng/",
+      "lang": "en"
     },
     {
       "id": "9789241549912-webannexes-eng",
@@ -12538,7 +13084,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/9789241549912-webannexes-eng/"
+      "view": "/en/cat-harness/library/who-iris/9789241549912-webannexes-eng/",
+      "lang": "en"
     },
     {
       "id": "9789241549912-websupplement-eng",
@@ -12589,7 +13136,8 @@
         "unreadable": 0,
         "empty": 6
       },
-      "view": "/en/cat-harness/library/who-iris/9789241549912-websupplement-eng/"
+      "view": "/en/cat-harness/library/who-iris/9789241549912-websupplement-eng/",
+      "lang": "en"
     },
     {
       "id": "b0426",
@@ -12652,7 +13200,8 @@
         "empty": 0
       },
       "view": "/en/cat-harness/library/who-iris/b0426/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "who-2019-ncov-digital-certificates-vaccination-20211-eng",
@@ -12772,7 +13321,8 @@
         "empty": 0
       },
       "view": "/en/cat-harness/library/who-iris/who-his-hwf-nhwa-20171-eng/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "who-pub-tps-931",
@@ -12904,7 +13454,8 @@
         "unreadable": 0,
         "empty": 0
       },
-      "view": "/en/cat-harness/library/who-iris/who-rhr-1806-eng/"
+      "view": "/en/cat-harness/library/who-iris/who-rhr-1806-eng/",
+      "lang": "en"
     },
     {
       "id": "wpr-rdo-2020-003-eng",
@@ -12973,7 +13524,8 @@
         "empty": 0
       },
       "view": "/en/cat-harness/library/who-iris/wpr-rdo-2020-003-eng/",
-      "viewable": "pdf"
+      "viewable": "pdf",
+      "lang": "en"
     },
     {
       "id": "10665-375056",

@@ -45,6 +45,84 @@
     }
   ],
   "paths": {
+    "/tools/bpmn-graphviz-layout": {
+      "post": {
+        "operationId": "bpmn-graphviz-layout",
+        "summary": "BPMN → Diagram Interchange, laid out by Graphviz",
+        "description": "Lay out a BPMN that carries no Diagram Interchange (`bpmn_to_svg.py` beside this file, moved from `.github/skills/bpmn_layout/` by bean folio-assistant-tgaj): one Graphviz cluster per participant, the coordinates written back into the BPMN as `<bpmndi:BPMNDiagram>`, and Graphviz's own SVG. cat-harness-tools' `render:bpmn` draws only the DI a file already has (bpmn-js does not lay out), so this is the step before it for a DAK process written, or imported, without one.",
+        "tags": [
+          "smart-base-tools"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "bpmn-graphviz-layout/"
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "bpmn": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "A BPMN 2.0 file, with or without DI."
+                  }
+                },
+                "required": [
+                  "bpmn"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "bpmn": {
+                      "$ref": "#/components/schemas/RepoPath",
+                      "description": "The BPMN with a Graphviz-placed `<bpmndi:BPMNDiagram>` (`--bpmn`)."
+                    },
+                    "svg": {
+                      "$ref": "#/components/schemas/RepoPath",
+                      "description": "Graphviz's drawing (`--svg`); not bpmn-js's, so not the published picture."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "http://smart.who.int/base/tools/bpmn-graphviz-layout.jsonld",
+        "x-invoke": {
+          "shell": "python3 smart-base/L2-bpmn/tools/bpmn-graphviz-layout/bpmn_to_svg.py <file.bpmn> [--bpmn <out.bpmn>] [--svg <out.svg>] [--dot <out.dot>]"
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "python3",
+            "graphviz"
+          ],
+          "network": false
+        },
+        "x-satisfies": [
+          "smart-base-tools"
+        ],
+        "x-selection": {
+          "when": "A BPMN has no Diagram Interchange, so `render:bpmn` would draw it blank, and a first layout is wanted before an author tidies it (`bpmn:detangle`).",
+          "limits": "A first layout, not the finished one: it does not meet `bpmn-authoring`'s readability rules (fixed task size, label placement, lane order); run `bun run cat bpmn:detangle --write` and look at `render:bpmn`'s picture after it. It parses with the standard library's ElementTree, so it is for files an author holds, not untrusted input.",
+          "cost": "Seconds; needs Graphviz `dot` on the PATH."
+        }
+      }
+    },
     "/tools/bpmn-to-fsh": {
       "post": {
         "operationId": "bpmn-to-fsh",
@@ -114,6 +192,84 @@
           "when": "An L2 business process is to reach L3 as a computable artefact, not only a picture.",
           "limits": "Requires a `smart-base` checkout at `SMART_BASE_HOME`; without one the capability is ABSENT, not a clean run.",
           "cost": "Seconds, plus the upstream checkout."
+        }
+      }
+    },
+    "/tools/bpmn-validate": {
+      "post": {
+        "operationId": "bpmn-validate",
+        "summary": "BPMN structure, vendor namespaces and lane → actor",
+        "description": "Check a DAK's BPMN (`validate.ts` beside this file; bean folio-assistant-tgaj, which replaced four Python validators with it): well-formed XML whose root is `<bpmn:definitions>`, no Camunda or Zeebe namespace, no duplicate id, at least one process, no bpmn-moddle (bpmn-js) import warning; every process has a `<laneSet>`, every flow node sits in a lane, and lane ids are unique and valid FSH ids; and every innermost lane names its actor by id: its `partitionElementRef` (a top-level `<bpmn:resource>`), else its own id, matched exactly against the `Instance:` ids of the ActorDefinitions in the IG's FSH (or JSON) and, for a harness process, the role ids of the mounted layers' `scenarios/roles.json`. Never by file name or title. With no file named it reads the declared process directories, `smart-base/**/processes/` and an IG's `input/bpmn/`.",
+        "tags": [
+          "smart-base-tools"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "bpmn-validate/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "bpmn": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "The .bpmn files to check; when absent, every .bpmn under the declared process directories (or, with `--changed <ref>`, those the branch changed)."
+                  },
+                  "fsh": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "Directories of ActorDefinition FSH or JSON; default `input/fsh` and `input/resources`."
+                  },
+                  "roles": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "`scenarios/roles.json` files whose role ids a harness lane may bind; default those of smart-base and the mounted cat-harness, fhir-harness and folio-assistant-core."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "report": {
+                      "$ref": "#/components/schemas/Text",
+                      "description": "One `✗` line per error and `!` per warning, then a count. Exit 0 no error, 1 an error, 2 nothing to check (not a pass). `--json` prints the findings as data."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "http://smart.who.int/base/tools/bpmn-validate.jsonld",
+        "x-invoke": {
+          "shell": "bun run smart-base/L2-bpmn/tools/bpmn-validate/validate.ts [file.bpmn ...] [--root <repo>] [--fsh <dir>]... [--roles <roles.json>]... [--changed <git ref>] [--json] [--verbose]"
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "bun"
+          ],
+          "network": false
+        },
+        "x-satisfies": [
+          "smart-base-tools"
+        ],
+        "x-selection": {
+          "when": "A DAK's business process (L2, BPMN) is added or edited, before review (skill `l2-component-edit-review`, the BPMN row's checker), and on every pull request that changes a `.bpmn`.",
+          "limits": "An ActorDefinition a dependency IG declares is found only when its FSH or JSON directory is passed with `--fsh`. Reads lanes, not pools: a participant whose process has no lanes is reported as a process with no laneSet. A lane bound to a harness role is accepted here; whether that role is equipped is cat-harness's `role-model` check (`kg:audit`). A published DAK whose processes are still Visio figures is crosswalked against its personas by `smart-base/scripts/dak-swimlanes.ts` (always on, beside the `web-annex` kind's `dak-swimlanes/v1` validator), not by this Tool. It does not draw the diagram (`render:bpmn` does) or check DI completeness.",
+          "cost": "Seconds, no network."
         }
       }
     },
@@ -1119,7 +1275,7 @@
         },
         "x-tool-iri": "http://smart.who.int/base/tools/l1-recommendation-candidates.jsonld",
         "x-invoke": {
-          "shell": "bun run smart-base/scripts/l1-recommendation-candidates.ts --entry <library entry> [--curation <curation.yaml>] --out <dir> [--check]"
+          "shell": "bun run smart-base/L1/scripts/l1-recommendation-candidates.ts --entry <library entry> [--curation <curation.yaml>] --out <dir> [--check]"
         },
         "x-install": {
           "none": true
@@ -1383,7 +1539,7 @@
         },
         "x-tool-iri": "http://smart.who.int/base/tools/l1-transcription-verbatim.jsonld",
         "x-invoke": {
-          "shell": "bun run smart-base/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]"
+          "shell": "bun run smart-base/L1/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]"
         },
         "x-install": {
           "none": true
@@ -1635,7 +1791,7 @@
                   "properties": {
                     "result": {
                       "$ref": "#/components/schemas/RepoPath",
-                      "description": "Result JSON conforming to `schemas/skills/classify-and-code-content/output.schema.json`."
+                      "description": "Result JSON conforming to `L1/schemas/skills/classify-and-code-content/output.schema.json`."
                     }
                   }
                 }

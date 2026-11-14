@@ -89,13 +89,13 @@
   "statusSrc":"../../../../assets/translation-status/index.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
-<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;processes&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
+<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","processes","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -164,7 +164,7 @@
 
 <link rel="stylesheet" href="../../../../assets/css/navbar.css"><script src="../../../../assets/navbar/rail-14ze53ymud6.js" defer></script><script src="../../../../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../../../../assets/page-layout.css" data-fa-page-layout><script src="../../../../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-pinned-data" content="../../../.."></head>
 
-<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../../../..">{"data":"rail-14ze53ymud6","here":"/en/cat-harness/processes/skills/translation-refresh.html","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#what-wakes-it","label":"What wakes it"},{"href":"#cold-start-once-per-run","label":"Cold start, once per run"},{"href":"#per-layer-in-order","label":"Per layer, in order","children":[{"href":"#1-detect","label":"Detect","icon":"1","depth":1},{"href":"#2-refresh-the-templates","label":"Refresh the templates","icon":"2","depth":1},{"href":"#3-merge-into-each-locale","label":"Merge into each locale","icon":"3","depth":1},{"href":"#4-translate-only-the-new-and-fuzzy-strings","label":"Translate only the new and fuzzy strings","icon":"4","depth":1},{"href":"#5-gates","label":"Gates","icon":"5","depth":1},{"href":"#6-round-trip-on-the-changed-strings","label":"Round trip on the changed strings","icon":"6","depth":1},{"href":"#7-qa-report","label":"QA report","icon":"7","depth":1},{"href":"#8-one-pr-per-layer-to-main","label":"One PR per layer, to main","icon":"8","depth":1},{"href":"#9-merge-by-the-layers-policy","label":"Merge, by the layer’s policy","icon":"9","depth":1},{"href":"#10-source-mistakes-one-issue","label":"Source mistakes: one issue","icon":"10","depth":1}],"fold":"10 sub-sections"},{"href":"#never","label":"Never"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../../">SMART Base</a></nav>
+<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../../../..">{"data":"rail-14ze53ymud6","here":"/en/cat-harness/processes/skills/translation-refresh.html","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#what-wakes-it","label":"What wakes it"},{"href":"#cold-start-once-per-run","label":"Cold start, once per run"},{"href":"#per-layer-in-order","label":"Per layer, in order","children":[{"href":"#1-detect","label":"Detect","icon":"1","depth":1},{"href":"#2-refresh-the-templates","label":"Refresh the templates","icon":"2","depth":1},{"href":"#3-merge-into-each-locale","label":"Merge into each locale","icon":"3","depth":1},{"href":"#4-translate-only-the-new-and-fuzzy-strings","label":"Translate only the new and fuzzy strings","icon":"4","depth":1},{"href":"#5-gates","label":"Gates","icon":"5","depth":1},{"href":"#6-round-trip-on-the-changed-strings","label":"Round trip on the changed strings","icon":"6","depth":1},{"href":"#7-qa-report","label":"QA report","icon":"7","depth":1},{"href":"#8-one-pr-per-layer-to-main","label":"One PR per layer, to main","icon":"8","depth":1},{"href":"#9-merge-by-the-layers-policy","label":"Merge, by the layer’s policy","icon":"9","depth":1},{"href":"#10-source-mistakes-one-issue","label":"Source mistakes: one issue","icon":"10","depth":1},{"href":"#11-prune-the-rulings-of-removed-strings-after-merge","label":"Prune the rulings of removed strings, after merge","icon":"11","depth":1}],"fold":"11 sub-sections"},{"href":"#never","label":"Never"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../../">SMART Base</a></nav>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="svg-link" viewBox="0 0 24 24">
@@ -401,6 +401,11 @@ takes <code class="language-plaintext highlighter-rouge">--instance &lt;root&gt;
       <td>one issue on the source</td>
       <td>filed, or none found</td>
     </tr>
+    <tr>
+      <td>11. prune rulings</td>
+      <td>the layer’s prune command, after the removal is on main</td>
+      <td>dry run clean, or a pure drop-and-renumber pushed</td>
+    </tr>
   </tbody>
 </table></div>
 <h3 id="1-detect">
@@ -459,6 +464,12 @@ modified; re-lay it from the lock afterwards, as the cold start says.</p>
   <li><strong>obsolete strings are kept as <code class="language-plaintext highlighter-rouge">#~</code> entries</strong>, never deleted, so the
 translation can be revived if the source comes back.</li>
 </ul>
+
+<p>A string that leaves the catalogue costs no round trip. Rulings are paired
+with strings by the hash of the msgid they judged, not by position
+(<a href="translation-manager.html"><code class="language-plaintext highlighter-rouge">translation-manager</code></a> §”The untainted round trip,
+as run”), so removing or reordering strings invalidates none of them. The
+removed strings’ rulings are dropped by step 11, after merge.</p>
 
 <p>With gettext installed,
 <code class="language-plaintext highlighter-rouge">msgmerge --update --backup=none &lt;locale.po&gt; &lt;template.pot&gt;</code> does all three.
@@ -594,6 +605,31 @@ said only a person merges.</p>
 the source repository, with the location and the reading the translation
 took. Not one per locale, and not a fix in the translation: a fix to the
 source is a source PR, and the next run carries it to every locale.</p>
+<h3 id="11-prune-the-rulings-of-removed-strings-after-merge">
+  
+  
+    <a href="#11-prune-the-rulings-of-removed-strings-after-merge" class="anchor-heading" aria-labelledby="11-prune-the-rulings-of-removed-strings-after-merge"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 11. Prune the rulings of removed strings, after merge
+  
+  
+</h3>
+    
+
+<p>Only where the layer keeps per-string round-trip rulings on an attestations
+state branch; its <code class="language-plaintext highlighter-rouge">AGENTS.md</code> names the command, by convention
+<code class="language-plaintext highlighter-rouge">translation-qa:prune</code>. Run it once the PR that removed strings is on main,
+whoever merged it:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bun run <span class="nb">cat </span>translation-qa:prune            <span class="c"># dry run against origin/main: each dropped ruling, each renumbered span</span>
+bun run <span class="nb">cat </span>translation-qa:prune <span class="nt">--write</span>    <span class="c"># apply it to the mounted attestations</span>
+bun run <span class="nb">cat </span>state:push                      <span class="c"># push that one commit to the state branch</span>
+</code></pre></div></div>
+
+<p>Push only when the dry run shows nothing but dropped and renumbered
+rulings. It drops a ruling only when main once held its string and no longer
+does, so a ruling recorded ahead of an unmerged PR stays; it never changes or
+adds a verdict. <strong>Never run it from the removing branch before that branch
+merges</strong>: the state branch serves main as well, and main would be left with
+strings that have no ruling. Nothing to prune is the usual result.</p>
 <h2 id="never">
   
   
@@ -607,6 +643,8 @@ source is a source PR, and the next run carries it to every locale.</p>
   <li><strong>Never re-extract per locale.</strong> Templates are refreshed once, for every
 locale.</li>
   <li><strong>Never re-translate a finished string</strong>, and never delete an obsolete one.</li>
+  <li><strong>Never re-run the round trip because strings were removed or reordered.</strong>
+Rulings are keyed by content; step 11 tidies them mechanically.</li>
   <li><strong>Never write <code class="language-plaintext highlighter-rouge">official: true</code>.</strong> A person makes a translation official
 (<a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/human-translation-workflow.bpmn"><code class="language-plaintext highlighter-rouge">human-translation-workflow</code></a>).</li>
   <li><strong>Never read exit 2 as clean.</strong> “Could not tell” is reported, every time.</li>

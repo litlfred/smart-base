@@ -89,13 +89,13 @@
   "statusSrc":"../../../assets/translation-status/index.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
-<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;processes&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
+<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../build.json"><link rel="stylesheet" href="../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","processes","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../assets/js/harness-data.js" defer></script>
 <script src="../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../assets/js/kg-render.js" defer></script><script src="../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../assets/js/work-plan.js" defer></script><script src="../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../assets/js/work-plan.js" defer></script><script src="../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -273,13 +273,15 @@
 </h1>
     
 
-<p><code class="language-plaintext highlighter-rouge">Process_TranslationRefresh</code> · advisory · 10 step(s)</p>
+<p><code class="language-plaintext highlighter-rouge">Process_TranslationRefresh</code> · advisory · 11 step(s)</p>
 
 <p>Keep every locale current after the source moves: detect, refresh the templates, merge them into each locale, translate only what is new or fuzzy, check it, and land one PR per layer on main.</p>
 
 <p>You are in this process when the watcher scheduled by <code class="language-plaintext highlighter-rouge">multi-locale-translation</code> wakes, or when a template check has failed. It is the loop that process ends with. A fresh session can run it cold: the skill <a href="../../../en/cat-harness/processes/skills/translation-refresh.html"><code class="language-plaintext highlighter-rouge">translation-refresh</code></a> gives each step as a command, and each layer’s own AGENTS.md names what is particular to it. One run walks every layer in turn, and each layer with something to refresh gets its own PR.</p>
 
 <p>A refresh never re-translates a finished string. Obsolete strings are kept as <code class="language-plaintext highlighter-rouge">#~</code> entries, new ones arrive empty, and only new and fuzzy strings are translated, with the terms the term base already fixes. The round trip runs on the changed strings only.</p>
+
+<p>Round-trip rulings are keyed by content: each is pinned by the hash of the msgid it judged (and of the msgstr), never by its position in the catalogue. So removing or reordering strings invalidates no ruling and needs no agent re-run. Once main no longer holds a removed string, its ruling is dropped mechanically by the prune step.</p>
 <style>.pt-diagram{position:relative;width:100%}.pt-diagram>img{display:block;width:100%;height:auto}.pt-mark{position:absolute;transform:translate(-50%,-50%);width:1.35em;height:1.35em;padding:0;border-radius:50%;border:1px solid #1f6feb;background:#fff;color:#1f6feb;font:bold 0.8em/1 sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(0,0,0,.25)}.pt-layer{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:2}.pt-layer>*{pointer-events:auto}.pt-go{position:absolute;display:block;border-radius:3px;cursor:pointer}.pt-go:hover,.pt-go:focus-visible{outline:2px solid #1f6feb;outline-offset:1px;background:rgba(31,111,235,.07)}.pt-mark{z-index:1}.pt-mark:hover,.pt-mark[aria-expanded=true]{background:#1f6feb;color:#fff}.pt-mark:focus-visible{outline:2px solid #1f6feb;outline-offset:2px}.pt-panel{position:absolute;z-index:5;text-align:left;margin:0.9em 0 0 -0.6em;max-width:min(26em,90vw);min-width:14em;padding:0.6em 0.7em;background:#fff;color:#1b1f24;border:1px solid #8c959f;border-radius:6px;box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:0.85em;line-height:1.35}.pt-close{position:absolute;top:0.2em;right:0.35em;border:0;background:none;font-size:1.2em;cursor:pointer;color:inherit}.pt-obj{border:1px solid #57606a;border-radius:3px;margin:0.15em 0}.pt-head{border-bottom:1px solid #57606a;padding:0.15em 0.45em;background:#f6f8fa;text-decoration:underline}.pt-head .pt-st{text-decoration:none;display:inline-block;margin-right:0.35em}.pt-attr{padding:0.1em 0.45em}.pt-st,.pt-via{color:#57606a;font-size:0.9em}.pt-edge{color:#57606a;font-size:0.85em;padding-left:1em}.pt-role .pt-head{background:#fff8c5}.pt-skill .pt-head{background:#ddf4ff}.pt-task .pt-head{background:#f6f8fa}.pt-none{color:#57606a;font-style:italic;margin-top:0.3em}.pt-diagram [data-pt-hl]>[class$="djs-visual"]>:first-child{stroke:#d97706!important;stroke-width:4px!important;fill:#fff3d6!important}.pt-diagram [data-pt-hl]>[class$="djs-visual"]>path:first-child{fill:none!important}.pt-has-hl [class*="djs-shape"]:not([data-pt-hl])>[class$="djs-visual"]>:first-child{opacity:.75}</style>
 
 <div class="pt-diagram" data-panel="translation-refresh.tasks.json">
@@ -296,6 +298,7 @@
 <button type="button" class="pt-mark" data-task="Task_TR_Report" style="left:97.41%;top:4.72%" aria-expanded="false" aria-label="About step: QA report and one PR to main" title="About: QA report and one PR to main">i</button>
 <button type="button" class="pt-mark" data-task="Task_TR_SourceIssue" style="left:97.41%;top:40.57%" aria-expanded="false" aria-label="About step: Report source errors as one issue" title="About: Report source errors as one issue">i</button>
 <button type="button" class="pt-mark" data-task="Task_TR_Merge" style="left:80.37%;top:40.57%" aria-expanded="false" aria-label="About step: Merge the PR" title="About: Merge the PR">i</button>
+<button type="button" class="pt-mark" data-task="Task_TR_PruneRulings" style="left:80.37%;top:70.75%" aria-expanded="false" aria-label="About step: Prune the rulings of removed strings" title="About: Prune the rulings of removed strings">i</button>
 </div>
 <div class="pt-panel" role="dialog" aria-label="Task details" hidden=""></div>
 </div>
@@ -560,7 +563,7 @@
 </h2>
     
 
-<p>Every one of the 10 step(s) is documented.</p>
+<p>Every one of the 11 step(s) is documented.</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -631,6 +634,12 @@
       <td>Source-language lead (watcher)</td>
       <td><a href="../../../en/cat-harness/processes/skills/translation-refresh.html"><code class="language-plaintext highlighter-rouge">translation-refresh</code></a></td>
       <td>Merge the layer’s PR to main, then confirm the template checks pass on main.</td>
+    </tr>
+    <tr>
+      <td><a id="step-Task_TR_PruneRulings"></a><strong>Prune the rulings of removed strings</strong><br /><code class="language-plaintext highlighter-rouge">Task_TR_PruneRulings</code></td>
+      <td>Source-language lead (watcher)</td>
+      <td><a href="../../../en/cat-harness/processes/skills/translation-refresh.html"><code class="language-plaintext highlighter-rouge">translation-refresh</code></a></td>
+      <td>Drop the round-trip rulings of strings main no longer holds, with the layer’s prune command (its AGENTS.md names it, by convention <code class="language-plaintext highlighter-rouge">translation-qa:prune</code>), once the PR is on main. Only a layer that keeps per-string rulings on an attestations state branch has one. Run it as a dry run first: it lists each ruling whose msgid main no longer holds but once did, and the indices it renumbers to catalogue order. Push the result (<code class="language-plaintext highlighter-rouge">--write</code>, then the state-branch push) only when the diff is purely dropped and renumbered rulings. It never changes or invents a verdict, and it keeps a ruling recorded ahead of a PR that has not merged. Never run it before the removal is on main: the state branch serves main too, and main would be left with strings that have no ruling. Nothing to prune is the usual result, and this step then writes nothing.</td>
     </tr>
   </tbody>
 </table></div>

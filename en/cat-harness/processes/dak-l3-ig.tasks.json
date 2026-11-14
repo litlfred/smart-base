@@ -82,9 +82,7 @@
     }
    ],
    "calls": {
-    "name": "L3 FHIR IG pipeline",
-    "href": "https://litlfred.github.io/folio-assistant/fhir-harness/process/Process_L3Fhir",
-    "diagram": "l3-fhir-pipeline.html"
+    "name": "Process_L3Fhir"
    },
    "role": {
     "name": "fhir-modeller",

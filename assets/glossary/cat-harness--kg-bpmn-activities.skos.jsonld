@@ -6904,6 +6904,26 @@
       "skos:note": "candidate"
     },
     {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationrefresh.task_tr_prunerulings",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Prune the rulings of removed strings"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Drop the round-trip rulings of strings main no longer holds, with the layer's prune command (its AGENTS.md names it, by convention `translation-qa:prune`), once the PR is on main. Only a layer that keeps per-string rulings on an attestations state branch has one. Run it as a dry run first: it lists each ruling whose msgid main no longer holds but once did, and the indices it renumbers to catalogue order. Push the result (`--write`, then the state-branch push) only when the diff is purely dropped and renumbered rulings. It never changes or invents a verdict, and it keeps a ruling recorded ahead of a PR that has not merged. Never run it before the removal is on main: the state branch serves main too, and main would be left with strings that have no ruling. Nothing to prune is the usual result, and this step then writes nothing."
+        }
+      ],
+      "skos:notation": "Task_TR_PruneRulings",
+      "dcterms:source": "cat-harness/library/processes/translation-refresh.bpmn#Task_TR_PruneRulings",
+      "skos:note": "candidate"
+    },
+    {
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationrefresh.task_tr_report",
       "@type": "skos:Concept",
       "skos:inScheme": {

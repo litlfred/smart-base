@@ -89,13 +89,13 @@
   "statusSrc":"../../../../assets/translation-status/index.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
-<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;processes&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
+<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","processes","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -274,7 +274,7 @@
 
 <p><strong>Skill <code class="language-plaintext highlighter-rouge">remote-mount</code>:</strong> Bring a harness, and every layer it depends on, into a checkout that does not hold it, from another repository at a pinned commit, as declared directories with a lock: a <code class="language-plaintext highlighter-rouge">source.remote</code> entry in the downstream’s root <code class="language-plaintext highlighter-rouge">index.config.json</code> (legacy: <code class="language-plaintext highlighter-rouge">remoteMounts</code> on its declaration) and <code class="language-plaintext highlighter-rouge">mountDefaults</code> on the harness. Covers when to mount and when to subscribe instead, why there are no submodules and no <code class="language-plaintext highlighter-rouge">.deps/</code>, the transitive closure through <code class="language-plaintext highlighter-rouge">needs</code> and gitlinks, overrides by id, the lock, and the three states.</p>
 
-<p><strong>Named by:</strong> <a href="../human-translation-workflow.html">Human Translation Workflow</a>, <a href="../kg-separation-cutover.html">Cut over to the separated graph</a>, <a href="../kg-separation-move.html">Move the graph into its repositories</a>, <a href="../kg-separation-prepare.html">Prepare a graph to stand alone</a>, <a href="../kg-separation.html">A knowledge graph leaves for its own repositories</a>, <a href="../kg-to-portal.html">KG to public portal</a>, <a href="../mount-dependency.html">Remote-mount a dependency</a>, <a href="../mount-subgraph.html">Mount a declared subgraph</a>, <a href="../slice-sqlite-publish.html">Build and publish a per-slice SQLite file</a>, <a href="../sub-kg-lifecycle.html">A sub-KG is staged in place, then leaves for its own repository</a>, <a href="../actor-role-administration.html">Actor and role administration</a>, <a href="../render-kg-to-cdn.html">Render a Knowledge Graph to a CDN</a>, <a href="../archimate-publish.html">Publish an ArchiMate model — every picture derived from it</a>, <a href="../harness-default-rendering.html">A harness’s default rendering</a>, <a href="../staging-render-log.html">Render log — the publish branch keeps its own history</a>, <a href="../web-app-publish.html">Publish a web app — declared, translated, built at its own route</a>, <a href="../ig-ast-cache.html">An IG site, built from the AST on its cache branch</a>, <a href="../ig-ast-delta-review.html">Is the incremental IG AST what a full build would have produced?</a>, <a href="../ig-incremental-build.html">Incremental IG build</a>, <a href="../ig-release.html">An IG release: the owner tags, a draft is built, the owner publishes</a>, <a href="../l3-fhir-pipeline.html">L3 FHIR IG pipeline</a>, <a href="../questionnaire-wireframe-review.html">Questionnaire wireframe review</a>, <a href="../ig-docs-site-compose.html">Each IG, composed into a host docs site and rendered with just-the-docs</a>, <a href="../authoring-a-document.html">Authoring a document</a>, <a href="../content-change-review-publish.html">Merge and publish a content change</a>, <a href="../content-change-review-stage.html">Stage the content change</a>, <a href="../content-change-review.html">Content Change and Review</a>, <a href="../draft-to-publication.html">Draft, review and publish</a>, <a href="../folio-review-publish.html">Review and publish a folio</a>, <a href="../guideline-updates.html">Guideline Updates</a>, <a href="../public-comment-change.html">Make a decided public comment change</a>, <a href="../public-comment-release.html">Release a draft for public comment</a>, <a href="../iris-cdn-initial-load.html">IRIS CDN initial load</a>, <a href="../iris-cdn-nightly.html">IRIS CDN nightly change ingest</a>, <a href="../iris-cdn-reconcile.html">IRIS CDN weekly reconciliation</a>, <a href="../iris-cdn-sign-publish.html">Sign and publish an IRIS CDN release</a></p>
+<p><strong>Named by:</strong> <a href="../human-translation-workflow.html">Human Translation Workflow</a>, <a href="../kg-separation-cutover.html">Cut over to the separated graph</a>, <a href="../kg-separation-move.html">Move the graph into its repositories</a>, <a href="../kg-separation-prepare.html">Prepare a graph to stand alone</a>, <a href="../kg-separation.html">A knowledge graph leaves for its own repositories</a>, <a href="../kg-to-portal.html">KG to public portal</a>, <a href="../mount-dependency.html">Remote-mount a dependency</a>, <a href="../mount-subgraph.html">Mount a declared subgraph</a>, <a href="../slice-sqlite-publish.html">Build and publish a per-slice SQLite file</a>, <a href="../sub-kg-lifecycle.html">A sub-KG is staged in place, then leaves for its own repository</a>, <a href="../actor-role-administration.html">Actor and role administration</a>, <a href="../render-kg-to-cdn.html">Render a Knowledge Graph to a CDN</a>, <a href="../archimate-publish.html">Publish an ArchiMate model — every picture derived from it</a>, <a href="../harness-default-rendering.html">A harness’s default rendering</a>, <a href="../staging-render-log.html">Render log — the publish branch keeps its own history</a>, <a href="../web-app-publish.html">Publish a web app — declared, translated, built at its own route</a>, <a href="../ig-ast-cache.html">An IG site, built from the AST on its cache branch</a>, <a href="../ig-release.html">An IG release: the owner tags, a draft is built, the owner publishes</a>, <a href="../questionnaire-wireframe-review.html">Questionnaire wireframe review</a>, <a href="../ig-docs-site-compose.html">Each IG, composed into a host docs site and rendered with just-the-docs</a>, <a href="../folio-review-publish.html">Review and publish a folio</a>, <a href="../iris-cdn-initial-load.html">IRIS CDN initial load</a>, <a href="../iris-cdn-nightly.html">IRIS CDN nightly change ingest</a>, <a href="../iris-cdn-reconcile.html">IRIS CDN weekly reconciliation</a>, <a href="../iris-cdn-sign-publish.html">Sign and publish an IRIS CDN release</a></p>
 
 <p>How a downstream folio gets the layers it is built on:</p>
 
@@ -829,6 +829,13 @@ checkout’s layer health report at the new pins and publishes it. The health
 check fails a re-pin once the report is more than 26 hours old and the checker
 has moved. The tools layer implements it.</p>
 
+<p><strong>The merge manager re-pins for a merge</strong> (owner ruling, 2026-11-13: “send
+to you as merge manager to handle merge AND repin so you can handle trains
+and CI”). A session whose PR is green except for a re-pin sends it to the
+merge manager as <code class="language-plaintext highlighter-rouge">repin+merge:</code>, and does not re-pin it just in time. The
+merge manager makes the re-pin as its own PR and sequences re-pin trains
+and CI. The rules below are how it does so.</p>
+
 <p><strong>The committer re-pins, locally, and CI only verifies.</strong> The person or agent
 who moves a pin does the whole re-pin in their own checkout: <code class="language-plaintext highlighter-rouge">--seed</code>, a
 fresh <code class="language-plaintext highlighter-rouge">mount:remote</code>, the regenerated agent surface (<code class="language-plaintext highlighter-rouge">skill:commands</code>,
@@ -969,6 +976,11 @@ list is refused. Without the list, mounts report <code class="language-plaintext
 0, but never shown as clean. A checkout whose mounts <code class="language-plaintext highlighter-rouge">index.config.json</code>
 lists declares the list there, as its top-level <code class="language-plaintext highlighter-rouge">mountApprovers</code>; declaring
 it on the layer declaration as well is an error.</li>
+  <li><strong>A one-time consent is recorded where it acts</strong> (owner ruling,
+2026-11-13). Quote the owner’s card, with its date, in the re-pin PR’s
+body and in <code class="language-plaintext highlighter-rouge">trust.consent</code>’s evidence in <code class="language-plaintext highlighter-rouge">index.config.json</code>. Example:
+folio-assistant#3119 re-pointed a content layer’s pin to that layer’s
+main under the card “A. Re-point to main”.</li>
   <li><strong>A refused mount is not current.</strong> Its old bytes stay on disk (an agent
 does not delete them). The lock records them under <code class="language-plaintext highlighter-rouge">unmounted</code> as
 <code class="language-plaintext highlighter-rouge">leftOnDisk</code>, and the check reports them as not mounted.</li>
@@ -991,6 +1003,21 @@ branch’s newest (green) commit and writes <code class="language-plaintext high
 <code class="language-plaintext highlighter-rouge">by</code> that person and marked <code class="language-plaintext highlighter-rouge">standing</code>. The mount accepts it only while the
 same rule is still declared: withdraw or edit it and those pins ask again.
 A pin moved by hand still asks again, rule or not.</p>
+
+<p><strong>A standing re-pin never merges itself</strong> (owner ruling, 2026-11-13, card
+“C. No auto-merge”, which replaces “A. MM dispatches, auto-merge OK”). A
+standing re-pin run, however it is triggered, opens or updates its PR,
+labels it <code class="language-plaintext highlighter-rouge">needs-repin</code>, and stops. The merge manager judges it once CI is
+green and merges it. The reason was measured: the self-merges landed 3-4
+seconds after the PR opened, before any check had run. The tools layer
+decides the mechanism. A re-pin commit pushed by a bot gets runs held at
+<code class="language-plaintext highlighter-rouge">action_required</code>, and the merge manager approves them, so the re-pin is
+judged on runs that executed (<code class="language-plaintext highlighter-rouge">github-state-inspection</code>).</p>
+
+<p><strong>Site repositories</strong> (owner ruling, 2026-11-13, card “A. Give MM access”).
+The merge manager attaches each site repository and runs its re-pin: it
+dispatches the run, approves the held bot runs, and merges when green. A
+site’s own sessions do not re-pin it.</p>
 <h2 id="publishing-a-remote-mounted-downstream--provision-gh-pages-first">
   
   

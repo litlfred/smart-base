@@ -16,6 +16,7 @@
     "smart-base/L2-dmn/schemas",
     "smart-base/L2/schemas",
     "smart-base/L3/schemas",
+    "smart-base/L4/schemas",
     "smart-base/schemas",
     "who-iris/sources"
   ],
@@ -26580,6 +26581,13 @@
           "doc": "What makes this subgraph reachable — a renderer, a documentation entry,"
         },
         {
+          "name": "catalogues",
+          "type": "string",
+          "optional": true,
+          "array": false,
+          "doc": "A `translation-sources` directory's catalogues, when not under `<path>/<locale>/` (e.g. `input/*\\/translations/{locale}.po`). See the schema field."
+        },
+        {
           "name": "igSite",
           "type": "boolean",
           "optional": true,
@@ -26712,6 +26720,13 @@
           "type": "SubgraphCoverageSchema.optional()",
           "optional": true,
           "array": false
+        },
+        {
+          "name": "catalogues",
+          "type": "z.string().min(1).optional()",
+          "optional": true,
+          "array": false,
+          "doc": "For a `translation-sources` directory: where the layer's `.po` catalogues"
         },
         {
           "name": "optIn",
@@ -26919,7 +26934,7 @@
           "type": "z.array(z.string()).optional()",
           "optional": true,
           "array": true,
-          "doc": "BPMN diagrams that need re-rendering for translation."
+          "doc": "BPMN diagrams that need re-rendering for translation: a path from the"
         },
         {
           "name": "notes",
@@ -28354,6 +28369,13 @@
           "optional": true,
           "array": false,
           "doc": "The nearest opt-in sub-graph this entry is, or sits within, qualified"
+        },
+        {
+          "name": "conventionOnly",
+          "type": "boolean",
+          "optional": true,
+          "array": false,
+          "doc": "The CONVENTION of an inherited opt-in sub-graph the root has not switched"
         }
       ],
       "extendsNames": [
@@ -31808,6 +31830,12 @@
           "type": "z.array(PackageScriptName).default([])",
           "optional": true,
           "array": true
+        },
+        {
+          "name": "rootIndex",
+          "type": "z.boolean().optional()",
+          "optional": true,
+          "array": false
         }
       ],
       "extendsNames": [],
@@ -66657,6 +66685,32 @@
       "exported": true
     },
     {
+      "id": "cat-harness-tools/schemas/test-preload.ts#AnySpawn",
+      "name": "AnySpawn",
+      "module": "cat-harness-tools/schemas/test-preload.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "exported": false
+    },
+    {
+      "id": "cat-harness-tools/schemas/test-preload.ts#BunSpawnOptions",
+      "name": "BunSpawnOptions",
+      "module": "cat-harness-tools/schemas/test-preload.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "exported": false
+    },
+    {
       "id": "cat-harness-tools/schemas/tools/store-tool-results.ts#BeanClaimCheckSchema",
       "name": "BeanClaimCheckSchema",
       "module": "cat-harness-tools/schemas/tools/store-tool-results.ts",
@@ -74807,6 +74861,13 @@
           "array": false
         },
         {
+          "name": "coverage",
+          "type": "z .array( z .object({ kind: z.enum([\"contents\", \"sections\", \"figures\", \"tables\", \"references\", \"glossary\", \"footnotes\",…",
+          "optional": true,
+          "array": true,
+          "doc": "What was extracted, kind by kind — found, none in the text, or not extracted (owner, 2026-11-14)."
+        },
+        {
           "name": "links",
           "type": "z.object({ repo: z.string().min(1), branch: z.string().min(1), dir: z.string().min(1) }).strict().optional()",
           "optional": true,
@@ -75024,6 +75085,19 @@
           "optional": true,
           "array": false,
           "doc": "The kind of viewer the entry's held source opens in, set only when the"
+        },
+        {
+          "name": "lang",
+          "type": "z.string().optional()",
+          "optional": true,
+          "array": false,
+          "doc": "The title's language and the titles of the entry's held language"
+        },
+        {
+          "name": "titles",
+          "type": "z.record(z.string(), z.string()).optional()",
+          "optional": true,
+          "array": false
         },
         {
           "name": "pageStart",
@@ -76472,15 +76546,13 @@
           "name": "script",
           "type": "z.string().regex(/^[a-z0-9:_-]+$/).default(\"build\")",
           "optional": true,
-          "array": false,
-          "doc": "The `package.json` script that builds it."
+          "array": false
         },
         {
           "name": "outDir",
           "type": "InnerPath.default(\"dist\")",
           "optional": true,
-          "array": false,
-          "doc": "Where the build writes, relative to the app's directory."
+          "array": false
         }
       ],
       "extendsNames": [],

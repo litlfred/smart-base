@@ -89,13 +89,13 @@
   "statusSrc":"../../../../../assets/translation-status/index.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
-<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;processes&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
+<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","processes","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -260,7 +260,7 @@
       <div id="main-content" class="main-content">
         <main>
           
-            <script type="application/ld+json">{"@context":"https://litlfred.github.io/folio-assistant/cat-harness/cat-harness.context.jsonld","@id":"https://litlfred.github.io/folio-assistant/cat-harness/tools/tools-viewer.jsonld","@type":"https://litlfred.github.io/cat-harness/v0/ns/Tool","partOf":"https://litlfred.github.io/folio-assistant/cat-harness/cat-harness.jsonld","name":"tools-viewer","title":"Tools viewer","description":"Render this layer's Tool nodes, and the skills each satisfies, as one page.","install":{"none":true},"invoke":{"shell":"bun run cat tools:viz"},"io":{"inputs":[{"name":"check","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/Flag","description":"Fail if a page is stale, instead of writing.","required":false,"arg":{"flag":"--check"}},{"name":"site","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/RepoPath","description":"A site being built: write the pages at their declared route under it instead of under the harness's own site directory. A repository's own site build passes it (the tools layer's `visualiser-writers.ts`), since its harness docs are a pinned mount.","required":false,"arg":{"flag":"--site"}}],"outputs":[{"name":"pages","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/RepoPath","description":"The viewer pages, under the published site directory."}]},"satisfies":["graph-rendering"],"requirements":{"runtime":["bun"],"network":false},"renders":["tools"]}</script>
+            <script type="application/ld+json">{"@context":"https://litlfred.github.io/folio-assistant/cat-harness/cat-harness.context.jsonld","@id":"https://litlfred.github.io/folio-assistant/cat-harness/tools/tools-viewer.jsonld","@type":"https://litlfred.github.io/cat-harness/v0/ns/Tool","partOf":"https://litlfred.github.io/folio-assistant/cat-harness/cat-harness.jsonld","name":"tools-viewer","title":"Tools viewer","description":"Render this layer's Tool nodes, and the skills each satisfies, as one page.","install":{"none":true},"invoke":{"shell":"bun run cat tools:viz"},"io":{"inputs":[{"name":"check","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/Flag","description":"Fail if a page is stale, instead of writing.","required":false,"arg":{"flag":"--check"}},{"name":"site","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/RepoPath","description":"A site being built: write the pages at their declared route under it instead of under the harness's own site directory. A repository's own site build passes it (the tools layer's `visualiser-writers.ts`), since its harness docs are a pinned mount.","required":false,"arg":{"flag":"--site"}},{"name":"scope","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/IdList","description":"A scoped site build: the comma-separated instances whose per-layer Tools pages this writer writes; every other layer's Tools pages are linked on the platform's site, not copied (owner, 2026-11-13: \"other harnesses should be referenced not included\"). The combined index and API documents are still written. Passed by the tools layer's `visualiser-writers.ts`. Absent: every instance.","required":false,"arg":{"flag":"--scope"}}],"outputs":[{"name":"pages","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/RepoPath","description":"The viewer pages, under the published site directory."}]},"satisfies":["graph-rendering"],"requirements":{"runtime":["bun"],"network":false},"renders":["tools"]}</script>
 
 <h1 id="tools-viewer">
   
@@ -303,7 +303,7 @@
     </tr>
     <tr>
       <td>source</td>
-      <td><a href="https://github.com/litlfred/cat-harness/blob/026a6d919add39221387dd0fba0faccf998be9ac/tools/tools-viewer/tools-viewer.json"><code class="language-plaintext highlighter-rouge">cat-harness/tools/tools-viewer/tools-viewer.json</code></a></td>
+      <td><a href="https://github.com/litlfred/cat-harness/blob/855c93fa1ef9690508c398c738706817070b9a91/tools/tools-viewer/tools-viewer.json"><code class="language-plaintext highlighter-rouge">cat-harness/tools/tools-viewer/tools-viewer.json</code></a></td>
     </tr>
     <tr>
       <td>invoked</td>
@@ -379,6 +379,14 @@
       <td> </td>
       <td>A site being built: write the pages at their declared route under it instead of under the harness’s own site directory. A repository’s own site build passes it (the tools layer’s <code class="language-plaintext highlighter-rouge">visualiser-writers.ts</code>), since its harness docs are a pinned mount.</td>
       <td>string · pattern <code class="language-plaintext highlighter-rouge">^[A-Za-z0-9._][A-Za-z0-9._/-]*$</code> · A path relative to the repository root. No <code class="language-plaintext highlighter-rouge">..</code> segments.</td>
+    </tr>
+    <tr>
+      <td>in</td>
+      <td><code class="language-plaintext highlighter-rouge">scope</code></td>
+      <td><a href="https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/IdList"><code class="language-plaintext highlighter-rouge">IdList</code></a></td>
+      <td> </td>
+      <td>A scoped site build: the comma-separated instances whose per-layer Tools pages this writer writes; every other layer’s Tools pages are linked on the platform’s site, not copied (owner, 2026-11-13: “other harnesses should be referenced not included”). The combined index and API documents are still written. Passed by the tools layer’s <code class="language-plaintext highlighter-rouge">visualiser-writers.ts</code>. Absent: every instance.</td>
+      <td>string · pattern <code class="language-plaintext highlighter-rouge">^[A-Za-z0-9][A-Za-z0-9._/-]*(?:,[A-Za-z0-9][A-Za-z0-9._/-]*)*$</code> · Comma-separated ids, e.g. skills,processes/sdlc or bean-query,agent-memory</td>
     </tr>
     <tr>
       <td>out</td>
@@ -458,12 +466,12 @@
   <tbody>
     <tr>
       <td>definition</td>
-      <td><a href="https://github.com/litlfred/cat-harness/blob/026a6d919add39221387dd0fba0faccf998be9ac/tools/tools-viewer/tools-viewer.json"><code class="language-plaintext highlighter-rouge">cat-harness/tools/tools-viewer/tools-viewer.json</code></a></td>
+      <td><a href="https://github.com/litlfred/cat-harness/blob/855c93fa1ef9690508c398c738706817070b9a91/tools/tools-viewer/tools-viewer.json"><code class="language-plaintext highlighter-rouge">cat-harness/tools/tools-viewer/tools-viewer.json</code></a></td>
       <td> </td>
     </tr>
     <tr>
       <td>script</td>
-      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/31e8a3edb90f97938bfacbce02357904ee0a7c4a/scripts/gen-tools-viz.ts"><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/gen-tools-viz.ts</code></a></td>
+      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/43993a90cd7a544f54636545953d7df26963730d/scripts/gen-tools-viz.ts"><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/gen-tools-viz.ts</code></a></td>
       <td> </td>
     </tr>
   </tbody>
@@ -513,6 +521,15 @@
         </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
         </span><span class="nl">"arg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="nl">"flag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"--site"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"scope"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/IdList"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A scoped site build: the comma-separated instances whose per-layer Tools pages this writer writes; every other layer's Tools pages are linked on the platform's site, not copied (owner, 2026-11-13: </span><span class="se">\"</span><span class="s2">other harnesses should be referenced not included</span><span class="se">\"</span><span class="s2">). The combined index and API documents are still written. Passed by the tools layer's `visualiser-writers.ts`. Absent: every instance."</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"arg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"flag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"--scope"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">

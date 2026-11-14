@@ -14,6 +14,26 @@
       "dcterms:source": "Tools of smart-base"
     },
     {
+      "@id": "https://litlfred.github.io/smart-base/v0/ns/glossary/kg-tools/bpmn-graphviz-layout",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-base/v0/ns/glossary/kg-tools"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "BPMN → Diagram Interchange, laid out by Graphviz"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Lay out a BPMN that carries no Diagram Interchange (`bpmn_to_svg.py` beside this file, moved from `.github/skills/bpmn_layout/` by bean folio-assistant-tgaj): one Graphviz cluster per participant, the coordinates written back into the BPMN as `<bpmndi:BPMNDiagram>`, and Graphviz's own SVG. cat-harness-tools' `render:bpmn` draws only the DI a file already has (bpmn-js does not lay out), so this is the step before it for a DAK process written, or imported, without one."
+        }
+      ],
+      "skos:notation": "bpmn-graphviz-layout",
+      "dcterms:source": "smart-base/L2-bpmn/tools/bpmn-graphviz-layout/bpmn-graphviz-layout.ts#bpmn-graphviz-layout",
+      "skos:note": "candidate"
+    },
+    {
       "@id": "https://litlfred.github.io/smart-base/v0/ns/glossary/kg-tools/bpmn-to-fsh",
       "@type": "skos:Concept",
       "skos:inScheme": {
@@ -31,6 +51,26 @@
       ],
       "skos:notation": "bpmn-to-fsh",
       "dcterms:source": "smart-base/L2-bpmn/tools/bpmn-to-fsh/bpmn-to-fsh.ts#bpmn-to-fsh",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/smart-base/v0/ns/glossary/kg-tools/bpmn-validate",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/smart-base/v0/ns/glossary/kg-tools"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "BPMN structure, vendor namespaces and lane → actor"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Check a DAK's BPMN (`validate.ts` beside this file; bean folio-assistant-tgaj, which replaced four Python validators with it): well-formed XML whose root is `<bpmn:definitions>`, no Camunda or Zeebe namespace, no duplicate id, at least one process, no bpmn-moddle (bpmn-js) import warning; every process has a `<laneSet>`, every flow node sits in a lane, and lane ids are unique and valid FSH ids; and every innermost lane names its actor by id: its `partitionElementRef` (a top-level `<bpmn:resource>`), else its own id, matched exactly against the `Instance:` ids of the ActorDefinitions in the IG's FSH (or JSON) and, for a harness process, the role ids of the mounted layers' `scenarios/roles.json`. Never by file name or title. With no file named it reads the declared process directories, `smart-base/**/processes/` and an IG's `input/bpmn/`."
+        }
+      ],
+      "skos:notation": "bpmn-validate",
+      "dcterms:source": "smart-base/L2-bpmn/tools/bpmn-validate/bpmn-validate.ts#bpmn-validate",
       "skos:note": "candidate"
     },
     {
@@ -270,7 +310,7 @@
         }
       ],
       "skos:notation": "l1-extraction-pages",
-      "dcterms:source": "smart-base/L1/tools/l1-extraction-pages/l1-extraction-pages.ts#l1-extraction-pages",
+      "dcterms:source": "smart-base/tools/l1-extraction-pages/l1-extraction-pages.ts#l1-extraction-pages",
       "skos:note": "candidate"
     },
     {

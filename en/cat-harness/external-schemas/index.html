@@ -89,13 +89,13 @@
   "statusSrc":"../../../assets/translation-status/index.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
-<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;processes&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
+<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../build.json"><link rel="stylesheet" href="../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","processes","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../assets/js/harness-data.js" defer></script>
 <script src="../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../assets/js/kg-render.js" defer></script><script src="../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../assets/js/work-plan.js" defer></script><script src="../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../assets/js/work-plan.js" defer></script><script src="../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -293,7 +293,7 @@ depends on it</strong>, and <strong>which of its terms this repository branches 
 <div class="xs-grid">
 <div class="xs-stat"><b>30</b><span>specifications</span></div>
 <div class="xs-stat"><b>162</b><span>operative terms in graph (91 described, 71 pending)</span></div>
-<div class="xs-stat"><b>313</b><span>declared uses</span></div>
+<div class="xs-stat"><b>278</b><span>declared uses</span></div>
 <div class="xs-stat"><b>0</b><span>declarations naming no record</span></div>
 </div>
 
@@ -582,6 +582,14 @@ a registry nobody prunes is one that stops describing the repository.</p>
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.claude/skills/smartbase-iris-dspace/SKILL.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.github/skills/smartbase-iris-dspace/SKILL.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/kg-export.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
@@ -1084,7 +1092,7 @@ graph. That is a determined zero, not an unfilled field.</p>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">fhir-harness/processes/content/*.bpmn (6)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">fhir-harness/processes/content/*.bpmn (3)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
@@ -1092,19 +1100,11 @@ graph. That is a determined zero, not an unfilled field.</p>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/content/*.bpmn (4)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/conduct/*.bpmn (1)</code></td>
-      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/content/*.bpmn (18)</code></td>
-      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/library/*.bpmn (7)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/library/*.bpmn (6)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
@@ -1112,27 +1112,27 @@ graph. That is a determined zero, not an unfilled field.</p>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">smart-base/collab/processes/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">smart-base/collab/processes/content/*.bpmn (2)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">smart-base/L1/processes/*.bpmn (1)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">smart-base/L2/processes/*.bpmn (3)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">smart-base/L2/collab/processes/*.bpmn (3)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">smart-base/L3/processes/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">smart-base/L3/collab/processes/*.bpmn (1)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">smart-base/L4/processes/*.bpmn (2)</code></td>
-      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">smart-base/methodologies/processes/*.bpmn (1)</code></td>
-      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">smart-base/processes/content/*.bpmn (2)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
@@ -1379,7 +1379,7 @@ a subset of the edition rather than a transcription of it.</p>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">fhir-harness/processes/content/*.bpmn (6)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">fhir-harness/processes/content/*.bpmn (3)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
@@ -1387,15 +1387,11 @@ a subset of the edition rather than a transcription of it.</p>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/conduct/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/content/*.bpmn (4)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/content/*.bpmn (18)</code></td>
-      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/library/*.bpmn (7)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/library/*.bpmn (6)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
@@ -1403,27 +1399,27 @@ a subset of the edition rather than a transcription of it.</p>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">smart-base/collab/processes/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">smart-base/collab/processes/content/*.bpmn (2)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">smart-base/L1/processes/*.bpmn (1)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">smart-base/L2/processes/*.bpmn (3)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">smart-base/L2/collab/processes/*.bpmn (3)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">smart-base/L3/processes/*.bpmn (1)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">smart-base/L3/collab/processes/*.bpmn (1)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">smart-base/L4/processes/*.bpmn (2)</code></td>
-      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">smart-base/methodologies/processes/*.bpmn (1)</code></td>
-      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">smart-base/processes/content/*.bpmn (2)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
@@ -1476,14 +1472,6 @@ graph. That is a determined zero, not an unfilled field.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/processes/process/decisions/*.dmn (1)</code></td>
-      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/conduct/decisions/*.dmn (2)</code></td>
-      <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/content/decisions/*.dmn (2)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
   </tbody>
@@ -1953,8 +1941,28 @@ graph. That is a determined zero, not an unfilled field.</p>
   </thead>
   <tbody>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">.claude/skills/cat-nquads-distribution/SKILL.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.claude/skills/smartbase-iris-oxigraph/SKILL.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.github/skills/cat-nquads-distribution/SKILL.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.github/skills/smartbase-iris-oxigraph/SKILL.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness-tools/schemas/kg/nquads-distribution.ts</code></td>
       <td><code class="language-plaintext highlighter-rouge">@conformsTo</code> tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cat-harness/skills/kg/graph-management/nquads-distribution.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">who-iris/skills/iris-oxigraph.md</code></td>
@@ -2713,6 +2721,14 @@ a subset of the edition rather than a transcription of it.</p>
   </thead>
   <tbody>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">.claude/skills/smartbase-iris-oxigraph/SKILL.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.github/skills/smartbase-iris-oxigraph/SKILL.md</code></td>
+      <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">who-iris/skills/iris-oxigraph.md</code></td>
       <td><code class="language-plaintext highlighter-rouge">conformsTo:</code> front matter</td>
     </tr>
@@ -2838,7 +2854,7 @@ graph. That is a determined zero, not an unfilled field.</p>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/content/*.bpmn (2)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">folio-assistant-core/processes/content/*.bpmn (1)</code></td>
       <td><code class="language-plaintext highlighter-rouge">xmlns</code> binding</td>
     </tr>
     <tr>

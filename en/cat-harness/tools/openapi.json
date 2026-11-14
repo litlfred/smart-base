@@ -83,16 +83,7 @@
       "name": "document-intake"
     },
     {
-      "name": "dsa-catalogue-status"
-    },
-    {
       "name": "dsa-checksum"
-    },
-    {
-      "name": "dsa-dcat-record"
-    },
-    {
-      "name": "dsa-odrl-source"
     },
     {
       "name": "dublin-core-renderings"
@@ -279,9 +270,6 @@
     },
     {
       "name": "upload-routes"
-    },
-    {
-      "name": "visual-diff"
     },
     {
       "name": "vocabulary-authority"
@@ -1479,6 +1467,84 @@
         }
       }
     },
+    "/tools/bpmn-graphviz-layout": {
+      "post": {
+        "operationId": "bpmn-graphviz-layout",
+        "summary": "BPMN → Diagram Interchange, laid out by Graphviz",
+        "description": "Lay out a BPMN that carries no Diagram Interchange (`bpmn_to_svg.py` beside this file, moved from `.github/skills/bpmn_layout/` by bean folio-assistant-tgaj): one Graphviz cluster per participant, the coordinates written back into the BPMN as `<bpmndi:BPMNDiagram>`, and Graphviz's own SVG. cat-harness-tools' `render:bpmn` draws only the DI a file already has (bpmn-js does not lay out), so this is the step before it for a DAK process written, or imported, without one.",
+        "tags": [
+          "smart-base-tools"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "smart-base/bpmn-graphviz-layout/"
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "bpmn": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "A BPMN 2.0 file, with or without DI."
+                  }
+                },
+                "required": [
+                  "bpmn"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "bpmn": {
+                      "$ref": "#/components/schemas/RepoPath",
+                      "description": "The BPMN with a Graphviz-placed `<bpmndi:BPMNDiagram>` (`--bpmn`)."
+                    },
+                    "svg": {
+                      "$ref": "#/components/schemas/RepoPath",
+                      "description": "Graphviz's drawing (`--svg`); not bpmn-js's, so not the published picture."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "http://smart.who.int/base/tools/bpmn-graphviz-layout.jsonld",
+        "x-invoke": {
+          "shell": "python3 smart-base/L2-bpmn/tools/bpmn-graphviz-layout/bpmn_to_svg.py <file.bpmn> [--bpmn <out.bpmn>] [--svg <out.svg>] [--dot <out.dot>]"
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "python3",
+            "graphviz"
+          ],
+          "network": false
+        },
+        "x-satisfies": [
+          "smart-base-tools"
+        ],
+        "x-selection": {
+          "when": "A BPMN has no Diagram Interchange, so `render:bpmn` would draw it blank, and a first layout is wanted before an author tidies it (`bpmn:detangle`).",
+          "limits": "A first layout, not the finished one: it does not meet `bpmn-authoring`'s readability rules (fixed task size, label placement, lane order); run `bun run cat bpmn:detangle --write` and look at `render:bpmn`'s picture after it. It parses with the standard library's ElementTree, so it is for files an author holds, not untrusted input.",
+          "cost": "Seconds; needs Graphviz `dot` on the PATH."
+        }
+      }
+    },
     "/tools/bpmn-render": {
       "post": {
         "operationId": "bpmn-render",
@@ -1614,6 +1680,84 @@
           "when": "An L2 business process is to reach L3 as a computable artefact, not only a picture.",
           "limits": "Requires a `smart-base` checkout at `SMART_BASE_HOME`; without one the capability is ABSENT, not a clean run.",
           "cost": "Seconds, plus the upstream checkout."
+        }
+      }
+    },
+    "/tools/bpmn-validate": {
+      "post": {
+        "operationId": "bpmn-validate",
+        "summary": "BPMN structure, vendor namespaces and lane → actor",
+        "description": "Check a DAK's BPMN (`validate.ts` beside this file; bean folio-assistant-tgaj, which replaced four Python validators with it): well-formed XML whose root is `<bpmn:definitions>`, no Camunda or Zeebe namespace, no duplicate id, at least one process, no bpmn-moddle (bpmn-js) import warning; every process has a `<laneSet>`, every flow node sits in a lane, and lane ids are unique and valid FSH ids; and every innermost lane names its actor by id: its `partitionElementRef` (a top-level `<bpmn:resource>`), else its own id, matched exactly against the `Instance:` ids of the ActorDefinitions in the IG's FSH (or JSON) and, for a harness process, the role ids of the mounted layers' `scenarios/roles.json`. Never by file name or title. With no file named it reads the declared process directories, `smart-base/**/processes/` and an IG's `input/bpmn/`.",
+        "tags": [
+          "smart-base-tools"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "smart-base/bpmn-validate/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "bpmn": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "The .bpmn files to check; when absent, every .bpmn under the declared process directories (or, with `--changed <ref>`, those the branch changed)."
+                  },
+                  "fsh": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "Directories of ActorDefinition FSH or JSON; default `input/fsh` and `input/resources`."
+                  },
+                  "roles": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "`scenarios/roles.json` files whose role ids a harness lane may bind; default those of smart-base and the mounted cat-harness, fhir-harness and folio-assistant-core."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "report": {
+                      "$ref": "#/components/schemas/Text",
+                      "description": "One `✗` line per error and `!` per warning, then a count. Exit 0 no error, 1 an error, 2 nothing to check (not a pass). `--json` prints the findings as data."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "http://smart.who.int/base/tools/bpmn-validate.jsonld",
+        "x-invoke": {
+          "shell": "bun run smart-base/L2-bpmn/tools/bpmn-validate/validate.ts [file.bpmn ...] [--root <repo>] [--fsh <dir>]... [--roles <roles.json>]... [--changed <git ref>] [--json] [--verbose]"
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "bun"
+          ],
+          "network": false
+        },
+        "x-satisfies": [
+          "smart-base-tools"
+        ],
+        "x-selection": {
+          "when": "A DAK's business process (L2, BPMN) is added or edited, before review (skill `l2-component-edit-review`, the BPMN row's checker), and on every pull request that changes a `.bpmn`.",
+          "limits": "An ActorDefinition a dependency IG declares is found only when its FSH or JSON directory is passed with `--fsh`. Reads lanes, not pools: a participant whose process has no lanes is reported as a process with no laneSet. A lane bound to a harness role is accepted here; whether that role is equipped is cat-harness's `role-model` check (`kg:audit`). A published DAK whose processes are still Visio figures is crosswalked against its personas by `smart-base/scripts/dak-swimlanes.ts` (always on, beside the `web-annex` kind's `dak-swimlanes/v1` validator), not by this Tool. It does not draw the diagram (`render:bpmn` does) or check DI completeness.",
+          "cost": "Seconds, no network."
         }
       }
     },
@@ -2075,10 +2219,7 @@
         "summary": "Verify Data Sharing Agreement hash, citation, and vocabulary terms",
         "description": "Verify a Data Sharing Agreement (DSA) directory or single version: checks that every JSON-LD term in `agreement.jsonld` and `dcat.jsonld` is defined in the SHA-256-pinned official W3C ODRL 2.2, W3C DCAT 3 (with SPDX 2.2.2 and ADMS), or DCMI Metadata Terms contexts; checks that the ODRL 2.2 Agreement's `uid` is the version's fixed-version URL and its `dcterms:source` cites the DCAT 3 `dcat:Distribution` whose `spdx:checksum` is checked; verifies that the SHA-256 digest of `agreement.md` matches `spdx:checksumValue`; and checks `dcat:previousVersion` and hash distinctness across versions.",
         "tags": [
-          "dsa-checksum",
-          "dsa-odrl-source",
-          "dsa-dcat-record",
-          "dsa-catalogue-status"
+          "dsa-checksum"
         ],
         "externalDocs": {
           "description": "The Tool's page",
@@ -2133,10 +2274,7 @@
           "network": false
         },
         "x-satisfies": [
-          "dsa-checksum",
-          "dsa-odrl-source",
-          "dsa-dcat-record",
-          "dsa-catalogue-status"
+          "dsa-checksum"
         ],
         "x-selection": {
           "when": "Verifying a Data Sharing Agreement's checksum, ODRL citation, DCAT 3 record and `dcat:previousVersion` chain, or `adms:status`.",
@@ -2267,6 +2405,14 @@
         "x-satisfies": [
           "fhir-validation"
         ],
+        "x-skill-contracts": {
+          "fhir-validation.input": {
+            "$ref": "#/components/schemas/skill.fhir-validation.input"
+          },
+          "fhir-validation.output": {
+            "$ref": "#/components/schemas/skill.fhir-validation.output"
+          }
+        },
         "x-selection": {
           "when": "A pull request changes an IG's CodeSystems or its translation supplements, and the IG build is not run on it.",
           "limits": "Compiles only CodeSystems, Aliases and RuleSets with the supplements: a base CodeSystem written as an Instance, or one from another package, is reported as missing.",
@@ -2345,6 +2491,14 @@
         "x-satisfies": [
           "fhir-questionnaire-wireframe"
         ],
+        "x-skill-contracts": {
+          "fhir-questionnaire-wireframe.input": {
+            "$ref": "#/components/schemas/skill.fhir-questionnaire-wireframe.input"
+          },
+          "fhir-questionnaire-wireframe.output": {
+            "$ref": "#/components/schemas/skill.fhir-questionnaire-wireframe.output"
+          }
+        },
         "x-selection": {
           "when": "A Questionnaire was derived from an L2 wireframe and is reviewed for fidelity; or a suggested edit to either side is checked (`checkSuggestion`, the same judge in the editor-checker shape).",
           "limits": "Compares ids and order only: it says nothing about labels, answer options, enableWhen or layout quality, which `wireframe-design-review` judges. A wireframe with no `data-element` field is exit 2, not a pass.",
@@ -4587,96 +4741,6 @@
         }
       }
     },
-    "/tools/folio-block-screenshots": {
-      "post": {
-        "operationId": "folio-block-screenshots",
-        "summary": "Folio block screenshots",
-        "description": "Picture each changed figure, diagram, table, equation or simulator block on the published main site and on a staging build, and compare the two pictures pixel by pixel in Chromium's canvas. Writes `visual-diff.json` (`folio-visual-diff/v1`: per block, the share of pixels changed beyond anti-aliasing, and the before, after and diff pictures) and `visual/*.png`, which the review page's visual renderer shows. A side that cannot be pictured (page or anchor missing) is recorded as missing, never drawn blank. Drives Chromium through Playwright.",
-        "tags": [
-          "visual-diff"
-        ],
-        "externalDocs": {
-          "description": "The Tool's page",
-          "url": "folio-assistant-core/folio-block-screenshots/"
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "changeset": {
-                    "$ref": "#/components/schemas/RepoPath",
-                    "description": "The preview's `changeset.json`: which blocks changed, and their kind on each side."
-                  },
-                  "base": {
-                    "$ref": "#/components/schemas/RepoPath",
-                    "description": "The published main site, as a directory (the publish branch's root)."
-                  },
-                  "head": {
-                    "$ref": "#/components/schemas/RepoPath",
-                    "description": "The staging build's site directory."
-                  },
-                  "out": {
-                    "$ref": "#/components/schemas/RepoPath",
-                    "description": "Where to write `visual-diff.json` and `visual/`: the site root, so the review page finds them."
-                  },
-                  "count": {
-                    "$ref": "#/components/schemas/Flag",
-                    "description": "Print how many changed blocks would be pictured, and stop, so a caller installs a browser only when there is work."
-                  }
-                },
-                "required": [
-                  "changeset"
-                ],
-                "additionalProperties": false
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The Tool's declared outputs.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "visual-diff": {
-                      "$ref": "#/components/schemas/RepoPath",
-                      "description": "`<out>/visual-diff.json` and `<out>/visual/*.png`. A per-block summary goes to stderr."
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-tool-iri": "https://litlfred.github.io/folio-assistant/folio-assistant-core/tools/folio-block-screenshots.jsonld",
-        "x-invoke": {
-          "shell": "bun run cat block:screenshots"
-        },
-        "x-install": {
-          "none": true
-        },
-        "x-requires": {
-          "runtime": [
-            "bun",
-            "chromium"
-          ],
-          "network": false
-        },
-        "x-satisfies": [
-          "visual-diff"
-        ],
-        "x-selection": {
-          "when": "A staging build changed a figure, diagram, table, equation or simulator, whose markup diff says little, and the reviewer needs to see before and after.",
-          "limits": "The number is how MUCH changed, never whether the change is right. A block's picture is its anchor down to the next anchor, so a page whose anchors are missing or misplaced pictures the wrong region. Pictures are of the light theme.",
-          "cost": "A Chromium launch and two page loads, one screenshot and one canvas compare per visual block. Nothing when no visual block changed."
-        }
-      }
-    },
     "/tools/folio-changeset": {
       "post": {
         "operationId": "folio-changeset",
@@ -5354,7 +5418,15 @@
         },
         "x-satisfies": [
           "fhir-validation"
-        ]
+        ],
+        "x-skill-contracts": {
+          "fhir-validation.input": {
+            "$ref": "#/components/schemas/skill.fhir-validation.input"
+          },
+          "fhir-validation.output": {
+            "$ref": "#/components/schemas/skill.fhir-validation.output"
+          }
+        }
       }
     },
     "/tools/gates": {
@@ -9826,7 +9898,7 @@
         },
         "x-tool-iri": "http://smart.who.int/base/tools/l1-recommendation-candidates.jsonld",
         "x-invoke": {
-          "shell": "bun run smart-base/scripts/l1-recommendation-candidates.ts --entry <library entry> [--curation <curation.yaml>] --out <dir> [--check]"
+          "shell": "bun run smart-base/L1/scripts/l1-recommendation-candidates.ts --entry <library entry> [--curation <curation.yaml>] --out <dir> [--check]"
         },
         "x-install": {
           "none": true
@@ -10090,7 +10162,7 @@
         },
         "x-tool-iri": "http://smart.who.int/base/tools/l1-transcription-verbatim.jsonld",
         "x-invoke": {
-          "shell": "bun run smart-base/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]"
+          "shell": "bun run smart-base/L1/scripts/l1-transcription-verbatim.ts --dir <dir of *.l1.yaml> [--root <repo>]"
         },
         "x-install": {
           "none": true
@@ -14006,6 +14078,14 @@
         "x-satisfies": [
           "fhir-questionnaire-wireframe"
         ],
+        "x-skill-contracts": {
+          "fhir-questionnaire-wireframe.input": {
+            "$ref": "#/components/schemas/skill.fhir-questionnaire-wireframe.input"
+          },
+          "fhir-questionnaire-wireframe.output": {
+            "$ref": "#/components/schemas/skill.fhir-questionnaire-wireframe.output"
+          }
+        },
         "x-selection": {
           "when": "After SUSHI has built the IG's Questionnaires and before they are reviewed as forms; whenever a Questionnaire uses modular sub-forms, template extraction or pre-population.",
           "limits": "Only as good as the IG's fixtures: with none, extraction and population say `no-fixture` rather than pass. Nothing is fetched from a server: sub-forms resolve in the AST and population queries in the fixture. The behavioural toolkit is early and needs React and Smart Forms peers installed with the IG's tests; without them it is `could-not-determine`, a warning.",
@@ -16637,7 +16717,7 @@
                   "properties": {
                     "result": {
                       "$ref": "#/components/schemas/RepoPath",
-                      "description": "Result JSON conforming to `schemas/skills/classify-and-code-content/output.schema.json`."
+                      "description": "Result JSON conforming to `L1/schemas/skills/classify-and-code-content/output.schema.json`."
                     }
                   }
                 }
@@ -17003,6 +17083,10 @@
                   "site": {
                     "$ref": "#/components/schemas/RepoPath",
                     "description": "A site being built: write the pages at their declared route under it instead of under the harness's own site directory. A repository's own site build passes it (the tools layer's `visualiser-writers.ts`), since its harness docs are a pinned mount."
+                  },
+                  "scope": {
+                    "$ref": "#/components/schemas/IdList",
+                    "description": "A scoped site build: the comma-separated instances whose per-layer Tools pages this writer writes; every other layer's Tools pages are linked on the platform's site, not copied (owner, 2026-11-13: \"other harnesses should be referenced not included\"). The combined index and API documents are still written. Passed by the tools layer's `visualiser-writers.ts`. Absent: every instance."
                   }
                 },
                 "additionalProperties": false
@@ -17426,6 +17510,76 @@
           "none": true
         },
         "x-requires": {
+          "network": false
+        },
+        "x-satisfies": [
+          "translation-manager"
+        ]
+      }
+    },
+    "/tools/translation-qa-prune": {
+      "post": {
+        "operationId": "translation-qa-prune",
+        "summary": "Prune round-trip rulings of removed strings",
+        "description": "Drop the translation-semantic-roundtrip rulings of strings the catalogues no longer hold, and renumber the rest to catalogue order. Rulings are paired with strings by the hash of their msgid, so removing strings invalidates none and needs no agent re-run; this is the upkeep that follows. It only drops or renumbers: a verdict is never changed or invented, and a ruling for a string the ref's history never held (one recorded ahead of its PR) is kept.",
+        "tags": [
+          "translation-manager"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "who-iris/translation-qa-prune/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "write": {
+                    "$ref": "#/components/schemas/Flag",
+                    "description": "Apply the change to test/attestations/translation-qa/. Absent, it is a dry run that prints each dropped ruling and the renumbered spans."
+                  },
+                  "ref": {
+                    "$ref": "#/components/schemas/Branch",
+                    "description": "Whose catalogues decide what was removed. Default origin/main: the state branch serves main and every branch, so a ruling goes only once main no longer holds its string."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "attestations": {
+                      "$ref": "#/components/schemas/RepoPath",
+                      "description": "With --write, the rewritten `test/attestations/translation-qa/<catalogue>.<locale>.attestations.json`, to be pushed to `cat/who-iris/attestations`."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/who-iris/tools/translation-qa-prune.jsonld",
+        "x-invoke": {
+          "shell": "bun run cat translation-qa:prune"
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "bun",
+            "git"
+          ],
           "network": false
         },
         "x-satisfies": [
@@ -19925,6 +20079,731 @@
           }
         },
         "$comment": "Copy of cat-harness schemas/staging-comparison.schema.json; cat-harness schemas/staging.test.ts fails when a copy drifts."
+      },
+      "skill.fhir-questionnaire-wireframe.input": {
+        "title": "FHIR Questionnaire Wireframe Input",
+        "description": "Which built Questionnaire to render and review, against which L2 wireframe, and where the drawings and the requests for feedback go.",
+        "type": "object",
+        "required": [
+          "questionnaire"
+        ],
+        "properties": {
+          "questionnaire": {
+            "type": "string",
+            "description": "Repository-relative path of ONE built Questionnaire JSON (`fsh-generated/resources/Questionnaire-<id>.json`), never FSH. Several Questionnaires are several runs, so each carries its own fidelity findings and review."
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "render",
+              "fidelity-check",
+              "wireframe-from-questionnaire"
+            ],
+            "default": "render",
+            "description": "`render`: wireframe and form view for review. `fidelity-check`: only the field-for-field check against `wireframe`. `wireframe-from-questionnaire`: draw an L2 wireframe from a Questionnaire that has none."
+          },
+          "wireframe": {
+            "type": "string",
+            "description": "Repository-relative path of the L2 wireframe HTML the Questionnaire was derived from (the chosen `wireframe-design-review` candidate), when one exists."
+          },
+          "renderer": {
+            "type": "string",
+            "enum": [
+              "lhc-forms"
+            ],
+            "default": "lhc-forms",
+            "description": "The form-view renderer. Only the vendored NLM LHC-Forms (owner, 2026-10-14)."
+          },
+          "assetDir": {
+            "type": "string",
+            "description": "Repository-relative directory for the wireframes, captures and checks."
+          },
+          "suggest": {
+            "type": "boolean",
+            "default": true,
+            "description": "Offer ✍ suggest, in its Questionnaire mode, on the form view."
+          },
+          "issueForm": {
+            "type": "string",
+            "default": "questionnaire-change.yml",
+            "description": "The issue form change requests are opened with."
+          },
+          "channels": {
+            "type": "array",
+            "description": "Where the request for review goes: chosen by judgement, and more than one may be right (staging-review, the deep-link rule, point 5).",
+            "items": {
+              "type": "object",
+              "required": [
+                "kind"
+              ],
+              "properties": {
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "conversation",
+                    "issue",
+                    "pull-request"
+                  ]
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          },
+          "branch": {
+            "type": "string",
+            "description": "The feature branch the renderings are committed on, so feature-staging publishes them."
+          }
+        }
+      },
+      "skill.fhir-questionnaire-wireframe.output": {
+        "title": "FHIR Questionnaire Wireframe Output",
+        "description": "The renderings of one built Questionnaire and their review, in the output shape of cat-harness `wireframe-design-review` (candidates with source HTML, web and mobile screenshots and their staging links; the choice; the changed assets; the staging deep links), plus the renderer that drew the form view, the fidelity findings against the L2 wireframe per layout, and the change requests received.",
+        "type": "object",
+        "required": [
+          "use",
+          "topic",
+          "assetDir",
+          "candidates",
+          "renderer",
+          "changedAssets",
+          "stagingLinks"
+        ],
+        "properties": {
+          "use": {
+            "type": "string",
+            "enum": [
+              "design",
+              "as-is"
+            ]
+          },
+          "topic": {
+            "type": "string"
+          },
+          "assetDir": {
+            "type": "string",
+            "description": "Repository-relative directory holding the wireframes, the form-view captures and their checks."
+          },
+          "intent": {
+            "type": "string",
+            "description": "Repository-relative path of intent.md."
+          },
+          "candidates": {
+            "type": "array",
+            "minItems": 1,
+            "description": "At least two for Design use, exactly one (marked as-is) for as-is use.",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "source",
+                "screenshots",
+                "outcome"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Candidate id, shown to reviewers in place of its author."
+                },
+                "title": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string",
+                  "description": "Repository-relative path of the candidate's mid-fidelity HTML."
+                },
+                "screenshots": {
+                  "type": "object",
+                  "required": [
+                    "web",
+                    "mobile"
+                  ],
+                  "description": "Written by wireframe-check: one per viewport. A candidate with only one does not enter review.",
+                  "properties": {
+                    "web": {
+                      "type": "string",
+                      "description": "Repository-relative path of the 1280×800 screenshot."
+                    },
+                    "mobile": {
+                      "type": "string",
+                      "description": "Repository-relative path of the 390×844 screenshot."
+                    }
+                  }
+                },
+                "staging": {
+                  "type": "object",
+                  "description": "The candidate and its screenshots on the staging preview, as deep links.",
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "web": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "mobile": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  }
+                },
+                "entries": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/skill.fhir-questionnaire-wireframe.output.criterionEntry"
+                  },
+                  "description": "Script and review entries, per criterion. No scores, no averages."
+                },
+                "outcome": {
+                  "type": "string",
+                  "enum": [
+                    "chosen",
+                    "rejected",
+                    "pending",
+                    "as-is"
+                  ]
+                },
+                "reason": {
+                  "type": "string",
+                  "description": "Why it was chosen or why it lost. Rejected candidates stay, each with its reason."
+                }
+              }
+            }
+          },
+          "chosen": {
+            "type": "object",
+            "required": [
+              "candidate",
+              "chosenBy"
+            ],
+            "description": "Design use: the candidate the human reviewer chose. Absent until they choose; an agent never records a choice on a person's behalf.",
+            "properties": {
+              "candidate": {
+                "type": "string",
+                "description": "The chosen candidate's id."
+              },
+              "chosenBy": {
+                "type": "string",
+                "description": "The requester or BA who chose it."
+              },
+              "recordedAt": {
+                "type": "string",
+                "format": "uri",
+                "description": "Where the choice is recorded: the issue or pull request comment, or, when it was made in the conversation, the proposal section that records it."
+              }
+            }
+          },
+          "questionnaire": {
+            "type": "string",
+            "description": "The built Questionnaire JSON rendered, as in the input."
+          },
+          "renderer": {
+            "type": "object",
+            "required": [
+              "name",
+              "version"
+            ],
+            "description": "What drew the form view. The vendored build, never a CDN at runtime (owner, 2026-10-14).",
+            "properties": {
+              "name": {
+                "type": "string",
+                "enum": [
+                  "lhc-forms"
+                ],
+                "description": "NLM LHC-Forms, the owner's choice of 2026-10-14."
+              },
+              "version": {
+                "type": "string",
+                "description": "The vendored LHC-Forms version, e.g. 44.1.0."
+              },
+              "assets": {
+                "type": "string",
+                "description": "Site-relative directory the vendored files are served from."
+              },
+              "licenceNotice": {
+                "type": "string",
+                "description": "Repository-relative path of the NLM licence notice kept with the vendored files."
+              }
+            }
+          },
+          "fidelity": {
+            "type": "array",
+            "description": "check-wireframe-questionnaire's findings, one entry per Questionnaire and wireframe layout. Absent when no L2 wireframe exists; an entry whose status is `could-not-determine` (exit 2) is never a pass.",
+            "items": {
+              "$ref": "#/components/schemas/skill.fhir-questionnaire-wireframe.output.fidelityEntry"
+            }
+          },
+          "sdcChecks": {
+            "type": "array",
+            "description": "The SDC build checks (fhir-harness `sdc-checks`, CSIRO's libraries), one entry per Questionnaire. `not-applicable`, `no-fixture` and `could-not-determine` are never a pass; a behavioural test's failure is a warning.",
+            "items": {
+              "$ref": "#/components/schemas/skill.fhir-questionnaire-wireframe.output.sdcCheckResult"
+            }
+          },
+          "changeRequests": {
+            "type": "array",
+            "description": "Change requests received through ✍ suggest or the questionnaire-change issue form, and where each stands.",
+            "items": {
+              "$ref": "#/components/schemas/skill.fhir-questionnaire-wireframe.output.changeRequest"
+            }
+          },
+          "changedAssets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/skill.fhir-questionnaire-wireframe.output.changedAsset"
+            },
+            "description": "Every file the branch adds, changes or removes — wireframe HTML, form-view pages, screenshots, reviews — in the changed-assets record shape a staging preview's graph carries."
+          },
+          "stagingLinks": {
+            "$ref": "#/components/schemas/skill.fhir-questionnaire-wireframe.output.stagingLinks"
+          }
+        }
+      },
+      "skill.fhir-questionnaire-wireframe.output.changedAsset": {
+        "title": "Changed asset",
+        "description": "One file the branch adds, changes or removes, in the record shape of a staging preview graph's `changedAssets` (cat-harness-tools scripts/kg-changed-assets.ts `ChangedAsset`; glosses in schemas/vocabulary.ts: assetChange, assetKind, beforeVersion, afterVersion, assetSource, renderedPage, renderedPagesUnknown).",
+        "type": "object",
+        "required": [
+          "change"
+        ],
+        "properties": {
+          "change": {
+            "type": "string",
+            "enum": [
+              "added",
+              "changed",
+              "removed"
+            ],
+            "description": "How the asset differs from main."
+          },
+          "kind": {
+            "type": "string",
+            "description": "What the asset is, without namespace: `questionnaire-wireframe`, `questionnaire-rendering`, `questionnaire-screenshot`, or a `wireframe-design-review` kind (`wireframe-candidate`, `wireframe-screenshot`, `wireframe-intent`, `wireframe-review`)."
+          },
+          "title": {
+            "type": "string"
+          },
+          "before": {
+            "type": "string",
+            "format": "uri",
+            "description": "The asset as published on main; absent when it is new on the branch."
+          },
+          "after": {
+            "type": "string",
+            "format": "uri",
+            "description": "The asset as published in the staging preview; absent when the branch removes it."
+          },
+          "source": {
+            "type": "string",
+            "description": "The repository-relative file."
+          },
+          "pages": {
+            "type": "array",
+            "description": "The rendered pages the source maps to, as before/after pairs (StagingPageComparison rows: the item shape of stagingLinks.pages).",
+            "items": {
+              "type": "object",
+              "required": [
+                "title"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "before": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "after": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "summary": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "pagesUnknown": {
+            "type": "string",
+            "description": "Why the pages were not mapped one by one, when they were not; never read as 'renders no page'."
+          }
+        },
+        "$comment": "Mirrors ChangedAsset in cat-harness-tools scripts/kg-changed-assets.ts (PR #203, branch claude/staging-kg-changed-assets)."
+      },
+      "skill.fhir-questionnaire-wireframe.output.changeRequest": {
+        "type": "object",
+        "required": [
+          "issue",
+          "edited",
+          "status"
+        ],
+        "properties": {
+          "issue": {
+            "type": "string",
+            "format": "uri",
+            "description": "The issue the request arrived as."
+          },
+          "via": {
+            "type": "string",
+            "enum": [
+              "suggest",
+              "issue-form"
+            ],
+            "description": "The ✍ suggest editor's Questionnaire mode, or the questionnaire-change issue form filled by hand."
+          },
+          "questionnaire": {
+            "type": "string",
+            "description": "Canonical URL or Questionnaire/<id>."
+          },
+          "edited": {
+            "type": "string",
+            "enum": [
+              "questionnaire",
+              "wireframe"
+            ],
+            "description": "The side the requester changed. It is the source of the change; the other side is brought back in line with it (owner, 2026-10-14)."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "received",
+              "triaged",
+              "applied",
+              "staged",
+              "declined"
+            ]
+          },
+          "note": {
+            "type": "string",
+            "description": "Why it was declined, or what was applied."
+          }
+        }
+      },
+      "skill.fhir-questionnaire-wireframe.output.criterionEntry": {
+        "type": "object",
+        "required": [
+          "criterion",
+          "status"
+        ],
+        "properties": {
+          "criterion": {
+            "type": "string",
+            "description": "renders, no-overflow, no-placeholder (script entries from wireframe-check); intent-fit, web-usability, mobile-usability, accessibility, alternatives (review entries)."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "warn",
+              "fail"
+            ]
+          },
+          "by": {
+            "type": "string",
+            "description": "`script` for a wireframe-check entry; the reviewer otherwise."
+          },
+          "note": {
+            "type": "string",
+            "description": "The reason. Required in substance for every warn and fail."
+          }
+        }
+      },
+      "skill.fhir-questionnaire-wireframe.output.fidelityEntry": {
+        "type": "object",
+        "required": [
+          "questionnaire",
+          "layout",
+          "status",
+          "findings"
+        ],
+        "properties": {
+          "questionnaire": {
+            "type": "string",
+            "description": "Repository-relative path of the built Questionnaire JSON."
+          },
+          "wireframe": {
+            "type": "string",
+            "description": "Repository-relative path of the L2 wireframe HTML it was checked against."
+          },
+          "layout": {
+            "type": "string",
+            "description": "The `data-layout` name, or `(whole document)` when the wireframe has one layout."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "faithful",
+              "findings",
+              "could-not-determine"
+            ],
+            "description": "Exit 0, 1 and 2 of the checker."
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The checker's lines for this layout, verbatim."
+          }
+        }
+      },
+      "skill.fhir-questionnaire-wireframe.output.sdcCheckResult": {
+        "type": "object",
+        "required": [
+          "questionnaire",
+          "checks"
+        ],
+        "properties": {
+          "questionnaire": {
+            "type": "string",
+            "description": "The Questionnaire's id."
+          },
+          "checks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "check",
+                "library",
+                "status",
+                "severity",
+                "findings"
+              ],
+              "properties": {
+                "check": {
+                  "type": "string",
+                  "enum": [
+                    "assemble",
+                    "template-extract",
+                    "populate",
+                    "behaviour"
+                  ]
+                },
+                "library": {
+                  "type": "string",
+                  "description": "The npm package and version that ran it."
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "not-applicable",
+                    "no-fixture",
+                    "could-not-determine"
+                  ]
+                },
+                "severity": {
+                  "type": "string",
+                  "enum": [
+                    "error",
+                    "warning"
+                  ],
+                  "description": "`warning` for the behavioural tests (questionnaire-test-toolkit is early)."
+                },
+                "findings": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "output": {
+                  "type": "string",
+                  "description": "The assembled Questionnaire, when it was written."
+                }
+              }
+            }
+          }
+        }
+      },
+      "skill.fhir-questionnaire-wireframe.output.stagingLinks": {
+        "title": "Staging links",
+        "description": "The staging preview of the work a request for feedback is about: one deep link per changed page (the page and the anchor where the change sits) with the same page on main as `before`. Mirrors StagingComparison in schemas/staging.ts. The rule is skills/sdlc/sdlc-core/staging-review.md §\"The deep-link rule\". Copied inline as `definitions.stagingLinks` into every skill contract that carries it; schemas/staging.test.ts fails when a copy drifts.",
+        "type": "object",
+        "required": [
+          "branch",
+          "slug",
+          "branchUrl",
+          "mainBaseUrl",
+          "stagingBaseUrl",
+          "pages"
+        ],
+        "properties": {
+          "branch": {
+            "type": "string",
+            "description": "Feature branch name."
+          },
+          "slug": {
+            "type": "string",
+            "description": "Branch slug used in the staging URL path."
+          },
+          "branchUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "pr": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "mainBaseUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "stagingBaseUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "pages": {
+            "type": "array",
+            "description": "One entry per changed page, deep-linked; from the change's rendered-impact list, never chosen by judgement.",
+            "items": {
+              "type": "object",
+              "required": [
+                "title"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "before": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "Same page on main; absent for a new page."
+                },
+                "after": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "The page on the staging preview, with the anchor where the change sits; absent for a deleted page."
+                },
+                "summary": {
+                  "type": "string",
+                  "description": "What to look at on this page."
+                }
+              }
+            }
+          },
+          "missing": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "What could not be linked, said rather than hidden: no preview yet (and when it will exist), no page list computed, or a changed page the publish ref does not hold."
+          }
+        },
+        "$comment": "Copy of cat-harness schemas/staging-comparison.schema.json; cat-harness schemas/staging.test.ts fails when a copy drifts."
+      },
+      "skill.fhir-validation.input": {
+        "title": "FHIR Validation Input",
+        "description": "Input schema for FHIR validation — runs SUSHI, IG Publisher QA, and conformance checks.",
+        "type": "object",
+        "required": [
+          "igRoot"
+        ],
+        "properties": {
+          "igRoot": {
+            "type": "string",
+            "description": "Path to the IG repository root."
+          },
+          "validationLevel": {
+            "type": "string",
+            "enum": [
+              "sushi-only",
+              "publisher-qa",
+              "full"
+            ],
+            "default": "full",
+            "description": "Level of validation to perform."
+          },
+          "targetProfiles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Specific CRMI profiles to validate against (Shareable, Publishable, Computable, Executable)."
+          }
+        }
+      },
+      "skill.fhir-validation.output": {
+        "title": "FHIR Validation Output",
+        "description": "Output schema for FHIR validation results.",
+        "type": "object",
+        "required": [
+          "overallStatus"
+        ],
+        "properties": {
+          "overallStatus": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "warnings",
+              "errors"
+            ]
+          },
+          "sushiResult": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string"
+              },
+              "errors": {
+                "type": "integer"
+              },
+              "warnings": {
+                "type": "integer"
+              }
+            }
+          },
+          "publisherResult": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string"
+              },
+              "qaHtmlPath": {
+                "type": "string"
+              },
+              "errorCount": {
+                "type": "integer"
+              },
+              "warningCount": {
+                "type": "integer"
+              },
+              "infoCount": {
+                "type": "integer"
+              }
+            }
+          },
+          "conformanceResults": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "resource": {
+                  "type": "string"
+                },
+                "profile": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "conformant",
+                    "non-conformant"
+                  ]
+                },
+                "issues": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
       },
       "skill.public-comment.input": {
         "title": "Public Comment Input",

@@ -17,16 +17,7 @@
       "name": "document-intake"
     },
     {
-      "name": "dsa-catalogue-status"
-    },
-    {
       "name": "dsa-checksum"
-    },
-    {
-      "name": "dsa-dcat-record"
-    },
-    {
-      "name": "dsa-odrl-source"
     },
     {
       "name": "dublin-core-renderings"
@@ -78,9 +69,6 @@
     },
     {
       "name": "tabular-metadata"
-    },
-    {
-      "name": "visual-diff"
     }
   ],
   "paths": {
@@ -525,10 +513,7 @@
         "summary": "Verify Data Sharing Agreement hash, citation, and vocabulary terms",
         "description": "Verify a Data Sharing Agreement (DSA) directory or single version: checks that every JSON-LD term in `agreement.jsonld` and `dcat.jsonld` is defined in the SHA-256-pinned official W3C ODRL 2.2, W3C DCAT 3 (with SPDX 2.2.2 and ADMS), or DCMI Metadata Terms contexts; checks that the ODRL 2.2 Agreement's `uid` is the version's fixed-version URL and its `dcterms:source` cites the DCAT 3 `dcat:Distribution` whose `spdx:checksum` is checked; verifies that the SHA-256 digest of `agreement.md` matches `spdx:checksumValue`; and checks `dcat:previousVersion` and hash distinctness across versions.",
         "tags": [
-          "dsa-checksum",
-          "dsa-odrl-source",
-          "dsa-dcat-record",
-          "dsa-catalogue-status"
+          "dsa-checksum"
         ],
         "externalDocs": {
           "description": "The Tool's page",
@@ -583,10 +568,7 @@
           "network": false
         },
         "x-satisfies": [
-          "dsa-checksum",
-          "dsa-odrl-source",
-          "dsa-dcat-record",
-          "dsa-catalogue-status"
+          "dsa-checksum"
         ],
         "x-selection": {
           "when": "Verifying a Data Sharing Agreement's checksum, ODRL citation, DCAT 3 record and `dcat:previousVersion` chain, or `adms:status`.",
@@ -914,96 +896,6 @@
           "when": "A staging preview is being built and its review page's heat map should show QA per section, from what the folio's QA sweep last recorded.",
           "limits": "Reports the LAST sweep: in a staging build, the sweep the job ran just before it; otherwise the committed verdicts. A folio never swept reads unaudited throughout. Verdicts are read at the instance root, so a folio in a subfolder is read at its own root, then in the folio directory.",
           "cost": "One text walk of the folio and one read per sidecar. No network."
-        }
-      }
-    },
-    "/tools/folio-block-screenshots": {
-      "post": {
-        "operationId": "folio-block-screenshots",
-        "summary": "Folio block screenshots",
-        "description": "Picture each changed figure, diagram, table, equation or simulator block on the published main site and on a staging build, and compare the two pictures pixel by pixel in Chromium's canvas. Writes `visual-diff.json` (`folio-visual-diff/v1`: per block, the share of pixels changed beyond anti-aliasing, and the before, after and diff pictures) and `visual/*.png`, which the review page's visual renderer shows. A side that cannot be pictured (page or anchor missing) is recorded as missing, never drawn blank. Drives Chromium through Playwright.",
-        "tags": [
-          "visual-diff"
-        ],
-        "externalDocs": {
-          "description": "The Tool's page",
-          "url": "folio-block-screenshots/"
-        },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "changeset": {
-                    "$ref": "#/components/schemas/RepoPath",
-                    "description": "The preview's `changeset.json`: which blocks changed, and their kind on each side."
-                  },
-                  "base": {
-                    "$ref": "#/components/schemas/RepoPath",
-                    "description": "The published main site, as a directory (the publish branch's root)."
-                  },
-                  "head": {
-                    "$ref": "#/components/schemas/RepoPath",
-                    "description": "The staging build's site directory."
-                  },
-                  "out": {
-                    "$ref": "#/components/schemas/RepoPath",
-                    "description": "Where to write `visual-diff.json` and `visual/`: the site root, so the review page finds them."
-                  },
-                  "count": {
-                    "$ref": "#/components/schemas/Flag",
-                    "description": "Print how many changed blocks would be pictured, and stop, so a caller installs a browser only when there is work."
-                  }
-                },
-                "required": [
-                  "changeset"
-                ],
-                "additionalProperties": false
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The Tool's declared outputs.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "visual-diff": {
-                      "$ref": "#/components/schemas/RepoPath",
-                      "description": "`<out>/visual-diff.json` and `<out>/visual/*.png`. A per-block summary goes to stderr."
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "x-tool-iri": "https://litlfred.github.io/folio-assistant/folio-assistant-core/tools/folio-block-screenshots.jsonld",
-        "x-invoke": {
-          "shell": "bun run cat block:screenshots"
-        },
-        "x-install": {
-          "none": true
-        },
-        "x-requires": {
-          "runtime": [
-            "bun",
-            "chromium"
-          ],
-          "network": false
-        },
-        "x-satisfies": [
-          "visual-diff"
-        ],
-        "x-selection": {
-          "when": "A staging build changed a figure, diagram, table, equation or simulator, whose markup diff says little, and the reviewer needs to see before and after.",
-          "limits": "The number is how MUCH changed, never whether the change is right. A block's picture is its anchor down to the next anchor, so a page whose anchors are missing or misplaced pictures the wrong region. Pictures are of the light theme.",
-          "cost": "A Chromium launch and two page loads, one screenshot and one canvas compare per visual block. Nothing when no visual block changed."
         }
       }
     },

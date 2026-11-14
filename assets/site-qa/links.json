@@ -1,6 +1,6 @@
 {
  "$schema": "site-link-report/v1",
- "pages": 18836,
+ "pages": 18780,
  "unresolved": [],
  "selfAddress": [],
  "content": [
@@ -59,12 +59,8 @@
   {
    "page": "assets/formbuilder/12.9.0/window-open.html",
    "href": "webcomponents/webcomponents-loader.js"
-  },
-  {
-   "page": "authoring-skills.html",
-   "href": ".github/skills/bpmn_layout/skills.yaml"
   }
  ],
- "diagrams": 138,
+ "diagrams": 119,
  "inDiagrams": []
 }

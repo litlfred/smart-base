@@ -89,13 +89,13 @@
   "statusSrc":"../../../../assets/translation-status/index.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
-<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;processes&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
+<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","processes","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -274,7 +274,7 @@
 
 <p><strong>Skill <code class="language-plaintext highlighter-rouge">recommendation-extraction</code>:</strong> Extract the recommendations of an L1 source as L1 3.0 recommendation and remark nodes, then describe each one’s scenario: the persona (role) who acts on it, the business process they act in, and the user story, as smart-kg L2 user-scenario candidates that reuse the target guide’s own vocabulary. Read before extracting recommendations from a WHO guideline or position paper with no printed “Recommendation N” labels, before linking a recommendation to a DAK persona or process, and whenever a recommendation has to say who does it and where. Covers the hybrid extraction (mechanical candidates, agent structuring, verbatim and 100 % coverage gates), the reuse-first precedence for personas and processes, the WARNING format, and sign-off.</p>
 
-<p><strong>Named by:</strong> <a href="../classify-and-code-content.html">Classify and code content</a>, <a href="../smart-guideline-end-to-end.html">SMART Guideline end to end</a></p>
+<p><strong>Named by:</strong> <a href="../smart-guideline-end-to-end.html">SMART Guideline end to end</a>, <a href="../classify-and-code-content.html">Classify and code content</a></p>
 
 <blockquote>
   <p>Skill id: <code class="language-plaintext highlighter-rouge">recommendation-extraction</code> · Package: <code class="language-plaintext highlighter-rouge">authoring-who-smart-guidelines</code> ·
@@ -297,7 +297,7 @@ existing vocabulary and processes first, and warns when none fits.</p>
 </h2>
     
 
-<p>The contract is <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/schemas/skills/recommendation-extraction/input.schema.json"><code class="language-plaintext highlighter-rouge">input.schema.json</code></a> and <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/schemas/skills/recommendation-extraction/output.schema.json"><code class="language-plaintext highlighter-rouge">output.schema.json</code></a>.</p>
+<p>The contract is <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L1/schemas/skills/recommendation-extraction/input.schema.json"><code class="language-plaintext highlighter-rouge">input.schema.json</code></a> and <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L1/schemas/skills/recommendation-extraction/output.schema.json"><code class="language-plaintext highlighter-rouge">output.schema.json</code></a>.</p>
 
 <ul>
   <li><strong>In:</strong> <code class="language-plaintext highlighter-rouge">l1Sources</code>, <a href="dak-l1-library.html"><code class="language-plaintext highlighter-rouge">dak-l1-library</code></a>’s output, and the <code class="language-plaintext highlighter-rouge">targetGuide</code> whose personas and processes the scenarios reuse first.</li>
@@ -398,7 +398,7 @@ mechanical.</p>
 <code class="language-plaintext highlighter-rouge">bun run cat ingest uploads/&lt;doc_id&gt;/&lt;doc_id&gt;.pdf --library &lt;lib&gt;</code>.</li>
   <li><strong>Fast path — a guideline that prints labels.</strong> When the source prints
 <code class="language-plaintext highlighter-rouge">Recommendation N:</code> labels,
-<code class="language-plaintext highlighter-rouge">bun run smart-base/scripts/extract-smart-kg-l1.ts --entry smart-base/library/&lt;id&gt;</code>
+<code class="language-plaintext highlighter-rouge">bun run smart-base/L1/scripts/extract-smart-kg-l1.ts --entry smart-base/library/&lt;id&gt;</code>
 extracts them by label (it writes L1 1.0). A source with no labels, such
 as the measles position paper, takes the hybrid path below.</li>
   <li>
@@ -458,10 +458,10 @@ the Tool <code class="language-plaintext highlighter-rouge">smart-base/L1/tools/
 the agent’s judgement:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. mechanical: the work list — every normative sentence, with hints; nothing decided</span>
-bun run smart-base/scripts/l1-recommendation-candidates.ts <span class="nt">--entry</span> smart-base/library/&lt;<span class="nb">id</span><span class="o">&gt;</span> <span class="nt">--out</span> &lt;<span class="nb">dir</span><span class="o">&gt;</span>
+bun run smart-base/L1/scripts/l1-recommendation-candidates.ts <span class="nt">--entry</span> smart-base/library/&lt;<span class="nb">id</span><span class="o">&gt;</span> <span class="nt">--out</span> &lt;<span class="nb">dir</span><span class="o">&gt;</span>
 <span class="c"># 2. agent: write &lt;dir&gt;/curation.yaml (l1-recommendation-curation/v1), one decision per location</span>
 <span class="c"># 3. mechanical: the gates, and the L1 3.0 graph</span>
-bun run smart-base/scripts/l1-recommendation-candidates.ts <span class="nt">--entry</span> smart-base/library/&lt;<span class="nb">id</span><span class="o">&gt;</span> <span class="se">\</span>
+bun run smart-base/L1/scripts/l1-recommendation-candidates.ts <span class="nt">--entry</span> smart-base/library/&lt;<span class="nb">id</span><span class="o">&gt;</span> <span class="se">\</span>
   <span class="nt">--curation</span> &lt;<span class="nb">dir</span><span class="o">&gt;</span>/curation.yaml <span class="nt">--out</span> &lt;<span class="nb">dir</span><span class="o">&gt;</span> <span class="o">[</span><span class="nt">--check</span><span class="o">]</span>
 </code></pre></div></div>
 
@@ -555,7 +555,7 @@ that mounts the layer at the commit being staged; it must exit 0.</p>
     
 
 <p>Its mechanical step is the named skill
-<a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/recommendation-scenarios.md"><code class="language-plaintext highlighter-rouge">recommendation-scenarios</code></a> (Tool
+<a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L1/skills/smart-l1/recommendation-scenarios.md"><code class="language-plaintext highlighter-rouge">recommendation-scenarios</code></a> (Tool
 <code class="language-plaintext highlighter-rouge">l1-recommendation-scenarios</code>).</p>
 <h3 id="the-shape-l2-nodes-reused-unchanged">
   

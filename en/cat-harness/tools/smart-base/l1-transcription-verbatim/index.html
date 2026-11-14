@@ -89,13 +89,13 @@
   "statusSrc":"../../../../../assets/translation-status/index.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
-<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;processes&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
+<meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=1eebbbe844d9"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","processes","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
+<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
 <script src="../../../../../assets/js/vendor/qrcode.js" defer></script>
 <script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../../assets/js/docs-ui.js?v=829c614a8b9d" defer></script><script src="../../../../../assets/js/edit-links.js?v=ee68944d6d0b" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
+<script src="../../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -232,7 +232,7 @@
       <div id="main-content" class="main-content">
         <main>
           
-            <script type="application/ld+json">{"@context":"http://smart.who.int/base/smart-base.context.jsonld","@id":"http://smart.who.int/base/tools/l1-transcription-verbatim.jsonld","@type":"https://litlfred.github.io/cat-harness/v0/ns/Tool","partOf":"http://smart.who.int/base/smart-base.jsonld","name":"l1-transcription-verbatim","title":"Authored L1 → verbatim against transcriptions and image narratives","description":"Check authored L1 (`*.l1.yaml`, the measles pattern) for a source with no usable text layer: each statement must be verbatim in the image narrative (`images.json`) or the `transcription` block it names; every transcription word (digits aside) must be corroborated by the entry's text layer unless listed under `inspectionOnly`; keys must be unique.","install":{"none":true},"invoke":{"shell":"bun run smart-base/scripts/l1-transcription-verbatim.ts --dir \u003cdir of *.l1.yaml> [--root \u003crepo>]"},"io":{"inputs":[{"name":"dir","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/RepoPath","description":"The directory of authored `*.l1.yaml`; each names its library entry in `graph.source.entry`.","required":true}],"outputs":[{"name":"report","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/Text","description":"One summary line per file and one `FINDING` line per failure. Exit 0 clean, 1 findings, 2 nothing to check (not a pass)."}]},"satisfies":["transcription-verbatim"],"requirements":{"runtime":["bun"],"network":false},"selection":{"when":"The L1 was authored from inspected images or transcriptions because `l1-recommendation-candidates` found no normative sentence in the entry's text layer (a poster, a slide deck).","limits":"Verbatim is checked after NFKC normalisation with private-use glyphs dropped, so digits a text layer maps to private-use code points rest on inspection alone. Whether the transcription reads the picture correctly is the reviewer's call (`bun run cat narratives`).","cost":"Seconds, no network."}}</script>
+            <script type="application/ld+json">{"@context":"http://smart.who.int/base/smart-base.context.jsonld","@id":"http://smart.who.int/base/tools/l1-transcription-verbatim.jsonld","@type":"https://litlfred.github.io/cat-harness/v0/ns/Tool","partOf":"http://smart.who.int/base/smart-base.jsonld","name":"l1-transcription-verbatim","title":"Authored L1 → verbatim against transcriptions and image narratives","description":"Check authored L1 (`*.l1.yaml`, the measles pattern) for a source with no usable text layer: each statement must be verbatim in the image narrative (`images.json`) or the `transcription` block it names; every transcription word (digits aside) must be corroborated by the entry's text layer unless listed under `inspectionOnly`; keys must be unique.","install":{"none":true},"invoke":{"shell":"bun run smart-base/L1/scripts/l1-transcription-verbatim.ts --dir \u003cdir of *.l1.yaml> [--root \u003crepo>]"},"io":{"inputs":[{"name":"dir","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/RepoPath","description":"The directory of authored `*.l1.yaml`; each names its library entry in `graph.source.entry`.","required":true}],"outputs":[{"name":"report","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/Text","description":"One summary line per file and one `FINDING` line per failure. Exit 0 clean, 1 findings, 2 nothing to check (not a pass)."}]},"satisfies":["transcription-verbatim"],"requirements":{"runtime":["bun"],"network":false},"selection":{"when":"The L1 was authored from inspected images or transcriptions because `l1-recommendation-candidates` found no normative sentence in the entry's text layer (a poster, a slide deck).","limits":"Verbatim is checked after NFKC normalisation with private-use glyphs dropped, so digits a text layer maps to private-use code points rest on inspection alone. Whether the transcription reads the picture correctly is the reviewer's call (`bun run cat narratives`).","cost":"Seconds, no network."}}</script>
 
 <h1 id="authored-l1--verbatim-against-transcriptions-and-image-narratives">
   
@@ -306,7 +306,7 @@
 
 <p>Source: <code class="language-plaintext highlighter-rouge">smart-base/L1/skills/smart-l1/transcription-verbatim.md</code>.</p>
 
-<p><strong>input</strong> — <code class="language-plaintext highlighter-rouge">smart-base/schemas/skills/transcription-verbatim/input.schema.json</code></p>
+<p><strong>input</strong> — <code class="language-plaintext highlighter-rouge">smart-base/L1/schemas/skills/transcription-verbatim/input.schema.json</code></p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -327,7 +327,7 @@
   </tbody>
 </table></div>
 
-<p><strong>output</strong> — <code class="language-plaintext highlighter-rouge">smart-base/schemas/skills/transcription-verbatim/output.schema.json</code></p>
+<p><strong>output</strong> — <code class="language-plaintext highlighter-rouge">smart-base/L1/schemas/skills/transcription-verbatim/output.schema.json</code></p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -408,7 +408,7 @@
     
 
 <ul>
-  <li><strong>Command line.</strong> From the repository root: <code class="language-plaintext highlighter-rouge">bun run smart-base/scripts/l1-transcription-verbatim.ts --dir &lt;dir of *.l1.yaml&gt; [--root &lt;repo&gt;]</code>.</li>
+  <li><strong>Command line.</strong> From the repository root: <code class="language-plaintext highlighter-rouge">bun run smart-base/L1/scripts/l1-transcription-verbatim.ts --dir &lt;dir of *.l1.yaml&gt; [--root &lt;repo&gt;]</code>.</li>
   <li><strong>GitHub Actions.</strong> No workflow in this checkout runs its command.</li>
 </ul>
 
@@ -479,7 +479,7 @@
   <tbody>
     <tr>
       <td>script</td>
-      <td><a href="https://github.com/litlfred/smart-base/blob/HEAD/smart-base/scripts/l1-transcription-verbatim.ts"><code class="language-plaintext highlighter-rouge">smart-base/scripts/l1-transcription-verbatim.ts</code></a></td>
+      <td><a href="https://github.com/litlfred/smart-base/blob/HEAD/smart-base/L1/scripts/l1-transcription-verbatim.ts"><code class="language-plaintext highlighter-rouge">smart-base/L1/scripts/l1-transcription-verbatim.ts</code></a></td>
       <td> </td>
     </tr>
   </tbody>
@@ -507,7 +507,7 @@
     </span><span class="nl">"none"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"invoke"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"shell"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bun run smart-base/scripts/l1-transcription-verbatim.ts --dir &lt;dir of *.l1.yaml&gt; [--root &lt;repo&gt;]"</span><span class="w">
+    </span><span class="nl">"shell"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bun run smart-base/L1/scripts/l1-transcription-verbatim.ts --dir &lt;dir of *.l1.yaml&gt; [--root &lt;repo&gt;]"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"io"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"inputs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
