@@ -61,23 +61,23 @@ export const L3: LayerSpec = {
     },
     {
       "what": "A real published DAK Implementation Guide",
-      "where": "WorldHealthOrganization/smart-immunizations at 12ec2fc, canonical http://smart.who.int/immunizations",
+      "where": "WHO's immunizations IG repository at 12ec2fc, canonical http://smart.who.int/immunizations",
       "detail": "138 PlanDefinition (all cpg-recommendationdefinition), 279 Library, 279 .cql files, 192 ValueSet, 41 Measure (all proportion-measure-cqfm), 16 StructureMap .fml, 15 StructureDefinition (10 FSH Logical + 5 JSON), 10 Questionnaire, 8 ConceptMap, 6 CodeSystem, 5 Profile, 3 ActivityDefinition. Every class below is authored against a non-zero count; the three types with none are omitted, listed in deliberatelyOmitted with their zero."
     },
     {
       "what": "The link fields the IG actually populates",
-      "where": "https://github.com/WorldHealthOrganization/smart-immunizations input/fsh/rulesets/rulesets-plandefinition.fsh",
+      "where": "WHO's immunizations IG repository, input/fsh/rulesets/rulesets-plandefinition.fsh",
       "detail": "`library = Canonical({library}Logic)` joins a PlanDefinition to its Library by an id suffix. `relatedArtifact[+].type = #citation` with `citation = \"WHO recommendations for routine immunization - summary tables (January 2025)\"` is the link back to L1 -- the same publication family the BCG decision table cites, at a different date. `definitionCanonical = Canonical(IMMZD2DTMR)` joins an action to its ActivityDefinition. These are real references and the extractor prefers them over conventions."
     },
     {
       "what": "The id convention that carries the L2 join",
-      "where": "https://github.com/WorldHealthOrganization/smart-immunizations input/fsh/plandefinitions/*.fsh, and l3_decisiontables.md",
+      "where": "WHO's immunizations IG repository, input/fsh/plandefinitions/*.fsh, and l3_decisiontables.md",
       "detail": "`Title: \"IMMZ.D2.DT.Dengue.3 doses with pre-vaccination screening\"` on `Instance: IMMZD2DTDengue3DosesWithPreVaccinationScreening` -- the L2 decision table id is the title, and the resource id is that title with dots and spaces removed. The same shape governs indicators (`IMMZ.IND.08` -> `IMMZIND08`). No extension anywhere carries an L2-to-L3 back-pointer, so these conventions ARE the traceability, which is why every implementedBy instance records the rule that matched it."
     },
     {
       "what": "Personas and requirements, which the DAK does not carry",
       "where": "smart-base input/fsh/actors/*.fsh",
-      "detail": "https://github.com/WorldHealthOrganization/smart-immunizations has zero ActorDefinition and zero Requirements instances; smart-base, its base dependency, has 22 and 41. Both classes are therefore grounded in real committed instances, just not in the DAK -- which is itself a finding a coverage query should surface."
+      "detail": "WHO's immunizations IG (canonical http://smart.who.int/immunizations) has zero ActorDefinition and zero Requirements instances; smart-base, its base dependency, has 22 and 41. Both classes are therefore grounded in real committed instances, just not in the DAK -- which is itself a finding a coverage query should surface."
     },
     {
       "what": "Two SOP pages disagree about the decision-table outputs",
