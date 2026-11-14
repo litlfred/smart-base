@@ -384,6 +384,10 @@
     "404": {
       "sha": "043016dac474fc6a95060b60815be19808efccc2",
       "written_at": "2026-11-14T10:06:30.707Z"
+    },
+    "405": {
+      "sha": "93f4961f265715fa371a983fcf87fc793df63e04",
+      "written_at": "2026-11-14T14:20:53.847Z"
     }
   },
   "skipped": {
@@ -584,7 +588,9 @@
     "04bf735ae4d29c622b69390a822ef15498e5937f": "9d540ce3ff3b12da4f9fb994265cee48af8c8ef2",
     "main/04bf735ae4d29c622b69390a822ef15498e5937f": "main/9d540ce3ff3b12da4f9fb994265cee48af8c8ef2",
     "a7813861dff614641f1b7723b45e5a59a9de40c5": "4d497e5aa87d21f59084a7b5ff1b88fdbf9c17db",
-    "main/a7813861dff614641f1b7723b45e5a59a9de40c5": "main/4d497e5aa87d21f59084a7b5ff1b88fdbf9c17db"
+    "main/a7813861dff614641f1b7723b45e5a59a9de40c5": "main/4d497e5aa87d21f59084a7b5ff1b88fdbf9c17db",
+    "93f4961f265715fa371a983fcf87fc793df63e04": "9ad819a5daa5cae11098f89ece4004c6f96b50db",
+    "pr/405/93f4961f265715fa371a983fcf87fc793df63e04": "main/9ad819a5daa5cae11098f89ece4004c6f96b50db"
   },
   "main": {
     "sha": "9ad819a5daa5cae11098f89ece4004c6f96b50db",
