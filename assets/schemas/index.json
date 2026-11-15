@@ -4421,6 +4421,14 @@
       "isTest": false
     },
     {
+      "module": "smart-base/schemas/site-roots.test.ts",
+      "instance": "smart-base",
+      "name": "site-roots.test",
+      "graphNode": "undeclared",
+      "summary": "The publishing roots come from the shared profile, and the owner is derived",
+      "isTest": true
+    },
+    {
       "module": "smart-base/schemas/site-roots.ts",
       "instance": "smart-base",
       "name": "site-roots",
