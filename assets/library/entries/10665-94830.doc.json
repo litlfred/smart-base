@@ -1225,7 +1225,7 @@
       "pageEnd": 24,
       "labelStart": "5",
       "labelEnd": "6",
-      "words": 936,
+      "words": 940,
       "summary": {
         "text": "Explains that few randomized trials link screening strategies to treatment and patient outcomes, so the evidence came mostly from separate studies of test accuracy and of outcomes after treatment. It describes the systematic reviews, pooling of data and use of GRADE to rate evidence quality. It adds that evidence-to-recommendation tables were prepared summarising benefits, harms, values, resource use and feasibility.",
         "status": "draft"
@@ -1409,12 +1409,12 @@
           "heading": true
         },
         {
-          "term": "erg",
-          "heading": false
-        },
-        {
           "term": "review",
           "heading": true
+        },
+        {
+          "term": "erg",
+          "heading": false
         }
       ],
       "extract": "The WHO screen-and-treat strategies to prevent cervical cancer underwent the following peer review process before and during development:  The questions formulated for the development of the guidelines were circulated among the WHO Steering Group, who also discussed them with the GDG. When the GDG and the WHO Steering Group had reached agreement on the questions, these were sent to the ERG.  The protocol for",
@@ -1495,7 +1495,7 @@
           "heading": false
         },
         {
-          "term": "screening tests",
+          "term": "transformation zone",
           "heading": false
         }
       ],
@@ -1511,7 +1511,7 @@
       "pageEnd": 34,
       "labelStart": "10",
       "labelEnd": "16",
-      "words": 3472,
+      "words": 3481,
       "summary": {
         "text": "Sets out the first screen-and-treat recommendations of the WHO cervical precancer guideline, each with remarks and a summary of evidence: a strong recommendation against cold knife conization because harms such as major bleeding and premature delivery outweigh similar benefits, and a conditional preference for an HPV test over VIA where resources permit, with VIA where HPV testing is not feasible. It goes on to prefer an HPV test over cytology followed by colposcopy, while allowing either where a high-quality cytology programme already exists, citing lower resource needs and fewer visits. It explains how the HPV-test and HPV-test-then-VIA strategies decide who is treated and gives rescreening intervals: three to five years after a negative VIA or cytology, at least five years after a negative HPV test, within three years for women living with HIV, and follow-up one year after treatment. The section ends with the comparison of an HPV test followed by colposcopy versus an HPV test followed by VIA, weighing fewer missed CIN2+ cases against more overtreatment, resource demands and acceptability; the evidence-quality ratings are missing from the extracted text.",
         "status": "draft"
@@ -3006,37 +3006,40 @@
       "kind": "contents",
       "state": "found",
       "count": 42,
-      "note": "inferred"
+      "note": "contents from inferred"
     },
     {
       "kind": "sections",
       "state": "found",
-      "count": 43,
-      "note": "2 levels"
+      "count": 43
     },
     {
       "kind": "figures",
       "state": "found",
-      "count": 1
+      "count": 1,
+      "note": "1 raster, 0 vector; 3 caption(s) read off the pages"
     },
     {
       "kind": "tables",
       "state": "found",
-      "count": 1
+      "count": 2,
+      "note": "drafts; backend pdfplumber 0.11.10; 3 candidate(s) dropped: under two columns or no row under the header; 52 dropped as prose cut into columns (a word cut at a quarter or more of the cell boundaries)"
     },
     {
       "kind": "references",
-      "state": "not-extracted",
-      "note": "a references section is in the text (p38); its entries are not extracted"
+      "state": "found",
+      "count": 20
     },
     {
       "kind": "glossary",
-      "state": "not-extracted",
-      "note": "a glossary section is in the text (p13); its entries are not extracted"
+      "state": "none",
+      "note": "no glossary, definitions or abbreviations section in the entry's sections",
+      "count": 0
     },
     {
       "kind": "footnotes",
-      "state": "none"
+      "state": "partial",
+      "note": "no footnote linked to a mark; 12 mark(s) with no note found, kept for a reader to judge"
     },
     {
       "kind": "summaries",

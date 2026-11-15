@@ -30,6 +30,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-001",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "target": "../tables/table-1.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-002",
       "types": [
         "folio-assistant-core:Prose",
@@ -72,7 +89,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "The title and credits page of the Persian translation of the 2013 WHO guidelines for screening and treatment of precancerous lesions for cervical cancer prevention, naming the translators, editors and supervisor and stating that the translation was published online in 2014 by the Tabriz University of Medical Sciences nursing and midwifery faculty under WHO permission; the English title line is garbled by OCR.",
         "state": "draft",
         "draftedBy": {
@@ -82,6 +99,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-002",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 3,
+      "pageEnd": 3,
+      "target": "../tables/table-2.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-004",
@@ -111,6 +145,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-003",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 4,
+      "pageEnd": 4,
+      "target": "../tables/table-3.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-005",
       "types": [
         "folio-assistant-core:Prose",
@@ -138,6 +189,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-004",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 5,
+      "pageEnd": 5,
+      "target": "../tables/table-4.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-006",
       "types": [
         "folio-assistant-core:Prose",
@@ -149,11 +217,11 @@
       "pageEnd": 6,
       "target": "../sections/page-006.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nضمایم\n\nضمیمه ۱: اظهار منافع YY\nضمیمه ۲. فلوچارت تصمیم گیری برای استراتژی‌های غربالگری - و- درمان 29\nضمیمه ۳. فلوچارت‌ها برای استراتژی‌های غربالگری و درمان (وضعیت HIV منفی يا ناشناخته) 31\nغربالگری با تست HPV و درمان با کرایوتراپی یا LEEP 32\nغربالگری با تست HPV با VIA و درمان با کرایوتراپی یا LEEP 34\nغربالگری با VIA و درمان با کرایوتراپی یا LEEP 36\nغربلگری با تست HPV با کولپوسکوپی (با يا بدون بیوپسی) و درمان با کرایوتراپی يا LEEP 27\nغربالگری با سیتولوژی با کولپوسکوپی(با يا بدون بیوپسی) و درمان با کرایوتراپی ی",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nضمایم\n\nضمیمه ۱: اظهار منافع YY\nضمیمه ۲. فلوچارت تصمیم گیری برای استراتژی‌های غربالگری - و- درمان 29\nضمیمه ۳. فلوچارت‌ها برای استراتژی‌های غربالگری و درمان (وضعیت HIV منفی يا ناشناخته) 31\nغربالگری با تست HPV و درمان با کرایوتراپی یا LEEP 32\nغربالگری با تست HPV با VIA و درمان با کرایوتراپی یا LEEP 34\nغربالگری با VIA و درمان با کرایوتراپی یا LEEP 36\nغربلگری با تست HPV با کولپوسکوپی (با يا بدون بیوپسی) و درمان با کرایوتراپی يا .1 27\nغربالگری با سیتولوژی با کولپوسکوپی(با يا بدون بیوپسی) و درمان با کرایوتراپی یا",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "The continuation of the table of contents of the Persian translation, listing the annexes (declarations of interest, decision-making and screen-and-treat flowcharts by HIV status, search strategies, PRISMA diagram and included studies) and the online supplemental evidence sections; several lines are garbled by OCR.",
         "state": "draft",
         "draftedBy": {
@@ -163,6 +231,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-005",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 6,
+      "pageEnd": 6,
+      "target": "../tables/table-5.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-007",
@@ -192,6 +277,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-006",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 7,
+      "pageEnd": 7,
+      "target": "../tables/table-6.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-008",
       "types": [
         "folio-assistant-core:Prose",
@@ -217,6 +319,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-007",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 8,
+      "pageEnd": 8,
+      "target": "../tables/table-7.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-009",
@@ -246,6 +365,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-008",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 9,
+      "pageEnd": 9,
+      "target": "../tables/table-8.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-010",
       "types": [
         "folio-assistant-core:Prose",
@@ -273,6 +409,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-009",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 10,
+      "pageEnd": 10,
+      "target": "../tables/table-9.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-011",
       "types": [
         "folio-assistant-core:Prose",
@@ -284,11 +437,11 @@
       "pageEnd": 11,
       "target": "../sections/page-011.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضابعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nفرآیند برای مدیریت اظهارات و تضاد منافع\nنقش گروه‌های تکنیکی و کاری\n\nدر سپتامبر سال 2010 گروه بررسی خارجی (۳*62ع) برای تصمیم‌گیری در به روزرسانی کنترل جامع سرطان سرویکس: یک\nراهنما برای عمل ضروری (2۳-024))» که بصورت اورجینال در سال 2006 منتشر شد نشستی داشت. یکی از نتایج عمده\nاین بود که فصل مربوط به غربالگری و درمان ضایعات پیش سرطانی برای پیشگیری از سرطان سرویکس نیاز به روز رسانی\nدرد. این گروه همچنین توصیه هایی برای سازمان بهداشت جهانی (WHO) در ترکیب دستورلسمل گروه توسعه (60۵))\nایجاد کرد.\n\nدر سال 2011 ۵)نآت) و",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضابعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nفرآیند برای مدیریت اظهارات و تضاد منافع\nنقش گروه‌های تکنیکی و کاری\n\nدر سپتامبر سال 2010 گروه بررسی خارجی (۳*62ع) برای تصمیم‌گیری در به روزرسانی کنترل جامع سرطان سرویکس: یک\nراهنما برای عمل ضروری (2۳-024))» که بصورت اورجینال در سال 2006 منتشر شد نشستی داشت. یکی از نتایج عمده\nاین بود که فصل مربوط به غربالگری و درمان ضایعات پیش سرطانی برای پیشگیری از سرطان سرویکس نیاز به روز رسانی\nدرد. این گروه همچنین توصیه هایی برای سازمان بهداشت جهانی (WHO) در ترکیب دستورلسمل گروه توسعه GDG\nایجاد کرد.\n\nدر سال 2011 ۵)نآت) و گر",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Describes the process behind the guideline in the Persian translation, from the External Review Group's 2010 decision that the screening and treatment chapter of the 2006 cervical cancer control guide needed updating, through the 2011–2013 meetings of the development and methods groups on questions, modelling and draft recommendations. It explains that conflicts of interest were managed through WHO declaration forms, verbal disclosure at meetings and legal review, which allowed all experts to take part with interests reported, and notes that the guideline covers screening for precancer, not HPV vaccination.",
         "state": "draft",
         "draftedBy": {
@@ -298,6 +451,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-010",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 11,
+      "pageEnd": 11,
+      "target": "../tables/table-10.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-012",
@@ -311,11 +481,11 @@
       "pageEnd": 12,
       "target": "../sections/page-012.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nتقدیر و تشکر\n\nWHO از گروه توسعه دستورالعمل ها و همچنین گروه متدولوژی جهت سخت کوشی و دسترسی\nمستمرشان تشکر می‌نماید.\n\nWHO همچنین از گروه‌های مرورکننده خارجی برای امکان توسعه این توصیه‌های ضروری جهت غربالگری\nو درمان ضایعات پیش سرطانی برای جلوگیری از سرطان سرویکس سپاسگ زاری می‌نم‌اید. اسامی شرکت\n\nکنندگان در هر گروه از صفحه ۷11-۷ آورده شده است.\n\nهمچنین ازکارکنان و اعضا و دانشجویان دانشگاه ۲و2 طمااتصع۳1 و کانادا که در مرور\nسیستماتیک مطالعات نه در بحث و پیشنهادات کمک نمودند تقدیر به عمل می آید: ,عصتاعط) عصحونت۸0",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nتقدیر و تشکر\n\n0 از گروه توسعه دستورالعمل ها و همچنین گروه متدولوژی جهت سخت کوشی و دسترسی\nمستمرشان تشکر می‌نماید.\n\n(0 همچنین از گروه‌های مرورکننده خارجی برای امکان توسعه این توصیه‌های ضروری جهت غربالگری\nو درمان ضایعات پیش سرطانی برای جلوگیری از سرطان سرویکس سپاسگ زاری می‌نم‌اید. اسامی شرکت\n\nکنندگان در هر گروه از صفحه ۷11-۷ آورده شده است.\n\nهمچنین ازکارکنان و اعضا و دانشجویان دانشگاه ۲و2 طمااتصع۳1 و کانادا که در مرور\nسیستماتیک مطالعات نه در بحث و پیشنهادات کمک نمودند تقدیر به عمل می آید: ,عصتاعط) عصحونت۸0\n\nتاک",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Acknowledgements page in which WHO thanks the guideline development and methods groups, the external review groups, and staff and students who helped with the systematic reviews. It also thanks funders including the Flanders international cooperation agency, France's National Cancer Institute and the GAVI Alliance, although names in Latin script are largely garbled by OCR.",
         "state": "draft",
         "draftedBy": {
@@ -325,6 +495,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-011",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 12,
+      "pageEnd": 12,
+      "target": "../tables/table-11.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-013",
@@ -354,6 +541,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-012",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 13,
+      "pageEnd": 13,
+      "target": "../tables/table-12.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-014",
       "types": [
         "folio-assistant-core:Prose",
@@ -379,6 +583,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-013",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 14,
+      "pageEnd": 14,
+      "target": "../tables/table-13.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-015",
@@ -408,6 +629,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-014",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 15,
+      "pageEnd": 15,
+      "target": "../tables/table-14.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-016",
       "types": [
         "folio-assistant-core:Prose",
@@ -423,7 +661,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Lists, in the Persian translation, the summary recommendations on screen-and-treat strategies, which apply to all women with specific advice for women living with HIV: the expert panel advises against cold knife conization, so all strategies use cryotherapy or LEEP. It then sets out the panel's suggestions on strategies that pair or compare an HPV test, VIA, cytology followed by colposcopy and test sequences such as an HPV test followed by VIA, including a VIA strategy where HPV testing is not feasible.",
         "state": "draft",
         "draftedBy": {
@@ -433,6 +671,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-015",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 16,
+      "pageEnd": 16,
+      "target": "../tables/table-15.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-017",
@@ -450,7 +705,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Introduces a decision flowchart that helps programme managers choose one of the recommended screen-and-treat strategies according to their setting, with each strategy detailed in Annex 3 for women who are HIV-negative or of unknown status and Annex 4 for women who are HIV-positive or of unknown status in high-prevalence areas. The flowchart text is fragmentary in the extraction, showing questions on resources for testing and on whether cryotherapy or LEEP should be part of the programme.",
         "state": "draft",
         "draftedBy": {
@@ -460,6 +715,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-016",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 17,
+      "pageEnd": 17,
+      "target": "../tables/table-16.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-018",
@@ -477,7 +749,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Begins the introduction of the Persian translation, explaining that CIN2 and CIN3 can progress to cancer, that about 1–2% of women (and more among women living with HIV) have CIN2+ each year, and that standard cytology-based screening with colposcopy and biopsy needs skilled staff and equipment, leaving coverage low in low- and middle-income countries. It presents screen-and-treat as an alternative in which a screening test, used alone or in sequence, decides treatment, and includes a footnote on how CIN is graded histologically; Latin abbreviations are frequently garbled by OCR.",
         "state": "draft",
         "draftedBy": {
@@ -487,6 +759,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-017",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 18,
+      "pageEnd": 18,
+      "target": "../tables/table-17.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-019",
@@ -516,6 +805,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-018",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 19,
+      "pageEnd": 19,
+      "target": "../tables/table-18.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-020",
       "types": [
         "folio-assistant-core:Prose",
@@ -531,7 +837,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Identifies the intended audience of the guideline in the Persian translation as policy-makers, managers, programme staff and other health professionals choosing cervical cancer prevention strategies, and recommends that reproductive health, STI including HIV/AIDS and family planning staff also consult it. It describes the guideline's purpose and contents: recommendations in chapter 3, a decision flowchart, strategy flowcharts by HIV status, the methods with annexes and GRADE evidence profiles and evidence-to-recommendation tables, giving the scientific basis for the C4-GEP; some footnote lines are garbled.",
         "state": "draft",
         "draftedBy": {
@@ -541,6 +847,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-019",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 20,
+      "pageEnd": 20,
+      "target": "../tables/table-19.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-021",
@@ -558,7 +881,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Begins the methods chapter of the Persian translation, describing the groups involved: a 17-member guideline development group chaired by Joanna Cain, a 33-member external review group of varied professionals, and a methods group from the MacGRADE centre at McMaster University. It explains that in February 2011 the development group identified 15 possible questions, prioritized them through an online survey, dropped seven that compared standard strategies with ones not commonly used, kept eight as the basis of the recommendations, and drew up a list of outcomes to consider.",
         "state": "draft",
         "draftedBy": {
@@ -568,6 +891,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-020",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 21,
+      "pageEnd": 21,
+      "target": "../tables/table-20.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-022",
@@ -597,6 +937,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-021",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 22,
+      "pageEnd": 22,
+      "target": "../tables/table-21.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-023",
       "types": [
         "folio-assistant-core:Prose",
@@ -612,7 +969,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Describes, in the Persian translation, how evidence was synthesized: because randomized trials linking screen-and-treat strategies to health outcomes for all screened women are scarce, the recommendations rely on modelling from reviews of screening-test accuracy and of treatment effects. It details the searches of MEDLINE and EMBASE to February 2012, an update of a Cochrane review comparing HPV testing with cytology to November 2012 and a colposcopy search to September 2012, with independent screening by two reviewers and inclusion criteria such as low risk of bias, verification by a reference standard and non-pregnant women aged 18 or over not previously treated.",
         "state": "draft",
         "draftedBy": {
@@ -622,6 +979,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-022",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 23,
+      "pageEnd": 23,
+      "target": "../tables/table-22.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-024",
@@ -635,11 +1009,11 @@
       "pageEnd": 24,
       "target": "../sections/page-024.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nفلودياگرام برای ورود و خروج مطالعات (ضمیمه ع) استفاده شد. یک لیست از همه مطالعات وارد شده در مرورهای\nدقت تست تشخیصی در ضمیمه ۷ ارایه شده است.\n\nدو عضو از ۷6 به طور مستقل داده‌ها درباره مشخصات بیماران. محیط. و دقت تست تشخیصی را با استفاده از فرم\nپیش آزمون شده خلاصه سازی داده‌هاء خلاصه کردند . داده‌ها جهت ارزیابی کیفیت مطالعات همچنین با استفاده از\nابزار QUADAS (ارزیابی کیفیت برای مطالعات دقت تشخیصی ) جمع آوری شدند (13). ما داده‌های دقت تست\n\nتشخیصی را با استفاده از آنالیز داده‌ای و نرم‌افزار آماری 5101012 روی ه",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nفلودياگرام برای ورود و خروج مطالعات (ضمیمه ع) استفاده شد. یک لیست از همه مطالعات وارد شده در مرورهای\nدقت تست تشخیصی در ضمیمه ۷ ارایه شده است.\n\nدو عضو از MG به طور مستقل داده‌ها درباره مشخصات بیماران. محیط. و دقت تست تشخیصی را با استفاده از فرم\nپیش آزمون شده خلاصه سازی داده‌هاء خلاصه کردند . داده‌ها جهت ارزیابی کیفیت مطالعات همچنین با استفاده از\nابزار QUADAS (ارزیابی کیفیت برای مطالعات دقت تشخیصی ) جمع آوری شدند (13). ما داده‌های دقت تست\n\nتشخیصی را با استفاده از آنالیز داده‌ای و نرم‌افزار آماری 5101012 روی ه",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Continues the methods in the Persian translation: two methods group members independently extracted data and assessed study quality with the QUADAS tool, test-accuracy data were pooled, and Table 2 lists the outcomes judged important, from cervical cancer mortality and incidence to bleeding, premature delivery, fertility and infections. It explains that a mathematical model combining CIN2+ prevalence, natural history, pooled accuracy and treatment effects compared the benefits and harms of strategies for women of unknown and HIV-positive status, with evidence quality assessed using GRADE.",
         "state": "draft",
         "draftedBy": {
@@ -649,6 +1023,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-023",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 24,
+      "pageEnd": 24,
+      "target": "../tables/table-23.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-025",
@@ -662,11 +1053,11 @@
       "pageEnd": 25,
       "target": "../sections/page-025.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nپیامدهای بعد از یک استراتژی غربالگری-و-درمان) نیز در پروفایل‌های شواهد ارایه می شود (محتوای تکمیلی» بخش\n۸۵و 8 به طور کلی در قسمت های FN ۲.۳ را برای هر توصیه. مطابق با سن را ببینید ). کیفیت شواهد يا اطمینان\nدر تخمین‌های اثربه صورت باه متوسط. پایین. یا خیلی پایین. مطابق ‏ با معیار 68۵08 ارزیابی می‌شود. جداول\nجهت سهولت تصمیم گیری برای توصیه‌ها (شواهد- تا- جداول توصیه‌ها) برای هر توصیه ارایه شده است . این جداول\nشامل خلاصه‌ای از شواهد (فواید و مضرات» ارزییی از کیفیت شواهد. ارزش ها و ترجیحات مربوطه بیمار, و هرگون",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nپیامدهای بعد از یک استراتژی غربالگری-و-درمان) نیز در پروفایل‌های شواهد ارایه می شود (محتوای تکمیلی» بخش\n۸۵و 8 به طور کلی در قسمت های ۲ ۲.۳ را برای هر توصیه. مطابق با سن را ببینید ). کیفیت شواهد يا اطمینان\nدر تخمین‌های اثربه صورت باه متوسط. پایین. یا خیلی پایین. مطابق ‏ با معیار GRADE ارزیابی می‌شود. جداول\nجهت سهولت تصمیم گیری برای توصیه‌ها (شواهد- تا- جداول توصیه‌ها) برای هر توصیه ارایه شده است . این جداول\nشامل خلاصه‌ای از شواهد (فواید و مضرات» ارزییی از کیفیت شواهد. ارزش ها و ترجیحات مربوطه بیمار, و هرگونه",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Explains, in the Persian translation, that evidence quality was rated high, moderate, low or very low under GRADE and that evidence-to-recommendation tables summarized benefits, harms, values and resource implications. It describes the modelling of health outcomes, arguing that the most accurate test is not necessarily the best and that true and false positive and negative results must be weighed, using a TreeAge Pro 2012 model with sensitivity analyses by HIV status and age, and notes that the groups met on 26–28 April 2012 to formulate recommendations.",
         "state": "draft",
         "draftedBy": {
@@ -676,6 +1067,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-024",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 25,
+      "pageEnd": 25,
+      "target": "../tables/table-24.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-026",
@@ -693,7 +1101,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Describes, in the Persian translation, the April 2012 meeting at which the development and external review groups formulated recommendations, considering evidence on values and preferences (women may fear screening and colposcopy and dislike second visits but find screening with immediate treatment acceptable) and resource use informed by a WHO costing tool for HPV vaccination and screen-and-treat programmes. It explains that decisions were reached by consensus without major disagreement and that recommendations are graded as strong ('we recommend') or conditional ('we suggest'), most being conditional.",
         "state": "draft",
         "draftedBy": {
@@ -703,6 +1111,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-025",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 26,
+      "pageEnd": 26,
+      "target": "../tables/table-25.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-027",
@@ -716,11 +1141,11 @@
       "pageEnd": 27,
       "target": "../sections/page-027.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nاستراتژی های غربالگری- و- درمان WHO برای جلوگیری از سرطان گردن رحم تحت فرآیند داوری همتا قبل و\nدر طول توسعه به صورت زیر قرار گرفت:\n* پرسش‌های تنظیم شده برای توسعه دستورالعمل‌ها در میان گروه هدایت کننده WHO توزیع شد که\nهمچنین آن‌ها را با 616 مورد بحث قرار دادند. هنگامی که GDG و گروه هدایت کننده WHO در\n\nمورد پرسش‌ها به توافق رسیدند. اين‌ها به ۴6 ارسال شدند.\n\n* پروتکل برای مرورهای سیستماتیک در بین 6100 توزیع شد. این پروتکل همچنین طی جلسه ERG\nبحث شد که توسط گروه توسعه دستورالعمل های اروپا نیز علاوه بر گروه هدای",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nاستراتژی های غربالگری- و- درمان WHO برای جلوگیری از سرطان گردن رحم تحت فرآیند داوری همتا قبل و\nدر طول توسعه به صورت زیر قرار گرفت:\n* پرسش‌های تنظیم شده برای توسعه دستورالعمل‌ها در میان گروه هدایت کننده WHO توزیع شد که\nهمچنین آن‌ها را با 616 مورد بحث قرار دادند. هنگامی که GDG و گروه هدایت کننده WHO در\n\nمورد پرسش‌ها به توافق رسیدند. اين‌ها به ERG ارسال شدند.\n\n* پروتکل برای مرورهای سیستماتیک در بین 6100 توزیع شد. این پروتکل همچنین طی جلسه ERG\nبحث شد که توسط گروه توسعه دستورالعمل های اروپا نیز علاوه بر گروه هدا",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Outlines, in the Persian translation, the review and approval process for the guideline, in which the questions, the systematic review protocol, the evidence and draft profiles and finally the draft guideline were circulated among the WHO steering group, the development group and the external review group before WHO clearance. It also presents Table 1, which explains what strong and conditional recommendations mean for patients, clinicians and policy-makers; several group acronyms are garbled by OCR.",
         "state": "draft",
         "draftedBy": {
@@ -730,6 +1155,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-026",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 27,
+      "pageEnd": 27,
+      "target": "../tables/table-26.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-028",
@@ -759,6 +1201,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-027",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 28,
+      "pageEnd": 28,
+      "target": "../tables/table-27.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-029",
       "types": [
         "folio-assistant-core:Prose",
@@ -774,7 +1233,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Continues the considerations in the Persian translation: VIA suits women whose transformation zone is visible, usually under 50, cryotherapy is the first-choice treatment with LEEP when eligibility criteria are not met, and all screen-positive women should first have VIA by a trained provider to check eligibility and rule out large lesions or suspected cancer. It explains how the HPV-test and HPV-test-then-VIA strategies decide who is treated and gives rescreening intervals of three to five years after negative VIA or cytology, at least five years after a negative HPV test, and follow-up one year after treatment.",
         "state": "draft",
         "draftedBy": {
@@ -784,6 +1243,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-028",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 29,
+      "pageEnd": 29,
+      "target": "../tables/table-28.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/figure-img-p030-1",
@@ -831,11 +1307,11 @@
       "pageEnd": 30,
       "target": "../sections/page-030.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nاطمینان از اثربخشی درمان داشته باشند . به ضمیمه ۳ برای فلوچارت‌ها جهت همه استراتزی ها برای زنان با وضعیت\n۷ منفی يا ناشناخته مراجعه کنید.\n\nدر زنان با وضعیت HIV مثبت. يا وضعیت HIV ناشناخته در مناطقی با عفونت HIV آندمیک بالاء در صورتی که\nآزمون غربالگری منفی است. فواصل غربالگری برای غربالگری مکرر باید در عرض ۰ ۴ سال باشد. زنانی که درمان\nدریافت کرده‌اند باید غربالگری پیگیری پس از درمان در یک سال جهت اطمینان از اثربخشی درمان داشته باشند.\nبه ضمیمه ۴ برای فلوچارت ها جهت همه استراتزی ها برای زنان با وضعیت 1۷ متبت پا",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nاطمینان از اثربخشی درمان داشته باشند . به ضمیمه ۳ برای فلوچارت‌ها جهت همه استراتزی ها برای زنان با وضعیت\n۷ منفی يا ناشناخته مراجعه کنید.\n\nدر زنان با وضعیت HIV مثبت. يا وضعیت HIV ناشناخته در مناطقی با عفونت HIV آندمیک بالاء در صورتی که\nآزمون غربالگری منفی است. فواصل غربالگری برای غربالگری مکرر باید در عرض ۰ ۴ سال باشد. زنانی که درمان\nدریافت کرده‌اند باید غربالگری پیگیری پس از درمان در یک سال جهت اطمینان از اثربخشی درمان داشته باشند.\nبه ضمیمه ۴ برای فلوچارت ها جهت همه استراتزی ها برای زنان با وضعیت HIV متبت پ",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Gives, in the Persian translation, the follow-up rules for women living with HIV or of unknown status in high-prevalence areas, who need more frequent rescreening after a negative test and follow-up one year after treatment, and then presents Recommendation 1, a strong recommendation against cold knife conization because, despite similar benefits and slightly fewer recurrences, it carries more major bleeding and premature delivery. It begins Recommendation 2, on screening with an HPV test and treating with cryotherapy or LEEP where resources permit, alongside a VIA-based strategy; some figures and acronyms are garbled.",
         "state": "draft",
         "draftedBy": {
@@ -845,6 +1321,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-029",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 30,
+      "pageEnd": 30,
+      "target": "../tables/table-29.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-031",
@@ -874,6 +1367,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-030",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 31,
+      "pageEnd": 31,
+      "target": "../tables/table-30.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-032",
       "types": [
         "folio-assistant-core:Prose",
@@ -889,7 +1399,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Continues the evidence comparing HPV testing with cytology followed by colposcopy, where low-quality evidence suggests HPV testing may bring fewer CIN2+ recurrences, cancers and deaths but slightly more overtreatment. Gives Recommendation 4, a conditional recommendation for screening with VIA and cryotherapy (or LEEP) over cytology followed by colposcopy, with remarks on resource needs and the start of its evidence summary.",
         "state": "draft",
         "draftedBy": {
@@ -899,6 +1409,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-031",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 32,
+      "pageEnd": 32,
+      "target": "../tables/table-31.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-033",
@@ -916,7 +1443,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Completes the evidence for Recommendation 4, showing little or no difference in recurrence, cancer and deaths between VIA and cytology with colposcopy, but slightly more overtreatment with VIA. Presents Recommendation 5, a conditional recommendation for screening with an HPV test and cryotherapy (or LEEP) over HPV testing followed by colposcopy, noting the extra resources and second visit colposcopy requires and that it applies regardless of HIV status.",
         "state": "draft",
         "draftedBy": {
@@ -926,6 +1453,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-032",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "target": "../tables/table-32.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-034",
@@ -943,7 +1487,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Finishes the evidence for Recommendation 5 and sets out Recommendation 6, which conditionally recommends either HPV testing followed by VIA or HPV testing alone, with cryotherapy or LEEP, depending on circumstances. Remarks note that HPV testing alone gives greater reductions in cancer and deaths, particularly for women living with HIV, while low-quality evidence suggests the sequential HPV-then-VIA approach misses more CIN2+ but leads to less unnecessary treatment.",
         "state": "draft",
         "draftedBy": {
@@ -953,6 +1497,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-033",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 34,
+      "pageEnd": 34,
+      "target": "../tables/table-33.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-035",
@@ -966,11 +1527,11 @@
       "pageEnd": 35,
       "target": "../sections/page-035.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nزنان درمان غیرضروری بگیرند» منابع کمتری استفاده شده و عوارض ناشی از تست ۰ HPV و پیگیری با VIA کمتر\n\nخواهد بود.\n\nبا این وجود این نتایج زمانی که برای زنان HIV مثبت مدل سازی شود. برجسته تر می شود.. ممکن است تفاوت\nبزرگی در مزایا و مضرات وجود داشته باشد.\n\nشواهد برای زنان با وضعیت HIV مثبت نشان داد که حتی احتمالاً میزان بیشتر عود +۱2 با تست HPV و\nپیگیری با VIA (بیشتراز ۲۲/۱۰۰۰ و همچنین سرطان سروی کس بیشتر (بیشتر از ۱۷۲/10000 زنان) و مرگ\nبیشتر (بیشتر از ۰ زنان) نسبت به تست HPV به تنهایی وجود داشته باشد. با این وجو",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nزنان درمان غیرضروری بگیرند» منابع کمتری استفاده شده و عوارض ناشی از تست ۰ HPV و پیگیری با VIA کمتر\n\nخواهد بود.\n\nبا این وجود این نتایج زمانی که برای زنان HIV مثبت مدل سازی شود. برجسته تر می شود.. ممکن است تفاوت\nبزرگی در مزایا و مضرات وجود داشته باشد.\n\nشواهد برای زنان با وضعیت HIV مثبت نشان داد که حتی احتمالاً میزان بیشتر عود CIN2+ با تست HPV و\nپیگیری با VIA (بیشتراز ۲۲/۱۰۰۰ و همچنین سرطان سروی کس بیشتر (بیشتر از ۱۷۲/10000 زنان) و مرگ\nبیشتر (بیشتر از ۰ زنان) نسبت به تست HPV به تنهایی وجود داشته باشد. با این و",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Continues the Recommendation 6 evidence, reporting that differences in benefits and harms between HPV testing followed by VIA and HPV testing alone become larger when modelled for women living with HIV. Gives Recommendation 7, a conditional recommendation for HPV testing followed by VIA over VIA alone, advising VIA alone where HPV testing is unavailable, with low-quality evidence showing little difference in outcomes but more overtreatment with VIA alone.",
         "state": "draft",
         "draftedBy": {
@@ -980,6 +1541,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-034",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 35,
+      "pageEnd": 35,
+      "target": "../tables/table-34.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-036",
@@ -1009,6 +1587,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-035",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 36,
+      "pageEnd": 36,
+      "target": "../tables/table-35.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-037",
       "types": [
         "folio-assistant-core:Prose",
@@ -1024,7 +1619,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Completes the remarks and evidence for Recommendation 9, noting that colposcopy may need more trained staff and resources, and that HPV testing followed by colposcopy may miss fewer CIN2+ cases but cause more overtreatment than HPV testing followed by VIA. Opens the section on research gaps, observing that few randomized trials have measured patient-important outcomes of screen-and-treat strategies or test sequences, and few studies report results for women living with HIV.",
         "state": "draft",
         "draftedBy": {
@@ -1034,6 +1629,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-036",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 37,
+      "pageEnd": 37,
+      "target": "../tables/table-36.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-038",
@@ -1063,6 +1675,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-037",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 38,
+      "pageEnd": 38,
+      "target": "../tables/table-37.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-039",
       "types": [
         "folio-assistant-core:Prose",
@@ -1078,7 +1707,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Explains that, because few trials evaluated screen-and-treat strategies, the guideline relied on modelling, which needed uncertain data on baseline risk and the natural history of CIN, especially by age group and for women living with HIV. Notes unresolved questions about the ages to start and stop screening, screening intervals and follow-up after treatment, as well as outcomes such as fertility, HIV transmission and detection of sexually transmitted infections that studies have not yet measured.",
         "state": "draft",
         "draftedBy": {
@@ -1088,6 +1717,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-038",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 39,
+      "pageEnd": 39,
+      "target": "../tables/table-38.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-040",
@@ -1101,11 +1747,11 @@
       "pageEnd": 40,
       "target": "../sections/page-040.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\n۵ استفاده از دستورالعمل\nانتشار دستورالعمل\n\nاین دستورالعمل بصورت آنلاین در پایگاه داده های کتابخانه سازمان جهانی بهداشت در دسترس است و به صفحه\nوب بهداشت جنسی و باروری WHO و کتابخانه بهداشت باروری WHO که یک ژورنال مروری الکترونیک است.\nلینک خواهد شد VV انتشارات همچنین در Bank ۱۱0۳۴/۱۲۱۱۳۳۸/۱۲۱۱۱۵۶۴۲/۷۷۵۲۱۵ at برنامه ویژه تحقیق.\nتوسعه آموزش و پژوهش در فصلنامه علمی پژوهشی باروری انسان http://www. (۳۱8۳). بهداشت باروری به روز رسانی شده\n۸/۵ ۸ که به دست بیش از 2000 مشترک و سازمان های متعدد که ما با آن ها کار می کنی",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\n۵ استفاده از دستورالعمل\nانتشار دستورالعمل\n\nاین دستورالعمل بصورت آنلاین در پایگاه داده های کتابخانه سازمان جهانی بهداشت در دسترس است و به صفحه\nوب بهداشت جنسی و باروری WHO و کتابخانه بهداشت باروری WHO که یک ژورنال مروری الکترونیک است.\nلینک خواهد شد VV انتشارات همچنین در Bank ۱۱0۳۴/۱۲۱۱۳۳۸/۱۲۱۱۱۵۶۴۲/۷۷۵۲۱۵ 1 برنامه ویژه تحقیق.\nتوسعه آموزش و پژوهش در فصلنامه علمی پژوهشی باروری انسان ۰ (۳۱8۳). بهداشت باروری به روز رسانی شده\n۸/۵ ۸ که به دست بیش از 2000 مشترک و سازمان های متعدد که ما با آن ها کار می کنیم» می‌رسد.",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Opens the chapter on using the guideline by describing its dissemination: online availability through WHO libraries and web pages, distribution of printed copies to ministries, WHO offices, professional societies and other recipients, and regional launch meetings planned for 2013 and 2014. Notes that regional offices will help countries adapt the guideline to their national context; the footnotes at the bottom are garbled mixed-script OCR.",
         "state": "draft",
         "draftedBy": {
@@ -1115,6 +1761,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-039",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 40,
+      "pageEnd": 40,
+      "target": "../tables/table-39.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-041",
@@ -1144,6 +1807,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-040",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 41,
+      "pageEnd": 41,
+      "target": "../tables/table-40.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-042",
       "types": [
         "folio-assistant-core:Prose",
@@ -1169,6 +1849,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-041",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 42,
+      "pageEnd": 42,
+      "target": "../tables/table-41.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-043",
@@ -1198,6 +1895,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-042",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 43,
+      "pageEnd": 43,
+      "target": "../tables/table-42.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-044",
       "types": [
         "folio-assistant-core:Prose",
@@ -1223,6 +1937,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-043",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 44,
+      "pageEnd": 44,
+      "target": "../tables/table-43.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-045",
@@ -1252,6 +1983,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-044",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 45,
+      "pageEnd": 45,
+      "target": "../tables/table-44.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-046",
       "types": [
         "folio-assistant-core:Prose",
@@ -1267,7 +2015,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Introduces Annex 2, a decision flowchart that helps programme managers choose a screen-and-treat strategy by answering questions about existing screening programmes and the resources available for HPV testing, cytology and colposcopy. The flowchart text is fragmentary in the extraction, and readers are referred to Chapter 3 and Annexes 3 and 4 for more detail.",
         "state": "draft",
         "draftedBy": {
@@ -1277,6 +2025,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-045",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 46,
+      "pageEnd": 46,
+      "target": "../tables/table-45.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-047",
@@ -1333,6 +2098,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-046",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 48,
+      "pageEnd": 48,
+      "target": "../tables/table-46.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-049",
       "types": [
         "folio-assistant-core:Prose",
@@ -1358,6 +2140,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-047",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 49,
+      "pageEnd": 49,
+      "target": "../tables/table-47.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-050",
@@ -1387,6 +2186,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-048",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 50,
+      "pageEnd": 50,
+      "target": "../tables/table-48.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-051",
       "types": [
         "folio-assistant-core:Prose",
@@ -1412,6 +2228,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-049",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 51,
+      "pageEnd": 51,
+      "target": "../tables/table-49.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-052",
@@ -1441,6 +2274,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-050",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 52,
+      "pageEnd": 52,
+      "target": "../tables/table-50.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-053",
       "types": [
         "folio-assistant-core:Prose",
@@ -1466,6 +2316,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-051",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 53,
+      "pageEnd": 53,
+      "target": "../tables/table-51.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-054",
@@ -1495,6 +2362,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-052",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 54,
+      "pageEnd": 54,
+      "target": "../tables/table-52.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-055",
       "types": [
         "folio-assistant-core:Prose",
@@ -1520,6 +2404,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-053",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 55,
+      "pageEnd": 55,
+      "target": "../tables/table-53.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-056",
@@ -1549,6 +2450,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-054",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 56,
+      "pageEnd": 56,
+      "target": "../tables/table-54.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-057",
       "types": [
         "folio-assistant-core:Prose",
@@ -1560,11 +2478,11 @@
       "pageEnd": 57,
       "target": "../sections/page-057.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضابعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nضمیمه . فلوچارت برای استراتژی‌های غربالگری و درمان (وضعیت\nHIV سمثبت یا وضعیت ‎HIV نامعلوم در مناطقی با آندمی بالای\nعفونت (HIV\n\nفلوچارت‌های زیر مراحل هر یک از استراتژی‌های غربالگری و درمان در دسترس را توصیف می‌نماید\n\nفلوچارت نشان نمی‌دهد که کدام استراتژی ترجیح داده می شود. به توصیه‌های ارائه شده جهت غربالگری- و- درمان در فصل\n۳ از دستورالعمل برای راهنمایی در مورد این که کدام استراٌی توصیه می شود و به فلوچارت تصمیم گیری در ضمیمه ۲ مراجعه\nکنید. برای اطلاعات مفصل در مورد عوامل خاصی که پانل دستورالعمل هنگام تدوین",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضابعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nضمیمه . فلوچارت برای استراتژی‌های غربالگری و درمان (وضعیت\n۷ سمثبت یا وضعیت ‎HIV نامعلوم در مناطقی با آندمی بالای\nعفونت (HIV\n\nفلوچارت‌های زیر مراحل هر یک از استراتژی‌های غربالگری و درمان در دسترس را توصیف می‌نماید\n\nفلوچارت نشان نمی‌دهد که کدام استراتژی ترجیح داده می شود. به توصیه‌های ارائه شده جهت غربالگری- و- درمان در فصل\n۳ از دستورالعمل برای راهنمایی در مورد این که کدام استراٌی توصیه می شود و به فلوچارت تصمیم گیری در ضمیمه ۲ مراجعه\nکنید. برای اطلاعات مفصل در مورد عوامل خاصی که پانل دستورالعمل هنگام تدوین د",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Opens Annex 4, flowcharts of screen-and-treat strategies for women living with HIV or of unknown HIV status in areas of high HIV endemicity, stressing that the charts do not indicate which strategy is preferred. Outlines the strategy of screening with an HPV test, using VIA to assess cryotherapy eligibility and exclude cancer, treating with cryotherapy or LEEP, rescreening within three years if negative and follow-up one year after treatment.",
         "state": "draft",
         "draftedBy": {
@@ -1574,6 +2492,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-055",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 57,
+      "pageEnd": 57,
+      "target": "../tables/table-55.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-058",
@@ -1614,11 +2549,11 @@
       "pageEnd": 59,
       "target": "../sections/page-059.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nغربالگری با تست HPV پیگیری با VIA و درمان با کرایوتراپی یا LEEP هنگامی که برای کرایوتراپی واجد\nشرایط نباشد.\n\nزمانی که تست HPV مثبت است. سپس VIA به عنوان تست غربالگری دوم برای تعیین ارایه يا عدم ارایه درمان فراهم می -\nشود. درمان تنها زمانی ارائه می شود که هر دو تست HPV و VIA مثبت باشند.\n\nتست HPV\n\nسس\n\nغربالگری مجدد بعد از یک سال\n\nعدم وجود شرایط برای واجد شرایط برای کرایوتراپی»\n\nپیگیری پس از درمان در ۱\n\nتوجه: به توصیه های غربالگری- و- درمان ارائه شده در فصل ۳ دستورالعمل برای راهنمایی در مورد این که کدام استرات",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nغربالگری با تست HPV پیگیری با VIA و درمان با کرایوتراپی یا ۳-]-| هنگامی که برای کرایوتراپی واجد\nشرایط نباشد.\n\nزمانی که تست HPV مثبت است. سپس VIA به عنوان تست غربالگری دوم برای تعیین ارایه يا عدم ارایه درمان فراهم می -\nشود. درمان تنها زمانی ارائه می شود که هر دو تست HPV و VIA مثبت باشند.\n\nتست HPV\n\nسس\n\nغربالگری مجدد بعد از یک سال\n\nعدم وجود شرایط برای واجد شرایط برای کرایوتراپی»\n\nپیگیری پس از درمان در ۱\n\nتوجه: به توصیه های غربالگری- و- درمان ارائه شده در فصل ۳ دستورالعمل برای راهنمایی در مورد این که کدام استرا",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Shows the flowchart for screening with an HPV test followed by VIA, in which cryotherapy or LEEP is offered only when both tests are positive, with rescreening after one year and follow-up after treatment.",
         "state": "draft",
         "draftedBy": {
@@ -1628,6 +2563,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-056",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 59,
+      "pageEnd": 59,
+      "target": "../tables/table-56.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-060",
@@ -1657,6 +2609,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-057",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 60,
+      "pageEnd": 60,
+      "target": "../tables/table-57.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-061",
       "types": [
         "folio-assistant-core:Prose",
@@ -1668,11 +2637,11 @@
       "pageEnd": 61,
       "target": "../sections/page-061.md",
       "narrative": null,
-      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nغربالگری با یک تست HPV که با کولپوسکوپی پیگیری می شود (با یا بدون بیوپسی) ‏ و درمان با کرایوتراپی یا\nLEEP به هنگام عدم وجود شرایط برای کرایوتراپی\n\nتست ۲۱۳۷\n\nاگر CIN2 مثبت باشد\n\nاج\n\nاد ۶\n\nتوجه: به توصیه های غربالگری- و- درمان ارائه شده د ر فصل ۳ دستورالعمل برای راهنمایی در مورد این که کدام استراتژی\nتوصیه می‌شود و همچ انین جهت اطلاعات در مورد عواملی که به هنگام تصمیم گیری یک استراتزی در نظر گرفته می شور,\nمراجعه نمایید..\n\n\"زنان با حدس بر کولپوسکوپی مثبت می‌توانند بیوپسی برای تایید بافت شناسی دریافت کنند یا بلا",
+      "content": "دستورالعمل‌های WHO برای غربالگری و درمان ضایعات پیش سرطانی جهت پیشگیری از سرطان سرویکس\n\nغربالگری با یک تست HPV که با کولپوسکوپی پیگیری می شود (با یا بدون بیوپسی) ‏ و درمان با کرایوتراپی یا\n۳ به هنگام عدم وجود شرایط برای کرایوتراپی\n\nتست ۲۱۳۷\n\nاگر CIN2 مثبت باشد\n\nاج\n\nاد ۶\n\nتوجه: به توصیه های غربالگری- و- درمان ارائه شده د ر فصل ۳ دستورالعمل برای راهنمایی در مورد این که کدام استراتژی\nتوصیه می‌شود و همچ انین جهت اطلاعات در مورد عواملی که به هنگام تصمیم گیری یک استراتزی در نظر گرفته می شور,\nمراجعه نمایید..\n\n\"زنان با حدس بر کولپوسکوپی مثبت می‌توانند بیوپسی برای تایید بافت شناسی دریافت کنند یا بلافاص",
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Flowchart for screening with an HPV test followed by colposcopy, with or without biopsy, and treating with cryotherapy or LEEP if CIN2+ is found, noting that women with positive colposcopy may have a biopsy or be treated immediately.",
         "state": "draft",
         "draftedBy": {
@@ -1682,6 +2651,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-058",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 61,
+      "pageEnd": 61,
+      "target": "../tables/table-58.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-062",
@@ -1711,6 +2697,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-059",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 62,
+      "pageEnd": 62,
+      "target": "../tables/table-59.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-063",
       "types": [
         "folio-assistant-core:Prose",
@@ -1736,6 +2739,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-060",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 63,
+      "pageEnd": 63,
+      "target": "../tables/table-60.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-064",
@@ -1765,6 +2785,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-061",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 64,
+      "pageEnd": 64,
+      "target": "../tables/table-61.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-065",
       "types": [
         "folio-assistant-core:Prose",
@@ -1780,7 +2817,7 @@
       "truncated": true,
       "provenance": "ingested",
       "summary": {
-        "status": "draft",
+        "status": "stale",
         "text": "Presents an annex containing the PRISMA flow diagram of study inclusion and exclusion for the evidence reviews on the diagnostic accuracy of HPV testing, VIA, Pap cytology and colposcopy. It shows records identified and screened, full-text articles assessed, reasons for exclusion and studies included in the meta-analysis, though many of the figures are garbled in the extraction.",
         "state": "draft",
         "draftedBy": {
@@ -1790,6 +2827,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-062",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 65,
+      "pageEnd": 65,
+      "target": "../tables/table-62.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-066",
@@ -1819,6 +2873,23 @@
       }
     },
     {
+      "id": "library/10665-94830-per/blocks/table-063",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 66,
+      "pageEnd": 66,
+      "target": "../tables/table-63.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
+    },
+    {
       "id": "library/10665-94830-per/blocks/prose-page-067",
       "types": [
         "folio-assistant-core:Prose",
@@ -1844,6 +2915,23 @@
         },
         "draftedAt": "2026-11-12"
       }
+    },
+    {
+      "id": "library/10665-94830-per/blocks/table-064",
+      "types": [
+        "folio-assistant-core:Table",
+        "doco:Table"
+      ],
+      "kind": "table",
+      "title": "",
+      "pageStart": 67,
+      "pageEnd": 67,
+      "target": "../tables/table-64.csv",
+      "narrative": null,
+      "content": null,
+      "truncated": false,
+      "provenance": "ingested",
+      "summary": null
     },
     {
       "id": "library/10665-94830-per/blocks/prose-page-068",
