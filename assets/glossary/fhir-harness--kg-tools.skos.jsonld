@@ -94,6 +94,26 @@
       "skos:note": "candidate"
     },
     {
+      "@id": "https://litlfred.github.io/fhir-harness/v0/ns/glossary/kg-tools/fhir-core",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/fhir-harness/v0/ns/glossary/kg-tools"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Refer to HL7's published FHIR core definitions by canonical URL, and derive their UML class model"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Read HL7's own core package for each stable FHIR release (`https://hl7.org/fhir/R4/hl7.fhir.r4.core.tgz`, R4B, R5) at the sha1 and sha512 `fhir-core/pins.json` pins, and keep, under `fhir-core/<release>/`, only what refers to it or is derived from it: `index` writes the manifest (each resource, complex, primitive and root type by canonical URL, with HL7's published JSON for it, its kind, base and the sha256 of its bytes in HL7's package); `uml` derives the UML class model HL7 publishes only as pictures, citing the definition and element of every class and attribute; `materialise` fills a labelled local cache, never committed; `check` holds all of it to the pins offline; `resolve` answers with HL7's URL for a canonical (`--cache` for the cached copy); `diagram` prints a type's Mermaid class diagram. HL7's publication is the authority: a mirror may only fill the cache. A package that cannot be fetched or verified is recorded as `unread` with the reason, never as an empty graph."
+        }
+      ],
+      "skos:notation": "fhir-core",
+      "dcterms:source": "fhir-harness/tools/fhir-core/fhir-core.ts#fhir-core",
+      "skos:note": "candidate"
+    },
+    {
       "@id": "https://litlfred.github.io/fhir-harness/v0/ns/glossary/kg-tools/fhir-package-mirror",
       "@type": "skos:Concept",
       "skos:inScheme": {

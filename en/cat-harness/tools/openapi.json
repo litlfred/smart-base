@@ -140,6 +140,12 @@
       "name": "initialization-steps"
     },
     {
+      "name": "iris-cdn-exporter"
+    },
+    {
+      "name": "iris-dspace"
+    },
+    {
       "name": "journey-maps"
     },
     {
@@ -273,6 +279,9 @@
     },
     {
       "name": "translation-manager"
+    },
+    {
+      "name": "translation-refresh"
     },
     {
       "name": "uml-overview"
@@ -2741,6 +2750,154 @@
         }
       }
     },
+    "/tools/ci-iris-cdn": {
+      "post": {
+        "operationId": "ci-iris-cdn",
+        "summary": "Run the IRIS CDN export",
+        "description": "Dispatch `iris-cdn.yml`: the nightly change ingest or the weekly reconciliation of the IRIS CDN (`scripts/iris-cdn/run.ts`), then verify the signed release. Started with the standard GitHub CLI; the run is watched with `gh run watch`.",
+        "tags": [
+          "iris-cdn-exporter"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "who-iris/ci-iris-cdn/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "repo": {
+                    "$ref": "#/components/schemas/RepoFullName",
+                    "description": "The repository whose workflow is run. Default: the current one."
+                  },
+                  "ref": {
+                    "$ref": "#/components/schemas/Branch",
+                    "description": "The branch to run it on. Default: the default branch."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "run": {
+                      "$ref": "#/components/schemas/Text",
+                      "description": "The dispatched run; its outcome is read with `gh run watch` or `gh run view`."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/who-iris/tools/ci-iris-cdn.jsonld",
+        "x-invoke": {
+          "shell": "gh workflow run iris-cdn.yml"
+        },
+        "x-install": {
+          "cli": "gh"
+        },
+        "x-requires": {
+          "runtime": [
+            "gh"
+          ],
+          "network": true
+        },
+        "x-satisfies": [
+          "iris-cdn-exporter"
+        ],
+        "x-selection": {
+          "when": "Running the IRIS CDN nightly ingest or reconciliation on demand instead of waiting for its schedule. Pass the mode with `-f mode=nightly` or `-f mode=reconcile`.",
+          "limits": "Needs a token that may dispatch workflows (actions: write) on the repository.",
+          "cost": "A CI run on GitHub's runners."
+        }
+      }
+    },
+    "/tools/ci-iris-cover-pdfs": {
+      "post": {
+        "operationId": "ci-iris-cover-pdfs",
+        "summary": "Fetch IRIS cover PDFs",
+        "description": "Dispatch `iris-cover-pdfs.yml`: fetch the PDFs the replica's home page references (`scripts/iris-covers/fetch-referenced-pdfs.py`) and render their cover previews (`scripts/iris-covers/render-previews.py`). Started with the standard GitHub CLI; the run is watched with `gh run watch`.",
+        "tags": [
+          "iris-dspace"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "who-iris/ci-iris-cover-pdfs/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "repo": {
+                    "$ref": "#/components/schemas/RepoFullName",
+                    "description": "The repository whose workflow is run. Default: the current one."
+                  },
+                  "ref": {
+                    "$ref": "#/components/schemas/Branch",
+                    "description": "The branch to run it on. Default: the default branch."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "run": {
+                      "$ref": "#/components/schemas/Text",
+                      "description": "The dispatched run; its outcome is read with `gh run watch` or `gh run view`."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/who-iris/tools/ci-iris-cover-pdfs.jsonld",
+        "x-invoke": {
+          "shell": "gh workflow run iris-cover-pdfs.yml"
+        },
+        "x-install": {
+          "cli": "gh"
+        },
+        "x-requires": {
+          "runtime": [
+            "gh"
+          ],
+          "network": true
+        },
+        "x-satisfies": [
+          "iris-dspace"
+        ],
+        "x-selection": {
+          "when": "Refreshing the replica's cover previews on demand. Pass `-f only=<slugs>` to limit it to some items.",
+          "limits": "Needs a token that may dispatch workflows (actions: write) on the repository.",
+          "cost": "A CI run on GitHub's runners."
+        }
+      }
+    },
     "/tools/ci-post-merge-regen": {
       "post": {
         "operationId": "ci-post-merge-regen",
@@ -4501,6 +4658,84 @@
         }
       }
     },
+    "/tools/fhir-core": {
+      "post": {
+        "operationId": "fhir-core",
+        "summary": "Refer to HL7's published FHIR core definitions by canonical URL, and derive their UML class model",
+        "description": "Read HL7's own core package for each stable FHIR release (`https://hl7.org/fhir/R4/hl7.fhir.r4.core.tgz`, R4B, R5) at the sha1 and sha512 `fhir-core/pins.json` pins, and keep, under `fhir-core/<release>/`, only what refers to it or is derived from it: `index` writes the manifest (each resource, complex, primitive and root type by canonical URL, with HL7's published JSON for it, its kind, base and the sha256 of its bytes in HL7's package); `uml` derives the UML class model HL7 publishes only as pictures, citing the definition and element of every class and attribute; `materialise` fills a labelled local cache, never committed; `check` holds all of it to the pins offline; `resolve` answers with HL7's URL for a canonical (`--cache` for the cached copy); `diagram` prints a type's Mermaid class diagram. HL7's publication is the authority: a mirror may only fill the cache. A package that cannot be fetched or verified is recorded as `unread` with the reason, never as an empty graph.",
+        "tags": [
+          "ig-build-pipeline"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "fhir-harness/fhir-core/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "root": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "The fhir-harness layer root. Default: the layer this script is in."
+                  },
+                  "release": {
+                    "$ref": "#/components/schemas/Slug",
+                    "description": "One release (R4, R4B or R5). Default: every pinned release (R4 for resolve and diagram)."
+                  },
+                  "tgz-dir": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "A directory holding an already-downloaded copy of HL7's package (`hl7.fhir.<r>.core.tgz` or `<name>-<version>.tgz`); still hash-checked against the pin."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "definitions": {
+                      "$ref": "#/components/schemas/Count",
+                      "description": "Definitions indexed, classes derived or files cached per release; an unread release is named with its reason."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/fhir-harness/tools/fhir-core.jsonld",
+        "x-invoke": {
+          "shell": "bun run fhir-harness/scripts/fhir-core.ts <index|uml|materialise|check|resolve <url>|diagram <Type>>"
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "bun"
+          ],
+          "network": true
+        },
+        "x-satisfies": [
+          "ig-build-pipeline"
+        ],
+        "x-selection": {
+          "when": "Before a reader resolves a FHIR core type by canonical URL or draws a class diagram of core types (an IG's logical models or profiles over them), or when a pin changes.",
+          "limits": "Stable releases only. Constraint profiles, extension definitions and logical models in the core package are left out and counted. The class model copies no constraint, binding or description: the cited HL7 definition holds them.",
+          "cost": "One 4-17 MB download per release from hl7.org, then seconds; `check`, `resolve` and `diagram` are offline."
+        }
+      }
+    },
     "/tools/fhir-package-mirror": {
       "post": {
         "operationId": "fhir-package-mirror",
@@ -6068,7 +6303,7 @@
       "post": {
         "operationId": "glossary-table",
         "summary": "Glossary and acronyms tables",
-        "description": "Rewrite the glossary and acronyms tables of a document from its folio-glossary/v1 schemes, as `glossary/glossary-tables.json` (folio-glossary-tables/v1) lists them: terms with their altLabels, definitions and editorial notes, or acronyms (notation and prefLabel). The block's caption and footnotes are left alone. `--check` writes nothing and fails when a table is stale.",
+        "description": "Rewrite the glossary and acronyms tables of a document from its folio-glossary/v1 schemes, as `glossary/glossary-tables.json` (folio-glossary-tables/v1) lists them: terms with their altLabels, definitions and editorial notes; acronyms (notation and prefLabel); or element types, the placeholder types an ArchiMate metamodel view shows, with each term's definition and skos:example. The block's caption and footnotes are left alone. `--check` writes nothing and fails when a table is stale.",
         "tags": [
           "graph-rendering"
         ],
@@ -6135,9 +6370,9 @@
           "graph-rendering"
         ],
         "x-selection": {
-          "when": "A document's glossary or acronyms tables should come from its SKOS glossaries. For a References list use references-render.",
+          "when": "A document's glossary, acronyms or element-types tables should come from its SKOS glossaries (and, for element types, its ArchiMate metamodel view). For a References list use references-render.",
           "limits": "Only the tables `glossary/glossary-tables.json` names; captions and footnotes are left alone.",
-          "cost": "Milliseconds per table; reads the instance's glossary schemes, no network."
+          "cost": "Milliseconds per table; reads the instance's glossary schemes and, for element types, one Archi model; no network."
         }
       }
     },
@@ -17836,6 +18071,113 @@
         "x-satisfies": [
           "translation-adjudication"
         ]
+      }
+    },
+    "/tools/translation-candidates": {
+      "post": {
+        "operationId": "translation-candidates",
+        "summary": "Collect candidate translations from open engines",
+        "description": "Ask one or more open, self-hosted machine translators — OPUS-MT (Helsinki-NLP Marian models, CC-BY 4.0, run locally) and/or a self-hosted LibreTranslate (AGPL, Argos models) — for CANDIDATE translations of each empty or fuzzy string, so no freemium API quota is involved. Candidates are appended to `<locale>/<catalogue>.candidates.json` (`translation-candidates/v1`) for a reviewer to choose among on the translation review page; a candidate whose placeholders or markup do not round-trip is not recorded. Candidates are never a barrier to having a translation: an EMPTY msgstr gets the first good candidate, marked `#, fuzzy`; a non-empty msgstr is never overwritten. The translation node records the source (`generatedBy: \"machine\"`, model, time); `official` is never set, and a candidate is never a verdict. A catalogue that says DO NOT MACHINE-FILL, or whose node is official, gets candidates but no fill.",
+        "tags": [
+          "translation-refresh",
+          "translation-candidate-source"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "cat-harness/translation-candidates/"
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "instance": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "The layer root whose declared `translation-sources` directory is filled. Default: the current directory."
+                  },
+                  "engines": {
+                    "$ref": "#/components/schemas/IdList",
+                    "description": "Comma-separated candidate sources, tried in this order for an empty msgstr: `opus-mt` (the local runner `scripts/translation/opus_mt_runner.py`, shared with `translate-pot`, which needs the extended Python tier) and/or `libretranslate` (the URL below). Absent, the command exits 2."
+                  },
+                  "url": {
+                    "$ref": "#/components/schemas/Url",
+                    "description": "A self-hosted LibreTranslate's base URL (default `http://localhost:5000`). The hosted libretranslate.com / .de services are refused."
+                  },
+                  "locales": {
+                    "$ref": "#/components/schemas/IdList",
+                    "description": "Comma-separated locales to fill, e.g. `es,fr`. Default: every locale directory except the source locale."
+                  },
+                  "init": {
+                    "$ref": "#/components/schemas/Flag",
+                    "description": "Start a `.po` from each template that has none (locale named, `X-Folio-Official: no`, every msgstr empty), then collect candidates for it. Never the default: starting a catalogue is a decision."
+                  },
+                  "noCreateNode": {
+                    "$ref": "#/components/schemas/Flag",
+                    "description": "Record candidates for a catalogue with no translation node beside it, but fill nothing there, instead of writing a minimal `translation-node/v1` for it."
+                  },
+                  "noMask": {
+                    "$ref": "#/components/schemas/Flag",
+                    "description": "Send placeholders to the engine as they are, instead of as numbered stand-ins. The round-trip check runs either way."
+                  },
+                  "dryRun": {
+                    "$ref": "#/components/schemas/Flag",
+                    "description": "Translate and report, writing nothing."
+                  }
+                },
+                "required": [
+                  "engines"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "candidates": {
+                      "$ref": "#/components/schemas/RepoPath",
+                      "description": "`translations/<locale>/<catalogue>.candidates.json` (`translation-candidates/v1`), appended to: each candidate carries its text and source `{kind: \"open-mt\", id: <model>, version?, at}`. Identical text from the same source is not added twice."
+                    },
+                    "catalogues": {
+                      "$ref": "#/components/schemas/RepoPath",
+                      "description": "The `.po` catalogues whose empty msgstr got the first good candidate, `#, fuzzy`, and their `<name>.json` translation nodes. Exit 0 something was recorded · 3 nothing was · 2 could not determine · 1 an engine failed."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-candidates.jsonld",
+        "x-invoke": {
+          "shell": "bun run cat translation:candidates"
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "bun"
+          ],
+          "network": true
+        },
+        "x-satisfies": [
+          "translation-refresh",
+          "translation-candidate-source"
+        ],
+        "x-selection": {
+          "when": "A catalogue has empty or fuzzy entries and machine drafts are wanted for a reviewer to choose among on the translation review page. Every candidate is a draft; a person's adjudication decides.",
+          "limits": "Singular entries only: plural entries are left for a person. Catalogues that say DO NOT MACHINE-FILL, and catalogues whose node is official, are refused. Machine output into a language nobody on the project reads cannot be checked here; it is a draft for review, never a sign-off. The LibreTranslate host is whatever `--url` names (normally one on this machine), so it has no fixed remedy; without one, use `--engine opus-mt`.",
+          "cost": "OPUS-MT: a model download per language pair on first use (hundreds of MB) and CPU time, no per-string fee. LibreTranslate: whatever running your own instance costs."
+        }
       }
     },
     "/tools/translation-candidates-agent": {

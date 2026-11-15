@@ -395,6 +395,84 @@
         }
       }
     },
+    "/tools/fhir-core": {
+      "post": {
+        "operationId": "fhir-core",
+        "summary": "Refer to HL7's published FHIR core definitions by canonical URL, and derive their UML class model",
+        "description": "Read HL7's own core package for each stable FHIR release (`https://hl7.org/fhir/R4/hl7.fhir.r4.core.tgz`, R4B, R5) at the sha1 and sha512 `fhir-core/pins.json` pins, and keep, under `fhir-core/<release>/`, only what refers to it or is derived from it: `index` writes the manifest (each resource, complex, primitive and root type by canonical URL, with HL7's published JSON for it, its kind, base and the sha256 of its bytes in HL7's package); `uml` derives the UML class model HL7 publishes only as pictures, citing the definition and element of every class and attribute; `materialise` fills a labelled local cache, never committed; `check` holds all of it to the pins offline; `resolve` answers with HL7's URL for a canonical (`--cache` for the cached copy); `diagram` prints a type's Mermaid class diagram. HL7's publication is the authority: a mirror may only fill the cache. A package that cannot be fetched or verified is recorded as `unread` with the reason, never as an empty graph.",
+        "tags": [
+          "ig-build-pipeline"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "fhir-core/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "root": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "The fhir-harness layer root. Default: the layer this script is in."
+                  },
+                  "release": {
+                    "$ref": "#/components/schemas/Slug",
+                    "description": "One release (R4, R4B or R5). Default: every pinned release (R4 for resolve and diagram)."
+                  },
+                  "tgz-dir": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "A directory holding an already-downloaded copy of HL7's package (`hl7.fhir.<r>.core.tgz` or `<name>-<version>.tgz`); still hash-checked against the pin."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "definitions": {
+                      "$ref": "#/components/schemas/Count",
+                      "description": "Definitions indexed, classes derived or files cached per release; an unread release is named with its reason."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/fhir-harness/tools/fhir-core.jsonld",
+        "x-invoke": {
+          "shell": "bun run fhir-harness/scripts/fhir-core.ts <index|uml|materialise|check|resolve <url>|diagram <Type>>"
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "bun"
+          ],
+          "network": true
+        },
+        "x-satisfies": [
+          "ig-build-pipeline"
+        ],
+        "x-selection": {
+          "when": "Before a reader resolves a FHIR core type by canonical URL or draws a class diagram of core types (an IG's logical models or profiles over them), or when a pin changes.",
+          "limits": "Stable releases only. Constraint profiles, extension definitions and logical models in the core package are left out and counted. The class model copies no constraint, binding or description: the cited HL7 definition holds them.",
+          "cost": "One 4-17 MB download per release from hl7.org, then seconds; `check`, `resolve` and `diagram` are offline."
+        }
+      }
+    },
     "/tools/fhir-package-mirror": {
       "post": {
         "operationId": "fhir-package-mirror",
