@@ -4390,6 +4390,14 @@
       "isTest": false
     },
     {
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "instance": "smart-base",
+      "name": "dth-planning-schemas",
+      "graphNode": "schema",
+      "summary": "Proposed WHO Digital Transformation Handbook (DTH) governance and planning",
+      "isTest": false
+    },
+    {
       "module": "smart-base/schemas/dth-step-table.test.ts",
       "instance": "smart-base",
       "name": "dth-step-table.test",
@@ -147759,6 +147767,1409 @@
       "exported": true
     },
     {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionEntry",
+      "name": "BarrierSolutionEntry",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionEntrySchema",
+      "name": "BarrierSolutionEntrySchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Single barrier-to-candidate-solution entry in a {@link BarrierSolutionMapSchema}.",
+      "fields": [
+        {
+          "name": "barrierId",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Stable identifier for the barrier entry (e.g. `\"SFP-BAR-01\"` or `\"PHC-BAR-01\"`)."
+        },
+        {
+          "name": "category",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Barrier category (e.g. `\"Awareness and reporting culture\"`, `\"Connectivity\"`, `\"Feedback loop\"`)."
+        },
+        {
+          "name": "barrier",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Statement of the barrier or root cause identified in the handbook."
+        },
+        {
+          "name": "affectedRoleIris",
+          "type": "z.array(RoleOrElementIriSchema).min(1)",
+          "optional": false,
+          "array": true,
+          "card": "1..*",
+          "utype": "RoleOrElementIriSchema[]",
+          "doc": "Persona or governance-role IRIs affected by this barrier."
+        },
+        {
+          "name": "candidateSolutions",
+          "type": "z.array(z.string().min(1)).min(1)",
+          "optional": false,
+          "array": true,
+          "card": "1..*",
+          "utype": "string[]",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Candidate digital or operational solutions addressing this barrier."
+        },
+        {
+          "name": "relatedRequirementIds",
+          "type": "z.array(z.string().min(1)).default([])",
+          "optional": true,
+          "array": true,
+          "card": "0..*",
+          "utype": "string[]",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Identifiers of functional or non-functional requirements that realise the candidate solutions."
+        },
+        {
+          "name": "archimateAssessmentIri",
+          "type": "RoleOrElementIriSchema.optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "RoleOrElementIriSchema",
+          "doc": "Optional `smart-ra` ArchiMate Motivation `Assessment` or `Driver` element IRI."
+        },
+        {
+          "name": "sourceRef",
+          "type": "DthSourceRefSchema.optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "DthSourceRefSchema",
+          "doc": "Optional row-level L1 handbook citation."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+        "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionMap",
+      "name": "BarrierSolutionMap",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionMapInput",
+      "name": "BarrierSolutionMapInput",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionMapSchema",
+      "name": "BarrierSolutionMapSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Barrier-to-candidate-solution mapping (`dth-barrier-map/v1`).",
+      "fields": [
+        {
+          "name": "$schema",
+          "type": "z.literal(BARRIER_SOLUTION_MAP_SCHEMA_TAG).default(BARRIER_SOLUTION_MAP_SCHEMA_TAG)",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "BARRIER_SOLUTION_MAP_SCHEMA_TAG"
+        },
+        {
+          "name": "id",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Stable identifier for the barrier-solution map."
+        },
+        {
+          "name": "title",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Human-readable title of the barrier-solution map."
+        },
+        {
+          "name": "entries",
+          "type": "z.array(BarrierSolutionEntrySchema).min(1)",
+          "optional": false,
+          "array": true,
+          "card": "1..*",
+          "utype": "BarrierSolutionEntrySchema[]",
+          "doc": "Barrier-to-candidate-solution mapping entries."
+        },
+        {
+          "name": "sourceRef",
+          "type": "DthSourceRefSchema",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "doc": "L1 handbook citation for the barrier map."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionEntrySchema",
+        "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "BARRIER_SOLUTION_MAP_SCHEMA_TAG",
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#DthPlanningArtefact",
+      "name": "DthPlanningArtefact",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#DthPlanningArtefactSchema",
+      "name": "DthPlanningArtefactSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-union",
+      "doc": "Union of all five proposed DTH governance and planning artefacts.",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#DthPlanningSchemaTag",
+      "name": "DthPlanningSchemaTag",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#DthSourceRef",
+      "name": "DthSourceRef",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+      "name": "DthSourceRefSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-union",
+      "doc": "Source reference anchoring a DTH planning artefact or entry to its L1",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#DthStructuredSourceRef",
+      "name": "DthStructuredSourceRef",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#DthStructuredSourceRefSchema",
+      "name": "DthStructuredSourceRefSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Structured L1 source reference anchoring a DTH planning artefact or row to",
+      "fields": [
+        {
+          "name": "libraryId",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Publication identifier in `who-iris/library/`, e.g. `\"9789240120747-eng\"`."
+        },
+        {
+          "name": "sectionId",
+          "type": "z.string().min(1).optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Section identifier in the ingested L1 entry, e.g. `\"sec-008\"`."
+        },
+        {
+          "name": "pages",
+          "type": "z.string().min(1).optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Printed page range in the source handbook, e.g. `\"14-17\"`."
+        },
+        {
+          "name": "tableOrAnnex",
+          "type": "z.string().min(1).optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Table, figure, section, or annex label, e.g. `\"Table 5\"` or `\"Annex 4\"`."
+        },
+        {
+          "name": "quote",
+          "type": "z.string().min(1).optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Optional verbatim quote from the L1 source passage."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRole",
+      "name": "GovernanceRole",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleInput",
+      "name": "GovernanceRoleInput",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleSchema",
+      "name": "GovernanceRoleSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Organisational governance body or leadership role (`dth-governance-role/v1`).",
+      "fields": [
+        {
+          "name": "$schema",
+          "type": "z.literal(GOVERNANCE_ROLE_SCHEMA_TAG).default(GOVERNANCE_ROLE_SCHEMA_TAG)",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "GOVERNANCE_ROLE_SCHEMA_TAG"
+        },
+        {
+          "name": "id",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Stable identifier for the governance role or body (e.g. `\"SFP-GOV-01\"`)."
+        },
+        {
+          "name": "name",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Human-readable name of the governance body or leadership role."
+        },
+        {
+          "name": "roleType",
+          "type": "GovernanceRoleTypeSchema",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "doc": "Classification of the governance body or leadership role."
+        },
+        {
+          "name": "mandate",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Mandate, terms of reference, or core responsibility statement."
+        },
+        {
+          "name": "chairOrLeadRoleIri",
+          "type": "RoleOrElementIriSchema",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "doc": "IRI of the chairing or leading role/actor."
+        },
+        {
+          "name": "memberRoleIris",
+          "type": "z.array(RoleOrElementIriSchema).min(1)",
+          "optional": false,
+          "array": true,
+          "card": "1..*",
+          "utype": "RoleOrElementIriSchema[]",
+          "doc": "IRIs of constituent member roles or stakeholder organisations."
+        },
+        {
+          "name": "meetingCadence",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Stated meeting cadence or review frequency (e.g. `\"Quarterly\"`, `\"Monthly during rollout\"`)."
+        },
+        {
+          "name": "decisionRights",
+          "type": "z.array(z.string().min(1)).min(1)",
+          "optional": false,
+          "array": true,
+          "card": "1..*",
+          "utype": "string[]",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Explicit decision rights or approval authorities held by this body/role."
+        },
+        {
+          "name": "archimateElementIri",
+          "type": "RoleOrElementIriSchema",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "doc": "Link to the corresponding `smart-ra` ArchiMate Business Role, Actor, or Collaboration IRI."
+        },
+        {
+          "name": "sourceRef",
+          "type": "DthSourceRefSchema",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "doc": "L1 handbook citation from which this governance role was extracted."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+        "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleTypeSchema",
+        "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "GOVERNANCE_ROLE_SCHEMA_TAG",
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleType",
+      "name": "GovernanceRoleType",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleTypeSchema",
+      "name": "GovernanceRoleTypeSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-enum",
+      "doc": "Zod enum for {@link GOVERNANCE_ROLE_TYPES}.",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciActivity",
+      "name": "RaciActivity",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciActivitySchema",
+      "name": "RaciActivitySchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Single activity row in a {@link RaciMatrixSchema}.",
+      "fields": [
+        {
+          "name": "activityId",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Stable identifier for the activity row (e.g. `\"SFP-RACI-ACT-01\"`)."
+        },
+        {
+          "name": "activity",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Description of the activity, deliverable, or decision task."
+        },
+        {
+          "name": "phase",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Implementation or DIIG phase name/number (e.g. `\"Phase 1: Assess current state\"`)."
+        },
+        {
+          "name": "assignments",
+          "type": "z.record(z.string().min(1), z.array(RaciCodeSchema))",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "record",
+          "links": {
+            "record": "https://zod.dev/api#records"
+          },
+          "doc": "Map from `roleId` (or role IRI) to one or more RACI codes (`\"R\"`, `\"A\"`,"
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/schemas/dth-planning-schemas.ts#RaciCodeSchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciCode",
+      "name": "RaciCode",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciCodeSchema",
+      "name": "RaciCodeSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-enum",
+      "doc": "Zod enum for {@link RACI_CODES}.",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciMatrix",
+      "name": "RaciMatrix",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciMatrixInput",
+      "name": "RaciMatrixInput",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciMatrixSchema",
+      "name": "RaciMatrixSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Responsibility assignment (RACI) matrix (`dth-raci-matrix/v1`).",
+      "fields": [
+        {
+          "name": "$schema",
+          "type": "z.literal(RACI_MATRIX_SCHEMA_TAG).default(RACI_MATRIX_SCHEMA_TAG)",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "RACI_MATRIX_SCHEMA_TAG"
+        },
+        {
+          "name": "id",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Stable identifier for the RACI matrix (e.g. `\"SFP-RACI-ANNEX-04\"`)."
+        },
+        {
+          "name": "title",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Human-readable title of the RACI matrix."
+        },
+        {
+          "name": "mode",
+          "type": "z.enum([\"template\", \"populated\"]).default(\"populated\")",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "enum",
+          "links": {
+            "enum": "https://zod.dev/api#enums"
+          },
+          "doc": "Whether this matrix is fully populated (`\"populated\"`) or a blank/partial"
+        },
+        {
+          "name": "roles",
+          "type": "z.array(RaciRoleRefSchema).min(1)",
+          "optional": false,
+          "array": true,
+          "card": "1..*",
+          "utype": "RaciRoleRefSchema[]",
+          "doc": "Declared roles (persona IRIs or governance-role IRIs) participating in the matrix."
+        },
+        {
+          "name": "activities",
+          "type": "z.array(RaciActivitySchema).min(1)",
+          "optional": false,
+          "array": true,
+          "card": "1..*",
+          "utype": "RaciActivitySchema[]",
+          "doc": "Sequenced activities with per-role RACI assignments."
+        },
+        {
+          "name": "sourceRef",
+          "type": "DthSourceRefSchema",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "doc": "L1 handbook citation for the RACI matrix."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+        "smart-base/schemas/dth-planning-schemas.ts#RaciActivitySchema",
+        "smart-base/schemas/dth-planning-schemas.ts#RaciRoleRefSchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "RACI_MATRIX_SCHEMA_TAG",
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciRoleColumn",
+      "name": "RaciRoleColumn",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciRoleColumnSchema",
+      "name": "RaciRoleColumnSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Role column declaration in a RACI matrix, binding a short column key",
+      "fields": [
+        {
+          "name": "roleId",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Short role key used as a key in `activity.assignments` (e.g. `\"nmra-lead\"`)."
+        },
+        {
+          "name": "label",
+          "type": "z.string().min(1).optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Display label for the role column header."
+        },
+        {
+          "name": "roleIri",
+          "type": "RoleOrElementIriSchema",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "doc": "Formal persona or governance-role IRI."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciRoleRef",
+      "name": "RaciRoleRef",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RaciRoleRefSchema",
+      "name": "RaciRoleRefSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-union",
+      "doc": "Role entry in `RaciMatrix.roles[]`: either a structured {@link RaciRoleColumn}",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RiskEntry",
+      "name": "RiskEntry",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RiskEntrySchema",
+      "name": "RiskEntrySchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Single risk and mitigation row in a {@link RiskRegisterSchema}: a",
+      "fields": [
+        {
+          "name": "category",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Risk category or domain (e.g. `\"Governance\"`, `\"Technical\"`, `\"Data privacy\"`)."
+        },
+        {
+          "name": "likelihood",
+          "type": "RiskLevelSchema.optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "RiskLevelSchema",
+          "doc": "Qualitative likelihood rating, optional when unstated in L1."
+        },
+        {
+          "name": "impact",
+          "type": "RiskLevelSchema.optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "RiskLevelSchema",
+          "doc": "Qualitative impact rating, optional when unstated in L1."
+        },
+        {
+          "name": "priority",
+          "type": "RiskPrioritySchema.optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "RiskPrioritySchema",
+          "doc": "Qualitative overall priority rating."
+        },
+        {
+          "name": "sourceRef",
+          "type": "DthSourceRefSchema.optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "DthSourceRefSchema",
+          "doc": "Optional row-level L1 handbook citation."
+        }
+      ],
+      "extendsNames": [
+        "DthRiskMitigationRowSchema"
+      ],
+      "values": [],
+      "refs": [
+        "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+        "smart-base/schemas/dth-planning-schemas.ts#RiskLevelSchema",
+        "smart-base/schemas/dth-planning-schemas.ts#RiskPrioritySchema",
+        "smart-base/schemas/dth-step-table.ts#DthRiskMitigationRowSchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RiskLevel",
+      "name": "RiskLevel",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RiskLevelSchema",
+      "name": "RiskLevelSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-enum",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RiskPriority",
+      "name": "RiskPriority",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RiskPrioritySchema",
+      "name": "RiskPrioritySchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-enum",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RiskRegister",
+      "name": "RiskRegister",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RiskRegisterInput",
+      "name": "RiskRegisterInput",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RiskRegisterSchema",
+      "name": "RiskRegisterSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Risk and mitigation register (`dth-risk-register/v1`).",
+      "fields": [
+        {
+          "name": "$schema",
+          "type": "z.literal(RISK_REGISTER_SCHEMA_TAG).default(RISK_REGISTER_SCHEMA_TAG)",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "RISK_REGISTER_SCHEMA_TAG"
+        },
+        {
+          "name": "id",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Stable identifier for the risk register (e.g. `\"PC-RISK-REG-CH02\"`)."
+        },
+        {
+          "name": "title",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Human-readable title of the risk register."
+        },
+        {
+          "name": "mode",
+          "type": "z.enum([\"template\", \"populated\"])",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "enum",
+          "links": {
+            "enum": "https://zod.dev/api#enums"
+          },
+          "doc": "Whether this register is populated with concrete risks or is a worksheet template."
+        },
+        {
+          "name": "entries",
+          "type": "z.array(RiskEntrySchema)",
+          "optional": false,
+          "array": true,
+          "card": "0..*",
+          "utype": "RiskEntrySchema[]",
+          "doc": "Risk and mitigation entries (must be non-empty when `mode === \"populated\"`)."
+        },
+        {
+          "name": "sourceRef",
+          "type": "DthSourceRefSchema",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "doc": "L1 handbook citation for the risk register."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+        "smart-base/schemas/dth-planning-schemas.ts#RiskEntrySchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "RISK_REGISTER_SCHEMA_TAG",
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema",
+      "name": "RoleOrElementIriSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-scalar",
+      "doc": "Non-empty IRI or CURIE string referencing a persona, governance role, or",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#StakeholderAnalysis",
+      "name": "StakeholderAnalysis",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#StakeholderAnalysisInput",
+      "name": "StakeholderAnalysisInput",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#StakeholderAnalysisSchema",
+      "name": "StakeholderAnalysisSchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Multi-sectoral stakeholder mapping and analysis (`dth-stakeholder-analysis/v1`).",
+      "fields": [
+        {
+          "name": "$schema",
+          "type": "z.literal(STAKEHOLDER_ANALYSIS_SCHEMA_TAG).default(STAKEHOLDER_ANALYSIS_SCHEMA_TAG)",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "STAKEHOLDER_ANALYSIS_SCHEMA_TAG"
+        },
+        {
+          "name": "id",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Stable identifier for the stakeholder analysis table."
+        },
+        {
+          "name": "title",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Human-readable title of the stakeholder analysis table."
+        },
+        {
+          "name": "stakeholders",
+          "type": "z.array(StakeholderEntrySchema).min(1)",
+          "optional": false,
+          "array": true,
+          "card": "1..*",
+          "utype": "StakeholderEntrySchema[]",
+          "doc": "Stakeholder mapping rows."
+        },
+        {
+          "name": "sourceRef",
+          "type": "DthSourceRefSchema",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "doc": "L1 handbook citation for the stakeholder analysis table."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+        "smart-base/schemas/dth-planning-schemas.ts#StakeholderEntrySchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "STAKEHOLDER_ANALYSIS_SCHEMA_TAG",
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#StakeholderEntry",
+      "name": "StakeholderEntry",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/schemas/dth-planning-schemas.ts#StakeholderEntrySchema",
+      "name": "StakeholderEntrySchema",
+      "module": "smart-base/schemas/dth-planning-schemas.ts",
+      "kind": "zod-object",
+      "doc": "Single stakeholder row in a {@link StakeholderAnalysisSchema}.",
+      "fields": [
+        {
+          "name": "stakeholderId",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Stable identifier for the stakeholder entry (e.g. `\"SFP-STK-01\"`)."
+        },
+        {
+          "name": "name",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Name of the stakeholder group or institution (e.g. `\"National Medicines Regulatory Authority (NMRA)\"`)."
+        },
+        {
+          "name": "sector",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Sector classification (e.g. `\"Public health & regulation\"`, `\"Law enforcement & customs\"`, `\"Supply chain & industry\"`, `\"Civil society & patients\"`)."
+        },
+        {
+          "name": "roleInSystem",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Description of the stakeholder's functional role in the health/regulatory system."
+        },
+        {
+          "name": "interestOrInfluence",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Statement of the stakeholder's interest, motivation, or influence in the digital transformation."
+        },
+        {
+          "name": "engagementMechanism",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Mechanism or channel for engaging this stakeholder across DIIG phases."
+        },
+        {
+          "name": "roleIri",
+          "type": "RoleOrElementIriSchema.optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "RoleOrElementIriSchema",
+          "doc": "Optional link to a DAK persona or `GovernanceRole` IRI when this stakeholder also acts in a workflow lane or governance body."
+        },
+        {
+          "name": "archimateStakeholderIri",
+          "type": "RoleOrElementIriSchema.optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "RoleOrElementIriSchema",
+          "doc": "Optional link to the `smart-ra` ArchiMate Motivation `Stakeholder` or Business `Actor`/`Role` IRI."
+        },
+        {
+          "name": "sourceRef",
+          "type": "DthSourceRefSchema.optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "DthSourceRefSchema",
+          "doc": "Optional row-level L1 handbook citation."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+        "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
       "id": "smart-base/schemas/dth-step-table.ts#DthBpmnLaneStub",
       "name": "DthBpmnLaneStub",
       "module": "smart-base/schemas/dth-step-table.ts",
@@ -172230,6 +173641,222 @@
       "via": "",
       "kind": "extends",
       "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionEntrySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+      "via": "sourceRef",
+      "kind": "field",
+      "optional": true,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionEntrySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema",
+      "via": "affectedRoleIris",
+      "kind": "field",
+      "optional": false,
+      "array": true
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionEntrySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema",
+      "via": "archimateAssessmentIri",
+      "kind": "field",
+      "optional": true,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionMapSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionEntrySchema",
+      "via": "entries",
+      "kind": "field",
+      "optional": false,
+      "array": true
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#BarrierSolutionMapSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+      "via": "sourceRef",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+      "via": "sourceRef",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleTypeSchema",
+      "via": "roleType",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema",
+      "via": "archimateElementIri",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema",
+      "via": "chairOrLeadRoleIri",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#GovernanceRoleSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema",
+      "via": "memberRoleIris",
+      "kind": "field",
+      "optional": false,
+      "array": true
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RaciActivitySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RaciCodeSchema",
+      "via": "assignments",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RaciMatrixSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+      "via": "sourceRef",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RaciMatrixSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RaciActivitySchema",
+      "via": "activities",
+      "kind": "field",
+      "optional": false,
+      "array": true
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RaciMatrixSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RaciRoleRefSchema",
+      "via": "roles",
+      "kind": "field",
+      "optional": false,
+      "array": true
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RaciRoleColumnSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema",
+      "via": "roleIri",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RiskEntrySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+      "via": "sourceRef",
+      "kind": "field",
+      "optional": true,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RiskEntrySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RiskLevelSchema",
+      "via": "impact",
+      "kind": "field",
+      "optional": true,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RiskEntrySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RiskLevelSchema",
+      "via": "likelihood",
+      "kind": "field",
+      "optional": true,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RiskEntrySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RiskPrioritySchema",
+      "via": "priority",
+      "kind": "field",
+      "optional": true,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RiskEntrySchema",
+      "to": "smart-base/schemas/dth-step-table.ts#DthRiskMitigationRowSchema",
+      "via": "",
+      "kind": "extends",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RiskRegisterSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+      "via": "sourceRef",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#RiskRegisterSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RiskEntrySchema",
+      "via": "entries",
+      "kind": "field",
+      "optional": false,
+      "array": true
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#StakeholderAnalysisSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+      "via": "sourceRef",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#StakeholderAnalysisSchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#StakeholderEntrySchema",
+      "via": "stakeholders",
+      "kind": "field",
+      "optional": false,
+      "array": true
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#StakeholderEntrySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#DthSourceRefSchema",
+      "via": "sourceRef",
+      "kind": "field",
+      "optional": true,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#StakeholderEntrySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema",
+      "via": "archimateStakeholderIri",
+      "kind": "field",
+      "optional": true,
+      "array": false
+    },
+    {
+      "from": "smart-base/schemas/dth-planning-schemas.ts#StakeholderEntrySchema",
+      "to": "smart-base/schemas/dth-planning-schemas.ts#RoleOrElementIriSchema",
+      "via": "roleIri",
+      "kind": "field",
+      "optional": true,
       "array": false
     },
     {
