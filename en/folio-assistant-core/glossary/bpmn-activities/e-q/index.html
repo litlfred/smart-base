@@ -86,16 +86,15 @@
     "pagesWithTranslations": 0,
     "complete": false
   },
-  "statusSrc":"../../../../../assets/translation-status/index.json"
+  "statusSrc":"../../../../../assets/translation-status/index.json",
+  "reviewSrc":"../../../../../assets/translation-status/review.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
-<meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
-<script src="../../../../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
+<meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=263225e79ed9">
+<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=cc59a4b4ce11"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
+<script src="../../../../../assets/js/docs-ui.js?v=480a3c3c0d42" defer></script><script src="../../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../../assets/js/translation-review.js?v=1902d883e072" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -281,11 +280,11 @@
 
 <p>Candidate terms extracted from every BPMN task and call activity: <code class="language-plaintext highlighter-rouge">name</code> as the label, its own <code class="language-plaintext highlighter-rouge">&lt;documentation&gt;</code> as the definition, the element id as the code. Each is the asset’s own text, verbatim and not curated, and carries the badge “candidate, extracted”. A person promotes one by authoring it. Authored terms are on their owning instance’s page, and those pages, the counts and the sources are linked from the <a href="../../../../../en/folio-assistant-core/glossary/">glossary index</a>.</p>
 
-<p>From: bootstrap 38 (<a href="../../../../../assets/glossary/bootstrap--kg-bpmn-activities.skos.jsonld">SKOS</a>) · bootstrap-tools 7 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-bpmn-activities.skos.jsonld">SKOS</a>) · cat-harness 377 (<a href="../../../../../assets/glossary/cat-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · fhir-harness 25 (<a href="../../../../../assets/glossary/fhir-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · folio-assistant-core 70 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-bpmn-activities.skos.jsonld">SKOS</a>) · smart-base 161 (<a href="../../../../../assets/glossary/smart-base--kg-bpmn-activities.skos.jsonld">SKOS</a>) · who-iris 34 (<a href="../../../../../assets/glossary/who-iris--kg-bpmn-activities.skos.jsonld">SKOS</a>).</p>
+<p>From: bootstrap 38 (<a href="../../../../../assets/glossary/bootstrap--kg-bpmn-activities.skos.jsonld">SKOS</a>) · bootstrap-tools 7 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-bpmn-activities.skos.jsonld">SKOS</a>) · cat-harness 389 (<a href="../../../../../assets/glossary/cat-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · fhir-harness 25 (<a href="../../../../../assets/glossary/fhir-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · folio-assistant-core 70 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-bpmn-activities.skos.jsonld">SKOS</a>) · smart-base 161 (<a href="../../../../../assets/glossary/smart-base--kg-bpmn-activities.skos.jsonld">SKOS</a>) · who-iris 34 (<a href="../../../../../assets/glossary/who-iris--kg-bpmn-activities.skos.jsonld">SKOS</a>).</p>
 
 <p>One of 3 pages of this type, split by the first letter of the label: <a href="../../../../../en/folio-assistant-core/glossary/bpmn-activities/">all parts</a>.</p>
 
-<p><strong>Size:</strong> this page holds 211 terms and is 171 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
+<p><strong>Size:</strong> this page holds 216 terms and is 176 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
 
 <div class="table-wrapper"><table class="fa-gloss-mapping">
 <caption>Already somebody else's concept? — <code>check:term-mapping</code>, bean <code>7wou</code></caption>
@@ -300,7 +299,7 @@ be a term this corpus is right to coin.</p>
 
 <p><label for="fa-gloss-q">Filter terms</label>
 <input id="fa-gloss-q" type="search" autocomplete="off" style="min-height:44px;width:100%;max-width:32rem" /></p>
-<p aria-live="polite"><span id="fa-gloss-n">211</span> shown</p>
+<p aria-live="polite"><span id="fa-gloss-n">216</span> shown</p>
 
 <nav aria-label="Letters"><a href="#letter-E">E</a> <a href="#letter-F">F</a> <a href="#letter-G">G</a> <a href="#letter-H">H</a> <a href="#letter-I">I</a> <a href="#letter-J">J</a> <a href="#letter-K">K</a> <a href="#letter-L">L</a> <a href="#letter-M">M</a> <a href="#letter-N">N</a> <a href="#letter-O">O</a> <a href="#letter-P">P</a> <a href="#letter-Q">Q</a></nav>
 <h2 id="letter-E">
@@ -545,6 +544,13 @@ File info, sizes, hashes, timestamps, mimetype <span class="fa-gloss-status">can
 <dd>
 <p>NOT IMPLEMENTED; see docs/document-ingestion.md. Mechanical and cheap; the checksum is what makes a remote asset verifiable.</p>
 <p class="fa-gloss-meta">BPMN activities of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/library/ingest-derive-content.bpmn"><code>folio-assistant-core/processes/library/ingest-derive-content.bpmn#Task_TechMeta</code></a></p>
+</dd>
+<dt id="cat-harness--kg-bpmn-activities--process_translationreviewadjudication.task_tra_fileissue" data-fa-state="extracted" data-fa-gloss="">
+File the adjudication issue <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Submit opens GitHub's new-issue form prefilled with a readable summary and a <code>translation-adjudication/v1</code> JSON block, labelled <code>translation-adjudication</code> and titled <code>[translation review] …</code>. When the record is too long for a URL the page copies the body for pasting instead. Filing it is the act of adjudicating.</p>
+<p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn"><code>cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_FileIssue</code></a></p>
 </dd>
 <dt id="cat-harness--kg-bpmn-activities--process_multilocaletranslation.task_ml_sourceissue" data-fa-state="extracted" data-fa-gloss="">
 File the source errors as one issue <span class="fa-gloss-status">candidate, extracted</span>
@@ -1448,6 +1454,13 @@ Onboard new concepts to Commons (governance) <span class="fa-gloss-status">candi
 <p><em>The asset carries no description.</em></p>
 <p class="fa-gloss-meta">BPMN activities of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/collab/processes/content/SGAuthoring.DAKLifecycle.bpmn"><code>smart-base/collab/processes/content/SGAuthoring.DAKLifecycle.bpmn#Task_OnboardConcepts</code></a></p>
 </dd>
+<dt id="cat-harness--kg-bpmn-activities--process_translationreviewadjudication.task_tra_openpr" data-fa-state="extracted" data-fa-gloss="">
+Open a ready PR and comment <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Commit on <code>translation-adjudication/issue-&lt;n&gt;</code>, authored by the issue's author, open a ready pull request that names the issue, and comment the summary on the issue: what was recorded and what was refused.</p>
+<p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn"><code>cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_OpenPR</code></a></p>
+</dd>
 <dt id="cat-harness--kg-bpmn-activities--process_actorroleadministration.task_assignroles" data-fa-state="extracted" data-fa-gloss="">
 Open or close a role to an actor <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
@@ -1626,6 +1639,13 @@ Phases 3–4: Define requirements + impact <span class="fa-gloss-status">candida
 <p>Two skills, because this step is two things: the requirements come from the CRDM process, the impact half is a question about the entities and relations the change touches, which is what data modelling answers; a folio-content skill such as <code>content-graph</code> is not one this harness diagram can bind.</p>
 <p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/crdm-requirements-definition.bpmn"><code>cat-harness/processes/process/crdm-requirements-definition.bpmn#A_DefineReqs</code></a></p>
 </dd>
+<dt id="cat-harness--kg-bpmn-activities--process_translationreviewadjudication.task_tra_choose" data-fa-state="extracted" data-fa-gloss="">
+Pick a candidate or write your own <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>For each wrong string: pick one of the candidates (its source is recorded with the suggestion) or type the text. The suggestion carries the text the reviewer saw (<code>current</code>), so a catalogue that changed under them is caught.</p>
+<p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn"><code>cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Choose</code></a></p>
+</dd>
 <dt id="cat-harness--kg-bpmn-activities--process_methodologyfromsource.a_place" data-fa-state="extracted" data-fa-gloss="">
 Place by ownership; declare the directory <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
@@ -1674,6 +1694,13 @@ Plan the implementation <span class="fa-gloss-status">candidate, extracted</span
 <dd>
 <p>DIIG Chapter 5. Infrastructure; legislation, policy and compliance, including data management, privacy and security, and the regulation of new technologies; leadership and governance, including external partnerships; workforce and training; services and applications.</p>
 <p class="fa-gloss-meta">BPMN activities of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/collab/processes/diig-investment-path.bpmn"><code>smart-base/collab/processes/diig-investment-path.bpmn#A_PlanImplementation</code></a></p>
+</dd>
+<dt id="cat-harness--kg-bpmn-activities--process_translationreviewadjudication.task_tra_plan" data-fa-state="extracted" data-fa-gloss="">
+Plan the records (translation:adjudicate) <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p><code>translation:adjudicate</code> reads the <code>issues</code> event GitHub wrote, never the body from a shell variable: the body is untrusted and is only parsed as JSON. It decides every write before making any, and refuses rather than guesses.</p>
+<p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn"><code>cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Plan</code></a></p>
 </dd>
 <dt id="smart-base--kg-bpmn-activities--process_dthauthoring.call_steps" data-fa-state="extracted" data-fa-gloss="">
 Planning steps per chapter [document-authoring] <span class="fa-gloss-status">candidate, extracted</span>
@@ -1758,6 +1785,13 @@ Produce &gt;= 2 candidates, web + mobile <span class="fa-gloss-status">candidate
 <dd>
 <p>Mid-fidelity HTML: monochrome, real folio content, semantic icons, no placeholder text. Each candidate has both a web layout and a mobile layout.</p>
 <p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/wireframe-design-review.bpmn"><code>cat-harness/processes/ui/wireframe-design-review.bpmn#D_Candidates</code></a></p>
+</dd>
+<dt id="cat-harness--kg-bpmn-activities--process_translationreviewadjudication.task_tra_candidates" data-fa-state="extracted" data-fa-gloss="">
+Produce candidate translations (any engine) <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>One or more candidate sources write alternatives per string to <code>translations/&lt;locale&gt;/&lt;catalogue&gt;.candidates.json</code> (<code>translation-candidates/v1</code>), each candidate carrying its source: an agent model, an open machine-translation model, a web service, or a person. The engines are interchangeable behind one skill, <code>translation-candidate-source</code>: whichever runs, the same sidecar comes out. Writers append; a candidate is never a verdict.</p>
+<p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn"><code>cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Candidates</code></a></p>
 </dd>
 <dt id="cat-harness--kg-bpmn-activities--process_translation.task_translate" data-fa-state="extracted" data-fa-gloss="">
 Produce translation (PO file) <span class="fa-gloss-status">candidate, extracted</span>

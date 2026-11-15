@@ -86,16 +86,15 @@
     "pagesWithTranslations": 0,
     "complete": false
   },
-  "statusSrc":"../../../../../assets/translation-status/index.json"
+  "statusSrc":"../../../../../assets/translation-status/index.json",
+  "reviewSrc":"../../../../../assets/translation-status/review.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
-<meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
-<script src="../../../../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
+<link rel="alternate" type="application/ld+json" href="https://litlfred.github.io/folio-assistant/cat-harness/tools/lsi-query.jsonld"><meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=263225e79ed9">
+<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=cc59a4b4ce11"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
+<script src="../../../../../assets/js/docs-ui.js?v=480a3c3c0d42" defer></script><script src="../../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../../assets/js/translation-review.js?v=1902d883e072" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -262,6 +261,8 @@
           
             <script type="application/ld+json">{"@context":"https://litlfred.github.io/folio-assistant/cat-harness/cat-harness.context.jsonld","@id":"https://litlfred.github.io/folio-assistant/cat-harness/tools/lsi-query.jsonld","@type":"https://litlfred.github.io/cat-harness/v0/ns/Tool","partOf":"https://litlfred.github.io/folio-assistant/cat-harness/cat-harness.jsonld","name":"lsi-query","title":"Latent Semantic Indexing over a prose graph","description":"Find units of a declared prose graph (a library, the skills, the beans, docs) that discuss a query in OTHER words — the vocabulary gap lexical search cannot reach. Each hit is labelled lexical+latent or latent only, and the score is a cosine in the latent space, never merged with a lexical result.","install":{"none":true},"invoke":{"shell":"bun run cat lsi query","mcp":{"tool":"lsi_query"},"inProcess":{"module":"src/tools/lsi-query.ts"}},"io":{"inputs":[{"name":"text","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/Text","description":"The query, in any words, on STDIN — free text never goes on a command line.","required":true,"arg":{"stdin":true}},{"name":"instance","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/Slug","description":"Layer declaring the graph, e.g. `cat-harness`.","required":false,"arg":{"flag":"--instance"}},{"name":"graph","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/Slug","description":"Graph id within the layer, e.g. `library`.","required":false,"arg":{"flag":"--graph"}}],"outputs":[{"name":"report","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/Markdown","description":"Per graph: the top hits by cosine, each marked lexical+latent or latent only."}]},"satisfies":["lsi-indexing"],"requirements":{"network":false}}</script>
 
+<style>.cd { max-width: none; height: auto; display: block; } .cd-box { fill: var(--fa-uml-schema, #e9edf3); stroke: var(--fa-uml-edge, #1b2432); stroke-width: 1; } .cd-box.cd-skill { fill: var(--fa-uml-scenario, #e8f0ee); } .cd-box.cd-sel { stroke: #2f5d9e; stroke-width: 2.2; } .cd-box.cd-ext { fill: var(--fa-uml-other, #f4f4f1); stroke-dasharray: 2 3; } .cd-box.cd-und { fill: var(--fa-uml-other, #f4f4f1); stroke-dasharray: 5 4; } .cd-t { fill: var(--fa-uml-edge, #1b2432); font: 600 12px ui-monospace, Menlo, Consolas, monospace; } .cd-st { fill: #4a5568; font: 10px ui-monospace, Menlo, Consolas, monospace; } .cd-f { fill: var(--fa-uml-edge, #1b2432); font: 11px ui-monospace, Menlo, Consolas, monospace; } .cd-c { fill: #4a5568; } .cd-k { fill: #7a3e9d; font-style: italic; } .cd-n-note { fill: #8a4b00; font: italic 11px ui-sans-serif, system-ui, sans-serif; } .cd-e { stroke: var(--fa-uml-edge, #1b2432); fill: none; stroke-width: 1.2; } .cd-e.cd-id { stroke-dasharray: 5 4; } .cd-l { fill: var(--fa-uml-edge, #1b2432); font: 10.5px ui-monospace, Menlo, Consolas, monospace; } .cd-lb { fill: #fbfcfd; } .cd-genhead { fill: #fbfcfd; stroke: var(--fa-uml-edge, #1b2432); stroke-width: 1.2; } .cd-tiphead { fill: none; stroke: var(--fa-uml-edge, #1b2432); stroke-width: 1.3; } .cd-diahead { fill: var(--fa-uml-edge, #1b2432); } .cd-a { cursor: pointer; } .cd-a .cd-ty { fill: #2f5d9e; text-decoration: underline; } .cd-a:hover .cd-t, .cd-a:focus-visible .cd-t { fill: #2f5d9e; text-decoration: underline; } .cd-wrap { overflow-x: auto; background: #fbfcfd; border: 1px solid #d5dbe3; border-radius: 6px; padding: 8px; margin: 8px 0 16px; }</style>
+
 <h1 id="latent-semantic-indexing-over-a-prose-graph">
   
   
@@ -303,7 +304,7 @@
     </tr>
     <tr>
       <td>source</td>
-      <td><a href="https://github.com/litlfred/cat-harness/blob/855c93fa1ef9690508c398c738706817070b9a91/tools/lsi-query/lsi-query.json"><code class="language-plaintext highlighter-rouge">cat-harness/tools/lsi-query/lsi-query.json</code></a></td>
+      <td><a href="https://github.com/litlfred/cat-harness/blob/ad19c7767a7d489b37abb018607cf55e616d8fd8/tools/lsi-query/lsi-query.json"><code class="language-plaintext highlighter-rouge">cat-harness/tools/lsi-query/lsi-query.json</code></a></td>
     </tr>
     <tr>
       <td>invoked</td>
@@ -428,6 +429,8 @@
 
 <p><strong><code class="language-plaintext highlighter-rouge">lsi_query</code></strong> — read from its registrar.</p>
 
+<div class="cd-wrap"><svg class="cd" viewBox="-2 0 245 255" width="245" height="255" role="img" aria-label="lsi-query: lsi_query"><defs><marker id="cdheddv1-gen" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M1 1 L13 7 L1 13 z" class="cd-genhead" /></marker><marker id="cdheddv1-tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" class="cd-tiphead" /></marker><marker id="cdheddv1-dia" viewBox="0 0 16 10" refX="1" refY="5" markerWidth="14" markerHeight="9" orient="auto"><path d="M1 5 L8 1 L15 5 L8 9 z" class="cd-diahead" /></marker></defs><path class="cd-e" d="M117.2 65 V102 H117.19999999999999 V139" marker-end="url(#cdheddv1-tip)" /><rect class="cd-lb" x="120.19999999999999" y="117" width="110.4" height="14" rx="2" /><text class="cd-l" x="123.19999999999999" y="127">lsi_query [1..1]</text><g class="cd-n" data-id="owner:lsi-query"><title>lsi-query</title><rect class="cd-box cd-sel" x="0" y="8" width="234.4" height="57" rx="4" /><text class="cd-st" x="228.4" y="20" text-anchor="end">«tool»</text><a class="cd-a" href="../mcp-tools.json"><text class="cd-t" x="117.2" y="35" text-anchor="middle">lsi-query</text></a><line class="cd-e" x1="0" y1="42" x2="234.4" y2="42" /><text class="cd-f" x="10" y="57">lsi_query : <tspan>LsiQueryInput</tspan><tspan class="cd-c"> [1..1]</tspan></text></g><g class="cd-n" data-id="mcp/lsi_query.input.schema.json#LsiQueryInput"><title>LsiQueryInput</title><rect class="cd-box" x="26.799999999999983" y="139" width="180.8" height="102" rx="4" /><text class="cd-st" x="201.6" y="151" text-anchor="end">«json-schema»</text><text class="cd-t" x="117.19999999999999" y="166" text-anchor="middle">LsiQueryInput</text><line class="cd-e" x1="26.799999999999983" y1="173" x2="207.6" y2="173" /><text class="cd-f" x="36.79999999999998" y="188">text : <a class="cd-a" href="https://json-schema.org/understanding-json-schema/reference/string"><tspan class="cd-ty">string</tspan></a><tspan class="cd-c"> [1..1]</tspan></text><text class="cd-f" x="36.79999999999998" y="203">instance : <a class="cd-a" href="https://json-schema.org/understanding-json-schema/reference/string"><tspan class="cd-ty">string</tspan></a><tspan class="cd-c"> [0..1]</tspan></text><text class="cd-f" x="36.79999999999998" y="218">graph : <a class="cd-a" href="https://json-schema.org/understanding-json-schema/reference/string"><tspan class="cd-ty">string</tspan></a><tspan class="cd-c"> [0..1]</tspan></text><text class="cd-f" x="36.79999999999998" y="233">top : <a class="cd-a" href="https://json-schema.org/understanding-json-schema/reference/numeric#integer"><tspan class="cd-ty">integer</tspan></a><tspan class="cd-c"> [0..1]</tspan></text></g></svg></div>
+
 <div class="table-wrapper"><table>
   <thead>
     <tr>
@@ -505,17 +508,17 @@
   <tbody>
     <tr>
       <td>definition</td>
-      <td><a href="https://github.com/litlfred/cat-harness/blob/855c93fa1ef9690508c398c738706817070b9a91/tools/lsi-query/lsi-query.json"><code class="language-plaintext highlighter-rouge">cat-harness/tools/lsi-query/lsi-query.json</code></a></td>
+      <td><a href="https://github.com/litlfred/cat-harness/blob/ad19c7767a7d489b37abb018607cf55e616d8fd8/tools/lsi-query/lsi-query.json"><code class="language-plaintext highlighter-rouge">cat-harness/tools/lsi-query/lsi-query.json</code></a></td>
       <td> </td>
     </tr>
     <tr>
       <td>in-process module</td>
-      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/43993a90cd7a544f54636545953d7df26963730d/src/tools/lsi-query.ts"><code class="language-plaintext highlighter-rouge">cat-harness-tools/src/tools/lsi-query.ts</code></a></td>
+      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/5ba5c29d0adaf6e9115b84c9771db5d7168da418/src/tools/lsi-query.ts"><code class="language-plaintext highlighter-rouge">cat-harness-tools/src/tools/lsi-query.ts</code></a></td>
       <td> </td>
     </tr>
     <tr>
       <td>script</td>
-      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/43993a90cd7a544f54636545953d7df26963730d/scripts/lsi.ts"><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/lsi.ts</code></a></td>
+      <td><a href="https://github.com/litlfred/cat-harness-tools/blob/5ba5c29d0adaf6e9115b84c9771db5d7168da418/scripts/lsi.ts"><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/lsi.ts</code></a></td>
       <td> </td>
     </tr>
   </tbody>
@@ -524,8 +527,8 @@
 <p>Its module imports, one hop:</p>
 
 <ul>
-  <li><a href="https://github.com/litlfred/cat-harness-tools/blob/43993a90cd7a544f54636545953d7df26963730d/pipeline/lsi.ts"><code class="language-plaintext highlighter-rouge">cat-harness-tools/pipeline/lsi.ts</code></a></li>
-  <li><a href="https://github.com/litlfred/cat-harness-tools/blob/43993a90cd7a544f54636545953d7df26963730d/scripts/lsi.ts"><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/lsi.ts</code></a></li>
+  <li><a href="https://github.com/litlfred/cat-harness-tools/blob/5ba5c29d0adaf6e9115b84c9771db5d7168da418/pipeline/lsi.ts"><code class="language-plaintext highlighter-rouge">cat-harness-tools/pipeline/lsi.ts</code></a></li>
+  <li><a href="https://github.com/litlfred/cat-harness-tools/blob/5ba5c29d0adaf6e9115b84c9771db5d7168da418/scripts/lsi.ts"><code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/lsi.ts</code></a></li>
 </ul>
 <h2 id="linked-data">
   

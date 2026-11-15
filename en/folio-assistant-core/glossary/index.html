@@ -86,16 +86,15 @@
     "pagesWithTranslations": 0,
     "complete": false
   },
-  "statusSrc":"../../../assets/translation-status/index.json"
+  "statusSrc":"../../../assets/translation-status/index.json",
+  "reviewSrc":"../../../assets/translation-status/review.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
-<meta name="fa-beans-src" content="../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../build.json"><link rel="stylesheet" href="../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../assets/js/harness-data.js" defer></script>
-<script src="../../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../assets/js/kg-render.js" defer></script><script src="../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../assets/js/work-plan.js" defer></script><script src="../../../assets/js/process-index.js" defer></script><style>
+<meta name="fa-beans-src" content="../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../build.json"><link rel="stylesheet" href="../../../assets/css/navbar-row.css?v=263225e79ed9">
+<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=cc59a4b4ce11"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../assets/js/harness-data.js" defer></script><script src="../../../assets/js/kg-render.js" defer></script><script src="../../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
+<script src="../../../assets/js/docs-ui.js?v=480a3c3c0d42" defer></script><script src="../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../assets/js/translation-review.js?v=1902d883e072" defer></script><script src="../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -270,13 +269,13 @@
 </h1>
     
 
-<p>Every term the instances in this repository define or carry, as W3C SKOS. Terms link to the external concepts they match rather than copying them. 4320 terms: <strong>41 authored</strong> in 7 glossaries, one page per instance that owns them, and <strong>4076 extracted</strong> from knowledge-graph assets in 25 generated schemes, one page per asset type, plus the sources below.</p>
+<p>Every term the instances in this repository define or carry, as W3C SKOS. Terms link to the external concepts they match rather than copying them. 4495 terms: <strong>41 authored</strong> in 10 glossaries, one page per instance that owns them, and <strong>4127 extracted</strong> from knowledge-graph assets in 25 generated schemes, one page per asset type, plus the sources below.</p>
 
 <div class="table-wrapper"><table>
 <thead><tr><th>state</th><th>what it means</th><th>terms</th></tr></thead>
 <tbody>
 <tr><td>authored</td><td>A person wrote or approved the definition.</td><td>41</td></tr>
-<tr><td>candidate, extracted</td><td>Lifted from a knowledge-graph asset's own title and description, verbatim, and not curated. The definition is the asset's text, the source links to the asset, and an asset with no description gives a term with none. A person promotes one by authoring it.</td><td>4076</td></tr>
+<tr><td>candidate, extracted</td><td>Lifted from a knowledge-graph asset's own title and description, verbatim, and not curated. The definition is the asset's text, the source links to the asset, and an asset with no description gives a term with none. A person promotes one by authoring it.</td><td>4127</td></tr>
 <tr><td>could-not-extract</td><td>The source names a term the extractor could not read, and says why.</td><td>0</td></tr>
 </tbody>
 </table></div>
@@ -294,7 +293,7 @@
 <div class="table-wrapper"><table class="fa-gloss-mapping">
 <caption>Already somebody else's concept? — <code>check:term-mapping</code>, bean <code>7wou</code></caption>
 <thead><tr><th>target</th><th>mapped</th><th>unmapped</th><th>undetermined</th><th>why undetermined</th></tr></thead>
-<tbody><tr><td><code>fhir</code></td><td>0</td><td>4724</td><td>0</td><td>—</td></tr><tr><td><code>skos</code></td><td>0</td><td>4724</td><td>0</td><td>—</td></tr></tbody>
+<tbody><tr><td><code>fhir</code></td><td>0</td><td>4848</td><td>0</td><td>—</td></tr><tr><td><code>skos</code></td><td>0</td><td>4848</td><td>0</td><td>—</td></tr></tbody>
 </table></div>
 <p class="fa-gloss-mapping-note"><strong>Undetermined is never “no match”.</strong> 
 A vocabulary that could not be reached has said nothing, and the column above keeps that 
@@ -314,21 +313,21 @@ be a term this corpus is right to coin.</p>
 <div style="overflow-x:auto"><div class="table-wrapper"><table>
 <thead><tr><th>page</th><th>holds</th><th>terms</th><th>size</th></tr></thead>
 <tbody>
-<tr><td>this page</td><td>counts and sources</td><td>—</td><td>13 KB</td></tr>
+<tr><td>this page</td><td>counts and sources</td><td>—</td><td>14 KB</td></tr>
 <tr><td><a href="../../../en/folio-assistant-core/glossary/instance/bootstrap/">bootstrap</a></td><td>authored terms of bootstrap</td><td>22</td><td>28 KB</td></tr>
 <tr><td><a href="../../../en/folio-assistant-core/glossary/instance/cat-harness/">cat-harness</a></td><td>authored terms of cat-harness</td><td>14</td><td>19 KB</td></tr>
 <tr><td><a href="../../../en/folio-assistant-core/glossary/instance/fhir-harness/">fhir-harness</a></td><td>authored terms of fhir-harness</td><td>0</td><td>2 KB</td></tr>
 <tr><td><a href="../../../en/folio-assistant-core/glossary/instance/folio-assistant-core/">folio-assistant-core</a></td><td>authored terms of folio-assistant-core</td><td>4</td><td>10 KB</td></tr>
 <tr><td><a href="../../../en/folio-assistant-core/glossary/instance/smart-base/">smart-base</a></td><td>authored terms of smart-base</td><td>0</td><td>2 KB</td></tr>
-<tr><td><a href="../../../en/folio-assistant-core/glossary/instance/who-iris/">who-iris</a></td><td>authored terms of who-iris</td><td>204</td><td>384 KB</td></tr>
-<tr><td><a href="../../../en/folio-assistant-core/glossary/skills/">Skills</a></td><td>candidates, extracted</td><td>283</td><td>219 KB</td></tr>
-<tr><td><a href="../../../en/folio-assistant-core/glossary/tools/">Tools</a></td><td>candidates, extracted</td><td>91</td><td>94 KB</td></tr>
-<tr><td><a href="../../../en/folio-assistant-core/glossary/bpmn-activities/">BPMN activities</a></td><td>candidates, extracted</td><td>712</td><td>572 KB</td></tr>
+<tr><td><a href="../../../en/folio-assistant-core/glossary/instance/who-iris/">who-iris</a></td><td>authored terms of who-iris</td><td>328</td><td>510 KB</td></tr>
+<tr><td><a href="../../../en/folio-assistant-core/glossary/skills/">Skills</a></td><td>candidates, extracted</td><td>285</td><td>221 KB</td></tr>
+<tr><td><a href="../../../en/folio-assistant-core/glossary/tools/">Tools</a></td><td>candidates, extracted</td><td>93</td><td>97 KB</td></tr>
+<tr><td><a href="../../../en/folio-assistant-core/glossary/bpmn-activities/">BPMN activities</a></td><td>candidates, extracted</td><td>724</td><td>582 KB</td></tr>
 <tr><td><a href="../../../en/folio-assistant-core/glossary/dmn-decisions/">DMN decisions</a></td><td>candidates, extracted</td><td>6</td><td>7 KB</td></tr>
-<tr><td><a href="../../../en/folio-assistant-core/glossary/schema-fields/">Schema fields</a></td><td>candidates, extracted</td><td>2984</td><td>1.7 MB</td></tr>
+<tr><td><a href="../../../en/folio-assistant-core/glossary/schema-fields/">Schema fields</a></td><td>candidates, extracted</td><td>3019</td><td>1.7 MB</td></tr>
 </tbody></table></div></div>
 
-<p><strong>Size:</strong> this page is 13 KB before compression, within its budget of 64 KB; each instance’s and each asset type’s page has a budget of 1.0 MB. There is no search index: the filter on each page runs over that page, and its A–Z bar jumps within it. The SKOS files in the sources are the machine-readable form.</p>
+<p><strong>Size:</strong> this page is 14 KB before compression, within its budget of 64 KB; each instance’s and each asset type’s page has a budget of 1.0 MB. There is no search index: the filter on each page runs over that page, and its A–Z bar jumps within it. The SKOS files in the sources are the machine-readable form.</p>
 <h2 id="authored-terms">
   
   
@@ -362,7 +361,7 @@ be a term this corpus is right to coin.</p>
 <li><a href="../../../en/folio-assistant-core/glossary/instance/fhir-harness/">fhir-harness</a>: 0 terms in </li>
 <li><a href="../../../en/folio-assistant-core/glossary/instance/folio-assistant-core/">folio-assistant-core</a>: 4 terms in Folio Assistant platform terms, Guideline domain</li>
 <li><a href="../../../en/folio-assistant-core/glossary/instance/smart-base/">smart-base</a>: 0 terms in </li>
-<li><a href="../../../en/folio-assistant-core/glossary/instance/who-iris/">who-iris</a>: 204 terms in Human resources for health information system: minimum data set for health workforce registry (2015) — system functional requirements, National health workforce accounts: a handbook, second edition (2023), WHO house terms</li>
+<li><a href="../../../en/folio-assistant-core/glossary/instance/who-iris/">who-iris</a>: 328 terms in National eHealth strategy toolkit, Digital transformation handbook for health supply chain architecture, Digital transformation handbook for health product catalogue, Human resources for health information system: minimum data set for health workforce registry (2015) — system functional requirements, National health workforce accounts: a handbook, second edition (2023), WHO house terms</li>
 </ul>
 <h2 id="sources">
   
@@ -386,6 +385,9 @@ be a term this corpus is right to coin.</p>
 <li><strong>Folio Assistant platform terms (cat-harness)</strong> (cat-harness, 14 terms) · <a href="../../../assets/glossary/cat-harness--platform.skos.jsonld">SKOS JSON-LD</a> · <code>folio-assistant-core/glossary/cat-harness.glossary.json</code></li>
 <li><strong>Folio Assistant platform terms</strong> (folio-assistant-core, 1 term) · <a href="../../../assets/glossary/folio-assistant-core--platform.skos.jsonld">SKOS JSON-LD</a> · <code>folio-assistant-core/glossary/folio-assistant-core.glossary.json</code></li>
 <li><strong>Guideline domain</strong> (folio-assistant-core, 3 terms) · <a href="../../../assets/glossary/folio-assistant-core--guideline-domain.skos.jsonld">SKOS JSON-LD</a> · <code>folio-assistant-core/glossary/guideline-domain.glossary.json</code></li>
+<li><strong>National eHealth strategy toolkit</strong> (who-iris, 11 terms) · <a href="../../../assets/glossary/who-iris--10665-75211.skos.jsonld">SKOS JSON-LD</a> · <code>who-iris/glossary/10665-75211.glossary.json</code></li>
+<li><strong>Digital transformation handbook for health supply chain architecture</strong> (who-iris, 55 terms) · <a href="../../../assets/glossary/who-iris--9789240101197-eng.skos.jsonld">SKOS JSON-LD</a> · <code>who-iris/glossary/9789240101197-eng.glossary.json</code></li>
+<li><strong>Digital transformation handbook for health product catalogue</strong> (who-iris, 58 terms) · <a href="../../../assets/glossary/who-iris--9789240116191-eng.skos.jsonld">SKOS JSON-LD</a> · <code>who-iris/glossary/9789240116191-eng.glossary.json</code></li>
 <li><strong>Human resources for health information system: minimum data set for health workforce registry (2015) — system functional requirements</strong> (who-iris, 121 terms) · <a href="../../../assets/glossary/who-iris--hrhis-registry-2015.skos.jsonld">SKOS JSON-LD</a> · <code>who-iris/glossary/hrhis-registry-2015.glossary.json</code></li>
 <li><strong>National health workforce accounts: a handbook, second edition (2023)</strong> (who-iris, 82 terms) · <a href="../../../assets/glossary/who-iris--nhwa-2023.skos.jsonld">SKOS JSON-LD</a> · <code>who-iris/glossary/nhwa-2023.glossary.json</code></li>
 <li><strong>WHO house terms</strong> (who-iris, 1 term) · <a href="../../../assets/glossary/who-iris--who-terms.skos.jsonld">SKOS JSON-LD</a> · <code>who-iris/glossary/who-iris.glossary.json</code></li>
@@ -408,13 +410,13 @@ be a term this corpus is right to coin.</p>
 <tbody>
 <tr><td>bootstrap</td><td>13 · <a href="../../../assets/glossary/bootstrap--kg-skills.skos.jsonld">SKOS</a></td><td>—</td><td>38 · <a href="../../../assets/glossary/bootstrap--kg-bpmn-activities.skos.jsonld">SKOS</a></td><td>—</td><td>—</td></tr>
 <tr><td>bootstrap-tools</td><td>3 · <a href="../../../assets/glossary/bootstrap-tools--kg-skills.skos.jsonld">SKOS</a></td><td>—</td><td>7 · <a href="../../../assets/glossary/bootstrap-tools--kg-bpmn-activities.skos.jsonld">SKOS</a></td><td>—</td><td>45 · <a href="../../../assets/glossary/bootstrap-tools--kg-schema-fields.skos.jsonld">SKOS</a></td></tr>
-<tr><td>cat-harness</td><td>162 · <a href="../../../assets/glossary/cat-harness--kg-skills.skos.jsonld">SKOS</a></td><td>—</td><td>377 · <a href="../../../assets/glossary/cat-harness--kg-bpmn-activities.skos.jsonld">SKOS</a></td><td>6 · <a href="../../../assets/glossary/cat-harness--kg-dmn-decisions.skos.jsonld">SKOS</a></td><td>—</td></tr>
-<tr><td>cat-harness-tools</td><td>—</td><td>1 · <a href="../../../assets/glossary/cat-harness-tools--kg-tools.skos.jsonld">SKOS</a></td><td>—</td><td>—</td><td>2530 · <a href="../../../assets/glossary/cat-harness-tools--kg-schema-fields.skos.jsonld">SKOS</a></td></tr>
-<tr><td>fhir-harness</td><td>19 · <a href="../../../assets/glossary/fhir-harness--kg-skills.skos.jsonld">SKOS</a></td><td>37 · <a href="../../../assets/glossary/fhir-harness--kg-tools.skos.jsonld">SKOS</a></td><td>25 · <a href="../../../assets/glossary/fhir-harness--kg-bpmn-activities.skos.jsonld">SKOS</a></td><td>—</td><td>151 · <a href="../../../assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld">SKOS</a></td></tr>
+<tr><td>cat-harness</td><td>164 · <a href="../../../assets/glossary/cat-harness--kg-skills.skos.jsonld">SKOS</a></td><td>—</td><td>389 · <a href="../../../assets/glossary/cat-harness--kg-bpmn-activities.skos.jsonld">SKOS</a></td><td>6 · <a href="../../../assets/glossary/cat-harness--kg-dmn-decisions.skos.jsonld">SKOS</a></td><td>—</td></tr>
+<tr><td>cat-harness-tools</td><td>—</td><td>1 · <a href="../../../assets/glossary/cat-harness-tools--kg-tools.skos.jsonld">SKOS</a></td><td>—</td><td>—</td><td>2554 · <a href="../../../assets/glossary/cat-harness-tools--kg-schema-fields.skos.jsonld">SKOS</a></td></tr>
+<tr><td>fhir-harness</td><td>19 · <a href="../../../assets/glossary/fhir-harness--kg-skills.skos.jsonld">SKOS</a></td><td>39 · <a href="../../../assets/glossary/fhir-harness--kg-tools.skos.jsonld">SKOS</a></td><td>25 · <a href="../../../assets/glossary/fhir-harness--kg-bpmn-activities.skos.jsonld">SKOS</a></td><td>—</td><td>162 · <a href="../../../assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld">SKOS</a></td></tr>
 <tr><td>folio-assistant-core</td><td>46 · <a href="../../../assets/glossary/folio-assistant-core--kg-skills.skos.jsonld">SKOS</a></td><td>29 · <a href="../../../assets/glossary/folio-assistant-core--kg-tools.skos.jsonld">SKOS</a></td><td>70 · <a href="../../../assets/glossary/folio-assistant-core--kg-bpmn-activities.skos.jsonld">SKOS</a></td><td>—</td><td>207 · <a href="../../../assets/glossary/folio-assistant-core--kg-schema-fields.skos.jsonld">SKOS</a></td></tr>
 <tr><td>smart-base</td><td>35 · <a href="../../../assets/glossary/smart-base--kg-skills.skos.jsonld">SKOS</a></td><td>22 · <a href="../../../assets/glossary/smart-base--kg-tools.skos.jsonld">SKOS</a></td><td>161 · <a href="../../../assets/glossary/smart-base--kg-bpmn-activities.skos.jsonld">SKOS</a></td><td>—</td><td>51 · <a href="../../../assets/glossary/smart-base--kg-schema-fields.skos.jsonld">SKOS</a></td></tr>
 <tr><td>who-iris</td><td>5 · <a href="../../../assets/glossary/who-iris--kg-skills.skos.jsonld">SKOS</a></td><td>2 · <a href="../../../assets/glossary/who-iris--kg-tools.skos.jsonld">SKOS</a></td><td>34 · <a href="../../../assets/glossary/who-iris--kg-bpmn-activities.skos.jsonld">SKOS</a></td><td>—</td><td>—</td></tr>
-<tr><td><strong>total</strong></td><td><strong>283</strong></td><td><strong>91</strong></td><td><strong>712</strong></td><td><strong>6</strong></td><td><strong>2984</strong></td></tr>
+<tr><td><strong>total</strong></td><td><strong>285</strong></td><td><strong>93</strong></td><td><strong>724</strong></td><td><strong>6</strong></td><td><strong>3019</strong></td></tr>
 </tbody></table></div></div>
 
           
@@ -426,15 +428,7 @@ be a term this corpus is right to coin.</p>
 <ul>
   
   <li>
-    <a href="../../../en/folio-assistant-core/glossary/instance/folio-assistant-core/">Glossary: folio-assistant-core</a>
-  </li>
-  
-  <li>
     <a href="../../../en/folio-assistant-core/glossary/instance/fhir-harness/">Glossary: fhir-harness</a>
-  </li>
-  
-  <li>
-    <a href="../../../en/folio-assistant-core/glossary/instance/cat-harness/">Glossary: cat-harness</a>
   </li>
   
   <li>
@@ -443,6 +437,14 @@ be a term this corpus is right to coin.</p>
   
   <li>
     <a href="../../../en/folio-assistant-core/glossary/instance/smart-base/">Glossary: smart-base</a>
+  </li>
+  
+  <li>
+    <a href="../../../en/folio-assistant-core/glossary/instance/cat-harness/">Glossary: cat-harness</a>
+  </li>
+  
+  <li>
+    <a href="../../../en/folio-assistant-core/glossary/instance/folio-assistant-core/">Glossary: folio-assistant-core</a>
   </li>
   
   <li>

@@ -469,7 +469,8 @@
       "extractCut": true,
       "blocks": [
         "library/9789240016514-eng/blocks/prose-sec-front-matter",
-        "library/9789240016514-eng/blocks/figure-img-p011-1"
+        "library/9789240016514-eng/blocks/figure-img-p011-1",
+        "library/9789240016514-eng/blocks/figure-vfig-p011"
       ]
     },
     {
@@ -735,7 +736,7 @@
           "heading": false
         },
         {
-          "term": "vaccination history",
+          "term": "capturing delayed",
           "heading": false
         }
       ],
@@ -958,15 +959,15 @@
           "heading": true
         },
         {
+          "term": "cold chain",
+          "heading": false
+        },
+        {
           "term": "supplies",
           "heading": true
         },
         {
           "term": "multi-dose vial",
-          "heading": false
-        },
-        {
-          "term": "cold chain",
           "heading": false
         },
         {

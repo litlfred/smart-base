@@ -796,11 +796,13 @@
       "blocks": [
         "library/who-2019-ncov-digital-certificates-vaccination-20211-eng/blocks/prose-sec-front-matter",
         "library/who-2019-ncov-digital-certificates-vaccination-20211-eng/blocks/figure-img-p014-1",
+        "library/who-2019-ncov-digital-certificates-vaccination-20211-eng/blocks/figure-vfig-p014",
         "library/who-2019-ncov-digital-certificates-vaccination-20211-eng/blocks/figure-img-p015-1",
         "library/who-2019-ncov-digital-certificates-vaccination-20211-eng/blocks/figure-img-p015-2",
         "library/who-2019-ncov-digital-certificates-vaccination-20211-eng/blocks/figure-img-p015-3",
         "library/who-2019-ncov-digital-certificates-vaccination-20211-eng/blocks/figure-img-p015-4",
-        "library/who-2019-ncov-digital-certificates-vaccination-20211-eng/blocks/figure-img-p015-5"
+        "library/who-2019-ncov-digital-certificates-vaccination-20211-eng/blocks/figure-img-p015-5",
+        "library/who-2019-ncov-digital-certificates-vaccination-20211-eng/blocks/figure-vfig-p015"
       ]
     },
     {
@@ -1011,11 +1013,11 @@
           "heading": false
         },
         {
-          "term": "pha",
+          "term": "digital record",
           "heading": false
         },
         {
-          "term": "digital record",
+          "term": "pha",
           "heading": false
         },
         {
@@ -1753,11 +1755,11 @@
           "heading": false
         },
         {
-          "term": "icd",
+          "term": "data content",
           "heading": false
         },
         {
-          "term": "data content",
+          "term": "icd",
           "heading": false
         }
       ],
@@ -2153,12 +2155,12 @@
           "heading": false
         },
         {
-          "term": "developers",
-          "heading": true
-        },
-        {
           "term": "performance indicators",
           "heading": false
+        },
+        {
+          "term": "developers",
+          "heading": true
         },
         {
           "term": "contracts",

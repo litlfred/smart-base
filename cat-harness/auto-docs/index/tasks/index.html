@@ -86,16 +86,15 @@
     "pagesWithTranslations": 0,
     "complete": false
   },
-  "statusSrc":"../../../../assets/translation-status/index.json"
+  "statusSrc":"../../../../assets/translation-status/index.json",
+  "reviewSrc":"../../../../assets/translation-status/review.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
-<meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
-<script src="../../../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
+<meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=263225e79ed9">
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=cc59a4b4ce11"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
+<script src="../../../../assets/js/docs-ui.js?v=480a3c3c0d42" defer></script><script src="../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../assets/js/translation-review.js?v=1902d883e072" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -746,6 +745,50 @@
 <tr id="a-cat-harness-library-processes-translation-refresh-bpmn-Translate-new-and-fuzzy-only">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-refresh.bpmn#Translate new and fuzzy only"><code>Translate new and fuzzy only</code></a><br><span class="p">cat-harness/library/processes/translation-refresh.bpmn#Translate new and fuzzy only</span></td>
   <td>serviceTask in translation-refresh</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-Build-the-10-review-page">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#Build the&amp;#10;review page"><code>Build the&amp;#10;review page</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#Build the&amp;#10;review page</span></td>
+  <td>serviceTask in translation-review-adjudication</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-Comment-why-nothing-10-was-recorded">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#Comment why nothing&amp;#10;was recorded"><code>Comment why nothing&amp;#10;was recorded</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#Comment why nothing&amp;#10;was recorded</span></td>
+  <td>serviceTask in translation-review-adjudication</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-File-the-adjudication-10-issue">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#File the adjudication&amp;#10;issue"><code>File the adjudication&amp;#10;issue</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#File the adjudication&amp;#10;issue</span></td>
+  <td>userTask in translation-review-adjudication</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-Open-a-ready-PR-10-and-comment">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#Open a ready PR&amp;#10;and comment"><code>Open a ready PR&amp;#10;and comment</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#Open a ready PR&amp;#10;and comment</span></td>
+  <td>serviceTask in translation-review-adjudication</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-Pick-a-candidate-10-or-write-your-own">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#Pick a candidate&amp;#10;or write your own"><code>Pick a candidate&amp;#10;or write your own</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#Pick a candidate&amp;#10;or write your own</span></td>
+  <td>userTask in translation-review-adjudication</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-Plan-the-records-10-translation-adjudicate-">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#Plan the records&amp;#10;(translation:adjudicate)"><code>Plan the records&amp;#10;(translation:adjudicate)</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#Plan the records&amp;#10;(translation:adjudicate)</span></td>
+  <td>serviceTask in translation-review-adjudication</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-Produce-candidate-10-translations-any-engine-">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#Produce candidate&amp;#10;translations (any engine)"><code>Produce candidate&amp;#10;translations (any engine)</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#Produce candidate&amp;#10;translations (any engine)</span></td>
+  <td>serviceTask in translation-review-adjudication</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-Read-the-catalogue-10-on-the-review-page">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#Read the catalogue&amp;#10;on the review page"><code>Read the catalogue&amp;#10;on the review page</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#Read the catalogue&amp;#10;on the review page</span></td>
+  <td>userTask in translation-review-adjudication</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-Review-the-PR-10-merge-or-close">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#Review the PR;&amp;#10;merge or close"><code>Review the PR;&amp;#10;merge or close</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#Review the PR;&amp;#10;merge or close</span></td>
+  <td>userTask in translation-review-adjudication</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-Write-the-first-candidate-10-as-a-fuzzy-msgstr">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#Write the first candidate&amp;#10;as a fuzzy msgstr"><code>Write the first candidate&amp;#10;as a fuzzy msgstr</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#Write the first candidate&amp;#10;as a fuzzy msgstr</span></td>
+  <td>serviceTask in translation-review-adjudication</td>
+</tr>
+<tr id="a-cat-harness-library-processes-translation-review-adjudication-bpmn-Write-the-records">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn#Write the records"><code>Write the records</code></a><br><span class="p">cat-harness/library/processes/translation-review-adjudication.bpmn#Write the records</span></td>
+  <td>serviceTask in translation-review-adjudication</td>
 </tr>
 <tr id="a-cat-harness-library-processes-translation-round-trip-bpmn-Back-translate-the-target-text">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-round-trip.bpmn#Back-translate the target text"><code>Back-translate the target text</code></a><br><span class="p">cat-harness/library/processes/translation-round-trip.bpmn#Back-translate the target text</span></td>
@@ -1698,6 +1741,10 @@
 <tr id="a-cat-harness-processes-ui-harness-default-rendering-bpmn-Read-a-page-or-a-card">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/harness-default-rendering.bpmn#Read a page or a card"><code>Read a page or a card</code></a><br><span class="p">cat-harness/processes/ui/harness-default-rendering.bpmn#Read a page or a card</span></td>
   <td>userTask in harness-default-rendering</td>
+</tr>
+<tr id="a-cat-harness-processes-ui-harness-default-rendering-bpmn-Report-node-view-coverage">
+  <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/harness-default-rendering.bpmn#Report node-view coverage"><code>Report node-view coverage</code></a><br><span class="p">cat-harness/processes/ui/harness-default-rendering.bpmn#Report node-view coverage</span></td>
+  <td>serviceTask in harness-default-rendering</td>
 </tr>
 <tr id="a-cat-harness-processes-ui-harness-default-rendering-bpmn-Resolve-each-harness-s-page-ground">
   <td><a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/harness-default-rendering.bpmn#Resolve each harness's page ground"><code>Resolve each harness's page ground</code></a><br><span class="p">cat-harness/processes/ui/harness-default-rendering.bpmn#Resolve each harness's page ground</span></td>

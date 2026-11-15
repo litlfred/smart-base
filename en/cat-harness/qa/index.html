@@ -86,16 +86,15 @@
     "pagesWithTranslations": 0,
     "complete": false
   },
-  "statusSrc":"../../../assets/translation-status/index.json"
+  "statusSrc":"../../../assets/translation-status/index.json",
+  "reviewSrc":"../../../assets/translation-status/review.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
-<meta name="fa-beans-src" content="../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../build.json"><link rel="stylesheet" href="../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../assets/js/harness-data.js" defer></script>
-<script src="../../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../assets/js/kg-render.js" defer></script><script src="../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../assets/js/work-plan.js" defer></script><script src="../../../assets/js/process-index.js" defer></script><style>
+<meta name="fa-beans-src" content="../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../build.json"><link rel="stylesheet" href="../../../assets/css/navbar-row.css?v=263225e79ed9">
+<link rel="stylesheet" href="../../../assets/css/docs-ui.css?v=cc59a4b4ce11"><link rel="stylesheet" href="../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../assets/js/harness-data.js" defer></script><script src="../../../assets/js/kg-render.js" defer></script><script src="../../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
+<script src="../../../assets/js/docs-ui.js?v=480a3c3c0d42" defer></script><script src="../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../assets/js/translation-review.js?v=1902d883e072" defer></script><script src="../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -438,5 +437,132 @@
   
     
   
-</body>
+<section data-fa-site-qa><h2 class="sv-h2" id="site-build-qa">This site's build</h2><div class="sv-site-qa" data-dir="../../../assets/site-qa"><p class="sv-sub">Loading what this site's build published with…</p><noscript><p class="sv-sub">These reports are read in the browser. Without JavaScript, open <a href="../../../assets/site-qa/parity.json">parity.json</a>, <a href="../../../assets/site-qa/build.json">build.json</a> and <a href="../../../assets/site-qa/links.json">links.json</a>.</p></noscript></div><script>(function () {
+  "use strict";
+  var boxes = document.querySelectorAll(".sv-site-qa");
+  for (var i = 0; i < boxes.length; i++) run(boxes[i]);
+
+  function el(tag, text, cls) {
+    var e = document.createElement(tag);
+    if (text != null) e.textContent = String(text);
+    if (cls) e.className = cls;
+    return e;
+  }
+  function list(items, max) {
+    var ul = el("ul");
+    for (var i = 0; i < items.length && i < max; i++) ul.appendChild(el("li", items[i]));
+    if (items.length > max) ul.appendChild(el("li", "\u2026 and " + (items.length - max) + " more"));
+    return ul;
+  }
+  function load(u) {
+    return fetch(u).then(
+      function (r) {
+        if (!r.ok) return { status: r.status };
+        return r.json().then(
+          function (doc) {
+            return { doc: doc };
+          },
+          function () {
+            return { bad: "is not JSON" };
+          },
+        );
+      },
+      function (e) {
+        return { error: String((e && e.message) || e) };
+      },
+    );
+  }
+  function unknown(box, name, r, absent) {
+    var why = r.status === 404 ? absent : r.status ? "it answered HTTP " + r.status : r.error ? "it could not be reached (" + r.error + ")" : "it " + r.bad;
+    box.appendChild(el("p", name + ": " + why + ". Unknown, not zero.", "sv-sub"));
+  }
+
+  function run(box) {
+    var dir = box.getAttribute("data-dir");
+    Promise.all([load(dir + "/parity.json"), load(dir + "/build.json"), load(dir + "/links.json")]).then(function (rs) {
+      box.textContent = "";
+      parity(box, dir, rs[0]);
+      build(box, dir, rs[1]);
+      links(box, dir, rs[2]);
+    });
+  }
+
+  function parity(box, dir, r) {
+    box.appendChild(el("h3", "Against the published site it replaced"));
+    var d = r.doc;
+    if (!d || d.$schema !== "site-parity-report/v1") {
+      if (d) r = { bad: "is not a site-parity-report/v1" };
+      return unknown(box, "parity.json", r, "no parity report: this build was a preview, or had no published site to compare with");
+    }
+    var short = Array.isArray(d.shortfall) ? d.shortfall : [];
+    var dropped = Array.isArray(d.droppedByRuling) ? d.droppedByRuling : [];
+    var head =
+      d.outcome === "carries-everything"
+        ? "It carries everything the published site carried."
+        : d.outcome === "refused"
+          ? "It was REFUSED: it lacks " + short.length + " thing(s) the published site carried."
+          : "It was published lacking " + short.length + " thing(s) the published site carried:";
+    box.appendChild(el("p", head));
+    if (short.length) box.appendChild(list(short, 50));
+    if (dropped.length) {
+      box.appendChild(el("p", dropped.length + " thing(s) were dropped by the owner's ruling, not as a shortfall:", "sv-sub"));
+      box.appendChild(
+        list(
+          dropped.map(function (x) {
+            return x.what + " (" + x.ruling + ")";
+          }),
+          20,
+        ),
+      );
+    }
+  }
+
+  function build(box, dir, r) {
+    box.appendChild(el("h3", "What the build published with"));
+    var d = r.doc;
+    if (!d || d.$schema !== "site-build-qa/v1" || !Array.isArray(d.findings)) {
+      if (d) r = { bad: "is not a site-build-qa/v1" };
+      return unknown(box, "build.json", r, "no build report: this site was built before builds recorded one");
+    }
+    if (d.findings.length === 0) return box.appendChild(el("p", "No findings: the build published with nothing to report."));
+    var by = {};
+    var order = [];
+    d.findings.forEach(function (f) {
+      var k = (f && f.check) || "other";
+      if (!by[k]) {
+        by[k] = [];
+        order.push(k);
+      }
+      by[k].push((f && f.detail) || JSON.stringify(f));
+    });
+    box.appendChild(el("p", d.findings.length + " finding(s), published rather than refused:"));
+    order.forEach(function (k) {
+      box.appendChild(el("h4", k + " (" + by[k].length + ")"));
+      box.appendChild(list(by[k], 50));
+    });
+  }
+
+  function links(box, dir, r) {
+    box.appendChild(el("h3", "Links"));
+    var d = r.doc;
+    if (!d || d.$schema !== "site-link-report/v1") {
+      if (d) r = { bad: "is not a site-link-report/v1" };
+      return unknown(box, "links.json", r, "no link report: this site was built before builds recorded one");
+    }
+    var n = function (xs) {
+      return Array.isArray(xs) ? xs.length : 0;
+    };
+    box.appendChild(
+      el(
+        "p",
+        (d.pages || 0) + " page(s) checked: " + n(d.unresolved) + " unresolved, " + n(d.content) + " unresolved on pages the content supplies, " +
+          n(d.selfAddress) + " absolute link(s) to this site that reach no page, " + n(d.inDiagrams) + " inside diagrams.",
+      ),
+    );
+    var rows = (Array.isArray(d.unresolved) ? d.unresolved : []).map(function (x) {
+      return x.page + ": " + x.href;
+    });
+    if (rows.length) box.appendChild(list(rows, 50));
+  }
+})();</script></section></body>
 </html>

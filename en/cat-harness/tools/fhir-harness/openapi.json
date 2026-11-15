@@ -395,6 +395,84 @@
         }
       }
     },
+    "/tools/fhir-core": {
+      "post": {
+        "operationId": "fhir-core",
+        "summary": "Load the stable FHIR releases' core StructureDefinitions as a graph keyed by canonical URL",
+        "description": "Read each stable FHIR release's core package (`hl7.fhir.r4.core#4.0.1`, `hl7.fhir.r4b.core#4.3.0`, `hl7.fhir.r5.core#5.0.0`) at the version, sha1 and sha512 `fhir-core/pins.json` pins, and keep its resources, complex and primitive types and root types (Base, Element, BackboneElement, DomainResource, Resource) under `fhir-core/<release>/`, keyed by canonical URL. `index` writes the release's manifest (each definition's kind, type, base and sha256); `materialise` writes the bodies byte for byte as the package holds them; `check` holds the two to the pins offline; `resolve` answers which file a canonical URL is kept in. A package that cannot be fetched or verified is recorded as `unread` with the reason, never as an empty graph.",
+        "tags": [
+          "ig-build-pipeline"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "fhir-core/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "root": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "The fhir-harness layer root. Default: the layer this script is in."
+                  },
+                  "release": {
+                    "$ref": "#/components/schemas/Slug",
+                    "description": "One release (R4, R4B or R5). Default: every pinned release."
+                  },
+                  "tgz-dir": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "A directory of already-downloaded `<name>-<version>.tgz`; still hash-checked against the pin."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "definitions": {
+                      "$ref": "#/components/schemas/Count",
+                      "description": "Definitions indexed or materialised per release; an unread release is named with its reason."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/fhir-harness/tools/fhir-core.jsonld",
+        "x-invoke": {
+          "shell": "bun run fhir-harness/scripts/fhir-core.ts <index|materialise|check|resolve <url>>"
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "bun"
+          ],
+          "network": true
+        },
+        "x-satisfies": [
+          "ig-build-pipeline"
+        ],
+        "x-selection": {
+          "when": "Before a reader resolves a FHIR core type by canonical URL (a class diagram of an IG's logical models or profiles), or when a pin changes.",
+          "limits": "Stable releases only. Constraint profiles, extension definitions and logical models in the core package are left out and counted.",
+          "cost": "One 13-17 MB download per release, then seconds; `check` and `resolve` are offline."
+        }
+      }
+    },
     "/tools/fhir-package-mirror": {
       "post": {
         "operationId": "fhir-package-mirror",
@@ -1970,6 +2048,87 @@
           "when": "Building the docs site or a staging preview: an IG instance needs its artefact pages.",
           "limits": "Narrative pages are not held — the harvest keeps artefacts — so menu entries link upstream. Bodies are still partly HTML inside markdown.",
           "cost": "Seconds; one file per artefact."
+        }
+      }
+    },
+    "/tools/ig-publisher-i18n": {
+      "post": {
+        "operationId": "ig-publisher-i18n",
+        "summary": "Put the IG Publisher's QA messages in each language an IG translates into, from the Publisher's own translations first",
+        "description": "Fetches the IG Publisher's own message bundles (`Messages_<lang>.properties` in `org.hl7.fhir.utilities-<core>.jar`, Maven Central) at exactly the core version the AST recorded, and translates each QA message by its `message-id`: the Publisher's translation where it has one whose placeholders match the English, else this layer's catalogue `translations/<locale>/publisher/messages.po` (machine translation, marked as such), else the English. `needs --merge` appends to each locale's catalogue the strings a build lacks, each with an example and deep links to the rows that print it. The site build (`ig-qa-page.ts`) calls it for every locale the IG translates its pages into and publishes `qa-messages.<locale>.json` and `i18n-usage.json` beside the QA report.",
+        "tags": [
+          "ig-build-pipeline"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "ig-publisher-i18n/"
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "command": {
+                    "$ref": "#/components/schemas/Text",
+                    "description": "`fetch <core-version> <dir>`, or `needs <qa-messages.json> <bundle-dir> <translations-dir> <locale>...`."
+                  },
+                  "merge": {
+                    "$ref": "#/components/schemas/Flag",
+                    "description": "With `needs`: append what each locale lacks to its catalogue."
+                  },
+                  "site": {
+                    "$ref": "#/components/schemas/Url",
+                    "description": "With `needs`: the published site's URL, so a catalogue's links open the rendered rows."
+                  }
+                },
+                "required": [
+                  "command"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "needs": {
+                      "$ref": "#/components/schemas/Count",
+                      "description": "Strings each locale lacks a translation for."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/fhir-harness/tools/ig-publisher-i18n.jsonld",
+        "x-invoke": {
+          "shell": "bun run fhir-harness/scripts/ig-publisher-i18n.ts"
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "bun"
+          ],
+          "network": true
+        },
+        "x-satisfies": [
+          "ig-build-pipeline"
+        ],
+        "x-selection": {
+          "when": "When an IG's QA report is built for its translated locales, or to see and fill what a locale's catalogue lacks.",
+          "limits": "Needs curl and unzip and Maven Central for the bundles; without them every message falls back to this layer's catalogue or English, and the build says why. Never substitutes another core version.",
+          "cost": "One jar download (about 3 MB) per core version, cached under ~/.fhir/publisher-i18n."
         }
       }
     },

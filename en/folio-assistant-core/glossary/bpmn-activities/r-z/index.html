@@ -86,16 +86,15 @@
     "pagesWithTranslations": 0,
     "complete": false
   },
-  "statusSrc":"../../../../../assets/translation-status/index.json"
+  "statusSrc":"../../../../../assets/translation-status/index.json",
+  "reviewSrc":"../../../../../assets/translation-status/review.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
-<meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
-<script src="../../../../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
+<meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=263225e79ed9">
+<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=cc59a4b4ce11"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
+<script src="../../../../../assets/js/docs-ui.js?v=480a3c3c0d42" defer></script><script src="../../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../../assets/js/translation-review.js?v=1902d883e072" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -281,11 +280,11 @@
 
 <p>Candidate terms extracted from every BPMN task and call activity: <code class="language-plaintext highlighter-rouge">name</code> as the label, its own <code class="language-plaintext highlighter-rouge">&lt;documentation&gt;</code> as the definition, the element id as the code. Each is the asset’s own text, verbatim and not curated, and carries the badge “candidate, extracted”. A person promotes one by authoring it. Authored terms are on their owning instance’s page, and those pages, the counts and the sources are linked from the <a href="../../../../../en/folio-assistant-core/glossary/">glossary index</a>.</p>
 
-<p>From: bootstrap 38 (<a href="../../../../../assets/glossary/bootstrap--kg-bpmn-activities.skos.jsonld">SKOS</a>) · bootstrap-tools 7 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-bpmn-activities.skos.jsonld">SKOS</a>) · cat-harness 377 (<a href="../../../../../assets/glossary/cat-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · fhir-harness 25 (<a href="../../../../../assets/glossary/fhir-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · folio-assistant-core 70 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-bpmn-activities.skos.jsonld">SKOS</a>) · smart-base 161 (<a href="../../../../../assets/glossary/smart-base--kg-bpmn-activities.skos.jsonld">SKOS</a>) · who-iris 34 (<a href="../../../../../assets/glossary/who-iris--kg-bpmn-activities.skos.jsonld">SKOS</a>).</p>
+<p>From: bootstrap 38 (<a href="../../../../../assets/glossary/bootstrap--kg-bpmn-activities.skos.jsonld">SKOS</a>) · bootstrap-tools 7 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-bpmn-activities.skos.jsonld">SKOS</a>) · cat-harness 389 (<a href="../../../../../assets/glossary/cat-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · fhir-harness 25 (<a href="../../../../../assets/glossary/fhir-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · folio-assistant-core 70 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-bpmn-activities.skos.jsonld">SKOS</a>) · smart-base 161 (<a href="../../../../../assets/glossary/smart-base--kg-bpmn-activities.skos.jsonld">SKOS</a>) · who-iris 34 (<a href="../../../../../assets/glossary/who-iris--kg-bpmn-activities.skos.jsonld">SKOS</a>).</p>
 
 <p>One of 3 pages of this type, split by the first letter of the label: <a href="../../../../../en/folio-assistant-core/glossary/bpmn-activities/">all parts</a>.</p>
 
-<p><strong>Size:</strong> this page holds 266 terms and is 208 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
+<p><strong>Size:</strong> this page holds 271 terms and is 212 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
 
 <div class="table-wrapper"><table class="fa-gloss-mapping">
 <caption>Already somebody else's concept? — <code>check:term-mapping</code>, bean <code>7wou</code></caption>
@@ -300,7 +299,7 @@ be a term this corpus is right to coin.</p>
 
 <p><label for="fa-gloss-q">Filter terms</label>
 <input id="fa-gloss-q" type="search" autocomplete="off" style="min-height:44px;width:100%;max-width:32rem" /></p>
-<p aria-live="polite"><span id="fa-gloss-n">266</span> shown</p>
+<p aria-live="polite"><span id="fa-gloss-n">271</span> shown</p>
 
 <nav aria-label="Letters"><a href="#letter-R">R</a> <a href="#letter-S">S</a> <a href="#letter-T">T</a> <a href="#letter-U">U</a> <a href="#letter-V">V</a> <a href="#letter-W">W</a></nav>
 <h2 id="letter-R">
@@ -395,6 +394,13 @@ Read the built Questionnaire JSON <span class="fa-gloss-status">candidate, extra
 <dd>
 <p>fsh-generated/resources/Questionnaire-&lt;id&gt;.json, or the IG's published Questionnaire-&lt;id&gt;.json — never FSH. The JSON is what every renderer and reader receives, so it is what is judged.</p>
 <p class="fa-gloss-meta">BPMN activities of fhir-harness · source <a href="https://github.com/litlfred/fhir-harness/blob/main/processes/content/questionnaire-wireframe-review.bpmn"><code>fhir-harness/processes/content/questionnaire-wireframe-review.bpmn#Task_Read</code></a></p>
+</dd>
+<dt id="cat-harness--kg-bpmn-activities--process_translationreviewadjudication.task_tra_review" data-fa-state="extracted" data-fa-gloss="">
+Read the catalogue on the review page <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The reviewer opens the review page and reads one catalogue's strings against their source, with the candidates beside each.</p>
+<p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn"><code>cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Review</code></a></p>
 </dd>
 <dt id="folio-assistant-core--kg-bpmn-activities--process_reviewlogwatch.task_readsheet" data-fa-state="extracted" data-fa-gloss="">
 Read the Contributor Feedback tab <span class="fa-gloss-status">candidate, extracted</span>
@@ -914,6 +920,13 @@ Report issues to author for resolution <span class="fa-gloss-status">candidate, 
 <p><em>The asset carries no description.</em></p>
 <p class="fa-gloss-meta">BPMN activities of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/collab/processes/content/SGAuthoring.DAKLifecycle.bpmn"><code>smart-base/collab/processes/content/SGAuthoring.DAKLifecycle.bpmn#Task_ReportIssues</code></a></p>
 </dd>
+<dt id="cat-harness--kg-bpmn-activities--process_harnessrendering.a_nodeviews" data-fa-state="extracted" data-fa-gloss="">
+Report node-view coverage <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The Tool <code>node-view-coverage</code> (<code>bun run cat node-views:report -- --site &lt;built site&gt;</code>) counts, per layer, folder and kind, which nodes have an IRI, a <code>.jsonld</code>, a page and a row on their folder page, and which folder links are dead or point at the raw repository. A QA report, not a gate: it always exits 0 and feeds no gateway, and its results go to <code>test/results/node-views/</code> and on to the <code>qa-reports</code> branch. A graph with no viewer is still shown inert and labelled by the tile step; this says how many of its nodes are owed a page.</p>
+<p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/processes/ui/harness-default-rendering.bpmn"><code>cat-harness/processes/ui/harness-default-rendering.bpmn#A_NodeViews</code></a></p>
+</dd>
 <dt id="cat-harness--kg-bpmn-activities--process_translationrefresh.task_tr_sourceissue" data-fa-state="extracted" data-fa-gloss="">
 Report source errors as one issue <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
@@ -1165,6 +1178,13 @@ Review the load report; open beans for gaps <span class="fa-gloss-status">candid
 <dd>
 <p><em>The asset carries no description.</em></p>
 <p class="fa-gloss-meta">BPMN activities of who-iris · source <a href="https://github.com/litlfred/who-iris/blob/main/processes/iris-cdn-initial-load.bpmn"><code>who-iris/processes/iris-cdn-initial-load.bpmn#Task_ReviewLoad</code></a></p>
+</dd>
+<dt id="cat-harness--kg-bpmn-activities--process_translationreviewadjudication.task_tra_merge" data-fa-state="extracted" data-fa-gloss="">
+Review the PR; merge or close <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The maintainer checks that the PR writes down what the issue decided and nothing else, lets the layer's checks run, and merges or closes it.</p>
+<p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn"><code>cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Merge</code></a></p>
 </dd>
 <dt id="folio-assistant-core--kg-bpmn-activities--process_contributorfeedback.task_answerpreview" data-fa-state="extracted" data-fa-gloss="">
 Review the preview and answer <span class="fa-gloss-status">candidate, extracted</span>
@@ -2182,6 +2202,13 @@ Write the entry that LEADS — keeping the checker's beneath it <span class="fa-
 <p>Not relaxable, and the one step here that is not. A judgement nobody wrote down is indistinguishable from a checker that was never run, so the judgement is free and the record is not. Do not resolve the disagreement away: both entries stay, the adjudication on top under the sweep's most-recent-matching-hash rule. A disagreement between a checker and a reviewer is information, and somebody re-running the check next month needs to find that a checker read it differently rather than a clean pass. <code>/api/relevance/adjudicate</code> reached the same rule independently — <code>human_adjudicated</code> written alongside, never over, the agent's <code>assessed_by</code>.</p>
 <p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/processes/process/criterion-adjudication.bpmn"><code>cat-harness/processes/process/criterion-adjudication.bpmn#A_RecordEntry</code></a></p>
 </dd>
+<dt id="cat-harness--kg-bpmn-activities--process_translationreviewadjudication.task_tra_seedfuzzy" data-fa-state="extracted" data-fa-gloss="">
+Write the first candidate as a fuzzy msgstr <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Candidates are never a barrier to having a translation. The first candidate becomes the <code>msgstr</code>, marked <code>#, fuzzy</code>: the page shows it, the status page counts it as needing review, and it stays the default until a person adjudicates the catalogue.</p>
+<p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn"><code>cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_SeedFuzzy</code></a></p>
+</dd>
 <dt id="cat-harness--kg-bpmn-activities--process_multilocaletranslation.task_ml_qareport" data-fa-state="extracted" data-fa-gloss="">
 Write the locale's QA report <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
@@ -2202,6 +2229,13 @@ Write the note into the folio — with no coordinate <span class="fa-gloss-statu
 <dd>
 <p>A new note: write it into the folio with no x, no y, no board and no position. A folio is complete with no board, and one note may sit on several boards, which a coordinate on the note could not express.</p>
 <p class="fa-gloss-meta">BPMN activities of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/processes/ui/board-place-note.bpmn"><code>folio-assistant-core/processes/ui/board-place-note.bpmn#A_CreateNote</code></a></p>
+</dd>
+<dt id="cat-harness--kg-bpmn-activities--process_translationreviewadjudication.task_tra_write" data-fa-state="extracted" data-fa-gloss="">
+Write the records <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Acceptable: the catalogue's translation node gets <code>signedOffBy</code> / <code>signedOffAt</code>. Mistranslation: each suggestion replaces its <code>msgstr</code>, marked <code>#, fuzzy</code>. Either way an entry is appended to the catalogue's <code>translation-qa</code> attestation (criterion <code>human-adjudication</code>) naming the issue and the hash the person saw; the attestation is append-only and checked against <code>qa-attestations/v1</code> before it is written. The PO header <code>X-Folio-Official</code> and the locale's <code>status.json</code> are never touched.</p>
+<p class="fa-gloss-meta">BPMN activities of cat-harness · source <a href="https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn"><code>cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Write</code></a></p>
 </dd>
 <dt id="bootstrap--kg-bpmn-activities--process_initializeharness.a_writerootreadme" data-fa-state="extracted" data-fa-gloss="">
 Write the root README, if it is not there <span class="fa-gloss-status">candidate, extracted</span>

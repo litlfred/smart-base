@@ -2454,6 +2454,26 @@
       "skos:note": "candidate"
     },
     {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_harnessrendering.a_nodeviews",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Report node-view coverage"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The Tool `node-view-coverage` (`bun run cat node-views:report -- --site <built site>`) counts, per layer, folder and kind, which nodes have an IRI, a `.jsonld`, a page and a row on their folder page, and which folder links are dead or point at the raw repository. A QA report, not a gate: it always exits 0 and feeds no gateway, and its results go to `test/results/node-views/` and on to the `qa-reports` branch. A graph with no viewer is still shown inert and labelled by the tile step; this says how many of its nodes are owed a page."
+        }
+      ],
+      "skos:notation": "A_NodeViews",
+      "dcterms:source": "cat-harness/processes/ui/harness-default-rendering.bpmn#A_NodeViews",
+      "skos:note": "candidate"
+    },
+    {
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_harnessrendering.a_propose",
       "@type": "skos:Concept",
       "skos:inScheme": {
@@ -7001,6 +7021,226 @@
       ],
       "skos:notation": "Task_TR_Translate",
       "dcterms:source": "cat-harness/library/processes/translation-refresh.bpmn#Task_TR_Translate",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_candidates",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Produce candidate translations (any engine)"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "One or more candidate sources write alternatives per string to `translations/<locale>/<catalogue>.candidates.json` (`translation-candidates/v1`), each candidate carrying its source: an agent model, an open machine-translation model, a web service, or a person. The engines are interchangeable behind one skill, `translation-candidate-source`: whichever runs, the same sidecar comes out. Writers append; a candidate is never a verdict."
+        }
+      ],
+      "skos:notation": "Task_TRA_Candidates",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Candidates",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_choose",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Pick a candidate or write your own"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "For each wrong string: pick one of the candidates (its source is recorded with the suggestion) or type the text. The suggestion carries the text the reviewer saw (`current`), so a catalogue that changed under them is caught."
+        }
+      ],
+      "skos:notation": "Task_TRA_Choose",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Choose",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_fileissue",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "File the adjudication issue"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Submit opens GitHub's new-issue form prefilled with a readable summary and a `translation-adjudication/v1` JSON block, labelled `translation-adjudication` and titled `[translation review] …`. When the record is too long for a URL the page copies the body for pasting instead. Filing it is the act of adjudicating."
+        }
+      ],
+      "skos:notation": "Task_TRA_FileIssue",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_FileIssue",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_merge",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Review the PR; merge or close"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The maintainer checks that the PR writes down what the issue decided and nothing else, lets the layer's checks run, and merges or closes it."
+        }
+      ],
+      "skos:notation": "Task_TRA_Merge",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Merge",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_openpr",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Open a ready PR and comment"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Commit on `translation-adjudication/issue-<n>`, authored by the issue's author, open a ready pull request that names the issue, and comment the summary on the issue: what was recorded and what was refused."
+        }
+      ],
+      "skos:notation": "Task_TRA_OpenPR",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_OpenPR",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_plan",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Plan the records (translation:adjudicate)"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "`translation:adjudicate` reads the `issues` event GitHub wrote, never the body from a shell variable: the body is untrusted and is only parsed as JSON. It decides every write before making any, and refuses rather than guesses."
+        }
+      ],
+      "skos:notation": "Task_TRA_Plan",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Plan",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_refuse",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Comment why nothing was recorded"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Every refusal, with its reason, as a comment on the issue (exit 3). No pull request is opened. A refusal is never a partial record dressed as a whole one; a new review is a new issue and a new instance of this process."
+        }
+      ],
+      "skos:notation": "Task_TRA_Refuse",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Refuse",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_review",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Read the catalogue on the review page"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "The reviewer opens the review page and reads one catalogue's strings against their source, with the candidates beside each."
+        }
+      ],
+      "skos:notation": "Task_TRA_Review",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Review",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_reviewpage",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Build the review page"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "`translation:status` writes `review.html` beside the status page, with `assets/translation-status/review.json`: every catalogue × locale, its state (`machine`, `flagged`, `reviewed`, `stale`, `official`), the candidates per string, and the hash of the catalogue's bytes. That hash is what the verdict is pinned to."
+        }
+      ],
+      "skos:notation": "Task_TRA_ReviewPage",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_ReviewPage",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_seedfuzzy",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Write the first candidate as a fuzzy msgstr"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Candidates are never a barrier to having a translation. The first candidate becomes the `msgstr`, marked `#, fuzzy`: the page shows it, the status page counts it as needing review, and it stays the default until a person adjudicates the catalogue."
+        }
+      ],
+      "skos:notation": "Task_TRA_SeedFuzzy",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_SeedFuzzy",
+      "skos:note": "candidate"
+    },
+    {
+      "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities/process_translationreviewadjudication.task_tra_write",
+      "@type": "skos:Concept",
+      "skos:inScheme": {
+        "@id": "https://litlfred.github.io/cat-harness/v0/ns/glossary/kg-bpmn-activities"
+      },
+      "skos:prefLabel": [
+        {
+          "@value": "Write the records"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Acceptable: the catalogue's translation node gets `signedOffBy` / `signedOffAt`. Mistranslation: each suggestion replaces its `msgstr`, marked `#, fuzzy`. Either way an entry is appended to the catalogue's `translation-qa` attestation (criterion `human-adjudication`) naming the issue and the hash the person saw; the attestation is append-only and checked against `qa-attestations/v1` before it is written. The PO header `X-Folio-Official` and the locale's `status.json` are never touched."
+        }
+      ],
+      "skos:notation": "Task_TRA_Write",
+      "dcterms:source": "cat-harness/library/processes/translation-review-adjudication.bpmn#Task_TRA_Write",
       "skos:note": "candidate"
     },
     {

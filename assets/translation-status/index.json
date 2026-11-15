@@ -1,6 +1,6 @@
 {
   "$schema": "folio-translation-status/v1",
-  "changedAt": "2026-11-14",
+  "changedAt": "2026-11-15",
   "scope": "cat-harness/translations",
   "tile": {
     "smart-base-translations": {
@@ -127,7 +127,7 @@
           "untranslated": 0
         }
       ],
-      "templates": 110,
+      "templates": 111,
       "catalogues": 15,
       "entries": 734,
       "translated": 685,
@@ -251,7 +251,7 @@
           "untranslated": 0
         }
       ],
-      "templates": 111,
+      "templates": 112,
       "catalogues": 15,
       "entries": 743,
       "translated": 694,
@@ -381,7 +381,7 @@
           "untranslated": 0
         }
       ],
-      "templates": 113,
+      "templates": 114,
       "catalogues": 16,
       "entries": 767,
       "translated": 718,
@@ -504,7 +504,7 @@
           "untranslated": 0
         }
       ],
-      "templates": 110,
+      "templates": 111,
       "catalogues": 15,
       "entries": 734,
       "translated": 685,
@@ -629,7 +629,7 @@
           "untranslated": 0
         }
       ],
-      "templates": 111,
+      "templates": 112,
       "catalogues": 15,
       "entries": 736,
       "translated": 687,
@@ -650,11 +650,26 @@
             "officialCatalogues": 0,
             "findings": 0
           },
-          "files": [],
+          "files": [
+            {
+              "path": "generated-pages/ig-qa-page.po",
+              "entries": 78,
+              "translated": 78,
+              "fuzzy": 0,
+              "untranslated": 0
+            },
+            {
+              "path": "publisher/messages.po",
+              "entries": 15,
+              "translated": 15,
+              "fuzzy": 0,
+              "untranslated": 0
+            }
+          ],
           "templates": 7,
-          "catalogues": 0,
-          "entries": 0,
-          "translated": 0,
+          "catalogues": 2,
+          "entries": 93,
+          "translated": 93,
           "fuzzy": 0,
           "untranslated": 0,
           "unreadable": []
@@ -666,11 +681,26 @@
             "officialCatalogues": 0,
             "findings": 0
           },
-          "files": [],
+          "files": [
+            {
+              "path": "generated-pages/ig-qa-page.po",
+              "entries": 78,
+              "translated": 78,
+              "fuzzy": 0,
+              "untranslated": 0
+            },
+            {
+              "path": "publisher/messages.po",
+              "entries": 21,
+              "translated": 21,
+              "fuzzy": 0,
+              "untranslated": 0
+            }
+          ],
           "templates": 7,
-          "catalogues": 0,
-          "entries": 0,
-          "translated": 0,
+          "catalogues": 2,
+          "entries": 99,
+          "translated": 99,
           "fuzzy": 0,
           "untranslated": 0,
           "unreadable": []
@@ -682,11 +712,26 @@
             "officialCatalogues": 0,
             "findings": 0
           },
-          "files": [],
+          "files": [
+            {
+              "path": "generated-pages/ig-qa-page.po",
+              "entries": 78,
+              "translated": 78,
+              "fuzzy": 0,
+              "untranslated": 0
+            },
+            {
+              "path": "publisher/messages.po",
+              "entries": 27,
+              "translated": 27,
+              "fuzzy": 0,
+              "untranslated": 0
+            }
+          ],
           "templates": 7,
-          "catalogues": 0,
-          "entries": 0,
-          "translated": 0,
+          "catalogues": 2,
+          "entries": 105,
+          "translated": 105,
           "fuzzy": 0,
           "untranslated": 0,
           "unreadable": []
@@ -698,11 +743,26 @@
             "officialCatalogues": 0,
             "findings": 0
           },
-          "files": [],
+          "files": [
+            {
+              "path": "generated-pages/ig-qa-page.po",
+              "entries": 78,
+              "translated": 78,
+              "fuzzy": 0,
+              "untranslated": 0
+            },
+            {
+              "path": "publisher/messages.po",
+              "entries": 15,
+              "translated": 15,
+              "fuzzy": 0,
+              "untranslated": 0
+            }
+          ],
           "templates": 7,
-          "catalogues": 0,
-          "entries": 0,
-          "translated": 0,
+          "catalogues": 2,
+          "entries": 93,
+          "translated": 93,
           "fuzzy": 0,
           "untranslated": 0,
           "unreadable": []
@@ -714,11 +774,26 @@
             "officialCatalogues": 0,
             "findings": 0
           },
-          "files": [],
+          "files": [
+            {
+              "path": "generated-pages/ig-qa-page.po",
+              "entries": 78,
+              "translated": 78,
+              "fuzzy": 0,
+              "untranslated": 0
+            },
+            {
+              "path": "publisher/messages.po",
+              "entries": 27,
+              "translated": 27,
+              "fuzzy": 0,
+              "untranslated": 0
+            }
+          ],
           "templates": 7,
-          "catalogues": 0,
-          "entries": 0,
-          "translated": 0,
+          "catalogues": 2,
+          "entries": 105,
+          "translated": 105,
           "fuzzy": 0,
           "untranslated": 0,
           "unreadable": []

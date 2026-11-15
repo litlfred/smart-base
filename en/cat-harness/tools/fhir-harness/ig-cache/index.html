@@ -86,16 +86,15 @@
     "pagesWithTranslations": 0,
     "complete": false
   },
-  "statusSrc":"../../../../../assets/translation-status/index.json"
+  "statusSrc":"../../../../../assets/translation-status/index.json",
+  "reviewSrc":"../../../../../assets/translation-status/review.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
-<meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script>
-<script src="../../../../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../../assets/js/work-plan.js" defer></script><script src="../../../../../assets/js/process-index.js" defer></script><style>
+<link rel="alternate" type="application/ld+json" href="https://litlfred.github.io/folio-assistant/fhir-harness/tools/ig-cache.jsonld"><meta name="fa-beans-src" content="../../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../../build.json"><link rel="stylesheet" href="../../../../../assets/css/navbar-row.css?v=263225e79ed9">
+<link rel="stylesheet" href="../../../../../assets/css/docs-ui.css?v=cc59a4b4ce11"><link rel="stylesheet" href="../../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../../assets/js/harness-data.js" defer></script><script src="../../../../../assets/js/kg-render.js" defer></script><script src="../../../../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
+<script src="../../../../../assets/js/docs-ui.js?v=480a3c3c0d42" defer></script><script src="../../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../../assets/js/translation-review.js?v=1902d883e072" defer></script><script src="../../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -227,6 +226,8 @@
           
             <script type="application/ld+json">{"@context":"https://litlfred.github.io/folio-assistant/fhir-harness/fhir-harness.context.jsonld","@id":"https://litlfred.github.io/folio-assistant/fhir-harness/tools/ig-cache.jsonld","@type":"https://litlfred.github.io/cat-harness/v0/ns/Tool","partOf":"https://litlfred.github.io/folio-assistant/fhir-harness/fhir-harness.jsonld","name":"ig-cache","title":"FHIR AST cache","description":"Restore, verify, seed and diagnose the prebuilt AST artefacts for an IG. Always try `restore` first: a full AST build via AstExportCli is expensive, a restore is fast. `seed` commits the IG API a layer above generates from the AST (`ig-site:sidecars`, via `ig-api-cache.ts`) as `ig-api/` beside it, and the artefact index built from that tree (`ig-index-cache.ts`) as `fhir-artifact-index/index.json`, so a site reads both by raw URL at the cache commit.","install":{"none":true},"invoke":{"shell":"fhir-harness/scripts/ig-cache.sh"},"io":{"inputs":[{"name":"action","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/IgCacheAction","description":"The verb. `doctor` diagnoses a restore that missed.","required":true,"arg":{"positional":0}},{"name":"igRoot","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/RepoPath","description":"The IG whose AST is acted on.","required":false,"arg":{"flag":"--ig-root"}},{"name":"package","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/PackageName","required":false,"arg":{"flag":"--package"}},{"name":"remote","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/PackageName","description":"Git remote to fetch from / push to. Default 'origin'. Use when the IG's origin is upstream and the cache lives on a fork.","required":false,"arg":{"flag":"--remote"}}],"outputs":[{"name":"result","schema":"https://litlfred.github.io/folio-assistant/cat-harness/tool-types.schema.json#/$defs/Text","description":"A real hit, a miss, or a diagnosis — never a miss that reads as a hit."}]},"satisfies":["compiled-artefact-cache","ig-ast-delta"],"requirements":{"runtime":["bash","git"],"network":true},"remedies":[{"host":"packages.fhir.org","tool":"fhir-cache-seed-npm"},{"host":"tx.fhir.org","none":"No declared Tool replaces the terminology server. The HL7 IG Publisher's own `-tx n/a` skips terminology validation, at the cost of not validating it."}]}</script>
 
+<style>.cd { max-width: none; height: auto; display: block; } .cd-box { fill: var(--fa-uml-schema, #e9edf3); stroke: var(--fa-uml-edge, #1b2432); stroke-width: 1; } .cd-box.cd-skill { fill: var(--fa-uml-scenario, #e8f0ee); } .cd-box.cd-sel { stroke: #2f5d9e; stroke-width: 2.2; } .cd-box.cd-ext { fill: var(--fa-uml-other, #f4f4f1); stroke-dasharray: 2 3; } .cd-box.cd-und { fill: var(--fa-uml-other, #f4f4f1); stroke-dasharray: 5 4; } .cd-t { fill: var(--fa-uml-edge, #1b2432); font: 600 12px ui-monospace, Menlo, Consolas, monospace; } .cd-st { fill: #4a5568; font: 10px ui-monospace, Menlo, Consolas, monospace; } .cd-f { fill: var(--fa-uml-edge, #1b2432); font: 11px ui-monospace, Menlo, Consolas, monospace; } .cd-c { fill: #4a5568; } .cd-k { fill: #7a3e9d; font-style: italic; } .cd-n-note { fill: #8a4b00; font: italic 11px ui-sans-serif, system-ui, sans-serif; } .cd-e { stroke: var(--fa-uml-edge, #1b2432); fill: none; stroke-width: 1.2; } .cd-e.cd-id { stroke-dasharray: 5 4; } .cd-l { fill: var(--fa-uml-edge, #1b2432); font: 10.5px ui-monospace, Menlo, Consolas, monospace; } .cd-lb { fill: #fbfcfd; } .cd-genhead { fill: #fbfcfd; stroke: var(--fa-uml-edge, #1b2432); stroke-width: 1.2; } .cd-tiphead { fill: none; stroke: var(--fa-uml-edge, #1b2432); stroke-width: 1.3; } .cd-diahead { fill: var(--fa-uml-edge, #1b2432); } .cd-a { cursor: pointer; } .cd-a .cd-ty { fill: #2f5d9e; text-decoration: underline; } .cd-a:hover .cd-t, .cd-a:focus-visible .cd-t { fill: #2f5d9e; text-decoration: underline; } .cd-wrap { overflow-x: auto; background: #fbfcfd; border: 1px solid #d5dbe3; border-radius: 6px; padding: 8px; margin: 8px 0 16px; }</style>
+
 <h1 id="fhir-ast-cache">
   
   
@@ -268,7 +269,7 @@
     </tr>
     <tr>
       <td>source</td>
-      <td><a href="https://github.com/litlfred/fhir-harness/blob/9c04b6fa237c2ab5f6217ffcb42c760f3783b2f3/tools/ig-cache/ig-cache.ts"><code class="language-plaintext highlighter-rouge">fhir-harness/tools/ig-cache/ig-cache.ts</code></a></td>
+      <td><a href="https://github.com/litlfred/fhir-harness/blob/5bf5ff9576650c132fb541e3d477e1feab447159/tools/ig-cache/ig-cache.ts"><code class="language-plaintext highlighter-rouge">fhir-harness/tools/ig-cache/ig-cache.ts</code></a></td>
     </tr>
     <tr>
       <td>invoked</td>
@@ -452,22 +453,22 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://github.com/litlfred/fhir-harness/blob/9c04b6fa237c2ab5f6217ffcb42c760f3783b2f3/.github/workflows/ig-ast-refresh.yml#L162"><code class="language-plaintext highlighter-rouge">fhir-harness/.github/workflows/ig-ast-refresh.yml</code></a></td>
+      <td><a href="https://github.com/litlfred/fhir-harness/blob/5bf5ff9576650c132fb541e3d477e1feab447159/.github/workflows/ig-ast-refresh.yml#L162"><code class="language-plaintext highlighter-rouge">fhir-harness/.github/workflows/ig-ast-refresh.yml</code></a></td>
       <td>162</td>
       <td><code class="language-plaintext highlighter-rouge">[ -f fhir-harness/scripts/ig-cache.sh ] \|\| { echo "::error::the lock mounts no fhir-harness"; exit 2; }</code></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/litlfred/fhir-harness/blob/9c04b6fa237c2ab5f6217ffcb42c760f3783b2f3/.github/workflows/ig-ast-refresh.yml#L172"><code class="language-plaintext highlighter-rouge">fhir-harness/.github/workflows/ig-ast-refresh.yml</code></a></td>
+      <td><a href="https://github.com/litlfred/fhir-harness/blob/5bf5ff9576650c132fb541e3d477e1feab447159/.github/workflows/ig-ast-refresh.yml#L172"><code class="language-plaintext highlighter-rouge">fhir-harness/.github/workflows/ig-ast-refresh.yml</code></a></td>
       <td>172</td>
       <td><code class="language-plaintext highlighter-rouge">if bash fhir-harness/scripts/ig-cache.sh restore --ig-root .; then</code></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/litlfred/fhir-harness/blob/9c04b6fa237c2ab5f6217ffcb42c760f3783b2f3/.github/workflows/ig-ast-refresh.yml#L552"><code class="language-plaintext highlighter-rouge">fhir-harness/.github/workflows/ig-ast-refresh.yml</code></a></td>
+      <td><a href="https://github.com/litlfred/fhir-harness/blob/5bf5ff9576650c132fb541e3d477e1feab447159/.github/workflows/ig-ast-refresh.yml#L552"><code class="language-plaintext highlighter-rouge">fhir-harness/.github/workflows/ig-ast-refresh.yml</code></a></td>
       <td>552</td>
       <td><code class="language-plaintext highlighter-rouge">bash fhir-harness/scripts/ig-cache.sh seed --ig-root . --push</code></td>
     </tr>
     <tr>
-      <td><a href="https://github.com/litlfred/fhir-harness/blob/9c04b6fa237c2ab5f6217ffcb42c760f3783b2f3/.github/workflows/ig-release.yml#L107"><code class="language-plaintext highlighter-rouge">fhir-harness/.github/workflows/ig-release.yml</code></a></td>
+      <td><a href="https://github.com/litlfred/fhir-harness/blob/5bf5ff9576650c132fb541e3d477e1feab447159/.github/workflows/ig-release.yml#L107"><code class="language-plaintext highlighter-rouge">fhir-harness/.github/workflows/ig-release.yml</code></a></td>
       <td>107</td>
       <td><code class="language-plaintext highlighter-rouge">[ -f fhir-harness/scripts/ig-cache.sh ] \|\| { echo "::error::the lock mounts no fhir-harness"; exit 2; }</code></td>
     </tr>
@@ -539,12 +540,12 @@
   <tbody>
     <tr>
       <td>definition</td>
-      <td><a href="https://github.com/litlfred/fhir-harness/blob/9c04b6fa237c2ab5f6217ffcb42c760f3783b2f3/tools/ig-cache/ig-cache.ts"><code class="language-plaintext highlighter-rouge">fhir-harness/tools/ig-cache/ig-cache.ts</code></a></td>
+      <td><a href="https://github.com/litlfred/fhir-harness/blob/5bf5ff9576650c132fb541e3d477e1feab447159/tools/ig-cache/ig-cache.ts"><code class="language-plaintext highlighter-rouge">fhir-harness/tools/ig-cache/ig-cache.ts</code></a></td>
       <td> </td>
     </tr>
     <tr>
       <td>script</td>
-      <td><a href="https://github.com/litlfred/fhir-harness/blob/9c04b6fa237c2ab5f6217ffcb42c760f3783b2f3/scripts/ig-cache.sh"><code class="language-plaintext highlighter-rouge">fhir-harness/scripts/ig-cache.sh</code></a></td>
+      <td><a href="https://github.com/litlfred/fhir-harness/blob/5bf5ff9576650c132fb541e3d477e1feab447159/scripts/ig-cache.sh"><code class="language-plaintext highlighter-rouge">fhir-harness/scripts/ig-cache.sh</code></a></td>
       <td> </td>
     </tr>
   </tbody>

@@ -86,16 +86,15 @@
     "pagesWithTranslations": 0,
     "complete": false
   },
-  "statusSrc":"../../../../assets/translation-status/index.json"
+  "statusSrc":"../../../../assets/translation-status/index.json",
+  "reviewSrc":"../../../../assets/translation-status/review.json"
 }</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/smart-base/","jsonld":"https://litlfred.github.io/folio-assistant/smart-base/smart-base.jsonld","source":"https://github.com/litlfred/smart-base"}</script><meta name="fa-site-index-src" content="../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
-<meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=7d7d00921e0f">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=61b1c4bbd106"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/work-plan.css?v=63b259829c69"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=dc8694990be6"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script>
-<script src="../../../../assets/js/vendor/qrcode.js" defer></script>
-<script src="../../../../assets/js/vendor/qrcode_UTF8.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=cc1885e41c70" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=37e3d2fc2982" defer></script><script src="../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><script src="../../../../assets/js/work-plan.js" defer></script><script src="../../../../assets/js/process-index.js" defer></script><style>
+<meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=263225e79ed9">
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=cc59a4b4ce11"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
+<script src="../../../../assets/js/docs-ui.js?v=480a3c3c0d42" defer></script><script src="../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../assets/js/translation-review.js?v=1902d883e072" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -273,7 +272,7 @@
 
 <p>Generated by <code class="language-plaintext highlighter-rouge">cat-harness-tools/scripts/gen-processes-viz.ts</code>. <strong>Every number here is counted from the directory</strong>, never carried in prose — <code class="language-plaintext highlighter-rouge">bpmn-processes</code>’ own rule, and the bean that asked for this page had two different counts in its title and its body.</p>
 
-<p><strong>55</strong> diagram(s), <strong>55</strong> parsed, <strong>0</strong> that would not load.</p>
+<p><strong>56</strong> diagram(s), <strong>56</strong> parsed, <strong>0</strong> that would not load.</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -289,7 +288,7 @@
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/library/processes/</code></td>
-      <td>13</td>
+      <td>14</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cat-harness/processes/kg/</code></td>
@@ -329,331 +328,337 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="../content-acquisition.html">Content acquisition</a></td>
+      <td><a href="../content-acquisition.html">Content acquisition</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ContentAcquisition">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ContentAcquisition.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../copy-out-materialized.html">Copy out materialized content — to work on somebody else’s bytes</a></td>
+      <td><a href="../copy-out-materialized.html">Copy out materialized content — to work on somebody else’s bytes</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CopyOutMaterialized">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CopyOutMaterialized.jsonld">JSON-LD</a></td>
       <td>5</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../document-ingestion.html">Basic ingestion — an upload to an asset catalogued in library/</a></td>
+      <td><a href="../document-ingestion.html">Basic ingestion — an upload to an asset catalogued in library/</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Ingestion">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Ingestion.jsonld">JSON-LD</a></td>
       <td>4</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../human-translation-workflow.html">Human Translation Workflow</a></td>
+      <td><a href="../human-translation-workflow.html">Human Translation Workflow</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HumanTranslation.jsonld">JSON-LD</a></td>
       <td>16</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../materialize-remote.html">Materialize remote content: the shared subprocess</a></td>
+      <td><a href="../materialize-remote.html">Materialize remote content: the shared subprocess</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MaterializeRemote">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MaterializeRemote.jsonld">JSON-LD</a></td>
       <td>7</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../methodology-from-source.html">Adopt a methodology from a source document</a></td>
+      <td><a href="../methodology-from-source.html">Adopt a methodology from a source document</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MethodologyFromSource">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MethodologyFromSource.jsonld">JSON-LD</a></td>
       <td>8</td>
       <td>1</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../multi-locale-translation.html">Multi-locale translation</a></td>
+      <td><a href="../multi-locale-translation.html">Multi-locale translation</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MultiLocaleTranslation">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MultiLocaleTranslation.jsonld">JSON-LD</a></td>
       <td>13</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../refresh-materialized.html">Refresh materialized remote content</a></td>
+      <td><a href="../refresh-materialized.html">Refresh materialized remote content</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RefreshMaterialized">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RefreshMaterialized.jsonld">JSON-LD</a></td>
       <td>8</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../sample-import.html">Sample import into a structured data store</a></td>
+      <td><a href="../sample-import.html">Sample import into a structured data store</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SampleImport">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SampleImport.jsonld">JSON-LD</a></td>
       <td>7</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../subscribe-kg.html">Subscribe to an external knowledge graph</a></td>
+      <td><a href="../subscribe-kg.html">Subscribe to an external knowledge graph</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SubscribeKg">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SubscribeKg.jsonld">JSON-LD</a></td>
       <td>11</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../translation-refresh.html">Translation refresh (watcher)</a></td>
+      <td><a href="../translation-refresh.html">Translation refresh (watcher)</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationRefresh">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationRefresh.jsonld">JSON-LD</a></td>
       <td>11</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../translation-round-trip.html">Translation round trip (untainted)</a></td>
+      <td><a href="../translation-review-adjudication.html">Translation review and adjudication</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication.jsonld">JSON-LD</a></td>
+      <td>11</td>
+      <td>—</td>
+      <td>none recorded</td>
+    </tr>
+    <tr>
+      <td><a href="../translation-round-trip.html">Translation round trip (untainted)</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationRoundTrip">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationRoundTrip.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../translation-workflow.html">Translation Workflow</a></td>
+      <td><a href="../translation-workflow.html">Translation Workflow</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Translation">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Translation.jsonld">JSON-LD</a></td>
       <td>12</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../review-narrative.html">Narrative review</a></td>
+      <td><a href="../review-narrative.html">Narrative review</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_NarrativeReview">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_NarrativeReview.jsonld">JSON-LD</a></td>
       <td>5</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../review-task.html">Review task</a></td>
+      <td><a href="../review-task.html">Review task</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Review.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../voice-review.html">Voice overlay review</a></td>
+      <td><a href="../voice-review.html">Voice overlay review</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_VoiceReview">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_VoiceReview.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../copy-into-folio.html">Copy a knowledge-graph asset into a folio</a></td>
+      <td><a href="../copy-into-folio.html">Copy a knowledge-graph asset into a folio</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CopyIntoFolio">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CopyIntoFolio.jsonld">JSON-LD</a></td>
       <td>8</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../graph-detanglement.html">A sub-graph wants to leave</a></td>
+      <td><a href="../graph-detanglement.html">A sub-graph wants to leave</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_GraphDetanglement">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_GraphDetanglement.jsonld">JSON-LD</a></td>
       <td>8</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../kg-separation-authorise.html">Authorise the extraction</a></td>
+      <td><a href="../kg-separation-authorise.html">Authorise the extraction</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgSeparationAuthorise">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgSeparationAuthorise.jsonld">JSON-LD</a></td>
       <td>2</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../kg-separation-cutover.html">Cut over to the separated graph</a></td>
+      <td><a href="../kg-separation-cutover.html">Cut over to the separated graph</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgSeparationCutover">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgSeparationCutover.jsonld">JSON-LD</a></td>
       <td>2</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../kg-separation-move.html">Move the graph into its repositories</a></td>
+      <td><a href="../kg-separation-move.html">Move the graph into its repositories</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgSeparationMove">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgSeparationMove.jsonld">JSON-LD</a></td>
       <td>8</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../kg-separation-prepare.html">Prepare a graph to stand alone</a></td>
+      <td><a href="../kg-separation-prepare.html">Prepare a graph to stand alone</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgSeparationPrepare">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgSeparationPrepare.jsonld">JSON-LD</a></td>
       <td>5</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../kg-separation.html">A knowledge graph leaves for its own repositories</a></td>
+      <td><a href="../kg-separation.html">A knowledge graph leaves for its own repositories</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgSeparation">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgSeparation.jsonld">JSON-LD</a></td>
       <td>8</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../kg-to-portal.html">KG to public portal</a></td>
+      <td><a href="../kg-to-portal.html">KG to public portal</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgToPortal">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_KgToPortal.jsonld">JSON-LD</a></td>
       <td>10</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../mount-dependency.html">Remote-mount a dependency</a></td>
+      <td><a href="../mount-dependency.html">Remote-mount a dependency</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountDependency">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountDependency.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../mount-subgraph.html">Mount a declared subgraph</a></td>
+      <td><a href="../mount-subgraph.html">Mount a declared subgraph</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountSubgraph">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountSubgraph.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../review-code.html">Code node review</a></td>
+      <td><a href="../review-code.html">Code node review</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CodeReview">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CodeReview.jsonld">JSON-LD</a></td>
       <td>4</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../slice-sqlite-publish.html">Build and publish a per-slice SQLite file</a></td>
+      <td><a href="../slice-sqlite-publish.html">Build and publish a per-slice SQLite file</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SliceSqlitePublish">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SliceSqlitePublish.jsonld">JSON-LD</a></td>
       <td>7</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../sub-kg-lifecycle.html">A sub-KG is staged in place, then leaves for its own repository</a></td>
+      <td><a href="../sub-kg-lifecycle.html">A sub-KG is staged in place, then leaves for its own repository</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SubKgLifecycle">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SubKgLifecycle.jsonld">JSON-LD</a></td>
       <td>11</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../actor-role-administration.html">Actor and role administration</a></td>
+      <td><a href="../actor-role-administration.html">Actor and role administration</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ActorRoleAdministration">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ActorRoleAdministration.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../adjudication.html">Adjudication</a></td>
+      <td><a href="../adjudication.html">Adjudication</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Adjudication">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Adjudication.jsonld">JSON-LD</a></td>
       <td>3</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../ask-the-person.html">Ask the person</a></td>
+      <td><a href="../ask-the-person.html">Ask the person</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_AskThePerson">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_AskThePerson.jsonld">JSON-LD</a></td>
       <td>3</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../crdm-close.html">CRDM close-out</a></td>
+      <td><a href="../crdm-close.html">CRDM close-out</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Close">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Close.jsonld">JSON-LD</a></td>
       <td>5</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../crdm-data-model.html">CRDM data model</a></td>
+      <td><a href="../crdm-data-model.html">CRDM data model</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_DataModel">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_DataModel.jsonld">JSON-LD</a></td>
       <td>5</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../crdm-deliver.html">CRDM Phase 6 — implement, MVP, acceptance</a></td>
+      <td><a href="../crdm-deliver.html">CRDM Phase 6 — implement, MVP, acceptance</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Deliver">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Deliver.jsonld">JSON-LD</a></td>
       <td>9</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../crdm-issue-linking.html">CRDM — link the work to an issue</a></td>
+      <td><a href="../crdm-issue-linking.html">CRDM — link the work to an issue</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Issue">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Issue.jsonld">JSON-LD</a></td>
       <td>4</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../crdm-needs.html">CRDM Phase 1 — needs</a></td>
+      <td><a href="../crdm-needs.html">CRDM Phase 1 — needs</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Needs">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Needs.jsonld">JSON-LD</a></td>
       <td>4</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../crdm-requirements-definition.html">CRDM Phases 2–4 — BPA and requirements</a></td>
+      <td><a href="../crdm-requirements-definition.html">CRDM Phases 2–4 — BPA and requirements</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Requirements">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Requirements.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../crdm-requirements.html">CRDM requirements</a></td>
+      <td><a href="../crdm-requirements.html">CRDM requirements</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM.jsonld">JSON-LD</a></td>
       <td>9</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../crdm-signoff.html">CRDM Phase 5 — beans and sign-off</a></td>
+      <td><a href="../crdm-signoff.html">CRDM Phase 5 — beans and sign-off</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Signoff">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CRDM_Signoff.jsonld">JSON-LD</a></td>
       <td>7</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../criterion-adjudication.html">Criterion adjudication</a></td>
+      <td><a href="../criterion-adjudication.html">Criterion adjudication</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication.jsonld">JSON-LD</a></td>
       <td>4</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../hand-back-to-discussion.html">Hand back to the discussion</a></td>
+      <td><a href="../hand-back-to-discussion.html">Hand back to the discussion</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HandBackToDiscussion">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HandBackToDiscussion.jsonld">JSON-LD</a></td>
       <td>8</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../options-analysis.html">Options analysis</a></td>
+      <td><a href="../options-analysis.html">Options analysis</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_OptionsAnalysis">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_OptionsAnalysis.jsonld">JSON-LD</a></td>
       <td>5</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../related-work.html">Related work: find, sort, summarize, ask to coordinate</a></td>
+      <td><a href="../related-work.html">Related work: find, sort, summarize, ask to coordinate</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RelatedWork">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RelatedWork.jsonld">JSON-LD</a></td>
       <td>5</td>
       <td>1</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../render-kg-to-cdn.html">Render a Knowledge Graph to a CDN</a></td>
+      <td><a href="../render-kg-to-cdn.html">Render a Knowledge Graph to a CDN</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderKgToCdn">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderKgToCdn.jsonld">JSON-LD</a></td>
       <td>4</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../secure-agent-permissions.html">Secure agent permissions</a></td>
+      <td><a href="../secure-agent-permissions.html">Secure agent permissions</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SecureAgentPermissions">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SecureAgentPermissions.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../session-state-machine.html">Session state machine</a></td>
+      <td><a href="../session-state-machine.html">Session state machine</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SessionStateMachine">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SessionStateMachine.jsonld">JSON-LD</a></td>
       <td>8</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../swot-analysis.html">SWOT situation analysis</a></td>
+      <td><a href="../swot-analysis.html">SWOT situation analysis</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SwotAnalysis">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_SwotAnalysis.jsonld">JSON-LD</a></td>
       <td>7</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../archimate-publish.html">Publish an ArchiMate model — every picture derived from it</a></td>
+      <td><a href="../archimate-publish.html">Publish an ArchiMate model — every picture derived from it</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ArchimatePublish">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ArchimatePublish.jsonld">JSON-LD</a></td>
       <td>4</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../harness-default-rendering.html">A harness’s default rendering</a></td>
-      <td>7</td>
+      <td><a href="../harness-default-rendering.html">A harness’s default rendering</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HarnessRendering">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HarnessRendering.jsonld">JSON-LD</a></td>
+      <td>8</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../ingest-theme.html">Ingestion subprocess — ingest a theme</a></td>
+      <td><a href="../ingest-theme.html">Ingestion subprocess — ingest a theme</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_IngestTheme">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_IngestTheme.jsonld">JSON-LD</a></td>
       <td>5</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../staging-render-log.html">Render log — the publish branch keeps its own history</a></td>
+      <td><a href="../staging-render-log.html">Render log — the publish branch keeps its own history</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderLog">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RenderLog.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../theme-ui-review.html">Theme and UI review — at ingestion</a></td>
+      <td><a href="../theme-ui-review.html">Theme and UI review — at ingestion</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ThemeUIReview">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ThemeUIReview.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../web-app-publish.html">Publish a web app — declared, translated, built at its own route</a></td>
+      <td><a href="../web-app-publish.html">Publish a web app — declared, translated, built at its own route</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_WebAppPublish">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_WebAppPublish.jsonld">JSON-LD</a></td>
       <td>7</td>
       <td>—</td>
       <td>none recorded</td>
     </tr>
     <tr>
-      <td><a href="../wireframe-design-review.html">Wireframe design review</a></td>
+      <td><a href="../wireframe-design-review.html">Wireframe design review</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_WireframeDesignReview">IRI</a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/process/Process_WireframeDesignReview.jsonld">JSON-LD</a></td>
       <td>6</td>
       <td>—</td>
       <td>none recorded</td>
@@ -673,7 +678,7 @@
 
 <p>The reverse of <code class="language-plaintext highlighter-rouge">&lt;bootstrap.processes:skill ref&gt;</code>, which is the join nothing else exposes: a skill says what to do, and until now nothing said which processes ask for it.</p>
 
-<p><strong>72</strong> distinct skill(s) are named by an activity.</p>
+<p><strong>75</strong> distinct skill(s) are named by an activity.</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -840,6 +845,10 @@
       <td><a href="../kg-to-portal.html"><code class="language-plaintext highlighter-rouge">kg-to-portal.bpmn</code></a></td>
     </tr>
     <tr>
+      <td><a href="../../../../en/cat-harness/processes/skills/kg-viewer.html"><code class="language-plaintext highlighter-rouge">kg-viewer</code></a></td>
+      <td><a href="../harness-default-rendering.html"><code class="language-plaintext highlighter-rouge">harness-default-rendering.bpmn</code></a></td>
+    </tr>
+    <tr>
       <td><a href="../../../../en/cat-harness/processes/skills/library-ingestion.html"><code class="language-plaintext highlighter-rouge">library-ingestion</code></a></td>
       <td><a href="../content-acquisition.html"><code class="language-plaintext highlighter-rouge">content-acquisition.bpmn</code></a>, <a href="../document-ingestion.html"><code class="language-plaintext highlighter-rouge">document-ingestion.bpmn</code></a></td>
     </tr>
@@ -932,6 +941,14 @@
       <td><a href="../ingest-theme.html"><code class="language-plaintext highlighter-rouge">ingest-theme.bpmn</code></a>, <a href="../theme-ui-review.html"><code class="language-plaintext highlighter-rouge">theme-ui-review.bpmn</code></a></td>
     </tr>
     <tr>
+      <td><a href="../../../../en/cat-harness/processes/skills/translation-adjudication.html"><code class="language-plaintext highlighter-rouge">translation-adjudication</code></a></td>
+      <td><a href="../translation-review-adjudication.html"><code class="language-plaintext highlighter-rouge">translation-review-adjudication.bpmn</code></a></td>
+    </tr>
+    <tr>
+      <td><a href="../../../../en/cat-harness/processes/skills/translation-candidate-source.html"><code class="language-plaintext highlighter-rouge">translation-candidate-source</code></a></td>
+      <td><a href="../translation-review-adjudication.html"><code class="language-plaintext highlighter-rouge">translation-review-adjudication.bpmn</code></a></td>
+    </tr>
+    <tr>
       <td><a href="../../../../en/cat-harness/processes/skills/translation-manager.html"><code class="language-plaintext highlighter-rouge">translation-manager</code></a></td>
       <td><a href="../human-translation-workflow.html"><code class="language-plaintext highlighter-rouge">human-translation-workflow.bpmn</code></a>, <a href="../multi-locale-translation.html"><code class="language-plaintext highlighter-rouge">multi-locale-translation.bpmn</code></a>, <a href="../translation-refresh.html"><code class="language-plaintext highlighter-rouge">translation-refresh.bpmn</code></a>, <a href="../translation-round-trip.html"><code class="language-plaintext highlighter-rouge">translation-round-trip.bpmn</code></a>, <a href="../translation-workflow.html"><code class="language-plaintext highlighter-rouge">translation-workflow.bpmn</code></a>, <a href="../review-narrative.html"><code class="language-plaintext highlighter-rouge">review-narrative.bpmn</code></a></td>
     </tr>
@@ -986,7 +1003,7 @@
 
 <p>A lane NAMES the Role its tasks are performed in; it is not itself a Role. The NAME is free text — <code class="language-plaintext highlighter-rouge">process-model.ts</code> notes that sixty lanes spell two dozen positions — so the lane’s <code class="language-plaintext highlighter-rouge">partitionElementRef</code> (or the legacy <code class="language-plaintext highlighter-rouge">&lt;bootstrap.processes:role ref&gt;</code>) is the join that does not depend on spelling, and it is reported separately below rather than merged into the name.</p>
 
-<p><strong>63</strong> distinct lane name(s).</p>
+<p><strong>66</strong> distinct lane name(s).</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -1089,6 +1106,10 @@
       <td>1</td>
     </tr>
     <tr>
+      <td>Automated pipeline</td>
+      <td>1</td>
+    </tr>
+    <tr>
       <td>Automated Pipeline</td>
       <td>1</td>
     </tr>
@@ -1173,6 +1194,10 @@
       <td>1</td>
     </tr>
     <tr>
+      <td>Maintainer</td>
+      <td>1</td>
+    </tr>
+    <tr>
       <td>Model author</td>
       <td>1</td>
     </tr>
@@ -1186,6 +1211,10 @@
     </tr>
     <tr>
       <td>Reader (any actor)</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Reviewer (adjudicator)</td>
       <td>1</td>
     </tr>
     <tr>
@@ -1284,7 +1313,7 @@
 </h2>
     
 
-<p>Three states, not two. <code class="language-plaintext highlighter-rouge">loadProcessModel</code> reads an undeclared policy as <code class="language-plaintext highlighter-rouge">strict</code>, which is right for the engine — <em>“a process that forgot to say is governed, not exempt”</em> — and hides a fact a reader wants. <strong>Somebody chose strict</strong> and <strong>nobody said, so the engine assumed strict</strong> are different, and the second is <strong>0</strong> of 55 here.</p>
+<p>Three states, not two. <code class="language-plaintext highlighter-rouge">loadProcessModel</code> reads an undeclared policy as <code class="language-plaintext highlighter-rouge">strict</code>, which is right for the engine — <em>“a process that forgot to say is governed, not exempt”</em> — and hides a fact a reader wants. <strong>Somebody chose strict</strong> and <strong>nobody said, so the engine assumed strict</strong> are different, and the second is <strong>0</strong> of 56 here.</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -1302,7 +1331,7 @@
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">advisory</code></td>
-      <td>20</td>
+      <td>21</td>
       <td>0</td>
     </tr>
   </tbody>
@@ -1316,7 +1345,7 @@
 </h2>
     
 
-<p>Every one of the <strong>55</strong> diagrams has a rendered SVG.</p>
+<p>Every one of the <strong>56</strong> diagrams has a rendered SVG.</p>
 <h3 id="activities-carrying-no-bootstrapprocessesskill-ref--a-census-not-a-gap-list">
   
   

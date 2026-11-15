@@ -45,13 +45,13 @@
   }
  },
  "candidate": {
-  "pages": 18781,
+  "pages": 19023,
   "counts": {
    "siteNav": 1,
-   "search": 9111,
-   "navbarRow": 8691,
-   "rail": 9111,
-   "translationMeta": 9112
+   "search": 9232,
+   "navbarRow": 9232,
+   "rail": 9232,
+   "translationMeta": 9233
   },
   "dirs": [
    "ar",
@@ -78,11 +78,57 @@
   ],
   "index": [
    "search",
+   "navbarRow",
    "rail",
    "translationMeta"
   ],
   "stamp": {
    "present": true
   }
+ },
+ "baseline": {
+  "features": {
+   "pages": 19023,
+   "counts": {
+    "siteNav": 1,
+    "search": 9232,
+    "navbarRow": 9232,
+    "rail": 9232,
+    "translationMeta": 9233
+   },
+   "dirs": [
+    "ar",
+    "artifact",
+    "assets",
+    "cat-harness",
+    "cat-harness-tools",
+    "catalogue",
+    "code",
+    "docs",
+    "en",
+    "es",
+    "fhir-artifact-index",
+    "folio-assistant-core",
+    "fr",
+    "id-lookup",
+    "openapi",
+    "questionnaires",
+    "ru",
+    "smart-base",
+    "translations",
+    "who-iris",
+    "zh"
+   ],
+   "index": [
+    "search",
+    "navbarRow",
+    "rail",
+    "translationMeta"
+   ],
+   "stamp": {
+    "present": true
+   }
+  },
+  "from": "050de3b8130e"
  }
 }
