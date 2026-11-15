@@ -280,11 +280,11 @@
 
 <p>Candidate terms extracted from every schema field with a doc comment: <code class="language-plaintext highlighter-rouge">&lt;Declaration&gt;.&lt;field&gt;</code> as the label, the comment’s first paragraph as the definition. Each is the asset’s own text, verbatim and not curated, and carries the badge “candidate, extracted”. A person promotes one by authoring it. Authored terms are on their owning instance’s page, and those pages, the counts and the sources are linked from the <a href="../../../../../en/folio-assistant-core/glossary/">glossary index</a>.</p>
 
-<p>From: bootstrap-tools 45 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · cat-harness-tools 2554 (<a href="../../../../../assets/glossary/cat-harness-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · fhir-harness 180 (<a href="../../../../../assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld">SKOS</a>) · folio-assistant-core 208 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-schema-fields.skos.jsonld">SKOS</a>) · smart-base 114 (<a href="../../../../../assets/glossary/smart-base--kg-schema-fields.skos.jsonld">SKOS</a>).</p>
+<p>From: bootstrap-tools 45 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · cat-harness-tools 2562 (<a href="../../../../../assets/glossary/cat-harness-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · fhir-harness 180 (<a href="../../../../../assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld">SKOS</a>) · folio-assistant-core 208 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-schema-fields.skos.jsonld">SKOS</a>) · smart-base 114 (<a href="../../../../../assets/glossary/smart-base--kg-schema-fields.skos.jsonld">SKOS</a>).</p>
 
 <p>One of 7 pages of this type, split by the first letter of the label: <a href="../../../../../en/folio-assistant-core/glossary/schema-fields/">all parts</a>.</p>
 
-<p><strong>Size:</strong> this page holds 603 terms and is 354 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
+<p><strong>Size:</strong> this page holds 608 terms and is 357 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
 
 <div class="table-wrapper"><table class="fa-gloss-mapping">
 <caption>Already somebody else's concept? — <code>check:term-mapping</code>, bean <code>7wou</code></caption>
@@ -299,7 +299,7 @@ be a term this corpus is right to coin.</p>
 
 <p><label for="fa-gloss-q">Filter terms</label>
 <input id="fa-gloss-q" type="search" autocomplete="off" style="min-height:44px;width:100%;max-width:32rem" /></p>
-<p aria-live="polite"><span id="fa-gloss-n">603</span> shown</p>
+<p aria-live="polite"><span id="fa-gloss-n">608</span> shown</p>
 
 <nav aria-label="Letters"><a href="#letter-P">P</a> <a href="#letter-Q">Q</a> <a href="#letter-R">R</a></nav>
 <h2 id="letter-P">
@@ -1703,6 +1703,27 @@ PublishedSourceSchema.url <span class="fa-gloss-status">candidate, extracted</sp
 <dd>
 <p>Where a reader goes to read it — the publisher's own address.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/library/referenced-source.ts"><code>cat-harness-tools/schemas/library/referenced-source.ts#PublishedSourceSchema.url</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--publishing-profile.publishingprofileschema.iriroot" data-fa-state="extracted" data-fa-gloss="">
+PublishingProfileSchema.iriRoot <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The fixed root IRIs are minted under while a layer is staged.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/publishing-profile.ts"><code>cat-harness-tools/schemas/kg/publishing-profile.ts#PublishingProfileSchema.iriRoot</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--publishing-profile.publishingprofileschema.publishedroot" data-fa-state="extracted" data-fa-gloss="">
+PublishingProfileSchema.publishedRoot <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The root a published layer's IRIs and site move to.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/publishing-profile.ts"><code>cat-harness-tools/schemas/kg/publishing-profile.ts#PublishingProfileSchema.publishedRoot</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--publishing-profile.publishingprofileschema.stagingroot" data-fa-state="extracted" data-fa-gloss="">
+PublishingProfileSchema.stagingRoot <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The checkout's own staging site root; <code>&#123;owner}</code> is replaced by the checkout's owner.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/publishing-profile.ts"><code>cat-harness-tools/schemas/kg/publishing-profile.ts#PublishingProfileSchema.stagingRoot</code></a></p>
 </dd>
 <dt id="cat-harness-tools--kg-schema-fields--assistant-package.pythondependency.package" data-fa-state="extracted" data-fa-gloss="">
 PythonDependency.package <span class="fa-gloss-status">candidate, extracted</span>
@@ -3179,6 +3200,20 @@ RemoteMountSchema.overrides <span class="fa-gloss-status">candidate, extracted</
 <dd>
 <p>Per-instance overrides across the closure, keyed by layer name.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/remote-mount.ts"><code>cat-harness-tools/schemas/kg/remote-mount.ts#RemoteMountSchema.overrides</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--remote-mount.remotemountschema.repository" data-fa-state="extracted" data-fa-gloss="">
+RemoteMountSchema.repository <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p><code>owner/name</code>, or a bare <code>name</code>: a SAME-OWNER name, resolved to the owner of the checkout that declares it (<code>schemas/kg/repo-owner.ts</code>, cat-harness-tools#2337). Readers (&#123;@link readMountLock}, <code>readDeclaredMounts</code>) hand callers the resolved <code>owner/name</code> with <code>sameOwner: true</code>; writers put the bare name back.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/remote-mount.ts"><code>cat-harness-tools/schemas/kg/remote-mount.ts#RemoteMountSchema.repository</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--remote-mount.remotemountschema.sameowner" data-fa-state="extracted" data-fa-gloss="">
+RemoteMountSchema.sameOwner <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>In memory: <code>repository</code> was declared without an owner. Accepted on disk; written as a bare name.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/kg/remote-mount.ts"><code>cat-harness-tools/schemas/kg/remote-mount.ts#RemoteMountSchema.sameOwner</code></a></p>
 </dd>
 <dt id="cat-harness-tools--kg-schema-fields--remote-mount.remotemountschema.trust" data-fa-state="extracted" data-fa-gloss="">
 RemoteMountSchema.trust <span class="fa-gloss-status">candidate, extracted</span>
