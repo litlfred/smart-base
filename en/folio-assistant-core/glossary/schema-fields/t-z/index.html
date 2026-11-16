@@ -280,11 +280,11 @@
 
 <p>Candidate terms extracted from every schema field with a doc comment: <code class="language-plaintext highlighter-rouge">&lt;Declaration&gt;.&lt;field&gt;</code> as the label, the comment’s first paragraph as the definition. Each is the asset’s own text, verbatim and not curated, and carries the badge “candidate, extracted”. A person promotes one by authoring it. Authored terms are on their owning instance’s page, and those pages, the counts and the sources are linked from the <a href="../../../../../en/folio-assistant-core/glossary/">glossary index</a>.</p>
 
-<p>From: bootstrap-tools 45 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · cat-harness-tools 2562 (<a href="../../../../../assets/glossary/cat-harness-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · fhir-harness 180 (<a href="../../../../../assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld">SKOS</a>) · folio-assistant-core 208 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-schema-fields.skos.jsonld">SKOS</a>) · smart-base 114 (<a href="../../../../../assets/glossary/smart-base--kg-schema-fields.skos.jsonld">SKOS</a>).</p>
+<p>From: bootstrap-tools 45 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · cat-harness-tools 2571 (<a href="../../../../../assets/glossary/cat-harness-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · fhir-harness 180 (<a href="../../../../../assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld">SKOS</a>) · folio-assistant-core 208 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-schema-fields.skos.jsonld">SKOS</a>) · smart-base 114 (<a href="../../../../../assets/glossary/smart-base--kg-schema-fields.skos.jsonld">SKOS</a>).</p>
 
 <p>One of 7 pages of this type, split by the first letter of the label: <a href="../../../../../en/folio-assistant-core/glossary/schema-fields/">all parts</a>.</p>
 
-<p><strong>Size:</strong> this page holds 531 terms and is 309 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
+<p><strong>Size:</strong> this page holds 540 terms and is 314 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
 
 <div class="table-wrapper"><table class="fa-gloss-mapping">
 <caption>Already somebody else's concept? — <code>check:term-mapping</code>, bean <code>7wou</code></caption>
@@ -299,7 +299,7 @@ be a term this corpus is right to coin.</p>
 
 <p><label for="fa-gloss-q">Filter terms</label>
 <input id="fa-gloss-q" type="search" autocomplete="off" style="min-height:44px;width:100%;max-width:32rem" /></p>
-<p aria-live="polite"><span id="fa-gloss-n">531</span> shown</p>
+<p aria-live="polite"><span id="fa-gloss-n">540</span> shown</p>
 
 <nav aria-label="Letters"><a href="#letter-T">T</a> <a href="#letter-U">U</a> <a href="#letter-V">V</a> <a href="#letter-W">W</a></nav>
 <h2 id="letter-T">
@@ -3687,6 +3687,13 @@ WorkshopLabStepSchema.label <span class="fa-gloss-status">candidate, extracted</
 <p>On the step's tab (&quot;Who decides&quot;).</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopLabStepSchema.label</code></a></p>
 </dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshoplabstepschema.matrix" data-fa-state="extracted" data-fa-gloss="">
+WorkshopLabStepSchema.matrix <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The module × journey matrix: modules down, the workshop's steps across, ● where a module's question is asked, each cell linking to its step.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopLabStepSchema.matrix</code></a></p>
+</dd>
 <dt id="cat-harness-tools--kg-schema-fields--workshop.workshoplabstepschema.minutes" data-fa-state="extracted" data-fa-gloss="">
 WorkshopLabStepSchema.minutes <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
@@ -3735,6 +3742,20 @@ WorkshopLabStepSchema.useCases <span class="fa-gloss-status">candidate, extracte
 <dd>
 <p>The use-case cards (<code>lab.useCases</code>), any number ticked, and the table's own statement under them.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopLabStepSchema.useCases</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopmatrixcellschema.step" data-fa-state="extracted" data-fa-gloss="">
+WorkshopMatrixCellSchema.step <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A step of the workshop: its step id (<code>J2b</code>), or <code>&lt;scenario&gt;#&lt;step&gt;</code>.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopMatrixCellSchema.step</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopmatrixschema.intro" data-fa-state="extracted" data-fa-gloss="">
+WorkshopMatrixSchema.intro <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>A line above the matrix.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopMatrixSchema.intro</code></a></p>
 </dd>
 <dt id="cat-harness-tools--kg-schema-fields--workshop.workshopmoduleschema.carries" data-fa-state="extracted" data-fa-gloss="">
 WorkshopModuleSchema.carries <span class="fa-gloss-status">candidate, extracted</span>
@@ -3987,6 +4008,48 @@ WorkshopSheetSchema.modules <span class="fa-gloss-status">candidate, extracted</
 <dd>
 <p>The modules whose questions it carries, in order.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetSchema.modules</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopsheetssourceschema.description" data-fa-state="extracted" data-fa-gloss="">
+WorkshopSheetsSourceSchema.description <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>One line under the title (what is in it, how to print it).</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetsSourceSchema.description</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopsheetssourceschema.docx" data-fa-state="extracted" data-fa-gloss="">
+WorkshopSheetsSourceSchema.docx <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The editable Word file.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetsSourceSchema.docx</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopsheetssourceschema.pdf" data-fa-state="extracted" data-fa-gloss="">
+WorkshopSheetsSourceSchema.pdf <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The print-ready PDF.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetsSourceSchema.pdf</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopsheetssourceschema.previews" data-fa-state="extracted" data-fa-gloss="">
+WorkshopSheetsSourceSchema.previews <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>An image per page, in order (the cover first).</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetsSourceSchema.previews</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopsheetssourceschema.size" data-fa-state="extracted" data-fa-gloss="">
+WorkshopSheetsSourceSchema.size <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The paper the canvas is printed on, said beside the print button; A3 when absent.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetsSourceSchema.size</code></a></p>
+</dd>
+<dt id="cat-harness-tools--kg-schema-fields--workshop.workshopsheetssourceschema.title" data-fa-state="extracted" data-fa-gloss="">
+WorkshopSheetsSourceSchema.title <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>What the canvas is called (&quot;Country Canvas&quot;); &quot;Table canvas&quot; when absent.</p>
+<p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/process/workshop.ts"><code>cat-harness-tools/schemas/process/workshop.ts#WorkshopSheetsSourceSchema.title</code></a></p>
 </dd>
 <dt id="cat-harness-tools--kg-schema-fields--workshop.workshopstepschema.asktheroom" data-fa-state="extracted" data-fa-gloss="">
 WorkshopStepSchema.askTheRoom <span class="fa-gloss-status">candidate, extracted</span>
