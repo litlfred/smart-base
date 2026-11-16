@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://litlfred.github.io/smart-base/en/cat-harness/harness/cat-harness-tools/",
+  "url": "https://litlfred.github.io/smart-base/en/cat-harness/harness/cat-harness-tools/",
+  "@type": "WebPage",
+  "name": "C@T Harness Tools on SMART Base",
+  "about": {
+    "@type": "SoftwareSourceCode",
+    "identifier": "cat-harness-tools",
+    "name": "C@T Harness Tools",
+    "description": "What implements the harness's Tool definitions: the MCP servers, their tool registrars and routes. Definitions stay in cat-harness; this layer runs them.",
+    "version": "0.1.0",
+    "codeRepository": "https://github.com/litlfred/cat-harness-tools",
+    "isBasedOn": [
+      {
+        "@id": "https://litlfred.github.io/cat-harness/"
+      },
+      {
+        "identifier": "bootstrap-tools"
+      }
+    ],
+    "additionalProperty": {
+      "@type": "PropertyValue",
+      "name": "pinnedCommit",
+      "value": "c9d564a9e9c5baf4aa551ae84a4ebd23aeba9b5a"
+    }
+  },
+  "isPartOf": {
+    "@id": "https://litlfred.github.io/smart-base/",
+    "name": "SMART Base"
+  },
+  "significantLink": [
+    "https://litlfred.github.io/folio-assistant/en/cat-harness/beans/cat-harness-tools/",
+    "https://github.com/litlfred/cat-harness-tools/tree/c9d564a9e9c5baf4aa551ae84a4ebd23aeba9b5a",
+    "https://github.com/litlfred/cat-harness-tools/blob/c9d564a9e9c5baf4aa551ae84a4ebd23aeba9b5a/README.md",
+    "https://github.com/litlfred/cat-harness-tools/blob/c9d564a9e9c5baf4aa551ae84a4ebd23aeba9b5a/AGENTS.md"
+  ]
+}

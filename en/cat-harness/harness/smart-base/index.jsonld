@@ -1,0 +1,39 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://litlfred.github.io/smart-base/en/cat-harness/harness/smart-base/",
+  "url": "https://litlfred.github.io/smart-base/en/cat-harness/harness/smart-base/",
+  "@type": "WebPage",
+  "name": "SMART Base on SMART Base",
+  "about": {
+    "@id": "https://litlfred.github.io/smart-base/",
+    "@type": "SoftwareSourceCode",
+    "identifier": "smart-base",
+    "name": "SMART Base",
+    "description": "The WHO SMART Guidelines base layer — the ingested WHO digital-health corpus, the methodologies read out of it, and the editorial voices derived from it.",
+    "version": "0.1.0",
+    "codeRepository": "https://github.com/litlfred/smart-base",
+    "isBasedOn": [
+      {
+        "@id": "https://litlfred.github.io/fhir-harness/"
+      },
+      {
+        "@id": "https://worldhealthorganization.github.io/who-iris/"
+      }
+    ],
+    "keywords": [
+      "dak"
+    ]
+  },
+  "isPartOf": {
+    "@id": "https://litlfred.github.io/smart-base/",
+    "name": "SMART Base"
+  },
+  "significantLink": [
+    "https://litlfred.github.io/folio-assistant/#harness-smart-base",
+    "https://github.com/litlfred/smart-base",
+    "https://github.com/litlfred/smart-base/blob/HEAD/README.md",
+    "https://github.com/litlfred/smart-base/blob/HEAD/AGENTS.md"
+  ]
+}

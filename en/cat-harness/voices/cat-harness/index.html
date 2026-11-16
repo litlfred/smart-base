@@ -469,6 +469,7 @@ function render() {
       v.hasInstructions ? "with a SKILL.md" : "<b>no SKILL.md</b>",
       "provenance <b>" + esc(v.provenance) + "</b>"
     ];
+    if (v.iri) meta.push('<a href="' + esc(v.iri) + '">IRI</a> · <a href="' + esc(v.iri) + '.jsonld" type="application/ld+json">JSON-LD</a>');
     if (v.sources && v.sources.length) {
       meta.push("derived from " + v.sources.map(function (s) {
         return esc(s.title) + (s.year ? " (" + s.year + ")" : "");
@@ -479,7 +480,7 @@ function render() {
 
     html.push(
       '<details class="voice"' + (open || q || sev ? " open" : "") + ">" +
-      "<summary><span class=\"vhead\"><h2>" + esc(v.title) + '</h2><span class="id">' +
+      "<summary><span class=\"vhead\"><h2>" + (v.page ? '<a href="' + esc(SITE_ROOT + v.page) + '">' + esc(v.title) + "</a>" : esc(v.title)) + '</h2><span class="id">' +
       esc(v.id) + "</span></span>" +
       '<div class="vmeta">' + esc(v.description) + "</div>" +
       '<div class="vmeta">' + meta.join(" &middot; ") + "</div></summary>" +
