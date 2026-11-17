@@ -1182,7 +1182,7 @@
         },
         "x-tool-iri": "http://smart.who.int/base/tools/l1-extraction-pages.jsonld",
         "x-invoke": {
-          "shell": "bun run smart-base/scripts/gen-l1-extraction-pages.ts"
+          "shell": "bun run cat smart-base:l1-extraction:pages"
         },
         "x-install": {
           "none": true
