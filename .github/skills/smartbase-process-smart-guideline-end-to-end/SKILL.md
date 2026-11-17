@@ -29,7 +29,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 2. 1 · Identify L1 guidelines and recommendations (`Task_IdentifyL1`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `dak-l1-library`.
+- Skill: `dak-l1-library`, `guideline-gap-report`.
 - What: Component 1 sources of any DAK already in scope first, then WHO IRIS and the jurisdiction's own guidelines.
 - Record it: `workflow_complete` with `node: "Task_IdentifyL1"`.
 - next: → `Fork_L1`
@@ -60,7 +60,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 4. 2 · Ingest into the L1 KG (`Task_IngestKg`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `recommendation-extraction`, `dak-l1-library`.
+- Skill: `recommendation-extraction`, `dak-l1-library`, `figure-rebuild`, `transcription-verbatim`, `guideline-gap-report`.
 - What: Per source not yet extracted: cat ingest into library/, the generic-document layer (l1-library), then the L1 layer (recommendations, remarks, practices, scenario candidates) into library/<bib>/l1-extraction/.
 - Record it: `workflow_complete` with `node: "Task_IngestKg"`.
 - next: → `Fork_Kg`
@@ -78,7 +78,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 5. 3 · Choose L2 dependencies (WHO / jurisdiction DAKs) (`Task_DepsL2`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `l2-dependency-choice`, `smart-base-tools`, `decision-comparison`.
+- Skill: `l2-dependency-choice`, `smart-base-tools`, `decision-comparison`, `guideline-gap-report`.
 - What: From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason.
 - Record it: `workflow_complete` with `node: "Task_DepsL2"`.
 - next: → `Fork_DepsL2`
@@ -111,7 +111,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 8. 4 · Create / adapt L2 DAK assets (`Task_L2`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `l2-dak-authoring`, `smart-base-tools`, `dak-preprocessing`, `dak-postprocessing`, `wireframe-design-review`, `feature-staging`.
+- Skill: `l2-dak-authoring`, `smart-base-tools`, `dak-preprocessing`, `dak-postprocessing`, `wireframe-design-review`, `feature-staging`, `guideline-gap-report`.
 - What: The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data ele
 - Record it: `workflow_complete` with `node: "Task_L2"`.
 - next: → `Fork_L2`
@@ -136,7 +136,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 10. 5 · Choose L3 dependencies (WHO / jurisdiction IGs) (`Task_DepsL3`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `l3-dependency-choice`, `ig-artifact-ingestion`, `smart-base-tools`, `decision-comparison`.
+- Skill: `l3-dependency-choice`, `ig-artifact-ingestion`, `smart-base-tools`, `decision-comparison`, `guideline-gap-report`.
 - What: Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG, and record per artefact type the candidate's toolchain (CQL refresh, test-case format, example generator), which stage 6 then uses.
 - Record it: `workflow_complete` with `node: "Task_DepsL3"`.
 - next: → `Fork_DepsL3`
@@ -180,7 +180,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 13. 6 · Produce L3 assets (`Task_L3`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `l3-fhir-authoring`, `l2-dak-authoring`, `smart-base-tools`, `feature-staging`.
+- Skill: `l3-fhir-authoring`, `l2-dak-authoring`, `smart-base-tools`, `feature-staging`, `guideline-gap-report`.
 - What: The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build.
 - Record it: `workflow_complete` with `node: "Task_L3"`.
 - next: → `Fork_L3`
@@ -221,7 +221,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 ### 17. 8b · L4: build the consuming application (`Task_BuildApp`)
 
 - Who: the `Authoring agent` lane (role `authoring-agent`).
-- Skill: `l4-application-build`.
+- Skill: `l4-application-build`, `guideline-gap-report`.
 - What: Against the stage-6 IG build, with conformance tests from the IG's examples and test cases.
 - Record it: `workflow_complete` with `node: "Task_BuildApp"`.
 - next: → `Fork_App`
