@@ -41,7 +41,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### 3. Adjudicate the L1 source list (`Task_AdjL1`)
 
-- Who: the `Human adjudicators` lane (role `reviewer`).
+- Who: the `Human adjudicators` lane (role `adjudicator`).
 - Skill: `content-review`.
 - What: Clinical SME: each source with why it was included or left out.
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
@@ -85,7 +85,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### 6. Adjudicate the L1 KG (`Task_AdjKg`)
 
-- Who: the `Human adjudicators` lane (role `reviewer`).
+- Who: the `Human adjudicators` lane (role `adjudicator`).
 - Skill: `content-review`, `recommendation-extraction`.
 - What: l1-extraction-reviewer signs exclusions and coverage; Clinical SME reviews recommendations beside the printed page.
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
@@ -102,7 +102,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### 7. Adjudicate L2 dependencies (`Task_AdjDepsL2`)
 
-- Who: the `Human adjudicators` lane (role `reviewer`).
+- Who: the `Human adjudicators` lane (role `adjudicator`).
 - Skill: `content-review`, `decision-audit`.
 - What: Programme manager and business analyst: one row per candidate DAK, rejected ones included.
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
@@ -127,7 +127,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### 9. Review each L2 asset (before / after if adapted) (`Task_AdjL2`)
 
-- Who: the `Human adjudicators` lane (role `reviewer`).
+- Who: the `Human adjudicators` lane (role `adjudicator`).
 - Skill: `content-review`, `staging-review`, `visual-diff`, `wireframe-design-review`.
 - What: One review item per created or changed asset, shown as its reviewer reads it (diagram, table, data-dictionary rows); an adapted asset as a diff against its pinned upstream.
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
@@ -152,7 +152,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### 11. Adjudicate L3 dependencies (`Task_AdjDepsL3`)
 
-- Who: the `Human adjudicators` lane (role `reviewer`).
+- Who: the `Human adjudicators` lane (role `adjudicator`).
 - Skill: `content-review`, `decision-audit`.
 - What: FHIR modeller and terminologist: one row per candidate IG, rejected ones included.
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
@@ -192,7 +192,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### 14. Review each L3 asset (before / after if adapted) (`Task_AdjL3`)
 
-- Who: the `Human adjudicators` lane (role `reviewer`).
+- Who: the `Human adjudicators` lane (role `adjudicator`).
 - Skill: `content-review`, `staging-review`, `ig-ast-delta`, `wireframe-design-review`, `fhir-questionnaire-wireframe`.
 - What: One review item per created or changed resource: differential, each Questionnaire against the L2 wireframe it was derived from (field to item: fhir-harness fhir-questionnaire-wireframe, whose check is check-wireframe-questionnaire), CQL beside its DMN rule with test results, terminology expansions.
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
@@ -233,7 +233,7 @@ From a use case to a consuming application: identify the L1 guidelines, ingest t
 
 ### 18. Adjudicate the L4 wireframes and application (`Task_AdjApp`)
 
-- Who: the `Human adjudicators` lane (role `reviewer`).
+- Who: the `Human adjudicators` lane (role `adjudicator`).
 - Skill: `content-review`, `staging-review`, `wireframe-design-review`.
 - What: Business analyst and clinical SME walk it through each L2 user scenario; FHIR modeller checks L3 conformance.
 - A subprocess (`Process_Review`): `workflow_next` reports its own steps; complete those — this call activity itself is not completable.
