@@ -2,7 +2,7 @@
   "$schema": "folio-search-manifest/v1",
   "source": {
     "path": "assets/js/search-data.json",
-    "sha256": "73c3f4e46fae7c3efdf87b12f4704d383716672b7fb7fd57f67aa652560e3b2a",
+    "sha256": "eac5cdb6c26c3d6eaf9425ad374da65eaf66169c8dbc50397e326ab35d4947c2",
     "entries": 9273,
     "bytes": 13089528
   },
@@ -22,7 +22,7 @@
       "bytes": 10026288,
       "index": {
         "path": "assets/js/search/cat-harness.idx.json",
-        "bytes": 31259619
+        "bytes": 31253763
       }
     },
     {
@@ -33,7 +33,7 @@
       "bytes": 2566950,
       "index": {
         "path": "assets/js/search/folio-assistant-core.idx.json",
-        "bytes": 7415085
+        "bytes": 7401236
       }
     },
     {
