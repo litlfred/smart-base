@@ -46,6 +46,11 @@
  *     --document 9789240099456-eng --l1 who-iris/library/9789240099456-eng/sections/<sec>.md \
  *     --bpmn <dir-or-file>... [--xlsx <workbook>...] [--write | --check]
  *
+ * `--ig-page <page.md>` reads the annotations an IG page writes as an HTML list
+ * (`#### Process A: …`, then an `<ol>` of steps with `<ul>` notes) in place of,
+ * or beside, the L1 text. Such a list prints no step numbers, so its items are
+ * matched to tasks by name only.
+ *
  *   bun run smart-base/L2-bpmn/scripts/dak-task-annotations.ts --report <dir-or-file>... \
  *     [--prefix IMMZ --xlsx <workbook>...]
  *
@@ -84,6 +89,11 @@ export interface AnnotationBlock {
   letter: string;
   heading: string;
   items: AnnotationItem[];
+  /**
+   * False when the source prints no step numbers (an IG page's HTML list): an item's position
+   * is then not its step, so it is matched by name only (CHUD's list skips step 7).
+   */
+  numbered?: boolean;
 }
 
 /** The DAK documents' side-tab labels, printed down every page's edge. */
@@ -191,6 +201,46 @@ export function parseAnnotationBlocks(text: string): AnnotationBlock[] {
     blocks.push(block);
     i = j - 1;
     lastEnd = i;
+  }
+  return blocks;
+}
+
+/** HTML text: tags dropped, entities decoded, whitespace collapsed. */
+const htmlText = (s: string) =>
+  decodeXml(s.replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, "")).replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
+
+/**
+ * The annotations an IG page writes as HTML (smart-dak-chud's `business-processes.md`): under
+ * `#### Process A: <title>`, after `Business process notes and annotations`, an `<ol>` whose
+ * items are the steps (the text before the item's `<ul>`) and whose `<ul>` items are the notes.
+ * The list prints no step numbers, so the blocks are `numbered: false`.
+ */
+export function parseIgPageAnnotations(md: string): AnnotationBlock[] {
+  const blocks: AnnotationBlock[] = [];
+  for (const sec of md.split(/^#{2,6}\s+/m).slice(1)) {
+    const head = /^Process\s+([A-Z])\s*[:.]\s*(.+)$/m.exec(sec.split("\n")[0] ?? "");
+    const at = sec.search(/notes and annotations/i);
+    if (!head || at < 0) continue;
+    const list = /<ol\b[^>]*>([\s\S]*)<\/ol>/i.exec(sec.slice(at))?.[1] ?? "";
+    const items: AnnotationItem[] = [];
+    // Top-level <li> of the <ol>: split at depth 0, so a nested list stays inside its item.
+    let depth = 0;
+    let start = -1;
+    for (const m of list.matchAll(/<(\/?)(li|ul|ol)\b[^>]*>/gi)) {
+      const closing = m[1] === "/";
+      const tag = m[2]!.toLowerCase();
+      if (tag === "li" && !closing && depth === 0) start = m.index! + m[0].length;
+      if (tag === "li" && closing && depth === 0 && start >= 0) {
+        const li = list.slice(start, m.index);
+        const cut = li.search(/<ul\b/i);
+        const name = htmlText(cut >= 0 ? li.slice(0, cut) : li);
+        const bullets = [...(cut >= 0 ? li.slice(cut) : "").matchAll(/<li\b[^>]*>([\s\S]*?)(?=<li\b|<\/ul>|$)/gi)].map((b) => htmlText(b[1]!)).filter(Boolean);
+        if (name) items.push({ item: String(items.length + 1), name, bullets });
+        start = -1;
+      }
+      if (tag !== "li") depth += closing ? -1 : 1;
+    }
+    blocks.push({ letter: head[1]!, heading: `Process ${head[1]}: ${head[2]!.trim()} — business process notes and annotations`, items, numbered: false });
   }
   return blocks;
 }
@@ -400,23 +450,38 @@ export function matchAnnotations(input: MatchInput): DakTaskAnnotations | null {
   const tasks: TaskAnnotation[] = [];
   const unmatched: DakTaskAnnotations["unmatched"] = [];
   const used = new Set<string>();
+  const numbered = block.numbered !== false;
   for (const item of block.items) {
-    const code = `${prefix}.${letter}${item.item}`;
     const kept = adjudicated.get(item.item);
     let node: BpmnNode | undefined;
     let how: MatchMethod | undefined;
+    const printed = `${prefix}.${letter}${item.item}`;
     if (kept) {
       node = nodes.find((n) => n.id === kept.bpmnTask);
       how = "adjudicated";
     }
-    if (!node && byCode.has(code)) [node, how] = [byCode.get(code), "id"];
-    if (!node && byStep.has(item.item)) [node, how] = [byStep.get(item.item), "step-number"];
+    if (!node && numbered && byCode.has(printed)) [node, how] = [byCode.get(printed), "id"];
+    if (!node && numbered && byStep.has(item.item)) [node, how] = [byStep.get(item.item), "step-number"];
     if (!node && byName.get(norm(item.name))) [node, how] = [byName.get(norm(item.name))!, "name"];
     if (!node || used.has(node.id)) {
-      unmatched.push({ item: item.item, name: item.name, reason: node ? `BPMN node ${node.id} is already annotated by another item` : `no BPMN node has id ${code}, label step ${item.item}, or this name` });
+      unmatched.push({
+        item: item.item,
+        name: item.name,
+        reason: node
+          ? `BPMN node ${node.id} is already annotated by another item`
+          : numbered
+            ? `no BPMN node has id ${printed}, label step ${item.item}, or this name`
+            : "the list prints no step numbers, and no BPMN node has this name",
+      });
       continue;
     }
     used.add(node.id);
+    // For a numbered source the activity id is the printed step; otherwise it is the matched
+    // node's: its id when that is an activity id, else its label's step number.
+    const nodeStep = stepNumber(node.name);
+    const code = numbered
+      ? printed
+      : (activityCode(node.id, prefix) ?? (nodeStep ? `${prefix}.${letter}${nodeStep}` : `${prefix}.${letter}:${node.id}`));
     const sorted = (s?: Set<string>) => [...(s ?? [])].sort();
     tasks.push({
       bpmnTask: node.id,
@@ -521,16 +586,20 @@ export function main(argv: string[]): number {
   const prefix = argsOf(argv, "--prefix")[0];
   const document = argsOf(argv, "--document")[0];
   const l1 = argsOf(argv, "--l1");
+  const igPages = argsOf(argv, "--ig-page");
   const bpmn = argsOf(argv, "--bpmn").flatMap(bpmnFiles);
   if (prefix && !PREFIX.test(prefix)) {
     console.error(`--prefix ${JSON.stringify(prefix)} is not a DAK id prefix: capitals, digits and dots only (IMMZ, TB, CHUD)`);
     return 2;
   }
-  if (!prefix || !document || !l1.length || !bpmn.length) {
-    console.error("usage: dak-task-annotations.ts --prefix <IMMZ> --document <l1-id> --l1 <section.md>... --bpmn <dir|file>... [--xlsx <workbook>...] [--write | --check]");
+  if (!prefix || !document || !(l1.length || igPages.length) || !bpmn.length) {
+    console.error("usage: dak-task-annotations.ts --prefix <IMMZ> --document <id> (--l1 <section.md> | --ig-page <page.md>)... --bpmn <dir|file>... [--xlsx <workbook>...] [--write | --check]");
     return 2;
   }
-  const blocks = l1.flatMap((f) => parseAnnotationBlocks(readFileSync(f, "utf8")));
+  const blocks = [
+    ...l1.flatMap((f) => parseAnnotationBlocks(readFileSync(f, "utf8"))),
+    ...igPages.flatMap((f) => parseIgPageAnnotations(readFileSync(f, "utf8"))),
+  ];
   const links = emptyLinks();
   for (const x of argsOf(argv, "--xlsx")) readActivityLinks(readWorkbook(readFileSync(x)), prefix, links);
   const write = argv.includes("--write");

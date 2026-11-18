@@ -35,6 +35,19 @@ Feature: dak-task-annotations puts a DAK's BPMN task annotations in the knowledg
     And "2. Assess medical history" after item 3, the next figure's box label, ends the block
     And "2.1 …" under item 2 stays in its text, while "1.2 …" going back below item 2 ends the block
 
+  @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_reading_an_IG_page's_HTML_list::readsStepsAndNotesFromTheHtmlList_unnumbered
+  Scenario: an IG page's HTML list of annotations is read, step by step, as an unnumbered block
+    Given an IG page with "#### Process A: …" and an ordered list of steps, each with a list of notes
+    When the page is read
+    Then each top-level item is a step named by its text, with its notes as bullets, tags dropped and entities decoded
+    And the blocks are marked unnumbered
+
+  @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_reading_an_IG_page's_HTML_list::matchesAnUnnumberedListByNameNeverByPosition
+  Scenario: an unnumbered list is matched to tasks by name, never by position
+    Given a list that skips a gateway the BPMN draws as step 7
+    When it is matched
+    Then its second item joins step 8 by name, with the activity id CHUD.A8 from the task's label, not step 2 or the gateway
+
   @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_matching_to_BPMN::normalisesActivityIds
   Scenario: activity ids are normalised whichever way they are written
     Then "IMMZ.B.1" and "IMMZ.B1" are both IMMZ.B1, and "IMMZ.C4.Create client record" is IMMZ.C4
