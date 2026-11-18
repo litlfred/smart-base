@@ -11,7 +11,7 @@
   "dcterms:identifier": "StructureDefinition/KGDakTask",
   "schema:name": "KGDakTask",
   "dcterms:title": "Knowledge graph L2: Task Entry",
-  "dcterms:description": "One entry of BusinessProcessWorkflow's `task 0..*` backbone: identifier, name, description. A node rather than a property because the same task is also drawn in the BPMN file, and the two lists have to be joinable to be checkable against each other. Class IRI: http://smart.who.int/kg/dak-task.",
+  "dcterms:description": "One task of a DAK business process, as the DAK document's \"notes and annotations\" describe it: identifier, name, description, and the personas, data elements, requirements and decision tables it links to. A node rather than a property because the same task is also drawn in the BPMN file, and the two have to be joinable to be checkable against each other (`describes`). Read from a BPMN file's `dak-task-annotations/v1` sidecar (smart-base/L2-bpmn/schemas/task-annotations.ts); BusinessProcessWorkflow's `task 0..*` backbone carries the first three fields of the same thing. Class IRI: http://smart.who.int/kg/dak-task.",
   "schema:version": "0.3.0",
   "dcterms:type": "Structures: Logical Models",
   "schema:sameAs": {
@@ -30,7 +30,7 @@
     {
       "@type": "schema:MediaObject",
       "schema:contentUrl": {
-        "@id": "https://raw.githubusercontent.com/litlfred/smart-base/ea469edd72effd3bf203e7fc3d987c80299a446c/resources/StructureDefinition/KGDakTask.json"
+        "@id": "https://raw.githubusercontent.com/litlfred/smart-base/891b2730a021ed54f9e0b5fe60ecd3129a077ce9/resources/StructureDefinition/KGDakTask.json"
       },
       "schema:encodingFormat": "application/fhir+json",
       "dcterms:source": "mirror"
@@ -39,7 +39,7 @@
   "prov:wasGeneratedBy": {
     "@type": "prov:Activity",
     "schema:instrument": "ig-publisher 3.0.0 / core 7.0.1",
-    "prov:used": "9875986400c30a910d141ea79b0fe5af6063e3ca"
+    "prov:used": "2c8d21ccdd2516a1c3ea658476f43583cec09ef9"
   },
   "dcterms:isPartOf": {
     "@type": "fhir:ImplementationGuide",

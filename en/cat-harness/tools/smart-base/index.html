@@ -298,9 +298,9 @@ is <code class="language-plaintext highlighter-rouge">satisfies</code>, and it r
 to do that</em>, never <em>this skill is a tool</em>.</p>
 
 <div class="tg-grid">
-<a class="tg-stat" href="#every-tool"><b>22</b><span>Tool nodes</span></a>
+<a class="tg-stat" href="#every-tool"><b>23</b><span>Tool nodes</span></a>
 <a class="tg-stat" href="#does-every-satisfies-name-a-skill-that-exists"><b>12</b><span>skills satisfied</span></a>
-<a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>22</b><span>invoked as a shell command</span></a>
+<a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>23</b><span>invoked as a shell command</span></a>
 <a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>0</b><span>reachable over MCP</span></a>
 </div>
 
@@ -325,7 +325,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
   <tbody>
     <tr>
       <td><span class="tg-tag tg-shell" data-surface="shell">cli</span></td>
-      <td>22</td>
+      <td>23</td>
     </tr>
   </tbody>
 </table></div>
@@ -340,7 +340,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">none</code></td>
-      <td>21</td>
+      <td>22</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cli</code></td>
@@ -357,7 +357,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
 </h2>
     
 
-<p>Yes — all <strong>12</strong> skills named across <strong>22</strong> tools resolve to a
+<p>Yes — all <strong>12</strong> skills named across <strong>23</strong> tools resolve to a
 skill document in this checkout. A <code class="language-plaintext highlighter-rouge">satisfies</code> pointing at nothing would be a
 tool advertising a capability the graph cannot locate.</p>
 <h2 id="every-tool">
@@ -369,7 +369,7 @@ tool advertising a capability the graph cannot locate.</p>
 </h2>
     
 
-<div class="tg-filter" id="tg-filter" role="group" aria-label="Filter by how a tool is reached"><span>Reached as:</span><button type="button" aria-pressed="true" data-surface="">all</button><button type="button" aria-pressed="false" data-surface="action">github action (7)</button><button type="button" aria-pressed="false" data-surface="shell">cli (22)</button><span><span id="tg-shown">22</span> of 22 shown</span></div>
+<div class="tg-filter" id="tg-filter" role="group" aria-label="Filter by how a tool is reached"><span>Reached as:</span><button type="button" aria-pressed="true" data-surface="">all</button><button type="button" aria-pressed="false" data-surface="action">github action (7)</button><button type="button" aria-pressed="false" data-surface="shell">cli (23)</button><span><span id="tg-shown">23</span> of 23 shown</span></div>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -424,6 +424,14 @@ tool advertising a capability the graph cannot locate.</p>
       <td><a href="https://github.com/litlfred/smart-base/blob/cat/cat-harness/qa-reports/index.json"><code class="language-plaintext highlighter-rouge">qa-reports</code></a></td>
     </tr>
     <tr>
+      <td><a id="dak-task-annotations"></a><a href="dak-task-annotations/"><code class="language-plaintext highlighter-rouge">dak-task-annotations</code></a> · <a href="http://smart.who.int/base/tools/dak-task-annotations.jsonld">JSON-LD</a><br />DAK task annotations → BPMN sidecars</td>
+      <td>Read a DAK document’s per-task “NOTES AND ANNOTATIONS” from its L1 section text (who-iris), match each numbered item to the BPMN task it describes (by @id, then the label’s step number with the file’s process letter, then the name), add the persona from the task’s lane or pool and the data elements, functional requirements and decision tables the DAK workbooks key to the activity id, and write one <code class="language-plaintext highlighter-rouge">dak-task-annotations/v1</code> sidecar (<code class="language-plaintext highlighter-rouge">&lt;file&gt;.tasks.json</code>) beside each BPMN (<code class="language-plaintext highlighter-rouge">smart-base/L2-bpmn/scripts/dak-task-annotations.ts</code>, schema <code class="language-plaintext highlighter-rouge">smart-base/L2-bpmn/schemas/task-annotations.ts</code>). Items no task matches are listed for a person to adjudicate; a re-run keeps adjudicated matches. <code class="language-plaintext highlighter-rouge">--report</code> prints what a set of sidecars covers and never fails. The BPMN is read, never written, and nothing FHIR-specific is involved.</td>
+      <td><span class="tg-tag tg-shell" data-surface="shell">cli</span></td>
+      <td><code class="language-plaintext highlighter-rouge">smart-base-tools</code></td>
+      <td>5 in / 1 out</td>
+      <td><a href="https://github.com/litlfred/smart-base/blob/cat/cat-harness/qa-reports/index.json"><code class="language-plaintext highlighter-rouge">qa-reports</code></a></td>
+    </tr>
+    <tr>
       <td><a id="dmn-to-html"></a><a href="dmn-to-html/"><code class="language-plaintext highlighter-rouge">dmn-to-html</code></a> · <a href="http://smart.who.int/base/tools/dmn-to-html.jsonld">JSON-LD</a><br />DMN → HTML</td>
       <td>Render each DMN decision table to an HTML fragment for a page, via <code class="language-plaintext highlighter-rouge">dmn2html.xslt</code> and <code class="language-plaintext highlighter-rouge">dmn.css</code>.</td>
       <td><span class="tg-tag tg-shell" data-surface="shell">cli</span> <span class="tg-tag tg-action" data-surface="action">github action</span></td>
@@ -457,10 +465,10 @@ tool advertising a capability the graph cannot locate.</p>
     </tr>
     <tr>
       <td><a id="kg-extract-bpmn"></a><a href="kg-extract-bpmn/"><code class="language-plaintext highlighter-rouge">kg-extract-bpmn</code></a> · <a href="http://smart.who.int/base/tools/kg-extract-bpmn.jsonld">JSON-LD</a><br />BPMN → L2-BPMN knowledge graph</td>
-      <td>Extract the interior of one BPMN file as the L2-BPMN subgraph (<code class="language-plaintext highlighter-rouge">smart-base/L2-bpmn/schemas/extract-bpmn.ts</code>, ported from WHO smart-kg <code class="language-plaintext highlighter-rouge">tools/extract-bpmn.mjs</code>): a <code class="language-plaintext highlighter-rouge">bpmn-definitions</code> node and its processes, participants, tasks, gateways, events, the <code class="language-plaintext highlighter-rouge">flowsTo</code>/<code class="language-plaintext highlighter-rouge">messageTo</code>/<code class="language-plaintext highlighter-rouge">contains</code> edges between them, and one <code class="language-plaintext highlighter-rouge">performedBy</code> edge from each pool to the persona its @name matches against the ActorDefinition titles under <code class="language-plaintext highlighter-rouge">--personas</code>. The output is a graph document whose <code class="language-plaintext highlighter-rouge">@context</code> is the l2-bpmn context and validates with the engine’s <code class="language-plaintext highlighter-rouge">check()</code>.</td>
+      <td>Extract the interior of one BPMN file as the L2-BPMN subgraph (<code class="language-plaintext highlighter-rouge">smart-base/L2-bpmn/schemas/extract-bpmn.ts</code>, ported from WHO smart-kg <code class="language-plaintext highlighter-rouge">tools/extract-bpmn.mjs</code>): a <code class="language-plaintext highlighter-rouge">bpmn-definitions</code> node and its processes, participants, tasks, gateways, events, the <code class="language-plaintext highlighter-rouge">flowsTo</code>/<code class="language-plaintext highlighter-rouge">messageTo</code>/<code class="language-plaintext highlighter-rouge">contains</code> edges between them, and one <code class="language-plaintext highlighter-rouge">performedBy</code> edge from each pool to the persona its @name matches against the ActorDefinition titles under <code class="language-plaintext highlighter-rouge">--personas</code>. When a <code class="language-plaintext highlighter-rouge">dak-task-annotations/v1</code> sidecar sits beside the file (<code class="language-plaintext highlighter-rouge">&lt;file&gt;.tasks.json</code>), each of its entries becomes an l2 <code class="language-plaintext highlighter-rouge">dak-task</code> that <code class="language-plaintext highlighter-rouge">describes</code> its BPMN task, with <code class="language-plaintext highlighter-rouge">performedBy</code>, <code class="language-plaintext highlighter-rouge">usesDataElement</code>, <code class="language-plaintext highlighter-rouge">specifiedBy</code> and <code class="language-plaintext highlighter-rouge">invokesDecision</code> edges by the DAK’s own ids. The output is a graph document whose <code class="language-plaintext highlighter-rouge">@context</code> is the l2-bpmn context and validates with the engine’s <code class="language-plaintext highlighter-rouge">check()</code>.</td>
       <td><span class="tg-tag tg-shell" data-surface="shell">cli</span></td>
       <td><code class="language-plaintext highlighter-rouge">smart-base-tools</code></td>
-      <td>3 in / 1 out</td>
+      <td>4 in / 1 out</td>
       <td><a href="https://github.com/litlfred/smart-base/blob/cat/cat-harness/qa-reports/index.json"><code class="language-plaintext highlighter-rouge">qa-reports</code></a></td>
     </tr>
     <tr>

@@ -4228,6 +4228,14 @@
       "isTest": false
     },
     {
+      "module": "smart-base/L2-bpmn/schemas/task-annotations.ts",
+      "instance": "smart-base",
+      "name": "task-annotations",
+      "graphNode": "schema",
+      "summary": "`dak-task-annotations/v1` — the reviewable record of a DAK's BPMN task",
+      "isTest": false
+    },
+    {
       "module": "smart-base/L2-dmn/schemas/extract-citations.ts",
       "instance": "smart-base",
       "name": "extract-citations",
@@ -147127,6 +147135,74 @@
       "exported": true
     },
     {
+      "id": "smart-base/L2-bpmn/schemas/extract-bpmn.ts#EmitContext",
+      "name": "EmitContext",
+      "module": "smart-base/L2-bpmn/schemas/extract-bpmn.ts",
+      "kind": "interface",
+      "fields": [
+        {
+          "name": "ns",
+          "type": "string",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          }
+        },
+        {
+          "name": "eid",
+          "type": "(id: string | null) => string",
+          "optional": false,
+          "array": false,
+          "card": "1..1"
+        },
+        {
+          "name": "nodes",
+          "type": "GraphNode[]",
+          "optional": false,
+          "array": true,
+          "card": "0..*"
+        },
+        {
+          "name": "edges",
+          "type": "GraphEdge[]",
+          "optional": false,
+          "array": true,
+          "card": "0..*"
+        },
+        {
+          "name": "warnings",
+          "type": "string[]",
+          "optional": false,
+          "array": true,
+          "card": "0..*",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          }
+        },
+        {
+          "name": "personaTitles",
+          "type": "Map<string, PersonaTitle | null>",
+          "optional": false,
+          "array": false,
+          "card": "1..1"
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/L2-bpmn/schemas/extract-bpmn.ts#PersonaTitle"
+      ],
+      "unresolved": [
+        "GraphEdge",
+        "GraphNode"
+      ],
+      "external": [],
+      "source": "typescript",
+      "exported": false
+    },
+    {
       "id": "smart-base/L2-bpmn/schemas/extract-bpmn.ts#PersonaTitle",
       "name": "PersonaTitle",
       "module": "smart-base/L2-bpmn/schemas/extract-bpmn.ts",
@@ -147160,6 +147236,391 @@
       "unresolved": [],
       "external": [],
       "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/L2-bpmn/schemas/task-annotations.ts#AnnotationSourceSchema",
+      "name": "AnnotationSourceSchema",
+      "module": "smart-base/L2-bpmn/schemas/task-annotations.ts",
+      "kind": "zod-object",
+      "doc": "Where in the L1 document an annotation came from.",
+      "fields": [
+        {
+          "name": "document",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "The L1 library document id (who-iris `library/<id>/`)."
+        },
+        {
+          "name": "page",
+          "type": "z.number().int().positive().optional()",
+          "optional": true,
+          "array": false,
+          "card": "0..1",
+          "utype": "number",
+          "links": {
+            "number": "https://zod.dev/api#numbers"
+          },
+          "doc": "The page the item starts on, when the extraction recorded one."
+        },
+        {
+          "name": "item",
+          "type": "z.string().regex(/^\\d+(\\.\\d+)*$/)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "The item's number as printed: `1`, `2.3`."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/L2-bpmn/schemas/task-annotations.ts#DakTaskAnnotations",
+      "name": "DakTaskAnnotations",
+      "module": "smart-base/L2-bpmn/schemas/task-annotations.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/L2-bpmn/schemas/task-annotations.ts#DakTaskAnnotationsSchema",
+      "name": "DakTaskAnnotationsSchema",
+      "module": "smart-base/L2-bpmn/schemas/task-annotations.ts",
+      "kind": "zod-object",
+      "fields": [
+        {
+          "name": "$schema",
+          "type": "z.literal(DAK_TASK_ANNOTATIONS_SCHEMA)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "DAK_TASK_ANNOTATIONS_SCHEMA"
+        },
+        {
+          "name": "bpmn",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "The BPMN file these annotate, relative to this file (its basename)."
+        },
+        {
+          "name": "process",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "The DAK process id: `IMMZ.B`."
+        },
+        {
+          "name": "document",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "The L1 document and the heading of the annotations block."
+        },
+        {
+          "name": "heading",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          }
+        },
+        {
+          "name": "tasks",
+          "type": "z.array(TaskAnnotationSchema)",
+          "optional": false,
+          "array": true,
+          "card": "0..*",
+          "utype": "TaskAnnotationSchema[]"
+        },
+        {
+          "name": "unmatched",
+          "type": "z.array(UnmatchedItemSchema).default([])",
+          "optional": true,
+          "array": true,
+          "card": "0..*",
+          "utype": "UnmatchedItemSchema[]"
+        },
+        {
+          "name": "unannotated",
+          "type": "z.array(z.string().min(1)).default([])",
+          "optional": true,
+          "array": true,
+          "card": "0..*",
+          "utype": "string[]",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "BPMN task ids with no annotation item."
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema",
+        "smart-base/L2-bpmn/schemas/task-annotations.ts#UnmatchedItemSchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "DAK_TASK_ANNOTATIONS_SCHEMA",
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/L2-bpmn/schemas/task-annotations.ts#MatchMethod",
+      "name": "MatchMethod",
+      "module": "smart-base/L2-bpmn/schemas/task-annotations.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotation",
+      "name": "TaskAnnotation",
+      "module": "smart-base/L2-bpmn/schemas/task-annotations.ts",
+      "kind": "type-alias",
+      "fields": [],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [],
+      "source": "typescript",
+      "exported": true
+    },
+    {
+      "id": "smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema",
+      "name": "TaskAnnotationSchema",
+      "module": "smart-base/L2-bpmn/schemas/task-annotations.ts",
+      "kind": "zod-object",
+      "fields": [
+        {
+          "name": "bpmnTask",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "The BPMN task's `@id`: the join key into the diagram."
+        },
+        {
+          "name": "activityId",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "The DAK activity id (`IMMZ.B1`, `TB.A5`): the join key into the spreadsheets."
+        },
+        {
+          "name": "name",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "The step's name as the annotation prints it."
+        },
+        {
+          "name": "description",
+          "type": "z.string()",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "The annotation's bullets, as Markdown, one `- ` line per `»`."
+        },
+        {
+          "name": "personas",
+          "type": "z.array(z.string().min(1)).default([])",
+          "optional": true,
+          "array": true,
+          "card": "0..*",
+          "utype": "string[]",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Personas performing the task, as the BPMN lane names them."
+        },
+        {
+          "name": "dataElements",
+          "type": "z.array(z.string().min(1)).default([])",
+          "optional": true,
+          "array": true,
+          "card": "0..*",
+          "utype": "string[]",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Data element ids the data dictionary keys to this activity."
+        },
+        {
+          "name": "requirements",
+          "type": "z.array(z.string().min(1)).default([])",
+          "optional": true,
+          "array": true,
+          "card": "0..*",
+          "utype": "string[]",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Functional requirement ids keyed to this activity."
+        },
+        {
+          "name": "decisionTables",
+          "type": "z.array(z.string().min(1)).default([])",
+          "optional": true,
+          "array": true,
+          "card": "0..*",
+          "utype": "string[]",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          },
+          "doc": "Decision table ids keyed to this activity, or named by the task's calledDecision."
+        },
+        {
+          "name": "matchedBy",
+          "type": "z.enum(MATCH_METHODS)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "enum",
+          "links": {
+            "enum": "https://zod.dev/api#enums"
+          }
+        },
+        {
+          "name": "source",
+          "type": "AnnotationSourceSchema",
+          "optional": false,
+          "array": false,
+          "card": "1..1"
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [
+        "smart-base/L2-bpmn/schemas/task-annotations.ts#AnnotationSourceSchema"
+      ],
+      "unresolved": [],
+      "external": [
+        "MATCH_METHODS",
+        "z"
+      ],
+      "source": "zod",
+      "exported": true
+    },
+    {
+      "id": "smart-base/L2-bpmn/schemas/task-annotations.ts#UnmatchedItemSchema",
+      "name": "UnmatchedItemSchema",
+      "module": "smart-base/L2-bpmn/schemas/task-annotations.ts",
+      "kind": "zod-object",
+      "doc": "An annotation item no BPMN task was found for: for a person to adjudicate, never guessed.",
+      "fields": [
+        {
+          "name": "item",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          }
+        },
+        {
+          "name": "name",
+          "type": "z.string()",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          }
+        },
+        {
+          "name": "reason",
+          "type": "z.string().min(1)",
+          "optional": false,
+          "array": false,
+          "card": "1..1",
+          "utype": "string",
+          "links": {
+            "string": "https://zod.dev/api#strings"
+          }
+        }
+      ],
+      "extendsNames": [],
+      "values": [],
+      "refs": [],
+      "unresolved": [],
+      "external": [
+        "z"
+      ],
+      "source": "zod",
       "exported": true
     },
     {
@@ -175605,6 +176066,38 @@
       "from": "smart-base/L2-bpmn/schemas/extract-bpmn.ts#BpmnExtraction",
       "to": "smart-base/L2-bpmn/schemas/extract-bpmn.ts#BpmnStats",
       "via": "stats",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/L2-bpmn/schemas/extract-bpmn.ts#EmitContext",
+      "to": "smart-base/L2-bpmn/schemas/extract-bpmn.ts#PersonaTitle",
+      "via": "personaTitles",
+      "kind": "field",
+      "optional": false,
+      "array": false
+    },
+    {
+      "from": "smart-base/L2-bpmn/schemas/task-annotations.ts#DakTaskAnnotationsSchema",
+      "to": "smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema",
+      "via": "tasks",
+      "kind": "field",
+      "optional": false,
+      "array": true
+    },
+    {
+      "from": "smart-base/L2-bpmn/schemas/task-annotations.ts#DakTaskAnnotationsSchema",
+      "to": "smart-base/L2-bpmn/schemas/task-annotations.ts#UnmatchedItemSchema",
+      "via": "unmatched",
+      "kind": "field",
+      "optional": true,
+      "array": true
+    },
+    {
+      "from": "smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema",
+      "to": "smart-base/L2-bpmn/schemas/task-annotations.ts#AnnotationSourceSchema",
+      "via": "source",
       "kind": "field",
       "optional": false,
       "array": false

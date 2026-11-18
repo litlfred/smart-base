@@ -163,7 +163,7 @@
 
 <link rel="stylesheet" href="../../../../assets/css/navbar.css"><script src="../../../../assets/navbar/rail-14ze53ymud6.js" defer></script><script src="../../../../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../../../../assets/page-layout.css" data-fa-page-layout><script src="../../../../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-pinned-data" content="../../../.."></head>
 
-<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../../../..">{"data":"rail-14ze53ymud6","here":"/en/cat-harness/tools/api/","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#operations-247","label":"Operations (247)"},{"href":"#mcp-tools-27","label":"MCP tools (27)"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../../">SMART Base</a></nav>
+<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../../../..">{"data":"rail-14ze53ymud6","here":"/en/cat-harness/tools/api/","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#operations-248","label":"Operations (248)"},{"href":"#mcp-tools-27","label":"MCP tools (27)"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../../">SMART Base</a></nav>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="svg-link" viewBox="0 0 24 24">
@@ -265,10 +265,10 @@
   <li><a href="../openapi.json"><code class="language-plaintext highlighter-rouge">openapi.json</code></a> — OpenAPI 3.1.0, one operation per Tool. Open it in Swagger UI or Redoc, or generate a client from it. The paths are the Tools’ call contracts, not HTTP endpoints: each operation’s <code class="language-plaintext highlighter-rouge">x-invoke</code> says how the Tool is really reached.</li>
   <li><a href="../mcp-tools.json"><code class="language-plaintext highlighter-rouge">mcp-tools.json</code></a> — the answer an MCP server gives to <code class="language-plaintext highlighter-rouge">tools/list</code>: each tool’s name, description and input schema, read from the registrar that serves it.</li>
 </ul>
-<h2 id="operations-247">
+<h2 id="operations-248">
   
   
-    <a href="#operations-247" class="anchor-heading" aria-labelledby="operations-247"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Operations (247)
+    <a href="#operations-248" class="anchor-heading" aria-labelledby="operations-248"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Operations (248)
   
   
 </h2>
@@ -598,6 +598,13 @@
       <td>sushi-config.yaml → index.config.json#contentTypes.dak</td>
       <td><code class="language-plaintext highlighter-rouge">sushiConfig</code>: RepoPath, <code class="language-plaintext highlighter-rouge">branch</code>?: Branch</td>
       <td><code class="language-plaintext highlighter-rouge">dakConfig</code>?: RepoPath</td>
+      <td>shell</td>
+    </tr>
+    <tr>
+      <td><a id="dak-task-annotations"></a><a href="../smart-base/dak-task-annotations/"><code class="language-plaintext highlighter-rouge">POST</code> <code class="language-plaintext highlighter-rouge">/tools/dak-task-annotations</code></a></td>
+      <td>DAK task annotations → BPMN sidecars</td>
+      <td><code class="language-plaintext highlighter-rouge">prefix</code>: DocId, <code class="language-plaintext highlighter-rouge">document</code>: DocId, <code class="language-plaintext highlighter-rouge">l1</code>: RepoPath, <code class="language-plaintext highlighter-rouge">bpmn</code>: RepoPath, <code class="language-plaintext highlighter-rouge">xlsx</code>?: WorkbookPath</td>
+      <td><code class="language-plaintext highlighter-rouge">sidecars</code>?: RepoPath</td>
       <td>shell</td>
     </tr>
     <tr>
@@ -1072,7 +1079,7 @@
     <tr>
       <td><a id="kg-extract-bpmn"></a><a href="../smart-base/kg-extract-bpmn/"><code class="language-plaintext highlighter-rouge">POST</code> <code class="language-plaintext highlighter-rouge">/tools/kg-extract-bpmn</code></a></td>
       <td>BPMN → L2-BPMN knowledge graph</td>
-      <td><code class="language-plaintext highlighter-rouge">bpmn</code>: RepoPath, <code class="language-plaintext highlighter-rouge">personas</code>?: RepoPath, <code class="language-plaintext highlighter-rouge">out</code>?: RepoPath</td>
+      <td><code class="language-plaintext highlighter-rouge">bpmn</code>: RepoPath, <code class="language-plaintext highlighter-rouge">personas</code>?: RepoPath, <code class="language-plaintext highlighter-rouge">annotations</code>?: RepoPath, <code class="language-plaintext highlighter-rouge">out</code>?: RepoPath</td>
       <td><code class="language-plaintext highlighter-rouge">graph</code>?: RepoPath</td>
       <td>shell</td>
     </tr>

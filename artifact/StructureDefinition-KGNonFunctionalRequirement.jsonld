@@ -30,7 +30,7 @@
     {
       "@type": "schema:MediaObject",
       "schema:contentUrl": {
-        "@id": "https://raw.githubusercontent.com/litlfred/smart-base/ea469edd72effd3bf203e7fc3d987c80299a446c/resources/StructureDefinition/KGNonFunctionalRequirement.json"
+        "@id": "https://raw.githubusercontent.com/litlfred/smart-base/891b2730a021ed54f9e0b5fe60ecd3129a077ce9/resources/StructureDefinition/KGNonFunctionalRequirement.json"
       },
       "schema:encodingFormat": "application/fhir+json",
       "dcterms:source": "mirror"
@@ -39,7 +39,7 @@
   "prov:wasGeneratedBy": {
     "@type": "prov:Activity",
     "schema:instrument": "ig-publisher 3.0.0 / core 7.0.1",
-    "prov:used": "9875986400c30a910d141ea79b0fe5af6063e3ca"
+    "prov:used": "2c8d21ccdd2516a1c3ea658476f43583cec09ef9"
   },
   "dcterms:isPartOf": {
     "@type": "fhir:ImplementationGuide",

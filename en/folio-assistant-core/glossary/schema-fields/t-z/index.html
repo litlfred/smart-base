@@ -280,11 +280,11 @@
 
 <p>Candidate terms extracted from every schema field with a doc comment: <code class="language-plaintext highlighter-rouge">&lt;Declaration&gt;.&lt;field&gt;</code> as the label, the comment’s first paragraph as the definition. Each is the asset’s own text, verbatim and not curated, and carries the badge “candidate, extracted”. A person promotes one by authoring it. Authored terms are on their owning instance’s page, and those pages, the counts and the sources are linked from the <a href="../../../../../en/folio-assistant-core/glossary/">glossary index</a>.</p>
 
-<p>From: bootstrap-tools 45 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · cat-harness-tools 2571 (<a href="../../../../../assets/glossary/cat-harness-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · fhir-harness 180 (<a href="../../../../../assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld">SKOS</a>) · folio-assistant-core 208 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-schema-fields.skos.jsonld">SKOS</a>) · smart-base 114 (<a href="../../../../../assets/glossary/smart-base--kg-schema-fields.skos.jsonld">SKOS</a>).</p>
+<p>From: bootstrap-tools 45 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · cat-harness-tools 2571 (<a href="../../../../../assets/glossary/cat-harness-tools--kg-schema-fields.skos.jsonld">SKOS</a>) · fhir-harness 180 (<a href="../../../../../assets/glossary/fhir-harness--kg-schema-fields.skos.jsonld">SKOS</a>) · folio-assistant-core 208 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-schema-fields.skos.jsonld">SKOS</a>) · smart-base 129 (<a href="../../../../../assets/glossary/smart-base--kg-schema-fields.skos.jsonld">SKOS</a>).</p>
 
 <p>One of 7 pages of this type, split by the first letter of the label: <a href="../../../../../en/folio-assistant-core/glossary/schema-fields/">all parts</a>.</p>
 
-<p><strong>Size:</strong> this page holds 540 terms and is 314 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
+<p><strong>Size:</strong> this page holds 548 terms and is 319 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
 
 <div class="table-wrapper"><table class="fa-gloss-mapping">
 <caption>Already somebody else's concept? — <code>check:term-mapping</code>, bean <code>7wou</code></caption>
@@ -299,7 +299,7 @@ be a term this corpus is right to coin.</p>
 
 <p><label for="fa-gloss-q">Filter terms</label>
 <input id="fa-gloss-q" type="search" autocomplete="off" style="min-height:44px;width:100%;max-width:32rem" /></p>
-<p aria-live="polite"><span id="fa-gloss-n">540</span> shown</p>
+<p aria-live="polite"><span id="fa-gloss-n">548</span> shown</p>
 
 <nav aria-label="Letters"><a href="#letter-T">T</a> <a href="#letter-U">U</a> <a href="#letter-V">V</a> <a href="#letter-W">W</a></nav>
 <h2 id="letter-T">
@@ -450,6 +450,62 @@ TargetSchema.key <span class="fa-gloss-status">candidate, extracted</span>
 <dd>
 <p>The JSON term written, when it is not <code>code</code>.</p>
 <p class="fa-gloss-meta">Schema fields of cat-harness-tools · source <a href="https://github.com/litlfred/cat-harness-tools/blob/main/schemas/content/vocab-mapping.ts"><code>cat-harness-tools/schemas/content/vocab-mapping.ts#TargetSchema.key</code></a></p>
+</dd>
+<dt id="smart-base--kg-schema-fields--task-annotations.taskannotationschema.activityid" data-fa-state="extracted" data-fa-gloss="">
+TaskAnnotationSchema.activityId <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The DAK activity id (<code>IMMZ.B1</code>, <code>TB.A5</code>): the join key into the spreadsheets.</p>
+<p class="fa-gloss-meta">Schema fields of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2-bpmn/schemas/task-annotations.ts"><code>smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema.activityId</code></a></p>
+</dd>
+<dt id="smart-base--kg-schema-fields--task-annotations.taskannotationschema.bpmntask" data-fa-state="extracted" data-fa-gloss="">
+TaskAnnotationSchema.bpmnTask <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The BPMN task's <code>@id</code>: the join key into the diagram.</p>
+<p class="fa-gloss-meta">Schema fields of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2-bpmn/schemas/task-annotations.ts"><code>smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema.bpmnTask</code></a></p>
+</dd>
+<dt id="smart-base--kg-schema-fields--task-annotations.taskannotationschema.dataelements" data-fa-state="extracted" data-fa-gloss="">
+TaskAnnotationSchema.dataElements <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Data element ids the data dictionary keys to this activity.</p>
+<p class="fa-gloss-meta">Schema fields of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2-bpmn/schemas/task-annotations.ts"><code>smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema.dataElements</code></a></p>
+</dd>
+<dt id="smart-base--kg-schema-fields--task-annotations.taskannotationschema.decisiontables" data-fa-state="extracted" data-fa-gloss="">
+TaskAnnotationSchema.decisionTables <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Decision table ids keyed to this activity, or named by the task's calledDecision.</p>
+<p class="fa-gloss-meta">Schema fields of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2-bpmn/schemas/task-annotations.ts"><code>smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema.decisionTables</code></a></p>
+</dd>
+<dt id="smart-base--kg-schema-fields--task-annotations.taskannotationschema.description" data-fa-state="extracted" data-fa-gloss="">
+TaskAnnotationSchema.description <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The annotation's bullets, as Markdown, one <code>- </code> line per <code>»</code>.</p>
+<p class="fa-gloss-meta">Schema fields of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2-bpmn/schemas/task-annotations.ts"><code>smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema.description</code></a></p>
+</dd>
+<dt id="smart-base--kg-schema-fields--task-annotations.taskannotationschema.name" data-fa-state="extracted" data-fa-gloss="">
+TaskAnnotationSchema.name <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>The step's name as the annotation prints it.</p>
+<p class="fa-gloss-meta">Schema fields of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2-bpmn/schemas/task-annotations.ts"><code>smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema.name</code></a></p>
+</dd>
+<dt id="smart-base--kg-schema-fields--task-annotations.taskannotationschema.personas" data-fa-state="extracted" data-fa-gloss="">
+TaskAnnotationSchema.personas <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Personas performing the task, as the BPMN lane names them.</p>
+<p class="fa-gloss-meta">Schema fields of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2-bpmn/schemas/task-annotations.ts"><code>smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema.personas</code></a></p>
+</dd>
+<dt id="smart-base--kg-schema-fields--task-annotations.taskannotationschema.requirements" data-fa-state="extracted" data-fa-gloss="">
+TaskAnnotationSchema.requirements <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Functional requirement ids keyed to this activity.</p>
+<p class="fa-gloss-meta">Schema fields of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2-bpmn/schemas/task-annotations.ts"><code>smart-base/L2-bpmn/schemas/task-annotations.ts#TaskAnnotationSchema.requirements</code></a></p>
 </dd>
 <dt id="cat-harness-tools--kg-schema-fields--carried-note.taskrefschema.process" data-fa-state="extracted" data-fa-gloss="">
 TaskRefSchema.process <span class="fa-gloss-status">candidate, extracted</span>

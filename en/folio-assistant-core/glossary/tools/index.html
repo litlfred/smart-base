@@ -279,9 +279,9 @@
 
 <p>Candidate terms extracted from every Tool node: <code class="language-plaintext highlighter-rouge">title</code> as the label, <code class="language-plaintext highlighter-rouge">description</code> as the definition, the Tool id as the code. Each is the asset’s own text, verbatim and not curated, and carries the badge “candidate, extracted”. A person promotes one by authoring it. Authored terms are on their owning instance’s page, and those pages, the counts and the sources are linked from the <a href="../../../../en/folio-assistant-core/glossary/">glossary index</a>.</p>
 
-<p>From: cat-harness-tools 1 (<a href="../../../../assets/glossary/cat-harness-tools--kg-tools.skos.jsonld">SKOS</a>) · fhir-harness 39 (<a href="../../../../assets/glossary/fhir-harness--kg-tools.skos.jsonld">SKOS</a>) · folio-assistant-core 29 (<a href="../../../../assets/glossary/folio-assistant-core--kg-tools.skos.jsonld">SKOS</a>) · smart-base 22 (<a href="../../../../assets/glossary/smart-base--kg-tools.skos.jsonld">SKOS</a>) · who-iris 2 (<a href="../../../../assets/glossary/who-iris--kg-tools.skos.jsonld">SKOS</a>).</p>
+<p>From: cat-harness-tools 1 (<a href="../../../../assets/glossary/cat-harness-tools--kg-tools.skos.jsonld">SKOS</a>) · fhir-harness 39 (<a href="../../../../assets/glossary/fhir-harness--kg-tools.skos.jsonld">SKOS</a>) · folio-assistant-core 29 (<a href="../../../../assets/glossary/folio-assistant-core--kg-tools.skos.jsonld">SKOS</a>) · smart-base 23 (<a href="../../../../assets/glossary/smart-base--kg-tools.skos.jsonld">SKOS</a>) · who-iris 2 (<a href="../../../../assets/glossary/who-iris--kg-tools.skos.jsonld">SKOS</a>).</p>
 
-<p><strong>Size:</strong> this page holds 93 terms and is 97 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
+<p><strong>Size:</strong> this page holds 94 terms and is 99 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
 
 <div class="table-wrapper"><table class="fa-gloss-mapping">
 <caption>Already somebody else's concept? — <code>check:term-mapping</code>, bean <code>7wou</code></caption>
@@ -296,7 +296,7 @@ be a term this corpus is right to coin.</p>
 
 <p><label for="fa-gloss-q">Filter terms</label>
 <input id="fa-gloss-q" type="search" autocomplete="off" style="min-height:44px;width:100%;max-width:32rem" /></p>
-<p aria-live="polite"><span id="fa-gloss-n">93</span> shown</p>
+<p aria-live="polite"><span id="fa-gloss-n">94</span> shown</p>
 
 <nav aria-label="Letters"><a href="#letter-A">A</a> <a href="#letter-B">B</a> <a href="#letter-C">C</a> <a href="#letter-D">D</a> <a href="#letter-E">E</a> <a href="#letter-F">F</a> <a href="#letter-G">G</a> <a href="#letter-I">I</a> <a href="#letter-L">L</a> <a href="#letter-M">M</a> <a href="#letter-P">P</a> <a href="#letter-R">R</a> <a href="#letter-S">S</a> <a href="#letter-V">V</a> <a href="#letter-W">W</a></nav>
 <h2 id="letter-A">
@@ -364,7 +364,7 @@ BPMN → FHIR Shorthand <span class="fa-gloss-status">candidate, extracted</span
 BPMN → L2-BPMN knowledge graph <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Extract the interior of one BPMN file as the L2-BPMN subgraph (<code>smart-base/L2-bpmn/schemas/extract-bpmn.ts</code>, ported from WHO smart-kg <code>tools/extract-bpmn.mjs</code>): a <code>bpmn-definitions</code> node and its processes, participants, tasks, gateways, events, the <code>flowsTo</code>/<code>messageTo</code>/<code>contains</code> edges between them, and one <code>performedBy</code> edge from each pool to the persona its @name matches against the ActorDefinition titles under <code>--personas</code>. The output is a graph document whose <code>@context</code> is the l2-bpmn context and validates with the engine's <code>check()</code>.</p>
+<p>Extract the interior of one BPMN file as the L2-BPMN subgraph (<code>smart-base/L2-bpmn/schemas/extract-bpmn.ts</code>, ported from WHO smart-kg <code>tools/extract-bpmn.mjs</code>): a <code>bpmn-definitions</code> node and its processes, participants, tasks, gateways, events, the <code>flowsTo</code>/<code>messageTo</code>/<code>contains</code> edges between them, and one <code>performedBy</code> edge from each pool to the persona its @name matches against the ActorDefinition titles under <code>--personas</code>. When a <code>dak-task-annotations/v1</code> sidecar sits beside the file (<code>&lt;file&gt;.tasks.json</code>), each of its entries becomes an l2 <code>dak-task</code> that <code>describes</code> its BPMN task, with <code>performedBy</code>, <code>usesDataElement</code>, <code>specifiedBy</code> and <code>invokesDecision</code> edges by the DAK's own ids. The output is a graph document whose <code>@context</code> is the l2-bpmn context and validates with the engine's <code>check()</code>.</p>
 <p class="fa-gloss-meta">Tools of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2-bpmn/tools/kg-extract-bpmn/kg-extract-bpmn.ts"><code>smart-base/L2-bpmn/tools/kg-extract-bpmn/kg-extract-bpmn.ts#kg-extract-bpmn</code></a></p>
 </dd>
 <dt id="smart-base--kg-tools--bpmn-validate" data-fa-state="extracted" data-fa-gloss="">
@@ -491,6 +491,13 @@ DAK spreadsheets → DMN, PlanDefinitions, CQL, requirements, logical models <sp
 <dd>
 <p>Run WHO's <code>extract_dak.py</code> in a DAK or IG repository. It reads the DAK template spreadsheets (<code>input/decision-logic/*.xlsx</code> via <code>dt_extractor</code>, <code>input/system-requirements/*.xlsx</code> via <code>req_extractor</code>, <code>input/dictionary/*.xlsx</code> via <code>dd_extractor</code>) and the BPMN, and writes DMN decision tables, CPG recommendation PlanDefinitions with citations, CQL library skeletons, Requirements and logical-model FSH. Per the WHO IG Starter Kit (<code>l3_decisiontables</code>, <code>l3_cql</code>), an adapted decision or scheduling table is an edited copy of the upstream DAK's spreadsheet, never a parallel format.</p>
 <p class="fa-gloss-meta">Tools of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2/tools/extract-dak/extract-dak.ts"><code>smart-base/L2/tools/extract-dak/extract-dak.ts#extract-dak</code></a></p>
+</dd>
+<dt id="smart-base--kg-tools--dak-task-annotations" data-fa-state="extracted" data-fa-gloss="">
+DAK task annotations → BPMN sidecars <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Read a DAK document's per-task &quot;NOTES AND ANNOTATIONS&quot; from its L1 section text (who-iris), match each numbered item to the BPMN task it describes (by @id, then the label's step number with the file's process letter, then the name), add the persona from the task's lane or pool and the data elements, functional requirements and decision tables the DAK workbooks key to the activity id, and write one <code>dak-task-annotations/v1</code> sidecar (<code>&lt;file&gt;.tasks.json</code>) beside each BPMN (<code>smart-base/L2-bpmn/scripts/dak-task-annotations.ts</code>, schema <code>smart-base/L2-bpmn/schemas/task-annotations.ts</code>). Items no task matches are listed for a person to adjudicate; a re-run keeps adjudicated matches. <code>--report</code> prints what a set of sidecars covers and never fails. The BPMN is read, never written, and nothing FHIR-specific is involved.</p>
+<p class="fa-gloss-meta">Tools of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2-bpmn/tools/dak-task-annotations/dak-task-annotations.ts"><code>smart-base/L2-bpmn/tools/dak-task-annotations/dak-task-annotations.ts#dak-task-annotations</code></a></p>
 </dd>
 <dt id="smart-base--kg-tools--kg-extract-dak" data-fa-state="extracted" data-fa-gloss="">
 dak.json + FSH tree → L2 DAK component graph <span class="fa-gloss-status">candidate, extracted</span>
