@@ -10,6 +10,7 @@ import {
   cleanLines,
   coverage,
   decodeXml,
+  htmlText,
   main,
   parseIgPageAnnotations,
   reEscape,
@@ -198,6 +199,12 @@ describe("dak-task-annotations reading an IG page's HTML list", () => {
       { item: "2", name: "Correct fixable data quality issues", bullets: ["Fixable issues are corrected & resubmitted."] },
     ]);
     expect(b!.items.map((i) => i.name)).toEqual(["Publish data"]);
+  });
+
+  test("leavesNoMarkupInHtmlText", () => {
+    expect(htmlText("<scr<script>ipt>alert(1)</script> done")).toBe("alert(1) done");
+    expect(htmlText("a &lt;b&gt; tag &amp; text")).toBe("a tag & text");
+    expect(htmlText("x < y and y > z")).toBe("x y and y z");
   });
 
   test("matchesAnUnnumberedListByNameNeverByPosition", () => {

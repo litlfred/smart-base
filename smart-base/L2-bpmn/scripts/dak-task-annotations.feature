@@ -42,6 +42,11 @@ Feature: dak-task-annotations puts a DAK's BPMN task annotations in the knowledg
     Then each top-level item is a step named by its text, with its notes as bullets, tags dropped and entities decoded
     And the blocks are marked unnumbered
 
+  @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_reading_an_IG_page's_HTML_list::leavesNoMarkupInHtmlText
+  Scenario: text read from HTML holds no markup
+    Then a nested "<scr<script>ipt>" leaves no tag behind
+    And an escaped tag is decoded and then dropped, and a stray angle bracket is removed
+
   @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_reading_an_IG_page's_HTML_list::matchesAnUnnumberedListByNameNeverByPosition
   Scenario: an unnumbered list is matched to tasks by name, never by position
     Given a list that skips a gateway the BPMN draws as step 7

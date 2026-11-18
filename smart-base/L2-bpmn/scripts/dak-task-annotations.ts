@@ -205,9 +205,19 @@ export function parseAnnotationBlocks(text: string): AnnotationBlock[] {
   return blocks;
 }
 
-/** HTML text: tags dropped, entities decoded, whitespace collapsed. */
-const htmlText = (s: string) =>
-  decodeXml(s.replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, "")).replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
+/**
+ * HTML as plain text: entities decoded first, then tags dropped until none is left (so a nested
+ * `<scr<script>ipt>` cannot reassemble one), then any stray angle bracket removed. The result is
+ * JSON text, never rendered, and holds no markup.
+ */
+export const htmlText = (s: string): string => {
+  let t = decodeXml(s.replace(/<br\s*\/?>/gi, " ").replace(/&nbsp;/g, " "));
+  for (let prev = ""; prev !== t; ) {
+    prev = t;
+    t = t.replace(/<[^<>]*>/g, "");
+  }
+  return t.replace(/[<>]/g, "").replace(/\s+/g, " ").trim();
+};
 
 /**
  * The annotations an IG page writes as HTML (smart-dak-chud's `business-processes.md`): under
