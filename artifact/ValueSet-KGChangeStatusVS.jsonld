@@ -30,7 +30,7 @@
     {
       "@type": "schema:MediaObject",
       "schema:contentUrl": {
-        "@id": "https://raw.githubusercontent.com/litlfred/smart-base/cf381d27d175ea7c9a7e3b52ab7c848c2850601a/resources/ValueSet/KGChangeStatusVS.json"
+        "@id": "https://raw.githubusercontent.com/litlfred/smart-base/f3fd338d6bb4f954edf8c9c593caf94c1c269030/resources/ValueSet/KGChangeStatusVS.json"
       },
       "schema:encodingFormat": "application/fhir+json",
       "dcterms:source": "mirror"
@@ -39,7 +39,7 @@
   "prov:wasGeneratedBy": {
     "@type": "prov:Activity",
     "schema:instrument": "ig-publisher 3.0.0 / core 7.0.1",
-    "prov:used": "63daa5276909996824d0180082265817bb9e7e58"
+    "prov:used": "9edab5ef67b78fbd3aceba41bb993a82d5071800"
   },
   "dcterms:isPartOf": {
     "@type": "fhir:ImplementationGuide",

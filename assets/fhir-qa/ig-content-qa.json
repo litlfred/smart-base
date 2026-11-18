@@ -1,7 +1,7 @@
 {
   "$schema": "ig-content-qa-verdict/v1",
-  "items": 7301,
-  "contentDigest": "sha256:57e120553800132170521cf388c9202f523dcfb3638df2e6622db24b44f11add",
+  "items": 7313,
+  "contentDigest": "sha256:3e4a1959067f2337f80bc917b1b03207eda6a22313029a61b35ee331e43ada93",
   "patternHits": [],
   "reviewedDigest": "sha256:28c95b703fa7d89f76e86b83a07d67342ebfe5b93c1a8d32b7c51b781db05988",
   "reviewer": {
@@ -13,5 +13,5 @@
   "ok": true,
   "state": "stale",
   "openFindings": [],
-  "said": "WARNING: the review in qa/ig-content-qa.json is stale: it read sha256:28c95b703fa7d89f76e86b83a07d67342ebfe5b93c1a8d32b7c51b781db05988 (7284 text(s)), the site publishes sha256:57e120553800132170521cf388c9202f523dcfb3638df2e6622db24b44f11add (7301); published anyway, with no pattern hit; which texts were not reviewed cannot be told: the review records no per-text SHAs (recorded before 2026-11-16); an agent reviews the texts and records the review (skill ig-content-qa: `ig-content-qa.ts scan`, then `record`)"
+  "said": "WARNING: the review in qa/ig-content-qa.json is stale: it read sha256:28c95b703fa7d89f76e86b83a07d67342ebfe5b93c1a8d32b7c51b781db05988 (7284 text(s)), the site publishes sha256:3e4a1959067f2337f80bc917b1b03207eda6a22313029a61b35ee331e43ada93 (7313); published anyway, with no pattern hit; which texts were not reviewed cannot be told: the review records no per-text SHAs (recorded before 2026-11-16); an agent reviews the texts and records the review (skill ig-content-qa: `ig-content-qa.ts scan`, then `record`)"
 }

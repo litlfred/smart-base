@@ -2946,7 +2946,7 @@
       "@type": "fhir:StructureDefinition",
       "dcterms:identifier": "StructureDefinition/SGString",
       "dcterms:title": "SGString",
-      "dcterms:description": "Smart Guidelines (required) string extension for use in a complex extension",
+      "dcterms:description": "Smart Guidelines (required) string extension for use in a complex extension. Retired: SGUserStory now uses inline `capability` and `benefit` sub-extensions, because two slices of one extension definition cannot be told apart.",
       "dcterms:type": "Structures: Extension Definitions",
       "schema:sameAs": {
         "@id": "http://smart.who.int/base/StructureDefinition/SGString"
