@@ -45,7 +45,7 @@ Feature: dak-task-annotations puts a DAK's BPMN task annotations in the knowledg
   @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_reading_an_IG_page's_HTML_list::leavesNoMarkupInHtmlText
   Scenario: text read from HTML holds no markup
     Then a nested "<scr<script>ipt>" leaves no tag behind
-    And an escaped tag is decoded and then dropped, and a stray angle bracket is removed
+    And escaped text keeps its words, and the angle brackets it decodes to are removed
 
   @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_reading_an_IG_page's_HTML_list::matchesAnUnnumberedListByNameNeverByPosition
   Scenario: an unnumbered list is matched to tasks by name, never by position

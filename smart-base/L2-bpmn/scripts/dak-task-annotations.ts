@@ -206,17 +206,18 @@ export function parseAnnotationBlocks(text: string): AnnotationBlock[] {
 }
 
 /**
- * HTML as plain text: entities decoded first, then tags dropped until none is left (so a nested
- * `<scr<script>ipt>` cannot reassemble one), then any stray angle bracket removed. The result is
- * JSON text, never rendered, and holds no markup.
+ * HTML as plain text: tags dropped from the raw HTML until none is left (so a nested
+ * `<scr<script>ipt>` cannot reassemble one), then entities decoded (so escaped text such as
+ * `a &lt; b` keeps its words), then any angle bracket left removed. The result is JSON text,
+ * never rendered, and holds no markup.
  */
 export const htmlText = (s: string): string => {
-  let t = decodeXml(s.replace(/<br\s*\/?>/gi, " ").replace(/&nbsp;/g, " "));
+  let t = s.replace(/<br\s*\/?>/gi, " ");
   for (let prev = ""; prev !== t; ) {
     prev = t;
     t = t.replace(/<[^<>]*>/g, "");
   }
-  return t.replace(/[<>]/g, "").replace(/\s+/g, " ").trim();
+  return decodeXml(t.replace(/&nbsp;/g, " ")).replace(/[<>]/g, "").replace(/\s+/g, " ").trim();
 };
 
 /**

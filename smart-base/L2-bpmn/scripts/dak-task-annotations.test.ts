@@ -203,8 +203,10 @@ describe("dak-task-annotations reading an IG page's HTML list", () => {
 
   test("leavesNoMarkupInHtmlText", () => {
     expect(htmlText("<scr<script>ipt>alert(1)</script> done")).toBe("alert(1) done");
-    expect(htmlText("a &lt;b&gt; tag &amp; text")).toBe("a tag & text");
-    expect(htmlText("x < y and y > z")).toBe("x y and y z");
+    // Escaped text keeps its words; the brackets it decodes to are removed.
+    expect(htmlText("a &lt;b&gt; tag &amp; text")).toBe("a b tag & text");
+    expect(htmlText("x &lt; y and y &gt; z")).toBe("x y and y z");
+    expect(htmlText("&lt;script&gt;alert(1)&lt;/script&gt;")).toBe("scriptalert(1)/script");
   });
 
   test("matchesAnUnnumberedListByNameNeverByPosition", () => {
