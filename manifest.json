@@ -7,7 +7,7 @@
     "versions"
   ],
   "provisionalUntil": "a full IG Publisher run",
-  "generatedAt": "2026-11-14T10:17:40.501829542Z",
+  "generatedAt": "2026-11-18T03:15:17.635910686Z",
   "ig": {
     "root": ".",
     "version": "4.0.1"
@@ -17,8 +17,8 @@
   },
   "inputs": {
     "toolchain": "ig-publisher 3.0.0 / core 7.0.1",
-    "sourceRevision": "9875986400c30a910d141ea79b0fe5af6063e3ca",
-    "inputDigest": "092f8b9176d2012be882f82cfa6de23d2ed5b603e60bc5e3079ec376ae2eb26f"
+    "sourceRevision": "2c8d21ccdd2516a1c3ea658476f43583cec09ef9",
+    "inputDigest": "dcd7af1ff234250443060871455a18cd4e79416f67af558c23075ce05c49dbc1"
   },
   "inputsNotAtRevision": {
     "count": 62,
@@ -227,7 +227,7 @@
   "terminology": {
     "server": {
       "address": "https://tx.fhir.org/r4",
-      "version": "1.0.1"
+      "version": "1.0.3"
     },
     "expansions": [
       {
@@ -3843,6 +3843,6 @@
   ],
   "preExport": {
     "command": "bash smart-base/scripts/dak-pre-export.sh",
-    "preparedInputDigest": "42caaf501033d0ed1180302b2a93ee621b3b8a92e7ef866c1466ac6ad2041c6b"
+    "preparedInputDigest": "a52db821dec277f21e6adb591755383240f0158c596b01f2d4436c852a10857c"
   }
 }

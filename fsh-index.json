@@ -389,7 +389,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/KGL2Predicates.fsh",
     "startLine": 2,
-    "endLine": 23
+    "endLine": 26
   },
   {
     "outputFile": "CodeSystem-KGL3Classes.json",
@@ -1052,8 +1052,8 @@
     "fshName": "KGBpmnEvent",
     "fshType": "Logical",
     "fshFile": "models/KGL2BPMN.fsh",
-    "startLine": 59,
-    "endLine": 67
+    "startLine": 60,
+    "endLine": 69
   },
   {
     "outputFile": "StructureDefinition-KGBpmnGateway.json",
@@ -1061,7 +1061,7 @@
     "fshType": "Logical",
     "fshFile": "models/KGL2BPMN.fsh",
     "startLine": 47,
-    "endLine": 57
+    "endLine": 58
   },
   {
     "outputFile": "StructureDefinition-KGBpmnParticipant.json",
@@ -1141,23 +1141,23 @@
     "fshType": "Logical",
     "fshFile": "models/KGL2.fsh",
     "startLine": 69,
-    "endLine": 77
+    "endLine": 82
   },
   {
     "outputFile": "StructureDefinition-KGDataElement.json",
     "fshName": "KGDataElement",
     "fshType": "Logical",
     "fshFile": "models/KGL2.fsh",
-    "startLine": 79,
-    "endLine": 94
+    "startLine": 84,
+    "endLine": 99
   },
   {
     "outputFile": "StructureDefinition-KGDecisionSupportLogic.json",
     "fshName": "KGDecisionSupportLogic",
     "fshType": "Logical",
     "fshFile": "models/KGL2.fsh",
-    "startLine": 96,
-    "endLine": 107
+    "startLine": 101,
+    "endLine": 112
   },
   {
     "outputFile": "StructureDefinition-KGDmnDecision.json",
@@ -1236,16 +1236,16 @@
     "fshName": "KGExternalArtifact",
     "fshType": "Logical",
     "fshFile": "models/KGL2.fsh",
-    "startLine": 208,
-    "endLine": 217
+    "startLine": 213,
+    "endLine": 222
   },
   {
     "outputFile": "StructureDefinition-KGFunctionalRequirement.json",
     "fshName": "KGFunctionalRequirement",
     "fshType": "Logical",
     "fshFile": "models/KGL2.fsh",
-    "startLine": 140,
-    "endLine": 157
+    "startLine": 145,
+    "endLine": 162
   },
   {
     "outputFile": "StructureDefinition-KGGraphDocument.json",
@@ -1324,8 +1324,8 @@
     "fshName": "KGNonFunctionalRequirement",
     "fshType": "Logical",
     "fshFile": "models/KGL2.fsh",
-    "startLine": 159,
-    "endLine": 175
+    "startLine": 164,
+    "endLine": 180
   },
   {
     "outputFile": "StructureDefinition-KGOutcome.json",
@@ -1364,8 +1364,8 @@
     "fshName": "KGProgramIndicator",
     "fshType": "Logical",
     "fshFile": "models/KGL2.fsh",
-    "startLine": 122,
-    "endLine": 138
+    "startLine": 127,
+    "endLine": 143
   },
   {
     "outputFile": "StructureDefinition-KGProvenanceSource.json",
@@ -1436,8 +1436,8 @@
     "fshName": "KGRequirementStatement",
     "fshType": "Logical",
     "fshFile": "models/KGL2.fsh",
-    "startLine": 177,
-    "endLine": 192
+    "startLine": 182,
+    "endLine": 197
   },
   {
     "outputFile": "StructureDefinition-KGRequirements.json",
@@ -1452,8 +1452,8 @@
     "fshName": "KGSchedulingLogic",
     "fshType": "Logical",
     "fshFile": "models/KGL2.fsh",
-    "startLine": 109,
-    "endLine": 120
+    "startLine": 114,
+    "endLine": 125
   },
   {
     "outputFile": "StructureDefinition-KGStructureDefinition.json",
@@ -1484,8 +1484,8 @@
     "fshName": "KGTestScenario",
     "fshType": "Logical",
     "fshFile": "models/KGL2.fsh",
-    "startLine": 194,
-    "endLine": 206
+    "startLine": 199,
+    "endLine": 211
   },
   {
     "outputFile": "StructureDefinition-KGUserScenario.json",

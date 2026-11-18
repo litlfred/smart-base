@@ -16,7 +16,7 @@
   },
   "@id": "http://smart.who.int/base/ValueSet-KGL2PredicatesVS.jsonld",
   "@type": "http://www.w3.org/ns/prov#Entity",
-  "generatedAt": "2026-11-14T10:17:40.501829542Z",
+  "generatedAt": "2026-11-18T03:15:17.635910686Z",
   "@graph": [
     {
       "id": "#hasComponent",
@@ -53,6 +53,18 @@
     {
       "id": "#describes",
       "name": "describes"
+    },
+    {
+      "id": "#usesDataElement",
+      "name": "usesDataElement"
+    },
+    {
+      "id": "#specifiedBy",
+      "name": "specifiedBy"
+    },
+    {
+      "id": "#invokesDecision",
+      "name": "invokesDecision"
     },
     {
       "id": "#implementedBy",

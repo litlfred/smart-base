@@ -104,6 +104,10 @@
           "direction": {
             "$ref": "./ValueSet-KGGatewayDirectionVS.schema.json",
             "description": "The gateway's gatewayDirection."
+          },
+          "parent": {
+            "type": "string",
+            "description": "The id of the sub-process that contains it, when nested."
           }
         },
         "required": [

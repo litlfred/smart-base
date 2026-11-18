@@ -14,7 +14,7 @@
   "title" : "SMART Base",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-11-14T10:12:42+00:00",
+  "date" : "2026-11-18T03:10:38+00:00",
   "publisher" : "WHO",
   "contact" : [{
     "name" : "WHO",
@@ -2354,7 +2354,7 @@
         "reference" : "StructureDefinition/KGBpmnEvent"
       },
       "name" : "Knowledge graph L2-BPMN: BPMN Event",
-      "description" : "A start or end event. Same connectivity argument as gateway, plus one of its own: entry and exit points are what make 'is this task reachable' and 'does this path terminate' answerable at all. Class IRI: http://smart.who.int/kg/bpmn-event.",
+      "description" : "A start, end or intermediate event (WHO's DAK BPMN draw intermediate throw and catch events inside sub-processes). Same connectivity argument as gateway, plus one of its own: entry and exit points are what make 'is this task reachable' and 'does this path terminate' answerable at all. Class IRI: http://smart.who.int/kg/bpmn-event.",
       "exampleBoolean" : false
     },
     {
@@ -2798,7 +2798,7 @@
         "reference" : "StructureDefinition/KGDakTask"
       },
       "name" : "Knowledge graph L2: Task Entry",
-      "description" : "One entry of BusinessProcessWorkflow's `task 0..*` backbone: identifier, name, description. A node rather than a property because the same task is also drawn in the BPMN file, and the two lists have to be joinable to be checkable against each other. Class IRI: http://smart.who.int/kg/dak-task.",
+      "description" : "One task of a DAK business process, as the DAK document's \"notes and annotations\" describe it: identifier, name, description, and the personas, data elements, requirements and decision tables it links to. A node rather than a property because the same task is also drawn in the BPMN file, and the two have to be joinable to be checkable against each other (`describes`). Read from a BPMN file's `dak-task-annotations/v1` sidecar (smart-base/L2-bpmn/schemas/task-annotations.ts); BusinessProcessWorkflow's `task 0..*` backbone carries the first three fields of the same thing. Class IRI: http://smart.who.int/kg/dak-task.",
       "exampleBoolean" : false
     },
     {

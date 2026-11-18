@@ -162,9 +162,9 @@
                       "filename": "StructureDefinition-KGBpmnEvent.schema.json",
                       "id": "http://smart.who.int/base/StructureDefinition-KGBpmnEvent.schema.json",
                       "title": "Knowledge graph L2-BPMN: BPMN Event",
-                      "description": "A start or end event. Same connectivity argument as gateway, plus one of its own: entry and exit points are what make 'is this task reachable' and 'does this path terminate' answerable at all. Class IRI: http://smart.who.int/kg/bpmn-event.",
+                      "description": "A start, end or intermediate event (WHO's DAK BPMN draw intermediate throw and catch events inside sub-processes). Same connectivity argument as gateway, plus one of its own: entry and exit points are what make 'is this task reachable' and 'does this path terminate' answerable at all. Class IRI: http://smart.who.int/kg/bpmn-event.",
                       "url": "./StructureDefinition-KGBpmnEvent.schema.json",
-                      "propertyCount": 4
+                      "propertyCount": 5
                     },
                     {
                       "filename": "StructureDefinition-KGBpmnGateway.schema.json",
@@ -172,7 +172,7 @@
                       "title": "Knowledge graph L2-BPMN: BPMN Gateway",
                       "description": "A branch or merge. Included for connectivity rather than for a cross-model edge: a flow through a gateway with no node would point at nothing, and every reachability question over the process would break at the first decision point. Class IRI: http://smart.who.int/kg/bpmn-gateway.",
                       "url": "./StructureDefinition-KGBpmnGateway.schema.json",
-                      "propertyCount": 7
+                      "propertyCount": 8
                     },
                     {
                       "filename": "StructureDefinition-KGBpmnParticipant.schema.json",
@@ -250,9 +250,9 @@
                       "filename": "StructureDefinition-KGDakTask.schema.json",
                       "id": "http://smart.who.int/base/StructureDefinition-KGDakTask.schema.json",
                       "title": "Knowledge graph L2: Task Entry",
-                      "description": "One entry of BusinessProcessWorkflow's `task 0..*` backbone: identifier, name, description. A node rather than a property because the same task is also drawn in the BPMN file, and the two lists have to be joinable to be checkable against each other. Class IRI: http://smart.who.int/kg/dak-task.",
+                      "description": "One task of a DAK business process, as the DAK document's \"notes and annotations\" describe it: identifier, name, description, and the personas, data elements, requirements and decision tables it links to. A node rather than a property because the same task is also drawn in the BPMN file, and the two have to be joinable to be checkable against each other (`describes`). Read from a BPMN file's `dak-task-annotations/v1` sidecar (smart-base/L2-bpmn/schemas/task-annotations.ts); BusinessProcessWorkflow's `task 0..*` backbone carries the first three fields of the same thing. Class IRI: http://smart.who.int/kg/dak-task.",
                       "url": "./StructureDefinition-KGDakTask.schema.json",
-                      "propertyCount": 4
+                      "propertyCount": 9
                     },
                     {
                       "filename": "StructureDefinition-KGDataElement.schema.json",
@@ -921,9 +921,9 @@
               "filename": "StructureDefinition-KGBpmnEvent.schema.json",
               "id": "http://smart.who.int/base/StructureDefinition-KGBpmnEvent.schema.json",
               "title": "Knowledge graph L2-BPMN: BPMN Event",
-              "description": "A start or end event. Same connectivity argument as gateway, plus one of its own: entry and exit points are what make 'is this task reachable' and 'does this path terminate' answerable at all. Class IRI: http://smart.who.int/kg/bpmn-event.",
+              "description": "A start, end or intermediate event (WHO's DAK BPMN draw intermediate throw and catch events inside sub-processes). Same connectivity argument as gateway, plus one of its own: entry and exit points are what make 'is this task reachable' and 'does this path terminate' answerable at all. Class IRI: http://smart.who.int/kg/bpmn-event.",
               "url": "./StructureDefinition-KGBpmnEvent.schema.json",
-              "propertyCount": 4
+              "propertyCount": 5
             },
             {
               "filename": "StructureDefinition-KGBpmnGateway.schema.json",
@@ -931,7 +931,7 @@
               "title": "Knowledge graph L2-BPMN: BPMN Gateway",
               "description": "A branch or merge. Included for connectivity rather than for a cross-model edge: a flow through a gateway with no node would point at nothing, and every reachability question over the process would break at the first decision point. Class IRI: http://smart.who.int/kg/bpmn-gateway.",
               "url": "./StructureDefinition-KGBpmnGateway.schema.json",
-              "propertyCount": 7
+              "propertyCount": 8
             },
             {
               "filename": "StructureDefinition-KGBpmnParticipant.schema.json",
@@ -1009,9 +1009,9 @@
               "filename": "StructureDefinition-KGDakTask.schema.json",
               "id": "http://smart.who.int/base/StructureDefinition-KGDakTask.schema.json",
               "title": "Knowledge graph L2: Task Entry",
-              "description": "One entry of BusinessProcessWorkflow's `task 0..*` backbone: identifier, name, description. A node rather than a property because the same task is also drawn in the BPMN file, and the two lists have to be joinable to be checkable against each other. Class IRI: http://smart.who.int/kg/dak-task.",
+              "description": "One task of a DAK business process, as the DAK document's \"notes and annotations\" describe it: identifier, name, description, and the personas, data elements, requirements and decision tables it links to. A node rather than a property because the same task is also drawn in the BPMN file, and the two have to be joinable to be checkable against each other (`describes`). Read from a BPMN file's `dak-task-annotations/v1` sidecar (smart-base/L2-bpmn/schemas/task-annotations.ts); BusinessProcessWorkflow's `task 0..*` backbone carries the first three fields of the same thing. Class IRI: http://smart.who.int/kg/dak-task.",
               "url": "./StructureDefinition-KGDakTask.schema.json",
-              "propertyCount": 4
+              "propertyCount": 9
             },
             {
               "filename": "StructureDefinition-KGDataElement.schema.json",
