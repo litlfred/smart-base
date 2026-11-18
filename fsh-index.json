@@ -1700,8 +1700,8 @@
     "fshName": "SGString",
     "fshType": "Extension",
     "fshFile": "extensions/SGUserStory.fsh",
-    "startLine": 7,
-    "endLine": 10
+    "startLine": 19,
+    "endLine": 23
   },
   {
     "outputFile": "StructureDefinition-SGStructureDefinition.json",
@@ -1733,7 +1733,7 @@
     "fshType": "Extension",
     "fshFile": "extensions/SGUserStory.fsh",
     "startLine": 1,
-    "endLine": 4
+    "endLine": 13
   },
   {
     "outputFile": "StructureDefinition-SGValueSet.json",

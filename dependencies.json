@@ -1,8 +1,8 @@
 {
   "$schema" : "ig-ast-dependencies/v1",
   "authority" : "cache",
-  "edges" : 336,
-  "resolvedInIg" : 218,
+  "edges" : 335,
+  "resolvedInIg" : 217,
   "dependencies" : [{
     "source" : "Requirements/SGAuthoring.Skills.AuthorActorDefinitions",
     "kind" : "meta.profile",
@@ -2340,15 +2340,6 @@
     "target" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "targetVersion" : "4.0.1",
     "resolved" : null,
-    "path" : null,
-    "origin" : "publisher"
-  },
-  {
-    "source" : "http://smart.who.int/base/StructureDefinition/SGUserStory|0.3.0",
-    "kind" : "uses",
-    "target" : "http://smart.who.int/base/StructureDefinition/SGString",
-    "targetVersion" : "0.3.0",
-    "resolved" : "http://smart.who.int/base/StructureDefinition/SGString|0.3.0",
     "path" : null,
     "origin" : "publisher"
   },

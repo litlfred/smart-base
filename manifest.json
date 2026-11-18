@@ -7,7 +7,7 @@
     "versions"
   ],
   "provisionalUntil": "a full IG Publisher run",
-  "generatedAt": "2026-11-18T19:35:18.380106816Z",
+  "generatedAt": "2026-11-18T21:45:37.696419379Z",
   "ig": {
     "root": ".",
     "version": "4.0.1"
@@ -17,8 +17,8 @@
   },
   "inputs": {
     "toolchain": "ig-publisher 3.0.0 / core 7.0.1",
-    "sourceRevision": "63daa5276909996824d0180082265817bb9e7e58",
-    "inputDigest": "70610b42842ec0aef3f3f4ac77893bb06138a82c823c6092ca35e97a64c36933"
+    "sourceRevision": "9edab5ef67b78fbd3aceba41bb993a82d5071800",
+    "inputDigest": "e751148a69e2ccc1e5013c3a9fdd2d80735838998e4cbc43aec0a1b8495e800f"
   },
   "inputsNotAtRevision": {
     "count": 62,
@@ -3843,6 +3843,6 @@
   ],
   "preExport": {
     "command": "bash smart-base/scripts/dak-pre-export.sh",
-    "preparedInputDigest": "838ed6a7df5c649691351d08dd6e04fda80eace0bef69d8dc93b4c535cc99a63"
+    "preparedInputDigest": "60d49c2ac1d1244544de872d14fc1be76243f78be247daa21f17f95cb20f3b0c"
   }
 }
