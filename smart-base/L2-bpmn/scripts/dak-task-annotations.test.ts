@@ -103,6 +103,59 @@ describe("dak-task-annotations reading the L1 text", () => {
   });
 });
 
+// The TB DAK's layout: no process letter on the heading, item 1 printed before it (the heading
+// sits in the right-hand column), an item number printed twice, the next figure's box labels and
+// the next document section straight after the last item.
+const tbL1 = [
+  "1. Was the visit initiated by the client or by the provider?",
+  "» Depending on the reasons that triggered the encounter.",
+  "workflows",
+  "REGISTRATION BUSINESS PROCESS NOTES AND ANNOTATIONS",
+  "» Patient-initiated health-care pathway.",
+  "2.",
+  "2. Client arrives at facility",
+  "» The client arrives at the health-care facility.",
+  "3. Arrive at the client's location",
+  "» The health worker arrives.",
+  "2. Assess medical history",
+  "5. Is referral",
+  "Fig. 7 Workflow C: diagnosis business process",
+  "SCREENING BUSINESS PROCESS NOTES AND ANNOTATIONS",
+  "1. Provide pre-screening information",
+  "» Information is given.",
+  "2. Make an informed decision",
+  "» The client decides.",
+  "2.1 Not a section: a sub-step under item 2",
+  "1.2 Principles of TB screening",
+  "5.1 Simplified list of core data elements",
+].join("\n");
+
+describe("dak-task-annotations reading a TB-style layout", () => {
+  test("lettersHeadingsInOrderAndStartsAtAnItem1PrintedBeforeTheHeading", () => {
+    const [a, b] = parseAnnotationBlocks(tbL1);
+    expect([a!.letter, b!.letter]).toEqual(["A", "B"]);
+    expect(a!.items[0]).toEqual({
+      item: "1",
+      name: "Was the visit initiated by the client or by the provider?",
+      bullets: ["Depending on the reasons that triggered the encounter.", "Patient-initiated health-care pathway."],
+    });
+  });
+
+  test("readsANumberPrintedTwiceAsOneItem_andEndsWhereTheNumberingGoesBack", () => {
+    const [a, b] = parseAnnotationBlocks(tbL1);
+    expect(a!.items.map((i) => [i.item, i.name])).toEqual([
+      ["1", "Was the visit initiated by the client or by the provider?"],
+      ["2", "Client arrives at facility"],
+      ["3", "Arrive at the client's location"],
+    ]);
+    // "2. Assess medical history" after item 3 is the next figure's box label: the block ends.
+    expect(a!.items[2]!.bullets).toEqual(["The health worker arrives."]);
+    // A dotted heading under the current item stays in its text; one that goes back ends the block.
+    expect(b!.items.map((i) => i.item)).toEqual(["1", "2"]);
+    expect(b!.items[1]!.bullets).toEqual(["The client decides. 2.1 Not a section: a sub-step under item 2"]);
+  });
+});
+
 describe("dak-task-annotations matching to BPMN", () => {
   test("normalisesActivityIds", () => {
     expect(activityCode("IMMZ.B.1", "IMMZ")).toBe("IMMZ.B1");
@@ -238,6 +291,28 @@ describe("dak-task-annotations in the knowledge graph", () => {
     expect(doc.nodes.find((n) => n.id.endsWith("#IMMZ.B5"))!.properties.taskType).toBe("businessRuleTask");
     expect(doc.nodes.find((n) => n.id.endsWith("#IMMZ.B3"))!.type).toBe("bpmn-gateway");
     expect(doc.wasDerivedFrom?.map((s) => s.path)).toEqual([path, sidecarPath(path)]);
+  });
+
+  test("aStepNumberMatchIsInferredWithEvidence_andAnAdHocSubProcessIsATask", () => {
+    const dir = mkdtempSync(join(tmpdir(), "dak-task-annotations-tb-"));
+    const xml = bpmnTb.replace(
+      '<bpmn:task id="Activity_0def"',
+      '<bpmn:adHocSubProcess id="Activity_adhoc" name="Clinical evaluation"><bpmn:task id="Activity_in" name="4. Inside" /></bpmn:adHocSubProcess><bpmn:task id="Activity_0def"',
+    );
+    const path = join(dir, "a-registration.bpmn");
+    writeFileSync(path, xml);
+    const blocks = parseAnnotationBlocks("A. REGISTRATION BUSINESS PROCESS NOTES AND ANNOTATIONS\n" + [1, 2, 3, 4, 5].map((n) => `${n}.\nStep ${n}\n»\nText.`).join("\n"));
+    const ann = matchAnnotations({ prefix: "TB", document: "tb", bpmnPath: path, xml, blocks })!;
+    const { doc } = extract(xml, path, new Map(), ann);
+    const describes = doc.edges.filter((e) => e.predicate === "describes");
+    expect(describes.length).toBe(2);
+    for (const e of describes) {
+      expect(e.derivation).toBe("inferred");
+      expect(e.evidence?.location).toBe(sidecarPath(path));
+    }
+    const adhoc = doc.nodes.find((n) => n.id.endsWith("#Activity_adhoc"))!;
+    expect(adhoc.properties).toMatchObject({ taskType: "adHocSubProcess", isSubProcess: true });
+    expect(doc.nodes.find((n) => n.id.endsWith("#Activity_in"))!.properties.parent).toBe(adhoc.id);
   });
 
   test("publishesAJsonSchema", () => {

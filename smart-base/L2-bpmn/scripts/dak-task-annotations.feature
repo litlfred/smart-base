@@ -22,6 +22,19 @@ Feature: dak-task-annotations puts a DAK's BPMN task annotations in the knowledg
     And an out-of-sequence number stays in the bullet text it belongs to
     And an item written on one line with an inline » keeps its name and bullet apart
 
+  @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_reading_a_TB-style_layout::lettersHeadingsInOrderAndStartsAtAnItem1PrintedBeforeTheHeading
+  Scenario: a heading without a process letter takes the next letter, and an item 1 printed before it starts the block
+    Given the TB DAK's layout, where the heading sits in the right-hand column and carries no letter
+    When the blocks are parsed
+    Then they are lettered A and B in document order
+    And the item 1 printed just before the first heading, followed by its bullets, starts block A
+
+  @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_reading_a_TB-style_layout::readsANumberPrintedTwiceAsOneItem_andEndsWhereTheNumberingGoesBack
+  Scenario: a number printed twice is one item, and a block ends where the numbering goes back
+    Then "2." followed by "2. Client arrives at facility" is the one item 2
+    And "2. Assess medical history" after item 3, the next figure's box label, ends the block
+    And "2.1 …" under item 2 stays in its text, while "1.2 …" going back below item 2 ends the block
+
   @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_matching_to_BPMN::normalisesActivityIds
   Scenario: activity ids are normalised whichever way they are written
     Then "IMMZ.B.1" and "IMMZ.B1" are both IMMZ.B1, and "IMMZ.C4.Create client record" is IMMZ.C4
@@ -76,6 +89,13 @@ Feature: dak-task-annotations puts a DAK's BPMN task annotations in the knowledg
     Then each annotation is a dak-task named by its activity id, which describes its BPMN node
     And IMMZ.B1 is specified by its requirement and performed by its persona
     And a businessRuleTask and a gateway are in the graph, and the sidecar is a source of the document
+
+  @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_in_the_knowledge_graph::aStepNumberMatchIsInferredWithEvidence_andAnAdHocSubProcessIsATask
+  Scenario: a match by step number is recorded as inferred, with its evidence, and an ad-hoc sub-process is a task
+    Given a TB-style BPMN with Modeler ids and an ad-hoc sub-process holding a task
+    When it is extracted with its sidecar
+    Then each describes edge is inferred and its evidence points at the sidecar
+    And the ad-hoc sub-process is a bpmn-task with isSubProcess, and parents the task inside it
 
   @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_in_the_knowledge_graph::publishesAJsonSchema
   Scenario: the sidecar format has a JSON Schema
