@@ -13,9 +13,11 @@ Description: "Smart Guidelines extension to support structured User Stories (As 
 * extension[benefit].valueString 1..1 MS
 
 
-// No longer used by SGUserStory. Kept so a resource or downstream IG that
-// names it still resolves.
+// No longer used by SGUserStory. SGString is published in
+// smart.who.int.base 0.2.0 and 1.0.0, so it stays, retired, for anything that
+// names it.
 Extension: SGString
-Description: "Smart Guidelines (required) string extension for use in a complex extension"
+Description: "Smart Guidelines (required) string extension for use in a complex extension. Retired: SGUserStory now uses inline `capability` and `benefit` sub-extensions, because two slices of one extension definition cannot be told apart."
+* ^status = #retired
 * value[x] only string
 * valueString 1..1 MS
