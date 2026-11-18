@@ -272,7 +272,7 @@
 </h1>
     
 
-<p><code class="language-plaintext highlighter-rouge">Process_DthAuthoring</code> · advisory · 37 step(s)</p>
+<p><code class="language-plaintext highlighter-rouge">Process_DthAuthoring</code> · advisory · 38 step(s)</p>
 
 <p>Produces a WHO Digital Transformation Handbook (DTH) from its sources to publication, in seven stages that each end in a recorded milestone: initiate (M0 charter), ingest sources into the library (M1 library frozen), outline and scope (M2 outline agreed), structured drafting (M3 zero draft), working-group feedback (M4), public comment (M5 released, M6 dispositioned), and finalise and publish (M7).
 Milestones are recorded checkpoints, not gates: each is written as a note on the handbook’s epic bean (which milestone, when, evidence), so the site can show stage and progress. Review runs beside drafting as QA, as in smart-guideline-end-to-end.bpmn.
@@ -319,6 +319,8 @@ Empirical content (figures, statistics, country examples) stays as cited narrati
 <button type="button" class="pt-mark" data-task="Call_Glossary" style="left:54.05%;top:57.05%" aria-expanded="false" aria-label="About step: Link glossary to smart-ra SKOS" title="About: Link glossary to smart-ra SKOS">i</button>
 <button type="button" class="pt-mark" data-task="Task_Validate" style="left:61.12%;top:23.22%" aria-expanded="false" aria-label="About step: Validate the draft" title="About: Validate the draft">i</button>
 <button type="button" class="pt-mark" data-task="Task_ArchReview" style="left:61.12%;top:73.08%" aria-expanded="false" aria-label="About step: Architect group and handbook owners review" title="About: Architect group and handbook owners review">i</button>
+<a class="pt-go" href="dak-l3-ig.html" style="left:59.68%;top:34.63%;width:0.35%;height:1.32%" aria-label="Open subprocess: The DAK content as a FHIR IG" title="Open subprocess: The DAK content as a FHIR IG"></a>
+<button type="button" class="pt-mark" data-task="Call_DakL3" style="left:61.12%;top:31.01%" aria-expanded="false" aria-label="About step: The DAK content as a FHIR IG" title="About: The DAK content as a FHIR IG">i</button>
 <button type="button" class="pt-mark" data-task="M3" style="left:65.83%;top:23.22%" aria-expanded="false" aria-label="About step: Record milestone M3 · Zero draft" title="About: Record milestone M3 · Zero draft">i</button>
 <button type="button" class="pt-mark" data-task="Task_Comments" style="left:68.78%;top:81.7%" aria-expanded="false" aria-label="About step: 4 · Comment via contributor log sheet or GitHub pc:" title="About: 4 · Comment via contributor log sheet or GitHub pc:">i</button>
 <button type="button" class="pt-mark" data-task="Task_Import" style="left:71.72%;top:88.01%" aria-expanded="false" aria-label="About step: Import into review/wg-comment and form change sets" title="About: Import into review/wg-comment and form change sets">i</button>
@@ -549,7 +551,7 @@ Empirical content (figures, statistics, country examples) stays as cited narrati
 
 <ul>
   <li><strong>Called by:</strong> no call activity names this process</li>
-  <li><strong>Calls:</strong> <a href="l2-component-edit-review.html">L2 component edit and review</a>, <a href="publish-extracted-statements.html">Publish extracted statements with source links</a></li>
+  <li><strong>Calls:</strong> <a href="dak-l3-ig.html">L2 DAK to L3 FHIR IG</a>, <a href="l2-component-edit-review.html">L2 component edit and review</a>, <a href="publish-extracted-statements.html">Publish extracted statements with source links</a></li>
   <li><strong>Presented on:</strong> no docs page section shows this diagram</li>
   <li><strong>Skill:</strong> <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/L2/skills/smart-l2/dth-authoring.md"><code class="language-plaintext highlighter-rouge">dth-authoring</code></a></li>
   <li><strong>Running instances:</strong> none recorded</li>
@@ -628,7 +630,7 @@ Empirical content (figures, statistics, country examples) stays as cited narrati
 </h2>
     
 
-<p><strong>2</strong> of 37 step(s) carry no documentation — <code class="language-plaintext highlighter-rouge">activity-documented</code> lists them.</p>
+<p><strong>2</strong> of 38 step(s) carry no documentation — <code class="language-plaintext highlighter-rouge">activity-documented</code> lists them.</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -795,6 +797,12 @@ Empirical content (figures, statistics, country examples) stays as cited narrati
       <td>Architect group and handbook owners</td>
       <td><a href="../../../en/cat-harness/processes/skills/content-review.html"><code class="language-plaintext highlighter-rouge">content-review</code></a></td>
       <td>Runs beside validation, as QA. New kinds and shared schemas are reviewed here before they are built.</td>
+    </tr>
+    <tr>
+      <td><a id="step-Call_DakL3"></a><strong>The DAK content as a FHIR IG</strong><br /><code class="language-plaintext highlighter-rouge">Call_DakL3</code></td>
+      <td>Business analyst</td>
+      <td>calls <a href="dak-l3-ig.html">L2 DAK to L3 FHIR IG</a><br /><a href="../../../en/cat-harness/processes/skills/smart-guideline-end-to-end.html"><code class="language-plaintext highlighter-rouge">smart-guideline-end-to-end</code></a><br /><a href="../../../en/cat-harness/processes/skills/guideline-gap-report.html"><code class="language-plaintext highlighter-rouge">guideline-gap-report</code></a></td>
+      <td>Stages 5 and 6 of smart-guideline-end-to-end for the handbook: its DAK-kind assets become a FHIR IG on smart-base (personas as ActorDefinitions, processes and decision tables as PlanDefinitions with CQL Libraries, data elements as logical models, ValueSets and Questionnaires, indicators as Measures, requirements as Requirements). An asset goes to L3 once its L2 review is requested; its SME review at L3 re-runs the L2 dummy clients through the built logic. Runs beside the drafting reviews and never holds the zero draft. Calls <a href="dak-l3-ig.html">Process_DakL3Ig</a>; the agent writes the gap report (guideline-gap-report) after it.</td>
     </tr>
     <tr>
       <td><a id="step-M3"></a><strong>Record milestone M3 · Zero draft</strong><br /><code class="language-plaintext highlighter-rouge">M3</code></td>

@@ -163,7 +163,7 @@
 
 <link rel="stylesheet" href="../../../../assets/css/navbar.css"><script src="../../../../assets/navbar/rail-14ze53ymud6.js" defer></script><script src="../../../../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../../../../assets/page-layout.css" data-fa-page-layout><script src="../../../../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-pinned-data" content="../../../.."></head>
 
-<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../../../..">{"data":"rail-14ze53ymud6","here":"/en/cat-harness/processes/skills/l2-component-edit-review.html","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#the-shape-edit-check-render-then-fork","label":"The shape: edit, check, render, then fork"},{"href":"#the-inputs-per-component","label":"The inputs, per component"},{"href":"#asking-for-review","label":"Asking for review"},{"href":"#recording-the-verdict","label":"Recording the verdict"},{"href":"#tools-that-are-still-missing","label":"Tools that are still missing"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../../">SMART Base</a></nav>
+<body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../../../..">{"data":"rail-14ze53ymud6","here":"/en/cat-harness/processes/skills/l2-component-edit-review.html","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#the-shape-edit-check-render-then-fork","label":"The shape: edit, check, render, then fork"},{"href":"#the-inputs-per-component","label":"The inputs, per component"},{"href":"#who-sees-what","label":"Who sees what"},{"href":"#asking-for-review","label":"Asking for review"},{"href":"#recording-the-verdict","label":"Recording the verdict"},{"href":"#tools-that-are-still-missing","label":"Tools that are still missing"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../../">SMART Base</a></nav>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="svg-link" viewBox="0 0 24 24">
@@ -348,18 +348,18 @@ documentation names the rest.</p>
       <td><code class="language-plaintext highlighter-rouge">Task_Bpmn</code></td>
       <td><code class="language-plaintext highlighter-rouge">bpmn-authoring</code></td>
       <td>bpmn-js imports it with no warnings and every shape has diagram interchange. The Tool <code class="language-plaintext highlighter-rouge">bpmn-validate</code> (<code class="language-plaintext highlighter-rouge">L2-bpmn/tools/bpmn-validate/</code>, opt-in <code class="language-plaintext highlighter-rouge">smart-base.smart-base-L2-bpmn</code>) checks the structure (no duplicate id, every flow node in a lane), that no Camunda or Zeebe namespace is used, and that each lane names an ActorDefinition by its FSH <code class="language-plaintext highlighter-rouge">Instance:</code> id; pull-request CI runs it on every changed <code class="language-plaintext highlighter-rouge">.bpmn</code>. Reachability (<code class="language-plaintext highlighter-rouge">artefact-reachability</code>).</td>
-      <td>The diagram drawn by <code class="language-plaintext highlighter-rouge">render:bpmn</code>, before and after, with a <code class="language-plaintext highlighter-rouge">visual-diff</code> picture and its changed-pixel count.</td>
-      <td>Clinical SME</td>
-      <td>Does the flow match practice, and does each lane name a persona?</td>
+      <td>The diagram drawn by <code class="language-plaintext highlighter-rouge">render:bpmn</code>, before and after, with a <code class="language-plaintext highlighter-rouge">visual-diff</code> picture and its changed-pixel count, and the dummy clients (test scenarios, component 9) walked along it lane by lane.</td>
+      <td>Clinical SME (the programme SME for a programme process)</td>
+      <td>Does the flow match practice, does each lane name a persona, and does each dummy client go where it should?</td>
     </tr>
     <tr>
       <td>Decision-support logic (6), scheduling logic (7), DMN</td>
       <td><code class="language-plaintext highlighter-rouge">Task_Dmn</code></td>
       <td><code class="language-plaintext highlighter-rouge">dmn-authoring</code></td>
       <td>The table loads within the FEEL subset <code class="language-plaintext highlighter-rouge">dmn-authoring</code> names. Its decisions are reachable from a gateway (<code class="language-plaintext highlighter-rouge">artefact-reachability</code>, <code class="language-plaintext highlighter-rouge">audit:reachability</code>). Its test cases run (<code class="language-plaintext highlighter-rouge">content-test</code>).</td>
-      <td>The decision table as HTML (<code class="language-plaintext highlighter-rouge">smart-base-transform.py dmn2html</code>), before and after, each rule beside the L1 recommendation it cites, with the test-case results.</td>
+      <td>The decision table as HTML (<code class="language-plaintext highlighter-rouge">smart-base-transform.py dmn2html</code>), before and after, each rule beside the L1 recommendation it cites, and the dummy clients run through it, each with its inputs and the outcome in plain words.</td>
       <td>Clinical SME</td>
-      <td>Does each rule say what its recommendation says, and do the test cases show it?</td>
+      <td>Does each rule say what its recommendation says, and is each dummy client’s outcome right?</td>
     </tr>
     <tr>
       <td>Core data elements, data dictionary, glossary (5)</td>
@@ -390,6 +390,62 @@ documentation names the rest.</p>
     </tr>
   </tbody>
 </table></div>
+
+<p>A handbook (DTH) has two more L2 tracks, reviewed the same way through this
+subprocess:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>component</th>
+      <th>track</th>
+      <th>authoring skill</th>
+      <th>checker</th>
+      <th>renderer and diff</th>
+      <th>reviewing role</th>
+      <th>the reviewer judges</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Glossary terms and their SKOS links</td>
+      <td><code class="language-plaintext highlighter-rouge">dth-authoring</code> glossary</td>
+      <td><code class="language-plaintext highlighter-rouge">terminology-management</code></td>
+      <td><code class="language-plaintext highlighter-rouge">check:dth-glossary</code> (SKOS, cross-instance links resolve)</td>
+      <td>The term page, before and after, each term with its quoted source and page, and the smart-ra or sibling-DTH concept it narrows or matches</td>
+      <td>Terminologist, with the clinical or programme SME for meaning</td>
+      <td>Is each definition the handbook’s, and is each link to the right shared concept?</td>
+    </tr>
+    <tr>
+      <td>ArchiMate links and overlay</td>
+      <td><code class="language-plaintext highlighter-rouge">dth-authoring</code> ArchiMate</td>
+      <td><code class="language-plaintext highlighter-rouge">archimate-models</code></td>
+      <td>the overlay’s elements resolve to smart-ra (<code class="language-plaintext highlighter-rouge">check:dth-glossary</code>)</td>
+      <td>Each view drawn as SVG with its plain-language key, before and after</td>
+      <td>Business analyst with the architect group</td>
+      <td>Does each element mean what the handbook describes, and is it the shared one where one exists?</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="who-sees-what">
+  
+  
+    <a href="#who-sees-what" class="anchor-heading" aria-labelledby="who-sees-what"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Who sees what
+  
+  
+</h2>
+    
+
+<p>The reviewing role above answers the question in the last column, in the
+form the renderer column gives. Clinical and programme SMEs are shown
+rendered diagrams, tables, forms and the dummy clients run through them,
+never the <code class="language-plaintext highlighter-rouge">.bpmn</code>, <code class="language-plaintext highlighter-rouge">.dmn</code>, FSH or FHIR resource behind them
+(<a href="https://github.com/litlfred/smart-base/blob/main/smart-base/skills/content/authoring-who-smart-guidelines/smart-guideline-end-to-end.md"><code class="language-plaintext highlighter-rouge">smart-guideline-end-to-end</code></a>
+§<em>Review by expertise</em>). A component that needs a technical verdict as well
+(codes, conformance) gets a second review item for that role. Each request
+links the guideline’s gap report
+(<a href="https://github.com/litlfred/smart-base/blob/main/smart-base/skills/content/authoring-who-smart-guidelines/guideline-gap-report.md"><code class="language-plaintext highlighter-rouge">guideline-gap-report</code></a>),
+anchored at the component’s row.</p>
 
 <p><strong>An adaptation is a diff against its pinned upstream</strong>, not against an empty
 file. At L2 that diff is the renderer’s own. At L3 it is fhir-harness’s

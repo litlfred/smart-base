@@ -280,11 +280,11 @@
 
 <p>Candidate terms extracted from every BPMN task and call activity: <code class="language-plaintext highlighter-rouge">name</code> as the label, its own <code class="language-plaintext highlighter-rouge">&lt;documentation&gt;</code> as the definition, the element id as the code. Each is the asset’s own text, verbatim and not curated, and carries the badge “candidate, extracted”. A person promotes one by authoring it. Authored terms are on their owning instance’s page, and those pages, the counts and the sources are linked from the <a href="../../../../../en/folio-assistant-core/glossary/">glossary index</a>.</p>
 
-<p>From: bootstrap 38 (<a href="../../../../../assets/glossary/bootstrap--kg-bpmn-activities.skos.jsonld">SKOS</a>) · bootstrap-tools 7 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-bpmn-activities.skos.jsonld">SKOS</a>) · cat-harness 389 (<a href="../../../../../assets/glossary/cat-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · fhir-harness 25 (<a href="../../../../../assets/glossary/fhir-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · folio-assistant-core 70 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-bpmn-activities.skos.jsonld">SKOS</a>) · smart-base 161 (<a href="../../../../../assets/glossary/smart-base--kg-bpmn-activities.skos.jsonld">SKOS</a>) · who-iris 34 (<a href="../../../../../assets/glossary/who-iris--kg-bpmn-activities.skos.jsonld">SKOS</a>).</p>
+<p>From: bootstrap 38 (<a href="../../../../../assets/glossary/bootstrap--kg-bpmn-activities.skos.jsonld">SKOS</a>) · bootstrap-tools 7 (<a href="../../../../../assets/glossary/bootstrap-tools--kg-bpmn-activities.skos.jsonld">SKOS</a>) · cat-harness 389 (<a href="../../../../../assets/glossary/cat-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · fhir-harness 25 (<a href="../../../../../assets/glossary/fhir-harness--kg-bpmn-activities.skos.jsonld">SKOS</a>) · folio-assistant-core 70 (<a href="../../../../../assets/glossary/folio-assistant-core--kg-bpmn-activities.skos.jsonld">SKOS</a>) · smart-base 162 (<a href="../../../../../assets/glossary/smart-base--kg-bpmn-activities.skos.jsonld">SKOS</a>) · who-iris 34 (<a href="../../../../../assets/glossary/who-iris--kg-bpmn-activities.skos.jsonld">SKOS</a>).</p>
 
 <p>One of 3 pages of this type, split by the first letter of the label: <a href="../../../../../en/folio-assistant-core/glossary/bpmn-activities/">all parts</a>.</p>
 
-<p><strong>Size:</strong> this page holds 237 terms and is 192 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
+<p><strong>Size:</strong> this page holds 237 terms and is 193 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
 
 <div class="table-wrapper"><table class="fa-gloss-mapping">
 <caption>Already somebody else's concept? — <code>check:term-mapping</code>, bean <code>7wou</code></caption>
@@ -336,7 +336,7 @@ be a term this corpus is right to coin.</p>
 1 · Identify L1 guidelines and recommendations <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Component 1 sources of any DAK already in scope first, then WHO IRIS and the jurisdiction's own guidelines. Each candidate marked in-library / in-KG / not yet.</p>
+<p>Component 1 sources of any DAK already in scope first, then WHO IRIS and the jurisdiction's own guidelines. Each candidate marked in-library / in-KG / not yet. After the stage the agent writes and stages the guideline gap report (guideline-gap-report), linked from every review request.</p>
 <p class="fa-gloss-meta">BPMN activities of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn"><code>smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn#Task_IdentifyL1</code></a></p>
 </dd>
 <dt id="smart-base--kg-bpmn-activities--process_dthauthoring.task_ingest" data-fa-state="extracted" data-fa-gloss="">
@@ -350,7 +350,7 @@ be a term this corpus is right to coin.</p>
 2 · Ingest into the L1 KG <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Per source not yet extracted: cat ingest into library/, the generic-document layer (l1-library), then the L1 layer (recommendations, remarks, practices, scenario candidates) into library/&lt;bib&gt;/l1-extraction/.</p>
+<p>Per source not yet extracted: cat ingest into library/, the generic-document layer (l1-library), then the L1 layer (recommendations, remarks, practices, scenario candidates) into library/&lt;bib&gt;/l1-extraction/. A figure or table that carries a process, a decision or data is cut out with its page and transcribed verbatim (a table stays a table, a figure's boxes and arrows as printed), for stage 4 to model as BPMN, DMN or data elements, each naming the transcription in wasDerivedFrom. After the stage the agent writes and stages the guideline gap report (guideline-gap-report), linked from every review request.</p>
 <p class="fa-gloss-meta">BPMN activities of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn"><code>smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn#Task_IngestKg</code></a></p>
 </dd>
 <dt id="smart-base--kg-bpmn-activities--process_dthauthoring.task_outline" data-fa-state="extracted" data-fa-gloss="">
@@ -378,7 +378,7 @@ be a term this corpus is right to coin.</p>
 3 · Choose L2 dependencies (WHO / jurisdiction DAKs) <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason. Reuse first; prefer the jurisdiction's adaptation, recording the WHO original as its upstream. For each component kept, record how the candidate produces it (the tools graph, the candidate repository's source spreadsheets and converters, WHO's DAK toolchain); stage 4 uses that toolchain.</p>
+<p>From the L1 KG: which existing DAKs to reuse, adapt, extend or reject, each with evidence and reason. Reuse first; prefer the jurisdiction's adaptation, recording the WHO original as its upstream. For each component kept, record how the candidate produces it (the tools graph, the candidate repository's source spreadsheets and converters, WHO's DAK toolchain); stage 4 uses that toolchain. After the stage the agent writes and stages the guideline gap report (guideline-gap-report), linked from every review request.</p>
 <p class="fa-gloss-meta">BPMN activities of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn"><code>smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn#Task_DepsL2</code></a></p>
 </dd>
 <dt id="cat-harness--kg-bpmn-activities--process_graphdetanglement.task_isolate" data-fa-state="extracted" data-fa-gloss="">
@@ -399,7 +399,7 @@ be a term this corpus is right to coin.</p>
 4 · Create / adapt L2 DAK assets <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data elements. Its clinical validation is this stage's adjudication and does not hold up stage 5. The IG is built through fhir-harness's AST cache lifecycle (ig-ast-refresh.yml), with the DAK pre-processing as smart-base's pre-export overlay (dak-preprocessing, dak-pre-export.sh) and the DAK sidecars made from the AST (dak-postprocessing).</p>
+<p>The authoring steps of l2-dak-authoring.bpmn (personas and scenarios, BPMN, DMN, data dictionary, indicators and requirements, terminology), plus the design of each data-entry form as wireframe candidates (wireframe-design-review, design use) from the persona, the user scenario and the core data elements. Its clinical validation is this stage's adjudication and does not hold up stage 5. The IG is built through fhir-harness's AST cache lifecycle (ig-ast-refresh.yml), with the DAK pre-processing as smart-base's pre-export overlay (dak-preprocessing, dak-pre-export.sh) and the DAK sidecars made from the AST (dak-postprocessing). A transcribed figure or table becomes its BPMN process, DMN table or data elements, adding nothing it does not show. Each process and decision table gets dummy clients (test scenarios, component 9) for its SME review to run. After the stage the agent writes and stages the guideline gap report (guideline-gap-report), linked from every review request.</p>
 <p class="fa-gloss-meta">BPMN activities of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn"><code>smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn#Task_L2</code></a></p>
 </dd>
 <dt id="cat-harness--kg-bpmn-activities--process_graphdetanglement.task_extract" data-fa-state="extracted" data-fa-gloss="">
@@ -413,7 +413,7 @@ be a term this corpus is right to coin.</p>
 5 · Choose L3 dependencies (WHO / jurisdiction IGs) <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG, and record per artefact type the candidate's toolchain (CQL refresh, test-case format, example generator), which stage 6 then uses.</p>
+<p>Index each candidate IG, then match the L1 KG and the L2 assets against it: reuse, adapt, extend or reject per IG, and record per artefact type the candidate's toolchain (CQL refresh, test-case format, example generator), which stage 6 then uses. After the stage the agent writes and stages the guideline gap report (guideline-gap-report), linked from every review request.</p>
 <p class="fa-gloss-meta">BPMN activities of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn"><code>smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn#Task_DepsL3</code></a></p>
 </dd>
 <dt id="smart-base--kg-bpmn-activities--process_dthauthoring.task_openpublic" data-fa-state="extracted" data-fa-gloss="">
@@ -434,7 +434,7 @@ be a term this corpus is right to coin.</p>
 6 · Produce L3 assets <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build. Every L3 asset names the L2 asset it implements in wasDerivedFrom, with that edge's adjudication state. Each Questionnaire is derived from the chosen L2 wireframe of its form. Publication continues in that process and is not on the path to stage 8.</p>
+<p>The mapping and pipeline of dak-l3-ig.bpmn, up to a clean IG build. Every L3 asset names the L2 asset it implements in wasDerivedFrom, with that edge's adjudication state. Each Questionnaire is derived from the chosen L2 wireframe of its form. Publication continues in that process and is not on the path to stage 8. After the stage the agent writes and stages the guideline gap report (guideline-gap-report), linked from every review request.</p>
 <p class="fa-gloss-meta">BPMN activities of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn"><code>smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn#Task_L3</code></a></p>
 </dd>
 <dt id="smart-base--kg-bpmn-activities--process_sgendtoend.task_describeapp" data-fa-state="extracted" data-fa-gloss="">
@@ -455,7 +455,7 @@ be a term this corpus is right to coin.</p>
 8b · L4: build the consuming application <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Against the stage-6 IG build, with conformance tests from the IG's examples and test cases.</p>
+<p>Against the stage-6 IG build, with conformance tests from the IG's examples and test cases. After the stage the agent writes and stages the guideline gap report (guideline-gap-report), linked from every review request.</p>
 <p class="fa-gloss-meta">BPMN activities of smart-base · source <a href="https://github.com/litlfred/smart-base/blob/main/smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn"><code>smart-base/collab/processes/content/smart-guideline-end-to-end.bpmn#Task_BuildApp</code></a></p>
 </dd>
 </dl>
