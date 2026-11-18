@@ -131,9 +131,20 @@ def main() -> int:
               f"{id} has no benefitMarkdown:\n{fsh}")
         check("http://smart.who.int/base/CodeSystem/CDHIv1#1.1.1" in fsh,
               f"{id} lacks the DHI classification:\n{fsh}")
+        check("* classification[+] = FXREQBusinessProcesses#A" in fsh,
+              f"{id} lacks the business-process classification:\n{fsh}")
 
+    # SGRequirements has no classification slice (only task, satisfies,
+    # userstory): the codes live on the LM.<reqid> instances' classification
+    # (and category for non-functional), so the Requirements instance must
+    # not repeat them as an extension.
     for id, fsh in requirements.items():
         check("InstanceOf: SGRequirements" in fsh, f"{id} is not an SGRequirements instance")
+        check("extension[classification]" not in fsh,
+              f"{id} sets extension[classification], which SGRequirements does not slice:\n{fsh}")
+    for id, fsh in nfxn.items():
+        check("* category = FXREQCategories#Accessibility" in fsh,
+              f"{id} lacks its category:\n{fsh}")
 
     check("FXREQBusinessProcesses" in inst.code_systems, "no business-process code system")
     check("FXREQCategories" in inst.code_systems, "no non-functional category code system")

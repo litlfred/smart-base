@@ -181,12 +181,6 @@ class req_extractor(extractor):
             instance += '* name = "' + stringer.escape(nfreq) + '"\n'
             instance += '* publisher = "WHO"\n'
             instance += '* experimental = true\n'
-            if (catid):
-                instance += '* extension[classification][+].valueCoding = ' + \
-                    stringer.escape(cat_cs) + '#' + stringer.escape(catid) + '\n'
-            for classification_code in classification_codes:
-                instance += '* extension[classification][+].valueCoding = ' + stringer.escape(
-                    self.class_cs) + '#' + stringer.escape(classification_code) + '\n'
             description = '*Category*: ' + \
                 stringer.escape(cat) + "\n" + stringer.escape(nfreq)
             description = '* description = """\n' + description + '\n"""\n\n'
@@ -343,12 +337,6 @@ class req_extractor(extractor):
             instance += '* experimental = true\n'
             instance += '* actor[+] = Canonical(' + \
                 stringer.escape(actor_id) + ')\n'
-            if (businessprocess_code):
-                instance += '* extension[classification][+].valueCoding = ' + \
-                    bpid + '#' + stringer.escape(businessprocess_code) + '\n'
-            for classification_code in classification_codes:
-                instance += '* extension[classification][+].valueCoding = ' + stringer.escape(
-                    self.class_cs) + '#' + stringer.escape(classification_code) + '\n'
             instance += '* extension[userstory].extension[capability].valueString = "' + \
                 stringer.escape(row['i-want']) + '"\n'
             instance += '* extension[userstory].extension[benefit].valueString = "' + \
