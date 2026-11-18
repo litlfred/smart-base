@@ -19,6 +19,8 @@
  * are the DAK's own ids — persona labels as the lane names them, data element,
  * requirement and decision table ids as the DAK spreadsheets declare them — never
  * FHIR canonicals, and the BPMN file is read, never written.
+ *
+ * @graphNode schema
  */
 import { z } from "zod";
 
