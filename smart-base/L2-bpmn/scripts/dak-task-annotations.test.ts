@@ -9,6 +9,9 @@ import {
   activityCode,
   cleanLines,
   coverage,
+  decodeXml,
+  main,
+  reEscape,
   followsInSequence,
   matchAnnotations,
   parseAnnotationBlocks,
@@ -106,6 +109,19 @@ describe("dak-task-annotations matching to BPMN", () => {
     expect(activityCode("IMMZ.C4.Create client record", "IMMZ")).toBe("IMMZ.C4");
     expect(activityCode("IMMZ.D2.DT.BCG", "IMMZ")).toBe("IMMZ.D2");
     expect(activityCode("Activity_0abc", "IMMZ")).toBeNull();
+  });
+
+  test("refusesAPrefixThatIsNotADakIdPrefix", () => {
+    // The prefix becomes part of a regular expression: it is checked, then escaped.
+    expect(() => activityCode("IMMZ.B1", "I.*")).toThrow(/not a DAK id prefix/);
+    expect(() => activityCode("IMMZ.B1", "IMMZ\\")).toThrow(/not a DAK id prefix/);
+    expect(reEscape("a.b\\c(d)")).toBe("a\\.b\\\\c\\(d\\)");
+    expect(main(["--prefix", "(.*)+$", "--document", "d", "--l1", "x.md", "--bpmn", "."])).toBe(2);
+  });
+
+  test("decodesXmlAttributeTextOnce", () => {
+    expect(decodeXml("Check &amp;lt;stock&amp;gt;")).toBe("Check &lt;stock&gt;");
+    expect(decodeXml("A &lt;b&gt; &amp; &quot;c&quot;&#10;d")).toBe('A <b> & "c" d');
   });
 
   test("readsEveryActivityKindWithLaneOrPoolAndCalledDecision", () => {

@@ -27,6 +27,17 @@ Feature: dak-task-annotations puts a DAK's BPMN task annotations in the knowledg
     Then "IMMZ.B.1" and "IMMZ.B1" are both IMMZ.B1, and "IMMZ.C4.Create client record" is IMMZ.C4
     And a Modeler id such as "Activity_0abc" is no activity id
 
+  @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_matching_to_BPMN::refusesAPrefixThatIsNotADakIdPrefix
+  Scenario: a prefix that is not a DAK id prefix is refused before it reaches a regular expression
+    Then "I.*" and a prefix ending in a backslash are refused as DAK id prefixes
+    And every regular-expression metacharacter, the backslash included, is escaped
+    And the command line refuses such a prefix with exit code 2
+
+  @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_matching_to_BPMN::decodesXmlAttributeTextOnce
+  Scenario: XML attribute text is decoded exactly once
+    Then "&amp;lt;stock&amp;gt;" decodes to the literal text "&lt;stock&gt;", not to "<stock>"
+    And the five XML entities and a line feed decode as written
+
   @test:smart-base/L2-bpmn/scripts/dak-task-annotations.test.ts::dak-task-annotations_matching_to_BPMN::readsEveryActivityKindWithLaneOrPoolAndCalledDecision
   Scenario: every activity kind is read, with its lane or pool and any calledDecision
     Then a userTask, a task, an exclusive gateway and a businessRuleTask are read

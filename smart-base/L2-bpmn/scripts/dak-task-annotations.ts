@@ -173,8 +173,17 @@ export interface BpmnNode {
 }
 
 const NODE_KINDS = "task|userTask|serviceTask|businessRuleTask|manualTask|scriptTask|sendTask|receiveTask|callActivity|subProcess|exclusiveGateway|inclusiveGateway|parallelGateway|eventBasedGateway";
-const decodeXml = (s: string) =>
-  s.replace(/&#10;|&#xA;/gi, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/\s+/g, " ").trim();
+/** XML attribute text decoded once: `&amp;` last, so `&amp;lt;` stays the literal text `&lt;`. */
+export const decodeXml = (s: string) =>
+  s
+    .replace(/&#10;|&#xA;/gi, " ")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
 const attrOf = (tag: string, name: string) => {
   const m = new RegExp(`\\s${name}="([^"]*)"`).exec(tag);
   return m ? decodeXml(m[1]!) : undefined;
@@ -225,9 +234,21 @@ export function readBpmnNodes(xml: string): BpmnNode[] {
   return nodes;
 }
 
+/** A DAK id prefix: capitals, digits and dots (`IMMZ`, `TB`, `CHUD`). Anything else is refused, not escaped around. */
+export const PREFIX = /^[A-Z][A-Z0-9]*(?:\.[A-Z0-9]+)*$/;
+
+/** A string as a regular-expression literal, every metacharacter (backslash included) escaped. */
+export const reEscape = (s: string): string => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+/** The prefix, checked and escaped for use inside a pattern. */
+const prefixPattern = (prefix: string): string => {
+  if (!PREFIX.test(prefix)) throw new Error(`not a DAK id prefix: ${JSON.stringify(prefix)} (expected capitals, digits and dots, e.g. IMMZ)`);
+  return reEscape(prefix);
+};
+
 /** `IMMZ.B.1`, `IMMZ.B1`, `IMMZ.B1.Name` → `IMMZ.B1`; null when it is not an activity id of `prefix`. */
 export function activityCode(s: string, prefix: string): string | null {
-  const m = new RegExp(`^\\s*${prefix.replace(/\./g, "\\.")}\\.([A-Z])\\.?(\\d+(?:\\.\\d+)*)(?![\\d])`).exec(s);
+  const m = new RegExp(`^\\s*${prefixPattern(prefix)}\\.([A-Z])\\.?(\\d+(?:\\.\\d+)*)(?![\\d])`).exec(s);
   return m ? `${prefix}.${m[1]}${m[2]}` : null;
 }
 
@@ -243,7 +264,7 @@ export function processLetter(path: string, xml: string, nodes: BpmnNode[], pref
   if (fromIds.size === 1) return [...fromIds][0]!;
   const b = basename(path);
   const f =
-    new RegExp(`^${prefix.replace(/\./g, "\\.")}[._ -]([A-Z])(?:[._ -]|\\.bpmn$)`, "i").exec(b) ?? /^([a-z])-[a-z]/.exec(b) ?? null;
+    new RegExp(`^${prefixPattern(prefix)}[._ -]([A-Z])(?:[._ -]|\\.bpmn$)`, "i").exec(b) ?? /^([a-z])-[a-z]/.exec(b) ?? null;
   if (f) return f[1]!.toUpperCase();
   const pn = /<(?:bpmn2?:)?process\b[^>]*\sname="([A-Z])\.\s/.exec(xml);
   return pn ? pn[1]! : null;
@@ -266,7 +287,7 @@ export const emptyLinks = (): ActivityLinks => ({ dataElements: new Map(), requi
 const add = (m: Map<string, Set<string>>, k: string, v: string) => (m.get(k) ?? m.set(k, new Set()).get(k)!).add(v);
 /** Every activity id a cell names (`IMMZ.C4.Create… OR IMMZ.C5.…` names two). */
 const codesIn = (cell: string, prefix: string) =>
-  [...cell.matchAll(new RegExp(`${prefix.replace(/\./g, "\\.")}\\.[A-Z]\\.?\\d+(?:\\.\\d+)*`, "g"))].map((m) => activityCode(m[0], prefix)!).filter(Boolean);
+  [...cell.matchAll(new RegExp(`${prefixPattern(prefix)}\\.[A-Z]\\.?\\d+(?:\\.\\d+)*`, "g"))].map((m) => activityCode(m[0], prefix)!).filter(Boolean);
 
 /**
  * Read the activity keys of a DAK workbook: the data dictionary (`Activity ID`
@@ -444,6 +465,10 @@ export function main(argv: string[]): number {
     const files = report.flatMap((p) => (existsSync(p) ? sidecarFiles(p) : []));
     const xlsx = argsOf(argv, "--xlsx");
     const prefix = argsOf(argv, "--prefix")[0] ?? "";
+    if (xlsx.length && !PREFIX.test(prefix)) {
+      console.error(`--report with --xlsx needs --prefix, a DAK id prefix: capitals, digits and dots only (IMMZ, TB, CHUD)`);
+      return 2;
+    }
     const links = xlsx.length ? emptyLinks() : undefined;
     for (const x of xlsx) readActivityLinks(readWorkbook(readFileSync(x)), prefix, links);
     const rows = coverage(files, links);
@@ -459,6 +484,10 @@ export function main(argv: string[]): number {
   const document = argsOf(argv, "--document")[0];
   const l1 = argsOf(argv, "--l1");
   const bpmn = argsOf(argv, "--bpmn").flatMap(bpmnFiles);
+  if (prefix && !PREFIX.test(prefix)) {
+    console.error(`--prefix ${JSON.stringify(prefix)} is not a DAK id prefix: capitals, digits and dots only (IMMZ, TB, CHUD)`);
+    return 2;
+  }
   if (!prefix || !document || !l1.length || !bpmn.length) {
     console.error("usage: dak-task-annotations.ts --prefix <IMMZ> --document <l1-id> --l1 <section.md>... --bpmn <dir|file>... [--xlsx <workbook>...] [--write | --check]");
     return 2;
