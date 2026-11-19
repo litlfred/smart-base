@@ -30,7 +30,7 @@
     {
       "@type": "schema:MediaObject",
       "schema:contentUrl": {
-        "@id": "https://raw.githubusercontent.com/litlfred/smart-base/f3fd338d6bb4f954edf8c9c593caf94c1c269030/resources/Requirements/SGAuthoring.Skills.AuthorMeasures.json"
+        "@id": "https://raw.githubusercontent.com/litlfred/smart-base/62a2b8a01eae3d7b80bc7f960ee3c6452563578c/resources/Requirements/SGAuthoring.Skills.AuthorMeasures.json"
       },
       "schema:encodingFormat": "application/fhir+json",
       "dcterms:source": "mirror"
@@ -39,7 +39,7 @@
   "prov:wasGeneratedBy": {
     "@type": "prov:Activity",
     "schema:instrument": "ig-publisher 3.0.0 / core 7.0.1",
-    "prov:used": "9edab5ef67b78fbd3aceba41bb993a82d5071800"
+    "prov:used": "328e07312e44958d4d749c99dcee8f8209e7e55a"
   },
   "dcterms:isPartOf": {
     "@type": "fhir:ImplementationGuide",
