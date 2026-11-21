@@ -2,9 +2,9 @@
   "$schema": "folio-search-manifest/v1",
   "source": {
     "path": "assets/js/search-data.json",
-    "sha256": "d96f4ffe4a5c1bb8820ca9f80ca58d999739cb3724a37063e8dae33247313eb6",
-    "entries": 9316,
-    "bytes": 13190871
+    "sha256": "d1fe97b6189e42e62882b9dd6f96913c069cab8bb2fa3adc4a297191374ab733",
+    "entries": 9377,
+    "bytes": 13068289
   },
   "scopes": [
     {
@@ -18,22 +18,29 @@
       "id": "cat-harness",
       "kind": "instance",
       "path": "assets/js/search/cat-harness.json",
-      "entries": 7249,
-      "bytes": 10118097,
+      "entries": 7263,
+      "bytes": 10162897,
       "index": {
         "path": "assets/js/search/cat-harness.idx.json",
-        "bytes": 31534245
+        "bytes": 31670095
       }
+    },
+    {
+      "id": "cat-harness-tools",
+      "kind": "instance",
+      "path": "assets/js/search/cat-harness-tools.json",
+      "entries": 15,
+      "bytes": 6831
     },
     {
       "id": "folio-assistant-core",
       "kind": "instance",
       "path": "assets/js/search/folio-assistant-core.json",
       "entries": 1906,
-      "bytes": 2575143,
+      "bytes": 2594554,
       "index": {
         "path": "assets/js/search/folio-assistant-core.idx.json",
-        "bytes": 7420385
+        "bytes": 7485416
       }
     },
     {
@@ -41,35 +48,35 @@
       "kind": "locale",
       "path": "assets/js/search/locale-ar.json",
       "entries": 6,
-      "bytes": 13545
+      "bytes": 13906
     },
     {
       "id": "locale-es",
       "kind": "locale",
       "path": "assets/js/search/locale-es.json",
       "entries": 6,
-      "bytes": 11640
+      "bytes": 11985
     },
     {
       "id": "locale-fr",
       "kind": "locale",
       "path": "assets/js/search/locale-fr.json",
       "entries": 6,
-      "bytes": 12004
+      "bytes": 12340
     },
     {
       "id": "locale-ru",
       "kind": "locale",
       "path": "assets/js/search/locale-ru.json",
       "entries": 6,
-      "bytes": 15734
+      "bytes": 16095
     },
     {
       "id": "locale-zh",
       "kind": "locale",
       "path": "assets/js/search/locale-zh.json",
       "entries": 6,
-      "bytes": 10589
+      "bytes": 10950
     },
     {
       "id": "smart-base",
@@ -77,6 +84,13 @@
       "path": "assets/js/search/smart-base.json",
       "entries": 6,
       "bytes": 24930
+    },
+    {
+      "id": "who-iris",
+      "kind": "instance",
+      "path": "assets/js/search/who-iris.json",
+      "entries": 32,
+      "bytes": 168428
     }
   ],
   "remote": [
@@ -86,5 +100,16 @@
       "href": "id-lookup/?index=who-iris/",
       "entries": 53
     }
-  ]
+  ],
+  "layers": [
+    "bootstrap",
+    "bootstrap-tools",
+    "cat-harness",
+    "cat-harness-tools",
+    "fhir-harness",
+    "folio-assistant-core",
+    "smart-base",
+    "who-iris"
+  ],
+  "kgSearch": "slices/search.html?slice=kg"
 }

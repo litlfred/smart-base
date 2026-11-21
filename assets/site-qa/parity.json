@@ -46,13 +46,13 @@
   }
  },
  "candidate": {
-  "pages": 6718,
+  "pages": 6722,
   "counts": {
    "siteNav": 1,
-   "search": 3084,
-   "navbarRow": 3084,
-   "rail": 3084,
-   "translationMeta": 3085
+   "search": 3087,
+   "navbarRow": 3087,
+   "rail": 3087,
+   "translationMeta": 3088
   },
   "dirs": [
    "ar",
@@ -70,8 +70,10 @@
    "fr",
    "id-lookup",
    "openapi",
+   "payload",
    "questionnaires",
    "ru",
+   "slices",
    "smart-base",
    "translations",
    "who-iris",
@@ -89,13 +91,13 @@
  },
  "baseline": {
   "features": {
-   "pages": 6718,
+   "pages": 6722,
    "counts": {
     "siteNav": 1,
-    "search": 3084,
-    "navbarRow": 3084,
-    "rail": 3084,
-    "translationMeta": 3085
+    "search": 3087,
+    "navbarRow": 3087,
+    "rail": 3087,
+    "translationMeta": 3088
    },
    "dirs": [
     "ar",
@@ -113,8 +115,10 @@
     "fr",
     "id-lookup",
     "openapi",
+    "payload",
     "questionnaires",
     "ru",
+    "slices",
     "smart-base",
     "translations",
     "who-iris",
@@ -130,6 +134,6 @@
     "present": true
    }
   },
-  "from": "0b45b934abf5"
+  "from": "c0aaf442f0e6"
  }
 }

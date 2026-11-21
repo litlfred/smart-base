@@ -21,12 +21,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Build and publish the site from the AST"
+          "@value": "Build and publish the site from the AST",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Runs the site route's steps via `stage-local.ts` → `build-instance-site.ts`: `ig-site:sidecars` (IG API sidecars, if the landing layer has the step), `ig-site:compose` (artefact index and thin pages from the AST, the IG composed at the root), `ig-site:openapi` (if the IG holds OpenAPI pages), `ig-site:publisher-pages` (the AST's resources as `<Type>-<id>.json` at the root, the build stamp), and last `ig-site:bar` (the IG's slim bar on pages written after `publisher-pages`). Published at the root from the default branch, as a preview otherwise. When the restore recorded the cache commit, the site reads the AST from that commit by raw URL rather than copying it: the artefact pages draw each full resource there, the IG API sidecars are read from its `ig-api/` (fhir-harness#344), and the artefact index from its `fhir-artifact-index/index.json`, which the site points at with `fhir-artifact-index/index.ref.json` instead of serving (#358). The root `<Type>-<id>.json` copies are then reduced (minified, no narrative, no ELM data; #359), and the JSON-LD graph (`artifact/*.jsonld`) names each root file first and the cache copy as its mirror. The full resources are the cache commit's and the release's `package.tgz`."
+          "@value": "Runs the site route's steps via `stage-local.ts` → `build-instance-site.ts`: `ig-site:sidecars` (IG API sidecars, if the landing layer has the step), `ig-site:compose` (artefact index and thin pages from the AST, the IG composed at the root), `ig-site:openapi` (if the IG holds OpenAPI pages), `ig-site:publisher-pages` (the AST's resources as `<Type>-<id>.json` at the root, the build stamp), and last `ig-site:bar` (the IG's slim bar on pages written after `publisher-pages`). Published at the root from the default branch, as a preview otherwise. When the restore recorded the cache commit, the site reads the AST from that commit by raw URL rather than copying it: the artefact pages draw each full resource there, the IG API sidecars are read from its `ig-api/` (fhir-harness#344), and the artefact index from its `fhir-artifact-index/index.json`, which the site points at with `fhir-artifact-index/index.ref.json` instead of serving (#358). The root `<Type>-<id>.json` copies are then reduced (minified, no narrative, no ELM data; #359), and the JSON-LD graph (`artifact/*.jsonld`) names each root file first and the cache copy as its mirror. The full resources are the cache commit's and the release's `package.tgz`.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_BuildSite",
@@ -41,12 +43,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Dispatch AST refresh"
+          "@value": "Dispatch AST refresh",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Actions → \"IG AST refresh (by hand)\" → Run workflow on the default branch, inputs `ref` = the default branch, `force` = false. Set `force` = true only to rebuild a cache that is valid but suspected wrong."
+          "@value": "Actions → \"IG AST refresh (by hand)\" → Run workflow on the default branch, inputs `ref` = the default branch, `force` = false. Set `force` = true only to rebuild a cache that is valid but suspected wrong.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Dispatch",
@@ -61,12 +65,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Build the IG with the AST exporter"
+          "@value": "Build the IG with the AST exporter",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The runner mounts the layers the IG repository's `index.lock.json` pins, then restores and judges the cache itself. When it is not valid (or `force` is set) it rebuilds with the Publisher fork (Tool `ig-ast-export`, `litlfred/fhir-ig-publisher` at the pinned `claude/ast-export` commit). A stale cache is first rebuilt incrementally (`IncrementalBuildCli`), falling back to a full `AstExportCli` build with `-tx`; a `force` run, a `pre-export` caller, or a missing or cannot-tell cache always builds in full, and a release needs a full build. The caller's optional `pre-export` overlay command runs before a full build; the inputs it changed are put back and the AST is recorded against the clean commit's input digest (`ig-ast.ts source-inputs`). The AST just built must itself be `valid` for the commit, or the run fails."
+          "@value": "The runner mounts the layers the IG repository's `index.lock.json` pins, then restores and judges the cache itself. When it is not valid (or `force` is set) it rebuilds with the Publisher fork (Tool `ig-ast-export`, `litlfred/fhir-ig-publisher` at the pinned `claude/ast-export` commit). A stale cache is first rebuilt incrementally (`IncrementalBuildCli`), falling back to a full `AstExportCli` build with `-tx`; a `force` run, a `pre-export` caller, or a missing or cannot-tell cache always builds in full, and a release needs a full build. The caller's optional `pre-export` overlay command runs before a full build; the inputs it changed are put back and the AST is recorded against the clean commit's input digest (`ig-ast.ts source-inputs`). The AST just built must itself be `valid` for the commit, or the run fails.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Export",
@@ -81,12 +87,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Restore and judge the cached AST"
+          "@value": "Restore and judge the cached AST",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "`ig-cache.sh restore --ig-root .` fetches `cat/fhir-harness/fhir-ast/<package id>` into `output-ast/` (with the Publisher's `txcache/`), then `ig-cache.sh verify` runs `ig-ast.ts validity`: exit 0 valid, 1 stale-inputs (naming which input), 2 cannot-tell. A restore that finds no branch is a miss, judged as not valid. In an IG repository's site route this is the first `pre` step, `ig-site:ast` (`ig-repo-site.ts ast`)."
+          "@value": "`ig-cache.sh restore --ig-root .` fetches `cat/fhir-harness/fhir-ast/<package id>` into `output-ast/` (with the Publisher's `txcache/`), then `ig-cache.sh verify` runs `ig-ast.ts validity`: exit 0 valid, 1 stale-inputs (naming which input), 2 cannot-tell. A restore that finds no branch is a miss, judged as not valid. In an IG repository's site route this is the first `pre` step, `ig-site:ast` (`ig-repo-site.ts ast`).",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Restore",
@@ -101,12 +109,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Seed the cache branch"
+          "@value": "Seed the cache branch",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "`ig-cache.sh seed --ig-root . --push`: one commit holding the AST, the Publisher's expansions and `txcache/`, the IG API generated over that AST (`ig-api/`, `ig-api-cache.ts`) and the artefact index built from that tree (`fhir-artifact-index/index.json`, `ig-index-cache.ts`), which the site reads by raw URL; its subject recording the package, counts, Publisher version and source commit. Refused when the candidate is under 90% of the incumbent's resources or edges (the no-shrink gate)."
+          "@value": "`ig-cache.sh seed --ig-root . --push`: one commit holding the AST, the Publisher's expansions and `txcache/`, the IG API generated over that AST (`ig-api/`, `ig-api-cache.ts`) and the artefact index built from that tree (`fhir-artifact-index/index.json`, `ig-index-cache.ts`), which the site reads by raw URL; its subject recording the package, counts, Publisher version and source commit. Refused when the candidate is under 90% of the incumbent's resources or edges (the no-shrink gate).",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Seed",
@@ -121,12 +131,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Review the site's size"
+          "@value": "Review the site's size",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Read the size report the build printed before its push, and fix what it shows, or raise a decision card with the owner when no known fix applies (skill `ig-publication` §\"Size review\"). The report is cat-harness-tools `site-size.ts` (`bun run cat site:size`), written as `site-size.json` beside the build, never into the site. It gives the total against the published `gh-pages` root, the top directories, the size by extension, the biggest files, byte-identical duplicates, source maps, the directories named after another layer of `index.lock.json`, and the directories the shared-assets host could serve. Growth over the budget (10% or 10 MB) is a warning. The review is advisory and never refuses a publish."
+          "@value": "Read the size report the build printed before its push, and fix what it shows, or raise a decision card with the owner when no known fix applies (skill `ig-publication` §\"Size review\"). The report is cat-harness-tools `site-size.ts` (`bun run cat site:size`), written as `site-size.json` beside the build, never into the site. It gives the total against the published `gh-pages` root, the top directories, the size by extension, the biggest files, byte-identical duplicates, source maps, the directories named after another layer of `index.lock.json`, and the directories the shared-assets host could serve. Growth over the budget (10% or 10 MB) is a warning. The review is advisory and never refuses a publish.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_SizeReview",
@@ -141,12 +153,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Compose each staged IG into the host source [stage-ig-sites]"
+          "@value": "Compose each staged IG into the host source [stage-ig-sites]",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Tool `stage-ig-sites` with `--compose-into ./_docs` (the same run as `Task_Stage`). Moves each staged site INTO the host's Jekyll source at `<instance>/`, with its includes and data namespaced per IG. Pages wear the thin layout with the host's chrome linked (`--full-pages` inlines the host's full chrome instead). Prints one `<instance> <jekyll source> <at>` line per IG: the build list the host keeps (`./_ig-list.txt`) for the post-build pass."
+          "@value": "Tool `stage-ig-sites` with `--compose-into ./_docs` (the same run as `Task_Stage`). Moves each staged site INTO the host's Jekyll source at `<instance>/`, with its includes and data namespaced per IG. Pages wear the thin layout with the host's chrome linked (`--full-pages` inlines the host's full chrome instead). Prints one `<instance> <jekyll source> <at>` line per IG: the build list the host keeps (`./_ig-list.txt`) for the post-build pass.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_ComposeInto",
@@ -161,12 +175,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Build each IG's artefact index [ig-index-build]"
+          "@value": "Build each IG's artefact index [ig-index-build]",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Tool `ig-index-build`: `bun run cat ig-index:build`. Restores each IG's AST from its cache branch and writes `fhir-artifact-index/` (`index.json`, `menu.json` with the `source.of`/`source.ref` that `Task_Stage` clones from, `releases.json`, `package.tgz`). A missing input skips that instance, named."
+          "@value": "Tool `ig-index-build`: `bun run cat ig-index:build`. Restores each IG's AST from its cache branch and writes `fhir-artifact-index/` (`index.json`, `menu.json` with the `source.of`/`source.ref` that `Task_Stage` clones from, `releases.json`, `package.tgz`). A missing input skips that instance, named.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Indexes",
@@ -181,12 +197,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Generate each IG instance's artefact pages [ig-pages]"
+          "@value": "Generate each IG instance's artefact pages [ig-pages]",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Tool `ig-pages`: `bun run fhir-harness/scripts/gen-ig-pages.ts --instance <instance> ...`, run for every IG instance by its own pages script. Writes `<instance>/docs/` from the artefact index: one thin page per artefact with its JSON-LD node, and, for an instance whose docs declare `igSite`, only a front-matter `artifacts.md`. Built at publish, never committed."
+          "@value": "Tool `ig-pages`: `bun run fhir-harness/scripts/gen-ig-pages.ts --instance <instance> ...`, run for every IG instance by its own pages script. Writes `<instance>/docs/` from the artefact index: one thin page per artefact with its JSON-LD node, and, for an instance whose docs declare `igSite`, only a front-matter `artifacts.md`. Built at publish, never committed.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Pages",
@@ -201,12 +219,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Clone each IG at its recorded commit and stage it [stage-ig-sites]"
+          "@value": "Clone each IG at its recorded commit and stage it [stage-ig-sites]",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Tool `stage-ig-sites`: `bun run fhir-harness/scripts/stage-ig-sites.ts --work ./_ig --baseurl /<repo> --plantuml-jar <jar>`. Clones each IG at its recorded commit and stages ONE just-the-docs Jekyll source per IG with Tool `build-ig-site` (pages, includes, images, PlantUML, `_data/`, theme colours); the artefact lists (`artifacts`, `toc`) are thin pages over the artefact index node (Liquid only under `--full-pages`), and the instance's artefact pages from `Task_Pages` are copied in. The theme is the one `webpage` theme the instance declares or inherits along `needs`; two at the same distance are refused."
+          "@value": "Tool `stage-ig-sites`: `bun run fhir-harness/scripts/stage-ig-sites.ts --work ./_ig --baseurl /<repo> --plantuml-jar <jar>`. Clones each IG at its recorded commit and stages ONE just-the-docs Jekyll source per IG with Tool `build-ig-site` (pages, includes, images, PlantUML, `_data/`, theme colours); the artefact lists (`artifacts`, `toc`) are thin pages over the artefact index node (Liquid only under `--full-pages`), and the instance's artefact pages from `Task_Pages` are copied in. The theme is the one `webpage` theme the instance declares or inherits along `needs`; two at the same distance are refused.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Stage",
@@ -221,12 +241,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Check the current version's tag and release"
+          "@value": "Check the current version's tag and release",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "`bun run fhir-harness/scripts/ig-release.ts check --ig . --repo <owner/repo>` (Tool `ig-release`). Prints one notice per finding: `version X is untagged: the owner tags commit <sha> with vX`, or `tag vX has no release: run \"IG release (draft)\" (ig-release.yml) by hand with tag vX`, or that a draft waits for the owner. Exits 0 always; never tags and never releases."
+          "@value": "`bun run fhir-harness/scripts/ig-release.ts check --ig . --repo <owner/repo>` (Tool `ig-release`). Prints one notice per finding: `version X is untagged: the owner tags commit <sha> with vX`, or `tag vX has no release: run \"IG release (draft)\" (ig-release.yml) by hand with tag vX`, or that a draft waits for the owner. Exits 0 always; never tags and never releases.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Check",
@@ -241,12 +263,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Publish the draft release"
+          "@value": "Publish the draft release",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The owner reads the draft's files and publishes it on GitHub: `Task_AuthorizeRelease` of `draft-to-publication.bpmn`. Until then only the repository's writers see it and `releases.json` leaves it out."
+          "@value": "The owner reads the draft's files and publishes it on GitHub: `Task_AuthorizeRelease` of `draft-to-publication.bpmn`. Until then only the repository's writers see it and `releases.json` leaves it out.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Publish",
@@ -261,12 +285,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Build the tag in full and make the draft release"
+          "@value": "Build the tag in full and make the draft release",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "`ig-release.yml` (Tool `ig-release`): `ig-ast-refresh.yml` with `force` and `release` (never incremental), then `ig-release.ts assets` gathers `package.tgz` (and `package.r4.tgz`, `package.r4b.tgz`), `ast-data.zip` (the AST, Libraries with their ELM) and `SHA256SUMS`, and `ig-release.ts draft` makes or refreshes the GitHub draft for the tag. A tag with a published release is refused."
+          "@value": "`ig-release.yml` (Tool `ig-release`): `ig-ast-refresh.yml` with `force` and `release` (never incremental), then `ig-release.ts assets` gathers `package.tgz` (and `package.r4.tgz`, `package.r4b.tgz`), `ast-data.zip` (the AST, Libraries with their ELM) and `SHA256SUMS`, and `ig-release.ts draft` makes or refreshes the GitHub draft for the tag. A tag with a published release is refused.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_ReleaseBuild",
@@ -281,12 +307,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Run IG release (draft) by hand for the tag"
+          "@value": "Run IG release (draft) by hand for the tag",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Actions → \"IG release (draft)\" → Run workflow, input `tag` = `v<version>`. For a tag pushed before the IG carried the caller, or whose run failed."
+          "@value": "Actions → \"IG release (draft)\" → Run workflow, input `tag` = `v<version>`. For a tag pushed before the IG carried the caller, or whose run failed.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_RunRelease",
@@ -301,12 +329,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Tag the IG's current version"
+          "@value": "Tag the IG's current version",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The owner tags the commit that set the version with `v<version>` (for example `v0.2.0`) and pushes the tag. A `releaseLabel` of `ci-build`, `ballot` or `draft`, or a version with a suffix, makes it a pre-release (`ig-release.ts kind`). `ig-release.ts check` names the commit: the newest one whose diff of `sushi-config.yaml` sets that version, else HEAD."
+          "@value": "The owner tags the commit that set the version with `v<version>` (for example `v0.2.0`) and pushes the tag. A `releaseLabel` of `ci-build`, `ballot` or `draft`, or a version with a suffix, makes it a pre-release (`ig-release.ts kind`). `ig-release.ts check` names the commit: the newest one whose diff of `sushi-config.yaml` sets that version, else HEAD.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Tag",
@@ -321,12 +351,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Design review"
+          "@value": "Design review",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "cat-harness Process_WireframeDesignReview: as-is use for a form that exists, design use for one being designed. This process does not restate the method."
+          "@value": "cat-harness Process_WireframeDesignReview: as-is use for a form that exists, design use for one being designed. This process does not restate the method.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Call_Review",
@@ -341,12 +373,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Apply it to the other side"
+          "@value": "Apply it to the other side",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The side the request edited is the source of the change. An edited Questionnaire is applied as an FSH edit and the wireframe is redrawn to match; an edited wireframe is kept and the Questionnaire re-derived from it. Then back to Task_Read."
+          "@value": "The side the request edited is the source of the change. An edited Questionnaire is applied as an FSH edit and the wireframe is redrawn to match; an edited wireframe is kept and the Questionnaire re-derived from it. Then back to Task_Read.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Apply",
@@ -361,12 +395,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Ask for review with deep links"
+          "@value": "Ask for review with deep links",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "One deep link per rendered Questionnaire and wireframe, before and after. Where the request goes — the conversation, an issue, the pull request — is a judgement, and more than one may be right: staging-review's deep-link rule, point 5."
+          "@value": "One deep link per rendered Questionnaire and wireframe, before and after. Where the request goes — the conversation, an issue, the pull request — is a judgement, and more than one may be right: staging-review's deep-link rule, point 5.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_AskReview",
@@ -381,12 +417,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Check field for field"
+          "@value": "Check field for field",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "fhir-harness/scripts/check-wireframe-questionnaire.ts <wireframe.html> <Questionnaire.json>, per layout. Exit 0 faithful, 1 a finding, 2 cannot tell, which is never a pass. The findings become the output's fidelity[] and are shown to the reviewers."
+          "@value": "fhir-harness/scripts/check-wireframe-questionnaire.ts <wireframe.html> <Questionnaire.json>, per layout. Exit 0 faithful, 1 a finding, 2 cannot tell, which is never a pass. The findings become the output's fidelity[] and are shown to the reviewers.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Fidelity",
@@ -401,12 +439,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Read the built Questionnaire JSON"
+          "@value": "Read the built Questionnaire JSON",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "fsh-generated/resources/Questionnaire-<id>.json, or the IG's published Questionnaire-<id>.json — never FSH. The JSON is what every renderer and reader receives, so it is what is judged."
+          "@value": "fsh-generated/resources/Questionnaire-<id>.json, or the IG's published Questionnaire-<id>.json — never FSH. The JSON is what every renderer and reader receives, so it is what is judged.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Read",
@@ -421,12 +461,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Render the wireframe and the LHC-Forms view"
+          "@value": "Render the wireframe and the LHC-Forms view",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "A mid-fidelity wireframe with one field per answerable item, each carrying data-element and sitting in a data-layout web or mobile subtree; and the form view, the same JSON in the vendored <lhc-forms> web component on the IG site's form page. Never loaded from a CDN at runtime."
+          "@value": "A mid-fidelity wireframe with one field per answerable item, each carrying data-element and sitting in a data-layout web or mobile subtree; and the form view, the same JSON in the vendored <lhc-forms> web component on the IG site's form page. Never loaded from a CDN at runtime.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Render",
@@ -441,12 +483,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Review the staged form and wireframe"
+          "@value": "Review the staged form and wireframe",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "At the deep links. A change is requested through ✍ suggest in its Questionnaire mode, or the questionnaire-change issue form, and says which side was edited: the Questionnaire or the wireframe."
+          "@value": "At the deep links. A change is requested through ✍ suggest in its Questionnaire mode, or the questionnaire-change issue form, and says which side was edited: the Questionnaire or the wireframe.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_ReviewStaged",
@@ -461,12 +505,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Screenshots, web and mobile"
+          "@value": "Screenshots, web and mobile",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "cat-harness Tool wireframe-check: 1280×800 and 390×844; renders, no-overflow and no-placeholder, each a script entry. A rendering missing either viewport does not enter review."
+          "@value": "cat-harness Tool wireframe-check: 1280×800 and 390×844; renders, no-overflow and no-placeholder, each a script entry. A rendering missing either viewport does not enter review.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Screens",
@@ -481,12 +527,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Stage the renderings"
+          "@value": "Stage the renderings",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The branch's wireframes and form pages published under branches/<slug>/ by feature-staging."
+          "@value": "The branch's wireframes and form pages published under branches/<slug>/ by feature-staging.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Stage",
@@ -501,12 +549,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Triage the change request"
+          "@value": "Triage the change request",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "content-feedback triages the issue; when a review round is open it joins a change-set through public-comment instead."
+          "@value": "content-feedback triages the issue; when a review round is open it joins a change-set through public-comment instead.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Triage",

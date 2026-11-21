@@ -1,4 +1,9 @@
 {
  "$schema": "site-build-qa/v1",
- "findings": []
+ "findings": [
+  {
+   "check": "coverage",
+   "detail": "en/cat-harness/skills/ (cat-harness declares `skills`)"
+  }
+ ]
 }

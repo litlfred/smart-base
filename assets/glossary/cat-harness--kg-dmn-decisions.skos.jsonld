@@ -21,7 +21,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Detangled?"
+          "@value": "Detangled?",
+          "@language": "en"
         }
       ],
       "skos:notation": "Decision_DetanglementGate",
@@ -36,7 +37,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Stands alone?"
+          "@value": "Stands alone?",
+          "@language": "en"
         }
       ],
       "skos:notation": "Decision_IsolationGate",
@@ -51,7 +53,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "All five answered, none refused?"
+          "@value": "All five answered, none refused?",
+          "@language": "en"
         }
       ],
       "skos:notation": "Decision_MaterializationGate",
@@ -66,7 +69,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Is the sign-off recorded, and does it let the work proceed?"
+          "@value": "Is the sign-off recorded, and does it let the work proceed?",
+          "@language": "en"
         }
       ],
       "skos:notation": "Decision_RequirementSignoffRecorded",
@@ -81,7 +85,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Ready to seed?"
+          "@value": "Ready to seed?",
+          "@language": "en"
         }
       ],
       "skos:notation": "Decision_SeedReadiness",
@@ -96,7 +101,8 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Declared in place?"
+          "@value": "Declared in place?",
+          "@language": "en"
         }
       ],
       "skos:notation": "Decision_SubgraphDeclaredGate",

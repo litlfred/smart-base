@@ -13,10 +13,6 @@
 
   
 
-  
-    <script src="../../../../assets/js/vendor/lunr.min.js"></script>
-  
-
   <script src="../../../../assets/js/just-the-docs.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -93,8 +89,8 @@
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;,&quot;library&quot;,&quot;tools&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
 <meta name="fa-beans-src" content="../../../../assets/beans/index.json"><meta name="fa-processes-src" content="../../../../subgraph/index.jsonld"><meta name="fa-build-src" content="../../../../build.json"><link rel="stylesheet" href="../../../../assets/css/navbar-row.css?v=263225e79ed9">
-<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=eb56f2150b3d"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
-<script src="../../../../assets/js/docs-ui.js?v=2abe761c2b06" defer></script><script src="../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../assets/js/translation-review.js?v=1902d883e072" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
+<link rel="stylesheet" href="../../../../assets/css/docs-ui.css?v=4c7265cca407"><link rel="stylesheet" href="../../../../assets/css/narrow-viewport.css?v=173ef819dbf2"><link rel="stylesheet" href="../../../../assets/css/themes.css?v=37c8ab192a5f"><link rel="stylesheet" href="../../../../assets/css/uml.css?v=e677f91cbf66"><link rel="stylesheet" href="../../../../assets/css/avatars.css?v=7b30d540df9f"><script type="application/json" id="fa-declared-kinds">["beans","block-kinds","cat-harness","code","code-list","content-adapters","docs","document-kinds","fhir-artifact-index","fsh-guts","glossary","health","ig-pages","issue-marks","l1-extraction","library","merge-reviews","methodology","qa","qa-checkers","scenarios","schemas","skills","themes","todos","tools","translation-sources","typologies","uploads","validators"]</script><script src="../../../../assets/js/harness-data.js" defer></script><script src="../../../../assets/js/kg-render.js" defer></script><script src="../../../../assets/js/navbar-row.js?v=fb3cd5c0d28c" defer></script>
+<script src="../../../../assets/js/docs-ui.js?v=cae1ad7ba8e7" defer></script><script src="../../../../assets/js/edit-links.js?v=7b072444cbb5" defer></script><script src="../../../../assets/js/translation-review.js?v=3ab638979d22" defer></script><script src="../../../../assets/js/code-highlight.js?v=0f94772226c3" defer></script><style>
   .folio-landing { position: relative; margin: 0 0 2rem; }
 
   /* WHAT IS LEFT HERE, AND WHY IT IS SO LITTLE.
@@ -161,7 +157,7 @@
   }
 </style>
 
-<link rel="stylesheet" href="../../../../assets/css/navbar.css"><script src="../../../../assets/navbar/rail-14ze53ymud6.js" defer></script><script src="../../../../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../../../../assets/page-layout.css" data-fa-page-layout><script src="../../../../assets/page-layout.js" defer data-fa-page-layout></script><meta name="fa-pinned-data" content="../../../.."></head>
+<link rel="stylesheet" href="../../../../assets/css/navbar.css"><script src="../../../../assets/navbar/rail-14ze53ymud6.js" defer></script><script src="../../../../assets/js/navbar.js" defer></script><link rel="stylesheet" href="../../../../assets/page-layout.css" data-fa-page-layout><script src="../../../../assets/page-layout.js" defer data-fa-page-layout></script><script src="../../../../assets/draft-banner.js" defer data-fa-page-layout></script><noscript data-fa-draft-noscript><link rel="stylesheet" href="../../../../assets/draft-banner-noscript.css"></noscript><meta name="fa-pinned-data" content="../../../.."></head>
 
 <body><script type="application/json" id="fa-rail" data-fa-root="https://litlfred.github.io/folio-assistant" data-fa-to-root="../../../..">{"data":"rail-14ze53ymud6","here":"/en/folio-assistant-core/glossary/tools/","documentIndex":{"label":"On this page","icon":"§","items":[{"href":"#letter-A","label":"A"},{"href":"#letter-B","label":"B"},{"href":"#letter-C","label":"C"},{"href":"#letter-D","label":"D"},{"href":"#letter-E","label":"E"},{"href":"#letter-F","label":"F"},{"href":"#letter-G","label":"G"},{"href":"#letter-I","label":"I"},{"href":"#letter-L","label":"L"},{"href":"#letter-M","label":"M"},{"href":"#letter-P","label":"P"},{"href":"#letter-R","label":"R"},{"href":"#letter-S","label":"S"},{"href":"#letter-V","label":"V"},{"href":"#letter-W","label":"W"}],"collapsible":true}}</script><nav class="fa-nav" aria-label="folio-assistant" data-fa-rail="pending"><a href="../../../../">SMART Base</a></nav>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
@@ -279,9 +275,9 @@
 
 <p>Candidate terms extracted from every Tool node: <code class="language-plaintext highlighter-rouge">title</code> as the label, <code class="language-plaintext highlighter-rouge">description</code> as the definition, the Tool id as the code. Each is the asset’s own text, verbatim and not curated, and carries the badge “candidate, extracted”. A person promotes one by authoring it. Authored terms are on their owning instance’s page, and those pages, the counts and the sources are linked from the <a href="../../../../en/folio-assistant-core/glossary/">glossary index</a>.</p>
 
-<p>From: cat-harness-tools 1 (<a href="../../../../assets/glossary/cat-harness-tools--kg-tools.skos.jsonld">SKOS</a>) · fhir-harness 39 (<a href="../../../../assets/glossary/fhir-harness--kg-tools.skos.jsonld">SKOS</a>) · folio-assistant-core 29 (<a href="../../../../assets/glossary/folio-assistant-core--kg-tools.skos.jsonld">SKOS</a>) · smart-base 23 (<a href="../../../../assets/glossary/smart-base--kg-tools.skos.jsonld">SKOS</a>) · who-iris 2 (<a href="../../../../assets/glossary/who-iris--kg-tools.skos.jsonld">SKOS</a>).</p>
+<p>From: cat-harness-tools 1 (<a href="../../../../assets/glossary/cat-harness-tools--kg-tools.skos.jsonld">SKOS</a>) · fhir-harness 39 (<a href="../../../../assets/glossary/fhir-harness--kg-tools.skos.jsonld">SKOS</a>) · folio-assistant-core 30 (<a href="../../../../assets/glossary/folio-assistant-core--kg-tools.skos.jsonld">SKOS</a>) · smart-base 23 (<a href="../../../../assets/glossary/smart-base--kg-tools.skos.jsonld">SKOS</a>) · who-iris 2 (<a href="../../../../assets/glossary/who-iris--kg-tools.skos.jsonld">SKOS</a>).</p>
 
-<p><strong>Size:</strong> this page holds 94 terms and is 99 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
+<p><strong>Size:</strong> this page holds 95 terms and is 100 KB before compression, fetched in one request, within its budget of 1.0 MB. There is no search index: the filter below runs over this page, and the A–Z bar jumps within it.</p>
 
 <div class="table-wrapper"><table class="fa-gloss-mapping">
 <caption>Already somebody else's concept? — <code>check:term-mapping</code>, bean <code>7wou</code></caption>
@@ -296,7 +292,7 @@ be a term this corpus is right to coin.</p>
 
 <p><label for="fa-gloss-q">Filter terms</label>
 <input id="fa-gloss-q" type="search" autocomplete="off" style="min-height:44px;width:100%;max-width:32rem" /></p>
-<p aria-live="polite"><span id="fa-gloss-n">94</span> shown</p>
+<p aria-live="polite"><span id="fa-gloss-n">95</span> shown</p>
 
 <nav aria-label="Letters"><a href="#letter-A">A</a> <a href="#letter-B">B</a> <a href="#letter-C">C</a> <a href="#letter-D">D</a> <a href="#letter-E">E</a> <a href="#letter-F">F</a> <a href="#letter-G">G</a> <a href="#letter-I">I</a> <a href="#letter-L">L</a> <a href="#letter-M">M</a> <a href="#letter-P">P</a> <a href="#letter-R">R</a> <a href="#letter-S">S</a> <a href="#letter-V">V</a> <a href="#letter-W">W</a></nav>
 <h2 id="letter-A">
@@ -510,7 +506,7 @@ dak.json + FSH tree → L2 DAK component graph <span class="fa-gloss-status">can
 DIIG phases, steps and resources chart <span class="fa-gloss-status">candidate, extracted</span>
 </dt>
 <dd>
-<p>Draw a DIIG &quot;phases, steps and resources&quot; chart as SVG from <code>diig-phases-figure/v1</code> data on a who-iris library entry (DIIG Fig. 1.1.1, or a handbook's republished version such as the product catalogue handbook's Fig. 4), or from a folio's <code>diig-phases-adaptation/v1</code> file that adds its own tiles and marks itself &quot;(this document)&quot;. Every label comes from the data; tiles link to their library entry or glossary concept.</p>
+<p>Draw a DIIG &quot;phases, steps and resources&quot; chart as SVG from <code>diig-phases-figure/v1</code> data on a who-iris library entry (DIIG Fig. 1.1.1, or a handbook's republished version such as the product catalogue handbook's Fig. 4), or from a folio's <code>diig-phases-adaptation/v1</code> file that adds its own tiles and marks itself &quot;(this document)&quot;. Every label comes from the data; a tile whose data names a link (URL, glossary concept or who-iris library entry) is an SVG link titled with the tile's name, and a tile with none is drawn without one.</p>
 <p class="fa-gloss-meta">Tools of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/tools/diig-phases-svg/diig-phases-svg.ts"><code>folio-assistant-core/tools/diig-phases-svg/diig-phases-svg.ts#diig-phases-svg</code></a></p>
 </dd>
 <dt id="smart-base--kg-tools--dmn-to-questionnaire" data-fa-state="extracted" data-fa-gloss="">
@@ -595,6 +591,13 @@ Figure coverage and computability <span class="fa-gloss-status">candidate, extra
 <dd>
 <p>For every figure a source publication declares, report whether the folio built from it has a block and how computable it is: missing, excluded (signed off), picture (a PNG crop), linked (a picture linked to a model view), computable (a diagram, a table or a figure rebuilt by ArchiMate, BPMN, DMN, Mermaid, a class diagram or a generator), or cited (a picture kept on purpose, signed off). Exits non-zero when any declared figure is missing; <code>--require-computable</code> also fails on pictures, linked or not.</p>
 <p class="fa-gloss-meta">Tools of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/tools/figure-coverage/figure-coverage.ts"><code>folio-assistant-core/tools/figure-coverage/figure-coverage.ts#figure-coverage</code></a></p>
+</dd>
+<dt id="folio-assistant-core--kg-tools--as-drawn-svg" data-fa-state="extracted" data-fa-gloss="">
+Figure redrawn as drawn, from its PDF vector layer <span class="fa-gloss-status">candidate, extracted</span>
+</dt>
+<dd>
+<p>Draw a figure as SVG from <code>as-drawn-figure/v1</code> data: the drawing <code>scripts/pdf-as-drawn.py</code> transcribes from the source PDF's vector layer (every path, clip, text run and image in the L1 figure region, at its printed position, colour and size). The SVG keeps the original's layout and style; labels are SVG text held to their printed width, and labels that name a glossary concept link to it.</p>
+<p class="fa-gloss-meta">Tools of folio-assistant-core · source <a href="https://github.com/litlfred/folio-assistant-core/blob/main/tools/as-drawn-svg/as-drawn-svg.ts"><code>folio-assistant-core/tools/as-drawn-svg/as-drawn-svg.ts#as-drawn-svg</code></a></p>
 </dd>
 <dt id="folio-assistant-core--kg-tools--folio-block-qa-summary" data-fa-state="extracted" data-fa-gloss="">
 Folio block QA summary <span class="fa-gloss-status">candidate, extracted</span>

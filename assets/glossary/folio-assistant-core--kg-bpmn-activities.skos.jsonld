@@ -21,12 +21,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Close the window back to its avatar"
+          "@value": "Close the window back to its avatar",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "[x] closes the window back to its avatar. Only a person's [x] does this; a zoom-out never closes a window, or [x] and zooming become indistinguishable to the reader."
+          "@value": "[x] closes the window back to its avatar. Only a person's [x] does this; a zoom-out never closes a window, or [x] and zooming become indistinguishable to the reader.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_Close",
@@ -41,12 +43,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Leave a reachable way back"
+          "@value": "Leave a reachable way back",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Leave the way back reachable: the collapsed window becomes a control in its own position and focus moves to it — left alone, focus lands on <body> and the keyboard position is lost. An action whose inverse is not reachable is not a toggle."
+          "@value": "Leave the way back reachable: the collapsed window becomes a control in its own position and focus moves to it — left alone, focus lands on <body> and the keyboard position is lost. An action whose inverse is not reachable is not a toggle.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_OfferWayBack",
@@ -61,12 +65,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Project a window onto the board"
+          "@value": "Project a window onto the board",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Project a window onto the board for the chosen card. A window is not the card grown large: it survives zooming out, and only [x] closes it. The frame is fixed ([x] always present, always in the same place); the kind fills in its declared controls."
+          "@value": "Project a window onto the board for the chosen card. A window is not the card grown large: it survives zooming out, and only [x] closes it. The frame is fixed ([x] always present, always in the same place); the kind fills in its declared controls.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_Open",
@@ -81,12 +87,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Raise the window the reader selected"
+          "@value": "Raise the window the reader selected",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Raise the selected window to the top. Selecting ANY part raises it, not just a title bar. Z-order is session-only by stated default: no z is written to the layout, so a raise is never a file write."
+          "@value": "Raise the selected window to the top. Selecting ANY part raises it, not just a title bar. Z-order is session-only by stated default: no z is written to the layout, so a raise is never a file write.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_Raise",
@@ -101,12 +109,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Render every card as its avatar"
+          "@value": "Render every card as its avatar",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Render every card as its avatar — the starting state. Each content kind controls its own avatar; the board decides only that nothing starts open."
+          "@value": "Render every card as its avatar — the starting state. Each content kind controls its own avatar; the board decides only that nothing starts open.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_RenderAvatars",
@@ -121,12 +131,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Resolve the kind's zoom threshold"
+          "@value": "Resolve the kind's zoom threshold",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Resolve the semantic-zoom threshold for each card's kind: the folio default unless the kind overrides it with a stated because. Return the source alongside the value, so a card that flipped too early can be traced to a decision or to a default."
+          "@value": "Resolve the semantic-zoom threshold for each card's kind: the folio default unless the kind overrides it with a stated because. Return the source alongside the value, so a card that flipped too early can be traced to a decision or to a default.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_ResolveThreshold",
@@ -141,12 +153,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Swap cards below the threshold; leave open windows alone"
+          "@value": "Swap cards below the threshold; leave open windows alone",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Cards whose rendered width is strictly below the threshold swap to their avatar — automatic, driven by size. Open windows are left alone: semantic zoom and open/close are two mechanisms and must not be conflated."
+          "@value": "Cards whose rendered width is strictly below the threshold swap to their avatar — automatic, driven by size. Open windows are left alone: semantic zoom and open/close are two mechanisms and must not be conflated.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_SwapToAvatar",
@@ -161,12 +175,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Write the note into the folio — with no coordinate"
+          "@value": "Write the note into the folio — with no coordinate",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "A new note: write it into the folio with no x, no y, no board and no position. A folio is complete with no board, and one note may sit on several boards, which a coordinate on the note could not express."
+          "@value": "A new note: write it into the folio with no x, no y, no board and no position. A folio is complete with no board, and one note may sit on several boards, which a coordinate on the note could not express.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_CreateNote",
@@ -181,12 +197,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Record x,y for this note on THIS board"
+          "@value": "Record x,y for this note on THIS board",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Record the note's x,y in the layout layer for THIS board, naming the note by id. An existing card dragged here only gets a new position — placing is not creating, so no content is duplicated."
+          "@value": "Record the note's x,y in the layout layer for THIS board, naming the note by id. An existing card dragged here only gets a new position — placing is not creating, so no content is duplicated.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_Place",
@@ -201,12 +219,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Sweep positions whose note is gone"
+          "@value": "Sweep positions whose note is gone",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Remove every position in this board's layer whose note no longer exists. The sweep edits only the layer — one file, one pass — and never a note a person owns; a stale position must not keep a note alive."
+          "@value": "Remove every position in this board's layer whose note no longer exists. The sweep edits only the layer — one file, one pass — and never a note a person owns; a stale position must not keep a note alive.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_SweepOrphans",
@@ -221,12 +241,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Name what will move, and where it lands"
+          "@value": "Name what will move, and where it lands",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Before anything moves, name the content that would move — what it is, with its size and age — and where it lands. The confirmation sits in front of the move: an agent never relocates a durable artefact on its own initiative."
+          "@value": "Before anything moves, name the content that would move — what it is, with its size and age — and where it lands. The confirmation sits in front of the move: an agent never relocates a durable artefact on its own initiative.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_AskConfirm",
@@ -241,12 +263,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Leave the content exactly where it is"
+          "@value": "Leave the content exactly where it is",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The reader said no: nothing moves, no position is dropped, and the board is left exactly as it was. Drawn as its own end state because a destructive action whose refusal is not drawn gets performed by accident."
+          "@value": "The reader said no: nothing moves, no position is dropped, and the board is left exactly as it was. Drawn as its own end state because a destructive action whose refusal is not drawn gets performed by accident.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_Cancel",
@@ -261,12 +285,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Relocate the content to the trashcan"
+          "@value": "Relocate the content to the trashcan",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Relocate the confirmed content — that one thing, not the class it belongs to — to the trashcan. The folio changes first, because the folio carries what is true."
+          "@value": "Relocate the confirmed content — that one thing, not the class it belongs to — to the trashcan. The folio changes first, because the folio carries what is true.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_MoveContent",
@@ -281,12 +307,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Say what moved and where it went"
+          "@value": "Say what moved and where it went",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Tell the reader what moved and where it went, so the content can be found in the trashcan rather than inferred missing from a card that disappeared."
+          "@value": "Tell the reader what moved and where it went, so the content can be found in the trashcan rather than inferred missing from a card that disappeared.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_ReportMove",
@@ -301,12 +329,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Drop its positions and sweep orphans"
+          "@value": "Drop its positions and sweep orphans",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Only after the content has moved: drop its positions from the layout layer and sweep any position whose note is now gone. Sweeping first would make the board authoritative over the folio for one step."
+          "@value": "Only after the content has moved: drop its positions from the layout layer and sweep any position whose note is now gone. Sweeping first would make the board authoritative over the folio for one step.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_UpdateLayer",
@@ -321,12 +351,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Record assets[] — local path or remote URL"
+          "@value": "Record assets[] — local path or remote URL",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "kind / role / url-or-path / checksum / retrieved. A SIBLING of library:, never inside it: LibraryRef is regenerated from the tree, so an authored URL placed there is dropped on the next sync."
+          "@value": "kind / role / url-or-path / checksum / retrieved. A SIBLING of library:, never inside it: LibraryRef is regenerated from the tree, so an authored URL placed there is dropped on the next sync.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Assets",
@@ -341,12 +373,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Bind the folder to its bibliography slug"
+          "@value": "Bind the folder to its bibliography slug",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Bind the folder name to the document's bibliography slug, so library/<bib-slug>/ and its citation key are the same string: a citation resolves to a directory without a lookup table between them."
+          "@value": "Bind the folder name to the document's bibliography slug, so library/<bib-slug>/ and its citation key are the same string: a citation resolves to a directory without a lookup table between them.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Bind",
@@ -361,12 +395,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Write dublin-core.jsonld (the record of truth)"
+          "@value": "Write dublin-core.jsonld (the record of truth)",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "One standalone Dublin Core record per folder. dcterms is already this corpus's JSON-LD vocabulary, so this extends a live context rather than introducing one."
+          "@value": "One standalone Dublin Core record per folder. dcterms is already this corpus's JSON-LD vocabulary, so this extends a live context rather than introducing one.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Dublin",
@@ -381,12 +417,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Read glossary into candidate terms"
+          "@value": "Read glossary into candidate terms",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The source's glossary and abbreviations sections become candidate terms of a folio-glossary/v1 scheme with the Tool glossary-from-source, verbatim, each with source file#line, and an acronym as the notation of the term it expands. Terms a person owns are never changed, and only a person moves a term to authored. A source with no such section skips this step with nothing written."
+          "@value": "The source's glossary and abbreviations sections become candidate terms of a folio-glossary/v1 scheme with the Tool glossary-from-source, verbatim, each with source file#line, and an acronym as the notation of the term it expands. Terms a person owns are never changed, and only a person moves a term to authored. A source with no such section skips this step with nothing written.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Glossary",
@@ -401,12 +439,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Link L1 nodes into the corpus graph"
+          "@value": "Link L1 nodes into the corpus graph",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Anything in library/ is L1 source content. A knowledge-graph reference from any artefact -- paper, L2, L3 -- resolves to it through library/."
+          "@value": "Anything in library/ is L1 source content. A knowledge-graph reference from any artefact -- paper, L2, L3 -- resolves to it through library/.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Link",
@@ -421,12 +461,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Write manifest.jsonld referencing it"
+          "@value": "Write manifest.jsonld referencing it",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Write manifest.jsonld for the folder: its @id, @type folio:SourceDocument, what it contains and its provenance, referencing the standalone dublin-core.jsonld as the record of truth rather than copying its fields."
+          "@value": "Write manifest.jsonld for the folder: its @id, @type folio:SourceDocument, what it contains and its provenance, referencing the standalone dublin-core.jsonld as the record of truth rather than copying its fields.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Manifest",
@@ -441,12 +483,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Extract reference lists"
+          "@value": "Extract reference lists",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Each reference list of the source (a References, Bibliography or Further reading section, in any of the six UN languages) becomes folio-reference/v1 nodes with the Tool references-extract: one node per cited work, provenance extracted, derivedFrom the section it was read from, and printed the entry exactly as the source prints it. Only fields read without guessing are set (address, DOI, ISBN, year, access date); a cited IRIS item the library holds gets heldAt. The nodes are the document's own bibliography on the bibliography page. A source with no reference list skips this step with nothing written."
+          "@value": "Each reference list of the source (a References, Bibliography or Further reading section, in any of the six UN languages) becomes folio-reference/v1 nodes with the Tool references-extract: one node per cited work, provenance extracted, derivedFrom the section it was read from, and printed the entry exactly as the source prints it. Only fields read without guessing are set (address, DOI, ISBN, year, access date); a cited IRIS item the library holds gets heldAt. The nodes are the document's own bibliography on the bibliography page. A source with no reference list skips this step with nothing written.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_References",
@@ -461,12 +505,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Review the preview and answer"
+          "@value": "Review the preview and answer",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Members read the preview and answer in their Blue columns, or leave them as they are when the change is right. They record the row's Disposition (Blue): Pending, Accepted, Partially accepted, Not accepted, Noted, Duplicate or Out of scope."
+          "@value": "Members read the preview and answer in their Blue columns, or leave them as they are when the change is right. They record the row's Disposition (Blue): Pending, Accepted, Partially accepted, Not accepted, Noted, Duplicate or Out of scope.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_AnswerPreview",
@@ -481,12 +527,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Close the change set: the issue, then the sheet row"
+          "@value": "Close the change set: the issue, then the sheet row",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Closing is one step with two tools, GitHub and the review sheet. The agent closes the change set's issue on GitHub, with the merge or the reason it closed unmerged, then records Agentic status Closed (or Change merged) on the Agent tab through Record agent step (record-agent-step.bpmn). The sheet script then hides the row and strikes the whole row through (\"make sure complete changeset rows are hidden so not cluttered and that text of that whole row is crossed out\"). The agent never hides or strikes a row by hand, and never deletes one: reopening the issue and writing a new status shows it again. Hiding and striking are formatting only, which the review-log watcher ignores. A change set closed without a merge, at a person's request, takes this step too."
+          "@value": "Closing is one step with two tools, GitHub and the review sheet. The agent closes the change set's issue on GitHub, with the merge or the reason it closed unmerged, then records Agentic status Closed (or Change merged) on the Agent tab through Record agent step (record-agent-step.bpmn). The sheet script then hides the row and strikes the whole row through (\"make sure complete changeset rows are hidden so not cluttered and that text of that whole row is crossed out\"). The agent never hides or strikes a row by hand, and never deletes one: reopening the issue and writing a new status shows it again. Hiding and striking are formatting only, which the review-log watcher ignores. A change set closed without a merge, at a person's request, takes this step too.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_CloseChangeSet",
@@ -501,12 +549,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Edit the document in the row's pull request"
+          "@value": "Edit the document in the row's pull request",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "One row, one branch, one active pull request: the agent edits on the row's branch and opens its pull request, or updates it when the row comes round again. A closed pull request the committee wants back is reopened, or replaced by a new one on the same branch; earlier ones stay listed in Agentic status. Agentic status (Green) says where it is, and Staging review opens the preview's what-changed page. Before the preview is staged, the agent writes the change set's Disposition (change set) on the Agent tab: one line per feedback item, starting from the people's Blue Disposition, after an optional Overall statement; the sheet shows it in Disposition (agent) and flags any item without a disposition, or one that differs from the people's. It ends with Record agent step (record-agent-step.bpmn): the Agent tab row first, then Feedback (agent) from it, then the sheet read back, never Feedback (agent) alone."
+          "@value": "One row, one branch, one active pull request: the agent edits on the row's branch and opens its pull request, or updates it when the row comes round again. A closed pull request the committee wants back is reopened, or replaced by a new one on the same branch; earlier ones stay listed in Agentic status. Agentic status (Green) says where it is, and Staging review opens the preview's what-changed page. Before the preview is staged, the agent writes the change set's Disposition (change set) on the Agent tab: one line per feedback item, starting from the people's Blue Disposition, after an optional Overall statement; the sheet shows it in Disposition (agent) and flags any item without a disposition, or one that differs from the people's. It ends with Record agent step (record-agent-step.bpmn): the Agent tab row first, then Feedback (agent) from it, then the sheet read back, never Feedback (agent) alone.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_EditInPullRequest",
@@ -521,12 +571,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Merge the pull request"
+          "@value": "Merge the pull request",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The agent merges the row's pull request, and Agentic status says merged. The change set's Dispositions blurb, as it stands when Ready for merge is set to Yes, is the summary: it goes into the merge, and closes the change set's issue. It ends with Record agent step (record-agent-step.bpmn): the Agent tab row first, then Feedback (agent) from it, then the sheet read back, never Feedback (agent) alone."
+          "@value": "The agent merges the row's pull request, and Agentic status says merged. The change set's Dispositions blurb, as it stands when Ready for merge is set to Yes, is the summary: it goes into the merge, and closes the change set's issue. It ends with Record agent step (record-agent-step.bpmn): the Agent tab row first, then Feedback (agent) from it, then the sheet read back, never Feedback (agent) alone.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Merge",
@@ -541,12 +593,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Propose a direction"
+          "@value": "Propose a direction",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Reads: the row (Title, Selected Sections, the Contributor Feedback columns, Disposition) and the sections it names. Writes: a proposed direction in Feedback (agent) (Green), and the row's feedback basis on the Agent tab, so the script can tell when the feedback has moved on. A question for people goes in Feedback (agent) as a Decision needed block with options and a recommendation, and the row's Agentic status becomes Needs human; a chat card may repeat it, but the sheet is the record. An answered question leaves the feedback: its decision is added to the change set's Disposition (change set) on the Agent tab, shown in Disposition (agent), whose decision history is appended to and never removed. It ends with Record agent step (record-agent-step.bpmn): the Agent tab row first, then Feedback (agent) from it, then the sheet read back, never Feedback (agent) alone."
+          "@value": "Reads: the row (Title, Selected Sections, the Contributor Feedback columns, Disposition) and the sections it names. Writes: a proposed direction in Feedback (agent) (Green), and the row's feedback basis on the Agent tab, so the script can tell when the feedback has moved on. A question for people goes in Feedback (agent) as a Decision needed block with options and a recommendation, and the row's Agentic status becomes Needs human; a chat card may repeat it, but the sheet is the record. An answered question leaves the feedback: its decision is added to the change set's Disposition (change set) on the Agent tab, shown in Disposition (agent), whose decision history is appended to and never removed. It ends with Record agent step (record-agent-step.bpmn): the Agent tab row first, then Feedback (agent) from it, then the sheet read back, never Feedback (agent) alone.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Propose",
@@ -561,12 +615,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "QA gate: check dispositions and PR"
+          "@value": "QA gate: check dispositions and PR",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Reads: the change set's Disposition (change set), the people's Blue Disposition and feedback, the pull request's diff at its head commit, and the staging QA report. Checks that every feedback item has one disposition; that each agrees with the people's Blue Disposition; that each Accepted or Partially accepted item has the change in the diff, and a Not accepted, Noted, Duplicate or Out of scope item has none; that the diff changes nothing no disposition accounts for; and that the QA report for the staged commit has no failing gate. Writes: QA gate (change set) on the Agent tab, first line \"Passed <head sha>: …\" or \"Failed <head sha>: <why>\", and QA report (change set), the report's link. The sheet shows the gate under Staging review; a pass for an older commit reads as stale. It ends with Record agent step (record-agent-step.bpmn): the Agent tab row first, then Feedback (agent) from it, then the sheet read back, never Feedback (agent) alone."
+          "@value": "Reads: the change set's Disposition (change set), the people's Blue Disposition and feedback, the pull request's diff at its head commit, and the staging QA report. Checks that every feedback item has one disposition; that each agrees with the people's Blue Disposition; that each Accepted or Partially accepted item has the change in the diff, and a Not accepted, Noted, Duplicate or Out of scope item has none; that the diff changes nothing no disposition accounts for; and that the QA report for the staged commit has no failing gate. Writes: QA gate (change set) on the Agent tab, first line \"Passed <head sha>: …\" or \"Failed <head sha>: <why>\", and QA report (change set), the report's link. The sheet shows the gate under Staging review; a pass for an older commit reads as stale. It ends with Record agent step (record-agent-step.bpmn): the Agent tab row first, then Feedback (agent) from it, then the sheet read back, never Feedback (agent) alone.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_QaGate",
@@ -581,12 +637,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Set Ready for agent to Yes"
+          "@value": "Set Ready for agent to Yes",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "An Editor agrees the direction and sets the row's Ready for agent (Orange) to Yes. Person-only: the agent never sets it."
+          "@value": "An Editor agrees the direction and sets the row's Ready for agent (Orange) to Yes. Person-only: the agent never sets it.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_ReadyForAgent",
@@ -601,12 +659,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Set Ready for merge to Yes"
+          "@value": "Set Ready for merge to Yes",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "An Editor sets the row's Ready for merge (Orange) to Yes once the QA gate has passed for the pull request's head commit. Person-only. Set earlier, the agent does not merge until the gate passes, and its feedback says so."
+          "@value": "An Editor sets the row's Ready for merge (Orange) to Yes once the QA gate has passed for the pull request's head commit. Person-only. Set earlier, the agent does not merge until the gate passes, and its feedback says so.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_ReadyForMerge",
@@ -621,12 +681,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Start a change-set row"
+          "@value": "Start a change-set row",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "A member adds a row on the Contributor Feedback tab: a title, the Selected Sections it is about (a dropdown from the document's table of contents) and their feedback in their own Blue column. The script gives the row its Change-set id and links each section."
+          "@value": "A member adds a row on the Contributor Feedback tab: a title, the Selected Sections it is about (a dropdown from the document's table of contents) and their feedback in their own Blue column. The script gives the row its Change-set id and links each section.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_StartRow",
@@ -641,12 +703,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Filter the corpus, choose the granularity, decompose the question"
+          "@value": "Filter the corpus, choose the granularity, decompose the question",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The paper's Planner. Three outputs, and the middle one is the method's substance: a filtered document subset, the granularity to search at, and the sub-questions. CHOOSING THE GRANULARITY PER QUESTION is the whole point of parsing at several. A broad question is answered from summaries and a specific one from chunks; a pipeline that picks once has answered every future question the same way. This checkout cannot yet offer the choice — `l1-blocks.ts` produces blocks, there is no summary level — so this step SAYS which granularity it searched rather than implying the corpus offered alternatives. Re-entered on every iteration, not only the first: the sub-questions are re-derived from what has been found so far, which is what makes the loop a search rather than a retry."
+          "@value": "The paper's Planner. Three outputs, and the middle one is the method's substance: a filtered document subset, the granularity to search at, and the sub-questions. CHOOSING THE GRANULARITY PER QUESTION is the whole point of parsing at several. A broad question is answered from summaries and a specific one from chunks; a pipeline that picks once has answered every future question the same way. This checkout cannot yet offer the choice — `l1-blocks.ts` produces blocks, there is no summary level — so this step SAYS which granularity it searched rather than implying the corpus offered alternatives. Re-entered on every iteration, not only the first: the sub-questions are re-derived from what has been found so far, which is what makes the loop a search rather than a retry.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_Plan",
@@ -661,12 +725,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Deduplicate, and keep what is actually relevant"
+          "@value": "Deduplicate, and keep what is actually relevant",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The paper's Refiner. Accumulates into the evidence set the report is built from — so what is dropped here is invisible downstream, which is why it is a step somebody performs rather than a filter buried in retrieval."
+          "@value": "The paper's Refiner. Accumulates into the evidence set the report is built from — so what is dropped here is invisible downstream, which is why it is a step somebody performs rather than a filter buried in retrieval.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_Refine",
@@ -681,12 +747,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Synthesise, cite to a location, and say what was not found"
+          "@value": "Synthesise, cite to a location, and say what was not found",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The paper's Reporter, with two obligations it does not state. CITE TO A LOCATION, not to a document — the page and bounding box the parse preserved, so a reader verifies a claim where it was made rather than being sent to a PDF. AND SAY WHAT WAS NOT FOUND. The failure this method makes easy is that a search which ended quietly looks exactly like one that succeeded. Sub-questions that returned nothing are reported, distinguishing \"not in the corpus\" from \"not found by this search\" — only the first is a fact about the folio. A figure description an agent drafted is NOT reported as what the figure shows. `schemas/narrative.ts` holds that line and this step does not cross it."
+          "@value": "The paper's Reporter, with two obligations it does not state. CITE TO A LOCATION, not to a document — the page and bounding box the parse preserved, so a reader verifies a claim where it was made rather than being sent to a PDF. AND SAY WHAT WAS NOT FOUND. The failure this method makes easy is that a search which ended quietly looks exactly like one that succeeded. Sub-questions that returned nothing are reported, distinguishing \"not in the corpus\" from \"not found by this search\" — only the first is a fact about the folio. A figure description an agent drafted is NOT reported as what the figure shows. `schemas/narrative.ts` holds that line and this step does not cross it.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_Report",
@@ -701,12 +769,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Retrieve for each sub-question"
+          "@value": "Retrieve for each sub-question",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The paper's Searcher, at the granularity A_Plan chose. Which retrieval paradigm — text-only, vision-only or hybrid — is recorded in the methodology node as an open trade-off rather than settled here: the paper's comparison was measured on its own corpus and says nothing about a folio's."
+          "@value": "The paper's Searcher, at the granularity A_Plan chose. Which retrieval paradigm — text-only, vision-only or hybrid — is recorded in the methodology node as an open trade-off rather than settled here: the paper's comparison was measured on its own corpus and says nothing about a folio's.",
+          "@language": "en"
         }
       ],
       "skos:notation": "A_Search",
@@ -721,12 +791,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Archive → greppable contents manifest"
+          "@value": "Archive → greppable contents manifest",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "NOT IMPLEMENTED; see docs/document-ingestion.md. Tar/zip is opaque to every grep in the corpus until its contents are listed as data."
+          "@value": "NOT IMPLEMENTED; see docs/document-ingestion.md. Tar/zip is opaque to every grep in the corpus until its contents are listed as data.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Archive",
@@ -741,12 +813,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Transcribe and translate audio"
+          "@value": "Transcribe and translate audio",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "No Tool yet; the method, and the choice of recogniser, is skill audio-transcription."
+          "@value": "No Tool yet; the method, and the choice of recogniser, is skill audio-transcription.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Audio",
@@ -761,12 +835,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Extract figures and tables"
+          "@value": "Extract figures and tables",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The pdf-images.py, pdf-vector-labels.py and pdf-vector-figures.py arms extract the raster images and the figures drawn as vectors (grouped and rendered). For every table the document's structure declares, an agent reads the rendered page, checks cell text against the text layer, and writes tables/<label>.csv plus tables.csvw.json (folio-tabular-csvw/v1), with a draft description in the six UN languages; pdf-tables.py's grid is a cross-check, not the answer. Owner, 2026-11-11 (who-iris): \"actually extract the figures\" and \"any tables too\". Method: skill document-intake, \"Figures and captioned tables: describe, keep, transcribe\"."
+          "@value": "The pdf-images.py, pdf-vector-labels.py and pdf-vector-figures.py arms extract the raster images and the figures drawn as vectors (grouped and rendered). For every table the document's structure declares, an agent reads the rendered page, checks cell text against the text layer, and writes tables/<label>.csv plus tables.csvw.json (folio-tabular-csvw/v1), with a draft description in the six UN languages; pdf-tables.py's grid is a cross-check, not the answer. Owner, 2026-11-11 (who-iris): \"actually extract the figures\" and \"any tables too\". Method: skill document-intake, \"Figures and captioned tables: describe, keep, transcribe\".",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_FiguresTables",
@@ -781,12 +857,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Footnotes and the marks that call them"
+          "@value": "Footnotes and the marks that call them",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The pdf-footnotes.py arm (owner, 2026-11-11, \"also foot notes/marks\"): from the page layout, each note at the foot of a page and every superscript mark in the text that calls it, written to footnotes.json (folio-document-footnotes/v1) with the block that holds the page. The section text is not changed. Only a called note is a footnote; uncalled foot-of-page lines and marks with no note are listed, never dropped. OCR'd pages have no fonts and are reported unread. Method: skill l1-document-ingestion, \"Footnotes and their marks\"."
+          "@value": "The pdf-footnotes.py arm (owner, 2026-11-11, \"also foot notes/marks\"): from the page layout, each note at the foot of a page and every superscript mark in the text that calls it, written to footnotes.json (folio-document-footnotes/v1) with the block that holds the page. The section text is not changed. Only a called note is a footnote; uncalled foot-of-page lines and marks with no note are listed, never dropped. OCR'd pages have no fonts and are reported unread. Method: skill l1-document-ingestion, \"Footnotes and their marks\".",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Footnotes",
@@ -801,12 +879,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Narrative description per image, localized"
+          "@value": "Narrative description per image, localized",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Applies equally to an image EXTRACTED FROM A PDF (Task_FiguresTables), not only to an uploaded one. An agent opens every image and vector render and records a verdict in the library's image-verdicts.json: role (figure, logo or decorative), the reason, and a draft description in English plus ar, zh, es, fr and ru, which the apply-image-verdicts.ts arm lays over images.json on every ingest. Images judged figure are kept as WebP, quality 80, at most 1600 px; logos, decorative fragments and page scans are not. Every description stays a draft until a person confirms it with `bun run cat narratives`. Method: skill document-intake, \"Figures and captioned tables: describe, keep, transcribe\"."
+          "@value": "Applies equally to an image EXTRACTED FROM A PDF (Task_FiguresTables), not only to an uploaded one. An agent opens every image and vector render and records a verdict in the library's image-verdicts.json: role (figure, logo or decorative), the reason, and a draft description in English plus ar, zh, es, fr and ru, which the apply-image-verdicts.ts arm lays over images.json on every ingest. Images judged figure are kept as WebP, quality 80, at most 1600 px; logos, decorative fragments and page scans are not. Every description stays a draft until a person confirms it with `bun run cat narratives`. Method: skill document-intake, \"Figures and captioned tables: describe, keep, transcribe\".",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Image",
@@ -821,12 +901,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Cite the author of every narrative"
+          "@value": "Cite the author of every narrative",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "A generated description is a claim by someone. Record whether a human or an agent wrote it, and for an agent the model version. An uncited narrative is indistinguishable from a transcription of the source."
+          "@value": "A generated description is a claim by someone. Record whether a human or an agent wrote it, and for an agent the model version. An uncited narrative is indistinguishable from a transcription of the source.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Provenance",
@@ -841,12 +923,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Sheet names, headers, shape, narrative"
+          "@value": "Sheet names, headers, shape, narrative",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Tools tabular-csv and tabular-xlsx, as CSVW (skill tabular-metadata). CSV and spreadsheet: tabs, column and row headers, sizes, and what the dataset is about."
+          "@value": "Tools tabular-csv and tabular-xlsx, as CSVW (skill tabular-metadata). CSV and spreadsheet: tabs, column and row headers, sizes, and what the dataset is about.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Tabular",
@@ -861,12 +945,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "File info, sizes, hashes, timestamps, mimetype"
+          "@value": "File info, sizes, hashes, timestamps, mimetype",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "NOT IMPLEMENTED; see docs/document-ingestion.md. Mechanical and cheap; the checksum is what makes a remote asset verifiable."
+          "@value": "NOT IMPLEMENTED; see docs/document-ingestion.md. Mechanical and cheap; the checksum is what makes a remote asset verifiable.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_TechMeta",
@@ -881,12 +967,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Extract claim candidates"
+          "@value": "Extract claim candidates",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "candidates.json holds extracted theorems and definitions. Proposals only -- never adjudicated verdicts."
+          "@value": "candidates.json holds extracted theorems and definitions. Proposals only -- never adjudicated verdicts.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Candidates",
@@ -901,12 +989,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Extract the text layer"
+          "@value": "Extract the text layer",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The document has a text layer: extract it with pdf-extract (pdfminer.six, then a zero-dependency content-stream reader). Exit 2 means no text layer — a scan — and routes to OCR; it is not an empty document."
+          "@value": "The document has a text layer: extract it with pdf-extract (pdfminer.six, then a zero-dependency content-stream reader). Exit 2 means no text layer — a scan — and routes to OCR; it is not an empty document.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_ExtractText",
@@ -921,12 +1011,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "OCR to ocr/page-*.txt"
+          "@value": "OCR to ocr/page-*.txt",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Each page is read in the document's languages (--lang-hint, from dc.language.iso), narrowed to the script the page shows. A page Tesseract is unsure of (mean word confidence under 70) is read again with each other installed script added, and the most confident read is kept: a French article's Arabic abstract, or the Latin URLs in an Arabic document's references. A document ingested this way keeps its text in ocr/ and only a stub in sections/, which the documented sections/ grep cannot see. That asymmetry is why the corpus-grep checklist has a fourth tier. The run also records WHICH SOFTWARE made the pages, in ocr/run-context.json: a folio-run-context/v1 (cat-harness schemas/run-context.ts, the record test runs and QA reports use for the same question), naming the OCR engine, the rasteriser and each language model with its version and the sha256 of the bytes that ran. Two OCRs of one scan can read differently (\"Manual\" and \"Manval\"), and without it neither could be told from the other or reproduced."
+          "@value": "Each page is read in the document's languages (--lang-hint, from dc.language.iso), narrowed to the script the page shows. A page Tesseract is unsure of (mean word confidence under 70) is read again with each other installed script added, and the most confident read is kept: a French article's Arabic abstract, or the Latin URLs in an Arabic document's references. A document ingested this way keeps its text in ocr/ and only a stub in sections/, which the documented sections/ grep cannot see. That asymmetry is why the corpus-grep checklist has a fourth tier. The run also records WHICH SOFTWARE made the pages, in ocr/run-context.json: a folio-run-context/v1 (cat-harness schemas/run-context.ts, the record test runs and QA reports use for the same question), naming the OCR engine, the rasteriser and each language model with its version and the sha256 of the bytes that ran. Two OCRs of one scan can read differently (\"Manual\" and \"Manval\"), and without it neither could be told from the other or reproduced.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Ocr",
@@ -941,12 +1033,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Check each page; OCR pages that fail"
+          "@value": "Check each page; OCR pages that fail",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Owner, 2026-11-11 (who-iris, card Q-ODD-1 = A): \"force OCR when a page's text layer fails a quality check\". A text layer can hold plenty of letters and still not be the page's text: accents mapped to Greek letters (\"dΘclaration\"), Persian set in the wrong Arabic code points, words split by kerning (\"au g m ente\"), fake-bold words printed twice, mojibake. cat-harness-tools scripts/_text_quality.py checks every page against the document's languages (dc.language.iso, or --lang-hint); the router then OCRs the document and pdf-structure.py --ocr takes the OCR text for the failing pages only, listing them in structure.json source.ocr_pages with the reason. When most pages of a document with no outline fail, the whole document is read from OCR, as for a scan. Method: skill l1-document-ingestion, \"A text layer that is not text\"."
+          "@value": "Owner, 2026-11-11 (who-iris, card Q-ODD-1 = A): \"force OCR when a page's text layer fails a quality check\". A text layer can hold plenty of letters and still not be the page's text: accents mapped to Greek letters (\"dΘclaration\"), Persian set in the wrong Arabic code points, words split by kerning (\"au g m ente\"), fake-bold words printed twice, mojibake. cat-harness-tools scripts/_text_quality.py checks every page against the document's languages (dc.language.iso, or --lang-hint); the router then OCRs the document and pdf-structure.py --ocr takes the OCR text for the failing pages only, listing them in structure.json source.ocr_pages with the reason. When most pages of a document with no outline fail, the whole document is read from OCR, as for a scan. Method: skill l1-document-ingestion, \"A text layer that is not text\".",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_PageCheck",
@@ -961,12 +1055,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Split into sections/*.md with doc_brief front-matter"
+          "@value": "Split into sections/*.md with doc_brief front-matter",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Contextual retrieval: a chunk in isolation loses what makes it mean anything, so each section carries the document brief. An outline is set aside when its entries are machine bookmark names (_GoBack, _Hlk..., \"Blank Page\", a merged file's name) or when under half of them name a heading the pages print, and the contents are inferred instead (diagnostics.outline_rejected). A section that would hold more than half of a document of 20 pages or more (and over 8,000 words), or over 20,000 words anywhere, is cut at the headings inferred inside it, else one section per page (diagnostics.oversized_split). Owner, 2026-11-11: \"split single blocks that hold a whole book\". Method: skill l1-document-ingestion, \"An outline that is not contents, and a section too long to be a block\"."
+          "@value": "Contextual retrieval: a chunk in isolation loses what makes it mean anything, so each section carries the document brief. An outline is set aside when its entries are machine bookmark names (_GoBack, _Hlk..., \"Blank Page\", a merged file's name) or when under half of them name a heading the pages print, and the contents are inferred instead (diagnostics.outline_rejected). A section that would hold more than half of a document of 20 pages or more (and over 8,000 words), or over 20,000 words anywhere, is cut at the headings inferred inside it, else one section per page (diagnostics.oversized_split). Owner, 2026-11-11: \"split single blocks that hold a whole book\". Method: skill l1-document-ingestion, \"An outline that is not contents, and a section too long to be a block\".",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Sections",
@@ -981,12 +1077,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Write structure.json"
+          "@value": "Write structure.json",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Write structure.json (pdf-structure/v1): doc id, TOC from the PDF outline or inferred from headings, page ranges, metadata, and source{} with the sha256 and a mimetype sniffed from the bytes, never the extension. A structure that could not be determined says so in structure_note rather than being rendered as one. For OCR'd text, source.runContext cites the OCR step's run context by sha256. A title already known for the document (the catalogue's dc.title, or one given with --title) is passed through as the raw title, so the sections' doc_title does not carry a scan's misreading."
+          "@value": "Write structure.json (pdf-structure/v1): doc id, TOC from the PDF outline or inferred from headings, page ranges, metadata, and source{} with the sha256 and a mimetype sniffed from the bytes, never the extension. A structure that could not be determined says so in structure_note rather than being rendered as one. For OCR'd text, source.runContext cites the OCR step's run context by sha256. A title already known for the document (the catalogue's dc.title, or one given with --title) is passed through as the raw title, so the sections' doc_title does not carry a scan's misreading.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Structure",
@@ -1001,12 +1099,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Contributor feedback"
+          "@value": "Contributor feedback",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Process_ContributorFeedback: while the document is a working draft, the Authoring Committee gives feedback through the Contributor Feedback sheet, and each change set is edited and merged in its own pull request. When its changes are merged, the document is validated and rendered again."
+          "@value": "Process_ContributorFeedback: while the document is a working draft, the Authoring Committee gives feedback through the Contributor Feedback sheet, and each change set is edited and merged in its own pull request. When its changes are merged, the document is validated and rendered again.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Call_ContributorFeedback",
@@ -1021,12 +1121,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Publish"
+          "@value": "Publish",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "See draft-to-publication.bpmn for the review and release path this expands into. Release authorisation is not relaxable."
+          "@value": "See draft-to-publication.bpmn for the review and release path this expands into. Release authorisation is not relaxable.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Publish",
@@ -1041,12 +1143,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Review and record feedback"
+          "@value": "Review and record feedback",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The reviewer this folio binds. authoring-document relaxes the base SME step precisely because no single lane fits every document. Review the rendered folio, not a description of it, and record the feedback. The outcome is iterate — back to authoring — or approved for the publication path."
+          "@value": "The reviewer this folio binds. authoring-document relaxes the base SME step precisely because no single lane fits every document. Review the rendered folio, not a description of it, and record the feedback. The outcome is iterate — back to authoring — or approved for the publication path.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Review",
@@ -1061,12 +1165,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Is every derived artefact present?"
+          "@value": "Is every derived artefact present?",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "L1 source to L1 KG is NOT complete while a required derived artefact is missing. This is the gate that makes the derivation steps obligatory rather than aspirational."
+          "@value": "L1 source to L1 KG is NOT complete while a required derived artefact is missing. This is the gate that makes the derivation steps obligatory rather than aspirational.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_CheckDerived",
@@ -1081,12 +1187,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Adjudicate the flagged passage"
+          "@value": "Adjudicate the flagged passage",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "A machine can detect that two readings differ. Which one is right is a human call."
+          "@value": "A machine can detect that two readings differ. Which one is right is a human call.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_FlagDrift",
@@ -1101,12 +1209,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Round-trip translation QA"
+          "@value": "Round-trip translation QA",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Back-translate each localized narrative into its source language and compare the meaning, to catch semantic drift and bad terminology that a forward-only check cannot see. Agentic. Two parties are kept apart under untainted-verification: a back-translator that sees ONLY the target-language text, and an adjudicator that sees the original and the back-translation and rules. The verdict is recorded per block, under criterion `translation-semantic-roundtrip` in the block's `<block>.<locale>.translation-qa.json` sidecar, by the `translation-roundtrip-record` Tool (translation-manager §5). A terminology miss is a different criterion, `translation-terms-preserved` (acronyms, numbers, URLs that must survive), so Gateway_Drift can tell the two apart. Never close this step by reversing the PO's msgid→msgstr map: that returns the source exactly and scores 1.0 always. An empty `translation-semantic-roundtrip` entry list means \"not yet run\", which is never a pass."
+          "@value": "Back-translate each localized narrative into its source language and compare the meaning, to catch semantic drift and bad terminology that a forward-only check cannot see. Agentic. Two parties are kept apart under untainted-verification: a back-translator that sees ONLY the target-language text, and an adjudicator that sees the original and the back-translation and rules. The verdict is recorded per block, under criterion `translation-semantic-roundtrip` in the block's `<block>.<locale>.translation-qa.json` sidecar, by the `translation-roundtrip-record` Tool (translation-manager §5). A terminology miss is a different criterion, `translation-terms-preserved` (acronyms, numbers, URLs that must survive), so Gateway_Drift can tell the two apart. Never close this step by reversing the PO's msgid→msgstr map: that returns the source exactly and scores 1.0 always. An empty `translation-semantic-roundtrip` entry list means \"not yet run\", which is never a pass.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_RoundTrip",
@@ -1121,12 +1231,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Record the L1 completeness verdict"
+          "@value": "Record the L1 completeness verdict",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Record the completeness verdict in three states — met, unmet, or not yet derivable — as bun run cat check:l1-complete reports it. Not-yet-derivable is never a pass. An unmet verdict opens a bean and returns to derivation; only a met one lets the entry into library/."
+          "@value": "Record the completeness verdict in three states — met, unmet, or not yet derivable — as bun run cat check:l1-complete reports it. Not-yet-derivable is never a pass. An unmet verdict opens a bean and returns to derivation; only a met one lets the entry into library/.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Verdict",
@@ -1141,12 +1253,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Check pages are current, links resolve"
+          "@value": "Check pages are current, links resolve",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The generator's check mode regenerates in memory and fails on any difference from the committed pages, and on any source link that does not resolve. It runs in CI, so a change to an extraction or a library entry that was not republished fails the build rather than leaving a page that says something the extraction no longer does."
+          "@value": "The generator's check mode regenerates in memory and fails on any difference from the committed pages, and on any source link that does not resolve. It runs in CI, so a change to an extraction or a library entry that was not republished fails the build rather than leaving a page that says something the extraction no longer does.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_CheckCurrent",
@@ -1161,12 +1275,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Collect each statement with its source section"
+          "@value": "Collect each statement with its source section",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "For every statement extracted from the library entries the artifact draws on, read three things off files: the statement verbatim, the library entry it came from, and the section of that entry, as a library reference (layer, library id, section id). The section's label is read from the entry's structure: its title and its locator in the source's own unit (a slide, a page, a cell range, a line range). For example \"Catch up schedule, slide 7\". A statement whose section cannot be resolved is NOT published without a link: it is reported, because a statement nobody can trace is the failure this process exists to prevent."
+          "@value": "For every statement extracted from the library entries the artifact draws on, read three things off files: the statement verbatim, the library entry it came from, and the section of that entry, as a library reference (layer, library id, section id). The section's label is read from the entry's structure: its title and its locator in the source's own unit (a slide, a page, a cell range, a line range). For example \"Catch up schedule, slide 7\". A statement whose section cannot be resolved is NOT published without a link: it is reported, because a statement nobody can trace is the failure this process exists to prevent.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Collect",
@@ -1181,12 +1297,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Render them in the artifact's own pages"
+          "@value": "Render them in the artifact's own pages",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The statements are written into pages of the folio's working artifact, so a reader of the artifact finds them without leaving it. HOW the pages look is the content type's: its adapter renders them in its own format (pages of a document, a section of a paper, pages of an implementation guide), as its content profile declares. Each statement carries two links: to the library entry's page, and to the section, labelled as collected. The pages are GENERATED: a person edits the extraction or the source, never the page."
+          "@value": "The statements are written into pages of the folio's working artifact, so a reader of the artifact finds them without leaving it. HOW the pages look is the content type's: its adapter renders them in its own format (pages of a document, a section of a paper, pages of an implementation guide), as its content profile declares. Each statement carries two links: to the library entry's page, and to the section, labelled as collected. The pages are GENERATED: a person edits the extraction or the source, never the page.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_RenderArtifact",
@@ -1201,12 +1319,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Publish them in the shared viewer"
+          "@value": "Publish them in the shared viewer",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "The same statements, with the same two links, are published in the shared extraction viewer, reachable from the site's sources menu. The viewer is the cross-artifact view: every source and every statement extracted from it, whichever artifact uses them. Both places read ONE collected list, so they cannot disagree about what was extracted or where it came from."
+          "@value": "The same statements, with the same two links, are published in the shared extraction viewer, reachable from the site's sources menu. The viewer is the cross-artifact view: every source and every statement extracted from it, whichever artifact uses them. Both places read ONE collected list, so they cannot disagree about what was extracted or where it came from.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_RenderViewer",
@@ -1221,12 +1341,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Read back Agentic status and Staging review"
+          "@value": "Read back Agentic status and Staging review",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "After the script's next run, read the row's Agentic status, Agentic status (filter) and Staging review. They must name the pull request and preview that Feedback (agent) names, and show no \"no agent has picked this up\" warning."
+          "@value": "After the script's next run, read the row's Agentic status, Agentic status (filter) and Staging review. They must name the pull request and preview that Feedback (agent) names, and show no \"no agent has picked this up\" warning.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_ReadBack",
@@ -1241,12 +1363,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Write the change set's Agent row"
+          "@value": "Write the change set's Agent row",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "On the Agent tab, the change set's row: Agentic status (Not started, Working, PR open, Ready for review, Change merged or Needs human); Pull request; Staging review page; Staging built, PR head, Staging built from and Staging deploy from `agent-record.ts push`; and Agent step from `agent-record.ts step <name>`, exactly \"<step> <YYYY-MM-DD HH:MMZ>\" with a step from the fixed list (reading, proposing, editing, pushing, staging, deploying, qa-review, merging, proposed, idle). Prose in Agent step is not read: use idle when the row waits for people. A preview or review link is written only once it is live: the GitHub Pages deploy of a gh-pages commit at or after the preview's publish has succeeded, and an HTTP GET of each link answers 200 where the agent can reach the site. A publish that is only on the gh-pages branch is not live: Pages deploys can be queued for many minutes or cancelled by the next push. Until then Staging review page stays empty, Staging deploy says deploying, and Feedback (agent) says \"Preview deploying\" with no preview link."
+          "@value": "On the Agent tab, the change set's row: Agentic status (Not started, Working, PR open, Ready for review, Change merged or Needs human); Pull request; Staging review page; Staging built, PR head, Staging built from and Staging deploy from `agent-record.ts push`; and Agent step from `agent-record.ts step <name>`, exactly \"<step> <YYYY-MM-DD HH:MMZ>\" with a step from the fixed list (reading, proposing, editing, pushing, staging, deploying, qa-review, merging, proposed, idle). Prose in Agent step is not read: use idle when the row waits for people. A preview or review link is written only once it is live: the GitHub Pages deploy of a gh-pages commit at or after the preview's publish has succeeded, and an HTTP GET of each link answers 200 where the agent can reach the site. A publish that is only on the gh-pages branch is not live: Pages deploys can be queued for many minutes or cancelled by the next push. Until then Staging review page stays empty, Staging deploy says deploying, and Feedback (agent) says \"Preview deploying\" with no preview link.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_WriteAgentRow",
@@ -1261,12 +1385,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Write Feedback (agent) from that row"
+          "@value": "Write Feedback (agent) from that row",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Feedback (agent) in the fixed layout (the ask first, then Status: and Next:), linking the same pull request and preview the Agent row now names. In a log one watcher owns, another thread sends the watcher its step and links instead of writing the sheet. A preview or review link is written only once it is live: the GitHub Pages deploy of a gh-pages commit at or after the preview's publish has succeeded, and an HTTP GET of each link answers 200 where the agent can reach the site. A publish that is only on the gh-pages branch is not live: Pages deploys can be queued for many minutes or cancelled by the next push. Until then Staging review page stays empty, Staging deploy says deploying, and Feedback (agent) says \"Preview deploying\" with no preview link."
+          "@value": "Feedback (agent) in the fixed layout (the ask first, then Status: and Next:), linking the same pull request and preview the Agent row now names. In a log one watcher owns, another thread sends the watcher its step and links instead of writing the sheet. A preview or review link is written only once it is live: the GitHub Pages deploy of a gh-pages commit at or after the preview's publish has succeeded, and an HTTP GET of each link answers 200 where the agent can reach the site. A publish that is only on the gh-pages branch is not live: Pages deploys can be queued for many minutes or cancelled by the next push. Until then Staging review page stays empty, Staging deploy says deploying, and Feedback (agent) says \"Preview deploying\" with no preview link.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_WriteFeedback",
@@ -1281,12 +1407,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Accept the new state"
+          "@value": "Accept the new state",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Runs the check again with --accept, so the state file holds what was just handled and the next poll compares against it. A row the pass could not finish stays changed and is picked up on the next poll."
+          "@value": "Runs the check again with --accept, so the state file holds what was just handled and the next poll compares against it. A row the pass could not finish stays changed and is picked up on the next poll.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_Accept",
@@ -1301,12 +1429,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Agent pass on the changed rows"
+          "@value": "Agent pass on the changed rows",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "For each changed row, the agent pass of Contributor feedback on a working draft: Ready for agent = Yes gets its edit, Ready for merge = Yes its merge, and a Blue answer to a Decision needed question is taken up. Every new row (from an issue, a person or a TWG workbook), every row with an empty Feedback (agent) and every row whose Blue cells changed gets feedback in the same wake, in the fixed layout: the ask first (Decision needed: with lettered options, one recommended, and where to answer), then Proposed direction: and Next:, only the tags bold. The work stays inside the row's Selected Sections; a row with none gets a question asking which, and any edit outside them is named on an Outside the selected sections: line. PRs are named as repo#n, which the sheet script links, and it adds a Where to review line linking each selected section on the preview. The agent then runs tools/review-log-watch/lint.ts and fixes what it flags: a cell that breaks the layout, or a PR state that GitHub contradicts. The agent records its step on the Agent tab at once, with the real time. Previews follow main: by default (Config PREVIEW_REFRESH automatic) the agent runs tools/review-log-watch/previews.ts on every poll for every open change-set PR, and also when people act on a change set (new Blue feedback, Ready for agent set to Yes, or feedback asking to update the preview); with PREVIEW_REFRESH on-feedback, only then. A branch behind main gets main merged in (a merge commit), pushed and restaged; a conflict a person must settle is asked in the change set's feedback."
+          "@value": "For each changed row, the agent pass of Contributor feedback on a working draft: Ready for agent = Yes gets its edit, Ready for merge = Yes its merge, and a Blue answer to a Decision needed question is taken up. Every new row (from an issue, a person or a TWG workbook), every row with an empty Feedback (agent) and every row whose Blue cells changed gets feedback in the same wake, in the fixed layout: the ask first (Decision needed: with lettered options, one recommended, and where to answer), then Proposed direction: and Next:, only the tags bold. The work stays inside the row's Selected Sections; a row with none gets a question asking which, and any edit outside them is named on an Outside the selected sections: line. PRs are named as repo#n, which the sheet script links, and it adds a Where to review line linking each selected section on the preview. The agent then runs tools/review-log-watch/lint.ts and fixes what it flags: a cell that breaks the layout, or a PR state that GitHub contradicts. The agent records its step on the Agent tab at once, with the real time. Previews follow main: by default (Config PREVIEW_REFRESH automatic) the agent runs tools/review-log-watch/previews.ts on every poll for every open change-set PR, and also when people act on a change set (new Blue feedback, Ready for agent set to Yes, or feedback asking to update the preview); with PREVIEW_REFRESH on-feedback, only then. A branch behind main gets main merged in (a merge commit), pushed and restaged; a conflict a person must settle is asked in the change set's feedback.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_AgentPass",
@@ -1321,12 +1451,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Append rows for new issues; hide closed ones"
+          "@value": "Append rows for new issues; hide closed ones",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "For each row in the tool's append list (one per issue that no row's Issue cell links yet), appends it below the last row of Contributor Feedback: Title is the issue's title, the first Contributor Feedback column @login (#N): the issue's first paragraph, Issue its URL. The script gives each new row its Change-set id. No other writer adds issue rows. Then each row linking a closed issue (the tool's closedRows, and the rows just appended as closed) is hidden and its text struck through."
+          "@value": "For each row in the tool's append list (one per issue that no row's Issue cell links yet), appends it below the last row of Contributor Feedback: Title is the issue's title, the first Contributor Feedback column @login (#N): the issue's first paragraph, Issue its URL. The script gives each new row its Change-set id. No other writer adds issue rows. Then each row linking a closed issue (the tool's closedRows, and the rows just appended as closed) is hidden and its text struck through.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_AppendRows",
@@ -1341,12 +1473,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Read the Contributor Feedback tab"
+          "@value": "Read the Contributor Feedback tab",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Reads Watch!F1:I1, the hash of the person-set cells that the sheet script writes on every refresh, and Contributor Feedback's header row and Issue column (a public-comment log: Review Change Sets' header row and Change-set column), and saves them as JSON for the check. A sheet without the Watch hash yet is read whole. Reading is not agent work: it changes nothing."
+          "@value": "Reads Watch!F1:I1, the hash of the person-set cells that the sheet script writes on every refresh, and Contributor Feedback's header row and Issue column (a public-comment log: Review Change Sets' header row and Change-set column), and saves them as JSON for the check. A sheet without the Watch hash yet is read whole. Reading is not agent work: it changes nothing.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_ReadSheet",
@@ -1361,12 +1495,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Record agent step on each row it wrote"
+          "@value": "Record agent step on each row it wrote",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "For every row the pass or the stall check wrote, Record agent step: the Agent tab row first (status, pull request, preview, step), then Feedback (agent) from it, then read back Agentic status and Staging review. A row whose Feedback (agent) names a pull request or preview its Agent row does not, or whose Agent step is not \"<step> <time>\", is fixed here."
+          "@value": "For every row the pass or the stall check wrote, Record agent step: the Agent tab row first (status, pull request, preview, step), then Feedback (agent) from it, then read back Agentic status and Staging review. A row whose Feedback (agent) names a pull request or preview its Agent row does not, or whose Agent step is not \"<step> <time>\", is fixed here.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_RecordStep",
@@ -1381,12 +1517,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Run the review-log-watch check"
+          "@value": "Run the review-log-watch check",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Runs Tool review-log-watch with the folio repository, the saved values and the log's state file. The tool reads the repository's open and closed issues (no pull requests, no issue labelled no-sheet) and compares a digest of them and of the cells people set (Title, Selected Sections, Contributor Feedback, Disposition, Ready for agent, Ready for merge, Dispositions confirmed; on a public-comment log also Committee Feedback, TWG (CS), TWG (human), Change Set (human)) with the last check's. A read with no Issue column tracks only change-set issues and appends no rows, reporting them as issue-unlinked. It writes nothing."
+          "@value": "Runs Tool review-log-watch with the folio repository, the saved values and the log's state file. The tool reads the repository's open and closed issues (no pull requests, no issue labelled no-sheet) and compares a digest of them and of the cells people set (Title, Selected Sections, Contributor Feedback, Disposition, Ready for agent, Ready for merge, Dispositions confirmed; on a public-comment log also Committee Feedback, TWG (CS), TWG (human), Change Set (human)) with the last check's. A read with no Issue column tracks only change-set issues and appends no rows, reporting them as issue-unlinked. It writes nothing.",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_RunCheck",
@@ -1401,12 +1539,14 @@
       },
       "skos:prefLabel": [
         {
-          "@value": "Hand new feedback to the row's agent; take over stalled rows"
+          "@value": "Hand new feedback to the row's agent; take over stalled rows",
+          "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "On every poll, changed or not, new Blue feedback goes verbatim to the agent working the row, and a stalled row is restarted or taken over. For each row: new Blue feedback goes, verbatim and in the same poll, to the thread that owns the row (named in its Agent row or Feedback (agent)), and Feedback (agent) says who has it. A row is stalled when its Blue cells changed, or Ready for agent turned Yes, more than 10 minutes ago and no Agent step was recorded since; or when its agent recorded no step for 2 hours. A stalled row's owning thread is asked once; with no answer within 10 minutes, or a thread that is done or stopped, the watcher takes the row over, or asks the coordinator for a new thread, and writes the new owner, the step and a link into Feedback (agent)."
+          "@value": "On every poll, changed or not, new Blue feedback goes verbatim to the agent working the row, and a stalled row is restarted or taken over. For each row: new Blue feedback goes, verbatim and in the same poll, to the thread that owns the row (named in its Agent row or Feedback (agent)), and Feedback (agent) says who has it. A row is stalled when its Blue cells changed, or Ready for agent turned Yes, more than 10 minutes ago and no Agent step was recorded since; or when its agent recorded no step for 2 hours. A stalled row's owning thread is asked once; with no answer within 10 minutes, or a thread that is done or stopped, the watcher takes the row over, or asks the coordinator for a new thread, and writes the new owner, the step and a link into Feedback (agent).",
+          "@language": "en"
         }
       ],
       "skos:notation": "Task_StallCheck",
