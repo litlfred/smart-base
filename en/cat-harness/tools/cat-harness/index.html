@@ -322,9 +322,9 @@ is <code class="language-plaintext highlighter-rouge">satisfies</code>, and it r
 to do that</em>, never <em>this skill is a tool</em>.</p>
 
 <div class="tg-grid">
-<a class="tg-stat" href="#every-tool"><b>152</b><span>Tool nodes</span></a>
+<a class="tg-stat" href="#every-tool"><b>153</b><span>Tool nodes</span></a>
 <a class="tg-stat" href="#does-every-satisfies-name-a-skill-that-exists"><b>58</b><span>skills satisfied</span></a>
-<a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>128</b><span>invoked as a shell command</span></a>
+<a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>129</b><span>invoked as a shell command</span></a>
 <a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>22</b><span>reachable over MCP</span></a>
 </div>
 
@@ -349,7 +349,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
   <tbody>
     <tr>
       <td><span class="tg-tag tg-shell" data-surface="shell">cli</span></td>
-      <td>128</td>
+      <td>129</td>
     </tr>
     <tr>
       <td><span class="tg-tag tg-inproc" data-surface="inProcess">inProcess</span></td>
@@ -376,7 +376,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">none</code></td>
-      <td>141</td>
+      <td>142</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cli</code></td>
@@ -397,7 +397,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
 </h2>
     
 
-<p>Yes — all <strong>58</strong> skills named across <strong>152</strong> tools resolve to a
+<p>Yes — all <strong>58</strong> skills named across <strong>153</strong> tools resolve to a
 skill document in this checkout. A <code class="language-plaintext highlighter-rouge">satisfies</code> pointing at nothing would be a
 tool advertising a capability the graph cannot locate.</p>
 <h2 id="every-tool">
@@ -409,7 +409,7 @@ tool advertising a capability the graph cannot locate.</p>
 </h2>
     
 
-<div class="tg-filter" id="tg-filter" role="group" aria-label="Filter by how a tool is reached"><span>Reached as:</span><button type="button" aria-pressed="true" data-surface="">all</button><button type="button" aria-pressed="false" data-surface="action">github action (6)</button><button type="button" aria-pressed="false" data-surface="inProcess">inProcess (23)</button><button type="button" aria-pressed="false" data-surface="manual">manual (8)</button><button type="button" aria-pressed="false" data-surface="mcp">mcp (22)</button><button type="button" aria-pressed="false" data-surface="shell">cli (128)</button><span><span id="tg-shown">152</span> of 152 shown</span></div>
+<div class="tg-filter" id="tg-filter" role="group" aria-label="Filter by how a tool is reached"><span>Reached as:</span><button type="button" aria-pressed="true" data-surface="">all</button><button type="button" aria-pressed="false" data-surface="action">github action (7)</button><button type="button" aria-pressed="false" data-surface="inProcess">inProcess (23)</button><button type="button" aria-pressed="false" data-surface="manual">manual (8)</button><button type="button" aria-pressed="false" data-surface="mcp">mcp (22)</button><button type="button" aria-pressed="false" data-surface="shell">cli (129)</button><span><span id="tg-shown">153</span> of 153 shown</span></div>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -1252,6 +1252,14 @@ tool advertising a capability the graph cannot locate.</p>
       <td>Build the published site on this machine, so a page can be looked at rather than described: the same Jekyll build <code class="language-plaintext highlighter-rouge">pages-publish</code> runs in CI, into a directory of your choosing, and never pushed. The local half of the two site builds: local and GitHub builds are two Tools for one skill.</td>
       <td><span class="tg-tag tg-shell" data-surface="shell">cli</span></td>
       <td><code class="language-plaintext highlighter-rouge">docs-generation</code></td>
+      <td>1 in / 1 out</td>
+      <td><a href="https://github.com/litlfred/smart-base/blob/cat/cat-harness/qa-reports/index.json"><code class="language-plaintext highlighter-rouge">qa-reports</code></a></td>
+    </tr>
+    <tr>
+      <td><a id="site-publish-after"></a><a href="site-publish-after/"><code class="language-plaintext highlighter-rouge">site-publish-after</code></a> · <a href="https://litlfred.github.io/folio-assistant/cat-harness/tools/site-publish-after.jsonld">JSON-LD</a><br />Name the workflows a site publish waits for on the same commit</td>
+      <td>Print the repository’s workflows that a site publish must wait for, on the same commit, before it builds: every workflow that calls a reusable workflow a declared site publisher names in <code class="language-plaintext highlighter-rouge">after</code> (for example an IG’s AST refresh, which seeds the cache the site is built from), plus <code class="language-plaintext highlighter-rouge">site.publishAfter</code> from <code class="language-plaintext highlighter-rouge">index.config.json</code>. A workflow that calls the shared site publish is never named: it is the publish itself. The shared <code class="language-plaintext highlighter-rouge">folio-site-publish.yml</code> runs it and then waits for each workflow it names.</td>
+      <td><span class="tg-tag tg-shell" data-surface="shell">cli</span> <span class="tg-tag tg-action" data-surface="action">github action</span></td>
+      <td><code class="language-plaintext highlighter-rouge">feature-staging</code></td>
       <td>1 in / 1 out</td>
       <td><a href="https://github.com/litlfred/smart-base/blob/cat/cat-harness/qa-reports/index.json"><code class="language-plaintext highlighter-rouge">qa-reports</code></a></td>
     </tr>
