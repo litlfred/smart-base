@@ -103,31 +103,7 @@
      "href": "../../../en/cat-harness/processes/skills/content-plan.html"
     }
    ],
-   "role": {
-    "name": "programme-manager",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/programme-manager",
-    "title": "Programme manager",
-    "skills": [
-     {
-      "name": "decision-audit",
-      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
-     },
-     {
-      "name": "decision-methodology-selector",
-      "href": "../../../en/cat-harness/processes/skills/decision-methodology-selector.html"
-     },
-     {
-      "name": "methodology-adoption",
-      "href": "../../../en/cat-harness/processes/skills/methodology-adoption.html"
-     },
-     {
-      "name": "release-epic-planning"
-     },
-     {
-      "name": "release-lifecycle"
-     }
-    ]
-   }
+   "binding": "dangling"
   },
   "Task_FormTeam": {
    "id": "Task_FormTeam",
@@ -149,31 +125,7 @@
      ]
     }
    ],
-   "role": {
-    "name": "programme-manager",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/programme-manager",
-    "title": "Programme manager",
-    "skills": [
-     {
-      "name": "decision-audit",
-      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
-     },
-     {
-      "name": "decision-methodology-selector",
-      "href": "../../../en/cat-harness/processes/skills/decision-methodology-selector.html"
-     },
-     {
-      "name": "methodology-adoption",
-      "href": "../../../en/cat-harness/processes/skills/methodology-adoption.html"
-     },
-     {
-      "name": "release-epic-planning"
-     },
-     {
-      "name": "release-lifecycle"
-     }
-    ]
-   }
+   "binding": "dangling"
   },
   "Task_EstablishProcess": {
    "id": "Task_EstablishProcess",
@@ -189,31 +141,7 @@
      "href": "../../../en/cat-harness/processes/skills/methodology-adoption.html"
     }
    ],
-   "role": {
-    "name": "programme-manager",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/programme-manager",
-    "title": "Programme manager",
-    "skills": [
-     {
-      "name": "decision-audit",
-      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
-     },
-     {
-      "name": "decision-methodology-selector",
-      "href": "../../../en/cat-harness/processes/skills/decision-methodology-selector.html"
-     },
-     {
-      "name": "methodology-adoption",
-      "href": "../../../en/cat-harness/processes/skills/methodology-adoption.html"
-     },
-     {
-      "name": "release-epic-planning"
-     },
-     {
-      "name": "release-lifecycle"
-     }
-    ]
-   }
+   "binding": "dangling"
   },
   "Task_GatherDocs": {
    "id": "Task_GatherDocs",
@@ -229,31 +157,7 @@
      "href": "../../../en/cat-harness/processes/skills/dak-l1-library.html"
     }
    ],
-   "role": {
-    "name": "programme-manager",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/programme-manager",
-    "title": "Programme manager",
-    "skills": [
-     {
-      "name": "decision-audit",
-      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
-     },
-     {
-      "name": "decision-methodology-selector",
-      "href": "../../../en/cat-harness/processes/skills/decision-methodology-selector.html"
-     },
-     {
-      "name": "methodology-adoption",
-      "href": "../../../en/cat-harness/processes/skills/methodology-adoption.html"
-     },
-     {
-      "name": "release-epic-planning"
-     },
-     {
-      "name": "release-lifecycle"
-     }
-    ]
-   }
+   "binding": "dangling"
   },
   "Task_PlanTimeline": {
    "id": "Task_PlanTimeline",
@@ -268,31 +172,7 @@
      "name": "release-epic-planning"
     }
    ],
-   "role": {
-    "name": "programme-manager",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/programme-manager",
-    "title": "Programme manager",
-    "skills": [
-     {
-      "name": "decision-audit",
-      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
-     },
-     {
-      "name": "decision-methodology-selector",
-      "href": "../../../en/cat-harness/processes/skills/decision-methodology-selector.html"
-     },
-     {
-      "name": "methodology-adoption",
-      "href": "../../../en/cat-harness/processes/skills/methodology-adoption.html"
-     },
-     {
-      "name": "release-epic-planning"
-     },
-     {
-      "name": "release-lifecycle"
-     }
-    ]
-   }
+   "binding": "dangling"
   },
   "Task_PlanConsultations": {
    "id": "Task_PlanConsultations",
@@ -308,31 +188,7 @@
      "href": "../../../en/cat-harness/processes/skills/content-plan.html"
     }
    ],
-   "role": {
-    "name": "programme-manager",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/programme-manager",
-    "title": "Programme manager",
-    "skills": [
-     {
-      "name": "decision-audit",
-      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
-     },
-     {
-      "name": "decision-methodology-selector",
-      "href": "../../../en/cat-harness/processes/skills/decision-methodology-selector.html"
-     },
-     {
-      "name": "methodology-adoption",
-      "href": "../../../en/cat-harness/processes/skills/methodology-adoption.html"
-     },
-     {
-      "name": "release-epic-planning"
-     },
-     {
-      "name": "release-lifecycle"
-     }
-    ]
-   }
+   "binding": "dangling"
   },
   "Task_AssignWork": {
    "id": "Task_AssignWork",
@@ -347,31 +203,7 @@
      "name": "todo-manager"
     }
    ],
-   "role": {
-    "name": "programme-manager",
-    "href": "https://litlfred.github.io/folio-assistant/cat-harness/role/programme-manager",
-    "title": "Programme manager",
-    "skills": [
-     {
-      "name": "decision-audit",
-      "href": "../../../en/cat-harness/processes/skills/decision-audit.html"
-     },
-     {
-      "name": "decision-methodology-selector",
-      "href": "../../../en/cat-harness/processes/skills/decision-methodology-selector.html"
-     },
-     {
-      "name": "methodology-adoption",
-      "href": "../../../en/cat-harness/processes/skills/methodology-adoption.html"
-     },
-     {
-      "name": "release-epic-planning"
-     },
-     {
-      "name": "release-lifecycle"
-     }
-    ]
-   }
+   "binding": "dangling"
   }
  }
 }
